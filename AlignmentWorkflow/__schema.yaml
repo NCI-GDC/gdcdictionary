@@ -1,0 +1,73 @@
+schema:
+  name: alignment_workflow
+  namespace: gdc.nci.nih.gov
+  category: workflow
+  title: Workflow to perform uniformly sequence alignment
+  description: 
+  version: 
+  created:
+  updated:
+  data_format:
+  validator: 
+  projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
+  output_data_bundles:  # to be fleshed out more
+    -
+      bundle_type: AlignedSeq
+      bundle_id: 
+  system_fields:
+    -
+      name: id
+      type: uuid
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: version
+      type: integer
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: state
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+        allowed: [ registered, live ]
+    -
+      name: date_created
+      type: datetime
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: date_updated
+      type: datetime
+      description:
+      constraints:
+        required: true
+        unique: false
+  fields:
+    -
+      name: ref_genome_id
+      type: string
+      constraints:
+        required: true
+    -
+      name: input_file_id
+      type: string
+      list: true
+      constraints:
+        required: true
+    -
+      name: output_file_id
+      type: string
+      list: true
+      constraints:
+        required: true
+  primaryKey: id
+  parentKeys:  # to be fleshed out more

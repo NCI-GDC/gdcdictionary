@@ -1,0 +1,105 @@
+schema:
+  name: AlignedSeq
+  namespace: gdc.nci.nih.gov
+  category: data_bundle  # data_bundle is the entity type that holds metadata for data_files
+  title: Aligned sequencing reads
+  description: 
+  version: 
+  created:
+  updated:
+  validator: AlignedSeq
+  projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
+  files: 
+    -
+      type: AlignedBAM
+      minOccurrence: 1
+      maxOccurrence: 1
+  system_fields:
+    -
+      name: id
+      type: uuid
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: version
+      type: integer
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: state
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+        allowed: [ registered, uploading, validating, error, live ]
+  fields:
+    -
+      name: submitter_aliquot_id
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: project_id
+      type: string
+      constraints:
+        required: true
+        unique: false
+        pattern: PJ\d+
+        maxLength: 20
+    -
+      name: submitter_case_id
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: submitter_sample_id
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: unaligned_seq_id
+      type: uuid
+      list: true
+      constraints:
+        required: true
+    -
+      name: ref_genome_id
+      type: string
+      constraints:
+        required: true
+    -
+      name: workflow_id
+      type: string
+      constraints:
+        required: true
+  primaryKey: id
+  parentKeys:
+    -
+      fields: unaligned_seq_id
+      required: true
+      reference:
+        entity: UnalignedSeq
+        fields: id
+    -
+      fields: ref_genome_id
+      required: true
+      reference:
+        entity: RefGenome
+        fields: id
+    -
+      fields: workflow_id
+      required: true
+      reference:
+        entity: AlignmentWorkflow
+        fields: id

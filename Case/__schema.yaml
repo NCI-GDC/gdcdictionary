@@ -1,0 +1,140 @@
+schema:
+  name: Case
+  namespace: gdc.nci.nih.gov
+  category: clinical
+  title: Participants contributed to cancer research project.
+  description: This is to capture demographic data for the case.
+  version: 
+  created:
+  updated:
+  required: true
+  data_format:
+    - TSV
+    - JSON
+    - XML
+  validator: standard
+  projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
+  files:
+    -
+      type: Histology report
+      minOccurrence: 0
+      maxOccurrence: 1
+  system_fields:
+    -
+      name: id
+      type: uuid
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: version
+      type: integer
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: case_id  # short, user-friendly IDs
+      type: string
+      bind_to: [ project_id, submitter_case_id ]  # based on values of project_id and submitter_case_id
+      description:
+      constraints:
+        required: true
+        unique: true
+        pattern: CS[:seq]+
+    -
+      name: state
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+        allowed: [ registered, live ]
+    -
+      name: date_created
+      type: datetime
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: date_updated
+      type: datetime
+      description:
+      constraints:
+        required: true
+        unique: false
+  fields:
+    -
+      name: submitter_case_id
+      type: string
+      description:
+      search: id_match
+      constraints:
+        required: true
+        unique: false  # within project is unique
+    -
+      name: project_id
+      type: string
+      constraints:
+        required: true
+        unique: true
+        pattern: PJ\d+
+        maxLength: 20
+    -
+      name: gender
+      type: string
+      display_label: Gender
+      description: "Identification of gender is based upon self-report and may come from a form, questionnaire, interview, etc"
+      cde_id: 2200604
+      search: facet_terms
+      constraints:
+        required: true
+        allowed:
+          - female
+          - male
+          - unknown
+          - unspecified
+    -
+      name: race
+      type: string
+      display_label: Race
+      description: "Patient's race using the defined categories"
+      cde_id: 21922199
+      search: facet_terms
+      constraints:
+        required: false  # false means the field is optional
+        allowed:
+          - American Indian or Alaska Native
+          - Asian
+          - White
+          - Black or African American
+          - Native Hawaiian or other Pacific Islander
+          - Not Evaluated
+          - Unknown
+    -
+      name: ethnicity
+      type: string
+      display_label: Ethnicity
+      description: "Patient's ethnicity using the defined categories"
+      cde_id: 2200604
+      search: null
+      constraints:
+        required: false
+        allowed:
+          - female
+          - male
+          - unknown
+          - unspecified
+  primaryKey: id
+  uniqueKeys:
+    - [ case_id ]
+    - [ project_id, submitter_case_id ]
+  parentKeys:
+    -
+      fields: project_id  # this setting can accept both string value or list of string value, the latter allows for composite foreign key
+      required: true
+      reference:
+        entity: Project
+        fields: project_id

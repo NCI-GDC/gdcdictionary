@@ -1,0 +1,15 @@
+schema: # this is the dictionary itself
+  name: gdc_dictionary
+  namespace: gdc.nci.nih.gov
+  category: dictionary
+  title: GDC Data Dictionary
+  description: 
+  version: 0.0.1
+  created: 2015-04-05T13:37:01+00:00
+  updated: 2015-06-15T17:45:58+00:00
+  projects: # this is needed for defining/configuring project-specific data elements
+    - TCGA-BRCA
+    - TCGA-OV
+    - TARGET-ALL
+    - ABCD
+    - XYZ

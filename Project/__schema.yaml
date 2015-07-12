@@ -1,0 +1,84 @@
+schema:
+  name: Project
+  namespace: gdc.nci.nih.gov
+  category: administrative
+  title: Cancer research project
+  description: 
+  version: 
+  created:
+  updated:
+  data_format:
+    - TSV
+    - JSON
+    - XML
+  validator: standard
+  projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
+  system_fields:
+    -
+      name: id
+      type: uuid
+      constraints:
+        required: true
+        unique: true
+    -
+      name: version
+      type: integer
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: state
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+        allowed: [ registered, live ]
+    -
+      name: date_created
+      type: datetime
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: date_updated
+      type: datetime
+      description:
+      constraints:
+        required: true
+        unique: false
+  fields:
+    -
+      name: project_id
+      type: string
+      constraints:
+        required: true
+        unique: true
+        pattern: PJ\d+
+        minLength: 2
+        maxLength: 10
+    -
+      name: project_name
+      type: string
+      constraints:
+        required: true
+        unique: true
+        maxLength: 50
+    -
+      name: program_id
+      type: string
+      constraints:
+        required: true
+        maxLength: 10
+  primaryKey: id
+  uniqueKeys:
+    - [ project_id ]
+  parentKeys:
+    -
+      fields: program_id
+      required: false
+      reference:
+        entity: Program
+        fields: program_id

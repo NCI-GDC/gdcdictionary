@@ -1,0 +1,90 @@
+schema:
+  name: Program
+  namespace: gdc.nci.nih.gov
+  category: administrative
+  title: Cancer genome research program
+  description: 
+  version:
+  created:
+  updated:
+  data_format:
+    - TSV
+    - JSON
+    - XML
+  validator: standard
+  required: false  # system default, can be override by 'projects'
+  projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL"] # which projects this applies
+  system_fields:
+    -
+      name: id
+      type: uuid
+      constraints:
+        required: true
+        unique: true
+    -
+      # we need to flesh out more details for versioning, first implementatoin may not
+      # need to support versioning. version is auto-incremental integer: 1, 2, 3 etc.
+      # Any update to the entity results a new version, highest version is current version
+      name: version
+      type: integer
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      # this is more of a field for conveniently pulling all latest entities
+      name: is_latest
+      type: boolean
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: state
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+        allowed: [ registered, live ]
+    -
+      name: date_created
+      type: datetime
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: date_published  # date the entity turned to 'live' state
+      type: datetime
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: date_updated
+      type: datetime
+      description:
+      constraints:
+        required: true
+        unique: false
+  fields:
+    -
+      name: program_id
+      type: string
+      constraints:
+        required: true
+        unique: true
+        pattern: PR\d+
+        minLength: 2
+        maxLength: 10
+    -
+      name: program_name
+      type: string
+      constraints:
+        required: true
+        unique: true
+        maxLength: 30
+  primaryKey: id
+  uniqueKeys:
+    - [ program_id ]

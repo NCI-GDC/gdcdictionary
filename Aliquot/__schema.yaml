@@ -1,0 +1,125 @@
+schema:
+  name: Aliquot
+  namespace: gdc.nci.nih.gov
+  category: biospecimen
+  title: Aliquot used to perform experiements
+  description: 
+  version: 
+  created:
+  updated:
+  required: true
+  data_format: [TSV, JSON, XML]
+  validator: standard
+  projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
+  system_fields:
+    -
+      name: id
+      type: uuid
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: version
+      type: integer
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: aliquot_id  # short, user-friendly IDs
+      type: string
+      bind_to: [ project_id, submitter_aliquot_id ]  # based on values of project_id and submitter_aliquot_id
+      description:
+      constraints:
+        required: true
+        unique: true
+        pattern: SM\d+
+        maxLength: 20
+    -
+      name: state
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+        allowed: [ registered, live ]
+    -
+      name: date_created
+      type: datetime
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: date_updated
+      type: datetime
+      description:
+      constraints:
+        required: true
+        unique: false
+  fields:
+    -
+      name: submitter_aliquot_id
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false  # within project is unique
+    -
+      name: project_id
+      type: string
+      constraints:
+        required: true
+        unique: false
+        pattern: PJ\d+
+        maxLength: 20
+    -
+      name: submitter_case_id
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: submitter_sample_id
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+  primaryKey: id
+  uniqueKeys:
+    - [ aliquot_id ]
+    - [ project_id, submitter_aliquot_id ]
+  parentKeys:
+    -
+      fields: [project_id, submitter_sample_id]
+      required: false
+      projects:
+        -
+          TCGA-BRCA: # this is a way to overwrite system default setting
+            required: true
+        -
+          TCGA-OV:
+            required: true
+        -
+          TARGET-ALL:
+            required: true
+      reference:
+        entity: Sample
+        fields: [project_id, submitter_sample_id]
+    -
+      fields: [project_id, submitter_case_id] # this is when the aliquot is directly attached to case
+      required: false
+      projects:
+        -
+          ABCD: # this is a way to overwrite system default setting
+            required: true
+        -
+          XYZ:
+            required: true
+      reference:
+        entity: Case
+        fields: [project_id, submitter_case_id]
+

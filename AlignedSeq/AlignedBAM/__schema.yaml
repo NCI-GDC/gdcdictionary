@@ -1,0 +1,86 @@
+schema:
+  name: AlignedBAM  # this is the data_type entity for AlignedBAM
+  namespace: gdc.nci.nih.gov
+  category: data_file
+  title: Aligned sequencing reads
+  description: 
+  version: 
+  created:
+  updated:
+  validator: AlignedBAM
+  file_extension: bam
+  projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
+  system_fields:
+    -
+      name: id  # UUID for BAM data object
+      type: uuid
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: version
+      type: integer
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: state
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+        allowed: [ registered, uploading, validating, error, suppressed, live ]
+  fields:
+    -
+      name: file_name
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: md5sum
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: bai
+      type: uuid
+      description:
+      constraints:
+        required: false
+        unique: false
+    -
+      name: bai_md5sum
+      type: string
+      description:
+      constraints:
+        required: false
+        unique: false
+    -
+      name: submitter_aliquot_id
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: aligned_seq_id
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+  primaryKey: id
+  parentKeys:  # data file should be linked to both data bundle and entities it was derived from
+    -
+      fields: aligned_seq_id
+      required: true
+      reference:
+        entity: AlignedSeq  # this is the bundle entity
+        fields: id

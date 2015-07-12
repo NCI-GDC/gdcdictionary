@@ -1,0 +1,91 @@
+schema:
+  name: ssm_indel
+  namespace: gdc.nci.nih.gov
+  category: data_bundle
+  title: "Simple Somatic Mutations, Small InDels"
+  description: 
+  version: __version
+  created:
+  updated:
+  files: 
+    -
+      type: SSM_SNV
+      minOccurrence: 1
+      maxOccurrence: 1
+    -
+      type: SSM_SNV_QC
+      minOccurrence: 1
+      maxOccurrence: 1
+  system_fields:
+    -
+      name: id
+      type: uuid
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: version
+      type: integer
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: state
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+        allowed: [ registered, uploading, validating, error, live ]
+  fields:
+    -
+      name: aligned_seq_ids
+      type: uuid
+      list: true
+      min: 2  # one from tumor, one from normal
+      constraints:
+        required: true
+        unique: true
+    -
+      name: project_id
+      type: string
+      constraints:
+        required: true
+        unique: false
+        pattern: PJ\d+
+        maxLength: 20
+    -
+      name: submitter_case_id
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: workflow_id
+      type: string
+      constraints:
+        required: true
+  primaryKey: id
+  parentKeys:
+    -
+      fields: aligned_seq_ids
+      required: true
+      note: aligned seq from normal sample # should this information be just free text? or needs expressed explicitly and using controlled terms
+      reference:
+        entity: AlignedSeq
+        fields: id
+    -
+      fields: workflow_id
+      required: true
+      reference:
+        entity: SnvCallingWorkflow
+        fields: id
+    -
+      fields: [ project_id, submitter_case_id ]
+      required: true
+      reference:
+        entity: Case
+        fields: [ project_id, submitter_case_id ]

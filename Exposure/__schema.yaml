@@ -1,0 +1,42 @@
+schema:
+  name: exposue
+  namespace: gdc.nci.nih.gov
+  category: clinical
+  title: Exposue
+  description: 
+  version: 
+  created:
+  updated:
+  required: false
+  data_format:
+    - TSV
+    - JSON
+    - XML
+  validator: standard
+  projects: ["TCGA-BRCA", "TCGA-OV", "ABCD"]
+  fields: # if *projects* is missing from individual field, it inheritates it from the schema level
+    -
+      name: __id
+      type: uuid
+      constraints:
+        required: true
+        unique: true
+    -
+      name: case_code
+      type: string
+      constraints:
+        required: true
+    -
+      name: alcohol_consumption
+      type: integer
+      constraints:
+        required: true
+        unique: false
+  primaryKey: __id
+  parentKeys:
+    -
+      fields: case_code
+      required: true
+      reference:
+        entity: case
+        fields: case_code

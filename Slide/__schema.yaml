@@ -1,0 +1,93 @@
+schema:
+  name: Slide  # to be fleshed out more
+  namespace: gdc.nci.nih.gov
+  category: biospecimen
+  title: Slide image
+  description: 
+  version: 
+  created:
+  updated:
+  required: false
+  data_format: [TSV, JSON, XML]
+  validator: standard
+  projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
+  system_fields:
+    -
+      name: id
+      type: uuid
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: version
+      type: integer
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: state
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+        allowed: [ registered, live ]
+    -
+      name: date_created
+      type: datetime
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: date_updated
+      type: datetime
+      description:
+      constraints:
+        required: true
+        unique: false
+  fields:
+    -
+      name: id
+      type: uuid
+      constraints:
+        required: true
+        unique: true
+    -
+      name: sample_code
+      type: string
+      constraints:
+        required: true
+        unique: true
+        pattern: SM\d+
+        maxLength: 20
+    -
+      name: submitter_sample_id
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false  # within project is unique
+    -
+      name: case_code
+      type: string
+      constraints:
+        required: true
+    -
+      name: sample_type
+      type: string
+      constraints:
+        required: true
+        maxLength: 20
+
+  primaryKey: __id
+  parentKeys:
+    -
+      fields: case_code
+      required: true
+      reference:
+        entity: case
+        fields: case_code
+

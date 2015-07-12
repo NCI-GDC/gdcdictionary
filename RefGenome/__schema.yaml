@@ -1,0 +1,64 @@
+schema:
+  name: RefGenome
+  namespace: gdc.nci.nih.gov
+  category: data_bundle
+  title: Reference genome
+  description: 
+  version: 
+  created:
+  updated:
+  data_format: FASTA
+  projects: ["_all"]
+  files:
+    -
+      type: RefGenomeChr
+  system_fields:
+    -
+      name: id
+      type: uuid
+      constraints:
+        required: true
+        unique: true
+    -
+      name: version
+      type: integer
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: state
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+        allowed: [ registered, live ]
+    -
+      name: date_created
+      type: datetime
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: date_updated
+      type: datetime
+      description:
+      constraints:
+        required: true
+        unique: false
+  fields:
+    -
+      name: ref_geome_id
+      type: string
+      constraints:
+        required: true
+        unique: true
+    -
+      name: ncbi_build_name
+      type: string
+      constraints:
+        required: true
+        unique: true
+  primaryKey: id

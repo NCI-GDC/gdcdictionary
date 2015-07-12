@@ -1,0 +1,107 @@
+schema:
+  name: Sample
+  namespace: gdc.nci.nih.gov
+  category: biospecimen
+  title: Sample (tissue) obtained from case
+  description: 
+  version: 
+  created:
+  updated:
+  required: true
+  data_format: [TSV, JSON, XML]
+  validator: standard
+  projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
+  system_fields:
+    -
+      name: id
+      type: uuid
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: version
+      type: integer
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: sample_id  # short, user-friendly IDs
+      type: string
+      bind_to: [ project_id, submitter_sample_id ]  # based on values of project_id and submitter_sample_id
+      description:
+      constraints:
+        required: true
+        unique: true
+        pattern: SM[:seq]+
+    -
+      name: state
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+        allowed: [ registered, live ]
+    -
+      name: date_created
+      type: datetime
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: date_updated
+      type: datetime
+      description:
+      constraints:
+        required: true
+        unique: false
+  fields:
+    -
+      name: submitter_sample_id
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false  # within project is unique
+    -
+      name: submitter_case_id
+      type: string
+      description:
+      constraints:
+        required: false
+        unique: false
+    -
+      name: project_id
+      type: string
+      constraints:
+        required: true
+        unique: false
+        pattern: PJ\d+
+        maxLength: 20
+    -
+      name: sample_type
+      type: string
+      constraints:
+        required: true
+        maxLength: 20
+        allowed:  # we can list all allowed key/value pairs here, altertively reference to name of the CV terms
+          -
+            key: 01
+            value: Primary tumor
+          -
+            key: 10
+            value: Blood Derived Normal
+
+  primaryKey: id
+  uniqueKeys:
+    - [ sample_id ]
+    - [ project_id, submitter_sample_id ]
+  parentKeys:
+    -
+      fields: [ project_id, submitter_case_id ]
+      required: true
+      reference:
+        entity: Case
+        fields: [ project_id, submitter_case_id ]

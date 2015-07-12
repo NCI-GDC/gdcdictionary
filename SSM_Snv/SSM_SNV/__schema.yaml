@@ -1,0 +1,72 @@
+schema:
+  name: SSM_SNV  # this is the data_type entity for AlignedBAM
+  namespace: gdc.nci.nih.gov
+  category: data_file
+  title: 
+  description: 
+  version: 
+  created:
+  updated:
+  validator: SSM_SNV
+  file_extension: vcf
+  projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
+  system_fields:
+    -
+      name: id  # UUID for BAM data object
+      type: uuid
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: version
+      type: integer
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: state
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+        allowed: [ registered, uploading, validating, error, suppressed, live ]
+  fields:
+    -
+      name: file_name
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: md5sum
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: submitter_aliquot_id
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: aligned_seq_id
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+  primaryKey: id
+  parentKeys:
+    -
+      fields: aligned_seq_id
+      required: true
+      reference:
+        entity: SSM_Snv  # this is the bundle entity
+        fields: id

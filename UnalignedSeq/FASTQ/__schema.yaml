@@ -1,0 +1,106 @@
+schema:
+  name: FASTQ
+  namespace: gdc.nci.nih.gov
+  category: data_file
+  title: Aligned sequencing reads
+  description: 
+  version: 
+  created:
+  updated:
+  validator: FASTQ
+  file_extension: fastq
+  projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
+  system_fields:
+    -
+      name: id  # UUID for BAM data object
+      type: uuid
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: version
+      type: integer
+      description:
+      constraints:
+        required: true
+        unique: true
+    -
+      name: state
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+        allowed: [ registered, uploading, validating, error, suppressed, live ]
+  fields:
+    -
+      name: file_name
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: md5sum
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: project_id
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: submitter_aliquot_id
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: insert_size
+      type: integer
+      description:
+      constraints:
+        required: false
+        unique: false
+    -
+      name: read_count
+      type: integer
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: read_group_id
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: unaligned_seq_id  # UUID of the bundle
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+  primaryKey: id
+  parentKeys:
+    -
+      fields: [project_id, submitter_aliquot_id]  # file is directly linked to Aliquot
+      required: true
+      reference:
+        entity: Aliquot
+        fields: [project_id, submitter_aliquot_id]
+    -
+      fields: unaligned_seq_id  # file is also linked to UnalignedSeq bundle
+      required: true
+      reference:
+        entity: UnalignedSeq
+        fields: id
