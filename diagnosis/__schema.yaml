@@ -15,44 +15,15 @@ schema:
     - JSON
     - XML
   validator: standard
-  projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
+  projects: [ _all ]
   system_fields:
-    -
-      name: id
-      type: uuid
-      description:
-      constraints:
-        required: true
-        unique: true
-    -
-      name: version
-      type: integer
-      description:
-      constraints:
-        required: true
-        unique: true
-    -
-      name: state
-      type: string
-      description:
-      constraints:
-        required: true
-        unique: false
-        allowed: [ registered, live ]
-    -
-      name: date_created
-      type: datetime
-      description:
-      constraints:
-        required: true
-        unique: false
-    -
-      name: date_updated
-      type: datetime
-      description:
-      constraints:
-        required: true
-        unique: false
+    - name: id
+    - name: version
+    - name: is_latest
+    - name: state
+    - name: created_date
+    - name: published_date
+    - name: updated_date
   fields:
     -
       name: submitter_diagnosis_id
@@ -66,19 +37,19 @@ schema:
       type: string
       constraints:
         required: true
-        projects: [ _all ]
     -
-      name: case_id  # case_id is the system-generated short ID for case, submitter could use it for referencing the parent case
-      type: string
-      constraints:
-        required: false
-    -
-      name: diagnosis
+      name: diagnosis  # to be discussed further in clinical submission group
       type: string
       constraints:
         required: true
         unique: false
-        projects: [ _all ]
+    -
+      name: icd-10  # to be discussed further in clinical submission group
+      type: string
+      constraints:
+        required: true
+        unique: false
+        validator: icd-10  # customized validator, can be a python function? 
     -
       name: age_at_diagnosis
       type: string
@@ -101,14 +72,16 @@ schema:
           - OV:
               required: true
   primaryKey: id
-  # relationship to parent entity can be specified by using
+  uniqueKeys:
+    - [ project_id, submitter_diagnosis_id ]
+  # relationship to parent entity should be able to specify by using
   # either system-generated keys or submitter's IDs.
   # Semantically there shouldn't be any difference, it's a matter of 
-  # convenience. For example, for related clinical schemas (case & diagnosis) it may
-  # make more sense to use submitter's ID, so that submitter can
-  # fully specify and maintain the relationships on their own side,
-  # for example in the BCR case. BCR should not need to know anything
-  # about GDC assigned IDs (neither internal id nor short code)
+  # convenience. However, for clinical related schemas (case & diagnosis) it may
+  # make more sense to use submitter's IDs, so that submitter can
+  # fully specify and maintain the relationships on their own side.
+  # For example, BCR should not need to know anything
+  # about GDC assigned IDs (neither internal uuid nor short user-friendly ID)
   # However, for harmonization workflows, as the IDs are not usually
   # managed by user, system-generated IDs will need to be used for
   # specifying relationships

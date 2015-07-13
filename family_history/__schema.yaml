@@ -1,20 +1,21 @@
 schema:
-  name: project
+  name: family_history
   namespace: gdc='http://gdc.nci.nih.gov'
-  category: administrative
-  title: Cancer research project
+  category: clinical
+  title: Family history
   description: 
   version: 1
   created_date: 2015-06-16T07:37:39Z
   updated_date: 2015-07-12T21:04:01Z
   published_date: 2015-07-12T21:04:01Z
   is_published: true
+  required: false  # this entity is optional
   data_format:
     - TSV
     - JSON
     - XML
   validator: standard
-  projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
+  projects: ["TCGA-*"]
   system_fields:
     - name: id
     - name: version
@@ -23,36 +24,29 @@ schema:
     - name: created_date
     - name: published_date
     - name: updated_date
-  fields:
+  fields: # if *projects* is missing from individual field, it inherits it from the schema level
     -
-      name: project_id
-      type: string
+      name: __id
+      type: uuid
       constraints:
         required: true
         unique: true
-        pattern: PJ\d+
-        minLength: 2
-        maxLength: 10
     -
-      name: project_name
+      name: case_code
       type: string
       constraints:
         required: true
-        unique: true
-        maxLength: 50
     -
-      name: program_id
-      type: string
+      name: alcohol_consumption
+      type: integer
       constraints:
         required: true
-        maxLength: 10
-  primaryKey: id
-  uniqueKeys:
-    - [ project_id ]
+        unique: false
+  primaryKey: __id
   parentKeys:
     -
-      fields: program_id
-      required: false
+      fields: case_code
+      required: true
       reference:
-        entity: Program
-        fields: program_id
+        entity: case
+        fields: case_code

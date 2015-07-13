@@ -16,60 +16,14 @@ schema:
   validator: standard
   required: false  # not required as system default, can be overridden by 'projects'
   projects: ["TCGA-*", "TARGET-*"] # which projects this entity type is required
-  system_fields:
-    -
-      name: id
-      type: uuid
-      constraints:
-        required: true
-        unique: true
-    -
-      # we need to flesh out more details for versioning, first implementatoin may not
-      # need to support versioning. version is auto-incremental integer: 1, 2, 3 etc.
-      # Any update to the entity results a new version, highest version is current version
-      name: version
-      type: integer
-      description:
-      constraints:
-        required: true
-        unique: false
-    -
-      # this is more of a field for conveniently pulling all latest entities
-      name: is_latest
-      type: boolean
-      description:
-      constraints:
-        required: true
-        unique: false
-    -
-      name: state
-      type: string
-      description:
-      constraints:
-        required: true
-        unique: false
-        allowed: [ registered, live ]
-    -
-      name: date_created
-      type: datetime
-      description:
-      constraints:
-        required: true
-        unique: false
-    -
-      name: date_published  # date the entity turned to 'live' state
-      type: datetime
-      description:
-      constraints:
-        required: true
-        unique: false
-    -
-      name: date_updated
-      type: datetime
-      description:
-      constraints:
-        required: true
-        unique: false
+  system_fields:  # this reason this is not a list of system field names is to allow local overriding
+    - name: id
+    - name: version
+    - name: is_latest
+    - name: state
+    - name: created_date
+    - name: published_date
+    - name: updated_date
   fields:
     -
       name: program_id

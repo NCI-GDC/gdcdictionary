@@ -9,14 +9,22 @@ schema:
   updated_date: 2015-07-12T21:04:01Z
   published_date: 2015-07-12T21:04:01Z
   is_published: true
-  required: false
+  required: false  # this entity is optional
   data_format:
     - TSV
     - JSON
     - XML
   validator: standard
-  projects: ["TCGA-BRCA", "TCGA-OV", "ABCD"]
-  fields: # if *projects* is missing from individual field, it inheritates it from the schema level
+  projects: ["TCGA-*"]
+  system_fields:
+    - name: id
+    - name: version
+    - name: is_latest
+    - name: state
+    - name: created_date
+    - name: published_date
+    - name: updated_date
+  fields: # if *projects* is missing from individual field, it inherits it from the schema level
     -
       name: __id
       type: uuid

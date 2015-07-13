@@ -15,29 +15,21 @@ schema:
     - JSON
     - XML
   validator: standard
-  projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
+  projects: [ _all ]
   files:
     -
-      type: Histology report
+      type: Histology report  # this is the data type
       minOccurrence: 0
       maxOccurrence: 1
   system_fields:
-    -
-      name: id
-      type: uuid
-      description:
-      constraints:
-        required: true
-        unique: true
-    -
-      name: version
-      type: integer
-      description:
-      constraints:
-        required: true
-        unique: true
-    -
-      name: case_id  # short, user-friendly IDs
+    - name: id
+    - name: version
+    - name: is_latest
+    - name: state
+    - name: created_date
+    - name: published_date
+    - name: updated_date
+    - name: case_id  # short, user-friendly IDs
       type: string
       bind_to: [ project_id, submitter_case_id ]  # based on values of project_id and submitter_case_id
       description:
@@ -45,28 +37,6 @@ schema:
         required: true
         unique: true
         pattern: CS[:seq]+
-    -
-      name: state
-      type: string
-      description:
-      constraints:
-        required: true
-        unique: false
-        allowed: [ registered, live ]
-    -
-      name: date_created
-      type: datetime
-      description:
-      constraints:
-        required: true
-        unique: false
-    -
-      name: date_updated
-      type: datetime
-      description:
-      constraints:
-        required: true
-        unique: false
   fields:
     -
       name: submitter_case_id
