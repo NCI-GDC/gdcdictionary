@@ -68,7 +68,7 @@ schema:
         required: true
     -
       name: ref_genome_id
-      type: string
+      type: uuid
       constraints:
         required: true
     -
@@ -78,21 +78,19 @@ schema:
         required: true
   primary_key: id
   parents:
-    -
-      fields: unaligned_seq_id
+    - entity: ref_genome
       required: true
-      reference:
-        entity: UnalignedSeq
-        fields: id
-    -
-      fields: ref_genome_id
+      fields:
+        - name: id
+          self_field: ref_genome_id
+    - entity: fastq  # input FASTQ files
       required: true
-      reference:
-        entity: RefGenome
-        fields: id
-    -
-      fields: workflow_id
+      cardinality: n:1  # multiple input FASTQ files produced one data_bundle
+      fields: 
+        - name: id
+          self_field: unaligned_seq_id
+    - entity: alignment_workflow
       required: true
-      reference:
-        entity: AlignmentWorkflow
-        fields: id
+      fields:
+        - name: id
+          self_field: workflow_id

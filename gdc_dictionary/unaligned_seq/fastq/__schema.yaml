@@ -10,7 +10,7 @@ schema:
   updated_date: 2015-07-12T21:04:01Z
   published_date: null
   is_published: false
-  validator: FASTQ
+  validator: fastq
   file_extension: fastq
   projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
   system_fields:
@@ -86,15 +86,15 @@ schema:
         unique: false
   primary_key: id
   parents:
-    -
-      fields: [project_id, submitter_aliquot_id]  # file is directly linked to Aliquot
+    - entity: aliquot # file is directly linked to aliquot
       required: true
-      reference:
-        entity: Aliquot
-        fields: [project_id, submitter_aliquot_id]
-    -
-      fields: unaligned_seq_id  # file is also linked to UnalignedSeq bundle
+      fields:
+        - name: project_id
+          self_field: project_id
+        - name: submitter_aliquot_id
+          self_field: submitter_aliquot_id
+    - entity: unaligned_seq # file is also linked to unaligned_seq bundle
       required: true
-      reference:
-        entity: UnalignedSeq
-        fields: id
+      fields:
+        - name: id  # gobally unique parent bundle UUID
+          self_field: unaligned_seq_id

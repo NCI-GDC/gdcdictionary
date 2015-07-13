@@ -41,14 +41,7 @@ schema:
       constraints:
         required: true
         unique: true
-    -
-      name: project_id
-      type: string
-      constraints:
-        required: true
-        unique: false
-        pattern: PJ\d+
-        maxLength: 20
+    - name: project.project_id
     -
       name: submitter_case_id
       type: string
@@ -63,22 +56,14 @@ schema:
         required: true
   primary_key: id
   parents:
-    -
-      fields: aligned_seq_ids
+    - entity: aligned_seq
       required: true
-      note: aligned seq from normal sample # should this information be just free text? or needs expressed explicitly and using controlled terms
-      reference:
-        entity: AlignedSeq
-        fields: id
-    -
-      fields: workflow_id
+      cardinality: 2:1  # one normal, one tumour aligned BAM as input
+      fields:
+        - name: id
+          self_field: aligned_seq_ids
+    - entity: snv_calling_workflow
       required: true
-      reference:
-        entity: SnvCallingWorkflow
-        fields: id
-    -
-      fields: [ project_id, submitter_case_id ]
-      required: true
-      reference:
-        entity: Case
-        fields: [ project_id, submitter_case_id ]
+      fields:
+        - name: id
+          self_field: workflow_id

@@ -13,7 +13,7 @@ schema:
   projects: ["_all"]
   files:
     -
-      type: RefGenomeChr
+      type: ref_genome_seq
       minOccurrence: 23
       maxOccurrence: null
   system_fields:

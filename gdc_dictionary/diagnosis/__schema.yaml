@@ -45,14 +45,7 @@ schema:
       type: string
       constraints:
         required: true
-    -
-      name: project_id
-      type: string
-      constraints:
-        required: true
-        unique: false
-        pattern: PJ\d+
-        maxLength: 20
+    - name: project.project_id  # reuse the project_id definition originally defined in 'project' entity
     -
       name: diagnosis  # to be discussed further in clinical submission group
       type: string

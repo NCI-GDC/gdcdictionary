@@ -71,9 +71,14 @@ schema:
         unique: false
   primary_key: id
   parents:  # data file should be linked to both data bundle and entities it was derived from
-    -
-      fields: aligned_seq_id
+    - entity: aligned_seq  # bundle
       required: true
-      reference:
-        entity: AlignedSeq  # this is the bundle entity
-        fields: id
+      fields:
+        - name: id
+          self_field: aligned_seq_id
+    - entity: fastq  # input FASTQ files
+      required: true
+      cardinality: n:1  # multiple input FASTQ files produced one data_bundle
+      fields: 
+        - name: id
+          self_field: unaligned_seq_id

@@ -56,9 +56,8 @@ schema:
         unique: false
   primary_key: id
   parents:
-    -
-      fields: aligned_seq_id
+    - entity: ssm_snv  # bundle
       required: true
-      reference:
-        entity: SSM_Snv  # this is the bundle entity
-        fields: id
+      fields:
+        - name: id
+          self_field: ssm_snv_id

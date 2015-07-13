@@ -49,17 +49,30 @@ schema:
         required: true
         unique: false
     -
-      name: aligned_seq_id
+      name: ssm_snv_id
       type: string
       description:
       constraints:
         required: true
         unique: false
+    -
+      name: aligned_bam_ids
+      type: uuid
+      list: true
+      min: 2  # one from tumor, one from normal
+      constraints:
+        required: true
+        unique: true
   primary_key: id
   parents:
-    -
-      fields: aligned_seq_id
+    - entity: ssm_snv  # bundle
       required: true
-      reference:
-        entity: SSM_Snv  # this is the bundle entity
-        fields: id
+      fields:
+        - name: id
+          self_field: ssm_snv_id
+    - entity: aligned_bam  # input BAM
+      required: true
+      cardinality: 2:1  # one normal, one tumour aligned BAM as input
+      fields:
+        - name: id
+          self_field: aligned_bam_ids

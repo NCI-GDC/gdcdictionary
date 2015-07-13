@@ -78,10 +78,8 @@ schema:
         unique: false
   primary_key: id
   parents:
-    -
-      fields: ref_genome_id
+    - entity: ref_genome
       required: true
-      reference:
-        entity: RefGenome
-        fields: id
-
+      fields:
+        - name: id
+          self_field: ref_genome_id
