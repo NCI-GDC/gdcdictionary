@@ -76,8 +76,8 @@ schema:
       type: string
       constraints:
         required: true
-  primaryKey: id
-  parentKeys:
+  primary_key: id
+  parents:
     -
       fields: unaligned_seq_id
       required: true

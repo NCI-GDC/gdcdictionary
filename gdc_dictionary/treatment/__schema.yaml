@@ -9,13 +9,15 @@ schema:
   updated_date: 2015-07-12T21:04:01Z
   published_date: 2015-07-12T21:04:01Z
   is_published: true
-  required: false  # this entity is optional
+  required: false  # this entity is optional by default
+  projects:
+    TCGA-*:
+      required: true  # for projects start with TCGA- this entity is required
   data_format:
     - TSV
     - JSON
     - XML
   validator: standard
-  projects: ["TCGA-*"]
   system_fields:
     - name: id
     - name: version
@@ -26,27 +28,23 @@ schema:
     - name: updated_date
   fields: # if *projects* is missing from individual field, it inherits it from the schema level
     -
-      name: __id
-      type: uuid
-      constraints:
-        required: true
-        unique: true
-    -
-      name: case_code
+      name: submitter_case_id
       type: string
       constraints:
         required: true
+    - name: project.project_id  # reuse the project_id definition originally defined in 'project' entity
     -
       name: alcohol_consumption
       type: integer
       constraints:
         required: true
         unique: false
-  primaryKey: __id
-  parentKeys:
-    -
-      fields: case_code
+  primary_key: id
+  parents:
+    - entity: case
       required: true
-      reference:
-        entity: case
-        fields: case_code
+      fields: 
+        - name: project_id
+          self_field: project_id
+        - name: submitter_case_id
+          self_field: submitter_case_id

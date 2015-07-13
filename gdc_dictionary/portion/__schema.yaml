@@ -49,19 +49,15 @@ schema:
       constraints:
         required: true
         unique: false  # within project is unique
-    -
-      name: project_id
-      type: string
-      constraints:
-        required: true
-  primaryKey: id
-  uniqueKeys:
+    - name: project.project_id  # reuse the project_id definition originally defined in 'project' entity
+  primary_key: id
+  unique_keys:
     - [ project_id, submitter_portion_id ]
-  parentKeys:
-    -
-      fields: [ project_id, submitter_sample_id ]
+  parents:
+    - entity: sample
       required: true
-      reference:
-        entity: Sample
-        fields: [ project_id, submitter_sample_id ]
-
+      fields: 
+        - name: project_id
+          self_field: project_id
+        - name: submitter_sample_id
+          self_field: submitter_sample_id

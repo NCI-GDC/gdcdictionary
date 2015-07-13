@@ -84,8 +84,8 @@ schema:
       constraints:
         required: true
         unique: false
-  primaryKey: id
-  parentKeys:
+  primary_key: id
+  parents:
     -
       fields: [project_id, submitter_aliquot_id]  # file is directly linked to Aliquot
       required: true

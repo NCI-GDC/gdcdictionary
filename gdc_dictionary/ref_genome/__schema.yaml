@@ -43,4 +43,4 @@ schema:
       constraints:
         required: true
         unique: true
-  primaryKey: id
+  primary_key: id

@@ -25,28 +25,22 @@ schema:
     - name: published_date
     - name: updated_date
   fields: # if *projects* is missing from individual field, it inherits it from the schema level
-    -
-      name: __id
-      type: uuid
-      constraints:
-        required: true
-        unique: true
-    -
-      name: case_code
+    - name: submitter_case_id
       type: string
       constraints:
         required: true
-    -
-      name: alcohol_consumption
+    - name: project.project_id
+    - name: alcohol_consumption
       type: integer
       constraints:
         required: true
         unique: false
-  primaryKey: __id
-  parentKeys:
-    -
-      fields: case_code
+  primary_key: id
+  parents:
+    - entity: case
       required: true
-      reference:
-        entity: case
-        fields: case_code
+      fields: 
+        - name: project_id
+          self_field: project_id
+        - name: submitter_case_id
+          self_field: submitter_case_id

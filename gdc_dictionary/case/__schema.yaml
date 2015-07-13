@@ -46,14 +46,7 @@ schema:
       constraints:
         required: true
         unique: false  # within project is unique
-    -
-      name: project_id
-      type: string
-      constraints:
-        required: true
-        unique: true
-        pattern: PJ\d+
-        maxLength: 20
+    - name: project.project_id  # reuse the project_id definition originally defined in 'project' entity
     -
       name: gender
       type: string
@@ -99,14 +92,13 @@ schema:
           - male
           - unknown
           - unspecified
-  primaryKey: id
-  uniqueKeys:
+  primary_key: id
+  unique_keys:
     - [ case_id ]
     - [ project_id, submitter_case_id ]
-  parentKeys:
-    -
-      fields: project_id  # this setting can accept both string value or list of string value, the latter allows for composite foreign key
+  parents:
+    - entity: project
       required: true
-      reference:
-        entity: Project
-        fields: project_id
+      fields:
+        - name: project_id
+          self_field: project_id

@@ -76,8 +76,8 @@ schema:
       constraints:
         required: true
         unique: false
-  primaryKey: id
-  parentKeys:
+  primary_key: id
+  parents:
     -
       fields: ref_genome_id
       required: true

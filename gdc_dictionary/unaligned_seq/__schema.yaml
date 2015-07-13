@@ -13,7 +13,7 @@ schema:
   projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
   files:
     -
-      type: FASTQ
+      type: fastq
       minOccurrence: 1
   system_fields:
     - name: id
@@ -64,8 +64,8 @@ schema:
       type: string
       constraints:
         required: true
-  primaryKey: id
-  parentKeys:
+  primary_key: id
+  parents:
     -
       fields: [project_id, submitter_aliquot_id]
       required: true

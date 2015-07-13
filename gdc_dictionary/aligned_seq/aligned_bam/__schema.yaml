@@ -69,8 +69,8 @@ schema:
       constraints:
         required: true
         unique: false
-  primaryKey: id
-  parentKeys:  # data file should be linked to both data bundle and entities it was derived from
+  primary_key: id
+  parents:  # data file should be linked to both data bundle and entities it was derived from
     -
       fields: aligned_seq_id
       required: true

@@ -24,6 +24,14 @@ schema:
     - name: created_date
     - name: published_date
     - name: updated_date
+    - name: diagnosis_id  # short, user-friendly IDs
+      type: string
+      bind_to: [ project_id, submitter_diagnosis_id ]  # based on values of project_id and submitter_case_id
+      description:
+      constraints:
+        required: true
+        unique: true
+        pattern: DI[:seq]+
   fields:
     -
       name: submitter_diagnosis_id
@@ -37,6 +45,14 @@ schema:
       type: string
       constraints:
         required: true
+    -
+      name: project_id
+      type: string
+      constraints:
+        required: true
+        unique: false
+        pattern: PJ\d+
+        maxLength: 20
     -
       name: diagnosis  # to be discussed further in clinical submission group
       type: string
@@ -71,8 +87,9 @@ schema:
               name: prior_disease
           - OV:
               required: true
-  primaryKey: id
-  uniqueKeys:
+  primary_key: id
+  unique_keys:
+    - [ diagnosis_id ]
     - [ project_id, submitter_diagnosis_id ]
   # relationship to parent entity should be able to specify by using
   # either system-generated keys or submitter's IDs.
@@ -85,20 +102,11 @@ schema:
   # However, for harmonization workflows, as the IDs are not usually
   # managed by user, system-generated IDs will need to be used for
   # specifying relationships
-  parentKeys:
-    -
-      fields: submitter_case_id
+  parents:
+    - entity: case
       required: true
-      reference:
-        entity: case
-        fields: submitter_case_id
-    -
-      # this is the same relation as the above. Submitter should
-      # choose just either one of these, how do we express the mutually exclusive options?
-      # maybe should merge these two into one (since it is indeed one relation), then somehow
-      # may the fields for linking mutually exclusive
-      fields: case_id
-      required: false
-      reference:
-        entity: case
-        fields: case_id
+      fields: 
+        - name: project_id
+          self_field: project_id
+        - name: submitter_case_id
+          self_field: submitter_case_id

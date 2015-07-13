@@ -45,14 +45,7 @@ schema:
       constraints:
         required: false
         unique: false
-    -
-      name: project_id
-      type: string
-      constraints:
-        required: true
-        unique: false
-        pattern: PJ\d+
-        maxLength: 20
+    - name: project.project_id  # reuse the project_id definition originally defined in 'project' entity
     -
       name: sample_type
       type: string
@@ -67,14 +60,15 @@ schema:
             key: 10
             value: Blood Derived Normal
 
-  primaryKey: id
-  uniqueKeys:
+  primary_key: id
+  unique_keys:
     - [ sample_id ]
     - [ project_id, submitter_sample_id ]
-  parentKeys:
-    -
-      fields: [ project_id, submitter_case_id ]
+  parents:
+    - entity: case
       required: true
-      reference:
-        entity: Case
-        fields: [ project_id, submitter_case_id ]
+      fields: 
+        - name: project_id
+          self_field: project_id
+        - name: submitter_case_id
+          self_field: submitter_case_id

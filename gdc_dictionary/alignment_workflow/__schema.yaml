@@ -51,5 +51,5 @@ schema:
       list: true
       constraints:
         required: true
-  primaryKey: id
-  parentKeys:  # to be fleshed out more
+  primary_key: id
+  parents:  # to be fleshed out more

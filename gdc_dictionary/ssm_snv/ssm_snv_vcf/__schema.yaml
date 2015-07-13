@@ -55,8 +55,8 @@ schema:
       constraints:
         required: true
         unique: false
-  primaryKey: id
-  parentKeys:
+  primary_key: id
+  parents:
     -
       fields: aligned_seq_id
       required: true

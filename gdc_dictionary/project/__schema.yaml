@@ -14,7 +14,7 @@ schema:
     - JSON
     - XML
   validator: standard
-  projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
+  projects: [ _all ]
   system_fields:
     - name: id
     - name: version
@@ -46,13 +46,17 @@ schema:
       constraints:
         required: true
         maxLength: 10
-  primaryKey: id
-  uniqueKeys:
+  primary_key: id
+  unique_keys:
     - [ project_id ]
-  parentKeys:
-    -
-      fields: program_id
+  parents:
+    - entity: program
       required: false
-      reference:
-        entity: Program
-        fields: program_id
+      projects:
+        TCGA-*: # this is a way to overwrite system default setting
+          required: true
+        TARGET-*:
+          required: true
+      fields:
+        - name: program_id
+          self_field: program_id

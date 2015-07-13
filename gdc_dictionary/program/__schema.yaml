@@ -15,8 +15,12 @@ schema:
     - XML
   validator: standard
   required: false  # not required as system default, can be overridden by 'projects'
-  projects: ["TCGA-*", "TARGET-*"] # which projects this entity type is required
-  system_fields:  # this reason this is not a list of system field names is to allow local overriding
+  projects:  # which projects this entity type is required
+    TCGA-*:
+      required: true
+    TARGET-*:
+      required: true
+  system_fields:  # the reason this is not a list of system field names is to allow local overriding
     - name: id
     - name: version
     - name: is_latest
@@ -41,6 +45,6 @@ schema:
         required: true
         unique: true
         maxLength: 30
-  primaryKey: id
-  uniqueKeys:
+  primary_key: id
+  unique_keys:
     - [ program_id ]

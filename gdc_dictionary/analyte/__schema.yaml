@@ -38,32 +38,29 @@ schema:
       constraints:
         required: true
         unique: false  # within project is unique
+    - name: project.project_id  # reuse the project_id definition originally defined in 'project' entity
     -
       name: submitter_portion_id
       type: string
       description:
       constraints:
         required: true
-        unique: false  # within project is unique
-    -
-      name: project_id
-      type: string
-      constraints:
-        required: true
+        unique: false
+    - name: project.project_id  # reuse the project_id definition originally defined in 'project' entity
     -
       name: analyte_type
       type: string
       constraints:
         required: true
-        allowed: ["DNA", "RNA", "miRNA", "TotalRNA"]
-  primaryKey: id
-  uniqueKeys:
+        allowed: [ DNA, RNA, miRNA, TotalRNA ]
+  primary_key: id
+  unique_keys:
     - [ project_id, submitter_analyte_id ]
-  parentKeys:
-    -
-      fields: [ project_id, submitter_portion_id ]
+  parents:
+    - entity: portion
       required: true
-      reference:
-        entity: Portion
-        fields: [ project_id, submitter_portion_id ]
-
+      fields: 
+        - name: project_id
+          self_field: project_id
+        - name: submitter_portion_id
+          self_field: submitter_portion_id
