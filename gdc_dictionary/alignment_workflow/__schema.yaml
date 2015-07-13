@@ -2,8 +2,8 @@ schema:
   name: alignment_workflow
   namespace: gdc='http://gdc.nci.nih.gov'
   category: workflow
-  title: Workflow to perform uniformly sequence alignment
-  description: 
+  title: Alignment workflow
+  description: Workflow to perform uniformly sequence alignment
   version: 1
   created_date: 2015-06-16T07:37:39Z
   updated_date: 2015-07-12T21:04:01Z
@@ -13,49 +13,26 @@ schema:
   projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
   input_data_bundles:  # to be fleshed out more
     -
-      bundle_type: UnalignedSeq
+      bundle_type: unaligned_seq
       bundle_id: 
   output_data_bundles:  # to be fleshed out more
     -
-      bundle_type: AlignedSeq
+      bundle_type: aligned_seq
       bundle_id: 
   system_fields:
-    -
-      name: id
-      type: uuid
-      description:
-      constraints:
-        required: true
-        unique: true
-    -
-      name: version
-      type: integer
-      description:
-      constraints:
-        required: true
-        unique: true
-    -
-      name: state
+    - name: id
+    - name: version
+    - name: is_latest
+    - name: state  # local override system-wide 'state' field definition
       type: string
       description:
       constraints:
         required: true
         unique: false
-        allowed: [ registered, live ]
-    -
-      name: date_created
-      type: datetime
-      description:
-      constraints:
-        required: true
-        unique: false
-    -
-      name: date_updated
-      type: datetime
-      description:
-      constraints:
-        required: true
-        unique: false
+        allowed: [ registered, uploading, validating, error, suppressed, live ]
+    - name: created_date
+    - name: published_date
+    - name: updated_date
   fields:
     -
       name: ref_genome_id

@@ -17,28 +17,19 @@ schema:
       minOccurrence: 1
       maxOccurrence: 1
   system_fields:
-    -
-      name: id
-      type: uuid
-      description:
-      constraints:
-        required: true
-        unique: true
-    -
-      name: version
-      type: integer
-      description:
-      constraints:
-        required: true
-        unique: true
-    -
-      name: state
+    - name: id
+    - name: version
+    - name: is_latest
+    - name: state  # local override system-wide 'state' field definition
       type: string
       description:
       constraints:
         required: true
         unique: false
-        allowed: [ registered, uploading, validating, error, live ]
+        allowed: [ registered, uploading, validating, error, suppressed, live ]
+    - name: created_date
+    - name: published_date
+    - name: updated_date
   fields:
     -
       name: submitter_aliquot_id

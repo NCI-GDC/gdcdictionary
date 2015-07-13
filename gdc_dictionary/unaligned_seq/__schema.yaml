@@ -1,9 +1,9 @@
 schema:
-  name: UnalignedSeq
+  name: unaligned_seq
   namespace: gdc='http://gdc.nci.nih.gov'
   category: data_bundle
-  title: Unaligned sequencing reads
-  description: 
+  title: Unaligned
+  description: Unaligned sequencing reads
   version: 1
   created_date: 2015-06-16T07:37:39Z
   updated_date: 2015-07-12T21:04:01Z
@@ -16,28 +16,19 @@ schema:
       type: FASTQ
       minOccurrence: 1
   system_fields:
-    -
-      name: id
-      type: uuid
-      description:
-      constraints:
-        required: true
-        unique: true
-    -
-      name: version
-      type: integer
-      description:
-      constraints:
-        required: true
-        unique: true
-    -
-      name: state
+    - name: id
+    - name: version
+    - name: is_latest
+    - name: state  # local override system-wide 'state' field definition
       type: string
       description:
       constraints:
         required: true
         unique: false
-        allowed: [ registered, uploading, validating, live ]
+        allowed: [ registered, uploading, validating, error, suppressed, live ]
+    - name: created_date
+    - name: published_date
+    - name: updated_date
   fields:
     -
       name: submitter_aliquot_id

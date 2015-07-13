@@ -13,28 +13,19 @@ schema:
   file_extension: fa
   projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
   system_fields:
-    -
-      name: id  # UUID for FA data object
-      type: uuid
-      description:
-      constraints:
-        required: true
-        unique: true
-    -
-      name: version
-      type: integer
-      description:
-      constraints:
-        required: true
-        unique: true
-    -
-      name: state
+    - name: id
+    - name: version
+    - name: is_latest
+    - name: state  # local override system-wide 'state' field definition
       type: string
       description:
       constraints:
         required: true
         unique: false
         allowed: [ registered, uploading, validating, error, suppressed, live ]
+    - name: created_date
+    - name: published_date
+    - name: updated_date
   fields:
     -
       name: file_name

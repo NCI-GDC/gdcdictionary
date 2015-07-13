@@ -17,41 +17,19 @@ schema:
       minOccurrence: 23
       maxOccurrence: null
   system_fields:
-    -
-      name: id
-      type: uuid
-      constraints:
-        required: true
-        unique: true
-    -
-      name: version
-      type: integer
-      description:
-      constraints:
-        required: true
-        unique: false
-    -
-      name: state
+    - name: id
+    - name: version
+    - name: is_latest
+    - name: state  # local override system-wide 'state' field definition
       type: string
       description:
       constraints:
         required: true
         unique: false
-        allowed: [ registered, live ]
-    -
-      name: date_created
-      type: datetime
-      description:
-      constraints:
-        required: true
-        unique: false
-    -
-      name: date_updated
-      type: datetime
-      description:
-      constraints:
-        required: true
-        unique: false
+        allowed: [ registered, uploading, validating, error, suppressed, live ]
+    - name: created_date
+    - name: published_date
+    - name: updated_date
   fields:
     -
       name: ref_geome_id

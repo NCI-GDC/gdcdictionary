@@ -2,6 +2,7 @@ schema:
   name: fastq
   namespace: gdc='http://gdc.nci.nih.gov'
   category: data_file
+  data_type: Unaligned reads  # this is needed when entity category is data_file. This should be a CV term
   title: Aligned sequencing reads
   description: 
   version: 1
@@ -13,28 +14,19 @@ schema:
   file_extension: fastq
   projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
   system_fields:
-    -
-      name: id  # UUID for BAM data object
-      type: uuid
-      description:
-      constraints:
-        required: true
-        unique: true
-    -
-      name: version
-      type: integer
-      description:
-      constraints:
-        required: true
-        unique: true
-    -
-      name: state
+    - name: id
+    - name: version
+    - name: is_latest
+    - name: state  # local override system-wide 'state' field definition
       type: string
       description:
       constraints:
         required: true
         unique: false
         allowed: [ registered, uploading, validating, error, suppressed, live ]
+    - name: created_date
+    - name: published_date
+    - name: updated_date
   fields:
     -
       name: file_name

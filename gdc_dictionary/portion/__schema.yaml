@@ -1,9 +1,9 @@
 schema:
-  name: Portion
+  name: portion
   namespace: gdc='http://gdc.nci.nih.gov'
   category: biospecimen
-  title: Portion of the tissue obtained from case
-  description: 
+  title: Portion
+  description: Portion of the tissue obtained from case
   version: 1
   created_date: 2015-06-16T07:37:39Z
   updated_date: 2015-07-12T21:04:01Z
@@ -19,22 +19,14 @@ schema:
       minOccurrence: 0
       maxOccurrence: 
   system_fields:
-    -
-      name: id
-      type: uuid
-      description:
-      constraints:
-        required: true
-        unique: true
-    -
-      name: version
-      type: integer
-      description:
-      constraints:
-        required: true
-        unique: true
-    -
-      name: portion_id  # short, user-friendly IDs
+    - name: id
+    - name: version
+    - name: is_latest
+    - name: state
+    - name: created_date
+    - name: published_date
+    - name: updated_date
+    - name: portion_id  # short, user-friendly IDs
       type: string
       bind_to: [ project_id, submitter_portion_id ]  # based on values of project_id and submitter_portion_id
       description:
@@ -42,28 +34,6 @@ schema:
         required: true
         unique: true
         pattern: PO[:seq]+
-    -
-      name: state
-      type: string
-      description:
-      constraints:
-        required: true
-        unique: false
-        allowed: [ registered, live ]
-    -
-      name: date_created
-      type: datetime
-      description:
-      constraints:
-        required: true
-        unique: false
-    -
-      name: date_updated
-      type: datetime
-      description:
-      constraints:
-        required: true
-        unique: false
   fields:
     -
       name: submitter_portion_id

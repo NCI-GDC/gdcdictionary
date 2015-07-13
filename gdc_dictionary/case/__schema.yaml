@@ -2,7 +2,7 @@ schema:
   name: case
   namespace: gdc='http://gdc.nci.nih.gov'
   category: clinical
-  title: Participants contributed to cancer research project.
+  title: Case  # use title for nice display label
   description: This is to capture demographic data for the case.
   version: 1
   created_date: 2015-06-16T07:37:39Z
@@ -18,7 +18,7 @@ schema:
   projects: [ _all ]
   files:
     -
-      type: Histology report  # this is the data type
+      type: Histology report  # this is the data type (or data subtype, type can be inferred)
       minOccurrence: 0
       maxOccurrence: 1
   system_fields:
@@ -57,7 +57,7 @@ schema:
     -
       name: gender
       type: string
-      display_label: Gender
+      title: Gender  # use title for nice display label
       description: "Identification of gender is based upon self-report and may come from a form, questionnaire, interview, etc"
       cde_id: 2200604
       search: facet_terms
@@ -71,7 +71,7 @@ schema:
     -
       name: race
       type: string
-      display_label: Race
+      title: Race
       description: "Patient's race using the defined categories"
       cde_id: 21922199
       search: facet_terms
@@ -88,7 +88,7 @@ schema:
     -
       name: ethnicity
       type: string
-      display_label: Ethnicity
+      title: Ethnicity
       description: "Patient's ethnicity using the defined categories"
       cde_id: 2200604
       search: null
