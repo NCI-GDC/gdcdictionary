@@ -1,12 +1,14 @@
 schema:
-  name: AlignedSeq
+  name: aligned_seq
   namespace: gdc='http://gdc.nci.nih.gov'
   category: data_bundle  # data_bundle is the entity type that holds metadata for the containing data_files
   title: Aligned sequencing reads
   description: 
-  version: 
-  created:
-  updated:
+  version: 1
+  created_date: 2015-06-16T07:37:39Z
+  updated_date: 2015-07-12T21:04:01Z
+  published_date: null
+  is_published: false
   validator: AlignedSeq
   projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
   files: 

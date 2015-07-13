@@ -4,9 +4,11 @@ schema:
   category: biospecimen
   title: Analyte extracted from portion
   description: 
-  version: 
-  created:
-  updated:
+  version: 1
+  created_date: 2015-06-16T07:37:39Z
+  updated_date: 2015-07-12T21:04:01Z
+  published_date: null
+  is_published: false
   required: true
   data_format: [TSV, JSON, XML]
   validator: standard

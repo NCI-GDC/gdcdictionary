@@ -4,10 +4,11 @@ schema:
   category: data_file
   title: 
   description: 
-  version: 
-  created:
-  updated:
-  validator: SSM_SNV
+  version: 1
+  created_date: 2015-06-16T07:37:39Z
+  updated_date: 2015-07-12T21:04:01Z
+  published_date: null
+  is_published: false
   file_extension: vcf
   projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
   system_fields:

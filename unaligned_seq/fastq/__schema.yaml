@@ -1,18 +1,20 @@
 schema:
-  name: RefGenomeChr
+  name: fastq
   namespace: gdc='http://gdc.nci.nih.gov'
   category: data_file
-  title: Chromosome sequence in the reference genome
+  title: Aligned sequencing reads
   description: 
-  version: 
-  created:
-  updated:
-  validator: FASTA
-  file_extension: fa
+  version: 1
+  created_date: 2015-06-16T07:37:39Z
+  updated_date: 2015-07-12T21:04:01Z
+  published_date: null
+  is_published: false
+  validator: FASTQ
+  file_extension: fastq
   projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
   system_fields:
     -
-      name: id  # UUID for FA data object
+      name: id  # UUID for BAM data object
       type: uuid
       description:
       constraints:
@@ -49,35 +51,42 @@ schema:
         required: true
         unique: false
     -
-      name: fai
-      type: uuid
-      description:
-      constraints:
-        required: false
-        unique: false
-    -
-      name: fai_md5sum
-      type: string
-      description:
-      constraints:
-        required: false
-        unique: false
-    -
-      name: chromsome_name
+      name: project_id
       type: string
       description:
       constraints:
         required: true
         unique: false
     -
-      name: chromsome_length
+      name: submitter_aliquot_id
       type: string
       description:
       constraints:
         required: true
         unique: false
     -
-      name: ref_genome_id
+      name: insert_size
+      type: integer
+      description:
+      constraints:
+        required: false
+        unique: false
+    -
+      name: read_count
+      type: integer
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: read_group_id
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: unaligned_seq_id  # UUID of the bundle
       type: string
       description:
       constraints:
@@ -86,9 +95,14 @@ schema:
   primaryKey: id
   parentKeys:
     -
-      fields: ref_genome_id
+      fields: [project_id, submitter_aliquot_id]  # file is directly linked to Aliquot
       required: true
       reference:
-        entity: RefGenome
+        entity: Aliquot
+        fields: [project_id, submitter_aliquot_id]
+    -
+      fields: unaligned_seq_id  # file is also linked to UnalignedSeq bundle
+      required: true
+      reference:
+        entity: UnalignedSeq
         fields: id
-

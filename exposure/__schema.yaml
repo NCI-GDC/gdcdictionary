@@ -4,9 +4,11 @@ schema:
   category: clinical
   title: Exposue
   description: 
-  version: 
-  created:
-  updated:
+  version: 1
+  created_date: 2015-06-16T07:37:39Z
+  updated_date: 2015-07-12T21:04:01Z
+  published_date: 2015-07-12T21:04:01Z
+  is_published: true
   required: false
   data_format:
     - TSV

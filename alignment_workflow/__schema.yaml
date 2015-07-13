@@ -4,11 +4,12 @@ schema:
   category: workflow
   title: Workflow to perform uniformly sequence alignment
   description: 
-  version: 
-  created:
-  updated:
-  data_format:
-  validator: 
+  version: 1
+  created_date: 2015-06-16T07:37:39Z
+  updated_date: 2015-07-12T21:04:01Z
+  published_date: null
+  is_published: false
+  validator: null
   projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
   input_data_bundles:  # to be fleshed out more
     -
