@@ -1,4 +1,4 @@
-system_field:  # single place where all system fields are defined so that they don't need to be defined in different entities
+fields:  # single place where all system fields are defined so that they don't need to be defined in different entities
   id:
     type: uuid
     constraints:
