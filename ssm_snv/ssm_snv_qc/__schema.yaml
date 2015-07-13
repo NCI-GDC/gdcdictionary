@@ -1,5 +1,5 @@
 schema:
-  name: SSM_SNV  # this is the data_type entity for AlignedBAM
+  name: ssm_snv_qc  # this is the data_type entity for ssm_snv
   namespace: gdc='http://gdc.nci.nih.gov'
   category: data_file
   title: 
