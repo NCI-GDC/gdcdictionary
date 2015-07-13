@@ -50,6 +50,8 @@ schema:
         required: true
         unique: false  # within project is unique
     - name: project.project_id  # reuse the project_id definition originally defined in 'project' entity
+      constraints:
+        unique: false  # local overriding for uniqueness
   primary_key: id
   unique_keys:
     - [ project_id, submitter_portion_id ]

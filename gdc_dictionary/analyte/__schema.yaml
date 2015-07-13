@@ -39,6 +39,8 @@ schema:
         required: true
         unique: false  # within project is unique
     - name: project.project_id  # reuse the project_id definition originally defined in 'project' entity
+      constraints:
+        unique: false  # local overriding for uniqueness
     -
       name: submitter_portion_id
       type: string
@@ -46,7 +48,6 @@ schema:
       constraints:
         required: true
         unique: false
-    - name: project.project_id  # reuse the project_id definition originally defined in 'project' entity
     -
       name: analyte_type
       type: string

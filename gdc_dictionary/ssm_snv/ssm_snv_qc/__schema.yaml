@@ -26,6 +26,9 @@ schema:
     - name: published_date
     - name: updated_date
   fields:
+    - name: project.project_id  # reuse the project_id definition originally defined in 'project' entity
+      constraints:
+        unique: false  # local overriding for uniqueness
     -
       name: file_name
       type: string

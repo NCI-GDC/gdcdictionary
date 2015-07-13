@@ -46,6 +46,8 @@ schema:
       constraints:
         required: true
     - name: project.project_id  # reuse the project_id definition originally defined in 'project' entity
+      constraints:
+        unique: false  # local overriding for uniqueness
     -
       name: diagnosis  # to be discussed further in clinical submission group
       type: string

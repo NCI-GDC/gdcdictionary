@@ -41,7 +41,9 @@ schema:
       constraints:
         required: true
         unique: true
-    - name: project.project_id
+    - name: project.project_id  # reuse the project_id definition originally defined in 'project' entity
+      constraints:
+        unique: false  # local overriding for uniqueness
     -
       name: submitter_case_id
       type: string

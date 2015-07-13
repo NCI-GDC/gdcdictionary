@@ -46,6 +46,8 @@ schema:
         required: false
         unique: false
     - name: project.project_id  # reuse the project_id definition originally defined in 'project' entity
+      constraints:
+        unique: false  # local overriding for uniqueness
     -
       name: sample_type
       type: string
