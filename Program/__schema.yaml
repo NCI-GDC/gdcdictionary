@@ -1,6 +1,6 @@
 schema:
   name: Program
-  namespace: gdc.nci.nih.gov
+  namespace: gdc='http://gdc.nci.nih.gov'
   category: administrative
   title: Cancer genome research program
   description: 

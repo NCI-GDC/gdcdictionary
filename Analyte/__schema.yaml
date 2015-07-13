@@ -1,6 +1,6 @@
 schema:
   name: Analyte
-  namespace: gdc.nci.nih.gov
+  namespace: gdc='http://gdc.nci.nih.gov'
   category: biospecimen
   title: Analyte extracted from portion
   description: 

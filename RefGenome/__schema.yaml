@@ -1,6 +1,6 @@
 schema:
   name: RefGenome
-  namespace: gdc.nci.nih.gov
+  namespace: gdc='http://gdc.nci.nih.gov'
   category: data_bundle
   title: Reference genome
   description: 
@@ -12,6 +12,8 @@ schema:
   files:
     -
       type: RefGenomeChr
+      minOccurrence: 23
+      maxOccurrence: null
   system_fields:
     -
       name: id

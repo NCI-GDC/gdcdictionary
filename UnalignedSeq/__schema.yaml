@@ -1,6 +1,6 @@
 schema:
   name: UnalignedSeq
-  namespace: gdc.nci.nih.gov
+  namespace: gdc='http://gdc.nci.nih.gov'
   category: data_bundle
   title: Unaligned sequencing reads
   description: 

@@ -1,6 +1,6 @@
 schema:
   name: exposue
-  namespace: gdc.nci.nih.gov
+  namespace: gdc='http://gdc.nci.nih.gov'
   category: clinical
   title: Exposue
   description: 

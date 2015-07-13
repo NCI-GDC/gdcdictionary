@@ -1,6 +1,6 @@
 schema:
   name: Project
-  namespace: gdc.nci.nih.gov
+  namespace: gdc='http://gdc.nci.nih.gov'
   category: administrative
   title: Cancer research project
   description: 

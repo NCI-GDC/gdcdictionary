@@ -1,6 +1,6 @@
 schema:
   name: alignment_workflow
-  namespace: gdc.nci.nih.gov
+  namespace: gdc='http://gdc.nci.nih.gov'
   category: workflow
   title: Workflow to perform uniformly sequence alignment
   description: 
@@ -10,6 +10,10 @@ schema:
   data_format:
   validator: 
   projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
+  input_data_bundles:  # to be fleshed out more
+    -
+      bundle_type: UnalignedSeq
+      bundle_id: 
   output_data_bundles:  # to be fleshed out more
     -
       bundle_type: AlignedSeq

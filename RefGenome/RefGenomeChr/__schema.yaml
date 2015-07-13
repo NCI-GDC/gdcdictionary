@@ -1,6 +1,6 @@
 schema:
   name: RefGenomeChr
-  namespace: gdc.nci.nih.gov
+  namespace: gdc='http://gdc.nci.nih.gov'
   category: data_file
   title: Chromosome sequence in the reference genome
   description: 
@@ -12,7 +12,7 @@ schema:
   projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
   system_fields:
     -
-      name: id  # UUID for BAM data object
+      name: id  # UUID for FA data object
       type: uuid
       description:
       constraints:

@@ -1,6 +1,6 @@
 schema:
   name: Sample
-  namespace: gdc.nci.nih.gov
+  namespace: gdc='http://gdc.nci.nih.gov'
   category: biospecimen
   title: Sample (tissue) obtained from case
   description: 

@@ -1,6 +1,6 @@
 schema:
-  name: ssm_indel
-  namespace: gdc.nci.nih.gov
+  name: ssm_snv
+  namespace: gdc='http://gdc.nci.nih.gov'
   category: data_bundle
   title: "Simple Somatic Mutations, Small InDels"
   description: 

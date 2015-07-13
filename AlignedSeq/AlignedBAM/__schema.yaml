@@ -1,6 +1,6 @@
 schema:
   name: AlignedBAM  # this is the data_type entity for AlignedBAM
-  namespace: gdc.nci.nih.gov
+  namespace: gdc='http://gdc.nci.nih.gov'
   category: data_file
   title: Aligned sequencing reads
   description: 

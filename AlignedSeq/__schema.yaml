@@ -1,7 +1,7 @@
 schema:
   name: AlignedSeq
-  namespace: gdc.nci.nih.gov
-  category: data_bundle  # data_bundle is the entity type that holds metadata for data_files
+  namespace: gdc='http://gdc.nci.nih.gov'
+  category: data_bundle  # data_bundle is the entity type that holds metadata for the containing data_files
   title: Aligned sequencing reads
   description: 
   version: 

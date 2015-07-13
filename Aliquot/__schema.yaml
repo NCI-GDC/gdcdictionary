@@ -1,6 +1,6 @@
 schema:
   name: Aliquot
-  namespace: gdc.nci.nih.gov
+  namespace: gdc='http://gdc.nci.nih.gov'
   category: biospecimen
   title: Aliquot used to perform experiements
   description: 

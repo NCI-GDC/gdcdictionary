@@ -1,6 +1,6 @@
 schema:
-  name: Slide  # to be fleshed out more
-  namespace: gdc.nci.nih.gov
+  name: Slide
+  namespace: gdc='http://gdc.nci.nih.gov'
   category: biospecimen
   title: Slide image
   description: 
@@ -27,6 +27,15 @@ schema:
         required: true
         unique: true
     -
+      name: slide_id  # short, user-friendly IDs
+      type: string
+      bind_to: [ project_id, submitter_slide_id ]  # based on values of project_id and submitter_portion_id
+      description:
+      constraints:
+        required: true
+        unique: true
+        pattern: SI[:seq]+
+    -
       name: state
       type: string
       description:
@@ -50,44 +59,55 @@ schema:
         unique: false
   fields:
     -
-      name: id
+      name: submitter_slide_id
       type: uuid
-      constraints:
-        required: true
-        unique: true
-    -
-      name: sample_code
-      type: string
-      constraints:
-        required: true
-        unique: true
-        pattern: SM\d+
-        maxLength: 20
-    -
-      name: submitter_sample_id
-      type: string
-      description:
       constraints:
         required: true
         unique: false  # within project is unique
     -
-      name: case_code
+      name: submitter_portion_id
       type: string
+      description:
       constraints:
         required: true
+        unique: false
     -
-      name: sample_type
-      type: string
+      name: percent_tumor_nuclei
+      type: integer
       constraints:
         required: true
+        min: 0
+        max: 100
+    -
+      name: percent_tumor_cells
+      type: integer
+      constraints:
+        required: true
+        min: 0
+        max: 100
+    -
+      name: percent_normal_cells
+      type: integer
+      constraints:
+        required: true
+        min: 0
+        max: 100
+    -
+      name: section_location
+      type: string
+      constraints:
+        required: false
         maxLength: 20
-
-  primaryKey: __id
+        allowed:
+          - top
+          - buttom
+  primaryKey: id
+  uniqueKeys:
+    - [ project_id, submitter_slide_id ]
   parentKeys:
     -
-      fields: case_code
+      fields: [ project_id, submitter_portion_id ]
       required: true
       reference:
-        entity: case
-        fields: case_code
-
+        entity: Portion
+        fields: [ project_id, submitter_portion_id ]

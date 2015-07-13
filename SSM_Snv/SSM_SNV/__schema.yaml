@@ -1,6 +1,6 @@
 schema:
   name: SSM_SNV  # this is the data_type entity for AlignedBAM
-  namespace: gdc.nci.nih.gov
+  namespace: gdc='http://gdc.nci.nih.gov'
   category: data_file
   title: 
   description: 

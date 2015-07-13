@@ -1,6 +1,6 @@
 schema: # this is the dictionary itself
   name: gdc_dictionary
-  namespace: gdc.nci.nih.gov
+  namespace: gdc='http://gdc.nci.nih.gov'
   category: dictionary
   title: GDC Data Dictionary
   description: 

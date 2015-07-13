@@ -1,6 +1,6 @@
 schema:
   name: Case
-  namespace: gdc.nci.nih.gov
+  namespace: gdc='http://gdc.nci.nih.gov'
   category: clinical
   title: Participants contributed to cancer research project.
   description: This is to capture demographic data for the case.
