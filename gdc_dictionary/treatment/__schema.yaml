@@ -36,12 +36,61 @@ schema:
       constraints:
         unique: false  # local overriding for uniqueness
     -
-      name: alcohol_consumption
-      type: integer
+      name: treatment_on_clinical_trial
+      title: Treatment on Clinical Trial
+      description: >
+        Text term to signify determination that an action or administration of therapeutic agents to produce an effect is part of a research study performed in human subjects and intended to discover, and/or evaluate, and/or verify safety, effectiveness, clinical and pharmacological effects, and adverse reactions.
+      type: string
       constraints:
-        required: true
+        required: false
         unique: false
-  primary_key: id
+        allowed: [no, yes, unknown]
+    -
+      name: treatment_type
+      title: Treatment type
+      description: >
+        The type of treatment for cancer given as initial treatment for the particular study participant. (Multiple selection allowed)
+      type: string
+      list: true
+      constraints:
+        required: false
+        unique: false
+        allowed:
+          - Not applicable
+          - Cancer-directed surgery
+          - Radiation therapy
+          - Systemic therapy procedure
+          - Chemotherapy
+          - Hormone therapy
+          - Immunotherapy
+          - Unknown
+    -
+      name: treatment_regimen_intent_type
+      title: Treatment Regimen Intent
+      description:
+      constraints:
+        required: false
+        unique: false
+        allowed: 
+          - Not applicable
+          - Prevention
+          - Cancer control
+          - Cure
+          - Palliative
+          - Recurrence
+          - Progression
+          - Adjuvant
+          - "Other, specify in notes"
+          - Primary
+          - Progression after initial
+          - Initial
+    -
+      name: disease_site   # is this primary tumor site?
+      title: Disease site
+      description:
+      constraints:
+        required: false
+        unique: false
   parents:
     - entity: case
       required: true

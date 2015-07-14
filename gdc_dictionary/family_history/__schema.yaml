@@ -32,10 +32,38 @@ schema:
     - name: project.project_id  # reuse the project_id definition originally defined in 'project' entity
       constraints:
         unique: false  # local overriding for uniqueness
-    - name: alcohol_consumption
-      type: integer
+    - name: has_relative_with_cancer_history
+      description: "Have any of your blood relatives ever been diagnosed with cancer?"
+      type: string
       constraints:
-        required: true
+        required: false
+        unique: false
+        allowed: [ yes, no, unknown ]
+    - name: relationship_type
+      description: "Describes the blood relative's relationship to the patient: parent, sibling, offspring, grand parent?"
+      type: string
+      constraints:
+        required: false
+        unique: false
+        allowed: [ parent, sibling, offspring, grandparent ]
+    - name: relationship_gender
+      description: "Provide the patient's relationship gender using the defined categories."
+      type: string
+      constraints:
+        required: false
+        unique: false
+        allowed: [ female, male, unknown ]
+    - name: relationship_age
+      description: "Provide the patient's relationship age."
+      type: number
+      constraints:
+        required: false
+        unique: false
+    - name: relationship_disease  # idc-10 code?
+      description: "Provide the patient's relationship patient."
+      type: number
+      constraints:
+        required: false
         unique: false
   primary_key: id
   parents:
