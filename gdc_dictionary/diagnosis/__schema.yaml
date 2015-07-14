@@ -63,25 +63,106 @@ schema:
         validator: icd-10  # customized validator, can be a python function? 
     -
       name: age_at_diagnosis
-      type: string
-      unit: year  # need controlled list of supported units
+      type: number
+      unit: year
       constraints:
         required: true
         unique: false
         projects: [ _all ]
     -
-      name: prior_malingnancy
+      name: year_at_diagnosis  # in which calendar year patient diagnosed with cancer
+      type: integer
+      constraints:
+        required: true
+        unique: false
+        min: 1900
+    -
+      name: primary_site
       type: string
+      title: Primary site
+      description: IDC-O-3 site
+      search: terms_facet
       constraints:
         required: false
         unique: false
-        projects:
-          -
-            BRCA: # this is a way to overwrite system default setting
-              required: true
-              name: prior_disease
-          - OV:
-              required: true
+        allowed: [ ]  # how do we specify large list of allowed values (externalizing it?)
+    -
+      name: prior_malingnancy
+      title: Prior malignancy
+      description: History of prior malignancy (boolean)
+      type: string
+      search: terms_facet
+      constraints:
+        required: false
+        unique: false
+        allowed:
+          - yes
+          - no
+          - unknown
+    -
+      name: tumor_stage
+      title: Tumor stage
+      description: "Using the patient's pathology/laboratory report, select the stage defined such as by the American Joint Committee on Cancer (AJCC)."
+      type: string
+      search: phrase_match
+      cde_id: 3203222
+      constraints:
+        required: false  # not required by default
+        projects:  # required for these projects
+          TCGA-BLCA:
+            required: true
+          TCGA-BRCA:
+            required: true
+          TCGA-CESC:
+            required: true
+          TCGA-COAD:
+            required: true
+          TCGA-ESCA:
+            required: true
+          TCGA-HNSC:
+            required: true
+    -
+      name: tumor_grading_system  # we have tumor grading system used, how about tumor grade itself?
+      title: Tumor grading system
+      description: Cancer type-specific grading systems used
+      type: string
+      constraints:
+        required: false  # not required by default
+        allowed:
+          - Gleason scoring system
+          - Nottingham grading system
+          - Glioblastoma pathology nuclear grade
+    -
+      name: tumor_grade  # don't we need this?
+      title: Tumor grade
+      description: "Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation and aggressiveness."
+      type: string
+      constraints:
+        required: false
+        allowed: [ GX, G1, G2, G3, G4 ]
+    -
+      name: vital_status  # do we need this?
+      title: Vital status
+      description: Indicate whether the patient was living or deceased at the date of last contact
+      type: string
+      constraints:
+        required: true
+        allowed: [ alive, deceased ]
+    -
+      name: over_survival_duration
+      title: Over survival duration
+      description: >
+        The length of time from either the date of diagnosis or the start of treatment for a disease, such as cancer, that patients diagnosed with the disease are still alive (regardless of disease status) 
+      type: integer
+      unit: day
+      constraints:
+        required: false
+        min: 1
+        validator: |  # python function for validation
+          def _validate_over_survival_duration (field, value, entity, error):
+            if entity.get('vital_status') == 'deceased':
+              if not value:
+                error(field, "Survival duration must be populated when patient is deceased")
   primary_key: id
   unique_keys:
     - [ diagnosis_id ]

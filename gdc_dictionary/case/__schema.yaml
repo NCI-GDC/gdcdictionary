@@ -55,7 +55,7 @@ schema:
       title: Gender  # use title for nice display label
       description: "Identification of gender is based upon self-report and may come from a form, questionnaire, interview, etc"
       cde_id: 2200604
-      search: facet_terms
+      search: terms_facet
       constraints:
         required: true
         allowed:
