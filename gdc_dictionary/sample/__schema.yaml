@@ -14,7 +14,6 @@ schema:
   validator: standard
   projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
   system_fields:
-  system_fields:
     - name: id
     - name: version
     - name: is_latest
