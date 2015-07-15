@@ -53,7 +53,7 @@ schema:
       constraints:
         unique: false  # local overriding for uniqueness
   primary_key: id
-  parents:
+  parents:  # this file type does not need metadata, so no data bundle is needed
     - entity: case # file is directly linked to case
       required: true
       fields:
