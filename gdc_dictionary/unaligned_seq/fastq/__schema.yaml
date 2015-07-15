@@ -84,6 +84,7 @@ schema:
   parents:
     - entity: aliquot # file is directly linked to aliquot
       required: true
+      cardinality: 1:1 
       fields:
         - name: project_id
           self_field: project_id
@@ -91,6 +92,7 @@ schema:
           self_field: submitter_aliquot_id
     - entity: unaligned_seq # file is also linked to unaligned_seq bundle
       required: true
+      cardinality: 1:1+
       fields:
         - name: id  # gobally unique parent bundle UUID
           self_field: unaligned_seq_id

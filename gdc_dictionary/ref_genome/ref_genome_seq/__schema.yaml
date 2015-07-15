@@ -11,6 +11,7 @@ schema:
   is_published: false
   validator: FASTA
   file_extension: fa
+  required: true  # it should be required when the parent exist, how do we express this?
   projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
   system_fields:
     - name: id
@@ -80,6 +81,7 @@ schema:
   parents:
     - entity: ref_genome
       required: true
+      cardinality: 1:23+
       fields:
         - name: id
           self_field: ref_genome_id

@@ -70,6 +70,7 @@ schema:
   parents:
     - entity: ssm_snv  # bundle
       required: true
+      cardinality: 1:1
       fields:
         - name: id
           self_field: ssm_snv_id

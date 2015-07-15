@@ -9,13 +9,8 @@ schema:
   updated_date: 2015-07-12T21:04:01Z
   published_date: null
   is_published: false
-  validator: AlignedSeq
+  validator: aligned_seq
   projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
-  files: 
-    -
-      type: AlignedBAM
-      minOccurrence: 1
-      maxOccurrence: 1
   system_fields:
     - name: id
     - name: version
@@ -80,7 +75,7 @@ schema:
           self_field: ref_genome_id
     - entity: fastq  # input FASTQ files
       required: true
-      cardinality: n:1  # multiple input FASTQ files produced one data_bundle
+      cardinality: 1+:1  # multiple input FASTQ files produced one data_bundle
       fields: 
         - name: id
           self_field: unaligned_seq_id
