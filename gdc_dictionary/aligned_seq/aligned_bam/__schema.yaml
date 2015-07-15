@@ -81,7 +81,7 @@ schema:
           self_field: aligned_seq_id
     - entity: fastq  # input FASTQ files
       required: true
-      cardinality: n:1  # multiple input FASTQ files produced one data_bundle
+      cardinality: 1+:1  # multiple input FASTQ files produced one data_bundle
       fields: 
         - name: id
           self_field: unaligned_seq_id

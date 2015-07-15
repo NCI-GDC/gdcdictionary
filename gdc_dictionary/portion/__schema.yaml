@@ -13,11 +13,6 @@ schema:
   data_format: [TSV, JSON, XML]
   validator: standard
   projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
-  files:
-    -
-      type: Slide image
-      minOccurrence: 0
-      maxOccurrence: 
   system_fields:
     - name: id
     - name: version

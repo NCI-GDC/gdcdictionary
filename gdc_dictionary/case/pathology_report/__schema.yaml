@@ -1,0 +1,63 @@
+schema:
+  name: pathology_report
+  namespace: gdc='http://gdc.nci.nih.gov'
+  category: data_file
+  data_type: clinical  # data type categorization
+  data_subtype: pathology_report  # data type categorization
+  title: Pathology report
+  description: 
+  version: 1
+  created_date: 2015-06-16T07:37:39Z
+  updated_date: 2015-07-12T21:04:01Z
+  published_date: 2015-07-12T21:04:01Z
+  is_published: true
+  validator: null
+  file_extension: pdf
+  required: false
+  projects:
+    TCGA-*:
+      required: true
+  system_fields:
+    - name: id
+    - name: version
+    - name: is_latest
+    - name: state  # local override system-wide 'state' field definition
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+        allowed: [ registered, uploading, validating, error, suppressed, live ]
+    - name: created_date
+    - name: published_date
+    - name: updated_date
+  fields:
+    -
+      name: file_name
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    -
+      name: md5sum
+      type: string
+      description:
+      constraints:
+        required: true
+        unique: false
+    - name: project.project_id  # reuse the project_id definition originally defined in 'project' entity
+      constraints:
+        unique: false  # local overriding for uniqueness
+    - name: case.submitter_case_id  # reuse the submitter_case_id definition originally defined in 'case' entity
+      constraints:
+        unique: false  # local overriding for uniqueness
+  primary_key: id
+  parents:  # this file type does not need metadata, so no data bundle is needed
+    - entity: case # file is directly linked to case
+      required: true
+      fields:
+        - name: project_id
+          self_field: project_id
+        - name: submitter_case_id
+          self_field: submitter_case_id

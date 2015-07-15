@@ -16,11 +16,6 @@ schema:
     - XML
   validator: standard
   projects: [ _all ]
-  files:
-    -
-      type: Histology report  # this is the data type (or data subtype, type can be inferred)
-      minOccurrence: 0
-      maxOccurrence: 1
   system_fields:
     - name: id
     - name: version

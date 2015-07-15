@@ -11,10 +11,6 @@ schema:
   is_published: false
   validator: UnalignedSeq
   projects: ["TCGA-BRCA", "TCGA-OV", "TARGET-ALL", "ABCD", "XYZ"]
-  files:
-    -
-      type: fastq
-      minOccurrence: 1
   system_fields:
     - name: id
     - name: version

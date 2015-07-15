@@ -11,11 +11,6 @@ schema:
   is_published: false
   data_format: FASTA
   projects: ["_all"]
-  files:
-    -
-      type: ref_genome_seq
-      minOccurrence: 23
-      maxOccurrence: null
   system_fields:
     - name: id
     - name: version
