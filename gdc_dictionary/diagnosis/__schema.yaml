@@ -149,8 +149,8 @@ schema:
         required: true
         allowed: [ alive, deceased ]
     -
-      name: over_survival_duration
-      title: Over survival duration
+      name: overall_survival_duration
+      title: Overall survival duration
       description: >
         The length of time from either the date of diagnosis or the start of treatment for a disease, such as cancer, that patients diagnosed with the disease are still alive (regardless of disease status) 
       type: integer
@@ -159,7 +159,7 @@ schema:
         required: false
         min: 1
         validator: |  # python function for validation
-          def _validate_over_survival_duration (field, value, entity, error):
+          def _validate_overall_survival_duration (field, value, entity, error):
             if entity.get('vital_status') == 'deceased':
               if not value:
                 error(field, "Survival duration must be populated when patient is deceased")
