@@ -16,10 +16,13 @@ entity:
     - required
     - unique_keys
     - properties
+    - $schema
 
   title: "Entity Metaschema"
   type: object
   properties:
+    $schema:
+      type: string
     type:
       type: string
     title:
