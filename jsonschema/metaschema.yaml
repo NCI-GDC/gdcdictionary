@@ -1,0 +1,68 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+entity:
+  additionalProperties: false
+  required:
+    - title
+    - type
+    - namespace
+    - category
+    - project
+    - description
+    - additionalProperties
+    - validators
+    - schemaProperties
+    - systemProperties
+    - required
+    - unique_keys
+    - properties
+
+  title: "Entity Metaschema"
+  type: object
+  properties:
+    type:
+      type: string
+    title:
+      type: string
+    namespace:
+      type: string
+    category:
+      type: string
+    project:
+      type: string
+    description:
+      type: string
+    additionalProperties:
+      type: boolean
+    validators:
+      type: array
+    schemaProperties:
+      type: object
+      properties:
+        version:
+          type: integer
+        created_date:
+          type: string
+        updated_date:
+          type: string
+        published_date:
+          type: string
+        is_published:
+          type: boolean
+
+    systemProperties:
+      type: array
+
+    required:
+      type: array
+
+    unique_keys:
+      type: array
+
+    properties:
+      type: object
+      additionalProperties: true
+      properties:
+        parents:
+          type: object
+          additionalProperties: true
