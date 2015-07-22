@@ -3,13 +3,13 @@ schema:
   namespace: gdc='http://gdc.nci.nih.gov'
   category: administrative
   title: Cancer genome research program
-  description: 
+  description:
   version: 1
-  created_date: 2015-06-16T07:37:39Z
+  created_date: 2015-06-16T07:37:39Z  # leave to git
   updated_date: 2015-07-12T21:04:01Z
   published_date: 2015-07-12T21:04:01Z
   is_published: true
-  data_format:
+  data_format:  # leave this out? it's not data model
     - TSV
     - JSON
     - XML

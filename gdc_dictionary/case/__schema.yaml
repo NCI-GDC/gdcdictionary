@@ -34,7 +34,7 @@ schema:
         pattern: CS[:seq]+
   fields:
     -
-      name: submitter_case_id
+      name: submitter_case_id  # PCSI_04314
       type: string
       description:
       search: id_match
@@ -64,7 +64,7 @@ schema:
       title: Race
       description: "Patient's race using the defined categories"
       cde_id: 21922199
-      search: facet_terms
+      search: terms_facet
       constraints:
         required: false  # false means the field is optional
         allowed:
@@ -84,11 +84,8 @@ schema:
       search: null
       constraints:
         required: false
-        allowed:
-          - female
-          - male
-          - unknown
-          - unspecified
+        allowed:  # to be added
+          - To be completed
   primary_key: id
   unique_keys:
     - [ case_id ]
