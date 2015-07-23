@@ -1,0 +1,87 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+title: Case
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+project: '*'
+description: "TODO"
+additionalProperties: false
+validators: []
+
+schemaProperties:
+  version: 1
+  created_date: "2015-06-16T07:37:39Z"
+  updated_date: "2015-07-12T21:04:01Z"
+  is_published: false
+
+systemProperties:
+  - case_id
+  - project
+  - type
+  - state
+
+required:
+  - parents
+  - gender
+  - race
+
+unique_keys:
+  - [case_id]
+  - [project_id, submitter_case_id]
+
+# Case properties
+properties:
+  submitter_case_id:
+    type: string
+  type:
+    type: string
+  state:
+    type: string
+  gender:
+    title: Gender
+    cde_id: 2200604
+    type: string
+    description: |
+      Identification of gender is based upon self-report and may come
+      from a form, questionnaire, interview, etc
+    enum:
+      - female
+      - male
+      - unknown
+      - unspecified
+  race:
+    title: Race
+    cde_id: 21922199
+    description: |
+      Patient's race using the defined categories
+    enum:
+      - American Indian or Alaska Native
+      - Asian
+      - White
+      - Black or African American
+      - Native Hawaiian or other Pacific Islander
+      - Not Evaluated
+      - Unknown
+  ethnicity:
+    title: Ethnicity
+    description: |
+      Patient's ethnicity using the defined categories
+    cde_id: 2200604
+    enum:
+      - female
+      - male
+      - unknown
+      - unspecified
+
+
+# Case parents
+  parents:
+    type: object
+    additionalProperties: false
+    required:
+      - project_id
+    properties:
+      project_id:
+        $ref: "definitions.yaml#/UUID"
+        parentType: project
