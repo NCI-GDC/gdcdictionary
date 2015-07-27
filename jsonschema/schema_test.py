@@ -80,6 +80,8 @@ if __name__ == '__main__':
     resolver = RefResolver('definitions.yaml#', definitions)
 
     schemata = {
+        "program": load_yaml_schema('program.yaml'),
+        "project": load_yaml_schema('program.yaml'),
         "case": load_yaml_schema('case.yaml'),
         "sample": load_yaml_schema('sample.yaml'),
         "portion": load_yaml_schema('portion.yaml'),
@@ -114,9 +116,15 @@ if __name__ == '__main__':
         "race": "Unknown"
     }
 
+    program1 = {
+        "type": "program",
+        "submitter_program_id": 'case_1'
+    }
+
     # These should pass
     validate_entity(case1, schemata, resolver)
     validate_entity(aliquot1, schemata, resolver, 'project1')
+    validate_entity(program1, schemata, resolver)
 
     # These should fail
     try:

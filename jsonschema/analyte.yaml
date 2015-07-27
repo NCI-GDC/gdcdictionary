@@ -1,6 +1,6 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-title: analyte
+title: Analyte
 type: object
 namespace: http://gdc.nci.nih.gov
 category: biospecimen

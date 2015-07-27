@@ -1,0 +1,64 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+title: Project
+type: object
+namespace: http://gdc.nci.nih.gov
+category: administrative
+project: '*'
+description: >
+  Any specifically defined piece of work that is undertaken or attempted
+  to meet a single requirement. (NCIt C47885)
+additionalProperties: false
+validators: []
+
+systemProperties:
+  - project_id
+  - project
+
+required:
+  - submitter_project_id
+  - project_type
+  - parents
+
+unique_keys:
+  - [project_id]
+  - [project_id, submitter_project_id]
+
+# project properties
+# code, disease_type and primary_site are in the current data model for project
+# and likely shouldn't be
+properties:
+  type:
+    type: string
+  project_id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  submitter_project_id:
+    type: string
+    description: "TODO"
+  name:
+    type: string
+    description: "TODO"
+  state:
+    type: string
+    enum:
+      - legacy
+      - active
+    description: >
+      Whether the project is accepting new submissions (active)
+      or closed (legacy).
+
+
+# project parents
+# Right now following general setup that allows having more than one parent
+# Perhaps should limit to only allow a project to belong to one program?
+  parents:
+    type: object
+    additionalProperties: false
+    required:
+      - program_ids
+    properties:
+      case_ids:
+        $ref: "definitions.yaml#/parent_uuids"
+        parentType: program
