@@ -5,7 +5,10 @@ type: object
 namespace: http://gdc.nci.nih.gov
 category: biospecimen
 project: '*'
-description: "TODO"
+description: >
+  Pertaining to a portion of the whole;
+  any one of two or more samples of something,
+  of the same volume or weight. (NCIt C25414)
 additionalProperties: false
 validators: []
 
@@ -32,14 +35,14 @@ properties:
   submitter_aliquot_id:
     type: string
     description: "TODO"
-  submitter_case_id:
+  source_center:
     type: string
     description: "TODO"
-  submitter_analyte_id:
-    type: string
+  amount:
+    type: number
     description: "TODO"
-  submitter_sample_id:
-    type: string
+  concentration:
+    type: number
     description: "TODO"
 
 # Aliquot parents
