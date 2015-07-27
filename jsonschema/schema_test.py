@@ -80,9 +80,11 @@ if __name__ == '__main__':
     resolver = RefResolver('definitions.yaml#', definitions)
 
     schemata = {
-        "aliquot": load_yaml_schema('aliquot.yaml'),
         "case": load_yaml_schema('case.yaml'),
-        "sample": load_yaml_schema('sample.yaml')
+        "sample": load_yaml_schema('sample.yaml'),
+        "portion": load_yaml_schema('portion.yaml'),
+        "analyte": load_yaml_schema('analyte.yaml'),
+        "aliquot": load_yaml_schema('aliquot.yaml')
     }
 
     # validate schemata

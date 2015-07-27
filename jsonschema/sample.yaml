@@ -22,6 +22,7 @@ systemProperties:
 
 required:
   - submitter_sample_id
+  - sample_type
   - parents
 
 unique_keys:
@@ -46,6 +47,9 @@ properties:
     description: "TODO"
   is_ffpe:
     type: boolean
+    description: "TODO"
+  initial_weight:
+    type: number
     description: "TODO"
 
 # Sample parents

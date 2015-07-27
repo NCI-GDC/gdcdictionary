@@ -1,0 +1,54 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+title: Portion
+type: object
+namespace: http://gdc.nci.nih.gov
+category: biospecimen
+project: '*'
+description: >
+  A physical sub-part of any sample.
+additionalProperties: false
+validators: []
+
+systemProperties:
+  - portion_id
+  - project
+
+required:
+  - submitter_portion_id
+  - parents
+
+unique_keys:
+  - [portion_id]
+  - [project_id, submitter_portion_id]
+
+# Portion properties
+# Currently there are many TCGA-specific fields in the DB. This is an attempt
+# to minimize the core fields.
+# Including portion itself is TCGA-specific, but since it's in the data model,
+#leaving for now.
+properties:
+  type:
+    type: string
+  portion_id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  submitter_portion_id:
+    type: string
+    description: "TODO"
+  weight:
+    type: number
+    description: "TODO"
+
+
+# Portion parents
+  parents:
+    type: object
+    additionalProperties: false
+    required:
+      - sample_ids
+    properties:
+      sample_ids:
+        $ref: "definitions.yaml#/parent_uuids"
+        parentType: sample

@@ -1,0 +1,61 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+title: analyte
+type: object
+namespace: http://gdc.nci.nih.gov
+category: biospecimen
+project: '*'
+description: >
+  A liquid bulk product produced according to specified lab protocols,
+  from a sample or analyte, intended for further analysis.
+additionalProperties: false
+validators: []
+
+systemProperties:
+  - analyte_id
+  - project
+
+required:
+  - submitter_analyte_id
+  - parents
+
+unique_keys:
+  - [analyte_id]
+  - [project_id, submitter_analyte_id]
+
+# Analyte properties
+# Currently there are many TCGA-specific fields in the DB. This is an attempt
+# to minimize the core fields.
+properties:
+  type:
+    type: string
+  analyte_id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  submitter_analyte_id:
+    type: string
+    description: "TODO"
+  analyte_type:
+    type: string
+    description: "TODO"
+  amount:
+    type: number
+    description: "TODO"
+  concentration:
+    type: number
+    description: "TODO"
+  normal_tumor_genotype_match:
+    type: boolean
+    description: "TODO"
+
+# analyte parents
+  parents:
+    type: object
+    additionalProperties: false
+    required:
+      - portion_ids
+    properties:
+      sample_ids:
+        $ref: "definitions.yaml#/parent_uuids"
+        parentType: portion
