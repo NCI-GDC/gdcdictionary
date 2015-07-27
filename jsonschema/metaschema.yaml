@@ -11,7 +11,6 @@ entity:
     - description
     - additionalProperties
     - validators
-    - schemaProperties
     - systemProperties
     - required
     - unique_keys
@@ -31,6 +30,10 @@ entity:
       type: string
     category:
       type: string
+      enum:
+        - administrative
+        - biospecimen
+        - clinical
     project:
       type: string
     description:
@@ -39,19 +42,6 @@ entity:
       type: boolean
     validators:
       type: array
-    schemaProperties:
-      type: object
-      properties:
-        version:
-          type: integer
-        created_date:
-          type: string
-        updated_date:
-          type: string
-        published_date:
-          type: string
-        is_published:
-          type: boolean
 
     systemProperties:
       type: array
