@@ -29,7 +29,9 @@ properties:
     systemAlias: node_id
     description: "TODO"
   submitter_program_id:
-    type: string
+    type:
+      - string
+      - "null"
     description: "TODO"
   name:
     type: string

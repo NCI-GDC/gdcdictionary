@@ -33,7 +33,9 @@ properties:
     systemAlias: node_id
     description: "TODO"
   submitter_aliquot_id:
-    type: string
+    type:
+      - string
+      - "null"
     description: "TODO"
   source_center:
     type: string

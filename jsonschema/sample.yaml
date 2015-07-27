@@ -40,7 +40,9 @@ properties:
     systemAlias: node_id
     description: "TODO"
   submitter_sample_id:
-    type: string
+    type:
+      - string
+      - "null"
     description: "TODO"
   sample_type:
     type: string

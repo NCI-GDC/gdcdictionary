@@ -35,7 +35,9 @@ properties:
     systemAlias: node_id
     description: "TODO"
   submitter_portion_id:
-    type: string
+    type:
+      - string
+      - "null"
     description: "TODO"
   weight:
     type: number

@@ -118,13 +118,19 @@ if __name__ == '__main__':
 
     program1 = {
         "type": "program",
-        "submitter_program_id": 'case_1'
+        "submitter_program_id": 'program_1'
+    }
+
+    program2 = {
+        "type": "program",
+        "submitter_program_id": None
     }
 
     # These should pass
     validate_entity(case1, schemata, resolver)
     validate_entity(aliquot1, schemata, resolver, 'project1')
     validate_entity(program1, schemata, resolver)
+    validate_entity(program2, schemata, resolver)
 
     # These should fail
     try:

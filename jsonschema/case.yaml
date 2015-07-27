@@ -16,6 +16,7 @@ systemProperties:
   - state
 
 required:
+  - submitter_case_id
   - parents
   - gender
   - race
@@ -27,7 +28,9 @@ unique_keys:
 # Case properties
 properties:
   submitter_case_id:
-    type: string
+    type:
+      - string
+      - "null"
   type:
     type: string
   state:
