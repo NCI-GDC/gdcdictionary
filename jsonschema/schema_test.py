@@ -82,6 +82,7 @@ if __name__ == '__main__':
     schemata = {
         "aliquot": load_yaml_schema('aliquot.yaml'),
         "case": load_yaml_schema('case.yaml'),
+        "sample": load_yaml_schema('sample.yaml')
     }
 
     # validate schemata
@@ -94,6 +95,7 @@ if __name__ == '__main__':
     aliquot1 = {
         "type": "aliquot",
         "submitter_aliquot_id": 'aliquot_1',
+        "amount": 5.0,
         "parents": {
             "analyte_ids": [str(uuid.uuid4())]
         },
