@@ -1,43 +1,44 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-title: Aliquot
+title: Analyte
 type: object
 namespace: http://gdc.nci.nih.gov
 category: biospecimen
 project: '*'
 description: >
-  Pertaining to a portion of the whole;
-  any one of two or more samples of something,
-  of the same volume or weight. (NCIt C25414)
+  A liquid bulk product produced according to specified lab protocols,
+  from a sample or analyte, intended for further analysis.
 additionalProperties: false
 validators: []
 
 systemProperties:
-  - aliquot_id
+  - analyte_id
   - project
 
 required:
-  - submitter_aliquot_id
+  - submitter_analyte_id
   - parents
 
 unique_keys:
-  - [aliquot_id]
-  - [project_id, submitter_aliquot_id]
+  - [analyte_id]
+  - [project_id, submitter_analyte_id]
 
-# Aliquot properties
+# Analyte properties
+# Currently there are many TCGA-specific fields in the DB. This is an attempt
+# to minimize the core fields.
 properties:
   type:
     type: string
-  aliquot_id:
+  analyte_id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_aliquot_id:
+  submitter_analyte_id:
     type:
       - string
       - "null"
     description: "TODO"
-  source_center:
+  analyte_type:
     type: string
     description: "TODO"
   amount:
@@ -46,14 +47,17 @@ properties:
   concentration:
     type: number
     description: "TODO"
+  normal_tumor_genotype_match:
+    type: boolean
+    description: "TODO"
 
-# Aliquot parents
+# analyte parents
   parents:
     type: object
     additionalProperties: false
     required:
-      - analyte_ids
+      - portion_ids
     properties:
-      analyte_ids:
+      sample_ids:
         $ref: "definitions.yaml#/parent_uuids"
-        parentType: analyte
+        parentType: portion

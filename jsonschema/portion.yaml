@@ -1,59 +1,56 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-title: Aliquot
+title: Portion
 type: object
 namespace: http://gdc.nci.nih.gov
 category: biospecimen
 project: '*'
 description: >
-  Pertaining to a portion of the whole;
-  any one of two or more samples of something,
-  of the same volume or weight. (NCIt C25414)
+  A physical sub-part of any sample.
 additionalProperties: false
 validators: []
 
 systemProperties:
-  - aliquot_id
+  - portion_id
   - project
 
 required:
-  - submitter_aliquot_id
+  - submitter_portion_id
   - parents
 
 unique_keys:
-  - [aliquot_id]
-  - [project_id, submitter_aliquot_id]
+  - [portion_id]
+  - [project_id, submitter_portion_id]
 
-# Aliquot properties
+# Portion properties
+# Currently there are many TCGA-specific fields in the DB. This is an attempt
+# to minimize the core fields.
+# Including portion itself is TCGA-specific, but since it's in the data model,
+#leaving for now.
 properties:
   type:
     type: string
-  aliquot_id:
+  portion_id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_aliquot_id:
+  submitter_portion_id:
     type:
       - string
       - "null"
     description: "TODO"
-  source_center:
-    type: string
-    description: "TODO"
-  amount:
-    type: number
-    description: "TODO"
-  concentration:
+  weight:
     type: number
     description: "TODO"
 
-# Aliquot parents
+
+# Portion parents
   parents:
     type: object
     additionalProperties: false
     required:
-      - analyte_ids
+      - sample_ids
     properties:
-      analyte_ids:
+      sample_ids:
         $ref: "definitions.yaml#/parent_uuids"
-        parentType: analyte
+        parentType: sample

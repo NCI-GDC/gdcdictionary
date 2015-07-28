@@ -3,17 +3,11 @@ $schema: "http://json-schema.org/draft-04/schema#"
 title: Case
 type: object
 namespace: http://gdc.nci.nih.gov
-category: clinical
+category: administrative
 project: '*'
 description: "TODO"
 additionalProperties: false
 validators: []
-
-schemaProperties:
-  version: 1
-  created_date: "2015-06-16T07:37:39Z"
-  updated_date: "2015-07-12T21:04:01Z"
-  is_published: false
 
 systemProperties:
   - case_id
@@ -22,6 +16,7 @@ systemProperties:
   - state
 
 required:
+  - submitter_case_id
   - parents
   - gender
   - race
@@ -33,7 +28,9 @@ unique_keys:
 # Case properties
 properties:
   submitter_case_id:
-    type: string
+    type:
+      - string
+      - "null"
   type:
     type: string
   state:

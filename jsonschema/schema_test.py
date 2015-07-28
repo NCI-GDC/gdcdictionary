@@ -80,8 +80,13 @@ if __name__ == '__main__':
     resolver = RefResolver('definitions.yaml#', definitions)
 
     schemata = {
-        "aliquot": load_yaml_schema('aliquot.yaml'),
+        "program": load_yaml_schema('program.yaml'),
+        "project": load_yaml_schema('program.yaml'),
         "case": load_yaml_schema('case.yaml'),
+        "sample": load_yaml_schema('sample.yaml'),
+        "portion": load_yaml_schema('portion.yaml'),
+        "analyte": load_yaml_schema('analyte.yaml'),
+        "aliquot": load_yaml_schema('aliquot.yaml')
     }
 
     # validate schemata
@@ -94,6 +99,7 @@ if __name__ == '__main__':
     aliquot1 = {
         "type": "aliquot",
         "submitter_aliquot_id": 'aliquot_1',
+        "amount": 5.0,
         "parents": {
             "analyte_ids": [str(uuid.uuid4())]
         },
@@ -110,9 +116,21 @@ if __name__ == '__main__':
         "race": "Unknown"
     }
 
+    program1 = {
+        "type": "program",
+        "submitter_program_id": 'program_1'
+    }
+
+    program2 = {
+        "type": "program",
+        "submitter_program_id": None
+    }
+
     # These should pass
     validate_entity(case1, schemata, resolver)
     validate_entity(aliquot1, schemata, resolver, 'project1')
+    validate_entity(program1, schemata, resolver)
+    validate_entity(program2, schemata, resolver)
 
     # These should fail
     try:
