@@ -96,8 +96,10 @@ if __name__ == '__main__':
     map(lambda s: validate(s, metaschema['entity']), schemata.values())
 
     parser = argparse.ArgumentParser(description='Validate JSON')
-    parser.add_argument('jsonfiles', metavar='file', type=str, nargs='+',
-                   help='json files to test if (in)valid')
+    parser.add_argument('jsonfiles', metavar='file',
+        type=argparse.FileType('r'), nargs='+',
+        help='json files to test if (in)valid',
+    )
 
     parser.add_argument('--invalid', action='store_true', default=False,
                    help='expect the files to be invalid instead of valid')
@@ -109,20 +111,19 @@ if __name__ == '__main__':
     # Example validation
     ####################
 
-    for filename in args.jsonfiles:
-        with open(filename) as f:
-            doc = json.load(f)
-            if args.invalid:
-                try:
-                    print("CHECK if {0} is invalid:".format(filename))
-                    validate_entity(doc, schemata, resolver)
-                except ValidationError as e:
-                    print(e)
-                    print("Invalid as expected.")
-                    pass
-                else:
-                    raise Exception("Expected invalid, but validated.")
-            else:
-                print ("CHECK if {0} is valid:".format(filename))
+    for f in args.jsonfiles:
+        doc = json.load(f)
+        if args.invalid:
+            try:
+                print("CHECK if {0} is invalid:".format(f.name))
                 validate_entity(doc, schemata, resolver)
-                print("Valid as expected")
+            except ValidationError as e:
+                print(e)
+                print("Invalid as expected.")
+                pass
+            else:
+                raise Exception("Expected invalid, but validated.")
+        else:
+            print ("CHECK if {0} is valid:".format(f.name))
+            validate_entity(doc, schemata, resolver)
+            print("Valid as expected")
