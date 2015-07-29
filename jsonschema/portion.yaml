@@ -16,7 +16,7 @@ systemProperties:
 
 required:
   - submitter_portion_id
-  - parents
+  - linkTo
 
 unique_keys:
   - [portion_id]
@@ -44,13 +44,19 @@ properties:
     description: "TODO"
 
 
-# Portion parents
-  parents:
+# Portions link to samples
+  linkTo:
     type: object
     additionalProperties: false
-    required:
-      - sample_ids
+    oneOf:
+      - required:
+          - sample_ids
+      - required:
+          - sample_aliases
     properties:
       sample_ids:
-        $ref: "definitions.yaml#/parent_uuids"
+        $ref: "definitions.yaml#/linkTo_uuids"
+        parentType: sample
+      sample_aliases:
+        $ref: "definitions.yaml#/linkTo_aliases"
         parentType: sample

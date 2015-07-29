@@ -51,13 +51,19 @@ properties:
     type: boolean
     description: "TODO"
 
-# analyte parents
-  parents:
+# analyte link to portions
+  linkTo:
     type: object
     additionalProperties: false
-    required:
-      - portion_ids
+    oneOf:
+      - required:
+          - portion_ids
+      - required:
+          - portion_aliases
     properties:
-      sample_ids:
-        $ref: "definitions.yaml#/parent_uuids"
-        parentType: portion
+      portion_ids:
+        $ref: "definitions.yaml#/linkTo_uuids"
+        parentType: sample
+      portion_aliases:
+        $ref: "definitions.yaml#/linkTo_aliases"
+        parentType: sample

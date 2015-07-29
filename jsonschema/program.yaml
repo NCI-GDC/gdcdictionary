@@ -36,3 +36,10 @@ properties:
   name:
     type: string
     description: "Full name/title of the program."
+
+  linkTo:
+    type: "null"
+    description: >
+      Programs are the top level category so do not have any outgoing links.
+      As it isn't require the user doesn't have to include linkTo in
+      the submission, but it's here because required by the metaschema.

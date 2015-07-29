@@ -16,18 +16,18 @@ systemProperties:
   - state
 
 required:
-  - submitter_case_id
-  - parents
+  - case_alias
+  - linkTo
   - gender
   - race
 
 unique_keys:
   - [case_id]
-  - [project_id, submitter_case_id]
+  - [project_id, case_alias]
 
 # Case properties
 properties:
-  submitter_case_id:
+  case_alias:
     type:
       - string
       - "null"
@@ -72,13 +72,20 @@ properties:
       - unspecified
 
 
-# Case parents
-  parents:
+# Cases should only have one parent which is the project it belongs to
+  linkTo:
     type: object
     additionalProperties: false
-    required:
-      - project_id
+    oneOf:
+      - required:
+          - project_id
+      - required:
+          - project_alias
     properties:
       project_id:
         $ref: "definitions.yaml#/UUID"
+        #parentType is a GDC specific extension
+        parentType: project
+      project_alias:
+        type: string
         parentType: project

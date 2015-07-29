@@ -1,0 +1,9 @@
+{
+  "type": "case",
+  "case_alias": "case_1",
+  "linkTo": {
+    "project_alias": "my-short-id"
+  },
+  "gender": "female",
+  "race": "Unknown"
+}

@@ -55,12 +55,18 @@ properties:
 # project parents
 # Right now following general setup that allows having more than one parent
 # Perhaps should limit to only allow a project to belong to one program?
-  parents:
+  linkTo:
     type: object
     additionalProperties: false
-    required:
-      - program_ids
+    oneOf:
+      - required:
+          - program_id
+      - required:
+          - program_alias
     properties:
-      case_ids:
-        $ref: "definitions.yaml#/parent_uuids"
+      program_ids:
+        $ref: "definitions.yaml#/UUID"
+        parentType: program
+      program_alias:
+        type: string
         parentType: program

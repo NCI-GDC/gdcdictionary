@@ -55,12 +55,18 @@ properties:
     description: "TODO"
 
 # Sample parents
-  parents:
+  linkTo:
     type: object
     additionalProperties: false
-    required:
-      - case_ids
+    oneOf:
+      - required:
+          - case_ids
+      - required:
+          - case_aliases
     properties:
       case_ids:
-        $ref: "definitions.yaml#/parent_uuids"
+        $ref: "definitions.yaml#/linkTo_uuids"
+        parentType: case
+      case_aliases:
+        $ref: "definitions.yaml#/linkTo_aliases"
         parentType: case

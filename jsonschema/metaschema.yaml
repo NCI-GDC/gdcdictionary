@@ -1,6 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
 entity:
+  #Perhaps we should allow additional properties - maybe set a total file size limit?
   additionalProperties: false
   required:
     - title
@@ -55,7 +56,10 @@ entity:
     properties:
       type: object
       additionalProperties: true
+      required:
+        - linkTo
+
       properties:
-        parents:
+        linkTo:
           type: object
           additionalProperties: true
