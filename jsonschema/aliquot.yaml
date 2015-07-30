@@ -12,17 +12,36 @@ description: >
 additionalProperties: false
 validators: []
 
-systemProperties:
+system_properties:
   - aliquot_id
   - project
 
 required:
-  - submitter_aliquot_id
-  - parents
+  - aliquot_alias
+
+anyOf:
+  - oneOf:
+    - required:
+      - link_out_sample_id
+    - required:
+      - link_out_sample_alias
+    - required:
+      - link_out_sample_ids
+    - required:
+      - link_out_sample_aliases
+  - oneOf:
+    - required:
+      - link_out_analyte_id
+    - required:
+      - link_out_analyte_alias
+    - required:
+      - link_out_analyte_ids
+    - required:
+      - link_out_analyte_aliases
 
 unique_keys:
   - [aliquot_id]
-  - [project_id, submitter_aliquot_id]
+  - [project_id, aliquot_alias]
 
 # Aliquot properties
 properties:
@@ -32,7 +51,7 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_aliquot_id:
+  aliquot_alias:
     type:
       - string
       - "null"
@@ -48,12 +67,36 @@ properties:
     description: "TODO"
 
 # Aliquot parents
-  parents:
-    type: object
-    additionalProperties: false
-    required:
-      - analyte_ids
-    properties:
-      analyte_ids:
-        $ref: "definitions.yaml#/parent_uuids"
-        parentType: analyte
+
+  link_out_sample_id:
+    $ref: "definitions.yaml#/UUID"
+    link_to_type: sample
+    multiplicity: manyToMany
+  link_out_sample_alias:
+    type: string
+    link_to_type: sample
+    multiplicity: manyToMany
+  link_out_sample_ids:
+    $ref: "definitions.yaml#/array_of_uuids"
+    link_to_type: sample
+    multiplicity: manyToMany
+  link_out_sample_aliases:
+    $ref: "definitions.yaml#/array_of_strings"
+    link_to_type: sample
+    multiplicity: manyToMany
+  link_out_analyte_id:
+    $ref: "definitions.yaml#/UUID"
+    link_to_type: analyte
+    multiplicity: manyToMany
+  link_out_analyte_alias:
+    type: string
+    link_to_type: analyte
+    multiplicity: manyToMany
+  link_out_analyte_ids:
+    $ref: "definitions.yaml#/array_of_uuids"
+    link_to_type: analyte
+    multiplicity: manyToMany
+  link_out_analyte_aliases:
+    $ref: "definitions.yaml#/array_of_strings"
+    link_to_type: analyte
+    multiplicity: manyToMany

@@ -9,25 +9,31 @@ description: "TODO"
 additionalProperties: false
 validators: []
 
-systemProperties:
+system_properties:
   - case_id
   - project
   - type
   - state
 
 required:
-  - submitter_case_id
-  - parents
+  - case_alias
   - gender
   - race
 
+oneOf:
+  - required:
+    - link_out_project_id
+  - required:
+    - link_out_project_alias
+
 unique_keys:
   - [case_id]
-  - [project_id, submitter_case_id]
+  - [project_id, case_alias]
+
 
 # Case properties
 properties:
-  submitter_case_id:
+  case_alias:
     type:
       - string
       - "null"
@@ -60,6 +66,7 @@ properties:
       - Native Hawaiian or other Pacific Islander
       - Not Evaluated
       - Unknown
+
   ethnicity:
     title: Ethnicity
     description: |
@@ -71,14 +78,12 @@ properties:
       - unknown
       - unspecified
 
+  link_out_project_id:
+    $ref: "definitions.yaml#/UUID"
+    link_to_type: project
+    multiplicity: oneToOne
 
-# Case parents
-  parents:
-    type: object
-    additionalProperties: false
-    required:
-      - project_id
-    properties:
-      project_id:
-        $ref: "definitions.yaml#/UUID"
-        parentType: project
+  link_out_project_alias:
+    type: string
+    link_to_type: project
+    multiplicity: oneToOne

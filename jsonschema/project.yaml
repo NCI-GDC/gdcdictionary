@@ -11,18 +11,22 @@ description: >
 additionalProperties: false
 validators: []
 
-systemProperties:
+system_properties:
   - project_id
   - project
 
 required:
-  - submitter_project_id
+  - project_alias
   - project_type
-  - parents
+
+oneof:
+  required:
+    - link_out_program_id
+    - link_out_program_alias
 
 unique_keys:
   - [project_id]
-  - [project_id, submitter_project_id]
+  - [project_id, project_alias]
 
 # project properties
 # code, disease_type and primary_site are in the current data model for project
@@ -34,7 +38,7 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_project_id:
+  project_alias:
     type:
       - string
       - "null"
@@ -55,12 +59,11 @@ properties:
 # project parents
 # Right now following general setup that allows having more than one parent
 # Perhaps should limit to only allow a project to belong to one program?
-  parents:
-    type: object
-    additionalProperties: false
-    required:
-      - program_ids
-    properties:
-      case_ids:
-        $ref: "definitions.yaml#/parent_uuids"
-        parentType: program
+    link_out_program_id:
+      $ref: "definitions.yaml#/UUID"
+      link_to_type: program
+      multiplicity: oneToOne
+    link_out_program_alias:
+      type: string
+      link_to_type: program
+      multiplicity: oneToOne

@@ -1,61 +1,65 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-entity:
-  additionalProperties: false
-  required:
-    - title
-    - type
-    - namespace
-    - category
-    - project
-    - description
-    - additionalProperties
-    - validators
-    - systemProperties
-    - required
-    - unique_keys
-    - properties
-    - $schema
+id: "http://gdc.nci.nih.gov/v0/schema#"
+title: "GDC JSON schema extension"
 
-  title: "Entity Metaschema"
-  type: object
-  properties:
-    $schema:
-      type: string
-    type:
-      type: string
-    title:
-      type: string
-    namespace:
-      type: string
-    category:
-      type: string
-      enum:
-        - administrative
-        - biospecimen
-        - clinical
-    project:
-      type: string
-    description:
-      type: string
-    additionalProperties:
-      type: boolean
-    validators:
-      type: array
+allOf:
+  - "$ref": "http://json-schema.org/draft-04/schema#"
 
-    systemProperties:
-      type: array
+#GDC extensions
+required:
+  - namespace
+  - category
+  - project
+  - unique_keys
+  - system_properties
+  #Could also require core JSON schema fields here if desired
+  #JSON schema does not require anything
 
+definitions:
+  link:
+    title: "Links to other GDC entities"
+    type: object
     required:
-      type: array
-
-    unique_keys:
-      type: array
+      - link_to_type
+      - multiplicity
 
     properties:
-      type: object
-      additionalProperties: true
-      properties:
-        parents:
-          type: object
-          additionalProperties: true
+      link_to_type:
+        type: string
+
+      multiplicity:
+        type: string
+        enum:
+          - oneToOne
+          - oneToMany
+          - manyToOne
+          - manyToMany
+
+properties:
+  namespace:
+    type: string
+
+  category:
+    type: string
+    enum:
+      - administrative
+      - biospecimen
+      - clinical
+
+  project:
+    type: string
+
+  uniqueKeys:
+    type: array
+
+  validators:
+    type: array
+
+  system_properties:
+    type: array
+
+  properties:
+    patternProperties:
+      "^link_out_.*$":
+        $ref: "#/definitions/link"
