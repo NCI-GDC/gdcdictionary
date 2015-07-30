@@ -1,8 +1,6 @@
 {
   "type": "case",
   "case_alias": "case_1",
-  "linkTo": {
-  },
   "gender": "female",
   "race": "Unknown"
 }

@@ -93,7 +93,7 @@ if __name__ == '__main__':
     }
 
     # validate schemata
-    map(lambda s: validate(s, metaschema['entity']), schemata.values())
+    map(lambda s: validate(s, metaschema), schemata.values())
 
     parser = argparse.ArgumentParser(description='Validate JSON')
     parser.add_argument('jsonfiles', metavar='file',
@@ -105,7 +105,6 @@ if __name__ == '__main__':
                    help='expect the files to be invalid instead of valid')
 
     args = parser.parse_args()
-    print args.jsonfiles
 
     ####################
     # Example validation

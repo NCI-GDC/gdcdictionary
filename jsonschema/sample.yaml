@@ -16,14 +16,14 @@ description: >
 additionalProperties: false
 validators: []
 
-systemProperties:
+system_properties:
   - sample_id
   - project
 
 required:
   - submitter_sample_id
   - sample_type
-  - parents
+  - link_out
 
 unique_keys:
   - [sample_id]
@@ -55,7 +55,7 @@ properties:
     description: "TODO"
 
 # Sample parents
-  linkTo:
+  link_out:
     type: object
     additionalProperties: false
     oneOf:
@@ -65,8 +65,10 @@ properties:
           - case_aliases
     properties:
       case_ids:
-        $ref: "definitions.yaml#/linkTo_uuids"
-        parentType: case
+        $ref: "definitions.yaml#/array_of_uuids"
+        link_to_type: case
+        multiplicity: manyToOne
       case_aliases:
-        $ref: "definitions.yaml#/linkTo_aliases"
-        parentType: case
+        $ref: "definitions.yaml#/array_of_strings"
+        link_to_type: case
+        multiplicity: manyToOne

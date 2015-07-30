@@ -11,14 +11,14 @@ description: >
 additionalProperties: false
 validators: []
 
-systemProperties:
+system_properties:
   - project_id
   - project
 
 required:
   - submitter_project_id
   - project_type
-  - parents
+  - link_out
 
 unique_keys:
   - [project_id]
@@ -55,7 +55,7 @@ properties:
 # project parents
 # Right now following general setup that allows having more than one parent
 # Perhaps should limit to only allow a project to belong to one program?
-  linkTo:
+  link_out:
     type: object
     additionalProperties: false
     oneOf:
@@ -66,7 +66,9 @@ properties:
     properties:
       program_ids:
         $ref: "definitions.yaml#/UUID"
-        parentType: program
+        link_to_type: program
+        multiplicity: oneToOne
       program_alias:
         type: string
-        parentType: program
+        link_to_type: program
+        multiplicity: oneToOne

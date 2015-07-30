@@ -10,7 +10,7 @@ description: >
 additionalProperties: false
 validators: []
 
-systemProperties:
+system_properties:
   - portion_id
   - project
 
@@ -45,7 +45,7 @@ properties:
 
 
 # Portions link to samples
-  linkTo:
+  link_out:
     type: object
     additionalProperties: false
     oneOf:
@@ -55,8 +55,10 @@ properties:
           - sample_aliases
     properties:
       sample_ids:
-        $ref: "definitions.yaml#/linkTo_uuids"
-        parentType: sample
+        $ref: "definitions.yaml#/array_of_uuids"
+        link_to_type: sample
+        multiplicity: manyToMany
       sample_aliases:
-        $ref: "definitions.yaml#/linkTo_aliases"
-        parentType: sample
+        $ref: "definitions.yaml#/array_of_strings"
+        link_to_type: sample
+        multiplicity: manyToMany

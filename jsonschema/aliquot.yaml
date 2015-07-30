@@ -12,13 +12,13 @@ description: >
 additionalProperties: false
 validators: []
 
-systemProperties:
+system_properties:
   - aliquot_id
   - project
 
 required:
   - aliquot_alias
-  - linkTo
+  - link_out
 
 unique_keys:
   - [aliquot_id]
@@ -48,7 +48,7 @@ properties:
     description: "TODO"
 
 # Aliquot parents
-  linkTo:
+  link_out:
     type: object
     additionalProperties: false
     #This is probably too lenient, but testing out how far this can go
@@ -74,25 +74,33 @@ properties:
     properties:
       sample_id:
         $ref: "definitions.yaml#/UUID"
-        parentType: sample
+        link_to_type: sample
+        multiplicity: manyToMany
       sample_alias:
         type: string
-        parentType: sample
+        link_to_type: sample
+        multiplicity: manyToMany
       sample_ids:
-        $ref: "definitions.yaml#/linkTo_uuids"
-        parentType: sample
+        $ref: "definitions.yaml#/array_of_uuids"
+        link_to_type: sample
+        multiplicity: manyToMany
       sample_aliases:
-        $ref: "definitions.yaml#/linkTo_aliases"
-        parentType: sample
+        $ref: "definitions.yaml#/array_of_strings"
+        link_to_type: sample
+        multiplicity: manyToMany
       analyte_id:
         $ref: "definitions.yaml#/UUID"
-        parentType: analyte
+        link_to_type: analyte
+        multiplicity: manyToMany
       analyte_alias:
         type: string
-        parentType: analyte
+        link_to_type: analyte
+        multiplicity: manyToMany
       analyte_ids:
-        $ref: "definitions.yaml#/linkTo_uuids"
-        parentType: analyte
+        $ref: "definitions.yaml#/array_of_uuids"
+        link_to_type: analyte
+        multiplicity: manyToMany
       analyte_aliases:
-        $ref: "definitions.yaml#/linkTo_aliases"
-        parentType: analyte
+        $ref: "definitions.yaml#/array_of_strings"
+        link_to_type: analyte
+        multiplicity: manyToMany

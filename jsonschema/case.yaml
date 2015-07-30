@@ -9,7 +9,7 @@ description: "TODO"
 additionalProperties: false
 validators: []
 
-systemProperties:
+system_properties:
   - case_id
   - project
   - type
@@ -17,13 +17,14 @@ systemProperties:
 
 required:
   - case_alias
-  - linkTo
   - gender
   - race
+  - link_out
 
 unique_keys:
   - [case_id]
   - [project_id, case_alias]
+
 
 # Case properties
 properties:
@@ -71,9 +72,7 @@ properties:
       - unknown
       - unspecified
 
-
-# Cases should only have one parent which is the project it belongs to
-  linkTo:
+  link_out:
     type: object
     additionalProperties: false
     oneOf:
@@ -81,11 +80,13 @@ properties:
           - project_id
       - required:
           - project_alias
+
     properties:
       project_id:
         $ref: "definitions.yaml#/UUID"
-        #parentType is a GDC specific extension
-        parentType: project
+        link_to_type: project
+        multiplicity: oneToOne
       project_alias:
         type: string
-        parentType: project
+        link_to_type: project
+        multiplicity: oneToOne

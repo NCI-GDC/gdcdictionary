@@ -8,14 +8,14 @@ UUID:
     type: string
     pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
 
-linkTo_uuids:
+array_of_uuids:
     type: array
     minItems: 1
     items:
       $ref: "#/UUID"
     uniqueItems: true
 
-linkTo_aliases:
+array_of_strings:
     type: array
     minItems: 1
     items:

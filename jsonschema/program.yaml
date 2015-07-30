@@ -10,7 +10,7 @@ description: >
 additionalProperties: false
 validators: []
 
-systemProperties:
+system_properties:
   - program_id
 
 required:
@@ -37,7 +37,7 @@ properties:
     type: string
     description: "Full name/title of the program."
 
-  linkTo:
+  link_out:
     type: "null"
     description: >
       Programs are the top level category so do not have any outgoing links.

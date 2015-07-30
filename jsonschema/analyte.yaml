@@ -11,7 +11,7 @@ description: >
 additionalProperties: false
 validators: []
 
-systemProperties:
+system_properties:
   - analyte_id
   - project
 
@@ -52,7 +52,7 @@ properties:
     description: "TODO"
 
 # analyte link to portions
-  linkTo:
+  link_out:
     type: object
     additionalProperties: false
     oneOf:
@@ -62,8 +62,10 @@ properties:
           - portion_aliases
     properties:
       portion_ids:
-        $ref: "definitions.yaml#/linkTo_uuids"
-        parentType: sample
+        $ref: "definitions.yaml#/array_of_uuids"
+        link_to_type: sample
+        multiplicity: manyToMany
       portion_aliases:
-        $ref: "definitions.yaml#/linkTo_aliases"
-        parentType: sample
+        $ref: "definitions.yaml#/array_of_strings"
+        link_to_type: sample
+        multiplicity: manyToMany

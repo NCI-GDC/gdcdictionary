@@ -1,7 +1,7 @@
 {
   "type": "case",
   "case_alias": "case_1",
-  "linkTo": {
+  "link_out": {
     "project_alias": "my-short-id"
   },
   "gender": "female",
