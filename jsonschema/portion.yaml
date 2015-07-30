@@ -10,17 +10,17 @@ description: >
 additionalProperties: false
 validators: []
 
-systemProperties:
+system_properties:
   - portion_id
   - project
 
 required:
-  - submitter_portion_id
-  - parents
+  - portion_alias
+  - linkTo
 
 unique_keys:
   - [portion_id]
-  - [project_id, submitter_portion_id]
+  - [project_id, portion_alias]
 
 # Portion properties
 # Currently there are many TCGA-specific fields in the DB. This is an attempt
@@ -34,7 +34,7 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_portion_id:
+  portion_alias:
     type:
       - string
       - "null"
@@ -44,13 +44,21 @@ properties:
     description: "TODO"
 
 
-# Portion parents
-  parents:
+# Portions link to samples
+  link_out:
     type: object
     additionalProperties: false
-    required:
-      - sample_ids
+    oneOf:
+      - required:
+          - sample_ids
+      - required:
+          - sample_aliases
     properties:
       sample_ids:
-        $ref: "definitions.yaml#/parent_uuids"
-        parentType: sample
+        $ref: "definitions.yaml#/array_of_uuids"
+        link_to_type: sample
+        multiplicity: manyToMany
+      sample_aliases:
+        $ref: "definitions.yaml#/array_of_strings"
+        link_to_type: sample
+        multiplicity: manyToMany

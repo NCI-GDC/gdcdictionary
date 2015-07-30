@@ -12,17 +12,17 @@ description: >
 additionalProperties: false
 validators: []
 
-systemProperties:
+system_properties:
   - aliquot_id
   - project
 
 required:
-  - submitter_aliquot_id
-  - parents
+  - aliquot_alias
+  - link_out
 
 unique_keys:
   - [aliquot_id]
-  - [project_id, submitter_aliquot_id]
+  - [project_id, aliquot_alias]
 
 # Aliquot properties
 properties:
@@ -32,7 +32,7 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_aliquot_id:
+  aliquot_alias:
     type:
       - string
       - "null"
@@ -48,12 +48,59 @@ properties:
     description: "TODO"
 
 # Aliquot parents
-  parents:
+  link_out:
     type: object
     additionalProperties: false
-    required:
-      - analyte_ids
+    #This is probably too lenient, but testing out how far this can go
+    anyOf:
+      - oneOf:
+        - required:
+          - sample_id
+        - required:
+          - sample_alias
+        - required:
+          - sample_ids
+        - required:
+          - sample_aliases
+      - oneOf:
+        - required:
+          - analyte_id
+        - required:
+          - analyte_alias
+        - required:
+          - analyte_ids
+        - required:
+          - analyte_aliases
     properties:
+      sample_id:
+        $ref: "definitions.yaml#/UUID"
+        link_to_type: sample
+        multiplicity: manyToMany
+      sample_alias:
+        type: string
+        link_to_type: sample
+        multiplicity: manyToMany
+      sample_ids:
+        $ref: "definitions.yaml#/array_of_uuids"
+        link_to_type: sample
+        multiplicity: manyToMany
+      sample_aliases:
+        $ref: "definitions.yaml#/array_of_strings"
+        link_to_type: sample
+        multiplicity: manyToMany
+      analyte_id:
+        $ref: "definitions.yaml#/UUID"
+        link_to_type: analyte
+        multiplicity: manyToMany
+      analyte_alias:
+        type: string
+        link_to_type: analyte
+        multiplicity: manyToMany
       analyte_ids:
-        $ref: "definitions.yaml#/parent_uuids"
-        parentType: analyte
+        $ref: "definitions.yaml#/array_of_uuids"
+        link_to_type: analyte
+        multiplicity: manyToMany
+      analyte_aliases:
+        $ref: "definitions.yaml#/array_of_strings"
+        link_to_type: analyte
+        multiplicity: manyToMany

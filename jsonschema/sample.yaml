@@ -16,18 +16,18 @@ description: >
 additionalProperties: false
 validators: []
 
-systemProperties:
+system_properties:
   - sample_id
   - project
 
 required:
-  - submitter_sample_id
+  - sample_alias
   - sample_type
-  - parents
+  - link_out
 
 unique_keys:
   - [sample_id]
-  - [project_id, submitter_sample_id]
+  - [project_id, sample_alias]
 
 # Sample properties
 # Currently there are many TCGA-specific fields in the DB, this is an attempt
@@ -39,7 +39,7 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_sample_id:
+  sample_alias:
     type:
       - string
       - "null"
@@ -55,12 +55,20 @@ properties:
     description: "TODO"
 
 # Sample parents
-  parents:
+  link_out:
     type: object
     additionalProperties: false
-    required:
-      - case_ids
+    oneOf:
+      - required:
+          - case_ids
+      - required:
+          - case_aliases
     properties:
       case_ids:
-        $ref: "definitions.yaml#/parent_uuids"
-        parentType: case
+        $ref: "definitions.yaml#/array_of_uuids"
+        link_to_type: case
+        multiplicity: manyToOne
+      case_aliases:
+        $ref: "definitions.yaml#/array_of_strings"
+        link_to_type: case
+        multiplicity: manyToOne

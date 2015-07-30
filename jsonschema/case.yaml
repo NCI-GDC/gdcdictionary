@@ -9,25 +9,26 @@ description: "TODO"
 additionalProperties: false
 validators: []
 
-systemProperties:
+system_properties:
   - case_id
   - project
   - type
   - state
 
 required:
-  - submitter_case_id
-  - parents
+  - case_alias
   - gender
   - race
+  - link_out
 
 unique_keys:
   - [case_id]
-  - [project_id, submitter_case_id]
+  - [project_id, case_alias]
+
 
 # Case properties
 properties:
-  submitter_case_id:
+  case_alias:
     type:
       - string
       - "null"
@@ -71,14 +72,21 @@ properties:
       - unknown
       - unspecified
 
-
-# Case parents
-  parents:
+  link_out:
     type: object
     additionalProperties: false
-    required:
-      - project_id
+    oneOf:
+      - required:
+          - project_id
+      - required:
+          - project_alias
+
     properties:
       project_id:
         $ref: "definitions.yaml#/UUID"
-        parentType: project
+        link_to_type: project
+        multiplicity: oneToOne
+      project_alias:
+        type: string
+        link_to_type: project
+        multiplicity: oneToOne

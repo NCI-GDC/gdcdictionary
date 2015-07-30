@@ -11,17 +11,17 @@ description: >
 additionalProperties: false
 validators: []
 
-systemProperties:
+system_properties:
   - analyte_id
   - project
 
 required:
-  - submitter_analyte_id
+  - analyte_alias
   - parents
 
 unique_keys:
   - [analyte_id]
-  - [project_id, submitter_analyte_id]
+  - [project_id, analyte_alias]
 
 # Analyte properties
 # Currently there are many TCGA-specific fields in the DB. This is an attempt
@@ -33,7 +33,7 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_analyte_id:
+  analyte_alias:
     type:
       - string
       - "null"
@@ -51,13 +51,21 @@ properties:
     type: boolean
     description: "TODO"
 
-# analyte parents
-  parents:
+# analyte link to portions
+  link_out:
     type: object
     additionalProperties: false
-    required:
-      - portion_ids
+    oneOf:
+      - required:
+          - portion_ids
+      - required:
+          - portion_aliases
     properties:
-      sample_ids:
-        $ref: "definitions.yaml#/parent_uuids"
-        parentType: portion
+      portion_ids:
+        $ref: "definitions.yaml#/array_of_uuids"
+        link_to_type: sample
+        multiplicity: manyToMany
+      portion_aliases:
+        $ref: "definitions.yaml#/array_of_strings"
+        link_to_type: sample
+        multiplicity: manyToMany
