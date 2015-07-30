@@ -16,13 +16,13 @@ system_properties:
   - project
 
 required:
-  - submitter_project_id
+  - project_alias
   - project_type
   - link_out
 
 unique_keys:
   - [project_id]
-  - [project_id, submitter_project_id]
+  - [project_id, project_alias]
 
 # project properties
 # code, disease_type and primary_site are in the current data model for project
@@ -34,7 +34,7 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_project_id:
+  project_alias:
     type:
       - string
       - "null"

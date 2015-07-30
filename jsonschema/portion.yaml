@@ -15,12 +15,12 @@ system_properties:
   - project
 
 required:
-  - submitter_portion_id
+  - portion_alias
   - linkTo
 
 unique_keys:
   - [portion_id]
-  - [project_id, submitter_portion_id]
+  - [project_id, portion_alias]
 
 # Portion properties
 # Currently there are many TCGA-specific fields in the DB. This is an attempt
@@ -34,7 +34,7 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_portion_id:
+  portion_alias:
     type:
       - string
       - "null"

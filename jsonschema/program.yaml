@@ -14,7 +14,7 @@ system_properties:
   - program_id
 
 required:
-  - submitter_program_id
+  - program_alias
 
 unique_keys:
   - [program_id]
@@ -28,7 +28,7 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_program_id:
+  program_alias:
     type:
       - string
       - "null"

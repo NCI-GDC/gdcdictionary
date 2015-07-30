@@ -16,12 +16,12 @@ system_properties:
   - project
 
 required:
-  - submitter_analyte_id
+  - analyte_alias
   - parents
 
 unique_keys:
   - [analyte_id]
-  - [project_id, submitter_analyte_id]
+  - [project_id, analyte_alias]
 
 # Analyte properties
 # Currently there are many TCGA-specific fields in the DB. This is an attempt
@@ -33,7 +33,7 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_analyte_id:
+  analyte_alias:
     type:
       - string
       - "null"
