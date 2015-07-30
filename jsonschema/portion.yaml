@@ -16,7 +16,12 @@ system_properties:
 
 required:
   - portion_alias
-  - linkTo
+
+oneof:
+  - required:
+    - link_out_sample_ids
+  - required:
+    - link_out_sample_aliases
 
 unique_keys:
   - [portion_id]
@@ -43,22 +48,12 @@ properties:
     type: number
     description: "TODO"
 
-
 # Portions link to samples
-  link_out:
-    type: object
-    additionalProperties: false
-    oneOf:
-      - required:
-          - sample_ids
-      - required:
-          - sample_aliases
-    properties:
-      sample_ids:
-        $ref: "definitions.yaml#/array_of_uuids"
-        link_to_type: sample
-        multiplicity: manyToMany
-      sample_aliases:
-        $ref: "definitions.yaml#/array_of_strings"
-        link_to_type: sample
-        multiplicity: manyToMany
+  link_out_sample_ids:
+    $ref: "definitions.yaml#/array_of_uuids"
+    link_to_type: sample
+    multiplicity: manyToMany
+  link_out_sample_aliases:
+    $ref: "definitions.yaml#/array_of_strings"
+    link_to_type: sample
+    multiplicity: manyToMany

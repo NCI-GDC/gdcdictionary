@@ -60,15 +60,6 @@ properties:
     type: array
 
   properties:
-    required:
-      - link_out
-
-    properties:
-      link_out:
-        type: object
-
-        properties:
-          properties:
-            patternProperties:
-              ".*":
-                $ref: "#/definitions/link"
+    patternProperties:
+      "^link_out_.*$":
+        $ref: "#/definitions/link"

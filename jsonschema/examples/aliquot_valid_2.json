@@ -1,7 +1,5 @@
 {
   "type": "aliquot",
   "aliquot_alias": "abc",
-  "link_out": {
-    "analyte_ids": ["f138c4b5-e292-4b93-bfa7-5761f0e06b40", "511bf8e8-ae71-4cb9-bb1b-4e58d04d12c1"]
-  }
+  "link_out_analyte_ids": ["f138c4b5-e292-4b93-bfa7-5761f0e06b40", "511bf8e8-ae71-4cb9-bb1b-4e58d04d12c1"]
 }

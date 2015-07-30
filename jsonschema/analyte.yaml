@@ -17,7 +17,12 @@ system_properties:
 
 required:
   - analyte_alias
-  - parents
+
+oneOf:
+  - required:
+    - link_out_portion_ids
+  - required:
+    - link_out_portion_aliases
 
 unique_keys:
   - [analyte_id]
@@ -60,12 +65,12 @@ properties:
           - portion_ids
       - required:
           - portion_aliases
-    properties:
-      portion_ids:
-        $ref: "definitions.yaml#/array_of_uuids"
-        link_to_type: sample
-        multiplicity: manyToMany
-      portion_aliases:
-        $ref: "definitions.yaml#/array_of_strings"
-        link_to_type: sample
-        multiplicity: manyToMany
+
+  link_out_portion_ids:
+    $ref: "definitions.yaml#/array_of_uuids"
+    link_to_type: sample
+    multiplicity: manyToMany
+  link_out_portion_aliases:
+    $ref: "definitions.yaml#/array_of_strings"
+    link_to_type: sample
+    multiplicity: manyToMany

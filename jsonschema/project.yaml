@@ -18,7 +18,11 @@ system_properties:
 required:
   - project_alias
   - project_type
-  - link_out
+
+oneof:
+  required:
+    - link_out_program_id
+    - link_out_program_alias
 
 unique_keys:
   - [project_id]
@@ -55,20 +59,11 @@ properties:
 # project parents
 # Right now following general setup that allows having more than one parent
 # Perhaps should limit to only allow a project to belong to one program?
-  link_out:
-    type: object
-    additionalProperties: false
-    oneOf:
-      - required:
-          - program_id
-      - required:
-          - program_alias
-    properties:
-      program_ids:
-        $ref: "definitions.yaml#/UUID"
-        link_to_type: program
-        multiplicity: oneToOne
-      program_alias:
-        type: string
-        link_to_type: program
-        multiplicity: oneToOne
+    link_out_program_id:
+      $ref: "definitions.yaml#/UUID"
+      link_to_type: program
+      multiplicity: oneToOne
+    link_out_program_alias:
+      type: string
+      link_to_type: program
+      multiplicity: oneToOne

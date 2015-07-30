@@ -19,7 +19,12 @@ required:
   - case_alias
   - gender
   - race
-  - link_out
+
+oneOf:
+  - required:
+    - link_out_project_id
+  - required:
+    - link_out_project_alias
 
 unique_keys:
   - [case_id]
@@ -61,6 +66,7 @@ properties:
       - Native Hawaiian or other Pacific Islander
       - Not Evaluated
       - Unknown
+
   ethnicity:
     title: Ethnicity
     description: |
@@ -72,21 +78,12 @@ properties:
       - unknown
       - unspecified
 
-  link_out:
-    type: object
-    additionalProperties: false
-    oneOf:
-      - required:
-          - project_id
-      - required:
-          - project_alias
+  link_out_project_id:
+    $ref: "definitions.yaml#/UUID"
+    link_to_type: project
+    multiplicity: oneToOne
 
-    properties:
-      project_id:
-        $ref: "definitions.yaml#/UUID"
-        link_to_type: project
-        multiplicity: oneToOne
-      project_alias:
-        type: string
-        link_to_type: project
-        multiplicity: oneToOne
+  link_out_project_alias:
+    type: string
+    link_to_type: project
+    multiplicity: oneToOne

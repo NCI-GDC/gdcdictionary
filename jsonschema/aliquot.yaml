@@ -18,7 +18,26 @@ system_properties:
 
 required:
   - aliquot_alias
-  - link_out
+
+anyOf:
+  - oneOf:
+    - required:
+      - link_out_sample_id
+    - required:
+      - link_out_sample_alias
+    - required:
+      - link_out_sample_ids
+    - required:
+      - link_out_sample_aliases
+  - oneOf:
+    - required:
+      - link_out_analyte_id
+    - required:
+      - link_out_analyte_alias
+    - required:
+      - link_out_analyte_ids
+    - required:
+      - link_out_analyte_aliases
 
 unique_keys:
   - [aliquot_id]
@@ -48,59 +67,36 @@ properties:
     description: "TODO"
 
 # Aliquot parents
-  link_out:
-    type: object
-    additionalProperties: false
-    #This is probably too lenient, but testing out how far this can go
-    anyOf:
-      - oneOf:
-        - required:
-          - sample_id
-        - required:
-          - sample_alias
-        - required:
-          - sample_ids
-        - required:
-          - sample_aliases
-      - oneOf:
-        - required:
-          - analyte_id
-        - required:
-          - analyte_alias
-        - required:
-          - analyte_ids
-        - required:
-          - analyte_aliases
-    properties:
-      sample_id:
-        $ref: "definitions.yaml#/UUID"
-        link_to_type: sample
-        multiplicity: manyToMany
-      sample_alias:
-        type: string
-        link_to_type: sample
-        multiplicity: manyToMany
-      sample_ids:
-        $ref: "definitions.yaml#/array_of_uuids"
-        link_to_type: sample
-        multiplicity: manyToMany
-      sample_aliases:
-        $ref: "definitions.yaml#/array_of_strings"
-        link_to_type: sample
-        multiplicity: manyToMany
-      analyte_id:
-        $ref: "definitions.yaml#/UUID"
-        link_to_type: analyte
-        multiplicity: manyToMany
-      analyte_alias:
-        type: string
-        link_to_type: analyte
-        multiplicity: manyToMany
-      analyte_ids:
-        $ref: "definitions.yaml#/array_of_uuids"
-        link_to_type: analyte
-        multiplicity: manyToMany
-      analyte_aliases:
-        $ref: "definitions.yaml#/array_of_strings"
-        link_to_type: analyte
-        multiplicity: manyToMany
+
+  link_out_sample_id:
+    $ref: "definitions.yaml#/UUID"
+    link_to_type: sample
+    multiplicity: manyToMany
+  link_out_sample_alias:
+    type: string
+    link_to_type: sample
+    multiplicity: manyToMany
+  link_out_sample_ids:
+    $ref: "definitions.yaml#/array_of_uuids"
+    link_to_type: sample
+    multiplicity: manyToMany
+  link_out_sample_aliases:
+    $ref: "definitions.yaml#/array_of_strings"
+    link_to_type: sample
+    multiplicity: manyToMany
+  link_out_analyte_id:
+    $ref: "definitions.yaml#/UUID"
+    link_to_type: analyte
+    multiplicity: manyToMany
+  link_out_analyte_alias:
+    type: string
+    link_to_type: analyte
+    multiplicity: manyToMany
+  link_out_analyte_ids:
+    $ref: "definitions.yaml#/array_of_uuids"
+    link_to_type: analyte
+    multiplicity: manyToMany
+  link_out_analyte_aliases:
+    $ref: "definitions.yaml#/array_of_strings"
+    link_to_type: analyte
+    multiplicity: manyToMany

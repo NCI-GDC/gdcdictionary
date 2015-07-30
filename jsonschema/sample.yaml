@@ -23,7 +23,12 @@ system_properties:
 required:
   - sample_alias
   - sample_type
-  - link_out
+
+oneOf:
+  - required:
+    - link_out_case_ids
+  - required:
+    - link_out_case_aliases
 
 unique_keys:
   - [sample_id]
@@ -55,20 +60,12 @@ properties:
     description: "TODO"
 
 # Sample parents
-  link_out:
-    type: object
-    additionalProperties: false
-    oneOf:
-      - required:
-          - case_ids
-      - required:
-          - case_aliases
-    properties:
-      case_ids:
-        $ref: "definitions.yaml#/array_of_uuids"
-        link_to_type: case
-        multiplicity: manyToOne
-      case_aliases:
-        $ref: "definitions.yaml#/array_of_strings"
-        link_to_type: case
-        multiplicity: manyToOne
+  link_out_case_ids:
+    $ref: "definitions.yaml#/array_of_uuids"
+    link_to_type: case
+    multiplicity: manyToOne
+
+  link_out_case_aliases:
+    $ref: "definitions.yaml#/array_of_strings"
+    link_to_type: case
+    multiplicity: manyToOne

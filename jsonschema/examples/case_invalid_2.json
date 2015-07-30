@@ -1,10 +1,8 @@
 {
   "type": "case",
   "case_alias": "case_1",
-  "link_out" : {
-    "project_id": "f138c4b5-e292-4b93-bfa7-5761f0e06b40",
-    "project_alias": "my-short-id"
-  },
+  "link_out_project_id": "f138c4b5-e292-4b93-bfa7-5761f0e06b40",
+  "link_out_project_alias": "my-short-id",
   "gender": "female",
   "race": "Unknown"
 }
