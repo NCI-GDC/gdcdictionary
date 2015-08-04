@@ -14,3 +14,38 @@ parent_uuids:
     items:
       $ref: "#/UUID"
     uniqueItems: true
+
+id_array:
+  type:
+    object
+
+  additionalProperties: false
+
+  oneOf:
+    - required:
+      - id
+    - required:
+      - alias
+
+  properties:
+    id:
+      $ref: "#/UUID"
+
+    alias:
+      type: string
+
+#Can either use 'id' which are GDC IDs (UUID) or 'aliases' which are user defined IDs
+to_one:
+  type:
+    array
+  items:
+    $ref: "#/id_array"
+  minItems: 1
+  maxItems: 1
+
+to_many:
+  type:
+    array
+  items:
+    $ref: "#/id_array"
+  minItems: 1

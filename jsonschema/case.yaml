@@ -1,5 +1,7 @@
+#Should this be the GDC metaschema?
 $schema: "http://json-schema.org/draft-04/schema#"
 
+id: "case"
 title: Case
 type: object
 namespace: http://gdc.nci.nih.gov
@@ -9,17 +11,24 @@ description: "TODO"
 additionalProperties: false
 validators: []
 
-systemProperties:
+system_properties:
   - case_id
   - project
   - type
   - state
 
+links:
+  - name: member_of
+    link_to_type: project
+    multiplicity: one_to_one
+
 required:
-  - submitter_case_id
-  - parents
+  - alias
   - gender
   - race
+  - member_of
+
+constraints: null
 
 unique_keys:
   - [case_id]
@@ -35,6 +44,11 @@ properties:
     type: string
   state:
     type: string
+  alias:
+    type:
+      - string
+      - "null"
+
   gender:
     title: Gender
     cde_id: 2200604
@@ -71,14 +85,5 @@ properties:
       - unknown
       - unspecified
 
-
-# Case parents
-  parents:
-    type: object
-    additionalProperties: false
-    required:
-      - project_id
-    properties:
-      project_id:
-        $ref: "definitions.yaml#/UUID"
-        parentType: project
+  member_of:
+    $ref: "definitions.yaml#/to_one"

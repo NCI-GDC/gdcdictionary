@@ -1,61 +1,72 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-entity:
-  additionalProperties: false
-  required:
-    - title
-    - type
-    - namespace
-    - category
-    - project
-    - description
-    - additionalProperties
-    - validators
-    - systemProperties
-    - required
-    - unique_keys
-    - properties
-    - $schema
+#Should we publish with .json?
+id: "metaschema"
+title: "GDC JSON schema extension"
 
-  title: "Entity Metaschema"
-  type: object
-  properties:
-    $schema:
-      type: string
-    type:
-      type: string
-    title:
-      type: string
-    namespace:
-      type: string
-    category:
-      type: string
-      enum:
-        - administrative
-        - biospecimen
-        - clinical
-    project:
-      type: string
-    description:
-      type: string
-    additionalProperties:
-      type: boolean
-    validators:
-      type: array
+allOf:
+  - "$ref": "http://json-schema.org/draft-04/schema#"
 
-    systemProperties:
-      type: array
+#GDC extensions
+required:
+  #- namespace #this is what ID is supposed to be for...
+  - category #potentially used in submission system, if not may not be needed
+  #- project #should this be part of the schema id /<program id>/<project id>/<schema name>
+  - unique_keys #for validator to check uniqueness
+  - links #to specify to the validator what properties are links and their targets
+  - constraints #need better name, previously 'validators'
+                #purpose is to specify to the validator additional functions to run on the values
+  - system_properties #non-user facing values required by backend
+  #Could also require core JSON schema fields here if desired
 
+definitions:
+  link_definition:
+    title: "Define a link to other GDC entities"
+    type: object
     required:
-      type: array
-
-    unique_keys:
-      type: array
+      - name
+      - link_to_type #entity type being linked
+      - multiplicity #multiplicity of this link for validatio
 
     properties:
-      type: object
-      additionalProperties: true
-      properties:
-        parents:
-          type: object
-          additionalProperties: true
+      link_to_type:
+        type: string
+
+      multiplicity:
+        type: string
+        enum:
+          - one_to_one
+          - one_to_many
+          - many_to_one
+          - many_to_many
+
+properties:
+  category:
+    type: string
+    enum:
+      - administrative
+      - biospecimen
+      - clinical
+
+  unique_keys:
+    type: array
+    items:
+      type: array
+      items:
+        type: string
+
+  constraints:
+    type:
+      - array
+      - "null"
+
+  system_properties:
+    type: array
+
+  links:
+    type:
+      - array
+      - "null"
+
+    items:
+      $ref: "#/definitions/link_definition"

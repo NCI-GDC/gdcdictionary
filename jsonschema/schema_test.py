@@ -9,10 +9,13 @@ Examples are at the end.
 """
 
 
-from jsonschema import validate, RefResolver
+from jsonschema import validate, RefResolver, ValidationError
 import copy
 import uuid
 import yaml
+import argparse
+import json
+import sys
 
 
 def load_yaml_schema(path):
@@ -81,63 +84,45 @@ if __name__ == '__main__':
 
     schemata = {
         "program": load_yaml_schema('program.yaml'),
-        "project": load_yaml_schema('program.yaml'),
+        "project": load_yaml_schema('project.yaml'),
         "case": load_yaml_schema('case.yaml'),
-        "sample": load_yaml_schema('sample.yaml'),
-        "portion": load_yaml_schema('portion.yaml'),
-        "analyte": load_yaml_schema('analyte.yaml'),
+        #"sample": load_yaml_schema('sample.yaml'),
+        #"portion": load_yaml_schema('portion.yaml'),
+        #"analyte": load_yaml_schema('analyte.yaml'),
         "aliquot": load_yaml_schema('aliquot.yaml')
     }
 
     # validate schemata
-    map(lambda s: validate(s, metaschema['entity']), schemata.values())
+    map(lambda s: validate(s, metaschema), schemata.values())
+
+    parser = argparse.ArgumentParser(description='Validate JSON')
+    parser.add_argument('jsonfiles', metavar='file',
+        type=argparse.FileType('r'), nargs='+',
+        help='json files to test if (in)valid',
+    )
+
+    parser.add_argument('--invalid', action='store_true', default=False,
+                   help='expect the files to be invalid instead of valid')
+
+    args = parser.parse_args()
 
     ####################
     # Example validation
     ####################
 
-    aliquot1 = {
-        "type": "aliquot",
-        "submitter_aliquot_id": 'aliquot_1',
-        "amount": 5.0,
-        "parents": {
-            "analyte_ids": [str(uuid.uuid4())]
-        },
-        "project_1_specific_thing": 'test string',
-    }
-
-    case1 = {
-        "type": "case",
-        "submitter_case_id": 'case_1',
-        "parents": {
-            "project_id": str(uuid.uuid4())
-        },
-        "gender": "female",
-        "race": "Unknown"
-    }
-
-    program1 = {
-        "type": "program",
-        "submitter_program_id": 'program_1'
-    }
-
-    program2 = {
-        "type": "program",
-        "submitter_program_id": None
-    }
-
-    # These should pass
-    validate_entity(case1, schemata, resolver)
-    validate_entity(aliquot1, schemata, resolver, 'project1')
-    validate_entity(program1, schemata, resolver)
-    validate_entity(program2, schemata, resolver)
-
-    # These should fail
-    try:
-        validate_entity(aliquot1, schemata, resolver)
-    except:
-        pass
-    else:
-        raise Exception('Expected to fail')
-
-    print('\nsuccess.')
+    for f in args.jsonfiles:
+        doc = json.load(f)
+        if args.invalid:
+            try:
+                print("CHECK if {0} is invalid:".format(f.name))
+                validate_entity(doc, schemata, resolver)
+            except ValidationError as e:
+                print(e)
+                print("Invalid as expected.")
+                pass
+            else:
+                raise Exception("Expected invalid, but validated.")
+        else:
+            print ("CHECK if {0} is valid:".format(f.name))
+            validate_entity(doc, schemata, resolver)
+            print("Valid as expected")

@@ -2,9 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 title: Aliquot
 type: object
-namespace: http://gdc.nci.nih.gov
 category: biospecimen
-project: '*'
 description: >
   Pertaining to a portion of the whole;
   any one of two or more samples of something,
@@ -12,27 +10,33 @@ description: >
 additionalProperties: false
 validators: []
 
-systemProperties:
+system_properties:
   - aliquot_id
   - project
 
 required:
-  - submitter_aliquot_id
-  - parents
+  - alias
 
 unique_keys:
-  - [aliquot_id]
-  - [project_id, submitter_aliquot_id]
+  - [id]
+  - [project_id, id]
+
+links:
+  - name: member_of
+    link_to_type: project
+    multiplicity: many_to_many
+
+constraints: null
 
 # Aliquot properties
 properties:
   type:
     type: string
-  aliquot_id:
+  id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_aliquot_id:
+  alias:
     type:
       - string
       - "null"
@@ -47,13 +51,5 @@ properties:
     type: number
     description: "TODO"
 
-# Aliquot parents
-  parents:
-    type: object
-    additionalProperties: false
-    required:
-      - analyte_ids
-    properties:
-      analyte_ids:
-        $ref: "definitions.yaml#/parent_uuids"
-        parentType: analyte
+  derived_from:
+    $ref: "definitions.yaml#/to_many"

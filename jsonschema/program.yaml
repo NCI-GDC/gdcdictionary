@@ -1,16 +1,16 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
+id: "program"
 title: Program
 type: object
-namespace: http://gdc.nci.nih.gov
 category: administrative
 project: '*'
 description: >
   A broad framework of goals to be achieved. (NCIt C52647)
 additionalProperties: false
-validators: []
+constraints: []
 
-systemProperties:
+system_properties:
   - program_id
 
 required:
@@ -18,6 +18,8 @@ required:
 
 unique_keys:
   - [program_id]
+
+links: null
 
 # Program is the root entity and so it is the only entity
 # without a project or parents.
