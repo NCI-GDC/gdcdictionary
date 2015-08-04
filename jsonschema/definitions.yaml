@@ -21,6 +21,7 @@ id_array:
 
   additionalProperties: false
 
+  #Can either use 'id' which are GDC IDs (UUID) or 'aliases' which are user defined IDs ("submitter IDs in the backend")
   oneOf:
     - required:
       - id
@@ -34,7 +35,7 @@ id_array:
     alias:
       type: string
 
-#Can either use 'id' which are GDC IDs (UUID) or 'aliases' which are user defined IDs
+
 to_one:
   type:
     array

@@ -1,26 +1,30 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
+id: "project"
 title: Project
 type: object
+program: '*'
+project: '*'
 category: administrative
 description: >
   Any specifically defined piece of work that is undertaken or attempted
   to meet a single requirement. (NCIt C47885)
 additionalProperties: false
-validators: []
+validators: null
 
 system_properties:
-  - project_id
+  - id
   - project
 
 required:
-  - submitter_project_id
-  - project_type
-  - parents
+  - alias
+  - name
+  - state
+  - member_of
 
 unique_keys:
-  - [project_id]
-  - [project_id, submitter_project_id]
+  - [id]
+  - [alias]
 
 links:
   - name: member_of
@@ -35,11 +39,11 @@ constraints: null
 properties:
   type:
     type: string
-  project_id:
+  id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_project_id:
+  alias:
     type:
       - string
       - "null"

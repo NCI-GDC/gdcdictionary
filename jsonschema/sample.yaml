@@ -1,9 +1,11 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
+id: "sample"
 title: Sample
 type: object
 namespace: http://gdc.nci.nih.gov
 category: biospecimen
+program: '*'
 project: '*'
 description: >
   Any material sample taken from a biological entity for testing,
@@ -14,20 +16,25 @@ description: >
   organs, body fluids, embryos, and body excretory products.
   (GDC Synonym of NCIt C70699)
 additionalProperties: false
-validators: []
+validators: null
 
-systemProperties:
-  - sample_id
-  - project
+system_properties:
+  - id
+  - project_id
 
 required:
-  - submitter_sample_id
+  - alias
   - sample_type
-  - parents
+  - derived_from #this might need a semantic change after participant -> case
 
 unique_keys:
-  - [sample_id]
-  - [project_id, submitter_sample_id]
+  - [id]
+  - [project_id, alias]
+
+links:
+  - name: derived_from
+    link_to_type: case
+    multiplicity: one_to_many #not sure
 
 # Sample properties
 # Currently there are many TCGA-specific fields in the DB, this is an attempt
@@ -35,11 +42,11 @@ unique_keys:
 properties:
   type:
     type: string
-  sample_id:
+  id:
     $ref: "definitions.yaml#/UUID"
-    systemAlias: node_id
+    system_alias: node_id
     description: "TODO"
-  submitter_sample_id:
+  alias:
     type:
       - string
       - "null"
@@ -54,13 +61,5 @@ properties:
     type: number
     description: "TODO"
 
-# Sample parents
-  parents:
-    type: object
-    additionalProperties: false
-    required:
-      - case_ids
-    properties:
-      case_ids:
-        $ref: "definitions.yaml#/parent_uuids"
-        parentType: case
+  derived_from:
+    $ref: "definitions.yaml#/to_many" #should this be to_one

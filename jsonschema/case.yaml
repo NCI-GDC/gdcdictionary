@@ -6,13 +6,14 @@ title: Case
 type: object
 namespace: http://gdc.nci.nih.gov
 category: administrative
+program: '*'
 project: '*'
 description: "TODO"
 additionalProperties: false
-validators: []
+validators: null
 
 system_properties:
-  - case_id
+  - id
   - project
   - type
   - state
@@ -28,11 +29,9 @@ required:
   - race
   - member_of
 
-constraints: null
-
 unique_keys:
-  - [case_id]
-  - [project_id, submitter_case_id]
+  - [id]
+  - [project_id, alias]
 
 # Case properties
 properties:

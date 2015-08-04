@@ -4,20 +4,23 @@ id: "program"
 title: Program
 type: object
 category: administrative
+program: '*'
 project: '*'
 description: >
   A broad framework of goals to be achieved. (NCIt C52647)
 additionalProperties: false
-constraints: []
+validators: null
 
 system_properties:
-  - program_id
+  - id
 
 required:
-  - submitter_program_id
+  - alias
+  - name
 
 unique_keys:
-  - [program_id]
+  - [id]
+  - [alias]
 
 links: null
 
@@ -30,7 +33,7 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_program_id:
+  alias:
     type:
       - string
       - "null"

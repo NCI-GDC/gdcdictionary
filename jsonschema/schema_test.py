@@ -86,9 +86,9 @@ if __name__ == '__main__':
         "program": load_yaml_schema('program.yaml'),
         "project": load_yaml_schema('project.yaml'),
         "case": load_yaml_schema('case.yaml'),
-        #"sample": load_yaml_schema('sample.yaml'),
-        #"portion": load_yaml_schema('portion.yaml'),
-        #"analyte": load_yaml_schema('analyte.yaml'),
+        "sample": load_yaml_schema('sample.yaml'),
+        "portion": load_yaml_schema('portion.yaml'),
+        "analyte": load_yaml_schema('analyte.yaml'),
         "aliquot": load_yaml_schema('aliquot.yaml')
     }
 

@@ -1,7 +1,10 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
+id: "analyte"
 title: Analyte
 type: object
+program: '*'
+project: '*'
 namespace: http://gdc.nci.nih.gov
 category: biospecimen
 project: '*'
@@ -9,9 +12,9 @@ description: >
   A liquid bulk product produced according to specified lab protocols,
   from a sample or analyte, intended for further analysis.
 additionalProperties: false
-validators: []
+validators: null
 
-systemProperties:
+system_properties:
   - analyte_id
   - project
 
@@ -22,6 +25,11 @@ required:
 unique_keys:
   - [analyte_id]
   - [project_id, submitter_analyte_id]
+
+links:
+  - name: derived_from
+    link_to_type: portion
+    multiplicity: many_to_many
 
 # Analyte properties
 # Currently there are many TCGA-specific fields in the DB. This is an attempt
@@ -52,12 +60,5 @@ properties:
     description: "TODO"
 
 # analyte parents
-  parents:
-    type: object
-    additionalProperties: false
-    required:
-      - portion_ids
-    properties:
-      sample_ids:
-        $ref: "definitions.yaml#/parent_uuids"
-        parentType: portion
+  derived_from:
+    $ref: "definitions.yaml#/to_many" #should this be to_one

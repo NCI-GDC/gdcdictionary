@@ -1,8 +1,11 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
+id: "aliquot"
 title: Aliquot
 type: object
 category: biospecimen
+program: '*'
+project: '*'
 description: >
   Pertaining to a portion of the whole;
   any one of two or more samples of something,
@@ -22,8 +25,8 @@ unique_keys:
   - [project_id, id]
 
 links:
-  - name: member_of
-    link_to_type: project
+  - name: derived_from
+    link_to_type: analyte
     multiplicity: many_to_many
 
 constraints: null
