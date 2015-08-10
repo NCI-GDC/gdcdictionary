@@ -10,3 +10,7 @@ Choosing simplier design will always bring benefits in software development at a
 Taking one step further, practically, type of relations between nodes may not be so important to us. Just like ER modeling in RDBMS, uniqueness/cadinality is the only thing matters. With this thinking, it's possible to entirely eliminate the need for an edge table while implement the DAG model. We will still need to support some not so straightforward relations such as conditional relations, such as when there is A, there should (or shouldn't) be B etc. However such business logic is not necessarily harder for DAG to handle.
 
 One last point is that converting data in a DAG to JSON should be easier comparing to a general graph. Data in a JSON document is essentially a tree. When converting a DAG to a tree, it is mainly to denormalize child nodes with multiple parents into multiple copies, each parent will have a materialized local child node copy. This should make the logic cleaner when we export data in graph db to JSON to build Elasticsearch indexes.
+
+## Contributing
+
+Read how to contribute [here](https://github.com/NCI-GDC/gdcapi/blob/master/CONTRIBUTING.md)
