@@ -14,7 +14,7 @@ description: >
 additionalProperties: false
 validators: null
 
-system_properties:
+systemProperties:
   - analyte_id
   - project
 
@@ -22,7 +22,7 @@ required:
   - submitter_analyte_id
   - parents
 
-unique_keys:
+uniqueKeys:
   - [analyte_id]
   - [project_id, submitter_analyte_id]
 

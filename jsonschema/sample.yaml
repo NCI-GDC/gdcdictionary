@@ -18,7 +18,7 @@ description: >
 additionalProperties: false
 validators: null
 
-system_properties:
+systemProperties:
   - id
   - project_id
 
@@ -27,7 +27,7 @@ required:
   - sample_type
   - derived_from #this might need a semantic change after participant -> case
 
-unique_keys:
+uniqueKeys:
   - [id]
   - [project_id, alias]
 

@@ -12,7 +12,7 @@ description: >
 additionalProperties: false
 validators: null
 
-system_properties:
+systemProperties:
   - id
   - project
 
@@ -22,7 +22,7 @@ required:
   - state
   - member_of
 
-unique_keys:
+uniqueKeys:
   - [id]
   - [alias]
 

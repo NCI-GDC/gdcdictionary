@@ -13,14 +13,14 @@ description: >
 additionalProperties: false
 validators: []
 
-system_properties:
+systemProperties:
   - aliquot_id
   - project
 
 required:
   - alias
 
-unique_keys:
+uniqueKeys:
   - [id]
   - [project_id, id]
 

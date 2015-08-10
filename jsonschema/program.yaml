@@ -11,14 +11,14 @@ description: >
 additionalProperties: false
 validators: null
 
-system_properties:
+systemProperties:
   - id
 
 required:
   - alias
   - name
 
-unique_keys:
+uniqueKeys:
   - [id]
   - [alias]
 

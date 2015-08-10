@@ -12,7 +12,7 @@ description: >
 additionalProperties: false
 validators: null
 
-system_properties:
+systemProperties:
   - id
   - project
 
@@ -21,7 +21,7 @@ required:
   - derived_from
   - parents
 
-unique_keys:
+uniqueKeys:
   - [portion_id]
   - [project_id, submitter_portion_id]
 

@@ -14,11 +14,11 @@ required:
   #should these be part of the schema id /<program id>/<project id>/<schema name>
   - program
   - project
-  - unique_keys #for validator to check uniqueness
+  - uniqueKeys #for validator to check uniqueness
   - links #to specify to the validator what properties are links and their targets
   - validators #need better name, previously 'validators'
                 #purpose is to specify to the validator additional functions to run on the values
-  - system_properties #non-user facing values required by backend
+  - systemProperties #non-user facing values required by backend
   #Could also require core JSON schema fields here if desired, requiring id
   - id
 
