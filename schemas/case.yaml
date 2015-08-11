@@ -1,4 +1,3 @@
-#Should this be the GDC metaschema?
 $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "case"
@@ -49,6 +48,7 @@ properties:
       - "null"
 
   #These may end up in the clinical node, but they're here now
+  #in the data model due to the participant legacy
   gender:
     title: Gender
     cde_id: 2200604

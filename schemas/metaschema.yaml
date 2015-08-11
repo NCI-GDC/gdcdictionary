@@ -1,6 +1,5 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-#Should we publish with .json?
 id: "metaschema"
 title: "GDC JSON schema extension"
 
@@ -9,17 +8,14 @@ allOf:
 
 #GDC extensions
 required:
-  #- namespace #this is what ID is supposed to be for...
   - category #potentially used in submission system, if not may not be needed
-  #should these be part of the schema id /<program id>/<project id>/<schema name>
   - program
   - project
   - uniqueKeys #for validator to check uniqueness
   - links #to specify to the validator what properties are links and their targets
-  - validators #need better name, previously 'validators'
-                #purpose is to specify to the validator additional functions to run on the values
+  - validators #specify to the validator additional functions to run on the values
   - systemProperties #non-user facing values required by backend
-  #Could also require core JSON schema fields here if desired, requiring id
+  #Require core JSON schema fields here if desired, requiring id
   - id
 
 definitions:
