@@ -48,6 +48,7 @@ properties:
       - string
       - "null"
 
+  #These may end up in the clinical node, but they're here now
   gender:
     title: Gender
     cde_id: 2200604
@@ -86,3 +87,5 @@ properties:
 
   member_of:
     $ref: "definitions.yaml#/to_one"
+    description: >
+      Indicates that the case is logically part of the linked to project.

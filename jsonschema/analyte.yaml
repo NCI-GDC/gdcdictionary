@@ -5,7 +5,6 @@ title: Analyte
 type: object
 program: '*'
 project: '*'
-namespace: http://gdc.nci.nih.gov
 category: biospecimen
 project: '*'
 description: >
@@ -24,12 +23,12 @@ required:
 
 uniqueKeys:
   - [analyte_id]
-  - [project_id, submitter_analyte_id]
+  - [project_id, alias]
 
 links:
   - name: derived_from
     link_to_type: portion
-    multiplicity: many_to_many
+    multiplicity: many_to_one
 
 # Analyte properties
 # Currently there are many TCGA-specific fields in the DB. This is an attempt
@@ -41,7 +40,7 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_analyte_id:
+  alias:
     type:
       - string
       - "null"
@@ -61,4 +60,7 @@ properties:
 
 # analyte parents
   derived_from:
-    $ref: "definitions.yaml#/to_many" #should this be to_one
+    $ref: "definitions.yaml#/to_one" #should this be to_one
+    description: >
+      Indicates that the analyte is physically derived from the linked to
+      portion via some process/protocol

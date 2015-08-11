@@ -22,12 +22,12 @@ required:
 
 uniqueKeys:
   - [id]
-  - [project_id, id]
+  - [project_id, alias]
 
 links:
   - name: derived_from
     link_to_type: analyte
-    multiplicity: many_to_many
+    multiplicity: many_to_one
 
 constraints: null
 
@@ -53,6 +53,8 @@ properties:
   concentration:
     type: number
     description: "TODO"
-
   derived_from:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "definitions.yaml#/to_one"
+    description: >
+      Indicates that the aliquot is physically derived from the linked to
+      analyte via some process/protocol

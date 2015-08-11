@@ -34,7 +34,7 @@ uniqueKeys:
 links:
   - name: derived_from
     link_to_type: case
-    multiplicity: one_to_many #not sure
+    multiplicity: many_to_one #not sure
 
 # Sample properties
 # Currently there are many TCGA-specific fields in the DB, this is an attempt
@@ -62,4 +62,7 @@ properties:
     description: "TODO"
 
   derived_from:
-    $ref: "definitions.yaml#/to_many" #should this be to_one
+    $ref: "definitions.yaml#/to_one" #should this be to_one
+    description: >
+      Indicates that the sample is physically derived from the subject
+      of the linked to case via some process/protocol

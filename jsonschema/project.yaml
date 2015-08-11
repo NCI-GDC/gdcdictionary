@@ -62,3 +62,5 @@ properties:
 
   member_of:
     $ref: "definitions.yaml#/to_one"
+    description: >
+      Indicates that the project is logically part of the indicated project.
