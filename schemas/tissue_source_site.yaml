@@ -1,0 +1,47 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "tissue_source_site"
+title: Tissue Source Site
+type: object
+namespace: http://gdc.nci.nih.gov
+category: administrative
+program: '*'
+project: '*'
+description: "TODO"
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - tissue_source_site_id
+  - project
+
+links:
+  - name: member_of
+    link_to_type: project
+    multiplicity: many_to_one
+
+required:
+  - alias
+
+uniqueKeys:
+  - [id]
+  - [project_id, alias]
+
+# tissue_source_site properties
+properties:
+  tissue_source_site_id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  alias:
+    type:
+      - string
+      - "null"
+  name:
+    type: string
+  code:
+    type: string
+  project:
+    type: string
+  bcr_id:
+    type: string

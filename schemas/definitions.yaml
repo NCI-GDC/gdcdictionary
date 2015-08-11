@@ -36,11 +36,12 @@ id_array:
     alias:
       type: string
 
-
+    type:
+      type: string
 to_one:
   type:
     object
-
+  additionalProperties: false
   #Can either use 'id' which are GDC IDs (UUID) or 'aliases'
   #which are user defined IDs ("submitter IDs in the backend")
   oneOf:
@@ -54,6 +55,8 @@ to_one:
       $ref: "#/UUID"
 
     alias:
+      type: string
+    type:
       type: string
 
 

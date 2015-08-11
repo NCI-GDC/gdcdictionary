@@ -1,0 +1,69 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "file"
+title: File
+type: object
+namespace: http://gdc.nci.nih.gov
+category: data
+program: '*'
+project: '*'
+description: "TODO"
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - file_id
+  - project
+
+links:
+  - name: data_from
+    oneOf:
+      - link_to_type: aliquot
+        multiplicity: many_to_one
+      - link_to_type: analyte
+        multiplicity: many_to_one
+      - link_to_type: case
+        multiplicity: many_to_one
+      - link_to_type: file
+        multiplicity: many_to_one
+      - link_to_type: portion
+        multiplicity: many_to_one
+      - link_to_type: sample
+        multiplicity: many_to_one
+      - link_to_type: slide
+        multiplicity: many_to_one
+  - name: describes
+    link_to_type: case
+    multiplicity: many_to_one
+
+
+required:
+  - alias
+  - file_name
+  - file_size
+  - md5sum
+  - state
+
+uniqueKeys:
+  - [id]
+  - [project_id, alias]
+
+# File properties
+properties:
+  file_id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  alias:
+    type:
+      - string
+      - "null"
+    systemAlias: submitter_id
+  file_name:
+    type: string
+  file_size:
+    type: number
+  md5sum:
+    type: string
+  state:
+    type: string

@@ -46,6 +46,7 @@ properties:
     type:
       - string
       - "null"
+    systemAlias: submitter_id
     description: "TODO"
   weight:
     type: number

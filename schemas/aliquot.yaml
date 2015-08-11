@@ -16,6 +16,7 @@ validators: []
 systemProperties:
   - aliquot_id
   - project
+  - submitter_id
 
 required:
   - alias
@@ -26,8 +27,12 @@ uniqueKeys:
 
 links:
   - name: derived_from
-    link_to_type: analyte
-    multiplicity: many_to_one
+    anyOf:
+      - link_to_type: analyte
+        multiplicity: many_to_one
+      - link_to_type: sample
+        multiplicity: many_to_one
+
 
 constraints: null
 
@@ -43,6 +48,7 @@ properties:
     type:
       - string
       - "null"
+    systemAlias: submitter_id
     description: "TODO"
   source_center:
     type: string
@@ -54,7 +60,7 @@ properties:
     type: number
     description: "TODO"
   derived_from:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "definitions.yaml#/to_many"
     description: >
       Indicates that the aliquot is physically derived from the linked to
       analyte via some process/protocol

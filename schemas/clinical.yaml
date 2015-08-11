@@ -1,10 +1,10 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "case"
-title: Case
+id: "clinical"
+title: Clinical
 type: object
 namespace: http://gdc.nci.nih.gov
-category: administrative
+category: misc
 program: '*'
 project: '*'
 description: "TODO"
@@ -12,10 +12,8 @@ additionalProperties: false
 validators: null
 
 systemProperties:
-  - id
+  - clinical_id
   - project
-  - type
-  - state
 
 links:
   - name: member_of
@@ -23,29 +21,18 @@ links:
     multiplicity: many_to_one
 
 required:
-  - alias
-  - gender
-  - race
-  - member_of
+  - clinical_id
 
 uniqueKeys:
   - [id]
   - [project_id, alias]
 
-# Case properties
+# clinical properties
 properties:
-  type:
-    type: string
-  state:
-    type: string
-  alias:
-    type:
-      - string
-      - "null"
-    systemAlias: submitter_id
-
-  #These may end up in the clinical node, but they're here now
-  #in the data model due to the participant legacy
+  clinical_id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
   gender:
     title: Gender
     cde_id: 2200604
@@ -64,25 +51,31 @@ properties:
     description: |
       Patient's race using the defined categories
     enum:
-      - American Indian or Alaska Native
-      - Asian
-      - White
-      - Black or African American
-      - Native Hawaiian or other Pacific Islander
-      - Not Evaluated
-      - Unknown
+      - not reported
+      - white
+      - american indian or alaska native
+      - black or african american
+      - asian
+      - native hawaiian or other pacific islander
+      - other
   ethnicity:
     title: Ethnicity
     description: |
       Patient's ethnicity using the defined categories
     cde_id: 2200604
     enum:
-      - female
-      - male
-      - unknown
-      - unspecified
-
-  member_of:
-    $ref: "definitions.yaml#/to_one"
-    description: >
-      Indicates that the case is logically part of the linked to project.
+      - hispanic or latino
+      - not hispanic or latino
+  vital_status:
+    enum:
+      - alive
+      - dead
+      - lost to follow-up
+  year_of_diagnosis:
+    type: number
+  age_at_diagnosis:
+    type: number
+  days_to_death:
+    type: number
+  icd_10:
+    type: string
