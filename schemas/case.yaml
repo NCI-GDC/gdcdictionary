@@ -20,7 +20,7 @@ systemProperties:
 links:
   - name: member_of
     link_to_type: project
-    multiplicity: one_to_one
+    multiplicity: many_to_one
 
 required:
   - alias
