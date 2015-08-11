@@ -1,0 +1,37 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "center"
+title: Center
+type: object
+namespace: http://gdc.nci.nih.gov
+category: administrative
+program: '*'
+project: '*'
+description: "TODO"
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - center_id
+  - project
+
+links:
+  - name: member_of
+    link_to_type: project
+    multiplicity: many_to_one
+
+required:
+  - revision
+
+uniqueKeys:
+  - [id]
+  - [project_id, alias]
+
+# center properties
+properties:
+  center_id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  revision:
+    type: number

@@ -15,12 +15,10 @@ systemProperties:
   - id
 
 required:
-  - alias
   - name
 
 uniqueKeys:
   - [id]
-  - [alias]
 
 links: null
 
@@ -32,11 +30,6 @@ properties:
   program_id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
-  alias:
-    type:
-      - string
-      - "null"
     description: "TODO"
   name:
     type: string

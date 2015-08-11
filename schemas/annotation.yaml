@@ -1,0 +1,68 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "annotation"
+title: Annotation
+type: object
+namespace: http://gdc.nci.nih.gov
+category: misc
+program: '*'
+project: '*'
+description: "TODO"
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - annotation_id
+  - project
+
+links:
+  - name: annotates
+    oneOf:
+      - link_to_type: case
+        multiplicity: many_to_one
+      - link_to_type: sample
+        multiplicity: many_to_one
+      - link_to_type: slide
+        multiplicity: many_to_one
+      - link_to_type: portion
+        multiplicity: many_to_one
+      - link_to_type: analyte
+        multiplicity: many_to_one
+      - link_to_type: aliquot
+        multiplicity: many_to_one
+      - link_to_type: file
+        multiplicity: many_to_one
+
+required:
+  - alias
+  - category
+  - classification
+  - creator
+  - created_datetime
+  - status
+
+uniqueKeys:
+  - [id]
+  - [project_id, alias]
+
+# annotation properties
+properties:
+  annotation_id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  alias:
+    type:
+      - string
+      - "null"
+    systemAlias: submitter_id
+  category:
+    type: string
+  classification:
+    type: number
+  creator:
+    type: string
+  created_datetime:
+    type: number
+  status:
+    type: string

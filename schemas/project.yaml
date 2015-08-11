@@ -17,14 +17,15 @@ systemProperties:
   - project
 
 required:
-  - alias
+  - code
   - name
+  - disease_type
   - state
+  - primary_site
   - member_of
 
 uniqueKeys:
   - [id]
-  - [alias]
 
 links:
   - name: member_of
@@ -42,11 +43,6 @@ properties:
   id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
-  alias:
-    type:
-      - string
-      - "null"
     description: "TODO"
   name:
     type: string

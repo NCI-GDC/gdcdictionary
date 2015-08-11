@@ -18,8 +18,7 @@ systemProperties:
   - project
 
 required:
-  - submitter_analyte_id
-  - parents
+  - alias
 
 uniqueKeys:
   - [analyte_id]
@@ -30,9 +29,7 @@ links:
     link_to_type: portion
     multiplicity: many_to_one
 
-# Analyte properties
-# Currently there are many TCGA-specific fields in the DB. This is an attempt
-# to minimize the core fields.
+# Added back all fields in current data model to make it compatible with current database
 properties:
   type:
     type: string
@@ -44,20 +41,42 @@ properties:
     type:
       - string
       - "null"
+    systemAlias: submitter_id
     description: "TODO"
   analyte_type:
-    type: string
+    enum:
+      - DNA
+      - EBV Immortalized Normal
+      - GenomePlex (Rubicon) Amplified DNA
+      - Repli-G (Qiagen) DNA
+      - Repli-G X (Qiagen) DNA
+      - RNA
+      - Total RNA
     description: "TODO"
+  analyte_type_id:
+    enum:
+      - D
+      - G
+      - H
+      - R
+      - T
+      - W
+      - X
   amount:
     type: number
     description: "TODO"
   concentration:
     type: number
     description: "TODO"
-  normal_tumor_genotype_match:
-    type: boolean
+  a260_a280_ratio:
+    type: number
     description: "TODO"
-
+  well_number:
+    type: string
+    description: "TODO"
+  spectrophotometer_method:
+    type: string
+    description: "TODO"
 # analyte parents
   derived_from:
     $ref: "definitions.yaml#/to_one" #should this be to_one

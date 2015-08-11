@@ -18,26 +18,51 @@ required:
   #Require core JSON schema fields here if desired, requiring id
   - id
 
+link_properties_only:
+  type:
+    object
+
+  additionalProperties: false
+
+  required:
+    - link_to_type
+    - multiplicity
+  $ref: "#/link_properties"
+
+link_properties:
+  type: object
+  properties:
+    link_to_type:
+      type: string
+
+    multiplicity:
+      type: string
+      enum:
+        - one_to_one
+        - one_to_many
+        - many_to_one
+        - many_to_many
+
 definitions:
   link_def:
     title: "Define a link to other GDC entities"
     type: object
-    required:
-      - name
-      - link_to_type #entity type being linked
-      - multiplicity #multiplicity of this link for validatio
-
+    anyOf:
+      - required:
+        - link_to_type #entity type being linked
+        - multiplicity #multiplicity of this link for validatio
+      - required:
+        - anyOf
+      - required:
+        - oneOf
+    $ref: "#/link_properties"
     properties:
-      link_to_type:
-        type: string
-
-      multiplicity:
-        type: string
-        enum:
-          - one_to_one
-          - one_to_many
-          - many_to_one
-          - many_to_many
+      anyOf:
+          items:
+            $ref: "#/link_properties_only"
+      oneOf:
+          items:
+            $ref: "#/link_properties_only"
 
   validator_def:
     title: "Define a validator to be used on a property"
@@ -65,6 +90,7 @@ properties:
       - administrative
       - biospecimen
       - clinical
+      - data
 
   unique_keys:
     type: array

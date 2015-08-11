@@ -1,0 +1,45 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "publication"
+title: Publication
+type: object
+namespace: http://gdc.nci.nih.gov
+category: misc
+program: '*'
+project: '*'
+description: "TODO"
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - publication_id
+  - project
+
+links:
+  - name: member_of
+    link_to_type: project
+    multiplicity: many_to_one
+
+required:
+  - alias
+  - pmid
+  - doi
+
+uniqueKeys:
+  - [id]
+  - [project_id, alias]
+
+# publication properties
+properties:
+  publication_id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  alias:
+    type:
+      - string
+      - "null"
+  pmid:
+    type: string
+  doi:
+    type: string
