@@ -1,28 +1,37 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
+id: "project"
 title: Project
 type: object
-namespace: http://gdc.nci.nih.gov
-category: administrative
+program: '*'
 project: '*'
+category: administrative
 description: >
   Any specifically defined piece of work that is undertaken or attempted
   to meet a single requirement. (NCIt C47885)
 additionalProperties: false
-validators: []
+validators: null
 
 systemProperties:
-  - project_id
+  - id
   - project
 
 required:
-  - submitter_project_id
-  - project_type
-  - parents
+  - alias
+  - name
+  - state
+  - member_of
 
-unique_keys:
-  - [project_id]
-  - [project_id, submitter_project_id]
+uniqueKeys:
+  - [id]
+  - [alias]
+
+links:
+  - name: member_of
+    link_to_type: project
+    multiplicity: one_to_one
+
+constraints: null
 
 # project properties
 # code, disease_type and primary_site are in the current data model for project
@@ -30,11 +39,11 @@ unique_keys:
 properties:
   type:
     type: string
-  project_id:
+  id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_project_id:
+  alias:
     type:
       - string
       - "null"
@@ -51,16 +60,7 @@ properties:
       Whether the project is accepting new submissions (active)
       or closed (legacy).
 
-
-# project parents
-# Right now following general setup that allows having more than one parent
-# Perhaps should limit to only allow a project to belong to one program?
-  parents:
-    type: object
-    additionalProperties: false
-    required:
-      - program_ids
-    properties:
-      case_ids:
-        $ref: "definitions.yaml#/parent_uuids"
-        parentType: program
+  member_of:
+    $ref: "definitions.yaml#/to_one"
+    description: >
+      Indicates that the project is logically part of the indicated project.

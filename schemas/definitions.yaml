@@ -1,0 +1,72 @@
+#####################################################################
+# Reusable reference definitions
+#####################################################################
+
+$schema: "http://json-schema.org/draft-04/schema#"
+
+UUID:
+    type: string
+    pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+
+parent_uuids:
+    type: array
+    minItems: 1
+    items:
+      $ref: "#/UUID"
+    uniqueItems: true
+
+id_array:
+  type:
+    object
+
+  additionalProperties: false
+
+  #Can either use 'id' which are GDC IDs (UUID) or 'aliases'
+  #which are user defined IDs ("submitter IDs in the backend")
+  oneOf:
+    - required:
+      - id
+    - required:
+      - alias
+
+  properties:
+    id:
+      $ref: "#/UUID"
+
+    alias:
+      type: string
+
+
+to_one:
+  type:
+    object
+
+  #Can either use 'id' which are GDC IDs (UUID) or 'aliases'
+  #which are user defined IDs ("submitter IDs in the backend")
+  oneOf:
+    - required:
+      - id
+    - required:
+      - alias
+
+  properties:
+    id:
+      $ref: "#/UUID"
+
+    alias:
+      type: string
+
+
+to_many_array:
+  type:
+    array
+  items:
+    $ref: "#/id_array"
+  minItems: 1
+
+to_many:
+  oneOf:
+    - $ref:
+        "#/to_one"
+    - $ref:
+        "#/to_many_array"

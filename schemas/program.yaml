@@ -1,23 +1,28 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
+id: "program"
 title: Program
 type: object
-namespace: http://gdc.nci.nih.gov
 category: administrative
+program: '*'
 project: '*'
 description: >
   A broad framework of goals to be achieved. (NCIt C52647)
 additionalProperties: false
-validators: []
+validators: null
 
 systemProperties:
-  - program_id
+  - id
 
 required:
-  - submitter_program_id
+  - alias
+  - name
 
-unique_keys:
-  - [program_id]
+uniqueKeys:
+  - [id]
+  - [alias]
+
+links: null
 
 # Program is the root entity and so it is the only entity
 # without a project or parents.
@@ -28,7 +33,7 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_program_id:
+  alias:
     type:
       - string
       - "null"

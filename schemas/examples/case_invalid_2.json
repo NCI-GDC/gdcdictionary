@@ -1,0 +1,14 @@
+{
+  "type": "case",
+  "alias": "case_1",
+  "member_of": [
+    {
+      "id": "e58e1f64-d733-405f-95f1-ede1628c81e7"
+    },
+    {
+      "id": "511bf8e8-ae71-4cb9-bb1b-4e58d04d12c1"
+    }
+  ],
+  "gender": "female",
+  "race": "Unknown"
+}

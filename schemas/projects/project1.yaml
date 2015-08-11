@@ -8,13 +8,14 @@ $schema: "http://json-schema.org/draft-04/schema#"
 # Aliquot
 #####################################################################
 
-aliquot:
-  project: 'project1'
-  required:
-    - submitter_aliquot_id
-    - parents
-    - project_1_specific_thing
+id: "aliquot"
+program: 'program1'
+project: 'project1'
+required:
+  - submitter_aliquot_id
+  - parents
+  - project_1_specific_thing
 
-  properties:
-    project_1_specific_thing:
-      type: string
+properties:
+  project_1_specific_thing:
+    type: string

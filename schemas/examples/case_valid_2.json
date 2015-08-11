@@ -1,0 +1,9 @@
+{
+  "type": "case",
+  "alias": "case_1",
+  "member_of": {
+    "alias": "short_id"
+  },
+  "gender": "female",
+  "race": "Unknown"
+}

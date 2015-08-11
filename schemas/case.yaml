@@ -1,29 +1,36 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
+id: "case"
 title: Case
 type: object
 namespace: http://gdc.nci.nih.gov
 category: administrative
+program: '*'
 project: '*'
 description: "TODO"
 additionalProperties: false
-validators: []
+validators: null
 
 systemProperties:
-  - case_id
+  - id
   - project
   - type
   - state
 
+links:
+  - name: member_of
+    link_to_type: project
+    multiplicity: many_to_one
+
 required:
-  - submitter_case_id
-  - parents
+  - alias
   - gender
   - race
+  - member_of
 
-unique_keys:
-  - [case_id]
-  - [project_id, submitter_case_id]
+uniqueKeys:
+  - [id]
+  - [project_id, alias]
 
 # Case properties
 properties:
@@ -35,6 +42,13 @@ properties:
     type: string
   state:
     type: string
+  alias:
+    type:
+      - string
+      - "null"
+
+  #These may end up in the clinical node, but they're here now
+  #in the data model due to the participant legacy
   gender:
     title: Gender
     cde_id: 2200604
@@ -71,14 +85,7 @@ properties:
       - unknown
       - unspecified
 
-
-# Case parents
-  parents:
-    type: object
-    additionalProperties: false
-    required:
-      - project_id
-    properties:
-      project_id:
-        $ref: "definitions.yaml#/UUID"
-        parentType: project
+  member_of:
+    $ref: "definitions.yaml#/to_one"
+    description: >
+      Indicates that the case is logically part of the linked to project.

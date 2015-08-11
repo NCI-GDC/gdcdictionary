@@ -1,9 +1,10 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
+id: "aliquot"
 title: Aliquot
 type: object
-namespace: http://gdc.nci.nih.gov
 category: biospecimen
+program: '*'
 project: '*'
 description: >
   Pertaining to a portion of the whole;
@@ -17,22 +18,28 @@ systemProperties:
   - project
 
 required:
-  - submitter_aliquot_id
-  - parents
+  - alias
 
-unique_keys:
-  - [aliquot_id]
-  - [project_id, submitter_aliquot_id]
+uniqueKeys:
+  - [id]
+  - [project_id, alias]
+
+links:
+  - name: derived_from
+    link_to_type: analyte
+    multiplicity: many_to_one
+
+constraints: null
 
 # Aliquot properties
 properties:
   type:
     type: string
-  aliquot_id:
+  id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  submitter_aliquot_id:
+  alias:
     type:
       - string
       - "null"
@@ -46,14 +53,8 @@ properties:
   concentration:
     type: number
     description: "TODO"
-
-# Aliquot parents
-  parents:
-    type: object
-    additionalProperties: false
-    required:
-      - analyte_ids
-    properties:
-      analyte_ids:
-        $ref: "definitions.yaml#/parent_uuids"
-        parentType: analyte
+  derived_from:
+    $ref: "definitions.yaml#/to_one"
+    description: >
+      Indicates that the aliquot is physically derived from the linked to
+      analyte via some process/protocol
