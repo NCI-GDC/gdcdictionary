@@ -12,7 +12,7 @@ additionalProperties: false
 validators: null
 
 systemProperties:
-  - tissue_source_site_id
+  - id
   - project
 
 links:
@@ -20,23 +20,18 @@ links:
     link_to_type: project
     multiplicity: many_to_one
 
-required:
-  - alias
 
 uniqueKeys:
   - [id]
-  - [project_id, alias]
 
 # tissue_source_site properties
 properties:
-  tissue_source_site_id:
+  type:
+    type: string
+  id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  alias:
-    type:
-      - string
-      - "null"
   name:
     type: string
   code:

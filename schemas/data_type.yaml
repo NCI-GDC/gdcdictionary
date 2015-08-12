@@ -4,7 +4,7 @@ id: "data_type"
 title: Data Type
 type: object
 namespace: http://gdc.nci.nih.gov
-category: misc
+category: TBD
 program: '*'
 project: '*'
 description: "TODO"
@@ -12,7 +12,7 @@ additionalProperties: false
 validators: null
 
 systemProperties:
-  - data_type_id
+  - id
   - project
 
 links:
@@ -28,7 +28,9 @@ uniqueKeys:
 
 # data_type properties
 properties:
-  data_type_id:
+  type:
+    type: string
+  id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"

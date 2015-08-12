@@ -14,14 +14,14 @@ additionalProperties: false
 validators: null
 
 systemProperties:
-  - analyte_id
+  - id
   - project
 
 required:
   - alias
 
 uniqueKeys:
-  - [analyte_id]
+  - [id]
   - [project_id, alias]
 
 links:
@@ -33,7 +33,7 @@ links:
 properties:
   type:
     type: string
-  analyte_id:
+  id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"

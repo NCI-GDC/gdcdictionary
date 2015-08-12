@@ -22,7 +22,6 @@ required:
   - disease_type
   - state
   - primary_site
-  - member_of
 
 uniqueKeys:
   - [id]
@@ -49,13 +48,15 @@ properties:
     description: "TODO"
   state:
     type: string
-    enum:
-      - legacy
-      - active
     description: >
       Whether the project is accepting new submissions (active)
       or closed (legacy).
-
+  primary_site:
+    type: string
+  code:
+    type: string
+  disease_type:
+    type: string
   member_of:
     $ref: "definitions.yaml#/to_one"
     description: >

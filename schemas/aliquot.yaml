@@ -14,9 +14,8 @@ additionalProperties: false
 validators: []
 
 systemProperties:
-  - aliquot_id
+  - id
   - project
-  - submitter_id
 
 required:
   - alias
