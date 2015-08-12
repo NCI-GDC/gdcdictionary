@@ -4,7 +4,7 @@ id: "data_format"
 title: Data Format
 type: object
 namespace: http://gdc.nci.nih.gov
-category: misc
+category: TBD
 program: '*'
 project: '*'
 description: "TODO"
@@ -12,7 +12,7 @@ additionalProperties: false
 validators: null
 
 systemProperties:
-  - data_format_id
+  - id
   - project
 
 links:
@@ -25,11 +25,12 @@ required:
 
 uniqueKeys:
   - [id]
-  - [project_id, alias]
 
 # data_format properties
 properties:
-  data_format_id:
+  type:
+    type: string
+  id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"

@@ -4,7 +4,7 @@ id: "annotation"
 title: Annotation
 type: object
 namespace: http://gdc.nci.nih.gov
-category: misc
+category: TBD
 program: '*'
 project: '*'
 description: "TODO"
@@ -12,7 +12,7 @@ additionalProperties: false
 validators: null
 
 systemProperties:
-  - annotation_id
+  - id
   - project
 
 links:
@@ -47,7 +47,9 @@ uniqueKeys:
 
 # annotation properties
 properties:
-  annotation_id:
+  type:
+    type: string
+  id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
@@ -59,10 +61,12 @@ properties:
   category:
     type: string
   classification:
-    type: number
+    type: string 
   creator:
     type: string
   created_datetime:
     type: number
   status:
+    type: string
+  notes:
     type: string

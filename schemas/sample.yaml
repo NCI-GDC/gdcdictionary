@@ -25,7 +25,6 @@ systemProperties:
 required:
   - alias
   - sample_type
-  - derived_from #this might need a semantic change after participant -> case
 
 uniqueKeys:
   - [id]
@@ -54,13 +53,54 @@ properties:
   sample_type:
     type: string
     description: "TODO"
+  sample_type_id:
+    type: string
+    description: "TODO"
+  tumor_code_id:
+    type: string
+    description: "TODO"
+  tumor_code:
+    type: string
+    description: "TODO"
+  longest_dimension:
+    type: string
+    description: "TODO"
+  intermediate_dimension:
+    type: string
+    description: "TODO"
+  shortest_dimension:
+    type: string
+    description: "TODO"
+  initial_weight:
+    type: string
+    description: "TODO"
+  current_weight: 
+    type: string
+    description: "TODO"
+  freezing_method: 
+    type: string
+    description: "TODO"
+  oct_embedded: 
+    type: string
+    description: "TODO"
+  time_between_clamping_and_freezing: 
+    type: string
+    description: "TODO"
+  time_between_excision_and_freezing: 
+    type: string
+    description: "TODO"
+  days_to_collection: 
+    type: integer 
+    description: "TODO"
+  days_to_sample_procurement: 
+    type: integer 
+    description: "TODO"
+  pathology_report_uuid: 
+    type: string
+    description: "TODO"
   is_ffpe:
     type: boolean
     description: "TODO"
-  initial_weight:
-    type: number
-    description: "TODO"
-
   derived_from:
     $ref: "definitions.yaml#/to_one" #should this be to_one
     description: >

@@ -4,7 +4,7 @@ id: "clinical"
 title: Clinical
 type: object
 namespace: http://gdc.nci.nih.gov
-category: misc
+category: TBD
 program: '*'
 project: '*'
 description: "TODO"
@@ -12,7 +12,7 @@ additionalProperties: false
 validators: null
 
 systemProperties:
-  - clinical_id
+  - id
   - project
 
 links:
@@ -21,15 +21,16 @@ links:
     multiplicity: many_to_one
 
 required:
-  - clinical_id
+  - id
 
 uniqueKeys:
   - [id]
-  - [project_id, alias]
 
 # clinical properties
 properties:
-  clinical_id:
+  type:
+    type: string
+  id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"

@@ -27,7 +27,7 @@ links: null
 properties:
   type:
     type: string
-  program_id:
+  id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
