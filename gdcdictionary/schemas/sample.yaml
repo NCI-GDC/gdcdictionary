@@ -52,15 +52,97 @@ properties:
     description: "TODO"
   sample_type:
     type: string
+    enum:
+      - Blood Derived Normal
+      - Buccal Cell Normal
+      - Control Analyte
+      - DNA
+      - EBV Immortalized Normal
+      - GenomePlex (Rubicon) Amplified DNA
+      - Granulocytes
+      - Primary Blood Derived Cancer - Peripheral Blood
+      - Recurrent Blood Derived Cancer - Peripheral Blood
+      - Primary Tumor
+      - Recurrent Blood Derived Cancer - Bone Marrow
+      - Recurrent Tumor
+      - Repli-G (Qiagen) DNA
+      - Repli-G X (Qiagen) DNA
+      - RNA
+      - Slides
+      - Solid Tissue Normal
+      - Total RNA
+      - Metastatic
+      - Additional - New Primary
+      - Additional Metastatic
+      - Human Tumor Original Cells
+      - Post neo-adjuvant therapy
+      - Primary Blood Derived Cancer - Bone Marrow
+      - Blood Derived Cancer - Bone Marrow, Post-treatment
+      - Blood Derived Cancer - Peripheral Blood, Post-treatment
+      - Cell Lines
+      - Bone Marrow Normal
+      - Primary Xenograft Tissue
+      - Cell Line Derived Xenograft Tissue
+      - Fibroblasts from Bone Marrow Normal 
     description: "TODO"
   sample_type_id:
     type: string
     description: "TODO"
   tumor_code_id:
     type: string
+    enum:
+      - "00"
+      - "01"
+      - "02"
+      - "03"
+      - "04"
+      - "10"
+      - "20"
+      - "21"
+      - "30"
+      - "40"
+      - "41"
+      - "50"
+      - "51"
+      - "52"
+      - "60"
+      - "61"
+      - "62"
+      - "63"
+      - "64"
+      - "65"
+      - "70"
+      - "71"
+      - "80"
+      - "81"
     description: "TODO"
   tumor_code:
     type: string
+    enum:
+      - Non cancerous tissue
+      - Diffuse Large B-Cell Lymphoma (DLBCL)
+      - Lung Cancer (all types)
+      - Cervical Cancer (all types)
+      - Anal Cancer (all types)
+      - Acute lymphoblastic leukemia (ALL)
+      - Acute myeloid leukemia (AML)
+      - Induction Failure AML (AML-IF)
+      - Neuroblastoma (NBL)
+      - Osteosarcoma (OS)
+      - Ewing sarcoma
+      - Wilms tumor (WT)
+      - Clear cell sarcoma of the kidney (CCSK)
+      - Rhabdoid tumor (kidney) (RT)
+      - CNS, ependymoma
+      - CNS, glioblastoma (GBM)
+      - CNS, rhabdoid tumor
+      - CNS, low grade glioma (LGG)
+      - CNS, medulloblastoma
+      - CNS, other
+      - NHL, anaplastic large cell lymphoma
+      - NHL, Burkitt lymphoma (BL)
+      - Rhabdomyosarcoma
+      - Soft tissue sarcoma, non-rhabdomyosarcoma
     description: "TODO"
   longest_dimension:
     type: string
