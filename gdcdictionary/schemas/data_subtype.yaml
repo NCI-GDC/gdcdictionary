@@ -17,7 +17,7 @@ systemProperties:
 
 links:
   - name: member_of
-    link_to_type: project
+    link_to_type: data_type
     multiplicity: many_to_one
 
 required:
