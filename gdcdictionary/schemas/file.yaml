@@ -69,3 +69,5 @@ properties:
     type: string
   state:
     type: string
+  state_comment:
+    type: string
