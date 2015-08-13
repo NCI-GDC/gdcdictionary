@@ -25,7 +25,6 @@ systemProperties:
 required:
   - alias
   - sample_type
-  - derived_from #this might need a semantic change after participant -> case
 
 uniqueKeys:
   - [id]
@@ -53,14 +52,137 @@ properties:
     description: "TODO"
   sample_type:
     type: string
+    enum:
+      - Blood Derived Normal
+      - Buccal Cell Normal
+      - Control Analyte
+      - DNA
+      - EBV Immortalized Normal
+      - GenomePlex (Rubicon) Amplified DNA
+      - Granulocytes
+      - Primary Blood Derived Cancer - Peripheral Blood
+      - Recurrent Blood Derived Cancer - Peripheral Blood
+      - Primary Tumor
+      - Recurrent Blood Derived Cancer - Bone Marrow
+      - Recurrent Tumor
+      - Repli-G (Qiagen) DNA
+      - Repli-G X (Qiagen) DNA
+      - RNA
+      - Slides
+      - Solid Tissue Normal
+      - Total RNA
+      - Metastatic
+      - Additional - New Primary
+      - Additional Metastatic
+      - Human Tumor Original Cells
+      - Post neo-adjuvant therapy
+      - Primary Blood Derived Cancer - Bone Marrow
+      - Blood Derived Cancer - Bone Marrow, Post-treatment
+      - Blood Derived Cancer - Peripheral Blood, Post-treatment
+      - Cell Lines
+      - Bone Marrow Normal
+      - Primary Xenograft Tissue
+      - Cell Line Derived Xenograft Tissue
+      - Fibroblasts from Bone Marrow Normal 
+    description: "TODO"
+  sample_type_id:
+    type: string
+    description: "TODO"
+  tumor_code_id:
+    type: string
+    enum:
+      - "00"
+      - "01"
+      - "02"
+      - "03"
+      - "04"
+      - "10"
+      - "20"
+      - "21"
+      - "30"
+      - "40"
+      - "41"
+      - "50"
+      - "51"
+      - "52"
+      - "60"
+      - "61"
+      - "62"
+      - "63"
+      - "64"
+      - "65"
+      - "70"
+      - "71"
+      - "80"
+      - "81"
+    description: "TODO"
+  tumor_code:
+    type: string
+    enum:
+      - Non cancerous tissue
+      - Diffuse Large B-Cell Lymphoma (DLBCL)
+      - Lung Cancer (all types)
+      - Cervical Cancer (all types)
+      - Anal Cancer (all types)
+      - Acute lymphoblastic leukemia (ALL)
+      - Acute myeloid leukemia (AML)
+      - Induction Failure AML (AML-IF)
+      - Neuroblastoma (NBL)
+      - Osteosarcoma (OS)
+      - Ewing sarcoma
+      - Wilms tumor (WT)
+      - Clear cell sarcoma of the kidney (CCSK)
+      - Rhabdoid tumor (kidney) (RT)
+      - CNS, ependymoma
+      - CNS, glioblastoma (GBM)
+      - CNS, rhabdoid tumor
+      - CNS, low grade glioma (LGG)
+      - CNS, medulloblastoma
+      - CNS, other
+      - NHL, anaplastic large cell lymphoma
+      - NHL, Burkitt lymphoma (BL)
+      - Rhabdomyosarcoma
+      - Soft tissue sarcoma, non-rhabdomyosarcoma
+    description: "TODO"
+  longest_dimension:
+    type: string
+    description: "TODO"
+  intermediate_dimension:
+    type: string
+    description: "TODO"
+  shortest_dimension:
+    type: string
+    description: "TODO"
+  initial_weight:
+    type: string
+    description: "TODO"
+  current_weight: 
+    type: string
+    description: "TODO"
+  freezing_method: 
+    type: string
+    description: "TODO"
+  oct_embedded: 
+    type: string
+    description: "TODO"
+  time_between_clamping_and_freezing: 
+    type: string
+    description: "TODO"
+  time_between_excision_and_freezing: 
+    type: string
+    description: "TODO"
+  days_to_collection: 
+    type: integer 
+    description: "TODO"
+  days_to_sample_procurement: 
+    type: integer 
+    description: "TODO"
+  pathology_report_uuid: 
+    type: string
     description: "TODO"
   is_ffpe:
     type: boolean
     description: "TODO"
-  initial_weight:
-    type: number
-    description: "TODO"
-
   derived_from:
     $ref: "definitions.yaml#/to_one" #should this be to_one
     description: >

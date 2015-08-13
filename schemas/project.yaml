@@ -17,14 +17,14 @@ systemProperties:
   - project
 
 required:
-  - alias
+  - code
   - name
+  - disease_type
   - state
-  - member_of
+  - primary_site
 
 uniqueKeys:
   - [id]
-  - [alias]
 
 links:
   - name: member_of
@@ -43,23 +43,20 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  alias:
-    type:
-      - string
-      - "null"
-    description: "TODO"
   name:
     type: string
     description: "TODO"
   state:
     type: string
-    enum:
-      - legacy
-      - active
     description: >
       Whether the project is accepting new submissions (active)
       or closed (legacy).
-
+  primary_site:
+    type: string
+  code:
+    type: string
+  disease_type:
+    type: string
   member_of:
     $ref: "definitions.yaml#/to_one"
     description: >

@@ -1,10 +1,10 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "case"
-title: Case
+id: "archive"
+title: Archive
 type: object
 namespace: http://gdc.nci.nih.gov
-category: administrative
+category: TBD
 program: '*'
 project: '*'
 description: "TODO"
@@ -14,8 +14,6 @@ validators: null
 systemProperties:
   - id
   - project
-  - type
-  - state
 
 links:
   - name: member_of
@@ -24,12 +22,13 @@ links:
 
 required:
   - alias
+  - revision
 
 uniqueKeys:
   - [id]
   - [project_id, alias]
 
-# Case properties
+# archive properties
 properties:
   type:
     type: string
@@ -42,6 +41,5 @@ properties:
       - string
       - "null"
     systemAlias: submitter_id
-  days_to_index:
-    type:
-      - integer
+  revision:
+    type: number

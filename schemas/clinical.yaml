@@ -1,0 +1,82 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "clinical"
+title: Clinical
+type: object
+namespace: http://gdc.nci.nih.gov
+category: TBD
+program: '*'
+project: '*'
+description: "TODO"
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project
+
+links:
+  - name: member_of
+    link_to_type: project
+    multiplicity: many_to_one
+
+required:
+  - id
+
+uniqueKeys:
+  - [id]
+
+# clinical properties
+properties:
+  type:
+    type: string
+  id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  gender:
+    title: Gender
+    cde_id: 2200604
+    type: string
+    description: |
+      Identification of gender is based upon self-report and may come
+      from a form, questionnaire, interview, etc
+    enum:
+      - female
+      - male
+      - unknown
+      - unspecified
+  race:
+    title: Race
+    cde_id: 21922199
+    description: |
+      Patient's race using the defined categories
+    enum:
+      - not reported
+      - white
+      - american indian or alaska native
+      - black or african american
+      - asian
+      - native hawaiian or other pacific islander
+      - other
+  ethnicity:
+    title: Ethnicity
+    description: |
+      Patient's ethnicity using the defined categories
+    cde_id: 2200604
+    enum:
+      - hispanic or latino
+      - not hispanic or latino
+  vital_status:
+    enum:
+      - alive
+      - dead
+      - lost to follow-up
+  year_of_diagnosis:
+    type: number
+  age_at_diagnosis:
+    type: number
+  days_to_death:
+    type: number
+  icd_10:
+    type: string

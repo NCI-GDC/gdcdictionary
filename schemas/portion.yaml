@@ -18,11 +18,9 @@ systemProperties:
 
 required:
   - alias
-  - derived_from
-  - parents
 
 uniqueKeys:
-  - [portion_id]
+  - [id]
   - [project_id, alias]
 
 links:
@@ -38,7 +36,7 @@ links:
 properties:
   type:
     type: string
-  portion_id:
+  id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
@@ -46,9 +44,19 @@ properties:
     type:
       - string
       - "null"
+    systemAlias: submitter_id
     description: "TODO"
   weight:
     type: number
+    description: "TODO"
+  is_ffpe:
+    type: boolean
+    description: "TODO"
+  creation_datetime:
+    type: number
+    description: "TODO"
+  portion_number:
+    type: string
     description: "TODO"
 
   derived_from:

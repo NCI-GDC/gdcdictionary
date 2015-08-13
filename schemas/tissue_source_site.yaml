@@ -1,29 +1,30 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "program"
-title: Program
+id: "tissue_source_site"
+title: Tissue Source Site
 type: object
+namespace: http://gdc.nci.nih.gov
 category: administrative
 program: '*'
 project: '*'
-description: >
-  A broad framework of goals to be achieved. (NCIt C52647)
+description: "TODO"
 additionalProperties: false
 validators: null
 
 systemProperties:
   - id
+  - project
 
-required:
-  - name
+links:
+  - name: member_of
+    link_to_type: project
+    multiplicity: many_to_one
+
 
 uniqueKeys:
   - [id]
 
-links: null
-
-# Program is the root entity and so it is the only entity
-# without a project or parents.
+# tissue_source_site properties
 properties:
   type:
     type: string
@@ -33,4 +34,9 @@ properties:
     description: "TODO"
   name:
     type: string
-    description: "Full name/title of the program."
+  code:
+    type: string
+  project:
+    type: string
+  bcr_id:
+    type: string

@@ -1,18 +1,24 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "program"
-title: Program
+id: "data_type"
+title: Data Type
 type: object
-category: administrative
+namespace: http://gdc.nci.nih.gov
+category: TBD
 program: '*'
 project: '*'
-description: >
-  A broad framework of goals to be achieved. (NCIt C52647)
+description: "TODO"
 additionalProperties: false
 validators: null
 
 systemProperties:
   - id
+  - project
+
+links:
+  - name: member_of
+    link_to_type: project
+    multiplicity: many_to_one
 
 required:
   - name
@@ -20,10 +26,7 @@ required:
 uniqueKeys:
   - [id]
 
-links: null
-
-# Program is the root entity and so it is the only entity
-# without a project or parents.
+# data_type properties
 properties:
   type:
     type: string
@@ -33,4 +36,3 @@ properties:
     description: "TODO"
   name:
     type: string
-    description: "Full name/title of the program."
