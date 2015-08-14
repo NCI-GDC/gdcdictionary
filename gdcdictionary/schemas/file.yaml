@@ -7,7 +7,9 @@ namespace: http://gdc.nci.nih.gov
 category: data
 program: '*'
 project: '*'
-description: "TODO"
+description: >
+  A set of related records (either written or electronic) kept
+  together. (NCIt C42883)
 additionalProperties: false
 validators: null
 
@@ -61,13 +63,21 @@ properties:
       - string
       - "null"
     systemAlias: submitter_id
+    description: TOREVIEW: the file id assigned by the submitter
   file_name:
     type: string
+    description: TOREVIEW: the file (object) name
   file_size:
     type: number
+    description: the size file (object) in bytes
   md5sum:
     type: string
+    description: The MD5 hash of this file
   state:
     type: string
+    description: "TODO"
   state_comment:
     type: string
+    description: >
+      TOREVIEW: optional comment about why the file is in the
+      current state, mainly for invalid state.

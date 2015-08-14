@@ -7,7 +7,9 @@ namespace: http://gdc.nci.nih.gov
 category: TBD
 program: '*'
 project: '*'
-description: "TODO"
+description: >
+  A digital image, microscopic or otherwise, of any sample, portion, or
+  sub-part thereof. (GDC)
 additionalProperties: false
 validators: null
 
@@ -40,29 +42,46 @@ properties:
     type:
       - string
       - "null"
+    systemAlias: submitter_id
+    description: >
+      The legacy barcode used before prior to the use UUIDs, varies by project.
+      For TCGA, this is bcrslidebarcode.
   section_location:
     type: string
+    description: "TODO: define, from BCR"
   number_proliferating_cells:
     type: integer
+    description: "TODO: define, from BCR"
   percent_tumor_cells:
     type: number
+    description: "TODO: define, from BCR"
   percent_tumor_nuclei:
     type: number
+    description: "TODO: define, from BCR"
   percent_normal_cells:
     type: number
+    description: "TODO: define, from BCR"
   percent_necrosis:
     tpe: number
+    description: "TODO: define, from BCR"
   percent_stromal_cells:
     type: number
+    description: "TODO: define, from BCR"
   percent_inflam_infiltration:
     type: number
+    description: "TODO: define, from BCR"
   percent_lymphocyte_infiltration:
     type: number
+    description: "TODO: define, from BCR"
   percent_monocyte_infiltration:
     type: number
+    description: "TODO: define, from BCR"
   percent_granulocyte_infiltration:
     type: number
+    description: "TODO: define, from BCR"
   percent_neutrophil_infiltration:
     type: number
+    description: "TODO: define, from BCR"
   percent_eosinophil_infiltration:
     type: number
+    description: "TODO: define, from BCR"

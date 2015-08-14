@@ -45,7 +45,7 @@ properties:
     description: "TODO"
   name:
     type: string
-    description: "TODO"
+    description: "TOREVIEW: display name for the project"
   state:
     type: string
     description: >
@@ -53,10 +53,13 @@ properties:
       or closed (legacy).
   primary_site:
     type: string
+    description: "TOREVIEW: primary site for the project"
   code:
     type: string
+    description: "TODO"
   disease_type:
     type: string
+    description: "TOREVIEW: full name for the project"
   member_of:
     $ref: "definitions.yaml#/to_one"
     description: >

@@ -7,7 +7,9 @@ namespace: http://gdc.nci.nih.gov
 category: administrative
 program: '*'
 project: '*'
-description: "TODO"
+description: >
+  A clinical site that collects and provides patient samples and clinical
+  metadata for research use. (NCIt C103264)
 additionalProperties: false
 validators: null
 
@@ -34,9 +36,13 @@ properties:
     description: "TODO"
   name:
     type: string
+    description: "TODO"
   code:
     type: string
+    description: "TODO: define, from DCC"
   project:
     type: string
+    description: "TODO"
   bcr_id:
     type: string
+    description: "TODO"

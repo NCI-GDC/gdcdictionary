@@ -7,7 +7,10 @@ namespace: http://gdc.nci.nih.gov
 category: TBD
 program: '*'
 project: '*'
-description: "TODO"
+description: >
+  An explanatory or critical comment, or other in-context information
+  (e.g., pattern, motif, link), that has been associated with data or
+  other types of information. (NCIt C44272)
 additionalProperties: false
 validators: null
 
@@ -60,13 +63,61 @@ properties:
     systemAlias: submitter_id
   category:
     type: string
+    enum:
+      - Acceptable treatment for TCGA tumor
+      - Administrative Compliance
+      - Alternate sample pipeline
+      - BCR Notification
+      - Barcode incorrect
+      - Biospecimen identity unknown
+      - Case submitted is found to be a recurrence after submission
+      - Center QC failed
+      - Clinical data insufficient
+      - Duplicate case
+      - Duplicate item
+      - General
+      - Genotype mismatch
+      - History of acceptable prior treatment related to a prior/other malignancy
+      - History of unacceptable prior treatment related to a prior/other malignancy
+      - Inadvertently shipped
+      - Item does not meet study protocol
+      - Item flagged DNU
+      - Item in special subset
+      - Item is noncanonical
+      - Item may not meet study protocol
+      - Molecular analysis outside specification
+      - Neoadjuvant therapy
+      - New notification type
+      - New observation type
+      - Normal class but appears diseased
+      - Normal tissue origin incorrect
+      - Pathology outside specification
+      - Permanently missing item or object
+      - Prior malignancy
+      - Qualification metrics changed
+      - Qualified in error
+      - Sample compromised
+      - Subject identity unknown
+      - Subject withdrew consent
+      - Synchronous malignancy
+      - Tumor class but appears normal
+      - Tumor tissue origin incorrect
+      - Tumor type incorrect
+      - WGA Failure
+    description: "TODO: define, from DCC"
   classification:
     type: string 
+    description: "TODO: define, from DCC"
   creator:
     type: string
   created_datetime:
     type: number
+    description: >
+      TOREVIEW: The datetime of annotation creation encoded as seconds from
+      epoch. If no time is given, it is set to 00:00:00 of the date.
   status:
     type: string
+    description: "TODO: define, from DCC"
   notes:
     type: string
+    description: "TODO: define, from DCC"

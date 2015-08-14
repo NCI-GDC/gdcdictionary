@@ -36,3 +36,4 @@ properties:
     description: "TODO"
   name:
     type: string
+    description: name of this data subtype

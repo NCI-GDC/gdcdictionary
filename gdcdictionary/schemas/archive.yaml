@@ -7,7 +7,10 @@ namespace: http://gdc.nci.nih.gov
 category: TBD
 program: '*'
 project: '*'
-description: "TODO"
+description: >
+  A group of files containing program or project related data ingested by the
+  GDC. Archives may be submitted directly to GDC by a center, assembled by the
+  GDC, or obtained by another route. (GDC subclass of NCIt C114463)
 additionalProperties: false
 validators: null
 
@@ -41,5 +44,9 @@ properties:
       - string
       - "null"
     systemAlias: submitter_id
+    description: >
+      Unique identifier of this archive in the DCC; usually the original
+      archive filename.
   revision:
     type: number
+    description: The revision of this archive in the DCC.

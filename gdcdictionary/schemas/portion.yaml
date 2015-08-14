@@ -8,7 +8,7 @@ category: biospecimen
 program: '*'
 project: '*'
 description: >
-  A physical sub-part of any sample.
+  A physical sub-part of any sample. (GDC)
 additionalProperties: false
 validators: null
 
@@ -45,19 +45,24 @@ properties:
       - string
       - "null"
     systemAlias: submitter_id
-    description: "TODO"
+    description: >
+      The legacy barcode used before prior to the use UUIDs, varies by
+      project. For TCGA this is bcrportionbarcode.
   weight:
     type: number
-    description: "TODO"
+    description: "TODO: define, from BCR"
   is_ffpe:
     type: boolean
     description: "TODO"
   creation_datetime:
     type: number
-    description: "TODO"
+    description: >
+      TOREVIEW: The datetime of portion creation encoded as seconds from
+      epoch. If no time is given, it is set to 00:00:00 of the date. Replaces
+      dayofcreation/monthofcreation/yearofcreation.
   portion_number:
     type: string
-    description: "TODO"
+    description: "TODO: define, from BCR"
 
   derived_from:
     $ref: "definitions.yaml#/to_one" #should this be to_one

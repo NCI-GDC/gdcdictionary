@@ -48,16 +48,18 @@ properties:
       - string
       - "null"
     systemAlias: submitter_id
-    description: "TODO"
+    description: >
+      The legacy barcode used before prior to the use
+      UUIDs. For TCGA this is bcraliquotbarcode.
   source_center:
     type: string
-    description: "TODO"
+    description: "TODO: define, from BCR"
   amount:
     type: number
-    description: "TODO"
+    description: "TODO: define, from BCR"
   concentration:
     type: number
-    description: "TODO"
+    description: "TODO: define, from BCR"
   derived_from:
     $ref: "definitions.yaml#/to_many"
     description: >

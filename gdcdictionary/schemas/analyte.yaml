@@ -36,13 +36,17 @@ properties:
   id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
+    description: >
+      A liquid bulk product produced according to specified lab protocols,
+      from a sample or portion, intended for further analysis. (GDC)
   alias:
     type:
       - string
       - "null"
     systemAlias: submitter_id
-    description: "TODO"
+    description: >
+      The legacy barcode used before prior to the use UUIDs, varies by
+      project. For TCGA this is bcranalytebarcode.
   analyte_type:
     enum:
       - DNA
@@ -52,7 +56,7 @@ properties:
       - Repli-G X (Qiagen) DNA
       - RNA
       - Total RNA
-    description: "TODO"
+    description: "TODO: define, from BCR"
   analyte_type_id:
     enum:
       - D
@@ -64,19 +68,19 @@ properties:
       - X
   amount:
     type: number
-    description: "TODO"
+    description: "TODO: define, from BCR"
   concentration:
     type: number
-    description: "TODO"
+    description: "TODO: define, from BCR"
   a260_a280_ratio:
     type: number
-    description: "TODO"
+    description: "TODO: define, from BCR"
   well_number:
     type: string
-    description: "TODO"
+    description: "TODO: define, from BCR"
   spectrophotometer_method:
     type: string
-    description: "TODO"
+    description: "TODO: define, from BCR"
 # analyte parents
   derived_from:
     $ref: "definitions.yaml#/to_one" #should this be to_one

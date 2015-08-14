@@ -49,7 +49,10 @@ properties:
     type:
       - string
       - "null"
-    description: "TODO"
+    systemAlias: submitter_id
+    description: >
+      The legacy barcode used before prior to the use UUIDs, varies by project.
+      For TCGA this is bcrsamplebarcode.
   sample_type:
     type: string
     enum:
@@ -173,10 +176,16 @@ properties:
     description: "TODO"
   days_to_collection: 
     type: integer 
-    description: "TODO"
+    description: >
+      TOREVIEW: The datetime of sample collection encoded as seconds from
+      epoch. If no time is given, it is set to 00:00:00 of the date. Replaces
+      dayofcollection/monthofcollection/yearofcollection.
   days_to_sample_procurement: 
     type: integer 
-    description: "TODO"
+    description: >
+      TOREVIEW: The datetime of sample procurement encoded as seconds from
+      epoch. If no time is given, it is set to 00:00:00 of the date. Replaces
+      dayofcollection/monthofcollection/yearofcollection.
   pathology_report_uuid: 
     type: string
     description: "TODO"
