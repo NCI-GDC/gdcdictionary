@@ -1,7 +1,6 @@
 import yaml
 import os
 import glob
-from jsonschema import Draft4Validator, RefResolver
 
 MOD_DIR = os.path.abspath(os.path.dirname(__file__))
 
@@ -21,7 +20,6 @@ class GDCDictionary(object):
         self.metaschema = self.load_yaml_schema(self.metaschema_path)
         self.definitions = self.load_yaml_schema(self.definitions_path)
         self.load_root_dir()
-        self.resolver = RefResolver('definitions.yaml#', self.definitions)
 
     def load_root_dir(self):
         os.chdir(self.root_dir)
@@ -34,8 +32,3 @@ class GDCDictionary(object):
         full_path = os.path.join(self.root_dir, name)
         with open(full_path, 'r') as f:
             return yaml.load(f)
-
-    def iter_errors(self, doc):
-        validator = Draft4Validator(self.schema[doc['type']],
-                                    resolver=self.resolver)
-        return validator.iter_errors(doc)
