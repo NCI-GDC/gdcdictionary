@@ -63,16 +63,16 @@ properties:
       - string
       - "null"
     systemAlias: submitter_id
-    description: TOREVIEW: the file id assigned by the submitter
+    description: "TOREVIEW: the file id assigned by the submitter"
   file_name:
     type: string
-    description: TOREVIEW: the file (object) name
+    description: "TOREVIEW: the file (object) name"
   file_size:
     type: number
-    description: the size file (object) in bytes
+    description: "the size file (object) in bytes"
   md5sum:
     type: string
-    description: The MD5 hash of this file
+    description: "The MD5 hash of this file"
   state:
     type: string
     description: "TODO"
