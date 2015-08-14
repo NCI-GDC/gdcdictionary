@@ -31,6 +31,10 @@ links:
         multiplicity: many_to_one
       - link_to_type: sample
         multiplicity: many_to_one
+  - name: shipped_to
+    anyOf:
+      - link_to_type: center
+        multiplicity: many_to_one
 
 
 constraints: null

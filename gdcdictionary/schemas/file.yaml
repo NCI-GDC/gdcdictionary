@@ -37,7 +37,9 @@ links:
   - name: describes
     link_to_type: case
     multiplicity: many_to_one
-
+  - name: related_to
+    link_to_type: file
+    multiplicity: many_to_many
 
 required:
   - alias

@@ -18,8 +18,8 @@ systemProperties:
   - project
 
 links:
-  - name: member_of
-    link_to_type: project
+  - name: describes
+    link_to_type: case
     multiplicity: many_to_one
 
 required:

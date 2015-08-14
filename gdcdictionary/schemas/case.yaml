@@ -21,6 +21,9 @@ links:
   - name: member_of
     link_to_type: project
     multiplicity: many_to_one
+  - name: processed_at
+    link_to_type: tissue_source_site
+    multiplicity: many_to_one
 
 required:
   - alias
