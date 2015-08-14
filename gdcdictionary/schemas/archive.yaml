@@ -22,6 +22,9 @@ links:
   - name: member_of
     link_to_type: project
     multiplicity: many_to_one
+  - name: related_to
+    link_to_type: file
+    multiplicity: many_to_one
 
 required:
   - alias

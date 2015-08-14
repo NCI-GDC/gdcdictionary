@@ -37,6 +37,30 @@ links:
   - name: describes
     link_to_type: case
     multiplicity: many_to_one
+  - name: related_to
+    link_to_type: file
+    multiplicity: many_to_many
+  - name: memeber_of
+    link_to_type: tag
+    multiplicity: many_to_many
+  - name: member_of
+    link_to_type: archive
+    multiplicity: many_to_one
+  - name: member_of
+    link_to_type: data_subtype
+    multiplicity: many_to_one
+  - name: member_of
+    link_to_type: data_format
+    multiplicity: many_to_one
+  - name: member_of
+    link_to_type: experimental_strategy
+    multiplicity: many_to_one
+  - name: submitted_by
+    link_to_type: center
+    multiplicity: many_to_one
+  - name: generated_from
+    link_to_type: platform
+    multiplicity: many_to_one
 
 
 required:
