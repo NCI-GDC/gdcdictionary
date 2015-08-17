@@ -19,10 +19,14 @@ systemProperties:
   - project
 
 links:
-  - name: member_of
+  - name: projects
+    backref: archives
+    edge_label: member_of
     link_to_type: project
     multiplicity: many_to_one
-  - name: related_to
+  - name: related_files
+    backref: related_archives
+    edge_label: related_to
     link_to_type: file
     multiplicity: many_to_one
 
