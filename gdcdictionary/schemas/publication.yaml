@@ -16,9 +16,11 @@ systemProperties:
   - project
 
 links:
-  - name: refers_to
-    link_to_type: file
-    multiplicity: many_to_one
+  - name: files
+    backref: publications
+    label: refers_to
+    target_type: file
+    multiplicity: many_to_many
 
 required:
   - pmid
@@ -39,3 +41,5 @@ properties:
     type: string
   doi:
     type: string
+  files:
+    $ref: "definitions.yaml#/to_many"

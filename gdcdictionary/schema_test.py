@@ -11,11 +11,10 @@ Examples are at the end.
 
 from jsonschema import validate, RefResolver, ValidationError
 import copy
-import uuid
 import yaml
 import argparse
 import json
-import sys
+from python import GDCDictionary
 
 
 def load_yaml_schema(path):
@@ -59,14 +58,35 @@ def get_project_specific_schema(projects, project, schema, entity_type):
     return root
 
 
-def validate_entity(entity, schemata, resolver=None, project=None):
+def validate_entity(entity, schemata, resolver=None, project=None, name=''):
     """Validate an entity by looking up the core schema for its type and
     overriding it with any project level overrides
 
     """
     local_schema = get_project_specific_schema(
         projects, project, schemata[entity['type']], entity['type'])
-    return validate(entity, local_schema, resolver=resolver)
+    result = validate(entity, local_schema, resolver=resolver)
+    return result
+
+
+def validate_schemata(schemata, metaschema):
+    # validate schemata
+    print('Validating schemas against metaschema... '),
+    for s in schemata.values():
+        validate(s, metaschema)
+
+        def assert_link_is_also_prop(link):
+            assert link in s['properties'],\
+                "Entity '{}' has '{}' as a link but not property".format(
+                    s['id'], link)
+
+        for link in [l['name'] for l in s['links'] if 'name' in l]:
+            assert_link_is_also_prop(link)
+        for subgroup in [l['subgroup'] for l in s['links'] if 'name' not in l]:
+            for link in [l['name'] for l in subgroup if 'name' in l]:
+                assert_link_is_also_prop(link)
+
+    print('ok.')
 
 
 if __name__ == '__main__':
@@ -74,35 +94,16 @@ if __name__ == '__main__':
     ####################
     # Setup
     ####################
-
-    # Load schemata
-    metaschema = load_yaml_schema('metaschema.yaml')
-    definitions = load_yaml_schema('definitions.yaml')
-    project1 = load_yaml_schema('projects/project1.yaml')
+    project1 = load_yaml_schema('schemas/projects/project1.yaml')
     projects = {'project1': project1}
-    resolver = RefResolver('definitions.yaml#', definitions)
-
-    schemata = {
-        "program": load_yaml_schema('program.yaml'),
-        "project": load_yaml_schema('project.yaml'),
-        "case": load_yaml_schema('case.yaml'),
-        "sample": load_yaml_schema('sample.yaml'),
-        "portion": load_yaml_schema('portion.yaml'),
-        "analyte": load_yaml_schema('analyte.yaml'),
-        "aliquot": load_yaml_schema('aliquot.yaml')
-    }
-
-    # validate schemata
-    map(lambda s: validate(s, metaschema), schemata.values())
 
     parser = argparse.ArgumentParser(description='Validate JSON')
     parser.add_argument('jsonfiles', metavar='file',
-        type=argparse.FileType('r'), nargs='+',
-        help='json files to test if (in)valid',
-    )
+                        type=argparse.FileType('r'), nargs='*',
+                        help='json files to test if (in)valid')
 
     parser.add_argument('--invalid', action='store_true', default=False,
-                   help='expect the files to be invalid instead of valid')
+                        help='expect the files to be invalid instead of valid')
 
     args = parser.parse_args()
 
@@ -110,19 +111,23 @@ if __name__ == '__main__':
     # Example validation
     ####################
 
+    # Load schemata
+    dictionary = GDCDictionary()
+    resolver = RefResolver('definitions.yaml#', dictionary.definitions)
+    validate_schemata(dictionary.schema, dictionary.metaschema)
+
     for f in args.jsonfiles:
         doc = json.load(f)
         if args.invalid:
             try:
-                print("CHECK if {0} is invalid:".format(f.name))
-                validate_entity(doc, schemata, resolver)
+                print("CHECK if {0} is invalid:".format(f.name)),
+                validate_entity(doc, dictionary.schema, resolver)
             except ValidationError as e:
-                print(e)
                 print("Invalid as expected.")
                 pass
             else:
                 raise Exception("Expected invalid, but validated.")
         else:
-            print ("CHECK if {0} is valid:".format(f.name))
-            validate_entity(doc, schemata, resolver)
+            print ("CHECK if {0} is valid:".format(f.name)),
+            validate_entity(doc, dictionary.schema, resolver)
             print("Valid as expected")

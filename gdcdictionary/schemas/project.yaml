@@ -27,8 +27,10 @@ uniqueKeys:
   - [id]
 
 links:
-  - name: member_of
-    link_to_type: program
+  - name: program
+    backref: projects
+    label: member_of
+    target_type: program
     multiplicity: one_to_one
 
 constraints: null
@@ -60,7 +62,7 @@ properties:
   disease_type:
     type: string
     description: "TOREVIEW: full name for the project"
-  member_of:
+  program:
     $ref: "definitions.yaml#/to_one"
     description: >
       Indicates that the project is logically part of the indicated project.

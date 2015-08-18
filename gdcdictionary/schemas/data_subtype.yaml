@@ -16,8 +16,10 @@ systemProperties:
   - project
 
 links:
-  - name: member_of
-    link_to_type: data_type
+  - name: data_type
+    backref: data_subtypes
+    label: member_of
+    target_type: data_type
     multiplicity: many_to_one
 
 required:
@@ -37,3 +39,5 @@ properties:
   name:
     type: string
     description: name of this data subtype
+  data_type:
+    $ref: "definitions.yaml#/to_one"

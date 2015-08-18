@@ -21,13 +21,13 @@ systemProperties:
 links:
   - name: projects
     backref: archives
-    edge_label: member_of
-    link_to_type: project
+    label: member_of
+    target_type: project
     multiplicity: many_to_one
   - name: related_files
     backref: related_archives
-    edge_label: related_to
-    link_to_type: file
+    label: related_to
+    target_type: file
     multiplicity: many_to_one
 
 required:
@@ -57,3 +57,8 @@ properties:
   revision:
     type: number
     description: The revision of this archive in the DCC.
+
+  projects:
+    $ref: "definitions.yaml#/to_one"
+  related_files:
+    $ref: "definitions.yaml#/to_one"

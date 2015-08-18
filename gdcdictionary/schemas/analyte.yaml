@@ -25,8 +25,10 @@ uniqueKeys:
   - [project_id, alias]
 
 links:
-  - name: derived_from
-    link_to_type: portion
+  - name: portion
+    backref: analytes
+    label: derived_from
+    target_type: portion
     multiplicity: many_to_one
 
 # Added back all fields in current data model to make it compatible with current database
@@ -82,7 +84,7 @@ properties:
     type: string
     description: "TODO: define, from BCR"
 # analyte parents
-  derived_from:
+  portion:
     $ref: "definitions.yaml#/to_one" #should this be to_one
     description: >
       Indicates that the analyte is physically derived from the linked to

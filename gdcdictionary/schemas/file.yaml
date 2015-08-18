@@ -24,78 +24,78 @@ links:
     subgroup:
       - name: aliquots
         backref: files
-        edge_label: data_from
-        link_to_type: aliquot
+        label: data_from
+        target_type: aliquot
         multiplicity: many_to_many
       - name: analytes
         backref: files
-        edge_label: data_from
-        link_to_type: analyte
+        label: data_from
+        target_type: analyte
         multiplicity: many_to_many
       - name: cases
         backref: files
-        edge_label: data_from
-        link_to_type: case
+        label: data_from
+        target_type: case
         multiplicity: many_to_many
       - name: files
         backref: files
-        edge_label: data_from
-        link_to_type: file
+        label: data_from
+        target_type: file
         multiplicity: many_to_many
       - name: portions
         backref: files
-        edge_label: data_from
-        link_to_type: portion
+        label: data_from
+        target_type: portion
         multiplicity: many_to_many
       - name: samples
         backref: files
-        edge_label: data_from
-        link_to_type: sample
+        label: data_from
+        target_type: sample
         multiplicity: many_to_many
       - name: slides
         backref: files
-        edge_label: data_from
-        link_to_type: slide
+        label: data_from
+        target_type: slide
         multiplicity: many_to_many
   - name: files
     backref: files
-    edge_label: related_to
-    link_to_type: file
+    label: related_to
+    target_type: file
     multiplicity: many_to_many
   - name: tags
     backref: files
-    edge_label: memeber_of
-    link_to_type: tag
+    label: memeber_of
+    target_type: tag
     multiplicity: many_to_many
-  - name: archive
+  - name: archives
     backref: files
-    edge_label: member_of
-    link_to_type: archive
+    label: member_of
+    target_type: archive
     multiplicity: many_to_one
-  - name: data_subtype
+  - name: data_subtypes
     backref: files
-    edge_label: member_of
-    link_to_type: data_subtype
+    label: member_of
+    target_type: data_subtype
     multiplicity: many_to_one
-  - name: data_format
+  - name: data_formats
     backref: files
-    edge_label: member_of
-    link_to_type: data_format
+    label: member_of
+    target_type: data_format
     multiplicity: many_to_one
-  - name: experimental_strategys
-    backref: file
-    edge_label: member_of
-    link_to_type: experimental_strategies
-    multiplicity: many_to_one
-  - name: center
+  - name: experimental_strategies
     backref: files
-    edge_label: submitted_by
-    link_to_type: center
+    label: member_of
+    target_type: experimental_strategy
     multiplicity: many_to_one
-  - name: platform
+  - name: centers
     backref: files
-    edge_label: generated_from
-    link_to_type: platform
+    label: submitted_by
+    target_type: center
+    multiplicity: many_to_one
+  - name: platforms
+    backref: files
+    label: generated_from
+    target_type: platform
     multiplicity: many_to_one
 
 
@@ -148,8 +148,6 @@ properties:
     $ref: "definitions.yaml#/to_many"
   cases:
     $ref: "definitions.yaml#/to_many"
-  files:
-    $ref: "definitions.yaml#/to_many"
   portions:
     $ref: "definitions.yaml#/to_many"
   samples:
@@ -160,15 +158,15 @@ properties:
     $ref: "definitions.yaml#/to_many"
   tags:
     $ref: "definitions.yaml#/to_many"
-  archive:
+  archives:
     $ref: "definitions.yaml#/to_one"
-  data_subtype:
+  data_subtypes:
     $ref: "definitions.yaml#/to_one"
-  data_format:
+  data_formats:
     $ref: "definitions.yaml#/to_one"
-  experimental_strategy:
+  experimental_strategies:
     $ref: "definitions.yaml#/to_one"
-  center:
+  centers:
     $ref: "definitions.yaml#/to_one"
-  platform:
+  platforms:
     $ref: "definitions.yaml#/to_one"
