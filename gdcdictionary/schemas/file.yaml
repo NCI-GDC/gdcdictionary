@@ -37,8 +37,10 @@ links:
         label: data_from
         target_type: case
         multiplicity: many_to_many
-      - name: files
-        backref: files
+        # this is according to the definition in current data model
+        # https://github.com/NCI-GDC/gdcdatamodel/blob/develop/gdcdatamodel/models/edges/data_from.py#L53
+      - name: derived_files
+        backref: source_files
         label: data_from
         target_type: file
         multiplicity: many_to_many
@@ -57,7 +59,7 @@ links:
         label: data_from
         target_type: slide
         multiplicity: many_to_many
-  - name: files
+  - name: related_files
     backref: files
     label: related_to
     target_type: file
@@ -154,7 +156,9 @@ properties:
     $ref: "definitions.yaml#/to_many"
   slides:
     $ref: "definitions.yaml#/to_many"
-  files:
+  derived_files:
+    $ref: "definitions.yaml#/to_many"
+  related_files:
     $ref: "definitions.yaml#/to_many"
   tags:
     $ref: "definitions.yaml#/to_many"
