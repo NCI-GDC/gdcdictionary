@@ -16,7 +16,7 @@ systemProperties:
   - project
 
 links:
-  - name: data_type
+  - name: data_types
     backref: data_subtypes
     label: member_of
     target_type: data_type
@@ -39,5 +39,5 @@ properties:
   name:
     type: string
     description: name of this data subtype
-  data_type:
+  data_types:
     $ref: "definitions.yaml#/to_one"

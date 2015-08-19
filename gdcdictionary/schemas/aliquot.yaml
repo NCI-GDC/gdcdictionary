@@ -38,7 +38,7 @@ links:
         label: derived_from
         multiplicity: many_to_one
         target_type: sample
-  - name: center
+  - name: centers
     label: shipped_to
     backref: aliquots
     multiplicity: many_to_one
@@ -79,5 +79,5 @@ properties:
       analyte via some process/protocol
   samples:
     $ref: "definitions.yaml#/to_many"
-  center:
+  centers:
     $ref: "definitions.yaml#/to_one"

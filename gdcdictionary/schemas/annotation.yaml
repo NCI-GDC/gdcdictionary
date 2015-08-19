@@ -22,37 +22,37 @@ links:
   - exclusive: true
     required: true
     subgroup:
-      - name: case
+      - name: cases
         label: annotates
         backref: annotations
         target_type: case
         multiplicity: many_to_one
-      - name: sample
+      - name: samples
         label: annotates
         backref: annotations
         target_type: sample
         multiplicity: many_to_one
-      - name: slide
+      - name: slides
         label: annotates
         backref: annotations
         target_type: slide
         multiplicity: many_to_one
-      - name: portion
+      - name: portions
         label: annotates
         backref: annotations
         target_type: portion
         multiplicity: many_to_one
-      - name: analyte
+      - name: analytes
         label: annotates
         backref: annotations
         target_type: analyte
         multiplicity: many_to_one
-      - name: aliquot
+      - name: aliquots
         label: annotates
         backref: annotations
         target_type: aliquot
         multiplicity: many_to_one
-      - name: file
+      - name: files
         label: annotates
         backref: annotations
         target_type: file
@@ -144,17 +144,17 @@ properties:
     type: string
     description: "TODO: define, from DCC"
 
-  case:
+  cases:
     $ref: "definitions.yaml#/to_one"
-  sample:
+  samples:
     $ref: "definitions.yaml#/to_one"
-  slide:
+  slides:
     $ref: "definitions.yaml#/to_one"
-  portion:
+  portions:
     $ref: "definitions.yaml#/to_one"
-  analyte:
+  analytes:
     $ref: "definitions.yaml#/to_one"
-  aliquot:
+  aliquots:
     $ref: "definitions.yaml#/to_one"
-  file:
+  files:
     $ref: "definitions.yaml#/to_one"

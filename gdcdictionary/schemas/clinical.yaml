@@ -18,7 +18,7 @@ systemProperties:
   - project
 
 links:
-  - name: case
+  - name: cases
     backref: clinicals
     label: describes
     target_type: case
@@ -102,5 +102,5 @@ properties:
       The tenth version of the International Classification of Disease (ICD),
       published by the World Health Organization in 1992. A system of numbered
       categories for representation of data. CDE: 3226287.
-  case:
+  cases:
     $ref: "definitions.yaml#/to_one"

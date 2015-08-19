@@ -24,7 +24,7 @@ uniqueKeys:
   - [project_id, alias]
 
 links:
-  - name: sample
+  - name: samples
     backref: portions
     label: derived_from
     target_type: sample
@@ -66,7 +66,7 @@ properties:
     type: string
     description: "TODO: define, from BCR"
 
-  sample:
+  samples:
     $ref: "definitions.yaml#/to_one" #should this be to_one
     description: >
       Indicates that the portion is physically derived from the linked to

@@ -18,12 +18,12 @@ systemProperties:
   - state
 
 links:
-  - name: project
+  - name: projects
     backref: cases
     label: target_of
     target_type: project
     multiplicity: many_to_one
-  - name: tissue_source_site
+  - name: tissue_source_sites
     backref: cases
     label: processed_at
     target_type: tissue_source_site
@@ -52,7 +52,7 @@ properties:
   days_to_index:
     type:
       - integer
-  project:
+  projects:
     $ref: "definitions.yaml#/to_one"
-  tissue_source_site:
+  tissue_source_sites:
     $ref: "definitions.yaml#/to_one"

@@ -31,7 +31,7 @@ uniqueKeys:
   - [project_id, alias]
 
 links:
-  - name: case
+  - name: cases
     backref: samples
     label: derived_from
     target_type: case
@@ -194,7 +194,7 @@ properties:
   is_ffpe:
     type: boolean
     description: "TODO"
-  case:
+  cases:
     $ref: "definitions.yaml#/to_one" #should this be to_one
     description: >
       Indicates that the sample is physically derived from the subject

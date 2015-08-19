@@ -18,7 +18,7 @@ systemProperties:
   - project
 
 links:
-  - name: portion
+  - name: portions
     backref: slides
     label: derived_from
     target_type: portion
@@ -87,5 +87,5 @@ properties:
   percent_eosinophil_infiltration:
     type: number
     description: "TODO: define, from BCR"
-  portion:
+  portions:
     $ref: "definitions.yaml#/to_one"
