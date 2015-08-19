@@ -20,7 +20,7 @@ systemProperties:
 
 links:
   - exclusive: false
-    required: true
+    required: false # eg: bai file does not have edge to biospecimen
     subgroup:
       - name: aliquots
         backref: files
