@@ -14,7 +14,6 @@ validators: null
 systemProperties:
   - id
   - project
-  - type
   - state
 
 links:

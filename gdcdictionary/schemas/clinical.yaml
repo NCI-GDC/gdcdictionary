@@ -22,7 +22,7 @@ links:
     backref: clinicals
     label: describes
     target_type: case
-    multiplicity: many_to_one
+    multiplicity: one_to_one
 
 required:
   - id

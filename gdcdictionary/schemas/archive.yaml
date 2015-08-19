@@ -28,7 +28,7 @@ links:
     backref: related_archives
     label: related_to
     target_type: file
-    multiplicity: many_to_one
+    multiplicity: one_to_many
 
 required:
   - alias
@@ -61,4 +61,4 @@ properties:
   projects:
     $ref: "definitions.yaml#/to_one"
   related_files:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "definitions.yaml#/to_many"

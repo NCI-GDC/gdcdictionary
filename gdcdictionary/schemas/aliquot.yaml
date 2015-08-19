@@ -73,11 +73,11 @@ properties:
     type: number
     description: "TODO: define, from BCR"
   analytes:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "definitions.yaml#/to_one"
     description: >
       Indicates that the aliquot is physically derived from the linked to
       analyte via some process/protocol
   samples:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "definitions.yaml#/to_one"
   centers:
     $ref: "definitions.yaml#/to_one"
