@@ -31,7 +31,7 @@ links:
     backref: projects
     label: member_of
     target_type: program
-    multiplicity: one_to_one
+    multiplicity: many_to_one
 
 constraints: null
 
