@@ -17,7 +17,6 @@ systemProperties:
   - id
   - project
 
-
 links:
   - exclusive: false
     required: false # eg: bai file does not have edge to biospecimen
@@ -60,7 +59,7 @@ links:
         target_type: slide
         multiplicity: many_to_many
   - name: related_files
-    backref: files
+    backref: parent_files
     label: related_to
     target_type: file
     multiplicity: many_to_many
