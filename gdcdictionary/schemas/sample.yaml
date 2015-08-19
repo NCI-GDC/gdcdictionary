@@ -25,6 +25,7 @@ systemProperties:
 required:
   - alias
   - sample_type
+  - cases
 
 uniqueKeys:
   - [id]
@@ -36,6 +37,7 @@ links:
     label: derived_from
     target_type: case
     multiplicity: many_to_one #not sure
+    required: true
 
 # Sample properties
 # Currently there are many TCGA-specific fields in the DB, this is an attempt

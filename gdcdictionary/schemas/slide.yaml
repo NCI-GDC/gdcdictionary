@@ -24,10 +24,12 @@ links:
     target_type: portion
     # this is many_to_many according to relationships in current database
     multiplicity: many_to_many
+    required: true
 
 required:
   - alias
   - section_location
+  - portions
 
 uniqueKeys:
   - [id]

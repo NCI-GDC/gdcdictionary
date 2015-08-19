@@ -19,6 +19,7 @@ systemProperties:
 
 required:
   - alias
+  - portions
 
 uniqueKeys:
   - [id]
@@ -30,6 +31,7 @@ links:
     label: derived_from
     target_type: portion
     multiplicity: many_to_one
+    required: true
 
 # Added back all fields in current data model to make it compatible with current database
 properties:

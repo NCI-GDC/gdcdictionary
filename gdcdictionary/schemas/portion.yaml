@@ -18,6 +18,7 @@ systemProperties:
 
 required:
   - alias
+  - samples
 
 uniqueKeys:
   - [id]
@@ -29,6 +30,7 @@ links:
     label: derived_from
     target_type: sample
     multiplicity: many_to_one
+    required: true
 
 # Portion properties
 # Currently there are many TCGA-specific fields in the DB. This is an attempt

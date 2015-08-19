@@ -21,9 +21,11 @@ links:
     label: member_of
     target_type: data_type
     multiplicity: many_to_one
+    required: true
 
 required:
   - name
+  - data_types
 
 uniqueKeys:
   - [id]

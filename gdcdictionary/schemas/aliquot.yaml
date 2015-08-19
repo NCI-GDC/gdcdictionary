@@ -19,6 +19,7 @@ systemProperties:
 
 required:
   - alias
+  - centers
 
 uniqueKeys:
   - [id]
@@ -36,13 +37,14 @@ links:
       - name: samples
         backref: aliquots
         label: derived_from
-        multiplicity: many_to_one
+        multiplicity: many_to_many
         target_type: sample
   - name: centers
     label: shipped_to
     backref: aliquots
     multiplicity: many_to_one
     target_type: center
+    required: true
 
 
 constraints: null

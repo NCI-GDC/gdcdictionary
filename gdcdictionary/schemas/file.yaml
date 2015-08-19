@@ -63,46 +63,55 @@ links:
     label: related_to
     target_type: file
     multiplicity: many_to_many
+    required: false
   - name: tags
     backref: files
     label: memeber_of
     target_type: tag
     multiplicity: many_to_many
+    required: false
   - name: archives
     backref: files
     label: member_of
     target_type: archive
     multiplicity: many_to_one
+    required: false
   - name: data_subtypes
     backref: files
     label: member_of
     target_type: data_subtype
     multiplicity: many_to_one
+    required: false
   - name: data_formats
     backref: files
     label: member_of
     target_type: data_format
     multiplicity: many_to_one
+    required: false
   - name: experimental_strategies
     backref: files
     label: member_of
     target_type: experimental_strategy
     multiplicity: many_to_one
+    required: false
   - name: centers
     backref: files
     label: submitted_by
     target_type: center
     multiplicity: many_to_one
+    required: false
   - name: platforms
     backref: files
     label: generated_from
     target_type: platform
     multiplicity: many_to_one
+    required: false
   - name: described_cases
     backref: describing_files
     label: describes
     target_type: case
     multiplicity: many_to_one
+    required: false
 
 
 required:

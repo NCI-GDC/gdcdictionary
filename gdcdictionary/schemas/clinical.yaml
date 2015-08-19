@@ -23,9 +23,11 @@ links:
     label: describes
     target_type: case
     multiplicity: one_to_one
+    required: true
 
 required:
   - id
+  - cases
 
 uniqueKeys:
   - [id]

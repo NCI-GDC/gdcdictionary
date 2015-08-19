@@ -21,10 +21,12 @@ links:
     label: refers_to
     target_type: file
     multiplicity: many_to_many
+    required: true
 
 required:
   - pmid
   - doi
+  - files
 
 uniqueKeys:
   - [id]

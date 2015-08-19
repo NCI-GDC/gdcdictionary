@@ -22,14 +22,17 @@ links:
     label: member_of
     target_type: project
     multiplicity: many_to_one
+    required: true
   - name: tissue_source_sites
     backref: cases
     label: processed_at
     target_type: tissue_source_site
     multiplicity: many_to_one
+    required: false
 
 required:
   - alias
+  - projects
 
 uniqueKeys:
   - [id]

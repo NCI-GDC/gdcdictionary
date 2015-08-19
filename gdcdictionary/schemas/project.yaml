@@ -22,6 +22,7 @@ required:
   - disease_type
   - state
   - primary_site
+  - programs
 
 uniqueKeys:
   - [id]
@@ -32,6 +33,7 @@ links:
     label: member_of
     target_type: program
     multiplicity: many_to_one
+    required: true
 
 constraints: null
 

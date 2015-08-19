@@ -30,6 +30,7 @@ definitions:
       - backref
       - label
       - multiplicity
+      - required
     properties:
       name:
         type: string
@@ -46,6 +47,8 @@ definitions:
           - one_to_many
           - many_to_one
           - many_to_many
+      required:
+        type: boolean
 
   link_subgroup:
     required:
