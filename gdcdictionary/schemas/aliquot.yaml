@@ -25,16 +25,24 @@ uniqueKeys:
   - [project_id, alias]
 
 links:
-  - name: derived_from
-    anyOf:
-      - link_to_type: analyte
+  - exclusive: false
+    required: true
+    subgroup:
+      - name: analytes
+        backref: aliquots
+        label: derived_from
         multiplicity: many_to_one
-      - link_to_type: sample
+        target_type: analyte
+      - name: samples
+        backref: aliquots
+        label: derived_from
         multiplicity: many_to_one
-  - name: shipped_to
-    anyOf:
-      - link_to_type: center
-        multiplicity: many_to_one
+        target_type: sample
+  - name: center
+    label: shipped_to
+    backref: aliquots
+    multiplicity: many_to_one
+    target_type: center
 
 
 constraints: null
@@ -64,8 +72,12 @@ properties:
   concentration:
     type: number
     description: "TODO: define, from BCR"
-  derived_from:
+  analytes:
     $ref: "definitions.yaml#/to_many"
     description: >
       Indicates that the aliquot is physically derived from the linked to
       analyte via some process/protocol
+  samples:
+    $ref: "definitions.yaml#/to_many"
+  center:
+    $ref: "definitions.yaml#/to_one"

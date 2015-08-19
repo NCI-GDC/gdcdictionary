@@ -1,9 +1,7 @@
 {
   "type": "case",
   "alias": "case_1",
-  "member_of": {
+  "project": {
     "alias": "short_id"
-  },
-  "gender": "female",
-  "race": "Unknown"
+  }
 }

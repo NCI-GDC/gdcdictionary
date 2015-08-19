@@ -17,49 +17,85 @@ systemProperties:
   - id
   - project
 
+
 links:
-  - name: data_from
-    oneOf:
-      - link_to_type: aliquot
-        multiplicity: many_to_one
-      - link_to_type: analyte
-        multiplicity: many_to_one
-      - link_to_type: case
-        multiplicity: many_to_one
-      - link_to_type: file
-        multiplicity: many_to_one
-      - link_to_type: portion
-        multiplicity: many_to_one
-      - link_to_type: sample
-        multiplicity: many_to_one
-      - link_to_type: slide
-        multiplicity: many_to_one
-  - name: describes
-    link_to_type: case
-    multiplicity: many_to_one
-  - name: related_to
-    link_to_type: file
+  - exclusive: false
+    required: true
+    subgroup:
+      - name: aliquots
+        backref: files
+        label: data_from
+        target_type: aliquot
+        multiplicity: many_to_many
+      - name: analytes
+        backref: files
+        label: data_from
+        target_type: analyte
+        multiplicity: many_to_many
+      - name: cases
+        backref: files
+        label: data_from
+        target_type: case
+        multiplicity: many_to_many
+      - name: files
+        backref: files
+        label: data_from
+        target_type: file
+        multiplicity: many_to_many
+      - name: portions
+        backref: files
+        label: data_from
+        target_type: portion
+        multiplicity: many_to_many
+      - name: samples
+        backref: files
+        label: data_from
+        target_type: sample
+        multiplicity: many_to_many
+      - name: slides
+        backref: files
+        label: data_from
+        target_type: slide
+        multiplicity: many_to_many
+  - name: files
+    backref: files
+    label: related_to
+    target_type: file
     multiplicity: many_to_many
-  - name: memeber_of
-    link_to_type: tag
+  - name: tags
+    backref: files
+    label: memeber_of
+    target_type: tag
     multiplicity: many_to_many
-  - name: member_of
-    link_to_type: archive
+  - name: archives
+    backref: files
+    label: member_of
+    target_type: archive
     multiplicity: many_to_one
-  - name: member_of
-    link_to_type: data_subtype
+  - name: data_subtypes
+    backref: files
+    label: member_of
+    target_type: data_subtype
     multiplicity: many_to_one
-  - name: member_of
-    link_to_type: data_format
+  - name: data_formats
+    backref: files
+    label: member_of
+    target_type: data_format
     multiplicity: many_to_one
-  - name: member_of
-    link_to_type: experimental_strategy
+  - name: experimental_strategies
+    backref: files
+    label: member_of
+    target_type: experimental_strategy
     multiplicity: many_to_one
-  - name: submitted_by
-    link_to_type: center
+  - name: centers
+    backref: files
+    label: submitted_by
+    target_type: center
     multiplicity: many_to_one
-  - name: generated_from
-    link_to_type: platform
+  - name: platforms
+    backref: files
+    label: generated_from
+    target_type: platform
     multiplicity: many_to_one
 
 
@@ -105,3 +141,32 @@ properties:
     description: >
       TOREVIEW: optional comment about why the file is in the
       current state, mainly for invalid state.
+
+  aliquots:
+    $ref: "definitions.yaml#/to_many"
+  analytes:
+    $ref: "definitions.yaml#/to_many"
+  cases:
+    $ref: "definitions.yaml#/to_many"
+  portions:
+    $ref: "definitions.yaml#/to_many"
+  samples:
+    $ref: "definitions.yaml#/to_many"
+  slides:
+    $ref: "definitions.yaml#/to_many"
+  files:
+    $ref: "definitions.yaml#/to_many"
+  tags:
+    $ref: "definitions.yaml#/to_many"
+  archives:
+    $ref: "definitions.yaml#/to_one"
+  data_subtypes:
+    $ref: "definitions.yaml#/to_one"
+  data_formats:
+    $ref: "definitions.yaml#/to_one"
+  experimental_strategies:
+    $ref: "definitions.yaml#/to_one"
+  centers:
+    $ref: "definitions.yaml#/to_one"
+  platforms:
+    $ref: "definitions.yaml#/to_one"

@@ -20,7 +20,7 @@ required:
 uniqueKeys:
   - [id]
 
-links: null
+links: []
 
 # Program is the root entity and so it is the only entity
 # without a project or parents.

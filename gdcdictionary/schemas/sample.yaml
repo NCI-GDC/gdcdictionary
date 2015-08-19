@@ -31,8 +31,10 @@ uniqueKeys:
   - [project_id, alias]
 
 links:
-  - name: derived_from
-    link_to_type: case
+  - name: case
+    backref: samples
+    label: derived_from
+    target_type: case
     multiplicity: many_to_one #not sure
 
 # Sample properties
@@ -86,7 +88,7 @@ properties:
       - Bone Marrow Normal
       - Primary Xenograft Tissue
       - Cell Line Derived Xenograft Tissue
-      - Fibroblasts from Bone Marrow Normal 
+      - Fibroblasts from Bone Marrow Normal
     description: "TODO"
   sample_type_id:
     type: string
@@ -159,40 +161,40 @@ properties:
   initial_weight:
     type: string
     description: "TODO"
-  current_weight: 
+  current_weight:
     type: string
     description: "TODO"
-  freezing_method: 
+  freezing_method:
     type: string
     description: "TODO"
-  oct_embedded: 
+  oct_embedded:
     type: string
     description: "TODO"
-  time_between_clamping_and_freezing: 
+  time_between_clamping_and_freezing:
     type: string
     description: "TODO"
-  time_between_excision_and_freezing: 
+  time_between_excision_and_freezing:
     type: string
     description: "TODO"
-  days_to_collection: 
-    type: integer 
+  days_to_collection:
+    type: integer
     description: >
       TOREVIEW: The datetime of sample collection encoded as seconds from
       epoch. If no time is given, it is set to 00:00:00 of the date. Replaces
       dayofcollection/monthofcollection/yearofcollection.
-  days_to_sample_procurement: 
-    type: integer 
+  days_to_sample_procurement:
+    type: integer
     description: >
       TOREVIEW: The datetime of sample procurement encoded as seconds from
       epoch. If no time is given, it is set to 00:00:00 of the date. Replaces
       dayofcollection/monthofcollection/yearofcollection.
-  pathology_report_uuid: 
+  pathology_report_uuid:
     type: string
     description: "TODO"
   is_ffpe:
     type: boolean
     description: "TODO"
-  derived_from:
+  case:
     $ref: "definitions.yaml#/to_one" #should this be to_one
     description: >
       Indicates that the sample is physically derived from the subject

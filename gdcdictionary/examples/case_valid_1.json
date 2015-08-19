@@ -1,9 +1,8 @@
 {
   "type": "case",
   "alias": "case_1",
-  "member_of": {
+  "project": {
     "id": "f138c4b5-e292-4b93-bfa7-5761f0e06b40"
   },
-  "gender": "female",
-  "race": "Unknown"
+  "days_to_index": 5
 }

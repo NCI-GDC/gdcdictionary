@@ -18,51 +18,49 @@ required:
   #Require core JSON schema fields here if desired, requiring id
   - id
 
-link_properties_only:
-  type:
-    object
-
-  additionalProperties: false
-
-  required:
-    - link_to_type
-    - multiplicity
-  $ref: "#/link_properties"
-
-link_properties:
-  type: object
-  properties:
-    link_to_type:
-      type: string
-
-    multiplicity:
-      type: string
-      enum:
-        - one_to_one
-        - one_to_many
-        - many_to_one
-        - many_to_many
 
 definitions:
-  link_def:
-    title: "Define a link to other GDC entities"
+
+  link:
     type: object
-    anyOf:
-      - required:
-        - link_to_type #entity type being linked
-        - multiplicity #multiplicity of this link for validatio
-      - required:
-        - anyOf
-      - required:
-        - oneOf
-    $ref: "#/link_properties"
+    additionalProperties: false
+    required:
+      - name
+      - target_type
+      - backref
+      - label
+      - multiplicity
     properties:
-      anyOf:
-          items:
-            $ref: "#/link_properties_only"
-      oneOf:
-          items:
-            $ref: "#/link_properties_only"
+      name:
+        type: string
+      target_type:
+        type: string
+      backref:
+        type: string
+      label:
+        type: string
+      multiplicity:
+        type: string
+        enum:
+          - one_to_one
+          - one_to_many
+          - many_to_one
+          - many_to_many
+
+  link_subgroup:
+    required:
+      - exclusive
+      - required
+      - subgroup
+    properties:
+      exclusive:
+        type: boolean
+      required:
+        type: boolean
+      subgroup:
+        type: array
+        items:
+          $ref: "#/definitions/link"
 
   validator_def:
     title: "Define a validator to be used on a property"
@@ -91,6 +89,7 @@ properties:
       - biospecimen
       - clinical
       - data
+      - TBD
 
   unique_keys:
     type: array
@@ -103,7 +102,6 @@ properties:
     type:
       - array
       - "null"
-
     items:
       $ref: "#/definitions/validator_def"
 
@@ -111,9 +109,9 @@ properties:
     type: array
 
   links:
-    type:
-      - array
-      - "null"
-
+    title: "Define a link to other GDC entities"
+    type: array
     items:
-      $ref: "#/definitions/link_def"
+      oneOf:
+        - $ref: "#/definitions/link"
+        - $ref: "#/definitions/link_subgroup"

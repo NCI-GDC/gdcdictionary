@@ -18,8 +18,10 @@ systemProperties:
   - project
 
 links:
-  - name: describes
-    link_to_type: case
+  - name: case
+    backref: clinicals
+    label: describes
+    target_type: case
     multiplicity: many_to_one
 
 required:
@@ -41,7 +43,7 @@ properties:
     cde_id: 2200604
     type: string
     description: >
-      Text designations that identify gender. Gender is described as the assemblage 
+      Text designations that identify gender. Gender is described as the assemblage
       of properties that distinguish people on the basis of their societal roles. CDE: 2200604
     enum:
       - female
@@ -71,13 +73,13 @@ properties:
     enum:
       - hispanic or latino
       - not hispanic or latino
-  vital_status: 
+  vital_status:
     enum:
       - alive
       - dead
       - lost to follow-up
     description: >
-      The survival state of the person registered on the protocol. CDE: 5.      
+      The survival state of the person registered on the protocol. CDE: 5.
   year_of_diagnosis:
     type: number
     description: >
@@ -100,3 +102,5 @@ properties:
       The tenth version of the International Classification of Disease (ICD),
       published by the World Health Organization in 1992. A system of numbered
       categories for representation of data. CDE: 3226287.
+  case:
+    $ref: "definitions.yaml#/to_one"

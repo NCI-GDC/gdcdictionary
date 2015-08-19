@@ -19,21 +19,43 @@ systemProperties:
   - project
 
 links:
-  - name: annotates
-    oneOf:
-      - link_to_type: case
+  - exclusive: true
+    required: true
+    subgroup:
+      - name: case
+        label: annotates
+        backref: annotations
+        target_type: case
         multiplicity: many_to_one
-      - link_to_type: sample
+      - name: sample
+        label: annotates
+        backref: annotations
+        target_type: sample
         multiplicity: many_to_one
-      - link_to_type: slide
+      - name: slide
+        label: annotates
+        backref: annotations
+        target_type: slide
         multiplicity: many_to_one
-      - link_to_type: portion
+      - name: portion
+        label: annotates
+        backref: annotations
+        target_type: portion
         multiplicity: many_to_one
-      - link_to_type: analyte
+      - name: analyte
+        label: annotates
+        backref: annotations
+        target_type: analyte
         multiplicity: many_to_one
-      - link_to_type: aliquot
+      - name: aliquot
+        label: annotates
+        backref: annotations
+        target_type: aliquot
         multiplicity: many_to_one
-      - link_to_type: file
+      - name: file
+        label: annotates
+        backref: annotations
+        target_type: file
         multiplicity: many_to_one
 
 required:
@@ -106,7 +128,7 @@ properties:
       - WGA Failure
     description: "TODO: define, from DCC"
   classification:
-    type: string 
+    type: string
     description: "TODO: define, from DCC"
   creator:
     type: string
@@ -121,3 +143,18 @@ properties:
   notes:
     type: string
     description: "TODO: define, from DCC"
+
+  case:
+    $ref: "definitions.yaml#/to_one"
+  sample:
+    $ref: "definitions.yaml#/to_one"
+  slide:
+    $ref: "definitions.yaml#/to_one"
+  portion:
+    $ref: "definitions.yaml#/to_one"
+  analyte:
+    $ref: "definitions.yaml#/to_one"
+  aliquot:
+    $ref: "definitions.yaml#/to_one"
+  file:
+    $ref: "definitions.yaml#/to_one"
