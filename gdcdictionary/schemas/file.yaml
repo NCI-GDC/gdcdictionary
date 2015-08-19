@@ -98,6 +98,11 @@ links:
     label: generated_from
     target_type: platform
     multiplicity: many_to_one
+  - name: described_cases
+    backref: describing_files
+    label: describes
+    target_type: case
+    multiplicity: many_to_one
 
 
 required:
@@ -172,4 +177,6 @@ properties:
   centers:
     $ref: "definitions.yaml#/to_one"
   platforms:
+    $ref: "definitions.yaml#/to_one"
+  described_cases:
     $ref: "definitions.yaml#/to_one"
