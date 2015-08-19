@@ -19,7 +19,7 @@ systemProperties:
 links:
   - name: projects
     backref: cases
-    label: target_of
+    label: member_of
     target_type: project
     multiplicity: many_to_one
   - name: tissue_source_sites
