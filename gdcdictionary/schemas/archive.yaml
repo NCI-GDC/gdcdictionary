@@ -24,7 +24,9 @@ links:
     label: member_of
     target_type: project
     multiplicity: many_to_one
-  - name: related_files
+    # according to association defined in current data model
+  # https://github.com/NCI-GDC/gdcdatamodel/blob/develop/gdcdatamodel/models/edges/related_to.py#L18
+  - name: related_to_files
     backref: related_archives
     label: related_to
     target_type: file
@@ -60,5 +62,6 @@ properties:
 
   projects:
     $ref: "definitions.yaml#/to_one"
-  related_files:
+
+  related_to_files:
     $ref: "definitions.yaml#/to_many"
