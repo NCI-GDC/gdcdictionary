@@ -22,7 +22,8 @@ links:
     backref: slides
     label: derived_from
     target_type: portion
-    multiplicity: many_to_one
+    # this is many_to_many according to relationships in current database
+    multiplicity: many_to_many
 
 required:
   - alias
@@ -88,4 +89,4 @@ properties:
     type: number
     description: "TODO: define, from BCR"
   portions:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "definitions.yaml#/to_many"
