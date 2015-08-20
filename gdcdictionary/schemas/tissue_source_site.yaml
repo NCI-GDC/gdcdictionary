@@ -21,6 +21,7 @@ links: []
 
 uniqueKeys:
   - [id]
+  - [code]
 
 # tissue_source_site properties
 properties:

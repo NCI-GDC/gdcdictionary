@@ -22,6 +22,7 @@ required:
 
 uniqueKeys:
   - [id]
+  - [name]
 
 # experimental_strategy properties
 properties:

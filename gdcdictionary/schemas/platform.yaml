@@ -24,6 +24,7 @@ required:
 
 uniqueKeys:
   - [id]
+  - [name]
 
 # platform properties
 properties:

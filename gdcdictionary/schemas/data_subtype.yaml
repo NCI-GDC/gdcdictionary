@@ -29,6 +29,7 @@ required:
 
 uniqueKeys:
   - [id]
+  - [name]
 
 # data_subtype properties
 properties:

@@ -29,6 +29,7 @@ required:
 
 uniqueKeys:
   - [id]
+  - [code]
 
 # center properties
 properties:

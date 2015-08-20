@@ -22,6 +22,7 @@ required:
 
 uniqueKeys:
   - [id]
+  - [name]
 
 # data_format properties
 properties:

@@ -26,6 +26,7 @@ required:
 
 uniqueKeys:
   - [id]
+  - [code]
 
 links:
   - name: programs

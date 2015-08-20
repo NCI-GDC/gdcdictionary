@@ -19,6 +19,7 @@ required:
 
 uniqueKeys:
   - [id]
+  - [name]
 
 links: []
 

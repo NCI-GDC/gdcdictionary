@@ -30,6 +30,8 @@ required:
 
 uniqueKeys:
   - [id]
+  - [pmid]
+  - [doi]
 
 # publication properties
 properties:
