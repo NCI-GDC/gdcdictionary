@@ -19,6 +19,8 @@ systemProperties:
 
 required:
   - alias
+  - analyte_type_id
+  - analyte_type
   - portions
 
 uniqueKeys:
