@@ -19,7 +19,6 @@ systemProperties:
 
 required:
   - alias
-  - centers
 
 uniqueKeys:
   - [id]
@@ -44,7 +43,7 @@ links:
     backref: aliquots
     multiplicity: many_to_one
     target_type: center
-    required: true
+    required: false 
 
 
 constraints: null
