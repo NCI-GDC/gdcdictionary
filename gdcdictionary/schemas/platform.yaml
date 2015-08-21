@@ -15,13 +15,11 @@ validators: null
 
 systemProperties:
   - id
-  - project
 
 links: []
 
 required:
   - name
-  - project_id
 
 uniqueKeys:
   - [id]
@@ -38,5 +36,3 @@ properties:
   name:
     type: string
     description: name of this platform
-  project_id:
-    type: string

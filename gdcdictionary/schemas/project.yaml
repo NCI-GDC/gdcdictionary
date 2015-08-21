@@ -14,7 +14,6 @@ validators: null
 
 systemProperties:
   - id
-  - project_id
 
 required:
   - code
@@ -69,5 +68,3 @@ properties:
     $ref: "definitions.yaml#/to_one"
     description: >
       Indicates that the project is logically part of the indicated project.
-  project_id:
-    type: string

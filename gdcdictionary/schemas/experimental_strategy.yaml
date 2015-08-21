@@ -13,7 +13,6 @@ validators: null
 
 systemProperties:
   - id
-  - project_id
 
 links: []
 
@@ -35,5 +34,3 @@ properties:
   name:
     type: string
     description: name of this record
-  project_id:
-    type: string
