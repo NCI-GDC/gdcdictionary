@@ -15,7 +15,9 @@ validators: null
 
 systemProperties:
   - id
-  - project
+  - project_id
+
+required: []
 
 links: []
 
@@ -43,3 +45,5 @@ properties:
   bcr_id:
     type: string
     description: "TODO"
+  project_id:
+    type: string

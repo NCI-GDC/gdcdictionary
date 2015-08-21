@@ -16,7 +16,7 @@ validators: null
 
 systemProperties:
   - id
-  - project
+  - project_id
 
 links:
   - name: projects
@@ -65,6 +65,7 @@ properties:
 
   projects:
     $ref: "definitions.yaml#/to_one"
-
-  related_to_files:
+  related_files:
     $ref: "definitions.yaml#/to_many"
+  project_id:
+    type: string

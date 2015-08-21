@@ -15,7 +15,7 @@ validators: []
 
 systemProperties:
   - id
-  - project
+  - project_id
 
 required:
   - alias
@@ -43,7 +43,7 @@ links:
     backref: aliquots
     multiplicity: many_to_one
     target_type: center
-    required: false 
+    required: false
 
 
 constraints: null
@@ -82,3 +82,5 @@ properties:
     $ref: "definitions.yaml#/to_one"
   centers:
     $ref: "definitions.yaml#/to_one"
+  project_id:
+    type: string

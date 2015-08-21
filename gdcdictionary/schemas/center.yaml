@@ -16,7 +16,7 @@ validators: null
 
 systemProperties:
   - id
-  - project
+  - project_id
 
 links: []
 
@@ -54,3 +54,5 @@ properties:
   center_type:
     type: string
     description: "TODO: define, from DCC"
+  project_id:
+    type: string

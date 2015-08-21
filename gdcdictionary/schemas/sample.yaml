@@ -226,3 +226,5 @@ properties:
     description: >
       Indicates that the sample is physically derived from the subject
       of the linked to case via some process/protocol
+  project_id:
+    type: string

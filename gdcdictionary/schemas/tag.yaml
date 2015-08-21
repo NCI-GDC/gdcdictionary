@@ -13,7 +13,7 @@ validators: null
 
 systemProperties:
   - id
-  - project
+  - project_id
 
 links: []
 
@@ -21,6 +21,7 @@ required:
   - name
 
 uniqueKeys:
+
   - [id]
   - [name]
 
@@ -100,6 +101,8 @@ properties:
       - MSI
       - hpv
       - cov
-      - batch_effect_removed 
+      - batch_effect_removed
       - harmonized
       - summary
+  project_id:
+    type: string

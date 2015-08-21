@@ -13,6 +13,7 @@ validators: null
 
 systemProperties:
   - id
+  - project_id
 
 required:
   - name
@@ -35,3 +36,5 @@ properties:
   name:
     type: string
     description: "Full name/title of the program."
+  project_id:
+    type: string

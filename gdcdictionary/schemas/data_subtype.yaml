@@ -13,7 +13,7 @@ validators: null
 
 systemProperties:
   - id
-  - project
+  - project_id
 
 links:
   - name: data_types
