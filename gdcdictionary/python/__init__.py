@@ -4,8 +4,6 @@ import glob
 
 MOD_DIR = os.path.abspath(os.path.dirname(__file__))
 
-dictionaries = {}
-
 
 class GDCDictionary(object):
 
