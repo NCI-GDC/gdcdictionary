@@ -1,1 +1,1 @@
-from python import GDCDictionary
+from python import GDCDictionary, gdcdictionary

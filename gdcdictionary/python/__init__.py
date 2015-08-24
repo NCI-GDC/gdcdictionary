@@ -7,8 +7,9 @@ MOD_DIR = os.path.abspath(os.path.dirname(__file__))
 
 class GDCDictionary(object):
 
-    def __init__(self, lazy=False):
-        self.root_dir = os.path.join(os.path.dirname(MOD_DIR), 'schemas')
+    def __init__(self, root_dir=os.path.join(
+            os.path.dirname(MOD_DIR), 'schemas'), lazy=False):
+        self.root_dir = root_dir
         self.metaschema_path = 'metaschema.yaml'
         self.definitions_path = 'definitions.yaml'
         self.exclude = [self.metaschema_path, self.definitions_path]
@@ -32,3 +33,6 @@ class GDCDictionary(object):
         full_path = os.path.join(self.root_dir, name)
         with open(full_path, 'r') as f:
             return yaml.load(f)
+
+
+gdcdictionary = GDCDictionary()
