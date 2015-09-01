@@ -96,9 +96,9 @@ properties:
   sample_type_id:
     type: string
     description: "TODO"
-    enum: 
-      - '01' 
-      - '02' 
+    enum:
+      - '01'
+      - '02'
       - '03'
       - '04'
       - '05'
@@ -186,10 +186,10 @@ properties:
     type: string
     description: "TODO"
   initial_weight:
-    type: string
+    type: number
     description: "TODO"
   current_weight:
-    type: string
+    type: number
     description: "TODO"
   freezing_method:
     type: string
