@@ -1,0 +1,63 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "case"
+title: Case
+type: object
+namespace: http://gdc.nci.nih.gov
+category: administrative
+program: '*'
+project: '*'
+description: "TODO"
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - type
+  - state
+
+links:
+  - name: projects
+    backref: cases
+    label: member_of
+    target_type: project
+    multiplicity: many_to_one
+    required: true
+  - name: tissue_source_sites
+    backref: cases
+    label: processed_at
+    target_type: tissue_source_site
+    multiplicity: many_to_one
+    required: false
+
+required:
+  - alias
+  - projects
+
+uniqueKeys:
+  - [id]
+  - [project_id, alias]
+
+# Case properties
+properties:
+  type:
+    type: string
+  id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  alias:
+    type:
+      - string
+      - "null"
+    systemAlias: submitter_id
+  days_to_index:
+    type:
+      - integer
+  projects:
+    $ref: "definitions.yaml#/to_one"
+  tissue_source_sites:
+    $ref: "definitions.yaml#/to_one"
+  project_id:
+    type: string

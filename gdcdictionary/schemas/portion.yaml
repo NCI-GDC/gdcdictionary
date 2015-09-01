@@ -8,27 +8,29 @@ category: biospecimen
 program: '*'
 project: '*'
 description: >
-  A physical sub-part of any sample.
+  A physical sub-part of any sample. (GDC)
 additionalProperties: false
 validators: null
 
 systemProperties:
   - id
-  - project
+  - project_id
 
 required:
   - alias
-  - derived_from
-  - parents
+  - samples
 
 uniqueKeys:
-  - [portion_id]
+  - [id]
   - [project_id, alias]
 
 links:
-  - name: derived_from
-    link_to_type: sample
+  - name: samples
+    backref: portions
+    label: derived_from
+    target_type: sample
     multiplicity: many_to_one
+    required: true
 
 # Portion properties
 # Currently there are many TCGA-specific fields in the DB. This is an attempt
@@ -38,7 +40,7 @@ links:
 properties:
   type:
     type: string
-  portion_id:
+  id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
@@ -46,13 +48,30 @@ properties:
     type:
       - string
       - "null"
-    description: "TODO"
+    systemAlias: submitter_id
+    description: >
+      The legacy barcode used before prior to the use UUIDs, varies by
+      project. For TCGA this is bcrportionbarcode.
   weight:
     type: number
+    description: "TODO: define, from BCR"
+  is_ffpe:
+    type: boolean
     description: "TODO"
+  creation_datetime:
+    type: number
+    description: >
+      TOREVIEW: The datetime of portion creation encoded as seconds from
+      epoch. If no time is given, it is set to 00:00:00 of the date. Replaces
+      dayofcreation/monthofcreation/yearofcreation.
+  portion_number:
+    type: string
+    description: "TODO: define, from BCR"
 
-  derived_from:
+  samples:
     $ref: "definitions.yaml#/to_one" #should this be to_one
     description: >
       Indicates that the portion is physically derived from the linked to
       sample via some process/protocol
+  project_id:
+    type: string

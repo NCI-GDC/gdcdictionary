@@ -15,58 +15,37 @@ parent_uuids:
       $ref: "#/UUID"
     uniqueItems: true
 
-id_array:
+foreign_key:
   type:
     object
 
   additionalProperties: false
-
   #Can either use 'id' which are GDC IDs (UUID) or 'aliases'
   #which are user defined IDs ("submitter IDs in the backend")
-  oneOf:
+  anyOf:
     - required:
-      - id
+        - id
     - required:
-      - alias
+        - alias
 
   properties:
     id:
       $ref: "#/UUID"
-
     alias:
       type: string
-
 
 to_one:
-  type:
-    object
-
-  #Can either use 'id' which are GDC IDs (UUID) or 'aliases'
-  #which are user defined IDs ("submitter IDs in the backend")
-  oneOf:
-    - required:
-      - id
-    - required:
-      - alias
-
-  properties:
-    id:
-      $ref: "#/UUID"
-
-    alias:
-      type: string
-
-
-to_many_array:
-  type:
-    array
-  items:
-    $ref: "#/id_array"
-  minItems: 1
+  anyOf:
+    - type: array
+      items:
+        $ref: "#/foreign_key"
+      minItems: 1
+    - $ref: "#/foreign_key"
 
 to_many:
-  oneOf:
-    - $ref:
-        "#/to_one"
-    - $ref:
-        "#/to_many_array"
+  anyOf:
+    - type: array
+      items:
+        $ref: "#/foreign_key"
+      minItems: 1
+    - $ref: "#/foreign_key"

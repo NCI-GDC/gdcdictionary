@@ -1,0 +1,36 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "data_format"
+title: Data Format
+type: object
+namespace: http://gdc.nci.nih.gov
+category: TBD
+program: '*'
+project: '*'
+description: "TODO"
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+
+links: []
+
+required:
+  - name
+
+uniqueKeys:
+  - [id]
+  - [name]
+
+# data_format properties
+properties:
+  type:
+    type: string
+  id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  name:
+    type: string
+    description: name of this data format

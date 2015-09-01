@@ -15,28 +15,22 @@ systemProperties:
   - id
 
 required:
-  - alias
   - name
 
 uniqueKeys:
   - [id]
-  - [alias]
+  - [name]
 
-links: null
+links: []
 
 # Program is the root entity and so it is the only entity
 # without a project or parents.
 properties:
   type:
     type: string
-  program_id:
+  id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
-  alias:
-    type:
-      - string
-      - "null"
     description: "TODO"
   name:
     type: string

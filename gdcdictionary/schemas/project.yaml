@@ -14,22 +14,26 @@ validators: null
 
 systemProperties:
   - id
-  - project
 
 required:
-  - alias
+  - code
   - name
+  - disease_type
   - state
-  - member_of
+  - primary_site
+  - programs
 
 uniqueKeys:
   - [id]
-  - [alias]
+  - [code]
 
 links:
-  - name: member_of
-    link_to_type: project
-    multiplicity: one_to_one
+  - name: programs
+    backref: projects
+    label: member_of
+    target_type: program
+    multiplicity: many_to_one
+    required: true
 
 constraints: null
 
@@ -43,24 +47,24 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  alias:
-    type:
-      - string
-      - "null"
-    description: "TODO"
   name:
     type: string
-    description: "TODO"
+    description: "TOREVIEW: display name for the project"
   state:
     type: string
-    enum:
-      - legacy
-      - active
     description: >
       Whether the project is accepting new submissions (active)
       or closed (legacy).
-
-  member_of:
+  primary_site:
+    type: string
+    description: "TOREVIEW: primary site for the project"
+  code:
+    type: string
+    description: "TODO"
+  disease_type:
+    type: string
+    description: "TOREVIEW: full name for the project"
+  programs:
     $ref: "definitions.yaml#/to_one"
     description: >
       Indicates that the project is logically part of the indicated project.

@@ -1,0 +1,96 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "slide"
+title: Slide
+type: object
+namespace: http://gdc.nci.nih.gov
+category: TBD
+program: '*'
+project: '*'
+description: >
+  A digital image, microscopic or otherwise, of any sample, portion, or
+  sub-part thereof. (GDC)
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+
+links:
+  - name: portions
+    backref: slides
+    label: derived_from
+    target_type: portion
+    # this is many_to_many according to relationships in current database
+    multiplicity: many_to_many
+    required: true
+
+required:
+  - alias
+  - section_location
+  - portions
+
+uniqueKeys:
+  - [id]
+  - [project_id, alias]
+
+# slide properties
+properties:
+  type:
+    type: string
+  id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  alias:
+    type:
+      - string
+      - "null"
+    systemAlias: submitter_id
+    description: >
+      The legacy barcode used before prior to the use UUIDs, varies by project.
+      For TCGA, this is bcrslidebarcode.
+  section_location:
+    type: string
+    description: "TODO: define, from BCR"
+  number_proliferating_cells:
+    type: integer
+    description: "TODO: define, from BCR"
+  percent_tumor_cells:
+    type: number
+    description: "TODO: define, from BCR"
+  percent_tumor_nuclei:
+    type: number
+    description: "TODO: define, from BCR"
+  percent_normal_cells:
+    type: number
+    description: "TODO: define, from BCR"
+  percent_necrosis:
+    tpe: number
+    description: "TODO: define, from BCR"
+  percent_stromal_cells:
+    type: number
+    description: "TODO: define, from BCR"
+  percent_inflam_infiltration:
+    type: number
+    description: "TODO: define, from BCR"
+  percent_lymphocyte_infiltration:
+    type: number
+    description: "TODO: define, from BCR"
+  percent_monocyte_infiltration:
+    type: number
+    description: "TODO: define, from BCR"
+  percent_granulocyte_infiltration:
+    type: number
+    description: "TODO: define, from BCR"
+  percent_neutrophil_infiltration:
+    type: number
+    description: "TODO: define, from BCR"
+  percent_eosinophil_infiltration:
+    type: number
+    description: "TODO: define, from BCR"
+  portions:
+    $ref: "definitions.yaml#/to_many"
+  project_id:
+    type: string

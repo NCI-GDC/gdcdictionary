@@ -14,8 +14,8 @@ additionalProperties: false
 validators: []
 
 systemProperties:
-  - aliquot_id
-  - project
+  - id
+  - project_id
 
 required:
   - alias
@@ -25,9 +25,26 @@ uniqueKeys:
   - [project_id, alias]
 
 links:
-  - name: derived_from
-    link_to_type: analyte
+  - exclusive: false
+    required: true
+    subgroup:
+      - name: analytes
+        backref: aliquots
+        label: derived_from
+        multiplicity: many_to_one
+        target_type: analyte
+      - name: samples
+        backref: aliquots
+        label: derived_from
+        multiplicity: many_to_many
+        target_type: sample
+  - name: centers
+    label: shipped_to
+    backref: aliquots
     multiplicity: many_to_one
+    target_type: center
+    required: false
+
 
 constraints: null
 
@@ -43,18 +60,27 @@ properties:
     type:
       - string
       - "null"
-    description: "TODO"
+    systemAlias: submitter_id
+    description: >
+      The legacy barcode used before prior to the use
+      UUIDs. For TCGA this is bcraliquotbarcode.
   source_center:
     type: string
-    description: "TODO"
+    description: "TODO: define, from BCR"
   amount:
     type: number
-    description: "TODO"
+    description: "TODO: define, from BCR"
   concentration:
     type: number
-    description: "TODO"
-  derived_from:
+    description: "TODO: define, from BCR"
+  analytes:
     $ref: "definitions.yaml#/to_one"
     description: >
       Indicates that the aliquot is physically derived from the linked to
       analyte via some process/protocol
+  samples:
+    $ref: "definitions.yaml#/to_one"
+  centers:
+    $ref: "definitions.yaml#/to_one"
+  project_id:
+    type: string

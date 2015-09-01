@@ -1,0 +1,193 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "file"
+title: File
+type: object
+namespace: http://gdc.nci.nih.gov
+category: data
+program: '*'
+project: '*'
+description: >
+  A set of related records (either written or electronic) kept
+  together. (NCIt C42883)
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+
+links:
+  - exclusive: false
+    required: false # eg: bai file does not have edge to biospecimen
+    subgroup:
+      - name: aliquots
+        backref: files
+        label: data_from
+        target_type: aliquot
+        multiplicity: many_to_many
+      - name: analytes
+        backref: files
+        label: data_from
+        target_type: analyte
+        multiplicity: many_to_many
+      - name: cases
+        backref: files
+        label: data_from
+        target_type: case
+        multiplicity: many_to_many
+        # this is according to the definition in current data model
+        # https://github.com/NCI-GDC/gdcdatamodel/blob/develop/gdcdatamodel/models/edges/data_from.py#L53
+      - name: derived_files
+        backref: source_files
+        label: data_from
+        target_type: file
+        multiplicity: many_to_many
+      - name: portions
+        backref: files
+        label: data_from
+        target_type: portion
+        multiplicity: many_to_many
+      - name: samples
+        backref: files
+        label: data_from
+        target_type: sample
+        multiplicity: many_to_many
+      - name: slides
+        backref: files
+        label: data_from
+        target_type: slide
+        multiplicity: many_to_many
+  - name: related_files
+    backref: parent_files
+    label: related_to
+    target_type: file
+    multiplicity: many_to_many
+    required: false
+  - name: tags
+    backref: files
+    label: memeber_of
+    target_type: tag
+    multiplicity: many_to_many
+    required: false
+  - name: archives
+    backref: files
+    label: member_of
+    target_type: archive
+    multiplicity: many_to_one
+    required: false
+  - name: data_subtypes
+    backref: files
+    label: member_of
+    target_type: data_subtype
+    multiplicity: many_to_one
+    required: false
+  - name: data_formats
+    backref: files
+    label: member_of
+    target_type: data_format
+    multiplicity: many_to_one
+    required: false
+  - name: experimental_strategies
+    backref: files
+    label: member_of
+    target_type: experimental_strategy
+    multiplicity: many_to_one
+    required: false
+  - name: centers
+    backref: files
+    label: submitted_by
+    target_type: center
+    multiplicity: many_to_one
+    required: false
+  - name: platforms
+    backref: files
+    label: generated_from
+    target_type: platform
+    multiplicity: many_to_one
+    required: false
+  - name: described_cases
+    backref: describing_files
+    label: describes
+    target_type: case
+    multiplicity: many_to_one
+    required: false
+
+
+required:
+  - alias
+  - file_name
+  - file_size
+  - md5sum
+  - state
+
+uniqueKeys:
+  - [id]
+  - [project_id, alias]
+
+# File properties
+properties:
+  type:
+    type: string
+  id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  alias:
+    type:
+      - string
+      - "null"
+    systemAlias: submitter_id
+    description: "TOREVIEW: the file id assigned by the submitter"
+  file_name:
+    type: string
+    description: "TOREVIEW: the file (object) name"
+  file_size:
+    type: number
+    description: "the size file (object) in bytes"
+  md5sum:
+    type: string
+    description: "The MD5 hash of this file"
+  state:
+    type: string
+    description: "TODO"
+  state_comment:
+    type: string
+    description: >
+      TOREVIEW: optional comment about why the file is in the
+      current state, mainly for invalid state.
+
+  aliquots:
+    $ref: "definitions.yaml#/to_many"
+  analytes:
+    $ref: "definitions.yaml#/to_many"
+  cases:
+    $ref: "definitions.yaml#/to_many"
+  portions:
+    $ref: "definitions.yaml#/to_many"
+  samples:
+    $ref: "definitions.yaml#/to_many"
+  slides:
+    $ref: "definitions.yaml#/to_many"
+  derived_files:
+    $ref: "definitions.yaml#/to_many"
+  related_files:
+    $ref: "definitions.yaml#/to_many"
+  tags:
+    $ref: "definitions.yaml#/to_many"
+  archives:
+    $ref: "definitions.yaml#/to_one"
+  data_subtypes:
+    $ref: "definitions.yaml#/to_one"
+  data_formats:
+    $ref: "definitions.yaml#/to_one"
+  experimental_strategies:
+    $ref: "definitions.yaml#/to_one"
+  centers:
+    $ref: "definitions.yaml#/to_one"
+  platforms:
+    $ref: "definitions.yaml#/to_one"
+  described_cases:
+    $ref: "definitions.yaml#/to_one"
+  project_id:
+    type: string
