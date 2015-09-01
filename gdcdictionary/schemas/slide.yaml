@@ -15,7 +15,7 @@ validators: null
 
 systemProperties:
   - id
-  - project
+  - project_id
 
 links:
   - name: portions
@@ -92,3 +92,5 @@ properties:
     description: "TODO: define, from BCR"
   portions:
     $ref: "definitions.yaml#/to_many"
+  project_id:
+    type: string

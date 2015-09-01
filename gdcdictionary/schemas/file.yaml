@@ -15,7 +15,7 @@ validators: null
 
 systemProperties:
   - id
-  - project
+  - project_id
 
 links:
   - exclusive: false
@@ -189,3 +189,5 @@ properties:
     $ref: "definitions.yaml#/to_one"
   described_cases:
     $ref: "definitions.yaml#/to_one"
+  project_id:
+    type: string

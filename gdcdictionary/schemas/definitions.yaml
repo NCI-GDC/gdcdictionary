@@ -35,7 +35,12 @@ foreign_key:
       type: string
 
 to_one:
-  $ref: "#/foreign_key"
+  anyOf:
+    - type: array
+      items:
+        $ref: "#/foreign_key"
+      minItems: 1
+    - $ref: "#/foreign_key"
 
 to_many:
   anyOf:

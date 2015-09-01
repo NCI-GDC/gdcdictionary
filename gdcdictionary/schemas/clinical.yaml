@@ -15,7 +15,7 @@ validators: null
 
 systemProperties:
   - id
-  - project
+  - project_id
 
 links:
   - name: cases
@@ -106,3 +106,5 @@ properties:
       categories for representation of data. CDE: 3226287.
   cases:
     $ref: "definitions.yaml#/to_one"
+  project_id:
+    type: string

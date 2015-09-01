@@ -15,7 +15,6 @@ validators: null
 
 systemProperties:
   - id
-  - project
 
 links: []
 
