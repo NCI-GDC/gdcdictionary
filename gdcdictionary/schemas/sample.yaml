@@ -25,7 +25,7 @@ systemProperties:
   - updated_datetime
 
 required:
-  - alias
+  - submitter_id
   - sample_type
   - sample_type_id
   - cases
@@ -34,7 +34,7 @@ required:
 
 uniqueKeys:
   - [id]
-  - [project_id, alias]
+  - [project_id, submitter_id]
 
 links:
   - name: cases
@@ -52,13 +52,12 @@ properties:
     type: string
   id:
     $ref: "definitions.yaml#/UUID"
-    system_alias: node_id
+    systemAlias: node_id
     description: "TODO"
-  alias:
+  submitter_id:
     type:
       - string
       - "null"
-    systemAlias: submitter_id
     description: >
       The legacy barcode used before prior to the use UUIDs, varies by project.
       For TCGA this is bcrsamplebarcode.
