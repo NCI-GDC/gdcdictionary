@@ -27,13 +27,13 @@ links:
     required: true
 
 required:
-  - alias
+  - submitter_id
   - section_location
   - portions
 
 uniqueKeys:
   - [id]
-  - [project_id, alias]
+  - [project_id, submitter_id]
 
 # slide properties
 properties:
@@ -43,11 +43,10 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  alias:
+  submitter_id:
     type:
       - string
       - "null"
-    systemAlias: submitter_id
     description: >
       The legacy barcode used before prior to the use UUIDs, varies by project.
       For TCGA, this is bcrslidebarcode.

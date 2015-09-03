@@ -59,7 +59,7 @@ links:
         multiplicity: many_to_many
 
 required:
-  - alias
+  - submitter_id
   - category
   - classification
   - creator
@@ -68,7 +68,7 @@ required:
 
 uniqueKeys:
   - [id]
-  - [project_id, alias]
+  - [project_id, submitter_id]
 
 # annotation properties
 properties:
@@ -78,11 +78,10 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  alias:
+  submitter_id:
     type:
       - string
       - "null"
-    systemAlias: submitter_id
   category:
     type: string
     enum:
