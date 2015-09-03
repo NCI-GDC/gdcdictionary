@@ -20,7 +20,7 @@ systemProperties:
   - updated_datetime
 
 required:
-  - alias
+  - submitter_id
   - analyte_type_id
   - analyte_type
   - portions
@@ -29,7 +29,7 @@ required:
 
 uniqueKeys:
   - [id]
-  - [project_id, alias]
+  - [project_id, submitter_id]
 
 links:
   - name: portions
@@ -49,11 +49,10 @@ properties:
     description: >
       A liquid bulk product produced according to specified lab protocols,
       from a sample or portion, intended for further analysis. (GDC)
-  alias:
+  submitter_id:
     type:
       - string
       - "null"
-    systemAlias: submitter_id
     description: >
       The legacy barcode used before prior to the use UUIDs, varies by
       project. For TCGA this is bcranalytebarcode.

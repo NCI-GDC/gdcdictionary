@@ -34,14 +34,14 @@ links:
     required: false
 
 required:
-  - alias
+  - submitter_id
   - projects
   - created_datetime
   - updated_datetime
 
 uniqueKeys:
   - [id]
-  - [project_id, alias]
+  - [project_id, submitter_id]
 
 # Case properties
 properties:
@@ -51,11 +51,10 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  alias:
+  submitter_id:
     type:
       - string
       - "null"
-    systemAlias: submitter_id
   days_to_index:
     type:
       - integer

@@ -117,7 +117,7 @@ links:
 
 
 required:
-  - alias
+  - submitter_id
   - file_name
   - file_size
   - md5sum
@@ -127,7 +127,7 @@ required:
 
 uniqueKeys:
   - [id]
-  - [project_id, alias]
+  - [project_id, submitter_id]
 
 # File properties
 properties:
@@ -137,11 +137,10 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  alias:
+  submitter_id:
     type:
       - string
       - "null"
-    systemAlias: submitter_id
     description: "TOREVIEW: the file id assigned by the submitter"
   file_name:
     type: string

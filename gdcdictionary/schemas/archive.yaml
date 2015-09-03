@@ -37,7 +37,7 @@ links:
     required: false
 
 required:
-  - alias
+  - submitter_id
   - revision
   - projects
   - created_datetime
@@ -45,7 +45,7 @@ required:
 
 uniqueKeys:
   - [id]
-  - [project_id, alias]
+  - [project_id, submitter_id]
 
 # archive properties
 properties:
@@ -53,13 +53,12 @@ properties:
     type: string
   id:
     $ref: "definitions.yaml#/UUID"
-    systemAlias: node_id
+    systemSubmitter_Id: node_id
     description: "TODO"
-  alias:
+  submitter_id:
     type:
       - string
       - "null"
-    systemAlias: submitter_id
     description: >
       Unique identifier of this archive in the DCC; usually the original
       archive filename.
