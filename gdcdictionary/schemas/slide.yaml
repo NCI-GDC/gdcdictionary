@@ -70,7 +70,7 @@ properties:
     type: number
     description: "TODO: define, from BCR"
   percent_necrosis:
-    tpe: number
+    type: number
     description: "TODO: define, from BCR"
   percent_stromal_cells:
     type: number
