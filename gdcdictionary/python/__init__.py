@@ -23,11 +23,13 @@ class GDCDictionary(object):
         self.load_root_dir()
 
     def load_root_dir(self):
+        cdir = os.getcwd()
         os.chdir(self.root_dir)
         for name in glob.glob("*.yaml"):
             if name not in self.exclude:
                 schema = self.load_yaml_schema(name)
                 self.schema[schema['id']] = schema
+        os.chdir(cdir)
 
     def load_yaml_schema(self, name):
         full_path = os.path.join(self.root_dir, name)
