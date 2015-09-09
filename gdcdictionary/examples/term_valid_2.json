@@ -1,0 +1,17 @@
+{
+    "id" : "6828723d-c74f-44aa-a3a9-9aade926d56",
+    "term" : "aliquot",
+    "synonyms" : [
+	{ 
+	  "term_id":"6828723d-c74f-44aa-a3a9-9aade926d56",
+	  "term": "aliquot",
+	  "is_primary": true,
+	  "definition": "Pertaining to a portion of the whole; any one of two or more samples of something, of the same volume or weight.",
+	  "locale" : "en",
+	  "source" : {
+	      "uri" : "https://nciterms.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&code=C25414&ns=NCI_Thesaurus",
+	      "cde_id" : "C25414"
+	  }
+	}
+    ]
+}

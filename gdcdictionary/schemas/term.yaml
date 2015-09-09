@@ -1,0 +1,82 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+#$schema: "metaschema.yaml#"
+
+#id: "http://gdc.nci.nih.gov/term"
+id: "term"
+title: Term semantic information
+type: object
+namespace: http://gdc.nci.nih.gov
+category: TBD
+program: '*'
+project: '*'
+description: >
+  An object that contains information regarding the semantics of any schema item name.
+  It can serve as the value for the description key in any schema.
+additionalProperties: false
+validators: []
+
+systemProperties:
+  - id
+
+links: ["nolink"]
+
+uniqueKeys:
+  - [id]
+  
+required:
+  - term
+  - synonyms
+
+properties:
+  id:
+    $ref: "#/definitions/UUID"
+  term:
+    type: string
+  synonyms:
+    type: array
+    minItems: 1
+    items:
+      $ref: "#/definitions/synonym"
+      uniqueItems: true
+
+definitions:
+  UUID:
+    type: string
+    pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+  synonym:
+    type: object
+    required:
+      - term_id
+      - term
+      - is_primary
+      - definition
+    properties:
+      term_id:
+        $ref: "#/definitions/UUID"
+      term:
+        type: string
+      is_primary:
+        type: boolean
+      definition:
+        type: string
+      locale:
+        type: string
+        pattern: "^[A-z][A-z]$"
+        description: ISO 639-1 two-letter language code
+      source:
+        type: object
+        properties:
+          uri:
+            type: string
+            format: uri
+            description: Ontology URI for this term (need not resolve)
+          cde:
+            type: object
+            properties:
+              collection:
+                type: string
+                format: uri
+                description: Resolving URL to CDE source (e.g., caDSR, NCIt)
+              cde_id:
+                type: string
+                description: CDE public id for the term, should be queryable at collection URL
