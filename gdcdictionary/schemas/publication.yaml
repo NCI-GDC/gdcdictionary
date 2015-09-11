@@ -15,6 +15,8 @@ systemProperties:
   - id
   - project
   - project_id
+  - created_datetime
+  - updated_datetime
 
 links:
   - name: files
@@ -28,6 +30,8 @@ required:
   - pmid
   - doi
   - files
+  - created_datetime
+  - updated_datetime
 
 uniqueKeys:
   - [id]
@@ -50,3 +54,7 @@ properties:
     $ref: "definitions.yaml#/to_many"
   project_id:
     type: string
+  created_datetime:
+    type: date-time
+  updated_datetime:
+    type: date-time

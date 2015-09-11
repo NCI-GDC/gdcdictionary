@@ -17,6 +17,8 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - created_datetime
+  - updated_datetime
 
 links:
   - name: projects
@@ -38,6 +40,8 @@ required:
   - alias
   - revision
   - projects
+  - created_datetime
+  - updated_datetime
 
 uniqueKeys:
   - [id]
@@ -69,3 +73,7 @@ properties:
     $ref: "definitions.yaml#/to_many"
   project_id:
     type: string
+  created_datetime:
+    type: date-time
+  updated_datetime:
+    type: date-time
