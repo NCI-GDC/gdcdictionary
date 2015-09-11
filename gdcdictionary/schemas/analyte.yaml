@@ -16,12 +16,16 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - created_datetime
+  - updated_datetime
 
 required:
   - alias
   - analyte_type_id
   - analyte_type
   - portions
+  - created_datetime
+  - updated_datetime
 
 uniqueKeys:
   - [id]
@@ -95,3 +99,7 @@ properties:
       portion via some process/protocol
   project_id:
     type: string
+  created_datetime:
+    type: date-time
+  updated_datetime:
+    type: date-time

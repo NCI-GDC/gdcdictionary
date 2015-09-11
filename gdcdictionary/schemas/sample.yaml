@@ -21,12 +21,16 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - created_datetime
+  - updated_datetime
 
 required:
   - alias
   - sample_type
   - sample_type_id
   - cases
+  - created_datetime
+  - updated_datetime
 
 uniqueKeys:
   - [id]
@@ -228,3 +232,7 @@ properties:
       of the linked to case via some process/protocol
   project_id:
     type: string
+  created_datetime:
+    type: date-time
+  updated_datetime:
+    type: date-time

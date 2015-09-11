@@ -15,10 +15,14 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - created_datetime
+  - updated_datetime
 
 required:
   - alias
   - samples
+  - created_datetime
+  - updated_datetime
 
 uniqueKeys:
   - [id]
@@ -75,3 +79,7 @@ properties:
       sample via some process/protocol
   project_id:
     type: string
+  created_datetime:
+    type: date-time
+  updated_datetime:
+    type: date-time

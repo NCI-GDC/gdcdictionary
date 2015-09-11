@@ -16,6 +16,8 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - created_datetime
+  - updated_datetime
 
 links:
   - exclusive: false
@@ -120,6 +122,8 @@ required:
   - file_size
   - md5sum
   - state
+  - created_datetime
+  - updated_datetime
 
 uniqueKeys:
   - [id]
@@ -191,3 +195,7 @@ properties:
     $ref: "definitions.yaml#/to_one"
   project_id:
     type: string
+  created_datetime:
+    type: date-time
+  updated_datetime:
+    type: date-time
