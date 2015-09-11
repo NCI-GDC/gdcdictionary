@@ -38,11 +38,13 @@ links:
         label: derived_from
         multiplicity: many_to_one
         target_type: analyte
+        required: false
       - name: samples
         backref: aliquots
         label: derived_from
         multiplicity: many_to_many
         target_type: sample
+        required: false
   - name: centers
     label: shipped_to
     backref: aliquots

@@ -68,7 +68,7 @@ properties:
 
   projects:
     $ref: "definitions.yaml#/to_one"
-  related_files:
+  related_to_files:
     $ref: "definitions.yaml#/to_many"
   project_id:
     type: string
