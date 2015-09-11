@@ -33,7 +33,10 @@ uniqueKeys:
   #unclear if want submitter ID for clinical
   - [id]
 
-# clinical properties
+# Clinical properties
+# This is a skeleton outline for the internal terms that will be used by the GDC
+# The term field will be used to point to a semantic definition including
+# descriptions, synonyms, links to external vocabularies/ontologies
 properties:
   type:
     type: string
@@ -44,6 +47,7 @@ properties:
 
   demographics:
     type: object
+    term: TBD
 
     required:
       - gender
@@ -54,13 +58,8 @@ properties:
       - year_of_death
 
     properties:
-
       gender:
-        title: Gender
-        #cde_id: 2200604
-        description: >
-          Text designations that identify gender. Gender is described as the assemblage
-          of properties that distinguish people on the basis of their societal roles. CDE: 2200604
+        term: TBD
         enum:
           - female
           - male
@@ -68,11 +67,7 @@ properties:
           - unspecified
 
       race:
-        title: Race
-        #cde_id: 21922199
-        description: >
-          The text for reporting information about race based on the Office of
-          Management and Budget (OMB) categories. CDE: 2192199."
+        term: TBD
         enum:
           - white
           - american indian or alaska native
@@ -84,11 +79,7 @@ properties:
           - not allowed to collect
 
       ethnicity:
-        title: Ethnicity
-        description: >
-          The text for reporting information about ethnicity based on the Office
-          of Management and Budget (OMB) categories. CDE: 2192217.
-        cde_id: 2200604
+        term: TDB
         enum:
           - hispanic or latino
           - not hispanic or latino
@@ -96,21 +87,17 @@ properties:
           - not allowed to collect
 
       year_of_birth:
-        title: Year of Birth
+        term: TBD
         type: number
-        description: >
-          Year of Birth
-        #cde_id:
 
       year_of_death:
-        title: Year of Death
+        term: TBD
         type: number
-        description: >
-          Year of Death
-        #cde_id:
 
   diagnosis:
     type: object
+    term: TBD
+
     required:
       - age_at_diagnosis
       - days_to_birth
@@ -132,20 +119,15 @@ properties:
     properties:
       age_at_diagnosis:
         type: number
-        description: >
-          Age in days at which a condition or disease was first diagnosed.
-          CDE: 3225640. TCGA has the age in years with CDE 2006657,
-          this is converted by ceil(age*365.25) to get days.
+        term: TBD
 
       days_to_birth:
         type: number
-        description: >
-          From Dx
+        term: TBD
 
       days_to_last_follow_up:
         type: number
-        description: >
-          From Dx
+        term: TBD
 
     vital_status:
       enum:
@@ -153,72 +135,60 @@ properties:
         - dead
         - lost to follow-up
         - unknown
-      description: >
-        The survival state of the person registered on the protocol. CDE: 5.
+      term: TBD
 
     primary_diagnosis:
       type: string
-      description: >
-        ICD-10,
-        The tenth version of the International Classification of Disease (ICD),
-        published by the World Health Organization in 1992. A system of numbered
-        categories for representation of data. CDE: 3226287.
+      term: TBD
 
     morphology:
       type: string
-      description: >
-        ICD-O-3(M)
+      term: TBD
 
     tissue_or_organ_of_origin:
       type: string
-      description: >
-        ICD-O-3(T)
+      term: TBD
 
     site_of_resection_or_biopsy:
       type: string
-      description: >
-        ICD-O-3(T)
+      term: TBD
 
     classification_of_tumor:
+      term: TBD
       enum:
         - primary
         - metastasis
         - recurrence
         - other
-      description: >
-        With respect to disease progression/evolution
 
     prior_malignancy:
+      term: TBD
       enum:
         - yes
         - no
         - unknown
-      description: >
-        Optional
 
     tumor_stage:
+      term: TBD
       type: string
-      description: >
-        Using the patient's pathology/laboratory report, Cancer type-specific staging systems such as AJCC (3203222v1.0)
 
     tumor_grade:
+      term: TBD
       type: string
-      description: >
-        Tumor grade based on cancer type-specific grading systems such as Nottingham grading system (Breast) or Gleason scoring system (Prostate), N/A allowed.
 
     progression_or_recurrence:
+      term: TBD
       enum:
         - yes
         - no
         - unknown
-      description: >
 
     days_to_recurrence:
+      term: TBD
       type: number
-      description: >
-        Days
 
     last_known_disease_status:
+      term: TBD
       enum:
         - Distant met recurrence/progression
         - Loco-regional recurrence/progression
@@ -226,113 +196,91 @@ properties:
         - Tumor free
         - Unknown tumor status
         - With tumor
-      description: >
 
   family_history:
     type: object
+    term: TBD
 
     relative_with_cancer_history:
+      term: TBD
       enum:
         - yes
         - no
         - unknown
 
     relationship_type:
-      #TODO should be enum of possible relationship types
+      term: TBD
       type: string
-      description: >
 
     relationship_gender:
+      term: TBD
       enum:
         - female
         - male
         - unknown
         - unspecified
-      description: >
-        Text designations that identify gender. Gender is described as the assemblage
-        of properties that distinguish people on the basis of their societal roles. CDE: 2200604
 
     relationship_age_at_diagonsis:
+      term: TBD
       type: number
-      description: >
-        Age in days at which a condition or disease was first diagnosed.
-        CDE: 3225640. TCGA has the age in years with CDE 2006657,
-        this is converted by ceil(age*365.25) to get days.
 
     relationship_primary_diagnosis:
+      term: TBD
       type: string
-      description: >
-        ICD-10,
-        The tenth version of the International Classification of Disease (ICD),
-        published by the World Health Organization in 1992. A system of numbered
-        categories for representation of data. CDE: 3226287.
 
   exposure:
     type: object
 
     years_smoked:
+      term: TBD
       type: number
-      description: >
-        3137957v1.0
 
     cigarettes_per_day:
+      term: TBD
       type: number
-      description: >
-        2001716v4.0
 
     alcohol_history:
+      term: TBD
       type: string
-      description: >
-        2193765v1.0
 
     alcohol_intensity:
+      term: TBD
       type: string
-      description: >
-        3457767v1.0
 
     height:
+      term: TBD
       type: number
-      description: >
-        Units? Inches?
-        2538920v1.0
 
     weight:
+      term: TBD
       type: number
-      description: >
-        Units? Lbs?
-        2630200v1.0
 
     bmi:
+      term: TBD
       type: number
-      description: >
-        A calculated numerical quantity that represents an individual's weight
-        to height ratio.
-        2006410v3.0
 
   treatment:
     type: object
+    term: TBD
 
     treatment_or_therapy:
+      term: TBD
       enum:
         - yes
         - no
         - unknown
 
     treatment_intent_type:
+      term: TBD
       type: string
-      description: >
-        2793511v1.0
 
     therapeutic_agents:
-      #should this be an array
+      term: TBD
       type: string
-      description: >
-        Agent Name (per NCI Thesaurus) (NCIt contains all experimental drugs and federates RxNorm containing approved drugs)
 
     days_to_treatment:
+      term: TBD
       type: number
-      description: >
-        Days
 
   cases:
     $ref: "definitions.yaml#/to_one"
