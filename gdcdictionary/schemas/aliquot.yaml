@@ -20,7 +20,6 @@ systemProperties:
   - updated_datetime
 
 required:
-  - alias
   - submitter_id
   - created_datetime
   - updated_datetime
@@ -91,6 +90,8 @@ properties:
   project_id:
     type: string
   created_datetime:
-    type: date-time
+    type: string
+    format: date-time
   updated_datetime:
-    type: date-time
+    type: string
+    format: date-time
