@@ -196,6 +196,8 @@ properties:
   project_id:
     type: string
   created_datetime:
-    type: date-time
+    type: string
+    format: date-time
   updated_datetime:
-    type: date-time
+    type: string
+    format: date-time

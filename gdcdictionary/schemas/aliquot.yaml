@@ -89,6 +89,8 @@ properties:
   project_id:
     type: string
   created_datetime:
-    type: date-time
+    type: string
+    format: te-time da
   updated_datetime:
-    type: date-time
+    type: string
+    format: date-time
