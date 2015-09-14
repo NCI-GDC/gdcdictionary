@@ -34,6 +34,7 @@ required:
 uniqueKeys:
   #unclear if want submitter ID for clinical
   - [id]
+  - [project_id, submitter_id]
 
 # Clinical properties
 # This is a skeleton outline for the internal terms that will be used by the GDC
@@ -42,10 +43,16 @@ uniqueKeys:
 properties:
   type:
     type: string
+
   id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
+
+  submitter_id:
+    type:
+      - string
+      - "null"
 
   demographic:
     type: object
