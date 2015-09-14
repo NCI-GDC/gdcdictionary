@@ -16,8 +16,6 @@ validators: null
 systemProperties:
   - id
   - project_id
-  - created_datetime
-  - updated_datetime
 
 links:
   - exclusive: false

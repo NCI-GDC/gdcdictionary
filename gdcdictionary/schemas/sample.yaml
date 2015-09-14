@@ -29,8 +29,6 @@ required:
   - sample_type
   - sample_type_id
   - cases
-  - created_datetime
-  - updated_datetime
 
 uniqueKeys:
   - [id]
