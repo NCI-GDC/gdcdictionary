@@ -45,7 +45,7 @@ properties:
     systemAlias: node_id
     description: "TODO"
 
-  demographics:
+  demographic:
     type: object
     term: TBD
 
@@ -220,7 +220,7 @@ properties:
         - unknown
         - unspecified
 
-    relationship_age_at_diagonsis:
+    relationship_age_at_diagnosis:
       term: TBD
       type: number
 
