@@ -38,8 +38,6 @@ required:
   - submitter_id
   - revision
   - projects
-  - created_datetime
-  - updated_datetime
 
 uniqueKeys:
   - [id]
