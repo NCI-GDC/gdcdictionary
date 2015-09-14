@@ -30,8 +30,6 @@ required:
   - pmid
   - doi
   - files
-  - created_datetime
-  - updated_datetime
 
 uniqueKeys:
   - [id]

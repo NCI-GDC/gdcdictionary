@@ -32,8 +32,6 @@ required:
   - submitter_id
   - section_location
   - portions
-  - created_datetime
-  - updated_datetime
 
 uniqueKeys:
   - [id]

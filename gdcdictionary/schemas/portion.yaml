@@ -21,8 +21,6 @@ systemProperties:
 required:
   - submitter_id
   - samples
-  - created_datetime
-  - updated_datetime
 
 uniqueKeys:
   - [id]

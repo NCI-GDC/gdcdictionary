@@ -24,8 +24,6 @@ required:
   - analyte_type_id
   - analyte_type
   - portions
-  - created_datetime
-  - updated_datetime
 
 uniqueKeys:
   - [id]

@@ -30,8 +30,6 @@ links:
 required:
   - id
   - cases
-  - created_datetime
-  - updated_datetime
 
 uniqueKeys:
   - [id]
