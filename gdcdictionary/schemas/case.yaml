@@ -34,8 +34,6 @@ links:
 required:
   - submitter_id
   - projects
-  - created_datetime
-  - updated_datetime
 
 uniqueKeys:
   - [id]
