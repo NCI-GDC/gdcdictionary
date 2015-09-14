@@ -129,158 +129,162 @@ properties:
         type: number
         term: TBD
 
-    vital_status:
-      enum:
-        - alive
-        - dead
-        - lost to follow-up
-        - unknown
-      term: TBD
+      vital_status:
+        enum:
+          - alive
+          - dead
+          - lost to follow-up
+          - unknown
+        term: TBD
 
-    primary_diagnosis:
-      type: string
-      term: TBD
+      primary_diagnosis:
+        type: string
+        term: TBD
 
-    morphology:
-      type: string
-      term: TBD
+      morphology:
+        type: string
+        term: TBD
 
-    tissue_or_organ_of_origin:
-      type: string
-      term: TBD
+      tissue_or_organ_of_origin:
+        type: string
+        term: TBD
 
-    site_of_resection_or_biopsy:
-      type: string
-      term: TBD
+      site_of_resection_or_biopsy:
+        type: string
+        term: TBD
 
-    classification_of_tumor:
-      term: TBD
-      enum:
-        - primary
-        - metastasis
-        - recurrence
-        - other
+      classification_of_tumor:
+        term: TBD
+        enum:
+          - primary
+          - metastasis
+          - recurrence
+          - other
 
-    prior_malignancy:
-      term: TBD
-      enum:
-        - yes
-        - no
-        - unknown
+      prior_malignancy:
+        term: TBD
+        enum:
+          - yes
+          - no
+          - unknown
 
-    tumor_stage:
-      term: TBD
-      type: string
+      tumor_stage:
+        term: TBD
+        type: string
 
-    tumor_grade:
-      term: TBD
-      type: string
+      tumor_grade:
+        term: TBD
+        type: string
 
-    progression_or_recurrence:
-      term: TBD
-      enum:
-        - yes
-        - no
-        - unknown
+      progression_or_recurrence:
+        term: TBD
+        enum:
+          - yes
+          - no
+          - unknown
 
-    days_to_recurrence:
-      term: TBD
-      type: number
+      days_to_recurrence:
+        term: TBD
+        type: number
 
-    last_known_disease_status:
-      term: TBD
-      enum:
-        - Distant met recurrence/progression
-        - Loco-regional recurrence/progression
-        - Biochemical evidence of disease without structural correlate
-        - Tumor free
-        - Unknown tumor status
-        - With tumor
+      last_known_disease_status:
+        term: TBD
+        enum:
+          - Distant met recurrence/progression
+          - Loco-regional recurrence/progression
+          - Biochemical evidence of disease without structural correlate
+          - Tumor free
+          - Unknown tumor status
+          - With tumor
 
   family_history:
     type: object
     term: TBD
 
-    relative_with_cancer_history:
-      term: TBD
-      enum:
-        - yes
-        - no
-        - unknown
+    properties:
+      relative_with_cancer_history:
+        term: TBD
+        enum:
+          - yes
+          - no
+          - unknown
 
-    relationship_type:
-      term: TBD
-      type: string
+      relationship_type:
+        term: TBD
+        type: string
 
-    relationship_gender:
-      term: TBD
-      enum:
-        - female
-        - male
-        - unknown
-        - unspecified
+      relationship_gender:
+        term: TBD
+        enum:
+          - female
+          - male
+          - unknown
+          - unspecified
 
-    relationship_age_at_diagnosis:
-      term: TBD
-      type: number
+      relationship_age_at_diagnosis:
+        term: TBD
+        type: number
 
-    relationship_primary_diagnosis:
-      term: TBD
-      type: string
+      relationship_primary_diagnosis:
+        term: TBD
+        type: string
 
   exposure:
     type: object
+    term: TBD
 
-    years_smoked:
-      term: TBD
-      type: number
+    properties:
+      years_smoked:
+        term: TBD
+        type: number
 
-    cigarettes_per_day:
-      term: TBD
-      type: number
+      cigarettes_per_day:
+        term: TBD
+        type: number
 
-    alcohol_history:
-      term: TBD
-      type: string
+      alcohol_history:
+        term: TBD
+        type: string
 
-    alcohol_intensity:
-      term: TBD
-      type: string
+      alcohol_intensity:
+        term: TBD
+        type: string
 
-    height:
-      term: TBD
-      type: number
+      height:
+        term: TBD
+        type: number
 
-    weight:
-      term: TBD
-      type: number
+      weight:
+        term: TBD
+        type: number
 
-    bmi:
-      term: TBD
-      type: number
+      bmi:
+        term: TBD
+        type: number
 
   treatment:
     type: object
     term: TBD
 
-    treatment_or_therapy:
-      term: TBD
-      enum:
-        - yes
-        - no
-        - unknown
+    properties:
+      treatment_or_therapy:
+        term: TBD
+        enum:
+          - yes
+          - no
+          - unknown
 
-    treatment_intent_type:
-      term: TBD
-      type: string
+      treatment_intent_type:
+        term: TBD
+        type: string
 
-    therapeutic_agents:
-      term: TBD
-      type: string
+      therapeutic_agents:
+        term: TBD
+        type: string
 
-    days_to_treatment:
-      term: TBD
-      type: number
+      days_to_treatment:
+        term: TBD
+        type: number
 
   cases:
     $ref: "definitions.yaml#/to_one"
