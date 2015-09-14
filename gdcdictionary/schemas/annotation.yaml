@@ -70,10 +70,7 @@ required:
   - category
   - classification
   - creator
-  - created_datetime
   - status
-  - created_datetime
-  - updated_datetime
 
 uniqueKeys:
   - [id]
