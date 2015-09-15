@@ -106,8 +106,8 @@ properties:
   prior_malignancy:
     term: TBD
     enum:
-      - yes
-      - no
+      - "yes"
+      - "no"
       - unknown
 
   tumor_stage:
@@ -121,8 +121,8 @@ properties:
   progression_or_recurrence:
     term: TBD
     enum:
-      - yes
-      - no
+      - "yes"
+      - "no"
       - unknown
 
   days_to_recurrence:
@@ -138,7 +138,9 @@ properties:
       - Tumor free
       - Unknown tumor status
       - With tumor
-
+  days_to_last_known_disease_status:
+    term: TBD
+    type: number
   cases:
     $ref: "definitions.yaml#/to_one"
   project_id:

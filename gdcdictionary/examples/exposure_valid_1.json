@@ -1,14 +1,14 @@
 {
     "cigarettes_per_day": 1.095890410958904, 
-    "weight": -1, 
+    "weight": -1.0, 
     "alcohol_history": "", 
     "alcohol_intensity": "", 
-    "bmi": -1, 
+    "bmi": -1.0, 
     "years_smoked": 24.0, 
     "submitter_id": "1F518B0D-B7ED-4B4E-AD26-5DF368956943_exposure", 
     "cases": {
         "submitter_id": "TCGA-05-4384"
     }, 
-    "height": -1, 
+    "height": -1.0, 
     "type": "exposure"
 }
