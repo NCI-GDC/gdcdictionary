@@ -18,11 +18,11 @@ systemProperties:
   - project_id
 
 required:
-  - alias
+  - submitter_id
 
 uniqueKeys:
   - [id]
-  - [project_id, alias]
+  - [project_id, submitter_id]
 
 links:
   - exclusive: false
@@ -56,11 +56,10 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  alias:
+  submitter_id:
     type:
       - string
       - "null"
-    systemAlias: submitter_id
     description: >
       The legacy barcode used before prior to the use
       UUIDs. For TCGA this is bcraliquotbarcode.

@@ -1,62 +1,70 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "case"
-title: Case
+id: "treatment"
+title: Treatment
 type: object
 namespace: http://gdc.nci.nih.gov
-category: administrative
+category: clinical
 program: '*'
 project: '*'
-description: "TODO"
+description: TBD
 additionalProperties: false
 validators: null
 
 systemProperties:
   - id
   - project_id
-  - type
-  - state
 
 links:
-  - name: projects
-    backref: cases
-    label: member_of
-    target_type: project
+  - name: diagnosis
+    backref: treatment
+    label: describes #need better term here
+    target_type: case
     multiplicity: many_to_one
     required: true
-  - name: tissue_source_sites
-    backref: cases
-    label: processed_at
-    target_type: tissue_source_site
-    multiplicity: many_to_one
-    required: false
 
 required:
-  - submitter_id
-  - projects
+
 
 uniqueKeys:
+  #unclear if want submitter ID for clinical
   - [id]
   - [project_id, submitter_id]
 
-# Case properties
 properties:
   type:
     type: string
+
   id:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
+
   submitter_id:
     type:
       - string
       - "null"
-  days_to_index:
-    type:
-      - integer
-  projects:
-    $ref: "definitions.yaml#/to_one"
-  tissue_source_sites:
+
+  treatment_or_therapy:
+    term: TBD
+    enum:
+      - yes
+      - no
+      - unknown
+
+  treatment_intent_type:
+    term: TBD
+    type: string
+
+  therapeutic_agents:
+    term: TBD
+    type: string
+
+  days_to_treatment:
+    term: TBD
+    type: number
+
+  diagnosis:
     $ref: "definitions.yaml#/to_one"
   project_id:
     type: string

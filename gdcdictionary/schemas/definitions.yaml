@@ -18,7 +18,7 @@ parent_uuids:
 foreign_key:
   type: object
   additionalProperties: false
-  #Can either use 'id' which are GDC IDs (UUID) or 'aliases'
+  #Can either use 'id' which are GDC IDs (UUID) or 'submitter_id'
   #which are user defined IDs ("submitter IDs in the backend")
   anyOf:
     - required:
@@ -29,7 +29,7 @@ foreign_key:
   properties:
     id:
       $ref: "#/UUID"
-    alias:
+    submitter_id:
       type: string
 
 to_one:
