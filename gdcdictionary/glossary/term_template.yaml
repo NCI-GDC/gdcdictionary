@@ -1,0 +1,24 @@
+type: term
+id: #UUID
+term: #the term
+termdef :
+  term_id: #UUID
+  definition: >
+    The definition of the term, ideally from one of the authorities listed
+    in the sources: (if any) below.
+  locale: #two letter language code ("en"), can be omitted>
+  # if this term is used elsewhere as a key with values, those values
+  # may be enumerated here:
+  values:
+    - thing1
+    - thing2
+  source:
+    uri: # ontology uri, if any
+    cde: 
+      collection_name: #such as caDSR/TCGA
+      collection_url: # url that resolves to a description of the cde (ideal)
+      cde_id: # public id for the term
+synonyms: # if any
+  - #term_id (UUID) of a synonymous term
+  
+  
