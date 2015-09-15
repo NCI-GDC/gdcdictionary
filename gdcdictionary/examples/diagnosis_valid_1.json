@@ -1,0 +1,22 @@
+{
+    "classification_of_tumor": "", 
+    "last_known_disease_status": "", 
+    "tumor_grade": "", 
+    "tumor_stage": "stage iiia", 
+    "days_to_last_follow_up": "426", 
+    "primary_diagnosis": "c34.3", 
+    "submitter_id": "1F518B0D-B7ED-4B4E-AD26-5DF368956943_diagnosis", 
+    "site_of_resection_or_biopsy": "c34.3", 
+    "tissue_or_organ_of_origin": "c34.3", 
+    "days_to_birth": "-24411", 
+    "age_at_diagnosis": 66, 
+    "vital_status": "alive", 
+    "morphology": "8255/3", 
+    "cases": {
+        "submitter_id": "TCGA-05-4384"
+    }, 
+    "type": "diagnosis", 
+    "prior_malignancy": "yes", 
+    "days_to_recurrence": "", 
+    "progression_or_recurrence": ""
+}
