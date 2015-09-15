@@ -16,10 +16,10 @@ systemProperties:
   - project_id
 
 links:
-  - name: cases
-    backref: treatment
+  - name: diagnosis
+    backref: treatments
     label: describes #need better term here
-    target_type: case
+    target_type: diagnosis
     multiplicity: many_to_one
     required: true
 
@@ -63,7 +63,7 @@ properties:
     term: TBD
     type: number
 
-  cases:
+  diagnosis:
     $ref: "definitions.yaml#/to_one"
   project_id:
     type: string
