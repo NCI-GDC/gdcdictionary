@@ -73,8 +73,8 @@ definitions:
         pattern: "^[A-z][A-z]$"
         description: ISO 639-1 two-letter language code (language of term and definition)
       values:
-        - $ref: "http://json-schema.org/draft-04/schema#"
-          description: >-
+        $ref: "http://json-schema.org/draft-04/schema#"
+        description: >
             If the term itself is used as a key elsewhere, the values field
             contains a valid jsonschema that defines the acceptable values
             for the key.
@@ -96,5 +96,11 @@ definitions:
                 format: uri
                 description: Resolving URL to CDE collection (e.g., caDSR, NCIt)
               cde_id:
-                type: string
+                oneOf:
+                  - type: string
+                  - type: number
                 description: CDE public id for the term, should be queryable at collection URL
+              cde_version:
+                oneOf:
+                  - type: string
+                  - type: number

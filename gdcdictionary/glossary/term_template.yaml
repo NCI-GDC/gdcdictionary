@@ -1,8 +1,9 @@
 type: term
 id: #UUID
-term: #the term
+term: #the "GDC version" of the term
 termdef :
   term_id: #UUID
+  term: #if source given below, rendering of the term as given there
   definition: >
     The definition of the term, ideally from one of the authorities listed
     in the sources: (if any) below.
@@ -21,7 +22,7 @@ termdef :
     type: object
     properties:
       units:
-        type:string
+        type: string
         enum: ["<yourunits>"]
       value:
         type: number
@@ -31,6 +32,7 @@ termdef :
       collection_name: #such as caDSR/TCGA
       collection_url: # url that resolves to a description of the cde (ideal)
       cde_id: # public id for the term
+      cde_version: # version of public id used
 synonyms: # if any
   - #term_id (UUID) of a synonymous term
   
