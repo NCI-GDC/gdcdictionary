@@ -73,6 +73,7 @@ def validate_schemata(schemata, metaschema):
     # validate schemata
     print('Validating schemas against metaschema... '),
     for s in schemata.values():
+        print s['title']
         validate(s, metaschema)
 
         def assert_link_is_also_prop(link):
