@@ -10,8 +10,21 @@ termdef :
   # if this term is used elsewhere as a key with values, those values
   # may be enumerated here:
   values:
-    - thing1
-    - thing2
+    type: array
+    items:
+      type: string
+      enum:
+        - thing1
+        - thing2
+  #or
+  values:
+    type: object
+    properties:
+      units:
+        type:string
+        enum: ["<yourunits>"]
+      value:
+        type: number
   source:
     uri: # ontology uri, if any
     cde: 

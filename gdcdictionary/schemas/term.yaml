@@ -72,10 +72,12 @@ definitions:
         type: string
         pattern: "^[A-z][A-z]$"
         description: ISO 639-1 two-letter language code (language of term and definition)
-      values: 
-        type: array
-        items:
-          type: string
+      values:
+        - $ref: "http://json-schema.org/draft-04/schema#"
+          description: >-
+            If the term itself is used as a key elsewhere, the values field
+            contains a valid jsonschema that defines the acceptable values
+            for the key.
       source:
         type: object
         properties:
