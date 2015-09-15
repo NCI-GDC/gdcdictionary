@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-#id: "http://gdc.nci.nih.gov/term"
-id: "term"
+#id: "term"
+id: "http://localhost:8080/term.yaml"
 title: Term semantic information
 type: object
 namespace: http://gdc.nci.nih.gov
@@ -37,13 +37,17 @@ required:
 properties:
   type:
     type: string
+    enum:
+      - term
   id:
+#    $ref: "definitions.yaml#/UUID"
     $ref: "http://localhost:8080/definitions.yaml#/UUID"
   term:
     type: string
   termdef:
     $ref: "#/definitions/termdef"
   synonyms:
+#    $ref: "definitions.yaml#/to_many"
     $ref: "http://localhost:8080/definitions.yaml#/to_many"
 
 definitions:
@@ -55,6 +59,7 @@ definitions:
       - definition
     properties:
       term_id:
+#        $ref: "definitions.yaml#/UUID"
         $ref: "http://localhost:8080/definitions.yaml#/UUID"
       term:
         type: string
@@ -63,11 +68,14 @@ definitions:
         description: >
           Definition of term, ideally obtained verbatim from one of the authorities identified
           in source property (below)
-      
       locale:
         type: string
         pattern: "^[A-z][A-z]$"
         description: ISO 639-1 two-letter language code (language of term and definition)
+      values: 
+        type: array
+        items:
+          type: string
       source:
         type: object
         properties:
