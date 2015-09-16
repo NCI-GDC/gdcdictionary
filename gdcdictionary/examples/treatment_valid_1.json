@@ -1,0 +1,11 @@
+{
+    "therapeutic_agents": "", 
+    "submitter_id": "1F518B0D-B7ED-4B4E-AD26-5DF368956943_treatment", 
+    "days_to_treatment": -1.0, 
+    "diagnosis": {
+        "submitter_id": "1F518B0D-B7ED-4B4E-AD26-5DF368956943_diagnosis"
+    }, 
+    "type": "treatment", 
+    "treatment_intent_type": "", 
+    "treatment_or_therapy": "unknown"
+}
