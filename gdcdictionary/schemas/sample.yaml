@@ -223,7 +223,8 @@ properties:
     type: boolean
     description: "TODO"
   cases:
-    $ref: "definitions.yaml#/to_one" #should this be to_one
+    #should this be to_one
+    $ref: "definitions.yaml#/to_one"
     description: >
       Indicates that the sample is physically derived from the subject
       of the linked to case via some process/protocol
