@@ -16,9 +16,7 @@ parent_uuids:
     uniqueItems: true
 
 foreign_key:
-  type:
-    object
-
+  type: object
   additionalProperties: false
   #Can either use 'id' which are GDC IDs (UUID) or 'aliases'
   #which are user defined IDs ("submitter IDs in the backend")

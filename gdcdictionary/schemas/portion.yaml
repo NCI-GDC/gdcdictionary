@@ -69,7 +69,8 @@ properties:
     description: "TODO: define, from BCR"
 
   samples:
-    $ref: "definitions.yaml#/to_one" #should this be to_one
+    #should this be to_one
+    $ref: "definitions.yaml#/to_one" 
     description: >
       Indicates that the portion is physically derived from the linked to
       sample via some process/protocol
