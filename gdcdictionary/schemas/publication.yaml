@@ -50,3 +50,12 @@ properties:
     $ref: "definitions.yaml#/to_many"
   project_id:
     type: string
+<<<<<<< Updated upstream
+=======
+  created_datetime:
+    type: string
+    format: date-time
+  updated_datetime:
+    type: string
+    format: date-time
+>>>>>>> Stashed changes
