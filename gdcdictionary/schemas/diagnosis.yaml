@@ -61,6 +61,8 @@ properties:
 
   age_at_diagnosis:
     type: number
+    minimum: 0
+    maximum: 90
     term: TBD
 
   days_to_birth:
