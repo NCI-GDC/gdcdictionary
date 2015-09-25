@@ -4,7 +4,7 @@ id: "metaschema"
 title: "GDC JSON schema extension"
 
 allOf:
-  - "$ref": "http://json-schema.org/draft-04/schema#"
+  - $ref: "http://json-schema.org/draft-04/schema#"
 
 #GDC extensions
 required:

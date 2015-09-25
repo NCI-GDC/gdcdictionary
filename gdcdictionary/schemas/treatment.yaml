@@ -17,14 +17,11 @@ systemProperties:
 
 links:
   - name: diagnosis
-    backref: treatment
+    backref: treatments
     label: describes #need better term here
-    target_type: case
+    target_type: diagnosis
     multiplicity: many_to_one
     required: true
-
-required:
-
 
 uniqueKeys:
   #unclear if want submitter ID for clinical

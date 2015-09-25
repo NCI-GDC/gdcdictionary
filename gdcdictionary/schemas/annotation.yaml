@@ -27,43 +27,49 @@ links:
         backref: annotations
         target_type: case
         multiplicity: many_to_many
+        required: false
       - name: samples
         label: annotates
         backref: annotations
         target_type: sample
         multiplicity: many_to_many
+        required: false
       - name: slides
         label: annotates
         backref: annotations
         target_type: slide
         multiplicity: many_to_many
+        required: false
       - name: portions
         label: annotates
         backref: annotations
         target_type: portion
         multiplicity: many_to_many
+        required: false
       - name: analytes
         label: annotates
         backref: annotations
         target_type: analyte
         multiplicity: many_to_many
+        required: false
       - name: aliquots
         label: annotates
         backref: annotations
         target_type: aliquot
         multiplicity: many_to_many
+        required: false
       - name: files
         label: annotates
         backref: annotations
         target_type: file
         multiplicity: many_to_many
+        required: false
 
 required:
   - submitter_id
   - category
   - classification
   - creator
-  - created_datetime
   - status
 
 uniqueKeys:
@@ -159,3 +165,9 @@ properties:
     $ref: "definitions.yaml#/to_one"
   project_id:
     type: string
+  created_datetime:
+    type: string
+    format: date-time
+  updated_datetime:
+    type: string
+    format: date-time

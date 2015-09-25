@@ -21,6 +21,8 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - created_datetime
+  - updated_datetime
 
 required:
   - submitter_id
@@ -221,9 +223,16 @@ properties:
     type: boolean
     description: "TODO"
   cases:
-    $ref: "definitions.yaml#/to_one" #should this be to_one
+    #should this be to_one
+    $ref: "definitions.yaml#/to_one"
     description: >
       Indicates that the sample is physically derived from the subject
       of the linked to case via some process/protocol
   project_id:
     type: string
+  created_datetime:
+    type: string
+    format: date-time
+  updated_datetime:
+    type: string
+    format: date-time

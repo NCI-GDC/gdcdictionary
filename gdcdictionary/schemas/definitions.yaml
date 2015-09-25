@@ -23,8 +23,8 @@ foreign_key:
   anyOf:
     - required:
         - id
-    - required: 
-        - alias
+    - required:
+        - submitter_id
 
   properties:
     id:

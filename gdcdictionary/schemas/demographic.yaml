@@ -90,3 +90,6 @@ properties:
     $ref: "definitions.yaml#/to_one"
   project_id:
     type: string
+  religion:
+    term: TBD
+    type: string

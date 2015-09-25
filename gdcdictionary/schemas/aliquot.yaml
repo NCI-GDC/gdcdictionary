@@ -16,6 +16,8 @@ validators: []
 systemProperties:
   - id
   - project_id
+  - created_datetime
+  - updated_datetime
 
 required:
   - submitter_id
@@ -33,11 +35,13 @@ links:
         label: derived_from
         multiplicity: many_to_one
         target_type: analyte
+        required: false
       - name: samples
         backref: aliquots
         label: derived_from
         multiplicity: many_to_many
         target_type: sample
+        required: false
   - name: centers
     label: shipped_to
     backref: aliquots
@@ -83,3 +87,9 @@ properties:
     $ref: "definitions.yaml#/to_one"
   project_id:
     type: string
+  created_datetime:
+    type: string
+    format: date-time
+  updated_datetime:
+    type: string
+    format: date-time
