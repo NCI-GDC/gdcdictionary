@@ -1,6 +1,7 @@
 type: term
 id: #UUID
 term: #the "GDC version" of the term
+termns: #a "namespace" for the term (label of the node term is found in, e.g.)
 termdef :
   term_id: #UUID
   term: #if source given below, rendering of the term as given there
@@ -37,3 +38,4 @@ synonyms: # if any
   - #term_id (UUID) of a synonymous term
   
   
+
