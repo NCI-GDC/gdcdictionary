@@ -1,0 +1,17 @@
+---
+type: term
+id: b8d233ff-4f0e-479d-a75f-75fa40153423
+term: slide
+termdef:
+  term_id: b8d233ff-4f0e-479d-a75f-75fa40153423
+  term: Slide
+  definition: 'A digital image, microscopic or otherwise, of any sample, portion, or sub-part thereof.'
+  local: en
+  values: ~
+  source:
+    uri: ~
+    cde:
+      collection_name: GDC
+      collection_url: ~
+      cde_id: b8d233f
+      cde_version: ~

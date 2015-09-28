@@ -1,0 +1,17 @@
+---
+type: term
+id: 6f77144c-0a3e-4a7d-bec7-24192a2c1484
+term: portion
+termdef:
+  term_id: 6f77144c-0a3e-4a7d-bec7-24192a2c1484
+  term: ~
+  definition: A physical sub-part of any sample.
+  locale: en
+  values: ~
+  source:
+    uri: ~
+    cde:
+      collection_name: GDC
+      collection_url: ~
+      cde_id: 6f77244
+      cde_version: ~

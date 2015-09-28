@@ -1,0 +1,17 @@
+---
+type: term
+id: 2a5a23e1-edbd-4c6f-b781-a1abd2792211
+term: project
+termdef:
+  term_id: 2a5a23e1-edbd-4c6f-b781-a1abd2792211
+  term: Project
+  definition: Any specifically defined piece of work that is undertaken or attempted to meet a single requirement.
+  locale: en
+  values: ~
+  source:
+    uri: ~
+    cde:
+      collection_name: NCIt
+      collection_url: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C47885
+      cde_id: C47885
+      cde_version: ~
