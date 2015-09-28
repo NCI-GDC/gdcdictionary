@@ -1,0 +1,30 @@
+---
+type: term
+id: 939f7441-315c-46f0-bfab-2b7e53683606
+term: race
+termdef:
+  term_id: 939f7441-315c-46f0-bfab-2b7e53683606
+  term: Race
+  definition: ' An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution.'
+  locale: en
+  values:
+    type: array
+    items:
+      enum:
+        - white
+        - american indian or alaska native
+        - black or african american
+        - asian
+        - native hawaiian or other pacific islander
+        - other
+        - not reported
+        - not allowed to collect
+      type: string
+  source:
+    uri: ~
+    cde:
+      collection_name: NCIt
+      collection_url: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C17049
+      cde_id: C17049
+      cde_version: ~
+termns: clinical/demographic
