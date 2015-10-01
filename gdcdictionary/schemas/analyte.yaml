@@ -1,0 +1,98 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "analyte"
+title: Analyte
+type: object
+program: '*'
+project: '*'
+category: biospecimen
+project: '*'
+description: >
+  A liquid bulk product produced according to specified lab protocols,
+  from a sample or analyte, intended for further analysis.
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+
+required:
+  - alias
+  - analyte_type_id
+  - analyte_type
+  - portions
+
+uniqueKeys:
+  - [id]
+  - [project_id, alias]
+
+links:
+  - name: portions
+    backref: analytes
+    label: derived_from
+    target_type: portion
+    multiplicity: many_to_one
+    required: true
+
+# Added back all fields in current data model to make it compatible with current database
+properties:
+  type:
+    type: string
+  id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: >
+      A liquid bulk product produced according to specified lab protocols,
+      from a sample or portion, intended for further analysis. (GDC)
+  alias:
+    type:
+      - string
+      - "null"
+    systemAlias: submitter_id
+    description: >
+      The legacy barcode used before prior to the use UUIDs, varies by
+      project. For TCGA this is bcranalytebarcode.
+  analyte_type:
+    enum:
+      - DNA
+      - EBV Immortalized Normal
+      - GenomePlex (Rubicon) Amplified DNA
+      - Repli-G (Qiagen) DNA
+      - Repli-G X (Qiagen) DNA
+      - RNA
+      - Total RNA
+    description: "TODO: define, from BCR"
+  analyte_type_id:
+    enum:
+      - D
+      - G
+      - H
+      - R
+      - T
+      - W
+      - X
+  amount:
+    type: number
+    description: "TODO: define, from BCR"
+  concentration:
+    type: number
+    description: "TODO: define, from BCR"
+  a260_a280_ratio:
+    type: number
+    description: "TODO: define, from BCR"
+  well_number:
+    type: string
+    description: "TODO: define, from BCR"
+  spectrophotometer_method:
+    type: string
+    description: "TODO: define, from BCR"
+# analyte parents
+  portions:
+    #should this be to_one
+    $ref: "definitions.yaml#/to_one"
+    description: >
+      Indicates that the analyte is physically derived from the linked to
+      portion via some process/protocol
+  project_id:
+    type: string

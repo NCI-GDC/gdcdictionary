@@ -1,0 +1,70 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "project"
+title: Project
+type: object
+program: '*'
+project: '*'
+category: administrative
+description: >
+  Any specifically defined piece of work that is undertaken or attempted
+  to meet a single requirement. (NCIt C47885)
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+
+required:
+  - code
+  - name
+  - disease_type
+  - state
+  - primary_site
+  - programs
+
+uniqueKeys:
+  - [id]
+  - [code]
+
+links:
+  - name: programs
+    backref: projects
+    label: member_of
+    target_type: program
+    multiplicity: many_to_one
+    required: true
+
+constraints: null
+
+# project properties
+# code, disease_type and primary_site are in the current data model for project
+# and likely shouldn't be
+properties:
+  type:
+    type: string
+  id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  name:
+    type: string
+    description: "TOREVIEW: display name for the project"
+  state:
+    type: string
+    description: >
+      Whether the project is accepting new submissions (active)
+      or closed (legacy).
+  primary_site:
+    type: string
+    description: "TOREVIEW: primary site for the project"
+  code:
+    type: string
+    description: "TODO"
+  disease_type:
+    type: string
+    description: "TOREVIEW: full name for the project"
+  programs:
+    $ref: "definitions.yaml#/to_one"
+    description: >
+      Indicates that the project is logically part of the indicated project.

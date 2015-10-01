@@ -1,0 +1,86 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "aliquot"
+title: Aliquot
+type: object
+category: biospecimen
+program: '*'
+project: '*'
+description: >
+  Pertaining to a portion of the whole;
+  any one of two or more samples of something,
+  of the same volume or weight. (NCIt C25414)
+additionalProperties: false
+validators: []
+
+systemProperties:
+  - id
+  - project_id
+
+required:
+  - alias
+
+uniqueKeys:
+  - [id]
+  - [project_id, alias]
+
+links:
+  - exclusive: false
+    required: true
+    subgroup:
+      - name: analytes
+        backref: aliquots
+        label: derived_from
+        multiplicity: many_to_one
+        target_type: analyte
+      - name: samples
+        backref: aliquots
+        label: derived_from
+        multiplicity: many_to_many
+        target_type: sample
+  - name: centers
+    label: shipped_to
+    backref: aliquots
+    multiplicity: many_to_one
+    target_type: center
+    required: false
+
+
+constraints: null
+
+# Aliquot properties
+properties:
+  type:
+    type: string
+  id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  alias:
+    type:
+      - string
+      - "null"
+    systemAlias: submitter_id
+    description: >
+      The legacy barcode used before prior to the use
+      UUIDs. For TCGA this is bcraliquotbarcode.
+  source_center:
+    type: string
+    description: "TODO: define, from BCR"
+  amount:
+    type: number
+    description: "TODO: define, from BCR"
+  concentration:
+    type: number
+    description: "TODO: define, from BCR"
+  analytes:
+    $ref: "definitions.yaml#/to_one"
+    description: >
+      Indicates that the aliquot is physically derived from the linked to
+      analyte via some process/protocol
+  samples:
+    $ref: "definitions.yaml#/to_one"
+  centers:
+    $ref: "definitions.yaml#/to_one"
+  project_id:
+    type: string

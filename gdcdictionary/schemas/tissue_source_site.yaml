@@ -1,0 +1,46 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "tissue_source_site"
+title: Tissue Source Site
+type: object
+namespace: http://gdc.nci.nih.gov
+category: administrative
+program: '*'
+project: '*'
+description: >
+  A clinical site that collects and provides patient samples and clinical
+  metadata for research use. (NCIt C103264)
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+
+required: []
+
+links: []
+
+uniqueKeys:
+  - [id]
+  - [code]
+
+# tissue_source_site properties
+properties:
+  type:
+    type: string
+  id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  name:
+    type: string
+    description: "TODO"
+  code:
+    type: string
+    description: "TODO: define, from DCC"
+  project:
+    type: string
+    description: "TODO"
+  bcr_id:
+    type: string
+    description: "TODO"

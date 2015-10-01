@@ -1,0 +1,55 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "center"
+title: Center
+type: object
+namespace: http://gdc.nci.nih.gov
+category: administrative
+program: '*'
+project: '*'
+description: >
+  A Professional Organization or Group which has or is able to submit data to
+  the GDC that are valid with respect to GDC prescribed or defined data
+  formats. (GDC subclass of NCIt C19711)
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+
+links: []
+
+required:
+  - code
+  - namespace
+  - name
+  - short_name
+  - center_type
+
+uniqueKeys:
+  - [id]
+  - [code]
+
+# center properties
+properties:
+  type:
+    type: string
+  id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  code:
+    type: string
+    description: "TODO: define, from DCC"
+  namespace:
+    type: string
+    description: "TODO: define, from DCC"
+  name:
+    type: string
+    description: "TODO: define, from DCC as display_name"
+  short_name:
+    type: string
+    description: "TODO: define, from DCC"
+  center_type:
+    type: string
+    description: "TODO: define, from DCC"

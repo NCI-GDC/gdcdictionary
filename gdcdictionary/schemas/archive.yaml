@@ -1,0 +1,71 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "archive"
+title: Archive
+type: object
+namespace: http://gdc.nci.nih.gov
+category: TBD
+program: '*'
+project: '*'
+description: >
+  A group of files containing program or project related data ingested by the
+  GDC. Archives may be submitted directly to GDC by a center, assembled by the
+  GDC, or obtained by another route. (GDC subclass of NCIt C114463)
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+
+links:
+  - name: projects
+    backref: archives
+    label: member_of
+    target_type: project
+    multiplicity: many_to_one
+    required: true
+    # according to association defined in current data model
+    # https://github.com/NCI-GDC/gdcdatamodel/blob/develop/gdcdatamodel/models/edges/related_to.py#L18
+  - name: related_to_files
+    backref: related_archives
+    label: related_to
+    target_type: file
+    multiplicity: one_to_many
+    required: false
+
+required:
+  - alias
+  - revision
+  - projects
+
+uniqueKeys:
+  - [id]
+  - [project_id, alias]
+
+# archive properties
+properties:
+  type:
+    type: string
+  id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  alias:
+    type:
+      - string
+      - "null"
+    systemAlias: submitter_id
+    description: >
+      Unique identifier of this archive in the DCC; usually the original
+      archive filename.
+  revision:
+    type: number
+    description: The revision of this archive in the DCC.
+
+  projects:
+    $ref: "definitions.yaml#/to_one"
+  related_files:
+    $ref: "definitions.yaml#/to_many"
+  project_id:
+    type: string

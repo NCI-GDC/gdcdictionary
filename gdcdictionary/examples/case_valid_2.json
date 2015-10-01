@@ -1,0 +1,7 @@
+{
+  "type": "case",
+  "alias": "case_1",
+  "project": {
+    "alias": "short_id"
+  }
+}

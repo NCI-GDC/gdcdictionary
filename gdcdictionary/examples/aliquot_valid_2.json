@@ -1,0 +1,7 @@
+{
+  "type": "aliquot",
+  "alias": "abc",
+  "analytes": [{
+    "alias": "SIMPLE-1"
+  }]
+}

@@ -1,0 +1,78 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "portion"
+title: Portion
+type: object
+namespace: http://gdc.nci.nih.gov
+category: biospecimen
+program: '*'
+project: '*'
+description: >
+  A physical sub-part of any sample. (GDC)
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+
+required:
+  - alias
+  - samples
+
+uniqueKeys:
+  - [id]
+  - [project_id, alias]
+
+links:
+  - name: samples
+    backref: portions
+    label: derived_from
+    target_type: sample
+    multiplicity: many_to_one
+    required: true
+
+# Portion properties
+# Currently there are many TCGA-specific fields in the DB. This is an attempt
+# to minimize the core fields.
+# Including portion itself is TCGA-specific, but since it's in the data model,
+# leaving for now.
+properties:
+  type:
+    type: string
+  id:
+    $ref: "definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  alias:
+    type:
+      - string
+      - "null"
+    systemAlias: submitter_id
+    description: >
+      The legacy barcode used before prior to the use UUIDs, varies by
+      project. For TCGA this is bcrportionbarcode.
+  weight:
+    type: number
+    description: "TODO: define, from BCR"
+  is_ffpe:
+    type: boolean
+    description: "TODO"
+  creation_datetime:
+    type: number
+    description: >
+      TOREVIEW: The datetime of portion creation encoded as seconds from
+      epoch. If no time is given, it is set to 00:00:00 of the date. Replaces
+      dayofcreation/monthofcreation/yearofcreation.
+  portion_number:
+    type: string
+    description: "TODO: define, from BCR"
+
+  samples:
+    #should this be to_one
+    $ref: "definitions.yaml#/to_one" 
+    description: >
+      Indicates that the portion is physically derived from the linked to
+      sample via some process/protocol
+  project_id:
+    type: string
