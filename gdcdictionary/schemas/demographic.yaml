@@ -17,7 +17,7 @@ systemProperties:
 
 links:
   - name: cases
-    backref: demographic
+    backref: demographics
     label: describes
     target_type: case
     multiplicity: one_to_one

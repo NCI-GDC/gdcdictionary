@@ -17,7 +17,7 @@ systemProperties:
 
 links:
   - name: cases
-    backref: exposure
+    backref: exposures
     label: describes
     target_type: case
     multiplicity: many_to_one

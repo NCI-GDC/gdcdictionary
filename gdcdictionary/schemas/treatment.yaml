@@ -16,7 +16,7 @@ systemProperties:
   - project_id
 
 links:
-  - name: diagnosis
+  - name: diagnoses
     backref: treatments
     label: describes #need better term here
     target_type: diagnosis
