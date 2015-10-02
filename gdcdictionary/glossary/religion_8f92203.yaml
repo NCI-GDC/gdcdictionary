@@ -5,6 +5,7 @@ term: religion
 termdef:
   term_id: 8f922032-1328-44d8-ba57-be6d1f51f922
   term: Demographics Religion Category
+  termns: clinical/demographic
   definition: The category of a person's institutionalized system grounded in belief and reverence for a supernatural power or powers regarded as creator and governor of the universe.
   locale: en
   values:
@@ -16,6 +17,7 @@ termdef:
         - Judaism
         - Muslim
         - None
+        - Not Allowed To Collect
         - Other
     type: array
   source:
