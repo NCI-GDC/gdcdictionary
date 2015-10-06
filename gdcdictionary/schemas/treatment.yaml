@@ -63,7 +63,8 @@ properties:
     term: TBD
     type: number
 
-  diagnosis:
+  diagnoses:
     $ref: "definitions.yaml#/to_one"
+
   project_id:
     type: string
