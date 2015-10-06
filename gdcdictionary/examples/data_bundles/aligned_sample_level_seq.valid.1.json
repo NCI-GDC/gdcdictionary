@@ -36,6 +36,7 @@
   ],
 
   "library_level_markduplicate": [
+    {
       "library_name": "lib-1234",
       "unpaired_reads_examined": 1875109,
       "unpaired_read_duplicates": 1202855,
@@ -44,6 +45,7 @@
       "percent_duplication": 0.0730029,
       "unmapped_reads": 1841474,
       "read_pair_optical_duplicates": 0
+    }
   ],
 
   "sequence_file": {
@@ -57,10 +59,10 @@
 
   "lane_level_seq_files": [
     {
-      id: "57d120b6-d0ef-11e3-8718-27bfceb50ecb"
+      "id": "57d120b6-d0ef-11e3-8718-27bfceb50ecb"
     },
     {
-      id: "39b9c642-d0f8-11e3-9034-3f6c66781382"
+      "id": "39b9c642-d0f8-11e3-9034-3f6c66781382"
     }
   ],
 
