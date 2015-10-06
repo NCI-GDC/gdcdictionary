@@ -1,17 +1,18 @@
 ---
-type: term
-id: e6b68b02-5824-4fc3-aa6e-16b63c77f471
 term: sample
+type: term
 termdef:
-  term_id: e6b68b02-5824-4fc3-aa6e-16b63c77f471
   term: Biospecimen
   definition: 'Any material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes, including a sample obtained from a living organism or taken from the biological object after halting of all its life functions. Biospecimen can contain one or more components including but not limited to cellular molecules, cells, tissues, organs, body fluids, embryos, and body excretory products.'
-  locale: en
-  values: ~
   source:
     uri: ~
     cde:
       collection_name: NCIt
-      collection_url: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C70699
       cde_id: C70699
       cde_version: ~
+      collection_url: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C70699
+  term_id: e6b68b02-5824-4fc3-aa6e-16b63c77f471
+  locale: en
+  values: ~
+id: e6b68b02-5824-4fc3-aa6e-16b63c77f471
+termns: biospecimen

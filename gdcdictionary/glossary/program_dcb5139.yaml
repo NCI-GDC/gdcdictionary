@@ -1,17 +1,18 @@
 ---
 type: term
-id: dcb51393-3136-44f0-aa4b-2c3e8ef2e2b3
-term: program
 termdef:
-  term_id: dcb51393-3136-44f0-aa4b-2c3e8ef2e2b3
-  term: Program
-  definition: A broad framework of goals to be achieved.
-  locale: en
   values: ~
+  term: Program
+  locale: en
+  term_id: dcb51393-3136-44f0-aa4b-2c3e8ef2e2b3
   source:
     uri: ~
     cde:
-      collection_name: NCIt
-      collection_url: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C52647
-      cde_id: C52647
       cde_version: ~
+      collection_url: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C52647
+      collection_name: NCIt
+      cde_id: C52647
+  definition: A broad framework of goals to be achieved.
+id: dcb51393-3136-44f0-aa4b-2c3e8ef2e2b3
+termns: administrative
+term: program

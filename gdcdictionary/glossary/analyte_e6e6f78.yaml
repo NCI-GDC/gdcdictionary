@@ -1,17 +1,18 @@
 ---
-type: term
-id: e6e6f787-2aff-4bba-9fd9-677d071c79a4
 term: analyte
 termdef:
-  term_id: e6e6f787-2aff-4bba-9fd9-677d071c79a4
-  term: Analyte
-  definition: 'A liquid bulk product produced according to specified lab protocols, from a sample or portion, intended for further analysis.'
-  locale: en
   values: ~
+  term_id: e6e6f787-2aff-4bba-9fd9-677d071c79a4
+  locale: en
+  definition: 'A liquid bulk product produced according to specified lab protocols, from a sample or portion, intended for further analysis.'
   source:
     uri: ~
     cde:
+      cde_id: e6e6f78
       collection_name: GDC
       collection_url: ~
-      cde_id: e6e6f78
       cde_version: ~
+  term: Analyte
+type: term
+id: e6e6f787-2aff-4bba-9fd9-677d071c79a4
+termns: biospecimen
