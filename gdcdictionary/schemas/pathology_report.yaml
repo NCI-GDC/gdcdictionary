@@ -1,0 +1,84 @@
+  id: pathology_report
+  title: Pathology report
+  type: object
+  description: Pathology report
+  additionalProperties: false
+  category: data_bundle
+  validators: null
+
+  systemProperties:
+      id:
+          $ref: "_definitions#/UUID"
+      project_id:
+          $ref: "_definitions#/UUID"
+      state:
+          $ref: "_definitions#/data_bundle_state"
+
+  links:
+      - name: case
+        label: describes
+        target_type: case  # or should it be diagnosis?
+        multiplicity: one_to_one  # one case one pathology_report bundle
+        required: true
+
+  required: [ type, case, report_file ]
+
+  uniqueKeys:
+      - [ id ]
+
+  properties:
+      type:
+          enum: [ "pathology_report" ]
+      case:
+          $ref: "_definitions#/to_one"
+
+      report_file:
+          id: pathology_report/report_file
+          title: Pathology report file
+          type: object
+          description: Pathology report file
+          additionalProperties: false
+          category: data_file
+          validators: null
+
+          systemProperties:
+              id:
+                  $ref: "_definitions#/UUID"
+              project_id:
+                  $ref: "_definitions#/UUID"
+              state:
+                  $ref: "_definitions#/data_file_state"
+
+          links:
+              - name: pathology_report_bundle
+                label: part_of
+                target_type: pathology_report
+                multiplicity: one_to_one
+                required: true
+
+          required: [ type, file_name, file_format, file_size, md5sum ]
+
+          uniqueKeys:
+              - [ id ]
+              - [ project_id, file_name ]
+              - [ project_id, submitter_id ]
+
+          properties:
+              type:
+                  enum: [ pathology_report/report_file ]
+              submitter_id:
+                  type:
+                    - string
+                    - "null"
+              file_name:
+                  $ref: "_definitions#/file_name"
+              file_format:
+                  $ref: "_definitions#/file_format"
+                  enum: [ pdf ]
+              file_size:
+                  $ref: "_definitions#/file_size"
+              md5sum:
+                  $ref: "_definitions#/md5sum"
+              pathology_report_bundle:
+                  $ref: "_definitions#/to_one"
+

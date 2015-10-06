@@ -1,0 +1,216 @@
+id: lane_level_seq
+title: Lane level sequencing reads
+type: object
+description: Sequencing reads from one lane of an NGS run
+additionalProperties: false
+category: data_bundle
+validators: null
+
+systemProperties:
+    id:
+        $ref: "_definitions#/UUID"
+    project_id:
+        $ref: "_definitions#/UUID"
+    state:
+        $ref: "_definitions#/data_bundle_state"
+
+links:
+    - name: aliquot
+      label: derived_from
+      target_type: aliquot
+      multiplicity: many_to_one
+      required: true
+
+required:
+    - type
+    - aliquot
+    - sequencing_center
+    - platform
+    - library_strategy
+    - library_name
+    - is_paried_end
+    - read_length
+    - read_group_id
+    - sequence_file
+
+uniqueKeys:
+    - [ id ]
+    - [ project_id, read_group_id ]
+
+properties:
+    type:
+        enum: [ "lane_level_seq" ]
+    sequencing_center:
+        type: string
+    platform:
+        enum:
+            - ILLUMINA
+            - SOLID
+            - LS454
+            - Ion Torrent
+            - PACBIO
+    library_strategy:
+        enum:
+            - WGS
+            - WXS
+            - RNA-Seq
+            - ChIP-Seq
+    library_name:
+        type: string
+    insert_size:
+        type: integer
+    target_capture_kit_name:  # conditionally required for WXS etc
+        type: string
+    target_capture_kit_target_region:  # 
+        type: string
+    is_paried_end:
+        type: boolean
+    read_length:
+        type: integer
+    read_group_id:  # it may be good to assign UUID to read group
+        type: string
+    bqsr_performed:
+        type: boolean
+
+    aliquot:
+        $ref: "_definitions#/to_one"
+
+    sequence_file:
+        id: lane_level_seq/sequence_file
+        title: Lane level sequencing data file
+        type: object
+        description: Lane level sequencing data file
+        additionalProperties: false
+        category: data_file
+        validators: null
+
+        systemProperties:
+            id:
+                $ref: "_definitions#/UUID"
+            project_id:
+                $ref: "_definitions#/UUID"
+            state:
+                $ref: "_definitions#/data_file_state"
+
+        links:
+            - name: lane_level_seq_bundle
+              label: part_of
+              target_type: lane_level_seq
+              multiplicity: one_to_one
+              required: true
+
+        required: [ file_name, file_format, file_size, md5sum ]
+
+        uniqueKeys:
+            - [ id ]
+            - [ project_id, file_name ]
+
+        properties:
+            type:
+                enum: [ lane_level_seq/sequence_file ]
+            submitter_id:
+                type:
+                  - string
+                  - "null"
+            file_name:
+                $ref: "_definitions#/file_name"
+            file_format:
+                $ref: "_definitions#/file_format"
+                enum: [ "fastq", "bam" ]
+            file_size:
+                $ref: "_definitions#/file_size"
+            md5sum:
+                $ref: "_definitions#/md5sum"
+            lane_level_seq_bundle:
+                $ref: "_definitions#/to_one"
+
+    qc_metrics:   # this can be populated by the system after running sequencing file validation
+        id: lane_level_seq/qc_metrics
+        title: GDC QC metrics
+        type: object
+        description: GDC QC metrics
+        additionalProperties: false
+        category: qc_bundle  # qc_bundle is produced by GDC, and uploaded to GDC by GDC
+        validators: null
+
+        systemProperties:
+            id:
+                $ref: "_definitions#/UUID"
+            project_id:
+                $ref: "_definitions#/UUID"
+            state:
+                $ref: "_definitions#/data_file_state"
+
+        links:
+            - name: lane_level_seq_bundle
+              label: part_of
+              target_type: lane_level_seq
+              multiplicity: one_to_one
+              required: true
+
+        required: [ type, number_of_reads, percent_gc_content, average_per_base_quality, lane_level_seq_bundle, qc_file ]
+
+        uniqueKeys:
+            - [ id ]
+
+        properties:
+            type:
+                enum: [ lane_level_seq/qc_metrics ]
+            number_of_reads:
+                type: integer
+            percent_gc_content:
+                type: integer
+                minimum: 0
+                maximum: 100
+            average_per_base_quality:
+                type: array
+                itmes:
+                    type: integer
+            lane_level_seq_bundle:
+                $ref: "_definitions#/to_one"
+            qc_file:
+                id: lane_level_seq/qc_file
+                title: QC file for lane level sequencing data
+                type: object
+                description: FASTQC generated QC report files for lane level sequencing data
+                additionalProperties: false
+                category: qc_file
+                validators: null
+
+                systemProperties:
+                    id:
+                        $ref: "_definitions#/UUID"
+                    project_id:
+                        $ref: "_definitions#/UUID"
+                    state:
+                        $ref: "_definitions#/data_file_state"
+
+                links:
+                    - name: qc_metrics
+                      label: part_of
+                      target_type: lane_level_seq/qc_metrics
+                      multiplicity: one_to_one
+                      required: true
+
+                required: [ type, file_name, file_format, file_size, md5sum ]
+
+                uniqueKeys:
+                    - [ id ]
+                    - [ project_id, file_name ]
+
+                properties:
+                    type:
+                        enum: [ lane_level_seq/qc_file ]
+                    file_name:
+                        $ref: "_definitions#/file_name"
+                    file_format:
+                        $ref: "_definitions#/file_format"
+                        enum: [ "tar.gz" ]
+                    file_size:
+                        $ref: "_definitions#/file_size"
+                    md5sum:
+                        $ref: "_definitions#/md5sum"
+                    qc_metrics:
+                        $ref: "_definitions#/to_one"
+
+

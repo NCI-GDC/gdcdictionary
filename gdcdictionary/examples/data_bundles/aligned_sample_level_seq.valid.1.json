@@ -1,0 +1,70 @@
+{
+  "type": "aligned_sample_level_seq",
+
+  "analysis_center": "GDC",
+  "ref_assembly_build": "GRCh38",
+  "ref_assembly_name": "GRCh38",
+  "aligner_name": "BWA",
+
+  "read_group_mapping_summary": [
+    {
+      "read_group_id": "rg-3231322",
+      "library_name": "lib-1234",
+      "mean_insert_size": 692,
+      "median_insert_size": 650,
+      "insert_size_sd": 52,
+      "number_of_reads": 200000000,
+      "number_of_mapped_reads": 199999000,
+      "number_of_reads_properly_paired": 198999000,
+      "number_of_singleton_reads": 1000,
+      "number_of_mapped_bases": 99000000000,
+      "number_of_divergent_bases": 1000000
+    },
+    {
+      "read_group_id": "rg-935643",
+      "library_name": "lib-1234",
+      "mean_insert_size": 672,
+      "median_insert_size": 620,
+      "insert_size_sd": 47,
+      "number_of_reads": 210000000,
+      "number_of_mapped_reads": 199999001,
+      "number_of_reads_properly_paired": 198999000,
+      "number_of_singleton_reads": 1300,
+      "number_of_mapped_bases": 199000000000,
+      "number_of_divergent_bases": 1000000
+    }
+  ],
+
+  "library_level_markduplicate": [
+      "library_name": "lib-1234",
+      "unpaired_reads_examined": 1875109,
+      "unpaired_read_duplicates": 1202855,
+      "read_pairs_examined": 401442109,
+      "read_pair_duplicates": 28773445,
+      "percent_duplication": 0.0730029,
+      "unmapped_reads": 1841474,
+      "read_pair_optical_duplicates": 0
+  ],
+
+  "sequence_file": {
+    "type": "lane_level_seq/sequence_file",
+    "submitter_id": "4d8f5e7c-d7fc-4469-839f-3ea547bf871c",
+    "file_name": "023c722ed278d2ab1cbbeef1bfee4130.bam",
+    "file_format": "bam",
+    "file_size": 142380831856,
+    "md5sum": "023c722ed278d2ab1cbbeef1bfee4130"
+  },
+
+  "lane_level_seq_files": [
+    {
+      id: "57d120b6-d0ef-11e3-8718-27bfceb50ecb"
+    },
+    {
+      id: "39b9c642-d0f8-11e3-9034-3f6c66781382"
+    }
+  ],
+
+  "sample": {
+    "id": "e58e1f64-d733-405f-95f1-ede1628c81e7"
+  }
+}

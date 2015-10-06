@@ -1,0 +1,160 @@
+
+id: aligned_sample_level_seq
+title: Sample level aligned sequencing reads
+type: object
+description: Sample level aligned sequencing reads
+additionalProperties: false
+category: data_bundle
+validators: null
+
+systemProperties:
+    id:
+        $ref: "_definitions#/UUID"
+    project_id:
+        $ref: "_definitions#/UUID"
+    state:
+        $ref: "_definitions#/data_bundle_state"
+
+links:
+    - name: lane_level_seq_files  # these are input seq files
+      label: derived_from
+      target_type: lane_level_seq/sequence_file
+      multiplicity: one_to_many   # one or more input seq files merged into one sample level seq
+      required: true
+    - name: sample  # this is not strictly needed, but would be good for cross checking, all of the input seq must from the same sample
+      label: derived_from
+      target_type: sample
+      multiplicity: many_to_one   # one sample may have one or many sample level seq
+      required: true
+
+required: 
+    - type
+    - analysis_center
+    - ref_assembly_build
+    - ref_assembly_name
+    - aligner_name
+    - read_group_mapping_summary
+    - library_level_markduplicate
+    - sample
+    - sequence_file
+
+uniqueKeys:
+    - [ id ]
+
+properties:
+    type:
+        enum: [ "aligned_sample_level_seq" ]
+    analysis_center:
+        type: string
+    ref_assembly_build:
+        enum: [ "GRCh37", "GRCh38" ]
+    ref_assembly_name:
+        type: string
+    aligner_name:
+        type: string
+    aligner_version:
+        type: string
+    aligner_command_line_options:
+        type: string
+
+    read_group_mapping_summary:
+        type: array
+        uniqueItems: true  # does this work for items being object not primitive
+        items:
+            type: object
+            properties:
+                read_group_id:
+                    type: string
+                library_name:
+                    type: string
+                mean_insert_size:
+                    type: integer
+                median_insert_size:
+                    type: integer
+                insert_size_sd:
+                    type: number
+                number_of_reads:
+                    type: integer
+                number_of_mapped_reads:
+                    type: integer
+                number_of_reads_properly_paired:
+                    type: integer
+                number_of_singleton_reads:
+                    type: integer
+                number_of_mapped_bases:
+                    type: integer
+                number_of_divergent_bases:
+                    type: integer
+
+    library_level_markduplicate:
+        type: array
+        uniqueItems: true  # does this work for items being object not primitive
+        items:
+            type: object
+            properties:
+                library_name:
+                    type: string
+                unpaired_reads_examined:
+                    type: integer
+                unpaired_read_duplicates:
+                    type: integer
+                read_pairs_examined:
+                    type: integer
+                read_pair_duplicates:
+                    type: integer
+                percent_duplication:
+                    type: number
+                unmapped_reads:
+                    type: integer
+                read_pair_optical_duplicates:
+                    type: integer
+
+    lane_level_seq_files:
+        $ref: "_definitions#/to_many"
+    sample:
+        $ref: "_definitions#/to_one"
+
+    sequence_file:
+        id: aligned_sample_level_seq/sequence_file
+        title: Aligned sequencing file
+        type: object
+        description: Aligned sequencing file
+        additionalProperties: false
+        category: data_file
+        validators: null
+
+        systemProperties:
+            id:
+                $ref: "_definitions#/UUID"
+            project_id:
+                $ref: "_definitions#/UUID"
+            state:
+                $ref: "_definitions#/data_file_state"
+
+        links:
+            - name: aligned_sample_level_seq_bundle
+              label: part_of
+              target_type: aligned_sample_level_seq
+              multiplicity: one_to_one
+              required: true
+
+        required: [ type, file_name, file_format, file_size, md5sum ]
+
+        uniqueKeys:
+            - [ id ]
+            - [ project_id, file_name ]
+
+        properties:
+            type:
+                enum: [ aligned_sample_level_seq/sequence_file ]
+            file_name:
+                $ref: "_definitions#/file_name"
+            file_format:
+                $ref: "_definitions#/file_format"
+                enum: [ "bam" ]
+            file_size:
+                $ref: "_definitions#/file_size"
+            md5sum:
+                $ref: "_definitions#/md5sum"
+            aligned_sample_level_seq_bundle:
+                $ref: "_definitions#/to_one"
