@@ -186,7 +186,7 @@ properties:
                         $ref: "_definitions#/data_file_state"
 
                 links:
-                    - name: qc_metrics
+                    - name: qc_metrics_bundle
                       label: part_of
                       target_type: lane_level_seq/qc_metrics
                       multiplicity: one_to_one
@@ -210,7 +210,7 @@ properties:
                         $ref: "_definitions#/file_size"
                     md5sum:
                         $ref: "_definitions#/md5sum"
-                    qc_metrics:
+                    qc_metrics_bundle:
                         $ref: "_definitions#/to_one"
 
 
