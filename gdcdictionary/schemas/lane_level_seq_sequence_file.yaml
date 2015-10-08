@@ -1,0 +1,50 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: lane_level_seq_sequence_file
+title: Lane Level Seq Sequence File
+type: object
+description: Lane level sequencing data file
+additionalProperties: false
+category: data_file
+validators: null
+
+systemProperties:
+    id:
+        $ref: "_definitions#/UUID"
+    project_id:
+        $ref: "_definitions#/UUID"
+    state:
+        $ref: "_definitions#/data_file_state"
+
+links:
+    - name: lane_level_seq_bundles
+      label: part_of
+      target_type: lane_level_seq
+      multiplicity: one_to_one
+      required: true
+      backref: lane_level_seq_sequence_files
+
+required: [ file_name, file_format, file_size, md5sum ]
+
+uniqueKeys:
+    - [ id ]
+    - [ project_id, file_name ]
+
+properties:
+    type:
+        enum: [ lane_level_seq/sequence_file ]
+    submitter_id:
+        type:
+          - string
+          - "null"
+    file_name:
+        $ref: "_definitions#/file_name"
+    file_format:
+        $ref: "_definitions#/file_format"
+        enum: [ "fastq", "bam" ]
+    file_size:
+        $ref: "_definitions#/file_size"
+    md5sum:
+        $ref: "_definitions#/md5sum"
+    lane_level_seq_bundles:
+        $ref: "_definitions#/to_one"

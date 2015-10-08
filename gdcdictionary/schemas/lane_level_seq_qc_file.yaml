@@ -1,0 +1,46 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: lane_level_seq_qc_file
+title: Lane Level Seq Qc File 
+type: object
+description: FASTQC generated QC report files for lane level sequencing data
+additionalProperties: false
+category: qc_file
+validators: null
+
+systemProperties:
+    id:
+        $ref: "_definitions#/UUID"
+    project_id:
+        $ref: "_definitions#/UUID"
+    state:
+        $ref: "_definitions#/data_file_state"
+
+links:
+    - name: qc_metrics_bundles
+      label: part_of
+      target_type: lane_level_seq_qc_metrics
+      multiplicity: one_to_one
+      required: true
+      backref: lane_level_seq_qc_files
+
+required: [ type, file_name, file_format, file_size, md5sum ]
+
+uniqueKeys:
+    - [ id ]
+    - [ project_id, file_name ]
+
+properties:
+    type:
+        enum: [ lane_level_seq/qc_file ]
+    file_name:
+        $ref: "_definitions#/file_name"
+    file_format:
+        $ref: "_definitions#/file_format"
+        enum: [ "tar.gz" ]
+    file_size:
+        $ref: "_definitions#/file_size"
+    md5sum:
+        $ref: "_definitions#/md5sum"
+    qc_metrics_bundles:
+        $ref: "_definitions#/to_one"

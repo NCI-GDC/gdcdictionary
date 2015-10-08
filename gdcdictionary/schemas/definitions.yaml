@@ -1,8 +1,4 @@
-#####################################################################
-# Reusable reference definitions
-#####################################################################
-
-$schema: "http://json-schema.org/draft-04/schema#"
+id: _definitions
 
 UUID:
     type: string
@@ -12,38 +8,80 @@ parent_uuids:
     type: array
     minItems: 1
     items:
-      $ref: "#/UUID"
+        $ref: "#/UUID"
     uniqueItems: true
 
 foreign_key:
-  type: object
-  additionalProperties: false
-  #Can either use 'id' which are GDC IDs (UUID) or 'submitter_id'
-  #which are user defined IDs ("submitter IDs in the backend")
-  anyOf:
-    - required:
-        - id
-    - required:
-        - submitter_id
-
-  properties:
-    id:
-      $ref: "#/UUID"
-    submitter_id:
-      type: string
+    type: object
+    additionalProperties: false
+    #Can either use 'id' which are GDC IDs (UUID) or 'submitter_id'
+    #which are user defined IDs ("submitter IDs in the backend")
+    anyOf:
+        - required:
+            - id
+        - required:
+            - submitter_id
+    properties:
+        id:
+            $ref: "#/UUID"
+        submitter_id:
+            type: string
 
 to_one:
-  anyOf:
-    - type: array
-      items:
-        $ref: "#/foreign_key"
-      minItems: 1
     - $ref: "#/foreign_key"
 
 to_many:
-  anyOf:
     - type: array
       items:
-        $ref: "#/foreign_key"
+          $ref: "#/foreign_key"
       minItems: 1
-    - $ref: "#/foreign_key"
+
+created_datetime:
+    type: string
+    format: date-time
+updated_datetime:
+    type: string
+    format: date-time
+
+file_name:
+    type: string
+    description: "file name"
+file_size:
+    type: number
+    description: "the size of the data file (object) in bytes"
+file_format:
+    type: string
+    description: "the size of the data file (object) in bytes"
+md5sum:
+    type: string
+    description: "the MD5 hash of the data file (object)"
+
+bioentity_state:
+    description: "states of a bioentity"
+    enum:
+        - registered
+        - validated
+        - released
+        - redacted
+
+data_bundle_state:
+    description: "states of a data bundle"
+    enum:
+        - registered
+        - validated
+        - error
+        - released
+        - suppressed
+        - redacted
+
+data_file_state:
+    description: "states of a data file (object)"
+    enum:
+        - registered
+        - uploading
+        - validating
+        - validated
+        - error
+        - released
+        - suppressed
+        - redacted
