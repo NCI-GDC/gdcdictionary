@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: lane_level_seq_qc_metrics
-title: Lane Level Seq Qc Metrics 
+id: lane_level_seq_qc_metric
+title: Lane Level Qc Metric 
 type: object
 description: GDC QC metrics
 additionalProperties: false
@@ -22,7 +22,7 @@ links:
       target_type: lane_level_seq
       multiplicity: one_to_one
       required: true
-      backref: lane_level_seq_qc_metricss
+      backref: lane_level_qc_metrics
 
 required: [ type, number_of_reads, percent_gc_content, average_per_base_quality, lane_level_seq_bundle, qc_file ]
 

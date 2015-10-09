@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
 id: lane_level_seq_qc_file
-title: Lane Level Seq Qc File 
+title: Lane Level Qc File 
 type: object
 description: FASTQC generated QC report files for lane level sequencing data
 additionalProperties: false
@@ -19,10 +19,10 @@ systemProperties:
 links:
     - name: qc_metrics_bundles
       label: part_of
-      target_type: lane_level_seq_qc_metrics
+      target_type: lane_level_qc_metric
       multiplicity: one_to_one
       required: true
-      backref: lane_level_seq_qc_files
+      backref: lane_level_qc_files
 
 required: [ type, file_name, file_format, file_size, md5sum ]
 

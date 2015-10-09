@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
 id: lane_level_seq_sequence_file
-title: Lane Level Seq Sequence File
+title: Lane Level Seq File
 type: object
 description: Lane level sequencing data file
 additionalProperties: false
@@ -17,12 +17,12 @@ systemProperties:
         $ref: "_definitions#/data_file_state"
 
 links:
-    - name: lane_level_seq_bundles
+    - name: lane_level_seqs
       label: part_of
       target_type: lane_level_seq
       multiplicity: one_to_one
       required: true
-      backref: lane_level_seq_sequence_files
+      backref: lane_level_seq_files
 
 required: [ file_name, file_format, file_size, md5sum ]
 
