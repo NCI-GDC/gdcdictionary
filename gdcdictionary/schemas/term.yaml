@@ -9,8 +9,8 @@ category: TBD
 program: '*'
 project: '*'
 description: >
-  An object that contains information regarding the semantics of any schema item name.
-  It can serve as the value for the description key in any schema.
+  An object that contains information regarding the semantics of any schema
+  item name. It can serve as the value for the description key in any schema.
 additionalProperties: false
 validators: []
 
@@ -53,8 +53,11 @@ properties:
         pattern: "^([a-zA-Z_]+\\/?)*$"
       - type: "null"
     description: >
-      Optional namespace string of the form <token1[/token2/...]>. The category
-      name of the schema in which the term is referenced is a good standard.
+      Optional namespace string of the form <token1[/token2/...]>.
+      Convention: <token1> from ["administrative","biospecimen","clinical",
+      "molecular","relationship"]. <token2>, name of GDC dictionary in which
+      the term is used as a property (if any).
+      is used
   termdef:
     $ref: "#/definitions/termdef"
   synonyms:
