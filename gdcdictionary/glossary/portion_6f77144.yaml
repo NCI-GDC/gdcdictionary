@@ -2,7 +2,7 @@
 term: portion
 type: term
 termdef:
-  term: ~
+  term: Portion
   definition: A physical sub-part of any sample.
   source:
     cde:
