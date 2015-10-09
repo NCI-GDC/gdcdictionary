@@ -48,8 +48,10 @@ properties:
       This is the token as used in the schema or other code that uses the
       term. Put the full text of the term in termdef:term, below.
   termns:
-    type: string
-    pattern: "^([a-zA-Z_]+\\/?)*$"
+    oneOf:
+      - type: string
+        pattern: "^([a-zA-Z_]+\\/?)*$"
+      - type: "null"
     description: >
       Optional namespace string of the form <token1[/token2/...]>. The category
       name of the schema in which the term is referenced is a good standard.
@@ -78,12 +80,16 @@ definitions:
           Definition of term, ideally obtained verbatim from one of the
           authorities identified in source property (below)
       locale:
-        type: string
-        pattern: "^[A-z][A-z]$"
+        oneOf:
+          - type: string
+            pattern: "^[A-z][A-z]$"
+          - type: "null"
         description: >
           ISO 639-1 two-letter language code (language of term and definition)
       values:
-        $ref: "http://json-schema.org/draft-04/schema#"
+        oneOf:
+          - $ref: "http://json-schema.org/draft-04/schema#"
+          - type: "null"
         description: >
             If the term itself is used as a key elsewhere, the values field
             contains a valid jsonschema that defines the acceptable values
@@ -92,26 +98,33 @@ definitions:
         type: object
         properties:
           uri:
-            type: string
-            format: uri
+            oneOf:
+              - type: string
+                format: uri
+              - type: "null"
             description: >
               Optional ontology URI for this term (need not resolve);
-              can be empty string
+              can be null
           cde:
             type: object
             properties:
               collection_name:
-                type: string
+                oneOf:
+                  - type: string
+                  - type: "null"
                 description: >
                   Common name for collection if any (e.g. caDSR, NCIt)
               collection_url:
-                type: string
+                oneOf:
+                  - type: string
+                  - type: "null"
                 format: uri
                 description: Resolving URL to CDE collection (e.g., caDSR, NCIt)
               cde_id:
                 oneOf:
                   - type: string
                   - type: number
+                  - type: "null"
                 description: >
                   CDE public id for the term, should be queryable at
                   collection URL. Put version number in cde_version
@@ -120,3 +133,4 @@ definitions:
                 oneOf:
                   - type: string
                   - type: number
+                  - type: "null"
