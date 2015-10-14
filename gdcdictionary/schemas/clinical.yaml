@@ -37,7 +37,7 @@ properties:
   type:
     type: string
   id:
-    $ref: "definitions.yaml#/UUID"
+    $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
   gender:
@@ -105,6 +105,6 @@ properties:
       published by the World Health Organization in 1992. A system of numbered
       categories for representation of data. CDE: 3226287.
   cases:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string

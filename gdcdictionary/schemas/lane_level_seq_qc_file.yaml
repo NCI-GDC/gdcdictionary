@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
 id: lane_level_seq_qc_file
-title: Lane Level Qc File 
+title: Lane Level Qc File
 type: object
 description: FASTQC generated QC report files for lane level sequencing data
 additionalProperties: false
@@ -10,16 +10,16 @@ validators: null
 
 systemProperties:
     id:
-        $ref: "_definitions#/UUID"
+        $ref: "_definitions.yaml#/UUID"
     project_id:
-        $ref: "_definitions#/UUID"
+        type: string
     state:
-        $ref: "_definitions#/data_file_state"
+        $ref: "_definitions.yaml#/data_file_state"
 
 links:
     - name: qc_metrics_bundles
       label: part_of
-      target_type: lane_level_qc_metric
+      target_type: lane_level_seq_qc_metric
       multiplicity: one_to_one
       required: true
       backref: lane_level_qc_files
@@ -32,15 +32,23 @@ uniqueKeys:
 
 properties:
     type:
-        enum: [ lane_level_seq/qc_file ]
+        enum: [ lane_level_seq_qc_file ]
+    project_id:
+        type: string
+    state:
+        $ref: "_definitions.yaml#/data_file_state"
     file_name:
-        $ref: "_definitions#/file_name"
+        $ref: "_definitions.yaml#/file_name"
     file_format:
-        $ref: "_definitions#/file_format"
+        $ref: "_definitions.yaml#/file_format"
         enum: [ "tar.gz" ]
     file_size:
-        $ref: "_definitions#/file_size"
+        $ref: "_definitions.yaml#/file_size"
     md5sum:
-        $ref: "_definitions#/md5sum"
+        $ref: "_definitions.yaml#/md5sum"
     qc_metrics_bundles:
-        $ref: "_definitions#/to_one"
+        $ref: "_definitions.yaml#/to_one"
+    id:
+        $ref: "_definitions.yaml#/UUID"
+    state:
+        $ref: "_definitions.yaml#/data_file_state"

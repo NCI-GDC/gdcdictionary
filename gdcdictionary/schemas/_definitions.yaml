@@ -13,14 +13,11 @@ parent_uuids:
 
 foreign_key:
     type: object
-    additionalProperties: false
+    # Allow true here because we can have other unique keys defined on
+    # a target type
+    additionalProperties: True
     #Can either use 'id' which are GDC IDs (UUID) or 'submitter_id'
     #which are user defined IDs ("submitter IDs in the backend")
-    anyOf:
-        - required:
-            - id
-        - required:
-            - submitter_id
     properties:
         id:
             $ref: "#/UUID"
@@ -28,13 +25,21 @@ foreign_key:
             type: string
 
 to_one:
+  anyOf:
+    - type: array
+      items:
+        $ref: "#/foreign_key"
+        minItems: 1
+        maxItems: 1
     - $ref: "#/foreign_key"
 
 to_many:
+  anyOf:
     - type: array
       items:
-          $ref: "#/foreign_key"
-      minItems: 1
+        $ref: "#/foreign_key"
+        minItems: 1
+    - $ref: "#/foreign_key"
 
 created_datetime:
     type: string

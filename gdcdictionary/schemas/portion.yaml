@@ -43,7 +43,7 @@ properties:
   type:
     type: string
   id:
-    $ref: "definitions.yaml#/UUID"
+    $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
   submitter_id:
@@ -71,7 +71,7 @@ properties:
 
   samples:
     #should this be to_one
-    $ref: "definitions.yaml#/to_one" 
+    $ref: "_definitions.yaml#/to_one"
     description: >
       Indicates that the portion is physically derived from the linked to
       sample via some process/protocol

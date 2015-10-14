@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
 id: lane_level_seq
-title: Lane Level Seq 
+title: Lane Level Seq
 type: object
 description: Sequencing reads from one lane of an NGS run
 additionalProperties: false
@@ -10,14 +10,14 @@ validators: null
 
 systemProperties:
     id:
-        $ref: "_definitions#/UUID"
+        $ref: "_definitions.yaml#/UUID"
     project_id:
-        $ref: "_definitions#/UUID"
+        type: string
     state:
-        $ref: "_definitions#/data_bundle_state"
+        $ref: "_definitions.yaml#/data_bundle_state"
 
 links:
-    - name: aliquot
+    - name: aliquots
       label: derived_from
       target_type: aliquot
       multiplicity: many_to_one
@@ -26,7 +26,7 @@ links:
 
 required:
     - type
-    - aliquot
+    - aliquots
     - sequencing_center
     - platform
     - library_strategy
@@ -34,13 +34,18 @@ required:
     - is_paried_end
     - read_length
     - read_group_id
-    - sequence_file
 
 uniqueKeys:
     - [ id ]
     - [ project_id, read_group_id ]
 
 properties:
+    id:
+        $ref: "_definitions.yaml#/UUID"
+    project_id:
+        type: string
+    state:
+        $ref: "_definitions.yaml#/data_bundle_state"
     type:
         enum: [ "lane_level_seq" ]
     sequencing_center:
@@ -64,7 +69,7 @@ properties:
         type: integer
     target_capture_kit_name:  # conditionally required for WXS etc
         type: string
-    target_capture_kit_target_region:  # 
+    target_capture_kit_target_region:  #
         type: string
     is_paried_end:
         type: boolean
@@ -74,6 +79,5 @@ properties:
         type: string
     bqsr_performed:
         type: boolean
-
-    aliquot:
-        $ref: "_definitions#/to_one"
+    aliquots:
+        $ref: "_definitions.yaml#/to_one"

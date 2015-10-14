@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
 id: lane_level_seq_qc_metric
-title: Lane Level Qc Metric 
+title: Lane Level Qc Metric
 type: object
 description: GDC QC metrics
 additionalProperties: false
@@ -10,11 +10,11 @@ validators: null
 
 systemProperties:
     id:
-        $ref: "_definitions#/UUID"
+        $ref: "_definitions.yaml#/UUID"
     project_id:
-        $ref: "_definitions#/UUID"
+        type: string
     state:
-        $ref: "_definitions#/data_file_state"
+        $ref: "_definitions.yaml#/data_file_state"
 
 links:
     - name: lane_level_seq_bundles
@@ -24,14 +24,25 @@ links:
       required: true
       backref: lane_level_qc_metrics
 
-required: [ type, number_of_reads, percent_gc_content, average_per_base_quality, lane_level_seq_bundle, qc_file ]
+required:
+  - type
+  - number_of_reads
+  - percent_gc_content
+  - average_per_base_quality
+  - lane_level_seq_bundles
 
 uniqueKeys:
     - [ id ]
 
 properties:
+    id:
+        $ref: "_definitions.yaml#/UUID"
+    project_id:
+        type: string
+    state:
+        $ref: "_definitions.yaml#/data_file_state"
     type:
-        enum: [ lane_level_seq/qc_metrics ]
+        enum:  [ lane_level_seq_qc_metric ]
     number_of_reads:
         type: integer
     percent_gc_content:
@@ -43,4 +54,4 @@ properties:
         itmes:
             type: integer
     lane_level_seq_bundles:
-        $ref: "_definitions#/to_one"
+        $ref: "_definitions.yaml#/to_one"

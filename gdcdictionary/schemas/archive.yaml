@@ -48,7 +48,7 @@ properties:
   type:
     type: string
   id:
-    $ref: "definitions.yaml#/UUID"
+    $ref: "_definitions.yaml#/UUID"
     systemSubmitter_Id: node_id
     description: "TODO"
   submitter_id:
@@ -63,9 +63,9 @@ properties:
     description: The revision of this archive in the DCC.
 
   projects:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   related_to_files:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   project_id:
     type: string
   created_datetime:

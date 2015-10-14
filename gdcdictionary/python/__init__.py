@@ -28,7 +28,7 @@ class GDCDictionary(object):
         for name in glob.glob("*.yaml"):
             if name not in self.exclude:
                 schema = self.load_yaml_schema(name)
-                self.schema['_'.join(schema['title'].lower().split(' '))] = schema
+                self.schema[schema['id']] = schema
         os.chdir(cdir)
 
     def load_yaml_schema(self, name):
