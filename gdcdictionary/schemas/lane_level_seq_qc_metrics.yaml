@@ -1,6 +1,6 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: lane_level_seq_qc_metric
+id: lane_level_qc_metric
 title: Lane Level Qc Metric
 type: object
 description: GDC QC metrics
