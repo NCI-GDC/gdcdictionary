@@ -84,6 +84,7 @@ data_file_state:
     enum:
         - registered
         - uploading
+        - uploaded
         - validating
         - validated
         - error
