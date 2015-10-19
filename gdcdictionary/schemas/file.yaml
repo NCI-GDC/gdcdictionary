@@ -4,7 +4,7 @@ id: "file"
 title: File
 type: object
 namespace: http://gdc.nci.nih.gov
-category: data
+category: data_file
 program: '*'
 project: '*'
 description: >
