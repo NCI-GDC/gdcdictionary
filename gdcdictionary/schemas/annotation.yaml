@@ -17,6 +17,8 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - created_datetime
+  - updated_datetime
 
 links:
   - exclusive: false
@@ -137,11 +139,6 @@ properties:
     description: "TODO: define, from DCC"
   creator:
     type: string
-  created_datetime:
-    type: number
-    description: >
-      TOREVIEW: The datetime of annotation creation encoded as seconds from
-      epoch. If no time is given, it is set to 00:00:00 of the date.
   status:
     type: string
     description: "TODO: define, from DCC"

@@ -9,12 +9,11 @@ category: qc_bundle  # qc_bundle is produced by GDC, and uploaded to GDC by GDC
 validators: null
 
 systemProperties:
-    id:
-        $ref: "_definitions.yaml#/UUID"
-    project_id:
-        type: string
-    state:
-        $ref: "_definitions.yaml#/data_file_state"
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
 
 links:
     - name: lane_level_seq_bundles
@@ -55,3 +54,9 @@ properties:
             type: integer
     lane_level_seq_bundles:
         $ref: "_definitions.yaml#/to_one"
+    created_datetime:
+        type: string
+        format: date-time
+    updated_datetime:
+        type: string
+        format: date-time

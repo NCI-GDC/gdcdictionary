@@ -9,12 +9,11 @@ category: data_file
 validators: null
 
 systemProperties:
-    id:
-        $ref: "_definitions.yaml#/UUID"
-    project_id:
-        type: string
-    state:
-        $ref: "_definitions.yaml#/data_file_state"
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
 
 links:
     - name: qc_metrics_bundles
@@ -48,7 +47,13 @@ properties:
         $ref: "_definitions.yaml#/md5sum"
     qc_metrics_bundles:
         $ref: "_definitions.yaml#/to_one"
-    id:
-        $ref: "_definitions.yaml#/UUID"
+    project_id:
+        type: string
     state:
         $ref: "_definitions.yaml#/data_file_state"
+    created_datetime:
+        type: string
+        format: date-time
+    updated_datetime:
+        type: string
+        format: date-time

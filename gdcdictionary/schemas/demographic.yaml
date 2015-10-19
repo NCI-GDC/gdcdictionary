@@ -14,6 +14,9 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - created_datetime
+  - updated_datetime
+
 
 links:
   - name: cases
@@ -93,3 +96,9 @@ properties:
   religion:
     term: TBD
     type: string
+  created_datetime:
+    type: string
+    format: date-time
+  updated_datetime:
+    type: string
+    format: date-time

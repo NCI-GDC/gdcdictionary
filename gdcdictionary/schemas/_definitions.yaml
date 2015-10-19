@@ -63,6 +63,7 @@ md5sum:
 
 bioentity_state:
     description: "states of a bioentity"
+    default: registered
     enum:
         - registered
         - validated
@@ -71,6 +72,7 @@ bioentity_state:
 
 data_bundle_state:
     description: "states of a data bundle"
+    default: registered
     enum:
         - registered
         - validated
@@ -81,6 +83,7 @@ data_bundle_state:
 
 data_file_state:
     description: "states of a data file (object)"
+    default: registered
     enum:
         - registered
         - uploading
