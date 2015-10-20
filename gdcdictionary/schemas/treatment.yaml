@@ -1,0 +1,78 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "treatment"
+title: Treatment
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: TBD
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: diagnoses
+    backref: treatments
+    label: describes #need better term here
+    target_type: diagnosis
+    multiplicity: many_to_one
+    required: true
+
+uniqueKeys:
+  #unclear if want submitter ID for clinical
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+  type:
+    type: string
+
+  id:
+    $ref: "_definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+
+  submitter_id:
+    type:
+      - string
+      - "null"
+
+  treatment_or_therapy:
+    term: TBD
+    enum:
+      - yes
+      - no
+      - unknown
+
+  treatment_intent_type:
+    term: TBD
+    type: string
+
+  therapeutic_agents:
+    term: TBD
+    type: string
+
+  days_to_treatment:
+    term: TBD
+    type: number
+
+  diagnoses:
+    $ref: "_definitions.yaml#/to_one"
+
+  project_id:
+    type: string
+
+  created_datetime:
+    type: string
+    format: date-time
+
+  updated_datetime:
+    type: string
+    format: date-time

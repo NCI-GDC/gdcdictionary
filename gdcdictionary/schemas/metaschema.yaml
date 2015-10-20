@@ -20,7 +20,9 @@ required:
 
 
 definitions:
-
+  nolink:
+    type: string
+    pattern: "^nolink$"
   link:
     type: object
     additionalProperties: false
@@ -51,6 +53,7 @@ definitions:
         type: boolean
 
   link_subgroup:
+    type: object
     required:
       - exclusive
       - required
@@ -118,3 +121,5 @@ properties:
       oneOf:
         - $ref: "#/definitions/link"
         - $ref: "#/definitions/link_subgroup"
+        - $ref: "#/definitions/nolink"
+

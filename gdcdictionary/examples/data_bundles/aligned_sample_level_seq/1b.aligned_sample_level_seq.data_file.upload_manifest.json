@@ -1,0 +1,10 @@
+{
+  "type": "lane_level_seq/sequence_file",
+  "id": "47755e781-b742-48d1-b9ce-5b3fc2aa94c",
+  "file_name": "023c722ed278d2ab1cbbeef1bfee4130.bam",
+  "file_size": 142380831856,
+  "md5sum": "023c722ed278d2ab1cbbeef1bfee4130",
+  "aligned_sample_level_seq_bundle": {
+    "id": "1c7aa029-f103-41fb-add3-dd6070a13da4"
+  }
+}

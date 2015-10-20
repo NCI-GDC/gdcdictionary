@@ -16,6 +16,8 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - created_datetime
+  - updated_datetime
 
 links:
   - name: portions
@@ -27,27 +29,26 @@ links:
     required: true
 
 required:
-  - alias
+  - submitter_id
   - section_location
   - portions
 
 uniqueKeys:
   - [id]
-  - [project_id, alias]
+  - [project_id, submitter_id]
 
 # slide properties
 properties:
   type:
     type: string
   id:
-    $ref: "definitions.yaml#/UUID"
+    $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  alias:
+  submitter_id:
     type:
       - string
       - "null"
-    systemAlias: submitter_id
     description: >
       The legacy barcode used before prior to the use UUIDs, varies by project.
       For TCGA, this is bcrslidebarcode.
@@ -67,7 +68,7 @@ properties:
     type: number
     description: "TODO: define, from BCR"
   percent_necrosis:
-    tpe: number
+    type: number
     description: "TODO: define, from BCR"
   percent_stromal_cells:
     type: number
@@ -91,6 +92,12 @@ properties:
     type: number
     description: "TODO: define, from BCR"
   portions:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   project_id:
     type: string
+  created_datetime:
+    type: string
+    format: date-time
+  updated_datetime:
+    type: string
+    format: date-time

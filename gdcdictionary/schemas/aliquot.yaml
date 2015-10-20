@@ -16,13 +16,15 @@ validators: []
 systemProperties:
   - id
   - project_id
+  - created_datetime
+  - updated_datetime
 
 required:
-  - alias
+  - submitter_id
 
 uniqueKeys:
   - [id]
-  - [project_id, alias]
+  - [project_id, submitter_id]
 
 links:
   - exclusive: false
@@ -33,11 +35,13 @@ links:
         label: derived_from
         multiplicity: many_to_one
         target_type: analyte
+        required: false
       - name: samples
         backref: aliquots
         label: derived_from
         multiplicity: many_to_many
         target_type: sample
+        required: false
   - name: centers
     label: shipped_to
     backref: aliquots
@@ -53,14 +57,13 @@ properties:
   type:
     type: string
   id:
-    $ref: "definitions.yaml#/UUID"
+    $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  alias:
+  submitter_id:
     type:
       - string
       - "null"
-    systemAlias: submitter_id
     description: >
       The legacy barcode used before prior to the use
       UUIDs. For TCGA this is bcraliquotbarcode.
@@ -74,13 +77,19 @@ properties:
     type: number
     description: "TODO: define, from BCR"
   analytes:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
     description: >
       Indicates that the aliquot is physically derived from the linked to
       analyte via some process/protocol
   samples:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   centers:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string
+  created_datetime:
+    type: string
+    format: date-time
+  updated_datetime:
+    type: string
+    format: date-time

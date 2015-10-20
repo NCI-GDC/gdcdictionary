@@ -14,8 +14,8 @@ validators: null
 systemProperties:
   - id
   - project_id
-  - type
-  - state
+  - created_datetime
+  - updated_datetime
 
 links:
   - name: projects
@@ -32,32 +32,37 @@ links:
     required: false
 
 required:
-  - alias
+  - submitter_id
   - projects
 
 uniqueKeys:
   - [id]
-  - [project_id, alias]
+  - [project_id, submitter_id]
 
 # Case properties
 properties:
   type:
     type: string
   id:
-    $ref: "definitions.yaml#/UUID"
+    $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  alias:
+  submitter_id:
     type:
       - string
       - "null"
-    systemAlias: submitter_id
   days_to_index:
     type:
       - integer
   projects:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   tissue_source_sites:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string
+  created_datetime:
+    type: string
+    format: date-time
+  updated_datetime:
+    type: string
+    format: date-time

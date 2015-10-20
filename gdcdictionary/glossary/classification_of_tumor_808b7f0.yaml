@@ -1,0 +1,26 @@
+---
+type: term
+id: 808b7f05-8b8a-4aaf-8bfc-cdaaa9ca4bc3
+term: classification_of_tumor
+termdef:
+  term_id: 808b7f05-8b8a-4aaf-8bfc-cdaaa9ca4bc3
+  term: Classification of Tumor
+  definition: The point in clinical disease progression at which a tumor sample was taken.
+  locale: en
+  values:
+    type: array
+    items:
+      type: string
+      enum:
+        - Primary
+        - Metastasis
+        - Recurrence
+        - Other
+  source:
+    uri: ~
+    cde:
+      collection_name: GDC
+      collection_url: ~
+      cde_id: 808b7f0
+      cde_version: ~
+termns: clinical/diagnosis

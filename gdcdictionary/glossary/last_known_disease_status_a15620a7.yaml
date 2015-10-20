@@ -1,0 +1,18 @@
+---
+id: a15620a7-3cce-4167-b40a-5af2f8378f63
+term: last_known_disease_status
+type: term
+termdef:
+  term: Person Neoplasm Status
+  locale: en
+  term_id: a15620a7-3cce-4167-b40a-5af2f8378f63
+  source:
+    cde:
+      cde_id: 2759550
+      cde_version: 1.0
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2759550&version=1.0
+      collection_name: caDSR
+  values:
+    type: string
+    description: 'caDSR value domain: hhttps://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2759550&version=1.0&listValidValuesForDataElements=9'
+  definition: "The state or condition of an individual's neoplasm at a particular point in time. \n"

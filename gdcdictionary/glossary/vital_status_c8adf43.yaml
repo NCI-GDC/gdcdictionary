@@ -1,0 +1,26 @@
+---
+type: term
+id: c8adf433-b8e0-41f5-8159-82e85f85562c
+term: vital_status
+termdef:
+  term_id: c8adf433-b8e0-41f5-8159-82e85f85562c
+  term: Vital Status
+  definition: The state or condition of being living or deceased; also includes the case where the vital status is unknown.
+  locale: en
+  values:
+    items:
+      enum:
+        - alive
+        - dead
+        - lost to follow-up
+        - unknown
+      type: string
+    type: array
+  source:
+    uri: ~
+    cde:
+      collection_name: NCIt
+      collection_url: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C25717
+      cde_id: C25717
+      cde_version: ~
+termns: clinical/diagnosis

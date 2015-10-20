@@ -4,7 +4,7 @@ id: "file"
 title: File
 type: object
 namespace: http://gdc.nci.nih.gov
-category: data
+category: data_file
 program: '*'
 project: '*'
 description: >
@@ -16,6 +16,9 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - created_datetime
+  - updated_datetime
+  - state
 
 links:
   - exclusive: false
@@ -26,16 +29,19 @@ links:
         label: data_from
         target_type: aliquot
         multiplicity: many_to_many
+        required: false
       - name: analytes
         backref: files
         label: data_from
         target_type: analyte
         multiplicity: many_to_many
+        required: false
       - name: cases
         backref: files
         label: data_from
         target_type: case
         multiplicity: many_to_many
+        required: false
         # this is according to the definition in current data model
         # https://github.com/NCI-GDC/gdcdatamodel/blob/develop/gdcdatamodel/models/edges/data_from.py#L53
       - name: derived_files
@@ -43,21 +49,25 @@ links:
         label: data_from
         target_type: file
         multiplicity: many_to_many
+        required: false
       - name: portions
         backref: files
         label: data_from
         target_type: portion
         multiplicity: many_to_many
+        required: false
       - name: samples
         backref: files
         label: data_from
         target_type: sample
         multiplicity: many_to_many
+        required: false
       - name: slides
         backref: files
         label: data_from
         target_type: slide
         multiplicity: many_to_many
+        required: false
   - name: related_files
     backref: parent_files
     label: related_to
@@ -115,7 +125,7 @@ links:
 
 
 required:
-  - alias
+  - submitter_id
   - file_name
   - file_size
   - md5sum
@@ -123,7 +133,7 @@ required:
 
 uniqueKeys:
   - [id]
-  - [project_id, alias]
+  - [project_id, submitter_id]
 
 # File properties
 properties:
@@ -133,11 +143,10 @@ properties:
     $ref: "definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
-  alias:
+  submitter_id:
     type:
       - string
       - "null"
-    systemAlias: submitter_id
     description: "TOREVIEW: the file id assigned by the submitter"
   file_name:
     type: string
@@ -149,8 +158,7 @@ properties:
     type: string
     description: "The MD5 hash of this file"
   state:
-    type: string
-    description: "TODO"
+    $ref: "_definitions.yaml#/data_file_state"
   state_comment:
     type: string
     description: >
@@ -158,36 +166,42 @@ properties:
       current state, mainly for invalid state.
 
   aliquots:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   analytes:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   cases:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   portions:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   samples:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   slides:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   derived_files:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   related_files:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   tags:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   archives:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   data_subtypes:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   data_formats:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   experimental_strategies:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   centers:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   platforms:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   described_cases:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string
+  created_datetime:
+    type: string
+    format: date-time
+  updated_datetime:
+    type: string
+    format: date-time

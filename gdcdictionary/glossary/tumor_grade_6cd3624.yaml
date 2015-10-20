@@ -1,0 +1,20 @@
+---
+type: term
+id: 6cd3624c-1fb9-4883-a308-3d3372841ae6
+term: tumor_grade
+termdef:
+  term_id: 6cd3624c-1fb9-4883-a308-3d3372841ae6
+  term: Histologic Grade
+  definition: 'The degree of abnormality of cancer cells, a measure of differentiation, the extent to which cancer cells are similar in appearance and function to healthy cells of the same tissue type. The degree of differentiation often relates to the clinical behavior of the particular tumor. Based on the microscopic findings, tumor grade is commonly described by one of four degrees of severity. Histopathologic grade of a tumor may be used to plan treatment and estimate the future course, outcome, and overall prognosis of disease. Certain types of cancers, such as soft tissue sarcoma, primary brain tumors, lymphomas, and breast have special grading systems.'
+  locale: en
+  values:
+    description: 'The accepted values for tumor_grade depend on the tumor site, type, and accepted grading system. These items should accompany the tumor_grade value as associated metadata.'
+    type: string
+  source:
+    uri: ~
+    cde:
+      collection_name: NCIt
+      collection_url: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C18000
+      cde_id: C18000
+      cde_version: ~
+termns: clinical/diagnosis

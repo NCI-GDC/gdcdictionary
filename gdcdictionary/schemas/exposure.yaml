@@ -1,0 +1,85 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "exposure"
+title: Exposure
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: TBD
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: exposures
+    label: describes
+    target_type: case
+    multiplicity: many_to_one
+    required: true
+
+
+uniqueKeys:
+  #unclear if want submitter ID for clinical
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+  type:
+    type: string
+
+  id:
+    $ref: "_definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+
+  submitter_id:
+    type:
+      - string
+      - "null"
+
+  years_smoked:
+    term: TBD
+    type: number
+
+  cigarettes_per_day:
+    term: TBD
+    type: number
+
+  alcohol_history:
+    term: TBD
+    type: string
+
+  alcohol_intensity:
+    term: TBD
+    type: string
+
+  height:
+    term: TBD
+    type: number
+
+  weight:
+    term: TBD
+    type: number
+
+  bmi:
+    term: TBD
+    type: number
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"
+  project_id:
+    type: string
+  created_datetime:
+    type: string
+    format: date-time
+  updated_datetime:
+    type: string
+    format: date-time
