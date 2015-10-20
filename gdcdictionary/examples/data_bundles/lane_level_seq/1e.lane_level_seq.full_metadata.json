@@ -1,0 +1,40 @@
+{
+  "type": "lane_level_seq",
+  "id": "e58e1f64-d733-405f-95f1-ede1628c81e7",
+  "sequencing_center": "Broad",
+  "platform": "ILLUMINA",
+  "library_strategy": "WGS",
+  "library_name": "broad-133",
+  "insert_size": 622,
+  "is_paried_end": true,
+  "read_length": 101,
+  "read_group_id": "rg-3231322",
+
+  "sequence_file": {
+    "type": "lane_level_seq/sequence_file",
+    "id": "40829066-1d90-4245-afe9-019f87f7cdbe",
+    "file_name": "023c722ed278d2ab1cbbeef1bfee4130.bam",
+    "file_format": "bam",
+    "file_size": 142380831856,
+    "md5sum": "023c722ed278d2ab1cbbeef1bfee4130"
+  },
+
+  "aliquot": {
+    "id": "e58e1f64-d733-405f-95f1-ede1628c81e7"
+  },
+
+  "qc_metrics": {
+    "type": "lane_level_seq/qc_metrics",
+    "number_of_reads": 400000000,
+    "percent_gc_content": 58,
+    "average_per_base_quality": 62,
+
+    "qc_file": {
+      "type": "lane_level_seq/qc_file",
+      "file_name": "023c722ed278d2ab1cbbeef1bfee4130.tar.gz",
+      "file_format": "tar.gz",
+      "file_size": 380831856,
+      "md5sum": "023c722ed278d2ab1cbbeef1bfee4130"
+    }
+  }
+}

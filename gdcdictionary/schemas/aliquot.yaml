@@ -57,7 +57,7 @@ properties:
   type:
     type: string
   id:
-    $ref: "definitions.yaml#/UUID"
+    $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
   submitter_id:
@@ -77,14 +77,14 @@ properties:
     type: number
     description: "TODO: define, from BCR"
   analytes:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
     description: >
       Indicates that the aliquot is physically derived from the linked to
       analyte via some process/protocol
   samples:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   centers:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string
   created_datetime:

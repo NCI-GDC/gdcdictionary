@@ -17,6 +17,8 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - created_datetime
+  - updated_datetime
 
 links:
   - exclusive: false
@@ -81,7 +83,7 @@ properties:
   type:
     type: string
   id:
-    $ref: "definitions.yaml#/UUID"
+    $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
   submitter_id:
@@ -137,11 +139,6 @@ properties:
     description: "TODO: define, from DCC"
   creator:
     type: string
-  created_datetime:
-    type: number
-    description: >
-      TOREVIEW: The datetime of annotation creation encoded as seconds from
-      epoch. If no time is given, it is set to 00:00:00 of the date.
   status:
     type: string
     description: "TODO: define, from DCC"
@@ -150,19 +147,19 @@ properties:
     description: "TODO: define, from DCC"
 
   cases:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   samples:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   slides:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   portions:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   analytes:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   aliquots:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   files:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string
   created_datetime:

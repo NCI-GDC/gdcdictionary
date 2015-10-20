@@ -14,9 +14,11 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - created_datetime
+  - updated_datetime
 
 links:
-  - name: diagnosis
+  - name: diagnoses
     backref: treatments
     label: describes #need better term here
     target_type: diagnosis
@@ -33,7 +35,7 @@ properties:
     type: string
 
   id:
-    $ref: "definitions.yaml#/UUID"
+    $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
 
@@ -61,7 +63,16 @@ properties:
     term: TBD
     type: number
 
-  diagnosis:
-    $ref: "definitions.yaml#/to_one"
+  diagnoses:
+    $ref: "_definitions.yaml#/to_one"
+
   project_id:
     type: string
+
+  created_datetime:
+    type: string
+    format: date-time
+
+  updated_datetime:
+    type: string
+    format: date-time

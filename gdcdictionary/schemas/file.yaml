@@ -4,7 +4,7 @@ id: "file"
 title: File
 type: object
 namespace: http://gdc.nci.nih.gov
-category: data
+category: data_file
 program: '*'
 project: '*'
 description: >
@@ -18,6 +18,7 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
+  - state
 
 links:
   - exclusive: false
@@ -157,8 +158,7 @@ properties:
     type: string
     description: "The MD5 hash of this file"
   state:
-    type: string
-    description: "TODO"
+    $ref: "_definitions.yaml#/data_file_state"
   state_comment:
     type: string
     description: >
@@ -166,37 +166,37 @@ properties:
       current state, mainly for invalid state.
 
   aliquots:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   analytes:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   cases:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   portions:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   samples:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   slides:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   derived_files:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   related_files:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   tags:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   archives:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   data_subtypes:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   data_formats:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   experimental_strategies:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   centers:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   platforms:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   described_cases:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string
   created_datetime:

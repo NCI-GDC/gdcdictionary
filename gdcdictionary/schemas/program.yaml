@@ -29,7 +29,7 @@ properties:
   type:
     type: string
   id:
-    $ref: "definitions.yaml#/UUID"
+    $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
   name:

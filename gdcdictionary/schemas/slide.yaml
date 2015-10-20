@@ -42,7 +42,7 @@ properties:
   type:
     type: string
   id:
-    $ref: "definitions.yaml#/UUID"
+    $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
   submitter_id:
@@ -92,7 +92,7 @@ properties:
     type: number
     description: "TODO: define, from BCR"
   portions:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   project_id:
     type: string
   created_datetime:

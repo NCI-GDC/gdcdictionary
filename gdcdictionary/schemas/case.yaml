@@ -14,8 +14,8 @@ validators: null
 systemProperties:
   - id
   - project_id
-  - type
-  - state
+  - created_datetime
+  - updated_datetime
 
 links:
   - name: projects
@@ -44,7 +44,7 @@ properties:
   type:
     type: string
   id:
-    $ref: "definitions.yaml#/UUID"
+    $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
   submitter_id:
@@ -55,9 +55,9 @@ properties:
     type:
       - integer
   projects:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   tissue_source_sites:
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string
   created_datetime:

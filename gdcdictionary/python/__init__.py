@@ -11,7 +11,7 @@ class GDCDictionary(object):
             os.path.dirname(MOD_DIR), 'schemas'), lazy=False):
         self.root_dir = root_dir
         self.metaschema_path = 'metaschema.yaml'
-        self.definitions_path = 'definitions.yaml'
+        self.definitions_path = '_definitions.yaml'
         self.exclude = [self.metaschema_path, self.definitions_path]
         self.schema = dict()
         if not lazy:
