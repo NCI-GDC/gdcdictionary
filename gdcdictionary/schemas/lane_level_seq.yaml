@@ -30,7 +30,7 @@ required:
     - platform
     - library_strategy
     - library_name
-    - is_paried_end
+    - is_paired_end
     - read_length
     - read_group_id
 
@@ -70,7 +70,7 @@ properties:
         type: string
     target_capture_kit_target_region:  #
         type: string
-    is_paried_end:
+    is_paired_end:
         type: boolean
     read_length:
         type: integer
