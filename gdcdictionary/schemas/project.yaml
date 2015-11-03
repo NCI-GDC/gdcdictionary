@@ -22,6 +22,7 @@ required:
   - state
   - primary_site
   - programs
+  - dbgap_accession_number
 
 uniqueKeys:
   - [id]
@@ -50,6 +51,8 @@ properties:
   name:
     type: string
     description: "TOREVIEW: display name for the project"
+  dbgap_accession_number:
+    type: string
   state:
     type: string
     description: >
