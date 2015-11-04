@@ -84,10 +84,21 @@ data_bundle_state:
 data_file_state:
     description: "states of a data file (object)"
     default: registered
+    downloadable:
+        - uploaded
+        - md5summed
+        - validating
+        - validated
+        - error
+        - released
+    public:
+        - live
     enum:
         - registered
         - uploading
         - uploaded
+        - md5summing
+        - md5summed
         - validating
         - validated
         - error
