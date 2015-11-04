@@ -16,6 +16,7 @@ systemProperties:
 
 required:
   - name
+  - dbgap_accession_number
 
 uniqueKeys:
   - [id]
@@ -35,3 +36,5 @@ properties:
   name:
     type: string
     description: "Full name/title of the program."
+  dbgap_accession_number:
+    type: string
