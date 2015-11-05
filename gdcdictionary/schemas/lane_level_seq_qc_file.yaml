@@ -54,8 +54,6 @@ properties:
     state:
         $ref: "_definitions.yaml#/data_file_state"
     created_datetime:
-        type: string
-        format: date-time
+        $ref: "_definitions.yaml#/datetime"
     updated_datetime:
-        type: string
-        format: date-time
+        $ref: "_definitions.yaml#/datetime"
