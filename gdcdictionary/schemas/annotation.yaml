@@ -70,9 +70,6 @@ links:
 required:
   - submitter_id
   - category
-  - classification
-  - creator
-  - status
 
 uniqueKeys:
   - [id]
