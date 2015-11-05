@@ -70,9 +70,6 @@ links:
 required:
   - submitter_id
   - category
-  - classification
-  - creator
-  - status
 
 uniqueKeys:
   - [id]
@@ -120,6 +117,7 @@ properties:
       - New observation type
       - Normal class but appears diseased
       - Normal tissue origin incorrect
+      - Observation
       - Pathology outside specification
       - Permanently missing item or object
       - Prior malignancy
