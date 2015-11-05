@@ -120,6 +120,7 @@ properties:
       - New observation type
       - Normal class but appears diseased
       - Normal tissue origin incorrect
+      - Observation
       - Pathology outside specification
       - Permanently missing item or object
       - Prior malignancy
