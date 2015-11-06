@@ -56,8 +56,6 @@ properties:
     lane_level_seq_bundles:
         $ref: "_definitions.yaml#/to_one"
     created_datetime:
-        type: string
-        format: date-time
+        $ref: "_definitions.yaml#/datetime"
     updated_datetime:
-        type: string
-        format: date-time
+        $ref: "_definitions.yaml#/datetime"

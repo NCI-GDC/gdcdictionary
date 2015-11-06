@@ -98,8 +98,6 @@ properties:
   project_id:
     type: string
   created_datetime:
-    type: string
-    format: date-time
+    $ref: "_definitions.yaml#/datetime"
   updated_datetime:
-    type: string
-    format: date-time
+    $ref: "_definitions.yaml#/datetime"

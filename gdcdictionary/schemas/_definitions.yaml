@@ -41,12 +41,9 @@ to_many:
         minItems: 1
     - $ref: "#/foreign_key"
 
-created_datetime:
-    type: string
-    format: date-time
-updated_datetime:
-    type: string
-    format: date-time
+datetime:
+  type: string
+  format: date-time 
 
 file_name:
     type: string
@@ -90,6 +87,7 @@ data_file_state:
         - validating
         - validated
         - error
+        - invalid
         - released
     public:
         - live
@@ -102,6 +100,7 @@ data_file_state:
         - validating
         - validated
         - error
+        - invalid
         - released
         - suppressed
         - redacted
