@@ -42,7 +42,8 @@ to_many:
     - $ref: "#/foreign_key"
 
 datetime:
-  type: number
+  type: string
+  format: date-time 
 
 file_name:
     type: string
@@ -86,6 +87,7 @@ data_file_state:
         - validating
         - validated
         - error
+        - invalid
         - released
     public:
         - live
@@ -98,6 +100,7 @@ data_file_state:
         - validating
         - validated
         - error
+        - invalid
         - released
         - suppressed
         - redacted
