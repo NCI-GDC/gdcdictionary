@@ -7,6 +7,8 @@ description: GDC QC metrics
 additionalProperties: false
 category: qc_bundle  # qc_bundle is produced by GDC, and uploaded to GDC by GDC
 validators: null
+project: '*'
+program: '*'
 
 systemProperties:
   - id

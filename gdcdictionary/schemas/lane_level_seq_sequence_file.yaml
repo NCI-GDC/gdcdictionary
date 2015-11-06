@@ -7,6 +7,8 @@ description: Lane level sequencing data file
 additionalProperties: false
 category: data_file
 validators: null
+project: '*'
+program: '*'
 
 systemProperties:
   - id
