@@ -17,6 +17,8 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - release_state
+  - release_state_datetime
 
 links:
   - name: projects
@@ -71,4 +73,9 @@ properties:
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
+
+  release_state:
+    $ref: "_definitions.yaml#/release_state"
+  release_state_datetime:
     $ref: "_definitions.yaml#/datetime"

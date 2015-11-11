@@ -18,6 +18,8 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
+  - release_state
+  - release_state_datetime
 
 links:
   - name: cases
@@ -113,4 +115,9 @@ properties:
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
+
+  release_state:
+    $ref: "_definitions.yaml#/release_state"
+  release_state_datetime:
     $ref: "_definitions.yaml#/datetime"
