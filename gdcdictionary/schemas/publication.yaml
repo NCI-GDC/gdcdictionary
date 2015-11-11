@@ -13,8 +13,9 @@ validators: null
 
 systemProperties:
   - id
-  - project
   - project_id
+  - created_datetime
+  - updated_datetime
 
 links:
   - name: files
@@ -39,7 +40,7 @@ properties:
   type:
     type: string
   id:
-    $ref: "definitions.yaml#/UUID"
+    $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
   pmid:
@@ -47,6 +48,10 @@ properties:
   doi:
     type: string
   files:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many"
   project_id:
     type: string
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"

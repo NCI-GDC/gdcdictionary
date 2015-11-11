@@ -14,6 +14,7 @@ import copy
 import yaml
 import argparse
 import json
+import unittest
 from python import GDCDictionary
 
 
@@ -86,7 +87,12 @@ def validate_schemata(schemata, metaschema):
             for link in [l['name'] for l in subgroup if 'name' in l]:
                 assert_link_is_also_prop(link)
 
-    print('ok.')
+
+class SchemaTest(unittest.TestCase):
+
+    def test_schemas(self):
+        dictionary = GDCDictionary()
+        validate_schemata(dictionary.schema, dictionary.metaschema)
 
 
 if __name__ == '__main__':
@@ -114,7 +120,6 @@ if __name__ == '__main__':
     # Load schemata
     dictionary = GDCDictionary()
     resolver = RefResolver('definitions.yaml#', dictionary.definitions)
-    validate_schemata(dictionary.schema, dictionary.metaschema)
 
     for f in args.jsonfiles:
         doc = json.load(f)
@@ -131,3 +136,4 @@ if __name__ == '__main__':
             print ("CHECK if {0} is valid:".format(f.name)),
             validate_entity(doc, dictionary.schema, resolver)
             print("Valid as expected")
+    print('ok.')

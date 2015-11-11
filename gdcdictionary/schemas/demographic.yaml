@@ -1,0 +1,102 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "demographic"
+title: Demographic
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: TBD
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+
+
+links:
+  - name: cases
+    backref: demographics
+    label: describes
+    target_type: case
+    multiplicity: one_to_one
+    required: true
+
+required:
+  - cases
+  - race
+  - ethnicity
+  - religion
+  - year_of_birth
+  - year_of_death
+
+uniqueKeys:
+  #unclear if want submitter ID for clinical
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+  type:
+    type: string
+
+  id:
+    $ref: "_definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+
+  submitter_id:
+    type:
+      - string
+      - "null"
+
+  gender:
+    term: TBD
+    enum:
+      - female
+      - male
+      - unknown
+      - unspecified
+
+  race:
+    term: TBD
+    enum:
+      - white
+      - american indian or alaska native
+      - black or african american
+      - asian
+      - native hawaiian or other pacific islander
+      - other
+      - not reported
+      - not allowed to collect
+
+  ethnicity:
+    term: TDB
+    enum:
+      - hispanic or latino
+      - not hispanic or latino
+      - not reported
+      - not allowed to collect
+
+  year_of_birth:
+    term: TBD
+    type: number
+
+  year_of_death:
+    term: TBD
+    type: number
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"
+  project_id:
+    type: string
+  religion:
+    term: TBD
+    type: string
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"

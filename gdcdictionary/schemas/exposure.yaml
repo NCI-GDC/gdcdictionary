@@ -1,13 +1,13 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "case"
-title: Case
+id: "exposure"
+title: Exposure
 type: object
 namespace: http://gdc.nci.nih.gov
-category: administrative
+category: clinical
 program: '*'
 project: '*'
-description: "TODO"
+description: TBD
 additionalProperties: false
 validators: null
 
@@ -18,45 +18,62 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: projects
-    backref: cases
-    label: member_of
-    target_type: project
+  - name: cases
+    backref: exposures
+    label: describes
+    target_type: case
     multiplicity: many_to_one
     required: true
-  - name: tissue_source_sites
-    backref: cases
-    label: processed_at
-    target_type: tissue_source_site
-    multiplicity: many_to_one
-    required: false
 
-required:
-  - submitter_id
-  - projects
 
 uniqueKeys:
+  #unclear if want submitter ID for clinical
   - [id]
   - [project_id, submitter_id]
 
-# Case properties
 properties:
   type:
     type: string
+
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
+
   submitter_id:
     type:
       - string
       - "null"
-  days_to_index:
-    type:
-      - integer
-  projects:
-    $ref: "_definitions.yaml#/to_one"
-  tissue_source_sites:
+
+  years_smoked:
+    term: TBD
+    type: number
+
+  cigarettes_per_day:
+    term: TBD
+    type: number
+
+  alcohol_history:
+    term: TBD
+    type: string
+
+  alcohol_intensity:
+    term: TBD
+    type: string
+
+  height:
+    term: TBD
+    type: number
+
+  weight:
+    term: TBD
+    type: number
+
+  bmi:
+    term: TBD
+    type: number
+
+  cases:
     $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string

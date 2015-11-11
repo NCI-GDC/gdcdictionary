@@ -1,0 +1,107 @@
+id: _definitions
+
+UUID:
+    type: string
+    pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+
+parent_uuids:
+    type: array
+    minItems: 1
+    items:
+        $ref: "#/UUID"
+    uniqueItems: true
+
+foreign_key:
+    type: object
+    # Allow true here because we can have other unique keys defined on
+    # a target type
+    additionalProperties: True
+    #Can either use 'id' which are GDC IDs (UUID) or 'submitter_id'
+    #which are user defined IDs ("submitter IDs in the backend")
+    properties:
+        id:
+            $ref: "#/UUID"
+        submitter_id:
+            type: string
+
+to_one:
+  anyOf:
+    - type: array
+      items:
+        $ref: "#/foreign_key"
+        minItems: 1
+        maxItems: 1
+    - $ref: "#/foreign_key"
+
+to_many:
+  anyOf:
+    - type: array
+      items:
+        $ref: "#/foreign_key"
+        minItems: 1
+    - $ref: "#/foreign_key"
+
+datetime:
+  type: string
+  format: date-time 
+
+file_name:
+    type: string
+    description: "file name"
+file_size:
+    type: number
+    description: "the size of the data file (object) in bytes"
+file_format:
+    type: string
+    description: "the size of the data file (object) in bytes"
+md5sum:
+    type: string
+    description: "the MD5 hash of the data file (object)"
+
+bioentity_state:
+    description: "states of a bioentity"
+    default: submitted
+    enum:
+        - submitted
+        - validated
+        - released
+        - redacted
+
+data_bundle_state:
+    description: "states of a data bundle"
+    default: submitted
+    enum:
+        - submitted
+        - validated
+        - error
+        - released
+        - suppressed
+        - redacted
+
+data_file_state:
+    description: "states of a data file (object)"
+    default: submitted
+    downloadable:
+        - uploaded
+        - md5summed
+        - validating
+        - validated
+        - error
+        - invalid
+        - released
+    public:
+        - live
+    enum:
+        - submitted
+        - uploading
+        - uploaded
+        - md5summing
+        - md5summed
+        - validating
+        - validated
+        - error
+        - invalid
+        - released
+        - suppressed
+        - redacted
+        - live

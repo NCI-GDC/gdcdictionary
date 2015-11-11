@@ -35,27 +35,26 @@ links:
     required: false
 
 required:
-  - alias
+  - submitter_id
   - revision
   - projects
 
 uniqueKeys:
   - [id]
-  - [project_id, alias]
+  - [project_id, submitter_id]
 
 # archive properties
 properties:
   type:
     type: string
   id:
-    $ref: "definitions.yaml#/UUID"
-    systemAlias: node_id
+    $ref: "_definitions.yaml#/UUID"
+    systemSubmitter_Id: node_id
     description: "TODO"
-  alias:
+  submitter_id:
     type:
       - string
       - "null"
-    systemAlias: submitter_id
     description: >
       Unique identifier of this archive in the DCC; usually the original
       archive filename.
@@ -64,8 +63,12 @@ properties:
     description: The revision of this archive in the DCC.
 
   projects:
-    $ref: "definitions.yaml#/to_one"
-  related_files:
-    $ref: "definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_one"
+  related_to_files:
+    $ref: "_definitions.yaml#/to_many"
   project_id:
     type: string
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
