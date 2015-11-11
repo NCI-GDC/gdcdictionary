@@ -1,0 +1,26 @@
+---
+type: term
+id: f2d8fac8-7c90-4e5f-8e96-a0d35e12054e
+term: year_of_death
+termdef:
+  term_id: f2d8fac8-7c90-4e5f-8e96-a0d35e12054e
+  term: Year Death Number
+  definition: Numeric value to represent the year of the death of an individual.
+  locale: en
+  values:
+    type: object
+    properties:
+      units:
+        type: string
+        enum:
+          - year
+      value:
+        type: number
+  source:
+    uri: ~
+    cde:
+      collection_name: caDSR
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2897030&version=1.0
+      cde_id: 2897030
+      cde_version: 1.0
+termns: clinical/demographic

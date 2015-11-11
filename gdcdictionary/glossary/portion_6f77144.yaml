@@ -1,0 +1,18 @@
+---
+term: portion
+type: term
+termdef:
+  term: Portion
+  definition: A physical sub-part of any sample.
+  source:
+    cde:
+      cde_version: ~
+      collection_url: ~
+      cde_id: 6f77244
+      collection_name: GDC
+    uri: ~
+  term_id: 6f77144c-0a3e-4a7d-bec7-24192a2c1484
+  locale: en
+  values: ~
+id: 6f77144c-0a3e-4a7d-bec7-24192a2c1484
+termns: biospecimen

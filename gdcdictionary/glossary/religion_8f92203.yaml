@@ -1,0 +1,30 @@
+---
+type: term
+id: 8f922032-1328-44d8-ba57-be6d1f51f922
+term: religion
+termdef:
+  term_id: 8f922032-1328-44d8-ba57-be6d1f51f922
+  term: Demographics Religion Category
+  termns: clinical/demographic
+  definition: The category of a person's institutionalized system grounded in belief and reverence for a supernatural power or powers regarded as creator and governor of the universe.
+  locale: en
+  values:
+    items:
+      type: string
+      enum:
+        - Roman Catholic
+        - Protestant Christian
+        - Judaism
+        - Muslim
+        - None
+        - Not Allowed To Collect
+        - Other
+    type: array
+  source:
+    uri: ~
+    cde:
+      collection_name: caDSR
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3800115&version=1.0
+      cde_id: 3800115
+      cde_version: 1.0
+termns: clinical/demographic

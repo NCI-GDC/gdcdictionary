@@ -1,0 +1,20 @@
+---
+type: term
+id: 9adb976b-a3ad-4601-b99c-c1387c3982ef
+term: tissue_or_organ_of_origin
+termdef:
+  term_id: 9adb976b-a3ad-4601-b99c-c1387c3982ef
+  term: 'International Classification of Diseases for Oncology, Third Edition ICD-O-3 Site Code'
+  definition: 'The third edition of the International Classification of Diseases for Oncology, published in 2000, used principally in tumor and cancer registries for coding the site (topography) and the histology (morphology) of neoplasms._The description of an anatomical region or of a body part._Named locations of, or within, the body._A system of numbered categories for representation of data.'
+  locale: en
+  values:
+    type: string
+    description: Code from http://codes.iarc.fr/topography (ICD-O-3 Online)
+  source:
+    uri: ~
+    cde:
+      collection_name: caDSR
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3226281&version=1.0
+      cde_id: 3226281
+      cde_version: 1.0
+termns: clinical/diagnosis

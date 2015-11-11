@@ -1,0 +1,26 @@
+---
+type: term
+id: 467d0f9a-f58a-43ec-936f-54cefb26e748
+term: days_to_last_followup
+termdef:
+  term_id: 467d0f9a-f58a-43ec-936f-54cefb26e748
+  term: Last Communication Contact Less Initial Pathologic Diagnosis Date Calculated Day Value
+  definition: 'Time interval from the date of last followup to the date of initial pathologic diagnosis, represented as a calculated number of days.'
+  locale: en
+  values:
+    properties:
+      value:
+        type: number
+      units:
+        type: string
+        enum:
+          - days
+    type: object
+  source:
+    uri: ~
+    cde:
+      collection_name: caDSR
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008273&version=1.0
+      cde_id: 3008273
+      cde_version: 1.0
+termns: clinical/diagnosis

@@ -1,0 +1,18 @@
+---
+type: term
+id: 9c0c45f4-3d4b-4f46-8a38-33c081a6a744
+term: gender
+termdef:
+  term_id: 9c0c45f4-3d4b-4f46-8a38-33c081a6a744
+  term: Gender
+  definition: Text designations that identify gender. Gender is described as the assemblage of properties that distinguish people on the basis of their societal roles.
+  locale: en
+  values: ~
+  source:
+    uri: ~
+    cde:
+      collection_name: caDSR
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2200604&version=3.0
+      cde_id: 2200604
+      cde_version: 3.0
+termns: clinical/demographic

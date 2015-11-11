@@ -1,0 +1,41 @@
+type: term
+id: #UUID
+term: #the "GDC version" of the term
+termns: #a "namespace" for the term (label of the node term is found in, e.g.)
+termdef :
+  term_id: #UUID
+  term: #if source given below, rendering of the term as given there
+  definition: >
+    The definition of the term, ideally from one of the authorities listed
+    in the sources: (if any) below.
+  locale: #two letter language code ("en"), can be omitted>
+  # if this term is used elsewhere as a key with values, those values
+  # may be enumerated here:
+  values:
+    type: array
+    items:
+      type: string
+      enum:
+        - thing1
+        - thing2
+  #or
+  values:
+    type: object
+    properties:
+      units:
+        type: string
+        enum: ["<yourunits>"]
+      value:
+        type: number
+  source:
+    uri: # ontology uri, if any
+    cde: 
+      collection_name: #such as caDSR/TCGA
+      collection_url: # url that resolves to a description of the cde (ideal)
+      cde_id: # public id for the term
+      cde_version: # version of public id used
+synonyms: # if any
+  - #term_id (UUID) of a synonymous term
+  
+  
+

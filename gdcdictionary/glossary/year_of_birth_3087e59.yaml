@@ -1,0 +1,26 @@
+---
+type: term
+id: 3087e597-8bed-41bd-8fa9-ccbb45899bc9
+term: year_of_birth
+termdef:
+  term_id: 3087e597-8bed-41bd-8fa9-ccbb45899bc9
+  term: Year Birth Date Number
+  definition: Numeric value to represent the calendar year in which an individual was born.
+  locale: en
+  values:
+    type: object
+    properties:
+      units:
+        enum:
+          - Year
+        type: string
+      value:
+        type: number
+  source:
+    uri: ~
+    cde:
+      collection_name: caDSR
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2896954&version=1.0
+      cde_id: 2896954
+      cde_version: 1.0
+termns: clinical/demographic
