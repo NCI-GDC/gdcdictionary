@@ -29,8 +29,21 @@ required:
   - type
   - number_of_reads
   - percent_gc_content
-  - average_per_base_quality
   - lane_level_seq_bundles
+  - encoding
+  - total_sequences
+  - basic_statistics
+  - per_base_sequence_quality
+  - per_tile_sequence_quality
+  - per_sequence_quality_score
+  - per_base_sequence_content
+  - per_sequence_gc_content
+  - per_base_n_content
+  - sequence_length_distribution
+  - sequence_duplication_levels
+  - overrepresented_sequences
+  - adapter_content
+  - kmer_content
 
 uniqueKeys:
     - [ id ]
@@ -50,10 +63,34 @@ properties:
         type: integer
         minimum: 0
         maximum: 100
-    average_per_base_quality:
-        type: array
-        itmes:
-            type: integer
+    encoding:
+        type: string
+    total_sequences:
+        type: integer
+    basic_statistics:
+        $ref: "_definitions.yaml#/qc_metrics_state"
+    per_base_sequence_quality:
+        $ref: "_definitions.yaml#/qc_metrics_state"
+    per_tile_sequence_quality:
+        $ref: "_definitions.yaml#/qc_metrics_state"
+    per_sequence_quality_score:
+        $ref: "_definitions.yaml#/qc_metrics_state"
+    per_base_sequence_content:
+        $ref: "_definitions.yaml#/qc_metrics_state"
+    per_sequence_gc_content:
+        $ref: "_definitions.yaml#/qc_metrics_state"
+    per_base_n_content:
+        $ref: "_definitions.yaml#/qc_metrics_state"
+    sequence_length_distribution:
+        $ref: "_definitions.yaml#/qc_metrics_state"
+    sequence_duplication_levels:
+        $ref: "_definitions.yaml#/qc_metrics_state"
+    overrepresented_sequences:
+        $ref: "_definitions.yaml#/qc_metrics_state"
+    adapter_content:
+        $ref: "_definitions.yaml#/qc_metrics_state"
+    kmer_content:
+        $ref: "_definitions.yaml#/qc_metrics_state"
     lane_level_seq_bundles:
         $ref: "_definitions.yaml#/to_one"
     created_datetime:

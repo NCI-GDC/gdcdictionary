@@ -105,3 +105,9 @@ data_file_state:
         - suppressed
         - redacted
         - live
+
+qc_metrics_state:
+    enum:
+        - FAIL
+        - PASS
+        - WARN
