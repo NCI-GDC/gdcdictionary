@@ -19,6 +19,7 @@ systemProperties:
   - updated_datetime
   - release_state
   - release_state_datetime
+  - release_state_lock
 
 required:
   - submitter_id
@@ -84,7 +85,10 @@ properties:
   updated_datetime:
     $ref: "_definitions.yaml#/datetime"
 
+  # ======== Release state ========
   release_state:
     $ref: "_definitions.yaml#/release_state"
   release_state_datetime:
     $ref: "_definitions.yaml#/datetime"
+  release_state_lock:
+    $ref: "_definitions.yaml#/release_state_lock"

@@ -65,11 +65,17 @@ release_state:
     default: unreleased
     enum:
       - unreleased
-      - locked
-      - approved
-      - approved_not_valid
       - released
       - redacted
+
+release_state_lock:
+    description: "Release statesd of an entity"
+    default: False
+    type: boolean
+    enum:
+      - True
+      - False
+      - null
 
 data_bundle_state:
     description: "states of a data bundle"

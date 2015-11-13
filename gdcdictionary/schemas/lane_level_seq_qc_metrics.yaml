@@ -18,6 +18,7 @@ systemProperties:
   - state
   - release_state
   - release_state_datetime
+  - release_state_lock
 
 links:
     - name: lane_level_seq_bundles
@@ -63,7 +64,10 @@ properties:
     updated_datetime:
         $ref: "_definitions.yaml#/datetime"
 
+    # ======== Release state ========
     release_state:
         $ref: "_definitions.yaml#/release_state"
     release_state_datetime:
         $ref: "_definitions.yaml#/datetime"
+    release_state_lock:
+        $ref: "_definitions.yaml#/release_state_lock"
