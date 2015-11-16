@@ -4,7 +4,7 @@ id: "clinical"
 title: Clinical
 type: object
 namespace: http://gdc.nci.nih.gov
-category: TBD
+category: clinical
 program: '*'
 project: '*'
 description: >
