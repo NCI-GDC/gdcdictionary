@@ -59,6 +59,8 @@ properties:
         $ref: "_definitions.yaml#/data_file_state"
     type:
         enum:  [ lane_level_seq_qc_metric ]
+    fastq_name:
+        type: string
     percent_gc_content:
         type: integer
         minimum: 0
