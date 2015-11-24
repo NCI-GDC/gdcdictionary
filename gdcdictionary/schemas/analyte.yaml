@@ -16,16 +16,18 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - created_datetime
+  - updated_datetime
 
 required:
-  - alias
+  - submitter_id
   - analyte_type_id
   - analyte_type
   - portions
 
 uniqueKeys:
   - [id]
-  - [project_id, alias]
+  - [project_id, submitter_id]
 
 links:
   - name: portions
@@ -40,16 +42,15 @@ properties:
   type:
     type: string
   id:
-    $ref: "definitions.yaml#/UUID"
+    $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: >
       A liquid bulk product produced according to specified lab protocols,
       from a sample or portion, intended for further analysis. (GDC)
-  alias:
+  submitter_id:
     type:
       - string
       - "null"
-    systemAlias: submitter_id
     description: >
       The legacy barcode used before prior to the use UUIDs, varies by
       project. For TCGA this is bcranalytebarcode.
@@ -90,9 +91,13 @@ properties:
 # analyte parents
   portions:
     #should this be to_one
-    $ref: "definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
     description: >
       Indicates that the analyte is physically derived from the linked to
       portion via some process/protocol
   project_id:
     type: string
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"

@@ -1,0 +1,10 @@
+{
+  "type": "lane_level_seq/qc_file",
+  "id": "e6510043-3ccd-4d22-a3a6-2cbe08209318",
+  "file_name": "023c722ed278d2ab1cbbeef1bfee4130.tar.gz",
+  "file_size": 380831856,
+  "md5sum": "023c722ed278d2ab1cbbeef1bfee4130",
+  "qc_metrics_bundle": {
+    "id": "fd880440-2271-48c8-a91a-c4b617f7cfe7"
+  }
+}

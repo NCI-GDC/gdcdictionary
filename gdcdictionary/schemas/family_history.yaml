@@ -1,13 +1,13 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "case"
-title: Case
+id: "family_history"
+title: Family History
 type: object
 namespace: http://gdc.nci.nih.gov
-category: administrative
+category: clinical
 program: '*'
 project: '*'
-description: "TODO"
+description: TBD
 additionalProperties: false
 validators: null
 
@@ -18,45 +18,61 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: projects
-    backref: cases
-    label: member_of
-    target_type: project
+  - name: cases
+    backref: family_histories
+    label: describes
+    target_type: case
     multiplicity: many_to_one
     required: true
-  - name: tissue_source_sites
-    backref: cases
-    label: processed_at
-    target_type: tissue_source_site
-    multiplicity: many_to_one
-    required: false
 
-required:
-  - submitter_id
-  - projects
 
 uniqueKeys:
+  #unclear if want submitter ID for clinical
   - [id]
   - [project_id, submitter_id]
 
-# Case properties
 properties:
   type:
     type: string
+
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
+
   submitter_id:
     type:
       - string
       - "null"
-  days_to_index:
-    type:
-      - integer
-  projects:
-    $ref: "_definitions.yaml#/to_one"
-  tissue_source_sites:
+
+  relative_with_cancer_history:
+    term: TBD
+    enum:
+      - yes
+      - no
+      - unknown
+
+  relationship_type:
+    term: TBD
+    type: string
+
+  relationship_gender:
+    term: TBD
+    enum:
+      - female
+      - male
+      - unknown
+      - unspecified
+
+  relationship_age_at_diagnosis:
+    term: TBD
+    type: number
+
+  relationship_primary_diagnosis:
+    term: TBD
+    type: string
+
+  cases:
     $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string

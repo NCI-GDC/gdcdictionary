@@ -11,7 +11,7 @@ class GDCDictionary(object):
             os.path.dirname(MOD_DIR), 'schemas'), lazy=False):
         self.root_dir = root_dir
         self.metaschema_path = 'metaschema.yaml'
-        self.definitions_path = 'definitions.yaml'
+        self.definitions_path = '_definitions.yaml'
         self.exclude = [self.metaschema_path, self.definitions_path]
         self.schema = dict()
         if not lazy:
@@ -23,11 +23,13 @@ class GDCDictionary(object):
         self.load_root_dir()
 
     def load_root_dir(self):
+        cdir = os.getcwd()
         os.chdir(self.root_dir)
         for name in glob.glob("*.yaml"):
             if name not in self.exclude:
                 schema = self.load_yaml_schema(name)
                 self.schema[schema['id']] = schema
+        os.chdir(cdir)
 
     def load_yaml_schema(self, name):
         full_path = os.path.join(self.root_dir, name)

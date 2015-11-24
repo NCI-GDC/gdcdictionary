@@ -1,0 +1,153 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "diagnosis"
+title: Diagnosis
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: TBD
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: diagnoses
+    label: describes
+    target_type: case
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - age_at_diagnosis
+  - days_to_birth
+  - days_to_last_follow_up
+  - vital_status
+  - primary_diagnosis
+  - morphology
+  - tissue_or_organ_of_origin
+  - site_of_resection_or_biopsy
+  - classification_of_tumor
+  - tumor_stage
+  - tumor_grade
+  - progression_or_recurrence
+  - days_to_recurrence
+  - days_to_last_known_disease_status
+  - last_known_disease_status
+
+uniqueKeys:
+  #unclear if want submitter ID for clinical
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+  type:
+    type: string
+
+  id:
+    $ref: "_definitions.yaml#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+
+  submitter_id:
+    type:
+      - string
+      - "null"
+
+  age_at_diagnosis:
+    type: number
+    term: TBD
+
+  days_to_birth:
+    type: number
+    term: TBD
+
+  days_to_last_follow_up:
+    type: number
+    term: TBD
+
+  vital_status:
+    enum:
+      - alive
+      - dead
+      - lost to follow-up
+      - unknown
+    term: TBD
+
+  primary_diagnosis:
+    type: string
+    term: TBD
+
+  morphology:
+    type: string
+    term: TBD
+
+  tissue_or_organ_of_origin:
+    type: string
+    term: TBD
+
+  site_of_resection_or_biopsy:
+    type: string
+    term: TBD
+
+  classification_of_tumor:
+    term: TBD
+    enum:
+      - primary
+      - metastasis
+      - recurrence
+      - other
+
+  prior_malignancy:
+    term: TBD
+    enum:
+      - "yes"
+      - "no"
+      - unknown
+
+  tumor_stage:
+    term: TBD
+    type: string
+
+  tumor_grade:
+    term: TBD
+    type: string
+
+  progression_or_recurrence:
+    term: TBD
+    enum:
+      - "yes"
+      - "no"
+      - unknown
+
+  days_to_recurrence:
+    term: TBD
+    type: number
+
+  last_known_disease_status:
+    term: TBD
+    enum:
+      - Distant met recurrence/progression
+      - Loco-regional recurrence/progression
+      - Biochemical evidence of disease without structural correlate
+      - Tumor free
+      - Unknown tumor status
+      - With tumor
+  days_to_last_known_disease_status:
+    term: TBD
+    type: number
+  cases:
+    $ref: "_definitions.yaml#/to_one"
+  project_id:
+    type: string
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"

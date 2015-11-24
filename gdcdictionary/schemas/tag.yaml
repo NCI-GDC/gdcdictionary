@@ -29,13 +29,16 @@ properties:
   type:
     type: string
   id:
-    $ref: "definitions.yaml#/UUID"
+    $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
   name:
     type: string
     description: name of this tag
     enum:
+      - original # for legacy data
+      - PilotAnalysisPipeline2 # for legacy data
+      - OptionAnalysisPipeline2 # for legacy data 
       - meth
       - hg18
       - hg19
