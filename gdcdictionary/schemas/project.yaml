@@ -23,6 +23,7 @@ required:
   - primary_site
   - programs
   - dbgap_accession_number
+  - project_id
 
 uniqueKeys:
   - [id]
@@ -71,3 +72,6 @@ properties:
     $ref: "_definitions.yaml#/to_one"
     description: >
       Indicates that the project is logically part of the indicated project.
+  project_id:
+    type: string
+    description: "The concatenation of Program.name, '-', and Project.code (e.g. PROGRAM-PROJECT)"
