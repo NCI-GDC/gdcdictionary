@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: lane_level_seq_qc_metric
-title: Lane Level Seq QC Metric
+id: read_group_qc_metric
+title: Read Group Seq QC Metric
 type: object
 description: GDC QC metrics
 additionalProperties: false
@@ -21,17 +21,17 @@ systemProperties:
   - release_state_lock
 
 links:
-    - name: lane_level_seq_bundles
+    - name: read_group_bundles
       label: part_of
-      target_type: lane_level_seq
+      target_type: read_group
       multiplicity: one_to_one
       required: true
-      backref: lane_level_qc_metrics
+      backref: read_group_qc_metrics
 
 required:
   - type
   - percent_gc_content
-  - lane_level_seq_bundles
+  - read_group_bundles
   - encoding
   - total_sequences
   - basic_statistics
@@ -58,7 +58,7 @@ properties:
     state:
         $ref: "_definitions.yaml#/data_file_state"
     type:
-        enum:  [ lane_level_seq_qc_metric ]
+        enum:  [ read_group_qc_metric ]
     fastq_name:
         type: string
     percent_gc_content:
@@ -93,7 +93,7 @@ properties:
         $ref: "_definitions.yaml#/qc_metrics_state"
     kmer_content:
         $ref: "_definitions.yaml#/qc_metrics_state"
-    lane_level_seq_bundles:
+    read_group_bundles:
         $ref: "_definitions.yaml#/to_one"
     created_datetime:
         $ref: "_definitions.yaml#/datetime"

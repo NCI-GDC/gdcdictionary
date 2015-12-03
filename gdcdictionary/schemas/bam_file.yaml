@@ -1,9 +1,9 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: lane_level_seq_file
-title: Lane Level Seq File
+id: bam_file
+title: Bam File
 type: object
-description: Lane level sequencing data file
+description: BAM data file
 additionalProperties: false
 category: data_file
 validators: null
@@ -21,18 +21,24 @@ systemProperties:
   - release_state_lock
 
 links:
-    - name: lane_level_seq_bundles
+    - name: read_group_bundles
       label: part_of
-      target_type: lane_level_seq
+      target_type: read_group
+      multiplicity: one_to_many
+      required: true
+      backref: bam_files
+    - name: external_alignment_bundles
+      label: part_of
+      target_type: external_alignment
       multiplicity: one_to_one
       required: true
-      backref: lane_level_seq_files
+      backref: bam_files
 
-required: [ file_name, file_format, file_size, md5sum ]
+required: [ file_name, file_size, md5sum, read_group_bundles ]
 
 uniqueKeys:
     - [ id ]
-    - [ project_id, file_name ]
+    - [ project_id, submitter_id ]
 
 properties:
     id:
@@ -42,21 +48,20 @@ properties:
     state:
         $ref: "_definitions.yaml#/data_file_state"
     type:
-        enum: [ lane_level_seq_file ]
+        enum: [ bam_file ]
     submitter_id:
         type:
           - string
           - "null"
     file_name:
         $ref: "_definitions.yaml#/file_name"
-    file_format:
-        $ref: "_definitions.yaml#/file_format"
-        enum: [ "fastq", "bam" ]
     file_size:
         $ref: "_definitions.yaml#/file_size"
     md5sum:
         $ref: "_definitions.yaml#/md5sum"
-    lane_level_seq_bundles:
+    read_group_bundles:
+        $ref: "_definitions.yaml#/to_one"
+    external_alignment_bundles:
         $ref: "_definitions.yaml#/to_one"
     created_datetime:
         $ref: "_definitions.yaml#/datetime"
