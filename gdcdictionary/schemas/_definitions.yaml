@@ -42,8 +42,10 @@ to_many:
     - $ref: "#/foreign_key"
 
 datetime:
-  type: string
-  format: date-time 
+  oneOf:
+    - type: string
+      format: date-time
+    - type: 'null'
 
 file_name:
     type: string
@@ -58,14 +60,22 @@ md5sum:
     type: string
     description: "the MD5 hash of the data file (object)"
 
-bioentity_state:
-    description: "states of a bioentity"
-    default: submitted
+release_state:
+    description: "Release statesd of an entity"
+    default: unreleased
     enum:
-        - submitted
-        - validated
-        - released
-        - redacted
+      - unreleased
+      - released
+      - redacted
+
+release_state_lock:
+    description: "Release statesd of an entity"
+    default: False
+    type: boolean
+    enum:
+      - True
+      - False
+      - null
 
 data_bundle_state:
     description: "states of a data bundle"
@@ -105,3 +115,9 @@ data_file_state:
         - suppressed
         - redacted
         - live
+
+qc_metrics_state:
+    enum:
+        - FAIL
+        - PASS
+        - WARN

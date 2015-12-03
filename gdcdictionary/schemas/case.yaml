@@ -16,6 +16,9 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
+  - release_state
+  - release_state_datetime
+  - release_state_lock
 
 links:
   - name: projects
@@ -64,3 +67,11 @@ properties:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
     $ref: "_definitions.yaml#/datetime"
+
+  # ======== Release state ========
+  release_state:
+    $ref: "_definitions.yaml#/release_state"
+  release_state_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  release_state_lock:
+    $ref: "_definitions.yaml#/release_state_lock"
