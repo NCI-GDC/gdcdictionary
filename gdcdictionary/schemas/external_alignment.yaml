@@ -46,7 +46,7 @@ properties:
   state:
     $ref: "_definitions.yaml#/data_file_state"
   type:
-    enum: [ read_group_file ]
+    enum: [ "external_alignment" ]
   submitter_id:
     type:
       - string
