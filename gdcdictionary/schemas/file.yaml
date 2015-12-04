@@ -79,7 +79,7 @@ links:
     required: false
   - name: tags
     backref: files
-    label: memeber_of
+    label: member_of
     target_type: tag
     multiplicity: many_to_many
     required: false
@@ -125,7 +125,18 @@ links:
     target_type: case
     multiplicity: many_to_one
     required: false
-
+  - name: clinical_data_bundles
+    backref: files
+    label: part_of
+    target_type: clinical_data_bundle
+    multiplicity: many_to_one
+    required: false
+  - name: biospecimen_data_bundles
+    backref: files
+    label: part_of
+    target_type: biospecimen_data_bundle
+    multiplicity: many_to_one
+    required: false
 
 required:
   - submitter_id
@@ -199,6 +210,10 @@ properties:
   platforms:
     $ref: "_definitions.yaml#/to_one"
   described_cases:
+    $ref: "_definitions.yaml#/to_one"
+  biospecimen_data_bundles:
+    $ref: "_definitions.yaml#/to_one"
+  clinical_data_bundles:
     $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string

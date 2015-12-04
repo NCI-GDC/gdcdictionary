@@ -1,0 +1,66 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: clinical_data_bundle
+title: Clinical Data Bundle
+type: object
+description: Clinical Data Bundle 
+additionalProperties: false
+category: data_bundle
+validators: null
+project: '*'
+program: '*'
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - release_state
+  - release_state_datetime
+  - release_state_lock
+
+links:
+  - name: cases
+    label: derived_from
+    target_type: case
+    multiplicity: many_to_one
+    required: true
+    backref: clinical_data_bundles
+
+required:
+  - type
+  - cases
+  - submitter_id
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  id:
+    $ref: "_definitions.yaml#/UUID"
+  project_id:
+    type: string
+  submitter_id:
+    type:
+    - string
+    - "null"
+  state:
+    $ref: "_definitions.yaml#/data_bundle_state"
+  type:
+    enum: [ "clinical_data_bundle" ]
+  cases:
+    $ref: "_definitions.yaml#/to_one"
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
+
+  # ======== Release state ========
+  release_state:
+    $ref: "_definitions.yaml#/release_state"
+  release_state_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  release_state_lock:
+    $ref: "_definitions.yaml#/release_state_lock"
