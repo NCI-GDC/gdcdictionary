@@ -9,6 +9,7 @@ program: '*'
 project: '*'
 description: TBD
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:

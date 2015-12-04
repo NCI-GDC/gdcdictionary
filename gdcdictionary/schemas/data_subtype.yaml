@@ -1,4 +1,4 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+p$schema: "http://json-schema.org/draft-04/schema#"
 
 id: "data_subtype"
 title: Data Subtype
@@ -8,6 +8,7 @@ category: TBD
 program: '*'
 project: '*'
 description: "TODO"
+submittable: false
 additionalProperties: false
 validators: null
 

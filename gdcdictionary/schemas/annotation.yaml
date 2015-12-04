@@ -12,6 +12,7 @@ description: >
   (e.g., pattern, motif, link), that has been associated with data or
   other types of information. (NCIt C44272)
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:

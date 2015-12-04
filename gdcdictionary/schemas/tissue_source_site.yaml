@@ -11,6 +11,7 @@ description: >
   A clinical site that collects and provides patient samples and clinical
   metadata for research use. (NCIt C103264)
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:

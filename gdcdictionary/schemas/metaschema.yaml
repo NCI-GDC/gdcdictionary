@@ -20,7 +20,8 @@ required:
 
 
 definitions:
-
+  submittable:
+    type: boolean
   link:
     type: object
     additionalProperties: false

@@ -10,6 +10,7 @@ project: '*'
 description: >
   A physical sub-part of any sample. (GDC)
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:

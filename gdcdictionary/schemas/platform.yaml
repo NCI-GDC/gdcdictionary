@@ -11,6 +11,7 @@ description: >
   Any distinct technology (laboratory or computational) from which data
   may be obtained as files. (GDC)
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:

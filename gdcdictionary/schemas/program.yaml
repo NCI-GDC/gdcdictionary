@@ -9,6 +9,7 @@ project: '*'
 description: >
   A broad framework of goals to be achieved. (NCIt C52647)
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:

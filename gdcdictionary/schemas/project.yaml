@@ -10,6 +10,7 @@ description: >
   Any specifically defined piece of work that is undertaken or attempted
   to meet a single requirement. (NCIt C47885)
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:
