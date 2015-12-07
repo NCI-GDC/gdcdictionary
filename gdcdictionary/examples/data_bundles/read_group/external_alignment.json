@@ -1,0 +1,52 @@
+[
+    {
+        "library_name": "test",
+        "library_strategy": "WXS",
+        "aliquots": [
+            {
+                "submitter_id": "BLGSP-71-06-00005-01A-21R"
+            }
+        ],
+        "is_paired_end": false,
+        "experiment_name": "RNA-Seq analysis for aliquot BLGSP-71-06-00005-01A-21R",
+        "read_length": 5,
+        "target_capture_kit_target_region": "test",
+        "platform": "Illumina",
+        "target_capture_kit_name": "test",
+        "sequencing_center": "test",
+        "type": "read_group",
+        "submitter_id": "read_group_b",
+        "read_group_name": "46"
+    },
+    {
+        "type": "external_alignment",
+        "submitter_id": "alignment_a",
+        "analysis_date": "2015-10-28",
+        "read_trimmed": false,
+        "aligner_name": "BWA_MEM",
+        "ref_assembly_build": "GRCh38",
+        "aliquots":  [
+            {
+                "submitter_id": "BLGSP-71-06-00005-01A-21R"
+            }
+        ]
+    },
+    {
+        "read_group_bundles": [
+            {
+                "submitter_id": "read_group_b"
+            }
+        ],
+        "external_alignment_bundles": [
+            {
+            "submitter_id": "alignment_a"
+            }
+        ],
+
+        "file_name": "test_bundle.bam",
+        "md5sum": "aa2f4eb691cb66b363b5342c5ab72972",
+        "submitter_id": "read_group_bam",
+        "file_size": 5,
+        "type": "bam_file"
+    }
+]

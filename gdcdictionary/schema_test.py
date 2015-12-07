@@ -119,14 +119,21 @@ if __name__ == '__main__':
 
     # Load schemata
     dictionary = GDCDictionary()
-    resolver = RefResolver('definitions.yaml#', dictionary.definitions)
+    resolver = RefResolver('_definitions.yaml#', dictionary.definitions)
 
     for f in args.jsonfiles:
         doc = json.load(f)
         if args.invalid:
             try:
                 print("CHECK if {0} is invalid:".format(f.name)),
-                validate_entity(doc, dictionary.schema, resolver)
+                print type(doc)
+                if type(doc) == dict:
+                    validate_entity(doc, dictionary.schema, resolver)
+                elif type(doc) == list:
+                    for entity in doc:
+                        validate_entity(entity, dictionary.schema, resolver)
+                else:
+                    raise ValidationError("Invalid json") 
             except ValidationError as e:
                 print("Invalid as expected.")
                 pass
@@ -134,6 +141,13 @@ if __name__ == '__main__':
                 raise Exception("Expected invalid, but validated.")
         else:
             print ("CHECK if {0} is valid:".format(f.name)),
-            validate_entity(doc, dictionary.schema, resolver)
+            if type(doc) == dict:
+                validate_entity(doc, dictionary.schema, resolver)
+            elif type(doc) == list:
+                for entity in doc:
+                    validate_entity(entity, dictionary.schema, resolver)
+            else:
+                print "Invalid json"
+
             print("Valid as expected")
     print('ok.')

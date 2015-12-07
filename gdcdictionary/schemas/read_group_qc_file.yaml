@@ -1,9 +1,9 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: lane_level_qc_file
-title: Lane Level QC File
+id: read_group_qc_file
+title: Read Group QC File
 type: object
-description: FASTQC generated QC report files for lane level sequencing data
+description: FASTQC generated QC report files for fastq data
 additionalProperties: false
 category: data_file
 validators: null
@@ -23,12 +23,12 @@ systemProperties:
 links:
     - name: qc_metrics_bundles
       label: part_of
-      target_type: lane_level_seq_qc_metric
+      target_type: read_group_qc_metric
       multiplicity: one_to_one
       required: true
-      backref: lane_level_qc_files
+      backref: read_group_qc_files
 
-required: [ type, file_name, file_format, file_size, md5sum ]
+required: [ type, file_name, file_format, file_size, md5sum, qc_metrics_bundles ]
 
 uniqueKeys:
     - [ id ]
@@ -36,7 +36,7 @@ uniqueKeys:
 
 properties:
     type:
-        enum: [ lane_level_seq_qc_file ]
+        enum: [ read_group_qc_file ]
     project_id:
         type: string
     state:
