@@ -12,16 +12,22 @@ Examples are at the end.
 from jsonschema import validate, RefResolver, ValidationError
 import copy
 import yaml
+import glob
+import os
 import argparse
 import json
 import unittest
 from python import GDCDictionary
 
 
+
 def load_yaml_schema(path):
     with open(path, 'r') as f:
         return yaml.load(f)
-
+CUR_DIR = os.path.dirname(os.path.realpath(__file__))
+DATA_DIR = os.path.join(CUR_DIR, 'examples')
+project1 = load_yaml_schema(os.path.join(CUR_DIR, 'schemas/projects/project1.yaml'))
+projects = {'project1': project1}
 
 def merge_schemas(a, b, path=None):
     """Recursively zip schemas together
@@ -89,19 +95,57 @@ def validate_schemata(schemata, metaschema):
 
 
 class SchemaTest(unittest.TestCase):
+    def setUp(self):
+        self.dictionary = GDCDictionary()
+        self.resolver = RefResolver('_definitions.yaml#', self.dictionary.definitions)
+        self.definitions = yaml.load(open(os.path.join(CUR_DIR, 'schemas','_definitions.yaml'),'r'))
 
     def test_schemas(self):
-        dictionary = GDCDictionary()
-        validate_schemata(dictionary.schema, dictionary.metaschema)
+        validate_schemata(self.dictionary.schema, self.dictionary.metaschema)
 
+    def test_valid_files(self):
+        for path in glob.glob(os.path.join(DATA_DIR, 'valid', '*.json')):
+            print "Validating {}".format(path)
+            doc = json.load(open(path,'r'))
+            if type(doc) == dict:
+                self.add_system_props(doc)
+                validate_entity(doc, self.dictionary.schema, self.resolver)
+            elif type(doc) == list:
+                for entity in doc:
+                    self.add_system_props(entity)
+                    validate_entity(entity, self.dictionary.schema, self.resolver)
+            else:
+                raise Exception("Invalid json")
+
+    def test_invalid_files(self):
+        for path in glob.glob(os.path.join(DATA_DIR, 'invalid', '*.json')):
+            print "Validating {}".format(path)
+            doc = json.load(open(path,'r'))
+            if type(doc) == dict:
+                self.add_system_props(doc)
+                with self.assertRaises(ValidationError):
+                    validate_entity(doc, self.dictionary.schema, self.resolver)
+            elif type(doc) == list:
+                for entity in doc:
+                    self.add_system_props(entity)
+                    with self.assertRaises(ValidationError):
+                        validate_entity(entity, self.dictionary.schema, self.resolver)
+            else:
+                raise Exception("Invalid json")
+    def add_system_props(self, doc):
+        schema = self.dictionary.schema[doc['type']]
+        for key in schema['systemProperties']:
+            if key in self.definitions and 'default' in self.definitions[key]:
+                doc[key] = self.definitions[key]['default']
+            if key == 'state':
+                doc[key] = self.definitions['data_file_state']['default']
 
 if __name__ == '__main__':
 
     ####################
     # Setup
     ####################
-    project1 = load_yaml_schema('schemas/projects/project1.yaml')
-    projects = {'project1': project1}
+    
 
     parser = argparse.ArgumentParser(description='Validate JSON')
     parser.add_argument('jsonfiles', metavar='file',
