@@ -1,0 +1,28 @@
+---
+type: term
+term: smoking_history
+id: ec85244b-de53-40a5-a1a5-5b462b58146f
+termns: clinical/exposure
+termdef:
+  term_id: ec85244b-de53-40a5-a1a5-5b462b58146f
+  term: Patient Smoking History Category
+  definition: 'Category describing current smoking status and smoking history as self-reported by a patient. '
+  locale: en
+  values:
+    type: array
+    description: https://cdebrowser.nci.nih.gov/CDEBrowser/search?listValidValuesForDataElements=9&tabClicked=2&PageId=ElementDetailsGroup
+    items:
+      type: string
+      enum:
+        - Lifelong Non-Smoker
+        - Current Smoker
+        - Current Reformed Smoker for > 15 yrs
+        - Current Refomed Smoker for < or = 15 yrs
+        - Current Reformed Smoker Duration Not Specified
+  source:
+    cde:
+      collection_name: caDSR
+      cde_id: 2181650
+      cde_version: 1.0
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2181650&version=1.0
+    uri: ''

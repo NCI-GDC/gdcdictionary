@@ -1,0 +1,29 @@
+---
+type: term
+term: alcohol_intensity
+id: 0eb447db-4f13-4758-9727-61ed9631b424
+termns: clinical/exposure
+termdef:
+  term_id: 0eb447db-4f13-4758-9727-61ed9631b424
+  term: Person Self-Report Alcoholic Beverage Exposure Category
+  definition: Category to describe the patient's current level of alcohol use as self-reported by the patient.
+  locale: en
+  values:
+    type: array
+    description: ''
+    items:
+      type: string
+      enum:
+        - None
+        - Not Evaluated
+        - Daily Drinker
+        - Occasional Drinker
+        - Social Drinker
+        - Weekly Drinker
+  source:
+    cde:
+      collection_name: caDSR
+      cde_id: 3457767
+      cde_version: 1.0
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3457767&version=1.0
+    uri: ''

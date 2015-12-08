@@ -1,0 +1,26 @@
+---
+type: term
+term: relative_with_cancer_history
+id: 702d1c15-0702-44ea-a934-1835f2c21d89
+termns: clinical/family_history
+termdef:
+  term_id: 702d1c15-0702-44ea-a934-1835f2c21d89
+  term: Other Cancer Biological Relative History Indicator
+  definition: "Indicator to signify whether or not an individual's biological relative has been diagnosed with another type of cancer. (GDC definition: Indicator to signify whether or not an individual's biological relative has been diagnosed with any type of cancer.)"
+  locale: en
+  values:
+    type: array
+    description: ''
+    items:
+      type: string
+      enum:
+        - Yes
+        - No
+        - Unknown
+  source:
+    cde:
+      collection_name: caDSR
+      cde_id: 3901752
+      cde_version: 1.0
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3901752&version=1.0
+    uri: ''

@@ -1,0 +1,34 @@
+---
+type: term
+term: relationship_type
+id: d75af2a7-1117-46be-9bd3-2edfb60eb8e8
+termns: clinical/family_history
+termdef:
+  term_id: d75af2a7-1117-46be-9bd3-2edfb60eb8e8
+  term: Family Member Relationship Type
+  definition: The subgroup that describes the state of connectedness between members of the unit of society organized around kinship ties.
+  locale: en
+  values:
+    type: array
+    description: The subset of first-degree relatives enumerated in the value domain in caDSR CDE 2690165v2.0.
+    items:
+      type: string
+      enum:
+        - Parent
+        - Mother
+        - Father
+        - Child
+        - Son
+        - Daughter
+        - Sibling
+        - Brother
+        - Sister
+        - None
+        - Don't Know
+  source:
+    cde:
+      collection_name: caDSR
+      cde_id: 2690165
+      cde_version: 2.0
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2690165&version=2.0
+    uri: ''

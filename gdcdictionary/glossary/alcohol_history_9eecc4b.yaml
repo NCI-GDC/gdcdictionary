@@ -1,0 +1,26 @@
+---
+type: term
+term: alcohol_history
+id: 9eecc4b7-fe5e-45fd-b343-2eb7f83103cf
+termns: clinical/exposure
+termdef:
+  term_id: 9eecc4b7-fe5e-45fd-b343-2eb7f83103cf
+  term: Alcohol Lifetime History Indicator
+  definition: 'A response to a question that asks whether the participant has consumed at least 12 drinks of any kind of alcoholic beverage in their lifetime. '
+  locale: en
+  values:
+    type: array
+    description: ''
+    items:
+      type: string
+      enum:
+        - Don't Know/Not Sure
+        - No
+        - Yes
+  source:
+    cde:
+      collection_name: caDSR
+      cde_id: 2201918
+      cde_version: 1.0
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2201918&version=1.0
+    uri: ''

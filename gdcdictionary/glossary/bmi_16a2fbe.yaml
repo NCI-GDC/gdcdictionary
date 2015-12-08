@@ -1,0 +1,27 @@
+---
+type: term
+term: bmi
+id: 16a2fbec-7f25-4496-8e23-8c3250930302
+termns: clinical/exposure
+termdef:
+  term_id: 16a2fbec-7f25-4496-8e23-8c3250930302
+  term: Body Mass Index (BMI)
+  definition: The body mass divided by the square of the body height expressed in units of kg/m2.
+  locale: en
+  values:
+    type: object
+    description: ''
+    properties:
+      units:
+        type: string
+        enum:
+          - kilograms per square meter
+      value:
+        type: number
+  source:
+    cde:
+      collection_name: caDSR
+      cde_id: 4973892
+      cde_version: 1.0
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4973892&version=1.0
+    uri: ''

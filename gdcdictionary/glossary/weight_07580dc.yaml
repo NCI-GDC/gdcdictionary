@@ -1,0 +1,27 @@
+---
+type: term
+term: weight
+id: 07580dcd-e0ef-4d5a-b424-df78877538b5
+termns: clinical/exposure
+termdef:
+  term_id: 07580dcd-e0ef-4d5a-b424-df78877538b5
+  term: Patient Weight Measurement
+  definition: The weight of the patient measured in kilograms.
+  locale: en
+  values:
+    type: object
+    description: ''
+    properties:
+      units:
+        type: string
+        enum:
+          - kilograms
+      value:
+        type: number
+  source:
+    cde:
+      collection_name: caDSR
+      cde_id: 651
+      cde_version: 1.0
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=651&version=1.0
+    uri: ''
