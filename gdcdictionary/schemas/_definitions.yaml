@@ -68,15 +68,6 @@ release_state:
       - released
       - redacted
 
-release_state_lock:
-    description: "Release statesd of an entity"
-    default: False
-    type: boolean
-    enum:
-      - True
-      - False
-      - null
-
 data_bundle_state:
     description: "states of a data bundle"
     default: submitted

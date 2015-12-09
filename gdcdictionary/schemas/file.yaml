@@ -21,7 +21,6 @@ systemProperties:
   - state
   - release_state
   - release_state_datetime
-  - release_state_lock
 
 links:
   - exclusive: false
@@ -212,5 +211,3 @@ properties:
     $ref: "_definitions.yaml#/release_state"
   release_state_datetime:
     $ref: "_definitions.yaml#/datetime"
-  release_state_lock:
-    $ref: "_definitions.yaml#/release_state_lock"
