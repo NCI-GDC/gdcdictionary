@@ -16,52 +16,55 @@ systemProperties:
   - created_datetime
   - updated_datetime
   - state
+  - error_type
   - release_state
   - release_state_datetime
 
 links:
-    - name: read_group_bundles
-      label: part_of
-      target_type: read_group
-      multiplicity: many_to_one
-      required: true
-      backref: fastq_files
+  - name: read_group_bundles
+    label: part_of
+    target_type: read_group
+    multiplicity: many_to_one
+    required: true
+    backref: fastq_files
 
 
 required: [ file_name, file_size, md5sum, read_group_bundles ]
 
 uniqueKeys:
-    - [ id ]
-    - [ project_id, submitter_id ]
+  - [ id ]
+  - [ project_id, submitter_id ]
 
 properties:
-    id:
-        $ref: "_definitions.yaml#/UUID"
-    project_id:
-      type: string
-    state:
-        $ref: "_definitions.yaml#/data_file_state"
+  id:
+    $ref: "_definitions.yaml#/UUID"
+  project_id:
+    type: string
+  state:
+    $ref: "_definitions.yaml#/data_file_state"
+  error_type:
+    $ref: "_definitions.yaml#/data_file_error_type"
+  type:
+    enum: [ fastq_file ]
+  submitter_id:
     type:
-        enum: [ fastq_file ]
-    submitter_id:
-        type:
-          - string
-          - "null"
-    file_name:
-        $ref: "_definitions.yaml#/file_name"
-    file_size:
-        $ref: "_definitions.yaml#/file_size"
-    md5sum:
-        $ref: "_definitions.yaml#/md5sum"
-    read_group_bundles:
-        $ref: "_definitions.yaml#/to_one"
-    created_datetime:
-        $ref: "_definitions.yaml#/datetime"
-    updated_datetime:
-        $ref: "_definitions.yaml#/datetime"
+      - string
+      - "null"
+  file_name:
+    $ref: "_definitions.yaml#/file_name"
+  file_size:
+    $ref: "_definitions.yaml#/file_size"
+  md5sum:
+    $ref: "_definitions.yaml#/md5sum"
+  read_group_bundles:
+    $ref: "_definitions.yaml#/to_one"
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
 
-    # ======== Release state ========
-    release_state:
-        $ref: "_definitions.yaml#/release_state"
-    release_state_datetime:
-        $ref: "_definitions.yaml#/datetime"
+  # ======== Release state ========
+  release_state:
+    $ref: "_definitions.yaml#/release_state"
+  release_state_datetime:
+    $ref: "_definitions.yaml#/datetime"

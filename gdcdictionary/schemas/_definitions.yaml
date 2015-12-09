@@ -79,6 +79,13 @@ data_bundle_state:
         - suppressed
         - redacted
 
+data_file_error_type:
+    description: "type of error"
+    enum:
+        - file_size
+        - file_format
+        - md5sum
+        
 data_file_state:
     description: "states of a data file (object)"
     default: submitted
