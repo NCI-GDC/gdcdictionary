@@ -1,12 +1,12 @@
 ---
 type: term
-term: gender
-id: 9c0c45f4-3d4b-4f46-8a38-33c081a6a744
-termns: clinical/demographic
+term: relationship_gender
+id: b1f63f44-074a-4dc1-a597-4b688a8f5baf
+termns: clinical/family_history
 termdef:
-  term_id: 9c0c45f4-3d4b-4f46-8a38-33c081a6a744
+  term_id: b1f63f44-074a-4dc1-a597-4b688a8f5baf
   term: Gender
-  definition: Text designations that identify gender. Gender is described as the assemblage of properties that distinguish people on the basis of their societal roles.
+  definition: (As applied to the case's relative) Text designations that identify gender. Gender is described as the assemblage of properties that distinguish people on the basis of their societal roles.
   locale: en
   values:
     type: array

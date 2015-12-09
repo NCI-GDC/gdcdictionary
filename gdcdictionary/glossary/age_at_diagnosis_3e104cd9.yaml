@@ -1,26 +1,27 @@
+---
 type: term
-id: 3e104cd9-7743-435d-8219-d8a875fde445
 term: age_at_diagnosis
-termdef :
+id: 3e104cd9-7743-435d-8219-d8a875fde445
+termns: ''
+termdef:
   term_id: 3e104cd9-7743-435d-8219-d8a875fde445
-  term: "Age at diagnosis"
-  definition: >
-    The numerical response indicating the age of a person, expressed in years,
-    when they were diagnosed with a disease or disorder. 
+  term: Person Diagnosis Age Value
+  definition: "The numerical response indicating the age of a person, expressed in years, when they were diagnosed with a disease or disorder. \n"
   locale: en
   values:
     type: object
+    description: ''
     properties:
       units:
         type: string
-        enum: ["years"]
+        enum:
+          - years
       value:
         type: number
   source:
-    uri: http://purl.bioontology.org/ontology/SNOMEDCT/423493009
-    cde: 
+    cde:
       collection_name: caDSR/caBIG
-      collection_url: >
-        https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4828691&version=1.0
       cde_id: 4828691
       cde_version: 1.0
+      collection_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4828691&version=1.0\n"
+    uri: http://purl.bioontology.org/ontology/SNOMEDCT/423493009

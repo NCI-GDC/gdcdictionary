@@ -1,0 +1,27 @@
+---
+type: term
+term: relationship_age_at_diagnosis
+id: 5e55abf0-57dc-47a0-85f5-3da66654598f
+termns: clinical/family_history
+termdef:
+  term_id: 5e55abf0-57dc-47a0-85f5-3da66654598f
+  term: Person Diagnosis Age Value
+  definition: "(Applied to the case's relative) The numerical response indicating the age of a person, expressed in years, when they were diagnosed with a disease or disorder."
+  locale: en
+  values:
+    type: object
+    description: ''
+    properties:
+      units:
+        type: string
+        enum:
+          - years
+      value:
+        type: number
+  source:
+    cde:
+      collection_name: caDSR
+      cde_id: 4828691
+      cde_version: 1.0
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4828691&version=1.0
+    uri: http://purl.bioontology.org/ontology/SNOMEDCT/423493009
