@@ -1,0 +1,18 @@
+---
+type: term
+term: treatment_or_therapy
+id: 2b9f26e3-5d15-4b74-bc7d-8db70e68cf07
+termns: clinical/treatment
+termdef:
+  term_id: 2b9f26e3-5d15-4b74-bc7d-8db70e68cf07
+  term: Therapeutic Procedure Prior Specimen Collection Administered Yes No Unknown Not Applicable Indicator
+  definition: 'A yes/no/unknown/not applicable indicator related to the administration of therapeutic agents received before the body specimen was collected. '
+  locale: en
+  values: ~
+  source:
+    cde:
+      collection_name: caDSR
+      cde_id: 4231463
+      cde_version: 1.0
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4231463&version=1.0
+    uri: ''

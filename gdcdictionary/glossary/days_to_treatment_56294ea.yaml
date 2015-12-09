@@ -1,0 +1,27 @@
+---
+type: term
+term: days_to_treatment
+id: 56294eaf-595b-4834-9562-bc34249cd058
+termns: clinical/treatment
+termdef:
+  term_id: 56294eaf-595b-4834-9562-bc34249cd058
+  term: Days to Treatment Start
+  definition: Number of days from date of initial pathologic diagnosis that treatment began.
+  locale: en
+  values:
+    type: object
+    description: ''
+    properties:
+      units:
+        type: string
+        enum:
+          - days
+      value:
+        type: number
+  source:
+    cde:
+      collection_name: GDC
+      cde_id: 56294eaf
+      cde_version: 1.0
+      collection_url: ''
+    uri: ''
