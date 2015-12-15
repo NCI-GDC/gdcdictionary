@@ -11,9 +11,9 @@ termdef:
     items:
       type: string
       enum:
-        - yes
-        - no
-        - unknown
+        - "Yes"
+        - "No"
+        - Unknown
     type: array
   source:
     uri: ~

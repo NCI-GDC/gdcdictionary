@@ -14,9 +14,9 @@ termdef:
     items:
       type: string
       enum:
-        - Don't Know/Not Sure
-        - No
-        - Yes
+        - "Don't Know/Not Sure"
+        - "No"
+        - "Yes"
   source:
     cde:
       collection_name: caDSR

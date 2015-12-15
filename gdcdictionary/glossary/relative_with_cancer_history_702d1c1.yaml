@@ -14,8 +14,8 @@ termdef:
     items:
       type: string
       enum:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
         - Unknown
   source:
     cde:
