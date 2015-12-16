@@ -8,7 +8,7 @@ termdef:
   definition: 'The investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation. The term primary indicates that this is the intial diagnosis made or provided in the context of the associated study.'
   locale: en
   values:
-    description: IDC-10 codes (http://apps.who.int/classifications/icd10/browse/2015/en)
+    description: [IDC-10 codes](http://apps.who.int/classifications/icd10/browse/2015/en)
     type: string
   source:
     uri: ~

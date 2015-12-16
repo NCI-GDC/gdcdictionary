@@ -10,7 +10,7 @@ termdef:
   locale: en
   values:
     type: string
-    description: IDC-10 codes (http://apps.who.int/classifications/icd10/browse/2015/en)
+    description: [IDC-10 codes](http://apps.who.int/classifications/icd10/browse/2015/en)
   source:
     cde:
       collection_name: NCIt

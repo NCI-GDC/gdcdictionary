@@ -12,7 +12,7 @@ termdef:
     properties:
       units:
         enum:
-          - Year
+          - year
         type: string
       value:
         type: number

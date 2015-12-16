@@ -6,7 +6,7 @@ termns: ''
 termdef:
   term_id: 3e104cd9-7743-435d-8219-d8a875fde445
   term: Person Diagnosis Age Value
-  definition: "The numerical response indicating the age of a person, expressed in years, when they were diagnosed with a disease or disorder. \n"
+  definition: "The numerical response indicating the age of a person, expressed in years, when they were diagnosed with a disease or disorder."
   locale: en
   values:
     type: object
@@ -20,8 +20,8 @@ termdef:
         type: number
   source:
     cde:
-      collection_name: caDSR/caBIG
+      collection_name: caDSR
       cde_id: 4828691
       cde_version: 1.0
-      collection_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4828691&version=1.0\n"
+      collection_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4828691&version=1.0"
     uri: http://purl.bioontology.org/ontology/SNOMEDCT/423493009

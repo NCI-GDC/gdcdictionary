@@ -13,7 +13,7 @@ termdef:
       enum:
         - "Yes"
         - "No"
-        - Unknown
+        - "Unknown"
     type: array
   source:
     uri: ~

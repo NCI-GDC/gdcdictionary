@@ -8,7 +8,7 @@ termdef:
   definition: 'Term to represent the name of the organ resected that was contiguous to the primary disease site. GDC: Also includes liquid biopsy material.'
   locale: en
   values:
-    description: Code from http://codes.iarc.fr/topography (ICD-O-3 Online)
+    description: Codes as provided at [ICD-O-3 Online](http://codes.iarc.fr/topography)
     type: string
   source:
     uri: ~

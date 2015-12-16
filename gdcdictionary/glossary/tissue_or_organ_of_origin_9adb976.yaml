@@ -9,7 +9,7 @@ termdef:
   locale: en
   values:
     type: string
-    description: Code from http://codes.iarc.fr/topography (ICD-O-3 Online)
+    description: Codes as provided at [ICD-O-3 Online](http://codes.iarc.fr/topography)
   source:
     uri: ~
     cde:

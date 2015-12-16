@@ -9,7 +9,7 @@ termdef:
   locale: en
   values:
     type: string
-    description: Codes as provided at http://codes.iarc.fr/codegroup/2 (ICD-O-3 Online)
+    description: Codes as provided at [ICD-O-3 Online](http://codes.iarc.fr/codegroup/2)
   source:
     uri: ~
     cde:

@@ -2,6 +2,7 @@
 type: term
 id: 456ad508-24cf-4900-8a49-32b5152bf623
 term: tissue_source_site
+termns: administrative
 termdef:
   term_id: 456ad508-24cf-4900-8a49-32b5152bf623
   term: Tissue Source Site

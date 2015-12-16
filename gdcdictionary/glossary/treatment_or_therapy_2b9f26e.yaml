@@ -8,7 +8,16 @@ termdef:
   term: Therapeutic Procedure Prior Specimen Collection Administered Yes No Unknown Not Applicable Indicator
   definition: 'A yes/no/unknown/not applicable indicator related to the administration of therapeutic agents received before the body specimen was collected. '
   locale: en
-  values: ~
+  values:
+    type: array
+    description: ''
+    items:
+      type: string
+      enum:
+        - "'Yes'"
+        - "'No'"
+        - Not Applicable
+        - Unknown
   source:
     cde:
       collection_name: caDSR

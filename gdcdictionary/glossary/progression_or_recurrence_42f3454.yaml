@@ -1,20 +1,27 @@
 ---
 type: term
-id: 42f34546-57ac-42c8-a4b5-39e6dda99e5d
 term: progression_or_recurrence
+id: 42f34546-57ac-42c8-a4b5-39e6dda99e5d
+termns: clinical/diagnosis
 termdef:
   term_id: 42f34546-57ac-42c8-a4b5-39e6dda99e5d
   term: Malignant Neoplasm Disease Progression Recurrence Last Communication Contact Indicator
   definition: 'Text indicator to represent the worsening or progression, recurrence of the cancer condition under investigation since the time of last contact with the subject.'
   locale: en
   values:
-    type: string
-    description: Permissible values at https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3830555&version=1.0&listValidValuesForDataElements=9&tabClicked=2
+    type: array
+    description: ''
+    items:
+      type: string
+      enum:
+        - "'Yes'"
+        - "'No'"
+        - Unevaluable
+        - Unknown
   source:
-    uri: ~
     cde:
       collection_name: caDSR
-      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3830555&version=1.0
-      cde_id: 3830555
+      cde_id: 3830556
       cde_version: 1.0
-termns: clinical/diagnosis
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3830556&version=1.0
+    uri: ''
