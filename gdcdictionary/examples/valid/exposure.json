@@ -1,0 +1,14 @@
+{
+    "cigarettes_per_day": -1.0,
+    "weight": -1.0,
+    "alcohol_history": "",
+    "alcohol_intensity": "",
+    "bmi": -1.0,
+    "years_smoked": -1.0,
+    "submitter_id": "E9EDB78B-6897-4205-B9AA-0CEF8AAB5A1F_exposure",
+    "cases": {
+        "submitter_id": "BLGSP-71-06-00019"
+    },
+    "height": -1.0,
+    "type": "exposure"
+}

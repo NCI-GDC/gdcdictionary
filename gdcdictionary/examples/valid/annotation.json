@@ -1,0 +1,12 @@
+{
+    "type": "annotation",
+    "category": "Observation",
+    "creator": "test_script",
+    "notes": "This sample is only a test sample!",
+    "submitter_id": "28961",
+    "samples": [
+        {
+            "submitter_id": "BLGSP-71-06-00019s"
+        }
+    ]
+}

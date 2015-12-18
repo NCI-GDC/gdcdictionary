@@ -1,0 +1,23 @@
+{
+    "progression_or_recurrence": "unknown",
+    "classification_of_tumor": "other",
+    "last_known_disease_status": "Unknown tumor status",
+    "tumor_grade": "",
+    "tissue_or_organ_of_origin": "c34.3",
+    "days_to_last_follow_up": -1.0,
+    "primary_diagnosis": "c34.3",
+    "submitter_id": "E9EDB78B-6897-4205-B9AA-0CEF8AAB5A1F_diagnosis",
+    "site_of_resection_or_biopsy": "c34.3",
+    "tumor_stage": "stage iiia",
+    "days_to_birth": -17238.0,
+    "age_at_diagnosis": 47,
+    "vital_status": "dead",
+    "morphology": "8255/3",
+    "cases": {
+        "submitter_id": "BLGSP-71-06-00019"
+    },
+    "type": "diagnosis",
+    "prior_malignancy": "no",
+    "days_to_recurrence": -1,
+    "days_to_last_known_disease_status": -1
+}

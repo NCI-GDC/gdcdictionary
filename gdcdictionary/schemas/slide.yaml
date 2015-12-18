@@ -20,7 +20,6 @@ systemProperties:
   - updated_datetime
   - release_state
   - release_state_datetime
-  - release_state_lock
 
 links:
   - name: portions
@@ -108,5 +107,3 @@ properties:
     $ref: "_definitions.yaml#/release_state"
   release_state_datetime:
     $ref: "_definitions.yaml#/datetime"
-  release_state_lock:
-    $ref: "_definitions.yaml#/release_state_lock"

@@ -68,15 +68,6 @@ release_state:
       - released
       - redacted
 
-release_state_lock:
-    description: "Release statesd of an entity"
-    default: False
-    type: boolean
-    enum:
-      - True
-      - False
-      - null
-
 data_bundle_state:
     description: "states of a data bundle"
     default: submitted
@@ -88,6 +79,13 @@ data_bundle_state:
         - suppressed
         - redacted
 
+data_file_error_type:
+    description: "type of error"
+    enum:
+        - file_size
+        - file_format
+        - md5sum
+        
 data_file_state:
     description: "states of a data file (object)"
     default: submitted

@@ -1,0 +1,12 @@
+{
+    "type": "analyte",
+    "portions": {
+        "submitter_id": "BLGSP-71-06-00019-99A"
+    },
+    "analyte_type": "DNA",
+    "submitter_id": "BLGSP-71-06-00019-99A-01D",
+    "amount": 10.98,
+    "concentration": 0.14,
+    "spectrophotometer_method": "PicoGreen",
+    "analyte_type_id": "D"
+}
