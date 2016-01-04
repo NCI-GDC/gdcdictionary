@@ -94,15 +94,6 @@ properties:
     $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string
-  religion:
-    term: TBD
-    enum:
-      - Roman Catholic
-      - Protestant Christian
-      - Judaism
-      - Muslim
-      - none
-      - other
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
