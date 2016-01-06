@@ -31,7 +31,7 @@ required:
   - cases
   - race
   - ethnicity
-  - religion
+  - gender
   - year_of_birth
   - year_of_death
 
@@ -93,9 +93,6 @@ properties:
   cases:
     $ref: "_definitions.yaml#/to_one"
   project_id:
-    type: string
-  religion:
-    term: TBD
     type: string
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
