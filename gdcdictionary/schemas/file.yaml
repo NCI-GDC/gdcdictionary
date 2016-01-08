@@ -19,9 +19,9 @@ systemProperties:
   - created_datetime
   - updated_datetime
   - state
+  - error_type
   - release_state
   - release_state_datetime
-  - release_state_lock
 
 links:
   - exclusive: false
@@ -162,6 +162,8 @@ properties:
     description: "The MD5 hash of this file"
   state:
     $ref: "_definitions.yaml#/data_file_state"
+  error_type:
+    $ref: "_definitions.yaml#/data_file_error_type"
   state_comment:
     type: string
     description: >
@@ -212,5 +214,3 @@ properties:
     $ref: "_definitions.yaml#/release_state"
   release_state_datetime:
     $ref: "_definitions.yaml#/datetime"
-  release_state_lock:
-    $ref: "_definitions.yaml#/release_state_lock"
