@@ -18,6 +18,7 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
+  - state
   - release_state
   - release_state_datetime
 
@@ -47,6 +48,8 @@ properties:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
+  state:
+    $ref: "_definitions.yaml#/state"
   submitter_id:
     type:
       - string
