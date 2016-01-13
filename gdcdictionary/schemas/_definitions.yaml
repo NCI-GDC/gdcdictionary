@@ -60,7 +60,7 @@ md5sum:
     type: string
     description: "the MD5 hash of the data file (object)"
 
-node_state:
+state:
     description: "state of any node"
     default: validated
     enum:
