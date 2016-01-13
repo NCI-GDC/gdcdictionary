@@ -19,6 +19,7 @@ systemProperties:
   - updated_datetime
   - release_state
   - release_state_datetime
+  - state
 
 required:
   - submitter_id
@@ -48,6 +49,8 @@ properties:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
+  state:
+    $ref: "_definitions.yaml#/state"
   submitter_id:
     type:
       - string

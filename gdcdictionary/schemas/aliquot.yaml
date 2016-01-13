@@ -20,6 +20,7 @@ systemProperties:
   - updated_datetime
   - release_state
   - release_state_datetime
+  - state
 
 required:
   - submitter_id
@@ -69,6 +70,8 @@ properties:
     description: >
       The legacy barcode used before prior to the use
       UUIDs. For TCGA this is bcraliquotbarcode.
+  state:
+    $ref: "_definitions.yaml#/state"
   source_center:
     type: string
     description: "TODO: define, from BCR"

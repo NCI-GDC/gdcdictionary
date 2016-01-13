@@ -20,6 +20,7 @@ systemProperties:
   - updated_datetime
   - release_state
   - release_state_datetime
+  - state
 
 links:
   - name: cases
@@ -44,6 +45,8 @@ properties:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
+  state:
+    $ref: "_definitions.yaml#/state"
   gender:
     title: Gender
     cde_id: 2200604
