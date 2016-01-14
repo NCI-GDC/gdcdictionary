@@ -1,4 +1,4 @@
-d: _definitions
+id: _definitions
 
 UUID:
     type: string
