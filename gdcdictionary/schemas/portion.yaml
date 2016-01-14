@@ -18,8 +18,6 @@ systemProperties:
   - state
   - created_datetime
   - updated_datetime
-  - release_state
-  - release_state_datetime
 
 required:
   - submitter_id

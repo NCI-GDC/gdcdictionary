@@ -17,8 +17,6 @@ validators: null
 systemProperties:
   - id
   - project_id
-  - release_state
-  - release_state_datetime
 
 links:
   - name: projects

@@ -19,8 +19,6 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
-  - release_state
-  - release_state_datetime
 
 links:
   - exclusive: false

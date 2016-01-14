@@ -21,8 +21,6 @@ systemProperties:
   - file_state
   - state
   - error_type
-  - release_state
-  - release_state_datetime
 
 links:
   - exclusive: false

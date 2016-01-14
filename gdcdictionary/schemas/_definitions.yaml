@@ -1,28 +1,28 @@
-id: _definitions
+d: _definitions
 
 UUID:
-  type: string
-  pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+    type: string
+    pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
 
 parent_uuids:
-  type: array
-  minItems: 1
-  items:
-    $ref: "#/UUID"
-  uniqueItems: true
+    type: array
+    minItems: 1
+    items:
+        $ref: "#/UUID"
+    uniqueItems: true
 
 foreign_key:
-  type: object
-  # Allow true here because we can have other unique keys defined on
-  # a target type
-  additionalProperties: True
-  #Can either use 'id' which are GDC IDs (UUID) or 'submitter_id'
-  #which are user defined IDs ("submitter IDs in the backend")
-  properties:
-    id:
-      $ref: "#/UUID"
-    submitter_id:
-      type: string
+    type: object
+    # Allow true here because we can have other unique keys defined on
+    # a target type
+    additionalProperties: True
+    #Can either use 'id' which are GDC IDs (UUID) or 'submitter_id'
+    #which are user defined IDs ("submitter IDs in the backend")
+    properties:
+        id:
+            $ref: "#/UUID"
+        submitter_id:
+            type: string
 
 to_one:
   anyOf:
@@ -48,82 +48,88 @@ datetime:
     - type: 'null'
 
 file_name:
-  type: string
-  description: "file name"
+    type: string
+    description: "file name"
 file_size:
-  type: number
-  description: "the size of the data file (object) in bytes"
+    type: number
+    description: "the size of the data file (object) in bytes"
 file_format:
-  type: string
-  description: "the size of the data file (object) in bytes"
+    type: string
+    description: "the size of the data file (object) in bytes"
 md5sum:
-  type: string
-  description: "the MD5 hash of the data file (object)"
+    type: string
+    description: "the MD5 hash of the data file (object)"
+
+release_state:
+    description: "Release statesd of an entity"
+    default: unreleased
+    enum:
+      - unreleased
+      - released
+      - redacted
 
 data_bundle_state:
-  description: "states of a data bundle"
-  default: submitted
-  enum:
-    - submitted
-    - validated
-    - error
-    - released
-    - suppressed
-    - redacted
+    description: "states of a data bundle"
+    default: submitted
+    enum:
+        - submitted
+        - validated
+        - error
+        - released
+        - suppressed
+        - redacted
 
 data_file_error_type:
-  description: "type of error"
-  enum:
-    - file_size
-    - file_format
-    - md5sum
+    description: "type of error"
+    enum:
+        - file_size
+        - file_format
+        - md5sum
         
 state:
-  description: "states of entity nodes"
-  default: submitted
-  downloadable:
-    - uploaded
-    - md5summed
-    - validating
-    - validated
-    - error
-    - invalid
-    - released
-  public:
-    - live
-  oneOf:
-    - enum:
-      - submitted
-      - uploading
-      - uploaded
-      - md5summing
-      - md5summed
-      - validating
-      - validated
-      - error
-      - invalid
-      - released
-      - suppressed
-      - redacted
-      - live
-    - enum:
-      - validated
-      - submitted
-      - released
+    description: "states of all entities"
+    default: submitted
+    downloadable:
+        - uploaded
+        - md5summed
+        - validating
+        - validated
+        - error
+        - invalid
+        - released
+    public:
+        - live
+    oneOf:
+        - enum:
+            - uploading
+            - uploaded
+            - md5summing
+            - md5summed
+            - validating
+            - error
+            - invalid
+            - suppressed
+            - redacted
+            - live
+        - enum:
+            - validated
+            - submitted
+            - released
+
 file_state:
-  descripiton: "states of data file nodes"
-  enum:
-    - submitted
-    - uploading
-    - uploaded
-    - uploading
-    - validated
-    - validating
-    - released
-    - error
+    description: "states for data file objects"
+    enum:
+        - registered
+        - uploading
+        - uploaded
+        - validating
+        - validated
+        - submitted
+        - released
+        - error
 
 qc_metrics_state:
-  enum:
-    - FAIL
-    - PASS
-    - WARN
+    enum:
+        - FAIL
+        - PASS
+        - WARN

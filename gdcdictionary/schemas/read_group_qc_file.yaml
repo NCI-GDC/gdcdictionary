@@ -17,8 +17,6 @@ systemProperties:
   - updated_datetime
   - file_state
   - state
-  - release_state
-  - release_state_datetime
 
 links:
   - name: qc_metrics_bundles
