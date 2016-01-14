@@ -43,7 +43,7 @@ properties:
   project_id:
     type: string
   state:
-    $ref: "_definitions.yaml#/data_file_state"
+    $ref: "_definitions.yaml#/state"
   type:
     enum: [ "external_alignment" ]
   submitter_id:

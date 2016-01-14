@@ -15,6 +15,7 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
+  - file_state
   - state
   - error_type
   - release_state
@@ -45,8 +46,10 @@ properties:
     $ref: "_definitions.yaml#/UUID"
   project_id:
     type: string
+  file_state:
+    $ref: "_definitions.yaml#/file_state"
   state:
-    $ref: "_definitions.yaml#/data_file_state"
+    $ref: "_definitions.yaml#/state"
   error_type:
     $ref: "_definitions.yaml#/data_file_error_type"
   type:

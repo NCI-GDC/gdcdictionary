@@ -18,6 +18,7 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
+  - file_state
   - state
   - error_type
   - release_state
@@ -160,8 +161,10 @@ properties:
   md5sum:
     type: string
     description: "The MD5 hash of this file"
+  file_state:
+    $ref: "_definitions.yaml#/file_state"
   state:
-    $ref: "_definitions.yaml#/data_file_state"
+    $ref: "_definitions.yaml#/state"
   error_type:
     $ref: "_definitions.yaml#/data_file_error_type"
   state_comment:

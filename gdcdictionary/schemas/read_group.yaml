@@ -54,7 +54,7 @@ properties:
     - string
     - "null"
   state:
-    $ref: "_definitions.yaml#/data_bundle_state"
+    $ref: "_definitions.yaml#/state"
   type:
     enum: [ "read_group" ]
   experiment_name:

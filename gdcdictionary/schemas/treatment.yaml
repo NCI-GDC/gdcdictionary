@@ -14,6 +14,7 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - state
   - created_datetime
   - updated_datetime
   - release_state
@@ -42,6 +43,9 @@ properties:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
+
+  state:
+    $ref: "_definitions.yaml#/state"
 
   submitter_id:
     type:

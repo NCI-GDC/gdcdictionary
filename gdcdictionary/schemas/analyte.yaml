@@ -16,6 +16,7 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - state
   - created_datetime
   - updated_datetime
   - release_state
@@ -49,6 +50,8 @@ properties:
     description: >
       A liquid bulk product produced according to specified lab protocols,
       from a sample or portion, intended for further analysis. (GDC)
+  state:
+    $ref: "_definitons.yaml#/state"
   submitter_id:
     type:
       - string
