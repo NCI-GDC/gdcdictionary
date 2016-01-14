@@ -60,14 +60,6 @@ md5sum:
   type: string
   description: "the MD5 hash of the data file (object)"
 
-release_state:
-  description: "Release statesd of an entity"
-  default: unreleased
-  enum:
-    - unreleased
-    - released
-    - redacted
-
 data_bundle_state:
   description: "states of a data bundle"
   default: submitted
