@@ -138,7 +138,7 @@ class SchemaTest(unittest.TestCase):
             if key in self.definitions and 'default' in self.definitions[key]:
                 doc[key] = self.definitions[key]['default']
             if key == 'state':
-                doc[key] = self.definitions['data_file_state']['default']
+                doc[key] = self.definitions['state']['default']
 
 if __name__ == '__main__':
 
