@@ -100,7 +100,7 @@ state:
     public:
         - live
     oneOf:
-        - enum:
+        - enum: #This list covers legacy data
             - uploading
             - uploaded
             - md5summing
@@ -111,7 +111,7 @@ state:
             - suppressed
             - redacted
             - live
-        - enum:
+        - enum: #This list covers all future data 1/15/16
             - validated
             - submitted
             - released
