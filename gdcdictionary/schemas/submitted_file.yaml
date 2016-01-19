@@ -1,0 +1,92 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "submitted_file"
+title: Submitted File
+type: object
+namespace: http://gdc.nci.nih.gov
+category: data_file
+program: '*'
+project: '*'
+description: TBD
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - error_type
+
+links:
+  - name: read_group_bundles
+    backref: submitted_files
+    label: part_of
+    target_type: read_group
+    multiplicity: many_to_one #what about one_to_many?
+    required: false
+  - name: clinical_data_bundles
+    backref: submitted_files
+    label: part_of #not sure
+    target_type: clinical_data_bundle
+    multiplicity: many_to_one
+    required: false
+  - name: biospecimen_data_bundles
+    backref: submitted_files
+    label: part_of
+    target_type: biospecimen_data_bundle
+    multiplicity: one_to_one #not sure
+    required: false
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - md5sum
+  - state
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  type:
+    type: string
+  id:
+    description: "TODO"
+    $ref: "_definitions.yaml#/UUID"
+    systemAlias: node_id
+  submitter_id:
+    description: "TOREVIEW: the file id assigned by the submitter"
+    type: string
+  file_name:
+    description: "TOREVIEW: the file (object) name"
+    type: string
+  file_size:
+    description: "the size file (object) in bytes"
+    type: number
+  md5sum:
+    description: "The MD5 hash of this file"
+    type: string
+  state:
+    $ref: "_definitions.yaml#/data_file_state"
+  error_type:
+    $ref: "_definitions.yaml#/data_file_error_type"
+  state_commend:
+    description: >
+      TOREVIEW: optional comment about why the file is in the
+      current state, mainly for invalid state.
+    type: string
+  read_group_bundles:
+    $ref: "_definitions.yaml#/to_one"
+  clinical_data_bundles:
+    $ref: "_definitions.yaml#/to_one"
+  biospecimen_data_bundles:
+    $ref: "_definitions.yaml#/to_one"
+  project_id:
+    type: string
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
