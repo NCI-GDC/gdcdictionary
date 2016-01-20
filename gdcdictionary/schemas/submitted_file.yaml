@@ -22,21 +22,21 @@ systemProperties:
 links:
   - name: read_group_bundles
     backref: submitted_files
-    label: part_of
+    label: data_from 
     target_type: read_group
-    multiplicity: many_to_one #what about one_to_many?
+    multiplicity: many_to_many
     required: false
   - name: clinical_data_bundles
     backref: submitted_files
-    label: part_of #not sure
+    label: data_from
     target_type: clinical_data_bundle
     multiplicity: many_to_one
     required: false
   - name: biospecimen_data_bundles
     backref: submitted_files
-    label: part_of
+    label: data_from
     target_type: biospecimen_data_bundle
-    multiplicity: one_to_one #not sure
+    multiplicity: many_to_one 
     required: false
 
 required:
