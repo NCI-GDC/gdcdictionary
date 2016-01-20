@@ -19,7 +19,8 @@ systemProperties:
   - state
   - error_type
 
-links:
+links: []
+
 
 required:
   - submitter_id
