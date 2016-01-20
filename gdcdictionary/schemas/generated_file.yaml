@@ -20,12 +20,6 @@ systemProperties:
   - error_type
 
 links:
-  - name: read_group_bundles
-    backref: generated_files
-    label: part_of
-    target_type: read_group
-    multiplicity: many_to_one #do we need a second link here for one_to_many?
-    required: false
 
 required:
   - submitter_id
@@ -68,8 +62,6 @@ properties:
       TOREVIEW: optional comment about why the file is in the
       current state, mainly for invalid state.
     type: string
-  read_group_bundles:
-    $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string
   created_datetime:
