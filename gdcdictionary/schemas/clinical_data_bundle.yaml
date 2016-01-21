@@ -1,6 +1,6 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: clinical_data_bundle.yaml
+id: clinical_data_bundle
 title: Clinical Data Bundle
 type: object
 description: TBD

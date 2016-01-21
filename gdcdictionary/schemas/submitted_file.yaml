@@ -20,7 +20,7 @@ systemProperties:
   - error_type
 
 links:
-  - name: read_group_bundles
+  - name: read_groups
     backref: submitted_files
     label: data_from 
     target_type: read_group
@@ -78,7 +78,7 @@ properties:
       TOREVIEW: optional comment about why the file is in the
       current state, mainly for invalid state.
     type: string
-  read_group_bundles:
+  read_groups:
     $ref: "_definitions.yaml#/to_one"
   clinical_data_bundles:
     $ref: "_definitions.yaml#/to_one"
