@@ -118,6 +118,7 @@ state:
 
 file_state:
     description: "states for data file objects"
+    default: registered
     enum:
         - registered
         - uploading
