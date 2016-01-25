@@ -16,8 +16,6 @@ systemProperties:
   - created_datetime
   - updated_datetime
   - state
-  - release_state
-  - release_state_datetime
 
 links:
   - name: aliquots
@@ -54,7 +52,7 @@ properties:
     - string
     - "null"
   state:
-    $ref: "_definitions.yaml#/data_bundle_state"
+    $ref: "_definitions.yaml#/state"
   type:
     enum: [ "read_group" ]
   experiment_name:
@@ -198,10 +196,4 @@ properties:
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
-
-  # ======== Release state ========
-  release_state:
-    $ref: "_definitions.yaml#/release_state"
-  release_state_datetime:
     $ref: "_definitions.yaml#/datetime"

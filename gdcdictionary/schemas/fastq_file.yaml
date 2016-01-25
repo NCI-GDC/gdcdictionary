@@ -15,10 +15,9 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
+  - file_state
   - state
   - error_type
-  - release_state
-  - release_state_datetime
 
 links:
   - name: read_group_bundles
@@ -41,7 +40,9 @@ properties:
   project_id:
     type: string
   state:
-    $ref: "_definitions.yaml#/data_file_state"
+    $ref: "_definitions.yaml#/state"
+  file_state:
+    $ref: "_definitions.yaml#/file_state"
   error_type:
     $ref: "_definitions.yaml#/data_file_error_type"
   type:
@@ -61,10 +62,4 @@ properties:
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
-
-  # ======== Release state ========
-  release_state:
-    $ref: "_definitions.yaml#/release_state"
-  release_state_datetime:
     $ref: "_definitions.yaml#/datetime"
