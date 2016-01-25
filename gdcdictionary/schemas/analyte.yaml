@@ -11,6 +11,7 @@ description: >
   A liquid bulk product produced according to specified lab protocols,
   from a sample or analyte, intended for further analysis.
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:

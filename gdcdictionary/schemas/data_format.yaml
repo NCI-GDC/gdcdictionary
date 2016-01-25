@@ -9,6 +9,7 @@ program: '*'
 project: '*'
 description: "TODO"
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:

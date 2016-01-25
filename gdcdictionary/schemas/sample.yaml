@@ -16,6 +16,7 @@ description: >
   organs, body fluids, embryos, and body excretory products.
   (GDC Synonym of NCIt C70699)
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:

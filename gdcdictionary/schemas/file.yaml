@@ -11,6 +11,7 @@ description: >
   A set of related records (either written or electronic) kept
   together. (NCIt C42883)
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:
