@@ -21,6 +21,12 @@ systemProperties:
   - error_type
 
 links:
+  - name: aliquots
+    backref: files
+    label: data_from
+    target_type: aliquot
+    multiplicity: many_to_many
+    required: false
   - name: read_groups
     backref: submitted_files
     label: data_from 
@@ -54,7 +60,7 @@ uniqueKeys:
 
 properties:
   type:
-    type: string
+    enum: [ "submitted_file" ] 
   id:
     description: "TODO"
     $ref: "_definitions.yaml#/UUID"
@@ -85,8 +91,10 @@ properties:
       TOREVIEW: optional comment about why the file is in the
       current state, mainly for invalid state.
     type: string
+  aliquots:
+    $ref: "_definitions.yaml#/to_many"
   read_groups:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_many"
   clinical_data_bundles:
     $ref: "_definitions.yaml#/to_one"
   biospecimen_data_bundles:

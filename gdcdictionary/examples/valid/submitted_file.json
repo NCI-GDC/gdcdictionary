@@ -1,8 +1,24 @@
 {
-    "type": "file",
-    "submitter_id": "CGCI-file-2",
-    "file_size": 5962718282,
-    "file_name": "C500.CGCI-file1.bam",
-    "md5sum": "35b39360cc41a7b635980159aef265ba",
-    "state_comment": ""
+    "type": "submitted_file",
+    "id": "90c8415c-73ac-4a02-b6d5-2c336d5a2639",
+    "submitter_id": "C317.TCGA-AB-2899-03A-01W-0733-08.4.bam",
+    "file_name": "C317.TCGA-AB-2899-03A-01W-0733-08.4.bam",
+    "file_format": "BAM",
+    "file_size": 33437548859,
+    "md5sum": "5e940eb2e50a5d1449c54e6afe2ab783",
+    "read_groups": [
+	{
+            "submitter_id": "205DDABXX100804.3.C317.TCGA-AB-2899-03A-01W-0733-08.4.bam"
+	}
+    ],
+    "read_groups": [
+	{
+            "submitter_id": "207FNABXX100716.3.C317.TCGA-AB-2899-03A-01W-0733-08.4.bam"
+	}
+    ],
+    "aliquots": [
+	{
+	    "submitter_id": "2c9108eb-c59a-4227-b650-56e61b3aa0ea"
+	}
+    ]
 }

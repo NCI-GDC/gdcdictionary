@@ -37,7 +37,7 @@ uniqueKeys:
 
 properties:
   type:
-    type: string
+    enum: [ "generated_file" ]
   id:
     description: "TODO"
     $ref: "_definitions.yaml#/UUID"
