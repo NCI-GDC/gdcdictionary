@@ -42,7 +42,7 @@ properties:
   submitter_id:
     type: string
   state:
-    $ref: "_definitions.yaml#/data_bundle_state"
+    $ref: "_definitions.yaml#/state"
   type:
     enum: [ "clinical_data_bundle" ]
   cases:

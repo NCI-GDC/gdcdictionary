@@ -17,6 +17,7 @@ systemProperties:
   - created_datetime
   - updated_datetime
   - state
+  - file_state
   - error_type
 
 links:
@@ -45,6 +46,7 @@ required:
   - file_size
   - md5sum
   - state
+  - file_state
 
 uniqueKeys:
   - [ id ]
@@ -73,7 +75,9 @@ properties:
     description: "The MD5 hash of this file"
     type: string
   state:
-    $ref: "_definitions.yaml#/data_file_state"
+    $ref: "_definitions.yaml#/state"
+  file_state:
+    $ref: "_definitions.yaml#/file_state"
   error_type:
     $ref: "_definitions.yaml#/data_file_error_type"
   state_comment:
