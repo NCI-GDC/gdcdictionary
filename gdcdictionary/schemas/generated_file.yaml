@@ -51,6 +51,9 @@ properties:
   file_size:
     description: "the size file (object) in bytes"
     type: number
+  file_format:
+    description: "the format of the file"
+    type: string
   md5sum:
     description: "The MD5 hash of this file"
     type: string

@@ -66,6 +66,9 @@ properties:
   file_size:
     description: "the size file (object) in bytes"
     type: number
+  file_format:
+    description: "format of the file"
+    type: string
   md5sum:
     description: "The MD5 hash of this file"
     type: string
@@ -73,7 +76,7 @@ properties:
     $ref: "_definitions.yaml#/data_file_state"
   error_type:
     $ref: "_definitions.yaml#/data_file_error_type"
-  state_commend:
+  state_comment:
     description: >
       TOREVIEW: optional comment about why the file is in the
       current state, mainly for invalid state.
