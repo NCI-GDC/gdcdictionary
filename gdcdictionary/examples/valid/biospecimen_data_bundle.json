@@ -1,0 +1,9 @@
+{
+    "type": "biospecimen_data_bundle",
+    "submitter_id": "biospecimen_data_bundle_a",
+    "cases": [
+        {
+            "submitter_id": "BLGSP-71-06-00005-01A-21R"
+        }
+    ]
+}

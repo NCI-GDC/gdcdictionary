@@ -48,9 +48,7 @@ properties:
   project_id:
     type: string
   submitter_id:
-    type:
-    - string
-    - "null"
+    type: string
   state:
     $ref: "_definitions.yaml#/state"
   type:

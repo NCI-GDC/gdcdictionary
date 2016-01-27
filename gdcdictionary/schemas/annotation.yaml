@@ -72,18 +72,6 @@ links:
         target_type: read_group
         multiplicity: many_to_many
         required: false
-      - name: bam_files
-        label: annotates
-        backref: annotations
-        target_type: bam_file
-        multiplicity: many_to_many
-        required: false
-      - name: fastq_files
-        label: annotates
-        backref: annotations
-        target_type: fastq_file
-        multiplicity: many_to_many
-        required: false
 required:
   - submitter_id
   - category
@@ -176,10 +164,6 @@ properties:
   files:
     $ref: "_definitions.yaml#/to_many"
   read_groups:
-    $ref: "_definitions.yaml#/to_many"
-  bam_files:
-    $ref: "_definitions.yaml#/to_many"
-  fastq_files:
     $ref: "_definitions.yaml#/to_many"
   project_id:
     type: string
