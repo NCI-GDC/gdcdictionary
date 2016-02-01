@@ -85,7 +85,7 @@ data_file_error_type:
         - file_size
         - file_format
         - md5sum
-        
+
 state:
     description: "states of all entities"
     default: submitted
@@ -126,6 +126,8 @@ file_state:
         - validating
         - validated
         - submitted
+        - processing
+        - processed
         - released
         - error
 
