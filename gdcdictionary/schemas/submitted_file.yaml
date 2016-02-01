@@ -21,6 +21,7 @@ systemProperties:
   - error_type
 
 links:
+<<<<<<< HEAD
   - name: aliquots
     backref: submitted_files
     label: data_from
@@ -45,6 +46,7 @@ links:
     target_type: biospecimen_data_bundle
     multiplicity: many_to_one 
     required: false
+<<<<<<< HEAD
   - name: pathology_data_bundles
     backref: submitted_files
     target_type: pathology_data_bundle
@@ -57,6 +59,31 @@ links:
     label: data_from
     multiplicity: many_to_one
     required: false
+=======
+=======
+  - exclusive: true
+    required: true
+    subgroup:
+      - name: read_groups
+        backref: submitted_files
+        label: data_from 
+        target_type: read_group
+        multiplicity: many_to_many
+        required: false
+      - name: clinical_data_bundles
+        backref: submitted_files
+        label: data_from
+        target_type: clinical_data_bundle
+        multiplicity: many_to_one
+        required: false
+      - name: biospecimen_data_bundles
+        backref: submitted_files
+        label: data_from
+        target_type: biospecimen_data_bundle
+        multiplicity: many_to_one 
+	required: false
+>>>>>>> e8cf36b... feat(analysis): added analysis node
+>>>>>>> 22581d1... feat(analysis): added analysis node
 
 required:
   - submitter_id
