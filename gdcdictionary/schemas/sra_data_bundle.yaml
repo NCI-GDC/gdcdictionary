@@ -1,0 +1,40 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: sra_data_bundle
+title: SRA Data Bundle
+type: object
+description: TBD
+additionalProperties: false
+category: data_bundle
+validators: null
+project: '*'
+program: '*'
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links: []
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  type:
+    enum: [ "sra_data_bundle" ]
+  id:
+    $ref: "_definitions.yaml#/UUID"
+  project_id:
+    type: string
+  submitter_id:
+    type: string
+  state:
+    $ref: "_definitions.yaml#/state"
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"

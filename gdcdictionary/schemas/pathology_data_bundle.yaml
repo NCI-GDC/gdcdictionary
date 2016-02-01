@@ -1,0 +1,44 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: pathology_data_bundle
+title: Pathology Data Bundle
+type: object
+description: TODO
+additionalProperties: false
+category: data_bundle
+validators: null
+project: '*'
+program: '*'
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links: []
+
+required:
+  - type
+  - submitted_id
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  type:
+    enum: [ "pathology_data_bundle" ]
+  id:
+    $ref: "_definitions.yaml#/UUID"
+  project_id:
+    type: string
+  submitter_id:
+    type: string
+  state:
+    $ref: "_definitions.yaml#/state"
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
