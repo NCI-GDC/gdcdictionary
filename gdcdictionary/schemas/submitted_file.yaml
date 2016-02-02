@@ -22,7 +22,7 @@ systemProperties:
 
 links:
   - name: aliquots
-    backref: files
+    backref: submitted_files
     label: data_from
     target_type: aliquot
     multiplicity: many_to_many
