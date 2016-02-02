@@ -88,7 +88,7 @@ data_file_error_type:
 
 state:
     description: "states of all entities"
-    default: submitted
+    default: validated
     downloadable:
         - uploaded
         - md5summed
