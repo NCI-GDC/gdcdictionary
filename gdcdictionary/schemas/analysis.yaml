@@ -26,13 +26,13 @@ links:
         backref: analyses
         label: performed_on
         target_type: submitted_file
-        multiplicity: one_to_one
+        multiplicity: one_to_many
         required: false
       - name: generated_files
         backref: analyses
         label: performed_on
         target_type: generated_file
-        multiplicity: one_to_one
+        multiplicity: one_to_many
         required: false
 
 required:
