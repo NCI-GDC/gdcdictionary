@@ -17,7 +17,13 @@ systemProperties:
   - created_datetime
   - updated_datetime
 
-links: []
+links:
+  - name: aliquots
+    label: derived_from
+    target_type: aliquot
+    multiplicity: many_to_one
+    required: true 
+    back_ref: sra_data_bundles
 
 uniqueKeys:
   - [ id ]
@@ -34,6 +40,8 @@ properties:
     type: string
   state:
     $ref: "_definitions.yaml#/state"
+  aliquots:
+    $ref: "_definitions.yaml#/to_one"
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:

@@ -17,7 +17,13 @@ systemProperties:
   - created_datetime
   - updated_datetime
 
-links: []
+links:
+  - name: cases
+    label: derived_from
+    target_type: case
+    multiplicity: many_to_one
+    required: true
+    backref: pathology_data_bundles 
 
 required:
   - type
@@ -38,6 +44,8 @@ properties:
     type: string
   state:
     $ref: "_definitions.yaml#/state"
+  cases:
+    $ref: "_definitions.yaml#/to_one"
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
