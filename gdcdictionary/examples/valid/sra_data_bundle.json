@@ -1,0 +1,9 @@
+{
+    "type": "sra_data_bundle",
+    "submitter_id": "data bundle for sra xmls",
+    "aliquots": [
+        {
+            "submitter_id": "ok"
+        }
+    ]
+}

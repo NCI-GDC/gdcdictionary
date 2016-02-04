@@ -27,7 +27,7 @@ links:
 
 required:
   - type
-  - submitted_id
+  - submitter_id
 
 uniqueKeys:
   - [ id ]
