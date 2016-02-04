@@ -19,6 +19,7 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
+  - state
 
 links:
   - exclusive: false
@@ -92,6 +93,8 @@ properties:
     type:
       - string
       - "null"
+  state:
+    $ref: "_definitions.yaml#/state"
   category:
     type: string
     enum:
