@@ -22,8 +22,8 @@ links:
     label: derived_from
     target_type: aliquot
     multiplicity: many_to_one
-    required: true 
-    back_ref: sra_data_bundles
+    required: true
+    backref: sra_data_bundles
 
 uniqueKeys:
   - [ id ]
