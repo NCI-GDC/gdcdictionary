@@ -57,13 +57,6 @@ links:
     label: data_from
     multiplicity: many_to_one
     required: false
-  - name: sra_data_bundles
-    backref: submitted_files
-    target_type: sra_data_bundle
-    label: data_from
-    multiplicity: many_to_one
-    required: false
-
 
 required:
   - submitter_id
@@ -121,8 +114,6 @@ properties:
   pathology_data_bundles:
     $ref: "_definitions.yaml#/to_one"
   slide_data_bundles:
-    $ref: "_definitions.yaml#/to_one"
-  sra_data_bundles:
     $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string
