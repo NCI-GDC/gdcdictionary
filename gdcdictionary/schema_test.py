@@ -106,7 +106,8 @@ class SchemaTest(unittest.TestCase):
     def test_valid_files(self):
         for path in glob.glob(os.path.join(DATA_DIR, 'valid', '*.json')):
             print "Validating {}".format(path)
-            doc = json.load(open(path,'r'))
+            doc = json.load(open(path, 'r'))
+            print(doc)
             if type(doc) == dict:
                 self.add_system_props(doc)
                 validate_entity(doc, self.dictionary.schema, self.resolver)
@@ -120,7 +121,7 @@ class SchemaTest(unittest.TestCase):
     def test_invalid_files(self):
         for path in glob.glob(os.path.join(DATA_DIR, 'invalid', '*.json')):
             print "Validating {}".format(path)
-            doc = json.load(open(path,'r'))
+            doc = json.load(open(path, 'r'))
             if type(doc) == dict:
                 self.add_system_props(doc)
                 with self.assertRaises(ValidationError):
@@ -132,20 +133,24 @@ class SchemaTest(unittest.TestCase):
                         validate_entity(entity, self.dictionary.schema, self.resolver)
             else:
                 raise Exception("Invalid json")
+
     def add_system_props(self, doc):
         schema = self.dictionary.schema[doc['type']]
         for key in schema['systemProperties']:
-            if key in self.definitions and 'default' in self.definitions[key]:
+            use_def_default = (
+                '$ref' in schema['properties'][key] and
+                key in self.definitions and
+                'default' in self.definitions[key]
+            )
+            if use_def_default:
                 doc[key] = self.definitions[key]['default']
-            if key == 'state':
-                doc[key] = self.definitions['state']['default']
 
 if __name__ == '__main__':
 
     ####################
     # Setup
     ####################
-    
+
 
     parser = argparse.ArgumentParser(description='Validate JSON')
     parser.add_argument('jsonfiles', metavar='file',
@@ -177,7 +182,7 @@ if __name__ == '__main__':
                     for entity in doc:
                         validate_entity(entity, dictionary.schema, resolver)
                 else:
-                    raise ValidationError("Invalid json") 
+                    raise ValidationError("Invalid json")
             except ValidationError as e:
                 print("Invalid as expected.")
                 pass

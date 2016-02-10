@@ -14,6 +14,8 @@ validators: null
 
 systemProperties:
   - id
+  - state
+  - released
 
 required:
   - code
@@ -53,11 +55,6 @@ properties:
     description: "TOREVIEW: display name for the project"
   dbgap_accession_number:
     type: string
-  state:
-    type: string
-    description: >
-      Whether the project is accepting new submissions (active)
-      or closed (legacy).
   primary_site:
     type: string
     description: "TOREVIEW: primary site for the project"
@@ -71,3 +68,56 @@ properties:
     $ref: "_definitions.yaml#/to_one"
     description: >
       Indicates that the project is logically part of the indicated project.
+
+  state:
+    description: |
+      The possible states a project can be in.  All but `open` are
+      equivalent to some type of locked state.
+    default: open
+    enum:
+        # open: the only state users can perform 'upload' actions
+        # possible actions in `open`:
+        #   - upload (no state change)
+        #   - review -> review
+        #   - release (project.released -> true)
+        - open
+
+        # locked: admin has locked project for review
+        # possible actions in `locked`:
+        #   - open -> open
+        #   - submit -> submitted
+        #   - release (project.released -> true)
+        - review
+
+        # submitted: An admin has submitted project, it is locked against
+        #            upload.
+        # possible actions in `submitted`:
+        #   - process -> processing
+        #   - release (project.released -> true)
+        - submitted
+
+        # processing: The system is processing data in the project and
+        #             is locked against upload and submission
+        #   - (system transition to open)
+        #   - release (project.released -> true)
+        - processing
+
+
+        # closed: The closed state is introduced to replace the
+        #         ``legacy`` state and means that no further action
+        #         can be taken on the project
+        #   - (system transition to open)
+        #   - release (project.released -> true)
+        - closed
+
+        # DEPRECATED(2016-03-01): synonymous with closed. included for
+        #                         backwards compatibility
+        - legacy
+
+
+  released:
+    description: |
+      To release a project is to tell the GDC to include all submitted
+      entities in the next GDC index.
+    default: false
+    type: boolean
