@@ -54,9 +54,6 @@ properties:
     type:
       - string
       - "null"
-  days_to_index:
-    type:
-      - integer
   projects:
     $ref: "_definitions.yaml#/to_one"
   tissue_source_sites:
