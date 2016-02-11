@@ -45,6 +45,18 @@ links:
     target_type: biospecimen_data_bundle
     multiplicity: many_to_one 
     required: false
+  - name: pathology_data_bundles
+    backref: submitted_files
+    target_type: pathology_data_bundle
+    label: data_from
+    multiplicity: many_to_one
+    required: false
+  - name: slide_data_bundles
+    backref: submitted_files
+    target_type: slide_data_bundle
+    label: data_from
+    multiplicity: many_to_one
+    required: false
 
 required:
   - submitter_id
@@ -98,6 +110,10 @@ properties:
   clinical_data_bundles:
     $ref: "_definitions.yaml#/to_one"
   biospecimen_data_bundles:
+    $ref: "_definitions.yaml#/to_one"
+  pathology_data_bundles:
+    $ref: "_definitions.yaml#/to_one"
+  slide_data_bundles:
     $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string

@@ -1,0 +1,52 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: slide_data_bundle
+title: Slide Data Bundle
+type: object
+description: TBD
+additionalProperties: false
+category: data_bundle
+validators: null
+project: '*'
+program: '*'
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: portions
+    backref: slide_data_bundles
+    label: derived_from
+    target_type: portion
+    multiplicity: many_to_many
+    required: true 
+
+required:
+  - type
+  - submitter_id
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  type:
+    enum: [ "slide_data_bundle" ]
+  id:
+    $ref: "_definitions.yaml#/UUID"
+  project_id:
+    type: string
+  submitter_id:
+    type: string
+  state:
+    $ref: "_definitions.yaml#/state"
+  portions:
+    $ref: "_definitions.yaml#/to_many"
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
