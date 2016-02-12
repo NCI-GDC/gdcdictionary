@@ -380,7 +380,7 @@ therapeutic_agent:
             - Metastasis
             - Recurrence
             - Other
-    description: "'Any natural, endogenously-derived, synthetic or semi-synthetic compound with pharmacologic activity. A pharmacologic substance has one or more specific mechanism of action(s) through which it exerts one or more effect(s) on the human or animal body. They can be used to potentially prevent, diagnose, treat or relieve symptoms of a disease. Formulation specific agents and some combination agents are also classified as pharmacologic substances. String value is the agent name as found in NCI Thesaurus, which indexes approved drugs via RxNorm as well as all experimental drugs."
+    description: "Any natural, endogenously-derived, synthetic or semi-synthetic compound with pharmacologic activity. A pharmacologic substance has one or more specific mechanism of action(s) through which it exerts one or more effect(s) on the human or animal body. They can be used to potentially prevent, diagnose, treat or relieve symptoms of a disease. Formulation specific agents and some combination agents are also classified as pharmacologic substances. String value is the agent name as found in NCI Thesaurus, which indexes approved drugs via RxNorm as well as all experimental drugs."
     termDef:
         term: Therapeutic Agent
         source: NCIt
