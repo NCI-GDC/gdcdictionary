@@ -28,7 +28,7 @@ links:
         target_type: submitted_file
         multiplicity: one_to_many
         required: false
-      - name: generated_files
+      - name: generated_file_inputs
         backref: analyses
         label: performed_on
         target_type: generated_file
@@ -65,8 +65,10 @@ properties:
     $ref: "_definitions.yaml#/state"
   submitted_files:
     $ref: "_definitions.yaml#/to_one"
-  generated_files:
+  generated_file_inputs:
     $ref: "_definitions.yaml#/to_one"
+  project_id:
+    type: string
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:

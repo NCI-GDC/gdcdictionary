@@ -21,8 +21,8 @@ systemProperties:
   - error_type
 
 links:
-  - name: analyses
-    backref: generated_files
+  - name: completed_analyses
+    backref: generated_file_outputs
     label: derived_from
     target_type: analysis
     multiplicity: many_to_one
@@ -77,7 +77,7 @@ properties:
     type: string
   project_id:
     type: string
-  analyses:
+  completed_analyses:
     $ref: "_definitions.yaml#/to_one"
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
