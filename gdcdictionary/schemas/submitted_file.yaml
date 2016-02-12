@@ -21,10 +21,6 @@ systemProperties:
   - error_type
 
 links:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8dd9f61... feat(submitted): rollback submitted file change
   - name: aliquots
     backref: submitted_files
     label: data_from
@@ -49,8 +45,6 @@ links:
     target_type: biospecimen_data_bundle
     multiplicity: many_to_one 
     required: false
-<<<<<<< HEAD
-<<<<<<< HEAD
   - name: pathology_data_bundles
     backref: submitted_files
     target_type: pathology_data_bundle
@@ -63,33 +57,6 @@ links:
     label: data_from
     multiplicity: many_to_one
     required: false
-=======
-=======
-  - exclusive: true
-    required: true
-    subgroup:
-      - name: read_groups
-        backref: submitted_files
-        label: data_from 
-        target_type: read_group
-        multiplicity: many_to_many
-        required: false
-      - name: clinical_data_bundles
-        backref: submitted_files
-        label: data_from
-        target_type: clinical_data_bundle
-        multiplicity: many_to_one
-        required: false
-      - name: biospecimen_data_bundles
-        backref: submitted_files
-        label: data_from
-        target_type: biospecimen_data_bundle
-        multiplicity: many_to_one 
-	required: false
->>>>>>> e8cf36b... feat(analysis): added analysis node
->>>>>>> 22581d1... feat(analysis): added analysis node
-=======
->>>>>>> 8dd9f61... feat(submitted): rollback submitted file change
 
 required:
   - submitter_id
@@ -144,13 +111,10 @@ properties:
     $ref: "_definitions.yaml#/to_one"
   biospecimen_data_bundles:
     $ref: "_definitions.yaml#/to_one"
-<<<<<<< HEAD
   pathology_data_bundles:
     $ref: "_definitions.yaml#/to_one"
   slide_data_bundles:
     $ref: "_definitions.yaml#/to_one"
-=======
->>>>>>> 8dd9f61... feat(submitted): rollback submitted file change
   project_id:
     type: string
   created_datetime:
