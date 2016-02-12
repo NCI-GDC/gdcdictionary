@@ -1,0 +1,525 @@
+age_at_diagnosis:
+    type: number
+    minimum: 0
+    maximum: 90  # should this be capped at 90?
+    description: "The numerical response indicating the age of a person, expressed in years, when they were diagnosed with a disease or disorder."
+    termDef:
+        term: Person Diagnosis Age Value
+        source: caDSR
+        cde_id: 4828691
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4828691&version=1.0"
+
+alcohol_history:
+    type:
+        enum:
+            - "Don't Know/Not Sure"
+            - "No"
+            - "Yes"
+    description: "A response to a question that asks whether the participant has consumed at least 12 drinks of any kind of alcoholic beverage in their lifetime."
+    termDef:
+        term: Alcohol Lifetime History Indicator
+        source: caDSR
+        cde_id: 2201918
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2201918&version=1.0"
+
+
+alcohol_intensity:
+    type:
+        enum:
+            - None
+            - Not Evaluated
+            - Daily Drinker
+            - Occasional Drinker
+            - Social Drinker
+            - Weekly Drinker
+    description: "Category to describe the patient's current level of alcohol use as self-reported by the patient."
+    termDef:
+        term: Alcohol Lifetime History Indicator
+        source: caDSR
+        cde_id: 3457767
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3457767&version=1.0"
+
+
+bmi:
+    type: number
+    description: "The body mass divided by the square of the body height expressed in units of kg/m2."
+    termDef:
+        term: Body Mass Index (BMI)
+        source: caDSR
+        cde_id: 4973892
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4973892&version=1.0"
+
+
+cigarettes_per_day:
+    type: number
+    description:
+    termDef:
+        term: Smoking Use Average Number
+        source: caDSR
+        cde_id: 2001716
+        cde_version: 4.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2001716&version=4.0"
+
+
+
+classification_of_tumor:
+    type:
+        enum:
+            - Primary
+            - Metastasis
+            - Recurrence
+            - Other
+    description: "The point in clinical disease progression at which a tumor sample was taken."
+    termDef:
+        term: Classification of Tumor
+        source: null
+        cde_id: null
+        cde_version: null
+        term_url: null
+
+
+days_to_birth:
+    type: number
+    maximum: 0
+    description: "Time interval from a person's date of birth to the date of initial pathologic diagnosis, represented as a calculated negative number of days."
+    termDef:
+        term: : Days to Birth
+        source: caDSR
+        cde_id: 3008233
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008233&version=1.0"
+
+
+days_to_last_followup:
+    type: number
+    minimum: 0
+    description: "Time interval from the date of last followup to the date of initial pathologic diagnosis, represented as a calculated number of days."
+    termDef:
+        term: Days to Last Followup
+        source: caDSR
+        cde_id: 3008273
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008273&version=1.0"
+
+
+days_to_last_known_disease_status:
+    type: number
+    description: "Time interval from the date of last followup to the date of initial pathologic diagnosis, represented as a calculated number of days."
+    termDef:
+        term: Days to Last Known Disease Status
+        source: caDSR
+        cde_id: 8008273
+        cde_version: 1.0
+        # the following url seems broken, copied from old yaml, not sure what's wrong
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=8008273&version=1.0"
+
+
+
+days_to_recurrence:
+    type: number
+    description: "Time interval from the date of disease recurrence to the date of initial pathologic diagnosis, represented as a calculated number of days."
+    termDef:
+        term: Days to Recurrence
+        source: caDSR
+        cde_id: 3008295
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008295&version=1.0"
+
+
+days_to_treatment:
+    type: number
+    description: "Number of days from date of initial pathologic diagnosis that treatment began."
+    termDef:
+        term: Days to Treatment Start
+        source: null
+        cde_id: null
+        cde_version: null
+        term_url: null
+
+
+ethnicity:
+    type:
+        enum:
+            - Hispanic or latino
+            - Not hispanic or latino
+            - Not reported
+            - Not allowed to collect
+    description: "The point in clinical disease progression at which a tumor sample was taken."
+    termDef:
+        term: Ethnicity
+        source: caDSR
+        cde_id: 2192213
+        cde_version: 1.1
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2192213&version=1.1"
+
+
+
+gender:
+    type:
+        enum:
+            - Female
+            - Male
+            - Unknown
+            - Unspecified
+    description: "Text designations that identify gender. Gender is described as the assemblage of properties that distinguish people on the basis of their societal roles."
+    termDef:
+        term: Gender
+        source: caDSR
+        cde_id: 2200604
+        cde_version: 3.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2200604&version=3.0"
+
+
+height:
+    type: number
+    description: "The height of the patient in centimeters."
+    termDef:
+        term: Patient Height Measurement
+        source: caDSR
+        cde_id: 649
+        cde_version: 4.1
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=649&version=4.1"
+
+
+morphology:
+    type: string
+    description: "The third edition of the International Classification of Diseases for Oncology, published in 2000, used principally in tumor and cancer registries for coding the site (topography) and the histology (morphology) of neoplasms._The study of the structure of the cells and their arrangement to constitute tissues and, finally, the association among these to form organs. In pathology, the microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by employing various cytochemical and immunocytochemical stains._A system of numbered categories for representation of data."
+    termDef:
+        term: ICD-O-3 Histology Code
+        source: caDSR
+        cde_id: 3226275
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3226275&version=1.0"
+
+
+last_known_disease_status:
+    type:
+        enum:
+            - Biochemical evidence of disease without structural correlate
+            - Distant met recurrence/progression
+            - Loco-regional recurrence/progression
+            - Tumor free
+            - Unknown tumor status
+            - With tumor
+    description: "The state or condition of an individual's neoplasm at a particular point in time."
+    termDef:
+        term: Last Known_Disease_satus
+        source: caDSR
+        cde_id: 2759550
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2759550&version=1.0"
+
+
+
+primary_diagnosis:
+    type: string
+    description: "The investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation. The term primary indicates that this is the intial diagnosis made or provided in the context of the associated study. [IDC-10 codes](http://apps.who.int/classifications/icd10/browse/2015/en)"
+    termDef:
+        term: Diagnosis
+        source: NCIt
+        cde_id: C15220
+        cde_version: null
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C15220"
+
+
+prior_malignancy:
+    type:
+        enum:
+            - Yes
+            - No
+            - Unknown
+    description: "Text term to describe the patient's history of prior cancer diagnosis and the spatial location of any previous cancer occurrence. GDC: allow yes/no/unknown as accepted values."
+    termDef:
+        term: Prior Cancer Diagnosis Occurrence Description Text
+        source: caDSR
+        cde_id: 3382736
+        cde_version: 2.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3382736&version=2.0"
+
+
+progression_or_recurrence:
+    type:
+        enum:
+            - Yes
+            - No
+            - Unevaluable
+            - Unknown
+    description: "Text indicator to represent the worsening or progression, recurrence of the cancer condition under investigation since the time of last contact with the subject."
+    termDef:
+        term: Progression or Recurrence
+        source: caDSR
+        cde_id: 3830556
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3830556&version=1.0"
+
+
+race:
+    type:
+        enum:
+            - White
+            - American Indian or Alaska Native
+            - Black or African American
+            - Asian
+            - Native Hawaiian or other Pacific Islander
+            - Other
+            - Not reported
+            - Not allowed to collect
+    description: "An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution."
+    termDef:
+        term: Race
+        source: NCIt
+        cde_id: C17049
+        cde_version: null
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C17049"
+
+
+relationship_type:
+    type:
+        enum:
+            - Parent
+            - Mother
+            - Father
+            - Child
+            - Son
+            - Daughter
+            - Sibling
+            - Brother
+            - Sister
+            - None
+            - Don't Know
+    description: "The subgroup that describes the state of connectedness between members of the unit of society organized around kinship ties."
+    termDef:
+        term: Relationship Type
+        source: caDSR
+        cde_id: 2690165
+        cde_version: 2.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2690165&version=2.0"
+
+
+relative_with_cancer_history:
+    type:
+        enum:
+            - Yes
+            - No
+            - Unknown
+    description: "Indicator to signify whether or not an individual's biological relative has been diagnosed with another type of cancer. (GDC definition: Indicator to signify whether or not an individual's biological relative has been diagnosed with any type of cancer.)"
+    termDef:
+        term: "Other Cancer Biological Relative History Indicator"
+        source: caDSR
+        cde_id: 3901752
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3901752&version=1.0"
+
+
+religion:
+    type:
+        enum:
+            - Roman Catholic
+            - Protestant Christian
+            - Judaism
+            - Muslim
+            - None
+            - Not Allowed To Collect
+            - Other
+    description: "The category of a person's institutionalized system grounded in belief and reverence for a supernatural power or powers regarded as creator and governor of the universe."
+    termDef:
+        term: Religion
+        source: caDSR
+        cde_id: 3800115
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3800115&version=1.0"
+
+
+site_of_resection_or_biopsy:
+    type: string
+    description: "Term to represent the name of the organ resected that was contiguous to the primary disease site. GDC: Also includes liquid biopsy material. Codes as provided at [ICD-O-3 Online](http://codes.iarc.fr/topography)"
+    termDef:
+        term: Contiguous Organ Excision Performed Anatomic Site
+        source: caDSR
+        cde_id: 3162811
+        cde_version: 2.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3162811&version=2.0"
+
+
+smoking_history:
+    type:
+        enum:
+            - "Lifelong Non-Smoker"
+            - "Current Smoker"
+            - "Current Reformed Smoker for > 15 yrs"
+            - "Current Refomed Smoker for < or = 15 yrs"
+            - "Current Reformed Smoker Duration Not Specified"
+    description: "Category describing current smoking status and smoking history as self-reported by a patient."
+    termDef:
+        term: Smoking History
+        source: caDSR
+        cde_id: 2181650
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2181650&version=1.0"
+
+
+smoking_intensity:
+    type: number
+    description: "Numeric computed value to represent lifetime tobacco exposure defined as number of cigarettes smoked per day x number of years smoked divided by 20"
+    termDef:
+        term: Smoking Intensity
+        source: caDSR
+        cde_id: 2955385
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2955385&version=1.0"
+
+
+therapeutic_agent:
+    type:
+        enum:
+            - Primary
+            - Metastasis
+            - Recurrence
+            - Other
+    description: "'Any natural, endogenously-derived, synthetic or semi-synthetic compound with pharmacologic activity. A pharmacologic substance has one or more specific mechanism of action(s) through which it exerts one or more effect(s) on the human or animal body. They can be used to potentially prevent, diagnose, treat or relieve symptoms of a disease. Formulation specific agents and some combination agents are also classified as pharmacologic substances. String value is the agent name as found in NCI Thesaurus, which indexes approved drugs via RxNorm as well as all experimental drugs."
+    termDef:
+        term: Therapeutic Agent
+        source: NCIt
+        cde_id: C1909
+        cde_version: null
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C1909"
+
+
+tissue_or_organ_of_origin:
+    type: string
+    description: "The third edition of the International Classification of Diseases for Oncology, published in 2000, used principally in tumor and cancer registries for coding the site (topography) and the histology (morphology) of neoplasms. The description of an anatomical region or of a body part. Named locations of, or within, the body. A system of numbered categories for representation of data. Codes as provided at [ICD-O-3 Online](http://codes.iarc.fr/topography)"
+    termDef:
+        term:  Tissue or Organ of Origin
+        source: caDSR
+        cde_id: 3226281
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3226281&version=1.0"
+
+
+treatment_intent_type:
+    type:
+        enum:
+            - Adjuvant
+            - Cancer control
+            - Cure
+            - Initial
+            - Other
+            - Palliative
+            - Prevention
+            - Primary
+            - Progression
+            - Progression after initial
+            - Recurrence
+    description: "Text term to identify the reason for the administration of a treatment regimen."
+    termDef:
+        term: Treatment Regimen Intent Type
+        source: caDSR
+        cde_id: 2793511
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2793511&version=1.0"
+
+
+treatment_or_therapy:
+    type:
+        enum:
+            - Yes
+            - No
+            - Not Applicable
+            - Unknown
+    description: "A yes/no/unknown/not applicable indicator related to the administration of therapeutic agents received before the body specimen was collected."
+    termDef:
+        term: Treatment or Therapy
+        source: caDSR
+        cde_id: 4231463
+        cde_version: 1.0
+        term_url: null
+
+
+tumor_grade:
+    type: string
+    description: "The degree of abnormality of cancer cells, a measure of differentiation, the extent to which cancer cells are similar in appearance and function to healthy cells of the same tissue type. The degree of differentiation often relates to the clinical behavior of the particular tumor. Based on the microscopic findings, tumor grade is commonly described by one of four degrees of severity. Histopathologic grade of a tumor may be used to plan treatment and estimate the future course, outcome, and overall prognosis of disease. Certain types of cancers, such as soft tissue sarcoma, primary brain tumors, lymphomas, and breast have special grading systems. The accepted values for tumor_grade depend on the tumor site, type, and accepted grading system. These items should accompany the tumor_grade value as associated metadata."
+    termDef:
+        term: Histologic Grade
+        source: NCIt
+        cde_id: C18000
+        cde_version: null
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C18000"
+
+
+tumor_stage:
+    type: string
+    description: "The extent of a cancer in the body. Staging is usually based on the size of the tumor, whether lymph nodes contain cancer, and whether the cancer has spread from the original site to other parts of the body. The accepted values for tumor_stage depend on the tumor site, type, and accepted staging system. These items should accompany the tumor_stage value as associated metadata."
+    termDef:
+        term: Tumor Stage
+        source: NCIt
+        cde_id: C16899
+        cde_version: null
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C16899"
+
+
+vital_status:
+    type:
+        enum:
+            - Alive
+            - Dead
+            - Lost to follow-up
+            - Unknown
+    description: "The state or condition of being living or deceased; also includes the case where the vital status is unknown."
+    termDef:
+        term: Vital Status
+        source: NCIt
+        cde_id: C25717
+        cde_version: null
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C25717"
+
+
+weight:
+    type: number
+    description: "The weight of the patient measured in kilograms."
+    termDef:
+        term: Patient Weight Measurement
+        source: caDSR
+        cde_id: 651
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=651&version=1.0"
+
+
+year_of_birth:
+    type: number
+    description: "Numeric value to represent the calendar year in which an individual was born."
+    termDef:
+        term: Year Birth Date Number
+        source: caDSR
+        cde_id: 2896954
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2896954&version=1.0"
+
+
+year_of_death:
+    type: number
+    description: "Numeric value to represent the year of the death of an individual."
+    termDef:
+        term: Year Death Number
+        source: caDSR
+        cde_id: 2897030
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2897030&version=1.0"
+
+
+years_smoked:
+    anyOf:
+        - type: number
+        - type: "null"
+
+    description: "Numeric value (or unknown) to represent the number of years a person has been smoking."
+    termDef:
+        term: Person Smoking Duration Year Count
+        source: caDSR
+        cde_id: 3137957
+        cde_version: 1.0
+        term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3137957&version=1.0"
+
