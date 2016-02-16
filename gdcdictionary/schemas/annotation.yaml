@@ -127,6 +127,7 @@ properties:
       - Inadvertently shipped
       - Item does not meet study protocol
       - Item flagged DNU
+      - Item Flagged Low Quality
       - Item in special subset
       - Item is noncanonical
       - Item may not meet study protocol

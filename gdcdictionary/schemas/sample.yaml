@@ -95,6 +95,7 @@ properties:
       - Primary Xenograft Tissue
       - Cell Line Derived Xenograft Tissue
       - Fibroblasts from Bone Marrow Normal
+      - FFPE Scrolls
     description: "TODO"
   sample_type_id:
     type: string
