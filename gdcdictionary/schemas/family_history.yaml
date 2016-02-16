@@ -50,31 +50,20 @@ properties:
       - "null"
 
   relative_with_cancer_history:
-    term: TBD
-    enum:
-      - yes
-      - no
-      - unknown
+    $ref: "_terms.yaml#/relative_with_cancer_history"
 
   relationship_type:
-    term: TBD
-    type: string
+    $ref: "_terms.yaml#/relationship_type"
 
   relationship_gender:
-    term: TBD
-    enum:
-      - female
-      - male
-      - unknown
-      - unspecified
+    $ref: "_terms.yaml#/gender"
 
-  relationship_age_at_diagnosis:
+  relationship_age_at_diagnosis:  # should this be expressed in years or days?
     term: TBD
     type: number
 
   relationship_primary_diagnosis:
-    term: TBD
-    type: string
+    $ref: "_terms.yaml#/primary_diagnosis"
 
   cases:
     $ref: "_definitions.yaml#/to_one"

@@ -1,8 +1,10 @@
-age_at_diagnosis:
+age_at_diagnosis:  # this is measured in years, do we need another term for age_at_diagnosis_in_days?
     type: number
     minimum: 0
     maximum: 90  # should this be capped at 90?
-    description: "The numerical response indicating the age of a person, expressed in years, when they were diagnosed with a disease or disorder."
+    description: >
+        The numerical response indicating the age of a person, expressed in years,
+        when they were diagnosed with a disease or disorder.
     termDef:
         term: Person Diagnosis Age Value
         source: caDSR
@@ -10,13 +12,16 @@ age_at_diagnosis:
         cde_version: 1.0
         term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4828691&version=1.0"
 
+
 alcohol_history:
     type:
         enum:
             - "Don't Know/Not Sure"
             - "No"
             - "Yes"
-    description: "A response to a question that asks whether the participant has consumed at least 12 drinks of any kind of alcoholic beverage in their lifetime."
+    description: >
+        A response to a question that asks whether the participant has consumed at least
+        12 drinks of any kind of alcoholic beverage in their lifetime.
     termDef:
         term: Alcohol Lifetime History Indicator
         source: caDSR
@@ -34,7 +39,8 @@ alcohol_intensity:
             - Occasional Drinker
             - Social Drinker
             - Weekly Drinker
-    description: "Category to describe the patient's current level of alcohol use as self-reported by the patient."
+    description: >
+        Category to describe the patient's current level of alcohol use as self-reported by the patient.
     termDef:
         term: Alcohol Lifetime History Indicator
         source: caDSR
@@ -56,14 +62,13 @@ bmi:
 
 cigarettes_per_day:
     type: number
-    description:
+    description: "The average number of cigarettes smoked per day."
     termDef:
         term: Smoking Use Average Number
         source: caDSR
         cde_id: 2001716
         cde_version: 4.0
         term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2001716&version=4.0"
-
 
 
 classification_of_tumor:
@@ -85,7 +90,9 @@ classification_of_tumor:
 days_to_birth:
     type: number
     maximum: 0
-    description: "Time interval from a person's date of birth to the date of initial pathologic diagnosis, represented as a calculated negative number of days."
+    description: >
+        Time interval from a person's date of birth to the date of initial pathologic diagnosis,
+        represented as a calculated negative number of days.
     termDef:
         term: : Days to Birth
         source: caDSR
@@ -97,7 +104,9 @@ days_to_birth:
 days_to_last_followup:
     type: number
     minimum: 0
-    description: "Time interval from the date of last followup to the date of initial pathologic diagnosis, represented as a calculated number of days."
+    description: >
+        Time interval from the date of last followup to the date of initial pathologic diagnosis,
+        represented as a calculated number of days.
     termDef:
         term: Days to Last Followup
         source: caDSR
@@ -108,7 +117,9 @@ days_to_last_followup:
 
 days_to_last_known_disease_status:
     type: number
-    description: "Time interval from the date of last followup to the date of initial pathologic diagnosis, represented as a calculated number of days."
+    description: >
+        Time interval from the date of last followup to the date of initial pathologic diagnosis,
+        represented as a calculated number of days.
     termDef:
         term: Days to Last Known Disease Status
         source: caDSR
@@ -118,10 +129,11 @@ days_to_last_known_disease_status:
         term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=8008273&version=1.0"
 
 
-
 days_to_recurrence:
     type: number
-    description: "Time interval from the date of disease recurrence to the date of initial pathologic diagnosis, represented as a calculated number of days."
+    description: >
+        Time interval from the date of disease recurrence to the date of initial pathologic diagnosis,
+        represented as a calculated number of days.
     termDef:
         term: Days to Recurrence
         source: caDSR
@@ -157,7 +169,6 @@ ethnicity:
         term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2192213&version=1.1"
 
 
-
 gender:
     type:
         enum:
@@ -165,7 +176,9 @@ gender:
             - Male
             - Unknown
             - Unspecified
-    description: "Text designations that identify gender. Gender is described as the assemblage of properties that distinguish people on the basis of their societal roles."
+    description: >
+        Text designations that identify gender. Gender is described as the assemblage of properties that
+        distinguish people on the basis of their societal roles.
     termDef:
         term: Gender
         source: caDSR
@@ -187,7 +200,14 @@ height:
 
 morphology:
     type: string
-    description: "The third edition of the International Classification of Diseases for Oncology, published in 2000, used principally in tumor and cancer registries for coding the site (topography) and the histology (morphology) of neoplasms._The study of the structure of the cells and their arrangement to constitute tissues and, finally, the association among these to form organs. In pathology, the microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by employing various cytochemical and immunocytochemical stains._A system of numbered categories for representation of data."
+    description: >
+        The third edition of the International Classification of Diseases for Oncology, published in 2000
+        used principally in tumor and cancer registries for coding the site (topography) and the histology
+        (morphology) of neoplasms._The study of the structure of the cells and their arrangement to
+        constitute tissues and, finally, the association among these to form organs. In pathology, the
+        microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by
+        employing various cytochemical and immunocytochemical stains._A system of numbered categories for
+        representation of data.
     termDef:
         term: ICD-O-3 Histology Code
         source: caDSR
@@ -214,10 +234,14 @@ last_known_disease_status:
         term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2759550&version=1.0"
 
 
-
 primary_diagnosis:
     type: string
-    description: "The investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation. The term primary indicates that this is the intial diagnosis made or provided in the context of the associated study. [IDC-10 codes](http://apps.who.int/classifications/icd10/browse/2015/en)"
+    description: >
+        The investigation, analysis and recognition of the presence and nature of disease,
+        condition, or injury from expressed signs and symptoms; also, the scientific determination
+        of any kind; the concise results of such an investigation. The term primary indicates that
+        this is the intial diagnosis made or provided in the context of the associated study.
+        [IDC-10 codes](http://apps.who.int/classifications/icd10/browse/2015/en)
     termDef:
         term: Diagnosis
         source: NCIt
@@ -232,7 +256,9 @@ prior_malignancy:
             - Yes
             - No
             - Unknown
-    description: "Text term to describe the patient's history of prior cancer diagnosis and the spatial location of any previous cancer occurrence. GDC: allow yes/no/unknown as accepted values."
+    description: >
+        Text term to describe the patient's history of prior cancer diagnosis and the spatial location
+        of any previous cancer occurrence. GDC: allow yes/no/unknown as accepted values.
     termDef:
         term: Prior Cancer Diagnosis Occurrence Description Text
         source: caDSR
@@ -248,7 +274,9 @@ progression_or_recurrence:
             - No
             - Unevaluable
             - Unknown
-    description: "Text indicator to represent the worsening or progression, recurrence of the cancer condition under investigation since the time of last contact with the subject."
+    description: >
+        Text indicator to represent the worsening or progression, recurrence of the cancer condition under
+        investigation since the time of last contact with the subject.
     termDef:
         term: Progression or Recurrence
         source: caDSR
@@ -268,7 +296,11 @@ race:
             - Other
             - Not reported
             - Not allowed to collect
-    description: "An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution."
+    description: >
+        An arbitrary classification of a taxonomic group that is a division of a species. It usually arises
+        as a consequence of geographical isolation within a species and is characterized by shared heredity,
+        physical attributes and behavior, and in the case of humans, by common history, nationality, or
+        geographic distribution.
     termDef:
         term: Race
         source: NCIt
@@ -291,7 +323,9 @@ relationship_type:
             - Sister
             - None
             - Don't Know
-    description: "The subgroup that describes the state of connectedness between members of the unit of society organized around kinship ties."
+    description: >
+        The subgroup that describes the state of connectedness between members of the unit of society
+        organized around kinship ties.
     termDef:
         term: Relationship Type
         source: caDSR
@@ -306,7 +340,10 @@ relative_with_cancer_history:
             - Yes
             - No
             - Unknown
-    description: "Indicator to signify whether or not an individual's biological relative has been diagnosed with another type of cancer. (GDC definition: Indicator to signify whether or not an individual's biological relative has been diagnosed with any type of cancer.)"
+    description: >
+        Indicator to signify whether or not an individual's biological relative has been diagnosed with another
+        type of cancer. (GDC definition: Indicator to signify whether or not an individual's biological relative
+            has been diagnosed with any type of cancer.)
     termDef:
         term: "Other Cancer Biological Relative History Indicator"
         source: caDSR
@@ -315,7 +352,7 @@ relative_with_cancer_history:
         term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3901752&version=1.0"
 
 
-religion:
+religion:  # this term is currently not used in any schema
     type:
         enum:
             - Roman Catholic
@@ -325,7 +362,9 @@ religion:
             - None
             - Not Allowed To Collect
             - Other
-    description: "The category of a person's institutionalized system grounded in belief and reverence for a supernatural power or powers regarded as creator and governor of the universe."
+    description: >
+        The category of a person's institutionalized system grounded in belief and reverence for a
+        supernatural power or powers regarded as creator and governor of the universe.
     termDef:
         term: Religion
         source: caDSR
@@ -336,7 +375,10 @@ religion:
 
 site_of_resection_or_biopsy:
     type: string
-    description: "Term to represent the name of the organ resected that was contiguous to the primary disease site. GDC: Also includes liquid biopsy material. Codes as provided at [ICD-O-3 Online](http://codes.iarc.fr/topography)"
+    description: >
+        Term to represent the name of the organ resected that was contiguous to the primary disease site.
+        GDC: Also includes liquid biopsy material. Codes as provided at
+        [ICD-O-3 Online](http://codes.iarc.fr/topography)
     termDef:
         term: Contiguous Organ Excision Performed Anatomic Site
         source: caDSR
@@ -353,7 +395,8 @@ smoking_history:
             - "Current Reformed Smoker for > 15 yrs"
             - "Current Refomed Smoker for < or = 15 yrs"
             - "Current Reformed Smoker Duration Not Specified"
-    description: "Category describing current smoking status and smoking history as self-reported by a patient."
+    description: >
+        Category describing current smoking status and smoking history as self-reported by a patient.
     termDef:
         term: Smoking History
         source: caDSR
@@ -364,7 +407,9 @@ smoking_history:
 
 smoking_intensity:
     type: number
-    description: "Numeric computed value to represent lifetime tobacco exposure defined as number of cigarettes smoked per day x number of years smoked divided by 20"
+    description: >
+        Numeric computed value to represent lifetime tobacco exposure defined as number of cigarettes smoked
+        per day x number of years smoked divided by 20
     termDef:
         term: Smoking Intensity
         source: caDSR
@@ -374,13 +419,16 @@ smoking_intensity:
 
 
 therapeutic_agent:
-    type:
-        enum:
-            - Primary
-            - Metastasis
-            - Recurrence
-            - Other
-    description: "Any natural, endogenously-derived, synthetic or semi-synthetic compound with pharmacologic activity. A pharmacologic substance has one or more specific mechanism of action(s) through which it exerts one or more effect(s) on the human or animal body. They can be used to potentially prevent, diagnose, treat or relieve symptoms of a disease. Formulation specific agents and some combination agents are also classified as pharmacologic substances. String value is the agent name as found in NCI Thesaurus, which indexes approved drugs via RxNorm as well as all experimental drugs."
+    type: string
+    description: >
+        Any natural, endogenously-derived, synthetic or semi-synthetic compound with pharmacologic activity.
+        A pharmacologic substance has one or more specific mechanism of action(s) through which it exerts
+        one or more effect(s) on the human or animal body. They can be used to potentially prevent, diagnose,
+        treat or relieve symptoms of a disease. Formulation specific agents and some combination agents are
+        also classified as pharmacologic substances. String value is the agent name as found in NCI Thesaurus,
+        which indexes approved drugs via RxNorm as well as all experimental drugs. String value is the agent
+        name as found in NCI Thesaurus, which indexes approved drugs via RxNorm as well as all experimental
+        drugs.
     termDef:
         term: Therapeutic Agent
         source: NCIt
@@ -391,7 +439,12 @@ therapeutic_agent:
 
 tissue_or_organ_of_origin:
     type: string
-    description: "The third edition of the International Classification of Diseases for Oncology, published in 2000, used principally in tumor and cancer registries for coding the site (topography) and the histology (morphology) of neoplasms. The description of an anatomical region or of a body part. Named locations of, or within, the body. A system of numbered categories for representation of data. Codes as provided at [ICD-O-3 Online](http://codes.iarc.fr/topography)"
+    description: >
+        The third edition of the International Classification of Diseases for Oncology, published in 2000,
+        used principally in tumor and cancer registries for coding the site (topography) and the histology
+        (morphology) of neoplasms. The description of an anatomical region or of a body part. Named locations
+        of, or within, the body. A system of numbered categories for representation of data. Codes as
+        provided at [ICD-O-3 Online](http://codes.iarc.fr/topography)
     termDef:
         term:  Tissue or Organ of Origin
         source: caDSR
@@ -430,7 +483,9 @@ treatment_or_therapy:
             - No
             - Not Applicable
             - Unknown
-    description: "A yes/no/unknown/not applicable indicator related to the administration of therapeutic agents received before the body specimen was collected."
+    description: >
+        A yes/no/unknown/not applicable indicator related to the administration of therapeutic agents
+        received before the body specimen was collected.
     termDef:
         term: Treatment or Therapy
         source: caDSR
@@ -441,7 +496,16 @@ treatment_or_therapy:
 
 tumor_grade:
     type: string
-    description: "The degree of abnormality of cancer cells, a measure of differentiation, the extent to which cancer cells are similar in appearance and function to healthy cells of the same tissue type. The degree of differentiation often relates to the clinical behavior of the particular tumor. Based on the microscopic findings, tumor grade is commonly described by one of four degrees of severity. Histopathologic grade of a tumor may be used to plan treatment and estimate the future course, outcome, and overall prognosis of disease. Certain types of cancers, such as soft tissue sarcoma, primary brain tumors, lymphomas, and breast have special grading systems. The accepted values for tumor_grade depend on the tumor site, type, and accepted grading system. These items should accompany the tumor_grade value as associated metadata."
+    description: >
+        The degree of abnormality of cancer cells, a measure of differentiation, the extent to which cancer
+        cells are similar in appearance and function to healthy cells of the same tissue type. The degree of
+        differentiation often relates to the clinical behavior of the particular tumor. Based on the
+        microscopic findings, tumor grade is commonly described by one of four degrees of severity.
+        Histopathologic grade of a tumor may be used to plan treatment and estimate the future course,
+        outcome, and overall prognosis of disease. Certain types of cancers, such as soft tissue sarcoma,
+        primary brain tumors, lymphomas, and breast have special grading systems. The accepted values for
+        tumor_grade depend on the tumor site, type, and accepted grading system. These items should
+        accompany the tumor_grade value as associated metadata.
     termDef:
         term: Histologic Grade
         source: NCIt
@@ -452,7 +516,11 @@ tumor_grade:
 
 tumor_stage:
     type: string
-    description: "The extent of a cancer in the body. Staging is usually based on the size of the tumor, whether lymph nodes contain cancer, and whether the cancer has spread from the original site to other parts of the body. The accepted values for tumor_stage depend on the tumor site, type, and accepted staging system. These items should accompany the tumor_stage value as associated metadata."
+    description: >
+        The extent of a cancer in the body. Staging is usually based on the size of the tumor, whether lymph
+        nodes contain cancer, and whether the cancer has spread from the original site to other parts of the
+        body. The accepted values for tumor_stage depend on the tumor site, type, and accepted staging
+        system. These items should accompany the tumor_stage value as associated metadata.
     termDef:
         term: Tumor Stage
         source: NCIt
@@ -468,7 +536,9 @@ vital_status:
             - Dead
             - Lost to follow-up
             - Unknown
-    description: "The state or condition of being living or deceased; also includes the case where the vital status is unknown."
+    description: >
+        The state or condition of being living or deceased; also includes the case where the vital
+        status is unknown.
     termDef:
         term: Vital Status
         source: NCIt

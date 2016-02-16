@@ -57,40 +57,19 @@ properties:
       - "null"
 
   gender:
-    term: TBD
-    enum:
-      - female
-      - male
-      - unknown
-      - unspecified
+    $ref: "_terms.yaml#/gender"
 
   race:
-    term: TBD
-    enum:
-      - white
-      - american indian or alaska native
-      - black or african american
-      - asian
-      - native hawaiian or other pacific islander
-      - other
-      - not reported
-      - not allowed to collect
+    $ref: "_terms.yaml#/race"
 
   ethnicity:
-    term: TDB
-    enum:
-      - hispanic or latino
-      - not hispanic or latino
-      - not reported
-      - not allowed to collect
+    $ref: "_terms.yaml#/ethnicity"
 
   year_of_birth:
-    term: TBD
-    type: number
+    $ref: "_terms.yaml#/year_of_birth"
 
   year_of_death:
-    term: TBD
-    type: number
+    $ref: "_terms.yaml#/year_of_death"
 
   cases:
     $ref: "_definitions.yaml#/to_one"
