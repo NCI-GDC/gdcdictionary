@@ -82,7 +82,7 @@ links:
       - name: biospecimen_data_bundles
         label: annotates
         backref: annotations
-        target_type: biospecimen_data_bundles
+        target_type: biospecimen_data_bundle
         multiplicity: many_to_many
         required: false
       - name: read_groups
