@@ -1,3 +1,5 @@
+id: _terms
+
 age_at_diagnosis:  # this is measured in years, do we need another term for age_at_diagnosis_in_days?
     type: number
     minimum: 0
