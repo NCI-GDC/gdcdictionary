@@ -21,42 +21,39 @@ systemProperties:
   - error_type
 
 links:
-  - name: aliquots
-    backref: submitted_files
-    label: data_from
-    target_type: aliquot
-    multiplicity: many_to_many
-    required: false
-  - name: read_groups
-    backref: submitted_files
-    label: data_from 
-    target_type: read_group
-    multiplicity: many_to_many
-    required: false
-  - name: clinical_data_bundles
-    backref: submitted_files
-    label: data_from
-    target_type: clinical_data_bundle
-    multiplicity: many_to_one
-    required: false
-  - name: biospecimen_data_bundles
-    backref: submitted_files
-    label: data_from
-    target_type: biospecimen_data_bundle
-    multiplicity: many_to_one 
-    required: false
-  - name: pathology_data_bundles
-    backref: submitted_files
-    target_type: pathology_data_bundle
-    label: data_from
-    multiplicity: many_to_one
-    required: false
-  - name: slide_data_bundles
-    backref: submitted_files
-    target_type: slide_data_bundle
-    label: data_from
-    multiplicity: many_to_one
-    required: false
+  - exclusive: true
+    required: true
+    subgroup:
+      - name: read_groups
+        backref: submitted_files
+        label: data_from 
+        target_type: read_group
+        multiplicity: many_to_many
+        required: false
+      - name: clinical_data_bundles
+        backref: submitted_files
+        label: data_from
+        target_type: clinical_data_bundle
+        multiplicity: many_to_one
+        required: false
+      - name: biospecimen_data_bundles
+        backref: submitted_files
+        label: data_from
+        target_type: biospecimen_data_bundle
+        multiplicity: many_to_one 
+        required: false
+      - name: pathology_data_bundles
+        backref: submitted_files
+        target_type: pathology_data_bundle
+        label: data_from
+        multiplicity: many_to_one
+        required: false
+      - name: slide_data_bundles
+        backref: submitted_files
+        target_type: slide_data_bundle
+        label: data_from
+        multiplicity: many_to_one
+        required: false
 
 required:
   - submitter_id
@@ -103,8 +100,6 @@ properties:
       TOREVIEW: optional comment about why the file is in the
       current state, mainly for invalid state.
     type: string
-  aliquots:
-    $ref: "_definitions.yaml#/to_many"
   read_groups:
     $ref: "_definitions.yaml#/to_many"
   clinical_data_bundles:

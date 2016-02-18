@@ -15,10 +15,5 @@
 	{
             "submitter_id": "207FNABXX100716.3.C317.TCGA-AB-2899-03A-01W-0733-08.4.bam"
 	}
-    ],
-    "aliquots": [
-	{
-	    "submitter_id": "2c9108eb-c59a-4227-b650-56e61b3aa0ea"
-	}
     ]
 }
