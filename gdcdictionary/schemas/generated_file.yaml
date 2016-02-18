@@ -20,8 +20,13 @@ systemProperties:
   - file_state
   - error_type
 
-links: []
-
+links:
+  - name: completed_analyses
+    backref: generated_file_outputs
+    label: derived_from
+    target_type: analysis
+    multiplicity: many_to_one
+    required: false
 
 required:
   - submitter_id
@@ -72,6 +77,8 @@ properties:
     type: string
   project_id:
     type: string
+  completed_analyses:
+    $ref: "_definitions.yaml#/to_one"
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
