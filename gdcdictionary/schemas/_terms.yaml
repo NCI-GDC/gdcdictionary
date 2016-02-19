@@ -96,7 +96,7 @@ days_to_birth:
         Time interval from a person's date of birth to the date of initial pathologic diagnosis,
         represented as a calculated negative number of days.
     termDef:
-        term: : Days to Birth
+        term: Days to Birth
         source: caDSR
         cde_id: 3008233
         cde_version: 1.0
