@@ -26,7 +26,7 @@ links:
     subgroup:
       - name: read_groups
         backref: submitted_files
-        label: data_from 
+        label: data_from
         target_type: read_group
         multiplicity: many_to_many
         required: false
@@ -40,7 +40,7 @@ links:
         backref: submitted_files
         label: data_from
         target_type: biospecimen_data_bundle
-        multiplicity: many_to_one 
+        multiplicity: many_to_one
         required: false
       - name: pathology_data_bundles
         backref: submitted_files
@@ -48,9 +48,9 @@ links:
         label: data_from
         multiplicity: many_to_one
         required: false
-      - name: slide_data_bundles
+      - name: slides
         backref: submitted_files
-        target_type: slide_data_bundle
+        target_type: slide
         label: data_from
         multiplicity: many_to_one
         required: false
@@ -69,7 +69,7 @@ uniqueKeys:
 
 properties:
   type:
-    enum: [ "submitted_file" ] 
+    enum: [ "submitted_file" ]
   id:
     description: "TODO"
     $ref: "_definitions.yaml#/UUID"
@@ -108,7 +108,7 @@ properties:
     $ref: "_definitions.yaml#/to_one"
   pathology_data_bundles:
     $ref: "_definitions.yaml#/to_one"
-  slide_data_bundles:
+  slides:
     $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string

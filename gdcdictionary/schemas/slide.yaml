@@ -4,7 +4,7 @@ id: "slide"
 title: Slide
 type: object
 namespace: http://gdc.nci.nih.gov
-category: TBD
+category: data_bundle
 program: '*'
 project: '*'
 description: >
