@@ -34,7 +34,7 @@ uniqueKeys:
 
 properties:
   type:
-    type: string
+    enum: [ "exposure" ]
 
   id:
     $ref: "_definitions.yaml#/UUID"
@@ -50,32 +50,31 @@ properties:
       - "null"
 
   years_smoked:
-    term: TBD
-    type: number
+    $ref: "_terms.yaml#/years_smoked"
 
-  cigarettes_per_day:
-    term: TBD
-    type: number
+  smoking_history:
+    $ref: "_terms.yaml#/smoking_history"
+
+  smoking_intensity:
+    $ref: "_terms.yaml#/smoking_intensity"
+
+  cigarettes_per_day:  # is this redundant with smoking_intensity?
+    $ref: "_terms.yaml#/cigarettes_per_day"
 
   alcohol_history:
-    term: TBD
-    type: string
+    $ref: "_terms.yaml#/alcohol_history"
 
   alcohol_intensity:
-    term: TBD
-    type: string
+    $ref: "_terms.yaml#/alcohol_intensity"
 
   height:
-    term: TBD
-    type: number
+    $ref: "_terms.yaml#/height"
 
   weight:
-    term: TBD
-    type: number
+    $ref: "_terms.yaml#/weight"
 
   bmi:
-    term: TBD
-    type: number
+    $ref: "_terms.yaml#/bmi"
 
   cases:
     $ref: "_definitions.yaml#/to_one"

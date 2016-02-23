@@ -51,23 +51,16 @@ properties:
       - "null"
 
   treatment_or_therapy:
-    term: TBD
-    enum:
-      - yes
-      - no
-      - unknown
+    $ref: "_terms.yaml#/treatment_or_therapy"
 
   treatment_intent_type:
-    term: TBD
-    type: string
+    $ref: "_terms.yaml#/treatment_intent_type"
 
-  therapeutic_agents:
-    term: TBD
-    type: string
+  therapeutic_agent:
+    $ref: "_terms.yaml#/therapeutic_agent"
 
   days_to_treatment:
-    term: TBD
-    type: number
+    $ref: "_terms.yaml#/days_to_treatment"
 
   diagnoses:
     $ref: "_definitions.yaml#/to_one"

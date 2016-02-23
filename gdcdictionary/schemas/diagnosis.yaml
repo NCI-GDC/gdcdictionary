@@ -65,88 +65,55 @@ properties:
       - string
       - "null"
 
-  age_at_diagnosis:
+  age_at_diagnosis:  # should this be expressed in years or days?
     type: number
     term: TBD
 
   days_to_birth:
-    type: number
-    term: TBD
+    $ref: "_terms.yaml#/days_to_birth"
 
   days_to_last_follow_up:
-    type: number
-    term: TBD
+    $ref: "_terms.yaml#/days_to_last_follow_up"
 
   vital_status:
-    enum:
-      - alive
-      - dead
-      - lost to follow-up
-      - unknown
-    term: TBD
+    $ref: "_terms.yaml#/vital_status"
 
   primary_diagnosis:
-    type: string
-    term: TBD
+    $ref: "_terms.yaml#/vital_status"
 
   morphology:
-    type: string
-    term: TBD
+    $ref: "_terms.yaml#/morphology"
 
   tissue_or_organ_of_origin:
-    type: string
-    term: TBD
+    $ref: "_terms.yaml#/tissue_or_organ_of_origin"
 
   site_of_resection_or_biopsy:
-    type: string
-    term: TBD
+    $ref: "_terms.yaml#/site_of_resection_or_biopsy"
 
   classification_of_tumor:
-    term: TBD
-    enum:
-      - primary
-      - metastasis
-      - recurrence
-      - other
+    $ref: "_terms.yaml#/classification_of_tumor"
 
   prior_malignancy:
-    term: TBD
-    enum:
-      - "yes"
-      - "no"
-      - unknown
+    $ref: "_terms.yaml#/prior_malignancy"
 
   tumor_stage:
-    term: TBD
-    type: string
+    $ref: "_terms.yaml#/tumor_stage"
 
   tumor_grade:
-    term: TBD
-    type: string
+    $ref: "_terms.yaml#/tumor_grade"
 
   progression_or_recurrence:
-    term: TBD
-    enum:
-      - "yes"
-      - "no"
-      - unknown
+    $ref: "_terms.yaml#/progression_or_recurrence"
 
   days_to_recurrence:
-    term: TBD
-    type: number
+    $ref: "_terms.yaml#/days_to_recurrence"
 
   last_known_disease_status:
-    term: TBD
-    enum:
-      - Distant met recurrence/progression
-      - Loco-regional recurrence/progression
-      - Biochemical evidence of disease without structural correlate
-      - Tumor free
-      - Unknown tumor status
-      - With tumor
+    $ref: "_terms.yaml#/days_to_recurrence"
+
   days_to_last_known_disease_status:
-    term: TBD
-    type: number
+    $ref: "_terms.yaml#/days_to_last_known_disease_status"
+
   cases:
     $ref: "_definitions.yaml#/to_one"
   project_id:
