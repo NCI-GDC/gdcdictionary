@@ -1,11 +1,11 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
 id: read_group_qc
-title: Read Group Seq QC
+title: Read Group QC
 type: object
 description: GDC QC metrics
 additionalProperties: false
-category: TBD
+category: analysis
 validators: null
 project: '*'
 program: '*'
@@ -18,9 +18,9 @@ systemProperties:
   - state
 
 links:
-  - name: analyses
+  - name: workflows
     label: data_from
-    target_type: analysis
+    target_type: workflow
     multiplicity: one_to_one
     required: true
     backref: read_group_qcs
@@ -35,7 +35,8 @@ links:
 required:
   - type
   - percent_gc_content
-  - read_group_bundles
+  - read_groups
+  - workflows
   - encoding
   - total_sequences
   - basic_statistics
@@ -63,7 +64,7 @@ properties:
     state:
         $ref: "_definitions.yaml#/state"
     type:
-        enum:  [ read_group_qc ]
+        enum:  [ "read_group_qc" ]
     fastq_name:
         type: string
     percent_gc_content:
@@ -98,7 +99,7 @@ properties:
         $ref: "_definitions.yaml#/qc_metrics_state"
     kmer_content:
         $ref: "_definitions.yaml#/qc_metrics_state"
-    analyses:
+    workflows:
         $ref: "_definitions.yaml#/to_one"
     read_groups:
         $ref: "_definitions.yaml#/to_one"
