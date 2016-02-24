@@ -1,9 +1,9 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "analysis"
-title: Analysis
+id: "workflow"
+title: Workflow
 type: object
-category: TBD
+category: analysis 
 program: '*'
 project: '*'
 description: >
@@ -23,13 +23,13 @@ links:
     required: true
     subgroup:
       - name: submitted_files
-        backref: analyses
+        backref: workflows
         label: performed_on
         target_type: submitted_file
         multiplicity: one_to_many
         required: false
       - name: generated_file_inputs
-        backref: analyses
+        backref: workflows
         label: performed_on
         target_type: generated_file
         multiplicity: one_to_many
@@ -37,8 +37,8 @@ links:
 
 required:
   - submitter_id
-  - analysis_type
-  - analysis_workflow
+  - workflow_type
+  - workflow_link
   - state
 
 uniqueKeys:
@@ -47,7 +47,7 @@ uniqueKeys:
 
 properties:
   type:
-    enum: [ "analysis" ]
+    enum: [ "workflow" ]
   id:
     description: "TODO"
     $ref: "_definitions.yaml#/UUID"
@@ -55,10 +55,27 @@ properties:
   submitter_id:
     description: "TOREVIEW: the file id assigned by the submitter"
     type: string
-  analysis_type:
+  workflow_type:
     description: "Analysis performed on file."
-    type: string
-  analysis_workflow:
+    enum:
+      - BWA Alignment
+      - Cocleaning
+      - MuSE
+      - SomaticSniper
+      - VarScan
+      - MuTect
+      - LiftOver
+      - HaplotypeCaller
+      - BIC-seq
+      - CNVnator
+      - STAR 2-Pass
+      - HTSeq
+      - Cufflinks
+      - Kallisto
+      - DEXSeq
+      - BCGSC miRNA Profiling
+      - Other
+  workflow_link:
     description: "Link to github location and hash for the cwl used."
     type: string
   state:
