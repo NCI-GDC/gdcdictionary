@@ -67,7 +67,7 @@ properties:
 
   race:
     term:
-      $ref: "_term.yaml#/race"
+      $ref: "_terms.yaml#/race"
     enum:
       - white
       - american indian or alaska native
@@ -89,7 +89,7 @@ properties:
 
   year_of_birth:
     term:
-      $ref: "_terms.yaml#/year_of_birth" 
+      $ref: "_terms.yaml#/year_of_birth"
     type: number
 
   year_of_death:
