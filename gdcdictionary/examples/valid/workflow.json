@@ -1,5 +1,6 @@
 {
     "id": "f21120fe-5e37-4bcf-846e-f819736bdfea",
+    "state": "validated",
     "submitter_id": "The Cancer Genome Atlas sequence alignment/map of sample TCGA-AB-2911-03A-01W-0732-08",
     "type": "workflow",
     "workflow_type": "BWA Alignment",
