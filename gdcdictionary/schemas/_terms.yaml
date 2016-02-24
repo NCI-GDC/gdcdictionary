@@ -93,6 +93,17 @@ days_to_last_known_disease_status:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008295&version=1.0"
 
+days_to_recurrence:
+  description: >
+    Time interval from the date of disease recurrence to the date of initial pathologic diagnosis,
+    represented as a calculated number of days.
+  termDef:
+    term: Days to Recurrence
+    source: caDSR
+    cde_id: 3008295
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008295&version=1.0"
+
 days_to_treatment:
   description: "Number of days from date of initial pathologic diagnosis that treatment began."
   termDef:
