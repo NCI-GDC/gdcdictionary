@@ -57,7 +57,8 @@ properties:
       - "null"
 
   gender:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/gender"
     enum:
       - female
       - male
@@ -65,7 +66,8 @@ properties:
       - unspecified
 
   race:
-    term: TBD
+    term:
+      $ref: "_term.yaml#/race"
     enum:
       - white
       - american indian or alaska native
@@ -77,7 +79,8 @@ properties:
       - not allowed to collect
 
   ethnicity:
-    term: TDB
+    term:
+      $ref: "_terms.yaml#/ethnicity"
     enum:
       - hispanic or latino
       - not hispanic or latino
@@ -85,11 +88,13 @@ properties:
       - not allowed to collect
 
   year_of_birth:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/year_of_birth" 
     type: number
 
   year_of_death:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/year_of_death"
     type: number
 
   cases:
