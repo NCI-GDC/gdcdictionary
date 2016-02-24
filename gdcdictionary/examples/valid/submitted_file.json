@@ -6,14 +6,16 @@
     "file_format": "BAM",
     "file_size": 33437548859,
     "md5sum": "5e940eb2e50a5d1449c54e6afe2ab783",
+    "state": "validated",
+    "file_state": "registered",
     "read_groups": [
-	{
+        {
             "submitter_id": "205DDABXX100804.3.C317.TCGA-AB-2899-03A-01W-0733-08.4.bam"
-	}
+        }
     ],
     "read_groups": [
-	{
+        {
             "submitter_id": "207FNABXX100716.3.C317.TCGA-AB-2899-03A-01W-0733-08.4.bam"
-	}
+        }
     ]
 }
