@@ -34,7 +34,7 @@ uniqueKeys:
 
 properties:
   type:
-    type: string
+    enum: [ "family_history" ]
 
   id:
     $ref: "_definitions.yaml#/UUID"
@@ -50,18 +50,21 @@ properties:
       - "null"
 
   relative_with_cancer_history:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/relative_with_cancer_history"
     enum:
       - yes
       - no
       - unknown
 
   relationship_type:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/relationship_type"
     type: string
 
   relationship_gender:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/gender"
     enum:
       - female
       - male
@@ -69,11 +72,12 @@ properties:
       - unspecified
 
   relationship_age_at_diagnosis:
-    term: TBD
+    term: TBD # is there a dedicated term for this?
     type: number
 
   relationship_primary_diagnosis:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/primary_diagnosis"
     type: string
 
   cases:
