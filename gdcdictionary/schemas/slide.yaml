@@ -4,7 +4,7 @@ id: "slide"
 title: Slide
 type: object
 namespace: http://gdc.nci.nih.gov
-category: TBD
+category: data_bundle
 program: '*'
 project: '*'
 description: >
@@ -16,10 +16,9 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - state
   - created_datetime
   - updated_datetime
-  - release_state
-  - release_state_datetime
 
 links:
   - name: portions
@@ -47,6 +46,8 @@ properties:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
+  state:
+    $ref: "_definitions.yaml#/state"
   submitter_id:
     type:
       - string
@@ -100,10 +101,4 @@ properties:
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
-
-  # ======== Release state ========
-  release_state:
-    $ref: "_definitions.yaml#/release_state"
-  release_state_datetime:
     $ref: "_definitions.yaml#/datetime"

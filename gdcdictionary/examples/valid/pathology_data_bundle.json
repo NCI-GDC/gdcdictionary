@@ -1,0 +1,9 @@
+{
+    "type": "pathology_data_bundle",
+    "submitter_id": "data bundle for pathology samples",
+    "samples": [
+        {
+            "submitter_id": "ok"
+        }
+    ]
+}

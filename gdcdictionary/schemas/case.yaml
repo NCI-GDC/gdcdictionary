@@ -16,8 +16,7 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
-  - release_state
-  - release_state_datetime
+  - state
 
 links:
   - name: projects
@@ -49,13 +48,12 @@ properties:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
+  state:
+    $ref: "_definitions.yaml#/state"
   submitter_id:
     type:
       - string
       - "null"
-  days_to_index:
-    type:
-      - integer
   projects:
     $ref: "_definitions.yaml#/to_one"
   tissue_source_sites:
@@ -65,10 +63,4 @@ properties:
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
-
-  # ======== Release state ========
-  release_state:
-    $ref: "_definitions.yaml#/release_state"
-  release_state_datetime:
     $ref: "_definitions.yaml#/datetime"

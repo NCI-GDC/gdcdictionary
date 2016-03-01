@@ -1,19 +1,22 @@
 {
-    "library_name": "test",
+    "id": "b4918128-f3e5-496a-bcd7-a4ec8d7dd1d9",
+    "submitter_id": "205DDABXX100804.3.C317.TCGA-AB-2899-03A-01W-0733-08.4.bam",
+    "type": "read_group",
+    "experiment_name": "Resequencing",
+    "sequencing_center": "BI",
+    "sequencing_date": "2010-08-04",
+    "platform": "Illumina",
+    "instrument_model": "Illumina HiSeq 2000",
     "library_strategy": "WXS",
+    "flow_cell_barcode": "205DDABXX",
+    "library_selection": "Hybrid_Selection",
+    "library_name": "Solexa-34688",
+    "is_paired_end": true,
+    "read_length": 75,
+    "read_group_name": "205DD.3",
     "aliquots": [
         {
-            "submitter_id": "BLGSP-71-06-00005-01A-21R"
+            "submitter_id": "2c9108eb-c59a-4227-b650-56e61b3aa0ea"
         }
-    ],
-    "is_paired_end": false,
-    "experiment_name": "RNA-Seq analysis for aliquot BLGSP-71-06-00005-01A-21R",
-    "read_length": 5,
-    "target_capture_kit_target_region": "test",
-    "platform": "Illumina",
-    "target_capture_kit_name": "test",
-    "sequencing_center": "test",
-    "type": "read_group",
-    "submitter_id": "read_group_a",
-    "read_group_name": "45"
+    ]   
 }

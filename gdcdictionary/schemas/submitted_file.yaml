@@ -1,0 +1,118 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "submitted_file"
+title: Submitted File
+type: object
+namespace: http://gdc.nci.nih.gov
+category: data_file
+program: '*'
+project: '*'
+description: TBD
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - exclusive: true
+    required: true
+    subgroup:
+      - name: read_groups
+        backref: submitted_files
+        label: data_from
+        target_type: read_group
+        multiplicity: many_to_many
+        required: false
+      - name: clinical_data_bundles
+        backref: submitted_files
+        label: data_from
+        target_type: clinical_data_bundle
+        multiplicity: many_to_one
+        required: false
+      - name: biospecimen_data_bundles
+        backref: submitted_files
+        label: data_from
+        target_type: biospecimen_data_bundle
+        multiplicity: many_to_one
+        required: false
+      - name: pathology_data_bundles
+        backref: submitted_files
+        target_type: pathology_data_bundle
+        label: data_from
+        multiplicity: many_to_one
+        required: false
+      - name: slides
+        backref: submitted_files
+        target_type: slide
+        label: data_from
+        multiplicity: many_to_one
+        required: false
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - md5sum
+  - state
+  - file_state
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  type:
+    enum: [ "submitted_file" ]
+  id:
+    description: "TODO"
+    $ref: "_definitions.yaml#/UUID"
+    systemAlias: node_id
+  submitter_id:
+    description: "TOREVIEW: the file id assigned by the submitter"
+    type: string
+  file_name:
+    description: "TOREVIEW: the file (object) name"
+    type: string
+  file_size:
+    description: "the size file (object) in bytes"
+    type: number
+  file_format:
+    description: "format of the file"
+    type: string
+  md5sum:
+    description: "The MD5 hash of this file"
+    type: string
+  state:
+    $ref: "_definitions.yaml#/state"
+  file_state:
+    $ref: "_definitions.yaml#/file_state"
+  error_type:
+    $ref: "_definitions.yaml#/data_file_error_type"
+  state_comment:
+    description: >
+      TOREVIEW: optional comment about why the file is in the
+      current state, mainly for invalid state.
+    type: string
+  read_groups:
+    $ref: "_definitions.yaml#/to_many"
+  clinical_data_bundles:
+    $ref: "_definitions.yaml#/to_one"
+  biospecimen_data_bundles:
+    $ref: "_definitions.yaml#/to_one"
+  pathology_data_bundles:
+    $ref: "_definitions.yaml#/to_one"
+  slides:
+    $ref: "_definitions.yaml#/to_one"
+  project_id:
+    type: string
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
