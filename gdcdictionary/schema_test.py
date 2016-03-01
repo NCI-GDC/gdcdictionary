@@ -9,7 +9,7 @@ Examples are at the end.
 """
 
 
-from jsonschema import validate, RefResolver, ValidationError
+from jsonschema import validate, ValidationError
 import copy
 import yaml
 import glob
@@ -65,14 +65,14 @@ def get_project_specific_schema(projects, project, schema, entity_type):
     return root
 
 
-def validate_entity(entity, schemata, resolver=None, project=None, name=''):
+def validate_entity(entity, schemata, project=None, name=''):
     """Validate an entity by looking up the core schema for its type and
     overriding it with any project level overrides
 
     """
     local_schema = get_project_specific_schema(
         projects, project, schemata[entity['type']], entity['type'])
-    result = validate(entity, local_schema, resolver=resolver)
+    result = validate(entity, local_schema)
     return result
 
 
@@ -97,7 +97,6 @@ def validate_schemata(schemata, metaschema):
 class SchemaTest(unittest.TestCase):
     def setUp(self):
         self.dictionary = GDCDictionary()
-        self.resolver = RefResolver('_definitions.yaml#', self.dictionary.definitions)
         self.definitions = yaml.load(open(os.path.join(CUR_DIR, 'schemas','_definitions.yaml'),'r'))
 
     def test_schemas(self):
@@ -110,11 +109,11 @@ class SchemaTest(unittest.TestCase):
             print(doc)
             if type(doc) == dict:
                 self.add_system_props(doc)
-                validate_entity(doc, self.dictionary.schema, self.resolver)
+                validate_entity(doc, self.dictionary.schema)
             elif type(doc) == list:
                 for entity in doc:
                     self.add_system_props(entity)
-                    validate_entity(entity, self.dictionary.schema, self.resolver)
+                    validate_entity(entity, self.dictionary.schema)
             else:
                 raise Exception("Invalid json")
 
@@ -125,12 +124,12 @@ class SchemaTest(unittest.TestCase):
             if type(doc) == dict:
                 self.add_system_props(doc)
                 with self.assertRaises(ValidationError):
-                    validate_entity(doc, self.dictionary.schema, self.resolver)
+                    validate_entity(doc, self.dictionary.schema)
             elif type(doc) == list:
                 for entity in doc:
                     self.add_system_props(entity)
                     with self.assertRaises(ValidationError):
-                        validate_entity(entity, self.dictionary.schema, self.resolver)
+                        validate_entity(entity, self.dictionary.schema)
             else:
                 raise Exception("Invalid json")
 
@@ -168,7 +167,6 @@ if __name__ == '__main__':
 
     # Load schemata
     dictionary = GDCDictionary()
-    resolver = RefResolver('_definitions.yaml#', dictionary.definitions)
 
     for f in args.jsonfiles:
         doc = json.load(f)
@@ -177,10 +175,10 @@ if __name__ == '__main__':
                 print("CHECK if {0} is invalid:".format(f.name)),
                 print type(doc)
                 if type(doc) == dict:
-                    validate_entity(doc, dictionary.schema, resolver)
+                    validate_entity(doc, dictionary.schema)
                 elif type(doc) == list:
                     for entity in doc:
-                        validate_entity(entity, dictionary.schema, resolver)
+                        validate_entity(entity, dictionary.schema)
                 else:
                     raise ValidationError("Invalid json")
             except ValidationError as e:
@@ -191,10 +189,10 @@ if __name__ == '__main__':
         else:
             print ("CHECK if {0} is valid:".format(f.name)),
             if type(doc) == dict:
-                validate_entity(doc, dictionary.schema, resolver)
+                validate_entity(doc, dictionary.schema)
             elif type(doc) == list:
                 for entity in doc:
-                    validate_entity(entity, dictionary.schema, resolver)
+                    validate_entity(entity, dictionary.schema)
             else:
                 print "Invalid json"
 
