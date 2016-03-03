@@ -57,43 +57,43 @@ properties:
       For TCGA, this is bcrslidebarcode.
   section_location:
     type: string
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW: Tissue source of the slide."
   number_proliferating_cells:
     type: integer
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW: Number of proliferating cells identified in the slide sample."
   percent_tumor_cells:
     type: number
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW: Percent of cells identified as tumor cells."
   percent_tumor_nuclei:
     type: number
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW: Percent of nuclei identified as tumor nuceli."
   percent_normal_cells:
     type: number
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW: Percent of cells identified as normal cells."
   percent_necrosis:
     type: number
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW: Percent of tumor cell necrosis in the slide."
   percent_stromal_cells:
     type: number
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW: Percent of cells identified as stromal cells."
   percent_inflam_infiltration:
     type: number
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW: Percent of cells identified as inflamatory infiltration."
   percent_lymphocyte_infiltration:
     type: number
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW: Percent of cells identified as lymphocyte infiltration."
   percent_monocyte_infiltration:
     type: number
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW: Percent of cells identified as monocyte infiltration."
   percent_granulocyte_infiltration:
     type: number
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW: Percent of cells identified as granulocyte infiltration."
   percent_neutrophil_infiltration:
     type: number
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW: Percent of cells identified as neutrophil infiltration."
   percent_eosinophil_infiltration:
     type: number
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW: Percent of cells identified as eosinophil infiltration."
   portions:
     $ref: "_definitions.yaml#/to_many"
   project_id:

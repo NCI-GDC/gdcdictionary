@@ -33,13 +33,13 @@ properties:
     description: "TODO"
   name:
     type: string
-    description: "TODO"
+    description: "TOREVIEW: Name of the source site."
   code:
     type: string
-    description: "TODO: define, from DCC"
+    description: "TOREVIEW: TCGA-provided TSS code."
   project:
     type: string
-    description: "TODO"
+    description: "TOREVIEW: Study name of the project."
   bcr_id:
     type: string
-    description: "TODO"
+    description: "TOREVIEW: TCGA-provided BCR id."

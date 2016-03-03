@@ -98,10 +98,12 @@ properties:
       - Fibroblasts from Bone Marrow Normal
       - Mononuclear Cell Normal
       - FFPE Scrolls
-    description: "TODO"
+    description: >
+      TOREVIEW: Type of the sample. Named for its cellular source, molecular composition,
+      and/or therapeutic treatment.
   sample_type_id:
     type: string
-    description: "TODO"
+    description: "TOREWVIEW: The accompanying sample type id for the sample type."
     enum:
       - '01'
       - '02'
@@ -154,7 +156,7 @@ properties:
       - "71"
       - "80"
       - "81"
-    description: "TODO"
+    description: "TODO" # unsure
   tumor_code:
     type: string
     enum:
@@ -182,34 +184,34 @@ properties:
       - NHL, Burkitt lymphoma (BL)
       - Rhabdomyosarcoma
       - Soft tissue sarcoma, non-rhabdomyosarcoma
-    description: "TODO"
+    description: "TOREVIEW: Name of the source of tumor tissue."
   longest_dimension:
     type: string
-    description: "TODO"
+    description: "TOREVIEW: Longest dimension of the sample, in millimeters."
   intermediate_dimension:
     type: string
-    description: "TODO"
+    description: "TOREVIEW: Intermediate dimension of the sample, in millimeters."
   shortest_dimension:
     type: string
-    description: "TODO"
+    description: "TOREVIEW: Shortest dimension of the sample, in millimeters."
   initial_weight:
     type: number
-    description: "TODO"
+    description: "TOREVIEW: Initial weight of the sample, in grams."
   current_weight:
     type: number
-    description: "TODO"
+    description: "TOREVIEW: Current weight of the sample, in grams."
   freezing_method:
     type: string
-    description: "TODO"
+    description: "TOREVIEW: Method used to freeze the sample." # more?
   oct_embedded:
     type: string
-    description: "TODO"
+    description: "Is the sample embedded in an optimal cutting temperature compound."
   time_between_clamping_and_freezing:
     type: string
-    description: "TODO"
+    description: "TOREVIEW: Time between clamping and freezing, in minutes." # is it minutes?
   time_between_excision_and_freezing:
     type: string
-    description: "TODO"
+    description: "TOREVIEW: Time between excision and freezing, in minutes." # is it minutes?
   days_to_collection:
     type: integer
     description: >
@@ -224,10 +226,10 @@ properties:
       dayofcollection/monthofcollection/yearofcollection.
   pathology_report_uuid:
     type: string
-    description: "TODO"
+    description: "TODO" # are we still doing this? seems like the links handle this now
   is_ffpe:
     type: boolean
-    description: "TODO"
+    description: "TOREVIEW: Is the sample formalin-fixed, paraffin-embedded?"
   cases:
     #should this be to_one
     $ref: "_definitions.yaml#/to_one"

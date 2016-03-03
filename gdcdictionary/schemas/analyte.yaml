@@ -66,7 +66,7 @@ properties:
       - Repli-G X (Qiagen) DNA
       - RNA
       - Total RNA
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW: Protocol specific, molecular type of the specimen."
   analyte_type_id:
     enum:
       - D
@@ -78,19 +78,22 @@ properties:
       - X
   amount:
     type: number
-    description: "TODO: define, from BCR"
+    description: "TODO: define, from BCR; is this weight in grams or volume in mL?"
   concentration:
     type: number
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW: Concentration of the analyte, in molarity."
   a260_a280_ratio:
     type: number
-    description: "TODO: define, from BCR"
+    description: >
+      TOREVIEW: Purity measurement that weights absorbance at 260nm (DNA concentration)
+      against absorbance at 280nm (protein concentration/contamination).
   well_number:
     type: string
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW Number of the well from which the analyte was derived."
   spectrophotometer_method:
     type: string
-    description: "TODO: define, from BCR"
+    description: >
+      TOREVIEW: Spectrophotometric method used to measure sample purity (e.g. UV Spec).
 # analyte parents
   portions:
     #should this be to_one

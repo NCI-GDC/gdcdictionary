@@ -138,6 +138,18 @@ ethnicity:
     cde_version: 2.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2192217&version=2.0"
 
+file_name:
+  description: >
+    TOREVIEW: The name (or part of a name) of a file (of any type). From http://edamontology.org/data_1050
+
+file_size:
+  description: >
+    TOREVIEW: The size of the data file (object) in bytes.
+
+file_format:
+  description: >
+    TOREVIEW: Format of the data files. From http://purl.obolibrary.org/obo/MS_1001459 
+
 gender:
   description: >
     Text designations that identify gender. Gender is described as the assemblage of properties that
@@ -380,6 +392,19 @@ tumor_stage:
     cde_id: C16899
     cde_version: null
     term_url: "https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C16899"
+
+UUID:
+  description: >
+    A 128 bit identifier. Depending on the mechanism used to generate it, it is either guaranteed to be 
+    different from all other UUIDs/GUIDs generated until 3400 AD or extremely likely to be different.
+    Its relatively small size lends itself well to sorting, ordering, and hashing of all sorts, storing
+    in databases, simple allocation, and ease of programming in general.i
+  termDef:
+    term: Universally Unique Identifier
+    source: NCIt
+    cde_id: C54100
+    cde_version: null
+    term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.02d&ns=NCI_Thesaurus&code=C54100"
 
 vital_status:
   description: >

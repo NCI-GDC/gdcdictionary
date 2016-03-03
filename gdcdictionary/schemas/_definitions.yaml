@@ -1,6 +1,8 @@
 id: _definitions
 
 UUID:
+    term:
+        $ref: "_terms.yaml#/UUID"
     type: string
     pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
 
@@ -49,13 +51,19 @@ datetime:
 
 file_name:
     type: string
-    description: "file name"
+    term:
+        $ref: "_terms/yaml#/file_name"
+
 file_size:
     type: number
-    description: "the size of the data file (object) in bytes"
+    term: 
+        $ref: "_terms.yaml#/file_size"
+
 file_format:
     type: string
-    description: "the size of the data file (object) in bytes"
+    term:
+        $ref: "_terms.yaml#/file_format"
+
 md5sum:
     type: string
     description: "the MD5 hash of the data file (object)"

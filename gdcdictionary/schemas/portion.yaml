@@ -64,10 +64,10 @@ properties:
       project. For TCGA this is bcrportionbarcode.
   weight:
     type: number
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW: Weight of the portion, in grams." # not sure 
   is_ffpe:
     type: boolean
-    description: "TODO"
+    description: "TOREVIEW: Is the portion formalin-fixed, paraffin-embedded?"
   creation_datetime:
     type: number
     description: >
@@ -76,7 +76,7 @@ properties:
       dayofcreation/monthofcreation/yearofcreation.
   portion_number:
     type: string
-    description: "TODO: define, from BCR"
+    description: "TODO: define, from BCR" # not sure
 
   samples:
     #should this be to_one

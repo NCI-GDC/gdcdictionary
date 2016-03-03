@@ -153,18 +153,18 @@ properties:
       - Tumor tissue origin incorrect
       - Tumor type incorrect
       - WGA Failure
-    description: "TODO: define, from DCC"
+    description: "TOREVIEW: Top level characterization of the annotation."
   classification:
     type: string
-    description: "TODO: define, from DCC"
+    description: "TODO: define, from DCC." # Is this supposed to be a description of the category"
   creator:
     type: string
   status:
     type: string
-    description: "TODO: define, from DCC"
+    description: "TOREVIEW: Status of the annotation." # Is this an enum?
   notes:
     type: string
-    description: "TODO: define, from DCC"
+    description: "TOREVIEW: Open entry for any further description or characterization of the data." 
 
   cases:
     $ref: "_definitions.yaml#/to_many"

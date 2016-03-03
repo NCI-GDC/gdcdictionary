@@ -72,13 +72,13 @@ properties:
       UUIDs. For TCGA this is bcraliquotbarcode.
   source_center:
     type: string
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW: Name of the center that produced the aliquot"
   amount:
     type: number
-    description: "TODO: define, from BCR"
+    description: "TODO: define, from BCR; is this weight in grams or volume in mL?"
   concentration:
     type: number
-    description: "TODO: define, from BCR"
+    description: "TOREVIEW: Concentration of the aliquot, in molarity."
   analytes:
     $ref: "_definitions.yaml#/to_one"
     description: >
