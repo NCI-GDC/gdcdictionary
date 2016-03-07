@@ -85,10 +85,10 @@ data_file_error_type:
         - file_size
         - file_format
         - md5sum
-        
-data_file_state:
-    description: "states of a data file (object)"
-    default: submitted
+
+state:
+    description: "states of all entities"
+    default: validated
     downloadable:
         - uploaded
         - md5summed
@@ -99,20 +99,37 @@ data_file_state:
         - released
     public:
         - live
+    oneOf:
+        - enum: #This list covers legacy data
+            - uploading
+            - uploaded
+            - md5summing
+            - md5summed
+            - validating
+            - error
+            - invalid
+            - suppressed
+            - redacted
+            - live
+        - enum: #This list covers all future data 1/15/16
+            - validated
+            - submitted
+            - released
+
+file_state:
+    description: "states for data file objects"
+    default: registered
     enum:
-        - submitted
+        - registered
         - uploading
         - uploaded
-        - md5summing
-        - md5summed
         - validating
         - validated
-        - error
-        - invalid
+        - submitted
+        - processing
+        - processed
         - released
-        - suppressed
-        - redacted
-        - live
+        - error
 
 qc_metrics_state:
     enum:

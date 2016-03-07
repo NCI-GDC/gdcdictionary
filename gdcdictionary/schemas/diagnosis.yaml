@@ -14,10 +14,9 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - state
   - created_datetime
   - updated_datetime
-  - release_state
-  - release_state_datetime
 
 links:
   - name: cases
@@ -58,49 +57,61 @@ properties:
     systemAlias: node_id
     description: "TODO"
 
+  state:
+    $ref: "_definitions.yaml#/state"
+
   submitter_id:
     type:
       - string
       - "null"
 
   age_at_diagnosis:
+    term:
+      $ref: "_terms.yaml#/age_at_diagnosis"
     type: number
-    term: TBD
 
   days_to_birth:
+    term:
+      $ref: "_terms.yaml#/days_to_birth"
     type: number
-    term: TBD
 
   days_to_last_follow_up:
+    term:
+      $ref: "_terms.yaml#/days_to_last_follow_up"
     type: number
-    term: TBD
 
   vital_status:
+    term:
+      $ref: "_terms.yaml#/vital_status"
     enum:
       - alive
       - dead
       - lost to follow-up
       - unknown
-    term: TBD
 
   primary_diagnosis:
+    term:
+      $ref: "_terms.yaml#/primary_diagnosis"
     type: string
-    term: TBD
 
   morphology:
+    term:
+      $ref: "_terms.yaml#/morphology"
     type: string
-    term: TBD
 
   tissue_or_organ_of_origin:
+    term:
+      $ref: "_terms.yaml#/tissue_or_organ_of_origin"
     type: string
-    term: TBD
 
   site_of_resection_or_biopsy:
+    term:
+      $ref: "_terms.yaml#/site_of_resection_or_biopsy"
     type: string
-    term: TBD
 
   classification_of_tumor:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/classification_of_tumor"
     enum:
       - primary
       - metastasis
@@ -108,33 +119,39 @@ properties:
       - other
 
   prior_malignancy:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/prior_malignancy"
     enum:
       - "yes"
       - "no"
       - unknown
 
   tumor_stage:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/tumor_stage"
     type: string
 
   tumor_grade:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/tumor_grade"
     type: string
 
   progression_or_recurrence:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/progression_or_recurrence"
     enum:
       - "yes"
       - "no"
       - unknown
 
   days_to_recurrence:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/days_to_recurrence"
     type: number
 
   last_known_disease_status:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/last_known_disease_status"
     enum:
       - Distant met recurrence/progression
       - Loco-regional recurrence/progression
@@ -142,9 +159,12 @@ properties:
       - Tumor free
       - Unknown tumor status
       - With tumor
+
   days_to_last_known_disease_status:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/days_to_last_known_disease_status"
     type: number
+
   cases:
     $ref: "_definitions.yaml#/to_one"
   project_id:
@@ -152,10 +172,4 @@ properties:
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
-
-  # ======== Release state ========
-  release_state:
-    $ref: "_definitions.yaml#/release_state"
-  release_state_datetime:
     $ref: "_definitions.yaml#/datetime"

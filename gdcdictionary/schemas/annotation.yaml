@@ -19,8 +19,7 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
-  - release_state
-  - release_state_datetime
+  - state
 
 links:
   - exclusive: false
@@ -68,22 +67,28 @@ links:
         target_type: file
         multiplicity: many_to_many
         required: false
+      - name: submitted_files
+        label: annotates
+        backref: annotations
+        target_type: submitted_file
+        multiplicity: many_to_many
+        required: false
+      - name: clinical_data_bundles
+        label: annotates
+        backref: annotations
+        target_type: clinical_data_bundle
+        multiplicity: many_to_many
+        required: false
+      - name: biospecimen_data_bundles
+        label: annotates
+        backref: annotations
+        target_type: biospecimen_data_bundle
+        multiplicity: many_to_many
+        required: false
       - name: read_groups
         label: annotates
         backref: annotations
         target_type: read_group
-        multiplicity: many_to_many
-        required: false
-      - name: bam_files
-        label: annotates
-        backref: annotations
-        target_type: bam_file
-        multiplicity: many_to_many
-        required: false
-      - name: fastq_files
-        label: annotates
-        backref: annotations
-        target_type: fastq_file
         multiplicity: many_to_many
         required: false
 required:
@@ -106,6 +111,8 @@ properties:
     type:
       - string
       - "null"
+  state:
+    $ref: "_definitions.yaml#/state"
   category:
     type: string
     enum:
@@ -180,19 +187,15 @@ properties:
     $ref: "_definitions.yaml#/to_many"
   read_groups:
     $ref: "_definitions.yaml#/to_many"
-  bam_files:
+  submitted_files:
     $ref: "_definitions.yaml#/to_many"
-  fastq_files:
+  clinical_data_bundles:
+    $ref: "_definitions.yaml#/to_many"
+  biospecimen_data_bundles:
     $ref: "_definitions.yaml#/to_many"
   project_id:
     type: string
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
-
-  # ======== Release state ========
-  release_state:
-    $ref: "_definitions.yaml#/release_state"
-  release_state_datetime:
     $ref: "_definitions.yaml#/datetime"

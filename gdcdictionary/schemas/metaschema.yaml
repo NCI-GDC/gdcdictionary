@@ -95,6 +95,7 @@ properties:
       - data_bundle
       - data_file
       - qc_bundle
+      - analysis
       - TBD
 
   unique_keys:

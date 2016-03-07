@@ -15,10 +15,9 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - state
   - created_datetime
   - updated_datetime
-  - release_state
-  - release_state_datetime
 
 required:
   - submitter_id
@@ -35,6 +34,12 @@ links:
     target_type: sample
     multiplicity: many_to_one
     required: true
+  - name: centers
+    backref: portions
+    label: shipped_to
+    target_type: center
+    multiplicity: many_to_one
+    required: false
 
 # Portion properties
 # Currently there are many TCGA-specific fields in the DB. This is an attempt
@@ -48,6 +53,8 @@ properties:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
+  state:
+    $ref: "_definitions.yaml#/state"
   submitter_id:
     type:
       - string
@@ -77,15 +84,15 @@ properties:
     description: >
       Indicates that the portion is physically derived from the linked to
       sample via some process/protocol
+
+  centers:
+    # For shipped portions
+    $ref: "_definitions.yaml#/to_one"
+    description: "TODO: define"
+
   project_id:
     type: string
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
-
-  # ======== Release state ========
-  release_state:
-    $ref: "_definitions.yaml#/release_state"
-  release_state_datetime:
     $ref: "_definitions.yaml#/datetime"

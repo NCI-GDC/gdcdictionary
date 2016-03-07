@@ -14,10 +14,9 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - state
   - created_datetime
   - updated_datetime
-  - release_state
-  - release_state_datetime
 
 links:
   - name: diagnoses
@@ -36,12 +35,15 @@ uniqueKeys:
 
 properties:
   type:
-    type: string
+    enum: [ "treatment" ]
 
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
+
+  state:
+    $ref: "_definitions.yaml#/state"
 
   submitter_id:
     type:
@@ -49,22 +51,26 @@ properties:
       - "null"
 
   treatment_or_therapy:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/treatment_or_therapy"
     enum:
       - yes
       - no
       - unknown
 
   treatment_intent_type:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/treatment_intent_type"
     type: string
 
   therapeutic_agents:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/therapeutic_agent"
     type: string
 
   days_to_treatment:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/days_to_treatment"
     type: number
 
   diagnoses:
@@ -77,10 +83,4 @@ properties:
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
-
-  # ======== Release state ========
-  release_state:
-    $ref: "_definitions.yaml#/release_state"
-  release_state_datetime:
     $ref: "_definitions.yaml#/datetime"

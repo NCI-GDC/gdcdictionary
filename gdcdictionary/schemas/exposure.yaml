@@ -14,10 +14,9 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - state
   - created_datetime
   - updated_datetime
-  - release_state
-  - release_state_datetime
 
 links:
   - name: cases
@@ -35,12 +34,15 @@ uniqueKeys:
 
 properties:
   type:
-    type: string
+    enum: [ "exposure" ]
 
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
     description: "TODO"
+
+  state:
+    $ref: "_definitions.yaml#/state"
 
   submitter_id:
     type:
@@ -48,31 +50,38 @@ properties:
       - "null"
 
   years_smoked:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/years_smoked"
     type: number
 
   cigarettes_per_day:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/cigarettes_per_day"
     type: number
 
   alcohol_history:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/alcohol_history"
     type: string
 
   alcohol_intensity:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/alcohol_intensity"
     type: string
 
   height:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/height"
     type: number
 
   weight:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/weight"
     type: number
 
   bmi:
-    term: TBD
+    term:
+      $ref: "_terms.yaml#/bmi"
     type: number
 
   cases:
@@ -82,10 +91,4 @@ properties:
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
-
-  # ======== Release state ========
-  release_state:
-    $ref: "_definitions.yaml#/release_state"
-  release_state_datetime:
     $ref: "_definitions.yaml#/datetime"

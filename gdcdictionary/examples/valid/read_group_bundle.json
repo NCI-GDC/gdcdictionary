@@ -17,17 +17,5 @@
         "sequencing_center": "test",
         "submitter_id": "read_group_a",
         "read_group_name": "45"
-    },
-    {
-        "type": "fastq_file",
-        "read_group_bundles": [
-            {
-                "submitter_id": "read_group_a"
-            }
-        ],
-        "file_name": "test_bundle.json",
-        "md5sum": "aa2f4eb691cb66b363b5342c5ab72972",
-        "submitter_id": "bundle-1",
-        "file_size": 5
     }
 ]
