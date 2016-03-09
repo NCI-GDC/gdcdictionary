@@ -29,7 +29,6 @@ links:
 required:
   - age_at_diagnosis
   - days_to_birth
-  - days_to_death
   - days_to_last_follow_up
   - vital_status
   - primary_diagnosis
