@@ -29,6 +29,7 @@ links:
 required:
   - age_at_diagnosis
   - days_to_birth
+  - days_to_death
   - days_to_last_follow_up
   - vital_status
   - primary_diagnosis
@@ -73,6 +74,11 @@ properties:
   days_to_birth:
     term:
       $ref: "_terms.yaml#/days_to_birth"
+    type: number
+
+  days_to_death:
+    term:
+      $ref: "_terms.yaml#/days_to_death"
     type: number
 
   days_to_last_follow_up:
