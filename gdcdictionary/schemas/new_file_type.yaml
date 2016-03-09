@@ -1,0 +1,49 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "new_file"
+title: NewFile
+type: object
+namespace: http://gdc.nci.nih.gov
+category: data_file
+program: '*'
+project: '*'
+description: 'Test node'
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - file_state
+  - state
+  - error_type
+
+links:
+  - name: aliquots
+    backref: new_files
+    label: data_from
+    target_type: aliquot
+    multiplicity: many_to_many
+    required: false
+
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - md5sum
+  - state
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+  additional_prop:
+    type: string
+    description: test property
+  aliquots:
+    $ref: "_definitions.yaml#/to_many"

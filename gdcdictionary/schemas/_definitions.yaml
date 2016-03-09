@@ -136,3 +136,43 @@ qc_metrics_state:
         - FAIL
         - PASS
         - WARN
+
+
+data_file_properties:
+  type:
+    type: string
+  id:
+    $ref: "#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  submitter_id:
+    type:
+      - string
+      - "null"
+    description: "TOREVIEW: the file id assigned by the submitter"
+  file_name:
+    type: string
+    description: "TOREVIEW: the file (object) name"
+  file_size:
+    type: number
+    description: "the size file (object) in bytes"
+  md5sum:
+    type: string
+    description: "The MD5 hash of this file"
+  file_state:
+    $ref: "#/file_state"
+  state:
+    $ref: "#/state"
+  error_type:
+    $ref: "#/data_file_error_type"
+  state_comment:
+    type: string
+    description: >
+      TOREVIEW: optional comment about why the file is in the
+      current state, mainly for invalid state.
+  project_id:
+    type: string
+  created_datetime:
+    $ref: "#/datetime"
+  updated_datetime:
+    $ref: "#/datetime"
