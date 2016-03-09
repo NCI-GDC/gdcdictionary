@@ -75,6 +75,11 @@ properties:
       $ref: "_terms.yaml#/days_to_birth"
     type: number
 
+  days_to_death:
+    term:
+      $ref: "_terms.yaml#/days_to_death"
+    type: number
+
   days_to_last_follow_up:
     term:
       $ref: "_terms.yaml#/days_to_last_follow_up"
