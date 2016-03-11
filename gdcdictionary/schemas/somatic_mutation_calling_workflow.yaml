@@ -21,10 +21,10 @@ systemProperties:
   - state
 
 links:
-  - name: harmonized_aligned_reads_files
+  - name: aligned_reads_files
     backref: somatic_mutation_calling_workflows
     label: performed_on
-    target_type: harmonized_aligned_reads
+    target_type: aligned_reads
     multiplicity: one_to_many
     required: true
 
@@ -33,7 +33,7 @@ required:
   - workflow_link
   - state
   - workflow_type
-  - harmonized_aligned_reads_files
+  - aligned_reads_files
   
 
 uniqueKeys:
@@ -55,5 +55,5 @@ properties:
       - VarScan2 All
       - VarScan2 Filtered
       - liftOver
-  harmonized_aligned_reads_files:
+  aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"

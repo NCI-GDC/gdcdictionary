@@ -1,13 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "harmonized_aligned_reads"
-title: Harmonized Aligned Reads
+id: "aligned_reads"
+title: Aligned Reads
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
 program: '*'
 project: '*'
-description: "Data file containing aligned reads that have been GDC Harmonized."
+description: >
+  Data file containing aligned reads that are generated internally by the GDC.
 additionalProperties: false
 validators: null
 
@@ -25,13 +26,13 @@ links:
     required: true
     subgroup:
       - name: alignment_cocleaning_workflows
-        backref: harmonized_aligned_reads_files
+        backref: aligned_reads_files
         label: data_from
         target_type: alignment_cocleaning_workflow
         multiplicity: many_to_one
         required: false
       - name: alignment_workflows
-        backref: harmonized_aligned_reads_files
+        backref: aligned_reads_files
         label: data_from
         target_type: alignment_cocleaning_workflow
         multiplicity: many_to_one
@@ -56,7 +57,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "harmonized_aligned_reads" ]
+    enum: [ "aligned_reads" ]
   data_category:
     enum: [ "Sequencing Data" ]
   data_type:

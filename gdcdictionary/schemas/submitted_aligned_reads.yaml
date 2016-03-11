@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "unharmonized_aligned_reads"
-title: Unharmonized Aligned Reads
+id: "submitted_aligned_reads"
+title: Submitted Aligned Reads
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
@@ -21,7 +21,7 @@ systemProperties:
 
 links:
   - name: read_groups
-    backref: unharmonized_aligned_reads_files # pretty ugly
+    backref: submitted_aligned_reads_files # pretty ugly
     label: data_from
     target_type: read_group
     multiplicity: one_to_many
@@ -42,7 +42,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "unharmonized_aligned_reads" ]
+    enum: [ "submitted_aligned_reads" ]
   data_category:
     enum: [ "Sequencing Data" ]
   data_type:

@@ -20,7 +20,7 @@
     "sequence_length_distribution": "PASS",
     "total_sequences": 195523357,
     "workflow_link": "github.com/<owner>/<project>/commit/<hash>",
-    "unharmonized_aligned_reads_files":
+    "submitted_aligned_reads_files":
         {"submitter_id": "bam_file_a"},
     "read_groups":
         {"submitter_id": "read_group_a"}
