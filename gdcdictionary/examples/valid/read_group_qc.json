@@ -1,5 +1,6 @@
 {
     "id": "7b460e40-27d9-42a5-9dee-8d97f3960c6d",
+    "submitter_id": "QC metrics for BAM_file_a",
     "type": "read_group_qc",
     "adapter_content": "PASS",
     "basic_statistics": "PASS",
@@ -18,8 +19,9 @@
     "sequence_duplication_levels": "PASS",
     "sequence_length_distribution": "PASS",
     "total_sequences": 195523357,
-    "workflows":
-        {"submitter_id": "workflow_a"},
+    "workflow_link": "github.com/<owner>/<project>/commit/<hash>",
+    "unharmonized_aligned_reads_files":
+        {"submitter_id": "bam_file_a"},
     "read_groups":
         {"submitter_id": "read_group_a"}
 }

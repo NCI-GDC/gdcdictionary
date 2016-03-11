@@ -1,0 +1,59 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "somatic_mutation_calling_workflow"
+title: Somatic Mutation Calling Workflow
+type: object
+namespace: http://gdc.nci.nih.gov
+category: analysis
+program: '*'
+project: '*'
+description: >
+  Metadata for the somatic mutation calling pipeline used to call variants in
+  the GDC DNA-seq pipelines.
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: harmonized_aligned_reads_files
+    backref: somatic_mutation_calling_workflows
+    label: performed_on
+    target_type: harmonized_aligned_reads
+    multiplicity: one_to_many
+    required: true
+
+required:
+  - submitter_id
+  - workflow_link
+  - state
+  - workflow_type
+  - harmonized_aligned_reads_files
+  
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/workflow_properties"
+  type:
+    enum: [ "somatic_mutation_calling_workflow" ]
+  workflow_type:
+    enum:
+      - MuTect2 All
+      - MuTect2 Filtered
+      - MuTect2 Validated
+      - MuSE Filtered
+      - SomaticSniper All
+      - SomaticSniper Filtered
+      - VarScan2 All
+      - VarScan2 Filtered
+      - liftOver
+  harmonized_aligned_reads_files:
+    $ref: "_definitions.yaml#/to_many"
