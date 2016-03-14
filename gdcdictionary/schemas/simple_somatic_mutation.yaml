@@ -34,20 +34,18 @@ required:
   - file_name
   - file_size
   - md5sum
-  - state
-  - file_state
   - data_category
   - data_type
   - file_format
   - experimental_strategy
-  - somatic_mutation_callign_workflows
+  - somatic_mutation_calling_workflows
 
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]
 
 properties:
-  $ref: "_definitions.yaml#/workflow_properties"
+  $ref: "_definitions.yaml#/data_file_properties"
   type:
     enum: [ "simple_somatic_mutation" ]
   data_category:

@@ -43,8 +43,6 @@ required:
   - file_name
   - file_size
   - md5sum
-  - state
-  - file_state
   - data_category
   - data_type
   - file_format

@@ -31,7 +31,6 @@ links:
 required:
   - submitter_id
   - workflow_link
-  - state
   - workflow_type
   - aligned_reads_files
   

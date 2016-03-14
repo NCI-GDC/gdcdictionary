@@ -32,8 +32,6 @@ required:
   - file_name
   - file_size
   - md5sum
-  - state
-  - file_state
 
 uniqueKeys:
   - [ id ]

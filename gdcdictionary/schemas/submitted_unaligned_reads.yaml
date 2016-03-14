@@ -33,7 +33,6 @@ required:
   - file_name
   - file_size
   - md5sum
-  - file_state
   - data_category
   - data_type
   - file_format
@@ -46,7 +45,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ submitted_unaligned_reads" ]
+    enum: [ "submitted_unaligned_reads" ]
   data_category:
     enum: [ "Sequencing Data" ]
   data_type:
