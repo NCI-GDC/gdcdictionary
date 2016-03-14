@@ -1,14 +1,15 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "simple_somatic_mutation"
-title: Simple Somatic Mutation
+id: "aggregated_somatic_mutation"
+title: Aggregated Somatic Mutation
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
-program: '*'
 project: '*'
+program: '*'
 description: >
-  Data file containing simple somatic mutations called from aligned reads.
+  TOREVIEW: MAF files that contain all of the somatic mutations for
+  all of the cases for a project. 
 additionalProperties: false
 validators: null
 
@@ -22,11 +23,11 @@ systemProperties:
   - error_type
 
 links:
-  - name: somatic_mutation_calling_workflows
-    backref: simple_somatic_mutations
+  - name: projects
+    backref: aggregated_somatic_mutations
     label: data_from
-    target_type: somatic_mutation_calling_workflow
-    multiplicity: many_to_one
+    target_type: project
+    multiplicity: one_to_one
     required: true
 
 required:
@@ -38,27 +39,26 @@ required:
   - data_type
   - file_format
   - experimental_strategy
-  - somatic_mutation_calling_workflows
+  - projects
 
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]
-
+  
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "simple_somatic_mutation" ]
+    enum: [ "aggregated_somatic_mutation" ]
   data_category:
     enum: [ "Simple Nucleotide Variation" ]
   data_type:
-    enum: [ "Simple Somatic Mutation" ]
+    enum: [ "Aggregated Somatic Mutations" ]
   file_format:
-    enum: [ "VCF" ]
+    enum:
+      - MAF
   experimental_strategy:
     enum:
       - WGS
       - WXS
-      - Low Pass WGS
-      - Validation
-  somatic_mutation_calling_workflows:
+  projects:
     $ref: "_definitions.yaml#/to_one"

@@ -1,14 +1,15 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "simple_somatic_mutation"
-title: Simple Somatic Mutation
+id: "gene_expression"
+title: Gene Expression
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing simple somatic mutations called from aligned reads.
+  Data file containing gene expression information generated internally
+  by the GDC.
 additionalProperties: false
 validators: null
 
@@ -22,10 +23,10 @@ systemProperties:
   - error_type
 
 links:
-  - name: somatic_mutation_calling_workflows
-    backref: simple_somatic_mutations
+  - name: rna_expression_workflows
+    backref: gene_expressions
     label: data_from
-    target_type: somatic_mutation_calling_workflow
+    target_type: rna_expression_workflow
     multiplicity: many_to_one
     required: true
 
@@ -38,8 +39,8 @@ required:
   - data_type
   - file_format
   - experimental_strategy
-  - somatic_mutation_calling_workflows
-
+  - rna_expression_workflows
+  
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]
@@ -47,18 +48,19 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "simple_somatic_mutation" ]
+    enum: [ "gene_expression" ]
   data_category:
-    enum: [ "Simple Nucleotide Variation" ]
+    enum: [ "Transcriptome Profiling" ]
   data_type:
-    enum: [ "Simple Somatic Mutation" ]
+    enum: [ "Gene Expression Quantification" ]
   file_format:
-    enum: [ "VCF" ]
+    enum:
+      - TXT
+      - TSV
+      - CSV
   experimental_strategy:
     enum:
-      - WGS
-      - WXS
-      - Low Pass WGS
-      - Validation
-  somatic_mutation_calling_workflows:
+      - RNA-seq
+      - Total RNA-seq
+  rna_expression_workflows:
     $ref: "_definitions.yaml#/to_one"

@@ -94,7 +94,7 @@ properties:
       - data
       - data_bundle
       - data_file
-      - data_index
+      - index_file 
       - qc_bundle
       - analysis
       - TBD

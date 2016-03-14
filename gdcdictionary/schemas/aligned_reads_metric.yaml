@@ -1,16 +1,15 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "read_group_metric"
-title: Read Group Metric
+id: "aligned_reads_metric"
+title: Aligned Reads Metric
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
 project: '*'
 program: '*'
-description: "Data file containing QC metric data."
+description: "Data file containing metrics from the harmonization pipelines."
 additionalProperties: false
 validators: null
-
 
 systemProperties:
   - id
@@ -22,23 +21,30 @@ systemProperties:
   - error_type
 
 links:
-  - name: read_group_qcs
-    backref: read_group_metrics
-    label: data_from
-    target_type: read_group_qc
-    multiplicity: one_to_one
+  - exclusive: true
     required: true
-    
+    subgroup:
+      - name: alignment_workflows
+        backref: aligned_reads_metrics
+        label: data_from
+        target_type: alignment_workflow
+        multiplicity: many_to_one
+        required: false
+      - name: alignment_cocleaning_workflows
+        backref: aligned_reads_metrics
+        label: data_from
+        target_type: alignment_cocleaning_workflow
+        multiplicity: many_to_one
+        required: false
+
 required:
   - submitter_id
   - file_name
   - file_size
+  - file_format
   - md5sum
   - data_category
   - data_type
-  - file_format
-  - experimental_strategy
-  - read_group_qcs
 
 uniqueKeys:
   - [ id ]
@@ -47,15 +53,13 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "read_group_metric" ]
+    enum: [ "aligned_reads_metric" ]
+  file_format:
+    type: string
   data_category:
     enum: [ "Sequencing Data" ]
   data_type:
-    enum: [ "Read Group Metric" ]
-  file_format:
-    enum:
-      - TXT
-      - TSV
+    enum: [ "Aligned Reads Metrics" ]
   experimental_strategy:
     enum:
       - WGS
@@ -65,5 +69,7 @@ properties:
       - RNA-seq
       - miRNA-seq
       - Total RNA-seq
-  read_group_qcs:
+  alignment_workflows:
+    $ref: "_definitions.yaml#/to_one"
+  alignment_cocleaning_workflows:
     $ref: "_definitions.yaml#/to_one"

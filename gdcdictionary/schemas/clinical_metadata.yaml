@@ -1,0 +1,58 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "clinical_metadata"
+title: Clinical Metadata
+type: object
+namespace: http://gdc.nci.nih.gov
+category: data_file
+project: '*'
+program: '*'
+description: >
+  Data file containing clinical metadata information.
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - name: cases
+    backref: clinical_metadata_files
+    label: derived_from
+    target_type: case
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - file_format
+  - md5sum
+  - data_category
+  - data_type
+  - cases
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+  type:
+    enum: [ "clinical_metadata" ]
+  file_format:
+    enum:
+      - BCR XML
+  data_category:
+    enum: [ "Clinical" ]
+  data_type:
+    enum: [ "Clinical Metadata" ]
+  cases:
+    $ref: "_definitions.yaml#/to_one"

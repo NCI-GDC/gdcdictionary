@@ -4,7 +4,7 @@ id: "aligned_reads_index"
 title: Aligned Reads Index
 type: object
 namespace: http://gdc.nci.nih.gov
-category: data_index
+category: index_file
 program: '*'
 project: '*'
 description: "Data file containing the index for a set of aligned reads."
@@ -45,7 +45,6 @@ required:
   - data_category
   - data_type
   - file_format
-  - experimental_strategy
 
 uniqueKeys:
   - [ id ]
@@ -61,17 +60,7 @@ properties:
     enum: [ "Aligned Reads Index" ]
   file_format:
     enum: [ "BAI" ]
-  experimental_strategy:
-    enum:
-      - WGS
-      - WXS
-      - Low Pass WGS
-      - Validation
-  workflow:
-    type: string
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
-      
-      

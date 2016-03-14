@@ -34,7 +34,7 @@ links:
       - name: alignment_workflows
         backref: aligned_reads_files
         label: data_from
-        target_type: alignment_cocleaning_workflow
+        target_type: alignment_workflow
         multiplicity: many_to_one
         required: false
 
@@ -68,8 +68,9 @@ properties:
       - WXS
       - Low Pass WGS
       - Validation
-  workflow:
-    type: string
+      - RNA-seq
+      - miRNA-seq
+      - Total RNA-seq
   alignment_cocleaning_workflows:
     $ref: "_definitions.yaml#/to_one"
   alignment_workflows:

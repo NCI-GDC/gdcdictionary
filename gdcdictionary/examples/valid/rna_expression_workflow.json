@@ -1,0 +1,9 @@
+{
+    "type": "rna_expression_workflow",
+    "submitter_id": "RNA_expression_run_#",
+    "workflow_link": "github.com/<owner>/<project>/commit/<hash>",
+    "workflow_type": "HTSeq - FPKM",
+    "aligned_reads_files": {
+	"id": "0cb66276-c29b-4811-a704-38502173c0f8"
+    }
+}

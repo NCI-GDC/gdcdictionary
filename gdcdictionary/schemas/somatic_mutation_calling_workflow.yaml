@@ -33,7 +33,6 @@ required:
   - workflow_link
   - workflow_type
   - aligned_reads_files
-  
 
 uniqueKeys:
   - [ id ]

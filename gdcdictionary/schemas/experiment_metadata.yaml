@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "simple_somatic_mutation"
-title: Simple Somatic Mutation
+id: "experiment_metadata"
+title: Experiment Metadata
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
-program: '*'
 project: '*'
+program: '*'
 description: >
-  Data file containing simple somatic mutations called from aligned reads.
+  Data file containing the metadata for the experiment performed. 
 additionalProperties: false
 validators: null
 
@@ -22,10 +22,10 @@ systemProperties:
   - error_type
 
 links:
-  - name: somatic_mutation_calling_workflows
-    backref: simple_somatic_mutations
-    label: data_from
-    target_type: somatic_mutation_calling_workflow
+  - name: read_groups
+    backref: experiment_metadata_files
+    label: derived_from
+    target_type: read_group
     multiplicity: many_to_one
     required: true
 
@@ -37,8 +37,7 @@ required:
   - data_category
   - data_type
   - file_format
-  - experimental_strategy
-  - somatic_mutation_calling_workflows
+  - read_groups
 
 uniqueKeys:
   - [ id ]
@@ -47,18 +46,13 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "simple_somatic_mutation" ]
+    enum: [ "experiment_metadata" ]
   data_category:
-    enum: [ "Simple Nucleotide Variation" ]
+    enum: [ "Sequencing Data" ]
   data_type:
-    enum: [ "Simple Somatic Mutation" ]
+    enum: [ "Experiment Metadata" ]
   file_format:
-    enum: [ "VCF" ]
-  experimental_strategy:
     enum:
-      - WGS
-      - WXS
-      - Low Pass WGS
-      - Validation
-  somatic_mutation_calling_workflows:
+      - SRA XML
+  read_groups:
     $ref: "_definitions.yaml#/to_one"

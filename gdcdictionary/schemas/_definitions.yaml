@@ -148,14 +148,11 @@ data_file_properties:
       - "null"
     description: "TOREVIEW: the file id assigned by the submitter"
   file_name:
-    type: string
-    description: "TOREVIEW: the file (object) name"
+    $ref: "#/file_name"
   file_size:
-    type: number
-    description: "the size file (object) in bytes"
+    $ref: "#/file_size"
   md5sum:
-    type: string
-    description: "The MD5 hash of this file"
+    $ref: "#/md5sum" 
   file_state:
     $ref: "#/file_state"
   state:

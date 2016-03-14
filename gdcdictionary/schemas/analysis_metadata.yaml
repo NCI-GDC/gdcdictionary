@@ -1,16 +1,16 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "read_group_metric"
-title: Read Group Metric
+id: "analysis_metadata"
+title: Analysis Metadata
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
 project: '*'
 program: '*'
-description: "Data file containing QC metric data."
+description: >
+  Data file containing the analysis information from the SRA XML.
 additionalProperties: false
 validators: null
-
 
 systemProperties:
   - id
@@ -22,13 +22,13 @@ systemProperties:
   - error_type
 
 links:
-  - name: read_group_qcs
-    backref: read_group_metrics
-    label: data_from
-    target_type: read_group_qc
-    multiplicity: one_to_one
+  - name: submitted_aligned_reads_files # what about unaligned reads?
+    backref: analysis_metadata_files
+    label: derived_from
+    target_type: submitted_aligned_reads
+    multiplicity: one_to_many
     required: true
-    
+
 required:
   - submitter_id
   - file_name
@@ -37,8 +37,7 @@ required:
   - data_category
   - data_type
   - file_format
-  - experimental_strategy
-  - read_group_qcs
+  - submitted_aligned_reads_files
 
 uniqueKeys:
   - [ id ]
@@ -47,23 +46,17 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "read_group_metric" ]
+    enum: [ "analysis_metadata" ]
   data_category:
     enum: [ "Sequencing Data" ]
   data_type:
-    enum: [ "Read Group Metric" ]
+    enum: [ "Analysis Metadata" ]
   file_format:
     enum:
-      - TXT
-      - TSV
-  experimental_strategy:
-    enum:
-      - WGS
-      - WXS
-      - Low Pass WGS
-      - Validation
-      - RNA-seq
-      - miRNA-seq
-      - Total RNA-seq
-  read_group_qcs:
-    $ref: "_definitions.yaml#/to_one"
+      - SRA XML
+      - MAGE-TAB
+      - SDRF
+      - IDF
+      - ADF
+  submitted_aligned_reads_files:
+    $ref: "_definitions.yaml#/to_many"

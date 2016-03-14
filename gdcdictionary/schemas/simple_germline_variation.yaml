@@ -60,7 +60,5 @@ properties:
       - WXS
       - Low Pass WGS
       - Validation
-  workflow:
-    type: string
   germline_mutation_calling_workflows:
     $ref: "_definitions.yaml#/to_one"

@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "simple_somatic_mutation"
-title: Simple Somatic Mutation
+id: "slide_image"
+title: Slide Image
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing simple somatic mutations called from aligned reads.
+  Data file containing image of a slide.
 additionalProperties: false
 validators: null
 
@@ -22,11 +22,11 @@ systemProperties:
   - error_type
 
 links:
-  - name: somatic_mutation_calling_workflows
-    backref: simple_somatic_mutations
+  - name: slides
+    backref: slide_images
     label: data_from
-    target_type: somatic_mutation_calling_workflow
-    multiplicity: many_to_one
+    target_type: slide
+    multiplicity: one_to_one
     required: true
 
 required:
@@ -38,7 +38,7 @@ required:
   - data_type
   - file_format
   - experimental_strategy
-  - somatic_mutation_calling_workflows
+  - slides
 
 uniqueKeys:
   - [ id ]
@@ -47,18 +47,17 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "simple_somatic_mutation" ]
-  data_category:
-    enum: [ "Simple Nucleotide Variation" ]
-  data_type:
-    enum: [ "Simple Somatic Mutation" ]
+    enum: [ "slide_image" ]
   file_format:
-    enum: [ "VCF" ]
+    enum:
+      - SVS
+  data_category:
+    enum: [ "Biospecimen" ]
+  data_type:
+    enum: [ "Slide Image" ]
   experimental_strategy:
     enum:
-      - WGS
-      - WXS
-      - Low Pass WGS
-      - Validation
-  somatic_mutation_calling_workflows:
+      - Diagnostic Slide
+      - Tissue Slide
+  slides:
     $ref: "_definitions.yaml#/to_one"

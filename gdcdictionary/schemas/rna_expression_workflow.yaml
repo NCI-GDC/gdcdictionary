@@ -1,15 +1,15 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "alignment_cocleaning_workflow" 
-title: Alignment Cocleaning Workflow
+id: "rna_expression_workflow" 
+title: RNA Expression Workflow
 type: object
 namespace: http://gdc.nci.nih.gov
 category: analysis 
 program: '*'
 project: '*'
 description: >
-  Metadata for the alignment and cocleaning pipeline used to align reads
-  in the GDC harmonization pipelines. 
+  Metadata for the RNA expression pipeline used to quantify RNA gene and exon
+  expression from unharmonized or GDC harmonized data.
 additionalProperties: false
 validators: null
 
@@ -24,17 +24,23 @@ links:
   - exclusive: true
     required: true
     subgroup:
+      - name: aligned_reads_files
+        backref: rna_expression_workflows
+        label: performed_on
+        target_type: aligned_reads
+        multiplicity: one_to_one
+        required: false
       - name: submitted_aligned_reads_files
-        backref: alignment_cocleaning_workflows
+        backref: rna_expression_workflows
         label: performed_on
         target_type: submitted_aligned_reads
-        multiplicity: one_to_many
+        multiplicity: one_to_one
         required: false
       - name: submitted_unaligned_reads_files
-        backref: alignment_cocleaning_workflows
+        backref: rna_expression_workflows
         label: performed_on
         target_type: submitted_unaligned_reads
-        multiplicity: one_to_many
+        multiplicity: one_to_one #to one?
         required: false
 
 required:
@@ -49,10 +55,16 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
   type:
-    enum: [ "alignment_cocleaning_workflow" ]
+    enum: [ "rna_expression_workflow" ]
   workflow_type:
-    enum: [ "BWA-mem with Mark Duplicates and Cocleaning" ]
+    enum:
+      - HTSeq - FPKM
+      - HTSeq - FPKM-UQ
+      - Cufflinks
+      - Kallisto
+  aligned_reads_files:
+    $ref: "_definitions.yaml#/to_one"
   submitted_aligned_reads_files:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_one"
   submitted_unaligned_reads_files:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_one"

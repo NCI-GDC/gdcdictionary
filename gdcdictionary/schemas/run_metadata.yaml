@@ -1,13 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "submitted_unaligned_reads"
-title: Submitted Unaligned Reads
+id: "run_metadata"
+title: Run Metadata
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
-program: '*'
 project: '*'
-description: "Data file containing unaligned reads that have not been GDC Harmonized."
+program: '*'
+description: >
+  Data file containing the run information from the SRA XML.
 additionalProperties: false
 validators: null
 
@@ -22,8 +23,8 @@ systemProperties:
 
 links:
   - name: read_groups
-    backref: submitted_unaligned_reads_files # pretty ugly
-    label: data_from
+    backref: run_metadata_files
+    label: derived_from
     target_type: read_group
     multiplicity: many_to_one
     required: true
@@ -36,7 +37,6 @@ required:
   - data_category
   - data_type
   - file_format
-  - experimental_strategy
   - read_groups
 
 uniqueKeys:
@@ -46,23 +46,13 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "submitted_unaligned_reads" ]
+    enum: [ "run_metadata" ]
   data_category:
     enum: [ "Sequencing Data" ]
   data_type:
-    enum: [ "Unaligned Reads" ]
+    enum: [ "Run Metadata" ]
   file_format:
     enum:
-      - BAM
-      - FASTQ
-  experimental_strategy:
-    enum:
-      - WGS
-      - WXS
-      - Low Pass WGS
-      - Validation
-      - RNA-seq
-      - miRNA-seq
-      - Total RNA-seq
+      - SRA XML
   read_groups:
     $ref: "_definitions.yaml#/to_one"

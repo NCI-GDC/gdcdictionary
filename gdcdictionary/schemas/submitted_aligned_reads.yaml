@@ -7,7 +7,8 @@ namespace: http://gdc.nci.nih.gov
 category: data_file
 program: '*'
 project: '*'
-description: "Data file containing aligned reads that have not yet been GDC Harmonized."
+description: >
+  Data file containing aligned reads that are used as input to GDC workflows. 
 additionalProperties: false
 validators: null
 
@@ -16,6 +17,7 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
+  - state
   - file_state
   - error_type
 
@@ -31,7 +33,12 @@ required:
   - submitter_id
   - file_name
   - file_size
+  - file_format
   - md5sum
+  - data_category
+  - data_type
+  - experimental_strategy
+  - read_groups
 
 uniqueKeys:
   - [ id ]
@@ -41,19 +48,20 @@ properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
     enum: [ "submitted_aligned_reads" ]
+  file_format:
+    enum: [ "BAM" ]
   data_category:
     enum: [ "Sequencing Data" ]
   data_type:
     enum: [ "Aligned Reads" ]
-  file_format:
-    enum: [ "BAM" ]
   experimental_strategy:
     enum:
       - WGS
       - WXS
       - Low Pass WGS
       - Validation
-  workflow:
-    type: string
+      - RNA-seq
+      - miRNA-seq
+      - Total RNA-seq
   read_groups:
     $ref: "_definitions.yaml#/to_many"
