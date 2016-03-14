@@ -1,0 +1,59 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "submitted_aligned_reads"
+title: Submitted Aligned Reads
+type: object
+namespace: http://gdc.nci.nih.gov
+category: data_file
+program: '*'
+project: '*'
+description: "Data file containing aligned reads that have not yet been GDC Harmonized."
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - file_state
+  - error_type
+
+links:
+  - name: read_groups
+    backref: submitted_aligned_reads_files # pretty ugly
+    label: data_from
+    target_type: read_group
+    multiplicity: one_to_many
+    required: true
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - md5sum
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+  type:
+    enum: [ "submitted_aligned_reads" ]
+  data_category:
+    enum: [ "Sequencing Data" ]
+  data_type:
+    enum: [ "Aligned Reads" ]
+  file_format:
+    enum: [ "BAM" ]
+  experimental_strategy:
+    enum:
+      - WGS
+      - WXS
+      - Low Pass WGS
+      - Validation
+  workflow:
+    type: string
+  read_groups:
+    $ref: "_definitions.yaml#/to_many"
