@@ -1,0 +1,13 @@
+{
+    "type": "clinical_metadata",
+    "submitter_id": "clinical_metadata_a",
+    "file_name": "clinical_meta.xml",
+    "file_size": 223525,
+    "file_format": "BCR XML",
+    "md5sum": "595f44fec1e92a71d3e9e77456ba80d1",
+    "data_category": "Clinical",
+    "data_type": "Clinical Metadata",
+    "cases": {
+	 "submitter_id": "BLGSP-71-06-00005-01A-21R"
+    }
+}

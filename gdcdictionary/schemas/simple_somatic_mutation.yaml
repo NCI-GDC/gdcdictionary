@@ -1,0 +1,64 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "simple_somatic_mutation"
+title: Simple Somatic Mutation
+type: object
+namespace: http://gdc.nci.nih.gov
+category: data_file
+program: '*'
+project: '*'
+description: >
+  Data file containing simple somatic mutations called from aligned reads.
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - name: somatic_mutation_calling_workflows
+    backref: simple_somatic_mutations
+    label: data_from
+    target_type: somatic_mutation_calling_workflow
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - md5sum
+  - data_category
+  - data_type
+  - file_format
+  - experimental_strategy
+  - somatic_mutation_calling_workflows
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+  type:
+    enum: [ "simple_somatic_mutation" ]
+  data_category:
+    enum: [ "Simple Nucleotide Variation" ]
+  data_type:
+    enum: [ "Simple Somatic Mutation" ]
+  file_format:
+    enum: [ "VCF" ]
+  experimental_strategy:
+    enum:
+      - WGS
+      - WXS
+      - Low Pass WGS
+      - Validation
+  somatic_mutation_calling_workflows:
+    $ref: "_definitions.yaml#/to_one"

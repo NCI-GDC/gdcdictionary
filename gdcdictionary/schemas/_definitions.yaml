@@ -136,3 +136,59 @@ qc_metrics_state:
         - FAIL
         - PASS
         - WARN
+
+data_file_properties:
+  id:
+    $ref: "#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  submitter_id:
+    type:
+      - string
+      - "null"
+    description: "TOREVIEW: the file id assigned by the submitter"
+  file_name:
+    $ref: "#/file_name"
+  file_size:
+    $ref: "#/file_size"
+  md5sum:
+    $ref: "#/md5sum" 
+  file_state:
+    $ref: "#/file_state"
+  state:
+    $ref: "#/state"
+  error_type:
+    $ref: "#/data_file_error_type"
+  state_comment:
+    type: string
+    description: >
+      TOREVIEW: optional comment about why the file is in the
+      current state, mainly for invalid state.
+  project_id:
+    type: string
+  created_datetime:
+    $ref: "#/datetime"
+  updated_datetime:
+    $ref: "#/datetime"
+
+workflow_properties:
+  id:
+    $ref: "#/UUID"
+    systemAlias: node_id
+    description: "TODO"
+  submitter_id:
+    type:
+      - string
+      - "null"
+    description: "TOREVIEW: the file id assigned by the submitter"
+  workflow_link:
+    description: "Link to github hash for the CWL workflow used."
+    type: string
+  state:
+    $ref: "#/state"
+  project_id:
+    type: string
+  created_datetime:
+    $ref: "#/datetime"
+  updated_datetime:
+    $ref: "#/datetime"

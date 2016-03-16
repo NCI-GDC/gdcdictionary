@@ -1,0 +1,65 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "mirna_expression"
+title: miRNA Expression
+type: object
+namespace: http://gdc.nci.nih.gov
+category: data_file
+program: '*'
+project: '*'
+description: >
+  Data file containing miRNA expression information  generated internally
+  by the GDC.
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - name: mirna_expression_workflows
+    backref: mirna_expressions
+    label: data_from
+    target_type: mirna_expression_workflow
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - md5sum
+  - data_category
+  - data_type
+  - file_format
+  - experimental_strategy
+  - mirna_expression_workflows
+  
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+  type:
+    enum: [ "mirna_expression" ]
+  data_category:
+    enum: [ "Transcriptome Profiling" ]
+  data_type:
+    enum: [ "miRNA Expression Quantification" ]
+  file_format:
+    enum:
+      - TXT
+      - TSV
+      - CSV
+  experimental_strategy:
+    enum:
+      - miRNA-seq
+  mirna_expression_workflows:
+    $ref: "_definitions.yaml#/to_one"

@@ -1,0 +1,66 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "aligned_reads_index"
+title: Aligned Reads Index
+type: object
+namespace: http://gdc.nci.nih.gov
+category: index_file
+program: '*'
+project: '*'
+description: "Data file containing the index for a set of aligned reads."
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - exclusive: true
+    required: true
+    subgroup:
+      - name: submitted_aligned_reads_files
+        backref: aligned_reads_indexes
+        label: derived_from
+        target_type: submitted_aligned_reads
+        multiplicity: one_to_one
+        required: false
+      - name: aligned_reads_files
+        backref: aligned_reads_indexes
+        label: derived_from
+        target_type: aligned_reads
+        multiplicity: one_to_one
+        required: false
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - md5sum
+  - data_category
+  - data_type
+  - file_format
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+  type:
+    enum: [ "aligned_reads_index" ]
+  data_category:
+    enum: [ "Sequencing Data" ]
+  data_type:
+    enum: [ "Aligned Reads Index" ]
+  file_format:
+    enum: [ "BAI" ]
+  submitted_aligned_reads_files:
+    $ref: "_definitions.yaml#/to_one"
+  aligned_reads_files:
+    $ref: "_definitions.yaml#/to_one"

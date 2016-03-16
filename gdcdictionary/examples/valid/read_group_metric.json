@@ -1,0 +1,14 @@
+{
+    "type": "read_group_metric",
+    "submitter_id": "read_group_qc_metric_file",
+    "file_name": "read_group_qc_metrics.txt",
+    "file_size": 3215521,
+    "md5sum": "d81203da215be180128f260b788900b5",
+    "data_category": "Sequencing Data",
+    "data_type": "Read Group Metric",
+    "file_format": "TXT",
+    "experimental_strategy": "WGS",
+    "read_group_qcs": {
+	"submitter_id": "read_group_quality_control_a"
+    }
+}

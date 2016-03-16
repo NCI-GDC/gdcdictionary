@@ -1,0 +1,64 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "aggregated_somatic_mutation"
+title: Aggregated Somatic Mutation
+type: object
+namespace: http://gdc.nci.nih.gov
+category: data_file
+project: '*'
+program: '*'
+description: >
+  TOREVIEW: MAF files that contain all of the somatic mutations for
+  all of the cases for a project. 
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - name: projects
+    backref: aggregated_somatic_mutations
+    label: data_from
+    target_type: project
+    multiplicity: one_to_one
+    required: true
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - md5sum
+  - data_category
+  - data_type
+  - file_format
+  - experimental_strategy
+  - projects
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+  
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+  type:
+    enum: [ "aggregated_somatic_mutation" ]
+  data_category:
+    enum: [ "Simple Nucleotide Variation" ]
+  data_type:
+    enum: [ "Aggregated Somatic Mutations" ]
+  file_format:
+    enum:
+      - MAF
+  experimental_strategy:
+    enum:
+      - WGS
+      - WXS
+  projects:
+    $ref: "_definitions.yaml#/to_one"
