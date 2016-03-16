@@ -32,7 +32,7 @@ links:
         required: false
       - name: submitted_unaligned_reads_files
         backref: alignment_workflows
-        label: performed_one
+        label: performed_on
         target_type: submitted_unaligned_reads
         multiplicity: one_to_many
         required: false

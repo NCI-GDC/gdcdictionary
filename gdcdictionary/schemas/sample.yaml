@@ -96,6 +96,7 @@ properties:
       - Primary Xenograft Tissue
       - Cell Line Derived Xenograft Tissue
       - Fibroblasts from Bone Marrow Normal
+      - Mononuclear Cell Normal
     description: "TODO"
   sample_type_id:
     type: string
@@ -116,6 +117,7 @@ properties:
       - '13'
       - '14'
       - '15'
+      - '16'
       - '20'
       - '40'
       - '41'
