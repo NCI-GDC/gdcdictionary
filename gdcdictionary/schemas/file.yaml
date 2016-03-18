@@ -158,8 +158,7 @@ properties:
     minimum: 1
     description: "the size file (object) in bytes"
   md5sum:
-    type: string
-    description: "The MD5 hash of this file"
+    $ref: "_definitions.yaml#/md5sum"
   file_state:
     $ref: "_definitions.yaml#/file_state"
   state:

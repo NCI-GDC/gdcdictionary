@@ -58,7 +58,8 @@ file_format:
     description: "the size of the data file (object) in bytes"
 md5sum:
     type: string
-    description: "the MD5 hash of the data file (object)"
+    pattern: "^[a-fA-F0-9]{32}$"
+    description: "the MD5 hash of the data"
 
 release_state:
     description: "Release statesd of an entity"
