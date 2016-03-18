@@ -154,7 +154,8 @@ properties:
     type: string
     description: "TOREVIEW: the file (object) name"
   file_size:
-    type: number
+    type: integer
+    minimum: 1
     description: "the size file (object) in bytes"
   md5sum:
     type: string
