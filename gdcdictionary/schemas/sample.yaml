@@ -97,6 +97,7 @@ properties:
       - Cell Line Derived Xenograft Tissue
       - Fibroblasts from Bone Marrow Normal
       - Mononuclear Cell Normal
+      - FFPE Scrolls
     description: "TODO"
   sample_type_id:
     type: string
