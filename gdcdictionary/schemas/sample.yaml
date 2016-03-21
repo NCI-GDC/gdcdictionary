@@ -193,9 +193,11 @@ properties:
     description: "TODO"
   initial_weight:
     type: number
+    minimum: 0
     description: "TODO"
   current_weight:
     type: number
+    minimum: 0
     description: "TODO"
   freezing_method:
     type: string
