@@ -72,6 +72,7 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_treatment"
     type: number
+    minimum: 0
 
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
