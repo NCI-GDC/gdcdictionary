@@ -53,11 +53,13 @@ properties:
     term:
       $ref: "_terms.yaml#/years_smoked"
     type: number
+    minimum: 0
 
   cigarettes_per_day:
     term:
       $ref: "_terms.yaml#/cigarettes_per_day"
     type: number
+    minimum: 0
 
   alcohol_history:
     term:
