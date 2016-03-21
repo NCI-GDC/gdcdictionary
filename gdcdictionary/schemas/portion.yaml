@@ -64,12 +64,14 @@ properties:
       project. For TCGA this is bcrportionbarcode.
   weight:
     type: number
+    minimum: 0
     description: "TODO: define, from BCR"
   is_ffpe:
     type: boolean
     description: "TODO"
   creation_datetime:
     type: number
+    minimum: 0
     description: >
       TOREVIEW: The datetime of portion creation encoded as seconds from
       epoch. If no time is given, it is set to 00:00:00 of the date. Replaces
