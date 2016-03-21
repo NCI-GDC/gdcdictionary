@@ -89,12 +89,14 @@ properties:
   year_of_birth:
     term:
       $ref: "_terms.yaml#/year_of_birth"
-    type: number
+    type: integer
+    minimum: 0
 
   year_of_death:
     term:
       $ref: "_terms.yaml#/year_of_death"
-    type: number
+    type: integer
+    minimum: 0
 
   cases:
     $ref: "_definitions.yaml#/to_one"
