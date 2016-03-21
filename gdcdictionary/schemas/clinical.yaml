@@ -88,18 +88,21 @@ properties:
     description: >
       The survival state of the person registered on the protocol. CDE: 5.
   year_of_diagnosis:
-    type: number
+    type: integer
+    minimum: 0
     description: >
       Numeric value to represent the year of an individual's initial pathologic
       diagnosis of cancer. CDE: 2896960.
   age_at_diagnosis:
     type: number
+    minimum: 0
     description: >
       Age in days at which a condition or disease was first diagnosed.
       CDE: 3225640. TCGA has the age in years with CDE 2006657,
       this is converted by ceil(age*365.25) to get days.
   days_to_death:
     type: number
+    minimum: 0
     description: >
       Time interval from a person's date of death to the date of initial
       pathologic diagnosis, represented as a calculated number of days. CDE: 3165475.
