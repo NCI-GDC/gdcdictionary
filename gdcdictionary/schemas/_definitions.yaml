@@ -50,8 +50,10 @@ datetime:
 file_name:
     type: string
     description: "file name"
+
 file_size:
-    type: number
+    type: integer
+    minimum: 1
     description: "the size of the data file (object) in bytes"
 
 file_format:
