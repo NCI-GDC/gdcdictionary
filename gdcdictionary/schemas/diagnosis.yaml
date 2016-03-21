@@ -69,21 +69,26 @@ properties:
     term:
       $ref: "_terms.yaml#/age_at_diagnosis"
     type: number
+    minimum: 1
+    maximum: 150
 
   days_to_birth:
     term:
       $ref: "_terms.yaml#/days_to_birth"
     type: number
+    maximum: 0
 
   days_to_death:
     term:
       $ref: "_terms.yaml#/days_to_death"
     type: number
+    minimum: 0
 
   days_to_last_follow_up:
     term:
       $ref: "_terms.yaml#/days_to_last_follow_up"
     type: number
+    minimum: 0
 
   vital_status:
     term:
@@ -153,6 +158,7 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_recurrence"
     type: number
+    minimum: 0
 
   last_known_disease_status:
     term:
@@ -169,6 +175,7 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_last_known_disease_status"
     type: number
+    minimum: 0
 
   cases:
     $ref: "_definitions.yaml#/to_one"
