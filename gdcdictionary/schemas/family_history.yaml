@@ -74,6 +74,7 @@ properties:
   relationship_age_at_diagnosis:
     term: TBD # is there a dedicated term for this?
     type: number
+    minimum: 0
 
   relationship_primary_diagnosis:
     term:
