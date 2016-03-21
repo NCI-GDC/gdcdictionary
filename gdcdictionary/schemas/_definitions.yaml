@@ -53,9 +53,11 @@ file_name:
 file_size:
     type: number
     description: "the size of the data file (object) in bytes"
+
 file_format:
     type: string
-    description: "the size of the data file (object) in bytes"
+    description: "the format of the data file"
+
 md5sum:
     type: string
     pattern: "^[a-fA-F0-9]{32}$"
