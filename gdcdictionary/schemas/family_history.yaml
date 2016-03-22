@@ -53,8 +53,8 @@ properties:
     term:
       $ref: "_terms.yaml#/relative_with_cancer_history"
     enum:
-      - yes
-      - no
+      - "yes"
+      - "no"
       - unknown
 
   relationship_type:

@@ -54,8 +54,8 @@ properties:
     term:
       $ref: "_terms.yaml#/treatment_or_therapy"
     enum:
-      - yes
-      - no
+      - "yes"
+      - "no"
       - unknown
 
   treatment_intent_type:
