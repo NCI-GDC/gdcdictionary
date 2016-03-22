@@ -43,6 +43,8 @@ properties:
   type:
     enum: [ "somatic_mutation_calling_workflow" ]
   workflow_type:
+    term:
+      $ref: "_terms.yaml#/workflow_type"
     enum:
       - MuTect2 All
       - MuTect2 Filtered

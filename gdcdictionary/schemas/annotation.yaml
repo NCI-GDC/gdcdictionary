@@ -156,7 +156,7 @@ properties:
     description: "TOREVIEW: Top level characterization of the annotation."
   classification:
     type: string
-    description: "TODO: define, from DCC." # Is this supposed to be a description of the category"
+    description: "TOREVIEW: Top level classification of the annotation."
   creator:
     type: string
   status:

@@ -41,7 +41,6 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
 
   state:
     $ref: "_definitions.yaml#/state"
@@ -74,7 +73,8 @@ properties:
       - unspecified
 
   relationship_age_at_diagnosis:
-    term: TBD # is there a dedicated term for this?
+    term:
+      $ref: "_terms.yaml#/age_at_diagnosis"
     type: number
 
   relationship_primary_diagnosis:

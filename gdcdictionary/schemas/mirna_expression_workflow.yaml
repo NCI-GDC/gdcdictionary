@@ -42,6 +42,8 @@ properties:
   type:
     enum: [ "mirna_expression_workflow" ]
   workflow_type:
+    term:
+      $ref: "_terms.yaml#/workflow_type"
     enum: [ "BCGSC miRNA Profiling" ]
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"

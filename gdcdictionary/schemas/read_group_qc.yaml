@@ -71,16 +71,26 @@ properties:
   type:
     enum: [ "read_group_qc" ]
   workflow_type:
+    term:
+      $ref: "_terms.yaml#/workflow_type"
     enum: [ "Read Group Quality Control" ]
   fastq_name:
+    term:
+      $ref: "_terms.yaml#/file_name"
     type: string
   percent_gc_content:
+    term:
+      $ref: "_terms.yaml#/percent_gc_content"
     type: integer
     minimum: 0
     maximum: 100
   encoding:
+    term:
+      $ref: "_terms.yaml#/encoding"
     type: string
   total_sequences:
+    term:
+      $ref: "_terms.yaml#/total_sequences"
     type: integer
   basic_statistics:
     $ref: "_definitions.yaml#/qc_metrics_state"

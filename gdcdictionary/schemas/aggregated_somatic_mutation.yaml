@@ -50,13 +50,21 @@ properties:
   type:
     enum: [ "aggregated_somatic_mutation" ]
   data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
     enum: [ "Simple Nucleotide Variation" ]
   data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
     enum: [ "Aggregated Somatic Mutations" ]
   file_format:
+    term:
+      $ref: "_terms.yaml#/file_format"
     enum:
       - MAF
   experimental_strategy:
+    term:
+      $ref: "_terms.yaml#/experimental_strategy"
     enum:
       - WGS
       - WXS

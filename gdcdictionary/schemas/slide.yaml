@@ -45,7 +45,6 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
   state:
     $ref: "_definitions.yaml#/state"
   submitter_id:
@@ -56,44 +55,57 @@ properties:
       The legacy barcode used before prior to the use UUIDs, varies by project.
       For TCGA, this is bcrslidebarcode.
   section_location:
+    term:
+      $ref: "_terms.yaml#/section_location"
     type: string
-    description: "TOREVIEW: Tissue source of the slide."
   number_proliferating_cells:
+    term:
+      $ref: "_terms.yaml#/number_proliferating_cells"
     type: integer
-    description: "TOREVIEW: Number of proliferating cells identified in the slide sample."
   percent_tumor_cells:
+    term:
+      $ref: "_terms.yaml#/percent_tumor_cells"
     type: number
-    description: "TOREVIEW: Percent of cells identified as tumor cells."
   percent_tumor_nuclei:
+    term:
+      $ref: "_terms.yaml#/percent_tumor_nuclei"
     type: number
-    description: "TOREVIEW: Percent of nuclei identified as tumor nuceli."
   percent_normal_cells:
+    term:
+      $ref: "_terms.yaml#/percent_normal_cells"
     type: number
-    description: "TOREVIEW: Percent of cells identified as normal cells."
   percent_necrosis:
+    term:
+      $ref: "_terms.yaml#/percent_necrosis"
     type: number
-    description: "TOREVIEW: Percent of tumor cell necrosis in the slide."
   percent_stromal_cells:
+    term:
+      $ref: "_terms.yaml#/percent_stromal_cells"
     type: number
-    description: "TOREVIEW: Percent of cells identified as stromal cells."
   percent_inflam_infiltration:
+    term:
+      $ref: "_terms.yaml#/percent_inflam_infiltration"
     type: number
-    description: "TOREVIEW: Percent of cells identified as inflamatory infiltration."
   percent_lymphocyte_infiltration:
+    term:
+      $ref: "_terms.yaml#/percent_lymphocyte_infiltration"
     type: number
-    description: "TOREVIEW: Percent of cells identified as lymphocyte infiltration."
   percent_monocyte_infiltration:
+    term:
+      $ref: "_terms.yaml#/percent_monocyte_infiltration"
     type: number
-    description: "TOREVIEW: Percent of cells identified as monocyte infiltration."
   percent_granulocyte_infiltration:
+    term:
+      $ref: "_terms.yaml#/percent_granulocyte_infiltration"
     type: number
-    description: "TOREVIEW: Percent of cells identified as granulocyte infiltration."
   percent_neutrophil_infiltration:
+    term:
+      $ref: "_terms.yaml#/percent_neutrophil_infiltration"
     type: number
-    description: "TOREVIEW: Percent of cells identified as neutrophil infiltration."
   percent_eosinophil_infiltration:
+    term:
+      $ref: "_terms.yaml#/percent_eosinophil_infiltration"
     type: number
-    description: "TOREVIEW: Percent of cells identified as eosinophil infiltration."
   portions:
     $ref: "_definitions.yaml#/to_many"
   project_id:

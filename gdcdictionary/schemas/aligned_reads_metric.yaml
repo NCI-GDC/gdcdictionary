@@ -54,13 +54,21 @@ properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
     enum: [ "aligned_reads_metric" ]
-  file_format:
-    type: string
   data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
     enum: [ "Sequencing Data" ]
   data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
     enum: [ "Aligned Reads Metrics" ]
+  file_format:
+    term:
+      $ref: "_terms.yaml#/file_format"
+    type: string
   experimental_strategy:
+    term:
+      $ref: "_terms.yaml#/experimental_strategy"
     enum:
       - WGS
       - WXS

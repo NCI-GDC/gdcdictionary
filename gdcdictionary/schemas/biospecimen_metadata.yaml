@@ -47,12 +47,18 @@ properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
     enum: [ "biospecimen_metadata" ]
-  file_format:
-    enum:
-      - BCR XML
   data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
     enum: [ "Biospecimen" ]
   data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
     enum: [ "Biospecimen Metadata" ]
+  file_format:
+    term:
+      $ref: "_terms.yaml#/file_format"
+    enum:
+      - BCR XML
   cases:
     $ref: "_definitions.yaml#/to_one"

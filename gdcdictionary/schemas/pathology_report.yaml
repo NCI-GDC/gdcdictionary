@@ -47,12 +47,18 @@ properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
     enum: [ "pathology_report" ]
-  file_format:
-    enum:
-      - PDF
   data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
     enum: [ "Clinical" ]
   data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
     enum: [ "Pathology Report" ]
+  file_format:
+    term:
+      $ref: "_terms.yaml#/file_format"
+    enum:
+      - PDF
   samples:
     $ref: "_definitions.yaml#/to_one"

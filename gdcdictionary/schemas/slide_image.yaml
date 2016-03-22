@@ -48,14 +48,22 @@ properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
     enum: [ "slide_image" ]
-  file_format:
-    enum:
-      - SVS
   data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
     enum: [ "Biospecimen" ]
   data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
     enum: [ "Slide Image" ]
+  file_format:
+    term:
+      $ref: "_terms.yaml#/file_format"
+    enum:
+      - SVS
   experimental_strategy:
+    term:
+      $ref: "_terms.yaml#/experimental_strategy"
     enum:
       - Diagnostic Slide
       - Tissue Slide

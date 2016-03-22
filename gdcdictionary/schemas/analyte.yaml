@@ -58,6 +58,8 @@ properties:
       The legacy barcode used before prior to the use UUIDs, varies by
       project. For TCGA this is bcranalytebarcode.
   analyte_type:
+    term:
+      $ref: "_terms.yaml#/analyte_type"
     enum:
       - DNA
       - EBV Immortalized Normal
@@ -66,8 +68,9 @@ properties:
       - Repli-G X (Qiagen) DNA
       - RNA
       - Total RNA
-    description: "TOREVIEW: Protocol specific, molecular type of the specimen."
   analyte_type_id:
+    term:
+      $ref: "_terms.yaml#/analyte_type_id"
     enum:
       - D
       - G
@@ -77,23 +80,25 @@ properties:
       - W
       - X
   amount:
+    term:
+      $ref: "_terms.yaml#/amount"
     type: number
-    description: "TODO: define, from BCR; is this weight in grams or volume in mL?"
   concentration:
+    term:
+      $ref: "_terms.yaml#/concentration"
     type: number
-    description: "TOREVIEW: Concentration of the analyte, in molarity."
   a260_a280_ratio:
+    term:
+      $ref: "_terms.yaml#/a260_a280_ratio"
     type: number
-    description: >
-      TOREVIEW: Purity measurement that weights absorbance at 260nm (DNA concentration)
-      against absorbance at 280nm (protein concentration/contamination).
   well_number:
+    term:
+      $ref: "_terms.yaml#/well_number"
     type: string
-    description: "TOREVIEW Number of the well from which the analyte was derived."
   spectrophotometer_method:
+    term:
+      $ref: "_terms.yaml#/spectrophotometer_method"
     type: string
-    description: >
-      TOREVIEW: Spectrophotometric method used to measure sample purity (e.g. UV Spec).
 # analyte parents
   portions:
     #should this be to_one

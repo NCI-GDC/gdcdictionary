@@ -1,5 +1,18 @@
 id: _terms
 
+a260_a280_ratio:
+  description: >
+    TOREVIEW: Purity measurement that weighs the absorbance at 20nm (DNA concentration)
+    against the absorbance at 280nm (protein concentration/contamination).
+
+adapter_name:
+  description: >
+    TOREVIEW: Name of the sequencing adapter.
+
+adapter_sequence:
+  description: >
+    TOREVIEW: Base sequence of the sequencing adapter.
+
 age_at_diagnosis:
   description: >
     The numerical response indicating the age of a person, expressed in years,
@@ -32,6 +45,26 @@ alcohol_intensity:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3457767&version=1.0"
 
+amount:
+  description: >
+    TOREVIEW: Is this weight in grams or volume in mL or something else??
+
+analyte_type:
+  description: >
+    TOREVIEW: Protocol-specific molecular type of the specimen.
+
+analyte_type_id:
+  description: >
+    TOREVIEW: Single letter BCR code for the analyte type.
+
+base_caller_name:
+  description: >
+    TOREVIEW: Name of the base caller.
+
+base_caller_version:
+  description: >
+    TOREVIEW: Version of the base caller.
+
 bmi:
   description: "The body mass divided by the square of the body height expressed in units of kg/m2."
   termDef:
@@ -59,6 +92,26 @@ classification_of_tumor:
     cde_version: null
     term_url: null
 
+concentration:
+  description: >
+    TOREVIEW: Concentration of the item, in molarity. ## NOT SURE
+
+current_weight:
+  description: >
+    TOREVIEW: Current weight of the sample, in grams.
+
+data_category:
+  description: >
+    TOREVIEW: Broad categorization of the contents of the data file.
+
+data_file_error_type:
+  description: >
+    TOREVIEW: Type of error for the data file object. 
+
+data_type:
+  description: >
+    TOREVIEW: Specific content type of the data file.
+
 days_to_birth:
   description: >
     Time interval from a person's date of birth to the date of initial pathologic diagnosis,
@@ -70,12 +123,23 @@ days_to_birth:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008233&version=1.0"
 
+days_to_collection:
+  description: >
+    Time interval from the date of biospecimen collection to the date of initial pathologic
+    diagnosis, represented as a calculated number of days. 
+  termDef:
+    term: Days to Collection
+    source: caBIG
+    cde_id: 3008340
+    cde_version: 1.0
+    term_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008340&version=1.0
+
 days_to_death:
   description: >
     Time interval from a person's date of death to the date of initial pathologic diagnosis,
     represented as a calculated number of days.
   termDef:
-    term: Days to Deaeth
+    term: Days to Death
     source: caDSR
     cde_id: 3008253
     cde_version: 1.0
@@ -115,6 +179,11 @@ days_to_recurrence:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008295&version=1.0"
 
+days_to_sample_procurement:
+  description: >
+    TOREVIEW: Time interval from the date of sample collection to the date of sample procurement,
+    expressed in days. 
+
 days_to_treatment:
   description: "Number of days from date of initial pathologic diagnosis that treatment began."
   termDef:
@@ -123,6 +192,10 @@ days_to_treatment:
     cde_id: null
     cde_version: null
     term_url: null
+
+encoding:
+  description: >
+    TOREVIEW: Version of ASCII encoding of quality values found in the file. From FASTQC Doc
 
 ethnicity:
   description: >
@@ -138,17 +211,41 @@ ethnicity:
     cde_version: 2.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2192217&version=2.0"
 
+experiment_name:
+  description: >
+    TOREVIEW: Submitter-defined name for the experiment.
+
+experimental_strategy:
+  description: >
+    TOREVIEW: The sequencing strategy used to generate the data file.
+
+fastq_name:
+  description: >
+    TOREVIEW: Names of FASTQs.
+
 file_name:
   description: >
     TOREVIEW: The name (or part of a name) of a file (of any type). From http://edamontology.org/data_1050
 
-file_size:
-  description: >
-    TOREVIEW: The size of the data file (object) in bytes.
-
 file_format:
   description: >
     TOREVIEW: Format of the data files. From http://purl.obolibrary.org/obo/MS_1001459 
+
+file_size:
+  description: >
+    TOREVIEW: The size of the data file (object) in bytes. 
+
+file_state:
+  description: >
+    TOREVIEW: The current state of the data file object.
+
+flow_cell_barcode:
+  description: >
+    TOREVIEW: Flow Cell Barcode.
+
+freezing_method:
+  description: >
+    TOREVIEW: Method used to freeze the sample.
 
 gender:
   description: >
@@ -170,6 +267,80 @@ height:
     cde_version: 4.1
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=649&version=4.1"
 
+includes_spike_ins:
+  description: >
+    TOREVIEW: Spike-in included?
+
+initial_weight:
+  description: >
+    TOREVIEW: Initial weight of the sample, in grams.
+
+instrument_model:
+  description: >
+    TOREVIEW: Specific model of sequencing instrument used.
+    
+intermediate_dimension:
+  description: >
+    TOREVIEW: Intermediate dimension of the sample, in millimeters.
+
+is_ffpe:
+  description: >
+    TOREVIEW: Is the sample formalin-fixed, paraffin-embedded?
+
+is_paired_end:
+  description: >
+    TOREVIEW: Are the reads paired end?
+
+last_known_disease_status:
+  description: "The state or condition of an individual's neoplasm at a particular point in time."
+  termDef:
+    term: Last Known_Disease_satus
+    source: caDSR
+    cde_id: 2759550
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2759550&version=1.0"
+
+library_strategy:
+  description: >
+    TOREVIEW: Library strategy.
+
+library_selection:
+  description: >
+    TOREVIEW: Library Selection Method
+
+library_name:
+  description: >
+    TOREVIEW: Name of the library.
+
+library_preparation_kit_name:
+  description: >
+    TOREVEIW: Name of Library Preparation Kit
+
+library_preparation_kit_vendor:
+  description: >
+    TOREVIEW: Vendor of Library Preparation Kit
+
+library_preparation_kit_catalog_number:
+  description: >
+    TOREVIEW: Catalog of Library Preparation Kit
+
+library_preparation_kit_version:
+  description: >
+    TOREVIEW: Version of Library Preparation Kit
+
+library_strand:
+  description: >
+    TOREVIEW: Library strandedness.
+    
+longest_dimension:
+  description: >
+    TOREVIEW: Longest dimension of the sample, in millimeters.
+
+md5sum:
+  description: >
+    TOREIVEW: The 128-bit hash value expressed as a 32 digit hexidecimal number used as a file's
+    digital fingerprint. Defined internally
+
 morphology:
   description: >
     The third edition of the International Classification of Diseases for Oncology, published in 2000
@@ -186,15 +357,69 @@ morphology:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3226275&version=1.0"
 
-last_known_disease_status:
-  description: "The state or condition of an individual's neoplasm at a particular point in time."
-  termDef:
-    term: Last Known_Disease_satus
-    source: caDSR
-    cde_id: 2759550
-    cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2759550&version=1.0"
+number_proliferating_cells:
+  description: >
+    TOREVIEW: Number of proliferating cells identified in the slide sample.
 
+oct_embedded:
+  description: >
+    TOREVIEW: Is the sample embedded in an optimal cutting temperature compound?
+
+percent_eosinophil_infiltration:
+  description: >
+    TOREVIEW: Percent of cells identified as eosinophil infiltration.
+
+percent_gc_content:
+  description: >
+    TOREVIEW: The overall %GC of all bases in all sequences. From FASTQC doc.
+
+percent_granulocyte_infiltration:
+  description: >
+    TOREVIEW: Percent of cells identified as granulocyte infiltration.
+
+percent_inflam_infiltration:
+  description: >
+    TOREVIEW: Percent of cells identified as inflamatory infiltration.
+
+percent_lymphocyte_infiltration:
+  description: >
+    TOREVIEW: Percent of cells identified as lymphocyte infiltration.
+
+percent_monocyte_infiltration:
+  description: >
+    TOREVIEW: Percent of cells identified as monocyte infiltration.
+    
+percent_normal_cells:
+  description: >
+    TOREVIEW: Percent of cells identified as normal cells.
+
+percent_necrosis:
+  description: >
+    TOREVIEW: Percent of tumor cell necrosis in the slide.
+
+percent_neutrophil_infiltration:
+  description: >
+    TOREVIEW: Percent of cells identified as neutrophil infiltration.
+
+percent_stromal_cells:
+  description: >
+    TOREVIEW: Percent of cells identified as stromal cells.
+
+percent_tumor_cells:
+  description: >
+    TOREVIEW: Percent of cells identified as tumor cells.
+
+percent_tumor_nuclei:
+  description: >
+    TOREVIEW: Percent of nuclei identified as tumor nuceli.
+
+platform:
+  description: >
+    TOREVIEW: Name of the platform used to sequence the data.
+    
+portion_number:
+  description: >
+    TOREVIEW: The number given to the portion. # Not sure
 primary_diagnosis:
   description: >
     The investigation, analysis and recognition of the presence and nature of disease,
@@ -231,6 +456,11 @@ progression_or_recurrence:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3830556&version=1.0"
 
+qc_metric_state:
+  description: >
+    TOREVIEW: State classification given by FASTQC for the metric. Metric specific details about the
+    states are available on their website. http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/
+
 race:
   description: >
     An arbitrary classification of a taxonomic group that is a division of a species. It usually arises
@@ -243,6 +473,14 @@ race:
     cde_id: C17049
     cde_version: null
     term_url: "https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C17049"
+
+read_length:
+  description: >
+    TOREVIEW: The length of the reads.
+
+read_group_name:
+  description: >
+    TOREVIEW: The name of the read group.
 
 relationship_type:
   description: >
@@ -278,6 +516,31 @@ religion:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3800115&version=1.0"
 
+RIN:
+  description: >
+    TOREVIEW: The RNA integrity number.
+
+sample_type:
+  description: >
+    TOREVIEW: Type of the sample. Named for its cellular source, molecular composition,
+    and/or therapeutic treatment.
+
+sample_type_id:
+  description: >
+    TOREWVIEW: The accompanying sample type id for the sample type.
+      
+section_location:
+  description: >
+    TOREVIEW: Tissue source of the slide.
+
+sequencing_center:
+  description: >
+    TOREVIEW: Name of the center that provided the sequence files.
+
+shortest_dimension:
+  description: >
+    TOREVIEW: Shortest dimension of the sample, in millimeters.
+
 site_of_resection_or_biopsy:
   description: >
     Term to represent the name of the organ resected that was contiguous to the primary disease site.
@@ -289,6 +552,10 @@ site_of_resection_or_biopsy:
     cde_id: 3162811
     cde_version: 2.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3162811&version=2.0"
+
+size_selection_range:
+  description: >
+    TOREVIEW: Range of size selection.
 
 smoking_history:
   description: >
@@ -311,6 +578,46 @@ smoking_intensity:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2955385&version=1.0"
 
+source_center:
+  description: >
+    TOREVIEW: Name of the center that provided the item.
+
+spectrophotometer_method:
+  description: >
+    TOREVIEW: Spectrophotometric method used to measure sample purity (e.g. UV Spec).
+
+spike_ins_fasta:
+  description: >
+    TOREVIEW: Name of the FASTA file that contains the spike-in seqeunces.
+    
+spike_ins_concentration:
+  description: >
+    TOREVIEW: Spike in concentration.
+    
+state:
+  description: >
+    TOREVIEW: The current state fo the object. Defined internally
+
+target_capture_kit_name:
+    description: >
+      TOREVIEW: Name of Target Capture Kit.
+
+target_capture_kit_vendor:
+    description: >
+      TOREVIEW: Vendor of Target Capture Kit.
+
+target_capture_kit_catalog_number:
+    description: >
+      TOREVIEW: Catalog of Target Capture Kit.
+
+target_capture_kit_version:
+    description: >
+      TOREVIEW: Version of Target Capture Kit.
+
+target_capture_kit_target_region:
+    description: >
+      TOREVIEW: Target Capture Kit BED file.
+    
 therapeutic_agent:
   description: >
     Any natural, endogenously-derived, synthetic or semi-synthetic compound with pharmacologic activity.
@@ -328,6 +635,14 @@ therapeutic_agent:
     cde_version: null
     term_url: "https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C1909"
 
+time_between_clamping_and_freezing:
+  description: >
+    TOREVIEW: Time between clamping and freezing, in minutes.
+
+time_between_excision_and_freezing:
+  description: >
+    TOREVIEW: Time between excision and freezing, in minutes.
+
 tissue_or_organ_of_origin:
   description: >
     The third edition of the International Classification of Diseases for Oncology, published in 2000,
@@ -341,6 +656,18 @@ tissue_or_organ_of_origin:
     cde_id: 3226281
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3226281&version=1.0"
+
+to_trim_adapter_sequence:
+  description: >
+    TOREIVEW: Does the user suggest adapter trimming?
+
+total_sequences:
+  description: >
+    TOREVIEW: A count of the total number of sequences processed. There are two values reported, actual
+    and estimated. At the moment these will always be the same. In the future it may be possible to
+    analyse just a subset of sequences and estimate the total number, to speed up the analysis, but since
+    we have found that problematic sequences are not evenly distributed through a file we have disabled
+    this for now. From FASTQC Doc
 
 treatment_intent_type:
   description: "Text term to identify the reason for the administration of a treatment regimen."
@@ -379,6 +706,14 @@ tumor_grade:
     cde_id: C18000
     cde_version: null
     term_url: "https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C18000"
+
+tumor_code:
+  description: >
+    TOREVIEW: Name of the source of tumor tissue.
+
+tumor_code_id:
+  description: >
+    TODO 
 
 tumor_stage:
   description: >
@@ -426,6 +761,13 @@ weight:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=651&version=1.0"
 
+well_number:
+  description: >
+    TOREVIEW: Number of the well from which the analyte was derived.
+
+workflow_type:
+  description: >
+    Generic name for the workflow used to analyze a data set.
 year_of_birth:
   description: "Numeric value to represent the calendar year in which an individual was born."
   termDef:
