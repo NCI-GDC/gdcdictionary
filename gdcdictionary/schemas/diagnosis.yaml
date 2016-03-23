@@ -99,6 +99,7 @@ properties:
       - dead
       - lost to follow-up
       - unknown
+      - pending # this is from TARGET RT clinical data
 
   primary_diagnosis:
     term:
