@@ -59,6 +59,7 @@ properties:
       - "yes"
       - "no"
       - unknown
+      - not reported
 
   treatment_intent_type:
     term:
