@@ -3,7 +3,7 @@
     "submitter_id": "harmonization_metrics_X",
     "file_name": "metrics.txt",
     "file_size": 234235,
-    "file_format": "TXT",
+    "data_format": "TXT",
     "md5sum": "d3266f2577584713ea17f94d331f30c4",
     "data_category": "Sequencing Data",
     "data_type": "Aligned Reads Metrics",

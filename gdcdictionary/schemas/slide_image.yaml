@@ -36,7 +36,7 @@ required:
   - md5sum
   - data_category
   - data_type
-  - file_format
+  - data_format
   - experimental_strategy
   - slides
 
@@ -56,9 +56,9 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Slide Image" ]
-  file_format:
+  data_format:
     term:
-      $ref: "_terms.yaml#/file_format"
+      $ref: "_terms.yaml#/data_format"
     enum:
       - SVS
   experimental_strategy:

@@ -7,7 +7,7 @@
     "md5sum": "d3266f2577584713ea17f94d331f30c4",
     "data_category": "Sequencing Data",
     "data_type": "Aligned Reads",
-    "file_format": "BAM",
+    "data_format": "BAM",
     "experimental_strategy": "WXS",
     "alignment_cocleaning_workflows": {
 	"submitter_id": "Jeremiah's_super_secret_pipeline_v423"

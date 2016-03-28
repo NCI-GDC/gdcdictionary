@@ -7,7 +7,7 @@
     "md5sum": "d81203da215be180128f260b788900b5",
     "data_category": "Sequencing Data",
     "data_type": "Unaligned Reads",
-    "file_format": "FASTQ",
+    "data_format": "FASTQ",
     "experimental_strategy": "WGS",
     "read_groups": {
 	"submitter_id": "read_group_1"

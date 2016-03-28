@@ -6,7 +6,7 @@
     "md5sum": "d3266f2577584713ea17f94d331f30c4",
     "data_category": "Simple Nucleotide Variation",
     "data_type": "Simple Somatic Mutation",
-    "file_format": "VCF",
+    "data_format": "VCF",
     "experimental_strategy": "WGS",
     "somatic_mutation_calling_workflows": {
 	"submitter_id": "Stuti's_super_secret_pipeline_v213"
