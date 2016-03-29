@@ -64,6 +64,7 @@ properties:
       - male
       - unknown
       - unspecified
+      - not reported
 
   race:
     term:

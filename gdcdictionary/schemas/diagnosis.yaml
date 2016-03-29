@@ -103,6 +103,7 @@ properties:
       - lost to follow-up
       - unknown
       - pending # this is from TARGET RT clinical data
+      - not reported
 
   primary_diagnosis:
     term:
@@ -132,6 +133,7 @@ properties:
       - metastasis
       - recurrence
       - other
+      - not reported
 
   prior_malignancy:
     term:
@@ -140,6 +142,7 @@ properties:
       - "yes"
       - "no"
       - unknown
+      - not reported
 
   tumor_stage:
     term:
@@ -158,6 +161,7 @@ properties:
       - "yes"
       - "no"
       - unknown
+      - not reported
 
   days_to_recurrence:
     term:
@@ -176,6 +180,7 @@ properties:
       - Tumor free
       - Unknown tumor status
       - With tumor
+      - not reported
 
   days_to_last_known_disease_status:
     term:

@@ -57,6 +57,7 @@ properties:
       - "yes"
       - "no"
       - unknown
+      - not reported
 
   relationship_type:
     term:
@@ -71,6 +72,7 @@ properties:
       - male
       - unknown
       - unspecified
+      - not reported
 
   relationship_age_at_diagnosis:
     term:
