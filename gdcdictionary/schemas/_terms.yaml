@@ -108,6 +108,10 @@ data_file_error_type:
   description: >
     TOREVIEW: Type of error for the data file object. 
 
+data_format:
+  description: >
+    TOREVIEW: Format of the data files. From http://purl.obolibrary.org/obo/MS_1001459 
+
 data_type:
   description: >
     TOREVIEW: Specific content type of the data file.
@@ -226,10 +230,6 @@ fastq_name:
 file_name:
   description: >
     TOREVIEW: The name (or part of a name) of a file (of any type). From http://edamontology.org/data_1050
-
-file_format:
-  description: >
-    TOREVIEW: Format of the data files. From http://purl.obolibrary.org/obo/MS_1001459 
 
 file_size:
   description: >

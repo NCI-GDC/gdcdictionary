@@ -6,7 +6,7 @@
     "md5sum": "d81203da215be180128f260b788900b5",
     "data_category": "Sequencing Data",
     "data_type": "Read Group Metric",
-    "file_format": "TXT",
+    "data_format": "TXT",
     "experimental_strategy": "WGS",
     "read_group_qcs": {
 	"submitter_id": "read_group_quality_control_a"

@@ -3,7 +3,7 @@
     "submitter_id": "biospecimen_metadata_a",
     "file_name": "biospecimen_meta.xml",
     "file_size": 223525,
-    "file_format": "BCR XML",
+    "data_format": "BCR XML",
     "md5sum": "595f44fec1e92a71d3e9e77456ba80d1",
     "data_category": "Biospecimen",
     "data_type": "Biospecimen Metadata",

@@ -44,7 +44,7 @@ required:
   - md5sum
   - data_category
   - data_type
-  - file_format
+  - data_format
 
 uniqueKeys:
   - [ id ]
@@ -62,9 +62,9 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Aligned Reads Index" ]
-  file_format:
+  data_format:
     term:
-      $ref: "_terms.yaml#/file_format"
+      $ref: "_terms.yaml#/data_format"
     enum: [ "BAI" ]
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"

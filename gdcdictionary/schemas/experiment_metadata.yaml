@@ -45,7 +45,7 @@ required:
   - md5sum
   - data_category
   - data_type
-  - file_format
+  - data_format
 
 uniqueKeys:
   - [ id ]
@@ -63,9 +63,9 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Experiment Metadata" ]
-  file_format:
+  data_format:
     term:
-      $ref: "_terms.yaml#/file_format"
+      $ref: "_terms.yaml#/data_format"
     enum:
       - SRA XML
   read_groups:

@@ -36,7 +36,7 @@ required:
   - md5sum
   - data_category
   - data_type
-  - file_format
+  - data_format
   - experimental_strategy
   - read_group_qcs
 
@@ -56,9 +56,9 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Read Group Metric" ]
-  file_format:
+  data_format:
     term:
-      $ref: "_terms.yaml#/file_format"
+      $ref: "_terms.yaml#/data_format"
     enum:
       - TXT
       - TSV

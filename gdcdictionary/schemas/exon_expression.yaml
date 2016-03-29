@@ -37,7 +37,7 @@ required:
   - md5sum
   - data_category
   - data_type
-  - file_format
+  - data_format
   - experimental_strategy
   - rna_expression_workflows
   
@@ -57,9 +57,9 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Exon Expression Quantification" ]
-  file_format:
+  data_format:
     term:
-      $ref: "_terms.yaml#/file_format"
+      $ref: "_terms.yaml#/data_format"
     enum:
       - TXT
       - TSV

@@ -41,7 +41,7 @@ required:
   - submitter_id
   - file_name
   - file_size
-  - file_format
+  - data_format
   - md5sum
   - data_category
   - data_type
@@ -62,9 +62,9 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Aligned Reads Metrics" ]
-  file_format:
+  data_format:
     term:
-      $ref: "_terms.yaml#/file_format"
+      $ref: "_terms.yaml#/data_format"
     type: string
   experimental_strategy:
     term:

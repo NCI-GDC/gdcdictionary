@@ -6,7 +6,7 @@
     "md5sum": "d3266f2577584713ea17f94d331f30c4",
     "data_category": "Transcriptome Profiling",
     "data_type": "Exon Expression Quantification",
-    "file_format": "TXT",
+    "data_format": "TXT",
     "experimental_strategy": "RNA-seq",
     "rna_expression_workflows": {
 	"submitter_id": "rna_profiling_output#"

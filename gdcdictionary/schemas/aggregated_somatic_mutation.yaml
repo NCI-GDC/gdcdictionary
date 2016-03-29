@@ -37,7 +37,7 @@ required:
   - md5sum
   - data_category
   - data_type
-  - file_format
+  - data_format
   - experimental_strategy
   - projects
 
@@ -57,9 +57,9 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Aggregated Somatic Mutations" ]
-  file_format:
+  data_format:
     term:
-      $ref: "_terms.yaml#/file_format"
+      $ref: "_terms.yaml#/data_format"
     enum:
       - MAF
   experimental_strategy:
