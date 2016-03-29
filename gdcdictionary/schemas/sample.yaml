@@ -63,6 +63,8 @@ properties:
       The legacy barcode used before prior to the use UUIDs, varies by project.
       For TCGA this is bcrsamplebarcode.
   sample_type:
+    term:
+      $ref: "_terms.yaml#/sample_type"
     type: string
     enum:
       - Blood Derived Normal
@@ -98,10 +100,10 @@ properties:
       - Fibroblasts from Bone Marrow Normal
       - Mononuclear Cell Normal
       - FFPE Scrolls
-    description: "TODO"
   sample_type_id:
+    term:
+      $ref: "_terms.yaml#/sample_type_id"
     type: string
-    description: "TODO"
     enum:
       - '01'
       - '02'
@@ -128,6 +130,8 @@ properties:
       - '61'
       - '99'
   tumor_code_id:
+    term:
+      $ref: "_terms.yaml#/tumor_code_id"
     type: string
     enum:
       - "00"
@@ -154,8 +158,9 @@ properties:
       - "71"
       - "80"
       - "81"
-    description: "TODO"
   tumor_code:
+    term:
+      $ref: "_terms.yaml#/tumor_code"
     type: string
     enum:
       - Non cancerous tissue
@@ -182,52 +187,57 @@ properties:
       - NHL, Burkitt lymphoma (BL)
       - Rhabdomyosarcoma
       - Soft tissue sarcoma, non-rhabdomyosarcoma
-    description: "TODO"
   longest_dimension:
+    terms:
+      $ref: "_terms.yaml#/longest_dimension"
     type: string
-    description: "TODO"
   intermediate_dimension:
+    terms:
+      $ref: "_terms.yaml#/intermediate_dimension"
     type: string
-    description: "TODO"
   shortest_dimension:
+    term:
+      $ref: "_terms.yaml#/shortest_dimension"
     type: string
-    description: "TODO"
   initial_weight:
+    term:
+      $ref: "_terms.yaml#/initial_weight"
     type: number
-    description: "TODO"
   current_weight:
+    term:
+      $ref: "_terms.yaml#/current_weight"
     type: number
-    description: "TODO"
   freezing_method:
+    term:
+      $ref: "_terms.yaml#/freezing_method"
     type: string
-    description: "TODO"
   oct_embedded:
+    term:
+      $ref: "_terms.yaml#/oct_embedded"
     type: string
-    description: "TODO"
   time_between_clamping_and_freezing:
+    term:
+      $ref: "_terms.yaml#/time_between_clamping_and_freezing"
     type: string
-    description: "TODO"
   time_between_excision_and_freezing:
+    term:
+      $ref: "_terms.yaml#/time_between_excision_and_freezing"
     type: string
-    description: "TODO"
   days_to_collection:
+    term:
+      $ref: "_terms.yaml#/days_to_collection"
     type: integer
-    description: >
-      TOREVIEW: The datetime of sample collection encoded as seconds from
-      epoch. If no time is given, it is set to 00:00:00 of the date. Replaces
-      dayofcollection/monthofcollection/yearofcollection.
   days_to_sample_procurement:
+    term:
+      $ref: "_terms.yaml#/days_to_sample_procurement"
     type: integer
-    description: >
-      TOREVIEW: The datetime of sample procurement encoded as seconds from
-      epoch. If no time is given, it is set to 00:00:00 of the date. Replaces
-      dayofcollection/monthofcollection/yearofcollection.
   pathology_report_uuid:
     type: string
-    description: "TODO"
+    description: "TODO" # are we still doing this? seems like the links handle this now
   is_ffpe:
+    term:
+      $ref: "_terms.yaml#/is_ffpe"
     type: boolean
-    description: "TODO"
   cases:
     #should this be to_one
     $ref: "_definitions.yaml#/to_one"

@@ -49,14 +49,22 @@ properties:
   type:
     enum: [ "read_group_metric" ]
   data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
     enum: [ "Sequencing Data" ]
   data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
     enum: [ "Read Group Metric" ]
   file_format:
+    term:
+      $ref: "_terms.yaml#/file_format"
     enum:
       - TXT
       - TSV
   experimental_strategy:
+    term:
+      $ref: "_terms.yaml#/experimental_strategy"
     enum:
       - WGS
       - WXS

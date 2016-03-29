@@ -1,6 +1,8 @@
 id: _definitions
 
 UUID:
+    term:
+        $ref: "_terms.yaml#/UUID"
     type: string
     pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
 
@@ -49,16 +51,23 @@ datetime:
 
 file_name:
     type: string
-    description: "file name"
+    term:
+        $ref: "_terms.yaml#/file_name"
+
 file_size:
     type: number
-    description: "the size of the data file (object) in bytes"
+    term: 
+        $ref: "_terms.yaml#/file_size"
+
 file_format:
     type: string
-    description: "the size of the data file (object) in bytes"
+    term:
+        $ref: "_terms.yaml#/file_format"
+
 md5sum:
     type: string
-    description: "the MD5 hash of the data file (object)"
+    term:
+        $ref: "_terms.yaml#/md5sum"
 
 release_state:
     description: "Release statesd of an entity"
@@ -80,14 +89,16 @@ data_bundle_state:
         - redacted
 
 data_file_error_type:
-    description: "type of error"
+    term:
+        $ref: "_terms.yaml#/data_file_error_type"
     enum:
         - file_size
         - file_format
         - md5sum
 
 state:
-    description: "states of all entities"
+    term:
+        $ref: "_terms.yaml#/state" 
     default: validated
     downloadable:
         - uploaded
@@ -117,7 +128,8 @@ state:
             - released
 
 file_state:
-    description: "states for data file objects"
+    term:
+        $ref: "_terms.yaml#/file_state" 
     default: registered
     enum:
         - registered
@@ -132,6 +144,8 @@ file_state:
         - error
 
 qc_metrics_state:
+    term:
+      $ref: "_terms.yaml#/qc_metric_state"
     enum:
         - FAIL
         - PASS
@@ -141,7 +155,6 @@ data_file_properties:
   id:
     $ref: "#/UUID"
     systemAlias: node_id
-    description: "TODO"
   submitter_id:
     type:
       - string
@@ -175,7 +188,6 @@ workflow_properties:
   id:
     $ref: "#/UUID"
     systemAlias: node_id
-    description: "TODO"
   submitter_id:
     type:
       - string

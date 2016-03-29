@@ -7,7 +7,11 @@ namespace: http://gdc.nci.nih.gov
 category: clinical
 program: '*'
 project: '*'
-description: TBD
+description: >
+  Data from the investigation, analysis and recognition of the presence
+  and nature of disease, condition, or injury from expressed signs and
+  symptoms; also, the scientific determination of any kind; the concise
+  results of such an investigation. 
 additionalProperties: false
 validators: null
 
@@ -55,7 +59,6 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
 
   state:
     $ref: "_definitions.yaml#/state"

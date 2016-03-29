@@ -56,10 +56,16 @@ properties:
   type:
     enum: [ "run_metadata" ]
   data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
     enum: [ "Sequencing Data" ]
   data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
     enum: [ "Run Metadata" ]
   file_format:
+    term:
+      $ref: "_terms.yaml#/file_format"
     enum:
       - SRA XML
   read_groups:
