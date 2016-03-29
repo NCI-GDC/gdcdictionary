@@ -51,7 +51,10 @@ properties:
   type:
     enum: [ "alignment_workflow" ]
   workflow_type:
-    enum: [ "STAR 2-Pass" ]
+    enum: 
+      - "STAR 2-Pass"
+      - "BWA-aln"
+      - "BWA-mem"
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
   submitted_unaligned_reads_files:

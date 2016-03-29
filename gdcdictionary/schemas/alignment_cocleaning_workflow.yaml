@@ -53,7 +53,7 @@ properties:
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
-    enum: [ "BWA-mem with Mark Duplicates and Cocleaning" ]
+    enum: [ "BWA with Mark Duplicates and Cocleaning" ]
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
   submitted_unaligned_reads_files:
