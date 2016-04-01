@@ -67,16 +67,16 @@ links:
         target_type: file
         multiplicity: many_to_many
         required: false
-      - name: clinical_metadata_files
+      - name: clinical_supplements
         label: annotates
         backref: annotations
-        target_type: clinical_metadata
+        target_type: clinical_supplement
         multiplicity: many_to_many
         required: false
-      - name: biospecimen_metadata_files
+      - name: biospecimen_supplements
         label: annotates
         backref: annotations
-        target_type: biospecimen_metadata
+        target_type: biospecimen_supplement
         multiplicity: many_to_many
         required: false
       - name: read_groups
@@ -182,9 +182,9 @@ properties:
     $ref: "_definitions.yaml#/to_many"
   read_groups:
     $ref: "_definitions.yaml#/to_many"
-  clinical_metadata_files:
+  clinical_supplements:
     $ref: "_definitions.yaml#/to_many"
-  biospecimen_metadata_files:
+  biospecimen_supplements:
     $ref: "_definitions.yaml#/to_many"
   project_id:
     type: string

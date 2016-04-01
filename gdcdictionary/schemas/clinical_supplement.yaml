@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "clinical_metadata"
-title: Clinical Metadata
+id: "clinical_supplement"
+title: Clinical Supplement
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
@@ -23,7 +23,7 @@ systemProperties:
 
 links:
   - name: cases
-    backref: clinical_metadata_files
+    backref: clinical_supplements
     label: derived_from
     target_type: case
     multiplicity: many_to_one
@@ -46,7 +46,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "clinical_metadata" ]
+    enum: [ "clinical_supplement" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -54,7 +54,7 @@ properties:
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Clinical Metadata" ]
+    enum: [ "Clinical Supplement" ]
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
