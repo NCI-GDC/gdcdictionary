@@ -67,22 +67,16 @@ links:
         target_type: file
         multiplicity: many_to_many
         required: false
-      - name: submitted_files
+      - name: clinical_supplements
         label: annotates
         backref: annotations
-        target_type: submitted_file
+        target_type: clinical_supplement
         multiplicity: many_to_many
         required: false
-      - name: clinical_data_bundles
+      - name: biospecimen_supplements
         label: annotates
         backref: annotations
-        target_type: clinical_data_bundle
-        multiplicity: many_to_many
-        required: false
-      - name: biospecimen_data_bundles
-        label: annotates
-        backref: annotations
-        target_type: biospecimen_data_bundle
+        target_type: biospecimen_supplement
         multiplicity: many_to_many
         required: false
       - name: read_groups
@@ -91,6 +85,7 @@ links:
         target_type: read_group
         multiplicity: many_to_many
         required: false
+
 required:
   - submitter_id
   - category
@@ -158,18 +153,18 @@ properties:
       - Tumor tissue origin incorrect
       - Tumor type incorrect
       - WGA Failure
-    description: "TODO: define, from DCC"
+    description: "TOREVIEW: Top level characterization of the annotation."
   classification:
     type: string
-    description: "TODO: define, from DCC"
+    description: "TOREVIEW: Top level classification of the annotation."
   creator:
     type: string
   status:
     type: string
-    description: "TODO: define, from DCC"
+    description: "TOREVIEW: Status of the annotation." # Is this an enum?
   notes:
     type: string
-    description: "TODO: define, from DCC"
+    description: "TOREVIEW: Open entry for any further description or characterization of the data." 
 
   cases:
     $ref: "_definitions.yaml#/to_many"
@@ -187,11 +182,9 @@ properties:
     $ref: "_definitions.yaml#/to_many"
   read_groups:
     $ref: "_definitions.yaml#/to_many"
-  submitted_files:
+  clinical_supplements:
     $ref: "_definitions.yaml#/to_many"
-  clinical_data_bundles:
-    $ref: "_definitions.yaml#/to_many"
-  biospecimen_data_bundles:
+  biospecimen_supplements:
     $ref: "_definitions.yaml#/to_many"
   project_id:
     type: string

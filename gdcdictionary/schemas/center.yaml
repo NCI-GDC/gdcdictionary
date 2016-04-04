@@ -40,16 +40,16 @@ properties:
     description: "TODO"
   code:
     type: string
-    description: "TODO: define, from DCC"
+    description: "TOREVIEW: Numeric code for the center."
   namespace:
     type: string
-    description: "TODO: define, from DCC"
+    description: "TOREVIEW: Domain name of the center (e.g. borad.mit.edu)."
   name:
     type: string
-    description: "TODO: define, from DCC as display_name"
+    description: "TOREVIEW: Name of the center (e.g. Broad Institute of MIT and Harvard)."
   short_name:
     type: string
-    description: "TODO: define, from DCC"
+    description: "TOREVIEW: Shortened name of the center (e.g. BI)."
   center_type:
     type: string
-    description: "TODO: define, from DCC"
+    description: "TOREVIEW: Type classification of the center (e.g. CGCC)." # probably something better here

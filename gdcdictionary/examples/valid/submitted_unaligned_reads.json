@@ -1,0 +1,15 @@
+{
+    "type": "submitted_unaligned_reads",
+    "id": "5557a728-1827-4aff-b28b-f004d835f9d6",
+    "submitter_id": "TCGA-DQ-5630-01A-01R-1873-07",
+    "file_name": "UNCID_2741452.a38e0f12-7b18-4856-9cc8-314d8f0b63d6.1.fastq",
+    "file_size": 5747943025,
+    "md5sum": "d81203da215be180128f260b788900b5",
+    "data_category": "Sequencing Data",
+    "data_type": "Unaligned Reads",
+    "data_format": "FASTQ",
+    "experimental_strategy": "WGS",
+    "read_groups": {
+	"submitter_id": "read_group_1"
+    }
+}

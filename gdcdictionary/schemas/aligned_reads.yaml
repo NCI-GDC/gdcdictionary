@@ -1,0 +1,87 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "aligned_reads"
+title: Aligned Reads
+type: object
+namespace: http://gdc.nci.nih.gov
+category: data_file
+program: '*'
+project: '*'
+description: >
+  Data file containing aligned reads that are generated internally by the GDC.
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - exclusive: true
+    required: true
+    subgroup:
+      - name: alignment_cocleaning_workflows
+        backref: aligned_reads_files
+        label: data_from
+        target_type: alignment_cocleaning_workflow
+        multiplicity: many_to_one
+        required: false
+      - name: alignment_workflows
+        backref: aligned_reads_files
+        label: data_from
+        target_type: alignment_workflow
+        multiplicity: many_to_one
+        required: false
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - md5sum
+  - data_category
+  - data_type
+  - data_format
+  - experimental_strategy
+  
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+  type:
+    enum: [ "aligned_reads" ]
+  data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
+    enum:
+      - Sequencing Data
+      - Raw Sequencing Data
+  data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
+    enum: [ "Aligned Reads" ]
+  data_format:
+    term:
+      $ref: "_terms.yaml#/data_format"
+    enum: [ "BAM" ]
+  experimental_strategy:
+    term:
+      $ref: "_terms.yaml#/experimental_strategy"
+    enum:
+      - WGS
+      - WXS
+      - Low Pass WGS
+      - Validation
+      - RNA-seq
+      - miRNA-seq
+      - Total RNA-seq
+  alignment_cocleaning_workflows:
+    $ref: "_definitions.yaml#/to_one"
+  alignment_workflows:
+    $ref: "_definitions.yaml#/to_one"

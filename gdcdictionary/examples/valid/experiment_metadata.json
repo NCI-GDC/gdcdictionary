@@ -1,0 +1,13 @@
+{
+    "type": "experiment_metadata",
+    "submitter_id": "experiment XML from SRA XML",
+    "file_name": "experiment.xml",
+    "file_size": 21234,
+    "md5sum": "84a72e8aaad3017348cb3f8459c5d5d9",
+    "data_category": "Sequencing Data",
+    "data_type": "Experiment Metadata",
+    "data_format": "SRA XML",
+    "read_groups": {
+	"submitter_id": "read_group_X"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "type": "pathology_report",
+    "submitter_id": "Pathology report from Dr. J",
+    "file_name": "pathology_report.pdf",
+    "file_size": 324234,
+    "data_format": "PDF",
+    "md5sum": "595f44fec1e92a71d3e9e77456ba80d1",
+    "data_category": "Clinical",
+    "data_type": "Pathology Report",
+    "samples": {
+	"submitter_id": "sample_X"
+    }
+}

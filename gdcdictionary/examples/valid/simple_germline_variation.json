@@ -1,0 +1,14 @@
+{
+    "type": "simple_germline_variation",
+    "submitter_id": "Simple_germline_variation_outputs",
+    "file_name": "simple_germline_variations.vcf",
+    "file_size": 2343646734,
+    "md5sum": "d3266f2577584713ea17f94d331f30c4",
+    "data_category": "Simple Nucleotide Variation",
+    "data_type": "Simple Germline Variation",
+    "data_format": "VCF",
+    "experimental_strategy": "WGS",
+    "germline_mutation_calling_workflows": {
+	"submitter_id": "Shenglai's_super_secret_pipeline_v#"
+    }
+}

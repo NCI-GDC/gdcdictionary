@@ -54,13 +54,18 @@ properties:
   type:
     enum: [ "read_group" ]
   experiment_name:
+    term:
+      $ref: "_terms.yaml#/experiment_name"
     type: string
-    description: "Submitter-defined name for the experiment"
   sequencing_center:
+    term:
+      $ref: "_terms.yaml#/sequencing_center"
     type: string
   sequencing_date:
     $ref: "_definitions.yaml#/datetime"
   platform:
+    term:
+      $ref: "_terms.yaml#/platform"
     enum:
       - Illumina
       - SOLiD
@@ -70,7 +75,8 @@ properties:
       - PacBio
       - Other
   instrument_model:
-    description: "Instrument Model"
+    terms:
+      $ref: "_terms.yaml#/instrument_model"
     enum:
       - 454 GS FLX Titanium
       - AB SOLiD 4
@@ -90,6 +96,8 @@ properties:
       - PacBio RS
       - Other
   library_strategy:
+    term:
+      $ref: "_terms.yaml#/library_strategy"
     enum:
       - WGS
       - WXS
@@ -101,27 +109,34 @@ properties:
       - Amplicon
       - Other
   RIN:
-    description: "RNA Integrity Number"
+    term:
+      $ref: "_terms.yaml#/RIN"
     type: number
   flow_cell_barcode:
-    description: "Flow Cell Barcode"
+    term:
+      $ref: "_terms.yaml#/flow_cell_barcode"
     type: string
   includes_spike_ins:
-    description: "Spike-in included"
+    term:
+      $ref: "_terms.yaml#/includes_spike_ins"
     type: boolean
   spike_ins_fasta:
-    description: "Fasta file containing spike-in sequences"
+    term:
+      $ref: "_terms.yaml#/spike_ins_fasta"
     type: string
   spike_ins_concentration:
-    description: "spike_ins_concentration"
+    term:
+      $ref: "_terms.yaml#/spike_ins_concentration"
     type: string
   fastq_name:
-    description: "Names of FASTQ"
+    term:
+      $ref: "_terms.yaml#/fastq_name"
     type: array
     items:
       type: string
   library_selection:
-    description: "Library Selection Method"
+    term:
+      $ref: "_terms.yaml#/library_selection"
     enum:
       - Hybrid_Selection
       - PCR
@@ -130,59 +145,79 @@ properties:
       - RNA_Depletion
       - Other
   library_preparation_kit_name:
-    description: "Name of Library Preparation Kit"
+    term:
+      $ref: "_terms.yaml#/library_preparation_kit_name"
     type: string
   library_preparation_kit_vendor:
-    description: "Vendor of Library Preparation Kit"
+    term:
+      $ref: "_terms.yaml#/library_preparation_kit_vendor"
     type: string
   library_preparation_kit_catalog_number:
-    description: "Catalog of Library Preparation Kit"
+    term:
+      $ref: "_terms.yaml#/library_preparation_kit_catalog_number"
     type: string
   library_preparation_kit_version:
-    description: "Version of Library Preparation Kit"
+    term:
+      $ref: "_terms.yaml#/library_preparation_kit_version"
     type: string
   library_name:
+    term:
+      $ref: "_terms.yaml#/library_name"
     type: string
   target_capture_kit_name:  # conditionally required for WXS etc
-    description: "Name of Target Capture Kit"
+    term:
+      $ref: "_terms.yaml#/target_capture_kit_name"
     type: string
   target_capture_kit_vendor:
-    description: "Vendor of Target Capture Kit"
+    term:
+      $ref: "_terms.yaml#/target_capture_kit_vendor"
     type: string
   target_capture_kit_catalog_number:
-    description: "Catalog of Target Capture Kit"
+    term:
+      $ref: "_terms.yaml#/target_capture_kit_catalog_number"
     type: string
   target_capture_kit_version:
-    description: "Version of Target Capture Kit"
+    term:
+      $ref: "_terms.yaml#/target_capture_kit_version"
     type: string
   target_capture_kit_target_region:
-    description: "Target Capture Kit BED file"
+    term:
+      $ref: "_terms.yaml#/target_capture_kit_target_region"
     type: string
   size_selection_range:
-    description: "Range of Size Selection"
+    term:
+      $ref: "_terms.yaml#/size_selection_range"
     type: string
   adapter_name:
-    description: "Name of Sequencing Adapter"
+    term:
+      $ref: "_terms.yaml#/adapter_name"
     type: string
   adapter_sequence:
-    description: "Base Sequence of Sequencing Adapter"
+    term:
+      $ref: "_terms.yaml#/adapter_sequence"
     type: string
   to_trim_adapter_sequence:
-    description: "Does User Suggest Adapter Triming?"
+    term:
+      $ref: "_terms.yaml#/to_trim_adapter_sequence"
     type: boolean
   library_strand:
-    description: "Libray Strandness"
+    term:
+      $ref: "_terms.yaml#/library_strand"
     enum:
       - Unstranded
       - First_Stranded
       - Second_Stranded
   base_caller_name:
-    description: "Base Caller"
+    term:
+      $ref: "_terms.yaml#/base_caller_name"
     type: string
   base_caller_version:
-    description: "Base Caller version"
+    term:
+      $ref: "_terms.yaml#/base_caller_version"
     type: string
   is_paired_end:
+    term:
+      $ref: "_terms.yaml#/is_paired_end"
     type: boolean
   read_length:
     type: integer

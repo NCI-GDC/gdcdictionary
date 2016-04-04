@@ -1,0 +1,72 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "simple_germline_variation"
+title: Simple Germline Variation
+type: object
+namespace: http://gdc.nci.nih.gov
+category: data_file
+program: '*'
+project: '*'
+description: >
+  Data file containing simple germline variations called from aligned reads.
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - name: germline_mutation_calling_workflows
+    backref: simple_germline_variations
+    label: data_from
+    target_type: germline_mutation_calling_workflow
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - md5sum
+  - data_category
+  - data_type
+  - data_format
+  - experimental_strategy
+  - germline_mutation_calling_workflows
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+  type:
+    enum: [ "simple_germline_variation" ]
+  data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
+    enum: [ "Simple Nucleotide Variation" ]
+  data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
+    enum: [ "Simple Germline Variation" ]
+  data_format:
+    term:
+      $ref: "_terms.yaml#/data_format"
+    enum: [ "VCF" ]
+  experimental_strategy:
+    term:
+      $ref: "_terms.yaml#/experimental_strategy"
+    enum:
+      - WGS
+      - WXS
+      - Low Pass WGS
+      - Validation
+  germline_mutation_calling_workflows:
+    $ref: "_definitions.yaml#/to_one"

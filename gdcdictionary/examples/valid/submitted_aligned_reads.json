@@ -1,0 +1,15 @@
+{
+    "type": "submitted_aligned_reads",
+    "id": "0cb66276-c29b-4811-a704-38502173c0f8",
+    "submitter_id": "TCGA-AB-2837-03B-01W-0728-08",
+    "file_name": "C317.TCGA-AB-2837-03B-01W-0728-08.3.bam",
+    "file_size": 28165335141,
+    "md5sum": "d3266f2577584713ea17f94d331f30c4",
+    "data_category": "Sequencing Data",
+    "data_type": "Aligned Reads",
+    "data_format": "BAM",
+    "experimental_strategy": "WXS",
+    "read_groups": {
+	"submitter_id": "205CTABXX100806.5.C317.TCGA-AB-2837-03B-01W-0728-08.3.bam"
+    }
+}

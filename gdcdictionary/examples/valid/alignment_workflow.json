@@ -1,0 +1,9 @@
+{
+    "type": "alignment_workflow",
+    "submitter_id": "Harmonization_run_#",
+    "workflow_link": "github.com/<owner>/<project>/commit/<hash>",
+    "workflow_type": "STAR 2-Pass",
+    "submitted_aligned_reads_files": {
+	"id": "0cb66276-c29b-4811-a704-38502173c0f8"
+    }
+}

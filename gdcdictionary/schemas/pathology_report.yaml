@@ -1,0 +1,64 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: pathology_report
+title: Pathology Report
+type: object
+namespace: http://gdc.nci.nih.gov
+category: data_file
+project: '*'
+program: '*'
+description: >
+  Data file containing the pathology report.
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - name: samples
+    backref: pathology_reports
+    label: derived_from
+    target_type: sample
+    multiplicity: one_to_one
+    required: true
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - data_format
+  - md5sum
+  - data_category
+  - data_type
+  - samples
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+  type:
+    enum: [ "pathology_report" ]
+  data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
+    enum: [ "Clinical" ]
+  data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
+    enum: [ "Pathology Report" ]
+  data_format:
+    term:
+      $ref: "_terms.yaml#/data_format"
+    enum:
+      - PDF
+  samples:
+    $ref: "_definitions.yaml#/to_one"

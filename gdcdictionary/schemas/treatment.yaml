@@ -7,7 +7,9 @@ namespace: http://gdc.nci.nih.gov
 category: clinical
 program: '*'
 project: '*'
-description: TBD
+description: >
+  Record of the administration and intention of therapeutic agents
+  provided to a patient to alter the course of a pathologic process.   
 additionalProperties: false
 validators: null
 
@@ -54,9 +56,10 @@ properties:
     term:
       $ref: "_terms.yaml#/treatment_or_therapy"
     enum:
-      - yes
-      - no
+      - "yes"
+      - "no"
       - unknown
+      - not reported
 
   treatment_intent_type:
     term:

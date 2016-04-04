@@ -1,0 +1,13 @@
+{
+    "type": "analysis_metadata",
+    "submitter_id": "analysis XML from SRA XML",
+    "file_name": "analysis.xml",
+    "file_size": 21234,
+    "md5sum": "84a72e8aaad3017348cb3f8459c5d5d9",
+    "data_category": "Sequencing Data",
+    "data_type": "Analysis Metadata",
+    "data_format": "SRA XML",
+    "submitted_aligned_reads_files": {
+	"submitter_id": "submitted_aligned_read_X"
+    }
+}

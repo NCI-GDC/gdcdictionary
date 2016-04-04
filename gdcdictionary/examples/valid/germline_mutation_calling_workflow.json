@@ -1,0 +1,9 @@
+{
+    "type": "germline_mutation_calling_workflow",
+    "submitter_id": "HaplotypeCaller_run_#",
+    "workflow_link": "github.com/<owner>/<project>/commit/<hash>",
+    "workflow_type": "HaplotypeCaller",
+    "aligned_reads_files": {
+	"submitter_id": "GDC_generated_bam_#"
+    }
+}

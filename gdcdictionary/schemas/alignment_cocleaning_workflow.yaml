@@ -1,0 +1,60 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "alignment_cocleaning_workflow" 
+title: Alignment Cocleaning Workflow
+type: object
+namespace: http://gdc.nci.nih.gov
+category: analysis 
+program: '*'
+project: '*'
+description: >
+  Metadata for the alignment and cocleaning pipeline used to align reads
+  in the GDC harmonization pipelines. 
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - exclusive: true
+    required: true
+    subgroup:
+      - name: submitted_aligned_reads_files
+        backref: alignment_cocleaning_workflows
+        label: performed_on
+        target_type: submitted_aligned_reads
+        multiplicity: one_to_many
+        required: false
+      - name: submitted_unaligned_reads_files
+        backref: alignment_cocleaning_workflows
+        label: performed_on
+        target_type: submitted_unaligned_reads
+        multiplicity: one_to_many
+        required: false
+
+required:
+  - submitter_id
+  - workflow_link
+  - workflow_type
+  
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/workflow_properties"
+  type:
+    enum: [ "alignment_cocleaning_workflow" ]
+  workflow_type:
+    term:
+      $ref: "_terms.yaml#/workflow_type"
+    enum: [ "BWA with Mark Duplicates and Cocleaning" ]
+  submitted_aligned_reads_files:
+    $ref: "_definitions.yaml#/to_many"
+  submitted_unaligned_reads_files:
+    $ref: "_definitions.yaml#/to_many"
