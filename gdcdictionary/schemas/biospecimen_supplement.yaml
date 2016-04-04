@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "biospecimen_metadata"
-title: Biospecimen Metadata
+id: "biospecimen_supplement"
+title: Biospecimen Supplement
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
@@ -23,7 +23,7 @@ systemProperties:
 
 links:
   - name: cases
-    backref: biospecimen_metadata_files
+    backref: biospecimen_supplements
     label: derived_from
     target_type: case
     multiplicity: many_to_one
@@ -46,7 +46,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "biospecimen_metadata" ]
+    enum: [ "biospecimen_supplement" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -54,7 +54,7 @@ properties:
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Biospecimen Metadata" ]
+    enum: [ "Biospecimen Supplement" ]
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
