@@ -89,14 +89,16 @@ properties:
     type: string
     enum:
       - administrative
+      - analysis
       - biospecimen
       - clinical
       - data
       - data_bundle
       - data_file
-      - index_file 
+      - index_file
+      - metadata_file
+      - notation 
       - qc_bundle
-      - analysis
       - TBD
 
   unique_keys:
