@@ -50,7 +50,9 @@ properties:
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
-    enum: [ "Sequencing Data" ]
+    enum:
+      - Sequencing Data
+      - Raw Sequencing Data
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
