@@ -94,7 +94,7 @@ properties:
       Numeric value to represent the year of an individual's initial pathologic
       diagnosis of cancer. CDE: 2896960.
   age_at_diagnosis:
-    type: number
+    type: integer
     minimum: 0
     description: >
       Age in days at which a condition or disease was first diagnosed.
