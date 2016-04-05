@@ -65,46 +65,57 @@ properties:
   percent_tumor_cells:
     type: number
     minimum: 0
+    maximum: 100
     description: "TODO: define, from BCR"
   percent_tumor_nuclei:
     type: number
     minimum: 0
+    maximum: 100
     description: "TODO: define, from BCR"
   percent_normal_cells:
     type: number
     minimum: 0
+    maximum: 100
     description: "TODO: define, from BCR"
   percent_necrosis:
     type: number
     minimum: 0
+    maximum: 100
     description: "TODO: define, from BCR"
   percent_stromal_cells:
     type: number
     minimum: 0
+    maximum: 100
     description: "TODO: define, from BCR"
   percent_inflam_infiltration:
     type: number
     minimum: 0
+    maximum: 100
     description: "TODO: define, from BCR"
   percent_lymphocyte_infiltration:
     type: number
     minimum: 0
+    maximum: 100
     description: "TODO: define, from BCR"
   percent_monocyte_infiltration:
     type: number
     minimum: 0
+    maximum: 100
     description: "TODO: define, from BCR"
   percent_granulocyte_infiltration:
     type: number
     minimum: 0
+    maximum: 100
     description: "TODO: define, from BCR"
   percent_neutrophil_infiltration:
     type: number
     minimum: 0
+    maximum: 100
     description: "TODO: define, from BCR"
   percent_eosinophil_infiltration:
     type: number
     minimum: 0
+    maximum: 100
     description: "TODO: define, from BCR"
   portions:
     $ref: "_definitions.yaml#/to_many"
