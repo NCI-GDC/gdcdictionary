@@ -188,6 +188,10 @@ properties:
     $ref: "_definitions.yaml#/to_many"
   project_id:
     type: string
+  legacy_created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  legacy_updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
