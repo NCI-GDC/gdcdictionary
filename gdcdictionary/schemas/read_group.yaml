@@ -128,12 +128,6 @@ properties:
     term:
       $ref: "_terms.yaml#/spike_ins_concentration"
     type: string
-  fastq_name:
-    term:
-      $ref: "_terms.yaml#/fastq_name"
-    type: array
-    items:
-      type: string
   library_selection:
     term:
       $ref: "_terms.yaml#/library_selection"
