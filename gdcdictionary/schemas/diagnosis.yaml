@@ -69,7 +69,7 @@ properties:
     term:
       $ref: "_terms.yaml#/age_at_diagnosis"
     type: number
-    minimum: 1
+    minimum: 0
     maximum: 150
 
   days_to_birth:
