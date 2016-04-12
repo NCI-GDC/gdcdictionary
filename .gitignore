@@ -59,3 +59,6 @@ target/
 
 #venv
 .venv/
+
+#DS_store
+.DS_store
