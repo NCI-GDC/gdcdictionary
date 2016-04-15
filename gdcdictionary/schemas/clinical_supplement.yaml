@@ -28,6 +28,12 @@ links:
     target_type: case
     multiplicity: many_to_one
     required: true
+  - name: archives
+    backref: clinical_supplements
+    label: member_of
+    target_type: archive
+    multiplicity: many_to_one
+    required: false
 
 required:
   - submitter_id
@@ -61,4 +67,6 @@ properties:
     enum:
       - BCR XML
   cases:
+    $ref: "_definitions.yaml#/to_one"
+  archives:
     $ref: "_definitions.yaml#/to_one"
