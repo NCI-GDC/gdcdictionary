@@ -86,6 +86,10 @@ properties:
     description: >
       Indicates that the aliquot is physically derived from the linked to
       analyte via some process/protocol
+  analyte_type:
+    $ref: "analyte.yaml#/properties/analyte_type"
+  analyte_type_id:
+    $ref: "analyte.yaml#/properties/analyte_type_id"
   samples:
     $ref: "_definitions.yaml#/to_one"
   centers:

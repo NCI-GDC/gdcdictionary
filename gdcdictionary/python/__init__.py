@@ -1,5 +1,6 @@
 from copy import deepcopy
 from collections import namedtuple
+from contextlib import contextmanager
 from jsonschema import RefResolver
 
 import glob
@@ -10,6 +11,42 @@ import yaml
 MOD_DIR = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 
 ResolverPair = namedtuple('ResolverPair', ['resolver', 'source'])
+
+
+@contextmanager
+def visit_directory(path):
+    """Perform contained actions with current working directory at
+    :param:``path``.  Always return to previous directory when done.
+
+    """
+
+    cdir = os.getcwd()
+    try:
+        os.chdir(path)
+        yield os.getcwd()
+    finally:
+        os.chdir(cdir)
+
+
+def load_yaml(name):
+    """Return contents of yaml file as dict"""
+    with open(name, 'r') as f:
+        return yaml.safe_load(f)
+
+
+def load_schemas_from_dir(directory):
+    """Returns all yamls and resolvers of those yamls from dir"""
+
+    schemas, resolvers = {}, {}
+
+    with visit_directory(directory):
+        for path in glob.glob("*.yaml"):
+            schema = load_yaml(path)
+            schemas[path] = schema
+            resolver = RefResolver('{}#'.format(path), schema)
+            resolvers[path] = ResolverPair(resolver, schema)
+
+    return schemas, resolvers
 
 
 class GDCDictionary(object):
@@ -40,18 +77,22 @@ class GDCDictionary(object):
         self.schema = dict()
         self.resolvers = dict()
         if not lazy:
-            self.load()
+            self.load_directory(self.root_dir)
 
-    def load(self):
-        """Load and reslove all schemas"""
+    def load_directory(self, directory):
+        """Load and reslove all schemas from directory"""
 
-        self.metaschema = self.load_yaml_schema(self.metaschema_path)
-        self.resolvers = self.get_resolvers()
-        self.load_root_dir()
-        self.schema = {
-            key: self.resolve_schema(schema, deepcopy(schema))
-            for key, schema in self.schema.iteritems()
+        yamls, resolvers = load_schemas_from_dir(directory)
+
+        self.metaschema = yamls[self.metaschema_path]
+        self.resolvers.update(resolvers)
+
+        schemas = {
+            schema['id']: self.resolve_schema(schema, deepcopy(schema))
+            for path, schema in yamls.iteritems()
+            if path not in self.exclude
         }
+        self.schema.update(schemas)
 
     def resolve_reference(self, value, root):
         """Resolves a reference.
@@ -77,7 +118,7 @@ class GDCDictionary(object):
         return resolution
 
     def resolve_schema(self, obj, root):
-        """REcursively resolves all references in a schema against
+        """Recursively resolves all references in a schema against
         ``self.resolvers``.
 
         :param obj: The object to recursively resolve.
@@ -99,28 +140,6 @@ class GDCDictionary(object):
             return [self.resolve_schema(item, root) for item in obj]
         else:
             return obj
-
-    def get_resolvers(self):
-        resolvers = {}
-        for path in self.definitions_paths:
-            source = self.load_yaml_schema(path)
-            resolver = RefResolver('{}#'.format(path), source)
-            resolvers[path] = ResolverPair(resolver, source)
-        return resolvers
-
-    def load_root_dir(self):
-        cdir = os.getcwd()
-        os.chdir(self.root_dir)
-        for name in glob.glob("*.yaml"):
-            if name not in self.exclude:
-                schema = self.load_yaml_schema(name)
-                self.schema[schema['id']] = schema
-        os.chdir(cdir)
-
-    def load_yaml_schema(self, name):
-        full_path = os.path.join(self.root_dir, name)
-        with open(full_path, 'r') as f:
-            return yaml.load(f)
 
 
 gdcdictionary = GDCDictionary()
