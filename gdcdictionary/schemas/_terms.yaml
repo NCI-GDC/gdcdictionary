@@ -15,14 +15,13 @@ adapter_sequence: # TOREVIEW
 
 age_at_diagnosis:
   description: >
-    The numerical response indicating the age of a person, expressed in years,
-    when they were diagnosed with a disease or disorder.
+    Age at the time of diagnosis expressed in number of days since birth.
   termDef:
-    term: Person Diagnosis Age Value
-    source: caDSR
-    cde_id: 4828691
+    term: Patient Age at Diagnosis
+    source: caBIG
+    cde_id: 3225640
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4828691&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3225640&version=1.0"
 
 alcohol_history:
   description: >
