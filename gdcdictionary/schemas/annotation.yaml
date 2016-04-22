@@ -4,7 +4,7 @@ id: "annotation"
 title: Annotation
 type: object
 namespace: http://gdc.nci.nih.gov
-category: TBD
+category: notation 
 program: '*'
 project: '*'
 description: >
