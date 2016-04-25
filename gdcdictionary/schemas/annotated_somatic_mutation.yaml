@@ -1,14 +1,15 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "simple_somatic_mutation"
-title: Simple Somatic Mutation
+id: "annotated_somatic_mutation"
+title: Annotated Somatic Mutation
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing simple somatic mutations called from aligned reads.
+  Data file containing the annotated somatic mutations calls from a harmonized
+  aligned reads file.
 additionalProperties: false
 validators: null
 
@@ -22,10 +23,10 @@ systemProperties:
   - error_type
 
 links:
-  - name: somatic_mutation_calling_workflows
-    backref: simple_somatic_mutations
+  - name: somatic_annotation_workflows
+    backref: annotated_somatic_mutations
     label: data_from
-    target_type: somatic_mutation_calling_workflow
+    target_type: somatic_annotation_workflow
     multiplicity: many_to_one
     required: true
 
@@ -38,7 +39,7 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - somatic_mutation_calling_workflows
+  - somatic_annotation_workflows
 
 uniqueKeys:
   - [ id ]
@@ -47,7 +48,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "simple_somatic_mutation" ]
+    enum: [ "annotated_somatic_mutation" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -55,11 +56,14 @@ properties:
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Raw Simple Somatic Mutation" ]
+    enum: [ "Annotated Somatic Mutation" ]
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
-    enum: [ "VCF" ]
+    enum:
+      - VCF
+      - MAF
+      - TSV
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
@@ -68,5 +72,5 @@ properties:
       - WXS
       - Low Pass WGS
       - Validation
-  somatic_mutation_calling_workflows:
+  somatic_annotation_workflows:
     $ref: "_definitions.yaml#/to_one"
