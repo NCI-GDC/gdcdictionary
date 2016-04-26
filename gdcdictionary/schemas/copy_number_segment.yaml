@@ -52,13 +52,13 @@ properties:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Copy number variation
+      - Copy Number Variation
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - Copy number segment allcnv
-      - Copy number segment nocnv
+      - Copy Number Segment allcnv
+      - Copy Number Segment nocnv
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
@@ -68,6 +68,6 @@ properties:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - Genotyping array
+      - Genotyping Array
   copy_number_liftover_workflows:
     $ref: "_definitions.yaml#/to_one"

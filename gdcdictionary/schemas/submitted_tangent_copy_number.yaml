@@ -52,12 +52,12 @@ properties:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Copy number variation
+      - Copy Number Variation
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - Copy number estimate
+      - Copy Number Estimate
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
@@ -67,6 +67,6 @@ properties:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - Genotyping array
+      - Genotyping Array
   aliquots:
     $ref: "_definitions.yaml#/to_one"
