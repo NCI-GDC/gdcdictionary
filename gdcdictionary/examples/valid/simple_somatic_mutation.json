@@ -5,7 +5,7 @@
     "file_size": 2343646734,
     "md5sum": "d3266f2577584713ea17f94d331f30c4",
     "data_category": "Simple Nucleotide Variation",
-    "data_type": "Simple Somatic Mutation",
+    "data_type": "Raw Simple Somatic Mutation",
     "data_format": "VCF",
     "experimental_strategy": "WGS",
     "somatic_mutation_calling_workflows": {
