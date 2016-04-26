@@ -8,8 +8,8 @@ category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing the somatic mutations that have not been filtered out
-  or masked.
+  Data file containing the somatic mutations that have been filtered to
+  remove low-quality and germline variants.
 additionalProperties: false
 validators: null
 

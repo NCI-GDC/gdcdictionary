@@ -8,7 +8,8 @@ category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing simple somatic mutations called from aligned reads.
+  Data file containing simple somatic mutations, which have not been 
+  annotated or filtered, called from aligned reads.
 additionalProperties: false
 validators: null
 

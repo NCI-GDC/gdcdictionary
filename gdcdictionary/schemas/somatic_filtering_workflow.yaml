@@ -9,7 +9,7 @@ program: '*'
 project: '*'
 description: >
   Metadata for the somatic mutation filtering pipeline used to filter out
-  mutations, particularly germline calls in the GDC DNA-seq pipelines.
+  mutations, particularly germline calls, in the GDC DNA-seq pipelines.
 additionalProperties: false
 validators: null
 
