@@ -49,5 +49,6 @@ properties:
       - MuTect2
       - MuSE
       - VarScan2
+      - SomaticSniper
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
