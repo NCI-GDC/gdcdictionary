@@ -46,6 +46,9 @@ properties:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum:
-      - fpfilter and VEP Annotation
+      - MuTect2 Annotation
+      - MuSE Annotation
+      - SomaticSniper Annotation
+      - VarScan2 Annotation
   simple_somatic_mutations:
     $ref: "_definitions.yaml#/to_many"
