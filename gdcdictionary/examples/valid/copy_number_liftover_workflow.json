@@ -1,0 +1,9 @@
+{
+    "type": "copy_number_liftover_workflow",
+    "submitter_id": "DNAcopy_run_#",
+    "workflow_link": "github.com/<owner>/<project>/commit/<hash>",
+    "workflow_type": "DNAcopy",
+    "submitted_tangent_copy_numbers": {
+	"id": "0cb66276-c29b-4811-a704-38502173c0f8"
+    }
+}
