@@ -23,10 +23,10 @@ systemProperties:
   - error_type
 
 links:
-  - name: somatic_filtering_workflows
+  - name: somatic_masking_workflows
     backref: filtered_somatic_mutations
     label: data_from
-    target_type: somatic_filtering_workflow
+    target_type: somatic_masking_workflow
     multiplicity: many_to_one
     required: true
 
@@ -39,7 +39,7 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - somatic_filtering_workflows
+  - somatic_masking_workflows
 
 uniqueKeys:
   - [ id ]
@@ -71,5 +71,5 @@ properties:
       - WXS
       - Low Pass WGS
       - Validation
-  somatic_filtering_workflows:
+  somatic_masking_workflows:
     $ref: "_definitions.yaml#/to_one"
