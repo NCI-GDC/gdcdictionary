@@ -196,6 +196,9 @@ workflow_properties:
   workflow_link:
     description: "Link to github hash for the CWL workflow used."
     type: string
+  workflow_version:
+    description: "Major version for a GDC workflow"
+    type: string
   state:
     $ref: "#/state"
   project_id:

@@ -1,0 +1,14 @@
+{
+    "type": "annotated_somatic_mutation",
+    "submitter_id": "annotated_somatic_mutation_outputs",
+    "file_name": "annotated_somatic_mutation.vcf",
+    "file_size": 2343646734,
+    "md5sum": "d3266f2577584713ea17f94d331f30c4",
+    "data_category": "Simple Nucleotide Variation",
+    "data_type": "Annotated Somatic Mutation",
+    "data_format": "VCF",
+    "experimental_strategy": "WGS",
+    "somatic_annotation_workflows": {
+	"submitter_id": "Kyles_super_secret_pipeline_v213"
+    }
+}
