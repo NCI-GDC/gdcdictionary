@@ -5,7 +5,7 @@
     "file_size": 223534,
     "md5sum": "d3266f2577584713ea17f94d331f30c4",
     "data_category": "Copy Number Variation",
-    "data_type": "Copy Number Segment allcnv",
+    "data_type": "Copy Number Segment",
     "data_format": "TXT",
     "experimental_strategy": "Genotyping Array",
     "copy_number_liftover_workflows": {

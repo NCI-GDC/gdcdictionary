@@ -58,8 +58,8 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - Copy Number Segment allcnv
-      - Copy Number Segment nocnv
+      - Copy Number Segment
+      - Masked Copy Number Segment
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
