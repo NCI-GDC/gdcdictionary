@@ -8,7 +8,7 @@
     "data_type": "Filtered Somatic Mutation",
     "data_format": "VCF",
     "experimental_strategy": "WGS",
-    "somatic_filtering_workflows": {
+    "somatic_masking_workflows": {
 	"submitter_id": "Kyles_super_secret_pipeline_v213"
     }
 }
