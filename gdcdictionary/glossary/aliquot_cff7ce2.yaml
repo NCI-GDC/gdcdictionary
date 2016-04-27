@@ -1,0 +1,18 @@
+---
+termns: biospecimen
+id: cff7ce2a-5672-4188-bb1b-27fc277de87b
+type: term
+termdef:
+  definition: 'Pertaining to a portion of the whole; any one of two or more samples of something, of the same volume or weight.'
+  source:
+    uri: ~
+    cde:
+      cde_version: ~
+      collection_url: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C25414
+      cde_id: C25414
+      collection_name: NCIt
+  term_id: cff7ce2a-5672-4188-bb1b-27fc277de87b
+  locale: en
+  term: Aliquot
+  values: ~
+term: aliquot

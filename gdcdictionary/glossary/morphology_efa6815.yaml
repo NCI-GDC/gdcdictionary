@@ -1,0 +1,20 @@
+---
+type: term
+id: efa68152-068b-4dcc-85fe-81140ba009da
+term: morphology
+termdef:
+  term_id: efa68152-068b-4dcc-85fe-81140ba009da
+  term: 'International Classification of Diseases for Oncology, Third Edition ICD-O-3 Histology Code'
+  definition: 'The third edition of the International Classification of Diseases for Oncology, published in 2000, used principally in tumor and cancer registries for coding the site (topography) and the histology (morphology) of neoplasms._The study of the structure of the cells and their arrangement to constitute tissues and, finally, the association among these to form organs. In pathology, the microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by employing various cytochemical and immunocytochemical stains._A system of numbered categories for representation of data. '
+  locale: en
+  values:
+    type: string
+    description: Codes as provided at [ICD-O-3 Online](http://codes.iarc.fr/codegroup/2)
+  source:
+    uri: ~
+    cde:
+      collection_name: caDSR
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3226275&version=1.0
+      cde_id: 3226275
+      cde_version: 1.0
+termns: clinical/diagnosis

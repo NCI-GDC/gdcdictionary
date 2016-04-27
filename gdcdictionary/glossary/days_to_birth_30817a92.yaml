@@ -1,0 +1,28 @@
+type: term
+id: 30817a92-8564-42d9-86ba-7c8ec7e15690
+term: days_to_birth
+termns: 'clinical/diagnosis'
+termdef :
+  term_id: 30817a92-8564-42d9-86ba-7c8ec7e15690
+  term: >
+    Person Birth Date Less Initial Pathologic Diagnosis Date
+    Calculated Day Value
+  definition: >
+    Time interval from a person's date of birth to the date of initial
+    pathologic diagnosis, represented as a calculated number of days.
+  locale: en
+  values:
+    type: object
+    properties:
+      units:
+        type: string
+        enum: ["days"]
+      value:
+        type: number
+  source:
+    cde: 
+      collection_name: caDSR
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008233&version=1.0
+      cde_id: 3008233
+      cde_version: 1.0
+   

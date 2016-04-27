@@ -1,0 +1,18 @@
+---
+type: term
+id: 2dc605de-a379-448d-a586-7cd877d8aea9
+term: annotation
+termns: administrative
+termdef:
+  term_id: 2dc605de-a379-448d-a586-7cd877d8aea9
+  term: Annotation
+  definition: 'An explanatory or critical comment, or other in-context information (e.g., pattern, motif, link), that has been associated with data or other types of information.'
+  local: en
+  values: ~
+  source:
+    uri: ~
+    cde:
+      collection_name: NCIt
+      collection_url: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C44272
+      cde_id: C44272
+      cde_version: ~

@@ -1,0 +1,27 @@
+---
+type: term
+term: smoking_intensity
+id: c8dd8e2e-f7a0-4d68-85ab-22b5713d2921
+termns: clinical/exposure
+termdef:
+  term_id: c8dd8e2e-f7a0-4d68-85ab-22b5713d2921
+  term: Person Cigarette Smoking History Pack Year Value
+  definition: Numeric computed value to represent lifetime tobacco exposure defined as number of cigarettes smoked per day x number of years smoked divided by 20.
+  locale: en
+  values:
+    type: object
+    description: One pack-year is smoking 20 cigarettes a day for one year.
+    properties:
+      units:
+        type: string
+        enum:
+          - pack-years
+      value:
+        type: number
+  source:
+    cde:
+      collection_name: caDSR
+      cde_id: 2955385
+      cde_version: 1.0
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2955385&version=1.0
+    uri: ''

@@ -1,0 +1,26 @@
+---
+type: term
+id: 4ea09e02-541c-4a3a-87a2-22f9cf1be0b4
+term: ethnicity
+termdef:
+  term_id: 4ea09e02-541c-4a3a-87a2-22f9cf1be0b4
+  term: Ethnicity
+  definition: 'Classification based on social groupings that are characterized by a distinctive social and cultural tradition maintained from generation to generation, a common history and origin and a sense of identification with the group; members of the group have distinctive features in their way of life, shared experiences and often a common genetic heritage; these features may be reflected in their experience of health and disease. '
+  locale: en
+  values:
+    items:
+      type: string
+      enum:
+        - hispanic or latino
+        - not hispanic or latino
+        - not reported
+        - not allowed to collect
+    type: array
+  source:
+    uri: ~
+    cde:
+      collection_name: caDSR
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2192213&version=1.1
+      cde_id: 2192213
+      cde_version: 1.1
+termns: clinical/demographic

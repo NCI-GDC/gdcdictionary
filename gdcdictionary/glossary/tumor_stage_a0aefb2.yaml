@@ -1,0 +1,20 @@
+---
+type: term
+id: a0aefb24-0b21-420a-9eb6-292287a492a7
+term: tumor_stage
+termdef:
+  term_id: a0aefb24-0b21-420a-9eb6-292287a492a7
+  term: Stage
+  definition: 'The extent of a cancer in the body. Staging is usually based on the size of the tumor, whether lymph nodes contain cancer, and whether the cancer has spread from the original site to other parts of the body.'
+  locale: en
+  values:
+    description: 'The accepted values for tumor_stage depend on the tumor site, type, and accepted staging system. These items should accompany the tumor_stage value as associated metadata.'
+    type: string
+  source:
+    uri: ~
+    cde:
+      collection_name: NCIt
+      collection_url: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C16899
+      cde_id: C16899
+      cde_version: ~
+termns: clinical/diagnosis

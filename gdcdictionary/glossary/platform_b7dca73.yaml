@@ -1,0 +1,18 @@
+---
+type: term
+id: b7dca736-52fb-4286-a3bf-95b53b344cae
+term: platform
+termns: administrative
+termdef:
+  term_id: b7dca736-52fb-4286-a3bf-95b53b344cae
+  term: Platform
+  definition: Any distinct technology (laboratory or computational) from which data may be obtained as files.
+  local: en
+  values: ~
+  source:
+    uri: ~
+    cde:
+      collection_name: GDC
+      collection_url: ~
+      cde_id: b7dca73
+      cde_version: ~

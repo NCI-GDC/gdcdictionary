@@ -1,0 +1,27 @@
+---
+type: term
+term: height
+id: b0d83c9c-16cb-4701-b37d-dbb69a2093f9
+termns: clinical/exposure
+termdef:
+  term_id: b0d83c9c-16cb-4701-b37d-dbb69a2093f9
+  term: Patient Height Measurement
+  definition: The height of the patient in centimeters.
+  locale: en
+  values:
+    type: object
+    description: ''
+    properties:
+      units:
+        type: string
+        enum:
+          - centimeters
+      value:
+        type: number
+  source:
+    cde:
+      collection_name: caDSR
+      cde_id: 649
+      cde_version: 4.1
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=649&version=4.1
+    uri: ''

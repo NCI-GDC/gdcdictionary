@@ -1,0 +1,20 @@
+---
+type: term
+id: 73934816-0996-440b-886f-bf17ef2fdefb
+term: site_of_resection_or_biopsy
+termdef:
+  term_id: 73934816-0996-440b-886f-bf17ef2fdefb
+  term: Contiguous Organ Excision Performed Anatomic Site
+  definition: 'Term to represent the name of the organ resected that was contiguous to the primary disease site. GDC: Also includes liquid biopsy material.'
+  locale: en
+  values:
+    description: Codes as provided at [ICD-O-3 Online](http://codes.iarc.fr/topography)
+    type: string
+  source:
+    uri: ~
+    cde:
+      collection_name: caDSR
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3162811&version=2.0
+      cde_id: 3162811
+      cde_version: 2.0
+termns: clinical/diagnosis

@@ -1,0 +1,18 @@
+---
+type: term
+id: a1a231a8-f3dc-40c3-96bd-be9373708165
+term: center
+termns: administrative
+termdef:
+  term_id: a1a231a8-f3dc-40c3-96bd-be9373708165
+  term: Center
+  definition: A Professional Organization or Group which has or is able to submit data to the GDC that are valid with respect to GDC prescribed or defined data formats.
+  local: en
+  values: ~
+  source:
+    uri: ~
+    cde:
+      collection_name: GDC
+      collection_url: ' '
+      cde_id: a1a231a
+      cde_version: ~

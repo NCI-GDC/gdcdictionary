@@ -1,0 +1,27 @@
+---
+type: term
+term: cigarettes_per_day
+id: 95f9495b-f427-4fb4-b0e7-18317c99429a
+termns: clinical/exposure
+termdef:
+  term_id: 95f9495b-f427-4fb4-b0e7-18317c99429a
+  term: Smoking Use Average Number
+  definition: The average number of cigarettes smoked per day.
+  locale: en
+  values:
+    type: object
+    description: ''
+    properties:
+      units:
+        type: string
+        enum:
+          - cigarettes
+      value:
+        type: number
+  source:
+    cde:
+      collection_name: caDSR
+      cde_id: 2001716
+      cde_version: 4.0
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2001716&version=4.0
+    uri: ''

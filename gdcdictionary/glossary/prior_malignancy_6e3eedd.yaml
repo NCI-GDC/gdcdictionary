@@ -1,0 +1,25 @@
+---
+type: term
+id: 6e3eedd8-dc9f-4741-b0af-80fc5d51fd71
+term: prior_malignancy
+termdef:
+  term_id: 6e3eedd8-dc9f-4741-b0af-80fc5d51fd71
+  term: Prior Cancer Diagnosis Occurrence Description Text
+  definition: "Text term to describe the patient's history of prior cancer diagnosis and the spatial location of any previous cancer occurrence. GDC: allow yes/no/unknown as accepted values."
+  locale: en
+  values:
+    items:
+      type: string
+      enum:
+        - "Yes"
+        - "No"
+        - "Unknown"
+    type: array
+  source:
+    uri: ~
+    cde:
+      collection_name: caDSR
+      collection_url: https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3382736&version=2.0
+      cde_id: 3382736
+      cde_version: 2.0
+termns: clinical/diagnosis

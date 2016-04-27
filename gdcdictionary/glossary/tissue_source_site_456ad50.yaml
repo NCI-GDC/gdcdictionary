@@ -1,0 +1,18 @@
+---
+type: term
+id: 456ad508-24cf-4900-8a49-32b5152bf623
+term: tissue_source_site
+termns: administrative
+termdef:
+  term_id: 456ad508-24cf-4900-8a49-32b5152bf623
+  term: Tissue Source Site
+  definition: A clinical site that collects and provides patient samples and clinical metadata for research use.
+  local: en
+  values: ~
+  source:
+    uri: ~
+    cde:
+      collection_name: NCIt
+      collection_url: https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C103264
+      cde_id: C103264
+      cde_version: ~
