@@ -1,15 +1,15 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "somatic_filtering_workflow"
-title: Somatic Filtering Workflow
+id: "copy_number_liftover_workflow"
+title: Copy Number Liftover Workflow
 type: object
 namespace: http://gdc.nci.nih.gov
 category: analysis
 program: '*'
 project: '*'
 description: >
-  Metadata for the somatic mutation filtering pipeline used to filter out
-  mutations, particularly germline calls, in the GDC DNA-seq pipelines.
+  Metadata for the copy number liftover workflow used to harmonize TCGA copy
+  number data.
 additionalProperties: false
 validators: null
 
@@ -21,10 +21,10 @@ systemProperties:
   - state
 
 links:
-  - name: annotated_somatic_mutations
-    backref: somatic_filtering_workflows
+  - name: submitted_tangent_copy_numbers
+    backref: copy_number_liftover_workflows
     label: performed_on
-    target_type: annotated_somatic_mutation
+    target_type: aligned_reads
     multiplicity: one_to_one
     required: true
 
@@ -32,7 +32,7 @@ required:
   - submitter_id
   - workflow_link
   - workflow_type
-  - annotated_somatic_mutations
+  - submitted_tangent_copy_numbers
 
 uniqueKeys:
   - [ id ]
@@ -41,11 +41,11 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
   type:
-    enum: [ "somatic_filtering_workflow" ]
+    enum: [ "copy_number_liftover_workflow" ]
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum:
-      - Low-Quality and Germline Removal
-  annotated_somatic_mutations:
+      - DNAcopy
+  submitted_tangent_copy_numbers:
     $ref: "_definitions.yaml#/to_many"

@@ -1,0 +1,74 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "filtered_copy_number_segment"
+title: Filtered Copy Number Segment
+type: object
+namespace: http://gdc.nci.nih.gov
+category: data_file
+program: '*'
+project: '*'
+description: >
+  Data file containing copy number information that has been lifted over
+  and filtered.
+additionalProperties: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - name: copy_number_liftover_workflows
+    backref: filtered_copy_number_segments
+    label: data_from
+    target_type: copy_number_liftover_workflow
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - data_format
+  - md5sum
+  - data_category
+  - data_type
+  - experimental_strategy
+  - copy_number_liftover_workflows
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+  type:
+    enum: [ "filtered_copy_number_segment" ]
+  data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
+    enum:
+      - Copy Number Variation
+  data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
+    enum:
+      - Copy Number Segment
+      - Masked Copy Number Segment
+  data_format:
+    term:
+      $ref: "_terms.yaml#/data_format"
+    enum:
+      - TXT
+  experimental_strategy:
+    term:
+      $ref: "_terms.yaml#/experimental_strategy"
+    enum:
+      - Genotyping Array
+  copy_number_liftover_workflows:
+    $ref: "_definitions.yaml#/to_one"
