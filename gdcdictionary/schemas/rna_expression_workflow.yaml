@@ -62,6 +62,7 @@ properties:
     enum:
       - HTSeq - FPKM
       - HTSeq - FPKM-UQ
+      - HTSeq - Counts
       - Cufflinks
       - Kallisto
   aligned_reads_files:
