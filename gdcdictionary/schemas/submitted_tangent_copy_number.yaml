@@ -1,16 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "copy_number_segment"
-title: Copy Number Segment
+id: "submitted_tangent_copy_number"
+title: Submitted Tangent Copy Number
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing the raw copy number data from the
-  copy number liftover workflow. Contains all copy numbers
-  detected. 
+  Data file containing copy number information from an aliquot. 
 additionalProperties: false
 validators: null
 
@@ -24,10 +22,10 @@ systemProperties:
   - error_type
 
 links:
-  - name: copy_number_liftover_workflows
-    backref: copy_number_segments
+  - name: aliquots
+    backref: submitted_tangent_copy_number
     label: derived_from
-    target_type: copy_number_liftover_workflow
+    target_type: aliquot
     multiplicity: one_to_one
     required: true
 
@@ -40,7 +38,7 @@ required:
   - data_category
   - data_type
   - experimental_strategy
-  - copy_number_liftover_workflows
+  - aliquots
 
 uniqueKeys:
   - [ id ]
@@ -49,7 +47,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "copy_number_segment" ]
+    enum: [ "submitted_tangent_copy_number" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -59,8 +57,7 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - Copy Number Segment
-      - Masked Copy Number Segment
+      - Copy Number Estimate
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
@@ -71,5 +68,5 @@ properties:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
       - Genotyping Array
-  copy_number_liftover_workflows:
+  aliquots:
     $ref: "_definitions.yaml#/to_one"
