@@ -62,7 +62,8 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  
+  - platform
+
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]
@@ -96,6 +97,8 @@ properties:
       - RNA-seq
       - miRNA-seq
       - Total RNA-seq
+  platform:
+    $ref: "read_group.yaml#/properties/platform"
   alignment_cocleaning_workflows:
     $ref: "_definitions.yaml#/to_one"
   alignment_workflows:
