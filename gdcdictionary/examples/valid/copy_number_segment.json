@@ -8,6 +8,7 @@
     "data_type": "Copy Number Segment",
     "data_format": "TXT",
     "experimental_strategy": "Genotyping Array",
+    "platform": "Affymetrix SNP 6.0",
     "copy_number_liftover_workflows": {
 	"submitter_id": "liftover_workflow_a"
     }
