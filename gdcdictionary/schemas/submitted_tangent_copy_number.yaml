@@ -8,7 +8,7 @@ category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing copy number information from an aliquot. 
+  Data file containing tangent normalized copy number information from an aliquot.
 additionalProperties: false
 validators: null
 

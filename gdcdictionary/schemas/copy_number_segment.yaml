@@ -8,9 +8,9 @@ category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing the raw copy number data from the
+  Data file containing the copy number data from a
   copy number liftover workflow. Contains all copy numbers
-  detected. 
+  detected.
 additionalProperties: false
 validators: null
 

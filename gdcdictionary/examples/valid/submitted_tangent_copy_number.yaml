@@ -9,6 +9,6 @@
     "data_format": "TXT",
     "experimental_strategy": "Genotyping Array",
     "aliquots": {
-	"submitter_id": "aliquot_m"
+      "submitter_id": "aliquot_m"
     }
 }
