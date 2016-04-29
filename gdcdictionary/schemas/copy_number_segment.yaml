@@ -40,6 +40,7 @@ required:
   - data_category
   - data_type
   - experimental_strategy
+  - platform
   - copy_number_liftover_workflows
 
 uniqueKeys:
@@ -71,5 +72,10 @@ properties:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
       - Genotyping Array
+  platform:
+    term:
+      $ref: "_terms.yaml#/platform"
+    enum:
+      - Affymetrix SNP 6.0
   copy_number_liftover_workflows:
     $ref: "_definitions.yaml#/to_one"

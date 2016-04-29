@@ -414,8 +414,8 @@ percent_tumor_nuclei: # TOREVIEW
 
 platform: # TOREVIEW
   description: >
-    Name of the platform used to sequence the data.
-    
+    Name of the platform used to obtain data.
+
 portion_number: # TOREVIEW
   description: >
     The number given to the portion.
