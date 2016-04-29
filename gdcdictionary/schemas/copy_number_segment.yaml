@@ -74,7 +74,7 @@ properties:
       - Genotyping Array
   platform:
     term:
-      $ref: $ref: "_terms.yaml#/platform"
+      $ref: "_terms.yaml#/platform"
     enum:
       - Affymetrix SNP 6.0
   copy_number_liftover_workflows:
