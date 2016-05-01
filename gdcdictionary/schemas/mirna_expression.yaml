@@ -40,7 +40,7 @@ required:
   - data_format
   - experimental_strategy
   - mirna_expression_workflows
-  
+
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]
@@ -68,6 +68,6 @@ properties:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - miRNA-seq
+      - miRNA-Seq
   mirna_expression_workflows:
     $ref: "_definitions.yaml#/to_one"

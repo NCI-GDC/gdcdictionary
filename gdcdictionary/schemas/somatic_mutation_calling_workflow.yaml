@@ -9,7 +9,7 @@ program: '*'
 project: '*'
 description: >
   Metadata for the somatic mutation calling pipeline used to call variants in
-  the GDC DNA-seq pipelines.
+  the GDC DNA-Seq pipelines.
 additionalProperties: false
 validators: null
 

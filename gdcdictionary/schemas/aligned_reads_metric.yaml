@@ -76,9 +76,9 @@ properties:
       - WXS
       - Low Pass WGS
       - Validation
-      - RNA-seq
-      - miRNA-seq
-      - Total RNA-seq
+      - RNA-Seq
+      - miRNA-Seq
+      - Total RNA-Seq
   alignment_workflows:
     $ref: "_definitions.yaml#/to_one"
   alignment_cocleaning_workflows:

@@ -7,7 +7,7 @@
     "data_category": "Transcriptome Profiling",
     "data_type": "miRNA Expression Quantification",
     "data_format": "TXT",
-    "experimental_strategy": "miRNA-seq",
+    "experimental_strategy": "miRNA-Seq",
     "mirna_expression_workflows": {
 	"submitter_id": "mirna_profiling_output#"
     }

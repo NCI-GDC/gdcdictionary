@@ -9,7 +9,7 @@ program: '*'
 project: '*'
 description: >
   Metadata for the somatic mutation annotation pipeline used to annotate
-  the mutations called in the GDC DNA-seq pipelines.
+  the mutations called in the GDC DNA-Seq pipelines.
 additionalProperties: false
 validators: null
 
