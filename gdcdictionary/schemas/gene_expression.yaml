@@ -40,7 +40,7 @@ required:
   - data_format
   - experimental_strategy
   - rna_expression_workflows
-  
+
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]
@@ -68,7 +68,7 @@ properties:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - RNA-seq
-      - Total RNA-seq
+      - RNA-Seq
+      - Total RNA-Seq
   rna_expression_workflows:
     $ref: "_definitions.yaml#/to_one"
