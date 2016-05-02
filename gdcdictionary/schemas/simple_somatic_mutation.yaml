@@ -8,7 +8,8 @@ category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing simple somatic mutations called from aligned reads.
+  Data file containing simple somatic mutations, which have not been 
+  annotated or filtered, called from aligned reads.
 additionalProperties: false
 validators: null
 
@@ -55,7 +56,7 @@ properties:
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Simple Somatic Mutation" ]
+    enum: [ "Raw Simple Somatic Mutation" ]
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"

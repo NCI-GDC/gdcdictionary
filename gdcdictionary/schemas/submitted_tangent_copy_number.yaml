@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "clinical_supplement"
-title: Clinical Supplement
+id: "submitted_tangent_copy_number"
+title: Submitted Tangent Copy Number
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
-project: '*'
 program: '*'
+project: '*'
 description: >
-  Data file containing clinical metadata information.
+  Data file containing tangent normalized copy number information from an aliquot.
 additionalProperties: false
 validators: null
 
@@ -22,18 +22,12 @@ systemProperties:
   - error_type
 
 links:
-  - name: cases
-    backref: clinical_supplements
+  - name: aliquots
+    backref: submitted_tangent_copy_number
     label: derived_from
-    target_type: case
-    multiplicity: many_to_one
+    target_type: aliquot
+    multiplicity: one_to_one
     required: true
-  - name: archives
-    backref: clinical_supplements
-    label: member_of
-    target_type: archive
-    multiplicity: many_to_one
-    required: false
 
 required:
   - submitter_id
@@ -43,7 +37,8 @@ required:
   - md5sum
   - data_category
   - data_type
-  - cases
+  - experimental_strategy
+  - aliquots
 
 uniqueKeys:
   - [ id ]
@@ -52,21 +47,26 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "clinical_supplement" ]
+    enum: [ "submitted_tangent_copy_number" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
-    enum: [ "Clinical" ]
+    enum:
+      - Copy Number Variation
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Clinical Supplement" ]
+    enum:
+      - Copy Number Estimate
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
-      - BCR XML
-  cases:
-    $ref: "_definitions.yaml#/to_one"
-  archives:
+      - TXT
+  experimental_strategy:
+    term:
+      $ref: "_terms.yaml#/experimental_strategy"
+    enum:
+      - Genotyping Array
+  aliquots:
     $ref: "_definitions.yaml#/to_one"

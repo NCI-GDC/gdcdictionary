@@ -1,15 +1,15 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "germline_mutation_calling_workflow"
-title: Germline Mutation Calling Workflow
+id: "somatic_annotation_workflow"
+title: Somatic Annotation Workflow
 type: object
 namespace: http://gdc.nci.nih.gov
 category: analysis
 program: '*'
 project: '*'
 description: >
-  Metadata for the germline mutation calling pipeline used to call variants in
-  the GDC DNA-Seq pipelines.
+  Metadata for the somatic mutation annotation pipeline used to annotate
+  the mutations called in the GDC DNA-Seq pipelines.
 additionalProperties: false
 validators: null
 
@@ -21,10 +21,10 @@ systemProperties:
   - state
 
 links:
-  - name: aligned_reads_files
-    backref: germline_mutation_calling_workflows
+  - name: simple_somatic_mutations
+    backref: somatic_annotation_workflows
     label: performed_on
-    target_type: aligned_reads
+    target_type: simple_somatic_mutation
     multiplicity: one_to_many
     required: true
 
@@ -32,7 +32,7 @@ required:
   - submitter_id
   - workflow_link
   - workflow_type
-  - aligned_reads_files
+  - simple_somatic_mutations
 
 uniqueKeys:
   - [ id ]
@@ -41,10 +41,14 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
   type:
-    enum: [ "germline_mutation_calling_workflow" ]
+    enum: [ "somatic_annotation_workflow" ]
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
-    enum: [ "HaplotypeCaller" ]
-  aligned_reads_files:
+    enum:
+      - MuTect2 Annotation
+      - MuSE Annotation
+      - SomaticSniper Annotation
+      - VarScan2 Annotation
+  simple_somatic_mutations:
     $ref: "_definitions.yaml#/to_many"

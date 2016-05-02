@@ -1,16 +1,17 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "read_group_metric"
-title: Read Group Metric
+id: "filtered_copy_number_segment"
+title: Filtered Copy Number Segment
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
-project: '*'
 program: '*'
-description: "Data file containing QC metric data."
+project: '*'
+description: >
+  Data file containing copy number information that has been lifted over
+  and filtered.
 additionalProperties: false
 validators: null
-
 
 systemProperties:
   - id
@@ -22,23 +23,23 @@ systemProperties:
   - error_type
 
 links:
-  - name: read_group_qcs
-    backref: read_group_metrics
+  - name: copy_number_liftover_workflows
+    backref: filtered_copy_number_segments
     label: data_from
-    target_type: read_group_qc
-    multiplicity: one_to_one
+    target_type: copy_number_liftover_workflow
+    multiplicity: many_to_one
     required: true
-    
+
 required:
   - submitter_id
   - file_name
   - file_size
+  - data_format
   - md5sum
   - data_category
   - data_type
-  - data_format
   - experimental_strategy
-  - read_group_qcs
+  - copy_number_liftover_workflows
 
 uniqueKeys:
   - [ id ]
@@ -47,33 +48,27 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "read_group_metric" ]
+    enum: [ "filtered_copy_number_segment" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Sequencing Data
-      - Raw Sequencing Data
+      - Copy Number Variation
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Read Group Metric" ]
+    enum:
+      - Copy Number Segment
+      - Masked Copy Number Segment
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
       - TXT
-      - TSV
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - WGS
-      - WXS
-      - Low Pass WGS
-      - Validation
-      - RNA-seq
-      - miRNA-seq
-      - Total RNA-seq
-  read_group_qcs:
+      - Genotyping Array
+  copy_number_liftover_workflows:
     $ref: "_definitions.yaml#/to_one"

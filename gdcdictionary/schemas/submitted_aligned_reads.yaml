@@ -8,7 +8,7 @@ category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing aligned reads that are used as input to GDC workflows. 
+  Data file containing aligned reads that are used as input to GDC workflows.
 additionalProperties: false
 validators: null
 
@@ -70,8 +70,8 @@ properties:
       - WXS
       - Low Pass WGS
       - Validation
-      - RNA-seq
-      - miRNA-seq
-      - Total RNA-seq
+      - RNA-Seq
+      - miRNA-Seq
+      - Total RNA-Seq
   read_groups:
     $ref: "_definitions.yaml#/to_many"

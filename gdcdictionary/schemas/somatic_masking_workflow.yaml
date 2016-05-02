@@ -1,15 +1,15 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "somatic_mutation_calling_workflow"
-title: Somatic Mutation Calling Workflow
+id: "somatic_masking_workflow"
+title: Somatic Masking Workflow
 type: object
 namespace: http://gdc.nci.nih.gov
 category: analysis
 program: '*'
 project: '*'
 description: >
-  Metadata for the somatic mutation calling pipeline used to call variants in
-  the GDC DNA-Seq pipelines.
+  Metadata for the somatic mutation masking pipeline used to filter out
+  mutations, particularly germline calls, in the GDC DNA-Seq pipelines.
 additionalProperties: false
 validators: null
 
@@ -21,18 +21,18 @@ systemProperties:
   - state
 
 links:
-  - name: aligned_reads_files
-    backref: somatic_mutation_calling_workflows
+  - name: annotated_somatic_mutations
+    backref: somatic_masking_workflows
     label: performed_on
-    target_type: aligned_reads
-    multiplicity: one_to_many
+    target_type: annotated_somatic_mutation
+    multiplicity: one_to_one
     required: true
 
 required:
   - submitter_id
   - workflow_link
   - workflow_type
-  - aligned_reads_files
+  - annotated_somatic_mutations
 
 uniqueKeys:
   - [ id ]
@@ -41,14 +41,14 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
   type:
-    enum: [ "somatic_mutation_calling_workflow" ]
+    enum: [ "somatic_masking_workflow" ]
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum:
-      - MuTect2
-      - MuSE
-      - VarScan2
-      - SomaticSniper
-  aligned_reads_files:
+      - MuTect2 Variant Masking
+      - MuSE Variant Masking
+      - SomaticSniper Variant Masking
+      - VarScan2 Variant Masking
+  annotated_somatic_mutations:
     $ref: "_definitions.yaml#/to_many"

@@ -1,0 +1,9 @@
+{
+    "type": "somatic_annotation_workflow",
+    "submitter_id": "fpfilter_and_VEP_run_21234",
+    "workflow_link": "github.com/<owner>/<project>/commit/<hash>",
+    "workflow_type": "MuSE Annotation",
+    "simple_somatic_mutations": {
+       "submitter_id": "MuTect_2_output_212"
+    }
+}

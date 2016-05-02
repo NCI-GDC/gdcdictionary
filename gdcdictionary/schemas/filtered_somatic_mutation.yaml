@@ -1,13 +1,15 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "aligned_reads_metric"
-title: Aligned Reads Metric
+id: "filtered_somatic_mutation"
+title: Filtered Somatic Mutation
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
-project: '*'
 program: '*'
-description: "Data file containing metrics from the harmonization pipelines."
+project: '*'
+description: >
+  Data file containing the somatic mutations that have been filtered to
+  remove low-quality and germline variants.
 additionalProperties: false
 validators: null
 
@@ -21,30 +23,23 @@ systemProperties:
   - error_type
 
 links:
-  - exclusive: true
+  - name: somatic_masking_workflows
+    backref: filtered_somatic_mutations
+    label: data_from
+    target_type: somatic_masking_workflow
+    multiplicity: many_to_one
     required: true
-    subgroup:
-      - name: alignment_workflows
-        backref: aligned_reads_metrics
-        label: data_from
-        target_type: alignment_workflow
-        multiplicity: many_to_one
-        required: false
-      - name: alignment_cocleaning_workflows
-        backref: aligned_reads_metrics
-        label: data_from
-        target_type: alignment_cocleaning_workflow
-        multiplicity: many_to_one
-        required: false
 
 required:
   - submitter_id
   - file_name
   - file_size
-  - data_format
   - md5sum
   - data_category
   - data_type
+  - data_format
+  - experimental_strategy
+  - somatic_masking_workflows
 
 uniqueKeys:
   - [ id ]
@@ -53,21 +48,21 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "aligned_reads_metric" ]
+    enum: [ "filtered_somatic_mutation" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
-    enum:
-      - Sequencing Data
-      - Raw Sequencing Data
+    enum: [ "Simple Nucleotide Variation" ]
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Aligned Reads Metrics" ]
+    enum: [ "Filtered Somatic Mutation" ]
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
-    type: string
+    enum:
+      - VCF
+      - MAF
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
@@ -76,10 +71,5 @@ properties:
       - WXS
       - Low Pass WGS
       - Validation
-      - RNA-Seq
-      - miRNA-Seq
-      - Total RNA-Seq
-  alignment_workflows:
-    $ref: "_definitions.yaml#/to_one"
-  alignment_cocleaning_workflows:
+  somatic_masking_workflows:
     $ref: "_definitions.yaml#/to_one"

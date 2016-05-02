@@ -62,7 +62,8 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  
+  - platform
+
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]
@@ -93,9 +94,11 @@ properties:
       - WXS
       - Low Pass WGS
       - Validation
-      - RNA-seq
-      - miRNA-seq
-      - Total RNA-seq
+      - RNA-Seq
+      - miRNA-Seq
+      - Total RNA-Seq
+  platform:
+    $ref: "read_group.yaml#/properties/platform"
   alignment_cocleaning_workflows:
     $ref: "_definitions.yaml#/to_one"
   alignment_workflows:

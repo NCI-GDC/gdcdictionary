@@ -4,7 +4,7 @@ id: "experiment_metadata"
 title: Experiment Metadata
 type: object
 namespace: http://gdc.nci.nih.gov
-category: data_file
+category: metadata_file
 project: '*'
 program: '*'
 description: >
