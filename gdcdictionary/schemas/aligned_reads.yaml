@@ -94,9 +94,9 @@ properties:
       - WXS
       - Low Pass WGS
       - Validation
-      - RNA-seq
-      - miRNA-seq
-      - Total RNA-seq
+      - RNA-Seq
+      - miRNA-Seq
+      - Total RNA-Seq
   platform:
     $ref: "read_group.yaml#/properties/platform"
   alignment_cocleaning_workflows:

@@ -24,7 +24,7 @@ links:
   - name: submitted_tangent_copy_numbers
     backref: copy_number_liftover_workflows
     label: performed_on
-    target_type: aligned_reads
+    target_type: submitted_tangent_copy_number
     multiplicity: one_to_one
     required: true
 
