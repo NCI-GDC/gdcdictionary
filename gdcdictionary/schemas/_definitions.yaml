@@ -1,47 +1,24 @@
 id: _definitions
-
-UUID:
+    
+data_bundle_state:
     term:
-        $ref: "_terms.yaml#/UUID"
-    type: string
-    pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        $ref: "_terms.yaml#/data_bundle_state"
+    default: submitted
+    enum:
+        - submitted
+        - validated
+        - error
+        - released
+        - suppressed
+        - redacted
 
-parent_uuids:
-    type: array
-    minItems: 1
-    items:
-        $ref: "#/UUID"
-    uniqueItems: true
-
-foreign_key:
-    type: object
-    # Allow true here because we can have other unique keys defined on
-    # a target type
-    additionalProperties: True
-    #Can either use 'id' which are GDC IDs (UUID) or 'submitter_id'
-    #which are user defined IDs ("submitter IDs in the backend")
-    properties:
-        id:
-            $ref: "#/UUID"
-        submitter_id:
-            type: string
-
-to_one:
-  anyOf:
-    - type: array
-      items:
-        $ref: "#/foreign_key"
-        minItems: 1
-        maxItems: 1
-    - $ref: "#/foreign_key"
-
-to_many:
-  anyOf:
-    - type: array
-      items:
-        $ref: "#/foreign_key"
-        minItems: 1
-    - $ref: "#/foreign_key"
+data_file_error_type:
+    term:
+        $ref: "_terms.yaml#/data_file_error_type"
+    enum:
+        - file_size
+        - file_format
+        - md5sum
 
 datetime:
   oneOf:
@@ -64,37 +41,63 @@ file_format:
     term:
         $ref: "_terms.yaml#/file_format"
 
+file_state:
+    term:
+        $ref: "_terms.yaml#/file_state" 
+    default: registered
+    enum:
+        - registered
+        - uploading
+        - uploaded
+        - validating
+        - validated
+        - submitted
+        - processing
+        - processed
+        - released
+        - error
+
+foreign_key:
+    type: object
+    # Allow true here because we can have other unique keys defined on
+    # a target type
+    additionalProperties: True
+    #Can either use 'id' which are GDC IDs (UUID) or 'submitter_id'
+    #which are user defined IDs ("submitter IDs in the backend")
+    properties:
+        id:
+            $ref: "#/UUID"
+        submitter_id:
+            type: string
+    
 md5sum:
     type: string
     term:
         $ref: "_terms.yaml#/md5sum"
 
+parent_uuids:
+    type: array
+    minItems: 1
+    items:
+        $ref: "#/UUID"
+    uniqueItems: true
+
+qc_metrics_state:
+    term:
+      $ref: "_terms.yaml#/qc_metric_state"
+    enum:
+        - FAIL
+        - PASS
+        - WARN
+
 release_state:
-    description: "Release statesd of an entity"
+    term:
+        $ref: "_terms.yaml#/release_state"
     default: unreleased
     enum:
       - unreleased
       - released
       - redacted
-
-data_bundle_state:
-    description: "states of a data bundle"
-    default: submitted
-    enum:
-        - submitted
-        - validated
-        - error
-        - released
-        - suppressed
-        - redacted
-
-data_file_error_type:
-    term:
-        $ref: "_terms.yaml#/data_file_error_type"
-    enum:
-        - file_size
-        - file_format
-        - md5sum
 
 state:
     term:
@@ -122,44 +125,47 @@ state:
             - suppressed
             - redacted
             - live
-        - enum: #This list covers all future data 1/15/16
+        - enum: #This list covers all future data Jan 15, 2016
             - validated
             - submitted
             - released
 
-file_state:
+submitter_id:
+    type:
+        - string
+        - "null"
     term:
-        $ref: "_terms.yaml#/file_state" 
-    default: registered
-    enum:
-        - registered
-        - uploading
-        - uploaded
-        - validating
-        - validated
-        - submitted
-        - processing
-        - processed
-        - released
-        - error
+        "_terms.yaml#/submitter_id"
 
-qc_metrics_state:
+to_many:
+  anyOf:
+    - type: array
+      items:
+        $ref: "#/foreign_key"
+        minItems: 1
+    - $ref: "#/foreign_key"
+    
+to_one:
+  anyOf:
+    - type: array
+      items:
+        $ref: "#/foreign_key"
+        minItems: 1
+        maxItems: 1
+    - $ref: "#/foreign_key"
+
+UUID:
     term:
-      $ref: "_terms.yaml#/qc_metric_state"
-    enum:
-        - FAIL
-        - PASS
-        - WARN
+        $ref: "_terms.yaml#/UUID"
+    type: string
+    pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
 
 data_file_properties:
   id:
     $ref: "#/UUID"
     systemAlias: node_id
   submitter_id:
-    type:
-      - string
-      - "null"
-    description: "TOREVIEW: the file id assigned by the submitter"
+    $ref: "#/submitter_id"
   file_name:
     $ref: "#/file_name"
   file_size:
@@ -174,9 +180,8 @@ data_file_properties:
     $ref: "#/data_file_error_type"
   state_comment:
     type: string
-    description: >
-      TOREVIEW: optional comment about why the file is in the
-      current state, mainly for invalid state.
+    term:
+      $ref: "_terms.yaml#/state_comment"
   project_id:
     type: string
   created_datetime:
@@ -189,16 +194,15 @@ workflow_properties:
     $ref: "#/UUID"
     systemAlias: node_id
   submitter_id:
-    type:
-      - string
-      - "null"
-    description: "TOREVIEW: the file id assigned by the submitter"
+    $ref: "#/submitter_id"
   workflow_link:
-    description: "Link to github hash for the CWL workflow used."
     type: string
+    term:
+      $ref: "_terms.yaml#/workflow_link"
   workflow_version:
-    description: "Major version for a GDC workflow"
     type: string
+    term:
+      $ref: "_terms.yaml#/workflow_version"
   state:
     $ref: "#/state"
   project_id:

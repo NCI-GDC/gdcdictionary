@@ -46,9 +46,7 @@ properties:
     $ref: "_definitions.yaml#/state"
 
   submitter_id:
-    type:
-      - string
-      - "null"
+    $ref: "_definitions.yaml#/submitter_id"
 
   relative_with_cancer_history:
     term:

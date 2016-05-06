@@ -41,27 +41,16 @@ links:
     multiplicity: many_to_one
     required: false
 
-# Portion properties
-# Currently there are many TCGA-specific fields in the DB. This is an attempt
-# to minimize the core fields.
-# Including portion itself is TCGA-specific, but since it's in the data model,
-# leaving for now.
 properties:
   type:
     type: string
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
   state:
     $ref: "_definitions.yaml#/state"
   submitter_id:
-    type:
-      - string
-      - "null"
-    description: >
-      The legacy barcode used before prior to the use UUIDs, varies by
-      project. For TCGA this is bcrportionbarcode.
+    $ref: "_definitions.yaml#/submitter_id"
   weight:
     term:
       $ref: "_terms.yaml#/weight"
@@ -72,8 +61,8 @@ properties:
     type: boolean
   creation_datetime:
     type: number
-    description: >
-      TOREVIEW: The datetime of portion creation encoded as seconds from
+    description: > # TOREVIEW
+      The datetime of portion creation encoded as seconds from
       epoch. If no time is given, it is set to 00:00:00 of the date. Replaces
       dayofcreation/monthofcreation/yearofcreation.
   portion_number:
@@ -82,17 +71,9 @@ properties:
     type: string
 
   samples:
-    #should this be to_one
     $ref: "_definitions.yaml#/to_one"
-    description: >
-      Indicates that the portion is physically derived from the linked to
-      sample via some process/protocol
-
   centers:
-    # For shipped portions
     $ref: "_definitions.yaml#/to_one"
-    description: "TODO: define"
-
   project_id:
     type: string
   created_datetime:

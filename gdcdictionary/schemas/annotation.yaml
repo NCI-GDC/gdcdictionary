@@ -103,9 +103,7 @@ properties:
     systemAlias: node_id
     description: "TODO"
   submitter_id:
-    type:
-      - string
-      - "null"
+    $ref: "_definitions.yaml#/submitter_id"
   state:
     $ref: "_definitions.yaml#/state"
   category:

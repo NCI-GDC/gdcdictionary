@@ -43,16 +43,16 @@ uniqueKeys:
   - [ project_id, submitter_id ]
 
 properties:
+  type:
+    enum: [ "read_group" ]
   id:
     $ref: "_definitions.yaml#/UUID"
   project_id:
     type: string
   submitter_id:
-    type: string
+    $ref: "_definitions.yaml#/submitter_id"
   state:
     $ref: "_definitions.yaml#/state"
-  type:
-    enum: [ "read_group" ]
   experiment_name:
     term:
       $ref: "_terms.yaml#/experiment_name"

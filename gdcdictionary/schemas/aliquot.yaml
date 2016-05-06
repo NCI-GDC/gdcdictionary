@@ -63,12 +63,7 @@ properties:
   state:
     $ref: "_definitions.yaml#/state"
   submitter_id:
-    type:
-      - string
-      - "null"
-    description: >
-      The legacy barcode used before prior to the use
-      UUIDs. For TCGA this is bcraliquotbarcode.
+    $ref: "_definitions.yaml#/submitter_id"
   source_center:
     term:
       $ref: "_terms.yaml#/source_center"
@@ -81,22 +76,19 @@ properties:
     term:
       $ref: "_terms.yaml#/concentration"
     type: number
-  analytes:
-    $ref: "_definitions.yaml#/to_one"
-    description: >
-      Indicates that the aliquot is physically derived from the linked to
-      analyte via some process/protocol
   analyte_type:
     $ref: "analyte.yaml#/properties/analyte_type"
   analyte_type_id:
     $ref: "analyte.yaml#/properties/analyte_type_id"
-  samples:
-    $ref: "_definitions.yaml#/to_one"
-  centers:
-    $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
     $ref: "_definitions.yaml#/datetime"
+  analytes:
+    $ref: "_definitions.yaml#/to_one"
+  samples:
+    $ref: "_definitions.yaml#/to_one"
+  centers:
+    $ref: "_definitions.yaml#/to_one"
