@@ -2,7 +2,7 @@ id: _terms
 
 a260_a280_ratio: # TOREVIEW
   description: >
-    Purity measurement that weighs the absorbance at 20nm (DNA concentration)
+    Purity measurement that weighs the absorbance at 260nm (DNA concentration)
     against the absorbance at 280nm (protein concentration/contamination).
 
 adapter_name: # TOREVIEW
@@ -65,7 +65,7 @@ base_caller_version: # TOREVIEW
     Version of the base caller.
 
 bmi:
-  description: "The body mass divided by the square of the body height expressed in units of kg/m2."
+  description: "The body mass divided by the square of the body height expressed in units of kg/m^2."
   termDef:
     term: Body Mass Index (BMI)
     source: caDSR
@@ -618,7 +618,7 @@ target_capture_kit_target_region: # TOREVIEW
   description: >
     Target Capture Kit BED file.
     
-therapeutic_agent:
+therapeutic_agents:
   description: >
     Any natural, endogenously-derived, synthetic or semi-synthetic compound with pharmacologic activity.
     A pharmacologic substance has one or more specific mechanism of action(s) through which it exerts

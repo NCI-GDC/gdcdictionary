@@ -68,7 +68,7 @@ properties:
 
   therapeutic_agents:
     term:
-      $ref: "_terms.yaml#/therapeutic_agent"
+      $ref: "_terms.yaml#/therapeutic_agents"
     type: string
 
   days_to_treatment:
