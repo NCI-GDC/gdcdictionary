@@ -52,16 +52,14 @@ properties:
   state:
     $ref: "_definitions.yaml#/state"
   submitter_id:
-    type:
-      - string
-      - "null"
-  projects:
-    $ref: "_definitions.yaml#/to_one"
-  tissue_source_sites:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/submitter_id"
   project_id:
     type: string
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
     $ref: "_definitions.yaml#/datetime"
+  projects:
+    $ref: "_definitions.yaml#/to_one"
+  tissue_source_sites:
+    $ref: "_definitions.yaml#/to_one"

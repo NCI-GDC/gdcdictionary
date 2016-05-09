@@ -99,6 +99,10 @@ current_weight: # TOREVIEW
   description: >
     Current weight of the sample, in grams.
 
+data_bundle_state: # TOREVIEW
+  description: >
+    The current state of the data bundle.
+
 data_category: # TOREVIEW
   description: > 
     Broad categorization of the contents of the data file.
@@ -505,6 +509,10 @@ relative_with_cancer_history:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3901752&version=1.0"
 
+release_state:
+  description: >
+    The release state of an entity.
+
 religion:
   description: >
     The category of a person's institutionalized system grounded in belief and reverence for a
@@ -596,7 +604,15 @@ spike_ins_concentration: # TOREVIEW
     
 state: # TOREVIEW
   description: >
-    The current state fo the object. Defined internally
+    The current state fo the object. Defined internally.
+
+state_comment: # TOREVIEW
+  description: >
+    Short comment about why a file is in its current state. Recommended if state is invalid.
+
+submitter_id: # TOREVIEW
+  description: >
+    A user-provided ID for a file that can be used to uniquely identify it within its project.
 
 target_capture_kit_name: # TOREVIEW
   description: >
@@ -765,9 +781,17 @@ well_number: # TOREVIEW
   description: >
     Number of the well from which the analyte was derived.
 
-workflow_type:
+workflow_link: # TOREVIEW
+  description: >
+    Link to the GitHub hash for the CWL workflow used.
+
+workflow_type: # TOREVIEW
   description: >
     Generic name for the workflow used to analyze a data set.
+
+workflow_version: # TOREVIEW
+  description: >
+    Major version for a GDC workflow.
 
 year_of_birth:
   description: "Numeric value to represent the calendar year in which an individual was born."

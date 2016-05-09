@@ -40,28 +40,19 @@ links:
     backref: samples
     label: derived_from
     target_type: case
-    multiplicity: many_to_one #not sure
+    multiplicity: many_to_one
     required: true
 
-# Sample properties
-# Currently there are many TCGA-specific fields in the DB, this is an attempt
-# to minimize the core fields
 properties:
   type:
     type: string
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
   state:
     $ref: "_definitions.yaml#/state"
   submitter_id:
-    type:
-      - string
-      - "null"
-    description: >
-      The legacy barcode used before prior to the use UUIDs, varies by project.
-      For TCGA this is bcrsamplebarcode.
+    $ref: "_definitions.yaml#/submitter_id"
   sample_type:
     term:
       $ref: "_terms.yaml#/sample_type"
@@ -103,7 +94,6 @@ properties:
       - Solid Tissue Normal
       - Total RNA
       - Xenograft Tissue
-    description: "TODO"
   sample_type_id:
     term:
       $ref: "_terms.yaml#/sample_type_id"
@@ -191,7 +181,6 @@ properties:
       - NHL, Burkitt lymphoma (BL)
       - Rhabdomyosarcoma
       - Soft tissue sarcoma, non-rhabdomyosarcoma
-    description: "TODO"
   tissue_type:
     enum:
       - Tumor
@@ -294,11 +283,7 @@ properties:
       $ref: "_terms.yaml#/is_ffpe"
     type: boolean
   cases:
-    #should this be to_one
     $ref: "_definitions.yaml#/to_one"
-    description: >
-      Indicates that the sample is physically derived from the subject
-      of the linked to case via some process/protocol
   project_id:
     type: string
   created_datetime:

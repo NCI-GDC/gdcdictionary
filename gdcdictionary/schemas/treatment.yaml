@@ -28,8 +28,6 @@ links:
     multiplicity: many_to_one
     required: true
 
-
-
 uniqueKeys:
   #unclear if want submitter ID for clinical
   - [id]
@@ -42,15 +40,12 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
 
   state:
     $ref: "_definitions.yaml#/state"
 
   submitter_id:
-    type:
-      - string
-      - "null"
+    $ref: "_definitions.yaml#/submitter_id"
 
   treatment_or_therapy:
     term:

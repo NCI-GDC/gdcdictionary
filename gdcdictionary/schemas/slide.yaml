@@ -25,7 +25,6 @@ links:
     backref: slides
     label: derived_from
     target_type: portion
-    # this is many_to_many according to relationships in current database
     multiplicity: many_to_many
     required: true
 
@@ -48,12 +47,7 @@ properties:
   state:
     $ref: "_definitions.yaml#/state"
   submitter_id:
-    type:
-      - string
-      - "null"
-    description: >
-      The legacy barcode used before prior to the use UUIDs, varies by project.
-      For TCGA, this is bcrslidebarcode.
+    $ref: "_definitions.yaml#/submitter_id"
   section_location:
     term:
       $ref: "_terms.yaml#/section_location"

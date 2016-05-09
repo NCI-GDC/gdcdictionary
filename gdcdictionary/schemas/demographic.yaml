@@ -52,9 +52,7 @@ properties:
     $ref: "_definitions.yaml#/state"
 
   submitter_id:
-    type:
-      - string
-      - "null"
+    $ref: "_definitions.yaml#/submitter_id"
 
   gender:
     term:
