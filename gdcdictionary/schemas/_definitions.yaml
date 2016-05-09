@@ -199,6 +199,10 @@ workflow_properties:
   workflow_version:
     description: "Major version for a GDC workflow"
     type: string
+  workflow_start_datetime:
+    $ref: "#/datetime"
+  workflow_end_datetime:
+    $ref: "#/datetime"
   state:
     $ref: "#/state"
   project_id:
