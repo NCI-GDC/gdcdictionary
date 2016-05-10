@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "aligned_reads_metric"
 title: Aligned Reads Metric
+short_name: ARM
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file

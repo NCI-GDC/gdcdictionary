@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "exon_expression"
 title: Exon Expression
+short_name: EEX
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file

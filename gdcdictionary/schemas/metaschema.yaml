@@ -101,6 +101,70 @@ properties:
       - qc_bundle
       - TBD
 
+  short_name:
+    type: string
+    enum:
+      - AGG
+      - ARD
+      - ARI
+      - ARM
+      - ACW
+      - ALW
+      - AQT
+      - AMD
+      - ALY
+      - ASM
+      - ANN
+      - ACV
+      - BSS
+      - CAS
+      - CTR
+      - CLN
+      - CLS
+      - CLW
+      - CNS
+      - DFT
+      - DST
+      - DTT
+      - DEM
+      - DGN
+      - EEX
+      - EMD
+      - EST
+      - EXP
+      - FMH
+      - FLE
+      - FCN
+      - FSM
+      - GEX
+      - GCW
+      - MEX
+      - MXW
+      - PTR
+      - PFM
+      - PTN
+      - PGM
+      - PJT
+      - PUB
+      - RGD
+      - RQC
+      - REW
+      - RMD
+      - SPL
+      - SGV
+      - SSM
+      - SLD
+      - SDI
+      - SAW
+      - SMW
+      - SCW
+      - SAR
+      - SCN
+      - SUR
+      - TAG
+      - TSS
+      - TMT
+
   unique_keys:
     type: array
     items:

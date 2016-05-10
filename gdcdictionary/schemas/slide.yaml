@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "slide"
 title: Slide
+short_name: SLD
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_bundle

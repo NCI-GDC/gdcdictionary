@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "aggregated_somatic_mutation"
 title: Aggregated Somatic Mutation
+short_name: AGG
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file

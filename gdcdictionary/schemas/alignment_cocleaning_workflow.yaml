@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "alignment_cocleaning_workflow" 
 title: Alignment Cocleaning Workflow
+short_name: ACW
 type: object
 namespace: http://gdc.nci.nih.gov
 category: analysis 

@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "data_subtype"
 title: Data Subtype
+short_name: DST
 type: object
 namespace: http://gdc.nci.nih.gov
 category: TBD

@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "gene_expression"
 title: Gene Expression
+short_name: GEX
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file

@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "submitted_unaligned_reads"
 title: Submitted Unaligned Reads
+short_name: SUR
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file

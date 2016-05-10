@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "experimental_strategy"
 title: Experimental Strategy
+short_name: EST
 type: object
 namespace: http://gdc.nci.nih.gov
 category: TBD

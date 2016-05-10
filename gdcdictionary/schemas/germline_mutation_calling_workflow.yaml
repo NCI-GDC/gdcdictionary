@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "germline_mutation_calling_workflow"
 title: Germline Mutation Calling Workflow
+short_name: GCW
 type: object
 namespace: http://gdc.nci.nih.gov
 category: analysis

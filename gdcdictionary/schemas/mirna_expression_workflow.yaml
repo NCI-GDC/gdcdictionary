@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "mirna_expression_workflow" 
 title: miRNA Expression Workflow
+short_name: MXW
 type: object
 namespace: http://gdc.nci.nih.gov
 category: analysis 

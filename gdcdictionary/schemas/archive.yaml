@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "archive"
 title: Archive
+short_name: ACV
 type: object
 namespace: http://gdc.nci.nih.gov
 category: TBD

@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "annotation"
 title: Annotation
+short_name: ANN
 type: object
 namespace: http://gdc.nci.nih.gov
 category: notation 

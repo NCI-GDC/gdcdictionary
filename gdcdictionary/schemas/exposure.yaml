@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "exposure"
 title: Exposure
+short_name: EXP
 type: object
 namespace: http://gdc.nci.nih.gov
 category: clinical

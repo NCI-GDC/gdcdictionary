@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "family_history"
 title: Family History
+short_name: FMH
 type: object
 namespace: http://gdc.nci.nih.gov
 category: clinical

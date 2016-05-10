@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "project"
 title: Project
+short_name: PJT
 type: object
 program: '*'
 project: '*'

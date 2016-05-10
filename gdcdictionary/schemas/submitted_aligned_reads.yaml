@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "submitted_aligned_reads"
 title: Submitted Aligned Reads
+short_name: SAR
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file

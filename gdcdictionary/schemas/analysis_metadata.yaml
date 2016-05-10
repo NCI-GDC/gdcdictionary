@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "analysis_metadata"
 title: Analysis Metadata
+short_name: AMD
 type: object
 namespace: http://gdc.nci.nih.gov
 category: metadata_file

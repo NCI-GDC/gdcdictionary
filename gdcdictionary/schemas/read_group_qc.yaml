@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "read_group_qc"
 title: Read Group QC
+short_name: RQC
 type: object
 namespace: http://gdc.nci.nih.gov
 category: notation 

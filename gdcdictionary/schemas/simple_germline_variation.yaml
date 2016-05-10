@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "simple_germline_variation"
 title: Simple Germline Variation
+short_name: SGV
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file

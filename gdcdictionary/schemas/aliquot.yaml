@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "aliquot"
 title: Aliquot
+short_name: AQT
 type: object
 category: biospecimen
 program: '*'

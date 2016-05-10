@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "submitted_tangent_copy_number"
 title: Submitted Tangent Copy Number
+short_name: SCN
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file

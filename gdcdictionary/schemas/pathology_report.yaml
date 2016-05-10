@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: pathology_report
 title: Pathology Report
+short_name: PTR
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file

@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "aligned_reads"
 title: Aligned Reads
+short_name: ARD
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file

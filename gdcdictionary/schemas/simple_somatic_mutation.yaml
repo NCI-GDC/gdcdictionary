@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "simple_somatic_mutation"
 title: Simple Somatic Mutation
+short_name: SSM
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file

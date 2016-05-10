@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "demographic"
 title: Demographic
+short_name: DEM
 type: object
 namespace: http://gdc.nci.nih.gov
 category: clinical

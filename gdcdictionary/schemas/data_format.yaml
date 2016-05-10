@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "data_format"
 title: Data Format
+short_name: DFT
 type: object
 namespace: http://gdc.nci.nih.gov
 category: TBD

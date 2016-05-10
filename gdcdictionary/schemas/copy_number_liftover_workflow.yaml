@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "copy_number_liftover_workflow"
 title: Copy Number Liftover Workflow
+short_name: CLW
 type: object
 namespace: http://gdc.nci.nih.gov
 category: analysis

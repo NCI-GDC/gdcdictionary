@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "somatic_mutation_calling_workflow"
 title: Somatic Mutation Calling Workflow
+short_name: SCW
 type: object
 namespace: http://gdc.nci.nih.gov
 category: analysis

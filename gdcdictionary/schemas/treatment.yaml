@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "treatment"
 title: Treatment
+short_name: TMT
 type: object
 namespace: http://gdc.nci.nih.gov
 category: clinical

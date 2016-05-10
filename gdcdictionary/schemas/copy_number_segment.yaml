@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "copy_number_segment"
 title: Copy Number Segment
+short_name: CNS
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file

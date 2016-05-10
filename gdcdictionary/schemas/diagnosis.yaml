@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "diagnosis"
 title: Diagnosis
+short_name: DGN
 type: object
 namespace: http://gdc.nci.nih.gov
 category: clinical

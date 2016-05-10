@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: read_group
 title: Read Group
+short_name: RGD
 type: object
 description: Sequencing reads from one lane of an NGS experiment
 additionalProperties: false

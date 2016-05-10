@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "alignment_workflow" 
 title: Alignment Workflow
+short_name: ALW
 type: object
 namespace: http://gdc.nci.nih.gov
 category: analysis 

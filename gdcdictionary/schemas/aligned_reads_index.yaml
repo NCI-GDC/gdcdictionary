@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "aligned_reads_index"
 title: Aligned Reads Index
+short_name: ARI
 type: object
 namespace: http://gdc.nci.nih.gov
 category: index_file

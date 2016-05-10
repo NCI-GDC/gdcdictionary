@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "filtered_somatic_mutation"
 title: Filtered Somatic Mutation
+short_name: FSM
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file

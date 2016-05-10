@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "somatic_annotation_workflow"
 title: Somatic Annotation Workflow
+short_name: SAW
 type: object
 namespace: http://gdc.nci.nih.gov
 category: analysis

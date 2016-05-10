@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "rna_expression_workflow" 
 title: RNA Expression Workflow
+short_name: REW
 type: object
 namespace: http://gdc.nci.nih.gov
 category: analysis 

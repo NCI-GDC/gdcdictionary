@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "run_metadata"
 title: Run Metadata
+short_name: RMD
 type: object
 namespace: http://gdc.nci.nih.gov
 category: metadata_file

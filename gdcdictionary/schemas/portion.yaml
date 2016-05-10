@@ -2,6 +2,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "portion"
 title: Portion
+short_name: PTN
 type: object
 namespace: http://gdc.nci.nih.gov
 category: biospecimen
