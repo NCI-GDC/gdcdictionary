@@ -149,13 +149,13 @@ properties:
     type:
       - string
       - "null"
-    description: "TOREVIEW: the file id assigned by the submitter"
+    description: "The file id assigned by the submitter" # TOREVIEW
   file_name:
     type: string
-    description: "TOREVIEW: the file (object) name"
+    description: "The file (object) name" # TOREVIEW
   file_size:
     type: number
-    description: "the size file (object) in bytes"
+    description: "The size file (object) in bytes"
   md5sum:
     type: string
     description: "The MD5 hash of this file"
@@ -167,8 +167,8 @@ properties:
     $ref: "_definitions.yaml#/data_file_error_type"
   state_comment:
     type: string
-    description: >
-      TOREVIEW: optional comment about why the file is in the
+    description: > # TOREVIEW
+      Optional comment about why the file is in the
       current state, mainly for invalid state.
 
   aliquots:

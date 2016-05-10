@@ -30,16 +30,16 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
+    description: "UUID for the Tissue Source Site" # TOREVIEW
   name:
     type: string
-    description: "TOREVIEW: Name of the source site."
+    description: "Name of the source site." # TOREVIEW
   code:
     type: string
-    description: "TOREVIEW: TCGA-provided TSS code."
+    description: "TCGA-provided TSS code." # TOREVIEW
   project:
     type: string
-    description: "TOREVIEW: Study name of the project."
+    description: "Study name of the project." # TOREVIEW
   bcr_id:
     type: string
-    description: "TOREVIEW: TCGA-provided BCR id."
+    description: "TCGA-provided BCR id." # TOREVIEW
