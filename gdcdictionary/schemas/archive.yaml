@@ -4,7 +4,7 @@ id: "archive"
 title: Archive
 type: object
 namespace: http://gdc.nci.nih.gov
-category: TBD
+category: data_file 
 program: '*'
 project: '*'
 description: >
@@ -17,6 +17,11 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - created_datetime
+  - updated_datetime
+  - file_state
+  - state
+  - error_type
 
 links:
   - name: projects
@@ -38,6 +43,10 @@ required:
   - submitter_id
   - revision
   - projects
+  - file_name
+  - file_size
+  - md5sum
+  - state
 
 uniqueKeys:
   - [id]
@@ -61,6 +70,26 @@ properties:
   revision:
     type: number
     description: The revision of this archive in the DCC.
+  file_name:
+    type: string
+    description: "TOREVIEW: the file (object) name"
+  file_size:
+    type: number
+    description: "the size file (object) in bytes"
+  md5sum:
+    type: string
+    description: "The MD5 hash of this file"
+  file_state:
+    $ref: "_definitions.yaml#/file_state"
+  state:
+    $ref: "_definitions.yaml#/state"
+  error_type:
+    $ref: "_definitions.yaml#/data_file_error_type"
+  state_comment:
+    type: string
+    description: >
+      TOREVIEW: optional comment about why the file is in the
+      current state, mainly for invalid state.
 
   projects:
     $ref: "_definitions.yaml#/to_one"
