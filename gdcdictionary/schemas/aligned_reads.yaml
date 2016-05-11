@@ -38,7 +38,7 @@ links:
         multiplicity: many_to_one
         required: false
   - exclusive: true
-    required: false
+    required: true 
     subgroup:
       - name: submitted_unaligned_reads_files
         backref: aligned_reads_files
