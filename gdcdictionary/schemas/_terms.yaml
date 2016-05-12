@@ -109,7 +109,7 @@ data_file_error_type: # TOREVIEW
 
 data_format: # TOREVIEW
   description: >
-    Format of the data files. From http://purl.obolibrary.org/obo/MS_1001459 
+    Format of the data files. 
 
 data_type: # TOREVIEW
   description: >
@@ -198,7 +198,7 @@ days_to_treatment:
 
 encoding: # TOREVIEW
   description: >
-    Version of ASCII encoding of quality values found in the file. From FASTQC Doc
+    Version of ASCII encoding of quality values found in the file. 
 
 ethnicity:
   description: >
@@ -228,7 +228,7 @@ fastq_name: # TOREVIEW
 
 file_name: # TOREVIEW
   description: >
-    The name (or part of a name) of a file (of any type). From http://edamontology.org/data_1050
+    The name (or part of a name) of a file (of any type). 
 
 file_size: # TOREVIEW
   description: >
@@ -337,8 +337,8 @@ longest_dimension: # TOREVIEW
 
 md5sum: # TOREVIEW
   description: >
-    TOREIVEW: The 128-bit hash value expressed as a 32 digit hexidecimal number used as a file's
-    digital fingerprint. Defined internally
+    The 128-bit hash value expressed as a 32 digit hexidecimal number used as a file's
+    digital fingerprint. 
 
 morphology:
   description: >
@@ -370,7 +370,7 @@ percent_eosinophil_infiltration: # TOREVIEW
 
 percent_gc_content: # TOREVIEW
   description: >
-    The overall %GC of all bases in all sequences. From FASTQC doc.
+    The overall %GC of all bases in all sequences. 
 
 percent_granulocyte_infiltration: # TOREVIEW
   description: >
@@ -596,7 +596,7 @@ spike_ins_concentration: # TOREVIEW
     
 state: # TOREVIEW
   description: >
-    The current state fo the object. Defined internally
+    The current state fo the object. 
 
 target_capture_kit_name: # TOREVIEW
   description: >
@@ -667,7 +667,7 @@ total_sequences: # TOREVIEW
     and estimated. At the moment these will always be the same. In the future it may be possible to
     analyse just a subset of sequences and estimate the total number, to speed up the analysis, but since
     we have found that problematic sequences are not evenly distributed through a file we have disabled
-    this for now. From FASTQC Doc
+    this for now. 
 
 treatment_intent_type:
   description: "Text term to identify the reason for the administration of a treatment regimen."
