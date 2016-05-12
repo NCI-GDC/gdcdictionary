@@ -7,8 +7,8 @@ namespace: http://gdc.nci.nih.gov
 category: data_file
 project: '*'
 program: '*'
-description: >
-  TOREVIEW: MAF files that contain all of the somatic mutations for
+description: > # TOREVIEW
+  MAF files that contain all of the somatic mutations for
   all of the cases for a project. 
 additionalProperties: false
 validators: null

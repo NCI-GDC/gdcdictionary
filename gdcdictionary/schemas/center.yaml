@@ -37,19 +37,19 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
+    description: "UUID for the center." # TOREVIEW
   code:
     type: string
-    description: "TOREVIEW: Numeric code for the center."
+    description: "Numeric code for the center." # TOREVIEW
   namespace:
     type: string
-    description: "TOREVIEW: Domain name of the center (e.g. borad.mit.edu)."
+    description: "Domain name of the center (e.g. borad.mit.edu)." # TOREVIEW
   name:
     type: string
-    description: "TOREVIEW: Name of the center (e.g. Broad Institute of MIT and Harvard)."
+    description: "Name of the center (e.g. Broad Institute of MIT and Harvard)." # TOREVIEW
   short_name:
     type: string
-    description: "TOREVIEW: Shortened name of the center (e.g. BI)."
+    description: "Shortened name of the center (e.g. BI)." # TOREVIEW
   center_type:
     type: string
-    description: "TOREVIEW: Type classification of the center (e.g. CGCC)." # probably something better here
+    description: "Type classification of the center (e.g. CGCC)." # TOREVIEW

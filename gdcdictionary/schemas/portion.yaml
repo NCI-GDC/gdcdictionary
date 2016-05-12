@@ -52,7 +52,7 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
+    description: "The UUID for the portion" # TOREVIEW
   state:
     $ref: "_definitions.yaml#/state"
   submitter_id:
@@ -72,10 +72,10 @@ properties:
     type: boolean
   creation_datetime:
     type: number
-    description: >
-      TOREVIEW: The datetime of portion creation encoded as seconds from
-      epoch. If no time is given, it is set to 00:00:00 of the date. Replaces
-      dayofcreation/monthofcreation/yearofcreation.
+    description: > # TOREVIEW
+      The datetime of portion creation encoded as seconds from
+      epoch. If no time is given, it is set to 00:00:00 of the date.
+      Replaces dayofcreation/monthofcreation/yearofcreation.
   portion_number:
     term:
       $ref: "_terms.yaml#/portion_number"
@@ -91,7 +91,6 @@ properties:
   centers:
     # For shipped portions
     $ref: "_definitions.yaml#/to_one"
-    description: "TODO: define"
 
   project_id:
     type: string
