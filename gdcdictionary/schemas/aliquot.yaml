@@ -9,7 +9,7 @@ project: '*'
 description: >
   Pertaining to a portion of the whole;
   any one of two or more samples of something,
-  of the same volume or weight. (NCIt C25414)
+  of the same volume or weight. 
 additionalProperties: false
 validators: []
 
@@ -83,9 +83,6 @@ properties:
     type: number
   analytes:
     $ref: "_definitions.yaml#/to_one"
-    description: >
-      Indicates that the aliquot is physically derived from the linked to
-      analyte via some process/protocol
   analyte_type:
     $ref: "analyte.yaml#/properties/analyte_type"
   analyte_type_id:
@@ -95,7 +92,7 @@ properties:
   centers:
     $ref: "_definitions.yaml#/to_one"
   project_id:
-    type: string
+    $ref: "_definitions.yaml#/project_id" 
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:

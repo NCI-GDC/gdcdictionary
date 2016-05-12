@@ -55,6 +55,7 @@ properties:
     description: "Display name for the project" # TOREVIEW
   dbgap_accession_number:
     type: string
+    description: "The dbgap accession number for the project." # TOREVIEW
   primary_site:
     type: string
     description: "Primary site for the project" # TOREVIEW

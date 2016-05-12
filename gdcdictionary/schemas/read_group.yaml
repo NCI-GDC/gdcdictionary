@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: read_group
 title: Read Group
 type: object
-description: Sequencing reads from one lane of an NGS experiment
+description: "Sequencing reads from one lane of an NGS experiment."
 additionalProperties: false
 category: data_bundle
 validators: null
@@ -46,7 +46,7 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
   project_id:
-    type: string
+    $ref: "_definitions.yaml#/project_id"
   submitter_id:
     type: string
   state:

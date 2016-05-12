@@ -8,7 +8,7 @@ category: biospecimen
 program: '*'
 project: '*'
 description: >
-  A physical sub-part of any sample. (GDC)
+  A physical sub-part of any sample.
 additionalProperties: false
 validators: null
 
@@ -41,11 +41,6 @@ links:
     multiplicity: many_to_one
     required: false
 
-# Portion properties
-# Currently there are many TCGA-specific fields in the DB. This is an attempt
-# to minimize the core fields.
-# Including portion itself is TCGA-specific, but since it's in the data model,
-# leaving for now.
 properties:
   type:
     type: string
@@ -72,7 +67,7 @@ properties:
     type: boolean
   creation_datetime:
     type: number
-    description: > # TOREVIEW
+    description: >
       The datetime of portion creation encoded as seconds from
       epoch. If no time is given, it is set to 00:00:00 of the date.
       Replaces dayofcreation/monthofcreation/yearofcreation.
@@ -82,18 +77,12 @@ properties:
     type: string
 
   samples:
-    #should this be to_one
     $ref: "_definitions.yaml#/to_one"
-    description: >
-      Indicates that the portion is physically derived from the linked to
-      sample via some process/protocol
-
   centers:
-    # For shipped portions
     $ref: "_definitions.yaml#/to_one"
 
   project_id:
-    type: string
+    $ref: "_definitions.yaml#/project_id"
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
