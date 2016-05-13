@@ -101,7 +101,6 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "Unique ID for the entity" # TOREVIEW
   submitter_id:
     type:
       - string
@@ -188,7 +187,7 @@ properties:
   biospecimen_supplements:
     $ref: "_definitions.yaml#/to_many"
   project_id:
-    type: string
+    $ref: "_definitions.yaml#/project_id" 
   legacy_created_datetime:
     $ref: "_definitions.yaml#/datetime"
   legacy_updated_datetime:

@@ -50,7 +50,6 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
     systemSubmitter_Id: node_id
-    description: "TODO"
   submitter_id:
     type:
       - string
