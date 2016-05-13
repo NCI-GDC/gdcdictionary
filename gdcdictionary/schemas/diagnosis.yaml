@@ -46,6 +46,10 @@ required:
   - days_to_last_known_disease_status
   - last_known_disease_status
 
+preferred:
+  - days_to_birth
+  - site_of_resection_or_biopsy 
+
 uniqueKeys:
   #unclear if want submitter ID for clinical
   - [id]
