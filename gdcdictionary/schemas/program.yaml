@@ -32,9 +32,9 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
   name:
     type: string
     description: "Full name/title of the program."
   dbgap_accession_number:
     type: string
+    description: "The dbgap accession number provided for the program."

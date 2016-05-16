@@ -14,7 +14,6 @@ description: >
   halting of all its life functions. Biospecimen can contain one or more
   components including but not limited to cellular molecules, cells, tissues,
   organs, body fluids, embryos, and body excretory products.
-  (GDC Synonym of NCIt C70699)
 additionalProperties: false
 validators: null
 
@@ -52,7 +51,6 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
   state:
     $ref: "_definitions.yaml#/state"
   submitter_id:
@@ -103,7 +101,6 @@ properties:
       - Solid Tissue Normal
       - Total RNA
       - Xenograft Tissue
-    description: "TODO"
   sample_type_id:
     term:
       $ref: "_terms.yaml#/sample_type_id"
@@ -191,14 +188,13 @@ properties:
       - NHL, Burkitt lymphoma (BL)
       - Rhabdomyosarcoma
       - Soft tissue sarcoma, non-rhabdomyosarcoma
-    description: "TODO"
   tissue_type:
     enum:
       - Tumor
       - Normal
       - Abnormal
       - Peritumoral
-    description: "TODO: from BCR"
+    description: "A description of the tissue type with respect its tumor/normal source." # TOREVIEW
   composition:
     enum:
       - Buccal Cells
@@ -223,7 +219,7 @@ properties:
       - Sputum
       - Solid Tissue
       - Whole Bone Marrow
-    description: "TODO: From BCR"
+    description: "Cellular composition of the sample." # TOREVIEW
   tumor_descriptor:
     enum:
       - Metastatic
@@ -232,7 +228,7 @@ properties:
       - Recurrence
       - Xenograft
       - NOS
-    description: "TODO: From BCR"
+    description: "A description of the tumor from which the sample was derived." # TOREVIEW
   preservation_method:
     enum:
       - Cryopreserved
@@ -241,7 +237,7 @@ properties:
       - OCT
       - Snap Frozen
       - Frozen
-    description: "TODO: From BCR"
+    description: "Primary preservation method used to store the sample." # TOREVIEW
   longest_dimension:
     terms:
       $ref: "_terms.yaml#/longest_dimension"
@@ -288,7 +284,7 @@ properties:
     type: integer
   pathology_report_uuid:
     type: string
-    description: "TODO" # are we still doing this? seems like the links handle this now
+    description: "UUID of the related pathology report." # are we still doing this? seems like the links handle this now
   is_ffpe:
     term:
       $ref: "_terms.yaml#/is_ffpe"

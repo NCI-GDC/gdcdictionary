@@ -7,7 +7,7 @@ namespace: http://gdc.nci.nih.gov
 category: TBD
 program: '*'
 project: '*'
-description: "TODO"
+description: "Data format of a legacy file (depreciated)."
 additionalProperties: false
 validators: null
 
@@ -30,7 +30,6 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
   name:
     type: string
     description: name of this data format

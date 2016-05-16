@@ -4,7 +4,7 @@ id: "read_group_qc"
 title: Read Group QC
 type: object
 namespace: http://gdc.nci.nih.gov
-category: notation 
+category: notation
 project: '*'
 program: '*'
 description: "GDC QC run metadata."
@@ -37,7 +37,7 @@ links:
   - name: read_groups
     label: generated_from
     target_type: read_group
-    multiplicity: one_to_one
+    multiplicity: many_to_one
     required: true
     backref: read_group_qcs
 
@@ -60,7 +60,7 @@ required:
   - overrepresented_sequences
   - adapter_content
   - kmer_content
-  - read_groups  
+  - read_groups
 
 uniqueKeys:
   - [ id ]

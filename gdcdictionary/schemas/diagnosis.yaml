@@ -46,6 +46,10 @@ required:
   - days_to_last_known_disease_status
   - last_known_disease_status
 
+preferred:
+  - days_to_birth
+  - site_of_resection_or_biopsy 
+
 uniqueKeys:
   #unclear if want submitter ID for clinical
   - [id]
@@ -191,7 +195,7 @@ properties:
   cases:
     $ref: "_definitions.yaml#/to_one"
   project_id:
-    type: string
+    $ref: "_definitions.yaml#/project_id" 
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:

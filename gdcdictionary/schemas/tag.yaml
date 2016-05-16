@@ -7,7 +7,7 @@ namespace: http://gdc.nci.nih.gov
 category: TBD
 program: '*'
 project: '*'
-description: "TODO"
+description: "Any comment or other information about an entity"
 additionalProperties: false
 validators: null
 
@@ -31,7 +31,6 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
   name:
     type: string
     description: name of this tag
