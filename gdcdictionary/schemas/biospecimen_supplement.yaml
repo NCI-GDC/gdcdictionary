@@ -26,7 +26,7 @@ links:
     backref: biospecimen_supplements
     label: derived_from
     target_type: case
-    multiplicity: many_to_one
+    multiplicity: many_to_many
     required: true
   - name: archives
     backref: biospecimen_supplements
@@ -67,6 +67,6 @@ properties:
     enum:
       - BCR XML
   cases:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_many"
   archives:
     $ref: "_definitions.yaml#/to_one"
