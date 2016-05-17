@@ -77,6 +77,8 @@ properties:
     type:
       - number
       - "null"
+    maximum: 32872
+    minimum: 0
 
   days_to_birth:
     term:
@@ -84,11 +86,15 @@ properties:
     type:
       - number
       - "null"
+    maximum: 0
+    minimum: -32872
 
   days_to_death:
     term:
       $ref: "_terms.yaml#/days_to_death"
     type: number
+    maximum: 32872
+    minimum: 0
 
   days_to_last_follow_up:
     term:
