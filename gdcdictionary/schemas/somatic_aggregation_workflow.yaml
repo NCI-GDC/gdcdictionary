@@ -1,15 +1,15 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "somatic_masking_workflow"
-title: Somatic Masking Workflow
+id: "somatic_aggregation_workflow"
+title: Somatic Aggregation Workflow
 type: object
 namespace: http://gdc.nci.nih.gov
 category: analysis
 program: '*'
 project: '*'
 description: >
-  Metadata for the somatic mutation masking pipeline used to filter out
-  mutations, particularly germline calls, in the GDC DNA-Seq pipelines.
+  Metadata for the somatic mutation aggregation workflow used to
+  generate both the public and protected MAFs in the GDC DNA-Seq pipelines.
 additionalProperties: false
 validators: null
 
@@ -22,10 +22,10 @@ systemProperties:
 
 links:
   - name: annotated_somatic_mutations
-    backref: somatic_masking_workflows
+    backref: somatic_aggregation_workflows
     label: performed_on
     target_type: annotated_somatic_mutation
-    multiplicity: one_to_one
+    multiplicity: one_to_many
     required: true
 
 required:
@@ -41,14 +41,14 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
   type:
-    enum: [ "somatic_masking_workflow" ]
+    enum: [ "somatic_aggregation_workflow" ]
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum:
-      - MuTect2 Variant Masking
-      - MuSE Variant Masking
-      - SomaticSniper Variant Masking
-      - VarScan2 Variant Masking
+      - MuTect2 Variant Aggregation and Masking
+      - MuSE Variant Aggregation and Masking
+      - SomaticSniper Variant Aggregation and Masking
+      - VarScan2 Variant Aggregation and Masking
   annotated_somatic_mutations:
     $ref: "_definitions.yaml#/to_many"
