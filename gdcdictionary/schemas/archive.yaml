@@ -4,7 +4,7 @@ id: "archive"
 title: Archive
 type: object
 namespace: http://gdc.nci.nih.gov
-category: TBD
+category: data_file 
 program: '*'
 project: '*'
 description: >
@@ -17,6 +17,11 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - created_datetime
+  - updated_datetime
+  - file_state
+  - state
+  - error_type
 
 links:
   - name: projects
@@ -38,6 +43,10 @@ required:
   - submitter_id
   - revision
   - projects
+  - file_name
+  - file_size
+  - md5sum
+  - state
 
 uniqueKeys:
   - [id]
@@ -45,18 +54,21 @@ uniqueKeys:
 
 # archive properties
 properties:
+  $ref: "_definitions.yaml#/data_file_properties"
   type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemSubmitter_Id: node_id
-  submitter_id:
-    type:
-      - string
-      - "null"
-    description: >
-      Unique identifier of this archive in the DCC; usually the original
-      archive filename.
+    enum: [ "archive" ]
+  data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
+    enum: [ "Archive" ]
+  data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
+    enum: [ "TCGA DCC Archive", "TARGET DCC Archive" ]
+  data_format:
+    term:
+      $ref: "_terms.yaml#/data_format"
+    enum: [ "TARGZ", "MAGETAB" ]
   revision:
     type: number
     description: The revision of this archive in the DCC.
