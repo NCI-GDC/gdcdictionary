@@ -1,0 +1,17 @@
+{
+    "type": "sample_level_maf",
+    "submitter_id": "sample_level_maf_a",
+    "file_name": "sample_level.maf",
+    "file_size": 2234135,
+    "data_format": "MAF",
+    "md5sum": "595f44fec1e92a71d3e9e77456ba80d1",
+    "data_category": "Simple Nucleotide Variation",
+    "data_type": "Sample Level MAF",
+    "data_format": "MAF",
+    "experimental_strategy": "WGS",
+    "somatic_annotation_workflows": {
+	"submitter_id": "SAW_run_1"
+    }
+}
+
+    
