@@ -2,7 +2,7 @@ id: _terms
 
 a260_a280_ratio: # TOREVIEW
   description: >
-    Purity measurement that weighs the absorbance at 20nm (DNA concentration)
+    Purity measurement that weighs the absorbance at 260nm (DNA concentration)
     against the absorbance at 280nm (protein concentration/contamination).
 
 adapter_name: # TOREVIEW
@@ -46,7 +46,7 @@ alcohol_intensity:
 
 amount: # TOREVIEW
   description: > 
-    Weight in grams or volume in mL
+    Weight in grams or volume in mL.
 
 analyte_type: # TOREVIEW
   description: >
@@ -65,7 +65,7 @@ base_caller_version: # TOREVIEW
     Version of the base caller.
 
 bmi:
-  description: "The body mass divided by the square of the body height expressed in units of kg/m2."
+  description: "The body mass divided by the square of the body height expressed in units of kg/m^2."
   termDef:
     term: Body Mass Index (BMI)
     source: caDSR
@@ -109,11 +109,15 @@ data_file_error_type: # TOREVIEW
 
 data_format: # TOREVIEW
   description: >
-    Format of the data files. From http://purl.obolibrary.org/obo/MS_1001459 
+    Format of the data files. 
 
 data_type: # TOREVIEW
   description: >
     Specific content type of the data file.
+
+datetime:
+  description: >
+    A combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]
 
 days_to_birth:
   description: >
@@ -198,7 +202,7 @@ days_to_treatment:
 
 encoding: # TOREVIEW
   description: >
-    Version of ASCII encoding of quality values found in the file. From FASTQC Doc
+    Version of ASCII encoding of quality values found in the file. 
 
 ethnicity:
   description: >
@@ -228,7 +232,7 @@ fastq_name: # TOREVIEW
 
 file_name: # TOREVIEW
   description: >
-    The name (or part of a name) of a file (of any type). From http://edamontology.org/data_1050
+    The name (or part of a name) of a file (of any type). 
 
 file_size: # TOREVIEW
   description: >
@@ -337,8 +341,8 @@ longest_dimension: # TOREVIEW
 
 md5sum: # TOREVIEW
   description: >
-    TOREIVEW: The 128-bit hash value expressed as a 32 digit hexidecimal number used as a file's
-    digital fingerprint. Defined internally
+    The 128-bit hash value expressed as a 32 digit hexidecimal number used as a file's
+    digital fingerprint. 
 
 morphology:
   description: >
@@ -370,7 +374,7 @@ percent_eosinophil_infiltration: # TOREVIEW
 
 percent_gc_content: # TOREVIEW
   description: >
-    The overall %GC of all bases in all sequences. From FASTQC doc.
+    The overall %GC of all bases in all sequences. 
 
 percent_granulocyte_infiltration: # TOREVIEW
   description: >
@@ -426,7 +430,7 @@ primary_diagnosis:
     condition, or injury from expressed signs and symptoms; also, the scientific determination
     of any kind; the concise results of such an investigation. The term primary indicates that
     this is the intial diagnosis made or provided in the context of the associated study.
-    [IDC-10 codes](http://apps.who.int/classifications/icd10/browse/2015/en)
+    [IDC-10 codes]
   termDef:
     term: Diagnosis
     source: NCIt
@@ -437,7 +441,7 @@ primary_diagnosis:
 prior_malignancy:
   description: >
     Text term to describe the patient's history of prior cancer diagnosis and the spatial location
-    of any previous cancer occurrence. GDC: allow yes/no/unknown as accepted values.
+    of any previous cancer occurrence.
   termDef:
     term: Prior Cancer Diagnosis Occurrence Description Text
     source: caDSR
@@ -456,10 +460,15 @@ progression_or_recurrence:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3830556&version=1.0"
 
+project_id: # TOREVIEW
+  description: > 
+    Unique ID for any specific defined piece of work that is undertaken or attempted to
+    meet a single requirement.
+
 qc_metric_state: # TOREVIEW
   description: >
     State classification given by FASTQC for the metric. Metric specific details about the
-    states are available on their website. http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/
+    states are available on their website. 
 
 race:
   description: >
@@ -496,8 +505,7 @@ relationship_type:
 relative_with_cancer_history:
   description: >
     Indicator to signify whether or not an individual's biological relative has been diagnosed with another
-    type of cancer. (GDC definition: Indicator to signify whether or not an individual's biological relative
-    has been diagnosed with any type of cancer.)
+    type of cancer. 
   termDef:
     term: "Other Cancer Biological Relative History Indicator"
     source: caDSR
@@ -544,8 +552,7 @@ shortest_dimension: # TOREVIEW
 site_of_resection_or_biopsy:
   description: >
     Term to represent the name of the organ resected that was contiguous to the primary disease site.
-    GDC: Also includes liquid biopsy material. Codes as provided at
-    [ICD-O-3 Online](http://codes.iarc.fr/topography)
+    GDC: Also includes liquid biopsy material. 
   termDef:
     term: Contiguous Organ Excision Performed Anatomic Site
     source: caDSR
@@ -596,7 +603,7 @@ spike_ins_concentration: # TOREVIEW
     
 state: # TOREVIEW
   description: >
-    The current state fo the object. Defined internally
+    The current state fo the object. 
 
 target_capture_kit_name: # TOREVIEW
   description: >
@@ -618,7 +625,7 @@ target_capture_kit_target_region: # TOREVIEW
   description: >
     Target Capture Kit BED file.
     
-therapeutic_agent:
+therapeutic_agents:
   description: >
     Any natural, endogenously-derived, synthetic or semi-synthetic compound with pharmacologic activity.
     A pharmacologic substance has one or more specific mechanism of action(s) through which it exerts
@@ -648,8 +655,7 @@ tissue_or_organ_of_origin:
     The third edition of the International Classification of Diseases for Oncology, published in 2000,
     used principally in tumor and cancer registries for coding the site (topography) and the histology
     (morphology) of neoplasms. The description of an anatomical region or of a body part. Named locations
-    of, or within, the body. A system of numbered categories for representation of data. Codes as
-    provided at [ICD-O-3 Online](http://codes.iarc.fr/topography)
+    of, or within, the body. A system of numbered categories for representation of data. 
   termDef:
     term:  Tissue or Organ of Origin
     source: caDSR
@@ -667,7 +673,7 @@ total_sequences: # TOREVIEW
     and estimated. At the moment these will always be the same. In the future it may be possible to
     analyse just a subset of sequences and estimate the total number, to speed up the analysis, but since
     we have found that problematic sequences are not evenly distributed through a file we have disabled
-    this for now. From FASTQC Doc
+    this for now. 
 
 treatment_intent_type:
   description: "Text term to identify the reason for the administration of a treatment regimen."
@@ -684,10 +690,10 @@ treatment_or_therapy:
     received before the body specimen was collected.
   termDef:
     term: Treatment or Therapy
-    source: caDSR
+    source: COG 
     cde_id: 4231463
     cde_version: 1.0
-    term_url: null
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4231463&version=1.0" 
 
 tumor_grade:
   description: >
@@ -709,11 +715,11 @@ tumor_grade:
 
 tumor_code: # TOREVIEW
   description: >
-    Name of the source of tumor tissue.
+    Diagnostic tumor code of the tissue sample source. 
 
 tumor_code_id: # TOREVIEW
   description: >
-    BCR-defined id code fur the tumor sample.
+    BCR-defined id code foor the tumor sample.
 
 tumor_stage:
   description: >

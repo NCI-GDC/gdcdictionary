@@ -101,7 +101,6 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
   submitter_id:
     type:
       - string
@@ -153,18 +152,19 @@ properties:
       - Tumor tissue origin incorrect
       - Tumor type incorrect
       - WGA Failure
-    description: "TOREVIEW: Top level characterization of the annotation."
+    description: "Top level characterization of the annotation." # TOREVEIW
   classification:
     type: string
-    description: "TOREVIEW: Top level classification of the annotation."
+    description: "Top level classification of the annotation." # TOREVIEW
   creator:
     type: string
+    description: "Name of the person or entity responsible for the creation of the annotation." # TOREVIEW
   status:
     type: string
-    description: "TOREVIEW: Status of the annotation." # Is this an enum?
+    description: "Status of the annotation." # TOREVIEW; is there an enum?
   notes:
     type: string
-    description: "TOREVIEW: Open entry for any further description or characterization of the data." 
+    description: "Open entry for any further description or characterization of the data." # TOREVIEW
 
   cases:
     $ref: "_definitions.yaml#/to_many"
@@ -187,7 +187,7 @@ properties:
   biospecimen_supplements:
     $ref: "_definitions.yaml#/to_many"
   project_id:
-    type: string
+    $ref: "_definitions.yaml#/project_id" 
   legacy_created_datetime:
     $ref: "_definitions.yaml#/datetime"
   legacy_updated_datetime:

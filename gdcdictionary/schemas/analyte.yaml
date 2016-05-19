@@ -38,16 +38,12 @@ links:
     multiplicity: many_to_one
     required: true
 
-# Added back all fields in current data model to make it compatible with current database
 properties:
   type:
     type: string
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: >
-      A liquid bulk product produced according to specified lab protocols,
-      from a sample or portion, intended for further analysis. (GDC)
   state:
     $ref: "_definitions.yaml#/state"
   submitter_id:
@@ -99,15 +95,10 @@ properties:
     term:
       $ref: "_terms.yaml#/spectrophotometer_method"
     type: string
-# analyte parents
   portions:
-    #should this be to_one
     $ref: "_definitions.yaml#/to_one"
-    description: >
-      Indicates that the analyte is physically derived from the linked to
-      portion via some process/protocol
   project_id:
-    type: string
+    $ref: "_definitions.yaml#/project_id" 
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:

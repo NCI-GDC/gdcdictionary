@@ -48,6 +48,8 @@ datetime:
     - type: string
       format: date-time
     - type: 'null'
+  term:
+    $ref: "_terms.yaml#/datetime"
 
 file_name:
     type: string
@@ -151,6 +153,11 @@ qc_metrics_state:
         - PASS
         - WARN
 
+project_id:
+    type: string
+    term:
+        $ref: "_terms.yaml#/project_id"
+
 data_file_properties:
   id:
     $ref: "#/UUID"
@@ -159,7 +166,7 @@ data_file_properties:
     type:
       - string
       - "null"
-    description: "TOREVIEW: the file id assigned by the submitter"
+    description: "The file id assigned by the submitter" # TOREVIEW
   file_name:
     $ref: "#/file_name"
   file_size:
@@ -174,11 +181,11 @@ data_file_properties:
     $ref: "#/data_file_error_type"
   state_comment:
     type: string
-    description: >
-      TOREVIEW: optional comment about why the file is in the
+    description: > 
+      Optional comment about why the file is in the
       current state, mainly for invalid state.
   project_id:
-    type: string
+    $ref: "#/project_id"
   created_datetime:
     $ref: "#/datetime"
   updated_datetime:
@@ -192,17 +199,21 @@ workflow_properties:
     type:
       - string
       - "null"
-    description: "TOREVIEW: the file id assigned by the submitter"
+    description: "The file id assigned by the submitter" # TOREVIEW
   workflow_link:
     description: "Link to github hash for the CWL workflow used."
     type: string
   workflow_version:
-    description: "Major version for a GDC workflow"
+    description: "Major version for a GDC workflow."
     type: string
+  workflow_start_datetime:
+    $ref: "#/datetime"
+  workflow_end_datetime:
+    $ref: "#/datetime"
   state:
     $ref: "#/state"
   project_id:
-    type: string
+    $ref: "#/project_id"
   created_datetime:
     $ref: "#/datetime"
   updated_datetime:

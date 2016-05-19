@@ -32,7 +32,6 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "TODO"
   name:
     type: string
     description: name of this platform
