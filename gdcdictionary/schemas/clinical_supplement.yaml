@@ -66,6 +66,7 @@ properties:
       $ref: "_terms.yaml#/data_format"
     enum:
       - BCR XML
+      - XLSX
   cases:
     $ref: "_definitions.yaml#/to_many"
   archives:
