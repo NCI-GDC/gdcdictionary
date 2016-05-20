@@ -83,13 +83,15 @@ cigarettes_per_day:
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2001716&version=4.0"
 
 classification_of_tumor:
-  description: "The point in clinical disease progression at which a tumor sample was taken."
+  description: >
+    Text that describes the kind of disease present in the tumor specimen as related
+    to a specific timepoint.  
   termDef:
-    term: Classification of Tumor
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: Tumor Type 
+    source: caBIG
+    cde_id: 3288124
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3288124&version=1.0"
 
 concentration: # TOREVIEW
   description: >
@@ -146,15 +148,15 @@ days_to_death:
     Time interval from a person's date of death to the date of initial pathologic diagnosis,
     represented as a calculated number of days.
   termDef:
-    term: Days to Death
-    source: caDSR
-    cde_id: 3008253
+    term: Number of Days from Initial Diagnosis to Date of Death 
+    source: caBIG
+    cde_id: 3165475
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008235&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3165475&version=1.0"
 
 days_to_last_follow_up:
   description: >
-    Time interval from the date of last followup to the date of initial pathologic diagnosis,
+    Time interval from the date of last follow up to the date of initial pathologic diagnosis,
     represented as a calculated number of days.
   termDef:
     term: Days to Last Followup
@@ -166,25 +168,25 @@ days_to_last_follow_up:
 
 days_to_last_known_disease_status:
   description: >
-    Time interval from the date of disease recurrence to the date of initial pathologic diagnosis,
-    represented as a calculated number of days.
+    Time interval from the date of last follow up to the date of initial pathologic 
+    diagnosis, represented as a calculated number of days.  
   termDef:
-    term: Days to Recurrence
-    source: caDSR
-    cde_id: 3008295
+    term: Days to Last Followup
+    source: caBIG
+    cde_id: 3008273
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008295&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008273&version=1.0"
 
 days_to_recurrence:
   description: >
-    Time interval from the date of disease recurrence to the date of initial pathologic diagnosis,
-    represented as a calculated number of days.
+    Time interval from the date of new tumor event including progression, recurrence and new primary 
+    malignancies to the date of initial pathologic diagnosis, represented as a calculated number of days. 
   termDef:
-    term: Days to Recurrence
-    source: caDSR
-    cde_id: 3008295
+    term: Number of Days from Date of Initial Pathologic Diagnosis to Date of New Tumor Event
+    source: caBIG
+    cde_id: 3392464
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008295&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3392464&version=1.0" 
 
 days_to_sample_procurement:
   description: >
@@ -206,11 +208,10 @@ encoding: # TOREVIEW
 
 ethnicity:
   description: >
-    Classification based on social groupings that are characterized by a distinctive social and 
-    cultural tradition maintained from generation to generation, a common history and origin and
-    a sense of identification with the group; members of the group have distinctive features in
-    their way of life, shared experiences and often a common genetic heritage; these features
-    may be reflected in their experience of health and disease. 
+    An individual's self-described social and cultural grouping, specifically whether 
+    an individual describes themselves as Hispanic or Latino. The provided values are
+    based on the categories defined by the U.S. Office of Management and Business
+    and used by the U.S. Census Bureau.
   termDef:
     term: Ethnicity
     source: caDSR
@@ -333,7 +334,7 @@ library_preparation_kit_version: # TOREVIEW
 
 library_strand: # TOREVIEW
   description: >
-    Library strandedness.
+    Library stranded-ness.
     
 longest_dimension: # TOREVIEW
   description: >
@@ -341,17 +342,17 @@ longest_dimension: # TOREVIEW
 
 md5sum: # TOREVIEW
   description: >
-    The 128-bit hash value expressed as a 32 digit hexidecimal number used as a file's
+    The 128-bit hash value expressed as a 32 digit hexadecimal number used as a file's
     digital fingerprint. 
 
 morphology:
   description: >
     The third edition of the International Classification of Diseases for Oncology, published in 2000
     used principally in tumor and cancer registries for coding the site (topography) and the histology
-    (morphology) of neoplasms._The study of the structure of the cells and their arrangement to
+    (morphology) of neoplasms. The study of the structure of the cells and their arrangement to
     constitute tissues and, finally, the association among these to form organs. In pathology, the
     microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by
-    employing various cytochemical and immunocytochemical stains._A system of numbered categories for
+    employing various cytochemical and immunocytochemical stains. A system of numbered categories for
     representation of data.
   termDef:
     term: ICD-O-3 Histology Code
@@ -382,7 +383,7 @@ percent_granulocyte_infiltration: # TOREVIEW
 
 percent_inflam_infiltration: # TOREVIEW
   description: >
-    Percent of cells identified as inflamatory infiltration.
+    Percent of cells identified as inflammatory infiltration.
 
 percent_lymphocyte_infiltration: # TOREVIEW
   description: >
@@ -414,7 +415,7 @@ percent_tumor_cells: # TOREVIEW
 
 percent_tumor_nuclei: # TOREVIEW
   description: >
-    Percent of nuclei identified as tumor nuceli.
+    Percent of nuclei identified as tumor nuclei.
 
 platform: # TOREVIEW
   description: >
@@ -426,17 +427,13 @@ portion_number: # TOREVIEW
 
 primary_diagnosis:
   description: >
-    The investigation, analysis and recognition of the presence and nature of disease,
-    condition, or injury from expressed signs and symptoms; also, the scientific determination
-    of any kind; the concise results of such an investigation. The term primary indicates that
-    this is the intial diagnosis made or provided in the context of the associated study.
-    [IDC-10 codes]
+    Text term for the structural pattern of cancer cells used to define a microscopic diagnosis. 
   termDef:
-    term: Diagnosis
-    source: NCIt
-    cde_id: C15220
-    cde_version: null
-    term_url: "https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C15220"
+    term: Histology 
+    source: caBIG 
+    cde_id: 3081934
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3081934&version=3.0" 
 
 prior_malignancy:
   description: >
@@ -451,14 +448,14 @@ prior_malignancy:
 
 progression_or_recurrence:
   description: >
-    Text indicator to represent the worsening or progression, recurrence of the cancer condition under
-    investigation since the time of last contact with the subject.
+    Yes/No/Unknown indicator to identify whether a patient has had a new tumor event 
+    after initial treatment.
   termDef:
-    term: Progression or Recurrence
-    source: caDSR
-    cde_id: 3830556
+    term: New Tumor Event After Initial Treatment 
+    source: caBIG
+    cde_id: 3121376
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3830556&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3121376&version=1.0" 
 
 project_id: # TOREVIEW
   description: > 
@@ -475,13 +472,14 @@ race:
     An arbitrary classification of a taxonomic group that is a division of a species. It usually arises
     as a consequence of geographical isolation within a species and is characterized by shared heredity,
     physical attributes and behavior, and in the case of humans, by common history, nationality, or
-    geographic distribution.
+    geographic distribution. The provided values are based on the categories defined by the U.S. Office
+    of Management and Business and used by the U.S. Census Bureau.
   termDef:
     term: Race
-    source: NCIt
-    cde_id: C17049
-    cde_version: null
-    term_url: "https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C17049"
+    source: caBIG
+    cde_id: 2192199
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2192199&version=1.0" 
 
 read_length: # TOREVIEW
   description: >
@@ -551,14 +549,17 @@ shortest_dimension: # TOREVIEW
 
 site_of_resection_or_biopsy:
   description: >
-    Term to represent the name of the organ resected that was contiguous to the primary disease site.
-    GDC: Also includes liquid biopsy material. 
+    The third edition of the International Classification of Diseases for Oncology,
+    published in 2000, used principally in tumor and cancer registries for coding
+    the site (topography) and the histology (morphology) of neoplasms. The description
+    of an anatomical region or of a body part. Named locations of, or within, the
+    body. A system of numbered categories for representation of data. 
   termDef:
-    term: Contiguous Organ Excision Performed Anatomic Site
-    source: caDSR
-    cde_id: 3162811
-    cde_version: 2.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3162811&version=2.0"
+    term: ICD-O-3 Site Code
+    source: caBIG
+    cde_id: 3226281
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3226281&version=1.0"
 
 size_selection_range: # TOREVIEW
   description: >
@@ -595,7 +596,7 @@ spectrophotometer_method: # TOREVIEW
 
 spike_ins_fasta: # TOREVIEW
   description: >
-    Name of the FASTA file that contains the spike-in seqeunces.
+    Name of the FASTA file that contains the spike-in sequences.
     
 spike_ins_concentration: # TOREVIEW
   description: >
@@ -603,7 +604,7 @@ spike_ins_concentration: # TOREVIEW
     
 state: # TOREVIEW
   description: >
-    The current state fo the object. 
+    The current state of the object.
 
 target_capture_kit_name: # TOREVIEW
   description: >
@@ -627,20 +628,13 @@ target_capture_kit_target_region: # TOREVIEW
     
 therapeutic_agents:
   description: >
-    Any natural, endogenously-derived, synthetic or semi-synthetic compound with pharmacologic activity.
-    A pharmacologic substance has one or more specific mechanism of action(s) through which it exerts
-    one or more effect(s) on the human or animal body. They can be used to potentially prevent, diagnose,
-    treat or relieve symptoms of a disease. Formulation specific agents and some combination agents are
-    also classified as pharmacologic substances. String value is the agent name as found in NCI Thesaurus,
-    which indexes approved drugs via RxNorm as well as all experimental drugs. String value is the agent
-    name as found in NCI Thesaurus, which indexes approved drugs via RxNorm as well as all experimental
-    drugs.
+    Text identification of the individual agent(s) used as part of a prior treatment regimen. 
   termDef:
-    term: Therapeutic Agent
-    source: NCIt
-    cde_id: C1909
-    cde_version: null
-    term_url: "https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C1909"
+    term: Name of drug
+    source: caBIG
+    cde_id: 2975232
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2975232&version=1.0"
 
 time_between_clamping_and_freezing: # TOREVIEW
   description: >
@@ -652,16 +646,13 @@ time_between_excision_and_freezing: # TOREVIEW
 
 tissue_or_organ_of_origin: 
   description: >
-    The third edition of the International Classification of Diseases for Oncology, published in 2000,
-    used principally in tumor and cancer registries for coding the site (topography) and the histology
-    (morphology) of neoplasms. The description of an anatomical region or of a body part. Named locations
-    of, or within, the body. A system of numbered categories for representation of data. 
+    Text term that describes the anatomic site of the tumor or disease.
   termDef:
-    term:  Tissue or Organ of Origin
-    source: caDSR
-    cde_id: 3226281
-    cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3226281&version=1.0"
+    term:  Site of Disease
+    source: caBIG
+    cde_id: 3427536
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3427536&version=3.0"
 
 to_trim_adapter_sequence: # TOREVIEW
   description: >
@@ -671,15 +662,16 @@ total_sequences: # TOREVIEW
   description: >
     A count of the total number of sequences processed. There are two values reported, actual
     and estimated. At the moment these will always be the same. In the future it may be possible to
-    analyse just a subset of sequences and estimate the total number, to speed up the analysis, but since
+    analyze just a subset of sequences and estimate the total number, to speed up the analysis, but since
     we have found that problematic sequences are not evenly distributed through a file we have disabled
     this for now. 
 
 treatment_intent_type:
-  description: "Text term to identify the reason for the administration of a treatment regimen."
+  description: >
+    Text term to identify the reason for the administration of a treatment regimen. [Manually-curated]
   termDef:
-    term: Treatment Regimen Intent Type
-    source: caDSR
+    term: Indication of Regimen
+    source: caBIG
     cde_id: 2793511
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2793511&version=1.0"
@@ -697,21 +689,14 @@ treatment_or_therapy:
 
 tumor_grade:
   description: >
-    The degree of abnormality of cancer cells, a measure of differentiation, the extent to which cancer
-    cells are similar in appearance and function to healthy cells of the same tissue type. The degree of
-    differentiation often relates to the clinical behavior of the particular tumor. Based on the
-    microscopic findings, tumor grade is commonly described by one of four degrees of severity.
-    Histopathologic grade of a tumor may be used to plan treatment and estimate the future course,
-    outcome, and overall prognosis of disease. Certain types of cancers, such as soft tissue sarcoma,
-    primary brain tumors, lymphomas, and breast have special grading systems. The accepted values for
-    tumor_grade depend on the tumor site, type, and accepted grading system. These items should
-    accompany the tumor_grade value as associated metadata.
+    Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation 
+    and aggressiveness. 
   termDef:
-    term: Histologic Grade
-    source: NCIt
-    cde_id: C18000
-    cde_version: null
-    term_url: "https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C18000"
+    term: Tumor grade 
+    source: caBIG
+    cde_id: 2785839
+    cde_version: 2.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2785839&version=2.0"
 
 tumor_code: # TOREVIEW
   description: >
@@ -719,7 +704,7 @@ tumor_code: # TOREVIEW
 
 tumor_code_id: # TOREVIEW
   description: >
-    BCR-defined id code foor the tumor sample.
+    BCR-defined id code for the tumor sample.
 
 tumor_stage:
   description: >
@@ -736,10 +721,10 @@ tumor_stage:
 
 UUID:
   description: >
-    A 128 bit identifier. Depending on the mechanism used to generate it, it is either guaranteed to be 
+    A 128-bit identifier. Depending on the mechanism used to generate it, it is either guaranteed to be 
     different from all other UUIDs/GUIDs generated until 3400 AD or extremely likely to be different.
     Its relatively small size lends itself well to sorting, ordering, and hashing of all sorts, storing
-    in databases, simple allocation, and ease of programming in general.i
+    in databases, simple allocation, and ease of programming in general.
   termDef:
     term: Universally Unique Identifier
     source: NCIt
@@ -749,14 +734,13 @@ UUID:
 
 vital_status:
   description: >
-    The state or condition of being living or deceased; also includes the case where the vital
-    status is unknown.
+    The survival state of the person registered on the protocol. 
   termDef:
     term: Vital Status
-    source: NCIt
-    cde_id: C25717
-    cde_version: null
-    term_url: "https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C25717"
+    source: CTEP 
+    cde_id: 5
+    cde_version: 5.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5&version=5.0" 
 
 weight:
   description: "The weight of the patient measured in kilograms."
