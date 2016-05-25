@@ -491,25 +491,25 @@ read_group_name: # TOREVIEW
 
 relationship_type:
   description: >
-    The subgroup that describes the state of connectedness between members of the unit of society
-    organized around kinship ties.
+    Text term that describes the subgroup for the state of connectedness between members of the unit 
+    of society organized around kinship ties.  
   termDef:
-    term: Relationship Type
-    source: caDSR
-    cde_id: 2690165
+    term: Family Medical History Relative Relationship Type 
+    source: caBIG
+    cde_id: 2783641
     cde_version: 2.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2690165&version=2.0"
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2783641&version=2.0"
 
 relative_with_cancer_history:
   description: >
-    Indicator to signify whether or not an individual's biological relative has been diagnosed with another
-    type of cancer. 
+    The yes/no/unknown indicator that asks whether any blood relatives have ever been diagnosed
+    with cancer.  
   termDef:
-    term: "Other Cancer Biological Relative History Indicator"
-    source: caDSR
-    cde_id: 3901752
+    term: "Have any of your blood relatives ever been diagnosed with cancer"
+    source: CTEP
+    cde_id: 2691192
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3901752&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2691192&version=1.0"
 
 religion:
   description: >
@@ -628,7 +628,14 @@ target_capture_kit_target_region: # TOREVIEW
     
 therapeutic_agents:
   description: >
-    Text identification of the individual agent(s) used as part of a prior treatment regimen. 
+    Any natural, endogenously-derived, synthetic or semi-synthetic compound with pharmacologic 
+    activity. A pharmacologic substance has one or more specific mechanism of action(s) through 
+    which it exerts one or more effect(s) on the human or animal body. They can be used to 
+    potentially prevent, diagnose, treat or relieve symptoms of a disease. Formulation specific
+    agents and some combination agents are also classified as pharmacologic substances. String
+    value is the agent name as found in NCI Thesaurus, which indexes approved drugs via RxNorm
+    as well as all experimental drugs. String value is the agent name as found in NCI Thesaurus,
+    which indexes approved drugs via RxNorm as well as all experimental drugs. 
   termDef:
     term: Name of drug
     source: caBIG

@@ -385,11 +385,6 @@ properties:
   tissue_or_organ_of_origin:
     term:
       $ref: "_terms.yaml#/tissue_or_organ_of_origin"
-    type: string
-
-  site_of_resection_or_biopsy:
-    term:
-      $ref: "_terms.yaml#/site_of_resection_or_biopsy"
     enum:
       - "Abdomen/Pelvis"
       - "Abdominal wall"
@@ -849,6 +844,11 @@ properties:
       - "Wrist"
       - "Zygomatic bone"
 
+  site_of_resection_or_biopsy:
+    term:
+      $ref: "_terms.yaml#/site_of_resection_or_biopsy"
+    type: string
+
   classification_of_tumor:
     term:
       $ref: "_terms.yaml#/classification_of_tumor"
@@ -884,7 +884,11 @@ properties:
       - GB
       - GX
       - High Grade
-      - Low Grade 
+      - Low Grade
+      - Papilloma
+      - PUNLMP 
+      - unknown
+      - not reported
 
   progression_or_recurrence:
     term:
