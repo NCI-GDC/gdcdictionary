@@ -60,6 +60,7 @@ properties:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum:
+      - DEXSeq
       - HTSeq - FPKM
       - HTSeq - FPKM-UQ
       - HTSeq - Counts
