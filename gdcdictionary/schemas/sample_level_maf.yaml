@@ -1,15 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "filtered_somatic_mutation"
-title: Filtered Somatic Mutation
+id: "sample_level_maf"
+title: Sample Level MAF
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing the somatic mutations that have been filtered to
-  remove low-quality and germline variants.
+  Data file containing the all of the somatic mutation calls for the sample.
 additionalProperties: false
 validators: null
 
@@ -23,11 +22,11 @@ systemProperties:
   - error_type
 
 links:
-  - name: somatic_masking_workflows
-    backref: filtered_somatic_mutations
+  - name: somatic_annotation_workflows
+    backref: sample_level_mafs
     label: data_from
-    target_type: somatic_masking_workflow
-    multiplicity: many_to_one
+    target_type: somatic_annotation_workflow
+    multiplicity: one_to_one
     required: true
 
 required:
@@ -39,7 +38,7 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - somatic_masking_workflows
+  - somatic_annotation_workflows
 
 uniqueKeys:
   - [ id ]
@@ -48,7 +47,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "filtered_somatic_mutation" ]
+    enum: [ "sample_level_maf" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -56,12 +55,11 @@ properties:
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Filtered Somatic Mutation" ]
+    enum: [ "Sample Level MAF" ]
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
-      - VCF
       - MAF
   experimental_strategy:
     term:
@@ -71,5 +69,5 @@ properties:
       - WXS
       - Low Pass WGS
       - Validation
-  somatic_masking_workflows:
+  somatic_annotation_workflows:
     $ref: "_definitions.yaml#/to_one"

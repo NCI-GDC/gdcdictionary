@@ -62,8 +62,6 @@ properties:
       $ref: "_terms.yaml#/data_format"
     enum:
       - VCF
-      - MAF
-      - TSV
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
