@@ -63,8 +63,7 @@ properties:
     enum:
       - SVS
   experimental_strategy:
-    term:
-      $ref: "_terms.yaml#/experimental_strategy"
+    description: "Classification of the slide type with respect to its experimental use." 
     enum:
       - Diagnostic Slide
       - Tissue Slide
