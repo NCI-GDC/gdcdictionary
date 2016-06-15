@@ -67,6 +67,7 @@ properties:
     enum:
       - BCR XML
       - XLSX
+      - OMF
   cases:
     $ref: "_definitions.yaml#/to_many"
   archives:
