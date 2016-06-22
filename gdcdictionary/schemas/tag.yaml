@@ -33,7 +33,6 @@ properties:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
   name:
-    type: string
     description: name of this tag
     enum:
       - aliquot

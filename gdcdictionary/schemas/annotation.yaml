@@ -109,7 +109,6 @@ properties:
   state:
     $ref: "_definitions.yaml#/state"
   category:
-    type: string
     enum:
       - Acceptable treatment for TCGA tumor
       - Administrative Compliance
