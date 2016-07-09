@@ -94,6 +94,7 @@ properties:
       - clinical
       - data
       - data_bundle
+      - experiment_data
       - data_file
       - index_file
       - metadata_file
