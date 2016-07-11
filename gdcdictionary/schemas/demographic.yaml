@@ -34,7 +34,6 @@ required:
   - race
   - ethnicity
   - gender
-  - year_of_birth
 
 preferred:
   - year_of_death
