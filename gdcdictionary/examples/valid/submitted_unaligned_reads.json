@@ -5,7 +5,7 @@
     "file_name": "UNCID_2741452.a38e0f12-7b18-4856-9cc8-314d8f0b63d6.1.fastq",
     "file_size": 5747943025,
     "md5sum": "d81203da215be180128f260b788900b5",
-    "data_category": "Sequencing Data",
+    "data_category": "Sequencing Reads",
     "data_type": "Unaligned Reads",
     "data_format": "FASTQ",
     "experimental_strategy": "WGS",
