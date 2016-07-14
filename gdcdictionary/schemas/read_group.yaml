@@ -136,7 +136,9 @@ properties:
       - PCR
       - Affinity_Enrichment
       - Poly-T_Enrichment
-      - RNA_Depletion
+      - rRNA_Depletion
+      - miRNA_Size_Fractionation
+      - Random
       - Other
   library_preparation_kit_name:
     term:
