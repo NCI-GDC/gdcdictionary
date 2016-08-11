@@ -59,7 +59,7 @@ properties:
       project. For TCGA this is bcrportionbarcode.
   weight:
     term:
-      $ref: "_terms.yaml#/weight"
+      $ref: "_terms.yaml#/portion_weight"
     type: number
   is_ffpe:
     term:
