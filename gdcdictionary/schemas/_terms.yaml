@@ -214,6 +214,12 @@ days_to_treatment:
 encoding: # TOREVIEW
   description: >
     Version of ASCII encoding of quality values found in the file.
+  termDef:
+    term: Encoding
+    source: FastQC
+    cde_id: null
+    cde_version: null
+    term_url: "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/1%20Basic%20Statistics.html"
 
 ethnicity:
   description: >
@@ -401,6 +407,12 @@ percent_eosinophil_infiltration:
 percent_gc_content: # TOREVIEW
   description: >
     The overall %GC of all bases in all sequences.
+  termDef:
+    term: "%GC"
+    source: FastQC
+    cde_id: null
+    cde_version: null
+    term_url: "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/1%20Basic%20Statistics.html"
 
 percent_granulocyte_infiltration:
   description: >
@@ -555,6 +567,12 @@ qc_metric_state: # TOREVIEW
   description: >
     State classification given by FASTQC for the metric. Metric specific details about the states
     are available on their website.
+  termDef:
+    term: QC Metric State
+    source: FastQC
+    cde_id: null
+    cde_version: null
+    term_url: "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/"
 
 race:
   description: >
@@ -756,11 +774,13 @@ to_trim_adapter_sequence: # TOREVIEW
 
 total_sequences: # TOREVIEW
   description: >
-    A count of the total number of sequences processed. There are two values reported, actual
-    and estimated. At the moment these will always be the same. In the future it may be possible to
-    analyze just a subset of sequences and estimate the total number, to speed up the analysis, but
-    since we have found that problematic sequences are not evenly distributed through a file we have
-    disabled this for now.
+    A count of the total number of sequences processed. 
+  termDef:
+    term: Total Sequences
+    source: FastQC
+    cde_id: null
+    cde_version: null
+    term_url: "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/1%20Basic%20Statistics.html"
 
 treatment_intent_type:
   description: >
