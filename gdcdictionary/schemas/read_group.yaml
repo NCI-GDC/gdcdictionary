@@ -89,6 +89,7 @@ properties:
       - Illumina Genome Analyzer IIx
       - Illumina HiSeq 2000
       - Illumina HiSeq 2500
+      - Illumina HiSeq 4000
       - Illumina MiSeq
       - Illumina NextSeq
       - Ion Torrent PGM
