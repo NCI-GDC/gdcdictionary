@@ -28,6 +28,9 @@ links:
     multiplicity: many_to_one
     required: true
 
+preferred:
+  - cigarettes_per_day 
+  - years_smoked
 
 uniqueKeys:
   #unclear if want submitter ID for clinical
@@ -58,6 +61,11 @@ properties:
   cigarettes_per_day:
     term:
       $ref: "_terms.yaml#/cigarettes_per_day"
+    type: number
+
+  pack_years_smoked:
+    term:
+      $ref: "_terms.yaml#/pack_years_smoked"
     type: number
 
   alcohol_history:
