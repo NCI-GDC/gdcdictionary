@@ -10,6 +10,7 @@ program: '*'
 description: >
   Data file containing the run information from the SRA XML.
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:

@@ -8,13 +8,13 @@ category: biospecimen
 program: '*'
 project: '*'
 description: >
-  Any material sample taken from a biological entity for testing,
-  diagnostic, propagation, treatment or research purposes, including a sample
-  obtained from a living organism or taken from the biological object after
-  halting of all its life functions. Biospecimen can contain one or more
-  components including but not limited to cellular molecules, cells, tissues,
-  organs, body fluids, embryos, and body excretory products.
+  Any material sample taken from a biological entity for testing, diagnostic, propagation, treatment
+  or research purposes, including a sample obtained from a living organism or taken from the
+  biological object after halting of all its life functions. Biospecimen can contain one or more
+  components including but not limited to cellular molecules, cells, tissues, organs, body fluids,
+  embryos, and body excretory products.
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:

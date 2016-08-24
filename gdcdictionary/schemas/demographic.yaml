@@ -8,9 +8,10 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  Data for the characterization of the patient by means of segementing the 
-  population (e.g., characterization by age, sex, or race). 
+  Data for the characterization of the patient by means of segementing the population (e.g.,
+  characterization by age, sex, or race). 
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:

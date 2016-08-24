@@ -108,6 +108,9 @@ properties:
       items:
         type: string
 
+  submittable:
+    type: boolean
+
   validators:
     type:
       - array

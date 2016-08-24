@@ -8,9 +8,9 @@ category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing miRNA expression information  generated internally
-  by the GDC.
+  Data file containing miRNA expression information  generated internally by the GDC.
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:

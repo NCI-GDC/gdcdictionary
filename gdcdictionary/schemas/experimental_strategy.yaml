@@ -9,6 +9,7 @@ program: '*'
 project: '*'
 description: "Experimental strategy of a legacy file (depreciated)."
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:

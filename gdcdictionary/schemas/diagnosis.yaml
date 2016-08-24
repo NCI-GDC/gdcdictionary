@@ -8,11 +8,11 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  Data from the investigation, analysis and recognition of the presence
-  and nature of disease, condition, or injury from expressed signs and
-  symptoms; also, the scientific determination of any kind; the concise
-  results of such an investigation. 
+  Data from the investigation, analysis and recognition of the presence and nature of disease,
+  condition, or injury from expressed signs and symptoms; also, the scientific determination of any
+  kind; the concise results of such an investigation. 
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:

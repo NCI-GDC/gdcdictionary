@@ -10,6 +10,7 @@ program: '*'
 description: >
   Data file containing clinical metadata information.
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:
