@@ -76,7 +76,7 @@ properties:
 
   relationship_age_at_diagnosis:
     term:
-      $ref: "_terms.yaml#/age_at_diagnosis"
+      $ref: "_terms.yaml#/relationship_age_at_diagnosis"
     type: number
 
   relationship_primary_diagnosis:

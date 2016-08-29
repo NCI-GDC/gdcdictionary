@@ -69,17 +69,17 @@ properties:
     description: >
       The legacy barcode used before prior to the use
       UUIDs. For TCGA this is bcraliquotbarcode.
-  source_center:
+  aliquot_quantity:
     term:
-      $ref: "_terms.yaml#/source_center"
-    type: string
+      $ref: "_terms.yaml#/aliquot_quantity"
+    type: number
+  aliquot_volume:
+    term:
+      $ref: "_terms.yaml#/aliquot_volume"
+    type: number
   amount:
     term:
       $ref: "_terms.yaml#/amount"
-    type: number
-  concentration:
-    term:
-      $ref: "_terms.yaml#/concentration"
     type: number
   analytes:
     $ref: "_definitions.yaml#/to_one"
@@ -87,12 +87,20 @@ properties:
     $ref: "analyte.yaml#/properties/analyte_type"
   analyte_type_id:
     $ref: "analyte.yaml#/properties/analyte_type_id"
+  concentration:
+    term:
+      $ref: "_terms.yaml#/concentration"
+    type: number
+  project_id:
+    $ref: "_definitions.yaml#/project_id" 
+  source_center:
+    term:
+      $ref: "_terms.yaml#/source_center"
+    type: string
   samples:
     $ref: "_definitions.yaml#/to_one"
   centers:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id" 
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:

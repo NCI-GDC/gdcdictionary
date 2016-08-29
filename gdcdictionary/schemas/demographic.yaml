@@ -79,6 +79,7 @@ properties:
       - asian
       - native hawaiian or other pacific islander
       - other
+      - Unknown
       - not reported
       - not allowed to collect
 
@@ -88,6 +89,7 @@ properties:
     enum:
       - hispanic or latino
       - not hispanic or latino
+      - Unknown
       - not reported
       - not allowed to collect
 

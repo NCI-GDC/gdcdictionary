@@ -65,6 +65,505 @@ properties:
     description: >
       The legacy barcode used before prior to the use UUIDs, varies by project.
       For TCGA this is bcrsamplebarcode.
+  biospecimen_anatomic_site:
+    term:
+      $ref: "_terms.yaml#/biospecimen_anatomic_site"
+    enum:
+      - Abdomen
+      - Abdomen/Pelvis
+      - Abdominal wall
+      - Acetabulum
+      - Adenoid
+      - Adenomyosis
+      - Adipose
+      - Adjacent Organ
+      - Adrenal gland
+      - Alveolar Ridge
+      - Amniotic Fluid
+      - Ampulla of Vater
+      - Anal canal
+      - Anal sphincter
+      - Ankle
+      - Anorectum
+      - Antecubital fossa
+      - Antrum
+      - Anus
+      - Aorta
+      - Aortic Body
+      - Appendix
+      - Aqueous Fluid
+      - Arm
+      - Artery
+      - Ascending Colon Hepatic Flexure
+      - Ascending colon
+      - Ascites
+      - Auditory canal
+      - Autonomic nervous system
+      - Axilla
+      - Back
+      - Base of Tongue
+      - Bile duct
+      - Bladder
+      - Bladder; Dome
+      - Bladder; macroscopic urothelial tissue
+      - Blood
+      - Blood vessel
+      - Bone
+      - Bone marrow
+      - Bowel
+      - Brain
+      - Brain stem
+      - Brain; Supratentorial
+      - Breast
+      - Broad ligament
+      - Bronchiole
+      - Bronchus
+      - Bronchus and Lung
+      - Brow
+      - Buccal cavity
+      - Buccal mucosa
+      - Buttock
+      - CNS + Systemic
+      - Calcaneus
+      - Calf
+      - Capillary
+      - Cardia
+      - Cardia; Proximal
+      - Carina
+      - Carotid artery
+      - Carotid body
+      - Carpus
+      - Cartilage
+      - Cecum
+      - Central Line Catheter
+      - Central nervous system
+      - Cerebellum
+      - Cerebral cortex
+      - Cerebrospinal fluid
+      - Cerebrum
+      - Cervical
+      - Cervical spine
+      - Cervical vertebra
+      - Cervical/Thoracic/Lumbar spine
+      - Cervix
+      - Chest
+      - Chest wall
+      - Chest/Abdomen/Pelvis
+      - Chest/Pelvis
+      - Chin
+      - Clavicle
+      - Clitoris
+      - Coccyx
+      - Colon
+      - Colon and rectum
+      - Colon, mucosa only
+      - Common duct
+      - Conjunctiva
+      - Connective tissue
+      - Corpus Uteri
+      - Cranial Nerve
+      - Cutaneous or Subcutaneous Tissue; Regional
+      - Descending colon
+      - Diaphragm
+      - Duodenum
+      - Ear
+      - Ear canal
+      - Ear, Pinna (External)
+      - Effusion
+      - Elbow
+      - Endocrine gland
+      - Endometrium Cavity
+      - Endometrium, NOS
+      - Endometrium; Fundus Uteri
+      - Endometrium; Lower Uterine Segment (Isthmus Uteri)
+      - Epididymis
+      - Epidural space
+      - Esophageal; Distal
+      - Esophageal; Mid
+      - Esophageal; Proximal
+      - Esophagogastric junction
+      - Esophagus
+      - Esophagus, Mucosa only
+      - Ethmoid bone
+      - Extra-adrenal
+      - Extremities
+      - Extremity
+      - Eye
+      - Eye; Choroid
+      - Eye; Ciliary Body
+      - Eye; Iris
+      - Eye; intraocular
+      - Fallopian tube
+      - Femur
+      - Fibula
+      - Finger
+      - Floor of Mouth
+      - Fluid
+      - Foot
+      - Forearm
+      - Forehead
+      - Foreskin
+      - Frontal lobe
+      - Fundus of stomach
+      - Gallbladder
+      - Ganglia
+      - Gastroesophageal Junction
+      - Gastrointestinal tract
+      - Genitourinary
+      - Groin
+      - Gum
+      - Hand
+      - Hard palate
+      - Head - face or neck, NOS
+      - Head/Neck
+      - Head/Neck/Chest/Abd/Pelvis
+      - Heart
+      - Hepatic Flexure
+      - Hepatic duct
+      - Hilum
+      - Hip
+      - Humerus
+      - Hypopharynx
+      - Ileum
+      - Ilium
+      - Intestine
+      - Ischium
+      - Jaw
+      - Jejunum
+      - Joints
+      - Kidney
+      - Kidney; Cortex
+      - Kidney; Medulla
+      - Kidney; Mixed
+      - Knee
+      - Lacrimal Gland
+      - Large bowel
+      - Laryngopharynx
+      - Larynx
+      - Larynx Trachea
+      - Leg
+      - Leptomeninges
+      - Ligament
+      - Lip
+      - Liver
+      - Liver and intrahepatic duct
+      - Liver/Spleen
+      - Lumbar spine
+      - Lung
+      - Lymph Node(s) Axilla
+      - Lymph Node(s) Cervical
+      - Lymph Node(s) Epitrochlear
+      - Lymph Node(s) Femoral
+      - Lymph Node(s) Hilar
+      - Lymph Node(s) Iliac
+      - Lymph Node(s) Iliac-common
+      - Lymph Node(s) Iliac-external
+      - Lymph Node(s) Inguinal
+      - Lymph Node(s) Int Mammary
+      - Lymph Node(s) Mammary
+      - Lymph Node(s) Mediastinal
+      - Lymph Node(s) Mesenteric
+      - Lymph Node(s) Occipital
+      - Lymph Node(s) Paracaval
+      - Lymph Node(s) Parotid
+      - Lymph Node(s) Pelvic
+      - Lymph Node(s) Periportal
+      - Lymph Node(s) Popliteal
+      - Lymph Node(s) Retroperitoneal
+      - Lymph Node(s) Splenic
+      - Lymph Node(s) Subclavicular
+      - Lymph Node(s) Submandibular
+      - Lymph Node(s) Supraclavicular
+      - Lymph node(s)
+      - Lymph node(s) Distant
+      - Lymph node(s) Para aortic
+      - Lymph node(s) Regional
+      - Lymph node(s) Scalene
+      - Lymphoma
+      - Mammary Gland
+      - Mandible
+      - Maxilla
+      - Mediastinal Soft Tissue
+      - Mediastinum
+      - Mediastinum; Anterior
+      - Mesentery
+      - Mesothelium
+      - Metastasis; Distant
+      - Mini Mantle
+      - Mouth
+      - Muscle
+      - Myometrium
+      - Nails
+      - Nasal Cavity
+      - Nasal Soft Tissue
+      - Nasopharynx
+      - Neck
+      - Neck/Chest
+      - Neck/Chest/Abdomen/Pelvis
+      - Nerve
+      - Nerve(s) Cranial
+      - Not Applicable
+      - Ocular Orbits
+      - Omentum
+      - Oral Cavity, Mucosa only
+      - Oral cavity
+      - Oropharynx
+      - Oropharynx; Soft Tissue
+      - Other
+      - Ovary
+      - PA/Lat
+      - Palate
+      - Pancreas
+      - Paraspinal Ganglion
+      - Parathyroid
+      - Parotid gland
+      - Patella
+      - Pelvis
+      - Penis
+      - Peri-orbital Soft Tissue
+      - Perianus
+      - Pericardium
+      - Peritoneal cavity
+      - Peritoneum
+      - Pharynx
+      - Pineal Gland
+      - Pituitary gland
+      - Placenta
+      - Pleura
+      - Popliteal fossa
+      - Prostate
+      - Pylorus
+      - Rectosigmoid Junction
+      - Rectum
+      - Retina
+      - Retro-orbital Area
+      - Retroperitoneum
+      - Ribs
+      - Round ligament
+      - Sacrum
+      - Salivary gland
+      - Scalp
+      - Scapula
+      - Scrotum
+      - Seminal Vesicle
+      - Serosal Surface
+      - Shoulder
+      - Sigmoid colon
+      - Sinus(es)
+      - Sinus(es), Maxillary
+      - Skeletal Muscle
+      - Skin
+      - Skull
+      - Small Bowel, Mucosa only
+      - Small intestine
+      - Smooth Muscle
+      - Soft Tissue
+      - Spinal Cord
+      - Spine
+      - Spine/Femur
+      - Spine/Femur/Radius
+      - Spleen
+      - Splenic Flexure
+      - Sternum
+      - Stomach
+      - Stomach, Mucosa only
+      - Stomach; Antrum (Distal)
+      - Subcutaneous tissue
+      - Superficial Trunk
+      - Synovium
+      - Systemic
+      - Tendon
+      - Testes
+      - Testicle
+      - Thigh
+      - Thoracic spine
+      - Thoracic/Lumbar spine
+      - Thorax
+      - Throat
+      - Thymus
+      - Thyroid gland
+      - Thyroid; Isthmus
+      - Tibia
+      - Tongue
+      - Tongue, Base of tongue
+      - Tonsil
+      - Tonsil, Pharyngeal
+      - Trachea
+      - Trachea/Major Bronchi
+      - Transverse Colon
+      - Trunk
+      - Trunk, Superficial
+      - Umbilical Cord
+      - Upper extremity
+      - Ureter
+      - Ureteric Orifice
+      - Urethra
+      - Urinary tract
+      - Uterine Cervix
+      - Uterus
+      - Uvula
+      - Vagina
+      - Vas Deferens
+      - Vein
+      - Vena Cava, Inferior/Superior
+      - Vertebra
+      - Vertebral column
+      - Vulva
+      - Whole body
+      - Wrist
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
+  composition:
+    term:
+      $ref: "_terms.yaml#/composition"
+    enum:
+      - Buccal Cells
+      - Buffy Coat
+      - Bone Marrow Components
+      - Bone Marrow Components NOS
+      - Control Analyte
+      - Cell
+      - Derived Cell Line
+      - EBV Immortalized
+      - Fibroblasts from Bone Marrow Normal
+      - Granulocytes
+      - Human Original Cells
+      - Lymphocytes
+      - Mononuclear Cells from Bone Marrow Normal
+      - Peripheral Blood Components NOS
+      - Pleural Effusion
+      - Plasma
+      - Peripheral Whole Blood
+      - Serum
+      - Saliva
+      - Sputum
+      - Solid Tissue
+      - Whole Bone Marrow
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
+  current_weight:
+    term:
+      $ref: "_terms.yaml#/current_weight"
+    type: number
+  days_to_collection:
+    term:
+      $ref: "_terms.yaml#/days_to_collection"
+    type: integer
+  days_to_sample_procurement:
+    term:
+      $ref: "_terms.yaml#/days_to_sample_procurement"
+    type: integer
+  diagnosis_pathologically_confirmed:
+    term: 
+      ref: "_terms.yaml#/diagnosis_pathologically_confirmed"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
+  freezing_method:
+    term:
+      $ref: "_terms.yaml#/freezing_method"
+    type: string
+  initial_weight:
+    term:
+      $ref: "_terms.yaml#/initial_weight"
+    type: number
+  intermediate_dimension:
+    terms:
+      $ref: "_terms.yaml#/intermediate_dimension"
+    type: string
+  is_ffpe:
+    term:
+      $ref: "_terms.yaml#/is_ffpe"
+    type: boolean
+  longest_dimension:
+    terms:
+      $ref: "_terms.yaml#/longest_dimension"
+    type: string
+  method_of_sample_procurement:
+    term:
+      $ref: "_terms.yaml#/method_of_sample_procurement"
+    enum:
+      - Abdomino-perineal Resection of Rectum 
+      - Anterior Resection of Rectum 
+      - Aspirate 
+      - Biopsy
+      - Blood Draw 
+      - Bone Marrow Aspirate 
+      - Core Biopsy 
+      - Cystectomy
+      - Endo Rectal Tumor Resection 
+      - Endoscopic Biopsy 
+      - Endoscopic Mucosal Resection (EMR) 
+      - Enucleation 
+      - Excisional Biopsy 
+      - Fine Needle Aspiration 
+      - Full Hysterectomy 
+      - Gross Total Resection 
+      - Hand Assisted Laparoscopic Radical Nephrectomy 
+      - Hysterectomy NOS 
+      - Incisional Biopsy 
+      - Indeterminant 
+      - Laparoscopic Biopsy 
+      - Laparoscopic Partial Nephrectomy 
+      - Laparoscopic Radical Nephrectomy 
+      - Laparoscopic Radical Prostatectomy with Robotics 
+      - Laparoscopic Radical Prostatectomy without Robotics 
+      - Left Hemicolectomy 
+      - Lobectomy 
+      - Local Resection (Exoresection; wall resection) 
+      - Lumpectomy 
+      - Modified Radical Mastectomy 
+      - Needle Biopsy 
+      - Open Craniotomy 
+      - Open Partial Nephrectomy 
+      - Open Radical Nephrectomy 
+      - Open Radical Prostatectomy 
+      - Orchiectomy 
+      - Other  
+      - Other Surgical Resection 
+      - Pan-Procto Colectomy 
+      - Pneumonectomy 
+      - Right Hemicolectomy 
+      - Sigmoid Colectomy
+      - Simple Mastectomy
+      - Subtotal Resection 
+      - Surgical Resection 
+      - Thoracoscopic Biopsy 
+      - Total Colectomy
+      - Total Mastectomy 
+      - Transplant 
+      - Transurethral resection (TURBT) 
+      - Transverse Colectomy 
+      - Tumor Resection 
+      - Wedge Resection  
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
+  oct_embedded:
+    term:
+      $ref: "_terms.yaml#/oct_embedded"
+    type: string
+  pathology_report_uuid:
+    type: string
+    description: "UUID of the related pathology report." # are we still doing this? seems like the links handle this now
+  preservation_method:
+    term:
+      $ref: "_terms.yaml#/preservation_method"
+    enum:
+      - Cryopreserved
+      - FFPE
+      - Fresh
+      - OCT
+      - Snap Frozen
+      - Frozen
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
   sample_type:
     term:
       $ref: "_terms.yaml#/sample_type"
@@ -106,6 +605,9 @@ properties:
       - Solid Tissue Normal
       - Total RNA
       - Xenograft Tissue
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
   sample_type_id:
     term:
       $ref: "_terms.yaml#/sample_type_id"
@@ -135,35 +637,29 @@ properties:
       - '60'
       - '61'
       - '99'
-  tumor_code_id:
+  shortest_dimension:
     term:
-      $ref: "_terms.yaml#/tumor_code_id"
+      $ref: "_terms.yaml#/shortest_dimension"
     type: string
+  time_between_clamping_and_freezing:
+    term:
+      $ref: "_terms.yaml#/time_between_clamping_and_freezing"
+    type: string
+  time_between_excision_and_freezing:
+    term:
+      $ref: "_terms.yaml#/time_between_excision_and_freezing"
+    type: string
+  tissue_type:
+    term:
+      $ref: "_terms.yaml#/tissue_type"
     enum:
-      - "00"
-      - "01"
-      - "02"
-      - "03"
-      - "04"
-      - "10"
-      - "20"
-      - "21"
-      - "30"
-      - "40"
-      - "41"
-      - "50"
-      - "51"
-      - "52"
-      - "60"
-      - "61"
-      - "62"
-      - "63"
-      - "64"
-      - "65"
-      - "70"
-      - "71"
-      - "80"
-      - "81"
+      - Tumor
+      - Normal
+      - Abnormal
+      - Peritumoral
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
   tumor_code:
     term:
       $ref: "_terms.yaml#/tumor_code"
@@ -193,39 +689,38 @@ properties:
       - NHL, Burkitt lymphoma (BL)
       - Rhabdomyosarcoma
       - Soft tissue sarcoma, non-rhabdomyosarcoma
-  tissue_type:
+  tumor_code_id:
+    term:
+      $ref: "_terms.yaml#/tumor_code_id"
+    type: string
     enum:
-      - Tumor
-      - Normal
-      - Abnormal
-      - Peritumoral
-    description: "A description of the tissue type with respect its tumor/normal source." # TOREVIEW
-  composition:
-    enum:
-      - Buccal Cells
-      - Buffy Coat
-      - Bone Marrow Components
-      - Bone Marrow Components NOS
-      - Control Analyte
-      - Cell
-      - Derived Cell Line
-      - EBV Immortalized
-      - Fibroblasts from Bone Marrow Normal
-      - Granulocytes
-      - Human Original Cells
-      - Lymphocytes
-      - Mononuclear Cells from Bone Marrow Normal
-      - Peripheral Blood Components NOS
-      - Pleural Effusion
-      - Plasma
-      - Peripheral Whole Blood
-      - Serum
-      - Saliva
-      - Sputum
-      - Solid Tissue
-      - Whole Bone Marrow
-    description: "Cellular composition of the sample." # TOREVIEW
+      - "00"
+      - "01"
+      - "02"
+      - "03"
+      - "04"
+      - "10"
+      - "20"
+      - "21"
+      - "30"
+      - "40"
+      - "41"
+      - "50"
+      - "51"
+      - "52"
+      - "60"
+      - "61"
+      - "62"
+      - "63"
+      - "64"
+      - "65"
+      - "70"
+      - "71"
+      - "80"
+      - "81"
   tumor_descriptor:
+    term:
+      $ref: "_terms.yaml#/tumor_descriptor"
     enum:
       - Metastatic
       - Not Applicable
@@ -233,67 +728,10 @@ properties:
       - Recurrence
       - Xenograft
       - NOS
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
     description: "A description of the tumor from which the sample was derived." # TOREVIEW
-  preservation_method:
-    enum:
-      - Cryopreserved
-      - FFPE
-      - Fresh
-      - OCT
-      - Snap Frozen
-      - Frozen
-    description: "Primary preservation method used to store the sample." # TOREVIEW
-  longest_dimension:
-    terms:
-      $ref: "_terms.yaml#/longest_dimension"
-    type: string
-  intermediate_dimension:
-    terms:
-      $ref: "_terms.yaml#/intermediate_dimension"
-    type: string
-  shortest_dimension:
-    term:
-      $ref: "_terms.yaml#/shortest_dimension"
-    type: string
-  initial_weight:
-    term:
-      $ref: "_terms.yaml#/initial_weight"
-    type: number
-  current_weight:
-    term:
-      $ref: "_terms.yaml#/current_weight"
-    type: number
-  freezing_method:
-    term:
-      $ref: "_terms.yaml#/freezing_method"
-    type: string
-  oct_embedded:
-    term:
-      $ref: "_terms.yaml#/oct_embedded"
-    type: string
-  time_between_clamping_and_freezing:
-    term:
-      $ref: "_terms.yaml#/time_between_clamping_and_freezing"
-    type: string
-  time_between_excision_and_freezing:
-    term:
-      $ref: "_terms.yaml#/time_between_excision_and_freezing"
-    type: string
-  days_to_collection:
-    term:
-      $ref: "_terms.yaml#/days_to_collection"
-    type: integer
-  days_to_sample_procurement:
-    term:
-      $ref: "_terms.yaml#/days_to_sample_procurement"
-    type: integer
-  pathology_report_uuid:
-    type: string
-    description: "UUID of the related pathology report." # are we still doing this? seems like the links handle this now
-  is_ffpe:
-    term:
-      $ref: "_terms.yaml#/is_ffpe"
-    type: boolean
   cases:
     #should this be to_one
     $ref: "_definitions.yaml#/to_one"
