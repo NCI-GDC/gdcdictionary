@@ -8,9 +8,9 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  Clinically relevant patient information not immediately
-  resulting from genetic predispositions. 
+  Clinically relevant patient information not immediately resulting from genetic predispositions. 
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:

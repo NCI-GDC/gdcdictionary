@@ -8,10 +8,10 @@ category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing the copy number data from a
-  copy number liftover workflow. Contains all copy numbers
-  detected.
+  Data file containing the copy number data from a copy number liftover workflow. Contains all copy
+  numbers detected.
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:

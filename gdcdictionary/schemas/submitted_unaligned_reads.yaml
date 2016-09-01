@@ -9,6 +9,7 @@ program: '*'
 project: '*'
 description: "Data file containing unaligned reads that have not been GDC Harmonized."
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:

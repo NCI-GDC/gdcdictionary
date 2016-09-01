@@ -8,9 +8,9 @@ category: data_file
 project: '*'
 program: '*'
 description: > 
-  MAF/TSV files that contain all of the somatic mutations for
-  all of the cases for a project. 
+  MAF/TSV files that contain all of the somatic mutations for all of the cases for a project. 
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:

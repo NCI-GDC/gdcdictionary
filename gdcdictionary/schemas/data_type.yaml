@@ -9,6 +9,7 @@ program: '*'
 project: '*'
 description: "Data type of a legacy file (depreciated)."
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:

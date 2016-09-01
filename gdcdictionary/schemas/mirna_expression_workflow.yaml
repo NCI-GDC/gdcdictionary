@@ -8,9 +8,10 @@ category: analysis
 program: '*'
 project: '*'
 description: >
-  Metadata for the miRNA profiling pipeline used to quantify miRNA expression
-  from GDC harmonized data.
+  Metadata for the miRNA profiling pipeline used to quantify miRNA expression from GDC harmonized
+  data.
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:

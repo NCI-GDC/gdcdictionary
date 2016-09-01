@@ -10,6 +10,7 @@ program: '*'
 description: >
   Data file containing the pathology report.
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:

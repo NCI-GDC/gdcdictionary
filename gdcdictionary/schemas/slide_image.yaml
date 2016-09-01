@@ -10,6 +10,7 @@ project: '*'
 description: >
   Data file containing image of a slide.
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:

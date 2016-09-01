@@ -8,9 +8,9 @@ category: biospecimen
 program: '*'
 project: '*'
 description: >
-  A digital image, microscopic or otherwise, of any sample, portion, or
-  sub-part thereof. (GDC)
+  A digital image, microscopic or otherwise, of any sample, portion, or sub-part thereof. (GDC)
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:

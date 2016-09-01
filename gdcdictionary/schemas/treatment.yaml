@@ -8,9 +8,10 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  Record of the administration and intention of therapeutic agents
-  provided to a patient to alter the course of a pathologic process.   
+  Record of the administration and intention of therapeutic agents provided to a patient to alter
+  the course of a pathologic process.   
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:

@@ -11,6 +11,7 @@ description: >
   The collection of all data related to a specific subject in the 
   context of a specific project.
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:

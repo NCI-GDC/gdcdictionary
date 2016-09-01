@@ -8,9 +8,10 @@ category: analysis
 program: '*'
 project: '*'
 description: >
-  Metadata for the alignment and cocleaning pipeline used to align reads
-  in the GDC harmonization pipelines. 
+  Metadata for the alignment and cocleaning pipeline used to align reads in the GDC harmonization
+  pipelines. 
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:

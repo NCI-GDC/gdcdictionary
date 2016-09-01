@@ -7,10 +7,10 @@ category: biospecimen
 program: '*'
 project: '*'
 description: >
-  Pertaining to a portion of the whole;
-  any one of two or more samples of something,
-  of the same volume or weight. 
+  Pertaining to a portion of the whole; any one of two or more samples of something, of the same
+  volume or weight.
 additionalProperties: false
+submittable: true
 validators: []
 
 systemProperties:
