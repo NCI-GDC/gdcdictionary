@@ -189,13 +189,16 @@ properties:
       - Rhabdomyosarcoma
       - Soft tissue sarcoma, non-rhabdomyosarcoma
   tissue_type:
+    terms:
+      $ref: "_terms.yaml#/tissue_type"
     enum:
       - Tumor
       - Normal
       - Abnormal
       - Peritumoral
-    description: "A description of the tissue type with respect its tumor/normal source." # TOREVIEW
   composition:
+    terms:
+      $ref: "_terms.yaml#/composition"
     enum:
       - Buccal Cells
       - Buffy Coat
@@ -219,8 +222,9 @@ properties:
       - Sputum
       - Solid Tissue
       - Whole Bone Marrow
-    description: "Cellular composition of the sample." # TOREVIEW
   tumor_descriptor:
+    terms:
+      $ref: "_terms.yaml#/tumor_descriptor"
     enum:
       - Metastatic
       - Not Applicable
@@ -228,8 +232,9 @@ properties:
       - Recurrence
       - Xenograft
       - NOS
-    description: "A description of the tumor from which the sample was derived." # TOREVIEW
   preservation_method:
+    terms:
+      $ref: "_terms.yaml#/preservation_method"
     enum:
       - Cryopreserved
       - FFPE
@@ -237,7 +242,6 @@ properties:
       - OCT
       - Snap Frozen
       - Frozen
-    description: "Primary preservation method used to store the sample." # TOREVIEW
   longest_dimension:
     terms:
       $ref: "_terms.yaml#/longest_dimension"
