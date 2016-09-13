@@ -60,9 +60,12 @@ properties:
     enum:
       - DNA
       - EBV Immortalized Normal
+      - FFPE DNA
+      - FFPE RNA
       - GenomePlex (Rubicon) Amplified DNA
       - Repli-G (Qiagen) DNA
       - Repli-G X (Qiagen) DNA
+      - Repli-G Pooled (Qiagen) DNA
       - RNA
       - Total RNA
   analyte_type_id:
@@ -70,12 +73,15 @@ properties:
       $ref: "_terms.yaml#/analyte_type_id"
     enum:
       - D
+      - E
       - G
       - H
       - R
+      - S
       - T
       - W
       - X
+      - Y
   amount:
     term:
       $ref: "_terms.yaml#/amount"
