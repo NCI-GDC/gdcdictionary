@@ -58,8 +58,11 @@ properties:
     term:
       $ref: "_terms.yaml#/analyte_type"
     enum:
+      - Both-reaction whole genome amplified (Qiagen) DNA
       - DNA
       - EBV Immortalized Normal
+      - FFPE DNA
+      - FFPE RNA
       - GenomePlex (Rubicon) Amplified DNA
       - Repli-G (Qiagen) DNA
       - Repli-G X (Qiagen) DNA
@@ -70,12 +73,15 @@ properties:
       $ref: "_terms.yaml#/analyte_type_id"
     enum:
       - D
+      - E
       - G
       - H
       - R
+      - S
       - T
       - W
       - X
+      - Y
   amount:
     term:
       $ref: "_terms.yaml#/amount"
