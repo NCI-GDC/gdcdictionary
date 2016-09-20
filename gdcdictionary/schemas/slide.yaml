@@ -27,6 +27,12 @@ links:
     target_type: portion
     multiplicity: many_to_many
     required: true
+  - name: samples
+    backref: slides
+    label: derived_from
+    target_type: sample
+    multiplicity: many_to_many
+    required: false
 
 required:
   - submitter_id
@@ -106,6 +112,8 @@ properties:
       $ref: "_terms.yaml#/percent_eosinophil_infiltration"
     type: number
   portions:
+    $ref: "_definitions.yaml#/to_many"
+  samples:
     $ref: "_definitions.yaml#/to_many"
   project_id:
     $ref: "_definitions.yaml#/project_id" 
