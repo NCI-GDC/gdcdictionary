@@ -46,5 +46,10 @@ properties:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum: [ "BCGSC miRNA Profiling" ]
+  mirbase_version:
+    term:
+      $ref: "_terms.yaml#/mirbase_version"
+    enum:
+      - miRBase 21
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"

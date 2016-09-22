@@ -345,6 +345,10 @@ md5sum: # TOREVIEW
     The 128-bit hash value expressed as a 32 digit hexadecimal number used as a file's
     digital fingerprint. 
 
+mirbase_version:
+  description: >
+    Version of miRBase used to run the miRNA Profiling Pipeline.
+
 morphology:
   description: >
     The third edition of the International Classification of Diseases for Oncology, published in 2000
