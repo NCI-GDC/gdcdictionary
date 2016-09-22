@@ -1,0 +1,15 @@
+{
+    "type": "submitted_methylation_beta_value",
+    "submitter_id": "methylation_beta_values",
+    "file_name": "methylation.txt",
+    "file_size": 281653,
+    "md5sum": "d3266f2577584713ea17f94d331f30c4",
+    "data_category": "DNA Methylation",
+    "data_type": "Methylation Beta Value",
+    "data_format": "TXT",
+    "experimental_strategy": "Methylation Array",
+    "platform": "Illumina Human Methylation 450",
+    "aliquots": {
+	"submitter_id": "aliquot_a"
+    }
+}
