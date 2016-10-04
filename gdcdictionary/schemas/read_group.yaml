@@ -37,6 +37,7 @@ required:
   - platform
   - library_strategy
   - library_name
+  - instrument_model
   - is_paired_end
   - read_length
   - read_group_name
