@@ -23,7 +23,6 @@ systemProperties:
 
 required:
   - submitter_id
-  - analyte_type_id
   - analyte_type
   - portions
 
