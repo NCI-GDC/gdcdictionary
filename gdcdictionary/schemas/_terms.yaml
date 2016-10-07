@@ -369,6 +369,17 @@ oct_embedded: # TOREVIEW
   description: >
     Is the sample embedded in an optimal cutting temperature compound?
 
+pack_years_smoked:
+  description: >
+    Numeric computed value to represent lifetime tobacco exposure defined as number of cigarettes
+    smoked per day x number of years smoked divided by 20.
+  termDef:
+    term: Person Cigarette Smoking History Pack Year Value
+    source: caDSR
+    cde_id: 2955385
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2955385&version=1.0"
+
 percent_eosinophil_infiltration: # TOREVIEW
   description: >
     Percent of cells identified as eosinophil infiltration.
