@@ -70,22 +70,18 @@ properties:
       $ref: "_terms.yaml#/biospecimen_anatomic_site"
     enum:
       - Abdomen
-      - Abdomen/Pelvis
-      - Abdominal wall
+      - Abdominal Wall
       - Acetabulum
       - Adenoid
-      - Adenomyosis
       - Adipose
-      - Adjacent Organ
-      - Adrenal gland
+      - Adrenal
       - Alveolar Ridge
       - Amniotic Fluid
-      - Ampulla of Vater
-      - Anal canal
-      - Anal sphincter
+      - Ampulla Of Vater
+      - Anal Sphincter
       - Ankle
       - Anorectum
-      - Antecubital fossa
+      - Antecubital Fossa
       - Antrum
       - Anus
       - Aorta
@@ -94,322 +90,262 @@ properties:
       - Aqueous Fluid
       - Arm
       - Artery
+      - Ascending Colon
       - Ascending Colon Hepatic Flexure
-      - Ascending colon
-      - Ascites
-      - Auditory canal
-      - Autonomic nervous system
+      - Auditory Canal
+      - Autonomic Nervous System
       - Axilla
       - Back
-      - Base of Tongue
-      - Bile duct
+      - Bile Duct
       - Bladder
-      - Bladder; Dome
-      - Bladder; macroscopic urothelial tissue
       - Blood
-      - Blood vessel
+      - Blood Vessel
       - Bone
-      - Bone marrow
+      - Bone Marrow
       - Bowel
       - Brain
-      - Brain stem
-      - Brain; Supratentorial
+      - Brain Stem
       - Breast
-      - Broad ligament
+      - Broad Ligament
       - Bronchiole
       - Bronchus
-      - Bronchus and Lung
       - Brow
-      - Buccal cavity
-      - Buccal mucosa
+      - Buccal Cavity
+      - Buccal Mucosa
       - Buttock
-      - CNS + Systemic
-      - Calcaneus
       - Calf
       - Capillary
       - Cardia
-      - Cardia; Proximal
       - Carina
-      - Carotid artery
-      - Carotid body
-      - Carpus
+      - Carotid Artery
+      - Carotid Body
       - Cartilage
       - Cecum
-      - Central Line Catheter
-      - Central nervous system
+      - Cell-Line
+      - Central Nervous System
       - Cerebellum
-      - Cerebral cortex
-      - Cerebrospinal fluid
+      - Cerebral Cortex
+      - Cerebrospinal Fluid
       - Cerebrum
-      - Cervical
-      - Cervical spine
-      - Cervical vertebra
-      - Cervical/Thoracic/Lumbar spine
+      - Cervical Spine
       - Cervix
       - Chest
-      - Chest wall
-      - Chest/Abdomen/Pelvis
-      - Chest/Pelvis
+      - Chest Wall
       - Chin
       - Clavicle
       - Clitoris
-      - Coccyx
       - Colon
-      - Colon and rectum
-      - Colon, mucosa only
-      - Common duct
+      - Colon - Mucosa Only
+      - Common Duct
       - Conjunctiva
-      - Connective tissue
-      - Corpus Uteri
-      - Cranial Nerve
-      - Cutaneous or Subcutaneous Tissue; Regional
-      - Descending colon
+      - Connective Tissue
+      - Dermal
+      - Descending Colon
       - Diaphragm
       - Duodenum
       - Ear
-      - Ear canal
+      - Ear Canal
       - Ear, Pinna (External)
       - Effusion
       - Elbow
-      - Endocrine gland
-      - Endometrium Cavity
-      - Endometrium, NOS
-      - Endometrium; Fundus Uteri
-      - Endometrium; Lower Uterine Segment (Isthmus Uteri)
+      - Endocrine Gland
       - Epididymis
-      - Epidural space
-      - Esophageal; Distal
-      - Esophageal; Mid
-      - Esophageal; Proximal
-      - Esophagogastric junction
+      - Epidural Space
+      - Esophagogastric Junction
       - Esophagus
-      - Esophagus, Mucosa only
-      - Ethmoid bone
-      - Extra-adrenal
-      - Extremities
-      - Extremity
+      - Esophagus - Mucosa Only
       - Eye
-      - Eye; Choroid
-      - Eye; Ciliary Body
-      - Eye; Iris
-      - Eye; intraocular
-      - Fallopian tube
+      - Fallopian Tube
+      - Femoral Artery
+      - Femoral Vein
       - Femur
+      - Fibroblasts
       - Fibula
       - Finger
-      - Floor of Mouth
+      - Floor Of Mouth
       - Fluid
       - Foot
       - Forearm
       - Forehead
       - Foreskin
-      - Frontal lobe
-      - Fundus of stomach
+      - Frontal Cortex
+      - Frontal Lobe
+      - Fundus Of Stomach
       - Gallbladder
       - Ganglia
       - Gastroesophageal Junction
-      - Gastrointestinal tract
-      - Genitourinary
+      - Gastrointestinal Tract
       - Groin
       - Gum
       - Hand
-      - Hard palate
-      - Head - face or neck, NOS
-      - Head/Neck
-      - Head/Neck/Chest/Abd/Pelvis
+      - Hard Palate
+      - Head & Neck
+      - Head - Face Or Neck, Nos
       - Heart
-      - Hepatic Flexure
-      - Hepatic duct
-      - Hilum
+      - Hepatic
+      - Hepatic Duct
+      - Hepatic Vein
       - Hip
+      - Hippocampus
       - Humerus
       - Hypopharynx
       - Ileum
       - Ilium
-      - Intestine
+      - Index Finger
       - Ischium
+      - Islet Cells
       - Jaw
       - Jejunum
-      - Joints
+      - Joint
       - Kidney
-      - Kidney; Cortex
-      - Kidney; Medulla
-      - Kidney; Mixed
       - Knee
       - Lacrimal Gland
-      - Large bowel
+      - Large Bowel
       - Laryngopharynx
       - Larynx
-      - Larynx Trachea
       - Leg
       - Leptomeninges
       - Ligament
       - Lip
       - Liver
-      - Liver and intrahepatic duct
-      - Liver/Spleen
-      - Lumbar spine
+      - Lumbar Spine
       - Lung
+      - Lymph Node
       - Lymph Node(s) Axilla
       - Lymph Node(s) Cervical
+      - Lymph Node(s) Distant
       - Lymph Node(s) Epitrochlear
       - Lymph Node(s) Femoral
       - Lymph Node(s) Hilar
-      - Lymph Node(s) Iliac
-      - Lymph Node(s) Iliac-common
-      - Lymph Node(s) Iliac-external
+      - Lymph Node(s) Iliac-Common
+      - Lymph Node(s) Iliac-External
       - Lymph Node(s) Inguinal
-      - Lymph Node(s) Int Mammary
+      - Lymph Node(s) Internal Mammary
       - Lymph Node(s) Mammary
-      - Lymph Node(s) Mediastinal
       - Lymph Node(s) Mesenteric
       - Lymph Node(s) Occipital
-      - Lymph Node(s) Paracaval
+      - Lymph Node(s) Paraaortic
       - Lymph Node(s) Parotid
       - Lymph Node(s) Pelvic
-      - Lymph Node(s) Periportal
       - Lymph Node(s) Popliteal
+      - Lymph Node(s) Regional
       - Lymph Node(s) Retroperitoneal
+      - Lymph Node(s) Scalene
       - Lymph Node(s) Splenic
       - Lymph Node(s) Subclavicular
       - Lymph Node(s) Submandibular
       - Lymph Node(s) Supraclavicular
-      - Lymph node(s)
-      - Lymph node(s) Distant
-      - Lymph node(s) Para aortic
-      - Lymph node(s) Regional
-      - Lymph node(s) Scalene
-      - Lymphoma
-      - Mammary Gland
+      - Lymph Nodes(s) Mediastinal
       - Mandible
       - Maxilla
       - Mediastinal Soft Tissue
       - Mediastinum
-      - Mediastinum; Anterior
       - Mesentery
       - Mesothelium
-      - Metastasis; Distant
-      - Mini Mantle
-      - Mouth
+      - Middle Finger
+      - Mitochondria
       - Muscle
-      - Myometrium
       - Nails
       - Nasal Cavity
       - Nasal Soft Tissue
       - Nasopharynx
       - Neck
-      - Neck/Chest
-      - Neck/Chest/Abdomen/Pelvis
       - Nerve
       - Nerve(s) Cranial
-      - Not Applicable
+      - Occipital Cortex
       - Ocular Orbits
       - Omentum
-      - Oral Cavity, Mucosa only
-      - Oral cavity
+      - Oral Cavity
+      - Oral Cavity - Mucosa Only
       - Oropharynx
-      - Oropharynx; Soft Tissue
       - Other
       - Ovary
-      - PA/Lat
       - Palate
       - Pancreas
       - Paraspinal Ganglion
       - Parathyroid
-      - Parotid gland
+      - Parotid Gland
       - Patella
       - Pelvis
       - Penis
-      - Peri-orbital Soft Tissue
-      - Perianus
       - Pericardium
-      - Peritoneal cavity
+      - Periorbital Soft Tissue
+      - Peritoneal Cavity
       - Peritoneum
       - Pharynx
+      - Pineal
       - Pineal Gland
-      - Pituitary gland
+      - Pituitary Gland
       - Placenta
       - Pleura
-      - Popliteal fossa
+      - Popliteal Fossa
       - Prostate
       - Pylorus
       - Rectosigmoid Junction
       - Rectum
       - Retina
-      - Retro-orbital Area
+      - Retro-Orbital Region
       - Retroperitoneum
-      - Ribs
-      - Round ligament
+      - Rib
+      - Ring Finger
+      - Round Ligament
       - Sacrum
-      - Salivary gland
+      - Salivary Gland
       - Scalp
       - Scapula
+      - Sciatic Nerve
       - Scrotum
       - Seminal Vesicle
-      - Serosal Surface
       - Shoulder
-      - Sigmoid colon
-      - Sinus(es)
+      - Sigmoid Colon
+      - Sinus
       - Sinus(es), Maxillary
       - Skeletal Muscle
       - Skin
       - Skull
-      - Small Bowel, Mucosa only
-      - Small intestine
-      - Smooth Muscle
+      - Small Bowel
+      - Small Bowel - Mucosa Only
+      - Small Finger
       - Soft Tissue
+      - Spinal Column
       - Spinal Cord
-      - Spine
-      - Spine/Femur
-      - Spine/Femur/Radius
       - Spleen
       - Splenic Flexure
       - Sternum
       - Stomach
-      - Stomach, Mucosa only
-      - Stomach; Antrum (Distal)
-      - Subcutaneous tissue
-      - Superficial Trunk
+      - Stomach - Mucosa Only
+      - Subcutaneous Tissue
       - Synovium
-      - Systemic
+      - Temporal Cortex
       - Tendon
-      - Testes
-      - Testicle
+      - Testis
       - Thigh
-      - Thoracic spine
-      - Thoracic/Lumbar spine
+      - Thoracic Spine
       - Thorax
       - Throat
+      - Thumb
       - Thymus
-      - Thyroid gland
-      - Thyroid; Isthmus
+      - Thyroid
       - Tibia
       - Tongue
-      - Tongue, Base of tongue
       - Tonsil
-      - Tonsil, Pharyngeal
-      - Trachea
-      - Trachea/Major Bronchi
+      - Tonsil (Pharyngeal)
+      - Trachea / Major Bronchi
       - Transverse Colon
       - Trunk
-      - Trunk, Superficial
       - Umbilical Cord
-      - Upper extremity
       - Ureter
-      - Ureteric Orifice
       - Urethra
-      - Urinary tract
-      - Uterine Cervix
+      - Urinary Tract
       - Uterus
       - Uvula
       - Vagina
       - Vas Deferens
       - Vein
-      - Vena Cava, Inferior/Superior
+      - Venous
       - Vertebra
-      - Vertebral column
       - Vulva
-      - Whole body
+      - White Blood Cells
       - Wrist
       - Unknown
       - Not Reported
@@ -456,7 +392,7 @@ properties:
       $ref: "_terms.yaml#/days_to_sample_procurement"
     type: integer
   diagnosis_pathologically_confirmed:
-    term: 
+    term:
       ref: "_terms.yaml#/diagnosis_pathologically_confirmed"
     enum:
       - "Yes"
@@ -488,59 +424,59 @@ properties:
     term:
       $ref: "_terms.yaml#/method_of_sample_procurement"
     enum:
-      - Abdomino-perineal Resection of Rectum 
-      - Anterior Resection of Rectum 
-      - Aspirate 
+      - Abdomino-perineal Resection of Rectum
+      - Anterior Resection of Rectum
+      - Aspirate
       - Biopsy
-      - Blood Draw 
-      - Bone Marrow Aspirate 
-      - Core Biopsy 
+      - Blood Draw
+      - Bone Marrow Aspirate
+      - Core Biopsy
       - Cystectomy
-      - Endo Rectal Tumor Resection 
-      - Endoscopic Biopsy 
-      - Endoscopic Mucosal Resection (EMR) 
-      - Enucleation 
-      - Excisional Biopsy 
-      - Fine Needle Aspiration 
-      - Full Hysterectomy 
-      - Gross Total Resection 
-      - Hand Assisted Laparoscopic Radical Nephrectomy 
-      - Hysterectomy NOS 
-      - Incisional Biopsy 
-      - Indeterminant 
-      - Laparoscopic Biopsy 
-      - Laparoscopic Partial Nephrectomy 
-      - Laparoscopic Radical Nephrectomy 
-      - Laparoscopic Radical Prostatectomy with Robotics 
-      - Laparoscopic Radical Prostatectomy without Robotics 
-      - Left Hemicolectomy 
-      - Lobectomy 
-      - Local Resection (Exoresection; wall resection) 
-      - Lumpectomy 
-      - Modified Radical Mastectomy 
-      - Needle Biopsy 
-      - Open Craniotomy 
-      - Open Partial Nephrectomy 
-      - Open Radical Nephrectomy 
-      - Open Radical Prostatectomy 
-      - Orchiectomy 
-      - Other  
-      - Other Surgical Resection 
-      - Pan-Procto Colectomy 
-      - Pneumonectomy 
-      - Right Hemicolectomy 
+      - Endo Rectal Tumor Resection
+      - Endoscopic Biopsy
+      - Endoscopic Mucosal Resection (EMR)
+      - Enucleation
+      - Excisional Biopsy
+      - Fine Needle Aspiration
+      - Full Hysterectomy
+      - Gross Total Resection
+      - Hand Assisted Laparoscopic Radical Nephrectomy
+      - Hysterectomy NOS
+      - Incisional Biopsy
+      - Indeterminant
+      - Laparoscopic Biopsy
+      - Laparoscopic Partial Nephrectomy
+      - Laparoscopic Radical Nephrectomy
+      - Laparoscopic Radical Prostatectomy with Robotics
+      - Laparoscopic Radical Prostatectomy without Robotics
+      - Left Hemicolectomy
+      - Lobectomy
+      - Local Resection (Exoresection; wall resection)
+      - Lumpectomy
+      - Modified Radical Mastectomy
+      - Needle Biopsy
+      - Open Craniotomy
+      - Open Partial Nephrectomy
+      - Open Radical Nephrectomy
+      - Open Radical Prostatectomy
+      - Orchiectomy
+      - Other
+      - Other Surgical Resection
+      - Pan-Procto Colectomy
+      - Pneumonectomy
+      - Right Hemicolectomy
       - Sigmoid Colectomy
       - Simple Mastectomy
-      - Subtotal Resection 
-      - Surgical Resection 
-      - Thoracoscopic Biopsy 
+      - Subtotal Resection
+      - Surgical Resection
+      - Thoracoscopic Biopsy
       - Total Colectomy
-      - Total Mastectomy 
-      - Transplant 
-      - Transurethral resection (TURBT) 
-      - Transverse Colectomy 
-      - Tumor Resection 
-      - Wedge Resection  
+      - Total Mastectomy
+      - Transplant
+      - Transurethral resection (TURBT)
+      - Transverse Colectomy
+      - Tumor Resection
+      - Wedge Resection
       - Unknown
       - Not Reported
       - Not Allowed To Collect

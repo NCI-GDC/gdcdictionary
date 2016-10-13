@@ -125,7 +125,7 @@ properties:
   portions:
     $ref: "_definitions.yaml#/to_one"
   project_id:
-    $ref: "_definitions.yaml#/project_id" 
+    $ref: "_definitions.yaml#/project_id"
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:

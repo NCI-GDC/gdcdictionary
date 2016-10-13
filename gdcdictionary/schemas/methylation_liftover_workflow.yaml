@@ -45,6 +45,6 @@ properties:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum:
-      - Liftover #NEEDS NAME 
+      - Liftover #NEEDS NAME
   submitted_methylation_beta_values:
     $ref: "_definitions.yaml#/to_many"

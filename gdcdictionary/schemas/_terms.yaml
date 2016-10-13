@@ -10,7 +10,7 @@ id: _terms
     cde_version: null
     term_url: null
 
-a260_a280_ratio: 
+a260_a280_ratio:
   description: >
     Numeric value that represents the sample ratio of nucleic acid absorbance at 260 nm and 280 nm,
     used to determine a measure of DNA purity.
@@ -187,15 +187,9 @@ analyte_quantity:
     cde_version: null
     term_url: null
 
-analyte_type: 
+analyte_type:
   description: >
-    Relating to or produced by or consisting of molecules.:A sample or part of a thing, or of
-    several things, taken to demonstrate or to determine the character of the whole, e.g. a
-    substance, or portion of material obtained for use in testing, examination, or study;
-    particularly, a preparation of tissue or bodily fluid taken for examination or
-    diagnosis._Something distinguishable as an identifiable class based on common
-    qualities._Text; the words of something written._The words or language units by which a
-    thing is known
+    Text term that represents the kind of molecular specimen analyte.
   termDef:
     term: Molecular Specimen Type Text Name
     source: caDSR
@@ -203,7 +197,7 @@ analyte_type:
     cde_version: 2.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2513915&version=2.0"
 
-analyte_type_id: 
+analyte_type_id:
   description: >
     A single letter code used to identify a type of molecular analyte.
   termDef:
@@ -235,6 +229,17 @@ ann_arbor_b_symptoms:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2902402&version=1.0"
 
+ann_arbor_clinical_stage:
+  description: >
+    The classification of the clinically confirmed anatomic disease extent of lymphoma (Hodgkin's
+    and Non-Hodgkins) based on the Ann Arbor Staging System.
+  termDef:
+    term: Ann Arbor Clinical Stage
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 ann_arbor_extranodal_involvement:
   description: >
     Indicator that identifies whether a patient with malignant lymphoma has lymphomatous involvement
@@ -245,6 +250,17 @@ ann_arbor_extranodal_involvement:
     cde_id: 3364582
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3364582&version=1.0"
+
+ann_arbor_pathologic_stage:
+  description: >
+    The classification of the pathologically confirmed anatomic disease extent of lymphoma
+    (Hodgkin's and Non-Hodgkins) based on the Ann Arbor Staging System.
+  termDef:
+    term: Ann Arbor Pathologic Stage
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 ann_arbor_tumor_stage:
   description: >
@@ -303,7 +319,7 @@ cause_of_death:
     term: Patient Death Reason
     source: caDSR
     cde_id: 2554674
-    cde_version: 3.0 
+    cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2554674&version=3.0"
 
 cigarettes_per_day:
@@ -316,6 +332,18 @@ cigarettes_per_day:
     cde_version: 4.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2001716&version=4.0"
 
+circumferential_resection_margin:
+  description: >
+    A value in millimeters indicating the measured length between a malignant lesion of the
+    colon or rectum and the nearest radial (or circumferential) border of tissue removed during
+    cancer surgery.
+  termDef:
+    term: Colorectal Surgical Margin Circumferential Distance Measurement
+    source: caDSR
+    cde_id: 64202
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=64202&version=3.0"
+
 classification_of_tumor:
   description: >
     Text that describes the kind of disease present in the tumor specimen as related to a specific
@@ -326,6 +354,17 @@ classification_of_tumor:
     cde_id: 3288124
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3288124&version=1.0"
+
+colon_polyps_history:
+  description: >
+    Yes/No indicator to describe if the subject had a previous history of colon polyps as noted
+    in the history/physical or previous endoscopic report (s).
+  termDef:
+    term: Colon Carcinoma Polyp Occurrence Indicator
+    source: caDSR
+    cde_id: 3107197
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3107197&version=1.0"
 
 composition:
   description: >
@@ -358,7 +397,7 @@ creation_datetime:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432592&version=1.0"
 
-current_weight: 
+current_weight:
   description: >
     Numeric value that represents the current weight of the sample, measured  in milligrams.
   termDef:
@@ -527,7 +566,7 @@ diagnosis_pathologically_confirmed:
     cde_version: null
     term_url: null
 
-encoding: 
+encoding:
   description: >
     Version of ASCII encoding of quality values found in the file.
   termDef:
@@ -589,7 +628,7 @@ flow_cell_barcode: # TOREVIEW
   description: >
     Flow Cell Barcode.
 
-freezing_method: 
+freezing_method:
   description: >
     Text term that represents the method used for freezing the sample.
   termDef:
@@ -632,6 +671,17 @@ hiv_status:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2180464&version=1.0"
 
+hpv_positive_type:
+  description: >
+    Text classification to represent the strain or type of human papillomavirus identified in an
+    individual.
+  termDef:
+    term: Human Papillomavirus Type
+    source: caDSR
+    cde_id: 2922649
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2922649&version=1.0"
+
 hpv_status:
   description: >
     The findings of the oncogenic HPV.
@@ -646,7 +696,7 @@ includes_spike_ins: # TOREVIEW
   description: >
     Spike-in included?
 
-initial_weight: 
+initial_weight:
   description: >
     Numeric value that represents the initial weight of the sample, measured in milligrams.
   termDef:
@@ -656,7 +706,7 @@ initial_weight:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432605&version=1.0"
 
-instrument_model: 
+instrument_model:
   description: >
     Numeric value that represents the sample dimension that is greater than the shortest
     dimension and less than the longest dimension, measured in millimeters.
@@ -671,7 +721,7 @@ intermediate_dimension: # TOREVIEW
   description: >
     Intermediate dimension of the sample, in millimeters.
 
-is_ffpe: 
+is_ffpe:
   description: >
     Indicator to signify whether or not the tissue sample was fixed in formalin and embedded in
     paraffin (FFPE).
@@ -760,7 +810,7 @@ library_strand: # TOREVIEW
   description: >
     Library stranded-ness.
 
-longest_dimension: 
+longest_dimension:
   description: >
     Numeric value that represents the longest dimension of the sample, measured in millimeters.
   termDef:
@@ -788,7 +838,7 @@ lymphatic_invasion_present:
     term: Lymphatic/Small vessel Invasion Ind
     source: caDSR
     cde_id: 64171
-    cde_version: 3.0 
+    cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=64171&version=3.0"
 
 method_of_diagnosis:
@@ -863,7 +913,7 @@ normal_tumor_genotype_snp_match:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4588156&version=1.0"
 
-number_proliferating_cells: 
+number_proliferating_cells:
   description: >
     Numeric value that represents the count of proliferating cells determined during pathologic
     review of the sample slide(s).
@@ -874,7 +924,7 @@ number_proliferating_cells:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432636&version=1.0"
 
-oct_embedded: 
+oct_embedded:
   description: >
     Indicator of whether or not the sample was embedded in Optimal Cutting Temperature (OCT) compound.
   termDef:
@@ -950,7 +1000,7 @@ percent_lymphocyte_infiltration:
     cde_version: 2.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2897710&version=2.0"
 
-percent_monocyte_infiltration: 
+percent_monocyte_infiltration:
   description: >
     Numeric value to represent the percentage of monocyte infiltration in a sample or specimen.
   termDef:
@@ -970,7 +1020,7 @@ percent_necrosis:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2841237&version=1.0"
 
-percent_neutrophil_infiltration: 
+percent_neutrophil_infiltration:
   description: >
     Numeric value to represent the percentage of infiltration by neutrophils in a tumor sample or
     specimen.
@@ -992,7 +1042,7 @@ percent_normal_cells:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2841233&version=1.0"
 
-percent_stromal_cells: 
+percent_stromal_cells:
   description: >
     Numeric value to represent the percentage of reactive cells that are present in a malignant
     tumor sample or specimen but are not malignant such as fibroblasts, vascular structures, etc.
@@ -1003,7 +1053,7 @@ percent_stromal_cells:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2841241&version=1.0"
 
-percent_tumor_cells: 
+percent_tumor_cells:
   description: >
     Numeric value that represents the percentage of infiltration by granulocytes in a sample.
   termDef:
@@ -1013,7 +1063,7 @@ percent_tumor_cells:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432686&version=1.0"
 
-percent_tumor_nuclei: 
+percent_tumor_nuclei:
   description: >
     Numeric value to represent the percentage of tumor nuclei in a malignant neoplasm sample or specimen.
   termDef:
@@ -1023,11 +1073,22 @@ percent_tumor_nuclei:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2841225&version=1.0"
 
+perineural_invasion_present:
+  description: >
+    a yes/no indicator to ask if perineural invasion or infiltration of tumor or cancer is
+    present.
+  termDef:
+    term: Tumor Perineural Invasion Ind
+    source: caDSR
+    cde_id: 64181
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=64181&version=3.0"
+
 platform: # TOREVIEW
   description: >
     Name of the platform used to obtain data.
 
-portion_number: 
+portion_number:
   description: >
     Numeric value that represents the sequential number assigned to a portion of the sample.
   termDef:
@@ -1037,7 +1098,7 @@ portion_number:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432711&version=1.0"
 
-portion_weight: 
+portion_weight:
   description: >
     Numeric value that represents the sample portion weight, measured in milligrams.
   termDef:
@@ -1047,7 +1108,7 @@ portion_weight:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432593&version=1.0"
 
-preservation_method: 
+preservation_method:
   description: >
     Text term that represents the method used to preserve the sample.
   termDef:
@@ -1105,7 +1166,7 @@ project_id: # TOREVIEW
     Unique ID for any specific defined piece of work that is undertaken or attempted to
     meet a single requirement.
 
-qc_metric_state: 
+qc_metric_state:
   description: >
     State classification given by FASTQC for the metric. Metric specific details about the states
     are available on their website.
@@ -1180,7 +1241,7 @@ residual_disease:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2608702&version=1.0"
 
-RIN: 
+RIN:
   description: >
     A numerical assessment of the integrity of RNA based on the entire electrophoretic trace of the
     RNA sample including the presence or absence of degradation products.
@@ -1191,7 +1252,7 @@ RIN:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5278775&version=1.0"
 
-sample_type: 
+sample_type:
   description: >
     Text term to describe the source of a biospecimen used for a laboratory test.
   termDef:
@@ -1213,7 +1274,7 @@ sequencing_center: # TOREVIEW
   description: >
     Name of the center that provided the sequence files.
 
-shortest_dimension: 
+shortest_dimension:
   description: >
     Numeric value that represents the shortest dimension of the sample, measured in millimeters.
   termDef:
@@ -1266,7 +1327,7 @@ source_center: # TOREVIEW
   description: >
     Name of the center that provided the item.
 
-spectrophotometer_method: 
+spectrophotometer_method:
   description: >
     Name of the method used to determine the concentration of purified nucleic acid within a
     solution.
@@ -1319,7 +1380,7 @@ therapeutic_agents:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2975232&version=1.0"
 
-time_between_clamping_and_freezing: 
+time_between_clamping_and_freezing:
   description: >
     Numeric representation of the elapsed time between the surgical clamping of blood supply and
     freezing of the sample, measured in minutes.
@@ -1330,7 +1391,7 @@ time_between_clamping_and_freezing:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432611&version=1.0"
 
-time_between_excision_and_freezing: 
+time_between_excision_and_freezing:
   description: >
     Numeric representation of the elapsed time between the excision and freezing of the sample,
     measured in minutes.
@@ -1339,7 +1400,7 @@ time_between_excision_and_freezing:
     source: caDSR
     cde_id: 5432612
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432612&version=1.0" 
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432612&version=1.0"
 
 tissue_or_organ_of_origin:
   description: >
@@ -1351,7 +1412,7 @@ tissue_or_organ_of_origin:
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3427536&version=3.0"
 
-tissue_type: 
+tissue_type:
   description: >
     Text term that represents a description of the kind of tissue collected with respect to disease
     status or proximity to tumor tissue.
@@ -1366,7 +1427,38 @@ to_trim_adapter_sequence: # TOREVIEW
   description: >
     Does the user suggest adapter trimming?
 
-total_sequences: 
+tobacco_smoking_onset_year:
+  description: >
+    The year in which the participant began smoking.
+  termDef:
+    term: Started Smoking Year
+    source: caDSR
+    cde_id: 2228604
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2228604&version=1.0"
+
+tobacco_smoking_quit_year:
+  description: >
+    The year in which the participant quit smoking.
+  termDef:
+    term: Stopped Smoking Year
+    source: caDSR
+    cde_id: 2228610
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2228610&version=1.0"
+
+tobacco_smoking_status:
+  description: >
+    Category describing current smoking status and smoking history as self-reported by a
+    patient.
+  termDef:
+    term: Patient Smoking History Category
+    source: caDSR
+    cde_id: 2181650
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2181650&version=1.0"
+
+total_sequences:
   description: >
     A count of the total number of sequences processed.
   termDef:
@@ -1446,7 +1538,7 @@ tumor_code_id: # TOREVIEW
   description: >
     BCR-defined id code for the tumor sample.
 
-tumor_descriptor: 
+tumor_descriptor:
   description: >
     Text that describes the kind of disease present in the tumor specimen as related to a specific
     timepoint.
@@ -1484,6 +1576,17 @@ UUID:
     cde_version: null
     term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.02d&ns=NCI_Thesaurus&code=C54100"
 
+vascular_invasion_present:
+  description: >
+    The yes/no indicator to ask if large vessel or venous invasion was detected by surgery or
+    presence in a tumor specimen.
+  termDef:
+    term: Tumor Vascular Invasion Ind-3
+    source: caDSR
+    cde_id: 64358
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=64358&version=3.0"
+
 vital_status:
   description: >
     The survival state of the person registered on the protocol.
@@ -1504,7 +1607,7 @@ weight:
     cde_version: 4.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=651&version=4.0"
 
-well_number: 
+well_number:
   description: >
     Numeric value that represents the the well location within a plate for the analyte or
     aliquot from the sample.

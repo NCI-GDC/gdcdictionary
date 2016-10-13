@@ -8,7 +8,7 @@ category: metadata_file
 project: '*'
 program: '*'
 description: >
-  Data file containing the metadata for the experiment performed. 
+  Data file containing the metadata for the experiment performed.
 additionalProperties: false
 submittable: true
 validators: null
@@ -61,7 +61,7 @@ properties:
       $ref: "_terms.yaml#/data_category"
     enum:
       - Sequencing Data
-      - Sequencing Reads 
+      - Sequencing Reads
       - Raw Sequencing Data
   data_type:
     term:

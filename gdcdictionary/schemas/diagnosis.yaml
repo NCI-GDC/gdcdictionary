@@ -10,7 +10,7 @@ project: '*'
 description: >
   Data from the investigation, analysis and recognition of the presence and nature of disease,
   condition, or injury from expressed signs and symptoms; also, the scientific determination of any
-  kind; the concise results of such an investigation. 
+  kind; the concise results of such an investigation.
 additionalProperties: false
 submittable: true
 validators: null
@@ -48,7 +48,7 @@ required:
 
 preferred:
   - days_to_birth
-  - site_of_resection_or_biopsy 
+  - site_of_resection_or_biopsy
 
 uniqueKeys:
   #unclear if want submitter ID for clinical
@@ -348,6 +348,15 @@ properties:
       - Not Reported
       - Not Allowed To Collect
 
+  ann_arbor_clinical_stage:
+    term:
+      $ref: "_terms.yaml#/ann_arbor_clinical_stage"
+    enum:
+      - Stage I
+      - Stage II
+      - Stage III
+      - Stage IV
+
   ann_arbor_extranodal_involvement:
     term:
       $ref: "_terms.yaml#/ann_arbor_extranodal_involvement"
@@ -357,6 +366,15 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+
+  ann_arbor_pathologic_stage:
+    term:
+      $ref: "_terms.yaml#/ann_arbor_pathologic_stage"
+    enum:
+      - Stage I
+      - Stage II
+      - Stage III
+      - Stage IV
 
   burkitt_lymphoma_clinical_variant:
     term:
@@ -398,6 +416,11 @@ properties:
       - Not Reported
       - Not Allowed To Collect
 
+  circumferential_resection_margin:
+    term:
+      $ref: "_terms.yaml#/circumferential_resection_margin"
+    type: number
+
   classification_of_tumor:
     term:
       $ref: "_terms.yaml#/classification_of_tumor"
@@ -408,6 +431,16 @@ properties:
       - other
       - Unknown
       - not reported
+      - Not Allowed To Collect
+
+  colon_polyps_history:
+    term:
+      $ref: "_terms.yaml#/colon_polyps_history"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
       - Not Allowed To Collect
 
   days_to_birth:
@@ -506,6 +539,18 @@ properties:
       - Not Reported
       - Not Allowed To Collect
 
+  hpv_positive_type:
+    term:
+      $ref: "_terms.yaml#/hpv_positive_type"
+    enum:
+      - HPV 16
+      - HPV 18
+      - Not applicable
+      - Other HPV type(s)
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
+
   hpv_status:
     term:
       $ref: "_terms.yaml#/hpv_status"
@@ -576,12 +621,12 @@ properties:
     term:
       $ref: "_terms.yaml#/lymphatic_invasion_present"
     enum:
-      - Indeterminate
       - Absent
-      - Not Available
-      - Not Determined
+      - Indeterminate
       - No Source Documentation
       - Not Applicable
+      - Not Available
+      - Not Determined
       - Not Sampled/Dissected
       - Present
       - Present - Extensive
@@ -754,6 +799,26 @@ properties:
       - Not Reported
       - Not Allowed To Collect
 
+  perineural_invasion_present:
+    term:
+      $ref: "_terms.yaml#/perineural_invasion_present"
+    enum:
+      - Absent
+      - Indeterminate
+      - No Source Documentation
+      - Not Applicable
+      - Not Available
+      - Not Determined
+      - Not Sampled/Dissected
+      - Present
+      - Present - Extensive
+      - Present - Minimal
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
+
   primary_diagnosis:
     term:
       $ref: "_terms.yaml#/primary_diagnosis"
@@ -822,6 +887,16 @@ properties:
       $ref: "_terms.yaml#/tumor_stage"
     type: string
 
+  vascular_invasion_present:
+    term:
+      $ref: "_terms.yaml#/vascular_invasion_present"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
+
   vital_status:
     term:
       $ref: "_terms.yaml#/vital_status"
@@ -844,7 +919,7 @@ properties:
   cases:
     $ref: "_definitions.yaml#/to_one"
   project_id:
-    $ref: "_definitions.yaml#/project_id" 
+    $ref: "_definitions.yaml#/project_id"
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:

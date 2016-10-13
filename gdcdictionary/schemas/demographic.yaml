@@ -9,7 +9,7 @@ program: '*'
 project: '*'
 description: >
   Data for the characterization of the patient by means of segementing the population (e.g.,
-  characterization by age, sex, or race). 
+  characterization by age, sex, or race).
 additionalProperties: false
 submittable: true
 validators: null
@@ -108,7 +108,7 @@ properties:
   cases:
     $ref: "_definitions.yaml#/to_one"
   project_id:
-    $ref: "_definitions.yaml#/project_id" 
+    $ref: "_definitions.yaml#/project_id"
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:

@@ -9,7 +9,7 @@ program: '*'
 project: '*'
 description: >
   Record of the administration and intention of therapeutic agents provided to a patient to alter
-  the course of a pathologic process.   
+  the course of a pathologic process.
 additionalProperties: false
 submittable: true
 validators: null
@@ -61,7 +61,7 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_treatment_end"
     type: number
-  
+
   days_to_treatment_start:
     term:
       $ref: "_terms.yaml#/days_to_treatment_start"
@@ -221,7 +221,7 @@ properties:
     $ref: "_definitions.yaml#/to_one"
 
   project_id:
-    $ref: "_definitions.yaml#/project_id" 
+    $ref: "_definitions.yaml#/project_id"
 
   # ======== Timestamps ========
   created_datetime:

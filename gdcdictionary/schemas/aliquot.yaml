@@ -92,7 +92,7 @@ properties:
       $ref: "_terms.yaml#/concentration"
     type: number
   project_id:
-    $ref: "_definitions.yaml#/project_id" 
+    $ref: "_definitions.yaml#/project_id"
   source_center:
     term:
       $ref: "_terms.yaml#/source_center"
