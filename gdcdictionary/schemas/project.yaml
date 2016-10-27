@@ -21,9 +21,7 @@ systemProperties:
 required:
   - code
   - name
-  - disease_type
   - state
-  - primary_site
   - programs
   - dbgap_accession_number
 
@@ -42,7 +40,7 @@ links:
 constraints: null
 
 # project properties
-# code, disease_type and primary_site are in the current data model for project
+# code is in the current data model for project
 # and likely shouldn't be
 properties:
   type:
@@ -57,15 +55,9 @@ properties:
   dbgap_accession_number:
     type: string
     description: "The dbgap accession number for the project." # TOREVIEW
-  primary_site:
-    type: string
-    description: "Primary site for the project" # TOREVIEW
   code:
     type: string
     description: "Project code" # TOREVIEW
-  disease_type:
-    type: string
-    description: "Full name for the project" # TOREVIEW
   programs:
     $ref: "_definitions.yaml#/to_one"
     description: >
