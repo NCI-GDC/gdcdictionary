@@ -1,15 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "copy_number_segment"
-title: Copy Number Segment
+id: "structural_variation"
+title: Structural Variation
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing the copy number data from a copy number liftover workflow. Contains all copy
-  numbers detected.
+  Data file containing the structural variation data from the FoundationOne Reports.
 additionalProperties: false
 submittable: false
 validators: null
@@ -24,12 +23,16 @@ systemProperties:
   - error_type
 
 links:
-  - name: copy_number_liftover_workflows
-    backref: copy_number_segments
+  - name: genomic_profile_harmonization_workflows
+    backref: structural_variations
     label: derived_from
-    target_type: copy_number_liftover_workflow
+    target_type: genomic_profile_harmonization_workflow
     multiplicity: one_to_one
     required: true
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
 
 required:
   - submitter_id
@@ -39,13 +42,7 @@ required:
   - md5sum
   - data_category
   - data_type
-  - experimental_strategy
-  - platform
-  - copy_number_liftover_workflows
-
-uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - genomic_profile_harmonization_workflows
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
@@ -55,29 +52,17 @@ properties:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Copy Number Variation
+      - Somatic Structural Variation 
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - Copy Number Segment
-      - Masked Copy Number Segment
-      - FoundationOne Copy Number
+      - FoundationOne Rearrangement
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
-      - TXT
       - TSV
-  experimental_strategy:
-    term:
-      $ref: "_terms.yaml#/experimental_strategy"
-    enum:
-      - Genotyping Array
-  platform:
-    term:
-      $ref: "_terms.yaml#/platform"
-    enum:
-      - Affymetrix SNP 6.0
-  copy_number_liftover_workflows:
+      - VCF
+  genomic_profile_harmonization_workflows:
     $ref: "_definitions.yaml#/to_one"

@@ -57,11 +57,15 @@ properties:
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Raw Simple Somatic Mutation" ]
+    enum:
+      - Raw Simple Somatic Mutation
+      - FoundationOne Somatic Mutation
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
-    enum: [ "VCF" ]
+    enum: 
+      - VCF
+      - MAF
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"

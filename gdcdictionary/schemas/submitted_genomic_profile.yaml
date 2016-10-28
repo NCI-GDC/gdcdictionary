@@ -1,17 +1,16 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "copy_number_segment"
-title: Copy Number Segment
+id: "submitted_genomic_profile"
+title: Submitted Genomic Profile
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing the copy number data from a copy number liftover workflow. Contains all copy
-  numbers detected.
+  Data file containing genomic profile information from Foundation Medicine.
 additionalProperties: false
-submittable: false
+submittable: true
 validators: null
 
 systemProperties:
@@ -24,10 +23,10 @@ systemProperties:
   - error_type
 
 links:
-  - name: copy_number_liftover_workflows
-    backref: copy_number_segments
-    label: derived_from
-    target_type: copy_number_liftover_workflow
+  - name: read_groups
+    backref: submitted_genomic_profiles
+    label: data_from
+    target_type: read_group
     multiplicity: one_to_one
     required: true
 
@@ -40,8 +39,7 @@ required:
   - data_category
   - data_type
   - experimental_strategy
-  - platform
-  - copy_number_liftover_workflows
+  - read_groups
 
 uniqueKeys:
   - [ id ]
@@ -50,34 +48,26 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "copy_number_segment" ]
+    enum: [ "submitted_genomic_profile" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Copy Number Variation
+      - Genomic Profiling
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - Copy Number Segment
-      - Masked Copy Number Segment
-      - FoundationOne Copy Number
+      - FoundationOne Report
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
-      - TXT
-      - TSV
+      - XML
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - Genotyping Array
-  platform:
-    term:
-      $ref: "_terms.yaml#/platform"
-    enum:
-      - Affymetrix SNP 6.0
-  copy_number_liftover_workflows:
-    $ref: "_definitions.yaml#/to_one"
+      - Targeted Capture Sequencing 
+  read_groups:
+    $ref: "_definitions.yaml#/to_one"       
