@@ -74,10 +74,12 @@ properties:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
       - Genotyping Array
+      - Targeted Sequencing
   platform:
     term:
       $ref: "_terms.yaml#/platform"
     enum:
       - Affymetrix SNP 6.0
+      - Illumina
   copy_number_liftover_workflows:
     $ref: "_definitions.yaml#/to_one"

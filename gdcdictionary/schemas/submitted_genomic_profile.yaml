@@ -68,6 +68,6 @@ properties:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - Targeted Capture Sequencing 
+      - Targeted Sequencing 
   read_groups:
     $ref: "_definitions.yaml#/to_one"       

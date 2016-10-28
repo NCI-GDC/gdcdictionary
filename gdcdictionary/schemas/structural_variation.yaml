@@ -64,5 +64,10 @@ properties:
     enum:
       - TSV
       - VCF
+  platform:
+    term:
+      $ref: "_terms.yaml#/platform"
+    enum:
+      - Targeted Sequencing
   genomic_profile_harmonization_workflows:
     $ref: "_definitions.yaml#/to_one"

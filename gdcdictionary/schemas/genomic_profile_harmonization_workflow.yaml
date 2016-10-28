@@ -40,7 +40,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
   type:
-    enum: [ "genomic_profiling_harmonization_workflow" ]
+    enum: [ "genomic_profile_harmonization_workflow" ]
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
