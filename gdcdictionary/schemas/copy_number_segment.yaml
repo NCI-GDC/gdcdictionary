@@ -62,13 +62,12 @@ properties:
     enum:
       - Copy Number Segment
       - Masked Copy Number Segment
-      - FoundationOne Copy Number
+      - Gene-Level Copy Number
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
       - TXT
-      - TSV
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
