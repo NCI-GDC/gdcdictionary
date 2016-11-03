@@ -40,6 +40,12 @@ links:
     target_type: case
     multiplicity: many_to_one #not sure
     required: true
+  - name: tissue_source_sites
+    backref: samples
+    label: processed_at
+    target_type: tissue_source_site
+    multiplicity: one_to_one
+    required: false
 
 # Sample properties
 # Currently there are many TCGA-specific fields in the DB, this is an attempt
@@ -294,6 +300,8 @@ properties:
     description: >
       Indicates that the sample is physically derived from the subject
       of the linked to case via some process/protocol
+  tissue_source_sites:
+    $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string
   created_datetime:
