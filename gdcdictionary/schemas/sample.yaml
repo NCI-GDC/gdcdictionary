@@ -146,6 +146,7 @@ properties:
       - "03"
       - "04"
       - "10"
+      - "15"
       - "20"
       - "21"
       - "30"
@@ -175,6 +176,7 @@ properties:
       - Cervical Cancer (all types)
       - Anal Cancer (all types)
       - Acute lymphoblastic leukemia (ALL)
+      - Mixed phenotype acute leukemia (MPAL)
       - Acute myeloid leukemia (AML)
       - Induction Failure AML (AML-IF)
       - Neuroblastoma (NBL)
