@@ -17,6 +17,7 @@ systemProperties:
   - id
   - state
   - released
+  - releasable
   - intended_release_date
 
 required:
@@ -121,6 +122,12 @@ properties:
     description: |
       To release a project is to tell the GDC to include all submitted
       entities in the next GDC index.
+    default: false
+    type: boolean
+
+  releasable:
+    description: |
+      A project can only be released by the user when `releasable` is true.
     default: false
     type: boolean
 
