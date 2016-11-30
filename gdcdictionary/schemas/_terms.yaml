@@ -779,6 +779,15 @@ year_of_birth:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2896954&version=1.0"
 
+year_of_diagnosis:
+   description: "Numeric value to represent the year of an individual's initial pathologic diagnosis of cancer."
+   termDef:
+     term: Year of initial pathologic diagnosis
+     source: NCIP
+     cde_id: 2896960
+     cde_version: 1.0
+     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2896960&version=1.0"
+
 year_of_death:
   description: "Numeric value to represent the year of the death of an individual."
   termDef:
