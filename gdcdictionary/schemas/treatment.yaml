@@ -64,7 +64,15 @@ properties:
   treatment_intent_type:
     term:
       $ref: "_terms.yaml#/treatment_intent_type"
-    type: string
+    enum:
+      - ADJUVANT
+      - PROGRESSION
+      - RECURRENCE
+      - PALLIATIVE
+      - Primary
+      - Initial
+      - Progression after initial
+      - OTHER, SPECIFY IN NOTES 
 
   therapeutic_agents:
     term:

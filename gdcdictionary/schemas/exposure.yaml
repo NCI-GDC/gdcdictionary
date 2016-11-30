@@ -71,12 +71,22 @@ properties:
   alcohol_history:
     term:
       $ref: "_terms.yaml#/alcohol_history"
-    type: string
+    enum:
+      - "yes"
+      - "no"
+      - unknown
+      - not reported 
 
   alcohol_intensity:
     term:
       $ref: "_terms.yaml#/alcohol_intensity"
-    type: string
+    enum:
+      - Daily Drinker
+      - Weekly Drinker
+      - Social Drinker
+      - Occasional Drinker
+      - None
+      - Not Evaluated 
 
   height:
     term:
