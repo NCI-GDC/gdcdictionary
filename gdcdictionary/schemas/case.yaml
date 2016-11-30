@@ -37,6 +37,8 @@ links:
 
 required:
   - submitter_id
+  - disease_type
+  - primary_site
   - projects
 
 uniqueKeys:
@@ -56,6 +58,14 @@ properties:
     type:
       - string
       - "null"
+  disease_type:
+    term:
+      $ref: "_terms.yaml#/disease_type"
+    type: string
+  primary_site:
+    term:
+      $ref: "_terms.yaml#/primary_site"
+    type: string
   projects:
     $ref: "_definitions.yaml#/to_one"
   tissue_source_sites:
