@@ -65,6 +65,7 @@ properties:
       - Repli-G (Qiagen) DNA
       - Repli-G Pooled (Qiagen) DNA
       - Repli-G X (Qiagen) DNA
+      - Repli-G Pooled (Qiagen) DNA
       - RNA
       - Total RNA
   analyte_type_id:
