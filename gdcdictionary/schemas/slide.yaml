@@ -4,7 +4,7 @@ id: "slide"
 title: Slide
 type: object
 namespace: http://gdc.nci.nih.gov
-category: biospecimen 
+category: biospecimen
 program: '*'
 project: '*'
 description: >
@@ -118,7 +118,7 @@ properties:
   samples:
     $ref: "_definitions.yaml#/to_many"
   project_id:
-    $ref: "_definitions.yaml#/project_id" 
+    $ref: "_definitions.yaml#/project_id"
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:

@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "alignment_workflow" 
+id: "alignment_workflow"
 title: Alignment Workflow
 type: object
 namespace: http://gdc.nci.nih.gov
-category: analysis 
+category: analysis
 program: '*'
 project: '*'
 description: >
-  Metadata for the alignment pipeline used to align reads in the GDC harmonization pipelines. 
+  Metadata for the alignment pipeline used to align reads in the GDC harmonization pipelines.
 additionalProperties: false
 submittable: false
 validators: null
@@ -41,7 +41,7 @@ required:
   - submitter_id
   - workflow_link
   - workflow_type
-  
+
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]
@@ -51,7 +51,7 @@ properties:
   type:
     enum: [ "alignment_workflow" ]
   workflow_type:
-    enum: 
+    enum:
       - "STAR 2-Pass"
       - "BWA-aln"
       - "BWA-mem"

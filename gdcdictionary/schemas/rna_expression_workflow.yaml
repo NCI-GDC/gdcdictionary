@@ -1,10 +1,10 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "rna_expression_workflow" 
+id: "rna_expression_workflow"
 title: RNA Expression Workflow
 type: object
 namespace: http://gdc.nci.nih.gov
-category: analysis 
+category: analysis
 program: '*'
 project: '*'
 description: >
@@ -48,7 +48,7 @@ required:
   - submitter_id
   - workflow_link
   - workflow_type
-  
+
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]

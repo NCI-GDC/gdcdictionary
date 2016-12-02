@@ -82,11 +82,11 @@ properties:
       - normalized
       - nte
       - omf
-      - OptionAnalysisPipeline2 # for legacy data 
+      - OptionAnalysisPipeline2 # for legacy data
       - original # for legacy data
       - Paired_LogR
       - pairedcn
-      - patient 
+      - patient
       - PilotAnalysisPipeline2 # for legacy data
       - portion
       - protocol

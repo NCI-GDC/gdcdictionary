@@ -56,10 +56,10 @@ properties:
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: 
+    enum:
       - miRNA Expression Quantification
       - Isoform Expression Quantification
-      - Supplementary Files 
+      - Supplementary Files
 
   data_format:
     term:
