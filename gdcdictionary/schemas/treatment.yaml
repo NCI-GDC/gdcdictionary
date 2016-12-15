@@ -172,25 +172,11 @@ properties:
     term:
       $ref: "_terms.yaml#/treatment_outcome"
     enum:
-      - Complete Remission/Response
       - Complete Response
-      - Elevated Tumor Markers and Residual Mass
-      - First Course Treatment Still in Progress
-      - No Measureable Tumor or Tumor Markers
-      - Normalization of Tumor Markers, but Residual Tumor Mass
-      - Not Applicable
-      - Other
-      - Partial Remission/Response
       - Partial Response
-      - Persistent Disease
-      - Progressive Disease
-      - Progressive Tumor Mass and Tumor Markers
-      - Stable Disease
       - Treatment Ongoing
       - Treatment Stopped Due to Toxicity
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   treatment_type:
     term:
@@ -200,7 +186,6 @@ properties:
       - Chemotherapy
       - Concurrent Chemoradiation
       - Cryoablation
-      - External Radiation
       - Embolization
       - Hormone Therapy
       - Internal Radiation
@@ -210,8 +195,6 @@ properties:
       - Radiation Therapy
       - Stem Cell Treatment
       - Surgery
-      - Surgery Only
-      - Systemic Radiation
       - Targeted Molecular Therapy
       - Unknown
       - Not Reported

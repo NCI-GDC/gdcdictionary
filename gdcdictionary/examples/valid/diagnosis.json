@@ -13,7 +13,7 @@
     "days_to_last_follow_up": -1.0,
     "days_to_last_known_disease_status": -1,
     "days_to_recurrence": -1,
-    "hiv_status": "Negative",
+    "hiv_positive": "No",
     "last_known_disease_status": "Unknown tumor status",
     "ldh_level_at_diagnosis": 1,
     "ldh_normal_range_upper": 1.5,
