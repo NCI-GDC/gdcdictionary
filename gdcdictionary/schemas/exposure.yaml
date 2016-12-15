@@ -56,12 +56,21 @@ properties:
   alcohol_history:
     term:
       $ref: "_terms.yaml#/alcohol_history"
-    type: string
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown 
 
   alcohol_intensity:
     term:
       $ref: "_terms.yaml#/alcohol_intensity"
-    type: string
+    enum:
+      - Daily Drinker
+      - None
+      - Not Evaluated
+      - Occasional Drinker
+      - Social Drinker
+      - Weekly Drinker    
 
   bmi:
     term:

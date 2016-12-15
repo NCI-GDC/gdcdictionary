@@ -62,7 +62,121 @@ properties:
   relationship_type:
     term:
       $ref: "_terms.yaml#/relationship_type"
-    type: string
+    enum:
+      - Adopted Daughter
+      - Adopted Son
+      - Adoptive Brother
+      - Adoptive Father
+      - Adoptive Mother
+      - Adoptive Sister
+      - Aunt
+      - Brother
+      - Brother-in-law
+      - Child
+      - Cousin
+      - Daughter
+      - Daughter-in-law
+      - Domestic Partner
+      - Don't Know
+      - Father
+      - Father-in-law
+      - Female Cousin
+      - First Cousin
+      - First Cousin Once Removed
+      - Foster Brother
+      - Foster Daughter
+      - Foster Father
+      - Foster Mother
+      - Foster Sister
+      - Foster Son
+      - Fraternal Twin Brother
+      - Fraternal Twin Sibling
+      - Fraternal Twin Sister
+      - Full Brother
+      - Full Sister
+      - Grand Nephew
+      - Grand Niece
+      - Grandchild
+      - Granddaughter
+      - Grandfather
+      - Grandmother
+      - Grandparent
+      - Grandson
+      - Great Grandchild
+      - Half Brother
+      - Half Sibling
+      - Half Sister
+      - Husband
+      - Identical Twin Brother
+      - Identical Twin Sibling
+      - Identical Twin Sister
+      - Legal Guardian
+      - Male Cousin
+      - Maternal Aunt
+      - Maternal First Cousin
+      - Maternal First Cousin Once Removed
+      - Maternal Grandfather
+      - Maternal Grandmother
+      - Maternal Grandparent
+      - Maternal Great Aunt
+      - Maternal Great Grandparent
+      - Maternal Great Uncle
+      - Maternal Half Brother
+      - Maternal Half Sibling
+      - Maternal Half Sister
+      - Maternal Uncle
+      - Mother
+      - Mother-in-law
+      - Natural Brother
+      - Natural Child
+      - Natural Daughter
+      - Natural Father
+      - Natural Grandchild
+      - Natural Grandfather
+      - Natural Grandmother
+      - Natural Grandparent
+      - Natural Mother
+      - Natural Parent
+      - Natural Sibling
+      - Natural Sister
+      - Natural Son
+      - Nephew
+      - Niece
+      - None
+      - Other
+      - Parent
+      - Paternal Aunt
+      - Paternal First Cousin
+      - Paternal First Cousin Once Removed
+      - Paternal Grandfather
+      - Paternal Grandmother
+      - Paternal Grandparent
+      - Paternal Great Aunt
+      - Paternal Great Grandparent
+      - Paternal Great Uncle
+      - Paternal Half Brother
+      - Paternal Half Sibling
+      - Paternal Half Sister
+      - Paternal Uncle
+      - Refused
+      - Sibling
+      - Sister
+      - Sister-in-law
+      - Son
+      - Son-in-law
+      - Spouse
+      - Step Child
+      - Step Sibling
+      - Stepbrother
+      - Stepdaughter
+      - Stepfather
+      - Stepmother
+      - Stepsister
+      - Stepson
+      - Twin Sibling
+      - Uncle
+      - Ward
+      - Wife 
 
   relationship_gender:
     term:
