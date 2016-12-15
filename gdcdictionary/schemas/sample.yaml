@@ -46,6 +46,12 @@ links:
     target_type: tissue_source_site
     multiplicity: one_to_one
     required: false
+  - name: diagnoses
+    backref: samples
+    label: related_to
+    target_type: diagnosis
+    multiplicity: many_to_one
+    required: false
 
 # Sample properties
 # Currently there are many TCGA-specific fields in the DB, this is an attempt
@@ -675,6 +681,8 @@ properties:
       Indicates that the sample is physically derived from the subject
       of the linked to case via some process/protocol
   tissue_source_sites:
+    $ref: "_definitions.yaml#/to_one"
+  diagnoses:
     $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string
