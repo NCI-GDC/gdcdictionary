@@ -1,0 +1,51 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "genomic_profile_harmonization_workflow"
+title: Genomic Profile Harmonization Workflow
+type: object
+namespace:  http://gdc.nci.nih.gov
+category: analysis 
+program: '*'
+project: '*'
+description: >
+  Metadata for the harmonization of genomic profiling reports.
+additionalProperties: false
+submittable: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: submitted_genomic_profiles
+    backref: genomic_profile_harmonization_workflows
+    label: performed_on
+    target_type: submitted_genomic_profile
+    multiplicity: one_to_one
+    required: true
+
+required:
+  - submitter_id
+  - workflow_link
+  - workflow_type
+  - submitted_genomic_profiles
+  
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/workflow_properties"
+  type:
+    enum: [ "genomic_profile_harmonization_workflow" ]
+  workflow_type:
+    term:
+      $ref: "_terms.yaml#/workflow_type"
+    enum:
+      - MuTect2 
+  submitted_genomic_profiles:
+    $ref: "_definitions.yaml#/to_one"

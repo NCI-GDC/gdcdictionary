@@ -1,0 +1,14 @@
+{
+    "type": "structural_variation",
+    "submitter_id": "structural_variation_outputs",
+    "file_name": "structural_variation.gvf",
+    "file_size": 2343646734,
+    "md5sum": "d3266f2577584713ea17f94d331f30c4",
+    "data_category": "Somatic Structural Variation",
+    "data_type": "Structural Rearrangement",
+    "data_format": "GVF",
+    "experimental_strategy": "Targeted Sequencing",
+    "genomic_profile_harmonization_workflows": {
+        "submitter_id": "fmi_pipeline_v213"
+    }
+}
