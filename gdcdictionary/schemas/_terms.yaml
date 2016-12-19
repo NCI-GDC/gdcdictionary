@@ -808,16 +808,15 @@ her2_erbb2_result_ihc:
     cde_version: 2.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2957563&version=2.0"
 
-hiv_status:
+hiv_positive:
   description: >
-    the result of a test to detect the presence of human immunodeficiency virus antibody in a
-    patient.
+    Text term to signify whether a physician has diagnosed HIV infection in a patient.
   termDef:
-    term: Antibody HIV Test Status
+    term: Physician Diagnosed HIV Infection Personal Medical History Yes No Not Applicable Indicator
     source: caDSR
-    cde_id: 2180464
+    cde_id: 4030799
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2180464&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4030799&version=1.0"
 
 hpv_positive_type:
   description: >
@@ -917,18 +916,14 @@ ldh_level_at_diagnosis:
 
 ldh_normal_range_upper:
   description: >
-    Information related to the result of the medical procedure that involves testing a sample of
-    blood for lactic dehydrogenase, a family of homotetrameric cytoplasmic enzymes involved in
-    the conversion of L-lactate and NAD to pyruvate and NADH in the final step of anaerobic
-    glycolysis._The top value of the range of statistical characteristics that are supposed to
-    represent accepted standard, non-pathological pattern for particular laboratory result or
-    other quantitative parameter.
+    The top value of the range of statistical characteristics that are supposed to represent
+    accepted standard, non-pathological pattern for lactate dehydrogenase (units not specified).
   termDef:
     term: Laboratory Procedure Lactate Dehydrogenase Result Upper Limit of Normal Value
     source: caDSR
-    cde_id: 2953115
+    cde_id: 2597015
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2953115&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2597015&version=1.0"
 
 library_strategy: # TOREVIEW
   description: >
@@ -1475,7 +1470,7 @@ site_of_resection_or_biopsy:
     Named locations of, or within, the body. A system of numbered categories for representation of
     data.
   termDef:
-    term: iInternational Classification of Diseases for Oncology, Third Edition ICD-O-3 Site Code
+    term: International Classification of Diseases for Oncology, Third Edition ICD-O-3 Site Code
     source: caDSR
     cde_id: 3226281
     cde_version: 1.0

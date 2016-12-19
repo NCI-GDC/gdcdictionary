@@ -257,11 +257,6 @@ properties:
     term:
       $ref: "_terms.yaml#/ajcc_pathologic_stage"
     enum:
-      - I/II NOS
-      - IG1
-      - IG2
-      - IG3
-      - IS
       - Stage 0
       - Stage 0a
       - Stage 0is
@@ -270,14 +265,11 @@ properties:
       - Stage IA1
       - Stage IA2
       - Stage IB
-      - Stage IB Cervix
       - Stage IB1
       - Stage IB2
       - Stage IC
       - Stage II
-      - Stage II Cervix
       - Stage IIA
-      - Stage IIA Cervix
       - Stage IIA1
       - Stage IIA2
       - Stage IIB
@@ -292,9 +284,6 @@ properties:
       - Stage IVC
       - Stage Tis
       - Stage X
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   ajcc_pathologic_t:
     term:
@@ -393,28 +382,9 @@ properties:
     term:
       $ref: "_terms.yaml#/cause_of_death"
     enum:
-      - Breast cancer
-      - Cancer related
-      - Cervical Cancer
-      - Death not Caused by Disease
-      - Metastatic Uveal Melanoma
-      - Non-Cancer Related
-      - Other malignancy
-      - Other, non-malignant disease
-      - Other, specify
-      - Pancreatic Cancer
-      - Prostate Cancer
-      - Related to Another Cancer
-      - Related to Head & Neck Cancer
-      - Stomach Cancer
-      - Submitted malignancy and/or related tumor event
-      - Surgical Complications
-      - Testicular Germ Cell Tumor (TGCT)
-      - Toxicity of non-protocol treatment
-      - Toxicity of protocol treatment
+      - Cancer Related 
+      - Not Cancer Related 
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   circumferential_resection_margin:
     term:
@@ -525,19 +495,13 @@ properties:
       - Not Reported
       - Not Allowed To Collect
 
-  hiv_status:
+  hiv_positive:
     term:
-      $ref: "_terms.yaml#/hiv_status"
+      $ref: "_terms.yaml#/hiv_positive"
     enum:
-      - Equivocal
-      - Indeterminate
-      - Not Done
-      - Not Available
-      - Negative
-      - Positive
+      - "Yes"
+      - "No" 
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   hpv_positive_type:
     term:
@@ -545,24 +509,16 @@ properties:
     enum:
       - HPV 16
       - HPV 18
-      - Not applicable
       - Other HPV type(s)
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   hpv_status:
     term:
       $ref: "_terms.yaml#/hpv_status"
     enum:
-      - Equivocal
-      - Insufficient sample for diagnosis
       - Negative
-      - Other, specify
       - Positive
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   last_known_disease_status:
     term:
@@ -582,16 +538,9 @@ properties:
       $ref: "_terms.yaml#/laterality"
     enum:
       - Bilateral
-      - Both
       - Left
-      - Midline
-      - Not a Paired site
       - Right
-      - Unilateral
-      - Unilateral, side not specified
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   ldh_level_at_diagnosis:
     term:
@@ -610,32 +559,15 @@ properties:
   lymph_nodes_positive:
     term:
       $ref: "_terms.yaml#/lymph_nodes_positive"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
+    type: integer 
 
   lymphatic_invasion_present:
     term:
       $ref: "_terms.yaml#/lymphatic_invasion_present"
     enum:
-      - Absent
-      - Indeterminate
-      - No Source Documentation
-      - Not Applicable
-      - Not Available
-      - Not Determined
-      - Not Sampled/Dissected
-      - Present
-      - Present - Extensive
-      - Present - Minimal
       - "Yes"
       - "No"
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   method_of_diagnosis:
     term:
@@ -803,21 +735,9 @@ properties:
     term:
       $ref: "_terms.yaml#/perineural_invasion_present"
     enum:
-      - Absent
-      - Indeterminate
-      - No Source Documentation
-      - Not Applicable
-      - Not Available
-      - Not Determined
-      - Not Sampled/Dissected
-      - Present
-      - Present - Extensive
-      - Present - Minimal
       - "Yes"
       - "No"
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   primary_diagnosis:
     term:
@@ -858,14 +778,10 @@ properties:
     term:
       $ref: "_terms.yaml#/residual_disease"
     enum:
-      - No source documentation
       - R0
       - R1
       - R2
       - RX
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   site_of_resection_or_biopsy:
     term:
