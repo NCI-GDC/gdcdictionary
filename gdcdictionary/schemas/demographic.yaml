@@ -97,13 +97,13 @@ properties:
     term:
       $ref: "_terms.yaml#/year_of_birth"
     type:
-      - number
+      - integer 
       - "null"
 
   year_of_death:
     term:
       $ref: "_terms.yaml#/year_of_death"
-    type: number
+    type: integer 
 
   cases:
     $ref: "_definitions.yaml#/to_one"

@@ -829,7 +829,7 @@ properties:
     term:
       $ref: "_terms.yaml#/year_of_diagnosis"
     type:
-      - number
+      - integer 
       - "null"
 
   cases:
