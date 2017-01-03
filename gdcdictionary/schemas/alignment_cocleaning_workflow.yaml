@@ -1,15 +1,15 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "alignment_cocleaning_workflow" 
+id: "alignment_cocleaning_workflow"
 title: Alignment Cocleaning Workflow
 type: object
 namespace: http://gdc.nci.nih.gov
-category: analysis 
+category: analysis
 program: '*'
 project: '*'
 description: >
   Metadata for the alignment and cocleaning pipeline used to align reads in the GDC harmonization
-  pipelines. 
+  pipelines.
 additionalProperties: false
 submittable: false
 validators: null
@@ -42,7 +42,7 @@ required:
   - submitter_id
   - workflow_link
   - workflow_type
-  
+
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]

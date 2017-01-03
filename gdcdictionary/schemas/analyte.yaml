@@ -53,6 +53,22 @@ properties:
     description: >
       The legacy barcode used before prior to the use UUIDs, varies by
       project. For TCGA this is bcranalytebarcode.
+  28s_16s_ribosomal_rna_ratio:
+    term:
+      $ref: "_terms.yaml#/28s_16s_ribosomal_rna_ratio"
+    type: number
+  a260_a280_ratio:
+    term:
+      $ref: "_terms.yaml#/a260_a280_ratio"
+    type: number
+  amount:
+    term:
+      $ref: "_terms.yaml#/amount"
+    type: number
+  analyte_quantity:
+    term:
+      $ref: "_terms.yaml#/analyte_quantity"
+    type: number
   analyte_type:
     term:
       $ref: "_terms.yaml#/analyte_type"
@@ -81,30 +97,35 @@ properties:
       - W
       - X
       - Y
-  amount:
+  analyte_volume:
     term:
-      $ref: "_terms.yaml#/amount"
+      $ref: "_terms.yaml#/analyte_volume"
     type: number
   concentration:
     term:
       $ref: "_terms.yaml#/concentration"
     type: number
-  a260_a280_ratio:
+  normal_tumor_genotype_snp_match:
     term:
-      $ref: "_terms.yaml#/a260_a280_ratio"
-    type: number
-  well_number:
-    term:
-      $ref: "_terms.yaml#/well_number"
-    type: string
+      $ref: "_terms.yaml#/normal_tumor_genotype_snp_match"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
   spectrophotometer_method:
     term:
       $ref: "_terms.yaml#/spectrophotometer_method"
     type: string
+  well_number:
+    term:
+      $ref: "_terms.yaml#/well_number"
+    type: string
   portions:
     $ref: "_definitions.yaml#/to_one"
   project_id:
-    $ref: "_definitions.yaml#/project_id" 
+    $ref: "_definitions.yaml#/project_id"
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:

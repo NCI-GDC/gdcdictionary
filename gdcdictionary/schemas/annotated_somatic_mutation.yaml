@@ -70,5 +70,6 @@ properties:
       - WXS
       - Low Pass WGS
       - Validation
+      - Targeted Sequencing
   somatic_annotation_workflows:
     $ref: "_definitions.yaml#/to_one"
