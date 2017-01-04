@@ -1,0 +1,8 @@
+{
+    "type": "keyword", 
+    "submitter_id": "keyword_1",
+    "keyword_name": "Blood Profiling Atlas",
+    "projects": {
+        "submitter_id": "project_1"
+    }
+}
