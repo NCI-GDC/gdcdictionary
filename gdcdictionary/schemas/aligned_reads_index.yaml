@@ -22,21 +22,12 @@ systemProperties:
   - error_type
 
 links:
-  - exclusive: true
+  - name: submitted_aligned_reads_files
+    backref: aligned_reads_indexes
+    label: derived_from
+    target_type: submitted_aligned_reads
+    multiplicity: one_to_one
     required: true
-    subgroup:
-      - name: submitted_aligned_reads_files
-        backref: aligned_reads_indexes
-        label: derived_from
-        target_type: submitted_aligned_reads
-        multiplicity: one_to_one
-        required: false
-      - name: aligned_reads_files
-        backref: aligned_reads_indexes
-        label: derived_from
-        target_type: aligned_reads
-        multiplicity: one_to_one
-        required: false
 
 required:
   - submitter_id
@@ -46,6 +37,7 @@ required:
   - data_category
   - data_type
   - data_format
+  - submitted_aligned_reads_files
 
 uniqueKeys:
   - [ id ]

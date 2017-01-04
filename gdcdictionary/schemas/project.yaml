@@ -22,7 +22,7 @@ systemProperties:
 
 required:
   - submitter_id
-  - name
+  - name 
   - programs
 
 uniqueKeys:
@@ -39,9 +39,6 @@ links:
 
 constraints: null
 
-# project properties
-# code, disease_type and primary_site are in the current data model for project
-# and likely shouldn't be
 properties:
   type:
     type: string
@@ -51,10 +48,33 @@ properties:
     description: "UUID for the project." # TOREVIEW
   name:
     type: string
-    description: "Display name for the project." # TOREVIEW
+    description: "Display name/brief description for the project." # TOREVIEW
   submitter_id:
     type: string
     description: "Unique identifier for the project."
+  investigator_name:
+    description: "Name of the principal investigator for the project."
+    type: string
+  investigator_affiliation:
+    description: "The investigator's affiliation with respect to a research institution."
+    type: string
+  date_collected:
+    description: "The date or date range in which the project data was collected."
+    type: string
+  availability_type:
+    description: "Is the project open or restricted?"
+    enum:
+      - Open
+      - Restricted
+  availability_mechanism:
+    description: "Mechanism by which the project will be made avilable."
+    type: string
+  support_source:
+    description: "The name of source providing support/grant resources."
+    type: string
+  support_id:
+    description: "The ID of the source providing support/grant resources."
+    type: string
   programs:
     $ref: "_definitions.yaml#/to_one"
     description: >

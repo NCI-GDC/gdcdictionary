@@ -1,13 +1,13 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "publication"
-title: Publication
+id: "keyword"
+title: Keyword
 type: object
 namespace: http://gdc.nci.nih.gov
 category: administrative
 program: '*'
 project: '*'
-description: "Publication for a project."
+description: "A keyword for a project."
 additionalProperties: false
 submittable: true
 validators: null
@@ -21,8 +21,8 @@ systemProperties:
 
 links:
   - name: projects
-    backref: publications
-    label: refers_to
+    backref: keywords
+    label: describe
     target_type: project
     multiplicity: many_to_many
     required: true
@@ -33,11 +33,11 @@ required:
 
 uniqueKeys:
   - [ id ]
-  - [ project_id, submitter_id ] 
+  - [ project_id, submitter_id ]
 
 properties:
   type:
-    enum: [ "publication" ] 
+    enum: [ "keyword" ]
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
@@ -47,9 +47,8 @@ properties:
     type:
       - string
       - "null"
-  pmid:
-    type: string
-  doi:
+  keyword_name:
+    description: "The name of the keyword."
     type: string
   projects:
     $ref: "_definitions.yaml#/to_many"
