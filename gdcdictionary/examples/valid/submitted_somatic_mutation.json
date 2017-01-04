@@ -1,0 +1,14 @@
+{
+    "type": "submitted_somatic_mutation",
+    "submitter_id": "somatic_mutations_from_x",
+    "data_category": "Sequencing Data",
+    "data_type": "Somatic Mutations",
+    "data_format": "VCF",
+    "file_name": "test.vcf",
+    "file_size": 100,
+    "md5sum": "122dffad32",
+    "experimental_strategy": "Targeted Sequencing",
+    "read_groups": {
+        "submitter_id": "read_group_x"
+    }
+}

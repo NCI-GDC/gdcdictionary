@@ -1,0 +1,14 @@
+{
+    "type": "submitted_copy_number",
+    "submitter_id": "copy_number_information",
+    "file_name": "cn.copynumber.data.txt",
+    "file_size": 281653,
+    "md5sum": "d3266f2577584713ea17f94d331f30c4",
+    "data_category": "Copy Number Variation",
+    "data_type": "Copy Number Estimate",
+    "data_format": "TXT",
+    "experimental_strategy": "Genotyping Array",
+    "aliquots": {
+      "submitter_id": "aliquot_m"
+    }
+}
