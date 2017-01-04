@@ -9,7 +9,7 @@ program: '*'
 project: '*'
 description: >
   The collection of all data related to a specific subject in the
-  context of a specific project.
+  context of a specific experiment. 
 additionalProperties: false
 submittable: true
 validators: null
@@ -22,22 +22,16 @@ systemProperties:
   - state
 
 links:
-  - name: projects
+  - name: experiments 
     backref: cases
     label: member_of
     target_type: project
     multiplicity: many_to_one
     required: true
-  - name: tissue_source_sites
-    backref: cases
-    label: processed_at
-    target_type: tissue_source_site
-    multiplicity: many_to_one
-    required: false
 
 required:
   - submitter_id
-  - projects
+  - experiments 
 
 uniqueKeys:
   - [id]
@@ -56,9 +50,13 @@ properties:
     type:
       - string
       - "null"
-  projects:
-    $ref: "_definitions.yaml#/to_one"
-  tissue_source_sites:
+  primary_site:
+    description: "Primary site for the case."
+    type: string
+  disease_type:
+    description: "Name of the disease for the case."
+    type: string
+  experiments: 
     $ref: "_definitions.yaml#/to_one"
   project_id:
     $ref: "_definitions.yaml#/project_id"

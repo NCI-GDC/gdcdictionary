@@ -18,4 +18,4 @@ required:
 
 properties:
   project_1_specific_thing:
-    type: string
+type: string

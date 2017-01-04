@@ -26,7 +26,6 @@ systemProperties:
 
 required:
   - submitter_id
-  - sample_type
   - cases
 
 uniqueKeys:
@@ -40,12 +39,6 @@ links:
     target_type: case
     multiplicity: many_to_one #not sure
     required: true
-  - name: tissue_source_sites
-    backref: samples
-    label: processed_at
-    target_type: tissue_source_site
-    multiplicity: one_to_one
-    required: false
   - name: diagnoses
     backref: samples
     label: related_to
@@ -356,6 +349,14 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+  clinical_time_point:
+    description: "Time point in the clinical stage at which the sample was collected."
+    type: string
+  collection_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  collection_temperature:
+    description: "Temperature in centigrade at which the sample was collected."
+    type: number
   composition:
     term:
       $ref: "_terms.yaml#/composition"
@@ -385,6 +386,9 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+  ctc_concentration:
+    description: "Concentration of the CTCs in the sample; units CTCs/mL."
+    type: number
   current_weight:
     term:
       $ref: "_terms.yaml#/current_weight"
@@ -404,8 +408,6 @@ properties:
       - "Yes"
       - "No"
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
   freezing_method:
     term:
       $ref: "_terms.yaml#/freezing_method"
@@ -506,6 +508,8 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+  processing_datetime:
+    $ref: "_definitions.yaml#/datetime"
   sample_type:
     term:
       $ref: "_terms.yaml#/sample_type"
@@ -579,10 +583,25 @@ properties:
       - '60'
       - '61'
       - '99'
+  sample_volume:
+    description: "The volume of the sample in mL."
+    type: number
   shortest_dimension:
     term:
       $ref: "_terms.yaml#/shortest_dimension"
     type: string
+  storage_duration:
+    description: >
+      Numeric duration for which a sample was stored before testing/experimentation.
+      Requires accompanying storage_duration_unit submission.
+    type: number
+  storage_duration_unit:
+    description: "Unit of time for which the storage duration took place."
+    enum:
+      - Seconds
+      - Minutes
+      - Hours
+      - Days
   time_between_clamping_and_freezing:
     term:
       $ref: "_terms.yaml#/time_between_clamping_and_freezing"
@@ -674,13 +693,10 @@ properties:
       - Not Reported
       - Not Allowed To Collect
     description: "A description of the tumor from which the sample was derived." # TOREVIEW
+  wbc_count:
+    description: "Count of the white blood cells in a sample."
+    type: integer
   cases:
-    #should this be to_one
-    $ref: "_definitions.yaml#/to_one"
-    description: >
-      Indicates that the sample is physically derived from the subject
-      of the linked to case via some process/protocol
-  tissue_source_sites:
     $ref: "_definitions.yaml#/to_one"
   diagnoses:
     $ref: "_definitions.yaml#/to_one"

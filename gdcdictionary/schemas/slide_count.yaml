@@ -1,44 +1,44 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "publication"
-title: Publication
+id: "slide_count"
+title: Slide Count
 type: object
 namespace: http://gdc.nci.nih.gov
-category: administrative
+category: notation
 program: '*'
 project: '*'
-description: "Publication for a project."
+description: >
+  Information pertaining to processed results obtained from slides; often in the form of counts.
 additionalProperties: false
 submittable: true
 validators: null
 
-
 systemProperties:
   - id
   - project_id
-  - state
   - created_datetime
   - updated_datetime
+  - state
 
 links:
-  - name: projects
-    backref: publications
-    label: refers_to
-    target_type: project
+  - name: slides
+    backref: slide_counts
+    label: data_from
+    target_type: slide
     multiplicity: many_to_many
     required: true
 
 required:
   - submitter_id
-  - projects
+  - slides
 
 uniqueKeys:
   - [ id ]
-  - [ project_id, submitter_id ] 
+  - [ project_id, submitter_id ]
 
 properties:
   type:
-    enum: [ "publication" ] 
+    enum: [ "slide_count" ]
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
@@ -48,11 +48,22 @@ properties:
     type:
       - string
       - "null"
-  pmid:
+  cell_type:
+    description: "The type of cell being counted or measured."
     type: string
-  doi:
+  cell_identifier:
+    description: "An alternative identifier for a given cell type."
     type: string
-  projects:
+  cell_count:
+    description: "Raw count of a particular cell type."
+    type: integer
+  ck_signal:
+    description: "Numeric quantification of the CK signal."
+    type: number
+  biomarker_signal:
+    description: "Numeric quantification of the biomarker signal."
+    type: number
+  slides:
     $ref: "_definitions.yaml#/to_many"
   project_id:
     type: string
