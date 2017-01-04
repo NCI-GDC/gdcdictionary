@@ -21,17 +21,13 @@ systemProperties:
   - intended_release_date
 
 required:
-  - code
+  - submitter_id
   - name
-  - disease_type
-  - state
-  - primary_site
   - programs
-  - dbgap_accession_number
 
 uniqueKeys:
-  - [id]
-  - [code]
+  - [ id ]
+  - [ submitter_id ]
 
 links:
   - name: programs
@@ -52,27 +48,17 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "UUID for the project" # TOREVIEW
+    description: "UUID for the project." # TOREVIEW
   name:
     type: string
-    description: "Display name for the project" # TOREVIEW
-  dbgap_accession_number:
+    description: "Display name for the project." # TOREVIEW
+  submitter_id:
     type: string
-    description: "The dbgap accession number for the project." # TOREVIEW
-  primary_site:
-    type: string
-    description: "Primary site for the project" # TOREVIEW
-  code:
-    type: string
-    description: "Project code" # TOREVIEW
-  disease_type:
-    type: string
-    description: "Full name for the project" # TOREVIEW
+    description: "Unique identifier for the project."
   programs:
     $ref: "_definitions.yaml#/to_one"
     description: >
       Indicates that the project is logically part of the indicated project.
-
   state:
     description: |
       The possible states a project can be in.  All but `open` are

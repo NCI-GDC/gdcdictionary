@@ -223,6 +223,9 @@ properties:
   read_group_name:  # it may be good to assign UUID to read group
     description: "Read Group Name"
     type: string
+  barcoding_applied:
+    description: "True/False: was barcoding applied?"
+    type: boolean
   aliquots:
     $ref: "_definitions.yaml#/to_one"
   created_datetime:
