@@ -33,13 +33,13 @@ links:
       - name: aliquots
         backref: assay_results
         label: data_from
-        target_type: read_group
+        target_type: aliquot
         multiplicity: many_to_many
         required: false
       - name: slides
         backref: assay_results
         label: data_from
-        target_type: read_group
+        target_type: slide
         multiplicity: many_to_many
         required: false
 
