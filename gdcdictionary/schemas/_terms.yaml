@@ -202,6 +202,16 @@ days_to_treatment:
     cde_version: null
     term_url: null
 
+disease_type: # TOREVIEW
+  description: > 
+    Full name for the project.
+  termDef:
+    term: Disease Type
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 encoding: # TOREVIEW
   description: >
     Version of ASCII encoding of quality values found in the file. 
@@ -445,6 +455,16 @@ primary_diagnosis:
     cde_id: 3081934
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3081934&version=3.0" 
+
+primary_site:
+  description: >
+    Primary site for the project.
+  termDef:
+    term: Primary Site
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 prior_malignancy:
   description: >
