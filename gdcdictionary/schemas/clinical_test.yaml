@@ -10,7 +10,7 @@ program: '*'
 description: > 
   Metadata concerning any clinical tests used in relation to a case diagnosis. 
 additionalProperties: false
-submittable: false
+submittable: true 
 validators: null
 
 systemProperties:
