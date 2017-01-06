@@ -10,7 +10,7 @@ description: >
   Any specifically defined piece of work that is undertaken or attempted to meet a single
   requirement. (NCIt C47885)
 additionalProperties: false
-submittable: false
+submittable: true 
 validators: null
 
 systemProperties:
@@ -21,13 +21,13 @@ systemProperties:
   - intended_release_date
 
 required:
-  - submitter_id
+  - code 
   - name 
   - programs
 
 uniqueKeys:
   - [ id ]
-  - [ submitter_id ]
+  - [ code ]
 
 links:
   - name: programs
@@ -49,7 +49,7 @@ properties:
   name:
     type: string
     description: "Display name/brief description for the project." # TOREVIEW
-  submitter_id:
+  code:
     type: string
     description: "Unique identifier for the project."
   investigator_name:
