@@ -1,6 +1,6 @@
 id: _terms
 
-28s_16s_ribosomal_rna_ratio:
+ribosomal_rna_28s_16s_ratio:
   description: >
     The 28S/18S ribosomal RNA band ratio used to assess the quality of total RNA.
   termDef:
@@ -288,7 +288,7 @@ biomarker_name:
     term: Biomarker Name
     source: caDSR
     cde_id: 5473
-    cde_version: 11.0 
+    cde_version: 11.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5473&version=2.31"
 
 biomarker_result:
@@ -608,7 +608,7 @@ diagnosis_pathologically_confirmed:
     term_url: null
 
 disease_type: # TOREVIEW
-  description: > 
+  description: >
     Full name for the project.
   termDef:
     term: Disease Type
@@ -628,7 +628,7 @@ dlco_ref_predictive_percent:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2180255&version=1.0"
 
-encoding: 
+encoding:
   description: >
     Version of ASCII encoding of quality values found in the file.
   termDef:
