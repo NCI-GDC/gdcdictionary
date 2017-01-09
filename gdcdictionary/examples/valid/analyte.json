@@ -1,7 +1,7 @@
 {
     "type": "analyte",
     "submitter_id": "BLGSP-71-06-00019-99A-01D",
-    "28s_16s_ribosomal_rna_ratio": 1,
+    "ribosomal_rna_28s_16s_ratio": 1,
     "a260_a280_ratio": 1,
     "amount": 10.98,
     "analyte_quantity": 10,

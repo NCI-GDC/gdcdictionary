@@ -37,8 +37,6 @@ links:
 
 required:
   - submitter_id
-  - disease_type
-  - primary_site
   - projects
 
 uniqueKeys:

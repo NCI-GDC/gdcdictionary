@@ -29,13 +29,13 @@ links:
     subgroup:
       - name: copy_number_liftover_workflows
         backref: copy_number_segments
-        label: data_from
+        label: derived_from
         target_type: copy_number_liftover_workflow
         multiplicity: one_to_one
         required: false
       - name: genomic_profile_harmonization_workflows
         backref: copy_number_segments
-        label: data_from
+        label: derived_from
         target_type: genomic_profile_harmonization_workflow
         multiplicity: one_to_one
         required: false
