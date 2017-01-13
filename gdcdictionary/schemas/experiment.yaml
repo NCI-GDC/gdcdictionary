@@ -77,6 +77,26 @@ properties:
     description: "Broad description of the specimens used in the experiment."
     type:
       - string
+  marker_panel_description:
+    description: "Brief description of the marker panel used in this experiment."
+    type: string
+  somatic_mutations_identified:
+    description: "Are somatic mutations identified for this experiment?"
+    type: boolean
+  indels_identified:
+    description: "Are indels identified in this experiment?"
+    type: boolean
+  copy_numbers_identified:
+    description: "Are copy number variations identified in this experiment?"
+    type: boolean
+  type_of_data:
+    description: "Is the data raw or processed?"
+    enum:
+      - Raw
+      - Processed
+  data_description:
+    description: "Brief description of the data being provided for this experiment."
+    type: string
   projects:
     $ref: "_definitions.yaml#/to_one"
   project_id:
