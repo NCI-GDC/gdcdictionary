@@ -353,7 +353,8 @@ properties:
     description: "Time point in the clinical stage at which the sample was collected."
     type: string
   collection_datetime:
-    $ref: "_definitions.yaml#/datetime"
+    description: "Datetime at which the sample was collected."
+    type: string 
   collection_temperature:
     description: "Temperature in centigrade at which the sample was collected."
     type: number
@@ -509,7 +510,8 @@ properties:
       - Not Reported
       - Not Allowed To Collect
   processing_datetime:
-    $ref: "_definitions.yaml#/datetime"
+    description: "Datetime at which the sample was processed."
+    type: string 
   sample_type:
     term:
       $ref: "_terms.yaml#/sample_type"
