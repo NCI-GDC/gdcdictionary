@@ -25,7 +25,7 @@ links:
   - name: experiments 
     backref: cases
     label: member_of
-    target_type: project
+    target_type: experiment
     multiplicity: many_to_one
     required: true
 
