@@ -60,13 +60,29 @@ properties:
     description: >
       The lower limit of detection. lowest quantity of a substance that can be distinguished from
       the absence of that substance (a blank value) within a stated confidence limit (generally 1%).
-    type: number
+    type:
+      - string
+      - number
+    oneOf:
+      - enum: ['WT']
+      - type: number
+
   specificity:
     description: "The true negative rate."
-    type: number
+    type:
+      - string
+      - number
+    oneOf:
+      - enum: ['WT']
+      - type: number
   sensitivity:
     description: "The true positive rate."
-    type: number
+    type:
+      - string
+      - number
+    oneOf:
+      - enum: ['WT']
+      - type: number
   read_groups:
     $ref: "_definitions.yaml#/to_many"
   experiments:

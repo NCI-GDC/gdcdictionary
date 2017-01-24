@@ -141,3 +141,6 @@ properties:
     description: Tracks a Project's intended release date.
     type: string
     format: date-time
+  dbgap_accession_number:
+    type: string
+    description: "The dbgap accession number provided for the project."

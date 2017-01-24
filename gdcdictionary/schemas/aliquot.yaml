@@ -62,6 +62,8 @@ properties:
     term:
       $ref: "_terms.yaml#/aliquot_volume"
     type: number
+  ctDNA_method:
+    type: string
   amount:
     term:
       $ref: "_terms.yaml#/amount"
@@ -69,17 +71,7 @@ properties:
   analyte_type:
     term:
       $ref: "_terms.yaml#/analyte_type"
-    enum:
-      - DNA
-      - EBV Immortalized Normal
-      - FFPE DNA
-      - FFPE RNA
-      - GenomePlex (Rubicon) Amplified DNA
-      - Repli-G (Qiagen) DNA
-      - Repli-G Pooled (Qiagen) DNA
-      - Repli-G X (Qiagen) DNA
-      - RNA
-      - Total RNA
+    type: string
   analyte_type_id:
     term:
       $ref: "_terms.yaml#/analyte_type_id"

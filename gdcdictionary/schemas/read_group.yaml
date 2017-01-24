@@ -99,6 +99,7 @@ properties:
       - Ion Torrent PGM
       - Ion Torrent Proton
       - PacBio RS
+      - Ion S5 XL System, Ion 530 Chip
       - Other
   library_strategy:
     term:

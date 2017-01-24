@@ -642,6 +642,8 @@ properties:
       - Lung Cancer (all types)
       - Lung Adenocarcinoma
       - Non-small Cell Lung Carcinoma (NSCLC)
+      - Colon Cancer (all types)
+      - Breast Cancer (all types)
       - Cervical Cancer (all types)
       - Anal Cancer (all types)
       - Acute lymphoblastic leukemia (ALL)
