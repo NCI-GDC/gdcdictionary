@@ -30,7 +30,6 @@ links:
 
 required:
   - submitter_id
-  - section_location
   - samples
 
 uniqueKeys:
