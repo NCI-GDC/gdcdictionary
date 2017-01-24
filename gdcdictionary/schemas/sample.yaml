@@ -526,7 +526,9 @@ properties:
       - Buccal Cell Normal
       - Cell Line Derived Xenograft Tissue
       - Cell Lines
+      - cfDNA
       - Control Analyte
+      - ctDNA
       - DNA
       - EBV Immortalized Normal
       - FFPE Recurrent
@@ -620,9 +622,16 @@ properties:
       - Normal
       - Abnormal
       - Peritumoral
+      - Contrived
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+  tube_type:
+    description: "The kind of tube used to collect the sample(s) taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes."
+    enum:
+      - EDTA
+      - CellSave
+      - Streck
   tumor_code:
     term:
       $ref: "_terms.yaml#/tumor_code"
@@ -631,6 +640,8 @@ properties:
       - Non cancerous tissue
       - Diffuse Large B-Cell Lymphoma (DLBCL)
       - Lung Cancer (all types)
+      - Lung Adenocarcinoma
+      - Non-small Cell Lung Carcinoma (NSCLC)
       - Cervical Cancer (all types)
       - Anal Cancer (all types)
       - Acute lymphoblastic leukemia (ALL)
@@ -652,6 +663,7 @@ properties:
       - NHL, Burkitt lymphoma (BL)
       - Rhabdomyosarcoma
       - Soft tissue sarcoma, non-rhabdomyosarcoma
+      - Castration-Resistant Prostate Cancer (CRPC)
   tumor_code_id:
     term:
       $ref: "_terms.yaml#/tumor_code_id"

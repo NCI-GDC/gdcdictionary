@@ -30,10 +30,8 @@ links:
     required: true
 
 required:
+  - submitter_id
   - cases
-  - race
-  - ethnicity
-  - gender
 
 preferred:
   - year_of_death

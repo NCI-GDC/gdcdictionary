@@ -27,7 +27,7 @@ links:
     backref: experiment_metadata_files
     label: derived_from
     target_type: experiment
-    multiplicity: many_to_one
+    multiplicity: many_to_many
     required: false
 
 required:
