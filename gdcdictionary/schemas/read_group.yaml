@@ -32,15 +32,6 @@ required:
   - type
   - submitter_id
   - aliquots
-  - experiment_name
-  - sequencing_center
-  - platform
-  - library_strategy
-  - library_name
-  - instrument_model
-  - is_paired_end
-  - read_length
-  - read_group_name
 
 uniqueKeys:
   - [ id ]
