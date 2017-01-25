@@ -92,6 +92,9 @@ properties:
   target_gene:
     description: "Gene of interest for the assay."
     type: string
+  target_location:
+    description: "Genomic or amino acid change targeted by the assay."
+    type: string
   mutant_fraction_percent:
     description: "Percent of the target that is identified as mutant."
     type: number
