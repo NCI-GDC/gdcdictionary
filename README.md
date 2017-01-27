@@ -151,12 +151,14 @@ effects.
 
 The GDC Dictionary should
 follow [Semantic Versioning](http://semver.org/) by updating the
-`VERSION` file accordingly:
+`VERSION` file to `MAJOR.MINOR.PATCH` accordingly:
 
-1. MAJOR version when you make incompatible API changes: **Breaking Changes**
-2. MINOR version when you add functionality in a backwards-compatible manner: **Relationship Additions**, **Schema Additions**
-3. PATCH version when you make backwards-compatible bug fixes: **Backwards compatible corrections**
-
+1. MAJOR: version when you make incompatible API changes: **Breaking Changes**
+   - e.g. 1.2.4 -> 2.0.0
+2. MINOR: version when you add functionality in a backwards-compatible manner: **Relationship Additions**, **Schema Additions**
+   - e.g. 1.2.4 -> 1.3.0
+3. PATCH: version when you make backwards-compatible bug fixes: **Cosmetic Corrections**
+   - e.g. 1.2.4 -> 1.2.5
 
 ## Contributing
 
