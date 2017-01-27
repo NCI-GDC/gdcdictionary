@@ -78,7 +78,7 @@ notified of a break in backwards-compatibility.
 - Changing existence requirements
   - Adding a property to the `required` list
   - Changing link `required` from `false` to `true`
-  - Changing link `multiplicity` from `many_to_one` to `one_to_one`
+  - Changing link `multiplicity` from `one_to_many` or `many_to_one` to `one_to_one`
   - Changing link subgroup exclusivity from `false` to `true`
 
 
