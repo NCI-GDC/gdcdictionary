@@ -64,5 +64,3 @@ properties:
     enum: [ "BAI" ]
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
-  aligned_reads_files:
-    $ref: "_definitions.yaml#/to_one"
