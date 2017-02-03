@@ -61,8 +61,8 @@ properties:
       The lower limit of detection. lowest quantity of a substance that can be distinguished from
       the absence of that substance (a blank value) within a stated confidence limit (generally 1%).
     type:
-      - string
       - number
+      - string
     oneOf:
       - enum: ['WT']
       - type: number
@@ -70,16 +70,16 @@ properties:
   specificity:
     description: "The true negative rate."
     type:
-      - string
       - number
+      - string
     oneOf:
       - enum: ['WT']
       - type: number
   sensitivity:
     description: "The true positive rate."
     type:
-      - string
       - number
+      - string
     oneOf:
       - enum: ['WT']
       - type: number
