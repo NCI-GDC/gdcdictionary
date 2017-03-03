@@ -139,6 +139,7 @@ properties:
       - rRNA_Depletion
       - miRNA_Size_Fractionation
       - Random
+      - Targeted Sequencing
       - Other
   library_preparation_kit_name:
     term:
