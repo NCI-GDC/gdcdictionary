@@ -27,13 +27,13 @@ links:
     required: true
     subgroup:
       - name: aliquots
-        backref: submitted_copy_number
+        backref: submitted_copy_number_files
         label: derived_from
         target_type: aliquot
         multiplicity: one_to_one
         required: false
       - name: read_groups
-        backref: submitted_copy_number
+        backref: submitted_copy_number_files
         label: derived_from
         target_type: read_group
         multiplicity: many_to_many
