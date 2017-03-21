@@ -368,6 +368,7 @@ properties:
       - Bone Marrow Components NOS
       - Control Analyte
       - Cell
+      - Circulating Tumor Cell (CTC)
       - Derived Cell Line
       - EBV Immortalized
       - Fibroblasts from Bone Marrow Normal
@@ -527,6 +528,7 @@ properties:
       - Cell Line Derived Xenograft Tissue
       - Cell Lines
       - cfDNA
+      - Circulating Tumor Cell (CTC)
       - Control Analyte
       - ctDNA
       - DNA
@@ -632,6 +634,7 @@ properties:
       - EDTA
       - CellSave
       - Streck
+      - Acid Citrate Dextrose (ACD)
   tumor_code:
     term:
       $ref: "_terms.yaml#/tumor_code"
@@ -666,6 +669,8 @@ properties:
       - Rhabdomyosarcoma
       - Soft tissue sarcoma, non-rhabdomyosarcoma
       - Castration-Resistant Prostate Cancer (CRPC)
+      - Prostate Cancer
+      - Hepatocellular Carcinoma (HCC)
   tumor_code_id:
     term:
       $ref: "_terms.yaml#/tumor_code_id"
