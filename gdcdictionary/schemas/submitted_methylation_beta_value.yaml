@@ -1,16 +1,15 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "slide_image"
-title: Slide Image
+id: "submitted_methylation_beta_value"
+title: Submitted Methylation Beta Value
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: http://gdc.nci.hit.gov
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing image of a slide.
+  Data file containing submitted beta values from a nucleotide methylation array.
 additionalProperties: false
-submittable: true
 validators: null
 
 systemProperties:
@@ -23,23 +22,23 @@ systemProperties:
   - error_type
 
 links:
-  - name: slides
-    backref: slide_images
-    label: data_from
-    target_type: slide
-    multiplicity: one_to_one
+  - name: aliquots
+    backref: submitted_methylation_beta_values
+    label: derived_from
+    target_type: aliquot
+    multiplicity: many_to_one
     required: true
 
 required:
   - submitter_id
   - file_name
   - file_size
+  - data_format
   - md5sum
   - data_category
   - data_type
-  - data_format
   - experimental_strategy
-  - slides
+  - aliquots
 
 uniqueKeys:
   - [ id ]
@@ -48,24 +47,32 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "slide_image" ]
+    enum: [ "submitted_methylation_beta_value" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
-    enum: [ "Biospecimen" ]
+    enum:
+      - DNA Methylation
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Slide Image" ]
+    enum:
+      - Methylation Beta Value
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
-      - SVS
+      - TXT
   experimental_strategy:
-    description: "Classification of the slide type with respect to its experimental use."
+    term:
+      $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - Diagnostic Slide
-      - Tissue Slide
-  slides:
+      - Methylation Array
+  platform:
+    term:
+      $ref: "_terms.yaml#/platform"
+    enum:
+      - Illumina Human Methylation 27
+      - Illumina Human Methylation 450
+  aliquots:
     $ref: "_definitions.yaml#/to_one"

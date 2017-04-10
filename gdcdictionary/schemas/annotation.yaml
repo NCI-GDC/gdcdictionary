@@ -4,7 +4,7 @@ id: "annotation"
 title: Annotation
 type: object
 namespace: http://gdc.nci.nih.gov
-category: notation 
+category: notation
 program: '*'
 project: '*'
 description: >
@@ -12,6 +12,7 @@ description: >
   (e.g., pattern, motif, link), that has been associated with data or
   other types of information. (NCIt C44272)
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:
@@ -187,7 +188,7 @@ properties:
   biospecimen_supplements:
     $ref: "_definitions.yaml#/to_many"
   project_id:
-    $ref: "_definitions.yaml#/project_id" 
+    $ref: "_definitions.yaml#/project_id"
   legacy_created_datetime:
     $ref: "_definitions.yaml#/datetime"
   legacy_updated_datetime:

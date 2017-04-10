@@ -9,6 +9,7 @@ program: '*'
 project: '*'
 description: "Data file containing unaligned reads that have not been GDC Harmonized."
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:
@@ -52,7 +53,7 @@ properties:
       $ref: "_terms.yaml#/data_category"
     enum:
       - Sequencing Data
-      - Sequencing Reads 
+      - Sequencing Reads
       - Raw Sequencing Data
   data_type:
     term:

@@ -62,3 +62,18 @@ target/
 
 #DS_store
 .DS_store
+
+#SSL ( THe *.crt is optional )
+*.key
+*.crt
+
+#GDC related files
+gdc-user-token.*
+
+#OpenStack
+admin_auth
+.novarc
+
+#s3 creds
+.s3cfg
+.aws/

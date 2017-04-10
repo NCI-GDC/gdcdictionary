@@ -10,6 +10,7 @@ project: '*'
 description: >
   Data file containing aligned reads that are generated internally by the GDC.
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:
@@ -77,7 +78,7 @@ properties:
       $ref: "_terms.yaml#/data_category"
     enum:
       - Sequencing Data
-      - Sequencing Reads 
+      - Sequencing Reads
       - Raw Sequencing Data
   data_type:
     term:

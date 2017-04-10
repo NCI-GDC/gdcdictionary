@@ -7,10 +7,10 @@ namespace: http://gdc.nci.nih.gov
 category: data_file
 project: '*'
 program: '*'
-description: > 
-  MAF/TSV files that contain all of the somatic mutations for
-  all of the cases for a project. 
+description: >
+  MAF/TSV files that contain all of the somatic mutations for all of the cases for a project.
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:
@@ -51,7 +51,7 @@ required:
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]
-  
+
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:

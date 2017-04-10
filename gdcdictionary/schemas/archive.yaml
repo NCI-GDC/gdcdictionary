@@ -4,7 +4,7 @@ id: "archive"
 title: Archive
 type: object
 namespace: http://gdc.nci.nih.gov
-category: data_file 
+category: data_file
 program: '*'
 project: '*'
 description: >
@@ -12,6 +12,7 @@ description: >
   GDC. Archives may be submitted directly to GDC by a center, assembled by the
   GDC, or obtained by another route. (GDC subclass of NCIt C114463)
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:

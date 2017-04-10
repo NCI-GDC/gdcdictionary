@@ -10,6 +10,7 @@ program: '*'
 description: >
   Data file containing the analysis information from the SRA XML.
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:
@@ -60,7 +61,7 @@ properties:
       $ref: "_terms.yaml#/data_category"
     enum:
       - Sequencing Data
-      - Sequencing Reads 
+      - Sequencing Reads
       - Raw Sequencing Data
   data_type:
     term:

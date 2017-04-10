@@ -10,6 +10,7 @@ program: '*'
 description: >
   Data file containing clinical metadata information.
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:
@@ -65,8 +66,10 @@ properties:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
+      - FoundationOne XML
       - BCR XML
       - XLSX
+      - OMF
   cases:
     $ref: "_definitions.yaml#/to_many"
   archives:

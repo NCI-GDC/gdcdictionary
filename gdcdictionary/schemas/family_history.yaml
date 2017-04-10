@@ -8,9 +8,9 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  Record of a patient's background regarding cancer events 
-  of blood relatives. 
+  Record of a patient's background regarding cancer events of blood relatives.
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:
@@ -76,7 +76,7 @@ properties:
 
   relationship_age_at_diagnosis:
     term:
-      $ref: "_terms.yaml#/age_at_diagnosis"
+      $ref: "_terms.yaml#/relationship_age_at_diagnosis"
     type: number
 
   relationship_primary_diagnosis:
@@ -87,7 +87,7 @@ properties:
   cases:
     $ref: "_definitions.yaml#/to_one"
   project_id:
-    $ref: "_definitions.yaml#/project_id" 
+    $ref: "_definitions.yaml#/project_id"
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:

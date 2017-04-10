@@ -11,6 +11,7 @@ description: >
   Data file containing copy number information that has been lifted over
   and filtered.
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:

@@ -7,15 +7,18 @@ program: '*'
 project: '*'
 category: administrative
 description: >
-  Any specifically defined piece of work that is undertaken or attempted
-  to meet a single requirement. (NCIt C47885)
+  Any specifically defined piece of work that is undertaken or attempted to meet a single
+  requirement. (NCIt C47885)
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:
   - id
   - state
   - released
+  - releasable
+  - intended_release_date
 
 required:
   - code
@@ -115,10 +118,20 @@ properties:
         #                         backwards compatibility
         - legacy
 
-
   released:
     description: |
       To release a project is to tell the GDC to include all submitted
       entities in the next GDC index.
     default: false
     type: boolean
+
+  releasable:
+    description: |
+      A project can only be released by the user when `releasable` is true.
+    default: false
+    type: boolean
+
+  intended_release_date:
+    description: Tracks a Project's intended release date.
+    type: string
+    format: date-time

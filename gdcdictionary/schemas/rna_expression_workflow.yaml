@@ -1,16 +1,17 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "rna_expression_workflow" 
+id: "rna_expression_workflow"
 title: RNA Expression Workflow
 type: object
 namespace: http://gdc.nci.nih.gov
-category: analysis 
+category: analysis
 program: '*'
 project: '*'
 description: >
-  Metadata for the RNA expression pipeline used to quantify RNA gene and exon
-  expression from unharmonized or GDC harmonized data.
+  Metadata for the RNA expression pipeline used to quantify RNA gene and exon expression from
+  unharmonized or GDC harmonized data.
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:
@@ -47,7 +48,7 @@ required:
   - submitter_id
   - workflow_link
   - workflow_type
-  
+
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]

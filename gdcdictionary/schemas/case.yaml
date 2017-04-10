@@ -8,9 +8,10 @@ category: administrative
 program: '*'
 project: '*'
 description: >
-  The collection of all data related to a specific subject in the 
+  The collection of all data related to a specific subject in the
   context of a specific project.
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:
@@ -60,7 +61,7 @@ properties:
   tissue_source_sites:
     $ref: "_definitions.yaml#/to_one"
   project_id:
-    $ref: "_definitions.yaml#/project_id" 
+    $ref: "_definitions.yaml#/project_id"
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:

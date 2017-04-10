@@ -8,9 +8,10 @@ category: analysis
 program: '*'
 project: '*'
 description: >
-  Metadata for the germline mutation calling pipeline used to call variants in
-  the GDC DNA-Seq pipelines.
+  Metadata for the germline mutation calling pipeline used to call variants in the GDC DNA-Seq
+  pipelines.
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:

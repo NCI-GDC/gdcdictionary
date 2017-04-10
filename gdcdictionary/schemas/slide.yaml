@@ -4,13 +4,13 @@ id: "slide"
 title: Slide
 type: object
 namespace: http://gdc.nci.nih.gov
-category: data_bundle
+category: biospecimen
 program: '*'
 project: '*'
 description: >
-  A digital image, microscopic or otherwise, of any sample, portion, or
-  sub-part thereof. (GDC)
+  A digital image, microscopic or otherwise, of any sample, portion, or sub-part thereof. (GDC)
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:
@@ -21,18 +21,25 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: portions
-    backref: slides
-    label: derived_from
-    target_type: portion
-    # this is many_to_many according to relationships in current database
-    multiplicity: many_to_many
+  - exclusive: false
     required: true
+    subgroup:
+      - name: portions
+        backref: slides
+        label: derived_from
+        target_type: portion
+        multiplicity: many_to_many
+        required: false
+      - name: samples
+        backref: slides
+        label: derived_from
+        target_type: sample
+        multiplicity: many_to_many
+        required: false
 
 required:
   - submitter_id
   - section_location
-  - portions
 
 uniqueKeys:
   - [id]
@@ -108,8 +115,10 @@ properties:
     type: number
   portions:
     $ref: "_definitions.yaml#/to_many"
+  samples:
+    $ref: "_definitions.yaml#/to_many"
   project_id:
-    $ref: "_definitions.yaml#/project_id" 
+    $ref: "_definitions.yaml#/project_id"
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:

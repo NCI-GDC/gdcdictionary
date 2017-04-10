@@ -8,9 +8,9 @@ category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing the annotated somatic mutations calls from a harmonized
-  aligned reads file.
+  Data file containing the annotated somatic mutations calls from a harmonized aligned reads file.
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:

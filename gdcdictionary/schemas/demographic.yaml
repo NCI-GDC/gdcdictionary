@@ -8,9 +8,10 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  Data for the characterization of the patient by means of segementing the 
-  population (e.g., characterization by age, sex, or race). 
+  Data for the characterization of the patient by means of segementing the population (e.g.,
+  characterization by age, sex, or race).
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:
@@ -33,7 +34,6 @@ required:
   - race
   - ethnicity
   - gender
-  - year_of_birth
 
 preferred:
   - year_of_death
@@ -79,6 +79,7 @@ properties:
       - asian
       - native hawaiian or other pacific islander
       - other
+      - Unknown
       - not reported
       - not allowed to collect
 
@@ -88,6 +89,7 @@ properties:
     enum:
       - hispanic or latino
       - not hispanic or latino
+      - Unknown
       - not reported
       - not allowed to collect
 
@@ -106,7 +108,7 @@ properties:
   cases:
     $ref: "_definitions.yaml#/to_one"
   project_id:
-    $ref: "_definitions.yaml#/project_id" 
+    $ref: "_definitions.yaml#/project_id"
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:

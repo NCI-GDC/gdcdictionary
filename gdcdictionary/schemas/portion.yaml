@@ -10,6 +10,7 @@ project: '*'
 description: >
   A physical sub-part of any sample.
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:
@@ -59,18 +60,16 @@ properties:
       project. For TCGA this is bcrportionbarcode.
   weight:
     term:
-      $ref: "_terms.yaml#/weight"
+      $ref: "_terms.yaml#/portion_weight"
     type: number
   is_ffpe:
     term:
       $ref: "_terms.yaml#/is_ffpe"
     type: boolean
   creation_datetime:
+    term:
+      $ref: "_terms.yaml#/creation_datetime"
     type: number
-    description: >
-      The datetime of portion creation encoded as seconds from
-      epoch. If no time is given, it is set to 00:00:00 of the date.
-      Replaces dayofcreation/monthofcreation/yearofcreation.
   portion_number:
     term:
       $ref: "_terms.yaml#/portion_number"

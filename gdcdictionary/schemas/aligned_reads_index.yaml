@@ -9,6 +9,7 @@ program: '*'
 project: '*'
 description: "Data file containing the index for a set of aligned reads."
 additionalProperties: false
+submittable: true
 validators: null
 
 systemProperties:

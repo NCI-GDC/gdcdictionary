@@ -10,6 +10,7 @@ project: '*'
 description: >
   Data file containing simple germline variations called from aligned reads.
 additionalProperties: false
+submittable: false
 validators: null
 
 systemProperties:

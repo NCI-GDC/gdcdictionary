@@ -72,7 +72,7 @@ md5sum:
         $ref: "_terms.yaml#/md5sum"
 
 release_state:
-    description: "Release statesd of an entity"
+    description: "Release state of an entity."
     default: unreleased
     enum:
       - unreleased
@@ -80,7 +80,7 @@ release_state:
       - redacted
 
 data_bundle_state:
-    description: "states of a data bundle"
+    description: "State of a data bundle."
     default: submitted
     enum:
         - submitted
@@ -166,7 +166,7 @@ data_file_properties:
     type:
       - string
       - "null"
-    description: "The file id assigned by the submitter" # TOREVIEW
+    description: "The file ID assigned by the submitter." # TOREVIEW
   file_name:
     $ref: "#/file_name"
   file_size:
@@ -199,9 +199,9 @@ workflow_properties:
     type:
       - string
       - "null"
-    description: "The file id assigned by the submitter" # TOREVIEW
+    description: "The file ID assigned by the submitter." # TOREVIEW
   workflow_link:
-    description: "Link to github hash for the CWL workflow used."
+    description: "Link to Github hash for the CWL workflow used."
     type: string
   workflow_version:
     description: "Major version for a GDC workflow."
