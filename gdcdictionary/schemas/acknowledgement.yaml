@@ -7,7 +7,7 @@ namespace: http://gdc.nci.nih.gov
 category: administrative
 program: '*'
 project: '*'
-description: "Acknowledgment of an individual involved in a project."
+description: "Acknowledgement of an individual involved in a project."
 additionalProperties: false
 submittable: true
 validators: null
