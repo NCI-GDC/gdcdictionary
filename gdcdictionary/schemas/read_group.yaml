@@ -111,6 +111,7 @@ properties:
       - Bisulfite-Seq
       - Validation
       - Amplicon
+      - Targeted Sequencing 
       - Other
   RIN:
     term:
