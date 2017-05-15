@@ -547,6 +547,7 @@ properties:
       - Solid Tissue Normal
       - Total RNA
       - Tumor Adjacent Normal – Post Neo-adjuvant Therapy
+      - Tumor
       - Xenograft Tissue
       - Unknown
       - Not Reported
