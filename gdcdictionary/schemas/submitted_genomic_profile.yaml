@@ -27,7 +27,7 @@ links:
     backref: submitted_genomic_profiles
     label: data_from
     target_type: read_group
-    multiplicity: one_to_one
+    multiplicity: one_to_many
     required: true
 
 required:
