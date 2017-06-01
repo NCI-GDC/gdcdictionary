@@ -64,6 +64,11 @@ properties:
     description: >
       The legacy barcode used before prior to the use UUIDs, varies by project.
       For TCGA this is bcrsamplebarcode.
+  blood_fractionation_method:
+    description: >
+      The name or description of the method used to obtain the blood fraction sample. (e.g. Ficoll
+      Method, Novartis Protocol #001, 2000 g centrifuge at 4C with gentle deceleration)
+    type: string
   biospecimen_anatomic_site:
     term:
       $ref: "_terms.yaml#/biospecimen_anatomic_site"
@@ -354,7 +359,7 @@ properties:
     type: string
   collection_datetime:
     description: "Datetime at which the sample was collected."
-    type: string 
+    type: string
   collection_temperature:
     description: "Temperature in centigrade at which the sample was collected."
     type: number
@@ -410,6 +415,9 @@ properties:
       - "Yes"
       - "No"
       - Unknown
+  DNA_yield:
+    description: "The total amount of DNA, in micrograms, that was isolated from the sample."
+    type: number
   freezing_method:
     term:
       $ref: "_terms.yaml#/freezing_method"
@@ -512,11 +520,9 @@ properties:
       - Not Allowed To Collect
   processing_datetime:
     description: "Datetime at which the sample was processed."
-    type: string 
-  sample_type:
-    term:
-      $ref: "_terms.yaml#/sample_type"
     type: string
+  sample_type:
+    description: "Characterization of the sample as either clinical or contrived."
     enum:
       - Additional Metastatic
       - Additional - New Primary
@@ -530,6 +536,8 @@ properties:
       - cfDNA
       - Circulating Tumor Cell (CTC)
       - Control Analyte
+      - Clinical
+      - Contrived
       - ctDNA
       - DNA
       - EBV Immortalized Normal
@@ -563,7 +571,6 @@ properties:
   sample_type_id:
     term:
       $ref: "_terms.yaml#/sample_type_id"
-    type: string
     enum:
       - '01'
       - '02'
@@ -592,6 +599,16 @@ properties:
   sample_volume:
     description: "The volume of the sample in mL."
     type: number
+  shipping_temperature:
+    description: "The average temperature, in centigrade, at which the sample was kept during transportation."
+    type:
+      - number
+      - string
+    oneOf:
+      - enum:
+          - Not Applicable
+          - Not Recorded
+      - type: number
   shortest_dimension:
     term:
       $ref: "_terms.yaml#/shortest_dimension"
@@ -608,6 +625,9 @@ properties:
       - Minutes
       - Hours
       - Days
+  storage_temperature:
+    description: "The temperature, in centigrade, at which the sample was stored."
+    type: number
   time_between_clamping_and_freezing:
     term:
       $ref: "_terms.yaml#/time_between_clamping_and_freezing"
@@ -616,6 +636,22 @@ properties:
     term:
       $ref: "_terms.yaml#/time_between_excision_and_freezing"
     type: string
+  time_to_fractionation:
+    description: "The amount of time, in hours, between the blood draw and the fractionation into its components."
+    type:
+      - number
+      - string
+    oneOf:
+      - enum: ['Not Applicable']
+      - type: number
+  time_to_freezer:
+    description: "The amount of time, in hours, between the completion of fractionation and the storage of the fraction in a freezer."
+    type:
+      - number
+      - string
+    oneOf:
+      - enum: ['Not Applicable']
+      - type: number
   tissue_type:
     term:
       $ref: "_terms.yaml#/tissue_type"
@@ -638,7 +674,6 @@ properties:
   tumor_code:
     term:
       $ref: "_terms.yaml#/tumor_code"
-    type: string
     enum:
       - Non cancerous tissue
       - Diffuse Large B-Cell Lymphoma (DLBCL)
@@ -674,7 +709,6 @@ properties:
   tumor_code_id:
     term:
       $ref: "_terms.yaml#/tumor_code_id"
-    type: string
     enum:
       - "00"
       - "01"

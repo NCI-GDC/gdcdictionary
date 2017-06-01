@@ -62,6 +62,17 @@ properties:
     term:
       $ref: "_terms.yaml#/aliquot_volume"
     type: number
+  analyte_isolation_method:
+    description: >
+      The name or general description of the method used to isolate the analyte (e.g. DNA, RNA, etc.)
+      from the source sample. (e.g. MagMAX Cell-Free DNA Isolation, QIAamp Circulating Nucleic Acid
+      Kit, etc.)
+    type: string
+  analyte_quantifcation_method:
+    description: >
+      The name or general description of the method used to quantify the analyte yield or
+      concentration of the aliquot. (e.g. quantitative PCR, UV Absorbance, etc.)
+    type: string
   ctDNA_method:
     type: string
   amount:
