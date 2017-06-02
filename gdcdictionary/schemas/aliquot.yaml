@@ -68,7 +68,7 @@ properties:
       from the source sample. (e.g. MagMAX Cell-Free DNA Isolation, QIAamp Circulating Nucleic Acid
       Kit, etc.)
     type: string
-  analyte_quantifcation_method:
+  analyte_quantification_method:
     description: >
       The name or general description of the method used to quantify the analyte yield or
       concentration of the aliquot. (e.g. quantitative PCR, UV Absorbance, etc.)
