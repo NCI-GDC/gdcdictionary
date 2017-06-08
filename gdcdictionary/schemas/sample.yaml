@@ -409,6 +409,18 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_sample_procurement"
     type: integer
+  days_to_analysis:
+    description: "The amount of time, in days, between when the sample was collected and when the sample was analyzed (e.g. days from blood draw to immunoassay)."
+    type: integer
+  days_to_processing:
+    description: "The amount of time, in days, between when the sample was collected and when the sample was processed (e.g. days from blood draw to plasma isolation)."
+    type: integer
+  days_to_reception:
+    description: "The amount of time, in days, between when the sample was collected and when the sample was received by the testing lab."
+    type: integer
+  days_to_staining:
+    description: "The amount of time, in days, between when the sample was collected and when the sample was stained."
+    type: integer
   diagnosis_pathologically_confirmed:
     term:
       ref: "_terms.yaml#/diagnosis_pathologically_confirmed"
@@ -675,6 +687,9 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+  tube_identifier:
+    description: "A unique identifier given to a blood tube for identification purposes."
+    type: string
   tube_type:
     description: "The kind of tube used to collect the sample(s) taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes."
     enum:
@@ -760,6 +775,9 @@ properties:
       - Not Reported
       - Not Allowed To Collect
     description: "A description of the tumor from which the sample was derived." # TOREVIEW
+  visit_number:
+    description: "Within the context of a study, the date-ordered numerical designation of the visit during which the sample was procured."
+    type: integer
   wbc_count:
     description: "Count of the white blood cells in a sample."
     type: integer

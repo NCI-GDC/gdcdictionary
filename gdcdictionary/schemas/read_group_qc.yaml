@@ -79,6 +79,11 @@ properties:
     term:
       $ref: "_terms.yaml#/file_name"
     type: string
+  percent_aligned:
+    description: "The percent of reads with at least one reported alignment."
+    type: integer
+    minimum: 0
+    maximum: 100
   percent_gc_content:
     term:
       $ref: "_terms.yaml#/percent_gc_content"
@@ -89,6 +94,9 @@ properties:
     term:
       $ref: "_terms.yaml#/encoding"
     type: string
+  total_aligned_reads:
+    description: "The total number of reads with at least one reported alignment."
+    type: integer
   total_sequences:
     term:
       $ref: "_terms.yaml#/total_sequences"

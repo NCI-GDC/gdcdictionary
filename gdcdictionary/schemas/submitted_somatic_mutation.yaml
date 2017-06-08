@@ -65,5 +65,8 @@ properties:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     type: string 
+  total_variants:
+    description: "The total number of variants detected carrying a base change difference from the reference genome."
+    type: integer
   read_groups:
     $ref: "_definitions.yaml#/to_many"

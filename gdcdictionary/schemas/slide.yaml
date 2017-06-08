@@ -49,13 +49,31 @@ properties:
     type:
       - string
       - "null"
+  apoptotic_concentration:
+    description: "The concentration, in cells/mL, of apoptotic cells in the slide blood."
+    type: number
+  ctc_concentration:
+    description: "The concentration, in cells/mL, of traditional CTC cells (intact and enlarged cell and nucleus, cytokeratin positive, and CD45 negative) in the slide blood."
+    type: number
+  ctc_low_concentration:
+    description: "The concentration, in cells/mL, of CTC-low cells (those with low cytokeratin levels compared to traditional CTCs) in the slide blood."
+    type: number
+  ctc_small_concentration::
+    description: "The concentration, in cells/mL, of CTC-small cells (those with a small nuclear and cellular size relative to traditional CTCs) in the slide blood."
+    type: number
   section_location:
     term:
       $ref: "_terms.yaml#/section_location"
     type: string
+  methanol_added:
+    description: "True/False indicator for if methanol was used in the slide preparation process."
+    type: boolean
   number_proliferating_cells:
     term:
       $ref: "_terms.yaml#/number_proliferating_cells"
+    type: integer
+  number_nucleated_cells:
+    description: "The total number of nucleated cells identified on the slide."
     type: integer
   percent_tumor_cells:
     term:
@@ -103,7 +121,7 @@ properties:
     type: number
   run_datetime:
     $ref: "_definitions.yaml#/datetime"
-  run_name:
+  run_identifier:
     description: "Name, number, or other identifier given to this slide's run."
     type: string
   slide_identifier:
