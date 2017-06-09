@@ -418,7 +418,12 @@ properties:
       - Unknown
   DNA_yield:
     description: "The total amount of DNA, in micrograms, that was isolated from the sample."
-    type: number
+    type:
+      - number
+      - string
+    oneOf:
+      - enum: ['Not Applicable']
+      - type: number
   freezing_method:
     term:
       $ref: "_terms.yaml#/freezing_method"
