@@ -2,6 +2,7 @@
     "type": "sample",
     "submitter_id": "BLGSP-71-06-00019s",
     "biospecimen_anatomic_site": "Adipose",
+    "time_to_freezer": "Not Applicable",
     "composition": "Cell",
     "current_weight": 1,
     "days_to_collection": 25,

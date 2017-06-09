@@ -651,6 +651,7 @@ properties:
     oneOf:
       - enum:
           - Not Applicable
+          - Unknown
       - type: number
   time_to_freezer:
     description: "The amount of time, in hours, between the completion of fractionation and the storage of the fraction in a freezer."
@@ -660,6 +661,7 @@ properties:
     oneOf:
       - enum:
           - Not Applicable
+          - Unknown
       - type: number
   tissue_type:
     term:
@@ -680,6 +682,7 @@ properties:
       - CellSave
       - Streck
       - Acid Citrate Dextrose (ACD)
+      - Not Applicable
   tumor_code:
     term:
       $ref: "_terms.yaml#/tumor_code"
