@@ -418,7 +418,13 @@ properties:
       - Unknown
   DNA_yield:
     description: "The total amount of DNA, in micrograms, that was isolated from the sample."
-    type: number
+    type:
+      - number
+      - string
+    oneOf:
+      - enum:
+          - Not Applicable
+      - type: number
   freezing_method:
     term:
       $ref: "_terms.yaml#/freezing_method"
@@ -643,7 +649,8 @@ properties:
       - number
       - string
     oneOf:
-      - enum: ['Not Applicable']
+      - enum:
+          - Not Applicable
       - type: number
   time_to_freezer:
     description: "The amount of time, in hours, between the completion of fractionation and the storage of the fraction in a freezer."
@@ -651,7 +658,8 @@ properties:
       - number
       - string
     oneOf:
-      - enum: ['Not Applicable']
+      - enum:
+          - Not Applicable
       - type: number
   tissue_type:
     term:
