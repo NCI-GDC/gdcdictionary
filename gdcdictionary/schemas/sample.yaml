@@ -422,7 +422,8 @@ properties:
       - number
       - string
     oneOf:
-      - enum: ['Not Applicable']
+      - enum:
+          - Not Applicable
       - type: number
   freezing_method:
     term:
@@ -648,7 +649,8 @@ properties:
       - number
       - string
     oneOf:
-      - enum: ['Not Applicable']
+      - enum:
+          - Not Applicable
       - type: number
   time_to_freezer:
     description: "The amount of time, in hours, between the completion of fractionation and the storage of the fraction in a freezer."
@@ -656,7 +658,8 @@ properties:
       - number
       - string
     oneOf:
-      - enum: ['Not Applicable']
+      - enum:
+          - Not Applicable
       - type: number
   tissue_type:
     term:
