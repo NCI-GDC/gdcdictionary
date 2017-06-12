@@ -63,6 +63,29 @@ properties:
   biomarker_signal:
     description: "Numeric quantification of the biomarker signal."
     type: number
+  er_localization:
+    description: "Cellular localization of the endoplasmic reticulum as determined by staining."
+    enum:
+      - Nuclear
+      - Cytoplasmic
+      - Both
+      - None
+      - Not Determined 
+  frame_identifier:
+    description: "Name, number, or other identifier given to the frame of the slide from which this image was taken."
+    type: string
+  relative_nuclear_size:
+    description: "The ratio of the single cell's nucleus size to the average of the surrounding cells."
+    type: number
+  relative_nuclear_intensity:
+    description: "The ratio of the single cell's nuclear staining intensity to the average of the surrounding cells."
+    type: number
+  relative_cytokeratin_intensity:
+    description: "The ratio of the single cell's cytokeratin staining intensity to the average of the surrounding cells."
+    type: number
+  relative_er_intensity:
+    description: "The ratio of the single cell's endoplasmic reticulum staining intensity to the average of the surrounding cells."
+    type: number
   slides:
     $ref: "_definitions.yaml#/to_many"
   project_id:

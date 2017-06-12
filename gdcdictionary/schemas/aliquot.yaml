@@ -103,6 +103,21 @@ properties:
   aliquot_concentration_unit:
     description: "The unit of measurement for the concentration."
     type: string
+  cell_identifier:
+    description: "An alternative identifier for a given cell type."
+    type: string
+  days_to_extraction:
+    description: "The amount of time, in days, between when the sample was collected and when the analyte was extracted. (e.g. days between blood draw and DNA extraction)"
+    type: integer
+  elution_buffer_volume:
+    description: "The volume, in microliters, of elution buffer used during analyte extraction."
+    type: number 
+  frame_identifier:
+    description: "Name, number, or other identifier given to the frame of the slide from which this image was taken."
+    type: string
+  slide_identifier:
+    description: "Unique identifier given to the this slide."
+    type: string
   project_id:
     $ref: "_definitions.yaml#/project_id"
   source_center:
