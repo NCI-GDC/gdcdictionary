@@ -159,6 +159,7 @@ project_id:
         $ref: "_terms.yaml#/project_id"
 
 data_file_properties:
+  $ref: "#/ubiquitous_properties"
   file_name:
     $ref: "#/file_name"
   file_size:
@@ -171,6 +172,7 @@ data_file_properties:
     $ref: "#/data_file_error_type"
 
 workflow_properties:
+  $ref: "#/ubiquitous_properties"
   workflow_link:
     description: "Link to Github hash for the CWL workflow used."
     type: string

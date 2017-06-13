@@ -1,14 +1,15 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "experimental_metadata"
-title: Experimental Metadata
+id: "protocol"
+title: Protocol
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://www.bloodpac.org
 category: metadata_file
 project: '*'
 program: '*'
 description: >
-  Data file containing the metadata for the experiment performed.
+  Data file containing the metadata for the experiment performed. A space for protocols, panel data,
+  or any data related to the experimental design.
 additionalProperties: false
 submittable: true
 validators: null
@@ -45,21 +46,26 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "experimental_metadata" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
-    type:
-      - string
+    enum:
+      - Experimental Metadata
+      - Biospecimen Metadata
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Experimental Metadata" ]
+    enum:
+      - Collection and Shipping SOP
+      - Testing Protocol
+      - Testing Kit/Panel Information
+      - Sample Preparation SOP
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
-    type:
-      - string
+    enum:
+      - EXCEL
+      - PDF
+      - TXT
   experiments:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_many"

@@ -3,13 +3,12 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "case"
 title: Case
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://www.bloodpac.org
 category: administrative
 program: '*'
 project: '*'
 description: >
-  The collection of all data related to a specific subject in the
-  context of a specific experiment. 
+  The collection of all data related to a specific subject in the context of a specific experiment. 
 additionalProperties: false
 submittable: true
 validators: null
@@ -26,7 +25,7 @@ links:
     backref: cases
     label: member_of
     target_type: experiment
-    multiplicity: many_to_one
+    multiplicity: many_to_many
     required: true
 
 required:
@@ -37,33 +36,26 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
-# Case properties
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
-  clinical_site:
-    description: "Identifier for the clinical site at which the case was handled."
-    type: string
-  primary_site:
-    description: "Primary site for the case."
-    type: string
-  disease_type:
-    description: "Name of the disease for the case."
-    type: string
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+  index_date:
+    description: >
+      The reference or anchor date used during date obfuscation, where a single date is obscurred by
+      creating one or more date ranges in relation to this date.
+    enum:
+      - Diagnosis
+      - Study Enrollment
+      - First Patient Visit
+  lost_to_followup:
+    description: >
+      A yes/no indicator related to whether a patient was unable to be contacted for follow-up. 
+    enum:
+      - "Yes"
+      - "No"
+      - Not Applicable
+  days_to_lost_to_followup:
+    description: >
+      The number of days between the date used for index and the date the patient was lost to follow-up.
+    type: integer
   experiments: 
-    $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
+    $ref: "_definitions.yaml#/to_many"

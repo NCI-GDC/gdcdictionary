@@ -1,12 +1,11 @@
 {
     "type": "experiment",
     "submitter_id": "experiment_1",
-    "number_experimental_group": 1,
-    "number_samples_per_experimental_group": 12,
-    "experimental_description": "Case/Control, Time Course, Responder/Non-Responder",
-    "experimental_intent": "Temperature, Storage Duration, and Tube Type effects on ctDNA stability",
-    "type_of_sample": "Clinical",
-    "type_of_specimen": "Plasma",
+    "experimental_design": "Clinical",
+    "experimental_objective": "Accuracy",
+    "experimental_setup": "Genetic Analysis",
+    "experimental_description": "WGS of Tumor and Normal from 8 Lung Cancer Patients",
+    "data_description": "Aligned reads BAMs and sequencing assay results",
     "projects": {
         "submitter_id": "P0001"
     }
