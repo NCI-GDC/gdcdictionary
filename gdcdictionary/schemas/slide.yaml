@@ -58,7 +58,7 @@ properties:
   ctc_low_concentration:
     description: "The concentration, in cells/mL, of CTC-low cells (those with low cytokeratin levels compared to traditional CTCs) in the slide blood."
     type: number
-  ctc_small_concentration::
+  ctc_small_concentration:
     description: "The concentration, in cells/mL, of CTC-small cells (those with a small nuclear and cellular size relative to traditional CTCs) in the slide blood."
     type: number
   section_location:
