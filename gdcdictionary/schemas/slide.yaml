@@ -121,7 +121,7 @@ properties:
     type: number
   run_datetime:
     $ref: "_definitions.yaml#/datetime"
-  run_identifier:
+  run_name:
     description: "Name, number, or other identifier given to this slide's run."
     type: string
   slide_identifier:
