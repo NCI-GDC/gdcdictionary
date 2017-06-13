@@ -18,6 +18,9 @@ required:
   #Require core JSON schema fields here if desired, requiring id
   - id
 
+field:
+  type: string
+  pattern: "^[_a-zA-Z0-9]*$"
 
 definitions:
 
@@ -33,13 +36,13 @@ definitions:
       - required
     properties:
       name:
-        type: string
+        $ref: "#/field"
       target_type:
-        type: string
+        $ref: "#/field"
       backref:
-        type: string
+        $ref: "#/field"
       label:
-        type: string
+        $ref: "#/field"
       multiplicity:
         type: string
         enum:
@@ -86,7 +89,7 @@ definitions:
 
 properties:
   category:
-    type: string
+    $ref: "#/field"
     enum:
       - administrative
       - analysis
@@ -97,7 +100,7 @@ properties:
       - data_file
       - index_file
       - metadata_file
-      - notation 
+      - notation
       - qc_bundle
       - TBD
 
@@ -120,7 +123,12 @@ properties:
 
   system_properties:
     type: array
-
+  properties:
+    type: object
+    patternProperties:
+      "^[_a-zA-Z0-9]*$":
+        type: object
+    additionalProperties: false
   links:
     title: "Define a link to other GDC entities"
     type: array
