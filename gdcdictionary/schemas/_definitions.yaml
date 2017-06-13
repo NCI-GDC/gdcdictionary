@@ -58,7 +58,7 @@ file_name:
 
 file_size:
     type: number
-    term: 
+    term:
         $ref: "_terms.yaml#/file_size"
 
 file_format:
@@ -100,7 +100,7 @@ data_file_error_type:
 
 state:
     term:
-        $ref: "_terms.yaml#/state" 
+        $ref: "_terms.yaml#/state"
     default: validated
     downloadable:
         - uploaded
@@ -131,7 +131,7 @@ state:
 
 file_state:
     term:
-        $ref: "_terms.yaml#/file_state" 
+        $ref: "_terms.yaml#/file_state"
     default: registered
     enum:
         - registered
@@ -159,47 +159,18 @@ project_id:
         $ref: "_terms.yaml#/project_id"
 
 data_file_properties:
-  id:
-    $ref: "#/UUID"
-    systemAlias: node_id
-  submitter_id:
-    type:
-      - string
-      - "null"
-    description: "The file ID assigned by the submitter." # TOREVIEW
   file_name:
     $ref: "#/file_name"
   file_size:
     $ref: "#/file_size"
   md5sum:
-    $ref: "#/md5sum" 
+    $ref: "#/md5sum"
   file_state:
     $ref: "#/file_state"
-  state:
-    $ref: "#/state"
   error_type:
     $ref: "#/data_file_error_type"
-  state_comment:
-    type: string
-    description: > 
-      Optional comment about why the file is in the
-      current state, mainly for invalid state.
-  project_id:
-    $ref: "#/project_id"
-  created_datetime:
-    $ref: "#/datetime"
-  updated_datetime:
-    $ref: "#/datetime"
 
 workflow_properties:
-  id:
-    $ref: "#/UUID"
-    systemAlias: node_id
-  submitter_id:
-    type:
-      - string
-      - "null"
-    description: "The file ID assigned by the submitter." # TOREVIEW
   workflow_link:
     description: "Link to Github hash for the CWL workflow used."
     type: string
@@ -210,6 +181,19 @@ workflow_properties:
     $ref: "#/datetime"
   workflow_end_datetime:
     $ref: "#/datetime"
+
+ubiquitous_properties:
+  type:
+    type: string
+  id:
+    $ref: "#/UUID"
+    systemAlias: node_id
+  submitter_id:
+    type:
+      - string
+    description: >
+      A project-specific identifier for a node. This property is the calling card/nickname/alias for
+      a unit of submission. It can be used in place of the UUID for identifying or recalling a node.
   state:
     $ref: "#/state"
   project_id:
