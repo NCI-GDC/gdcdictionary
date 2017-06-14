@@ -38,6 +38,7 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
+
   index_date:
     description: >
       The reference or anchor date used during date obfuscation, where a single date is obscurred by
@@ -57,5 +58,6 @@ properties:
     description: >
       The number of days between the date used for index and the date the patient was lost to follow-up.
     type: integer
+
   experiments: 
     $ref: "_definitions.yaml#/to_many"

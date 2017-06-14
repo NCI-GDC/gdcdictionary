@@ -1,12 +1,14 @@
 {
-    "gender": "male",
+    "gender": "Male",
     "submitter_id": "E9EDB78B-6897-4205-B9AA-0CEF8AAB5A1F_demographic",
-    "year_of_birth": 1652,
-    "race": "white",
+    "days_to_birth": -10652,
+    "race": "White",
     "cases": {
         "submitter_id": "BLGSP-71-06-00019"
     },
     "type": "demographic",
-    "ethnicity": "not hispanic or latino",
-    "year_of_death": 2009
+    "ethnicity": "Not Hispanic or Latino",
+    "days_to_death": 2009,
+    "vital_status": "Dead",
+    "cause_of_death": "Cancer Related"
 }

@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "demographic"
 title: Demographic
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://www.bloodpac.org 
 category: clinical
 program: '*'
 project: '*'
@@ -33,81 +33,60 @@ required:
   - submitter_id
   - cases
 
-preferred:
-  - year_of_death
 
 uniqueKeys:
-  #unclear if want submitter ID for clinical
   - [id]
   - [project_id, submitter_id]
 
 properties:
-  type:
-    type: string
+  $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-
-  state:
-    $ref: "_definitions.yaml#/state"
-
-  submitter_id:
-    type:
-      - string
-      - "null"
-
-  gender:
-    term:
-      $ref: "_terms.yaml#/gender"
+  cause_of_death:
+    description: "Text term to identify the cause of patient death with respect to cancer."
     enum:
-      - female
-      - male
-      - unknown
-      - unspecified
-      - not reported
-
-  race:
-    term:
-      $ref: "_terms.yaml#/race"
-    enum:
-      - white
-      - american indian or alaska native
-      - black or african american
-      - asian
-      - native hawaiian or other pacific islander
-      - other
+      - Cancer Related
+      - Not Cancer Related
       - Unknown
-      - not reported
-      - not allowed to collect
-
+  days_to_birth:
+    description: "The number of days between the index date and the date of patient birth." 
+    type: integer
+  days_to_death:
+    description: "The number of days between the index date and the date of patient death." 
+    type: integer 
   ethnicity:
     term:
       $ref: "_terms.yaml#/ethnicity"
     enum:
-      - hispanic or latino
-      - not hispanic or latino
+      - Hispanic or Latino
+      - Not Hispanic or Latino
       - Unknown
-      - not reported
-      - not allowed to collect
-
-  year_of_birth:
+  gender:
     term:
-      $ref: "_terms.yaml#/year_of_birth"
-    type:
-      - number
-      - "null"
-
-  year_of_death:
+      $ref: "_terms.yaml#/gender"
+    enum:
+      - Female
+      - Male
+      - Unknown
+      - Unspecified
+  race:
     term:
-      $ref: "_terms.yaml#/year_of_death"
-    type: number
+      $ref: "_terms.yaml#/race"
+    enum:
+      - White
+      - American Indian or Alaska Native
+      - Black or African American
+      - Asian
+      - Native Hawaiian or Other Pacific Islander
+      - Other
+      - Unknown
+  vital_status:
+    term:
+      $ref: "_terms.yaml#/vital_status"
+    enum:
+      - Alive
+      - Dead
+      - Lost to Follow-up
+      - Unknown
 
   cases:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

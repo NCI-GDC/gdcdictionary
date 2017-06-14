@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "diagnosis"
 title: Diagnosis
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://www.bloodpac.org
 category: clinical
 program: '*'
 project: '*'
@@ -31,54 +31,20 @@ links:
     required: true
 
 required:
-  - age_at_diagnosis
-  - days_to_last_follow_up
-  - vital_status
-  - primary_diagnosis
-  - morphology
-  - tissue_or_organ_of_origin
-  - site_of_resection_or_biopsy
   - classification_of_tumor
-  - tumor_stage
+  - days_to_diagnosis
+  - morphology
+  - primary_diagnosis
+  - tissue_or_organ_of_origin
   - tumor_grade
-  - progression_or_recurrence
-  - days_to_recurrence
-  - days_to_last_known_disease_status
-  - last_known_disease_status
 
-preferred:
-  - days_to_birth
-  - site_of_resection_or_biopsy
 
 uniqueKeys:
-  #unclear if want submitter ID for clinical
   - [id]
   - [project_id, submitter_id]
 
 properties:
-  type:
-    type: string
-
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-
-  state:
-    $ref: "_definitions.yaml#/state"
-
-  submitter_id:
-    type:
-      - string
-      - "null"
-
-  age_at_diagnosis:
-    term:
-      $ref: "_terms.yaml#/age_at_diagnosis"
-    type:
-      - number
-      - "null"
-    maximum: 32872
-    minimum: 0
+  $ref: "_definitions.yaml#/ubiquitous_properties"
 
   ajcc_clinical_m:
     term:
@@ -92,9 +58,6 @@ properties:
       - MX
       - cM0 (i+)
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
   ajcc_clinical_n:
     term:
       $ref: "_terms.yaml#/ajcc_clinical_n"
@@ -124,9 +87,6 @@ properties:
       - N4
       - NX
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
   ajcc_clinical_stage:
     term:
       $ref: "_terms.yaml#/ajcc_clinical_stage"
@@ -160,9 +120,6 @@ properties:
       - Stage Tis
       - Stage X
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
   ajcc_clinical_t:
     term:
       $ref: "_terms.yaml#/ajcc_clinical_t"
@@ -202,9 +159,6 @@ properties:
       - Tis (LCIS)
       - Tis (Paget's)
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
   ajcc_pathologic_m:
     term:
       $ref: "_terms.yaml#/ajcc_pathologic_m"
@@ -218,9 +172,6 @@ properties:
       - MX
       - cM0 (i+)
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
   ajcc_pathologic_n:
     term:
       $ref: "_terms.yaml#/ajcc_pathologic_n"
@@ -250,9 +201,6 @@ properties:
       - N4
       - NX
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
   ajcc_pathologic_stage:
     term:
       $ref: "_terms.yaml#/ajcc_pathologic_stage"
@@ -284,7 +232,6 @@ properties:
       - Stage IVC
       - Stage Tis
       - Stage X
-
   ajcc_pathologic_t:
     term:
       $ref: "_terms.yaml#/ajcc_pathologic_t"
@@ -324,251 +271,50 @@ properties:
       - Tis (LCIS)
       - Tis (Paget's)
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
-  ann_arbor_b_symptoms:
-    term:
-      $ref: "_terms.yaml#/ann_arbor_b_symptoms"
+  best_overall_response:
+    description: "The best improvement achieved throughout the entire course of protocol treatment."
     enum:
-      - "Yes"
-      - "No"
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
-  ann_arbor_clinical_stage:
-    term:
-      $ref: "_terms.yaml#/ann_arbor_clinical_stage"
-    enum:
-      - Stage I
-      - Stage II
-      - Stage III
-      - Stage IV
-
-  ann_arbor_extranodal_involvement:
-    term:
-      $ref: "_terms.yaml#/ann_arbor_extranodal_involvement"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
-  ann_arbor_pathologic_stage:
-    term:
-      $ref: "_terms.yaml#/ann_arbor_pathologic_stage"
-    enum:
-      - Stage I
-      - Stage II
-      - Stage III
-      - Stage IV
-
-  burkitt_lymphoma_clinical_variant:
-    term:
-      $ref: "_terms.yaml#/burkitt_lymphoma_clinical_variant"
-    enum:
-      - "Endemic"
-      - "Immunodeficiency-associated, adult"
-      - "Immunodeficiency-associated, pediatric"
-      - "Sporadic, adult"
-      - "Sporadic, pediatric"
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
-  cause_of_death:
-    term:
-      $ref: "_terms.yaml#/cause_of_death"
-    enum:
-      - Cancer Related 
-      - Not Cancer Related 
-      - Unknown
-
-  circumferential_resection_margin:
-    term:
-      $ref: "_terms.yaml#/circumferential_resection_margin"
-    type: number
-
+      - AJ-Adjuvant Therapy
+      - CPD-Clinical Progression
+      - CR-Complete Response
+      - CRU-Complete Response Unconfirmed
+      - DU-Disease Unchanged
+      - IMR-Immunoresponse
+      - IPD-Immunoprogression
+      - MR-Minimal/Marginal response
+      - MX-Mixed response
+      - Non-CR/Non-PD-Non-CR/Non-PD
+      - NPB-No Palliative Benefit
+      - NR-NO RESPONSE
+      - PA-Palliative Therapy
+      - PB-Palliative Benefit
+      - PD-Progressive Disease
+      - PPD-Pseudoprogression
+      - PR-Partial Response
+      - PSR-Pseudoresponse
+      - RD-Responsive Disease
+      - RP-Response
+      - RPD-Radiographic Progressive Disease
+      - sCR-Stringent Complete Response
+      - SD-Stable Disease
+      - SPD-Surgical progression
+      - TE-Too early
+      - VGPR-Very Good Partial Response
   classification_of_tumor:
     term:
       $ref: "_terms.yaml#/classification_of_tumor"
     enum:
-      - primary
-      - metastasis
-      - recurrence
-      - other
+      - Primary
+      - Metastasis
+      - Recurrence
+      - Other
       - Unknown
-      - not reported
-      - Not Allowed To Collect
-
-  colon_polyps_history:
-    term:
-      $ref: "_terms.yaml#/colon_polyps_history"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
-  days_to_birth:
-    term:
-      $ref: "_terms.yaml#/days_to_birth"
-    type:
-      - number
-      - "null"
-    maximum: 0
-    minimum: -32872
-
-  days_to_death:
-    term:
-      $ref: "_terms.yaml#/days_to_death"
-    type: number
-    maximum: 32872
-    minimum: 0
-
-  days_to_hiv_diagnosis:
-    term:
-      $ref: "_terms.yaml#/days_to_hiv_diagnosis"
-    type:
-      - number
-      - "null"
-
-  days_to_last_follow_up:
-    term:
-      $ref: "_terms.yaml#/days_to_last_follow_up"
-    type:
-      - number
-      - "null"
-
-  days_to_last_known_disease_status:
-    term:
-      $ref: "_terms.yaml#/days_to_last_known_disease_status"
-    type:
-      - number
-      - "null"
-
-  days_to_new_event:
-    term:
-      $ref: "_terms.yaml#/days_to_new_event"
-    type:
-      - number
-      - "null"
-
-  days_to_recurrence:
-    term:
-      $ref: "_terms.yaml#/days_to_recurrence"
-    type:
-      - number
-      - "null"
-
-  figo_stage:
-    term:
-      $ref: "_terms.yaml#/figo_stage"
-    enum:
-      - Stage 0
-      - Stage I
-      - Stage IA
-      - Stage IA1
-      - Stage IA2
-      - Stage IB
-      - Stage IB1
-      - Stage IB2
-      - Stage IC
-      - Stage II
-      - Stage IIA
-      - Stage IIA1
-      - Stage IIA2
-      - Stage IIB
-      - Stage III
-      - Stage IIIA
-      - Stage IIIB
-      - Stage IIIC
-      - Stage IIIC1
-      - Stage IIIC2
-      - Stage IV
-      - Stage IVA
-      - Stage IVB
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
-  hiv_positive:
-    term:
-      $ref: "_terms.yaml#/hiv_positive"
-    enum:
-      - "Yes"
-      - "No" 
-      - Unknown
-
-  hpv_positive_type:
-    term:
-      $ref: "_terms.yaml#/hpv_positive_type"
-    enum:
-      - HPV 16
-      - HPV 18
-      - Other HPV type(s)
-      - Unknown
-
-  hpv_status:
-    term:
-      $ref: "_terms.yaml#/hpv_status"
-    enum:
-      - Negative
-      - Positive
-      - Unknown
-
-  last_known_disease_status:
-    term:
-      $ref: "_terms.yaml#/last_known_disease_status"
-    enum:
-      - Distant met recurrence/progression
-      - Loco-regional recurrence/progression
-      - Biochemical evidence of disease without structural correlate
-      - Tumor free
-      - Unknown tumor status
-      - With tumor
-      - not reported
-      - Not Allowed To Collect
-
-  laterality:
-    term:
-      $ref: "_terms.yaml#/laterality"
-    enum:
-      - Bilateral
-      - Left
-      - Right
-      - Unknown
-
-  ldh_level_at_diagnosis:
-    term:
-      $ref: "_terms.yaml#/ldh_level_at_diagnosis"
-    type:
-      - number
-      - "null"
-
-  ldh_normal_range_upper:
-    term:
-      $ref: "_terms.yaml#/ldh_normal_range_upper"
-    type:
-      - number
-      - "null"
-
-  lymph_nodes_positive:
-    term:
-      $ref: "_terms.yaml#/lymph_nodes_positive"
-    type: integer 
-
-  lymphatic_invasion_present:
-    term:
-      $ref: "_terms.yaml#/lymphatic_invasion_present"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-
+  days_to_best_overall_response:
+    description: "Number of days between the date used for index and the date of the patient's best overall response."
+    type: integer
+  days_to_diagnosis:
+    description: "Number of days between the date used for index and the date of the patient's diagnosis."
+    type: integer
   method_of_diagnosis:
     term:
       $ref: "_terms.yaml#/method_of_diagnosis"
@@ -590,170 +336,3567 @@ properties:
       - Surgical Resection
       - Ultrasound Guided Biopsy
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
   morphology:
     term:
       $ref: "_terms.yaml#/morphology"
-    type: string
-
-  new_event_anatomic_site:
-    term:
-      $ref: "_terms.yaml#/new_event_anatomic_site"
     enum:
-      - Abdomen
-      - Adrenal
-      - Anus
-      - Appendix
-      - Ascites/Peritoneum
-      - Axillary lymph nodes
-      - Bladder
-      - Bone
-      - Bone Marrow
-      - Brain
-      - Breast
-      - Cervical lymph nodes
-      - Cervix
-      - Colon
-      - Conjunctiva
-      - Contralateral Pleura
-      - Distant Metastasis
-      - Epididymis
-      - Epidural
-      - Epitrochlear lymph nodes
-      - Esophagus
-      - Extremities
-      - Femoral lymph nodes
-      - Gallbladder
-      - Gastrointestinal/Abdominal
-      - Head & Neck
-      - Heart
-      - Hilar lymph nodes
-      - Hypopharynx
-      - Iliac Lymph Node
-      - Iliac-common lymph nodes
-      - Iliac-external lymph nodes
-      - Inguinal lymph nodes
-      - Intraocular
-      - Ipsilateral Chest Cavity
-      - Ipsilateral Chest Wall
-      - Ipsilateral Lymph Nodes
-      - Ipsilateral Pleura
-      - Kidney
-      - Large Intestine
-      - Larynx
-      - Leptomeninges
-      - Liver
-      - Lung
-      - Lymph Node Only
-      - Lymph Node(s)
-      - Mandible
-      - Maxilla
-      - Mediastinal Soft Tissue
-      - Mediastinal lymph nodes
-      - Mediastinal/Intra-thoracic
-      - Mesenteric lymph nodes
-      - Nasal Soft Tissue
-      - Nasopharynx
-      - No Known Extranodal Involvement
-      - Non-regional / Distant Lymph Nodes
+      - 8000/0
+      - 8000/1
+      - 8000/3
+      - 8000/6
+      - 8000/9
+      - 8001/0
+      - 8001/1
+      - 8001/3
+      - 8002/3
+      - 8003/3
+      - 8004/3
+      - 8005/0
+      - 8005/3
+      - 8010/0
+      - 8010/2
+      - 8010/3
+      - 8010/6
+      - 8010/9
+      - 8011/0
+      - 8011/3
+      - 8012/3
+      - 8013/3
+      - 8014/3
+      - 8015/3
+      - 8020/3
+      - 8021/3
+      - 8022/3
+      - 8030/3
+      - 8031/3
+      - 8032/3
+      - 8033/3
+      - 8034/3
+      - 8035/3
+      - 8040/0
+      - 8040/1
+      - 8041/3
+      - 8042/3
+      - 8043/3
+      - 8044/3
+      - 8045/3
+      - 8046/3
+      - 8050/0
+      - 8050/2
+      - 8050/3
+      - 8051/0
+      - 8051/3
+      - 8052/0
+      - 8052/2
+      - 8052/3
+      - 8053/0
+      - 8060/0
+      - 8070/2
+      - 8070/3
+      - 8070/6
+      - 8071/3
+      - 8072/3
+      - 8073/3
+      - 8074/3
+      - 8075/3
+      - 8076/2
+      - 8076/3
+      - 8077/0
+      - 8077/2
+      - 8078/3
+      - 8080/2
+      - 8081/2
+      - 8082/3
+      - 8083/3
+      - 8084/3
+      - 8090/1
+      - 8090/3
+      - 8091/3
+      - 8092/3
+      - 8093/3
+      - 8094/3
+      - 8095/3
+      - 8096/0
+      - 8097/3
+      - 8098/3
+      - 8100/0
+      - 8101/0
+      - 8102/0
+      - 8102/3
+      - 8103/0
+      - 8110/0
+      - 8110/3
+      - 8120/0
+      - 8120/1
+      - 8120/2
+      - 8120/3
+      - 8121/0
+      - 8121/1
+      - 8121/3
+      - 8122/3
+      - 8123/3
+      - 8124/3
+      - 8130/1
+      - 8130/2
+      - 8130/3
+      - 8131/3
+      - 8140/0
+      - 8140/1
+      - 8140/2
+      - 8140/3
+      - 8140/6
+      - 8141/3
+      - 8142/3
+      - 8143/3
+      - 8144/3
+      - 8145/3
+      - 8146/0
+      - 8147/0
+      - 8147/3
+      - 8148/0
+      - 8148/2
+      - 8149/0
+      - 8150/0
+      - 8150/1
+      - 8150/3
+      - 8151/0
+      - 8151/3
+      - 8152/1
+      - 8152/3
+      - 8153/1
+      - 8153/3
+      - 8154/3
+      - 8155/1
+      - 8155/3
+      - 8156/1
+      - 8156/3
+      - 8158/1
+      - 8160/0
+      - 8160/3
+      - 8161/0
+      - 8161/3
+      - 8162/3
+      - 8163/0
+      - 8163/2
+      - 8163/3
+      - 8170/0
+      - 8170/3
+      - 8171/3
+      - 8172/3
+      - 8173/3
+      - 8174/3
+      - 8175/3
+      - 8180/3
+      - 8190/0
+      - 8190/3
+      - 8191/0
+      - 8200/0
+      - 8200/3
+      - 8201/2
+      - 8201/3
+      - 8202/0
+      - 8204/0
+      - 8210/0
+      - 8210/2
+      - 8210/3
+      - 8211/0
+      - 8211/3
+      - 8212/0
+      - 8213/0
+      - 8213/3
+      - 8214/3
+      - 8215/3
+      - 8220/0
+      - 8220/3
+      - 8221/0
+      - 8221/3
+      - 8230/2
+      - 8230/3
+      - 8231/3
+      - 8240/1
+      - 8240/3
+      - 8241/3
+      - 8242/1
+      - 8242/3
+      - 8243/3
+      - 8244/3
+      - 8245/1
+      - 8245/3
+      - 8246/3
+      - 8247/3
+      - 8248/1
+      - 8249/3
+      - 8250/1
+      - 8250/3
+      - 8251/0
+      - 8251/3
+      - 8252/3
+      - 8253/3
+      - 8254/3
+      - 8255/3
+      - 8260/0
+      - 8260/3
+      - 8261/0
+      - 8261/2
+      - 8261/3
+      - 8262/3
+      - 8263/0
+      - 8263/2
+      - 8263/3
+      - 8264/0
+      - 8265/3
+      - 8270/0
+      - 8270/3
+      - 8271/0
+      - 8272/0
+      - 8272/3
+      - 8280/0
+      - 8280/3
+      - 8281/0
+      - 8281/3
+      - 8290/0
+      - 8290/3
+      - 8300/0
+      - 8300/3
+      - 8310/0
+      - 8310/3
+      - 8311/1
+      - 8312/3
+      - 8313/0
+      - 8313/1
+      - 8313/3
+      - 8314/3
+      - 8315/3
+      - 8316/3
+      - 8317/3
+      - 8318/3
+      - 8319/3
+      - 8320/3
+      - 8321/0
+      - 8322/0
+      - 8322/3
+      - 8323/0
+      - 8323/3
+      - 8324/0
+      - 8325/0
+      - 8330/0
+      - 8330/1
+      - 8330/3
+      - 8331/3
+      - 8332/3
+      - 8333/0
+      - 8333/3
+      - 8334/0
+      - 8335/3
+      - 8336/0
+      - 8337/3
+      - 8340/3
+      - 8341/3
+      - 8342/3
+      - 8343/3
+      - 8344/3
+      - 8345/3
+      - 8346/3
+      - 8347/3
+      - 8350/3
+      - 8360/1
+      - 8361/0
+      - 8370/0
+      - 8370/3
+      - 8371/0
+      - 8372/0
+      - 8373/0
+      - 8374/0
+      - 8375/0
+      - 8380/0
+      - 8380/1
+      - 8380/3
+      - 8381/0
+      - 8381/1
+      - 8381/3
+      - 8382/3
+      - 8383/3
+      - 8384/3
+      - 8390/0
+      - 8390/3
+      - 8391/0
+      - 8392/0
+      - 8400/0
+      - 8400/1
+      - 8400/3
+      - 8401/0
+      - 8401/3
+      - 8402/0
+      - 8402/3
+      - 8403/0
+      - 8403/3
+      - 8404/0
+      - 8405/0
+      - 8406/0
+      - 8407/0
+      - 8407/3
+      - 8408/0
+      - 8408/1
+      - 8408/3
+      - 8409/0
+      - 8409/3
+      - 8410/0
+      - 8410/3
+      - 8413/3
+      - 8420/0
+      - 8420/3
+      - 8430/1
+      - 8430/3
+      - 8440/0
+      - 8440/3
+      - 8441/0
+      - 8441/3
+      - 8442/1
+      - 8443/0
+      - 8444/1
+      - 8450/0
+      - 8450/3
+      - 8451/1
+      - 8452/1
+      - 8452/3
+      - 8453/0
+      - 8453/2
+      - 8453/3
+      - 8454/0
+      - 8460/0
+      - 8460/3
+      - 8461/0
+      - 8461/3
+      - 8462/1
+      - 8463/1
+      - 8470/0
+      - 8470/2
+      - 8470/3
+      - 8471/0
+      - 8471/3
+      - 8472/1
+      - 8473/1
+      - 8480/0
+      - 8480/1
+      - 8480/3
+      - 8480/6
+      - 8481/3
+      - 8482/3
+      - 8490/3
+      - 8490/6
+      - 8500/2
+      - 8500/3
+      - 8501/2
+      - 8501/3
+      - 8502/3
+      - 8503/0
+      - 8503/2
+      - 8503/3
+      - 8504/0
+      - 8504/2
+      - 8504/3
+      - 8505/0
+      - 8506/0
+      - 8507/2
+      - 8508/3
+      - 8510/3
+      - 8512/3
+      - 8513/3
+      - 8514/3
+      - 8520/2
+      - 8520/3
+      - 8521/3
+      - 8522/2
+      - 8522/3
+      - 8523/3
+      - 8524/3
+      - 8525/3
+      - 8530/3
+      - 8540/3
+      - 8541/3
+      - 8542/3
+      - 8543/3
+      - 8550/0
+      - 8550/1
+      - 8550/3
+      - 8551/3
+      - 8552/3
+      - 8560/0
+      - 8560/3
+      - 8561/0
+      - 8562/3
+      - 8570/3
+      - 8571/3
+      - 8572/3
+      - 8573/3
+      - 8574/3
+      - 8575/3
+      - 8576/3
+      - 8580/0
+      - 8580/1
+      - 8580/3
+      - 8581/1
+      - 8581/3
+      - 8582/1
+      - 8582/3
+      - 8583/1
+      - 8583/3
+      - 8584/1
+      - 8584/3
+      - 8585/1
+      - 8585/3
+      - 8586/3
+      - 8587/0
+      - 8588/3
+      - 8589/3
+      - 8590/1
+      - 8591/1
+      - 8592/1
+      - 8593/1
+      - 8600/0
+      - 8600/3
+      - 8601/0
+      - 8602/0
+      - 8610/0
+      - 8620/1
+      - 8620/3
+      - 8621/1
+      - 8622/1
+      - 8623/1
+      - 8630/0
+      - 8630/1
+      - 8630/3
+      - 8631/0
+      - 8631/1
+      - 8631/3
+      - 8632/1
+      - 8633/1
+      - 8634/1
+      - 8634/3
+      - 8640/1
+      - 8640/3
+      - 8641/0
+      - 8642/1
+      - 8650/0
+      - 8650/1
+      - 8650/3
+      - 8660/0
+      - 8670/0
+      - 8670/3
+      - 8671/0
+      - 8680/0
+      - 8680/1
+      - 8680/3
+      - 8681/1
+      - 8682/1
+      - 8683/0
+      - 8690/1
+      - 8691/1
+      - 8692/1
+      - 8693/1
+      - 8693/3
+      - 8700/0
+      - 8700/3
+      - 8710/3
+      - 8711/0
+      - 8711/3
+      - 8712/0
+      - 8713/0
+      - 8720/0
+      - 8720/2
+      - 8720/3
+      - 8721/3
+      - 8722/0
+      - 8722/3
+      - 8723/0
+      - 8723/3
+      - 8725/0
+      - 8726/0
+      - 8727/0
+      - 8728/0
+      - 8728/1
+      - 8728/3
+      - 8730/0
+      - 8730/3
+      - 8740/0
+      - 8740/3
+      - 8741/2
+      - 8741/3
+      - 8742/2
+      - 8742/3
+      - 8743/3
+      - 8744/3
+      - 8745/3
+      - 8746/3
+      - 8750/0
+      - 8760/0
+      - 8761/0
+      - 8761/1
+      - 8761/3
+      - 8762/1
+      - 8770/0
+      - 8770/3
+      - 8771/0
+      - 8771/3
+      - 8772/0
+      - 8772/3
+      - 8773/3
+      - 8774/3
+      - 8780/0
+      - 8780/3
+      - 8790/0
+      - 8800/0
+      - 8800/3
+      - 8800/9
+      - 8801/3
+      - 8802/3
+      - 8803/3
+      - 8804/3
+      - 8805/3
+      - 8806/3
+      - 8810/0
+      - 8810/1
+      - 8810/3
+      - 8811/0
+      - 8811/3
+      - 8812/0
+      - 8812/3
+      - 8813/0
+      - 8813/3
+      - 8814/3
+      - 8815/0
+      - 8815/3
+      - 8820/0
+      - 8821/1
+      - 8822/1
+      - 8823/0
+      - 8824/0
+      - 8824/1
+      - 8825/0
+      - 8825/1
+      - 8826/0
+      - 8827/1
+      - 8830/0
+      - 8830/1
+      - 8830/3
+      - 8831/0
+      - 8832/0
+      - 8832/3
+      - 8833/3
+      - 8834/1
+      - 8835/1
+      - 8836/1
+      - 8840/0
+      - 8840/3
+      - 8841/1
+      - 8842/0
+      - 8850/0
+      - 8850/1
+      - 8850/3
+      - 8851/0
+      - 8851/3
+      - 8852/0
+      - 8852/3
+      - 8853/3
+      - 8854/0
+      - 8854/3
+      - 8855/3
+      - 8856/0
+      - 8857/0
+      - 8857/3
+      - 8858/3
+      - 8860/0
+      - 8861/0
+      - 8862/0
+      - 8870/0
+      - 8880/0
+      - 8881/0
+      - 8890/0
+      - 8890/1
+      - 8890/3
+      - 8891/0
+      - 8891/3
+      - 8892/0
+      - 8893/0
+      - 8894/0
+      - 8894/3
+      - 8895/0
+      - 8895/3
+      - 8896/3
+      - 8897/1
+      - 8898/1
+      - 8900/0
+      - 8900/3
+      - 8901/3
+      - 8902/3
+      - 8903/0
+      - 8904/0
+      - 8905/0
+      - 8910/3
+      - 8912/3
+      - 8920/3
+      - 8921/3
+      - 8930/0
+      - 8930/3
+      - 8931/3
+      - 8932/0
+      - 8933/3
+      - 8934/3
+      - 8935/0
+      - 8935/1
+      - 8935/3
+      - 8936/0
+      - 8936/1
+      - 8936/3
+      - 8940/0
+      - 8940/3
+      - 8941/3
+      - 8950/3
+      - 8951/3
+      - 8959/0
+      - 8959/1
+      - 8959/3
+      - 8960/1
+      - 8960/3
+      - 8963/3
+      - 8964/3
+      - 8965/0
+      - 8966/0
+      - 8967/0
+      - 8970/3
+      - 8971/3
+      - 8972/3
+      - 8973/3
+      - 8974/1
+      - 8975/1
+      - 8980/3
+      - 8981/3
+      - 8982/0
+      - 8982/3
+      - 8983/0
+      - 8990/0
+      - 8990/1
+      - 8990/3
+      - 8991/3
+      - 9000/0
+      - 9000/1
+      - 9000/3
+      - 9010/0
+      - 9011/0
+      - 9012/0
+      - 9013/0
+      - 9014/0
+      - 9014/1
+      - 9014/3
+      - 9015/0
+      - 9015/1
+      - 9015/3
+      - 9016/0
+      - 9020/0
+      - 9020/1
+      - 9020/3
+      - 9030/0
+      - 9040/0
+      - 9040/3
+      - 9041/3
+      - 9042/3
+      - 9043/3
+      - 9044/3
+      - 9050/0
+      - 9050/3
+      - 9051/0
+      - 9051/3
+      - 9052/0
+      - 9052/3
+      - 9053/3
+      - 9054/0
+      - 9055/0
+      - 9055/1
+      - 9060/3
+      - 9061/3
+      - 9062/3
+      - 9063/3
+      - 9064/2
+      - 9064/3
+      - 9065/3
+      - 9070/3
+      - 9071/3
+      - 9072/3
+      - 9073/1
+      - 9080/0
+      - 9080/1
+      - 9080/3
+      - 9081/3
+      - 9082/3
+      - 9083/3
+      - 9084/0
+      - 9084/3
+      - 9085/3
+      - 9090/0
+      - 9090/3
+      - 9091/1
+      - 9100/0
+      - 9100/1
+      - 9100/3
+      - 9101/3
+      - 9102/3
+      - 9103/0
+      - 9104/1
+      - 9105/3
+      - 9110/0
+      - 9110/1
+      - 9110/3
+      - 9120/0
+      - 9120/3
+      - 9121/0
+      - 9122/0
+      - 9123/0
+      - 9124/3
+      - 9125/0
+      - 9130/0
+      - 9130/1
+      - 9130/3
+      - 9131/0
+      - 9132/0
+      - 9133/1
+      - 9133/3
+      - 9135/1
+      - 9136/1
+      - 9140/3
+      - 9141/0
+      - 9142/0
+      - 9150/0
+      - 9150/1
+      - 9150/3
+      - 9160/0
+      - 9161/0
+      - 9161/1
+      - 9170/0
+      - 9170/3
+      - 9171/0
+      - 9172/0
+      - 9173/0
+      - 9174/0
+      - 9174/1
+      - 9175/0
+      - 9180/0
+      - 9180/3
+      - 9181/3
+      - 9182/3
+      - 9183/3
+      - 9184/3
+      - 9185/3
+      - 9186/3
+      - 9187/3
+      - 9191/0
+      - 9192/3
+      - 9193/3
+      - 9194/3
+      - 9195/3
+      - 9200/0
+      - 9200/1
+      - 9210/0
+      - 9210/1
+      - 9220/0
+      - 9220/1
+      - 9220/3
+      - 9221/0
+      - 9221/3
+      - 9230/0
+      - 9230/3
+      - 9231/3
+      - 9240/3
+      - 9241/0
+      - 9242/3
+      - 9243/3
+      - 9250/1
+      - 9250/3
+      - 9251/1
+      - 9251/3
+      - 9252/0
+      - 9252/3
+      - 9260/3
+      - 9261/3
+      - 9262/0
+      - 9270/0
+      - 9270/1
+      - 9270/3
+      - 9271/0
+      - 9272/0
+      - 9273/0
+      - 9274/0
+      - 9275/0
+      - 9280/0
+      - 9281/0
+      - 9282/0
+      - 9290/0
+      - 9290/3
+      - 9300/0
+      - 9301/0
+      - 9302/0
+      - 9310/0
+      - 9310/3
+      - 9311/0
+      - 9312/0
+      - 9320/0
+      - 9321/0
+      - 9322/0
+      - 9330/0
+      - 9330/3
+      - 9340/0
+      - 9341/1
+      - 9342/3
+      - 9350/1
+      - 9351/1
+      - 9352/1
+      - 9360/1
+      - 9361/1
+      - 9362/3
+      - 9363/0
+      - 9364/3
+      - 9365/3
+      - 9370/3
+      - 9371/3
+      - 9372/3
+      - 9373/0
+      - 9380/3
+      - 9381/3
+      - 9382/3
+      - 9383/1
+      - 9384/1
+      - 9390/0
+      - 9390/1
+      - 9390/3
+      - 9391/3
+      - 9392/3
+      - 9393/3
+      - 9394/1
+      - 9395/3
+      - 9400/3
+      - 9401/3
+      - 9410/3
+      - 9411/3
+      - 9412/1
+      - 9413/0
+      - 9420/3
+      - 9421/1
+      - 9423/3
+      - 9424/3
+      - 9425/3
+      - 9430/3
+      - 9431/1
+      - 9432/1
+      - 9440/3
+      - 9441/3
+      - 9442/1
+      - 9442/3
+      - 9444/1
+      - 9450/3
+      - 9451/3
+      - 9460/3
+      - 9470/3
+      - 9471/3
+      - 9472/3
+      - 9473/3
+      - 9474/3
+      - 9480/3
+      - 9490/0
+      - 9490/3
+      - 9491/0
+      - 9492/0
+      - 9493/0
+      - 9500/3
+      - 9501/0
+      - 9501/3
+      - 9502/0
+      - 9502/3
+      - 9503/3
+      - 9504/3
+      - 9505/1
+      - 9505/3
+      - 9506/1
+      - 9507/0
+      - 9508/3
+      - 9509/1
+      - 9510/0
+      - 9510/3
+      - 9511/3
+      - 9512/3
+      - 9513/3
+      - 9514/1
+      - 9520/3
+      - 9521/3
+      - 9522/3
+      - 9523/3
+      - 9530/0
+      - 9530/1
+      - 9530/3
+      - 9531/0
+      - 9532/0
+      - 9533/0
+      - 9534/0
+      - 9535/0
+      - 9537/0
+      - 9538/1
+      - 9538/3
+      - 9539/1
+      - 9539/3
+      - 9540/0
+      - 9540/1
+      - 9540/3
+      - 9541/0
+      - 9550/0
+      - 9560/0
+      - 9560/1
+      - 9560/3
+      - 9561/3
+      - 9562/0
+      - 9570/0
+      - 9571/0
+      - 9571/3
+      - 9580/0
+      - 9580/3
+      - 9581/3
+      - 9582/0
+      - 9590/3
+      - 9591/3
+      - 9596/3
+      - 9597/3
+      - 9650/3
+      - 9651/3
+      - 9652/3
+      - 9653/3
+      - 9654/3
+      - 9655/3
+      - 9659/3
+      - 9661/3
+      - 9662/3
+      - 9663/3
+      - 9664/3
+      - 9665/3
+      - 9667/3
+      - 9670/3
+      - 9671/3
+      - 9673/3
+      - 9675/3
+      - 9678/3
+      - 9679/3
+      - 9680/3
+      - 9684/3
+      - 9687/3
+      - 9688/3
+      - 9689/3
+      - 9690/3
+      - 9691/3
+      - 9695/3
+      - 9698/3
+      - 9699/3
+      - 9700/3
+      - 9701/3
+      - 9702/3
+      - 9705/3
+      - 9708/3
+      - 9709/3
+      - 9712/3
+      - 9714/3
+      - 9716/3
+      - 9717/3
+      - 9718/3
+      - 9719/3
+      - 9724/3
+      - 9725/3
+      - 9726/3
+      - 9727/3
+      - 9728/3
+      - 9729/3
+      - 9731/3
+      - 9732/3
+      - 9733/3
+      - 9734/3
+      - 9735/3
+      - 9737/3
+      - 9738/3
+      - 9740/1
+      - 9740/3
+      - 9741/1
+      - 9741/3
+      - 9742/3
+      - 9750/3
+      - 9751/1
+      - 9751/3
+      - 9752/1
+      - 9753/1
+      - 9754/3
+      - 9755/3
+      - 9756/3
+      - 9757/3
+      - 9758/3
+      - 9759/3
+      - 9760/3
+      - 9761/3
+      - 9762/3
+      - 9764/3
+      - 9765/1
+      - 9766/1
+      - 9767/1
+      - 9768/1
+      - 9769/1
+      - 9800/3
+      - 9801/3
+      - 9805/3
+      - 9806/3
+      - 9807/3
+      - 9808/3
+      - 9809/3
+      - 9811/3
+      - 9812/3
+      - 9813/3
+      - 9814/3
+      - 9815/3
+      - 9816/3
+      - 9817/3
+      - 9818/3
+      - 9820/3
+      - 9823/3
+      - 9826/3
+      - 9827/3
+      - 9831/3
+      - 9832/3
+      - 9833/3
+      - 9834/3
+      - 9835/3
+      - 9836/3
+      - 9837/3
+      - 9840/3
+      - 9860/3
+      - 9861/3
+      - 9863/3
+      - 9865/3
+      - 9866/3
+      - 9867/3
+      - 9869/3
+      - 9870/3
+      - 9871/3
+      - 9872/3
+      - 9873/3
+      - 9874/3
+      - 9875/3
+      - 9876/3
+      - 9891/3
+      - 9895/3
+      - 9896/3
+      - 9897/3
+      - 9898/1
+      - 9898/3
+      - 9910/3
+      - 9911/3
+      - 9920/3
+      - 9930/3
+      - 9931/3
+      - 9940/3
+      - 9945/3
+      - 9946/3
+      - 9948/3
+      - 9950/3
+      - 9960/3
+      - 9961/3
+      - 9962/3
+      - 9963/3
+      - 9964/3
+      - 9965/3
+      - 9966/3
+      - 9967/3
+      - 9970/1
+      - 9971/1
+      - 9971/3
+      - 9975/3
+      - 9980/3
+      - 9982/3
+      - 9983/3
+      - 9984/3
+      - 9985/3
+      - 9986/3
+      - 9987/3
+      - 9989/3
+      - 9991/3
+      - 9992/3
+      - Unknown
       - Not Applicable
-      - Occipital lymph nodes
-      - Oral Cavity
-      - Oropharynx
-      - Other
-      - Other Extranodal Site
-      - Other, specify
-      - Ovary
-      - Pancreas
-      - Paraaortic lymph nodes
-      - Parotid Gland
-      - Parotid lymph nodes
-      - Pelvis
-      - Peri-orbital Soft Tissue
-      - Pericardium
-      - Perihilar Lymph Node
-      - Peripheral Blood
-      - Peritoneal Surfaces
-      - Pleura/Pleural Effusion
-      - Popliteal lymph nodes
-      - Prostate
-      - Pulmonary
-      - Rectum
-      - Renal Pelvis
-      - Retroperitoneal lymph nodes
-      - Retroperitoneum
-      - Salivary Gland
-      - Sinus
-      - Skin
-      - Small Intestine
-      - Soft Tissue
-      - Splenic lymph nodes
-      - Stomach
-      - Submandibular lymph nodes
-      - Supraclavicular lymph nodes
-      - Testes
-      - Thyroid
-      - Trunk
-      - Tumor Bed
-      - Ureter
-      - Urethra
-      - Uterus
-      - Vulva
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
-  new_event_type:
-    term:
-      $ref: "_terms.yaml#/new_event_type"
-    enum:
-      - Biochemical Evidence of Disease
-      - Both Locoregional and Distant Metastasis
-      - Distant Metastasis
-      - Extrahepatic Recurrence
-      - Intrahepatic Recurrence
-      - Intrapleural Progression
-      - Locoregional (Urothelial tumor event)
-      - Locoregional Disease
-      - Locoregional Recurrence
-      - Metachronous Testicular Tumor
-      - Metastatic
-      - New Primary Tumor
-      - New primary Melanoma
-      - No New Tumor Event
-      - Not Applicable
-      - Progression of Disease
-      - Recurrence
-      - Regional Lymph Node
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
-  perineural_invasion_present:
-    term:
-      $ref: "_terms.yaml#/perineural_invasion_present"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-
+  overall_survival:
+    description: "Number of days between the date used for index and the patient's date of death or the date the patient was last known to be alive."
+    type: integer
   primary_diagnosis:
     term:
       $ref: "_terms.yaml#/primary_diagnosis"
-    type: string
-
+    enum: 
+      - Abdominal desmoid
+      - Abdominal fibromatosis
+      - Achromic nevus 
+      - Acidophil adenocarcinoma 
+      - Acidophil adenoma 
+      - Acidophil carcinoma 
+      - Acinar adenocarcinoma
+      - Acinar adenoma
+      - Acinar carcinoma
+      - Acinar cell adenoma
+      - Acinar cell carcinoma
+      - Acinar cell cystadenocarcinoma
+      - Acinar cell tumour [obs]
+      - Acinic cell adenocarcinoma
+      - Acinic cell adenoma
+      - Acinic cell tumor [obs]
+      - Acoustic neuroma 
+      - Acquired tufted hemangioma
+      - Acral lentiginous melanoma, malignant 
+      - ACTH-producing tumor
+      - Acute basophilic leukaemia
+      - Acute bilineal leukemia
+      - Acute biphenotypic leukemia
+      - Acute erythremia [obs]
+      - Acute erythremic myelosis [obs]
+      - Acute erythroid leukaemia
+      - Acute granulocytic leukemia
+      - Acute leukemia, Burkitt type [obs]
+      - Acute leukemia, NOS
+      - Acute lymphatic leukemia
+      - Acute lymphoblastic leukemia-lymphoma, NOS
+      - Acute lymphoblastic leukemia, L2 type, NOS
+      - Acute lymphoblastic leukemia, mature B-cell type
+      - Acute lymphoblastic leukemia, NOS 
+      - Acute lymphoblastic leukemia, precursorcell type
+      - Acute lymphocytic leukemia
+      - Acute lymphoid leukemia
+      - Acute megakaryoblastic leukaemia
+      - Acute mixed lineage leukemia
+      - Acute monoblastic and monocytic leukemia
+      - Acute monoblastic leukemia
+      - Acute monocytic leukemia
+      - Acute myeloblastic leukemia
+      - Acute myelocytic leukemia
+      - Acute myelofibrosis
+      - Acute myelogenous leukemia
+      - Acute myeloid leukaemia, inv(16) (p13;q22)
+      - Acute myeloid leukaemia, t(8;21)(q22;q22)
+      - Acute myeloid leukemia (megakaryoblastic) with t(1;22)(p13;q13); RBM15-MKL1
+      - Acute myeloid leukemia with abnormal marrow eosinophils (includes all variants)
+      - Acute myeloid leukemia with inv(3) (q21q26.2) or t(3;3) (q21;q26.2); RPN1-EVI1
+      - Acute myeloid leukemia with maturation
+      - Acute myeloid leukemia with multilineage dysplasia
+      - Acute myeloid leukemia with mutated CEBPA
+      - Acute myeloid leukemia with mutated NPM1
+      - Acute myeloid leukemia with myelodysplasia-related changes
+      - Acute myeloid leukemia with prior myelodysplastic syndrome
+      - Acute myeloid leukemia with t(6;9) (p23;q34); DEK-NUP214
+      - Acute myeloid leukemia with t(8;21)(q22;q22); RUNX1-RUNX1T1
+      - Acute myeloid leukemia with t(9;11)(p22;q23); MLLT3-MLL
+      - Acute myeloid leukemia without maturation
+      - Acute myeloid leukemia without prior myelodysplastic syndrome
+      - Acute myeloid leukemia, AML1 (CBF-alpha)/ETO
+      - Acute myeloid leukemia, CBF-beta/MYH11
+      - Acute myeloid leukemia, M6 type
+      - Acute myeloid leukemia, minimal differentiation
+      - Acute myeloid leukemia, NOS (FAB or WHO type not specified)
+      - Acute myeloid leukemia, PML/RAR-alpha
+      - Acute myeloid leukemia, t(15;17) (q22;q11-12)
+      - Acute myeloid leukemia, t(16;16)(p 13;q 11)
+      - Acute myelomonocytic leukemia
+      - Acute myelomonocytic leukemia with abnormal eosinophils
+      - Acute myelosclerosis, NOS
+      - Acute myloid leukemia, 11q23 abnormalities
+      - Acute myloid leukemia, MLL
+      - Acute non-lymphocytic leukemia
+      - Acute panmyelosis with myelofibrosis 
+      - Acute panmyelosis, NOS
+      - Acute progressive histiocytosis X 
+      - Acute promyelocytic leukaemia, PML-RAR-alpha
+      - Acute promyelocytic leukaemia, t(15;17) (q22;q11-12)
+      - Acute promyelocytic leukemia, NOS
+      - Adamantinoma of long bones 
+      - Adamantinoma, malignant (except of long bones)
+      - Adamantinoma, NOS (except of long bones)
+      - Adenoacanthoma
+      - Adenoameloblastoma
+      - Adenocarcinoid tumor
+      - Adenocarcinoma combined with other types of carcinoma
+      - Adenocarcinoma in a polyp, NOS
+      - Adenocarcinoma in adenomatous polyp
+      - Adenocarcinoma in adenomatous polyposis coli 
+      - Adenocarcinoma in multiple adenomatous polyps
+      - Adenocarcinoma in polypoid adenoma
+      - Adenocarcinoma in situ in a polyp, NOS
+      - Adenocarcinoma in situ in adenomatous polyp
+      - Adenocarcinoma in situ in polypoid adenoma
+      - Adenocarcinoma in situ in tubular adenoma
+      - Adenocarcinoma in situ in tubulovillous adenoma
+      - Adenocarcinoma in situ in villous adenoma
+      - Adenocarcinoma in situ, NOS
+      - Adenocarcinoma in tubolovillous adenoma
+      - Adenocarcinoma in tubular adenoma
+      - Adenocarcinoma in villous adenoma
+      - Adenocarcinoma of anal ducts 
+      - Adenocarcinoma of anal glands 
+      - Adenocarcinoma with apocrine metaplasia
+      - Adenocarcinoma with cartilaginous and osseous metaplasia
+      - Adenocarcinoma with cartilaginous metaplasia
+      - Adenocarcinoma with mixed subtypes
+      - Adenocarcinoma with neuroendocrine differentiation
+      - Adenocarcinoma with osseous metaplasia
+      - Adenocarcinoma with spindle cell metaplasia
+      - Adenocarcinoma with squamous metaplasia
+      - Adenocarcinoma, cribriform comedo-type 
+      - Adenocarcinoma, cylindroid
+      - Adenocarcinoma, diffuse type 
+      - Adenocarcinoma, endocervical type
+      - Adenocarcinoma, intestinal type 
+      - Adenocarcinoma, metastatic, NOS
+      - Adenocarcinoma, NOS
+      - Adenocarcinoma, pancreatobiliary type 
+      - Adenocystic carcinoma
+      - Adenofibroma, NOS
+      - Adenoid basal carcinoma 
+      - Adenoid cystic carcinoma
+      - Adenolipoma
+      - Adenolymphoma 
+      - Adenoma of nipple 
+      - Adenoma, NOS
+      - Adenomatoid odontogenic tumor
+      - Adenomatoid tumor, NOS
+      - Adenomatosis, NOS
+      - Adenomatous polyp, NOS
+      - Adenomatous polyposis coli 
+      - Adenomyoepithelioma 
+      - Adenomyoma
+      - Adenosarcoma
+      - Adenosquamous carcinoma
+      - Adnexal carcinoma 
+      - Adnexal tumor, benign 
+      - Adrenal cortical adenocarcinoma 
+      - Adrenal cortical adenoma, clear cell 
+      - Adrenal cortical adenoma, compact cell 
+      - Adrenal cortical adenoma, glomerulosa cell 
+      - Adrenal cortical adenoma, mixed cell 
+      - Adrenal cortical adenoma, NOS 
+      - Adrenal cortical adenoma, pigmented 
+      - Adrenal cortical carcinoma 
+      - Adrenal cortical tumor, benign 
+      - Adrenal cortical tumor, malignant 
+      - Adrenal cortical tumor, NOS 
+      - Adrenal medullary paraganglioma 
+      - Adrenal medullary paraganglioma, malignant 
+      - Adrenal rest tumor
+      - Adult cystic teratoma
+      - Adult rhabdomyoma
+      - Adult T-cell leukemia
+      - Adult T-cell leukemia/lymphoma (HTLV-1 positive) (includes all variants)
+      - Adult T-cell lymphoma
+      - Adult T-cell lymphoma/leukemia
+      - Adult teratoma, NOS
+      - Aggressive angiomyxoma
+      - Aggressive digital papillary adenoma 
+      - Aggressive fibromatosis
+      - Aggressive NK-cell leukaemia
+      - Aggressive osteoblastoma 
+      - Aggressive systemic mastocytosis
+      - Agnogenic myeloid metaplasia
+      - AIN III 
+      - Aleukemic granulocytic leukemia [obs]
+      - Aleukemic leukemia, NOS [obs]
+      - Aleukemic lymphatic leukemia [obs]
+      - Aleukemic lymphocytic leukemia [obs]
+      - Aleukemic lymphoid leukemia [obs]
+      - Aleukemic monocytic leukemia [obs]
+      - Aleukemic myelogenous leukemia [obs]
+      - Aleukemic myeloid leukemia [obs]
+      - ALK positive large B-cell lymphoma
+      - Alpha cell tumor, malignant 
+      - Alpha cell tumor, NOS 
+      - Alpha heavy chain disease
+      - Alveolar adenocarcinoma 
+      - Alveolar adenoma 
+      - Alveolar carcinoma
+      - Alveolar cell carcinoma 
+      - Alveolar rhabdomyosarcoma
+      - Alveolar soft part sarcoma
+      - Amelanotic melanoma 
+      - Ameloblastic carcinoma
+      - Ameloblastic fibro-odontoma
+      - Ameloblastic fibro-odontosarcoma
+      - Ameloblastic fibrodentinoma
+      - Ameloblastic fibrodentinosarcoma
+      - Ameloblastic fibroma
+      - Ameloblastic fibrosarcoma
+      - Ameloblastic odontosarcoma
+      - Ameloblastic sarcoma
+      - Ameloblastoma, malignant
+      - Ameloblastoma, NOS
+      - AML M6
+      - Anal intraepithelial neoplasia, grade III 
+      - Anal intraepithelial neoplasia, low grade 
+      - Anaplastic large B-cell lymphoma
+      - Anaplastic large cell lymphoma, ALK negative
+      - Anaplastic large cell lymphoma, ALK positive
+      - Anaplastic large cell lymphoma, CD30+
+      - Anaplastic large cell lymphoma, NOS
+      - Anaplastic large cell lymphoma, T cell and Null cell type
+      - Anaplastic medulloblastoma
+      - Anaplastic oligoastrocytoma 
+      - Ancient schwannoma
+      - Androblastoma, benign
+      - Androblastoma, malignant
+      - Androblastoma, NOS
+      - Angioblastic meningioma [obs]
+      - Angioblastoma
+      - Angiocentric glioma
+      - Angiocentric immunoproliferative lesion
+      - Angiocentric T-cell lymphoma [obs]
+      - Angioendothelioma
+      - Angioendotheliomatosis
+      - Angiofibroma, NOS
+      - Angioimmunoblastic lymphadenopathy
+      - Angioimmunoblastic lymphoma [obs]
+      - Angioimmunoblastic T-cell lymphoma
+      - Angiokeratoma
+      - Angioleiomyoma
+      - Angiolipoma, NOS
+      - Angioma, NOS
+      - Angiomatoid fibrous histiocytoma
+      - Angiomatous meningioma
+      - Angiomyofibroblastoma
+      - Angiomyolipoma
+      - Angiomyoma
+      - Angiomyosarcoma
+      - Angiomyxoma
+      - Angiosarcoma
+      - Angiotropic lymphoma
+      - Aortic body paraganglioma 
+      - Aortic body tumor 
+      - Aorticopulmonary paraganglioma 
+      - Apocrine adenocarcinoma
+      - Apocrine adenoma
+      - Apocrine cystadenoma
+      - Apudoma
+      - Argentaffinoma, malignant
+      - Argentaffinoma, NOS [obs]
+      - Arrhenoblastoma, benign
+      - Arrhenoblastoma, malignant
+      - Arrhenoblastoma, NOS
+      - Arteriovenous hemangioma
+      - Askin tumor
+      - Astroblastoma 
+      - Astrocytic glioma 
+      - Astrocytoma, anaplastic 
+      - Astrocytoma, low grade 
+      - Astrocytoma, NOS 
+      - Astroglioma 
+      - Atypical adenoma
+      - Atypical carcinoid tumor
+      - Atypical choroid plexus papilloma 
+      - Atypical chronic myeloid leukemia, BCR/ABL negative
+      - Atypical chronic myeloid leukemia, Philadelphia chromosome (Ph1) negative
+      - Atypical fibrous histiocytoma
+      - Atypical fibroxanthoma
+      - Atypical follicular adenoma 
+      - Atypical leiomyoma
+      - Atypical lipoma
+      - Atypical medullary carcinoma 
+      - Atypical meningioma
+      - Atypical polypoid adenomyoma
+      - Atypical proliferating clear cell tumor 
+      - Atypical proliferating serous tumor 
+      - Atypical proliferative endometrioid tumor
+      - Atypical proliferative mucinous tumor 
+      - Atypical proliferative papillary serous tumor 
+      - Atypical teratoid/rhabdoid tumor 
+      - B cell lymphoma, NOS
+      - B lymphoblastic leukemia/lymphoma with hyperdiploidy
+      - B lymphoblastic leukemia/lymphoma with hypodiploidy (Hypodiploid ALL)
+      - B lymphoblastic leukemia/lymphoma with t(1;19) (q23;p13.3); E2A-PBX1 (TCF3-PBX1)
+      - B lymphoblastic leukemia/lymphoma with t(12;21) (p13;q22); TEL-AML1 (ETV6-RUNX1)
+      - B lymphoblastic leukemia/lymphoma with t(5;14) (q31;q32); IL3-IGH
+      - B lymphoblastic leukemia/lymphoma with t(9;22) (q34;q11.2); BCR-ABL1
+      - B lymphoblastic leukemia/lymphoma with t(v;11q23); MLL rearranged
+      - B lymphoblastic leukemia/lymphoma, NOS
+      - B-ALL [obs]
+      - B-cell lymphocytic leukemia/small lymphocytic lymphoma 
+      - B-cell lymphoma, unclassifiable, with features intermediate between diffuse large B-cell lymphoma and Burkitt lymphoma
+      - B-cell lymphoma, unclassifiable, with features intermediate between diffuse large B-cell lymphoma and classical Hodgkin lymphoma
+      - Balloon cell melanoma 
+      - Balloon cell nevus 
+      - BALT lymphoma
+      - Basal cell adenocarcinoma
+      - Basal cell adenoma
+      - Basal cell carcinoma, desmoplastic type 
+      - Basal cell carcinoma, fibroepithelial 
+      - Basal cell carcinoma, micronodular 
+      - Basal cell carcinoma, morpheic 
+      - Basal cell carcinoma, nodular 
+      - Basal cell carcinoma, NOS 
+      - Basal cell epithelioma 
+      - Basal cell tumor 
+      - Basaloid carcinoma
+      - Basaloid squamous cell carcinoma
+      - Basophil adenocarcinoma 
+      - Basophil adenoma 
+      - Basophil carcinoma 
+      - Basosquamous carcinoma 
+      - Bednar tumor 
+      - Bellini duct carcinoma 
+      - Benign cystic nephroma 
+      - Benign fibrous histiocytoma
+      - Beta cell adenoma 
+      - Beta cell tumor, malignant 
+      - Bile duct adenocarcinoma 
+      - Bile duct adenoma 
+      - Bile duct carcinoma 
+      - Bile duct cystadenocarcinoma 
+      - Bile duct cystadenoma 
+      - Biliary intraepithelial neoplasia, grade 3 (BilIN-3)
+      - Biliary intraepithelial neoplasia, high grade
+      - Biliary intraepithelial neoplasia, low grade
+      - Biliary papillomatosis 
+      - Bizarre leiomyoma
+      - Black adenoma 
+      - Blast cell leukemia
+      - Blastic NK cell lymphoma [obs]
+      - Blastic plasmacytoid dendritic cell neoplasm
+      - Blastoma, NOS
+      - Blue nevus, malignant 
+      - Blue nevus, NOS 
+      - Botryoid sarcoma
+      - Bowen disease 
+      - Brenner tumor, borderline malignancy 
+      - Brenner tumor, malignant 
+      - Brenner tumor, NOS 
+      - Brenner tumor, proliferating 
+      - Bronchial adenoma, carcinoid 
+      - Bronchial adenoma, cylindroid 
+      - Bronchial adenoma, NOS 
+      - Bronchial-associated lymphoid tussue lymphoma
+      - Bronchio-alveolar carcinoma, mixed mucinous and non-mucinous 
+      - Bronchio-alveolar carcinoma, mucinous 
+      - Bronchiolar adenocarcinoma 
+      - Bronchiolar carcinoma 
+      - Bronchiolo-alveolar adenocarcinoma, NOS 
+      - Bronchiolo-alveolar carcinoma, Clara cell 
+      - Bronchiolo-alveolar carcinoma, Clara cell and goblet cell type 
+      - Bronchiolo-alveolar carcinoma, goblet cell type 
+      - Bronchiolo-alveolar carcinoma, indeterminate type 
+      - Bronchiolo-alveolar carcinoma, non-mucinous 
+      - Bronchiolo-alveolar carcinoma, NOS 
+      - Bronchiolo-alveolar carcinoma, type II pneumocyte and goblet cell type 
+      - Bronchiolo-alveolar carcinoma; type II pneumocyte 
+      - Brooke tumor 
+      - Brown fat tumor
+      - Burkitt cell leukemia 
+      - Burkitt lymphoma, NOS (Includes all variants, see also M-9826/3)
+      - Burkitt tumor [obs]
+      - Burkitt-like lymphoma
+      - C cell carcinoma 
+      - c-ALL
+      - Calcifying epithelial odontogenic tumor
+      - Calcifying epithelioma of Malherbe 
+      - Calcifying nested epithelial stromal tumor 
+      - Calcifying odontogenic cyst
+      - Canalicular adenoma
+      - Cancer
+      - Capillary hemangioma
+      - Capillary lymphangioma
+      - Carcinofibroma
+      - Carcinoid tumor of uncertain malignant potential
+      - Carcinoid tumor, argentaffin, malignant
+      - Carcinoid tumor, argentaffin, NOS
+      - Carcinoid tumor, NOS
+      - Carcinoid tumor, NOS, of appendix 
+      - Carcinoid, NOS
+      - Carcinoid, NOS, of appendix 
+      - Carcinoma in a polyp, NOS
+      - Carcinoma in adenomatous polyp
+      - Carcinoma in pleomorphic adenoma 
+      - Carcinoma in situ in a polyp, NOS
+      - Carcinoma in situ in adenomatous polyp
+      - Carcinoma in situ, NOS
+      - Carcinoma showing thymus-like differentiation
+      - Carcinoma showing thymus-like element
+      - Carcinoma simplex
+      - Carcinoma with apocrine metaplasia
+      - Carcinoma with neuroendocrine differentiation
+      - Carcinoma with osteoclast-like giant cells
+      - Carcinoma with productive fibrosis
+      - Carcinoma, anaplastic, NOS
+      - Carcinoma, diffuse type 
+      - Carcinoma, intestinal type 
+      - Carcinoma, metastatic, NOS
+      - Carcinoma, NOS
+      - Carcinoma, undifferentiated, NOS
+      - Carcinomatosis
+      - Carcinosarcoma, embryonal
+      - Carcinosarcoma, NOS
+      - Carotid body paraganglioma 
+      - Carotid body tumor 
+      - Cartilaginous exostosis 
+      - CASTLE
+      - Cavernous hemangioma
+      - Cavernous lymphangioma
+      - Cellular angiofibroma
+      - Cellular blue nevus 
+      - Cellular ependymoma 
+      - Cellular fibroma 
+      - Cellular leiomyoma
+      - Cellular schwannoma
+      - Cementifying fibroma
+      - Cemento-ossifying fibroma
+      - Cementoblastoma, benign
+      - Cementoma, NOS
+      - Central neuroblastoma 
+      - Central neurocytoma
+      - Central odontogenic fibroma
+      - Central osteosarcoma 
+      - Central primitive neuroectodermal tumor, NOS 
+      - Cerebellar liponeurocytoma 
+      - Cerebellar sarcoma, NOS 
+      - Ceruminous adenocarcinoma 
+      - Ceruminous adenoma 
+      - Ceruminous carcinoma 
+      - Cervical intraepithelial neoplasia, grade III 
+      - Cervical intraepithelial neoplasia, low grade 
+      - Chemodectoma
+      - Chief cell adenoma 
+      - Chloroma
+      - Cholangiocarcinoma 
+      - Cholangioma 
+      - Chondroblastic osteosarcoma 
+      - Chondroblastoma, malignant 
+      - Chondroblastoma, NOS 
+      - Chondroid chordoma
+      - Chondroid lipoma
+      - Chondroid syringoma 
+      - Chondroma, NOS 
+      - Chondromatosis, NOS
+      - Chondromatous giant cell tumor 
+      - Chondromyxoid fibroma 
+      - Chondrosarcoma, NOS 
+      - Chordoid glioma 
+      - Chordoid glioma of third ventricle 
+      - Chordoid meningioma
+      - Chordoma, NOS
+      - Chorioadenoma 
+      - Chorioadenoma destruens 
+      - Chorioangioma 
+      - Choriocarcinoma combined with embryonal carcinoma
+      - Choriocarcinoma combined with other germ cell elements
+      - Choriocarcinoma combined with teratorna
+      - Choriocarcinoma, NOS
+      - Chorioepithelioma
+      - Chorionepithelioma
+      - Choroid plexus carcinoma 
+      - Choroid plexus papilloma, anaplastic 
+      - Choroid plexus papilloma, malignant 
+      - Choroid plexus papilloma, NOS 
+      - Chromaffin paraganglioma
+      - Chromaffin tumor
+      - Chromaffinoma
+      - Chromophobe adenocarcinoma 
+      - Chromophobe adenoma 
+      - Chromophobe carcinoma 
+      - Chromophobe cell renal carcinoma 
+      - Chronic eosinophilic leukemia, NOS
+      - Chronic erythremia [obs]
+      - Chronic granulocytic leukemia, BCR/ABL
+      - Chronic granulocytic leukemia, NOS
+      - Chronic granulocytic leukemia, Philadelphia chromosome (Ph1) positive
+      - Chronic granulocytic leukemia, t(9;22)(q34;q11)
+      - Chronic idiopathic myelofibrosis
+      - Chronic leukemia, NOS [obs]
+      - Chronic lymphatic leukemia
+      - Chronic lymphocytic leukemia
+      - Chronic lymphocytic leukemia, B-cell type  (includes all variants of BCLL)
+      - Chronic lymphoid leukemia
+      - Chronic lymphoproliferative disorder of NK cells
+      - Chronic monocytic leukemia [obs]
+      - Chronic myelocytic leukemia, NOS
+      - Chronic myelogenous leukemia, BCR-ABL positive
+      - Chronic myelogenous leukemia, Philadelphia chromosome (Ph 1) positive
+      - Chronic myelogenous leukemia, t(9;22)(q34;q11)
+      - Chronic myeloid leukemia, NOS
+      - Chronic myelomonocytic leukemia in transformation [obs]
+      - Chronic myelomonocytic leukemia, NOS
+      - Chronic myelomonocytic leukemia, Type 1
+      - Chronic myelomonocytic leukemia, Type II
+      - Chronic myeloproliferative disease, NOS
+      - Chronic myeloproliferative disorder
+      - Chronic neutrophilic leukemia
+      - CIN III with severe dysplasia 
+      - Cin III, NOS 
+      - Circumscribed arachnoidal cerebellar sarcoma 
+      - Classical Hodggkin lymphoma, lymphocyte depletion, diffuse fibrosis
+      - Classical Hodgkin lymphoma, lymphocyte depletion, NOS
+      - Classical Hodgkin lymphoma, lymphocyte depletion, reticular
+      - Classical Hodgkin lymphoma, lymphocyte-rich
+      - Classical Hodgkin lymphoma, mixed cellularity, NOS
+      - Classical Hodgkin lymphoma, nodular sclerosis, cellular phase
+      - Classical Hodgkin lymphoma, nodular sclerosis, grade 1
+      - Classical Hodgkin lymphoma, nodular sclerosis, grade 2
+      - Classical Hodgkin lymphoma, nodular sclerosis, NOS
+      - Clear cell adenocarcinofibroma 
+      - Clear cell adenocarcinoma, mesonephroid
+      - Clear cell adenocarcinoma, NOS
+      - Clear cell adenofibroma 
+      - Clear cell adenofibroma of borderline malignancy 
+      - Clear cell adenoma
+      - Clear cell carcinoma
+      - Clear cell chondrosarcoma 
+      - Clear cell cystadenocarcinofibroma 
+      - Clear cell cystadenofibroma 
+      - Clear cell cystadenofibroma of borderline malignancy 
+      - Clear cell cystadenoma 
+      - Clear cell cystic tumor of borderline malignancy 
+      - Clear cell ependymoma 
+      - Clear cell hidradenoma 
+      - Clear cell meningioma
+      - Clear cell odontogenic tumor
+      - Clear cell sarcoma of kidney 
+      - Clear cell sarcoma, NOS (except of kidney M-8964/3)
+      - Clear cell sarcoma, of tendons and aponeuroses 
+      - Clear cell tumor, NOS
+      - Cloacogenic carcinoma 
+      - Codman tumor 
+      - Collecting duct carcinoma 
+      - Colloid adenocarcinoma
+      - Colloid adenoma 
+      - Colloid carcinoma
+      - Columnar cell papilloma
+      - Combined carcinoid and adenocarcinoma
+      - Combined hepatocellular carcinoma and cholangiocarcinoma 
+      - Combined small cell carcinoma
+      - Combined small cell-adenocarcinoma
+      - Combined small cell-large carcinoma
+      - Combined small cell-squamous cell carcinoma
+      - Combined/mixed carcinoid and adenocarcinoma
+      - Comedocarcinoma, noninfiltrating 
+      - Comedocarcinoma, NOS 
+      - Common ALL
+      - Common precursor B ALL
+      - Complete hydatidiform mole 
+      - Complex odontoma
+      - Composite carcinoid
+      - Composite Hodgkin and non-Hodgkin lymphoma
+      - Compound nevus 
+      - Compound odontoma
+      - Condylomatous carcinoma
+      - Congenital fibrosarcoma
+      - Congenital generalized fibromatosis
+      - Congenital peribronchial myofibroblastic tumor 
+      - Conventional central osteosarcoma 
+      - Cortical T ALL
+      - CPNET 
+      - Craniopharyngioma 
+      - Craniopharyngioma, adamantinomatous 
+      - Craniopharyngioma, papillary 
+      - Cribriform carcinoma in situ 
+      - Cribriform carcinoma, NOS
+      - Cribriform comedo-type carcinoma 
+      - Cutaneous histiocytoma, NOS 
+      - Cutaneous lymphoma, NOS 
+      - Cutaneous mastocytosis
+      - Cutaneous T-cell lymphoma, NOS 
+      - Cylindrical cell carcinoma 
+      - Cylindrical cell papilloma 
+      - Cylindroma of skin 
+      - Cylindroma, NOS (except cylindroma of skin M-8200/0)
+      - Cyst-associated renal cell carcinoma 
+      - Cystadenocarcinoma, NOS
+      - Cystadenofibroma, NOS
+      - Cystadenoma, NOS
+      - Cystic astrocytoma 
+      - Cystic hygroma
+      - Cystic hypersecretory carcinoma 
+      - Cystic lymphangioma
+      - Cystic mesothelioma, benign 
+      - Cystic mesothelioma, NOS 
+      - Cystic partially differentiated nephroblastoma 
+      - Cystic teratoma, NOS
+      - Cystic tumor of atrio-ventricular node 
+      - Cystoma, NOS
+      - Cystosarcoma phyllodes, benign 
+      - Cystosarcoma phyllodes, malignant 
+      - Cystosarcoma phyllodes, NOS 
+      - Dabska tumor
+      - DCIS, comedo type 
+      - DCIS, NOS 
+      - DCIS, papillary 
+      - Dedifferentiated chondrosarcoma 
+      - Dedifferentiated chordoma
+      - Dedifferentiated liposarcoma
+      - Deep histiocytoma
+      - Degenerated schwannoma
+      - Dendritic cell sarcoma, NOS
+      - Dentinoma
+      - Dermal and epidermal nevus 
+      - Dermal nevus 
+      - Dermatofibroma lenticulare 
+      - Dermatofibroma, NOS 
+      - Dermatofibrosarcoma protuberans, NOS 
+      - Dermatofibrosarcoma, NOS 
+      - Dermoid cyst with malignant transformation 
+      - Dermoid cyst with secondary tumor
+      - Dermoid cyst, NOS
+      - Dermoid, NOS
+      - Desmoid, NOS
+      - Desmoplastic fibroma
+      - Desmoplastic infantile astrocytoma 
+      - Desmoplastic infantile ganglioglioma 
+      - Desmoplastic medulloblastoma 
+      - Desmoplastic melanoma, amelanotic 
+      - Desmoplastic melanoma, malignant 
+      - Desmoplastic mesothelioma
+      - Desmoplastic nodular medulloblastoma 
+      - Desmoplastic small round cell tumor
+      - Di Guglielmo disease [obs]
+      - Diffuse astrocytoma 
+      - Diffuse astrocytoma, low grade 
+      - Diffuse cutaneous mastocytosis
+      - Diffuse intraductal papillomatosis
+      - Diffuse large B-cell lymphoma associated with chronic inflammation
+      - Diffuse large B-cell lymphoma, NOS
+      - Diffuse melanocytosis 
+      - Diffuse meningiomatosis
+      - Digital papillary adenocarcinoma 
+      - Diktyoma, benign 
+      - Diktyoma, malignant 
+      - DIN 3 
+      - Duct adenocarcinoma, NOS
+      - Duct adenoma, NOS
+      - Duct carcinoma, desmoplastic type
+      - Duct carcinoma, NOS
+      - Duct cell carcinoma
+      - Ductal carcinoma in situ, comedo type 
+      - Ductal carcinoma in situ, cribriform type 
+      - Ductal carcinoma in situ, micropapillary 
+      - Ductal carcinoma in situ, NOS 
+      - Ductal carcinoma in situ, papillary 
+      - Ductal carcinoma in situ, solid type 
+      - Ductal carcinoma, cribriform type 
+      - Ductal carcinoma, NOS
+      - Ductal intraepithelial neoplasia 3 
+      - Ductal papilloma
+      - Dysembryoplastic neuroepithelial tumor
+      - Dysgerminoma
+      - Dysplastic gangliocytoma of cerebellum (Lhermitte-Duclos) 
+      - Dysplastic nevus 
+      - EBV positive diffuse large B-cell lymphoma of the elderly
+      - EC cell carcinoid
+      - Ecchondroma 
+      - Ecchondrosis 
+      - Eccrine acrospiroma 
+      - Eccrine adenocarcinoma 
+      - Eccrine cystadenoma 
+      - Eccrine dermal cylindroma 
+      - Eccrine papillary adenocarcinoma 
+      - Eccrine papillary adenoma 
+      - Eccrine poroma 
+      - Eccrine poroma, malignant
+      - Eccrine spiradenoma 
+      - ECL cell carcinoid, malignant
+      - ECL cell carcinoid, NOS
+      - Ectomesenchymoma
+      - Ectopic hamartomatous thymoma
+      - Elastofibroma
+      - Embryonal adenocarcinoma
+      - Embryonal adenoma
+      - Embryonal carcinoma, infantile
+      - Embryonal carcinoma, NOS
+      - Embryonal carcinoma, polyembryonal type
+      - Embryonal hepatoma 
+      - Embryonal rhabdomyosarcoma, NOS
+      - Embryonal rhabdomyosarcoma, pleomorphic
+      - Embryonal sarcoma
+      - Embryonal teratoma
+      - Enchondroma 
+      - Endocrine adenomatosis
+      - Endocrine tumor, functioning, NOS
+      - Endodermal sinus tumor
+      - Endolymphatic stromal myosis 
+      - Endometrial sarcoma, NOS 
+      - Endometrial stromal nodule 
+      - Endometrial stromal sarcoma, high grade 
+      - Endometrial stromal sarcoma, low grade 
+      - Endometrial stromal sarcoma, NOS 
+      - Endometrial stromatosis 
+      - Endometrioid adenocarcinoma, ciliated cell variant
+      - Endometrioid adenocarcinoma, NOS
+      - Endometrioid adenocarcinoma, secretory variant
+      - Endometrioid adenofibroma, borderline malignancy
+      - Endometrioid adenofibroma, malignant
+      - Endometrioid adenofibroma, NOS
+      - Endometrioid adenoma, borderline malignancy
+      - Endometrioid adenoma, NOS
+      - Endometrioid carcinoma, NOS
+      - Endometrioid cystadenocarcinoma
+      - Endometrioid cystadenofibroma, borderline malignancy
+      - Endometrioid cystadenofibroma, malignant
+      - Endometrioid cystadenofibroma, NOS
+      - Endometrioid cystadenoma, borderline malignancy
+      - Endometrioid cystadenoma, NOS
+      - Endometrioid tumor of low malignant potential
+      - Endotheliomatous meningioma
+      - Endovascular papillary angioendothelioma
+      - Enterochromaffin cell carcinoid
+      - Enterochromaffin-like cell carcinoid, NOS
+      - Enterochromaffin-like cell tumor, malignant
+      - Enteroglucagonoma, malignant
+      - Enteroglucagonoma, NOS
+      - Enteropathy associated T-cell lymphoma
+      - Enteropathy type intestinal T-cell lymphoma
+      - Eosinophil adenocarcinoma 
+      - Eosinophil adenoma 
+      - Eosinophil carcinoma 
+      - Eosinophilic granuloma
+      - Eosinophilic leukemia
+      - Ependymoblastoma 
+      - Ependymoma, anaplastic 
+      - Ependymoma, NOS 
+      - Epidermoid carcinoma in situ with questionable stromal invasion
+      - Epidermoid carcinoma in situ, NOS
+      - Epidermoid carcinoma, keratinizing
+      - Epidermoid carcinoma, large cell, nonkeratinizing
+      - Epidermoid carcinoma, NOS
+      - Epidermoid carcinoma, small cell, nonkeratinizing
+      - Epidermoid carcinoma, spindle cell
+      - Epithelial ependymoma 
+      - Epithelial tumor, benign
+      - Epithelial tumor, malignant
+      - Epithelial-myoepithelial carcinoma
+      - Epithelioid and spindle cell nevus 
+      - Epithelioid cell melanoma
+      - Epithelioid cell nevus 
+      - Epithelioid cell sarcoma
+      - Epithelioid hemangioendothelioma, malignant
+      - Epithelioid hemangioendothelioma, NOS
+      - Epithelioid hemangioma
+      - Epithelioid leiomyoma
+      - Epithelioid leiomyosarcoma
+      - Epithelioid mesothelioma, benign
+      - Epithelioid mesothelioma, malignant
+      - Epithelioid mesothelioma, NOS
+      - Epithelioid MPNST
+      - Epithelioid sarcoma
+      - Epithelioma adenoides cysticum 
+      - Epithelioma, benign
+      - Epithelioma, malignant
+      - Epithelioma, NOS
+      - Erythremic myelosis, NOS
+      - Erythroleukemia
+      - Esophageal glandular dysplasia (intraepithelial neoplasia), high grade 
+      - Esophageal glandular dysplasia (intraepithelial neoplasia), low grade 
+      - Esophageal intraepithelial neoplasia, high grade 
+      - Esophageal squamous intraepithelial neoplasia (dysplasia), high grade 
+      - Esophageal squamous intraepithelial neoplasia (dysplasia), low grade 
+      - Essential hemorrhagic thrombocythaemia
+      - Essential thrombocythemia
+      - Esthesioneuroblastoma 
+      - Esthesioneurocytoma 
+      - Esthesioneuroepithelioma 
+      - Ewing sarcoma
+      - Ewing tumor
+      - Extra-abdominal desmoid
+      - Extra-adrenal paraganglioma, malignant
+      - Extra-adrenal paraganglioma, NOS
+      - Extracutaneous mastocytoma
+      - Extranodal marginal zone lymphoma of mucosa-associated lymphoid tissue
+      - Extranodal NK/T-cell lymphoma, nasal type
+      - Extraosseous plasmacytoma
+      - Extraventricular neurocytoma
+      - FAB L2
+      - FAB L3 [obs]
+      - FAB Ll [obs]
+      - FAB M1
+      - FAB M2, AML1(CBF-alpha)/ETO
+      - FAB M2, NOS
+      - FAB M2, t(8;21)(q22;q22)
+      - FAB M3 (includes all variants)
+      - FAB M4
+      - FAB M4Eo
+      - FAB M5 (includes all variants)
+      - FAB M6
+      - FAB M7
+      - FAB MO
+      - Familial polyposis coli 
+      - Fascial fibroma
+      - Fascial fibrosarcoma
+      - Fetal adenocarcinoma
+      - Fetal adenoma 
+      - Fetal fat cell lipoma
+      - Fetal lipoma, NOS
+      - Fetal lipomatosis
+      - Fetal rhabdomyoma
+      - Fibrillary astrocytoma 
+      - Fibro-osteoma
+      - Fibroadenoma, NOS 
+      - Fibroameloblastic odontoma
+      - Fibroblastic liposarcoma
+      - Fibroblastic meningioma
+      - Fibroblastic osteosarcoma 
+      - Fibroblastic reticular cell tumor
+      - Fibrochondrosarcoma 
+      - Fibroepithelial basal cell carcinoma, Pinkus type
+      - Fibroepithelioma of Pinkus type
+      - Fibroepithelioma, NOS
+      - Fibrofolliculoma 
+      - Fibroid uterus 
+      - Fibrolipoma
+      - Fibroliposarcoma
+      - Fibroma, NOS
+      - Fibromyoma
+      - Fibromyxolipoma
+      - Fibromyxoma
+      - Fibromyxosarcoma
+      - Fibrosarcoma, NOS
+      - Fibrous astrocytoma 
+      - Fibrous histiocytoma of tendon sheath 
+      - Fibrous histiocytoma, NOS
+      - Fibrous meningioma
+      - Fibrous mesothelioma, benign
+      - Fibrous mesothelioma, malignant
+      - Fibrous mesothelioma, NOS
+      - Fibrous papule of nose 
+      - Fibroxanthoma, malignant
+      - Fibroxanthoma, NOS
+      - Flat adenoma
+      - Flat intraepithelial glandular neoplasia, high grade 
+      - Flat intraepithelial neoplasia (dysplasia), high grade 
+      - Flat intraepithelial neoplasia, high grade
+      - Florid osseous dysplasia
+      - Follicular adenocarcinoma, moderately differentiated 
+      - Follicular adenocarcinoma, NOS 
+      - Follicular adenocarcinoma, trabecular 
+      - Follicular adenocarcinoma, well differentiated 
+      - Follicular adenoma 
+      - Follicular adenoma, oxyphilic cell 
+      - Follicular carcinoma, encapsulated 
+      - Follicular carcinoma, minimally invasive 
+      - Follicular carcinoma, moderately differentiated 
+      - Follicular carcinoma, NOS 
+      - Follicular carcinoma, oxyphilic cell 
+      - Follicular carcinoma, trabecular 
+      - Follicular carcinoma, well differentiated 
+      - Follicular dendritic cell sarcoma
+      - Follicular dendritic cell tumor
+      - Follicular fibroma 
+      - Follicular lymphoma, grade 1
+      - Follicular lymphoma, grade 2
+      - Follicular lymphoma, grade 3
+      - Follicular lymphoma, grade 3A
+      - Follicular lymphoma, grade 3B
+      - Follicular lymphoma, NOS 
+      - Follicular lymphoma, small cleaved cell
+      - Folliculome lipidique 
+      - Franklin disease
+      - G cell tumor, malignant
+      - G cell tumor, NOS
+      - Gamma heavy chain disease
+      - Gangliocytic paraganglioma 
+      - Gangliocytoma
+      - Ganglioglioma, anaplastic
+      - Ganglioglioma, NOS
+      - Ganglioneuroblastoma
+      - Ganglioneuroma
+      - Ganglioneuromatosis
+      - GANT
+      - Gastrin cell tumor
+      - Gastrin cell tumor, malignant
+      - Gastrinoma, malignant
+      - Gastrinoma, NOS
+      - Gastrointestinal autonomic nerve tumor
+      - Gastrointestinal pacemaker cell tumor
+      - Gastrointestinal stromal sarcoma
+      - Gastrointestinal stromal tumor, benign
+      - Gastrointestinal stromal tumor, malignant
+      - Gastrointestinal stromal tumor, NOS
+      - Gastrointestinal stromal tumor, uncertain malignant potential
+      - Gelatinous adenocarcinoma [obs]
+      - Gelatinous carcinoma [obs]
+      - Gemistocytic astrocytoma 
+      - Gemistocytoma 
+      - Genital rhabdomyoma 
+      - Germ cell tumor, nonseminomatous 
+      - Germ cell tumor, NOS
+      - Germinoma
+      - Giant cell and spindle cell carcinoma
+      - Giant cell angiofibroma
+      - Giant cell carcinoma
+      - Giant cell fibroblastoma
+      - Giant cell glioblastoma 
+      - Giant cell sarcoma (except of bone M-9250/3)
+      - Giant cell sarcoma of bone 
+      - Giant cell tumor of bone, malignant 
+      - Giant cell tumor of bone, NOS 
+      - Giant cell tumor of soft parts, NOS
+      - Giant cell tumor of tendon sheath 
+      - Giant cell tumor of tendon sheath, malignant 
+      - Giant fibroadenoma 
+      - Giant osteoid osteoma 
+      - Giant pigmented nevus, NOS 
+      - Gigantiform cementoma
+      - GIST, benign
+      - GIST, malignant
+      - GIST, NOS
+      - Glandular intraepithelial neoplasia, grade I
+      - Glandular intraepithelial neoplasia, grade II
+      - Glandular intraepithelial neoplasia, grade III
+      - Glandular intraepithelial neoplasia, high grade
+      - Glandular intraepithelial neoplasia, low grade
+      - Glandular papilloma
+      - Glassy cell carcinoma
+      - Glioblastoma 
+      - Glioblastoma multiforme 
+      - Glioblastoma with sarcomatous component 
+      - Gliofibroma 
+      - Glioma, malignant 
+      - Glioma, NOS (except nasal glioma, not neoplastic)
+      - Gliomatosis cerebri 
+      - Glioneuroma [obs]
+      - Gliosarcoma 
+      - Glomangioma
+      - Glomangiomyoma
+      - Glomangiosarcoma
+      - Glomoid sarcoma
+      - Glomus jugulare tumor, NOS 
+      - Glomus tumor, malignant
+      - Glomus tumor, NOS
+      - Glucagon-like peptide-producing tumor
+      - Glucagonoma, malignant 
+      - Glucagonoma, NOS 
+      - Glycogen-rich carcinoma
+      - Glycogenic rhabdomyoma
+      - Goblet cell carcinoid
+      - Gonadal stromal tumor, NOS
+      - Gonadoblastoma
+      - Gonocytoma
+      - Granular cell adenocarcinoma
+      - Granular cell carcinoma
+      - Granular cell myoblastoma, malignant
+      - Granular cell myoblastoma, NOS
+      - Granular cell tumor of the sellar region 
+      - Granular cell tumor, malignant
+      - Granular cell tumor, NOS
+      - Granulocytic leukemia, NOS
+      - Granulocytic sarcoma
+      - Granulosa cell carcinoma 
+      - Granulosa cell tumor, adult type 
+      - Granulosa cell tumor, juvenile 
+      - Granulosa cell tumor, malignant 
+      - Granulosa cell tumor, NOS 
+      - Granulosa cell tumor, sarcomatoid 
+      - Granulosa cell-theca cell tumor 
+      - Grawitz tumor 
+      - Gynandroblastoma 
+      - Haemangioblastoma
+      - Haemangiosarcoma
+      - Hairy cell leukaemia variant
+      - Hairy cell leukemia 
+      - Hairy cell leukemia variant
+      - Hairy nevus 
+      - Halo nevus 
+      - Hand-Schuller-Christian disease 
+      - Heavy chain disease, NOS
+      - Hemangioblastic meningioma [obs]
+      - Hemangioendothelial sarcoma
+      - Hemangioendothelioma, benign
+      - Hemangioendothelioma, malignant
+      - Hemangioendothelioma, NOS
+      - Hemangioma simplex
+      - Hemangioma, NOS
+      - Hemangiopericytic meningioma 
+      - Hemangiopericytoma, benign
+      - Hemangiopericytoma, malignant
+      - Hemangiopericytoma, NOS
+      - Hemolymphangioma
+      - Hepatoblastoma 
+      - Hepatoblastoma, epithelioid 
+      - Hepatoblastoma, mixed epithelial-mesenchymal 
+      - Hepatocarcinoma 
+      - Hepatocellular adenoma 
+      - Hepatocellular carcinoma, clear cell type 
+      - Hepatocellular carcinoma, fibrolamellar 
+      - Hepatocellular carcinoma, NOS 
+      - Hepatocellular carcinoma, pleomorphic type 
+      - Hepatocellular carcinoma, sarcomatoid 
+      - Hepatocellular carcinoma, scirrhous 
+      - Hepatocellular carcinoma, spindle cell variant 
+      - Hepatocholangiocarcinoma 
+      - Hepatoid adenocarcinoma
+      - Hepatoid carcinoma
+      - Hepatoid yolk sac tumor
+      - Hepatoma, benign 
+      - Hepatoma, malignant 
+      - Hepatoma, NOS 
+      - Hepatosplenic T-cell lymphoma
+      - Hepatosplenic gamma-delta cell lymphoma
+      - Hibernoma
+      - Hidradenocarcinoma 
+      - Hidradenoma papilliferum
+      - Hidradenoma, NOS 
+      - Hidrocystoma 
+      - High grade surface osteosarcoma 
+      - Hilar cell tumor 
+      - Hilus cell tumor 
+      - Histiocyte-rich large B-cell lymphoma
+      - Histiocytic medullary reticulosis [obs]
+      - Histiocytic sarcoma
+      - Histiocytoid hemangioma
+      - Histiocytoma, NOS
+      - Histiocytosis X, NOS 
+      - Hodgkin disease, lymphocyte predominance, diffuse [obs]
+      - Hodgkin disease, lymphocyte predominance, NOS [obs]
+      - Hodgkin disease, lymphocytic-histiocytic predominance [obs]
+      - Hodgkin disease, nodular sclerosis, lymphocyte depletion
+      - Hodgkin disease, nodular sclerosis, lymphocyte predominance
+      - Hodgkin disease, nodular sclerosis, mixed cellularity
+      - Hodgkin disease, nodular sclerosis, NOS
+      - Hodgkin disease, nodular sclerosis, syncytial variant
+      - Hodgkin disease, NOS
+      - Hodgkin granuloma [obs]
+      - Hodgkin lymphoma, lymphocyte depletion, diffuse fibrosis
+      - Hodgkin lymphoma, lymphocyte depletion, NOS
+      - Hodgkin lymphoma, lymphocyte depletion, reticular
+      - Hodgkin lymphoma, lymphocyte predominance, nodular
+      - Hodgkin lymphoma, lymphocyte-rich
+      - Hodgkin lymphoma, mixed cellularity, NOS
+      - Hodgkin lymphoma, nodular lymphocyte predominance
+      - Hodgkin lymphoma, nodular sclerosis, cellular phase
+      - Hodgkin lymphoma, nodular sclerosis, grade 1
+      - Hodgkin lymphoma, nodular sclerosis, grade 2
+      - Hodgkin lymphoma, nodular sclerosis, NOS
+      - Hodgkin lymphoma, NOS
+      - Hodgkin paragranuloma, nodular [obs]
+      - Hodgkin paragranuloma, NOS [obs]
+      - Hodgkin sarcoma [obs]
+      - Hurthle cell adenocarcinoma 
+      - Hurthle cell adenoma 
+      - Hurthle cell carcinoma 
+      - Hurthle cell tumor 
+      - Hutchinson melanotic freckle, NOS 
+      - Hyalinizing trabecular adenoma 
+      - Hydatid mole 
+      - Hydatidiform mole, NOS 
+      - Hydroa vacciniforme-like lymphoma
+      - Hygroma, NOS
+      - Hypereosinophilic syndrome
+      - Hypernephroid tumor [obs]
+      - Hypernephroma 
+      - Idiopathic hemorrhagic thrombocythaemia
+      - Idiopathic thrombocythemia
+      - Immature teratoma, malignant
+      - Immature teratoma, NOS
+      - Immunoblastic sarcoma [obs]
+      - Immunocytoma [obs]
+      - Immunoglobulin deposition disease
+      - Immunoproliferative disease, NOS
+      - Immunoproliferative small intestinal disease 
+      - Indeterminate dendritic cell tumor
+      - Indolent systemic mastocytosis
+      - Infantile fibrosarcoma
+      - Infantile hemangioma
+      - Infantile myofibromatosis
+      - Infiltrating and papillary adenocarcinoma
+      - Infiltrating angiolipoma
+      - Infiltrating basal cell carcinoma, non-sclerosing 
+      - Infiltrating basal cell carcinoma, NOS 
+      - Infiltrating basal cell carcinoma, sclerosing 
+      - Infiltrating duct adenocarcinoma 
+      - Infiltrating duct and colloid carcinoma 
+      - Infiltrating duct and cribriform carcinoma 
+      - Infiltrating duct and lobular carcinoma 
+      - Infiltrating duct and lobular carcinoma in situ 
+      - Infiltrating duct and mucinous carcinoma 
+      - Infiltrating duct and tubular carcinoma 
+      - Infiltrating duct carcinoma, NOS 
+      - Infiltrating duct mixed with other types of carcinoma 
+      - Infiltrating ductular carcinoma 
+      - Infiltrating lipoma
+      - Infiltrating lobular carcinoma and ductal carcinoma in situ 
+      - Infiltrating lobular carcinoma, NOS 
+      - Infiltrating lobular mixed with other types of carcinoma 
+      - Infiltrating papillary adenocarcinoma
+      - Inflammatory adenocarcinoma 
+      - Inflammatory carcinoma 
+      - Inflammatory liposarcoma
+      - Inflammatory myofibroblastic tumor
+      - Insular carcinoma 
+      - Insulinoma, malignant 
+      - Insulinoma, NOS 
+      - Interdigitating cell sarcoma
+      - Interdigitating dendritic cell sarcoma
+      - Intermediate and giant congenital nevus 
+      - Interstitial cell tumor, benign
+      - Interstitial cell tumor, malignant
+      - Interstitial cell tumor, NOS
+      - Intestinal T-cell lymphoma
+      - Intracanalicular fibroadenoma 
+      - Intracortical osteosarcoma 
+      - Intracystic carcinoma, NOS
+      - Intracystic papillary adenocarcinoma
+      - Intracystic papillary adenoma
+      - Intracystic papillary neoplasm with associated invasive carcinoma 
+      - Intracystic papillary neoplasm with high grade intraepithelial neoplasia 
+      - Intracystic papillary neoplasm with intermediate grade intraepithelial neoplasia 
+      - Intracystic papillary neoplasm with low grade intraepithelial neoplasia 
+      - Intracystic papillary tumor with high grade dysplasia 
+      - Intracystic papillary tumor with high grade entraepithelial neoplasia 
+      - Intracystic papillary tumor with high grade intraepithelial neoplasia 
+      - Intracystic papilloma
+      - Intradermal nevus 
+      - Intraductal adenocarcinoma, noninfiltrating, NOS
+      - Intraductal and lobular carcinoma 
+      - Intraductal carcinoma and lobular carcinoma in situ 
+      - Intraductal carcinoma, clinging 
+      - Intraductal carcinoma, noninfiltrating, NOS
+      - Intraductal carcinoma, NOS
+      - Intraductal carcinoma, solid type
+      - Intraductal micropapillary carcinoma 
+      - Intraductal papillary adenocarcinoma with invasion 
+      - Intraductal papillary adenocarcinoma, NOS 
+      - Intraductal papillary carcinoma 
+      - Intraductal papillary mucinous neoplasm with an associated invasive carcinoma
+      - Intraductal papillary mucinous neoplasm with high grade dysplasia
+      - Intraductal papillary neoplasm with associated invasive carcinoma
+      - Intraductal papillary neoplasm with high grade dysplasia
+      - Intraductal papillary neoplasm with high grade intraepithelial neoplasia
+      - Intraductal papillary neoplasm with intermediate grade neoplasia 
+      - Intraductal papillary neoplasm with low grade intraepithelial neoplasia 
+      - Intraductal papillary neoplasm, NOS
+      - Intraductal papillary tumor with high grade dysplasia
+      - Intraductal papillary tumor with high grade intraepithelial neoplasia
+      - Intraductal papillary-mucinous adenoma 
+      - Intraductal papillary-mucinous carcinoma, invasive 
+      - Intraductal papillary-mucinous carcinoma, non-invasive 
+      - Intraductal papillary-mucinous neoplasm with low grade dysplasia 
+      - Intraductal papillary-mucinous neoplasm with moderate dysplasia 
+      - Intraductal papillary-mucinous tumor with intermediate dysplasia 
+      - Intraductal papillary-mucinous tumor with low grade dysplasia 
+      - Intraductal papillary-mucinous tumor with moderate dysplasia 
+      - Intraductal papilloma
+      - Intraductal papillomatosis, NOS
+      - Intraductal tubular-papillary neoplasm, high grade
+      - Intraductal tubular-papillary neoplasm, low grade
+      - Intraepidermal carcinoma, NOS
+      - Intraepidermal epithelioma of Jadassohn 
+      - Intraepidermal nevus 
+      - Intraepidermal squamous cell carcinoma, Bowen type 
+      - Intraepithelial carcinoma, NOS
+      - Intraepithelial squamous cell carcinoma
+      - Intraglandular papillary neoplasm with low grade intraepithelial neoplasia 
+      - Intramuscular hemangioma
+      - Intramuscular lipoma
+      - Intraneural perineurioma
+      - Intraosseous low grade osteosarcoma 
+      - Intraosseous well differentiated osteosarcoma 
+      - Intratubular germ cell neoplasia 
+      - Intratubular malignant germ cells 
+      - Intravascular B-cell lymphoma
+      - Intravascular bronchial alveolar tumor 
+      - Intravascular large B-cell lymphoma 
+      - Intravascular leiomyomatosis
+      - Invasive fibroma
+      - Invasive hydatidiform mole 
+      - Invasive mole, NOS 
+      - Involuting nevus 
+      - Islet cell adenocarcinoma 
+      - Islet cell adenoma 
+      - Islet cell adenomatosis 
+      - Islet cell carcinoma 
+      - Islet cell tumor, benign 
+      - Islet cell tumor, NOS 
+      - Jadassohn blue nevus 
+      - Jugular paraganglioma 
+      - Jugulotympanic paraganglioma 
+      - Junction nevus 
+      - Junctional nevus, NOS 
+      - Juvenile angiofibroma
+      - Juvenile astrocytoma 
+      - Juvenile carcinoma of breast 
+      - Juvenile chronic myelomonocytic leukemia
+      - Juvenile fibroadenoma 
+      - Juvenile hemangioma
+      - Juvenile histiocytoma
+      - Juvenile melanoma 
+      - Juvenile myelomonocytic leukemia
+      - Juvenile nevus 
+      - Juxtacortical chondroma 
+      - Juxtacortical chondrosarcoma 
+      - Juxtacortical osteosarcoma 
+      - Juxtaglomerular tumor 
+      - Kaposi sarcoma
+      - Kaposiform hemangioendothelioma
+      - Keratotoc papilloma
+      - Klatskin tumor 
+      - Krukenberg tumor
+      - Kupffer cell sarcoma 
+      - L-cell tumor
+      - Lactating adenoma 
+      - Langerhans cell granulomatosis 
+      - Langerhans cell granulomatosis, unifocal 
+      - Langerhans cell histiocytosis, disseminated 
+      - Langerhans cell histiocytosis, generalized 
+      - Langerhans cell histiocytosis, mono-ostotic 
+      - Langerhans cell histiocytosis, multifocal 
+      - Langerhans cell histiocytosis, NOS 
+      - Langerhans cell histiocytosis, poly-ostotic 
+      - Langerhans cell histiocytosis, unifocal 
+      - Langerhans cell sarcoma
+      - Large B-cell lymphoma arising in HHV8-associated multicentric Castleman disease
+      - Large cell (Ki-1+) lymphoma
+      - Large cell calcifying Sertoli cell tumor
+      - Large cell carcinoma with rhabdoid phenotype
+      - Large cell carcinoma, NOS
+      - Large cell medulloblastoma 
+      - Large cell neuroendocrine carcinoma
+      - Large granular lymphocytosis, NOS
+      - LCIS, NOS 
+      - Leiomyoblastoma
+      - Leiomyofibroma
+      - Leiomyoma, NOS
+      - Leiomyomatosis, NOS
+      - Leiomyosarcoma, NOS
+      - Lennert lymphoma
+      - Lentigo maligna 
+      - Lentigo maligna melanoma 
+      - Leptomeningeal sarcoma
+      - Letterer-Siwe disease 
+      - Leukaemic reticuloendotheliosis
+      - Leukemia, NOS
+      - Leydig cell tumor, benign 
+      - Leydig cell tumor, malignant 
+      - Leydig cell tumor, NOS 
+      - Linitis plastica 
+      - Lipid cell tumor of ovary 
+      - Lipid-rich carcinoma 
+      - Lipid-rich Sertoli cell tumor 
+      - Lipoadenoma
+      - Lipoarcoma, well differentiated
+      - Lipoblastoma
+      - Lipoblastomatosis
+      - Lipoid cell tumor of ovary 
+      - Lipoleiomyoma
+      - Lipoma-like liposarcoma
+      - Lipoma, NOS
+      - Lipomatous medulloblastoma 
+      - Liposarcoma, differentiated
+      - Liposarcoma, NOS
+      - Liver cell adenoma 
+      - Liver cell carcinoma 
+      - Lobular adenocarcinoma 
+      - Lobular and ductal carcinoma 
+      - Lobular carcinoma in situ, NOS 
+      - Lobular carcinoma, noninfiltrating 
+      - Lobular carcinoma, NOS 
+      - Localized fibrous tumor
+      - Low grade appendiceal mucinous neoplasm 
+      - Luteinoma 
+      - Luteoma, NOS 
+      - Lymphangioendothelial sarcoma
+      - Lymphangioendothelioma, malignant
+      - Lymphangioendothelioma, NOS
+      - Lymphangioleiomyomatosis
+      - Lymphangioma, NOS
+      - Lymphangiomyoma
+      - Lymphangiomyomatosis
+      - Lymphangiosarcoma
+      - Lymphatic leukemis, NOS [obs]
+      - Lymphoblastic leukemia, NOS
+      - Lymphoblastoma [obs]
+      - Lymphocytic leukemia, NOS [obs]
+      - Lymphoepithelial carcinoma
+      - Lymphoepithelioid lymphoma
+      - Lymphoepithelioma
+      - Lymphoepithelioma-like carcinoma
+      - Lymphoid leukemia, NOS
+      - Lymphoma, NOS
+      - Lymphomatoid granulomatosis
+      - Lymphomatoid papulosis 
+      - Lymphoplasmacyte-rich meningioma
+      - Lymphoproliferative disease, NOS
+      - Lymphoproliferative disorder, NOS
+      - Lymphosarcoma cell leukemia [obs]
+      - Lymphosarcoma, diffuse [obs]
+      - Lymphosarcoma, NOS [obs]
+      - M6A
+      - M6B
+      - Macrofollicular adenoma 
+      - Magnocellular nevus 
+      - Malignancy
+      - Malignant chondroid syringoma 
+      - Malignant cystic nephroma 
+      - Malignant eccrine spiradenoma 
+      - Malignant fibrous histiocytoma
+      - Malignant giant cell tumor of soft parts
+      - Malignant histiocytosis
+      - Malignant hydatidiform mole 
+      - Malignant lymphoma, centroblastic, diffuse
+      - Malignant lymphoma, centroblastic, follicular
+      - Malignant lymphoma, centroblastic, NOS
+      - Malignant lymphoma, centroblasticcentrocytic, diffuse [obs]
+      - Malignant lymphoma, centroblasticcentrocytic, follicular [obs]
+      - Malignant lymphoma, centroblasticcentrocytic, NOS [obs]
+      - Malignant lymphoma, centrocytic [obs]
+      - Malignant lymphoma, cleaved cell, NOS [obs]
+      - Malignant lymphoma, convoluted cell [obs]
+      - Malignant lymphoma, diffuse, NOS
+      - Malignant lymphoma, follicle center, follicular
+      - Malignant lymphoma, follicle center, NOS
+      - Malignant lymphoma, follicular, NOS
+      - Malignant lymphoma, histiocytic, diffuse
+      - Malignant lymphoma, histiocytic, nodular [obs]
+      - Malignant lymphoma, histiocytic, NOS [obs]
+      - Malignant lymphoma, Hodgkin
+      - Malignant lymphoma, immunoblastic, NOS
+      - Malignant lymphoma, large B-cell, diffuse, centroblastic, NOS
+      - Malignant lymphoma, large B-cell, diffuse, immunoblastic, NOS
+      - Malignant lymphoma, large B-cell, diffuse, NOS
+      - Malignant lymphoma, large B-cell, NOS
+      - Malignant lymphoma, large cell, cleaved and noncleaved [obs]
+      - Malignant lymphoma, large cell, cleaved, diffuse
+      - Malignant lymphoma, large cell, cleaved, NOS [obs]
+      - Malignant lymphoma, large cell, diffuse, NOS [obs]
+      - Malignant lymphoma, large cell, follicular, NOS
+      - Malignant lymphoma, large cell, immunoblastic
+      - Malignant lymphoma, large cell, noncleaved, diffuse
+      - Malignant lymphoma, large cell, noncleaved, follicular [obs]
+      - Malignant lymphoma, large cell, noncleaved, NOS
+      - Malignant lymphoma, large cell, NOS
+      - Malignant lymphoma, large cleaved cell, follicular [obs]
+      - Malignant lymphoma, large cleaved cell, NOS [obs]
+      - Malignant lymphoma, lymphoblastic, NOS 
+      - Malignant lymphoma, lymphocytec, nodular, NOS [obs]
+      - Malignant lymphoma, lymphocytec, poorly differentiated, nodular [obs]
+      - Malignant lymphoma, lymphocytec, well differentiated, nodular [obs]
+      - Malignant lymphoma, lymphocytic, diffuse, NOS
+      - Malignant lymphoma, lymphocytic, intermediate differentiation, diffuse [obs]
+      - Malignant lymphoma, lymphocytic, intermediate differentiation, nodular [obs]
+      - Malignant lymphoma, lymphocytic, NOS
+      - Malignant lymphoma, lymphocytic, poorly differentiated, diffuse [obs]
+      - Malignant lymphoma, lymphocytic, well differentiated, diffuse
+      - Malignant lymphoma, lymphoplasmacytic 
+      - Malignant lymphoma, lymphoplasmacytoid
+      - Malignant lymphoma, mixed cell type, diffuse [obs]
+      - Malignant lymphoma, mixed cell type, follicular [obs]
+      - Malignant lymphoma, mixed cell type, nodular [obs]
+      - Malignant lymphoma, mixed lymphocytec-histiocytic, nodular [obs]
+      - Malignant lymphoma, mixed lymphocytic-histiocytic, diffuse [obs]
+      - Malignant lymphoma, mixed small and large cell, diffuse 
+      - Malignant lymphoma, mixed small cleaved and large cell, follicular [obs]
+      - Malignant lymphoma, nodular, NOS [obs]
+      - Malignant lymphoma, non-cleaved cell, NOS
+      - Malignant lymphoma, non-Hodgkin, NOS
+      - Malignant lymphoma, noncleaved cell, follicular, NOS [obs]
+      - Malignant lymphoma, noncleaved, diffuse, NOS [obs]
+      - Malignant lymphoma, noncleaved, NOS
+      - Malignant lymphoma, NOS
+      - Malignant lymphoma, plasmacytoid [obs]
+      - Malignant lymphoma, small B lymphocytic, NOS 
+      - Malignant lymphoma, small cell diffuse
+      - Malignant lymphoma, small cell, noncleaved, diffuse [obs]
+      - Malignant lymphoma, small cell, NOS
+      - Malignant lymphoma, small cleaved cell, diffuse [obs]
+      - Malignant lymphoma, small cleaved cell, follicular [obs]
+      - Malignant lymphoma, small cleaved cell, NOS [obs]
+      - Malignant lymphoma, small lymphocytic, diffuse
+      - Malignant lymphoma, small lymphocytic, NOS
+      - Malignant lymphoma, small noncleaved, Burkitt type [obs]
+      - Malignant lymphoma, undifferentiated cell type, NOS [obs]
+      - Malignant lymphoma, undifferentiated cell, non-Burkitt [obs]
+      - Malignant lymphoma, undifferentiated, Burkitt type [obs]
+      - Malignant lymphomatous polyposis
+      - Malignant mast cell tumor
+      - Malignant mastocytoma
+      - Malignant mastocytosis
+      - Malignant melanoma in congenital melanocytic nevus 
+      - Malignant melanoma in giant pigmented nevus 
+      - Malignant melanoma in Hutchinson melanotic freckle 
+      - Malignant melanoma in junctional nevus 
+      - Malignant melanoma in precancerous melanosis 
+      - Malignant melanoma, NOS (except juvenile melanoma)
+      - Malignant melanoma, regressing 
+      - Malignant midline reticulosis [obs]
+      - Malignant mucinous adenofibroma
+      - Malignant mucinous cystadenofibroma
+      - Malignant multilocular cystic nephroma 
+      - Malignant myelosclerosis [obs]
+      - Malignant myoepithelioma
+      - Malignant peripheral nerve sheath tumor
+      - Malignant peripheral nerve sheath tumor with rhabdomyoblastic differentation
+      - Malignant reticulosis, NOS [obs]
+      - Malignant rhabdoid tumor
+      - Malignant schwannoma with rhabdomyoblastic differentiation
+      - Malignant schwannoma, NOS [obs]
+      - Malignant serous adenofibroma
+      - Malignant serous cystadenofibroma
+      - Malignant tenosynovial giant cell tumor 
+      - Malignant teratoma, anaplastic
+      - Malignant teratoma, intermediate
+      - Malignant teratoma, trophoblastic
+      - Malignant teratoma, undifferentiated
+      - Malignant tumor, clear cell type
+      - Malignant tumor, fusiform cell type
+      - Malignant tumor, glant cell type
+      - Malignant tumor, small cell type
+      - Malignant tumor, spindle cell type
+      - MALT lymphoma
+      - MANEC
+      - Mantle cell lymphoma (Includes all variants; blastic, pleomorphic, small cell)
+      - Mantle zone lymphoma [obs]
+      - Marginal zone B-cell lymphoma, NOS
+      - Marginal zone lymphoma, NOS
+      - Masculinovoblastoma 
+      - Mast cell leukaemia 
+      - Mast cell sarcoma
+      - Mast cell tumor, NOS
+      - Mastocytoma, NOS
+      - Matrical carcinoma 
+      - Mature T ALL
+      - Mature T-cell lymphoma, NOS
+      - Mature teratoma
+      - Mediastinal (thymic) large B-cell lymphoma)
+      - Mediterranean lymphoma
+      - Medullary adenocarcinoma
+      - Medullary carcinoma with amyloid stroma 
+      - Medullary carcinoma with lymphoid stroma
+      - Medullary carcinoma, NOS
+      - Medullary osteosarcoma 
+      - Medulloblastoma with extensive nodularity
+      - Medulloblastoma, NOS 
+      - Medullocytoma 
+      - Medulloepithelioma, benign 
+      - Medulloepithelioma, NOS
+      - Medullomyoblastoma 
+      - Megakaryocytic leukemia
+      - Megakaryocytic myelosclerosis
+      - Melanoameloblastoma
+      - Melanocytic nevus 
+      - Melanocytoma, eyeball 
+      - Melanocytoma, NOS
+      - Melanoma in situ
+      - Melanoma, malignant, of soft parts 
+      - Melanoma, NOS
+      - Melanotic medulloblastoma 
+      - Melanotic MPNST
+      - Melanotic neuroectodermal tumor
+      - Melanotic neurofibroma
+      - Melanotic progonoma
+      - Melanotic psammomatous MPNST
+      - Melanotic schwannoma
+      - Meningeal melanocytoma 
+      - Meningeal melanomatosis 
+      - Meningeal sarcoma
+      - Meningeal sarcomatosis
+      - Meningioma, anaplastic
+      - Meningioma, malignant
+      - Meningioma, NOS
+      - Meningiomatosis, NOS
+      - Meningothelial meningioma
+      - Meningothelial sarcoma
+      - Merkel cell carcinoma 
+      - Merkel cell tumor 
+      - Mesenchymal chondrosarcoma
+      - Mesenchymal tumor, malignant
+      - Mesenchymoma, benign
+      - Mesenchymoma, malignant
+      - Mesenchymoma, NOS
+      - Mesenteric fibromatosis 
+      - Mesoblastic nephroma
+      - Mesodermal mixed tumor
+      - Mesonephric adenocarcinoma
+      - Mesonephric adenoma
+      - Mesonephric tumor, NOS
+      - Mesonephroma, benign
+      - Mesonephroma, malignant
+      - Mesonephroma, NOS
+      - Mesothelial papilloma
+      - Mesothelioma, benign
+      - Mesothelioma, biphasic, malignant
+      - Mesothelioma, biphasic, NOS
+      - Mesothelioma, malignant
+      - Mesothelioma, NOS
+      - Metanephric adenoma 
+      - Metaplastic carcinoma, NOS
+      - Metaplastic meningioma
+      - Metastasizing leiomyoma
+      - Metastatic signet ring cell carcinoma
+      - Metatypical carcinoma 
+      - MGUS
+      - Microcystic adenoma 
+      - Microcystic adnexal carcinoma 
+      - Microcystic meningioma
+      - Microfollicular adenoma, NOS 
+      - Microglioma 
+      - Micropapillary carcinoma, NOS 
+      - Micropapillary serous carcinoma 
+      - Mixed acidophil-basophil adenoma 
+      - Mixed acidophil-basophil carcinoma 
+      - Mixed acinar-ductal carcinoma
+      - Mixed acinar-endocrine carcinoma 
+      - Mixed acinar-endocrine-ductal carcinoma
+      - Mixed adenocarcinoma and epidermoid carcinoma
+      - Mixed adenocarcinoma and squamous cell carcinoma
+      - Mixed adenomatous and hyperplastic polyp 
+      - Mixed adenoneuroendocrine carcinoma
+      - Mixed basal-squamous cell carcinoma 
+      - Mixed carcinoid-adenocarcinoma
+      - Mixed cell adenocarcinoma
+      - Mixed cell adenoma
+      - Mixed ductal-endocrine carcinoma 
+      - Mixed embryonal carcinoma and teratoma
+      - Mixed embryonal rhabdomyosarcoma and alveolar rhabdomyosarcoma
+      - Mixed endocrine and exocrine adenocarcinoma 
+      - Mixed epithelioid and spindle cell melanoma
+      - Mixed germ cell tumor
+      - Mixed glioma 
+      - Mixed hepatocellular and bile duct carcinoma 
+      - Mixed islet cell and exocrine adenocarcinoma 
+      - Mixed liposarcoma
+      - Mixed medullary-follicular carcinoma 
+      - Mixed medullary-papillary carcinoma 
+      - Mixed meningioma
+      - Mixed mesenchymal sarcoma
+      - Mixed mesenchymal tumor
+      - Mixed pancreatic endocrine and exocrine tumor, malignant 
+      - Mixed phenotype acute leukemia with t (9;22) (q34;q11.2); BCR-ABL1
+      - Mixed phenotype acute leukemia with t(v;11q23); MLL rearranged
+      - Mixed phenotype acute leukemia, B/myeloid, NOS
+      - Mixed phenotype acute leukemia, T/myeloid, NOS
+      - Mixed pineal tumor 
+      - Mixed pineocytoma-pineoblastoma 
+      - Mixed small cell carcinoma
+      - Mixed squamous cell and glandular papilloma
+      - Mixed subependymoma-ependymoma 
+      - Mixed teratoma and seminoma
+      - Mixed tumor, malignant, NOS
+      - Mixed tumor, NOS
+      - Mixed tumor, salivary gland type, malignant 
+      - Mixed tumor, salivary gland type, NOS 
+      - Mixed type rhabdomyosarcoma
+      - Monoblastic leukemia, Nos
+      - Monoclonal gammopathy of undetermined significance
+      - Monoclonal gammopathy, NOS
+      - Monocytic leukemia, NOS
+      - Monocytoid B-cell lymphoma
+      - Monomorphic adenoma
+      - Monstrocellular sarcoma 
+      - MPNST with glandular differentiation
+      - MPNST with mesenchymal differentiation
+      - MPNST with rhabdomyoblastic differentiation
+      - MPNST, NOS
+      - Mu heavy chain disease
+      - Mucin-producing adenocarcinoma
+      - Mucin-producing carcinoma
+      - Mucin-secreting adenocarcinoma
+      - Mucin-secreting carcinoma
+      - Mucinous adenocarcinofibroma
+      - Mucinous adenocarcinoma
+      - Mucinous adenocarcinoma, endocervical type
+      - Mucinous adenofibroma of borderline malignancy
+      - Mucinous adenofibroma, NOS
+      - Mucinous adenoma
+      - Mucinous carcinoid
+      - Mucinous carcinoma
+      - Mucinous cystadenocarcinofibroma
+      - Mucinous cystadenocarcinoma, non-invasive 
+      - Mucinous cystadenocarcinoma, NOS 
+      - Mucinous cystadenofibroma of borderline malignancy
+      - Mucinous cystadenofibroma, NOS
+      - Mucinous cystadenoma, borderline malignancy 
+      - Mucinous cystadenoma, NOS 
+      - Mucinous cystic neoplasm with an associated invasive carcinoma 
+      - Mucinous cystic neoplasm with high-grade dysplasia 
+      - Mucinous cystic neoplasm with high-grade intraepithelial neoplasia 
+      - Mucinous cystic neoplasm with intermediate-grade dysplasia 
+      - Mucinous cystic neoplasm with intermediate-grade intraepithelial neoplasia 
+      - Mucinous cystic neoplasm with low-grade dysplasia 
+      - Mucinous cystic neoplasm with low-grade intraepithelial neoplasia 
+      - Mucinous cystic tumor of borderline malignancy 
+      - Mucinous cystic tumor with an associated invasive carcinoma 
+      - Mucinous cystic tumor with high-grade dysplasia 
+      - Mucinous cystic tumor with intermediate dysplasia 
+      - Mucinous cystic tumor with low grade dysplasia 
+      - Mucinous cystic tumor with moderate dysplasia 
+      - Mucinous cystoma 
+      - Mucinous tumor, NOS, of low malignant potential 
+      - Mucocarcinoid tumor
+      - Mucoepidermoid carcinoma
+      - Mucoepidermoid tumor [obs]
+      - Mucoid adenocarcinoma
+      - Mucoid carcinoma
+      - Mucoid cell adenocarcinoma 
+      - Mucoid cell adenoma 
+      - Mucosal lentiginous melanoma
+      - Mucosal-associated lymphoid tissue lymphoma
+      - Mucous adenocarcinoma
+      - Mucous carcinoma
+      - Mullerian mixed tumor 
+      - Multicentric basal cell carcinoma 
+      - Multicystic mesothelioma, benign
+      - Multifocal superficial basal cell carcinoma 
+      - Multiple adenomatous polyps
+      - Multiple endocrine adenomas
+      - Multiple hemorrhagic sarcoma
+      - Multiple meningiomas
+      - Multiple myeloma 
+      - Multiple neurofibromatosis
+      - Mycosis fungoides 
+      - Myelocytic leukemia, NOS
+      - Myelodysplastic syndrome with 5q deletion (5q-) syndrome
+      - Myelodysplastic syndrome with isolated del (5q)
+      - Myelodysplastic syndrome, NOS
+      - Myelodysplastic syndrome, unclassifiable
+      - Myelodysplastic/myeloproliferative neoplasm, unclassifiable
+      - Myelofibrosis as a result of myeloproliferative disease
+      - Myelofibrosis with myeloid metaplasia
+      - Myelogenous leukemia, NOS
+      - Myeloid and lymphoid neoplasms with FGFR1 abnormalities
+      - Myeloid and lymphoid neoplasms with PDGFRA rearrangement
+      - Myeloid leukemia associated with Down Syndrome
+      - Myeloid leukemia, NOS
+      - Myeloid neoplasms with PDGFRB rearrangement
+      - Myeloid sarcoma 
+      - Myelolipoma
+      - Myeloma, NOS 
+      - Myelomatosis 
+      - Myelomonocytic leukemia, NOS
+      - Myeloproliferative disease, NOS
+      - Myeloproliferative neoplasm, NOS
+      - Myelosclerosis with myeloid metaplasia
+      - Myloproliferative neoplasm, unclassifiable
+      - Myoepithelial adenoma
+      - Myoepithelial carcinoma
+      - Myoepithelial tumor
+      - Myoepithelioma
+      - Myofibroblastic tumor, NOS
+      - Myofibroblastic tumor, peribronchial 
+      - Myofibroblastoma
+      - Myofibroma
+      - Myofibromatosis
+      - Myoma
+      - Myosarcoma
+      - Myxofibroma, NOS
+      - Myxoid chondrosarcoma
+      - Myxoid fibroma
+      - Myxoid leiomyosarcoma
+      - Myxoid liposarcoma
+      - Myxolipoma
+      - Myxoliposarcoma
+      - Myxoma, NOS
+      - Myxopapillary ependymoma 
+      - Myxosarcoma
+      - Neoplasm, benign
+      - Neoplasm, malignant
+      - Neoplasm, malignant, uncertain whether primary or metastatic
+      - Neoplasm, metastatic
+      - Neoplasm, NOS
+      - Neoplasm, secondary
+      - Neoplasm, uncertain whether benign or malignant
+      - Nephroblastoma, NOS 
+      - Nephrogenic adenofibroma 
+      - Nephroma, NOS 
+      - Nerve sheath myxoma
+      - Nesidioblastoma 
+      - Neurilemoma, malignant [obs]
+      - Neurilemoma, NOS
+      - Neurilemosarcoma [obs]
+      - Neurinoma
+      - Neurinomatosis
+      - Neuroastrocytoma [obs]
+      - Neuroblastoma, NOS
+      - Neurocytoma
+      - Neuroectodermal tumor, NOS
+      - Neuroendocrine carcinoma, low grade
+      - Neuroendocrine carcinoma, moderately differentiated
+      - Neuroendocrine carcinoma, NOS
+      - Neuroendocrine carcinoma, well-differentiated
+      - Neuroendocrine tumor, grade 1
+      - Neuroendocrine tumor, grade 2
+      - Neuroepithelioma, NOS
+      - Neurofibroma, NOS
+      - Neurofibromatosis, NOS
+      - Neurofibrosarcoma [obs]
+      - Neurogenic sarcoma [obs]
+      - Neurolipocytoma 
+      - Neuroma, NOS
+      - Neuronevus 
+      - Neurosarcoma [obs]
+      - Neurothekeoma
+      - Neurotropic melanoma, malignant 
+      - Nevus, NOS 
+      - NK-cell large granular lymphocytic leukemia
+      - NK/T-cell lymphoma, nasal and nasal-type
+      - Nodal marginal zone lymphoma
+      - Nodular hidradenoma 
+      - Nodular hidradenoma, malignant 
+      - Nodular melanoma 
+      - Non-Hodgkin lymphoma, NOS
+      - Non-lymphocytic leukemia, NOS
+      - Non-small cell carcinoma 
+      - Nonchromaffin paraganglioma, malignant
+      - Nonchromaffin paraganglioma, NOS
+      - Nonencapsulated sclerosing adenocarcinoma 
+      - Nonencapsulated sclerosing carcinoma 
+      - Nonencapsulated sclerosing tumor 
+      - Noninfiltrating intracystic carcinoma
+      - Noninfiltrating intraductal papillary adenocarcinoma 
+      - Noninfiltrating intraductal papillary carcinoma 
+      - Noninvasive pancreatobiliary papillary neoplasm with high grade dysplasia 
+      - Noninvasive pancreatobiliary papillary neoplasm with high grade intraepithelial neoplasia 
+      - Noninvasive pancreatobiliary papillary neoplasm with low grade dysplasia
+      - Noninvasive pancreatobiliary papillary neoplasm with low grade intraepithelial neoplasia
+      - Nonlipid reticuloendotheliosis 
+      - Nonpigmented nevus 
+      - Oat cell carcinoma 
+      - Odontoameloblastoma
+      - Odontogenic carcinoma
+      - Odontogenic carcinosarcoma
+      - Odontogenic fibroma, NOS
+      - Odontogenic fibrosarcoma
+      - Odontogenic ghost cell tumor
+      - Odontogenic myxofibroma
+      - Odontogenic myxoma
+      - Odontogenic sarcoma
+      - Odontogenic tumor, benign
+      - Odontogenic tumor, malignant
+      - Odontogenic tumor, NOS
+      - Odontoma, NOS
+      - Olfactory neuroblastoma 
+      - Olfactory neurocytoma 
+      - Olfactory neuroepithelioma 
+      - Olfactory neurogenic tumor
+      - Oligoastrocytoma 
+      - Oligodendroblastoma 
+      - Oligodendroglioma, anaplastic 
+      - Oligodendroglioma, NOS 
+      - Oncocytic adenocarcinoma
+      - Oncocytic adenoma
+      - Oncocytic carcinoma
+      - Oncocytic Schneiderian papilloma 
+      - Oncocytoma
+      - Orchioblastoma 
+      - Ossifying fibroma
+      - Ossifying fibromyxoid tumor
+      - Ossifying renal tumor 
+      - Osteoblastic sarcoma 
+      - Osteoblastoma, malignant 
+      - Osteoblastoma, NOS 
+      - Osteocartilaginous exostosis 
+      - Osteochondroma 
+      - Osteochondromatosis, NOS 
+      - Osteochondrosarcoma 
+      - Osteofibroma
+      - Osteofibrosarcoma 
+      - Osteogenic sarcoma, NOS 
+      - Osteoid osteoma, NOS 
+      - Osteoma, NOS 
+      - Osteosarcoma in Paget disease of bone 
+      - Osteosarcoma, NOS 
+      - Ovarian stromal tumor 
+      - Oxyphilic adenocarcinoma
+      - Oxyphilic adenoma
+      - Pacinian tumor
+      - Paget disease and infiltrating duct carcinoma of breast 
+      - Paget disease and intraductal carcinoma of breast 
+      - Paget disease of breast 
+      - Paget disease, extramammary (except Paget disease of bone)
+      - Paget disease, mammary 
+      - Pagetoid reticulosis
+      - Pancreatic endocrine tumor, benign 
+      - Pancreatic endocrine tumor, malignant
+      - Pancreatic endocrine tumor, nonfunctioning
+      - Pancreatic endocrine tumor, NOS 
+      - Pancreatic microadenoma 
+      - Pancreatic peptide and pancreatic peptide-like peptide within terminal tyrosine amide producing tumor
+      - Pancreatobiliary neoplasm, non-invasive
+      - Pancreatobiliary-type carcinoma 
+      - Pancreatoblastoma 
+      - Papillary adenocarcinoma, follicular variant 
+      - Papillary adenocarcinoma, NOS
+      - Papillary adenofibroma
+      - Papillary adenoma, NOS
+      - Papillary and follicular adenocarcinoma 
+      - Papillary and follicular carcinoma 
+      - Papillary carcinoma in situ
+      - Papillary carcinoma of thyroid 
+      - Papillary carcinoma, columnar cell 
+      - Papillary carcinoma, diffuse sclerosing 
+      - Papillary carcinoma, encapsulated 
+      - Papillary carcinoma, follicular variant 
+      - Papillary carcinoma, NOS
+      - Papillary carcinoma, oxyphilic cell 
+      - Papillary carcinoma, tall cell 
+      - Papillary cystadenocarcinoma, NOS 
+      - Papillary cystadenoma lymphomatosum 
+      - Papillary cystadenoma, borderline malignancy 
+      - Papillary cystadenoma, NOS 
+      - Papillary cystic tumor 
+      - Papillary ependymoma 
+      - Papillary epidermoid carcinoma
+      - Papillary glioneuronal tumor
+      - Papillary hidradenoma
+      - Papillary meningioma
+      - Papillary microcarcinoma 
+      - Papillary mucinous cystadenocarcinoma 
+      - Papillary mucinous cystadenoma, borderline malignancy 
+      - Papillary mucinous cystadenoma, NOS 
+      - Papillary mucinous tumor of low malignant potential 
+      - Papillary neoplasm, pancreatobiliary-type, with high grade intraepithelial neoplasia 
+      - Papillary pseudomucinous cystadenocarcinoma 
+      - Papillary pseudomucinous cystadenoma, borderline malignancy 
+      - Papillary pseudomucinous cystadenoma, NOS 
+      - Papillary renal cell carcinoma 
+      - Papillary serous adenocarcinoma 
+      - Papillary serous cystadenocarcinoma 
+      - Papillary serous cystadenoma, borderline malignancy 
+      - Papillary serous cystadenoma, NOS 
+      - Papillary serous tumor of low malignant potential 
+      - Papillary squamous cell carcinoma
+      - Papillary squamous cell carcinoma in situ
+      - Papillary squamous cell carcinoma, non-invasive
+      - Papillary syringadenoma 
+      - Papillary syringocystadenoma 
+      - Papillary transitional cell carcinoma 
+      - Papillary transitional cell carcinoma, non-invasive 
+      - Papillary transitional cell neoplasm of low malignant potential 
+      - Papillary tumor of the pineal region
+      - Papillary urothelial carcinoma 
+      - Papillary urothelial carcinoma, non-invasive 
+      - Papillary urothelial neoplasm of low malignant potential 
+      - Papillocystic adenocarcinoma
+      - Papilloma of bladder
+      - Papilloma, NOS (except papilloma of bladder M-8120/I)
+      - Papillomatosis, glandular
+      - Papillomatosis, NOS
+      - Papillotubular adenocarcinoma
+      - Papillotubular adenoma
+      - Parachordoma
+      - Parafollicular cell carcinoma 
+      - Paraganglioma, benign
+      - Paraganglioma, malignant
+      - Paraganglioma, NOS
+      - Parasympathetic paraganglioma
+      - Parietal cell adenocarcinoma 
+      - Parietal cell carcinoma 
+      - Parosteal osteosarcoma 
+      - Partial hydatidiform mole 
+      - Periapical cemental dysplasia
+      - Periapical cemento-osseous dysplasia
+      - Pericanalicular fibroadenoma 
+      - Perifollicular fibroma 
+      - Perineural MPNST
+      - Perineurioma, malignant
+      - Perineurioma, NOS
+      - Periosteal chondroma 
+      - Periosteal chondrosarcoma 
+      - Periosteal fibroma 
+      - Periosteal fibrosarcoma 
+      - Periosteal osteosarcoma 
+      - Periosteal sarcoma, NOS 
+      - Peripheral neuroectodermal tumor
+      - Peripheral odontogenic fibroma
+      - Peripheral primitive neuroectodermal tumor, NOS
+      - Peripheral T-cell lymphoma, AILD (Angioimmunoblastic Lymphadenopathy with Dysproteinemia)
+      - Peripheral T-cell lymphoma, large cell
+      - Peripheral T-cell lymphoma, NOS
+      - Peripheral T-cell lymphoma, pleomorphic medium and large cell
+      - Peripheral T-cell lymphoma, pleomorphic small cell
+      - Pheochromoblastoma 
+      - Pheochromocytoma, malignant 
+      - Pheochromocytoma, NOS 
+      - Phyllodes tumor, benign 
+      - Phyllodes tumor, borderline 
+      - Phyllodes tumor, malignant 
+      - Phyllodes tumor, NOS 
+      - Pick tubular adenoma
+      - Pigmented adenoma 
+      - Pigmented basal cell carcinoma 
+      - Pigmented dermatofibrosarcoma protuberans 
+      - Pigmented nevus, NOS 
+      - Pigmented schwannoma
+      - Pigmented spindle cell nevus of Reed 
+      - Pilar tumor 
+      - Pilocytic astrocytoma 
+      - Piloid astrocytoma 
+      - Pilomatricoma, malignant 
+      - Pilomatricoma, NOS 
+      - Pilomatrix carcinoma 
+      - Pilomatrixoma, malignant 
+      - Pilomatrixoma, NOS 
+      - Pilomyxoid astrocytoma
+      - PIN III 
+      - Pindborg tumor
+      - Pineal parenchymal tumor of intermediate differentiation 
+      - Pinealoma 
+      - Pineoblastoma 
+      - Pineocytoma 
+      - Pinkus tumor
+      - Pituicytoma
+      - Pituitary adenoma, NOS 
+      - Pituitary carcinoma, NOS 
+      - Placental site trophoblastic tumor 
+      - Plasma cell leukemia 
+      - Plasma cell myeloma 
+      - Plasma cell tumor
+      - Plasmablastic lymphoma
+      - Plasmacytic leukemia 
+      - Plasmacytic lymphoma [obs]
+      - Plasmacytoma of bone 
+      - Plasmacytoma, extramedullary (not occurring in bone)
+      - Plasmacytoma, NOS
+      - Pleomorphic adenoma
+      - Pleomorphic carcinoma
+      - Pleomorphic cell sarcoma
+      - Pleomorphic leiomyoma
+      - Pleomorphic lipoma
+      - Pleomorphic liposarcoma
+      - Pleomorphic rhabdomyosarcoma, adult type
+      - Pleomorphic rhabdomyosarcoma, NOS
+      - Pleomorphic xanthoastrocytoma 
+      - Pleuropulmonary blastoma
+      - Plexiform fibrohistiocytic tumor
+      - Plexiform fibromyxoma
+      - Plexiform hemangioma
+      - Plexiform leiomyoma
+      - Plexiform neurofibroma
+      - Plexiform neuroma
+      - Plexiform schwannoma
+      - PNET, NOS
+      - Pneumoblastoma 
+      - Polar spongioblastoma 
+      - Polycythemia rubra vera
+      - Polycythemia vera
+      - Polyembryoma
+      - Polygonal cell carcinoma
+      - Polymorphic post transplant lymphoproliferative disorder
+      - Polymorphic reticulosis [obs]
+      - Polymorphous low grade adenocarcinoma
+      - Polypoid adenoma
+      - Polyvesicular vitelline tumor
+      - Poorly cohesive carcinoma
+      - Porocarcinoma 
+      - Post transplant lymphoproliferative disorder, NOS
+      - PP/PYY producing tumor
+      - PPNET
+      - Pre-B ALL
+      - Pre-pre-B ALL
+      - Pre-T ALL
+      - Precancerous melanosis, NOS 
+      - Precursor B-cell lymphoblastic leukemia 
+      - Precursor B-cell lymphoblastic lymphoma 
+      - Precursor cell lymphoblastic leukemia, NOS 
+      - Precursor cell lymphoblastic leukemia, not phenotyped
+      - Precursor cell lymphoblastic lymphoma, NOS 
+      - Precursor T-cell lymphoblastic leukemia 
+      - Precursor T-cell lymphoblastic lymphoma 
+      - Preleukaemia [obs]
+      - Preleukemic syndrome [obs]
+      - Primary amyloidosis
+      - Primary cutaneous anaplastic large cell lymphoma 
+      - Primary cutaneous CD30+ large T-cell lymphoma 
+      - Primary cutaneous CD30+ T-cell lymphoproliferative disorder 
+      - Primary cutaneous CD4-positive small/medium T-cell lymphoma
+      - Primary cutaneous CD8-positive aggressive epidermotropic cytotoxic T-cell lymphoma
+      - Primary cutaneous DLBCL, leg type 
+      - Primary cutaneous follicle centre lymphoma
+      - Primary cutaneous gamma-delta T-cell lymphoma
+      - Primary cutaneous neuroendocrine carcinoma 
+      - Primary diffuse large B-cell lymphoma of the CNS 
+      - Primary effusion lymphoma
+      - Primary intraosseous carcinoma
+      - Primary myelofibrosis
+      - Primary serous papillary carcinoma of peritoneum 
+      - Primitive neuroectodermal tumor, NOS
+      - Primitive polar spongioblastoma 
+      - Pro-B ALL
+      - Pro-T ALL
+      - Prolactinoma 
+      - Proliferating trichilemmal cyst
+      - Proliferating trichilemmal tumor
+      - Proliferative dermal lesion in congenital nevus 
+      - Proliferative polycythemia
+      - Prolymphocytic leukemia, B-cell type
+      - Prolymphocytic leukemia, NOS
+      - Prolymphocytic leukemia, T-cell type
+      - Prostatic intraepithelial neoplasia, grade III 
+      - Protoplasmic astrocytoma 
+      - Psammomatous meningioma
+      - Psammomatous schwannoma
+      - Pseudomucinous adenocarcinoma 
+      - Pseudomucinous cystadenocarcinoma, NOS 
+      - Pseudomucinous cystadenoma, borderline malignancy 
+      - Pseudomucinous cystadenoma, NOS 
+      - Pseudomyxoma peritonei
+      - Pseudomyxoma peritonei with unknown primary site 
+      - Pseudosarcomatous carcinoma
+      - PTLD, NOS
+      - Pulmonary adenomatosis 
+      - Pulmonary blastoma 
+      - Queyrat erythroplasia 
+      - Racemose hemangioma
+      - RAEB
+      - RAEB I
+      - RAEB II
+      - RAEB-T
+      - RARS
+      - Rathke pouch tumor 
+      - Recklinghausen disease (except of bone)
+      - Refractory anemia
+      - Refractory anemia with excess blasts
+      - Refractory anemia with excess blasts in transformation [obs]
+      - Refractory anemia with ring sideroblasts associated with marked thrombocytosis
+      - Refractory anemia with ringed sideroblasts
+      - Refractory anemia with sideroblasts
+      - Refractory anemia without sideroblasts
+      - Refractory cytopenia of childhood
+      - Refractory cytopenia with multilineage dysplasia
+      - Refractory neutropenia
+      - Refractory thrombocytopenia
+      - Regressing nevus 
+      - Renal carcinoma, collecting duct type 
+      - Renal cell adenocarcinoma 
+      - Renal cell carcinoma, chromophobe type 
+      - Renal cell carcinoma, NOS 
+      - Renal cell carcinoma, sarcomatoid 
+      - Renal cell carcinoma, spindle cell 
+      - Reninoma 
+      - Renomedullary fibroma 
+      - Renomedullary interstitial cell tumor 
+      - Reserve cell carcinoma
+      - Reticulohistiocytoma
+      - Reticulosarcoma, diffuse [obs]
+      - Reticulosarcoma, NOS [obs]
+      - Reticulum cell sarcoma, diffuse [obs]
+      - Reticulum cell sarcoma, NOS [obs]
+      - Retinal anlage tumor
+      - Retinoblastoma, differentiated 
+      - Retinoblastoma, diffuse 
+      - Retinoblastoma, NOS 
+      - Retinoblastoma, spontaneously regressed 
+      - Retinoblastoma, undifferentiated 
+      - Retinocytoma 
+      - Retroperitoneal fibromatosis 
+      - Rhabdoid meningioma
+      - Rhabdoid sarcoma
+      - Rhabdoid tumor, NOS
+      - Rhabdomyoma, NOS
+      - Rhabdomyosarcoma with ganglionic differentiation
+      - Rhabdomyosarcoma, NOS
+      - Rhabdosarcoma
+      - Rodent ulcer 
+      - Rosette-forming glioneuronal tumor
+      - Round cell carcinoma
+      - Round cell liposarcoma
+      - Round cell osteosarcoma 
+      - Round cell sarcoma
+      - SALT lymphoma
+      - Sarcoma botryoides
+      - Sarcoma, NOS
+      - Sarcomatoid carcinoma
+      - Sarcomatoid mesothelioma
+      - Sarcomatosis, NOS
+      - Schmincke tumor 
+      - Schneiderian carcinoma 
+      - Schneiderian papilloma, inverted 
+      - Schneiderian papilloma, NOS 
+      - Schwannoma, NOS
+      - Scirrhous adenocarcinoma
+      - Scirrhous carcinoma
+      - Sclerosing hemangioma 
+      - Sclerosing hepatic carcinoma 
+      - Sclerosing liposarcoma
+      - Sclerosing stromal tumor 
+      - Sclerosing sweat duct carcinoma 
+      - Sebaceous adenocarcinoma 
+      - Sebaceous adenoma 
+      - Sebaceous carcinoma 
+      - Sebaceous epithelioma 
+      - Secondary carcinoma
+      - Secretory carcinoma of breast 
+      - Secretory meningioma
+      - Seminoma with high mitotic index 
+      - Seminoma, anaplastic 
+      - Seminoma, NOS 
+      - Serotonin producing carcinoid
+      - Serous adenocarcinofibroma
+      - Serous adenocarcinoma, NOS
+      - Serous adenofibroma of borderline malignancy
+      - Serous adenofibroma, NOS
+      - Serous carcinoma, NOS
+      - Serous cystadenocarcinofibroma
+      - Serous cystadenocarcinoma, NOS 
+      - Serous cystadenofibroma of borderline malignancy
+      - Serous cystadenofibroma, NOS
+      - Serous cystadenoma, borderline malignancy 
+      - Serous cystadenoma, NOS
+      - Serous cystoma
+      - Serous microcystic adenoma
+      - Serous papillary cystic tumor of borderline malignancy 
+      - Serous surface papillary carcinoma 
+      - Serous surface papillary tumor of borderline malignancy 
+      - Serous surface papilloma 
+      - Serous tumor, NOS, of low malignant potential 
+      - Serrated adenocarcinoma
+      - Serrated adenoma 
+      - Sertoli cell adenoma
+      - Sertoli cell carcinoma 
+      - Sertoli cell tumor with lipid storage
+      - Sertoli cell tumor, NOS
+      - Sertoli-Leydig cell tumor of intermediate differentiation
+      - Sertoli-Leydig cell tumor, intermediate differentiation, with heterologous elements
+      - Sertoli-Leydig cell tumor, NOS
+      - Sertoli-Leydig cell tumor, poorly differentiated
+      - Sertoli-Leydig cell tumor, poorly differentiated, with heterologous elements
+      - Sertoli-Leydig cell tumor, retiform
+      - Sertoli-Leydig cell tumor, retiform, with heterologous elements
+      - Sertoli-Leydig cell tumor, sarcomatoid
+      - Sertoli-Leydig cell tumor, well differentiated
+      - Sessile serrated adenoma
+      - Sessile serrated polyp
+      - SETTLE
+      - Sex cord tumor with annular tubules 
+      - Sex cord tumor, NOS
+      - Sex cord-gonadal stromal tumor, incompletely differentiated
+      - Sex cord-gonadal stromal tumor, mixed forms
+      - Sex cord-gonadal stromal tumor, NOS
+      - Sezary disease
+      - Sezary syndrome
+      - Sialoblastoma
+      - Signet ring cell adenocarcinoma
+      - Signet ring cell carcinoma
+      - Sinonasal papilloma, exophytic 
+      - Sinonasal papilloma, fungiform 
+      - Sinonasal papilloma, NOS 
+      - Skin appendage adenoma 
+      - Skin appendage carcinoma 
+      - Skin appendage tumor, benign 
+      - Skin-associated lymphoid tissue lymphoma
+      - Small cell carcinoma, fusiform cell
+      - Small cell carcinoma, intermediate cell
+      - Small cell carcinoma, NOS
+      - Small cell neuroendocrine carcinoma
+      - Small cell osteosarcoma 
+      - Small cell sarcoma
+      - Small congenital nevus 
+      - Smooth muscle tumor of uncertain malignant potential
+      - Smooth muscle tumor, NOS
+      - Soft tissue perineurioma
+      - Soft tissue sarcoma
+      - Soft tissue tumor, benign
+      - Soft tissue tumor, malignant
+      - Solid adenocarcinoma with mucin formation
+      - Solid and cystic tumor 
+      - Solid and papillary epithelial neoplasm 
+      - Solid carcinoma with mucin formation
+      - Solid carcinoma, NOS
+      - Solid pseudopapillary carcinoma 
+      - Solid pseudopapillary tumor 
+      - Solid teratoma
+      - Solitary fibrous tumor
+      - Solitary fibrous tumor, malignant
+      - Solitary mastocytoma of skin
+      - Solitary myeloma
+      - Solitary plasmacytoma
+      - Somatostatin cell tumor, malignant
+      - Somatostatin cell tumor, NOS
+      - Somatostatinoma, malignant
+      - Somatostatinoma, NOS
+      - Spermatocytic seminoma 
+      - Spermatocytoma 
+      - Spindle cell angioendothelioma
+      - Spindle cell carcinoma, NOS
+      - Spindle cell hemangioendothelioma
+      - Spindle cell lipoma
+      - Spindle cell melanoma, NOS
+      - Spindle cell melanoma, type A 
+      - Spindle cell melanoma, type B 
+      - Spindle cell nevus, NOS 
+      - Spindle cell oncocytoma 
+      - Spindle cell rhabdomyosarcoma
+      - Spindle cell sarcoma
+      - Spindle epithelial tumor with thymus-like differentiation
+      - Spindle epithelial tumor with thymus-like element
+      - Spindled mesothelioma
+      - Spiradenoma, NOS 
+      - Spitz nevus 
+      - Splenic B-cell lymphoma/leukemia, unclassifiable
+      - Splenic diffuse red pulp small B-cell lymphoma
+      - Splenic lymphoma with villous lymphocytes 
+      - Splenic marginal zone B-cell lymphoma 
+      - Splenic marginal zone lymphoma, NOS 
+      - Spongioblastoma multiforme 
+      - Spongioblastoma polare 
+      - Spongioblastoma, NOS 
+      - Spongioneuroblastoma
+      - Squamous carcinoma
+      - Squamous cell carcinoma in situ with questionable stromal invasion
+      - Squamous cell carcinoma in situ, NOS
+      - Squamous cell carcinoma with horn formation
+      - Squamous cell carcinoma, acantholytic
+      - Squamous cell carcinoma, adenoid
+      - Squamous cell carcinoma, clear cell type
+      - Squamous cell carcinoma, keratinizing, NOS
+      - Squamous cell carcinoma, large cell, keratinizing
+      - Squamous cell carcinoma, large cell, nonkeratinizing, NOS
+      - Squamous cell carcinoma, metastatic, NOS
+      - Squamous cell carcinoma, microinvasive
+      - Squamous cell carcinoma, nonkeratinizing, NOS
+      - Squamous cell carcinoma, NOS
+      - Squamous cell carcinoma, pseudoglandular
+      - Squamous cell carcinoma, sarcomatoid
+      - Squamous cell carcinoma, small cell, nonkeratinizing
+      - Squamous cell carcinoma, spindle cell
+      - Squamous cell epithelioma
+      - Squamous cell papilloma, inverted
+      - Squamous cell papilloma, NOS
+      - Squamous intraepithelial neoplasia, grade I
+      - Squamous intraepithelial neoplasia, grade II
+      - Squamous intraepithelial neoplasia, grade III
+      - Squamous intraepithelial neoplasia, high grade
+      - Squamous intraepithelial neoplasia, low grade
+      - Squamous odontogenic tumor
+      - Squamous papilloma
+      - Squamous papillomatosis
+      - Stem cell leukemia
+      - Steroid cell tumor, malignant
+      - Steroid cell tumor, NOS
+      - Stromal endometriosis 
+      - Stromal myosis, NOS 
+      - Stromal sarcoma, NOS
+      - Stromal tumor with minor sex cord elements 
+      - Stromal tumor, benign
+      - Stromal tumor, NOS
+      - Struma ovarii and carcinoid 
+      - Struma ovarii, malignant 
+      - Struma ovarii, NOS 
+      - Strumal carcinoid 
+      - Subacute granulocytic leukemia [obs]
+      - Subacute leukemia, NOS [obs]
+      - Subacute lymphatic leukemia [obs]
+      - Subacute lymphocytic leukemia [obs]
+      - Subacute lymphoid leukemia [obs]
+      - Subacute monocytic leukemia [obs]
+      - Subacute myelogenous leukemia [obs]
+      - Subacute myeloid leukemia [obs]
+      - Subareolar duct papillomatosis 
+      - Subcutaneous panniculitis-like T-cell lymphoma
+      - Subependymal astrocytoma, NOS 
+      - Subependymal giant cell astrocytoma 
+      - Subependymal glioma 
+      - Subependymoma 
+      - Subepidermal nodular fibrosis 
+      - Superficial spreading adenocarcinoma
+      - Superficial spreading melanoma 
+      - Superficial well differentated liposarcoma
+      - Supratentorial PNET 
+      - Sweat gland adenocarcinoma 
+      - Sweat gland adenoma 
+      - Sweat gland carcinoma 
+      - Sweat gland tumor, benign 
+      - Sweat gland tumor, malignant 
+      - Sweat gland tumor, NOS 
+      - Sympathetic paraganglioma
+      - Sympathicoblastoma
+      - Symplastic leiomyoma
+      - Syncytial meningioma
+      - Synovial sarcoma, biphasic
+      - Synovial sarcoma, epithelioid cell
+      - Synovial sarcoma, monophasic fibrous
+      - Synovial sarcoma, NOS
+      - Synovial sarcoma, spindle cell
+      - Synovioma, benign
+      - Synovioma, malignant
+      - Synovioma, NOS
+      - Syringadenoma, NOS 
+      - Syringocystadenoma papilliferum
+      - Syringofibroadenoma 
+      - Syringoma, NOS 
+      - Syringomatous carcinoma 
+      - Systemic EBV positive T-cell lymphoproliferative disease of childhood
+      - Systemic light chain disease
+      - Systemic mastocytosis with AHNMD
+      - Systemic mastocytosis with associated hematological clonal non-mast cell disorder
+      - Systemic tissue mast cell disease
+      - T lymphoblastic leukemia/lymphoma
+      - T-cell large granular lymphocytic leukemia
+      - T-cell large granular lymphocytosis
+      - T-cell lymphoma, NOS
+      - T-cell rich large B-cell lymphoma
+      - T-cell rich/histiocyte-rich large B-cell lymphoma
+      - T-gamma lymphoproliferative disease
+      - T-zone lymphoma
+      - T/NK-cell lymphoma
+      - Tanycytic ependymoma 
+      - Telangiectatic osteosarcoma 
+      - Tenosynovial giant cell tumor 
+      - Teratoblastoma, malignant
+      - Teratocarcinoma
+      - Teratoid medulloepithelioma
+      - Teratoid medulloepithelioma, benign 
+      - Teratoma with malignant transformation
+      - Teratoma, benign
+      - Teratoma, differentiated
+      - Teratoma, malignant, NOS
+      - Teratoma, NOS
+      - Terminal duct adenocarcinoma
+      - Testicular adenoma
+      - Testicular stromal tumor 
+      - Theca cell tumor 
+      - Theca cell-granulosa cell tumor 
+      - Thecoma, luteinized 
+      - Thecoma, malignant 
+      - Thecoma, NOS 
+      - Therapy related myeloid neoplasm
+      - Therapy-related acute myeloid leukemia, alkylating agent related
+      - Therapy-related acute myeloid leukemia, epipodophyllotoxin-related
+      - Therapy-related acute myeloid leukemia, NOS
+      - Therapy-related myelodysplastic syndrome, alkylating agent related
+      - Therapy-related myelodysplastic syndrome, epipodophyllotoxin-related
+      - Therapy-related myelodysplastic syndrome, NOS
+      - Thymic carcinoma, NOS 
+      - Thymic large B-cell lymphoma 
+      - Thymoma, atypical, malignant 
+      - Thymoma, atypical, NOS 
+      - Thymoma, benign 
+      - Thymoma, cortical, malignant 
+      - Thymoma, cortical, NOS 
+      - Thymoma, epithelial, malignant 
+      - Thymoma, epithelial, NOS 
+      - Thymoma, lymphocyte-rich, malignant 
+      - Thymoma, lymphocyte-rich, NOS 
+      - Thymoma, lymphocytic, malignant 
+      - Thymoma, lymphocytic, NOS 
+      - Thymoma, malignant, NOS 
+      - Thymoma, medullary, malignant 
+      - Thymoma, medullary, NOS 
+      - Thymoma, mixed type, malignant 
+      - Thymoma, mixed type, NOS 
+      - Thymoma, NOS 
+      - Thymoma, organoid, malignant 
+      - Thymoma, organoid, NOS 
+      - Thymoma, predominantly cortical, malignant 
+      - Thymoma, predominantly cortical, NOS 
+      - Thymoma, spindle cell, malignant 
+      - Thymoma, spindle cell, NOS 
+      - Thymoma, type A, malignant 
+      - Thymoma, type A, NOS 
+      - Thymoma, type AB, malignant 
+      - Thymoma, type AB, NOS 
+      - Thymoma, type B1, malignant 
+      - Thymoma, type B1, NOS 
+      - Thymoma, type B2, malignant 
+      - Thymoma, type B2, NOS 
+      - Thymoma, type B3, malignant 
+      - Thymoma, type B3, NOS 
+      - Thymoma, type C 
+      - Tibial adamantinoma 
+      - Trabecular adenocarcinoma
+      - Trabecular adenoma
+      - Trabecular carcinoma
+      - Traditional serrated adenoma
+      - Traditional sessile serrated adenoma
+      - Transient abnormal myelopoiesis
+      - Transitional carcinoma
+      - Transitional cell carcinoma
+      - Transitional cell carcinoma in situ
+      - Transitional cell carcinoma, micropapillary 
+      - Transitional cell carcinoma, sarcomatoid
+      - Transitional cell carcinoma, spindle cell
+      - Transitional cell papilloma, benign
+      - Transitional cell papilloma, inverted, benign
+      - Transitional cell papilloma, inverted, NOS
+      - Transitional cell papilloma, NOS
+      - Transitional meningioma
+      - Transitional papilloma
+      - Transitional papilloma, inverted, benign
+      - Transitional papilloma, inverted, NOS
+      - Transitional pineal tumor 
+      - Trichilemmal carcinoma 
+      - Trichilemmocarcinoma 
+      - Trichilemmoma 
+      - Trichodiscoma 
+      - Trichoepithelioma 
+      - Trichofolliculoma 
+      - Triton tumor, malignant
+      - Trophoblastic tumor, epithelioid
+      - True histiocytic lymphoma
+      - Tubular adenocarcinoma
+      - Tubular adenoma, NOS
+      - Tubular androblastoma with lipid storage 
+      - Tubular androblastoma, NOS
+      - Tubular carcinoid
+      - Tubular carcinoma
+      - Tubulo-papillary adenoma
+      - Tubulopapillary adenocarcinoma
+      - Tubulovillous adenoma, NOS
+      - Tumor cells, benign
+      - Tumor cells, malignant
+      - Tumor cells, NOS
+      - Tumor cells, uncertain whether benign or malignant
+      - Tumor embolus
+      - Tumor, benign
+      - Tumor, malignant, NOS
+      - Tumor, metastatic
+      - Tumor, NOS
+      - Tumor, secondary
+      - Tumorlet, benign
+      - Tumorlet, NOS
+      - Turban tumor 
+      - Typical carcinoid
+      - Unclassified tumor, benign
+      - Unclassified tumor, borderline malignancy
+      - Unclassified tumor, malignant
+      - Unclassified tumor, malignant, uncertain whether primary or metastatic
+      - Unclassified tumor, uncertain whether benign or malignant
+      - Undifferentiated leukaemia
+      - Undifferentiated sarcoma
+      - Urothelial carcinoma in situ
+      - Urothelial carcinoma, NOS
+      - Urothelial papilloma, NOS
+      - Urticaria pigmentosa
+      - Vaginal intraepithelial neoplasia, grade III 
+      - VAIN III 
+      - Vascular leiomyoma
+      - Venous hemangioma
+      - Verrucous carcinoma, NOS
+      - Verrucous epidermoid carcinoma
+      - Verrucous keratotic hemangioma
+      - Verrucous papilloma
+      - Verrucous squamous cell carcinoma
+      - Villoglandular adenoma
+      - Villous adenocarcinoma
+      - Villous adenoma, NOS
+      - Villous papilloma
+      - VIN III 
+      - Vipoma, malignant
+      - Vipoma, NOS
+      - Von Recklinghausen disease (except of bone)
+      - Vulvar intraepithelial neoplasia, grade III 
+      - Waldenstrom macroglobulinemia 
+      - Warthin tumor 
+      - Warty carcinoma
+      - Water-clear cell adenocarcinoma 
+      - Water-clear cell adenoma 
+      - Water-clear cell carcinoma 
+      - Well differentiated liposarcoma of superficial soft tissue
+      - Well differentiated papillary mesothelioma, benign
+      - Well differentiated thymic carcinoma 
+      - Wilms tumor 
+      - Wolffian duct adenoma
+      - Wolffian duct carcinoma
+      - Wolffian duct tumor
+      - Xanthofibroma
+      - Yolk sac tumor
   prior_malignancy:
     term:
       $ref: "_terms.yaml#/prior_malignancy"
     enum:
-      - "yes"
-      - "no"
-      - unknown
-      - not reported
-      - Not Allowed To Collect
-
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
   prior_treatment:
     term:
       $ref: "_terms.yaml#/prior_treatment"
@@ -762,18 +3905,16 @@ properties:
       - "No"
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-
-  progression_or_recurrence:
-    term:
-      $ref: "_terms.yaml#/progression_or_recurrence"
+  progression_free_survival:
+    description: "Number of days between the date used for index and the first date the patient is known to be free of disease progression."
+    type: integer
+  progression_free_survival_event:
+    description: "The event used to define the patient's disease progression."
     enum:
-      - "yes"
-      - "no"
-      - unknown
-      - not reported
-      - Not Allowed To Collect
-
+      - Death
+      - Disease Progression
+      - No Event
+      - Unknown
   residual_disease:
     term:
       $ref: "_terms.yaml#/residual_disease"
@@ -782,61 +3923,19 @@ properties:
       - R1
       - R2
       - RX
-
-  site_of_resection_or_biopsy:
-    term:
-      $ref: "_terms.yaml#/site_of_resection_or_biopsy"
-    type: string
-
   tissue_or_organ_of_origin:
     term:
       $ref: "_terms.yaml#/tissue_or_organ_of_origin"
     type: string
-
   tumor_grade:
     term:
       $ref: "_terms.yaml#/tumor_grade"
-    type: string
-
-  tumor_stage:
-    term:
-      $ref: "_terms.yaml#/tumor_stage"
-    type: string
-
-  vascular_invasion_present:
-    term:
-      $ref: "_terms.yaml#/vascular_invasion_present"
     enum:
-      - "Yes"
-      - "No"
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
-  vital_status:
-    term:
-      $ref: "_terms.yaml#/vital_status"
-    enum:
-      - alive
-      - dead
-      - lost to follow-up
-      - unknown
-      - not reported
-      - Not Allowed To Collect
-      - pending # this is from TARGET RT clinical data
-
-  year_of_diagnosis:
-    term:
-      $ref: "_terms.yaml#/year_of_diagnosis"
-    type:
-      - number
-      - "null"
+      -  GX Grade cannot be assessed (undetermined grade)
+      -  G1 Well differentiated (low grade)
+      -  G2 Moderately differentiated (intermediate grade)
+      -  G3 Poorly differentiated (high grade)
+      -  G4 Undifferentiated (high grade)
 
   cases:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
