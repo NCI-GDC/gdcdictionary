@@ -435,6 +435,7 @@ properties:
       - string
     oneOf:
       - enum:
+          - Unknown
           - Not Applicable
       - type: number
   freezing_method:
