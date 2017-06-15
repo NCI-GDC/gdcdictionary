@@ -1,0 +1,633 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "biospecimen"
+title: Biospecimen
+type: object
+namespace: https://www.bloodpac.org
+category: biospecimen
+program: '*'
+project: '*'
+description: >
+  Any material sample taken from a biological entity for testing, diagnostic, propagation, treatment
+  or research purposes, including a sample obtained from a living organism or taken from the
+  biological object after halting of all its life functions. Biospecimen can contain one or more
+  components including but not limited to cellular molecules, cells, tissues, organs, body fluids,
+  embryos, and body excretory products. In the case of contrived samples, it describes any material
+  obtained from a normal donor.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+required:
+  - submitter_id
+  - biospecimen_type
+  - biospecimen_anatomic_site
+  - blood_tube_type
+  - days_to_procurement
+  - method_of_procurement
+  - tissue_type
+  - cases
+
+links:
+  - name: cases
+    backref: biospecimens
+    label: derived_from
+    target_type: case
+    multiplicity: many_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  biospecimen_anatomic_site:
+    term:
+      $ref: "_terms.yaml#/biospecimen_anatomic_site"
+    enum:
+      - Abdomen
+      - Abdominal Wall
+      - Acetabulum
+      - Adenoid
+      - Adipose
+      - Adrenal
+      - Alveolar Ridge
+      - Amniotic Fluid
+      - Ampulla of Vater
+      - Anal Sphincter
+      - Ankle
+      - Anorectum
+      - Antecubital Fossa
+      - Antrum
+      - Anus
+      - Aorta
+      - Aortic Body
+      - Appendix
+      - Aqueous Fluid
+      - Arm
+      - Artery
+      - Ascending Colon
+      - Ascending Colon Hepatic Flexure
+      - Auditory Canal
+      - Autonomic Nervous System
+      - Axilla
+      - Back
+      - Bile Duct
+      - Bladder
+      - Blood
+      - Blood Vessel
+      - Bone
+      - Bone Marrow
+      - Bowel
+      - Brain
+      - Brain Stem
+      - Breast
+      - Broad Ligament
+      - Bronchiole
+      - Bronchus
+      - Brow
+      - Buccal Cavity
+      - Buccal Mucosa
+      - Buttock
+      - Calf
+      - Capillary
+      - Cardia
+      - Carina
+      - Carotid Artery
+      - Carotid Body
+      - Cartilage
+      - Cecum
+      - Cell-Line
+      - Central Nervous System
+      - Cerebellum
+      - Cerebral Cortex
+      - Cerebrospinal Fluid
+      - Cerebrum
+      - Cervical Spine
+      - Cervix
+      - Chest
+      - Chest Wall
+      - Chin
+      - Clavicle
+      - Clitoris
+      - Colon
+      - Colon (Mucosa Only)
+      - Common Duct
+      - Conjunctiva
+      - Connective Tissue
+      - Dermal
+      - Descending Colon
+      - Diaphragm
+      - Duodenum
+      - Ear
+      - Ear Canal
+      - Ear, Pinna (External)
+      - Effusion
+      - Elbow
+      - Endocrine Gland
+      - Epididymis
+      - Epidural Space
+      - Esophagogastric Junction
+      - Esophagus
+      - Esophagus (Mucosa Only)
+      - Eye
+      - Fallopian Tube
+      - Femoral Artery
+      - Femoral Vein
+      - Femur
+      - Fibroblasts
+      - Fibula
+      - Finger
+      - Floor of Mouth
+      - Fluid
+      - Foot
+      - Forearm
+      - Forehead
+      - Foreskin
+      - Frontal Cortex
+      - Frontal Lobe
+      - Fundus of Stomach
+      - Gallbladder
+      - Ganglia
+      - Gastroesophageal Junction
+      - Gastrointestinal Tract
+      - Groin
+      - Gum
+      - Hand
+      - Hard Palate
+      - Head and Neck
+      - Head (Face Or Neck) NOS
+      - Heart
+      - Hepatic
+      - Hepatic Duct
+      - Hepatic Vein
+      - Hip
+      - Hippocampus
+      - Humerus
+      - Hypopharynx
+      - Ileum
+      - Ilium
+      - Index Finger
+      - Ischium
+      - Islet Cells
+      - Jaw
+      - Jejunum
+      - Joint
+      - Kidney
+      - Knee
+      - Lacrimal Gland
+      - Large Bowel
+      - Laryngopharynx
+      - Larynx
+      - Leg
+      - Leptomeninges
+      - Ligament
+      - Lip
+      - Liver
+      - Lumbar Spine
+      - Lung
+      - Lymph Node
+      - Lymph Node(s) Axilla
+      - Lymph Node(s) Cervical
+      - Lymph Node(s) Distant
+      - Lymph Node(s) Epitrochlear
+      - Lymph Node(s) Femoral
+      - Lymph Node(s) Hilar
+      - Lymph Node(s) Iliac-Common
+      - Lymph Node(s) Iliac-External
+      - Lymph Node(s) Inguinal
+      - Lymph Node(s) Internal Mammary
+      - Lymph Node(s) Mammary
+      - Lymph Node(s) Mesenteric
+      - Lymph Node(s) Occipital
+      - Lymph Node(s) Paraaortic
+      - Lymph Node(s) Parotid
+      - Lymph Node(s) Pelvic
+      - Lymph Node(s) Popliteal
+      - Lymph Node(s) Regional
+      - Lymph Node(s) Retroperitoneal
+      - Lymph Node(s) Scalene
+      - Lymph Node(s) Splenic
+      - Lymph Node(s) Subclavicular
+      - Lymph Node(s) Submandibular
+      - Lymph Node(s) Supraclavicular
+      - Lymph Nodes(s) Mediastinal
+      - Mandible
+      - Maxilla
+      - Mediastinal Soft Tissue
+      - Mediastinum
+      - Mesentery
+      - Mesothelium
+      - Middle Finger
+      - Mitochondria
+      - Muscle
+      - Nails
+      - Nasal Cavity
+      - Nasal Soft Tissue
+      - Nasopharynx
+      - Neck
+      - Nerve
+      - Nerve(s) Cranial
+      - Occipital Cortex
+      - Ocular Orbits
+      - Omentum
+      - Oral Cavity
+      - Oral Cavity (Mucosa Only)
+      - Oropharynx
+      - Other
+      - Ovary
+      - Palate
+      - Pancreas
+      - Paraspinal Ganglion
+      - Parathyroid
+      - Parotid Gland
+      - Patella
+      - Pelvis
+      - Penis
+      - Pericardium
+      - Periorbital Soft Tissue
+      - Peritoneal Cavity
+      - Peritoneum
+      - Pharynx
+      - Pineal
+      - Pineal Gland
+      - Pituitary Gland
+      - Placenta
+      - Pleura
+      - Popliteal Fossa
+      - Prostate
+      - Pylorus
+      - Rectosigmoid Junction
+      - Rectum
+      - Retina
+      - Retro-Orbital Region
+      - Retroperitoneum
+      - Rib
+      - Ring Finger
+      - Round Ligament
+      - Sacrum
+      - Salivary Gland
+      - Scalp
+      - Scapula
+      - Sciatic Nerve
+      - Scrotum
+      - Seminal Vesicle
+      - Shoulder
+      - Sigmoid Colon
+      - Sinus
+      - Sinus(es), Maxillary
+      - Skeletal Muscle
+      - Skin
+      - Skull
+      - Small Bowel
+      - Small Bowel (Mucosa Only)
+      - Small Finger
+      - Soft Tissue
+      - Spinal Column
+      - Spinal Cord
+      - Spleen
+      - Splenic Flexure
+      - Sternum
+      - Stomach
+      - Stomach (Mucosa Only)
+      - Subcutaneous Tissue
+      - Synovium
+      - Temporal Cortex
+      - Tendon
+      - Testis
+      - Thigh
+      - Thoracic Spine
+      - Thorax
+      - Throat
+      - Thumb
+      - Thymus
+      - Thyroid
+      - Tibia
+      - Tongue
+      - Tonsil
+      - Tonsil (Pharyngeal)
+      - Trachea Major Bronchi
+      - Transverse Colon
+      - Trunk
+      - Umbilical Cord
+      - Ureter
+      - Urethra
+      - Urinary Tract
+      - Uterus
+      - Uvula
+      - Vagina
+      - Vas Deferens
+      - Vein
+      - Venous
+      - Vertebra
+      - Vulva
+      - White Blood Cells
+      - Wrist
+      - Unknown
+  biospecimen_type:
+    description: "A top level description of the biospecimen. Is the biospecimen a fluid or solid tissue?"
+    enum:
+      - Fluid
+      - Solid Tissue
+  biospecimen_volume:
+    description: "The total volume of the biospecimen in mililiters."
+    type: number
+  blood_draw_method:
+    description: >
+      The name or generalized description of the method used to draw a blood biospecimen.
+      Alternatively, if you have provided a blood draw protocol, put the associated file_name here.
+    type: string
+  blood_tube_type:
+    description: "The kind of tube used to collect the sample(s) taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes."
+    enum:
+      - EDTA
+      - CellSave
+      - Streck
+      - Acid Citrate Dextrose (ACD)
+      - Not Applicable
+  clinical_site:
+    description: "The name or identifier for the clinical site at which the biospecimen was taken from the patient."
+    type: string
+  days_to_procurement:
+    description: "The number of days between the index date and the date the biospecimen was taken from the patient (such as the blood draw)."
+    type: number
+  disease_type:
+    description: "The disease of the patient from which the biospecimen was taken."
+    enum:
+      - Acinar Cell Neoplasms
+      - Adenomas and Adenocarcinomas
+      - Adnexal and Skin Appendage Neoplasms
+      - Basal Cell Neoplasms
+      - Blood Vessel Tumors
+      - Chronic Myeloproliferative Disorders
+      - Complex Epithelial Neoplasms
+      - Complex Mixed and Stromal Neoplasms
+      - Cystic, Mucinous and Serous Neoplasms
+      - Ductal and Lobular Neoplams
+      - Epithelial Neoplasms, NOS
+      - Fibroepithelial Neoplasms
+      - Fibromatous Neoplasms
+      - Germ Cell Neoplasms
+      - Giant Cell Tumors
+      - Gliomas
+      - Granular Cell Tumors and Alveolar Soft Part Sarcomas
+      - Hodgkin Lymphoma
+      - Immunoproliferative Disease
+      - Leukemias, NOS
+      - Lipomatous Neoplasms
+      - Lymphatic Vessel Tumors
+      - Lymphoid Leukemias
+      - Malignant Lymphomas, NOS or Diffuse
+      - Mast Cell Tumors
+      - Mature B-Cell Lymphomas
+      - Mature T- and NK-Cell Lymphomas
+      - Meningiomas
+      - Mesonephromas
+      - Mesothelial Neoplasms
+      - Miscellaneous Bone Tumors
+      - Miscellaneous Tumors
+      - Mucoepidermoid Neoplasms
+      - Myelodysplastic Syndromes
+      - Myeloid Leukemias
+      - Myomatous Neoplasms
+      - Myxomatous Neoplasms
+      - Neoplasms
+      - Neoplasms of Histiocytes and Accessory Lymphoid Cells
+      - Nerve Sheath Tumors
+      - Neuroepitheliomatous Neoplasms
+      - Nevi and Melanomas
+      - Odontogenic Tumors
+      - Osseous and Chondromatous Neoplasms
+      - Other Hematologic Disorders
+      - Other Leukemias
+      - Paragangliomas and Glomus Tumors
+      - Plasma Cell Tumors
+      - Precursor Cell Lymphoblastic Lymphoma
+      - Soft Tissue Tumors and Sarcomas, NOS
+      - Specialized Gonadal Neoplasms
+      - Squamous Cell Neoplasms
+      - Synovial-like Neoplasms
+      - Thymic Epithelial Neoplasms
+      - Transitional Cell Papillomas and Carcinomas
+  metastatic_bone:
+    description: >
+      True/False indicator of whether metastasis had been confirmed in an area of bone of the
+      patient from which the biospecimen was taken.
+    type: boolean
+  metastatic_lymph_node:
+    description: >
+      True/False indicator of whether metastasis had been confirmed in the lymph nodes of the
+      patient from which the biospecimen was taken.
+    type: boolean
+  metastatic_visceral:
+    description: >
+      True/False indicator of whether metastasis had been confirmed in the viscera of the
+      patient from which the biospecimen was taken.
+    type: boolean
+  method_of_procurement:
+    term:
+      $ref: "_terms.yaml#/method_of_sample_procurement"
+    enum:
+      - Abdomino-perineal Resection of Rectum
+      - Anterior Resection of Rectum
+      - Aspirate
+      - Biopsy
+      - Blood Draw
+      - Bone Marrow Aspirate
+      - Core Biopsy
+      - Cystectomy
+      - Endo Rectal Tumor Resection
+      - Endoscopic Biopsy
+      - Endoscopic Mucosal Resection (EMR)
+      - Enucleation
+      - Excisional Biopsy
+      - Fine Needle Aspiration
+      - Full Hysterectomy
+      - Gross Total Resection
+      - Hand Assisted Laparoscopic Radical Nephrectomy
+      - Hysterectomy NOS
+      - Incisional Biopsy
+      - Indeterminant
+      - Laparoscopic Biopsy
+      - Laparoscopic Partial Nephrectomy
+      - Laparoscopic Radical Nephrectomy
+      - Laparoscopic Radical Prostatectomy with Robotics
+      - Laparoscopic Radical Prostatectomy without Robotics
+      - Left Hemicolectomy
+      - Lobectomy
+      - Local Resection (Exoresection; wall resection)
+      - Lumpectomy
+      - Modified Radical Mastectomy
+      - Needle Biopsy
+      - Open Craniotomy
+      - Open Partial Nephrectomy
+      - Open Radical Nephrectomy
+      - Open Radical Prostatectomy
+      - Orchiectomy
+      - Other
+      - Other Surgical Resection
+      - Pan-Procto Colectomy
+      - Pneumonectomy
+      - Right Hemicolectomy
+      - Sigmoid Colectomy
+      - Simple Mastectomy
+      - Subtotal Resection
+      - Surgical Resection
+      - Thoracoscopic Biopsy
+      - Total Colectomy
+      - Total Mastectomy
+      - Transplant
+      - Transurethral resection (TURBT)
+      - Transverse Colectomy
+      - Tumor Resection
+      - Wedge Resection
+  primary_site:
+    description: >
+      The site of the primary tumor for the patient from which the biospecimen was taken.
+    enum:
+      - Accessory Sinuses
+      - Adrenal Gland
+      - Anus and Anal Canal
+      - Base of Tongue
+      - Bladder
+      - Bones, Joints, and Articular Cartilage of Limbs
+      - Bones, Joints, and Articular Cartilage of Other and Unspecified Sites
+      - Brain
+      - Breast
+      - Bronchus and Lung
+      - Cervix Uteri
+      - Colon
+      - Connective, Subcutaneous, and Other Soft Tissues
+      - Corpus Uteri
+      - Esophagus
+      - Eye and Adnexa
+      - Floor of Mouth
+      - Gallbladder
+      - Gum
+      - Heart, Mediastinum, and Pleura
+      - Hematopoietic and Reticuloendothelial Systems
+      - Hypopharynx
+      - Kidney
+      - Larynx
+      - Lip
+      - Liver and Intrahepatic Bile Ducts
+      - Lymph Nodes
+      - Meninges
+      - Nasal Cavity and Middle Ear
+      - Nasopharynx
+      - Oropharynx
+      - Other An Unspecified Female Genital Organs
+      - Other and Ill-Defined Digestive Organs
+      - Other and Ill-Defined Sites
+      - Other and Ill-Defined Sites In Lip, Oral Cavity and Pharynx
+      - Other and Ill-Defined Sites Within Respiratory System and Intrathoracic Organs
+      - Other and Unspecified Major Salivary Glands
+      - Other and Unspecified Male Genital Organs
+      - Other and Unspecified Parts of Biliary Tract
+      - Other and Unspecified Parts of Mouth
+      - Other and Unspecified Parts of the Tongue
+      - Other and Unspecified Urinary Organs
+      - Other Endocrine Glands and Related Structures
+      - Ovary
+      - Palate
+      - Pancreas
+      - Parotid Gland
+      - Penis
+      - Peripheral Nerves and Autonomic Nervous System
+      - Placenta
+      - Prostate Gland
+      - Pyriform Sinus
+      - Rectum
+      - Renal Pelvis
+      - Retroperitoneum and Peritoneum
+      - Skin
+      - Small Intestine
+      - Spinal Cord, Cranial Nerves, and Other Parts of Central Nervous System
+      - Stomach
+      - Testis
+      - Thymus
+      - Thyroid Gland
+      - Tonsil
+      - Trachea
+      - Ureter
+      - Uterus, NOS
+      - Vagina
+      - Vulva
+      - Unknown
+  procurement_temperature:
+    description: >
+      The temperature, in centigrade, at which the biospecimen was kept after procuring it from the
+      patient. Use 20 for room temperature; 0 for on ice.
+    type: number 
+  shipping_temperature:
+    description: >
+      The temperature, in centigrade, at which the biospecimen was kept while it was being
+      transported from the procurement site to its processing destination.
+    type: number
+  tissue_type:
+    term:
+      $ref: "_terms.yaml#/tissue_type"
+    enum:
+      - Tumor
+      - Normal
+      - Abnormal
+      - Peritumoral
+      - Unknown
+  tumor_code:
+    term:
+      $ref: "_terms.yaml#/tumor_code"
+    enum:
+      - Non Cancerous Tissue
+      - Diffuse Large B-Cell Lymphoma (DLBCL)
+      - Lung Cancer (all types)
+      - Lung Adenocarcinoma
+      - Non-small Cell Lung Carcinoma (NSCLC)
+      - Colon Cancer (all types)
+      - Breast Cancer (all types)
+      - Cervical Cancer (all types)
+      - Anal Cancer (all types)
+      - Acute Lymphoblastic Leukemia (ALL)
+      - Acute Myeloid Leukemia (AML)
+      - Induction Failure AML (AML-IF)
+      - Neuroblastoma (NBL)
+      - Osteosarcoma (OS)
+      - Ewing Sarcoma
+      - Wilms Tumor (WT)
+      - Clear Cell Sarcoma of the Kidney (CCSK)
+      - Rhabdoid Tumor (Kidney) (RT)
+      - CNS, Ependymoma
+      - CNS, Glioblastoma (GBM)
+      - CNS, Rhabdoid Tumor
+      - CNS, Low Grade Glioma (LGG)
+      - CNS, Medulloblastoma
+      - CNS, Other
+      - NHL, Anaplastic Large Cell Lymphoma
+      - NHL, Burkitt lymphoma (BL)
+      - Rhabdomyosarcoma
+      - Soft Tissue Sarcoma, Non-rhabdomyosarcoma
+      - Castration-Resistant Prostate Cancer (CRPC)
+      - Prostate Cancer NOS
+      - Hepatocellular Carcinoma (HCC)
+  tumor_descriptor:
+    term:
+      $ref: "_terms.yaml#/tumor_descriptor"
+    enum:
+      - Metastatic
+      - Not Applicable
+      - Primary
+      - Recurrence
+      - Xenograft
+      - NOS
+      - Unknown
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"

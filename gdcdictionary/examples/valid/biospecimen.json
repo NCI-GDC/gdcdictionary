@@ -1,0 +1,25 @@
+{
+    "type":"biospecimen",
+    "submitter_id":"blood draw 1",
+    "clinical_site": "C1",
+    "days_to_procurement":25,
+    "blood_draw_method":"BloodDrawProtocol.pdf",
+    "method_of_procurement":"Blood Draw",
+    "biospecimen_type":"Fluid",
+    "biospecimen_anatomic_site":"Blood",
+    "biospecimen_volume":10,
+    "tissue_type":"Tumor",
+    "tumor_code":"Prostate Cancer NOS",
+    "disease_type":"Transitional Cell Papillomas and Carcinomas",
+    "tumor_descriptor":"Primary",
+    "primary_site":"Prostate Gland",
+    "metastatic_bone":false,
+    "metastatic_lymph_node":false,
+    "metastatic_visceral":false,
+    "procurement_temperature": 20,
+    "shipping_temperature": 0,
+    "blood_tube_type":"EDTA",
+    "cases": {
+        "submitter_id":"Case 1"
+    }
+}
