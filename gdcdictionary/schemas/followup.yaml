@@ -1,0 +1,1010 @@
+schema: "http://json-schema.org/draft-04/schema#"
+
+id: "followup"
+title: Follow-Up
+type: object
+namespace: https://www.bloodpac.org
+category: clinical
+program: '*'
+project: '*'
+description: >
+  The process by which information about the health status of an individual is obtained after a
+  study has officially closed; an activity that continues something that has already begun or that
+  repeats something that has already been done.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: followups
+    label: describes
+    target_type: case
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - days_to_followup
+  - cases
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+  adverse_event:
+    description: "Text that represents the Common Terminology Criteria for Adverse Events low level term name for an adverse event."
+    enum:
+      - Abdominal distension
+      - Abdominal infection
+      - Abdominal pain
+      - Abdominal soft tissue necrosis
+      - Abducens nerve disorder
+      - Accessory nerve disorder
+      - Acidosis
+      - Acoustic nerve disorder NOS
+      - Activated partial thromboplastin time prolonged
+      - Acute coronary syndrome
+      - Acute kidney injury
+      - Adrenal insufficiency
+      - Adult respiratory distress syndrome
+      - Agitation
+      - Akathisia
+      - Alanine aminotransferase increased
+      - Alcohol intolerance
+      - Alkaline phosphatase increased
+      - Alkalosis
+      - Allergic reaction
+      - Allergic rhinitis
+      - Alopecia
+      - Amnesia
+      - Anal fistula
+      - Anal hemorrhage
+      - Anal mucositis
+      - Anal necrosis
+      - Anal pain
+      - Anal stenosis
+      - Anal ulcer
+      - Anaphylaxis
+      - Anemia
+      - Ankle fracture
+      - Anorectal infection
+      - Anorexia
+      - Anorgasmia
+      - Anxiety
+      - Aortic injury
+      - Aortic valve disease
+      - Aphonia
+      - Apnea
+      - Appendicitis
+      - Appendicitis perforated
+      - Arachnoiditis
+      - Arterial injury
+      - Arteritis infective
+      - Arthralgia
+      - Arthritis
+      - Ascites
+      - Aspartate aminotransferase increased
+      - Aspiration
+      - Asystole
+      - Ataxia
+      - Atelectasis
+      - Atrial fibrillation
+      - Atrial flutter
+      - Atrioventricular block complete
+      - Atrioventricular block first degree
+      - Autoimmune disorder
+      - Avascular necrosis
+      - Azoospermia
+      - Back pain
+      - Bile duct stenosis
+      - Biliary anastomotic leak
+      - Biliary fistula
+      - Biliary tract infection
+      - Bladder anastomotic leak
+      - Bladder infection
+      - Bladder perforation
+      - Bladder spasm
+      - Bloating
+      - Blood and lymphatic system disorders
+      - Blood antidiuretic hormone abnormal
+      - Blood bilirubin increased
+      - Blood corticotrophin decreased
+      - Blood gonadotrophin abnormal
+      - Blood prolactin abnormal
+      - Blurred vision
+      - Body odor
+      - Bone infection
+      - Bone marrow hypocellular
+      - Bone pain
+      - Brachial plexopathy
+      - Breast atrophy
+      - Breast infection
+      - Breast pain
+      - Bronchial fistula
+      - Bronchial infection
+      - Bronchial obstruction
+      - Bronchial stricture
+      - Bronchopleural fistula
+      - Bronchopulmonary hemorrhage
+      - Bronchospasm
+      - Bruising
+      - Bullous dermatitis
+      - Burn
+      - Buttock pain
+      - Capillary leak syndrome
+      - Carbon monoxide diffusing capacity decreased
+      - Cardiac arrest
+      - Cardiac disorders
+      - Cardiac troponin I increased
+      - Cardiac troponin T increased
+      - Cataract
+      - Catheter related infection
+      - CD4 lymphocytes decreased
+      - Cecal hemorrhage
+      - Cecal infection
+      - Central nervous system necrosis
+      - Cerebrospinal fluid leakage
+      - Cervicitis infection
+      - Cheilitis
+      - Chest pain - cardiac
+      - Chest wall pain
+      - Chills
+      - Cholecystitis
+      - Cholesterol high
+      - Chronic kidney disease
+      - Chylothorax
+      - Cognitive disturbance
+      - Colitis
+      - Colonic fistula
+      - Colonic hemorrhage
+      - Colonic obstruction
+      - Colonic perforation
+      - Colonic stenosis
+      - Colonic ulcer
+      - Concentration impairment
+      - Conduction disorder
+      - Confusion
+      - Congenital, familial and genetic disorders
+      - Conjunctivitis
+      - Conjunctivitis infective
+      - Constipation
+      - Constrictive pericarditis
+      - Corneal infection
+      - Corneal ulcer
+      - Cough
+      - CPK increased
+      - Cranial nerve infection
+      - Creatinine increased
+      - Cushingoid
+      - Cystitis noninfective
+      - Cytokine release syndrome
+      - Death neonatal
+      - Death NOS
+      - Dehydration
+      - Delayed orgasm
+      - Delayed puberty
+      - Delirium
+      - Delusions
+      - Dental caries
+      - Depressed level of consciousness
+      - Depression
+      - Dermatitis radiation
+      - Device related infection
+      - Diarrhea
+      - Disseminated intravascular coagulation
+      - Dizziness
+      - Dry eye
+      - Dry mouth
+      - Dry skin
+      - Duodenal fistula
+      - Duodenal hemorrhage
+      - Duodenal infection
+      - Duodenal obstruction
+      - Duodenal perforation
+      - Duodenal stenosis
+      - Duodenal ulcer
+      - Dysarthria
+      - Dysesthesia
+      - Dysgeusia
+      - Dysmenorrhea
+      - Dyspareunia
+      - Dyspepsia
+      - Dysphagia
+      - Dysphasia
+      - Dyspnea
+      - Ear and labyrinth disorders
+      - Ear pain
+      - Edema cerebral
+      - Edema face
+      - Edema limbs
+      - Edema trunk
+      - Ejaculation disorder
+      - Ejection fraction decreased
+      - Electrocardiogram QT corrected interval prolonged
+      - Encephalitis infection
+      - Encephalomyelitis infection
+      - Encephalopathy
+      - Endocarditis infective
+      - Endocrine disorders
+      - Endophthalmitis
+      - Enterocolitis
+      - Enterocolitis infectious
+      - Enterovesical fistula
+      - Epistaxis
+      - Erectile dysfunction
+      - Erythema multiforme
+      - Erythroderma
+      - Esophageal anastomotic leak
+      - Esophageal fistula
+      - Esophageal hemorrhage
+      - Esophageal infection
+      - Esophageal necrosis
+      - Esophageal obstruction
+      - Esophageal pain
+      - Esophageal perforation
+      - Esophageal stenosis
+      - Esophageal ulcer
+      - Esophageal varices hemorrhage
+      - Esophagitis
+      - Euphoria
+      - Exostosis
+      - External ear inflammation
+      - External ear pain
+      - Extraocular muscle paresis
+      - Extrapyramidal disorder
+      - Eye disorders
+      - Eye infection
+      - Eye pain
+      - Eyelid function disorder
+      - Facial muscle weakness
+      - Facial nerve disorder
+      - Facial pain
+      - Fall
+      - Fallopian tube anastomotic leak
+      - Fallopian tube obstruction
+      - Fallopian tube perforation
+      - Fallopian tube stenosis
+      - Fat atrophy
+      - Fatigue
+      - Febrile neutropenia
+      - Fecal incontinence
+      - Female genital tract fistula
+      - Feminization acquired
+      - Fetal death
+      - Fetal growth retardation
+      - Fever
+      - Fibrinogen decreased
+      - Fibrosis deep connective tissue
+      - Flank pain
+      - Flashing lights
+      - Flatulence
+      - Floaters
+      - Flu like symptoms
+      - Flushing
+      - Forced expiratory volume decreased
+      - Fracture
+      - Gait disturbance
+      - Gallbladder fistula
+      - Gallbladder infection
+      - Gallbladder necrosis
+      - Gallbladder obstruction
+      - Gallbladder pain
+      - Gallbladder perforation
+      - Gastric anastomotic leak
+      - Gastric fistula
+      - Gastric hemorrhage
+      - Gastric necrosis
+      - Gastric perforation
+      - Gastric stenosis
+      - Gastric ulcer
+      - Gastritis
+      - Gastroesophageal reflux disease
+      - Gastrointestinal anastomotic leak
+      - Gastrointestinal disorders
+      - Gastrointestinal fistula
+      - Gastrointestinal pain
+      - Gastrointestinal stoma necrosis
+      - Gastroparesis
+      - General disorders and administration site conditions
+      - Generalized muscle weakness
+      - Genital edema
+      - GGT increased
+      - Gingival pain
+      - Glaucoma
+      - Glossopharyngeal nerve disorder
+      - Glucose intolerance
+      - Growth accelerated
+      - Growth hormone abnormal
+      - Growth suppression
+      - Gum infection
+      - Gynecomastia
+      - Hallucinations
+      - Haptoglobin decreased
+      - Head soft tissue necrosis
+      - Headache
+      - Hearing impaired
+      - Heart failure
+      - Hematoma
+      - Hematosalpinx
+      - Hematuria
+      - Hemoglobin increased
+      - Hemoglobinuria
+      - Hemolysis
+      - Hemolytic uremic syndrome
+      - Hemorrhoidal hemorrhage
+      - Hemorrhoids
+      - Hepatic failure
+      - Hepatic hemorrhage
+      - Hepatic infection
+      - Hepatic necrosis
+      - Hepatic pain
+      - Hepatitis viral
+      - Hepatobiliary disorders
+      - Hiccups
+      - Hip fracture
+      - Hirsutism
+      - Hoarseness
+      - Hot flashes
+      - Hydrocephalus
+      - Hypercalcemia
+      - Hyperglycemia
+      - Hyperhidrosis
+      - Hyperkalemia
+      - Hypermagnesemia
+      - Hypernatremia
+      - Hyperparathyroidism
+      - Hypersomnia
+      - Hypertension
+      - Hyperthyroidism
+      - Hypertrichosis
+      - Hypertriglyceridemia
+      - Hyperuricemia
+      - Hypoalbuminemia
+      - Hypocalcemia
+      - Hypoglossal nerve disorder
+      - Hypoglycemia
+      - Hypohidrosis
+      - Hypokalemia
+      - Hypomagnesemia
+      - Hyponatremia
+      - Hypoparathyroidism
+      - Hypophosphatemia
+      - Hypotension
+      - Hypothermia
+      - Hypothyroidism
+      - Hypoxia
+      - Ileal fistula
+      - Ileal hemorrhage
+      - Ileal obstruction
+      - Ileal perforation
+      - Ileal stenosis
+      - Ileal ulcer
+      - Ileus
+      - Immune system disorders
+      - Infections and infestations
+      - Infective myositis
+      - Infusion related reaction
+      - Infusion site extravasation
+      - Injection site reaction
+      - Injury to carotid artery
+      - Injury to inferior vena cava
+      - Injury to jugular vein
+      - Injury to superior vena cava
+      - Injury, poisoning and procedural complications
+      - INR increased
+      - Insomnia
+      - Intestinal stoma leak
+      - Intestinal stoma obstruction
+      - Intestinal stoma site bleeding
+      - Intra-abdominal hemorrhage
+      - Intracranial hemorrhage
+      - Intraoperative arterial injury
+      - Intraoperative breast injury
+      - Intraoperative cardiac injury
+      - Intraoperative ear injury
+      - Intraoperative endocrine injury
+      - Intraoperative gastrointestinal injury
+      - Intraoperative head and neck injury
+      - Intraoperative hemorrhage
+      - Intraoperative hepatobiliary injury
+      - Intraoperative musculoskeletal injury
+      - Intraoperative neurological injury
+      - Intraoperative ocular injury
+      - Intraoperative renal injury
+      - Intraoperative reproductive tract injury
+      - Intraoperative respiratory injury
+      - Intraoperative skin injury
+      - Intraoperative splenic injury
+      - Intraoperative urinary injury
+      - Intraoperative venous injury
+      - Investigations
+      - Iron overload
+      - Irregular menstruation
+      - Irritability
+      - Ischemia cerebrovascular
+      - IVth nerve disorder
+      - Jejunal fistula
+      - Jejunal hemorrhage
+      - Jejunal obstruction
+      - Jejunal perforation
+      - Jejunal stenosis
+      - Jejunal ulcer
+      - Joint effusion
+      - Joint infection
+      - Joint range of motion decreased
+      - Joint range of motion decreased cervical spine
+      - Joint range of motion decreased lumbar spine
+      - Keratitis
+      - Kidney anastomotic leak
+      - Kidney infection
+      - Kyphosis
+      - Lactation disorder
+      - Large intestinal anastomotic leak
+      - Laryngeal edema
+      - Laryngeal fistula
+      - Laryngeal hemorrhage
+      - Laryngeal inflammation
+      - Laryngeal mucositis
+      - Laryngeal obstruction
+      - Laryngeal stenosis
+      - Laryngitis
+      - Laryngopharyngeal dysesthesia
+      - Laryngospasm
+      - Left ventricular systolic dysfunction
+      - Lethargy
+      - Leukemia secondary to oncology chemotherapy
+      - Leukocytosis
+      - Leukoencephalopathy
+      - Libido decreased
+      - Libido increased
+      - Lip infection
+      - Lip pain
+      - Lipase increased
+      - Lipohypertrophy
+      - Localized edema
+      - Lordosis
+      - Lower gastrointestinal hemorrhage
+      - Lung infection
+      - Lymph gland infection
+      - Lymph leakage
+      - Lymph node pain
+      - Lymphedema
+      - Lymphocele
+      - Lymphocyte count decreased
+      - Lymphocyte count increased
+      - Malabsorption
+      - Malaise
+      - Mania
+      - Mediastinal hemorrhage
+      - Mediastinal infection
+      - Memory impairment
+      - Meningismus
+      - Meningitis
+      - Menopause
+      - Menorrhagia
+      - Metabolism and nutrition disorders
+      - Middle ear inflammation
+      - Mitral valve disease
+      - Mobitz (type) II atrioventricular block
+      - Mobitz type I
+      - Movements involuntary
+      - Mucosal infection
+      - Mucositis oral
+      - Multi-organ failure
+      - Muscle weakness left-sided
+      - Muscle weakness lower limb
+      - Muscle weakness right-sided
+      - Muscle weakness trunk
+      - Muscle weakness upper limb
+      - Musculoskeletal and connective tissue disorders
+      - Musculoskeletal deformity
+      - Myalgia
+      - Myelitis
+      - Myelodysplastic syndrome
+      - Myocardial infarction
+      - Myocarditis
+      - Myositis
+      - Nail discoloration
+      - Nail infection
+      - Nail loss
+      - Nail ridging
+      - Nasal congestion
+      - Nausea
+      - Neck edema
+      - Neck pain
+      - Neck soft tissue necrosis
+      - Neoplasms benign, malignant and unspecified (incl cysts and polyps)
+      - Nervous system disorders
+      - Neuralgia
+      - Neutrophil count decreased
+      - Night blindness
+      - Nipple deformity
+      - Non-cardiac chest pain
+      - Nystagmus
+      - Obesity
+      - Obstruction gastric
+      - Oculomotor nerve disorder
+      - Olfactory nerve disorder
+      - Oligospermia
+      - Optic nerve disorder
+      - Oral cavity fistula
+      - Oral dysesthesia
+      - Oral hemorrhage
+      - Oral pain
+      - Osteonecrosis of jaw
+      - Osteoporosis
+      - Otitis externa
+      - Otitis media
+      - Ovarian hemorrhage
+      - Ovarian infection
+      - Ovarian rupture
+      - Ovulation pain
+      - Pain
+      - Pain in extremity
+      - Pain of skin
+      - Palmar-plantar erythrodysesthesia syndrome
+      - Palpitations
+      - Pancreas infection
+      - Pancreatic anastomotic leak
+      - Pancreatic duct stenosis
+      - Pancreatic enzymes decreased
+      - Pancreatic fistula
+      - Pancreatic hemorrhage
+      - Pancreatic necrosis
+      - Pancreatitis
+      - Papilledema
+      - Papulopustular rash
+      - Paresthesia
+      - Paronychia
+      - Paroxysmal atrial tachycardia
+      - Pelvic floor muscle weakness
+      - Pelvic infection
+      - Pelvic pain
+      - Pelvic soft tissue necrosis
+      - Penile infection
+      - Penile pain
+      - Perforation bile duct
+      - Pericardial effusion
+      - Pericardial tamponade
+      - Pericarditis
+      - Perineal pain
+      - Periodontal disease
+      - Periorbital edema
+      - Periorbital infection
+      - Peripheral ischemia
+      - Peripheral motor neuropathy
+      - Peripheral nerve infection
+      - Peripheral sensory neuropathy
+      - Peritoneal infection
+      - Peritoneal necrosis
+      - Personality change
+      - Phantom pain
+      - Pharyngeal anastomotic leak
+      - Pharyngeal fistula
+      - Pharyngeal hemorrhage
+      - Pharyngeal mucositis
+      - Pharyngeal necrosis
+      - Pharyngeal stenosis
+      - Pharyngitis
+      - Pharyngolaryngeal pain
+      - Phlebitis
+      - Phlebitis infective
+      - Photophobia
+      - Photosensitivity
+      - Platelet count decreased
+      - Pleural effusion
+      - Pleural hemorrhage
+      - Pleural infection
+      - Pleuritic pain
+      - Pneumonitis
+      - Pneumothorax
+      - Portal hypertension
+      - Portal vein thrombosis
+      - Postnasal drip
+      - Postoperative hemorrhage
+      - Postoperative thoracic procedure complication
+      - Precocious puberty
+      - Pregnancy, puerperium and perinatal conditions
+      - Premature delivery
+      - Premature menopause
+      - Presyncope
+      - Proctitis
+      - Productive cough
+      - Prolapse of intestinal stoma
+      - Prolapse of urostomy
+      - Prostate infection
+      - Prostatic hemorrhage
+      - Prostatic obstruction
+      - Prostatic pain
+      - Proteinuria
+      - Pruritus
+      - Psychiatric disorders
+      - Psychosis
+      - Pulmonary edema
+      - Pulmonary fibrosis
+      - Pulmonary fistula
+      - Pulmonary hypertension
+      - Pulmonary valve disease
+      - Purpura
+      - Pyramidal tract syndrome
+      - Radiation recall reaction (dermatologic)
+      - Radiculitis
+      - Rash acneiform
+      - Rash maculo-papular
+      - Rash pustular
+      - Rectal anastomotic leak
+      - Rectal fistula
+      - Rectal hemorrhage
+      - Rectal mucositis
+      - Rectal necrosis
+      - Rectal obstruction
+      - Rectal pain
+      - Rectal perforation
+      - Rectal stenosis
+      - Rectal ulcer
+      - Recurrent laryngeal nerve palsy
+      - Renal and urinary disorders
+      - Renal calculi
+      - Renal colic
+      - Renal hemorrhage
+      - Reproductive system and breast disorders
+      - Respiratory failure
+      - Respiratory, thoracic and mediastinal disorders
+      - Restlessness
+      - Restrictive cardiomyopathy
+      - Retinal detachment
+      - Retinal tear
+      - Retinal vascular disorder
+      - Retinoic acid syndrome
+      - Retinopathy
+      - Retroperitoneal hemorrhage
+      - Reversible posterior leukoencephalopathy syndrome
+      - Rhinitis infective
+      - Right ventricular dysfunction
+      - Salivary duct inflammation
+      - Salivary gland fistula
+      - Salivary gland infection
+      - Scalp pain
+      - Scleral disorder
+      - Scoliosis
+      - Scrotal infection
+      - Scrotal pain
+      - Seizure
+      - Sepsis
+      - Seroma
+      - Serum amylase increased
+      - Serum sickness
+      - Sick sinus syndrome
+      - Sinus bradycardia
+      - Sinus disorder
+      - Sinus pain
+      - Sinus tachycardia
+      - Sinusitis
+      - Skin and subcutaneous tissue disorders
+      - Skin atrophy
+      - Skin hyperpigmentation
+      - Skin hypopigmentation
+      - Skin induration
+      - Skin infection
+      - Skin ulceration
+      - Sleep apnea
+      - Small intestinal anastomotic leak
+      - Small intestinal mucositis
+      - Small intestinal obstruction
+      - Small intestinal perforation
+      - Small intestinal stenosis
+      - Small intestine infection
+      - Small intestine ulcer
+      - Sneezing
+      - Social circumstances
+      - Soft tissue infection
+      - Soft tissue necrosis lower limb
+      - Soft tissue necrosis upper limb
+      - Somnolence
+      - Sore throat
+      - Spasticity
+      - Spermatic cord anastomotic leak
+      - Spermatic cord hemorrhage
+      - Spermatic cord obstruction
+      - Spinal fracture
+      - Spleen disorder
+      - Splenic infection
+      - Stenosis of gastrointestinal stoma
+      - Stevens-Johnson syndrome
+      - Stoma site infection
+      - Stomach pain
+      - Stomal ulcer
+      - Stridor
+      - Stroke
+      - Sudden death NOS
+      - Suicidal ideation
+      - Suicide attempt
+      - Superficial soft tissue fibrosis
+      - Superficial thrombophlebitis
+      - Superior vena cava syndrome
+      - Supraventricular tachycardia
+      - Surgical and medical procedures
+      - Syncope
+      - Telangiectasia
+      - Testicular disorder
+      - Testicular hemorrhage
+      - Testicular pain
+      - Thromboembolic event
+      - Thrombotic thrombocytopenic purpura
+      - Tinnitus
+      - Tooth development disorder
+      - Tooth discoloration
+      - Tooth infection
+      - Toothache
+      - Toxic epidermal necrolysis
+      - Tracheal fistula
+      - Tracheal hemorrhage
+      - Tracheal mucositis
+      - Tracheal obstruction
+      - Tracheal stenosis
+      - Tracheitis
+      - Tracheostomy site bleeding
+      - Transient ischemic attacks
+      - Treatment related secondary malignancy
+      - Tremor
+      - Tricuspid valve disease
+      - Trigeminal nerve disorder
+      - Trismus
+      - Tumor lysis syndrome
+      - Tumor pain
+      - Typhlitis
+      - Unequal limb length
+      - Unintended pregnancy
+      - Upper gastrointestinal hemorrhage
+      - Upper respiratory infection
+      - Ureteric anastomotic leak
+      - Urethral anastomotic leak
+      - Urethral infection
+      - Urinary fistula
+      - Urinary frequency
+      - Urinary incontinence
+      - Urinary retention
+      - Urinary tract infection
+      - Urinary tract obstruction
+      - Urinary tract pain
+      - Urinary urgency
+      - Urine discoloration
+      - Urine output decreased
+      - Urostomy leak
+      - Urostomy obstruction
+      - Urostomy site bleeding
+      - Urostomy stenosis
+      - Urticaria
+      - Uterine anastomotic leak
+      - Uterine fistula
+      - Uterine hemorrhage
+      - Uterine infection
+      - Uterine obstruction
+      - Uterine pain
+      - Uterine perforation
+      - Uveitis
+      - Vaginal anastomotic leak
+      - Vaginal discharge
+      - Vaginal dryness
+      - Vaginal fistula
+      - Vaginal hemorrhage
+      - Vaginal infection
+      - Vaginal inflammation
+      - Vaginal obstruction
+      - Vaginal pain
+      - Vaginal perforation
+      - Vaginal stricture
+      - Vaginismus
+      - Vagus nerve disorder
+      - Vas deferens anastomotic leak
+      - Vascular access complication
+      - Vascular disorders
+      - Vasculitis
+      - Vasovagal reaction
+      - Venous injury
+      - Ventricular arrhythmia
+      - Ventricular fibrillation
+      - Ventricular tachycardia
+      - Vertigo
+      - Vestibular disorder
+      - Virilization
+      - Visceral arterial ischemia
+      - Vital capacity abnormal
+      - Vitreous hemorrhage
+      - Voice alteration
+      - Vomiting
+      - Vulval infection
+      - Watering eyes
+      - Weight gain
+      - Weight loss
+      - Wheezing
+      - White blood cell decreased
+      - Wolff-Parkinson-White syndrome
+      - Wound complication
+      - Wound dehiscence
+      - Wound infection
+      - Wrist fracture
+  bmi:
+    description: "The body mass divided by the square of the body height expressed in units of kg/m^2."
+    type: number
+  cause_of_response:
+    description: >
+      A specific regimen or line of therapy responsible for the patient's observed improvement
+      achived at a certain point in time during a patient's treatment protocol.
+    type: string
+  comorbidity:
+    description: >
+      Text term to identify a coexistent disease or condition in a person.
+    enum:
+      - Acute renal failure
+      - Adrenocortical Insufficiency
+      - Allergies
+      - Anemia
+      - Anxiety
+      - Arrhythmia
+      - Arthritis
+      - Asthma
+      - Atrial Fibrillation
+      - Avascular Necrosis
+      - Basal Cell Carcinoma
+      - Blood Clots
+      - Bone Fracture(s)
+      - Bronchitis
+      - Calcium Channel Blockers
+      - Cancer
+      - Cataracts
+      - Cerebrovascular Disease
+      - Chronic renal failure
+      - Congestive Heart Failure (CHF)
+      - Connective Tissue Disorder
+      - COPD
+      - Coronary Artery Disease
+      - Cryptogenic Organizing Pneumonia
+      - Deep vein thrombosis / Thromboembolism
+      - Depression
+      - Diabetes
+      - Diabetic Neuropathy
+      - Diet controlled Diabetes
+      - DVT/PE
+      - Dyslipidemia
+      - Epilepsy
+      - Gastroesophageal reflux disease
+      - GERD
+      - Glaucoma
+      - Gout
+      - Gonadal dysfunction
+      - Headache
+      - Heart disease
+      - Hemorrhagic Cystitis
+      - Hepatitis
+      - Hepatitis B Infection
+      - Hepatitis C Infection
+      - HIV / AIDS
+      - HUS/TTP
+      - Hypercholesterolemia
+      - Hypercalcemia
+      - Hyperglycemia
+      - Hyperlipidemia
+      - Hypertension
+      - Hypothyroidism
+      - Inflammatory Bowel Disease
+      - Insulin controlled Diabetes
+      - Interstitial Pneumontis or ARDS
+      - Iron Overload
+      - Ischemic heart disease
+      - ITP
+      - Joint replacement
+      - Kidney Disease
+      - Liver Cirrhosis (Liver Disease)
+      - Liver toxicity (non-infectious)
+      - Lupus
+      - MAI
+      - Myocardial Infarction
+      - None
+      - Obesity
+      - Organ transplant (site)
+      - Osteoarthritis
+      - Osteoporosis or Osteopenia
+      - Other
+      - Other cancer within 5 years
+      - Other nonmalignant systemic disease
+      - Other pulmonary complications
+      - Pancreatitis
+      - Pain (various)
+      - Peptic Ulcer (Ulcer)
+      - Peripheral neuropathy
+      - Peripheral Vascular Disease
+      - Pregnancy in patient or partner
+      - Psoriasis
+      - Pulmonary Fibrosis
+      - Pulmonary Hemorrhage
+      - Renal failure (requiring dialysis)
+      - Renal dialysis
+      - Renal Insufficiency
+      - Rheumatologic Disease
+      - Sarcoidosis
+      - Seizure
+      - Sleep apnea
+      - Smoking
+      - Stroke
+      - Transient ischemic attack
+      - Tuberculosis
+      - Ulcerative Colitis
+  days_to_adverse_event:
+    description: "Number of days between the date used for index and the date the patient had an adverse event."
+    type: integer
+  days_to_comorbidity:
+    description: "Number of days between the date used for index and the date the patient was diagnosed with a comorbidity."
+    type: integer
+  days_to_followup:
+    description: "Number of days between the date used for index and the date the patient was seen or contacted at follow-up."
+    type: integer
+  days_to_progression:
+    description: "Number of days between the date used for index and the date the patient was diagnosed with progression of disease."
+    type: integer
+  days_to_recurrence:
+    description: "Number of days between the date used for index and the date the patient was diagnosed with a recurrent malignancy."
+    type: integer
+  disease_response:
+    description: "The observed improvement achieved at a certain point in time during a patient's treatment protocol."
+    enum:
+      - AJ-Adjuvant Therapy
+      - CPD-Clinical Progression
+      - CR-Complete Response
+      - CRU-Complete Response Unconfirmed
+      - DU-Disease Unchanged
+      - IMR-Immunoresponse
+      - IPD-Immunoprogression
+      - MR-Minimal/Marginal response
+      - MX-Mixed response
+      - Non-CR/Non-PD-Non-CR/Non-PD
+      - NPB-No Palliative Benefit
+      - NR-NO RESPONSE
+      - PA-Palliative Therapy
+      - PB-Palliative Benefit
+      - PD-Progressive Disease
+      - PPD-Pseudoprogression
+      - PR-Partial Response
+      - PSR-Pseudoresponse
+      - RD-Responsive Disease
+      - RP-Response
+      - RPD-Radiographic Progressive Disease
+      - sCR-Stringent Complete Response
+      - SD-Stable Disease
+      - SPD-Surgical progression
+      - TE-Too early
+      - VGPR-Very Good Partial Response
+  ecog_performance_status:
+    description: "The ECOG functional performance status of the patient/participant."
+    enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+  height:
+    description: "The height of the patient in centimeters."
+    type: number
+  progression_or_recurrence:
+    description: "Indicator to identify whether a patient has had a recurrent or relapsed malignancy or a progression of disease."
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+  weight:
+    description: "The weight of the patient measured in kilograms."
+    type: number
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"

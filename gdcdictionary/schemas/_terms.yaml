@@ -470,7 +470,7 @@ datetime:
 
 days_to_birth:
   description: >
-    Time interval from a person's date of birth to the date of initial pathologic diagnosis,
+    Time interval from a person's date of birth to the date of index,
     represented as a calculated negative number of days.
   termDef:
     term: Person Birth Date Less Initial Pathologic Diagnosis Date Calculated Day Value
@@ -492,7 +492,7 @@ days_to_collection:
 
 days_to_death:
   description: >
-    Time interval from a person's date of death to the date of initial pathologic diagnosis,
+    Time interval from a person's date of death to the date of index,
     represented as a calculated number of days.
   termDef:
     term: Death Less Initial Pathologic Diagnosis Date Calculated Day Value
@@ -503,7 +503,7 @@ days_to_death:
 
 days_to_hiv_diagnosis:
   description: >
-    Time interval from the date of the initial pathologic diagnosis to the date of human
+    Time interval from the date of the index to the date of human
     immunodeficiency diagnosis, represented as a calculated number of days.
   termDef:
     term: Human Immunodeficiency Virus Diagnosis Subtract Initial Pathologic Diagnosis Time Duration Day Calculation Value
@@ -514,7 +514,7 @@ days_to_hiv_diagnosis:
 
 days_to_last_follow_up:
   description: >
-    Time interval from the date of last follow up to the date of initial pathologic diagnosis,
+    Time interval from the date of last follow up to the date of index,
     represented as a calculated number of days.
   termDef:
     term: Last Communication Contact Less Initial Pathologic Diagnosis Date Calculated Day Value
@@ -525,7 +525,7 @@ days_to_last_follow_up:
 
 days_to_last_known_disease_status:
   description: >
-    Time interval from the date of last follow up to the date of initial pathologic diagnosis,
+    Time interval from the date of last follow up to the date of index,
     represented as a calculated number of days.
   termDef:
     term: Last Communication Contact Less Initial Pathologic Diagnosis Date Calculated Day Value
@@ -537,7 +537,7 @@ days_to_last_known_disease_status:
 days_to_new_event:
   description: >
     Time interval from the date of new tumor event including progression, recurrence and new
-    primary malignacies to the date of initial pathologic diagnosis, represented as a calculated
+    primary malignacies to the date of index, represented as a calculated
     number of days.
   termDef:
     term: New Tumor Event Less Initial Pathologic Diagnosis Date Calculated Day Value
@@ -549,7 +549,7 @@ days_to_new_event:
 days_to_recurrence:
   description: >
     Time interval from the date of new tumor event including progression, recurrence and new primary
-    malignancies to the date of initial pathologic diagnosis, represented as a calculated number of
+    malignancies to the date of index, represented as a calculated number of
     days.
   termDef:
     term: New Tumor Event Less Initial Pathologic Diagnosis Date Calculated Day Value
@@ -565,7 +565,7 @@ days_to_sample_procurement:
 
 days_to_treatment:
   description: >
-    Number of days from date of initial pathologic diagnosis that treatment began.
+    Number of days from date of index that treatment began.
   termDef:
     term: Days to Treatment Start
     source: null
@@ -575,7 +575,7 @@ days_to_treatment:
 
 days_to_treatment_end:
   description: >
-    Time interval from the date of the initial pathologic diagnosis to the date of treatment end,
+    Time interval from the date of the index to the date of treatment end,
     represented as a calculated number of days.
   termDef:
     term: Treatment End Subtract First Pathologic Diagnosis Day Calculation Value
@@ -586,7 +586,7 @@ days_to_treatment_end:
 
 days_to_treatment_start:
   description: >
-    Time interval from the date of the initial pathologic diagnosis to the start of treatment,
+    Time interval from the date of the index to the start of treatment,
     represented as a calculated number of days.
   termDef:
     term: Treatment Start Subtract First Pathologic Diagnosis Time Day Calculation Value

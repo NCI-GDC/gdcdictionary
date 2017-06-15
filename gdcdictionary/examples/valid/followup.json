@@ -1,0 +1,19 @@
+{
+    "type": "followup",
+    "submitter_id": "Visit 5",
+    "adverse_event": "Amnesia",
+    "bmi": 25,
+    "cause_of_response": "First Line of Therapy",
+    "comorbidity":"Lupus",
+    "days_to_adverse_event": 55,
+    "days_to_followup": 70,
+    "days_to_progression": 23,
+    "days_to_recurrence": 5,
+    "ecog_performance_status": 0,
+    "height": 156,
+    "progression_or_recurrence": "Yes",
+    "weight": 250,
+    "cases": {
+        "submitter_id": "Case Beta"
+    }
+}

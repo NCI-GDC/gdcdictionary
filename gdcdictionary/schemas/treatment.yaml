@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "treatment"
 title: Treatment
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://www.bloodpac.org
 category: clinical
 program: '*'
 project: '*'
@@ -29,49 +29,30 @@ links:
     multiplicity: many_to_one
     required: true
 
-
-
 uniqueKeys:
-  #unclear if want submitter ID for clinical
   - [id]
   - [project_id, submitter_id]
 
 properties:
-  type:
-    enum: [ "treatment" ]
-
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-
-  state:
-    $ref: "_definitions.yaml#/state"
-
-  submitter_id:
-    type:
-      - string
-      - "null"
-
-  days_to_treatment:
-    term:
-      $ref: "_terms.yaml#/days_to_treatment"
-    type: number
+  $ref: "_definitions.yaml#/ubiquitous_properties"
 
   days_to_treatment_end:
     term:
       $ref: "_terms.yaml#/days_to_treatment_end"
     type: number
-
   days_to_treatment_start:
     term:
       $ref: "_terms.yaml#/days_to_treatment_start"
     type: number
-
+  regimen_or_line_of_therapy:
+    description: >
+      General name for a the group of treatments of which this treatment was a part. This reference
+      name can be used to identify treatments involved in a certain outcome later one.
+    type: string
   therapeutic_agents:
     term:
       $ref: "_terms.yaml#/therapeutic_agents"
     type: string
-
   treatment_anatomic_site:
     term:
       $ref: "_terms.yaml#/treatment_anatomic_site"
@@ -151,23 +132,10 @@ properties:
       - Thorax
       - Trunk
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
   treatment_intent_type:
     term:
       $ref: "_terms.yaml#/treatment_intent_type"
     type: string
-
-  treatment_or_therapy:
-    term:
-      $ref: "_terms.yaml#/treatment_or_therapy"
-    enum:
-      - "yes"
-      - "no"
-      - unknown
-      - not reported
-
   treatment_outcome:
     term:
       $ref: "_terms.yaml#/treatment_outcome"
@@ -177,7 +145,6 @@ properties:
       - Treatment Ongoing
       - Treatment Stopped Due to Toxicity
       - Unknown
-
   treatment_type:
     term:
       $ref: "_terms.yaml#/treatment_type"
@@ -197,17 +164,6 @@ properties:
       - Surgery
       - Targeted Molecular Therapy
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
-
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-
-  # ======== Timestamps ========
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
