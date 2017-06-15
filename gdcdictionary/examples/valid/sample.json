@@ -1,29 +1,12 @@
 {
     "type": "sample",
     "submitter_id": "BLGSP-71-06-00019s",
-    "biospecimen_anatomic_site": "Adipose",
-    "time_to_freezer": "Not Applicable",
     "composition": "Cell",
-    "current_weight": 1,
     "days_to_collection": 25,
-    "days_to_sample_procurement": 123,
-    "diagnosis_pathologically_confirmed": "Yes",
-    "freezing_method": "OCT",
-    "initial_weight": 0.5,
-    "intermediate_dimension": "1.2",
-    "is_ffpe": true,
-    "longest_dimension": "1.5",
-    "method_of_sample_procurement": "Indeterminant",
-    "oct_embedded": "false",
-    "sample_type": "Blood Derived Normal",
-    "sample_type_id": "10",
-    "shortest_dimension": "0.5",
-    "time_between_clamping_and_freezing": "30",
-    "tissue_type": "Normal",
-    "tumor_code": "Osteosarcoma (OS)",
-    "tumor_code_id": "00",
-    "tumor_descriptor": "NOS",
-    "cases": {
+    "blood_fractionation_method": "FractionationProtocol4.pdf",
+    "time_to_fractionation":"Unknown",
+    "DNA_yield": 24,
+    "biospecimens": {
         "submitter_id": "BLGSP-71-06-00019"
     }
 }
