@@ -11,7 +11,7 @@
     "assay_method": "Methylation Array",
     "assay_instrument": "Illumina",
     "assay_instrument_model": "Illumina Infinium HumanMethylation450",
-    "aliquots": {
-        "submitter_id": "205CTABXX100806.5.C317.TCGA-AB-2837-03B-01W-0728-08.3.bam"
+    "analytes": {
+        "submitter_id": "analyteDNA2"
     }
 }

@@ -1,13 +1,17 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "submitted_methylation"
-title: Submitted Methylation
+id: "mass_cytometry_assay"
+title: Mass Cytometry Assay 
 type: object
 namespace: https://www.bloodpac.org/ 
 category: data_file
 program: '*'
 project: '*'
-description: "DNA methylation data files contain information on raw and normalized signal intensities, detection confidence and calculated beta values for methylated and unmethylated probes. DNA methylation is an epigenetic mark which can be associated with transcriptional inactivity when located in promoter regions."
+description: >
+  Mass cytometry is a variation of flow cytometry in which antibodies are labeled with heavy metal
+  ion tags rather than fluorochromes. Readout is by time-of-flight mass spectrometry. This allows
+  for the combination of many more antibody specificities in a single samples, without significant
+  spillover between channels.
 additionalProperties: false
 submittable: true
 validators: null
@@ -23,9 +27,9 @@ systemProperties:
 
 links:
   - name: analytes
-    backref: submitted_methylation_files
+    backref: mass_cytometry_assays 
     label: data_from
-    target_type: analyte
+    target_type: analytes
     multiplicity: one_to_one
     required: true
 
@@ -40,7 +44,7 @@ required:
   - assay_method
   - assay_instrument
   - assay_instrument_model
-  - analytes
+  - analytes 
 
 uniqueKeys:
   - [ id ]
@@ -48,31 +52,29 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "submitted_methylation" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Methylation Data
+      - Mass Cytometry 
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Methylation Intensity Values" ]
+    enum: 
+      - Raw IMC Data
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
-      - IDAT
+      - TXT
   assay_method: 
     enum:
-      - Methylation Array
+      - Imaging Mass Cytometry
   assay_instrument:
-    enum:
-      - Illumina
+    type: string 
   assay_instrument_model:
-    enum:
-      - Illumina Infinium HumanMethylation450
-      - Illumina Infinium HumanMethylation450K
+    type: string 
+
   analytes:
     $ref: "_definitions.yaml#/to_one"

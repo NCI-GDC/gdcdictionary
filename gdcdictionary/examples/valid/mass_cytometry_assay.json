@@ -1,0 +1,17 @@
+{
+    "type":"mass_cytometry_assay",
+    "submitter_id":"MassCytometryRun3",
+    "file_name":"run1324.txt",
+    "file_size":2352522,
+    "md5sum":"asdmq34tqmalskdffmalsdkff",
+    "data_format":"TXT",
+    "data_category":"Mass Cytometry",
+    "data_type":"Raw IMC Data",
+    "assay_method":"Imaging Mass Cytometry",
+    "assay_instrument":"Fluidigm CyTOF",
+    "assay_instrument_model":"CyTOF Helios",
+    "analytes": {
+        "submitter_id":"SlideFrame20"
+    }
+}
+

@@ -4,7 +4,7 @@ id: "read_group"
 title: Read Group
 type: object
 description: "Sequencing reads from one lane of an NGS experiment."
-namespace: http://gdc.nci.nih.gov
+namespace: https://www.bloodpac.org
 category: biospecimen
 validators: null
 project: '*'
@@ -21,54 +21,42 @@ systemProperties:
   - state
 
 links:
-  - name: aliquots
+  - name: analytes
     label: derived_from
-    target_type: aliquot
-    multiplicity: many_to_one
+    target_type: analytes
+    multiplicity: one_to_one
     required: true
     backref: read_groups
 
 required:
   - type
   - submitter_id
-  - aliquots
+  - platform
+  - instrument_model
+  - library_strategy
+  - is_paired_end
+  - read_length_lower
+  - read_length_upper
+  - analytes 
 
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]
 
 properties:
-  id:
-    $ref: "_definitions.yaml#/UUID"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  submitter_id:
-    type: string
-  state:
-    $ref: "_definitions.yaml#/state"
-  type:
-    enum: [ "read_group" ]
-  experiment_name:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  adapter_sequence:
     term:
-      $ref: "_terms.yaml#/experiment_name"
+      $ref: "_terms.yaml#/adapter_sequence"
     type: string
-  sequencing_center:
+  barcoding_applied:
+    description: "True/False: was barcoding applied?"
+    type: boolean
+  flow_cell_barcode:
     term:
-      $ref: "_terms.yaml#/sequencing_center"
+      $ref: "_terms.yaml#/flow_cell_barcode"
     type: string
-  sequencing_date:
-    $ref: "_definitions.yaml#/datetime"
-  platform:
-    term:
-      $ref: "_terms.yaml#/platform"
-    enum:
-      - Illumina
-      - SOLiD
-      - LS454
-      - Ion Torrent
-      - Complete Genomics
-      - PacBio
-      - Other
   instrument_model:
     terms:
       $ref: "_terms.yaml#/instrument_model"
@@ -92,49 +80,14 @@ properties:
       - PacBio RS
       - Ion S5 XL System, Ion 530 Chip
       - Other
-  library_strategy:
+  is_paired_end:
     term:
-      $ref: "_terms.yaml#/library_strategy"
-    enum:
-      - WGS
-      - WXS
-      - RNA-Seq
-      - ChIP-Seq
-      - miRNA-Seq
-      - Bisulfite-Seq
-      - Validation
-      - Amplicon
-      - Other
-  RIN:
-    term:
-      $ref: "_terms.yaml#/RIN"
-    type: number
-  flow_cell_barcode:
-    term:
-      $ref: "_terms.yaml#/flow_cell_barcode"
-    type: string
-  includes_spike_ins:
-    term:
-      $ref: "_terms.yaml#/includes_spike_ins"
+      $ref: "_terms.yaml#/is_paired_end"
     type: boolean
-  spike_ins_fasta:
+  library_name:
     term:
-      $ref: "_terms.yaml#/spike_ins_fasta"
+      $ref: "_terms.yaml#/library_name"
     type: string
-  spike_ins_concentration:
-    term:
-      $ref: "_terms.yaml#/spike_ins_concentration"
-    type: string
-  library_selection:
-    term:
-      $ref: "_terms.yaml#/library_selection"
-    enum:
-      - Hybrid_Selection
-      - PCR
-      - Affinity_Enrichment
-      - Poly-T_Enrichment
-      - RNA_Depletion
-      - Other
   library_preparation_kit_name:
     term:
       $ref: "_terms.yaml#/library_preparation_kit_name"
@@ -151,11 +104,63 @@ properties:
     term:
       $ref: "_terms.yaml#/library_preparation_kit_version"
     type: string
-  library_name:
+  library_selection:
     term:
-      $ref: "_terms.yaml#/library_name"
+      $ref: "_terms.yaml#/library_selection"
+    enum:
+      - Hybrid Selection
+      - PCR
+      - Affinity Enrichment
+      - Poly-T Enrichment
+      - RNA Depletion
+      - Targeted Sequencing
+      - Other
+  library_strand:
+    term:
+      $ref: "_terms.yaml#/library_strand"
+    enum:
+      - Unstranded
+      - First Stranded
+      - Second Stranded
+  library_strategy:
+    term:
+      $ref: "_terms.yaml#/library_strategy"
+    enum:
+      - WGS
+      - WXS
+      - RNA-Seq
+      - ChIP-Seq
+      - miRNA-Seq
+      - Bisulfite-Seq
+      - Validation
+      - Amplicon
+      - Other
+  platform:
+    term:
+      $ref: "_terms.yaml#/platform"
+    enum:
+      - Illumina
+      - SOLiD
+      - LS454
+      - Ion Torrent
+      - Complete Genomics
+      - PacBio
+      - Other
+  read_length_lower:
+    description: "The lower limit for the length of reads used in the sequencing experiment."
+    type: integer
+  read_length_upper:
+    description: "The upper limit for the length of reads used in the sequencing experiment."
+    type: integer
+  RIN:
+    term:
+      $ref: "_terms.yaml#/RIN"
+    type: number
+  sequencing_center:
+    term:
+      $ref: "_terms.yaml#/sequencing_center"
     type: string
-  target_capture_kit_name:  # conditionally required for WXS etc
+  target_capture_kit_name:
     term:
       $ref: "_terms.yaml#/target_capture_kit_name"
     type: string
@@ -175,52 +180,6 @@ properties:
     term:
       $ref: "_terms.yaml#/target_capture_kit_target_region"
     type: string
-  size_selection_range:
-    term:
-      $ref: "_terms.yaml#/size_selection_range"
-    type: string
-  adapter_name:
-    term:
-      $ref: "_terms.yaml#/adapter_name"
-    type: string
-  adapter_sequence:
-    term:
-      $ref: "_terms.yaml#/adapter_sequence"
-    type: string
-  to_trim_adapter_sequence:
-    term:
-      $ref: "_terms.yaml#/to_trim_adapter_sequence"
-    type: boolean
-  library_strand:
-    term:
-      $ref: "_terms.yaml#/library_strand"
-    enum:
-      - Unstranded
-      - First_Stranded
-      - Second_Stranded
-  base_caller_name:
-    term:
-      $ref: "_terms.yaml#/base_caller_name"
-    type: string
-  base_caller_version:
-    term:
-      $ref: "_terms.yaml#/base_caller_version"
-    type: string
-  is_paired_end:
-    term:
-      $ref: "_terms.yaml#/is_paired_end"
-    type: boolean
-  read_length:
-    type: integer
-  read_group_name:  # it may be good to assign UUID to read group
-    description: "Read Group Name"
-    type: string
-  barcoding_applied:
-    description: "True/False: was barcoding applied?"
-    type: boolean
-  aliquots:
+
+  analytes:
     $ref: "_definitions.yaml#/to_one"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
