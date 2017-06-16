@@ -4,6 +4,7 @@ id: "aliquot"
 title: Aliquot
 type: object
 category: biospecimen
+namespace: https://www.bloodpac.org
 program: '*'
 project: '*'
 description: >
@@ -22,6 +23,12 @@ systemProperties:
 
 required:
   - submitter_id
+  - aliquot_container
+  - clinical_or_contrived
+  - hours_to_freezer_lower
+  - hours_to_freezer_upper
+  - preservation_method
+  - storage_temperature
   - samples
 
 uniqueKeys:
@@ -38,22 +45,14 @@ links:
 
 constraints: null
 
-# Aliquot properties
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
-    description: >
-      The legacy barcode used before prior to the use
-      UUIDs. For TCGA this is bcraliquotbarcode.
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  aliquot_container:
+    description: "The device in which the final aliquot is held. Slides or vials."
+    enum:
+      - Slide
+      - Vial
   aliquot_quantity:
     term:
       $ref: "_terms.yaml#/aliquot_quantity"
@@ -62,71 +61,54 @@ properties:
     term:
       $ref: "_terms.yaml#/aliquot_volume"
     type: number
-  analyte_isolation_method:
-    description: >
-      The name or general description of the method used to isolate the analyte (e.g. DNA, RNA, etc.)
-      from the source sample. (e.g. MagMAX Cell-Free DNA Isolation, QIAamp Circulating Nucleic Acid
-      Kit, etc.)
-    type: string
-  analyte_quantification_method:
-    description: >
-      The name or general description of the method used to quantify the analyte yield or
-      concentration of the aliquot. (e.g. quantitative PCR, UV Absorbance, etc.)
-    type: string
-  ctDNA_method:
-    type: string
-  amount:
-    term:
-      $ref: "_terms.yaml#/amount"
-    type: number
-  analyte_type:
-    term:
-      $ref: "_terms.yaml#/analyte_type"
-    type: string
-  analyte_type_id:
-    term:
-      $ref: "_terms.yaml#/analyte_type_id"
+  clinical_or_contrived:
+    description: "Is the aliquot clinical or contrived?"
     enum:
-      - D
-      - E
-      - G
-      - H
-      - R
-      - S
-      - T
-      - W
-      - X
-      - Y
-  aliquot_concentration:
-    description: "Concentration for the aliquot. Must also specify aliquot_concentration_unit"
-    type: number
-  aliquot_concentration_unit:
-    description: "The unit of measurement for the concentration."
+      - Clinical
+      - Contrived
+  contrivance_method:
+    description: >
+      The name or general description of the contrivance(s) added to the biological aliquot.
+      Alternatively, if you have provided a contrivance protocol, enter its file_name here.
     type: string
-  cell_identifier:
-    description: "An alternative identifier for a given cell type."
-    type: string
-  days_to_extraction:
-    description: "The amount of time, in days, between when the sample was collected and when the analyte was extracted. (e.g. days between blood draw and DNA extraction)"
-    type: integer
-  elution_buffer_volume:
-    description: "The volume, in microliters, of elution buffer used during analyte extraction."
-    type: number 
-  frame_identifier:
-    description: "Name, number, or other identifier given to the frame of the slide from which this image was taken."
-    type: string
-  slide_identifier:
-    description: "Unique identifier given to the this slide."
-    type: string
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  source_center:
+  hours_to_freezer_lower:
+    description: >
+      The lower limit on the amount of time, in hours, that it took between the sample being
+      fractionated and the aliquot being frozen or otherwise preserved.
+    type:
+      - number
+      - string
+    oneOf:
+      - enum:
+          - Not Applicable
+          - Unknown
+      - type: number
+  hours_to_freezer_upper:
+    description: >
+      The upper limit on the amount of time, in hours, that it took between the sample being fractionated
+      and the aliquot being frozen or otherwise preserved.
+    type:
+      - number
+      - string
+    oneOf:
+      - enum:
+          - Not Applicable
+          - Unknown
+      - type: number
+  preservation_method:
     term:
-      $ref: "_terms.yaml#/source_center"
-    type: string
+      $ref: "_terms.yaml#/preservation_method"
+    enum:
+      - Cryopreserved
+      - FFPE
+      - Fresh
+      - OCT
+      - Snap Frozen
+      - Frozen
+      - Unknown
+  storage_temperature:
+    description: "The temperature, in centrigrade, at which the aliquot was preserved and/or stored."
+    type: number
+
   samples:
     $ref: "_definitions.yaml#/to_one"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

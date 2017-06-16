@@ -4,7 +4,8 @@
     "composition": "Cell",
     "days_to_collection": 25,
     "blood_fractionation_method": "FractionationProtocol4.pdf",
-    "time_to_fractionation":"Unknown",
+    "hours_to_fractionation_lower":"Unknown",
+    "hours_to_fractionation_upper":"Unknown",
     "DNA_yield": 24,
     "biospecimens": {
         "submitter_id": "BLGSP-71-06-00019"

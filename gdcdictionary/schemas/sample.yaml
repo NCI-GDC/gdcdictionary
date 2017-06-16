@@ -24,6 +24,8 @@ systemProperties:
 
 required:
   - submitter_id
+  - composition
+  - days_to_collection
   - biospecimens 
 
 uniqueKeys:
@@ -90,11 +92,10 @@ properties:
           - Unknown
           - Not Applicable
       - type: number
-  sample_volume:
-    description: "The volume of the sample in mL."
-    type: number
-  time_to_fractionation:
-    description: "The amount of time, in hours, between the blood draw and the fractionation into its components."
+  hours_to_fractionation_lower:
+    description: >
+      The lower limit on the amount of time, in hours, between the blood draw and the fractionation
+      into its components.
     type:
       - number
       - string
@@ -103,6 +104,24 @@ properties:
           - Not Applicable
           - Unknown
       - type: number
+  hours_to_fractionation_upper:
+    description: >
+      The upper limit on the amount of time, in hours, between the blood draw and the fractionation 
+      into its components.
+    type:
+      - number
+      - string
+    oneOf:
+      - enum:
+          - Not Applicable
+          - Unknown
+      - type: number
+  sample_quantity:
+    description: "The mass of the sample in ng."
+    type: number
+  sample_volume:
+    description: "The volume of the sample in mL."
+    type: number
 
   biospecimens:
     $ref: "_definitions.yaml#/to_many"

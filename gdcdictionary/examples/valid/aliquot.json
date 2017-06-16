@@ -1,12 +1,15 @@
 {
     "type": "aliquot",
     "submitter_id": "BLGSP-71-06-00019-01A-11D",
+    "aliquot_container":"Vial",
     "aliquot_quantity": 0.4,
     "aliquot_volume": 5,
-    "amount": 10,
-    "source_center": "23",
-    "aliquot_concentration": 0.07,
-    "aliquot_concentration_unit": "mg/mL",
+    "clinical_or_contrived":"Contrived",
+    "contrivance_method": "ContrivanceProtocolA.pdf",
+    "preservation_method":"Frozen",
+    "storage_temperature":-80,
+    "hours_to_freezer_lower": 2,
+    "hours_to_freezer_upper": 4,
     "samples": {
         "submitter_id": "BLGSP-71-06-00019-99A-01D"
     }
