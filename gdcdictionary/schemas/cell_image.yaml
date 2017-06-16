@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "slide_image"
-title: Slide Image
+id: "cell_image"
+title: Cell Image
 type: object
 namespace: https://www.bloodpac.org 
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing image of a slide.
+  Data file containing image of a single cell from a slide.
 additionalProperties: false
 submittable: true
 validators: null
@@ -23,11 +23,11 @@ systemProperties:
   - error_type
 
 links:
-  - name: aliquots
-    backref: slide_images
+  - name: analytes
+    backref: cell_images
     label: data_from
-    target_type: slide
-    multiplicity: many_to_one
+    target_type: analyte
+    multiplicity: one_to_one
     required: true
 
 required:
@@ -38,7 +38,7 @@ required:
   - data_category
   - data_type
   - data_format
-  - aliquots
+  - analytes 
 
 uniqueKeys:
   - [ id ]
@@ -56,13 +56,11 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - Diagnostic Slide Image
-      - Tissue Slide Image
-      - Blood Slide Image 
+      - Single Cell Image 
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     type: string 
 
-  aliquots:
+  analytes:
     $ref: "_definitions.yaml#/to_one"
