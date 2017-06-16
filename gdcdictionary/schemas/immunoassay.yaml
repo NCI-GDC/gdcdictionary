@@ -1,0 +1,81 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "immunoassay"
+title: Immunossay
+type: object
+namespace: https://www.bloodpac.org
+category: notation
+program: '*'
+project: '*'
+description: >
+  Information pertaining to processed results obtained from a immunoassay.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: analytes
+    backref: immunoassays
+    label: data_from
+    target_type: analyte
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - assay_instrument
+  - assay_instrument_model
+  - assay_method
+  - assay_target 
+  - target_measurement
+  - target_measurement_units
+  - analytes
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  assay_instrument:
+    description: "The specific instrument type used to perform the assay."
+    enum:
+      - Multi-Array Assay, Meso Scale Discovery
+      - Epic Sciences CTC Platform 
+  assay_instrument_model:
+    description: "The specific model of instrument used to perform the assay."
+    type: string 
+  assay_kit_name:
+    description: "Name of the assay kit used."
+    type: string
+  assay_kit_vendor:
+    description: "Vendor that provided the assay kit."
+    type: string
+  assay_kit_version:
+    description: "Version of the assay kit used."
+    type: string
+  assay_method:
+    description: "General methodology used to perform the assay."
+    enum:
+      - Enzyme-Linked Immunosorbent Assay (ELISA)
+      - Immunohistochemistry
+  assay_target:
+    description: "Target for the assay: can be a specific gene, protein, or otherwise."
+    type: string
+  target_measurement:
+    description: "Measurement for the assay target. Specify target_measurement_units as well."
+    type: number
+  target_measurement_units:
+    description: "Units of measurement used when evaluating the assay target."
+    type: string
+
+  analytes:
+    $ref: "_definitions.yaml#/to_one"

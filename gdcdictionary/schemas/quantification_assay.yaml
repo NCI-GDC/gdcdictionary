@@ -1,0 +1,77 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "quantification_assay"
+title: Quantification Assay
+type: object
+namespace: https://www.bloodpac.org
+category: notation
+program: '*'
+project: '*'
+description: >
+  Information pertaining to processed results obtained from a quantification assay.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: analytes
+    backref: quantification_assays 
+    label: data_from
+    target_type: analyte
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - assay_instrument
+  - assay_instrument_model
+  - assay_method
+  - analytes
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  assay_instrument:
+    description: "The specific instrument type used to perform the assay."
+    enum:
+      - Agilent TapeStation 
+  assay_instrument_model:
+    description: "The specific model of instrument used to perform the assay."
+    enum:
+      - Agilent 2200 TapeStation
+      - Agilent 4200 TapeStation 
+  assay_kit_name:
+    description: "Name of the assay kit used."
+    type: string
+  assay_kit_vendor:
+    description: "Vendor that provided the assay kit."
+    type: string
+  assay_kit_version:
+    description: "Version of the assay kit used."
+    type: string
+  assay_method:
+    description: "General methodology used to perform the assay (e.g. PCR, Sequencing)."
+    enum:
+      - DNA Electrophoresis 
+  molecular_concentration:
+    description: >
+      If the analyte is a molecule (e.g. DNA or RNA), report the observed concentration in nanograms per microliters.
+    type: number
+  cell_count:
+    description: >
+      If the analyte is the cell count, report total whole number of cells counted here.
+    type: integer 
+
+  analytes:
+    $ref: "_definitions.yaml#/to_one"

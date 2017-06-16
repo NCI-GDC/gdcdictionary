@@ -1,0 +1,16 @@
+{
+    "type":"immunoassay",
+    "submitter_id":"immunoassay run 1",
+    "assay_instrument":"Multi-Array Assay, Meso Scale Discovery",
+    "assay_instrument_model":"MSD",
+    "assay_method":"Enzyme-Linked Immunosorbent Assay (ELISA)",
+    "assay_kit_name":"MolecularMD",
+    "assay_kit_vendor":"Some Guy",
+    "assay_kit_version":"v34.2",
+    "assay_target":"Fas Ligand",
+    "target_measurement":55.07817598,
+    "target_measurement_units":"Immunosorbence",
+    "analytes": {
+         "submitter_id":"DNA_assay_input242"
+    }
+}

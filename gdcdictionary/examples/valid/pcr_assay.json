@@ -1,0 +1,19 @@
+{
+    "type":"pcr_assay",
+    "submitter_id":"pcr run 1",
+    "assay_instrument":"Bio-Rad",
+    "assay_instrument_model":"Bio-Rad QX100",
+    "assay_method":"TaqMan",
+    "assay_kit_name":"MolecularMD",
+    "assay_kit_vendor":"Some Guy",
+    "assay_kit_version":"v34.2",
+    "mutation_result":"Missense",
+    "assay_target":"BRAF",
+    "target_chromosome":"1",
+    "target_position":12412124,
+    "target_ref":"ACT",
+    "target_alt":"TTT",
+    "analytes": {
+         "submitter_id":"DNA_assay_input242"
+    }
+}

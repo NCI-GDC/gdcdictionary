@@ -1,0 +1,132 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "pcr_assay"
+title: PCR Assay
+type: object
+namespace: https://www.bloodpac.org
+category: notation
+program: '*'
+project: '*'
+description: >
+  Information pertaining to processed results obtained from a PCR assay.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: analytes
+    backref: pcr_assays
+    label: data_from
+    target_type: analyte
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - assay_instrument
+  - assay_instrument_model
+  - assay_method
+  - analytes
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  assay_instrument:
+    description: "The specific instrument type used to perform the assay."
+    enum:
+      - BEAMing
+      - Bio-Rad
+      - QuantStudio
+      - Qiagen Rotor-Gene Q
+  assay_instrument_model:
+    description: "The specific model of instrument used to perform the assay."
+    enum:
+      - Bio-Rad QX100
+      - Bio-Rad QX200
+      - QuantStudio Dx
+      - Qiagen Rotor-Gene Q 5plex HRM
+  assay_kit_name:
+    description: "Name of the assay kit used."
+    type: string
+  assay_kit_vendor:
+    description: "Vendor that provided the assay kit."
+    type: string
+  assay_kit_version:
+    description: "Version of the assay kit used."
+    type: string
+  assay_method:
+    description: "General methodology used to perform the assay (e.g. PCR, Sequencing)."
+    enum:
+      - Amplification-Refactory Mutation System
+      - Digital Droplet
+      - TaqMan
+  mutant_fraction_percent:
+    description: "Percent of the target that is identified as mutant."
+    type: number
+  mutation_result:
+    description: "Observed mutation type."
+    enum:
+      - Missense
+      - Nonsense
+      - Insertion
+      - Deleteion
+      - Duplication
+      - Frameshift
+      - Unspecified
+      - No Mutation Detected
+  mutant_copies:
+    description: "Mutant DNA absolute copies in the ctDNA. Requires copies_unit."
+    type: integer
+  assay_target:
+    description: "Target for the assay: can be a gene, protein, or otherwise."
+    type: string
+  target_chromosome:
+    description: "The chromosome on which the gene of interest is located."
+    enum:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+      - "10"
+      - "11"
+      - "12"
+      - "13"
+      - "14"
+      - "15"
+      - "16"
+      - "17"
+      - "18"
+      - "19"
+      - "20"
+      - "21"
+      - "22"
+      - X
+      - Y
+  target_position:
+    description: "The position on the chromosome on which the gene of interest is located."
+    type: integer
+  target_ref:
+    description: "The reference sequence for the genomic region that is being investigated."
+    type: string
+  target_alt:
+    description: "The observed alternate sequence for the genomic region being investigated."
+    type: string
+
+  analytes:
+    $ref: "_definitions.yaml#/to_one"

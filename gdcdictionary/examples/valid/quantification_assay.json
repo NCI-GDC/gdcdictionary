@@ -1,0 +1,14 @@
+{
+    "type":"quantification_assay",
+    "submitter_id":"quantifcation run 1",
+    "assay_instrument":"Agilent TapeStation",
+    "assay_instrument_model":"Agilent 2200 TapeStation",
+    "assay_method":"DNA Electrophoresis",
+    "assay_kit_name":"MolecularMD",
+    "assay_kit_vendor":"Some Guy",
+    "assay_kit_version":"v34.2",
+    "molecular_concentration":25.234,
+    "analytes": {
+         "submitter_id":"DNA_assay_input242"
+    }
+}
