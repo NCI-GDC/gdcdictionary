@@ -44,23 +44,6 @@ links:
 
 required:
   - submitter_id
-  - workflow_link
-  - type
-  - percent_gc_content
-  - encoding
-  - total_sequences
-  - basic_statistics
-  - per_base_sequence_quality
-  - per_tile_sequence_quality
-  - per_sequence_quality_score
-  - per_base_sequence_content
-  - per_sequence_gc_content
-  - per_base_n_content
-  - sequence_length_distribution
-  - sequence_duplication_levels
-  - overrepresented_sequences
-  - adapter_content
-  - kmer_content
   - read_groups
 
 uniqueKeys:
@@ -68,16 +51,11 @@ uniqueKeys:
   - [ project_id, submitter_id ]
 
 properties:
-  $ref: "_definitions.yaml#/workflow_properties"
-  type:
-    enum: [ "read_group_qc" ]
-  workflow_type:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  encoding:
     term:
-      $ref: "_terms.yaml#/workflow_type"
-    enum: [ "Read Group Quality Control" ]
-  fastq_name:
-    term:
-      $ref: "_terms.yaml#/file_name"
+      $ref: "_terms.yaml#/encoding"
     type: string
   percent_aligned:
     description: "The percent of reads with at least one reported alignment."
@@ -90,10 +68,6 @@ properties:
     type: integer
     minimum: 0
     maximum: 100
-  encoding:
-    term:
-      $ref: "_terms.yaml#/encoding"
-    type: string
   total_aligned_reads:
     description: "The total number of reads with at least one reported alignment."
     type: integer
@@ -101,6 +75,8 @@ properties:
     term:
       $ref: "_terms.yaml#/total_sequences"
     type: integer
+
+  #FASTQC
   basic_statistics:
     $ref: "_definitions.yaml#/qc_metrics_state"
   per_base_sequence_quality:
@@ -125,6 +101,7 @@ properties:
     $ref: "_definitions.yaml#/qc_metrics_state"
   kmer_content:
     $ref: "_definitions.yaml#/qc_metrics_state"
+
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
   submitted_unaligned_reads_files:

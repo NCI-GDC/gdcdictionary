@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "aligned_reads_index"
 title: Aligned Reads Index
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://www.bloodpac.org
 category: index_file
 program: '*'
 project: '*'
@@ -44,24 +44,23 @@ uniqueKeys:
   - [ project_id, submitter_id ]
 
 properties:
-  $ref: "_definitions.yaml#/ubiquitous_properties"
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "aligned_reads_index" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Sequencing Data
       - Sequencing Reads
-      - Raw Sequencing Data
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Aligned Reads Index" ]
+    enum: 
+      - Aligned Reads Index
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
-    enum: [ "BAI" ]
+    enum:
+      - BAI
+
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"

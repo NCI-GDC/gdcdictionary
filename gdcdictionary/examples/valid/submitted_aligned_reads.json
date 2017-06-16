@@ -5,7 +5,7 @@
     "file_name": "C317.TCGA-AB-2837-03B-01W-0728-08.3.bam",
     "file_size": 28165335141,
     "md5sum": "d3266f2577584713ea17f94d331f30c4",
-    "data_category": "Sequencing Data",
+    "data_category": "Sequencing Reads",
     "data_type": "Aligned Reads",
     "data_format": "BAM",
     "experimental_strategy": "WXS",

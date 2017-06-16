@@ -4,7 +4,7 @@
     "file_name": "C317.TCGA-AB-2837-03B-01W-0728-08.3.bam.bai",
     "file_size": 5990568,
     "md5sum": "6fd84891e7a53725d1cf6109c5f2400f",
-    "data_category": "Sequencing Data",
+    "data_category": "Sequencing Reads",
     "data_type": "Aligned Reads Index",
     "data_format": "BAI",
     "submitted_aligned_reads_files": {

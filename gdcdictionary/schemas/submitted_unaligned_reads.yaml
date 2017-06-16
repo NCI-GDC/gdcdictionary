@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "submitted_unaligned_reads"
 title: Submitted Unaligned Reads
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://www.bloodpac.org
 category: data_file
 program: '*'
 project: '*'
@@ -23,7 +23,7 @@ systemProperties:
 
 links:
   - name: read_groups
-    backref: submitted_unaligned_reads_files # pretty ugly
+    backref: submitted_unaligned_reads_files
     label: data_from
     target_type: read_group
     multiplicity: many_to_one
@@ -46,19 +46,17 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "submitted_unaligned_reads" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Sequencing Data
       - Sequencing Reads
-      - Raw Sequencing Data
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Unaligned Reads" ]
+    enum:
+      - Unaligned Reads
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
@@ -77,5 +75,6 @@ properties:
       - miRNA-Seq
       - Total RNA-Seq
       - DNA Panel
+
   read_groups:
     $ref: "_definitions.yaml#/to_one"

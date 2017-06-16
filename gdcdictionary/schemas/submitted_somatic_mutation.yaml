@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "submitted_somatic_mutation"
 title: Submitted Somatic Mutation
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://www.bloodpac.org
 category: data_file
 program: '*'
 project: '*'
@@ -47,8 +47,7 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "submitted_somatic_mutation" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -68,5 +67,6 @@ properties:
   total_variants:
     description: "The total number of variants detected carrying a base change difference from the reference genome."
     type: integer
+
   read_groups:
     $ref: "_definitions.yaml#/to_many"

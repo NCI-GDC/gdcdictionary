@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "exposure"
 title: Exposure
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://www.bloodpac.org
 category: clinical
 program: '*'
 project: '*'
@@ -28,71 +28,29 @@ links:
     multiplicity: many_to_one
     required: true
 
-preferred:
-  - cigarettes_per_day 
-  - years_smoked
+required:
+  - submitter_id
+  - cases
 
 uniqueKeys:
-  #unclear if want submitter ID for clinical
   - [id]
   - [project_id, submitter_id]
 
 properties:
-  type:
-    enum: [ "exposure" ]
-
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-
-  state:
-    $ref: "_definitions.yaml#/state"
-
-  submitter_id:
-    type:
-      - string
-      - "null"
+  $ref: "_definitions.yaml#/ubiquitous_properties"
 
   alcohol_history:
     term:
       $ref: "_terms.yaml#/alcohol_history"
     type: string
-
   alcohol_intensity:
     term:
       $ref: "_terms.yaml#/alcohol_intensity"
     type: string
-
-  bmi:
-    term:
-      $ref: "_terms.yaml#/bmi"
-    type: number
-
   cigarettes_per_day:
     term:
       $ref: "_terms.yaml#/cigarettes_per_day"
     type: number
-
-  height:
-    term:
-      $ref: "_terms.yaml#/height"
-    type: number
-
-  pack_years_smoked:
-    term:
-      $ref: "_terms.yaml#/pack_years_smoked"
-    type: number
-
-  tobacco_smoking_onset_year:
-    term:
-      $ref: "_terms.yaml#/tobacco_smoking_onset_year"
-    type: integer
-
-  tobacco_smoking_quit_year:
-    term:
-      $ref: "_terms.yaml#/tobacco_smoking_quit_year"
-    type: integer
-
   tobacco_smoking_status:
     term:
       $ref: "_terms.yaml#/tobacco_smoking_status"
@@ -105,14 +63,6 @@ properties:
       - 6
       - 7
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
-  weight:
-    term:
-      $ref: "_terms.yaml#/weight"
-    type: number
-
   years_smoked:
     term:
       $ref: "_terms.yaml#/years_smoked"
@@ -120,9 +70,3 @@ properties:
 
   cases:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

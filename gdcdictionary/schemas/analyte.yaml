@@ -25,6 +25,7 @@ systemProperties:
 required:
   - submitter_id
   - analyte_type
+  - analyte_isolation_method
   - aliquots 
 
 links:
@@ -82,6 +83,32 @@ properties:
       In an analysis of a slide, the frame denotes the region of the slide that is being examined.
       Within a frame are multiple cells. 
     type: string
+  llod:
+    description: >
+      The lower limit of detection. lowest quantity of a substance that can be distinguished from
+      the absence of that substance (a blank value) within a stated confidence limit (generally 1%).
+    type:
+      - number
+      - string
+    oneOf:
+      - enum: ['WT']
+      - type: number
+  specificity:
+    description: "The true negative rate."
+    type:
+      - number
+      - string
+    oneOf:
+      - enum: ['WT']
+      - type: number
+  sensitivity:
+    description: "The true positive rate."
+    type:
+      - number
+      - string
+    oneOf:
+      - enum: ['WT']
+      - type: number
 
   aliquots:
     $ref: "_definitions.yaml#/to_many"

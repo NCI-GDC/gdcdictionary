@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "submitted_copy_number"
 title: Submitted Copy Number
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://www.bloodpac.org
 category: data_file
 program: '*'
 project: '*'
@@ -23,21 +23,12 @@ systemProperties:
   - error_type
 
 links:
-  - exclusive: true
-    required: true
-    subgroup:
-      - name: aliquots
-        backref: submitted_copy_number_files
-        label: derived_from
-        target_type: aliquot
-        multiplicity: one_to_one
-        required: false
-      - name: read_groups
-        backref: submitted_copy_number_files
-        label: derived_from
-        target_type: read_group
-        multiplicity: many_to_many
-        required: false
+  - name: read_groups
+    backref: submitted_copy_number_files
+    label: derived_from
+    target_type: read_group
+    multiplicity: many_to_many
+    required: true 
 
 required:
   - submitter_id
@@ -55,8 +46,7 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "submitted_copy_number" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -73,7 +63,6 @@ properties:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     type: string 
-  aliquots:
-    $ref: "_definitions.yaml#/to_one"
+
   read_groups:
     $ref: "_definitions.yaml#/to_many"

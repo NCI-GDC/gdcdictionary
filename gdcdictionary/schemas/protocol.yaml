@@ -46,6 +46,7 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -67,5 +68,6 @@ properties:
       - EXCEL
       - PDF
       - TXT
+
   experiments:
     $ref: "_definitions.yaml#/to_many"

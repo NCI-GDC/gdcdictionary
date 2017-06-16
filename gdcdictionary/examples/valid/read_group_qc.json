@@ -6,7 +6,6 @@
     "basic_statistics": "PASS",
     "created_datetime": "2015-11-17T14:13:16.931431-06:00",
     "encoding": "Sanger / Illumina 1.9",
-    "fastq_name": "2893341596_1.fq.gz",
     "kmer_content": "PASS",
     "overrepresented_sequences": "PASS",
     "per_base_n_content": "PASS",
@@ -19,7 +18,6 @@
     "sequence_duplication_levels": "PASS",
     "sequence_length_distribution": "PASS",
     "total_sequences": 195523357,
-    "workflow_link": "github.com/<owner>/<project>/commit/<hash>",
     "submitted_aligned_reads_files":
         {"submitter_id": "bam_file_a"},
     "read_groups":

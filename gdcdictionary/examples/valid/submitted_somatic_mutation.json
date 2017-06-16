@@ -1,7 +1,7 @@
 {
     "type": "submitted_somatic_mutation",
     "submitter_id": "somatic_mutations_from_x",
-    "data_category": "Sequencing Data",
+    "data_category": "Sequencing Reads",
     "data_type": "Somatic Mutations",
     "data_format": "VCF",
     "file_name": "test.vcf",

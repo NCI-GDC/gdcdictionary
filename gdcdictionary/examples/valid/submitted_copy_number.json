@@ -8,7 +8,7 @@
     "data_type": "Copy Number Estimate",
     "data_format": "TXT",
     "experimental_strategy": "Genotyping Array",
-    "aliquots": {
-      "submitter_id": "aliquot_m"
+    "read_groups": {
+      "submitter_id": "read_group_m"
     }
 }
