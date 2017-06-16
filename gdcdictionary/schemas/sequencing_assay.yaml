@@ -1,0 +1,114 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "sequencing_assay"
+title: Sequencing Assay
+type: object
+namespace: https://www.bloodpac.org
+category: notation
+program: '*'
+project: '*'
+description: >
+  Information pertaining to processed results obtained from a sequencing assay. 
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: read_groups
+    backref: assay_results
+    label: data_from
+    target_type: read_group
+    multiplicity: many_to_many
+    required: false
+
+required:
+  - submitter_id
+  - read_groups
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  assay_method:
+    description: "General name or description of the method used to characterize the analyte."
+    enum:
+      - Targeted Sequencing
+      - Copy Number Analysis 
+  assay_target:
+    description: "Gene of interest for the assay."
+    type: string
+  copies_unit:
+    description: "The units for the copies measured (e.g. copies/xxx uL plasma)."
+    type: string
+  mutant_fraction_percent:
+    description: "Percent of the target that is identified as mutant."
+    type: number
+  mutant_copies:
+    description: "Mutant DNA absolute copies in the ctDNA. Requires copies_unit."
+    type: integer
+  mutation_result:
+    description: "Observed mutation type."
+    enum:
+      - Missense
+      - Nonsense
+      - Insertion
+      - Deleteion
+      - Duplication
+      - Frameshift
+      - Unspecified
+      - No Mutation Detected
+  read_depth:
+    description: "The read depth of the assay."
+    type: integer
+  target_chromosome:
+    description: "The chromosome on which the gene of interest is located."
+    enum:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+      - "10"
+      - "11"
+      - "12"
+      - "13"
+      - "14"
+      - "15"
+      - "16"
+      - "17"
+      - "18"
+      - "19"
+      - "20"
+      - "21"
+      - "22"
+      - X
+      - Y
+  target_position:
+    description: "The position on the chromosome on which the gene of interest is located."
+    type: integer
+  target_ref:
+    description: "The reference sequence for the genomic region that is being investigated."
+    type: string
+  target_alt:
+    description: "The observed alternate sequence for the genomic region being investigated."
+    type: string
+  WT_copies:
+    description: "WT DNA absolute coppies in the ctDNA. Requires copies_unit."
+    type: integer
+
+  read_groups:
+    $ref: "_definitions.yaml#/to_many"

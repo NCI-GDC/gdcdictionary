@@ -29,7 +29,7 @@ links:
   - name: analytes
     backref: mass_cytometry_assays 
     label: data_from
-    target_type: analytes
+    target_type: analyte
     multiplicity: one_to_one
     required: true
 
@@ -75,6 +75,16 @@ properties:
     type: string 
   assay_instrument_model:
     type: string 
+  panel_used:
+    description: >
+      The name or general description of the panel used for this mass cytometry assay.
+      Alternatively, if you have provided a protocol containing the panel, enter its file_name here.
+    type: string
+  protocol_used:
+    description: >
+      The name or general description of the protocol used to run the mass cytometry assay.
+      Alternatively, if you have provided a protocol, enter its file_name here.
+    type: string
 
   analytes:
     $ref: "_definitions.yaml#/to_one"

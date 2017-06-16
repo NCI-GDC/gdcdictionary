@@ -23,7 +23,7 @@ systemProperties:
 links:
   - name: analytes
     label: derived_from
-    target_type: analytes
+    target_type: analyte
     multiplicity: one_to_one
     required: true
     backref: read_groups

@@ -1,0 +1,15 @@
+{
+    "type":"mass_cytometry_image",
+    "submitter_id":"ProtienXMassCytometryRun3",
+    "file_name":"run1324_1.txt",
+    "file_size":2352522,
+    "md5sum":"asdmq34tqmalskdffmalsdkff",
+    "data_format":"PNG",
+    "data_category":"Mass Cytometry",
+    "data_type":"Single Channel IMC Image",
+    "assay_target":"Protein X",
+    "mass_cytometry_assays": {
+        "submitter_id":"MassCytometryRun3"
+    }
+}
+

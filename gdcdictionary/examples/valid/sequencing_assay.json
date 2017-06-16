@@ -1,0 +1,14 @@
+{
+    "type":"sequencing_assay",
+    "submitter_id":"sequencing run 1",
+    "assay_method":"Targeted Sequencing",
+    "mutation_result":"Missense",
+    "assay_target":"BRAF",
+    "target_chromosome":"1",
+    "target_position":12412124,
+    "target_ref":"ACT",
+    "target_alt":"TTT",
+    "read_groups": {
+         "submitter_id":"DNA_assay_input242"
+    }
+}

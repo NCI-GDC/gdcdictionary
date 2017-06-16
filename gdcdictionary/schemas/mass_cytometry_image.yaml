@@ -1,0 +1,73 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "mass_cytometry_image"
+title: Mass Cytometry Image 
+type: object
+namespace: https://www.bloodpac.org/ 
+category: data_file
+program: '*'
+project: '*'
+description: >
+  Following an imaging mass cytometry experiment, the raw data output can be converted into
+  antibody-specific images.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - name: mass_cytometry_assays
+    backref: mass_cytometry_images 
+    label: data_from
+    target_type: mass_cytometry_assay
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - md5sum
+  - data_category
+  - data_type
+  - data_format
+  - assay_target
+  - mass_cytometry_assays 
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+
+  data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
+    enum:
+      - Mass Cytometry 
+  data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
+    enum: 
+      - Single Channel IMC Image
+  data_format:
+    term:
+      $ref: "_terms.yaml#/data_format"
+    enum:
+      - PNG
+      - JPG
+  assay_target:
+    description: "The protein marker identified in this assay." 
+    type: string 
+
+  mass_cytometry_assays:
+    $ref: "_definitions.yaml#/to_one"
