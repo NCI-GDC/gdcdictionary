@@ -1,16 +1,15 @@
 {
-    "type": "sample_expectation",
-    "submitter_id": "sample_expectation_1",
+    "type": "contrived_expectation",
+    "submitter_id": "contrived_expectation_1",
     "expected_mutation_type": "Missense",
     "expected_mutation_chromosome": "X",
     "expected_mutation_position": "10000",
     "expected_mutation_gene": "EGRF",
     "expected_mutation_reference": "A",
     "expected_mutation_alt": "T",
-    "expected_aa_change": "V600E",
     "expected_allelic_fraction": 0.12,
     "expected_copy_number": 1,
-    "samples": {
-        "submitter_id": "sample_1"
+    "aliquots": {
+        "submitter_id": "aliquot_1"
     }
 }

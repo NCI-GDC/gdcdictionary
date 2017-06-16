@@ -1,0 +1,87 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "analyte"
+title: Analyte
+type: object
+namespace: https://www.bloodpac.org
+category: biospecimen
+program: '*'
+project: '*'
+description: >
+  Any aspect of an aliquot used in an analysis or assay to characterize the sample. These aspects
+  range from molecules, such as DNA and RNA, that can be extracted from the aliquot to general
+  descriptions of the aliquot's components, such as cell count and morphology.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+required:
+  - submitter_id
+  - analyte_type
+  - aliquots 
+
+links:
+  - name: aliquots 
+    backref: analytes
+    label: derived_from
+    target_type: aliquot 
+    multiplicity: many_to_many
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  analyte_isolation_method:
+    description: >
+      The name or general description of the method used to isolate the analyte. Alternatively, if
+      you have provided a protocol, put the file_name here. 
+    type: string
+  analyte_type:
+    term:
+      $ref: "_terms.yaml#/analyte_type"
+    enum:
+      - DNA
+      - RNA
+      - Peptide
+      - Protein
+      - Morphology
+      - Cell Count
+  cell_type:
+    description: >
+      In the case of single cell analysis, this is the type of cell being analyzed.
+    enum:
+      - Apoptotic CTC
+      - Cytokeratin Negative CTC
+      - Cytokeratin Negative CTC Cluster
+      - Small CTC
+      - Small CTC Cluster
+      - Traditional CTC
+      - Traditional CTC Cluster
+      - White Blood Cell
+  cell_identifier:
+    description: >
+      The identifying name or number for the cell being identified.
+    type: string
+  days_to_assay:
+    description: >
+      The amount of time, in days, between the date used for index and the assay used to address this analyte.
+    type: integer
+  frame_identifier:
+    description: >
+      In an analysis of a slide, the frame denotes the region of the slide that is being examined.
+      Within a frame are multiple cells. 
+    type: string
+
+  aliquots:
+    $ref: "_definitions.yaml#/to_many"

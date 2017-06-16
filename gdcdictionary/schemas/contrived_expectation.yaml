@@ -1,0 +1,70 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "contrived_expectation"
+title: Contrived Expectation
+type: object
+namespace: https://www.bloodpac.org
+category: biospecimen
+program: '*'
+project: '*'
+description: >
+  Any mutations or other values for a paricular sample that are expected to be observed through
+  experimentation. These expectaions can arise from using a cell line or other gold standard with
+  a known set of variants.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+required:
+  - submitter_id
+  - aliquots 
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+links:
+  - name: aliquots
+    backref: contrived_expectations
+    label: expected_of
+    target_type: aliquot
+    multiplicity: many_to_one
+    required: true
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  expected_allelic_fraction:
+    description: "Relative frequency of the expected allele."
+    type: number
+  expected_copy_number:
+    description: "The expected copy number ratio at the expected locus."
+    type: number
+  expected_mutation_alt:
+    description: "Expected mutated bases/amino acids in the sample."
+    type: string
+  expected_mutation_chromosome:
+    description: "The chromosome on which the mutation should be located."
+    type: string
+  expected_mutation_gene:
+    description: "The gene in which the mutation is expected to occur."
+    type: string
+  expected_mutation_position:
+    description: "The amino acid or base position of the expected mutation."
+    type: string
+  expected_mutation_reference:
+    description: "Identifier for the bases/amino acids in the reference genome."
+    type: string
+  expected_mutation_type:
+    description: "The type of mutation expected in the sample. (e.g. missense, indel, etc)"
+    type: string
+
+  aliquots:
+    $ref: "_definitions.yaml#/to_one"

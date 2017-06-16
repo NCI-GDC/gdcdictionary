@@ -1,0 +1,13 @@
+{
+    "type":"analyte",
+    "submitter_id":"SingleCellDNA",
+    "analyte_isolation_method":"DNAExtractionProtocolZ.pdf",
+    "analyte_type":"DNA",
+    "cell_type":"Small CTC",
+    "cell_identifier":"sc124155",
+    "frame_identifier":"f325253",
+    "days_to_assay":80,
+    "aliquots": {
+        "submitter_id":"aliquot_ZZ"
+    }
+}
