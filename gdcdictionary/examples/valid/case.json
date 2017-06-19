@@ -1,6 +1,9 @@
 {
     "type": "case",
     "submitter_id": "BLGSP-71-06-00019",
+    "index_date":"Diagnosis",
+    "lost_to_followup":"Yes",
+    "days_to_lost_to_followup":125,
     "primary_site": "Lung",
     "disease_type": "Burkitt's Lymphoma",
     "projects": {

@@ -56,10 +56,27 @@ properties:
     type:
       - string
       - "null"
+  days_to_lost_to_followup:
+    term:
+      $ref: "_terms.yaml#/days_to_lost_to_followup"
+    type: integer
   disease_type:
     term:
       $ref: "_terms.yaml#/disease_type"
     type: string
+  index_date:
+    term:
+      $ref: "_terms.yaml#/index_date"
+    enum:
+      - Diagnosis
+      - First Patient Visit
+      - Study Enrollment
+  lost_to_followup:
+    term:
+      $ref: "_terms.yaml#/lost_to_followup"
+    enum:
+      - "Yes"
+      - "No"
   primary_site:
     term:
       $ref: "_terms.yaml#/primary_site"
