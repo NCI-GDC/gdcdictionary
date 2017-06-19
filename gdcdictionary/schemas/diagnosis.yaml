@@ -429,6 +429,11 @@ properties:
     maximum: 32872
     minimum: 0
 
+  days_to_diagnosis:
+    term:
+      $ref: "_terms.yaml#/days_to_diagnosis"
+    type: integer
+
   days_to_hiv_diagnosis:
     term:
       $ref: "_terms.yaml#/days_to_hiv_diagnosis"
