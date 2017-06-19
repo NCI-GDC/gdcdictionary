@@ -59,6 +59,25 @@ properties:
       - string
       - "null"
 
+  cause_of_death:
+    term:
+      $ref: "_terms.yaml#/cause_of_death"
+    enum:
+      - Cancer Related
+      - Not Cancer Related
+      - Not Reported
+      - Unknown
+
+  days_to_birth:
+    term:
+      $ref: "_terms.yaml#/days_to_birth"
+    type: integer
+
+  days_to_death:
+    term:
+      $ref: "_terms.yaml#/days_to_death"
+    type: integer
+
   gender:
     term:
       $ref: "_terms.yaml#/gender"
@@ -104,6 +123,15 @@ properties:
     term:
       $ref: "_terms.yaml#/year_of_death"
     type: number
+
+  vital_status:
+    term:
+      $ref: "_terms.yaml#/vital_status"
+    enum:
+      - Alive
+      - Dead
+      - Unknown
+      - Not Reported
 
   cases:
     $ref: "_definitions.yaml#/to_one"
