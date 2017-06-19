@@ -614,6 +614,7 @@ properties:
       - Lung Cancer (all types)
       - Cervical Cancer (all types)
       - Anal Cancer (all types)
+      - Acute Leukemia of Ambiguous Lineage (ALAL)
       - Acute lymphoblastic leukemia (ALL)
       - Acute myeloid leukemia (AML)
       - Induction Failure AML (AML-IF)
@@ -643,6 +644,7 @@ properties:
       - "03"
       - "04"
       - "10"
+      - "15"
       - "20"
       - "21"
       - "30"
