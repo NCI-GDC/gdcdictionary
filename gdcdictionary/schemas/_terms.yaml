@@ -1,15 +1,5 @@
 id: _terms
 
-ribosomal_rna_28s_16s_ratio:
-  description: >
-    The 28S/18S ribosomal RNA band ratio used to assess the quality of total RNA.
-  termDef:
-    term: "28s/18s Ribosomal RNA Ratio"
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
-
 a260_a280_ratio:
   description: >
     Numeric value that represents the sample ratio of nucleic acid absorbance at 260 nm and 280 nm,
@@ -1397,6 +1387,16 @@ read_group_name: # TOREVIEW
   description: >
     The name of the read group.
 
+regimen_or_line_of_therapy:
+  description: >
+    The name of a regimen or line of therapy assigned to the patient.
+  termDef:
+    term: Treatment Regimen or Line of Therapy
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 relationship_age_at_diagnosis:
   description: >
     The age (in years) when the patient's relative was first diagnosed.
@@ -1438,6 +1438,16 @@ residual_disease:
     cde_id: 2608702
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2608702&version=1.0"
+
+ribosomal_rna_28s_16s_ratio:
+  description: >
+    The 28S/18S ribosomal RNA band ratio used to assess the quality of total RNA.
+  termDef:
+    term: "28s/18s Ribosomal RNA Ratio"
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 RIN:
   description: >
