@@ -271,6 +271,16 @@ base_caller_version: # TOREVIEW
   description: >
     Version of the base caller.
 
+best_overall_response:
+  description: >
+    The best improvement achieved throughout the entire course of protocol treatment.
+  termDef:
+    term: Best Response Assessment Type
+    source: caDSR
+    cde_id: 2003324
+    cde_version: 4.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2003324&version=4.0"
+
 biomarker_name:
   description: >
     The name of the biomarker being tested for this specimen and set of test results.
@@ -457,6 +467,17 @@ data_type: # TOREVIEW
 datetime:
   description: >
     A combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]
+
+days_to_best_overall_response:
+  description: >
+    Number of days between the date used for index and the date of the patient's best overall
+    response.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 days_to_birth:
   description: >
@@ -915,6 +936,16 @@ is_paired_end: # TOREVIEW
   description: >
     Are the reads paired end?
 
+iss_stage:
+  description: >
+    The multiple myeloma disease stage at diagnosis.
+  termDef:
+    term: Multiple Myeloma Disease Stage Diagnosis Status
+    source: caDSR
+    cde_id: 2465385
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2465385&version=1.0"
+
 last_known_disease_status:
   description: >
     Text term that describes the last known state or condition of an individual's neoplasm.
@@ -1132,6 +1163,16 @@ oct_embedded:
     cde_id: 5432538
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432538&version=1.0"
+
+overall_survival:
+  description: >
+    Number of days between the date used for index and the patient's date of death or the date the patient was last known to be alive.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 pack_years_smoked:
   description: >
@@ -1379,6 +1420,26 @@ progesterone_receptor_result_ihc:
     cde_id: 2957357
     cde_version: 2.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2957357&version=2.0"
+
+progression_free_survival:
+  description: >
+    Number of days between the date used for index and the first date the patient is known to be free of disease progression.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+progression_free_survival_event:
+  description: >
+    The event used to define the patient's disease progression.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 progression_or_recurrence:
   description: >

@@ -365,6 +365,37 @@ properties:
       - Stage III
       - Stage IV
 
+  best_overall_response:
+    term:
+      $ref: "_terms.yaml#/best_overall_response"
+    enum:
+      - AJ-Adjuvant Therapy
+      - CPD-Clinical Progression
+      - CR-Complete Response
+      - CRU-Complete Response Unconfirmed
+      - DU-Disease Unchanged
+      - IMR-Immunoresponse
+      - IPD-Immunoprogression
+      - MR-Minimal/Marginal Response
+      - MX-Mixed Response
+      - Non-CR/Non-PD-Non-CR/Non-PD
+      - NPB-No Palliative Benefit
+      - NR-No Response
+      - PA-Palliative Therapy
+      - PB-Palliative Benefit
+      - PD-Progressive Disease
+      - PPD-Pseudoprogression
+      - PR-Partial Response
+      - PSR-Pseudoresponse
+      - RD-Responsive Disease
+      - RP-Response
+      - RPD-Radiographic Progressive Disease
+      - sCR-Stringent Complete Response
+      - SD-Stable Disease
+      - SPD-Surgical Progression
+      - TE-Too Early
+      - VGPR-Very Good Partial Response
+
   burkitt_lymphoma_clinical_variant:
     term:
       $ref: "_terms.yaml#/burkitt_lymphoma_clinical_variant"
@@ -412,6 +443,11 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+
+  days_to_best_overall_response:
+    term:
+      $ref: "_terms.yaml#/days_to_best_overall_response"
+    type: integer
 
   days_to_birth:
     term:
@@ -523,6 +559,16 @@ properties:
     enum:
       - Negative
       - Positive
+      - Unknown
+
+  iss_stage:
+    term:
+      $ref: "_terms.yaml#/iss_stage"
+    enum:
+      - I
+      - II
+      - III
+      - Not Reported
       - Unknown
 
   last_known_disease_status:
@@ -736,6 +782,11 @@ properties:
       - Not Reported
       - Not Allowed To Collect
 
+  overall_survival:
+    term:
+      $ref: "_terms.yaml#/overall_survival"
+    type: integer
+
   perineural_invasion_present:
     term:
       $ref: "_terms.yaml#/perineural_invasion_present"
@@ -768,6 +819,19 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+
+  progression_free_survival:
+    term:
+      $ref: "_terms.yaml#/progression_free_survival"
+    type: integer
+
+  progression_free_survival_event:
+    term:
+      $ref: "_terms.yaml#/progression_free_survival_event"
+    enum:
+      - Disease Progression
+      - Death
+      - No Event
 
   progression_or_recurrence:
     term:
