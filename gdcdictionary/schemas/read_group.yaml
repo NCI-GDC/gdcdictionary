@@ -138,10 +138,17 @@ properties:
       $ref: "_terms.yaml#/library_selection"
     enum:
       - Hybrid_Selection
+      - Hybrid Selection
       - PCR
       - Affinity_Enrichment
+      - Affinity Enrichment
       - Poly-T_Enrichment
+      - Poly-T Enrichment
+      - Random
       - RNA_Depletion
+      - rRNA Depletion
+      - miRNA Size Fractionation
+      - Targeted Sequencing
       - Other
   library_preparation_kit_name:
     term:
