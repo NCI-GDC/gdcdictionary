@@ -11,6 +11,20 @@ a260_a280_ratio:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432595&version=1.0"
 
+absolute_neutrophil:
+  description: >
+    The value, in 1000/uL, for the medical procedure that involves testing a
+    sample of blood for the absolute neutrophil count, the real number of white blood cells
+    (WBCs) that are neutrophils and is derived by multiplying the WBC count times the percent of
+    neutrophils in the differential WBC count; the percent of neutrophils consists of the
+    segmented (fully mature neutrophils) &#43; the bands (almost mature neutrophils).
+  termDef:
+    term: Laboratory Procedure Absolute Neutrophil Count Result Unspecified Value
+    source: caDSR
+    cde_id: 2597287
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2597287&version=1.0"
+
 adapter_name: # TOREVIEW
   description: >
     Name of the sequencing adapter.
@@ -18,6 +32,17 @@ adapter_name: # TOREVIEW
 adapter_sequence: # TOREVIEW
   description: >
     Base sequence of the sequencing adapter.
+
+adverse_event:
+  description: >
+    Text that represents the Common Terminology Criteria for Adverse Events low level term name
+    for an adverse event.
+  termDef:
+    term: Common Terminology Criteria for Adverse Events Version 4.0 Low Level Term Name
+    source: caDSR
+    cde_id: 3125302
+    cde_version: 1.1
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3125302&version=1.1"
 
 age_at_diagnosis:
   description: >
@@ -118,6 +143,16 @@ ajcc_pathologic_t:
     cde_id: 3045435
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3045435&version=1.0"
+
+albumin:
+  description: >
+    The value of a lab test used to determine the albumin level in the blood.
+  termDef:
+    term: Laboratory Procedure Albumin Result Specified Value
+    source: caDSR
+    cde_id: 58274
+    cde_version: 4.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=58274&version=4.0"
 
 alcohol_history:
   description: >
@@ -281,6 +316,18 @@ best_overall_response:
     cde_version: 4.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2003324&version=4.0"
 
+beta_2_microglobulin:
+  description: >
+    A numerical quantity measured or assigned or computed for the beta-2-microglobulin protein
+    (119 aa, ~14 kDa) is encoded by the human B2M gene in the clear portion of the blood that
+    remains after the removal of the blood cells and the clotting proteins.
+  termDef:
+    term: Serum Beta-2-Microglobulin Protein Laboratory Procedure Performance Value
+    source: caDSR
+    cde_id: 2958039
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2958039&version=1.0"
+
 biomarker_name:
   description: >
     The name of the biomarker being tested for this specimen and set of test results.
@@ -331,6 +378,17 @@ bmi:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4973892&version=1.0"
 
+bun:
+  description: >
+    The laboratory value (units of measure unspecified) for a renal lab test for blood urea
+    nitrogen.
+  termDef:
+    term: Laboratory Procedure Blood Urea Nitrogen Result Unspecified Value
+    source: caDSR
+    cde_id: 58317
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=58317&version=3.0"
+
 burkitt_lymphoma_clinical_variant:
   description: >
     Burkitt's lymphoma categorization based on clinical features that differ from other forms of the
@@ -342,6 +400,17 @@ burkitt_lymphoma_clinical_variant:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3770421&version=1.0"
 
+calcium:
+  description: >
+    The laboratory value related to the quantity of calcium present in peripheral blood serum
+    measured by laboratory test.
+  termDef:
+    term: Laboratory Procedure Calcium Electrolytes Outcome Unspecified Value
+    source: caDSR
+    cde_id: 2630716
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2630716&version=1.0"
+
 cause_of_death:
   description: >
     Text term to identify the cause of death for a patient.
@@ -351,6 +420,17 @@ cause_of_death:
     cde_id: 2554674
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2554674&version=3.0"
+
+cause_of_response:
+  description: >
+    A specific regimen or line of therapy responsible for the patient's observed improvement achieved
+    at a certain point in time during a patient's treatment protocol.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 cea_level_preoperative:
   description: >
@@ -407,6 +487,16 @@ colon_polyps_history:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3107197&version=1.0"
 
+comorbidity:
+  description: >
+    Text term to identify a coexistent disease or condition in a person.
+  termDef:
+    term: Person Comorbidity Condition Name
+    source: caDSR
+    cde_id: 2970715
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2970715&version=1.0"
+
 composition:
   description: >
     Text term that represents the cellular composition of the sample.
@@ -428,6 +518,18 @@ concentration:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432594&version=1.0"
 
+creatinine:
+  description: >
+    The value, in mg/dL, for the medical procedure that involves testing a sample of blood for
+    creatinine, the breakdown product of creatine, a constituent of muscle tissue, that is
+    excreted by the kidney and whose serum level is used to evaluate kidney function.
+  termDef:
+    term: Laboratory Procedure Creatinine Result Specified Value
+    source: caDSR
+    cde_id: 58318
+    cde_version: 3.1
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=58318&version=3.1"
+
 creation_datetime:
   description: >
     The datetime of portion creation encoded as seconds from epoch.
@@ -437,6 +539,18 @@ creation_datetime:
     cde_id: 5432592
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432592&version=1.0"
+
+crp:
+  description: >
+    The value the result of the medical procedure that involves testing a sample of blood for
+    C-reactive protein, encoded by the CRP gene this protein is cleaved during biological
+    activation and is associated with host defense mechanisms and inflammatory responses.
+  termDef:
+    term: Laboratory Procedure C-Reactive Protein Result Specified Value
+    source: caDSR
+    cde_id: 2181510
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2181510&version=1.0"
 
 current_weight:
   description: >
@@ -467,6 +581,16 @@ data_type: # TOREVIEW
 datetime:
   description: >
     A combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]
+
+days_to_adverse_event:
+  description: >
+    Number of days between the date used for index and the date the patient had an adverse event.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 days_to_best_overall_response:
   description: >
@@ -501,6 +625,17 @@ days_to_collection:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3008340&version=1.0"
 
+days_to_comorbidity:
+  description: >
+    Number of days between the date used for index and the date the patient was diagnosed with a
+    comorbidity.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 days_to_death:
   description: >
     Time interval from a person's date of death to the date of initial pathologic diagnosis,
@@ -515,6 +650,17 @@ days_to_death:
 days_to_diagnosis:
   description: >
     Number of days between the date used for index and the date of diagnosis.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+days_to_follow_up:
+  description: >
+    Number of days between the date used for index and the date the patient was seen or contacted at
+    follow-up.
   termDef:
     term: null
     source: null
@@ -578,17 +724,27 @@ days_to_new_event:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3392464&version=1.0"
 
+days_to_progression:
+  description: >
+    Number of days between the date used for index and the date the patient was diagnosed with
+    progression of disease.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 days_to_recurrence:
   description: >
-    Time interval from the date of new tumor event including progression, recurrence and new primary
-    malignancies to the date of initial pathologic diagnosis, represented as a calculated number of
-    days.
+    Number of days between the date used for index and the date the patient was diagnosed with a
+    recurrent malignancy. 
   termDef:
-    term: New Tumor Event Less Initial Pathologic Diagnosis Date Calculated Day Value
-    source: caDSR
-    cde_id: 3392464
-    cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3392464&version=1.0"
+    term: null 
+    source: null
+    cde_id: null 
+    cde_version: null 
+    term_url: null 
 
 days_to_sample_procurement:
   description: >
@@ -639,6 +795,17 @@ diagnosis_pathologically_confirmed:
     cde_version: null
     term_url: null
 
+disease_response:
+  description: >
+    The observed improvement achieved at a certain point in time during a patient's treatment
+    protocol.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 disease_type: # TOREVIEW
   description: >
     Full name for the project.
@@ -659,6 +826,16 @@ dlco_ref_predictive_percent:
     cde_id: 2180255
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2180255&version=1.0"
+
+ecog_performance_status:
+  description: >
+    The ECOG functional performance status of the patient/participant.
+  termDef:
+    term: Performance Status Assessment Eastern Cooperative Oncology Group Scale
+    source: caDSR
+    cde_id: 88
+    cde_version: 5.1
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=88&version=5.1"
 
 encoding:
   description: >
@@ -808,6 +985,16 @@ gender:
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2200604&version=3.0"
 
+glucose:
+  description: >
+    The numeric value for the amount of glucose found in blood serum.
+  termDef:
+    term: Laboratory Procedure Glucose Electrolytes Outcome Unspecified Value
+    source: caDSR
+    cde_id: 2004319
+    cde_version: 4.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2004319&version=4.0"
+
 height:
   description: >
     The height of the patient in centimeters.
@@ -817,6 +1004,18 @@ height:
     cde_id: 649
     cde_version: 4.1
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=649&version=4.1"
+
+hemoglobin:
+  description: >
+    The value (g/dL) for a medical procedure that involves testing a sample of blood for
+    hemoglobin, red respiratory protein of erythrocytes, to help determine a diagnosis, plan
+    treatment, check to see if treatment is working, or monitor the disease over time.
+  termDef:
+    term: Laboratory Procedure Hemoglobin Result Specified Value
+    source: caDSR
+    cde_id: 2190
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2190&version=3.0"
 
 her2_erbb2_percent_positive_ihc:
   description: >
@@ -880,6 +1079,59 @@ hpv_status:
     cde_id: 2230033
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2230033&version=1.0"
+
+iga:
+  description: >
+    The numeric value, in mg/dL, for the amount of immunoglobulin type A
+    (IgA) found in blood serum.
+  termDef:
+    term: Laboratory Procedure Serum Immunologic IgA Result Unspecified Value
+    source: caDSR
+    cde_id: 64580
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64580&version=3.0"
+
+igg:
+  description: >
+    The numeric value, in mg/dL, for the amount of immunoglobulin type G
+    (IgG) found in blood serum.
+  termDef:
+    term: Laboratory Procedure Serum Immunologic IgG Result Unspecified Value
+    source: caDSR
+    cde_id: 64581
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64581&version=3.0"
+
+igl_kappa:
+  description: >
+    The patient's serum immunoglobulin light chain kappa value at a certain point in time.
+  termDef:
+    term: null 
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+igl_lambda:
+  description: >
+    The patient's serum immunoglobulin light chain lambda value at a certain point in time.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+igm:
+  description: >
+    The numeric value, in mg/dL, for the amount of immunoglobulin type M
+    (IgM) found in blood serum.
+  termDef:
+    term: Laboratory Procedure Serum Immunologic IgM Result Unspecified Value
+    source: caDSR
+    cde_id: 64582
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64582&version=3.0"
 
 includes_spike_ins: # TOREVIEW
   description: >
@@ -965,6 +1217,17 @@ laterality:
     cde_id: 827
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=827&version=3.0"
+
+ldh_level:
+  description: >
+    The 2 decimal place numeric laboratory value measured, assigned or computed related to the
+    assessment of lactate dehydrogenase in a specimen. Measured in U/L.
+  termDef:
+    term: Laboratory Procedure Lactate Dehydrogenase Result  Integer::2 Decimal Place Value
+    source: caDSR
+    cde_id: 2798766
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2798766&version=1.0"
 
 ldh_level_at_diagnosis:
   description: >
@@ -1060,6 +1323,18 @@ lymphatic_invasion_present:
     cde_id: 64171
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64171&version=3.0"
+
+m_protein:
+  description: >
+    The amount, in mg/dl, of monoclonal protein, a protein complex comprised of two heavy chains
+    and two light chains, resulting from the medical procedure that involves testing a sample of
+    blood, urine, or other substance from the body.
+  termDef:
+    term: Laboratory Procedure M Protein Outcome Value
+    source: caDSR
+    cde_id: 64561
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64561&version=3.0"
 
 method_of_diagnosis:
   description: >
@@ -1323,6 +1598,16 @@ perineural_invasion_present:
     cde_id: 64181
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64181&version=3.0"
+
+platelet_count:
+  description: >
+    The absolute peripheral platelet count (in 1000/uL).
+  termDef:
+    term: Laboratory Procedure Platelet Result Specified Value
+    source: caDSR
+    cde_id: 58304
+    cde_version: 4.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=58304&version=4.0"
 
 platform: # TOREVIEW
   description: >
@@ -1769,6 +2054,19 @@ tobacco_smoking_status:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2181650&version=1.0"
 
+total_protein:
+  description: >
+    The numeric value, in g/dL, for the results of the medical procedure
+    that involves testing a sample of blood for total serum proteins, dissolved proteins of
+    blood plasma, consisting mainly of albumins and globulins and include antibodies and blood-
+    clotting proteins.
+  termDef:
+    term: Laboratory Procedure Total Serum Protein Outcome Unspecified Value
+    source: caDSR
+    cde_id: 2181536
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2181536&version=1.0"
+
 total_sequences:
   description: >
     A count of the total number of sequences processed.
@@ -1907,6 +2205,16 @@ vital_status:
     cde_id: 5
     cde_version: 5.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5&version=5.0"
+
+wbc:
+  description: >
+    The absolute peripheral white blood cell count (in 1000/uL).
+  termDef:
+    term: Laboratory Procedure Leukocyte Result Specified Value
+    source: caDSR
+    cde_id: 58312
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=58312&version=3.0"
 
 weight:
   description: >
