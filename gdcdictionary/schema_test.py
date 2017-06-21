@@ -104,7 +104,7 @@ class SchemaTest(unittest.TestCase):
 
     def test_valid_files(self):
         for path in glob.glob(os.path.join(DATA_DIR, 'valid', '*.json')):
-            print "Validating {}".format(path)
+            print("Validating {}".format(path))
             doc = json.load(open(path, 'r'))
             print(doc)
             if type(doc) == dict:
@@ -119,7 +119,7 @@ class SchemaTest(unittest.TestCase):
 
     def test_invalid_files(self):
         for path in glob.glob(os.path.join(DATA_DIR, 'invalid', '*.json')):
-            print "Validating {}".format(path)
+            print("Validating {}".format(path))
             doc = json.load(open(path, 'r'))
             if type(doc) == dict:
                 self.add_system_props(doc)
@@ -173,7 +173,7 @@ if __name__ == '__main__':
         if args.invalid:
             try:
                 print("CHECK if {0} is invalid:".format(f.name)),
-                print type(doc)
+                print(type(doc))
                 if type(doc) == dict:
                     validate_entity(doc, dictionary.schema)
                 elif type(doc) == list:
@@ -194,7 +194,7 @@ if __name__ == '__main__':
                 for entity in doc:
                     validate_entity(entity, dictionary.schema)
             else:
-                print "Invalid json"
+                print("Invalid json")
 
             print("Valid as expected")
     print('ok.')

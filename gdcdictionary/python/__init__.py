@@ -129,12 +129,12 @@ class GDCDictionary(object):
         :returns: A denormalized/resolved version of :param:`obj`.
 
         """
-
+        refkey = '$ref'
         if isinstance(obj, dict):
-            for key in obj.keys():
-                if key == '$ref':
-                    val = obj.pop(key)
-                    obj.update(self.resolve_reference(val, root))
+            all_refkeys = [k for k in obj.keys() if k.startswith(refkey)]
+            for key in all_refkeys:
+                val = obj.pop(key)
+                obj.update(self.resolve_reference(val, root))
             return {k: self.resolve_schema(v, root) for k, v in obj.items()}
         elif isinstance(obj, list):
             return [self.resolve_schema(item, root) for item in obj]
