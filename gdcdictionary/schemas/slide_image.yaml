@@ -27,7 +27,7 @@ links:
     backref: slide_images
     label: data_from
     target_type: slide
-    multiplicity: one_to_one
+    multiplicity: many_to_one
     required: true
 
 required:
