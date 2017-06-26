@@ -5,6 +5,7 @@
     "cell_identifier": "1233423",
     "cell_count": 100,
     "ck_signal": 0.12,
+    "run_name": "Run1",
     "biomarker_signal": 3.45,
     "slides": {
         "submitter_id": "slide_1"

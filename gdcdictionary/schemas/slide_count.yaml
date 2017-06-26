@@ -86,6 +86,9 @@ properties:
   relative_er_intensity:
     description: "The ratio of the single cell's endoplasmic reticulum staining intensity to the average of the surrounding cells."
     type: number
+  run_name:
+    description: "The name or identifier given to the run that was used to generate this slide count."
+    type: string
   slides:
     $ref: "_definitions.yaml#/to_many"
   project_id:
