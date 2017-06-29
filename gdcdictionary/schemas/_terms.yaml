@@ -1,6 +1,6 @@
 id: _terms
 
-28s_16s_ribosomal_rna_ratio:
+ribosomal_rna_28s_16s_ratio:
   description: >
     The 28S/18S ribosomal RNA band ratio used to assess the quality of total RNA.
   termDef:
@@ -281,6 +281,36 @@ base_caller_version: # TOREVIEW
   description: >
     Version of the base caller.
 
+biomarker_name:
+  description: >
+    The name of the biomarker being tested for this specimen and set of test results.
+  termDef:
+    term: Biomarker Name
+    source: caDSR
+    cde_id: 5473
+    cde_version: 11.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5473&version=2.31"
+
+biomarker_result:
+  description: >
+    Text term to define the results of genetic testing.
+  termDef:
+    term: Laboratory Procedure Genetic Abnormality Test Result Type
+    source: caDSR
+    cde_id: 3234680
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3234680&version=1.0"
+
+biomarker_test_method:
+  description: >
+    Text descriptor of a molecular analysis method used for an individual.
+  termDef:
+    term: Disease Detection Molecular Analysis Method Type
+    source: caDSR
+    cde_id: 3121575
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3121575&version=1.0"
+
 biospecimen_anatomic_site:
   description: >
     Text term that represents the name of the primary disease site of the submitted tumor sample.
@@ -321,6 +351,17 @@ cause_of_death:
     cde_id: 2554674
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2554674&version=3.0"
+
+cea_level_preoperative:
+  description: >
+    Numeric value of the Carcinoembryonic antigen or CEA at the time before surgery. [Manually-
+    curated]
+  termDef:
+    term: Preoperative Carcinoembryonic Antigen Result Value
+    source: caDSR
+    cde_id: 2716510
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2716510&version=1.0"
 
 cigarettes_per_day:
   description: >
@@ -566,6 +607,27 @@ diagnosis_pathologically_confirmed:
     cde_version: null
     term_url: null
 
+disease_type: # TOREVIEW
+  description: >
+    Full name for the project.
+  termDef:
+    term: Disease Type
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+dlco_ref_predictive_percent:
+  description: >
+    The value, as a percentage of predicted lung volume, measuring the amount of carbon monoxide
+    detected in a patient's lungs.
+  termDef:
+    term: Lung Carbon Monoxide Diffusing Capability Test Assessment Predictive Value Percentage Value
+    source: caDSR
+    cde_id: 2180255
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2180255&version=1.0"
+
 encoding:
   description: >
     Version of ASCII encoding of quality values found in the file.
@@ -575,6 +637,26 @@ encoding:
     cde_id: null
     cde_version: null
     term_url: "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/1%20Basic%20Statistics.html"
+
+estrogen_receptor_percent_positive_ihc:
+  description: >
+    Classification to represent ER Positive results expressed as a percentage value.
+  termDef:
+    term: ER Level Cell Percentage Category
+    source: caDSR
+    cde_id: 3128341
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3128341&version=1.0"
+
+estrogen_receptor_result_ihc:
+  description: >
+    Text term to represent the overall result of Estrogen Receptor (ER) testing.
+  termDef:
+    term: Breast Carcinoma Estrogen Receptor Status
+    source: caDSR
+    cde_id: 2957359
+    cde_version: 2.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2957359&version=2.0"
 
 ethnicity:
   description: >
@@ -599,6 +681,50 @@ experimental_strategy: # TOREVIEW
 fastq_name: # TOREVIEW
   description: >
     Names of FASTQs.
+
+fev1_ref_post_bronch_percent:
+  description: >
+    The percentage comparison to a normal value reference range of the volume of air that a
+    patient can forcibly exhale from the lungs in one second post-bronchodilator.
+  termDef:
+    term: Post Bronchodilator Lung Forced Expiratory Volume 1 Test Lab Percentage Value
+    source: caDSR
+    cde_id: 3302948
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3302948&version=1.0"
+
+fev1_ref_pre_bronch_percent:
+  description: >
+    The percentage comparison to a normal value reference range of the volume of air that a
+    patient can forcibly exhale from the lungs in one second pre-bronchodilator.
+  termDef:
+    term: Pre Bronchodilator Lung Forced Expiratory Volume 1 Test Lab Percentage Value
+    source: caDSR
+    cde_id: 3302947
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3302947&version=1.0"
+
+fev1_fvc_post_bronch_percent:
+  description: >
+    Percentage value to represent result of Forced Expiratory Volume in 1 second (FEV1) divided
+    by the Forced Vital Capacity (FVC) post-bronchodilator.
+  termDef:
+    term: Post Bronchodilator FEV1/FVC Percent Value
+    source: caDSR
+    cde_id: 3302956
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3302956&version=1.0"
+
+fev1_fvc_pre_bronch_percent:
+  description: >
+    Percentage value to represent result of Forced Expiratory Volume in 1 second (FEV1) divided
+    by the Forced Vital Capacity (FVC) pre-bronchodilator.
+  termDef:
+    term: Pre Bronchodilator FEV1/FVC Percent Value
+    source: caDSR
+    cde_id: 3302955
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3302955&version=1.0"
 
 figo_stage:
   description: >
@@ -660,16 +786,47 @@ height:
     cde_version: 4.1
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=649&version=4.1"
 
-hiv_status:
+her2_erbb2_percent_positive_ihc:
   description: >
-    the result of a test to detect the presence of human immunodeficiency virus antibody in a
-    patient.
+    Classification to represent the number of positive HER2/ERBB2 cells in a specimen or sample.
   termDef:
-    term: Antibody HIV Test Status
+    term: HER2 ERBB Positive Finding Cell Percentage Category
     source: caDSR
-    cde_id: 2180464
+    cde_id: 3086980
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2180464&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3086980&version=1.0"
+
+her2_erbb2_result_fish:
+  description: >
+    the type of outcome for HER2 as determined by an in situ hybridization (ISH) assay.
+  termDef:
+    term: Laboratory Procedure HER2/neu in situ Hybridization Outcome Type
+    source: caDSR
+    cde_id: 2854089
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2854089&version=1.0"
+
+her2_erbb2_result_ihc:
+  description: >
+    Text term to signify the result of the medical procedure that involves testing a sample of
+    blood or tissue for HER2 by histochemical localization of immunoreactive substances using
+    labeled antibodies as reagents.
+  termDef:
+    term: Laboratory Procedure HER2/neu Immunohistochemistry Receptor Status
+    source: caDSR
+    cde_id: 2957563
+    cde_version: 2.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2957563&version=2.0"
+
+hiv_positive:
+  description: >
+    Text term to signify whether a physician has diagnosed HIV infection in a patient.
+  termDef:
+    term: Physician Diagnosed HIV Infection Personal Medical History Yes No Not Applicable Indicator
+    source: caDSR
+    cde_id: 4030799
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4030799&version=1.0"
 
 hpv_positive_type:
   description: >
@@ -769,14 +926,14 @@ ldh_level_at_diagnosis:
 
 ldh_normal_range_upper:
   description: >
-    The upper value of the normal range for Lactate dehydrogenase (LDH) at the facility where the
-    patient was tested at the time of initial diagnosis.
+    The top value of the range of statistical characteristics that are supposed to represent
+    accepted standard, non-pathological pattern for lactate dehydrogenase (units not specified).
   termDef:
-    term: LDH Upper Limit for Normal at Facility
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: Laboratory Procedure Lactate Dehydrogenase Result Upper Limit of Normal Value
+    source: caDSR
+    cde_id: 2597015
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2597015&version=1.0"
 
 library_strategy: # TOREVIEW
   description: >
@@ -865,6 +1022,16 @@ md5sum: # TOREVIEW
   description: >
     The 128-bit hash value expressed as a 32 digit hexadecimal number used as a file's digital
     fingerprint.
+
+microsatellite_instability_abnormal:
+  description: >
+    The yes/no indicator to signify the status of a tumor for microsatellite instability.
+  termDef:
+    term: Microsatellite Instability Occurrence Indicator
+    source: caDSR
+    cde_id: 3123142
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3123142&version=1.0"
 
 morphology:
   description: >
@@ -1128,6 +1295,16 @@ primary_diagnosis:
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3081934&version=3.0"
 
+primary_site:
+  description: >
+    Primary site for the project.
+  termDef:
+    term: Primary Site
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 prior_malignancy:
   description: >
     Text term to describe the patient's history of prior cancer diagnosis and the spatial location
@@ -1149,6 +1326,27 @@ prior_treatment:
     cde_id: 4231463
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4231463&version=1.0"
+
+progesterone_receptor_percent_positive_ihc:
+  description: >
+    Classification to represent Progesterone Receptor Positive results expressed as a percentage
+    value.
+  termDef:
+    term: Progesterone Receptor Level Cell Percentage Category
+    source: caDSR
+    cde_id: 3128342
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3128342&version=1.0"
+
+progesterone_receptor_result_ihc:
+  description: >
+    Text term to represent the overall result of Progresterone Receptor (PR) testing.
+  termDef:
+    term: Breast Carcinoma Progesterone Receptor Status
+    source: caDSR
+    cde_id: 2957357
+    cde_version: 2.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2957357&version=2.0"
 
 progression_or_recurrence:
   description: >
@@ -1292,7 +1490,7 @@ site_of_resection_or_biopsy:
     Named locations of, or within, the body. A system of numbered categories for representation of
     data.
   termDef:
-    term: iInternational Classification of Diseases for Oncology, Third Edition ICD-O-3 Site Code
+    term: International Classification of Diseases for Oncology, Third Edition ICD-O-3 Site Code
     source: caDSR
     cde_id: 3226281
     cde_version: 1.0

@@ -53,9 +53,9 @@ properties:
     description: >
       The legacy barcode used before prior to the use UUIDs, varies by
       project. For TCGA this is bcranalytebarcode.
-  28s_16s_ribosomal_rna_ratio:
+  ribosomal_rna_28s_16s_ratio:
     term:
-      $ref: "_terms.yaml#/28s_16s_ribosomal_rna_ratio"
+      $ref: "_terms.yaml#/ribosomal_rna_28s_16s_ratio"
     type: number
   a260_a280_ratio:
     term:
