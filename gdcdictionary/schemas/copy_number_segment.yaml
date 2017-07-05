@@ -71,6 +71,7 @@ properties:
       - Copy Number Segment
       - Masked Copy Number Segment
       - Gene Level Copy Number
+      - Gene Level Copy Number Scores
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
