@@ -25,7 +25,7 @@ links:
     backref: genomic_profile_harmonization_workflows
     label: performed_on
     target_type: submitted_genomic_profile
-    multiplicity: one_to_one
+    multiplicity: many_to_one
     required: true
 
 required:
@@ -47,5 +47,8 @@ properties:
       $ref: "_terms.yaml#/workflow_type"
     enum:
       - MuTect2 
+      - FM Simple Somatic Mutation
+      - FM Copy Number Variation
+      - FM Structural Variation
   submitted_genomic_profiles:
     $ref: "_definitions.yaml#/to_one"
