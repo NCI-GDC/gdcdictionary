@@ -39,6 +39,12 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
+  collaboration_id:
+    description: >
+      For instances in which multiple institutions use the same patient for their respective studies,
+      this space is used as a place to enter in the deidentified barcode, id, or other identifier for
+      the patient. Work with your collaborators to decide on the patient's id.
+    type: string
   index_date:
     description: >
       The reference or anchor date used during date obfuscation, where a single date is obscurred by

@@ -6,7 +6,6 @@
     "blood_fractionation_method": "FractionationProtocol4.pdf",
     "hours_to_fractionation_lower":"Unknown",
     "hours_to_fractionation_upper":"Unknown",
-    "DNA_yield": 24,
     "biospecimens": {
         "submitter_id": "BLGSP-71-06-00019"
     }

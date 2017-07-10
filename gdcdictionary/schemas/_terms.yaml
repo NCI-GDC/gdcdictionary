@@ -1710,7 +1710,7 @@ tumor_grade:
 
 tumor_code: # TOREVIEW
   description: >
-    Diagnostic tumor code of the tissue sample source.
+    A specification of a cancer through cellular origin and localization. 
 
 tumor_code_id: # TOREVIEW
   description: >

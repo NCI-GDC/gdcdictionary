@@ -32,6 +32,7 @@ required:
   - blood_tube_type
   - days_to_procurement
   - method_of_procurement
+  - procured_or_purchased
   - tissue_type
   - cases
 
@@ -357,67 +358,35 @@ properties:
   clinical_site:
     description: "The name or identifier for the clinical site at which the biospecimen was taken from the patient."
     type: string
+  collaboration_id:
+    description: >
+      In cases where the same biospecimen is used by multiple institutions, a deidenfitied id may be
+      provided here to tie those together. Work with your collaborators assure the same id is used 
+      in all projects.
+    type: string
   days_to_procurement:
     description: "The number of days between the index date and the date the biospecimen was taken from the patient (such as the blood draw)."
     type: number
   disease_type:
-    description: "The disease of the patient from which the biospecimen was taken."
+    description: "The primary disease of the patient from which the biospecimen was taken."
     enum:
-      - Acinar Cell Neoplasms
-      - Adenomas and Adenocarcinomas
-      - Adnexal and Skin Appendage Neoplasms
-      - Basal Cell Neoplasms
-      - Blood Vessel Tumors
-      - Chronic Myeloproliferative Disorders
-      - Complex Epithelial Neoplasms
-      - Complex Mixed and Stromal Neoplasms
-      - Cystic, Mucinous and Serous Neoplasms
-      - Ductal and Lobular Neoplams
-      - Epithelial Neoplasms, NOS
-      - Fibroepithelial Neoplasms
-      - Fibromatous Neoplasms
-      - Germ Cell Neoplasms
-      - Giant Cell Tumors
-      - Gliomas
-      - Granular Cell Tumors and Alveolar Soft Part Sarcomas
-      - Hodgkin Lymphoma
-      - Immunoproliferative Disease
-      - Leukemias, NOS
-      - Lipomatous Neoplasms
-      - Lymphatic Vessel Tumors
-      - Lymphoid Leukemias
-      - Malignant Lymphomas, NOS or Diffuse
-      - Mast Cell Tumors
-      - Mature B-Cell Lymphomas
-      - Mature T- and NK-Cell Lymphomas
-      - Meningiomas
-      - Mesonephromas
-      - Mesothelial Neoplasms
-      - Miscellaneous Bone Tumors
-      - Miscellaneous Tumors
-      - Mucoepidermoid Neoplasms
-      - Myelodysplastic Syndromes
-      - Myeloid Leukemias
-      - Myomatous Neoplasms
-      - Myxomatous Neoplasms
-      - Neoplasms
-      - Neoplasms of Histiocytes and Accessory Lymphoid Cells
-      - Nerve Sheath Tumors
-      - Neuroepitheliomatous Neoplasms
-      - Nevi and Melanomas
-      - Odontogenic Tumors
-      - Osseous and Chondromatous Neoplasms
-      - Other Hematologic Disorders
-      - Other Leukemias
-      - Paragangliomas and Glomus Tumors
-      - Plasma Cell Tumors
-      - Precursor Cell Lymphoblastic Lymphoma
-      - Soft Tissue Tumors and Sarcomas, NOS
-      - Specialized Gonadal Neoplasms
-      - Squamous Cell Neoplasms
-      - Synovial-like Neoplasms
-      - Thymic Epithelial Neoplasms
-      - Transitional Cell Papillomas and Carcinomas
+      - Blood Cancer, Leukemia
+      - Blood Cancer, Lymphoma
+      - Blood Cancer, Myeloma
+      - Breast Cancer
+      - Colorectal Cancer
+      - Gastric Cacner
+      - Kidney Cancer
+      - Liver Cancer
+      - Lung Cancer
+      - Melanoma
+      - Ovarian Cancer
+      - Pancreatic Cancer
+      - Prostate Cacner
+      - Sarcoma
+      - Uterine Cancer
+      - Healthy
+      - Unknown
   metastatic_bone:
     description: >
       True/False indicator of whether metastasis had been confirmed in an area of bone of the
@@ -437,59 +406,9 @@ properties:
     term:
       $ref: "_terms.yaml#/method_of_sample_procurement"
     enum:
-      - Abdomino-perineal Resection of Rectum
-      - Anterior Resection of Rectum
-      - Aspirate
       - Biopsy
       - Blood Draw
-      - Bone Marrow Aspirate
-      - Core Biopsy
-      - Cystectomy
-      - Endo Rectal Tumor Resection
-      - Endoscopic Biopsy
-      - Endoscopic Mucosal Resection (EMR)
-      - Enucleation
-      - Excisional Biopsy
-      - Fine Needle Aspiration
-      - Full Hysterectomy
-      - Gross Total Resection
-      - Hand Assisted Laparoscopic Radical Nephrectomy
-      - Hysterectomy NOS
-      - Incisional Biopsy
-      - Indeterminant
-      - Laparoscopic Biopsy
-      - Laparoscopic Partial Nephrectomy
-      - Laparoscopic Radical Nephrectomy
-      - Laparoscopic Radical Prostatectomy with Robotics
-      - Laparoscopic Radical Prostatectomy without Robotics
-      - Left Hemicolectomy
-      - Lobectomy
-      - Local Resection (Exoresection; wall resection)
-      - Lumpectomy
-      - Modified Radical Mastectomy
-      - Needle Biopsy
-      - Open Craniotomy
-      - Open Partial Nephrectomy
-      - Open Radical Nephrectomy
-      - Open Radical Prostatectomy
-      - Orchiectomy
-      - Other
-      - Other Surgical Resection
-      - Pan-Procto Colectomy
-      - Pneumonectomy
-      - Right Hemicolectomy
-      - Sigmoid Colectomy
-      - Simple Mastectomy
-      - Subtotal Resection
-      - Surgical Resection
-      - Thoracoscopic Biopsy
-      - Total Colectomy
-      - Total Mastectomy
-      - Transplant
-      - Transurethral resection (TURBT)
-      - Transverse Colectomy
-      - Tumor Resection
-      - Wedge Resection
+      - Unknown
   primary_site:
     description: >
       The site of the primary tumor for the patient from which the biospecimen was taken.
@@ -559,10 +478,16 @@ properties:
       - Tonsil
       - Trachea
       - Ureter
-      - Uterus, NOS
+      - Uterus
       - Vagina
       - Vulva
       - Unknown
+  procured_or_purchased:
+    description: >
+      Was the biospecimen purchased from a vendor or procured from a study participant.
+    enum:
+      - Procured
+      - Purchased
   procurement_temperature:
     description: >
       The temperature, in centigrade, at which the biospecimen was kept after procuring it from the
@@ -586,37 +511,62 @@ properties:
     term:
       $ref: "_terms.yaml#/tumor_code"
     enum:
+      - Acinar Cell Neoplasms
+      - Adenomas and Adenocarcinomas
+      - Adnexal and Skin Appendage Neoplasms
+      - Basal Cell Neoplasms
+      - Blood Vessel Tumors
+      - Chronic Myeloproliferative Disorders
+      - Complex Epithelial Neoplasms
+      - Complex Mixed and Stromal Neoplasms
+      - Cystic, Mucinous and Serous Neoplasms
+      - Ductal and Lobular Neoplams
+      - Epithelial Neoplasms, NOS
+      - Fibroepithelial Neoplasms
+      - Fibromatous Neoplasms
+      - Germ Cell Neoplasms
+      - Giant Cell Tumors
+      - Gliomas
+      - Granular Cell Tumors and Alveolar Soft Part Sarcomas
+      - Hodgkin Lymphoma
+      - Immunoproliferative Disease
+      - Leukemias, NOS
+      - Lipomatous Neoplasms
+      - Lymphatic Vessel Tumors
+      - Lymphoid Leukemias
+      - Malignant Lymphomas, NOS or Diffuse
+      - Mast Cell Tumors
+      - Mature B-Cell Lymphomas
+      - Mature T- and NK-Cell Lymphomas
+      - Meningiomas
+      - Mesonephromas
+      - Mesothelial Neoplasms
+      - Miscellaneous Bone Tumors
+      - Miscellaneous Tumors
+      - Mucoepidermoid Neoplasms
+      - Myelodysplastic Syndromes
+      - Myeloid Leukemias
+      - Myomatous Neoplasms
+      - Myxomatous Neoplasms
+      - Neoplasms
+      - Neoplasms of Histiocytes and Accessory Lymphoid Cells
+      - Nerve Sheath Tumors
+      - Neuroepitheliomatous Neoplasms
+      - Nevi and Melanomas
+      - Odontogenic Tumors
+      - Osseous and Chondromatous Neoplasms
+      - Other Hematologic Disorders
+      - Other Leukemias
+      - Paragangliomas and Glomus Tumors
+      - Plasma Cell Tumors
+      - Precursor Cell Lymphoblastic Lymphoma
+      - Soft Tissue Tumors and Sarcomas, NOS
+      - Specialized Gonadal Neoplasms
+      - Squamous Cell Neoplasms
+      - Synovial-like Neoplasms
+      - Thymic Epithelial Neoplasms
+      - Transitional Cell Papillomas and Carcinomas
       - Non Cancerous Tissue
-      - Diffuse Large B-Cell Lymphoma (DLBCL)
-      - Lung Cancer (all types)
-      - Lung Adenocarcinoma
-      - Non-small Cell Lung Carcinoma (NSCLC)
-      - Colon Cancer (all types)
-      - Breast Cancer (all types)
-      - Cervical Cancer (all types)
-      - Anal Cancer (all types)
-      - Acute Lymphoblastic Leukemia (ALL)
-      - Acute Myeloid Leukemia (AML)
-      - Induction Failure AML (AML-IF)
-      - Neuroblastoma (NBL)
-      - Osteosarcoma (OS)
-      - Ewing Sarcoma
-      - Wilms Tumor (WT)
-      - Clear Cell Sarcoma of the Kidney (CCSK)
-      - Rhabdoid Tumor (Kidney) (RT)
-      - CNS, Ependymoma
-      - CNS, Glioblastoma (GBM)
-      - CNS, Rhabdoid Tumor
-      - CNS, Low Grade Glioma (LGG)
-      - CNS, Medulloblastoma
-      - CNS, Other
-      - NHL, Anaplastic Large Cell Lymphoma
-      - NHL, Burkitt lymphoma (BL)
-      - Rhabdomyosarcoma
-      - Soft Tissue Sarcoma, Non-rhabdomyosarcoma
-      - Castration-Resistant Prostate Cancer (CRPC)
-      - Prostate Cancer NOS
-      - Hepatocellular Carcinoma (HCC)
   tumor_descriptor:
     term:
       $ref: "_terms.yaml#/tumor_descriptor"

@@ -82,16 +82,6 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_collection"
     type: integer
-  DNA_yield:
-    description: "The total amount of DNA, in micrograms, that was isolated from the sample."
-    type:
-      - number
-      - string
-    oneOf:
-      - enum:
-          - Unknown
-          - Not Applicable
-      - type: number
   hours_to_fractionation_lower:
     description: >
       The lower limit on the amount of time, in hours, between the blood draw and the fractionation
