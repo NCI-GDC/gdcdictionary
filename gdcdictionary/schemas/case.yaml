@@ -21,16 +21,16 @@ systemProperties:
   - state
 
 links:
-  - name: experiments 
+  - name: studies
     backref: cases
     label: member_of
-    target_type: experiment
+    target_type: study
     multiplicity: many_to_many
     required: true
 
 required:
   - submitter_id
-  - experiments 
+  - studies
 
 uniqueKeys:
   - [id]
@@ -55,7 +55,7 @@ properties:
       - First Patient Visit
   lost_to_followup:
     description: >
-      A yes/no indicator related to whether a patient was unable to be contacted for follow-up. 
+      A yes/no indicator related to whether a patient was unable to be contacted for follow-up.
     enum:
       - "Yes"
       - "No"
@@ -65,5 +65,5 @@ properties:
       The number of days between the date used for index and the date the patient was lost to follow-up.
     type: integer
 
-  experiments: 
+  studies:
     $ref: "_definitions.yaml#/to_many"

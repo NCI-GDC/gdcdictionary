@@ -7,7 +7,7 @@
     "data_category": "Experimental Metadata",
     "data_type": "Testing Protocol",
     "data_format": "PDF",
-    "experiments": {
+    "studies": {
 	"submitter_id": "read_group_X"
     }
 }

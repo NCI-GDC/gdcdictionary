@@ -8,8 +8,8 @@ category: metadata_file
 project: '*'
 program: '*'
 description: >
-  Data file containing the metadata for the experiment performed. A space for protocols, panel data,
-  or any data related to the experimental design.
+  Data file containing the metadata for the study performed. A space for protocols, panel data,
+  or any data related to the study design.
 additionalProperties: false
 submittable: true
 validators: null
@@ -24,10 +24,10 @@ systemProperties:
   - error_type
 
 links:
-  - name: experiments
-    backref: experiment_metadata_files
+  - name: studies
+    backref: study_metadata_files
     label: derived_from
-    target_type: experiment
+    target_type: study
     multiplicity: many_to_many
     required: false
 
@@ -69,5 +69,5 @@ properties:
       - PDF
       - TXT
 
-  experiments:
+  studies:
     $ref: "_definitions.yaml#/to_many"

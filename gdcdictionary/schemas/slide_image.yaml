@@ -26,7 +26,7 @@ links:
   - name: aliquots
     backref: slide_images
     label: data_from
-    target_type: slide
+    target_type: aliquot 
     multiplicity: many_to_one
     required: true
 
