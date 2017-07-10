@@ -1,6 +1,6 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "experiment"
+id: "study"
 title: Experiment
 type: object
 namespace: https://www.bloodpac.org
@@ -23,7 +23,7 @@ systemProperties:
 
 links:
   - name: projects
-    backref: experiments
+    backref: studies
     label: performed_for
     target_type: project
     multiplicity: many_to_one
@@ -32,10 +32,10 @@ links:
 required:
   - submitter_id
   - data_description
-  - experimental_description
-  - experimental_design
-  - experimental_objective
-  - experimental_setup
+  - study_description
+  - study_design
+  - study_objective
+  - study_setup
   - projects
 
 uniqueKeys:
@@ -44,19 +44,19 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
-  associated_experiment:
-    description: "The submitter_id for any experiment with which this experiment is associated, paired, or matched."
+  associated_study:
+    description: "The submitter_id for any study with which this study is associated, paired, or matched."
     type: string
   data_description:
-    description: "Brief description of the data being provided for this experiment. Free text"
+    description: "Brief description of the data being provided for this study. Free text"
     type: string
-  experimental_description:
-    description: "A brief description of the experiment being performed. Free text"
+  study_description:
+    description: "A brief description of the study being performed. Free text"
     type: string
-  experimental_design:
+  study_design:
     description: >
-      Summary of the goals the experiment is designed to discover. General description of the
-      experiment's place in relation to a clinical application.
+      Summary of the goals the study is designed to discover. General description of the
+      study's place in relation to a clinical application.
     enum:
       - Research/Early Development
       - Pre-Analytical
@@ -64,21 +64,21 @@ properties:
       - Clinical
       - Clinical Assay
       - Clinical Utility
-  experimental_objective:
+  study_objective:
     description: >
-      The general objective of the experiment. What the experiment hopes to discover or determine
+      The general objective of the study. What the study hopes to discover or determine
       through testing.
     enum:
       - Accuracy
       - Interference
       - Limit of Detection
       - Precision (Repeatability)
-      - Precision (Reproducability)
+      - Precision (Reproducibility)
       - Specificity/Sensitivity
       - Stability
-  experimental_setup:
+  study_setup:
     description: >
-      A high level description of the setup used to achieve the experimental objectives.
+      A high level description of the setup used to achieve the study objectives.
     enum:
       - Detection/Enumeration/Isolation
       - Genetic Analysis
