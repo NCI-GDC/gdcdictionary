@@ -56,6 +56,7 @@ class GDCDictionary(object):
         '_definitions.yaml',
         '_terms.yaml',
     ]
+    settings_path = '_settings.yaml'
 
     logger = logging.getLogger("GDCDictionary")
 
@@ -73,7 +74,9 @@ class GDCDictionary(object):
         self.root_dir = (root_dir or os.path.join(MOD_DIR, 'schemas'))
         self.metaschema_path = metaschema_path or self._metaschema_path
         self.definitions_paths = definitions_paths or self._definitions_paths
-        self.exclude = [self.metaschema_path] + self.definitions_paths
+        self.exclude = (
+            [self.metaschema_path] + self.definitions_paths
+            + [self.settings_path])
         self.schema = dict()
         self.resolvers = dict()
         if not lazy:
@@ -85,6 +88,7 @@ class GDCDictionary(object):
         yamls, resolvers = load_schemas_from_dir(directory)
 
         self.metaschema = yamls[self.metaschema_path]
+        self.settings = yamls[self.settings_path]
         self.resolvers.update(resolvers)
 
         schemas = {
