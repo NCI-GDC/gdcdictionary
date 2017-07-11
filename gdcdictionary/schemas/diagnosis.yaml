@@ -38,7 +38,6 @@ required:
   - morphology
   - tissue_or_organ_of_origin
   - site_of_resection_or_biopsy
-  - classification_of_tumor
   - tumor_stage
   - tumor_grade
   - progression_or_recurrence
