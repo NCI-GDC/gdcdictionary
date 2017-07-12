@@ -524,6 +524,17 @@ days_to_last_known_disease_status:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3008273&version=1.0"
 
+days_to_lost_to_followup:
+  description: >
+    The number of days between the date used for index and to the date the patient was lost to
+    follow-up.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 days_to_new_event:
   description: >
     Time interval from the date of new tumor event including progression, recurrence and new
@@ -843,6 +854,17 @@ includes_spike_ins: # TOREVIEW
   description: >
     Spike-in included?
 
+index_date:
+  description: >
+    The reference or anchor date used during date obfuscation, where a single date is obscurred by
+    creating one or more date ranges in relation to this date.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 initial_weight:
   description: >
     Numeric value that represents the initial weight of the sample, measured in milligrams.
@@ -966,6 +988,16 @@ longest_dimension:
     cde_id: 5432602
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432602&version=1.0"
+
+lost_to_followup:
+  description: >
+    A yes/no indicator related to whether a patient was unable to be contacted for follow-up.
+  termDef:
+    term: Patient Lost Follow-Up Ind-2
+    source: caDSR
+    cde_id: 61333
+    cde_version: 3.0
+    term_url: "https://cdebrowswer.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=61333&version=3.0"
 
 lymph_nodes_positive:
   description: >
