@@ -491,6 +491,16 @@ days_to_death:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3165475&version=1.0"
 
+days_to_diagnosis:
+  description: >
+    Number of days between the date used for index and the date of diagnosis.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 days_to_hiv_diagnosis:
   description: >
     Time interval from the date of the initial pathologic diagnosis to the date of human
