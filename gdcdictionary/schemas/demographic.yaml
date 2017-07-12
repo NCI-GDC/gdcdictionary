@@ -93,18 +93,6 @@ properties:
       - not reported
       - not allowed to collect
 
-  year_of_birth:
-    term:
-      $ref: "_terms.yaml#/year_of_birth"
-    type:
-      - number
-      - "null"
-
-  year_of_death:
-    term:
-      $ref: "_terms.yaml#/year_of_death"
-    type: number
-
   cases:
     $ref: "_definitions.yaml#/to_one"
   project_id:
