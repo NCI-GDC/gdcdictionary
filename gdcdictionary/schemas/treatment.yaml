@@ -67,6 +67,11 @@ properties:
       $ref: "_terms.yaml#/days_to_treatment_start"
     type: number
 
+  regimen_or_line_of_therapy:
+    term:
+      $ref: "_terms.yaml#/regimen_or_line_of_therapy"
+    type: string
+
   therapeutic_agents:
     term:
       $ref: "_terms.yaml#/therapeutic_agents"
