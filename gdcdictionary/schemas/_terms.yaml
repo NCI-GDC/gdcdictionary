@@ -1033,6 +1033,10 @@ microsatellite_instability_abnormal:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3123142&version=1.0"
 
+mirbase_version:
+  description: >
+    Version of miRBase used to run the miRNA Profiling Pipeline.
+
 morphology:
   description: >
     The third edition of the International Classification of Diseases for Oncology, published in
