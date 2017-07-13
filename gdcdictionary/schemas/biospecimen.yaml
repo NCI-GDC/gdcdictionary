@@ -414,75 +414,44 @@ properties:
     description: >
       The site of the primary tumor for the patient from which the biospecimen was taken.
     enum:
-      - Accessory Sinuses
-      - Adrenal Gland
-      - Anus and Anal Canal
-      - Base of Tongue
-      - Bladder
-      - Bones, Joints, and Articular Cartilage of Limbs
-      - Bones, Joints, and Articular Cartilage of Other and Unspecified Sites
+      - Bone
+      - Bone Marrow
       - Brain
       - Breast
-      - Bronchus and Lung
-      - Cervix Uteri
-      - Colon
-      - Connective, Subcutaneous, and Other Soft Tissues
+      - Central Nervous System
+      - Cervix
+      - Colorectal
       - Corpus Uteri
+      - Digestive Organs
+      - Endocrine Gland
       - Esophagus
-      - Eye and Adnexa
-      - Floor of Mouth
-      - Gallbladder
-      - Gum
-      - Heart, Mediastinum, and Pleura
-      - Hematopoietic and Reticuloendothelial Systems
-      - Hypopharynx
+      - Eye
+      - Female Genital Organs
+      - Head and Neck
+      - Hematopoietic System
+      - Integumentary System
+      - Joints and Articular Cartilage
       - Kidney
-      - Larynx
-      - Lip
-      - Liver and Intrahepatic Bile Ducts
-      - Lymph Nodes
-      - Meninges
-      - Nasal Cavity and Middle Ear
-      - Nasopharynx
-      - Oropharynx
-      - Other An Unspecified Female Genital Organs
-      - Other and Ill-Defined Digestive Organs
-      - Other and Ill-Defined Sites
-      - Other and Ill-Defined Sites In Lip, Oral Cavity and Pharynx
-      - Other and Ill-Defined Sites Within Respiratory System and Intrathoracic Organs
-      - Other and Unspecified Major Salivary Glands
-      - Other and Unspecified Male Genital Organs
-      - Other and Unspecified Parts of Biliary Tract
-      - Other and Unspecified Parts of Mouth
-      - Other and Unspecified Parts of the Tongue
-      - Other and Unspecified Urinary Organs
-      - Other Endocrine Glands and Related Structures
+      - Liver
+      - Lung
+      - Lymph Node
+      - Male Genital Organs
+      - Other Sites
       - Ovary
-      - Palate
       - Pancreas
-      - Parotid Gland
-      - Penis
-      - Peripheral Nerves and Autonomic Nervous System
-      - Placenta
-      - Prostate Gland
-      - Pyriform Sinus
-      - Rectum
-      - Renal Pelvis
+      - Pleura
+      - Prostate
       - Retroperitoneum and Peritoneum
       - Skin
-      - Small Intestine
-      - Spinal Cord, Cranial Nerves, and Other Parts of Central Nervous System
+      - Soft Tissue
       - Stomach
       - Testis
+      - Thoracic Organs
       - Thymus
-      - Thyroid Gland
-      - Tonsil
-      - Trachea
-      - Ureter
-      - Uterus
-      - Vagina
-      - Vulva
+      - Thyroid
       - Unknown
+      - Urinary System
+      - Uterus
   procured_or_purchased:
     description: >
       Was the biospecimen purchased from a vendor or procured from a study participant.
