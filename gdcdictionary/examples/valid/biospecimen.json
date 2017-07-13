@@ -13,7 +13,7 @@
     "tumor_code":"Neoplasms",
     "disease_type":"Lung Cancer",
     "tumor_descriptor":"Primary",
-    "primary_site":"Prostate Gland",
+    "primary_site":"Prostate",
     "procured_or_purchased":"Procured",
     "metastatic_bone":false,
     "metastatic_lymph_node":false,
