@@ -373,19 +373,17 @@ properties:
   disease_type:
     description: "The primary disease of the patient from which the biospecimen was taken."
     enum:
-      - Blood Cancer, Leukemia
-      - Blood Cancer, Lymphoma
-      - Blood Cancer, Myeloma
+      - Blood Cancer
       - Breast Cancer
       - Colorectal Cancer
-      - Gastric Cacner
+      - Gastric Cancer
       - Kidney Cancer
       - Liver Cancer
       - Lung Cancer
       - Melanoma
       - Ovarian Cancer
       - Pancreatic Cancer
-      - Prostate Cacner
+      - Prostate Cancer
       - Sarcoma
       - Uterine Cancer
       - Healthy
