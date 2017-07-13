@@ -991,7 +991,7 @@ properties:
     type: number
   crp:
     term:
-      $ref; "_terms.yaml#/crp"
+      $ref: "_terms.yaml#/crp"
     type: number
   days_to_adverse_event:
     term:
