@@ -8,6 +8,7 @@
     "biospecimen_type":"Fluid",
     "biospecimen_anatomic_site":"Blood",
     "biospecimen_volume":10,
+    "biospecimen_weight":12.3,
     "tissue_type":"Tumor",
     "tumor_code":"Neoplasms",
     "disease_type":"Lung Cancer",

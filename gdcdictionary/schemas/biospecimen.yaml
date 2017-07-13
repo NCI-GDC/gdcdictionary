@@ -340,7 +340,10 @@ properties:
       - Fluid
       - Solid Tissue
   biospecimen_volume:
-    description: "The total volume of the biospecimen in mililiters."
+    description: "For fluid biospecimens this is the total volume in milliliters."
+    type: number
+  biospecimen_weight:
+    description: "For solid tissue biospecimens this is the total weight in milligrams."
     type: number
   blood_draw_method:
     description: >
