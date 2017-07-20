@@ -2,7 +2,6 @@
     "type": "sample",
     "submitter_id": "BLGSP-71-06-00019s",
     "composition": "Cell",
-    "days_to_collection": 25,
     "blood_fractionation_method": "FractionationProtocol4.pdf",
     "hours_to_fractionation_lower":"Unknown",
     "hours_to_fractionation_upper":"Unknown",

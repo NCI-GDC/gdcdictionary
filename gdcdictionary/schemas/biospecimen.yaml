@@ -30,6 +30,7 @@ required:
   - biospecimen_type
   - biospecimen_anatomic_site
   - blood_tube_type
+  - days_to_collection
   - days_to_procurement
   - method_of_procurement
   - procured_or_purchased
@@ -367,9 +368,13 @@ properties:
       provided here to tie those together. Work with your collaborators assure the same id is used 
       in all projects.
     type: string
+  days_to_collection:
+    term:
+      $ref: "_terms.yaml#/days_to_collection"
+    type: integer
   days_to_procurement:
     description: "The number of days between the index date and the date the biospecimen was taken from the patient (such as the blood draw)."
-    type: number
+    type: integer
   disease_type:
     description: "The primary disease of the patient from which the biospecimen was taken."
     enum:

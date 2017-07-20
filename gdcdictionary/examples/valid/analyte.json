@@ -5,8 +5,9 @@
     "analyte_type":"DNA",
     "cell_type":"Small CTC",
     "cell_identifier":"sc124155",
-    "frame_identifier":"f325253",
     "days_to_assay":80,
+    "frame_identifier":"f325253",
+    "run_identifier":"asdf21",
     "aliquots": {
         "submitter_id":"aliquot_ZZ"
     }

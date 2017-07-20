@@ -70,6 +70,9 @@ properties:
   assay_target:
     description: "Target for the assay: can be a specific gene, protein, or otherwise."
     type: string
+  target_localization:
+    description: "The observed location of the assay target."
+    type: string 
   target_measurement:
     description: "Measurement for the assay target. Specify target_measurement_units as well."
     type: number
