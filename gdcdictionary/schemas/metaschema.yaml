@@ -97,7 +97,7 @@ properties:
       - data_file
       - index_file
       - metadata_file
-      - notation 
+      - notation
       - qc_bundle
       - TBD
 
@@ -120,6 +120,14 @@ properties:
 
   system_properties:
     type: array
+
+  properties:
+    type: object
+    properties: {}
+    additionalProperties: false
+    patternProperties:
+      # Enforce that the property names do not start with numbers, etc
+      "^[_a-zA-Z][_a-zA-Z0-9]*$": {}
 
   links:
     title: "Define a link to other GDC entities"

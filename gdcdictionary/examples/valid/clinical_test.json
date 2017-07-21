@@ -1,0 +1,29 @@
+{
+    "type": "clinical_test",
+    "submitter_id": "clinical_test_date_individual_name",
+    "biomarker_name": "ERBB4",
+    "biomarker_result": "Normal",
+    "biomarker_test_method": "Cytogenetics",
+    "cea_level_preoperative": 1,
+    "dlco_ref_predictive_percent": 1,
+    "estrogen_receptor_percent_positive_ihc": "<1%",
+    "estrogen_receptor_result_ihc": "Negative",
+    "fev1_ref_post_bronch_percent": 1,
+    "fev1_ref_pre_bronch_percent": 2,
+    "fev1_fvc_post_bronch_percent": 10,
+    "fev1_fvc_pre_bronch_percent": 15,
+    "her2_erbb2_percent_positive_ihc": "1-10%",
+    "her2_erbb2_result_fish": "Negative",
+    "her2_erbb2_result_ihc": "Not Performed",
+    "ldh_level_at_diagnosis": 3432,
+    "ldh_normal_range_upper": 13241,
+    "microsatellite_instability_abnormal": "Yes",
+    "progesterone_receptor_percent_positive_ihc": "<1%",
+    "progesterone_receptor_result_ihc": "Positive",
+    "cases": {
+        "submitter_id": "Extra large case"
+    },
+    "diagnoses": {
+        "submitter_id": "BL Diagnosis"
+    }
+}

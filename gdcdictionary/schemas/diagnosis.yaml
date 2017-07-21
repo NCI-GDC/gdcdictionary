@@ -38,7 +38,6 @@ required:
   - morphology
   - tissue_or_organ_of_origin
   - site_of_resection_or_biopsy
-  - classification_of_tumor
   - tumor_stage
   - tumor_grade
   - progression_or_recurrence
@@ -257,11 +256,6 @@ properties:
     term:
       $ref: "_terms.yaml#/ajcc_pathologic_stage"
     enum:
-      - I/II NOS
-      - IG1
-      - IG2
-      - IG3
-      - IS
       - Stage 0
       - Stage 0a
       - Stage 0is
@@ -270,14 +264,11 @@ properties:
       - Stage IA1
       - Stage IA2
       - Stage IB
-      - Stage IB Cervix
       - Stage IB1
       - Stage IB2
       - Stage IC
       - Stage II
-      - Stage II Cervix
       - Stage IIA
-      - Stage IIA Cervix
       - Stage IIA1
       - Stage IIA2
       - Stage IIB
@@ -292,9 +283,6 @@ properties:
       - Stage IVC
       - Stage Tis
       - Stage X
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   ajcc_pathologic_t:
     term:
@@ -376,6 +364,37 @@ properties:
       - Stage III
       - Stage IV
 
+  best_overall_response:
+    term:
+      $ref: "_terms.yaml#/best_overall_response"
+    enum:
+      - AJ-Adjuvant Therapy
+      - CPD-Clinical Progression
+      - CR-Complete Response
+      - CRU-Complete Response Unconfirmed
+      - DU-Disease Unchanged
+      - IMR-Immunoresponse
+      - IPD-Immunoprogression
+      - MR-Minimal/Marginal Response
+      - MX-Mixed Response
+      - Non-CR/Non-PD-Non-CR/Non-PD
+      - NPB-No Palliative Benefit
+      - NR-No Response
+      - PA-Palliative Therapy
+      - PB-Palliative Benefit
+      - PD-Progressive Disease
+      - PPD-Pseudoprogression
+      - PR-Partial Response
+      - PSR-Pseudoresponse
+      - RD-Responsive Disease
+      - RP-Response
+      - RPD-Radiographic Progressive Disease
+      - sCR-Stringent Complete Response
+      - SD-Stable Disease
+      - SPD-Surgical Progression
+      - TE-Too Early
+      - VGPR-Very Good Partial Response
+
   burkitt_lymphoma_clinical_variant:
     term:
       $ref: "_terms.yaml#/burkitt_lymphoma_clinical_variant"
@@ -393,28 +412,9 @@ properties:
     term:
       $ref: "_terms.yaml#/cause_of_death"
     enum:
-      - Breast cancer
-      - Cancer related
-      - Cervical Cancer
-      - Death not Caused by Disease
-      - Metastatic Uveal Melanoma
-      - Non-Cancer Related
-      - Other malignancy
-      - Other, non-malignant disease
-      - Other, specify
-      - Pancreatic Cancer
-      - Prostate Cancer
-      - Related to Another Cancer
-      - Related to Head & Neck Cancer
-      - Stomach Cancer
-      - Submitted malignancy and/or related tumor event
-      - Surgical Complications
-      - Testicular Germ Cell Tumor (TGCT)
-      - Toxicity of non-protocol treatment
-      - Toxicity of protocol treatment
+      - Cancer Related 
+      - Not Cancer Related 
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   circumferential_resection_margin:
     term:
@@ -443,6 +443,11 @@ properties:
       - Not Reported
       - Not Allowed To Collect
 
+  days_to_best_overall_response:
+    term:
+      $ref: "_terms.yaml#/days_to_best_overall_response"
+    type: integer
+
   days_to_birth:
     term:
       $ref: "_terms.yaml#/days_to_birth"
@@ -458,6 +463,11 @@ properties:
     type: number
     maximum: 32872
     minimum: 0
+
+  days_to_diagnosis:
+    term:
+      $ref: "_terms.yaml#/days_to_diagnosis"
+    type: integer
 
   days_to_hiv_diagnosis:
     term:
@@ -525,19 +535,13 @@ properties:
       - Not Reported
       - Not Allowed To Collect
 
-  hiv_status:
+  hiv_positive:
     term:
-      $ref: "_terms.yaml#/hiv_status"
+      $ref: "_terms.yaml#/hiv_positive"
     enum:
-      - Equivocal
-      - Indeterminate
-      - Not Done
-      - Not Available
-      - Negative
-      - Positive
+      - "Yes"
+      - "No" 
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   hpv_positive_type:
     term:
@@ -545,24 +549,26 @@ properties:
     enum:
       - HPV 16
       - HPV 18
-      - Not applicable
       - Other HPV type(s)
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   hpv_status:
     term:
       $ref: "_terms.yaml#/hpv_status"
     enum:
-      - Equivocal
-      - Insufficient sample for diagnosis
       - Negative
-      - Other, specify
       - Positive
       - Unknown
+
+  iss_stage:
+    term:
+      $ref: "_terms.yaml#/iss_stage"
+    enum:
+      - I
+      - II
+      - III
       - Not Reported
-      - Not Allowed To Collect
+      - Unknown
 
   last_known_disease_status:
     term:
@@ -582,16 +588,9 @@ properties:
       $ref: "_terms.yaml#/laterality"
     enum:
       - Bilateral
-      - Both
       - Left
-      - Midline
-      - Not a Paired site
       - Right
-      - Unilateral
-      - Unilateral, side not specified
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   ldh_level_at_diagnosis:
     term:
@@ -610,32 +609,15 @@ properties:
   lymph_nodes_positive:
     term:
       $ref: "_terms.yaml#/lymph_nodes_positive"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
+    type: integer 
 
   lymphatic_invasion_present:
     term:
       $ref: "_terms.yaml#/lymphatic_invasion_present"
     enum:
-      - Absent
-      - Indeterminate
-      - No Source Documentation
-      - Not Applicable
-      - Not Available
-      - Not Determined
-      - Not Sampled/Dissected
-      - Present
-      - Present - Extensive
-      - Present - Minimal
       - "Yes"
       - "No"
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   method_of_diagnosis:
     term:
@@ -799,25 +781,18 @@ properties:
       - Not Reported
       - Not Allowed To Collect
 
+  overall_survival:
+    term:
+      $ref: "_terms.yaml#/overall_survival"
+    type: integer
+
   perineural_invasion_present:
     term:
       $ref: "_terms.yaml#/perineural_invasion_present"
     enum:
-      - Absent
-      - Indeterminate
-      - No Source Documentation
-      - Not Applicable
-      - Not Available
-      - Not Determined
-      - Not Sampled/Dissected
-      - Present
-      - Present - Extensive
-      - Present - Minimal
       - "Yes"
       - "No"
       - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   primary_diagnosis:
     term:
@@ -844,6 +819,19 @@ properties:
       - Not Reported
       - Not Allowed To Collect
 
+  progression_free_survival:
+    term:
+      $ref: "_terms.yaml#/progression_free_survival"
+    type: integer
+
+  progression_free_survival_event:
+    term:
+      $ref: "_terms.yaml#/progression_free_survival_event"
+    enum:
+      - Disease Progression
+      - Death
+      - No Event
+
   progression_or_recurrence:
     term:
       $ref: "_terms.yaml#/progression_or_recurrence"
@@ -858,14 +846,10 @@ properties:
     term:
       $ref: "_terms.yaml#/residual_disease"
     enum:
-      - No source documentation
       - R0
       - R1
       - R2
       - RX
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   site_of_resection_or_biopsy:
     term:

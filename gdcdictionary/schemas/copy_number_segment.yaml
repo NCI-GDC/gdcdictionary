@@ -24,12 +24,21 @@ systemProperties:
   - error_type
 
 links:
-  - name: copy_number_liftover_workflows
-    backref: copy_number_segments
-    label: derived_from
-    target_type: copy_number_liftover_workflow
-    multiplicity: one_to_one
+  - exclusive: true
     required: true
+    subgroup:
+      - name: copy_number_liftover_workflows
+        backref: copy_number_segments
+        label: derived_from
+        target_type: copy_number_liftover_workflow
+        multiplicity: one_to_one
+        required: false
+      - name: genomic_profile_harmonization_workflows
+        backref: copy_number_segments
+        label: derived_from
+        target_type: genomic_profile_harmonization_workflow
+        multiplicity: one_to_one
+        required: false
 
 required:
   - submitter_id
@@ -41,7 +50,6 @@ required:
   - data_type
   - experimental_strategy
   - platform
-  - copy_number_liftover_workflows
 
 uniqueKeys:
   - [ id ]
@@ -62,6 +70,8 @@ properties:
     enum:
       - Copy Number Segment
       - Masked Copy Number Segment
+      - Gene Level Copy Number
+      - Gene Level Copy Number Scores
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
@@ -72,10 +82,14 @@ properties:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
       - Genotyping Array
+      - Targeted Sequencing
   platform:
     term:
       $ref: "_terms.yaml#/platform"
     enum:
       - Affymetrix SNP 6.0
+      - Illumina
   copy_number_liftover_workflows:
+    $ref: "_definitions.yaml#/to_one"
+  genomic_profile_harmonization_workflows:
     $ref: "_definitions.yaml#/to_one"

@@ -46,6 +46,12 @@ links:
     target_type: tissue_source_site
     multiplicity: one_to_one
     required: false
+  - name: diagnoses
+    backref: samples
+    label: related_to
+    target_type: diagnosis
+    multiplicity: many_to_one
+    required: false
 
 # Sample properties
 # Currently there are many TCGA-specific fields in the DB, this is an attempt
@@ -503,7 +509,6 @@ properties:
   sample_type:
     term:
       $ref: "_terms.yaml#/sample_type"
-    type: string
     enum:
       - Additional Metastatic
       - Additional - New Primary
@@ -523,6 +528,7 @@ properties:
       - GenomePlex (Rubicon) Amplified DNA
       - Granulocytes
       - Human Tumor Original Cells
+      - Lymphoid Normal
       - Metastatic
       - Mononuclear Cells from Bone Marrow Normal
       - Primary Blood Derived Cancer - Peripheral Blood
@@ -540,6 +546,8 @@ properties:
       - Slides
       - Solid Tissue Normal
       - Total RNA
+      - Tumor Adjacent Normal – Post Neo-adjuvant Therapy
+      - Tumor
       - Xenograft Tissue
       - Unknown
       - Not Reported
@@ -547,7 +555,6 @@ properties:
   sample_type_id:
     term:
       $ref: "_terms.yaml#/sample_type_id"
-    type: string
     enum:
       - '01'
       - '02'
@@ -565,6 +572,8 @@ properties:
       - '14'
       - '15'
       - '16'
+      - '17'
+      - '18'
       - '20'
       - '40'
       - '41'
@@ -599,13 +608,13 @@ properties:
   tumor_code:
     term:
       $ref: "_terms.yaml#/tumor_code"
-    type: string
     enum:
       - Non cancerous tissue
       - Diffuse Large B-Cell Lymphoma (DLBCL)
       - Lung Cancer (all types)
       - Cervical Cancer (all types)
       - Anal Cancer (all types)
+      - Acute Leukemia of Ambiguous Lineage (ALAL)
       - Acute lymphoblastic leukemia (ALL)
       - Acute myeloid leukemia (AML)
       - Induction Failure AML (AML-IF)
@@ -628,7 +637,6 @@ properties:
   tumor_code_id:
     term:
       $ref: "_terms.yaml#/tumor_code_id"
-    type: string
     enum:
       - "00"
       - "01"
@@ -636,6 +644,7 @@ properties:
       - "03"
       - "04"
       - "10"
+      - "15"
       - "20"
       - "21"
       - "30"
@@ -675,6 +684,8 @@ properties:
       Indicates that the sample is physically derived from the subject
       of the linked to case via some process/protocol
   tissue_source_sites:
+    $ref: "_definitions.yaml#/to_one"
+  diagnoses:
     $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string

@@ -1,15 +1,5 @@
 id: _terms
 
-28s_16s_ribosomal_rna_ratio:
-  description: >
-    The 28S/18S ribosomal RNA band ratio used to assess the quality of total RNA.
-  termDef:
-    term: "28s/18s Ribosomal RNA Ratio"
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
-
 a260_a280_ratio:
   description: >
     Numeric value that represents the sample ratio of nucleic acid absorbance at 260 nm and 280 nm,
@@ -19,7 +9,21 @@ a260_a280_ratio:
     source: caDSR
     cde_id: 5432595
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432595&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432595&version=1.0"
+
+absolute_neutrophil:
+  description: >
+    The value, in 1000/uL, for the medical procedure that involves testing a
+    sample of blood for the absolute neutrophil count, the real number of white blood cells
+    (WBCs) that are neutrophils and is derived by multiplying the WBC count times the percent of
+    neutrophils in the differential WBC count; the percent of neutrophils consists of the
+    segmented (fully mature neutrophils) &#43; the bands (almost mature neutrophils).
+  termDef:
+    term: Laboratory Procedure Absolute Neutrophil Count Result Unspecified Value
+    source: caDSR
+    cde_id: 2597287
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2597287&version=1.0"
 
 adapter_name: # TOREVIEW
   description: >
@@ -29,6 +33,17 @@ adapter_sequence: # TOREVIEW
   description: >
     Base sequence of the sequencing adapter.
 
+adverse_event:
+  description: >
+    Text that represents the Common Terminology Criteria for Adverse Events low level term name
+    for an adverse event.
+  termDef:
+    term: Common Terminology Criteria for Adverse Events Version 4.0 Low Level Term Name
+    source: caDSR
+    cde_id: 3125302
+    cde_version: 1.1
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3125302&version=1.1"
+
 age_at_diagnosis:
   description: >
     Age at the time of diagnosis expressed in number of days since birth.
@@ -37,7 +52,7 @@ age_at_diagnosis:
     source: caDSR
     cde_id: 3225640
     cde_version: 2.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3225640&version=2.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3225640&version=2.0"
 
 ajcc_clinical_m:
   description: >
@@ -48,7 +63,7 @@ ajcc_clinical_m:
     source: caDSR
     cde_id: 3440331
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3440331&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440331&version=1.0"
 
 ajcc_clinical_n:
   description: >
@@ -59,7 +74,7 @@ ajcc_clinical_n:
     source: caDSR
     cde_id: 3440330
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3440330&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440330&version=1.0"
 
 ajcc_clinical_stage:
   description: >
@@ -70,7 +85,7 @@ ajcc_clinical_stage:
     source: caDSR
     cde_id: 3440332
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3440332&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440332&version=1.0"
 
 ajcc_clinical_t:
   description: >
@@ -81,7 +96,7 @@ ajcc_clinical_t:
     source: caDSR
     cde_id: 3440328
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3440328&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440328&version=1.0"
 
 ajcc_pathologic_m:
   description: >
@@ -93,7 +108,7 @@ ajcc_pathologic_m:
     source: caDSR
     cde_id: 3045439
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3045439&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3045439&version=1.0"
 
 ajcc_pathologic_n:
   description: >
@@ -104,7 +119,7 @@ ajcc_pathologic_n:
     source: caDSR
     cde_id: 3203106
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3203106&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3203106&version=1.0"
 
 ajcc_pathologic_stage:
   description: >
@@ -115,7 +130,7 @@ ajcc_pathologic_stage:
     source: caDSR
     cde_id: 3203222
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3203222&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3203222&version=1.0"
 
 ajcc_pathologic_t:
   description: >
@@ -127,7 +142,17 @@ ajcc_pathologic_t:
     source: caDSR
     cde_id: 3045435
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3045435&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3045435&version=1.0"
+
+albumin:
+  description: >
+    The value of a lab test used to determine the albumin level in the blood.
+  termDef:
+    term: Laboratory Procedure Albumin Result Specified Value
+    source: caDSR
+    cde_id: 58274
+    cde_version: 4.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=58274&version=4.0"
 
 alcohol_history:
   description: >
@@ -138,7 +163,7 @@ alcohol_history:
     source: caDSR
     cde_id: 2201918
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2201918&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2201918&version=1.0"
 
 alcohol_intensity:
   description: >
@@ -148,7 +173,7 @@ alcohol_intensity:
     source: caDSR
     cde_id: 3457767
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3457767&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3457767&version=1.0"
 
 aliquot_quantity:
   description: >
@@ -195,7 +220,7 @@ analyte_type:
     source: caDSR
     cde_id: 2513915
     cde_version: 2.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2513915&version=2.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2513915&version=2.0"
 
 analyte_type_id:
   description: >
@@ -205,7 +230,7 @@ analyte_type_id:
     source: caDSR
     cde_id: 5432508
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432508&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432508&version=1.0"
 
 analyte_volume:
   description: >
@@ -227,7 +252,7 @@ ann_arbor_b_symptoms:
     source: caDSR
     cde_id: 2902402
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2902402&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2902402&version=1.0"
 
 ann_arbor_clinical_stage:
   description: >
@@ -249,7 +274,7 @@ ann_arbor_extranodal_involvement:
     source: caDSR
     cde_id: 3364582
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3364582&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3364582&version=1.0"
 
 ann_arbor_pathologic_stage:
   description: >
@@ -281,6 +306,58 @@ base_caller_version: # TOREVIEW
   description: >
     Version of the base caller.
 
+best_overall_response:
+  description: >
+    The best improvement achieved throughout the entire course of protocol treatment.
+  termDef:
+    term: Best Response Assessment Type
+    source: caDSR
+    cde_id: 2003324
+    cde_version: 4.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2003324&version=4.0"
+
+beta_2_microglobulin:
+  description: >
+    A numerical quantity measured or assigned or computed for the beta-2-microglobulin protein
+    (119 aa, ~14 kDa) is encoded by the human B2M gene in the clear portion of the blood that
+    remains after the removal of the blood cells and the clotting proteins.
+  termDef:
+    term: Serum Beta-2-Microglobulin Protein Laboratory Procedure Performance Value
+    source: caDSR
+    cde_id: 2958039
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2958039&version=1.0"
+
+biomarker_name:
+  description: >
+    The name of the biomarker being tested for this specimen and set of test results.
+  termDef:
+    term: Biomarker Name
+    source: caDSR
+    cde_id: 5473
+    cde_version: 11.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5473&version=2.31"
+
+biomarker_result:
+  description: >
+    Text term to define the results of genetic testing.
+  termDef:
+    term: Laboratory Procedure Genetic Abnormality Test Result Type
+    source: caDSR
+    cde_id: 3234680
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3234680&version=1.0"
+
+biomarker_test_method:
+  description: >
+    Text descriptor of a molecular analysis method used for an individual.
+  termDef:
+    term: Disease Detection Molecular Analysis Method Type
+    source: caDSR
+    cde_id: 3121575
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3121575&version=1.0"
+
 biospecimen_anatomic_site:
   description: >
     Text term that represents the name of the primary disease site of the submitted tumor sample.
@@ -289,7 +366,7 @@ biospecimen_anatomic_site:
     source: caDSR
     cde_id: 4742851
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4742851&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4742851&version=1.0"
 
 bmi:
   description: >
@@ -299,7 +376,18 @@ bmi:
     source: caDSR
     cde_id: 4973892
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4973892&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4973892&version=1.0"
+
+bun:
+  description: >
+    The laboratory value (units of measure unspecified) for a renal lab test for blood urea
+    nitrogen.
+  termDef:
+    term: Laboratory Procedure Blood Urea Nitrogen Result Unspecified Value
+    source: caDSR
+    cde_id: 58317
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=58317&version=3.0"
 
 burkitt_lymphoma_clinical_variant:
   description: >
@@ -310,7 +398,18 @@ burkitt_lymphoma_clinical_variant:
     source: caDSR
     cde_id: 3770421
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3770421&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3770421&version=1.0"
+
+calcium:
+  description: >
+    The laboratory value related to the quantity of calcium present in peripheral blood serum
+    measured by laboratory test.
+  termDef:
+    term: Laboratory Procedure Calcium Electrolytes Outcome Unspecified Value
+    source: caDSR
+    cde_id: 2630716
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2630716&version=1.0"
 
 cause_of_death:
   description: >
@@ -320,7 +419,29 @@ cause_of_death:
     source: caDSR
     cde_id: 2554674
     cde_version: 3.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2554674&version=3.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2554674&version=3.0"
+
+cause_of_response:
+  description: >
+    A specific regimen or line of therapy responsible for the patient's observed improvement achieved
+    at a certain point in time during a patient's treatment protocol.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+cea_level_preoperative:
+  description: >
+    Numeric value of the Carcinoembryonic antigen or CEA at the time before surgery. [Manually-
+    curated]
+  termDef:
+    term: Preoperative Carcinoembryonic Antigen Result Value
+    source: caDSR
+    cde_id: 2716510
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2716510&version=1.0"
 
 cigarettes_per_day:
   description: >
@@ -330,7 +451,7 @@ cigarettes_per_day:
     source: caDSR
     cde_id: 2001716
     cde_version: 4.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2001716&version=4.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2001716&version=4.0"
 
 circumferential_resection_margin:
   description: >
@@ -342,7 +463,7 @@ circumferential_resection_margin:
     source: caDSR
     cde_id: 64202
     cde_version: 3.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=64202&version=3.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64202&version=3.0"
 
 classification_of_tumor:
   description: >
@@ -353,7 +474,7 @@ classification_of_tumor:
     source: caDSR
     cde_id: 3288124
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3288124&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3288124&version=1.0"
 
 colon_polyps_history:
   description: >
@@ -364,7 +485,17 @@ colon_polyps_history:
     source: caDSR
     cde_id: 3107197
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3107197&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3107197&version=1.0"
+
+comorbidity:
+  description: >
+    Text term to identify a coexistent disease or condition in a person.
+  termDef:
+    term: Person Comorbidity Condition Name
+    source: caDSR
+    cde_id: 2970715
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2970715&version=1.0"
 
 composition:
   description: >
@@ -374,7 +505,7 @@ composition:
     source: caDSR
     cde_id: 5432591
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432591&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432591&version=1.0"
 
 concentration:
   description: >
@@ -385,7 +516,19 @@ concentration:
     source: caDSR
     cde_id: 5432594
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432594&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432594&version=1.0"
+
+creatinine:
+  description: >
+    The value, in mg/dL, for the medical procedure that involves testing a sample of blood for
+    creatinine, the breakdown product of creatine, a constituent of muscle tissue, that is
+    excreted by the kidney and whose serum level is used to evaluate kidney function.
+  termDef:
+    term: Laboratory Procedure Creatinine Result Specified Value
+    source: caDSR
+    cde_id: 58318
+    cde_version: 3.1
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=58318&version=3.1"
 
 creation_datetime:
   description: >
@@ -395,7 +538,19 @@ creation_datetime:
     source: caDSR
     cde_id: 5432592
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432592&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432592&version=1.0"
+
+crp:
+  description: >
+    The value the result of the medical procedure that involves testing a sample of blood for
+    C-reactive protein, encoded by the CRP gene this protein is cleaved during biological
+    activation and is associated with host defense mechanisms and inflammatory responses.
+  termDef:
+    term: Laboratory Procedure C-Reactive Protein Result Specified Value
+    source: caDSR
+    cde_id: 2181510
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2181510&version=1.0"
 
 current_weight:
   description: >
@@ -405,7 +560,7 @@ current_weight:
     source: caDSR
     cde_id: 5432606
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432606&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432606&version=1.0"
 
 data_category: # TOREVIEW
   description: >
@@ -427,6 +582,27 @@ datetime:
   description: >
     A combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]
 
+days_to_adverse_event:
+  description: >
+    Number of days between the date used for index and the date the patient had an adverse event.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+days_to_best_overall_response:
+  description: >
+    Number of days between the date used for index and the date of the patient's best overall
+    response.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 days_to_birth:
   description: >
     Time interval from a person's date of birth to the date of initial pathologic diagnosis,
@@ -436,7 +612,7 @@ days_to_birth:
     source: caDSR
     cde_id: 3008233
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008233&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3008233&version=1.0"
 
 days_to_collection:
   description: >
@@ -447,7 +623,18 @@ days_to_collection:
     source: caDSR
     cde_id: 3008340
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008340&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3008340&version=1.0"
+
+days_to_comorbidity:
+  description: >
+    Number of days between the date used for index and the date the patient was diagnosed with a
+    comorbidity.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 days_to_death:
   description: >
@@ -458,7 +645,28 @@ days_to_death:
     source: caDSR
     cde_id: 3165475
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3165475&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3165475&version=1.0"
+
+days_to_diagnosis:
+  description: >
+    Number of days between the date used for index and the date of diagnosis.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+days_to_follow_up:
+  description: >
+    Number of days between the date used for index and the date the patient was seen or contacted at
+    follow-up.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 days_to_hiv_diagnosis:
   description: >
@@ -469,7 +677,7 @@ days_to_hiv_diagnosis:
     source: caDSR
     cde_id: 4618491
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4618491&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4618491&version=1.0"
 
 days_to_last_follow_up:
   description: >
@@ -480,7 +688,7 @@ days_to_last_follow_up:
     source: caDSR
     cde_id: 3008273
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008273&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3008273&version=1.0"
 
 days_to_last_known_disease_status:
   description: >
@@ -491,7 +699,18 @@ days_to_last_known_disease_status:
     source: caDSR
     cde_id: 3008273
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008273&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3008273&version=1.0"
+
+days_to_lost_to_followup:
+  description: >
+    The number of days between the date used for index and to the date the patient was lost to
+    follow-up.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 days_to_new_event:
   description: >
@@ -503,19 +722,29 @@ days_to_new_event:
     source: caDSR
     cde_id: 3392464
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3392464&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3392464&version=1.0"
+
+days_to_progression:
+  description: >
+    Number of days between the date used for index and the date the patient was diagnosed with
+    progression of disease.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 days_to_recurrence:
   description: >
-    Time interval from the date of new tumor event including progression, recurrence and new primary
-    malignancies to the date of initial pathologic diagnosis, represented as a calculated number of
-    days.
+    Number of days between the date used for index and the date the patient was diagnosed with a
+    recurrent malignancy. 
   termDef:
-    term: New Tumor Event Less Initial Pathologic Diagnosis Date Calculated Day Value
-    source: caDSR
-    cde_id: 3392464
-    cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3392464&version=1.0"
+    term: null 
+    source: null
+    cde_id: null 
+    cde_version: null 
+    term_url: null 
 
 days_to_sample_procurement:
   description: >
@@ -541,7 +770,7 @@ days_to_treatment_end:
     source: caDSR
     cde_id: 5102431
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5102431&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5102431&version=1.0"
 
 days_to_treatment_start:
   description: >
@@ -552,7 +781,7 @@ days_to_treatment_start:
     source: caDSR
     cde_id: 5102411
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5102411&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5102411&version=1.0"
 
 diagnosis_pathologically_confirmed:
   description: >
@@ -566,6 +795,48 @@ diagnosis_pathologically_confirmed:
     cde_version: null
     term_url: null
 
+disease_response:
+  description: >
+    The observed improvement achieved at a certain point in time during a patient's treatment
+    protocol.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+disease_type: # TOREVIEW
+  description: >
+    Full name for the project.
+  termDef:
+    term: Disease Type
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+dlco_ref_predictive_percent:
+  description: >
+    The value, as a percentage of predicted lung volume, measuring the amount of carbon monoxide
+    detected in a patient's lungs.
+  termDef:
+    term: Lung Carbon Monoxide Diffusing Capability Test Assessment Predictive Value Percentage Value
+    source: caDSR
+    cde_id: 2180255
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2180255&version=1.0"
+
+ecog_performance_status:
+  description: >
+    The ECOG functional performance status of the patient/participant.
+  termDef:
+    term: Performance Status Assessment Eastern Cooperative Oncology Group Scale
+    source: caDSR
+    cde_id: 88
+    cde_version: 5.1
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=88&version=5.1"
+
 encoding:
   description: >
     Version of ASCII encoding of quality values found in the file.
@@ -575,6 +846,26 @@ encoding:
     cde_id: null
     cde_version: null
     term_url: "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/1%20Basic%20Statistics.html"
+
+estrogen_receptor_percent_positive_ihc:
+  description: >
+    Classification to represent ER Positive results expressed as a percentage value.
+  termDef:
+    term: ER Level Cell Percentage Category
+    source: caDSR
+    cde_id: 3128341
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3128341&version=1.0"
+
+estrogen_receptor_result_ihc:
+  description: >
+    Text term to represent the overall result of Estrogen Receptor (ER) testing.
+  termDef:
+    term: Breast Carcinoma Estrogen Receptor Status
+    source: caDSR
+    cde_id: 2957359
+    cde_version: 2.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2957359&version=2.0"
 
 ethnicity:
   description: >
@@ -586,7 +877,7 @@ ethnicity:
     source: caDSR
     cde_id: 2192217
     cde_version: 2.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2192217&version=2.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2192217&version=2.0"
 
 experiment_name: # TOREVIEW
   description: >
@@ -600,6 +891,50 @@ fastq_name: # TOREVIEW
   description: >
     Names of FASTQs.
 
+fev1_ref_post_bronch_percent:
+  description: >
+    The percentage comparison to a normal value reference range of the volume of air that a
+    patient can forcibly exhale from the lungs in one second post-bronchodilator.
+  termDef:
+    term: Post Bronchodilator Lung Forced Expiratory Volume 1 Test Lab Percentage Value
+    source: caDSR
+    cde_id: 3302948
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3302948&version=1.0"
+
+fev1_ref_pre_bronch_percent:
+  description: >
+    The percentage comparison to a normal value reference range of the volume of air that a
+    patient can forcibly exhale from the lungs in one second pre-bronchodilator.
+  termDef:
+    term: Pre Bronchodilator Lung Forced Expiratory Volume 1 Test Lab Percentage Value
+    source: caDSR
+    cde_id: 3302947
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3302947&version=1.0"
+
+fev1_fvc_post_bronch_percent:
+  description: >
+    Percentage value to represent result of Forced Expiratory Volume in 1 second (FEV1) divided
+    by the Forced Vital Capacity (FVC) post-bronchodilator.
+  termDef:
+    term: Post Bronchodilator FEV1/FVC Percent Value
+    source: caDSR
+    cde_id: 3302956
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3302956&version=1.0"
+
+fev1_fvc_pre_bronch_percent:
+  description: >
+    Percentage value to represent result of Forced Expiratory Volume in 1 second (FEV1) divided
+    by the Forced Vital Capacity (FVC) pre-bronchodilator.
+  termDef:
+    term: Pre Bronchodilator FEV1/FVC Percent Value
+    source: caDSR
+    cde_id: 3302955
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3302955&version=1.0"
+
 figo_stage:
   description: >
     The extent of a cervical or endometrial cancer within the body, especially whether the
@@ -610,7 +945,7 @@ figo_stage:
     source: caDSR
     cde_id: 3225684
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3225684&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3225684&version=1.0"
 
 file_name: # TOREVIEW
   description: >
@@ -636,7 +971,7 @@ freezing_method:
     source: caDSR
     cde_id: 5432607
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432607&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432607&version=1.0"
 
 gender:
   description: >
@@ -648,7 +983,17 @@ gender:
     source: caDSR
     cde_id: 2200604
     cde_version: 3.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2200604&version=3.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2200604&version=3.0"
+
+glucose:
+  description: >
+    The numeric value for the amount of glucose found in blood serum.
+  termDef:
+    term: Laboratory Procedure Glucose Electrolytes Outcome Unspecified Value
+    source: caDSR
+    cde_id: 2004319
+    cde_version: 4.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2004319&version=4.0"
 
 height:
   description: >
@@ -658,18 +1003,61 @@ height:
     source: caDSR
     cde_id: 649
     cde_version: 4.1
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=649&version=4.1"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=649&version=4.1"
 
-hiv_status:
+hemoglobin:
   description: >
-    the result of a test to detect the presence of human immunodeficiency virus antibody in a
-    patient.
+    The value (g/dL) for a medical procedure that involves testing a sample of blood for
+    hemoglobin, red respiratory protein of erythrocytes, to help determine a diagnosis, plan
+    treatment, check to see if treatment is working, or monitor the disease over time.
   termDef:
-    term: Antibody HIV Test Status
+    term: Laboratory Procedure Hemoglobin Result Specified Value
     source: caDSR
-    cde_id: 2180464
+    cde_id: 2190
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2190&version=3.0"
+
+her2_erbb2_percent_positive_ihc:
+  description: >
+    Classification to represent the number of positive HER2/ERBB2 cells in a specimen or sample.
+  termDef:
+    term: HER2 ERBB Positive Finding Cell Percentage Category
+    source: caDSR
+    cde_id: 3086980
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2180464&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3086980&version=1.0"
+
+her2_erbb2_result_fish:
+  description: >
+    the type of outcome for HER2 as determined by an in situ hybridization (ISH) assay.
+  termDef:
+    term: Laboratory Procedure HER2/neu in situ Hybridization Outcome Type
+    source: caDSR
+    cde_id: 2854089
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2854089&version=1.0"
+
+her2_erbb2_result_ihc:
+  description: >
+    Text term to signify the result of the medical procedure that involves testing a sample of
+    blood or tissue for HER2 by histochemical localization of immunoreactive substances using
+    labeled antibodies as reagents.
+  termDef:
+    term: Laboratory Procedure HER2/neu Immunohistochemistry Receptor Status
+    source: caDSR
+    cde_id: 2957563
+    cde_version: 2.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2957563&version=2.0"
+
+hiv_positive:
+  description: >
+    Text term to signify whether a physician has diagnosed HIV infection in a patient.
+  termDef:
+    term: Physician Diagnosed HIV Infection Personal Medical History Yes No Not Applicable Indicator
+    source: caDSR
+    cde_id: 4030799
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4030799&version=1.0"
 
 hpv_positive_type:
   description: >
@@ -680,7 +1068,7 @@ hpv_positive_type:
     source: caDSR
     cde_id: 2922649
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2922649&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2922649&version=1.0"
 
 hpv_status:
   description: >
@@ -690,11 +1078,75 @@ hpv_status:
     source: caDSR
     cde_id: 2230033
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2230033&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2230033&version=1.0"
+
+iga:
+  description: >
+    The numeric value, in mg/dL, for the amount of immunoglobulin type A
+    (IgA) found in blood serum.
+  termDef:
+    term: Laboratory Procedure Serum Immunologic IgA Result Unspecified Value
+    source: caDSR
+    cde_id: 64580
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64580&version=3.0"
+
+igg:
+  description: >
+    The numeric value, in mg/dL, for the amount of immunoglobulin type G
+    (IgG) found in blood serum.
+  termDef:
+    term: Laboratory Procedure Serum Immunologic IgG Result Unspecified Value
+    source: caDSR
+    cde_id: 64581
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64581&version=3.0"
+
+igl_kappa:
+  description: >
+    The patient's serum immunoglobulin light chain kappa value at a certain point in time.
+  termDef:
+    term: null 
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+igl_lambda:
+  description: >
+    The patient's serum immunoglobulin light chain lambda value at a certain point in time.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+igm:
+  description: >
+    The numeric value, in mg/dL, for the amount of immunoglobulin type M
+    (IgM) found in blood serum.
+  termDef:
+    term: Laboratory Procedure Serum Immunologic IgM Result Unspecified Value
+    source: caDSR
+    cde_id: 64582
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64582&version=3.0"
 
 includes_spike_ins: # TOREVIEW
   description: >
     Spike-in included?
+
+index_date:
+  description: >
+    The reference or anchor date used during date obfuscation, where a single date is obscurred by
+    creating one or more date ranges in relation to this date.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 initial_weight:
   description: >
@@ -704,7 +1156,7 @@ initial_weight:
     source: caDSR
     cde_id: 5432605
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432605&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432605&version=1.0"
 
 instrument_model:
   description: >
@@ -715,7 +1167,7 @@ instrument_model:
     source: caDSR
     cde_id: 5432604
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432604&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432604&version=1.0"
 
 intermediate_dimension: # TOREVIEW
   description: >
@@ -730,11 +1182,21 @@ is_ffpe:
     source: caDSR
     cde_id: 4170557
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4170557&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4170557&version=1.0"
 
 is_paired_end: # TOREVIEW
   description: >
     Are the reads paired end?
+
+iss_stage:
+  description: >
+    The multiple myeloma disease stage at diagnosis.
+  termDef:
+    term: Multiple Myeloma Disease Stage Diagnosis Status
+    source: caDSR
+    cde_id: 2465385
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2465385&version=1.0"
 
 last_known_disease_status:
   description: >
@@ -744,7 +1206,7 @@ last_known_disease_status:
     source: caDSR
     cde_id: 5424231
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2759550&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2759550&version=1.0"
 
 laterality:
   description: >
@@ -754,7 +1216,18 @@ laterality:
     source: caDSR
     cde_id: 827
     cde_version: 3.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=827&version=3.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=827&version=3.0"
+
+ldh_level:
+  description: >
+    The 2 decimal place numeric laboratory value measured, assigned or computed related to the
+    assessment of lactate dehydrogenase in a specimen. Measured in U/L.
+  termDef:
+    term: Laboratory Procedure Lactate Dehydrogenase Result  Integer::2 Decimal Place Value
+    source: caDSR
+    cde_id: 2798766
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2798766&version=1.0"
 
 ldh_level_at_diagnosis:
   description: >
@@ -765,18 +1238,18 @@ ldh_level_at_diagnosis:
     source: caDSR
     cde_id: 2798766
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2798766&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2798766&version=1.0"
 
 ldh_normal_range_upper:
   description: >
-    The upper value of the normal range for Lactate dehydrogenase (LDH) at the facility where the
-    patient was tested at the time of initial diagnosis.
+    The top value of the range of statistical characteristics that are supposed to represent
+    accepted standard, non-pathological pattern for lactate dehydrogenase (units not specified).
   termDef:
-    term: LDH Upper Limit for Normal at Facility
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: Laboratory Procedure Lactate Dehydrogenase Result Upper Limit of Normal Value
+    source: caDSR
+    cde_id: 2597015
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2597015&version=1.0"
 
 library_strategy: # TOREVIEW
   description: >
@@ -818,7 +1291,17 @@ longest_dimension:
     source: caDSR
     cde_id: 5432602
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432602&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432602&version=1.0"
+
+lost_to_followup:
+  description: >
+    A yes/no indicator related to whether a patient was unable to be contacted for follow-up.
+  termDef:
+    term: Patient Lost Follow-Up Ind-2
+    source: caDSR
+    cde_id: 61333
+    cde_version: 3.0
+    term_url: "https://cdebrowswer.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=61333&version=3.0"
 
 lymph_nodes_positive:
   description: >
@@ -828,7 +1311,7 @@ lymph_nodes_positive:
     source: caDSR
     cde_id: 89
     cde_version: 3.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=89&version=3.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=89&version=3.0"
 
 lymphatic_invasion_present:
   description: >
@@ -839,7 +1322,19 @@ lymphatic_invasion_present:
     source: caDSR
     cde_id: 64171
     cde_version: 3.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=64171&version=3.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64171&version=3.0"
+
+m_protein:
+  description: >
+    The amount, in mg/dl, of monoclonal protein, a protein complex comprised of two heavy chains
+    and two light chains, resulting from the medical procedure that involves testing a sample of
+    blood, urine, or other substance from the body.
+  termDef:
+    term: Laboratory Procedure M Protein Outcome Value
+    source: caDSR
+    cde_id: 64561
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64561&version=3.0"
 
 method_of_diagnosis:
   description: >
@@ -866,6 +1361,16 @@ md5sum: # TOREVIEW
     The 128-bit hash value expressed as a 32 digit hexadecimal number used as a file's digital
     fingerprint.
 
+microsatellite_instability_abnormal:
+  description: >
+    The yes/no indicator to signify the status of a tumor for microsatellite instability.
+  termDef:
+    term: Microsatellite Instability Occurrence Indicator
+    source: caDSR
+    cde_id: 3123142
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3123142&version=1.0"
+
 morphology:
   description: >
     The third edition of the International Classification of Diseases for Oncology, published in
@@ -880,7 +1385,7 @@ morphology:
     source: caDSR
     cde_id: 3226275
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3226275&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3226275&version=1.0"
 
 new_event_anatomic_site:
   description: >
@@ -890,7 +1395,7 @@ new_event_anatomic_site:
     source: caDSR
     cde_id: 3108271
     cde_version: 2.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3108271&version=2.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3108271&version=2.0"
 
 new_event_type:
   description: >
@@ -900,7 +1405,7 @@ new_event_type:
     source: caDSR
     cde_id: 3119721
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3119721&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3119721&version=1.0"
 
 normal_tumor_genotype_snp_match:
   description: >
@@ -911,7 +1416,7 @@ normal_tumor_genotype_snp_match:
     source: caDSR
     cde_id: 4588156
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4588156&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4588156&version=1.0"
 
 number_proliferating_cells:
   description: >
@@ -922,7 +1427,7 @@ number_proliferating_cells:
     source: caDSR
     cde_id: 5432636
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432636&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432636&version=1.0"
 
 oct_embedded:
   description: >
@@ -932,7 +1437,17 @@ oct_embedded:
     source: caDSR
     cde_id: 5432538
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432538&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432538&version=1.0"
+
+overall_survival:
+  description: >
+    Number of days between the date used for index and the patient's date of death or the date the patient was last known to be alive.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 pack_years_smoked:
   description: >
@@ -943,7 +1458,7 @@ pack_years_smoked:
     source: caDSR
     cde_id: 2955385
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2955385&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2955385&version=1.0"
 
 percent_eosinophil_infiltration:
   description: >
@@ -954,7 +1469,7 @@ percent_eosinophil_infiltration:
     source: caDSR
     cde_id: 2897700
     cde_version: 2.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2897700&version=2.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2897700&version=2.0"
 
 percent_gc_content:
   description: >
@@ -975,7 +1490,7 @@ percent_granulocyte_infiltration:
     source: caDSR
     cde_id: 2897705
     cde_version: 2.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2897705&version=2.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2897705&version=2.0"
 
 percent_inflam_infiltration:
   description: >
@@ -987,7 +1502,7 @@ percent_inflam_infiltration:
     source: caDSR
     cde_id: 2897695
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2897695&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2897695&version=1.0"
 
 percent_lymphocyte_infiltration:
   description: >
@@ -998,7 +1513,7 @@ percent_lymphocyte_infiltration:
     source: caDSR
     cde_id: 2897710
     cde_version: 2.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2897710&version=2.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2897710&version=2.0"
 
 percent_monocyte_infiltration:
   description: >
@@ -1008,7 +1523,7 @@ percent_monocyte_infiltration:
     source: caDSR
     cde_id: 5455535
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5455535&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5455535&version=1.0"
 
 percent_necrosis:
   description: >
@@ -1018,7 +1533,7 @@ percent_necrosis:
     source: caDSR
     cde_id: 2841237
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2841237&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2841237&version=1.0"
 
 percent_neutrophil_infiltration:
   description: >
@@ -1029,7 +1544,7 @@ percent_neutrophil_infiltration:
     source: caDSR
     cde_id: 2841267
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2841267&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2841267&version=1.0"
 
 percent_normal_cells:
   description: >
@@ -1040,7 +1555,7 @@ percent_normal_cells:
     source: caDSR
     cde_id: 2841233
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2841233&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2841233&version=1.0"
 
 percent_stromal_cells:
   description: >
@@ -1051,7 +1566,7 @@ percent_stromal_cells:
     source: caDSR
     cde_id: 2841241
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2841241&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2841241&version=1.0"
 
 percent_tumor_cells:
   description: >
@@ -1061,7 +1576,7 @@ percent_tumor_cells:
     source: caDSR
     cde_id: 5432686
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432686&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432686&version=1.0"
 
 percent_tumor_nuclei:
   description: >
@@ -1071,7 +1586,7 @@ percent_tumor_nuclei:
     source: caDSR
     cde_id: 2841225
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2841225&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2841225&version=1.0"
 
 perineural_invasion_present:
   description: >
@@ -1082,7 +1597,17 @@ perineural_invasion_present:
     source: caDSR
     cde_id: 64181
     cde_version: 3.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=64181&version=3.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64181&version=3.0"
+
+platelet_count:
+  description: >
+    The absolute peripheral platelet count (in 1000/uL).
+  termDef:
+    term: Laboratory Procedure Platelet Result Specified Value
+    source: caDSR
+    cde_id: 58304
+    cde_version: 4.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=58304&version=4.0"
 
 platform: # TOREVIEW
   description: >
@@ -1096,7 +1621,7 @@ portion_number:
     source: caDSR
     cde_id: 5432711
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432711&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432711&version=1.0"
 
 portion_weight:
   description: >
@@ -1106,7 +1631,7 @@ portion_weight:
     source: caDSR
     cde_id: 5432593
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432593&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432593&version=1.0"
 
 preservation_method:
   description: >
@@ -1116,7 +1641,7 @@ preservation_method:
     source: caDSR
     cde_id: 5432521
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432521&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432521&version=1.0"
 
 primary_diagnosis:
   description: >
@@ -1126,7 +1651,17 @@ primary_diagnosis:
     source: caDSR
     cde_id: 3081934
     cde_version: 3.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3081934&version=3.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3081934&version=3.0"
+
+primary_site:
+  description: >
+    Primary site for the project.
+  termDef:
+    term: Primary Site
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 prior_malignancy:
   description: >
@@ -1137,7 +1672,7 @@ prior_malignancy:
     source: caDSR
     cde_id: 3382736
     cde_version: 2.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3382736&version=2.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3382736&version=2.0"
 
 prior_treatment:
   description: >
@@ -1148,7 +1683,48 @@ prior_treatment:
     source: caDSR
     cde_id: 4231463
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4231463&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4231463&version=1.0"
+
+progesterone_receptor_percent_positive_ihc:
+  description: >
+    Classification to represent Progesterone Receptor Positive results expressed as a percentage
+    value.
+  termDef:
+    term: Progesterone Receptor Level Cell Percentage Category
+    source: caDSR
+    cde_id: 3128342
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3128342&version=1.0"
+
+progesterone_receptor_result_ihc:
+  description: >
+    Text term to represent the overall result of Progresterone Receptor (PR) testing.
+  termDef:
+    term: Breast Carcinoma Progesterone Receptor Status
+    source: caDSR
+    cde_id: 2957357
+    cde_version: 2.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2957357&version=2.0"
+
+progression_free_survival:
+  description: >
+    Number of days between the date used for index and the first date the patient is known to be free of disease progression.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+progression_free_survival_event:
+  description: >
+    The event used to define the patient's disease progression.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 progression_or_recurrence:
   description: >
@@ -1159,7 +1735,7 @@ progression_or_recurrence:
     source: caDSR
     cde_id: 3121376
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3121376&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3121376&version=1.0"
 
 project_id: # TOREVIEW
   description: >
@@ -1189,7 +1765,7 @@ race:
     source: caDSR
     cde_id: 2192199
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2192199&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2192199&version=1.0"
 
 read_length: # TOREVIEW
   description: >
@@ -1199,6 +1775,16 @@ read_group_name: # TOREVIEW
   description: >
     The name of the read group.
 
+regimen_or_line_of_therapy:
+  description: >
+    The name of a regimen or line of therapy assigned to the patient.
+  termDef:
+    term: Treatment Regimen or Line of Therapy
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 relationship_age_at_diagnosis:
   description: >
     The age (in years) when the patient's relative was first diagnosed.
@@ -1207,7 +1793,7 @@ relationship_age_at_diagnosis:
     source: caDSR
     cde_id: 5300571
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5300571&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5300571&version=1.0"
 
 relationship_type:
   description: >
@@ -1218,7 +1804,7 @@ relationship_type:
     source: caDSR
     cde_id: 2690165
     cde_version: 2.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2690165&version=2.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2690165&version=2.0"
 
 relative_with_cancer_history:
   description: >
@@ -1229,7 +1815,7 @@ relative_with_cancer_history:
     source: caDSR
     cde_id: 3901752
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3901752&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3901752&version=1.0"
 
 residual_disease:
   description: >
@@ -1239,7 +1825,17 @@ residual_disease:
     source: caDSR
     cde_id: 2608702
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2608702&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2608702&version=1.0"
+
+ribosomal_rna_28s_16s_ratio:
+  description: >
+    The 28S/18S ribosomal RNA band ratio used to assess the quality of total RNA.
+  termDef:
+    term: "28s/18s Ribosomal RNA Ratio"
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 RIN:
   description: >
@@ -1250,7 +1846,7 @@ RIN:
     source: caDSR
     cde_id: 5278775
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5278775&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5278775&version=1.0"
 
 sample_type:
   description: >
@@ -1260,7 +1856,7 @@ sample_type:
     source: caDSR
     cde_id: 3111302
     cde_version: 2.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3111302&version=2.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3111302&version=2.0"
 
 sample_type_id: # TOREVIEW
   description: >
@@ -1282,7 +1878,7 @@ shortest_dimension:
     source: caDSR
     cde_id: 5432603
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432603&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432603&version=1.0"
 
 site_of_resection_or_biopsy:
   description: >
@@ -1292,11 +1888,11 @@ site_of_resection_or_biopsy:
     Named locations of, or within, the body. A system of numbered categories for representation of
     data.
   termDef:
-    term: iInternational Classification of Diseases for Oncology, Third Edition ICD-O-3 Site Code
+    term: International Classification of Diseases for Oncology, Third Edition ICD-O-3 Site Code
     source: caDSR
     cde_id: 3226281
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3226281&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3226281&version=1.0"
 
 size_selection_range: # TOREVIEW
   description: >
@@ -1310,7 +1906,7 @@ smoking_history:
     source: caDSR
     cde_id: 2181650
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2181650&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2181650&version=1.0"
 
 smoking_intensity:
   description: >
@@ -1321,7 +1917,7 @@ smoking_intensity:
     source: caDSR
     cde_id: 2955385
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2955385&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2955385&version=1.0"
 
 source_center: # TOREVIEW
   description: >
@@ -1336,7 +1932,7 @@ spectrophotometer_method:
     source: caDSR
     cde_id: 3008378
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3008378&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3008378&version=1.0"
 
 spike_ins_fasta: # TOREVIEW
   description: >
@@ -1378,7 +1974,7 @@ therapeutic_agents:
     source: caDSR
     cde_id: 2975232
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2975232&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2975232&version=1.0"
 
 time_between_clamping_and_freezing:
   description: >
@@ -1389,7 +1985,7 @@ time_between_clamping_and_freezing:
     source: caDSR
     cde_id: 5432611
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432611&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432611&version=1.0"
 
 time_between_excision_and_freezing:
   description: >
@@ -1400,7 +1996,7 @@ time_between_excision_and_freezing:
     source: caDSR
     cde_id: 5432612
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432612&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432612&version=1.0"
 
 tissue_or_organ_of_origin:
   description: >
@@ -1410,7 +2006,7 @@ tissue_or_organ_of_origin:
     source: caDSR
     cde_id: 3427536
     cde_version: 3.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3427536&version=3.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3427536&version=3.0"
 
 tissue_type:
   description: >
@@ -1421,7 +2017,7 @@ tissue_type:
     source: caDSR
     cde_id: 5432687
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432687&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432687&version=1.0"
 
 to_trim_adapter_sequence: # TOREVIEW
   description: >
@@ -1435,7 +2031,7 @@ tobacco_smoking_onset_year:
     source: caDSR
     cde_id: 2228604
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2228604&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2228604&version=1.0"
 
 tobacco_smoking_quit_year:
   description: >
@@ -1445,7 +2041,7 @@ tobacco_smoking_quit_year:
     source: caDSR
     cde_id: 2228610
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2228610&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2228610&version=1.0"
 
 tobacco_smoking_status:
   description: >
@@ -1456,7 +2052,20 @@ tobacco_smoking_status:
     source: caDSR
     cde_id: 2181650
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2181650&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2181650&version=1.0"
+
+total_protein:
+  description: >
+    The numeric value, in g/dL, for the results of the medical procedure
+    that involves testing a sample of blood for total serum proteins, dissolved proteins of
+    blood plasma, consisting mainly of albumins and globulins and include antibodies and blood-
+    clotting proteins.
+  termDef:
+    term: Laboratory Procedure Total Serum Protein Outcome Unspecified Value
+    source: caDSR
+    cde_id: 2181536
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2181536&version=1.0"
 
 total_sequences:
   description: >
@@ -1486,7 +2095,7 @@ treatment_intent_type:
     source: caDSR
     cde_id: 2793511
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2793511&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2793511&version=1.0"
 
 treatment_or_therapy:
   description: >
@@ -1497,7 +2106,7 @@ treatment_or_therapy:
     source: caDSR
     cde_id: 4231463
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=4231463&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4231463&version=1.0"
 
 treatment_outcome:
   description: >
@@ -1507,7 +2116,7 @@ treatment_outcome:
     source: caDSR
     cde_id: 5102383
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5102383&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5102383&version=1.0"
 
 treatment_type:
   description: >
@@ -1517,7 +2126,7 @@ treatment_type:
     source: caDSR
     cde_id: 5102381
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5102381&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5102381&version=1.0"
 
 tumor_grade:
   description: >
@@ -1528,7 +2137,7 @@ tumor_grade:
     source: caDSR
     cde_id: 2785839
     cde_version: 2.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2785839&version=2.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2785839&version=2.0"
 
 tumor_code: # TOREVIEW
   description: >
@@ -1547,7 +2156,7 @@ tumor_descriptor:
     source: caDSR
     cde_id: 3288124
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3288124&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3288124&version=1.0"
 
 tumor_stage:
   description: >
@@ -1585,7 +2194,7 @@ vascular_invasion_present:
     source: caDSR
     cde_id: 64358
     cde_version: 3.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=64358&version=3.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64358&version=3.0"
 
 vital_status:
   description: >
@@ -1595,7 +2204,17 @@ vital_status:
     source: caDSR
     cde_id: 5
     cde_version: 5.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5&version=5.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5&version=5.0"
+
+wbc:
+  description: >
+    The absolute peripheral white blood cell count (in 1000/uL).
+  termDef:
+    term: Laboratory Procedure Leukocyte Result Specified Value
+    source: caDSR
+    cde_id: 58312
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=58312&version=3.0"
 
 weight:
   description: >
@@ -1605,7 +2224,7 @@ weight:
     source: caDSR
     cde_id: 651
     cde_version: 4.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=651&version=4.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=651&version=4.0"
 
 well_number:
   description: >
@@ -1616,7 +2235,7 @@ well_number:
     source: caDSR
     cde_id: 5432613
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432613&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432613&version=1.0"
 
 workflow_type:
   description: >
@@ -1630,7 +2249,7 @@ year_of_birth:
     source: caDSR
     cde_id: 2896954
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2896954&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2896954&version=1.0"
 
 year_of_diagnosis:
   description: >
@@ -1640,7 +2259,7 @@ year_of_diagnosis:
     source: caDSR
     cde_id: 2896960
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2896960&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2896960&version=1.0"
 
 year_of_death:
   description: >
@@ -1650,7 +2269,7 @@ year_of_death:
     source: caDSR
     cde_id: 2897030
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2897030&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2897030&version=1.0"
 
 years_smoked:
   description: >
@@ -1660,4 +2279,4 @@ years_smoked:
     source: caDSR
     cde_id: 3137957
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3137957&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3137957&version=1.0"

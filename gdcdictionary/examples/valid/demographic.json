@@ -1,6 +1,10 @@
 {
     "gender": "male",
     "submitter_id": "E9EDB78B-6897-4205-B9AA-0CEF8AAB5A1F_demographic",
+    "days_to_birth":-12414,
+    "days_to_death":1241,
+    "cause_of_death":"Cancer Related",
+    "vital_status":"Dead",
     "year_of_birth": 1652,
     "race": "white",
     "cases": {

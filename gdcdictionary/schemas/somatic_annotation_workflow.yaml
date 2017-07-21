@@ -51,5 +51,6 @@ properties:
       - MuSE Annotation
       - SomaticSniper Annotation
       - VarScan2 Annotation
+      - FoundationOne Annotation
   simple_somatic_mutations:
     $ref: "_definitions.yaml#/to_many"

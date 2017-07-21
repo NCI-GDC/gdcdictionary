@@ -79,6 +79,7 @@ properties:
       - WXS
       - Low Pass WGS
       - Validation
+      - Targeted Sequencing
   projects:
     $ref: "_definitions.yaml#/to_one"
   somatic_aggregation_workflows:

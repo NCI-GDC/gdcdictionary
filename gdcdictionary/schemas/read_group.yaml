@@ -37,7 +37,6 @@ required:
   - platform
   - library_strategy
   - library_name
-  - instrument_model
   - is_paired_end
   - read_length
   - read_group_name
@@ -112,6 +111,7 @@ properties:
       - Bisulfite-Seq
       - Validation
       - Amplicon
+      - Targeted Sequencing 
       - Other
   RIN:
     term:
@@ -138,10 +138,17 @@ properties:
       $ref: "_terms.yaml#/library_selection"
     enum:
       - Hybrid_Selection
+      - Hybrid Selection
       - PCR
       - Affinity_Enrichment
+      - Affinity Enrichment
       - Poly-T_Enrichment
+      - Poly-T Enrichment
+      - Random
       - RNA_Depletion
+      - rRNA Depletion
+      - miRNA Size Fractionation
+      - Targeted Sequencing
       - Other
   library_preparation_kit_name:
     term:
