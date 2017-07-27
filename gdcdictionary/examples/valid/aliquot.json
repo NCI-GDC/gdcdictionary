@@ -6,10 +6,11 @@
     "aliquot_volume": 5,
     "clinical_or_contrived":"Contrived",
     "contrivance_method": "ContrivanceProtocolA.pdf",
-    "preservation_method":"Frozen",
-    "storage_temperature":-80,
     "hours_to_freezer_lower": 2,
     "hours_to_freezer_upper": 4,
+    "methanol_added": true,
+    "preservation_method":"Frozen",
+    "storage_temperature":-80,
     "samples": {
         "submitter_id": "BLGSP-71-06-00019-99A-01D"
     }

@@ -163,7 +163,7 @@ aliquot_quantity:
 
 aliquot_volume:
   description: >
-    The volume in microliters (ml) of the aliquot(s) derived from the analyte(s) shipped for
+    The volume in microliters (ul) of the aliquot(s) derived from the analyte(s) shipped for
     sequencing and characterization.
   termDef:
     term: Biospecimen Aliquot Volume

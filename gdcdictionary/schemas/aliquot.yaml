@@ -95,6 +95,9 @@ properties:
           - Not Applicable
           - Unknown
       - type: number
+  methanol_added:
+    description: "In the preparation of a slide, was methanol added as a fixative? True/False."
+    type: boolean
   preservation_method:
     term:
       $ref: "_terms.yaml#/preservation_method"

@@ -26,13 +26,13 @@ required:
   - submitter_id
   - analyte_type
   - analyte_isolation_method
-  - aliquots 
+  - aliquots
 
 links:
-  - name: aliquots 
+  - name: aliquots
     backref: analytes
     label: derived_from
-    target_type: aliquot 
+    target_type: aliquot
     multiplicity: many_to_many
     required: true
 
@@ -46,7 +46,7 @@ properties:
   analyte_isolation_method:
     description: >
       The name or general description of the method used to isolate the analyte. Alternatively, if
-      you have provided a protocol, put the file_name here. 
+      you have provided a protocol, put the file_name here.
     type: string
   analyte_type:
     term:
@@ -81,7 +81,7 @@ properties:
   frame_identifier:
     description: >
       In an analysis of a slide, the frame denotes the region of the slide that is being examined.
-      Within a frame are multiple cells. 
+      Within a frame are multiple cells.
     type: string
   llod:
     description: >
@@ -93,6 +93,12 @@ properties:
     oneOf:
       - enum: ['WT']
       - type: number
+  run_identifier:
+    description: >
+      The identifier given to the run during which this particular analyte was tested or evaluated.
+      If you analyze multiple analytes through the same experimentation run, this is a good way to
+      keep track.
+    type: string
   specificity:
     description: "The true negative rate."
     type:

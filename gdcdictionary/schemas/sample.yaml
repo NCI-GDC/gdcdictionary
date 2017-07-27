@@ -25,7 +25,6 @@ systemProperties:
 required:
   - submitter_id
   - composition
-  - days_to_collection
   - biospecimens 
 
 uniqueKeys:
@@ -78,10 +77,6 @@ properties:
       - Solid Tissue
       - Whole Bone Marrow
       - Unknown
-  days_to_collection:
-    term:
-      $ref: "_terms.yaml#/days_to_collection"
-    type: integer
   hours_to_fractionation_lower:
     description: >
       The lower limit on the amount of time, in hours, between the blood draw and the fractionation
@@ -107,10 +102,10 @@ properties:
           - Unknown
       - type: number
   sample_quantity:
-    description: "The mass of the sample in ng."
+    description: "For solid samples, the mass of the sample in milligrams (mg)."
     type: number
   sample_volume:
-    description: "The volume of the sample in mL."
+    description: "For liquid samples, the volume of the sample in millilitres (mL)."
     type: number
 
   biospecimens:
