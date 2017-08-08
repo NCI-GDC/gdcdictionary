@@ -36,7 +36,7 @@ properties:
   name:
     type: string
     description: "Full name/title of the program."
-    pattern: "^[A-Z,0-9]+|[0-9]+|[A-Z]+$"
+    pattern: "^[A-Z0-9]+|[0-9]+|[A-Z]+$"
   dbgap_accession_number:
     type: string
     description: "The dbgap accession number provided for the program."
