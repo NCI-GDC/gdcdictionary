@@ -1301,7 +1301,7 @@ lost_to_followup:
     source: caDSR
     cde_id: 61333
     cde_version: 3.0
-    term_url: "https://cdebrowswer.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=61333&version=3.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=61333&version=3.0"
 
 lymph_nodes_positive:
   description: >
