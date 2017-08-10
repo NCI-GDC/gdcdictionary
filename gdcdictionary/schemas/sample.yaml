@@ -46,9 +46,7 @@ links:
     multiplicity: many_to_one
     required: false
 
-# Sample properties
-# Currently there are many TCGA-specific fields in the DB, this is an attempt
-# to minimize the core fields
+# Sample properties: keep TCGA-specific fields
 properties:
   type:
     type: string
@@ -64,11 +62,6 @@ properties:
     description: >
       The legacy barcode used before prior to the use UUIDs, varies by project.
       For TCGA this is bcrsamplebarcode.
-  blood_fractionation_method:
-    description: >
-      The name or description of the method used to obtain the blood fraction sample. (e.g. Ficoll
-      Method, Novartis Protocol #001, 2000 g centrifuge at 4C with gentle deceleration)
-    type: string
   biospecimen_anatomic_site:
     term:
       $ref: "_terms.yaml#/biospecimen_anatomic_site"
@@ -354,15 +347,6 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
-  clinical_time_point:
-    description: "Time point in the clinical stage at which the sample was collected."
-    type: string
-  collection_datetime:
-    description: "Datetime at which the sample was collected."
-    type: string
-  collection_temperature:
-    description: "Temperature in centigrade at which the sample was collected."
-    type: number
   composition:
     term:
       $ref: "_terms.yaml#/composition"
@@ -394,9 +378,6 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
-  ctc_concentration:
-    description: "Concentration of the CTCs in the sample; units CTCs/mL."
-    type: number
   current_weight:
     term:
       $ref: "_terms.yaml#/current_weight"
@@ -409,18 +390,6 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_sample_procurement"
     type: integer
-  days_to_analysis:
-    description: "The amount of time, in days, between when the sample was collected and when the sample was analyzed (e.g. days from blood draw to immunoassay)."
-    type: integer
-  days_to_processing:
-    description: "The amount of time, in days, between when the sample was collected and when the sample was processed (e.g. days from blood draw to plasma isolation)."
-    type: integer
-  days_to_reception:
-    description: "The amount of time, in days, between when the sample was collected and when the sample was received by the testing lab."
-    type: integer
-  days_to_staining:
-    description: "The amount of time, in days, between when the sample was collected and when the sample was stained."
-    type: integer
   diagnosis_pathologically_confirmed:
     term:
       ref: "_terms.yaml#/diagnosis_pathologically_confirmed"
@@ -428,16 +397,6 @@ properties:
       - "Yes"
       - "No"
       - Unknown
-  DNA_yield:
-    description: "The total amount of DNA, in micrograms, that was isolated from the sample."
-    type:
-      - number
-      - string
-    oneOf:
-      - enum:
-          - Unknown
-          - Not Applicable
-      - type: number
   freezing_method:
     term:
       $ref: "_terms.yaml#/freezing_method"
@@ -522,9 +481,6 @@ properties:
     term:
       $ref: "_terms.yaml#/oct_embedded"
     type: string
-  pathology_report_uuid:
-    type: string
-    description: "UUID of the related pathology report." # are we still doing this? seems like the links handle this now
   preservation_method:
     term:
       $ref: "_terms.yaml#/preservation_method"
@@ -538,9 +494,6 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
-  processing_datetime:
-    description: "Datetime at which the sample was processed."
-    type: string
   sample_type:
     description: "Characterization of the sample as either clinical or contrived."
     enum:
@@ -619,35 +572,10 @@ properties:
   sample_volume:
     description: "The volume of the sample in mL."
     type: number
-  shipping_temperature:
-    description: "The average temperature, in centigrade, at which the sample was kept during transportation."
-    type:
-      - number
-      - string
-    oneOf:
-      - enum:
-          - Not Applicable
-          - Not Recorded
-      - type: number
   shortest_dimension:
     term:
       $ref: "_terms.yaml#/shortest_dimension"
     type: string
-  storage_duration:
-    description: >
-      Numeric duration for which a sample was stored before testing/experimentation.
-      Requires accompanying storage_duration_unit submission.
-    type: number
-  storage_duration_unit:
-    description: "Unit of time for which the storage duration took place."
-    enum:
-      - Seconds
-      - Minutes
-      - Hours
-      - Days
-  storage_temperature:
-    description: "The temperature, in centigrade, at which the sample was stored."
-    type: number
   time_between_clamping_and_freezing:
     term:
       $ref: "_terms.yaml#/time_between_clamping_and_freezing"
@@ -656,26 +584,6 @@ properties:
     term:
       $ref: "_terms.yaml#/time_between_excision_and_freezing"
     type: string
-  time_to_fractionation:
-    description: "The amount of time, in hours, between the blood draw and the fractionation into its components."
-    type:
-      - number
-      - string
-    oneOf:
-      - enum:
-          - Not Applicable
-          - Unknown
-      - type: number
-  time_to_freezer:
-    description: "The amount of time, in hours, between the completion of fractionation and the storage of the fraction in a freezer."
-    type:
-      - number
-      - string
-    oneOf:
-      - enum:
-          - Not Applicable
-          - Unknown
-      - type: number
   tissue_type:
     term:
       $ref: "_terms.yaml#/tissue_type"
@@ -688,17 +596,6 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
-  tube_identifier:
-    description: "A unique identifier given to a blood tube for identification purposes."
-    type: string
-  tube_type:
-    description: "The kind of tube used to collect the sample(s) taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes."
-    enum:
-      - EDTA
-      - CellSave
-      - Streck
-      - Acid Citrate Dextrose (ACD)
-      - Not Applicable
   tumor_code:
     term:
       $ref: "_terms.yaml#/tumor_code"
@@ -776,12 +673,6 @@ properties:
       - Not Reported
       - Not Allowed To Collect
     description: "A description of the tumor from which the sample was derived." # TOREVIEW
-  visit_number:
-    description: "Within the context of a study, the date-ordered numerical designation of the visit during which the sample was procured."
-    type: integer
-  wbc_count:
-    description: "Count of the white blood cells in a sample."
-    type: integer
   cases:
     $ref: "_definitions.yaml#/to_one"
   diagnoses:
