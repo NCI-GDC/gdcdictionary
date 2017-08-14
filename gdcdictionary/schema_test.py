@@ -19,11 +19,14 @@ import json
 import unittest
 from python import GDCDictionary
 
+from pprint import pprint
+
 
 
 def load_yaml_schema(path):
     with open(path, 'r') as f:
         return yaml.load(f)
+        
 CUR_DIR = os.path.dirname(os.path.realpath(__file__))
 DATA_DIR = os.path.join(CUR_DIR, 'examples')
 project1 = load_yaml_schema(os.path.join(CUR_DIR, 'schemas/projects/project1.yaml'))
@@ -93,11 +96,33 @@ def validate_schemata(schemata, metaschema):
             for link in [l['name'] for l in subgroup if 'name' in l]:
                 assert_link_is_also_prop(link)
 
+UNICODE_COUNT = 0
+def absense_of_unicode_helper(all_errors, values):
+    if "Post Neo-adjuvant Therapy" in values:
+        print values
+    if not isinstance(values, basestring): # Baseclass for both unicode and str
+        for value in values:
+            all_errors.update(absense_of_unicode_helper(all_errors, value))
+    else:
+        if not is_ascii(values):
+            #print values
+            all_errors[UNICODE_COUNT + 1] =  values
+            UNICODE_COUNT = UNICODE_COUNT + 1
+    return all_errors
+
+def is_ascii(s):
+    return all(ord(c) < 128 for c in s)
 
 class SchemaTest(unittest.TestCase):
     def setUp(self):
         self.dictionary = GDCDictionary()
         self.definitions = yaml.load(open(os.path.join(CUR_DIR, 'schemas','_definitions.yaml'),'r'))
+
+    def test_absense_of_unicode(self):
+        #pprint (self.dictionary.schema.values())
+        assert not is_ascii("Tumor Adjacent Normal \u2013 Post Neo-adjuvant Therapy")
+        #errors = absense_of_unicode_helper(all_errors={}, values=self.dictionary.schema.values())
+        #assert not errors
 
     def test_schemas(self):
         validate_schemata(self.dictionary.schema, self.dictionary.metaschema)
