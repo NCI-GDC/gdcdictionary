@@ -62,15 +62,13 @@ class GDCDictionary(object):
         # For DAT-1064 Bomb out hard if unicode is in a schema file
         # But allow unicode through the terms and definitions
         with open(name, 'r') as f:
-            if name in self.exclude:
-                return yaml.safe_load(f)
-            else:
+            if name not in self.exclude:
                 try:
                     ascii_file = f.read().encode("ascii")
                 except UnicodeDecodeError:
                     print "Error in file: {}".format(name)
                     raise
-                return yaml.safe_load(ascii_file)
+            return yaml.safe_load(f)
 
 
     def load_schemas_from_dir(self, directory):
