@@ -5,8 +5,7 @@
     "aliquot_volume": 5,
     "amount": 10,
     "source_center": "23",
-    "aliquot_concentration": 0.07,
-    "aliquot_concentration_unit": "mg/mL",
+    "concentration": 0.07,
     "samples": {
         "submitter_id": "BLGSP-71-06-00019-99A-01D"
     }
