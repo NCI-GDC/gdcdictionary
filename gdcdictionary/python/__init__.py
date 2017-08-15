@@ -27,28 +27,6 @@ def visit_directory(path):
     finally:
         os.chdir(cdir)
 
-
-def load_yaml(name):
-    """Return contents of yaml file as dict"""
-    with open(name, 'r') as f:
-        return yaml.safe_load(f)
-
-
-def load_schemas_from_dir(directory):
-    """Returns all yamls and resolvers of those yamls from dir"""
-
-    schemas, resolvers = {}, {}
-
-    with visit_directory(directory):
-        for path in glob.glob("*.yaml"):
-            schema = load_yaml(path)
-            schemas[path] = schema
-            resolver = RefResolver('{}#'.format(path), schema)
-            resolvers[path] = ResolverPair(resolver, schema)
-
-    return schemas, resolvers
-
-
 class GDCDictionary(object):
 
     _metaschema_path = 'metaschema.yaml'
@@ -79,10 +57,40 @@ class GDCDictionary(object):
         if not lazy:
             self.load_directory(self.root_dir)
 
+    def load_yaml(self, name):
+        """Return contents of yaml file as dict"""
+        # For DAT-1064 Bomb out hard if unicode is in a schema file
+        # But allow unicode through the terms and definitions
+        with open(name, 'r') as f:
+            if name in self.exclude:
+                return yaml.safe_load(f)
+            else:
+                try:
+                    ascii_file = f.read().encode("ascii")
+                except UnicodeDecodeError:
+                    print "Error in file: {}".format(name)
+                    raise
+                return yaml.safe_load(ascii_file)
+
+
+    def load_schemas_from_dir(self, directory):
+        """Returns all yamls and resolvers of those yamls from dir"""
+
+        schemas, resolvers = {}, {}
+
+        with visit_directory(directory):
+            for path in glob.glob("*.yaml"):
+                schema = self.load_yaml(path)
+                schemas[path] = schema
+                resolver = RefResolver('{}#'.format(path), schema)
+                resolvers[path] = ResolverPair(resolver, schema)
+
+        return schemas, resolvers
+
     def load_directory(self, directory):
         """Load and reslove all schemas from directory"""
 
-        yamls, resolvers = load_schemas_from_dir(directory)
+        yamls, resolvers = self.load_schemas_from_dir(directory)
 
         self.metaschema = yamls[self.metaschema_path]
         self.resolvers.update(resolvers)
