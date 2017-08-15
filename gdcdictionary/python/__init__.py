@@ -64,7 +64,8 @@ class GDCDictionary(object):
         with open(name, 'r') as f:
             if name not in self.exclude:
                 try:
-                    ascii_file = f.read().encode("ascii")
+                    f.read().encode("ascii")
+                    f.seek(0)
                 except UnicodeDecodeError:
                     print "Error in file: {}".format(name)
                     raise
