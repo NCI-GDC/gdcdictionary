@@ -1,0 +1,18 @@
+{
+    "type": "slide",
+    "submitter_id": "TCGA-FW-A3R5-06A-01-TS1",
+    "section_location": "TOP",
+    "percent_tumor_cells": 80.0,
+    "percent_tumor_nuclei": 80.0,
+    "percent_normal_cells": 0.0,
+    "percent_necrosis": 0.0,
+    "percent_stromal_cells": 20.0,
+    "percent_lymphocyte_infiltration": 0.0,
+    "percent_monocyte_infiltration": 0.0,
+    "percent_neutrophil_infiltration": 0.0,
+    "samples": [
+        {
+            "submitter_id": "TCGA-FW-A3R5-06A-11"
+        }
+    ]
+}

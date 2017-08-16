@@ -1,0 +1,14 @@
+{
+    "type": "slide_image",
+    "submitter_id": "slide_image_X",
+    "file_name": "slide.svs",
+    "file_size": 21234,
+    "md5sum": "84a72e8aaad3017348cb3f8459c5d5d9",
+    "data_category": "Biospecimen",
+    "data_type": "Single Cell Image",
+    "data_format": "SVS",
+    "experimental_strategy": "Diagnostic Slide",
+    "slides": {
+	"submitter_id": "slide_X"
+    }
+}
