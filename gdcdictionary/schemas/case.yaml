@@ -50,9 +50,6 @@ properties:
     type:
       - string
       - "null"
-  clinical_site:
-    description: "Identifier for the clinical site at which the case was handled."
-    type: string
   primary_site:
     description: "Primary site for the case."
     type: string
