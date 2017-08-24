@@ -4,4 +4,4 @@ python:
 before_script:
     - yes | python setup.py install
     - pip freeze
-script: "nosetests -v"
+script: "nosetests -sv"
