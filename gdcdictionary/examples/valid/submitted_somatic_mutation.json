@@ -6,7 +6,7 @@
     "data_format": "VCF",
     "file_name": "test.vcf",
     "file_size": 100,
-    "md5sum": "122dffad32",
+    "md5sum": "6fd84891e7a53725d1cf6109c5f2400f",
     "experimental_strategy": "Targeted Sequencing",
     "read_groups": {
         "submitter_id": "read_group_x"
