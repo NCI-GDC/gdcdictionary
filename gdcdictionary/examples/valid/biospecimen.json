@@ -3,7 +3,7 @@
     "submitter_id":"blood draw 1",
     "clinical_site": "C1",
     "days_to_collection":26,
-    "days_to_procurement":25,
+    "days_to_procurement":-1,
     "blood_draw_method":"BloodDrawProtocol.pdf",
     "method_of_procurement":"Blood Draw",
     "biospecimen_type":"Fluid",
