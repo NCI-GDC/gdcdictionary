@@ -3,5 +3,6 @@ python:
   - "2.7"
 before_script:
     - yes | python setup.py install
+    - pip install -r dev-requirements.txt
     - pip freeze
 script: "nosetests -v"
