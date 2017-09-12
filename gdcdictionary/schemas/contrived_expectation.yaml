@@ -35,7 +35,7 @@ links:
     backref: contrived_expectations
     label: expected_of
     target_type: aliquot
-    multiplicity: many_to_one
+    multiplicity: many_to_many
     required: true
 
 properties:
