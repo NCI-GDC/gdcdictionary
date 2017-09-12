@@ -46,11 +46,16 @@ properties:
     description: "The specific instrument type used to perform the assay."
     enum:
       - Agilent TapeStation 
+      - Epic Sciences CTC Platform
+      - HD-SCA Platform
   assay_instrument_model:
     description: "The specific model of instrument used to perform the assay."
     enum:
       - Agilent 2200 TapeStation
       - Agilent 4200 TapeStation 
+      - ESRUO-01
+      - Fluidgm Hyperion
+      - HSDCA Enumeration
   assay_kit_name:
     description: "Name of the assay kit used."
     type: string
@@ -64,6 +69,7 @@ properties:
     description: "General methodology used to perform the assay (e.g. PCR, Sequencing)."
     enum:
       - DNA Electrophoresis 
+      - Immunohistochemistry
   cell_count:
     description: >
       If the analyte is cell count, report total whole number of cells counted here.

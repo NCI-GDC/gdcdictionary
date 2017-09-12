@@ -62,9 +62,15 @@ properties:
     description: >
       In the case of single cell analysis, this is the type of cell being analyzed.
     enum:
+      - All CTC Populations
       - Apoptotic CTC
+      - Biomarker Positive All CTC Populations
+      - Biomarker Positive Traditional CTC
       - Cytokeratin Negative CTC
       - Cytokeratin Negative CTC Cluster
+      - Cytokeratin Positive CTC
+      - Cytokeratin Positive CTC Cluster
+      - Nucleated Cell
       - Small CTC
       - Small CTC Cluster
       - Traditional CTC
