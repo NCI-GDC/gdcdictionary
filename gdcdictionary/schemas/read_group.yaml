@@ -24,7 +24,7 @@ links:
   - name: analytes
     label: derived_from
     target_type: analyte
-    multiplicity: one_to_one
+    multiplicity: many_to_one
     required: true
     backref: read_groups
 
@@ -146,6 +146,9 @@ properties:
       - Complete Genomics
       - PacBio
       - Other
+  read_group_name:
+    description: "The name given to this read group. Should match what is provided in the headers of associated files."
+    type: string
   read_length_lower:
     description: "The lower limit for the length of reads used in the sequencing experiment."
     type: integer
