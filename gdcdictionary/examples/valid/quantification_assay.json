@@ -7,6 +7,8 @@
     "assay_kit_name":"MolecularMD",
     "assay_kit_vendor":"Some Guy",
     "assay_kit_version":"v34.2",
+    "cell_count":2,
+    "cell_concentration":0.23,
     "molecular_concentration":25.234,
     "analytes": {
          "submitter_id":"DNA_assay_input242"

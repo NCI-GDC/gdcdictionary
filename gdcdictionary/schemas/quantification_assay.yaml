@@ -64,14 +64,20 @@ properties:
     description: "General methodology used to perform the assay (e.g. PCR, Sequencing)."
     enum:
       - DNA Electrophoresis 
-  molecular_concentration:
-    description: >
-      If the analyte is a molecule (e.g. DNA or RNA), report the observed concentration in nanograms per microliters.
-    type: number
   cell_count:
     description: >
-      If the analyte is the cell count, report total whole number of cells counted here.
+      If the analyte is cell count, report total whole number of cells counted here.
     type: integer 
+  cell_concentration:
+    description: >
+      If the analyte is cell count, report the concentrations of the cells in the aliquot (counted
+      cells per assay volume mL). Report the calculated concentration in cells per milliliters. 
+    type: number
+  molecular_concentration:
+    description: >
+      If the analyte is a molecule (e.g. DNA or RNA), report the observed concentration in nanograms
+      per microliters.
+    type: number
 
   analytes:
     $ref: "_definitions.yaml#/to_one"
