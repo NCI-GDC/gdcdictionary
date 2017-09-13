@@ -42,17 +42,18 @@ properties:
   collaboration_id:
     description: >
       For instances in which multiple institutions use the same patient for their respective studies,
-      this space is used as a place to enter in the deidentified barcode, id, or other identifier for
+      this space is used as a place to enter in the de-identified barcode, id, or other identifier for
       the patient. Work with your collaborators to decide on the patient's id.
     type: string
   index_date:
     description: >
-      The reference or anchor date used during date obfuscation, where a single date is obscurred by
+      The reference or anchor date used during date obfuscation, where a single date is obscured by
       creating one or more date ranges in relation to this date.
     enum:
       - Diagnosis
-      - Study Enrollment
       - First Patient Visit
+      - Study Enrollment
+      - Not Applicable
   lost_to_followup:
     description: >
       A yes/no indicator related to whether a patient was unable to be contacted for follow-up.
