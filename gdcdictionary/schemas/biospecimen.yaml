@@ -369,12 +369,31 @@ properties:
       in all projects.
     type: string
   days_to_collection:
-    term:
-      $ref: "_terms.yaml#/days_to_collection"
-    type: integer
+    description: >
+      The number of days between the index date and the date the biospecimen was collected at the
+      laboratory. Use Unknown if the date of the event is not known. Use Not Applicable if the event
+      never happened.
+    type:
+      - number
+      - string
+    oneOf:
+      - enum:
+          - Not Applicable
+          - Unknown
+      - type: integer
   days_to_procurement:
-    description: "The number of days between the index date and the date the biospecimen was taken from the patient (such as the blood draw)."
-    type: integer
+    description: >
+      The number of days between the index date and the date the biospecimen was taken from the
+      patient (such as the blood draw). Use Unknown if the date of the event is not known. Use Not
+      Applicable if the event never happened."
+    type:
+      - number
+      - string
+    oneOf:
+      - enum:
+          - Not Applicable
+          - Unknown
+      - type: integer 
   disease_type:
     description: "The primary disease of the patient from which the biospecimen was taken."
     enum:

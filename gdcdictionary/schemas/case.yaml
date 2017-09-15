@@ -30,6 +30,7 @@ links:
 
 required:
   - submitter_id
+  - index_date
   - studies
 
 uniqueKeys:
