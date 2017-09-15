@@ -54,12 +54,10 @@ properties:
       - Slide
       - Vial
   aliquot_quantity:
-    term:
-      $ref: "_terms.yaml#/aliquot_quantity"
+    description: "The quantity in micrograms (ug) of the aliquot derived from the sample and used for experimentation."
     type: number
   aliquot_volume:
-    term:
-      $ref: "_terms.yaml#/aliquot_volume"
+    description: "The volume in microliters (uL) of the aliquot derived from the sample and used for experimentation."
     type: number
   clinical_or_contrived:
     description: "Is the aliquot clinical or contrived?"
