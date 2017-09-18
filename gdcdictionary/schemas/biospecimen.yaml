@@ -365,7 +365,7 @@ properties:
   collaboration_id:
     description: >
       In cases where the same biospecimen is used by multiple institutions, a deidenfitied id may be
-      provided here to tie those together. Work with your collaborators assure the same id is used 
+      provided here to tie those together. Work with your collaborators assure the same id is used
       in all projects.
     type: string
   days_to_collection:
@@ -374,7 +374,7 @@ properties:
       laboratory. Use Unknown if the date of the event is not known. Use Not Applicable if the event
       never happened.
     type:
-      - number
+      - integer
       - string
     oneOf:
       - enum:
@@ -387,13 +387,13 @@ properties:
       patient (such as the blood draw). Use Unknown if the date of the event is not known. Use Not
       Applicable if the event never happened."
     type:
-      - number
+      - integer
       - string
     oneOf:
       - enum:
           - Not Applicable
           - Unknown
-      - type: integer 
+      - type: integer
   disease_type:
     description: "The primary disease of the patient from which the biospecimen was taken."
     enum:
@@ -486,7 +486,7 @@ properties:
     description: >
       The temperature, in centigrade, at which the biospecimen was kept after procuring it from the
       patient. Use 20 for room temperature; 0 for on ice.
-    type: number 
+    type: number
   shipping_temperature:
     description: >
       The temperature, in centigrade, at which the biospecimen was kept while it was being
