@@ -48,8 +48,10 @@ properties:
   assay_instrument:
     description: "The specific instrument type used to perform the assay."
     enum:
-      - Multi-Array Assay, Meso Scale Discovery
+      - CytoTrapNano CTC Platform
       - Epic Sciences CTC Platform 
+      - HD-SCA Platform
+      - Multi-Array Assay, Meso Scale Discovery
   assay_instrument_model:
     description: "The specific model of instrument used to perform the assay."
     type: string 

@@ -572,6 +572,11 @@ properties:
       - Xenograft
       - NOS
       - Unknown
+  tumor_morphology:
+    description: >
+      The specific description of the tumor morphology. Please use the ICD-0-3 code name (e.g.
+      "Neoplasm, benign", "Carcinoma, Nos", or "Hepatocellular adenoma").
+    type: string
 
   cases:
     $ref: "_definitions.yaml#/to_one"
