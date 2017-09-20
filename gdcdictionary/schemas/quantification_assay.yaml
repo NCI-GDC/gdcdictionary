@@ -46,6 +46,7 @@ properties:
     description: "The specific instrument type used to perform the assay."
     enum:
       - Agilent TapeStation 
+      - CytoTrapNano CTC Platform
       - Epic Sciences CTC Platform
       - HD-SCA Platform
   assay_instrument_model:
@@ -53,8 +54,9 @@ properties:
     enum:
       - Agilent 2200 TapeStation
       - Agilent 4200 TapeStation 
+      - C88801-RU
       - ESRUO-01
-      - Fluidgm Hyperion
+      - Fluidigm Hyperion
       - HSDCA Enumeration
   assay_kit_name:
     description: "Name of the assay kit used."

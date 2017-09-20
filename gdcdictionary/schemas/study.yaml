@@ -70,6 +70,7 @@ properties:
       through testing.
     enum:
       - Accuracy
+      - Clinical Detection
       - Interference
       - Limit of Detection
       - Precision (Repeatability)

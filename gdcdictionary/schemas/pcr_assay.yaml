@@ -45,13 +45,14 @@ properties:
   assay_instrument:
     description: "The specific instrument type used to perform the assay."
     enum:
-      - BEAMing
+      - BD Flow Cytometer
       - Bio-Rad
       - QuantStudio
       - Qiagen Rotor-Gene Q
   assay_instrument_model:
     description: "The specific model of instrument used to perform the assay."
     enum:
+      - BD Accuri C6 Flow Cytometer
       - Bio-Rad QX100
       - Bio-Rad QX200
       - QuantStudio Dx
@@ -69,6 +70,7 @@ properties:
     description: "General methodology used to perform the assay (e.g. PCR, Sequencing)."
     enum:
       - Amplification-Refactory Mutation System
+      - BEAMing Digital
       - Digital Droplet
       - TaqMan
   mutant_fraction_percent:
