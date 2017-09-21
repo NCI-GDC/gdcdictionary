@@ -57,7 +57,7 @@ properties:
       - C88801-RU
       - ESRUO-01
       - Fluidigm Hyperion
-      - HSDCA Enumeration
+      - HDSCA Enumeration
   assay_kit_name:
     description: "Name of the assay kit used."
     type: string
