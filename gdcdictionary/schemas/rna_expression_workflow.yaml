@@ -29,7 +29,7 @@ links:
         backref: rna_expression_workflows
         label: performed_on
         target_type: aligned_reads
-        multiplicity: one_to_one
+        multiplicity: many_to_one
         required: false
       - name: submitted_aligned_reads_files
         backref: rna_expression_workflows
