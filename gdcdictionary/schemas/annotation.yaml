@@ -44,18 +44,6 @@ links:
         target_type: slide
         multiplicity: many_to_many
         required: false
-      - name: portions
-        label: annotates
-        backref: annotations
-        target_type: portion
-        multiplicity: many_to_many
-        required: false
-      - name: analytes
-        label: annotates
-        backref: annotations
-        target_type: analyte
-        multiplicity: many_to_many
-        required: false
       - name: aliquots
         label: annotates
         backref: annotations
@@ -171,10 +159,6 @@ properties:
   samples:
     $ref: "_definitions.yaml#/to_many"
   slides:
-    $ref: "_definitions.yaml#/to_many"
-  portions:
-    $ref: "_definitions.yaml#/to_many"
-  analytes:
     $ref: "_definitions.yaml#/to_many"
   aliquots:
     $ref: "_definitions.yaml#/to_many"

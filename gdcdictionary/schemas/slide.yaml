@@ -21,21 +21,12 @@ systemProperties:
   - updated_datetime
 
 links:
-  - exclusive: false
+  - name: samples
+    backref: slides
+    label: derived_from
+    target_type: sample
+    multiplicity: many_to_many
     required: true
-    subgroup:
-      - name: portions
-        backref: slides
-        label: derived_from
-        target_type: portion
-        multiplicity: many_to_many
-        required: false
-      - name: samples
-        backref: slides
-        label: derived_from
-        target_type: sample
-        multiplicity: many_to_many
-        required: false
 
 required:
   - submitter_id

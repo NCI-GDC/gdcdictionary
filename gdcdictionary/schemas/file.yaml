@@ -33,12 +33,6 @@ links:
         target_type: aliquot
         multiplicity: many_to_many
         required: false
-      - name: analytes
-        backref: files
-        label: data_from
-        target_type: analyte
-        multiplicity: many_to_many
-        required: false
       - name: cases
         backref: files
         label: data_from
@@ -51,12 +45,6 @@ links:
         backref: source_files
         label: data_from
         target_type: file
-        multiplicity: many_to_many
-        required: false
-      - name: portions
-        backref: files
-        label: data_from
-        target_type: portion
         multiplicity: many_to_many
         required: false
       - name: samples
@@ -173,11 +161,7 @@ properties:
 
   aliquots:
     $ref: "_definitions.yaml#/to_many"
-  analytes:
-    $ref: "_definitions.yaml#/to_many"
   cases:
-    $ref: "_definitions.yaml#/to_many"
-  portions:
     $ref: "_definitions.yaml#/to_many"
   samples:
     $ref: "_definitions.yaml#/to_many"

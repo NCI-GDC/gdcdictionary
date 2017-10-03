@@ -10,7 +10,7 @@
     "percent_lymphocyte_infiltration": 0.0,
     "percent_monocyte_infiltration": 0.0,
     "percent_neutrophil_infiltration": 0.0,
-    "portions": [
+    "samples": [
         {
             "submitter_id": "TCGA-FW-A3R5-06A-11"
         }

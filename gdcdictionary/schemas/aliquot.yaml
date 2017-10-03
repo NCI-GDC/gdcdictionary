@@ -28,21 +28,12 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 links:
-  - exclusive: false
+  - name: samples
+    backref: aliquots
+    label: derived_from
+    multiplicity: many_to_many
+    target_type: sample
     required: true
-    subgroup:
-      - name: analytes
-        backref: aliquots
-        label: derived_from
-        multiplicity: many_to_one
-        target_type: analyte
-        required: false
-      - name: samples
-        backref: aliquots
-        label: derived_from
-        multiplicity: many_to_many
-        target_type: sample
-        required: false
   - name: centers
     label: shipped_to
     backref: aliquots
@@ -53,7 +44,6 @@ links:
 
 constraints: null
 
-# Aliquot properties
 properties:
   type:
     type: string
@@ -69,6 +59,17 @@ properties:
     description: >
       The legacy barcode used before prior to the use
       UUIDs. For TCGA this is bcraliquotbarcode.
+  project_id:
+    $ref: "_definitions.yaml#/project_id"
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
+
+  a260_a280_ratio:
+    term:
+      $ref: "_terms.yaml#/a260_a280_ratio"
+    type: number
   aliquot_quantity:
     term:
       $ref: "_terms.yaml#/aliquot_quantity"
@@ -81,27 +82,72 @@ properties:
     term:
       $ref: "_terms.yaml#/amount"
     type: number
-  analytes:
-    $ref: "_definitions.yaml#/to_one"
+  analyte_quantity:
+    term:
+      $ref: "_terms.yaml#/analyte_quantity"
+    type: number
   analyte_type:
-    $ref: "analyte.yaml#/properties/analyte_type"
+    term:
+      $ref: "_terms.yaml#/analyte_type"
+    enum:
+      - DNA
+      - EBV Immortalized Normal
+      - FFPE DNA
+      - FFPE RNA
+      - GenomePlex (Rubicon) Amplified DNA
+      - Repli-G (Qiagen) DNA
+      - Repli-G Pooled (Qiagen) DNA
+      - Repli-G X (Qiagen) DNA
+      - RNA
+      - Total RNA
   analyte_type_id:
-    $ref: "analyte.yaml#/properties/analyte_type_id"
+    term:
+      $ref: "_terms.yaml#/analyte_type_id"
+    enum:
+      - D
+      - E
+      - G
+      - H
+      - R
+      - S
+      - T
+      - W
+      - X
+      - Y
+  analyte_volume:
+    term:
+      $ref: "_terms.yaml#/analyte_volume"
+    type: number
   concentration:
     term:
       $ref: "_terms.yaml#/concentration"
     type: number
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
+  normal_tumor_genotype_snp_match:
+    term:
+      $ref: "_terms.yaml#/normal_tumor_genotype_snp_match"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+  ribosomal_rna_28s_16s_ratio:
+    term:
+      $ref: "_terms.yaml#/ribosomal_rna_28s_16s_ratio"
+    type: number
   source_center:
     term:
       $ref: "_terms.yaml#/source_center"
     type: string
+  spectrophotometer_method:
+    term:
+      $ref: "_terms.yaml#/spectrophotometer_method"
+    type: string
+  well_number:
+    term:
+      $ref: "_terms.yaml#/well_number"
+    type: string
+    
   samples:
     $ref: "_definitions.yaml#/to_one"
   centers:
     $ref: "_definitions.yaml#/to_one"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

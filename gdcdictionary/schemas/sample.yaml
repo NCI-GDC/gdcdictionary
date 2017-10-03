@@ -53,9 +53,6 @@ links:
     multiplicity: many_to_one
     required: false
 
-# Sample properties
-# Currently there are many TCGA-specific fields in the DB, this is an attempt
-# to minimize the core fields
 properties:
   type:
     type: string
@@ -71,6 +68,13 @@ properties:
     description: >
       The legacy barcode used before prior to the use UUIDs, varies by project.
       For TCGA this is bcrsamplebarcode.
+  project_id:
+    type: string
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
+
   biospecimen_anatomic_site:
     term:
       $ref: "_terms.yaml#/biospecimen_anatomic_site"
@@ -355,7 +359,6 @@ properties:
       - Wrist
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
   composition:
     term:
       $ref: "_terms.yaml#/composition"
@@ -384,7 +387,6 @@ properties:
       - Whole Bone Marrow
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
   current_weight:
     term:
       $ref: "_terms.yaml#/current_weight"
@@ -405,7 +407,6 @@ properties:
       - "No"
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
   freezing_method:
     term:
       $ref: "_terms.yaml#/freezing_method"
@@ -485,7 +486,6 @@ properties:
       - Wedge Resection
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
   oct_embedded:
     term:
       $ref: "_terms.yaml#/oct_embedded"
@@ -505,7 +505,6 @@ properties:
       - Frozen
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
   sample_type:
     term:
       $ref: "_terms.yaml#/sample_type"
@@ -551,7 +550,6 @@ properties:
       - Xenograft Tissue
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
   sample_type_id:
     term:
       $ref: "_terms.yaml#/sample_type_id"
@@ -604,7 +602,6 @@ properties:
       - Peritumoral
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
   tumor_code:
     term:
       $ref: "_terms.yaml#/tumor_code"
@@ -668,28 +665,18 @@ properties:
       $ref: "_terms.yaml#/tumor_descriptor"
     enum:
       - Metastatic
-      - Not Applicable
       - Primary
       - Recurrence
       - Xenograft
       - NOS
       - Unknown
+      - Not Applicable
       - Not Reported
-      - Not Allowed To Collect
     description: "A description of the tumor from which the sample was derived." # TOREVIEW
+
   cases:
-    #should this be to_one
     $ref: "_definitions.yaml#/to_one"
-    description: >
-      Indicates that the sample is physically derived from the subject
-      of the linked to case via some process/protocol
   tissue_source_sites:
     $ref: "_definitions.yaml#/to_one"
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    type: string
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
