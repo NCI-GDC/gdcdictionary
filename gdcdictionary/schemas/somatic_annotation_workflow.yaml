@@ -26,7 +26,7 @@ links:
     backref: somatic_annotation_workflows
     label: performed_on
     target_type: simple_somatic_mutation
-    multiplicity: one_to_many
+    multiplicity: many_to_many
     required: true
 
 required:

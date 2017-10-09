@@ -29,13 +29,13 @@ links:
         backref: alignment_cocleaning_workflows
         label: performed_on
         target_type: submitted_aligned_reads
-        multiplicity: one_to_many
+        multiplicity: many_to_many
         required: false
       - name: submitted_unaligned_reads_files
         backref: alignment_cocleaning_workflows
         label: performed_on
         target_type: submitted_unaligned_reads
-        multiplicity: one_to_many
+        multiplicity: many_to_many
         required: false
 
 required:

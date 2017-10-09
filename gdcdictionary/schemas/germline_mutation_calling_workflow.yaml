@@ -26,7 +26,7 @@ links:
     backref: germline_mutation_calling_workflows
     label: performed_on
     target_type: aligned_reads
-    multiplicity: one_to_many
+    multiplicity: many_to_many
     required: true
 
 required:
