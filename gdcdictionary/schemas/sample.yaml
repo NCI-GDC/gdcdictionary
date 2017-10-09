@@ -408,10 +408,6 @@ properties:
       - "No"
       - Unknown
       - Not Reported
-  freezing_method:
-    term:
-      $ref: "_terms.yaml#/freezing_method"
-    type: string
   initial_weight:
     term:
       $ref: "_terms.yaml#/initial_weight"
@@ -487,13 +483,6 @@ properties:
       - Wedge Resection
       - Unknown
       - Not Reported
-  oct_embedded:
-    term:
-      $ref: "_terms.yaml#/oct_embedded"
-    type: string
-  pathology_report_uuid:
-    type: string
-    description: "UUID of the related pathology report." # are we still doing this? seems like the links handle this now
   preservation_method:
     term:
       $ref: "_terms.yaml#/preservation_method"
