@@ -50,12 +50,6 @@ links:
         target_type: aliquot
         multiplicity: many_to_many
         required: false
-      - name: files
-        label: annotates
-        backref: annotations
-        target_type: file
-        multiplicity: many_to_many
-        required: false
       - name: clinical_supplements
         label: annotates
         backref: annotations
@@ -161,8 +155,6 @@ properties:
   slides:
     $ref: "_definitions.yaml#/to_many"
   aliquots:
-    $ref: "_definitions.yaml#/to_many"
-  files:
     $ref: "_definitions.yaml#/to_many"
   read_groups:
     $ref: "_definitions.yaml#/to_many"

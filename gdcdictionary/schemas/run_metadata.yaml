@@ -32,12 +32,6 @@ links:
         target_type: read_group
         multiplicity: many_to_one
         required: false
-      - name: files # for legacy import
-        backref: run_metadata_files
-        label: derived_from
-        target_type: file
-        multiplicity: one_to_many
-        required: false
 
 required:
   - submitter_id
@@ -73,5 +67,3 @@ properties:
       - SRA XML
   read_groups:
     $ref: "_definitions.yaml#/to_one"
-  files:
-    $ref: "_definitions.yaml#/to_many"

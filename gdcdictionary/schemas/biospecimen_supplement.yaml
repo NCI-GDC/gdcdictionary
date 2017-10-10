@@ -29,12 +29,6 @@ links:
     target_type: case
     multiplicity: many_to_many
     required: true
-  - name: archives
-    backref: biospecimen_supplements
-    label: member_of
-    target_type: archive
-    multiplicity: many_to_one
-    required: false
 
 required:
   - submitter_id
@@ -73,5 +67,3 @@ properties:
       - PPS
   cases:
     $ref: "_definitions.yaml#/to_many"
-  archives:
-    $ref: "_definitions.yaml#/to_one"
