@@ -3,7 +3,6 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "somatic_mutation_index"
 title: Somatic Mutation Index
 type: object
-namespace: https://gdc.cancer.gov/ 
 category: index_file
 program: '*'
 project: '*'

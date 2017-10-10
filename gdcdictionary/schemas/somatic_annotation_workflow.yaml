@@ -3,13 +3,12 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "somatic_annotation_workflow"
 title: Somatic Annotation Workflow
 type: object
-namespace: http://gdc.nci.nih.gov
 category: analysis
 program: '*'
 project: '*'
 description: >
   Metadata for the somatic mutation annotation pipeline used to annotate the mutations called in the
-  GDC DNA-Seq pipelines.
+  DNA-Seq pipelines.
 additionalProperties: false
 submittable: false
 validators: null

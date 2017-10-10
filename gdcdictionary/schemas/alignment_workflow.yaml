@@ -3,12 +3,11 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "alignment_workflow"
 title: Alignment Workflow
 type: object
-namespace: http://gdc.nci.nih.gov
 category: analysis
 program: '*'
 project: '*'
 description: >
-  Metadata for the alignment pipeline used to align reads in the GDC harmonization pipelines.
+  Metadata for the alignment pipeline used to align reads.
 additionalProperties: false
 submittable: false
 validators: null

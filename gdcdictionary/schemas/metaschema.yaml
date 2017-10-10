@@ -1,12 +1,12 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "metaschema"
-title: "GDC JSON schema extension"
+title: "Commons JSON schema extension"
 
 allOf:
   - $ref: "http://json-schema.org/draft-04/schema#"
 
-#GDC extensions
+#Extensions
 required:
   - category #potentially used in submission system, if not may not be needed
   - program
@@ -130,7 +130,7 @@ properties:
       "^[_a-zA-Z][_a-zA-Z0-9]*$": {}
 
   links:
-    title: "Define a link to other GDC entities"
+    title: "Define a link to other entities"
     type: array
     items:
       oneOf:

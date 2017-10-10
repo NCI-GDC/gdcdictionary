@@ -18,7 +18,7 @@ foreign_key:
     # Allow true here because we can have other unique keys defined on
     # a target type
     additionalProperties: True
-    #Can either use 'id' which are GDC IDs (UUID) or 'submitter_id'
+    #Can either use 'id' which are UUIDs or 'submitter_id'
     #which are user defined IDs ("submitter IDs in the backend")
     properties:
         id:
@@ -204,7 +204,7 @@ workflow_properties:
     description: "Link to Github hash for the CWL workflow used."
     type: string
   workflow_version:
-    description: "Major version for a GDC workflow."
+    description: "Major version for a workflow."
     type: string
   workflow_start_datetime:
     $ref: "#/datetime"

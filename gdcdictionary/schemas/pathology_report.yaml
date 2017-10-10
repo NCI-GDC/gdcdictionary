@@ -3,7 +3,6 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: pathology_report
 title: Pathology Report
 type: object
-namespace: http://gdc.nci.nih.gov
 category: data_file
 project: '*'
 program: '*'

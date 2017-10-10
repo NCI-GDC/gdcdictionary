@@ -3,12 +3,11 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "germline_mutation_calling_workflow"
 title: Germline Mutation Calling Workflow
 type: object
-namespace: http://gdc.nci.nih.gov
 category: analysis
 program: '*'
 project: '*'
 description: >
-  Metadata for the germline mutation calling pipeline used to call variants in the GDC DNA-Seq
+  Metadata for the germline mutation calling pipeline used to call variants from DNA-Seq
   pipelines.
 additionalProperties: false
 submittable: false

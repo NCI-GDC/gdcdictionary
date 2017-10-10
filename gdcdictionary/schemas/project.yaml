@@ -120,8 +120,8 @@ properties:
 
   released:
     description: |
-      To release a project is to tell the GDC to include all submitted
-      entities in the next GDC index.
+      To release a project is to include all submitted
+      entities in the next release.
     default: false
     type: boolean
 

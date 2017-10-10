@@ -3,7 +3,6 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "demographic"
 title: Demographic
 type: object
-namespace: http://gdc.nci.nih.gov
 category: clinical
 program: '*'
 project: '*'

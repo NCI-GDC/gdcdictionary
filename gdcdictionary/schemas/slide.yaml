@@ -3,12 +3,11 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "slide"
 title: Slide
 type: object
-namespace: http://gdc.nci.nih.gov
 category: biospecimen
 program: '*'
 project: '*'
 description: >
-  A digital image, microscopic or otherwise, of any sample, portion, or sub-part thereof. (GDC)
+  A digital image, microscopic or otherwise, of any sample, portion, or sub-part thereof.
 additionalProperties: false
 submittable: true
 validators: null

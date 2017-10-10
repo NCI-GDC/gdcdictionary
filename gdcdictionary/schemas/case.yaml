@@ -3,7 +3,6 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "case"
 title: Case
 type: object
-namespace: http://gdc.nci.nih.gov
 category: administrative
 program: '*'
 project: '*'

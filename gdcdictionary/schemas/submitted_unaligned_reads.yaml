@@ -3,11 +3,10 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "submitted_unaligned_reads"
 title: Submitted Unaligned Reads
 type: object
-namespace: http://gdc.nci.nih.gov
 category: data_file
 program: '*'
 project: '*'
-description: "Data file containing unaligned reads that have not been GDC Harmonized."
+description: "Data file containing unaligned reads that have not been harmonized."
 additionalProperties: false
 submittable: true
 validators: null

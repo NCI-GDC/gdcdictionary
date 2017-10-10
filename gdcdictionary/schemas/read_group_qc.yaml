@@ -3,11 +3,10 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "read_group_qc"
 title: Read Group QC
 type: object
-namespace: http://gdc.nci.nih.gov
 category: notation
 project: '*'
 program: '*'
-description: "GDC QC run metadata."
+description: "Quality Control run measures."
 additionalProperties: false
 submittable: false
 validators: null
