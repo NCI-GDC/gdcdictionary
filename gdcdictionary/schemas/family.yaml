@@ -1,0 +1,74 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "family"
+title: Family
+type: object
+category: administrative
+program: '*'
+project: '*'
+description: >
+  The collection of cases that make up a family for purposes of genomic harmonization.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: proband
+    backref: proband_families
+    label: proband_of
+    multiplicity: one_to_one
+    target_type: case
+    required: true
+  - name: father
+    backref: father_families
+    label: father_of
+    multiplicity: one_to_one
+    target_type: case
+    required: false
+  - name: mother
+    backref: mother_families
+    label: mother_of
+    multiplicity: one_to_one
+    target_type: case
+    required: false
+
+required:
+  - submitter_id
+  - proband
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+# Family properties
+properties:
+  type:
+    type: string
+  id:
+    $ref: "_definitions.yaml#/UUID"
+    systemAlias: node_id
+  state:
+    $ref: "_definitions.yaml#/state"
+  submitter_id:
+    type:
+      - string
+      - "null"
+  proband:
+    $ref: "_definitions.yaml#/to_one"
+  father:
+    $ref: "_definitions.yaml#/to_one"
+  mother:
+    $ref: "_definitions.yaml#/to_one"
+  project_id:
+    $ref: "_definitions.yaml#/project_id"
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
