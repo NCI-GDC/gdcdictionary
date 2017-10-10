@@ -1,13 +1,13 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "family"
-title: Family
+id: "trio"
+title: Trio
 type: object
 category: administrative
 program: '*'
 project: '*'
 description: >
-  The collection of cases that make up a family for purposes of genomic harmonization.
+  The collection of cases that make up a trio for purposes of genomic harmonization.
 additionalProperties: false
 submittable: true
 validators: null
@@ -19,23 +19,26 @@ systemProperties:
   - updated_datetime
   - state
 
+# A case can only be the proband for one trio analysis
+# but could be the father or mother for multiple trio analyses
+
 links:
   - name: proband
-    backref: proband_families
+    backref: trio_probands
     label: proband_of
     multiplicity: one_to_one
     target_type: case
     required: true
   - name: father
-    backref: father_families
+    backref: trio_fathers
     label: father_of
-    multiplicity: one_to_one
+    multiplicity: many_to_one
     target_type: case
     required: false
   - name: mother
-    backref: mother_families
+    backref: trio_mothers
     label: mother_of
-    multiplicity: one_to_one
+    multiplicity: many_to_one
     target_type: case
     required: false
 
@@ -47,7 +50,7 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
-# Family properties
+# Trio properties
 properties:
   type:
     type: string

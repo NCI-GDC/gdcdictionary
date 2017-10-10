@@ -7,7 +7,7 @@ category: biospecimen
 program: '*'
 project: '*'
 description: >
-  A digital image, microscopic or otherwise, of any sample, portion, or sub-part thereof.
+  A digital image, microscopic or otherwise, of any sample, or sub-part thereof.
 additionalProperties: false
 submittable: true
 validators: null
@@ -103,8 +103,6 @@ properties:
     term:
       $ref: "_terms.yaml#/percent_eosinophil_infiltration"
     type: number
-  portions:
-    $ref: "_definitions.yaml#/to_many"
   samples:
     $ref: "_definitions.yaml#/to_many"
   project_id:
