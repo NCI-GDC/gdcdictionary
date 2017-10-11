@@ -9,7 +9,7 @@
     "diagnosis_pathologically_confirmed": "Yes",
     "initial_weight": 0.5,
     "intermediate_dimension": "1.2",
-    "is_ffpe": true,
+    "preservation_method": "FFPE",
     "longest_dimension": "1.5",
     "method_of_sample_procurement": "Indeterminant",
     "shortest_dimension": "0.5",

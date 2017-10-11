@@ -409,10 +409,6 @@ properties:
     terms:
       $ref: "_terms.yaml#/intermediate_dimension"
     type: string
-  is_ffpe:
-    term:
-      $ref: "_terms.yaml#/is_ffpe"
-    type: boolean
   longest_dimension:
     terms:
       $ref: "_terms.yaml#/longest_dimension"
