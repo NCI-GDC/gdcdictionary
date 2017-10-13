@@ -65,6 +65,7 @@ properties:
     enum:
       - PNG
       - JPG
+      - TIF
   assay_target:
     description: "The protein marker identified in this assay." 
     type: string 
