@@ -35,6 +35,12 @@ links:
     target_type: aliquot
     multiplicity: many_to_many
     required: true
+  - name: studies
+    backref: analytes
+    label: analyzed_for
+    target_type: study
+    multiplicity: many_to_many
+    required: false
 
 uniqueKeys:
   - [id]
@@ -123,4 +129,6 @@ properties:
       - type: number
 
   aliquots:
+    $ref: "_definitions.yaml#/to_many"
+  studies:
     $ref: "_definitions.yaml#/to_many"
