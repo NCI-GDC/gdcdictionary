@@ -48,26 +48,7 @@ links:
     required: false
 
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
-    description: >
-      The legacy barcode used before prior to the use UUIDs, varies by project.
-      For TCGA this is bcrsamplebarcode.
-  project_id:
-    type: string
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
 
   biospecimen_anatomic_site:
     term:

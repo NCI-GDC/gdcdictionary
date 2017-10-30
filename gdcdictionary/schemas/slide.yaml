@@ -37,20 +37,7 @@ uniqueKeys:
 
 # slide properties
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
-    description: >
-      The legacy barcode used before prior to the use UUIDs, varies by project.
-      For TCGA, this is bcrslidebarcode.
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
   section_location:
     term:
       $ref: "_terms.yaml#/section_location"
@@ -105,9 +92,3 @@ properties:
     type: number
   samples:
     $ref: "_definitions.yaml#/to_many"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

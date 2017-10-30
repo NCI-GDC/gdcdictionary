@@ -39,27 +39,7 @@ links:
 constraints: null
 
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
-    description: >
-      The legacy barcode used before prior to the use
-      UUIDs. For TCGA this is bcraliquotbarcode.
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
-
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
   a260_a280_ratio:
     term:
       $ref: "_terms.yaml#/a260_a280_ratio"

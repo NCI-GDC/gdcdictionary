@@ -158,7 +158,7 @@ project_id:
     term:
         $ref: "_terms.yaml#/project_id"
 
-data_file_properties:
+ubiquitous_properties: #All entities except for program and project
   id:
     $ref: "#/UUID"
     systemAlias: node_id
@@ -166,7 +166,19 @@ data_file_properties:
     type:
       - string
       - "null"
-    description: "The file ID assigned by the submitter." # TOREVIEW
+    description: "The identifier assigned by the submitter."
+  state:
+    $ref: "#/state"
+  project_id:
+    $ref: "#/project_id"
+  created_datetime:
+    $ref: "#/datetime"
+  updated_datetime:
+    $ref: "#/datetime"
+  type:
+    type: string
+
+data_file_properties: 
   file_name:
     $ref: "#/file_name"
   file_size:
@@ -175,8 +187,6 @@ data_file_properties:
     $ref: "#/md5sum" 
   file_state:
     $ref: "#/file_state"
-  state:
-    $ref: "#/state"
   error_type:
     $ref: "#/data_file_error_type"
   state_comment:
@@ -184,22 +194,9 @@ data_file_properties:
     description: > 
       Optional comment about why the file is in the
       current state, mainly for invalid state.
-  project_id:
-    $ref: "#/project_id"
-  created_datetime:
-    $ref: "#/datetime"
-  updated_datetime:
-    $ref: "#/datetime"
+  
 
 workflow_properties:
-  id:
-    $ref: "#/UUID"
-    systemAlias: node_id
-  submitter_id:
-    type:
-      - string
-      - "null"
-    description: "The file ID assigned by the submitter." # TOREVIEW
   workflow_link:
     description: "Link to Github hash for the CWL workflow used."
     type: string
@@ -209,12 +206,4 @@ workflow_properties:
   workflow_start_datetime:
     $ref: "#/datetime"
   workflow_end_datetime:
-    $ref: "#/datetime"
-  state:
-    $ref: "#/state"
-  project_id:
-    $ref: "#/project_id"
-  created_datetime:
-    $ref: "#/datetime"
-  updated_datetime:
     $ref: "#/datetime"

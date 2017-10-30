@@ -52,26 +52,10 @@ uniqueKeys:
 
 # Trio properties
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
   proband:
     $ref: "_definitions.yaml#/to_one"
   father:
     $ref: "_definitions.yaml#/to_one"
   mother:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

@@ -67,9 +67,8 @@ uniqueKeys:
   - [ project_id, submitter_id ]
 
 properties:
-  $ref: "_definitions.yaml#/workflow_properties"
-  type:
-    enum: [ "read_group_qc" ]
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
+  $ref_wf: "_definitions.yaml#/workflow_properties"
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"

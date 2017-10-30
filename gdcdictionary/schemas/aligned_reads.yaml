@@ -63,9 +63,8 @@ uniqueKeys:
   - [ project_id, submitter_id ]
 
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "aligned_reads" ]
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
+  $ref_file: "_definitions.yaml#/data_file_properties"
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"

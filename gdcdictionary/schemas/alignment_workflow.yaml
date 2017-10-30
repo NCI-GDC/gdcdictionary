@@ -46,9 +46,10 @@ uniqueKeys:
   - [ project_id, submitter_id ]
 
 properties:
-  $ref: "_definitions.yaml#/workflow_properties"
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
+  $ref_wf: "_definitions.yaml#/workflow_properties"
   type:
-    enum: [ "alignment_workflow" ]
+    enum: [  ]
   workflow_type:
     enum:
       - "STAR 2-Pass"

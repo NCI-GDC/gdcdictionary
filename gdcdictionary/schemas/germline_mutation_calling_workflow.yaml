@@ -39,9 +39,8 @@ uniqueKeys:
   - [ project_id, submitter_id ]
 
 properties:
-  $ref: "_definitions.yaml#/workflow_properties"
-  type:
-    enum: [ "germline_mutation_calling_workflow" ]
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
+  $ref_wf: "_definitions.yaml#/workflow_properties"
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
