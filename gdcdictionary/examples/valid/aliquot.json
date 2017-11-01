@@ -6,7 +6,7 @@
     "amount": 10,
     "source_center": "23",
     "concentration": 0.07,
-    "analytes": {
+    "samples": {
         "submitter_id": "BLGSP-71-06-00019-99A-01D"
     }
 }

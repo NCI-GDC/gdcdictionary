@@ -3,7 +3,6 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "simple_somatic_mutation"
 title: Simple Somatic Mutation
 type: object
-namespace: http://gdc.nci.nih.gov
 category: data_file
 program: '*'
 project: '*'
@@ -33,12 +32,6 @@ links:
         target_type: somatic_mutation_calling_workflow
         multiplicity: many_to_one
         required: false
-      - name: genomic_profile_harmonization_workflows
-        backref: simple_somatic_mutations
-        label: data_from
-        target_type: genomic_profile_harmonization_workflow
-        multiplicity: one_to_one
-        required: false
 
 required:
   - submitter_id
@@ -55,9 +48,8 @@ uniqueKeys:
   - [ project_id, submitter_id ]
 
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "simple_somatic_mutation" ]
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
+  $ref_file: "_definitions.yaml#/data_file_properties"
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -82,6 +74,4 @@ properties:
       - Validation
       - Targeted Sequencing
   somatic_mutation_calling_workflows:
-    $ref: "_definitions.yaml#/to_one"
-  genomic_profile_harmonization_workflows:
     $ref: "_definitions.yaml#/to_one"

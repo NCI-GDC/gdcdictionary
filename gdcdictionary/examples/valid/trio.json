@@ -1,0 +1,13 @@
+{
+    "type": "trio",
+    "submitter_id": "TRIO-71",
+    "proband": {
+        "submitter_id": "BLGSP-71-06-00019"
+    },
+    "father": {
+        "submitter_id": "BLGSP-71-06-00019F"
+    },
+    "mother": {
+        "submitter_id": "BLGSP-71-06-00019M"
+    }
+}

@@ -3,12 +3,11 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "submitted_aligned_reads"
 title: Submitted Aligned Reads
 type: object
-namespace: http://gdc.nci.nih.gov
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing aligned reads that are used as input to GDC workflows.
+  Data file containing aligned reads that are used as input to workflows.
 additionalProperties: false
 submittable: true
 validators: null
@@ -46,9 +45,8 @@ uniqueKeys:
   - [ project_id, submitter_id ]
 
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "submitted_aligned_reads" ]
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
+  $ref_file: "_definitions.yaml#/data_file_properties"
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"

@@ -10,7 +10,7 @@
     "data_format": "BAM",
     "experimental_strategy": "WXS",
     "platform" : "Illumina",
-    "alignment_cocleaning_workflows": {
+    "alignment_workflows": {
 	"submitter_id": "Jeremiah's_super_secret_pipeline_v423"
     }
 }

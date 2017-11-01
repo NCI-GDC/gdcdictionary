@@ -3,7 +3,6 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "aligned_reads_metric"
 title: Aligned Reads Metric
 type: object
-namespace: http://gdc.nci.nih.gov
 category: data_file
 project: '*'
 program: '*'
@@ -31,12 +30,6 @@ links:
         target_type: alignment_workflow
         multiplicity: many_to_one
         required: false
-      - name: alignment_cocleaning_workflows
-        backref: aligned_reads_metrics
-        label: data_from
-        target_type: alignment_cocleaning_workflow
-        multiplicity: many_to_one
-        required: false
 
 required:
   - submitter_id
@@ -52,9 +45,8 @@ uniqueKeys:
   - [ project_id, submitter_id ]
 
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "aligned_reads_metric" ]
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
+  $ref_file: "_definitions.yaml#/data_file_properties"
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -82,6 +74,4 @@ properties:
       - miRNA-Seq
       - Total RNA-Seq
   alignment_workflows:
-    $ref: "_definitions.yaml#/to_one"
-  alignment_cocleaning_workflows:
     $ref: "_definitions.yaml#/to_one"

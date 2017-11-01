@@ -3,7 +3,6 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "somatic_mutation_index"
 title: Somatic Mutation Index
 type: object
-namespace: https://gdc.cancer.gov/ 
 category: index_file
 program: '*'
 project: '*'
@@ -52,9 +51,8 @@ uniqueKeys:
   - [ project_id, submitter_id ]
 
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "somatic_mutation_index" ]
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
+  $ref_file: "_definitions.yaml#/data_file_properties"
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"

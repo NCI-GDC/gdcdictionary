@@ -3,7 +3,6 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "clinical_supplement"
 title: Clinical Supplement
 type: object
-namespace: http://gdc.nci.nih.gov
 category: data_file
 project: '*'
 program: '*'
@@ -29,12 +28,6 @@ links:
     target_type: case
     multiplicity: many_to_many
     required: true
-  - name: archives
-    backref: clinical_supplements
-    label: member_of
-    target_type: archive
-    multiplicity: many_to_one
-    required: false
 
 required:
   - submitter_id
@@ -51,9 +44,8 @@ uniqueKeys:
   - [ project_id, submitter_id ]
 
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "clinical_supplement" ]
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
+  $ref_file: "_definitions.yaml#/data_file_properties"
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -72,5 +64,3 @@ properties:
       - OMF
   cases:
     $ref: "_definitions.yaml#/to_many"
-  archives:
-    $ref: "_definitions.yaml#/to_one"

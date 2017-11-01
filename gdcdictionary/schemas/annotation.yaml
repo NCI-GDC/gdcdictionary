@@ -3,7 +3,6 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "annotation"
 title: Annotation
 type: object
-namespace: http://gdc.nci.nih.gov
 category: notation
 program: '*'
 project: '*'
@@ -44,28 +43,10 @@ links:
         target_type: slide
         multiplicity: many_to_many
         required: false
-      - name: portions
-        label: annotates
-        backref: annotations
-        target_type: portion
-        multiplicity: many_to_many
-        required: false
-      - name: analytes
-        label: annotates
-        backref: annotations
-        target_type: analyte
-        multiplicity: many_to_many
-        required: false
       - name: aliquots
         label: annotates
         backref: annotations
         target_type: aliquot
-        multiplicity: many_to_many
-        required: false
-      - name: files
-        label: annotates
-        backref: annotations
-        target_type: file
         multiplicity: many_to_many
         required: false
       - name: clinical_supplements
@@ -97,17 +78,7 @@ uniqueKeys:
 
 # annotation properties
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  submitter_id:
-    type:
-      - string
-      - "null"
-  state:
-    $ref: "_definitions.yaml#/state"
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
   category:
     enum:
       - Acceptable treatment for TCGA tumor
@@ -165,20 +136,13 @@ properties:
   notes:
     type: string
     description: "Open entry for any further description or characterization of the data." # TOREVIEW
-
   cases:
     $ref: "_definitions.yaml#/to_many"
   samples:
     $ref: "_definitions.yaml#/to_many"
   slides:
     $ref: "_definitions.yaml#/to_many"
-  portions:
-    $ref: "_definitions.yaml#/to_many"
-  analytes:
-    $ref: "_definitions.yaml#/to_many"
   aliquots:
-    $ref: "_definitions.yaml#/to_many"
-  files:
     $ref: "_definitions.yaml#/to_many"
   read_groups:
     $ref: "_definitions.yaml#/to_many"
@@ -186,13 +150,7 @@ properties:
     $ref: "_definitions.yaml#/to_many"
   biospecimen_supplements:
     $ref: "_definitions.yaml#/to_many"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
   legacy_created_datetime:
     $ref: "_definitions.yaml#/datetime"
   legacy_updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
     $ref: "_definitions.yaml#/datetime"

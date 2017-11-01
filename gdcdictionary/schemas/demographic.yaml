@@ -3,7 +3,6 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "demographic"
 title: Demographic
 type: object
-namespace: http://gdc.nci.nih.gov
 category: clinical
 program: '*'
 project: '*'
@@ -44,21 +43,8 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 properties:
-  type:
-    type: string
-
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-
-  state:
-    $ref: "_definitions.yaml#/state"
-
-  submitter_id:
-    type:
-      - string
-      - "null"
-
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
+  
   cause_of_death:
     term:
       $ref: "_terms.yaml#/cause_of_death"
@@ -135,9 +121,3 @@ properties:
 
   cases:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

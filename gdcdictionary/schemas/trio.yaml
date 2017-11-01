@@ -1,0 +1,61 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "trio"
+title: Trio
+type: object
+category: administrative
+program: '*'
+project: '*'
+description: >
+  The collection of cases that make up a trio for purposes of genomic harmonization.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+# A case can only be the proband for one trio analysis
+# but could be the father or mother for multiple trio analyses
+
+links:
+  - name: proband
+    backref: trio_probands
+    label: proband_of
+    multiplicity: one_to_one
+    target_type: case
+    required: true
+  - name: father
+    backref: trio_fathers
+    label: father_of
+    multiplicity: many_to_one
+    target_type: case
+    required: false
+  - name: mother
+    backref: trio_mothers
+    label: mother_of
+    multiplicity: many_to_one
+    target_type: case
+    required: false
+
+required:
+  - submitter_id
+  - proband
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+# Trio properties
+properties:
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
+  proband:
+    $ref: "_definitions.yaml#/to_one"
+  father:
+    $ref: "_definitions.yaml#/to_one"
+  mother:
+    $ref: "_definitions.yaml#/to_one"

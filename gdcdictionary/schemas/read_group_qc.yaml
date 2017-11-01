@@ -3,11 +3,10 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "read_group_qc"
 title: Read Group QC
 type: object
-namespace: http://gdc.nci.nih.gov
 category: notation
 project: '*'
 program: '*'
-description: "GDC QC run metadata."
+description: "Quality Control run measures."
 additionalProperties: false
 submittable: false
 validators: null
@@ -68,9 +67,8 @@ uniqueKeys:
   - [ project_id, submitter_id ]
 
 properties:
-  $ref: "_definitions.yaml#/workflow_properties"
-  type:
-    enum: [ "read_group_qc" ]
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
+  $ref_wf: "_definitions.yaml#/workflow_properties"
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"

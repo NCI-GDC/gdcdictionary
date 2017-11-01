@@ -3,12 +3,11 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "slide"
 title: Slide
 type: object
-namespace: http://gdc.nci.nih.gov
 category: biospecimen
 program: '*'
 project: '*'
 description: >
-  A digital image, microscopic or otherwise, of any sample, portion, or sub-part thereof. (GDC)
+  A digital image, microscopic or otherwise, of any sample, or sub-part thereof.
 additionalProperties: false
 submittable: true
 validators: null
@@ -21,21 +20,12 @@ systemProperties:
   - updated_datetime
 
 links:
-  - exclusive: false
+  - name: samples
+    backref: slides
+    label: derived_from
+    target_type: sample
+    multiplicity: many_to_many
     required: true
-    subgroup:
-      - name: portions
-        backref: slides
-        label: derived_from
-        target_type: portion
-        multiplicity: many_to_many
-        required: false
-      - name: samples
-        backref: slides
-        label: derived_from
-        target_type: sample
-        multiplicity: many_to_many
-        required: false
 
 required:
   - submitter_id
@@ -47,20 +37,7 @@ uniqueKeys:
 
 # slide properties
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
-    description: >
-      The legacy barcode used before prior to the use UUIDs, varies by project.
-      For TCGA, this is bcrslidebarcode.
+  $ref_ubiq: "_definitions.yaml#/ubiquitous_properties"
   section_location:
     term:
       $ref: "_terms.yaml#/section_location"
@@ -113,13 +90,5 @@ properties:
     term:
       $ref: "_terms.yaml#/percent_eosinophil_infiltration"
     type: number
-  portions:
-    $ref: "_definitions.yaml#/to_many"
   samples:
     $ref: "_definitions.yaml#/to_many"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
