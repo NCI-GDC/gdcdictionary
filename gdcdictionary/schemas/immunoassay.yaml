@@ -48,6 +48,7 @@ properties:
   assay_instrument:
     description: "The specific instrument type used to perform the assay."
     enum:
+      - Bruker Mass Spectrometer
       - CytoTrapNano CTC Platform
       - Epic Sciences CTC Platform 
       - HD-SCA Platform
@@ -69,6 +70,7 @@ properties:
     enum:
       - Enzyme-Linked Immunosorbent Assay (ELISA)
       - Immunohistochemistry
+      - MALDI-TOF Mass Spectrometry
   assay_target:
     description: "Target for the assay: can be a specific gene, protein, or otherwise."
     type: string

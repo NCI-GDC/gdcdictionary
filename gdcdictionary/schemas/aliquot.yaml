@@ -51,6 +51,7 @@ properties:
   aliquot_container:
     description: "The device in which the final aliquot is held. Slides or vials."
     enum:
+      - Serum Card
       - Slide
       - Vial
   aliquot_quantity:
