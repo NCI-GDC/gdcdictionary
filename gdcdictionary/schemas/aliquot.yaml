@@ -22,6 +22,7 @@ systemProperties:
 
 required:
   - submitter_id
+  - analyte_type
 
 uniqueKeys:
   - [id]
@@ -74,20 +75,6 @@ properties:
       - Repli-G X (Qiagen) DNA
       - RNA
       - Total RNA
-  analyte_type_id:
-    term:
-      $ref: "_terms.yaml#/analyte_type_id"
-    enum:
-      - D
-      - E
-      - G
-      - H
-      - R
-      - S
-      - T
-      - W
-      - X
-      - Y
   analyte_volume:
     term:
       $ref: "_terms.yaml#/analyte_volume"
