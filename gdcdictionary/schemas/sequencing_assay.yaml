@@ -47,6 +47,9 @@ properties:
   assay_target:
     description: "Gene of interest for the assay."
     type: string
+  assay_target_secondary:
+    description: "Secondary gene of interest for the assay."
+    type: string
   copies_unit:
     description: "The units for the copies measured (e.g. copies/xxx uL plasma)."
     type: string
@@ -59,12 +62,16 @@ properties:
   mutation_result:
     description: "Observed mutation type."
     enum:
+      - Copy Number Amplification
+      - Copy Number Deletion
+      - Frameshift
       - Missense
       - Nonsense
-      - Insertion
-      - Deleteion
-      - Duplication
-      - Frameshift
+      - Nonstart
+      - Nonstop
+      - Nonframeshift Insertion
+      - Nonframeshift Deletion
+      - Splice Site
       - Unspecified
       - No Mutation Detected
   read_depth:
@@ -97,8 +104,38 @@ properties:
       - "22"
       - X
       - Y
+  target_chromosome_secondary:
+    description: "The chromosome on which the secondary gene of interest is located."
+    enum:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+      - "10"
+      - "11"
+      - "12"
+      - "13"
+      - "14"
+      - "15"
+      - "16"
+      - "17"
+      - "18"
+      - "19"
+      - "20"
+      - "21"
+      - "22"
+      - X
+      - Y
   target_position:
     description: "The position on the chromosome on which the gene of interest is located."
+    type: integer
+  target_position_secondary:
+    description: "The position on the chromosome on which the secondary gene of interest is located."
     type: integer
   target_ref:
     description: "The reference sequence for the genomic region that is being investigated."

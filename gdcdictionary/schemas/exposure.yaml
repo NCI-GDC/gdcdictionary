@@ -55,13 +55,13 @@ properties:
     term:
       $ref: "_terms.yaml#/tobacco_smoking_status"
     enum:
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
       - Unknown
   years_smoked:
     term:
