@@ -4,8 +4,11 @@
     "assay_method":"Targeted Sequencing",
     "mutation_result":"Missense",
     "assay_target":"BRAF",
+    "assay_target_secondary":"VEGA",
     "target_chromosome":"1",
+    "target_chromosome_secondary":"2",
     "target_position":12412124,
+    "target_position_secondary":12414124,
     "target_ref":"ACT",
     "target_alt":"TTT",
     "read_groups": {
