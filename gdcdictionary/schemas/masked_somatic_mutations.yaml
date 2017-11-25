@@ -27,13 +27,13 @@ links:
     backref: masked_somatic_mutations
     label: derived_from
     target_type: project
-    multiplicity: one_to_one
+    multiplicity: many_to_many
     required: true
   - name: somatic_aggregation_workflows
     backref: masked_somatic_mutations
     label: data_from
     target_type: somatic_aggregation_workflow
-    multiplicity: one_to_one
+    multiplicity: many_to_many
     required: true
 
 required:
@@ -80,6 +80,6 @@ properties:
       - Low Pass WGS
       - Validation
   projects:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_many"
   somatic_aggregation_workflows:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_many"

@@ -33,7 +33,7 @@ links:
     backref: aggregated_somatic_mutations
     label: data_from
     target_type: somatic_aggregation_workflow
-    multiplicity: one_to_one
+    multiplicity: many_to_many
     required: true
 
 required:
@@ -83,4 +83,4 @@ properties:
   projects:
     $ref: "_definitions.yaml#/to_many"
   somatic_aggregation_workflows:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_many"
