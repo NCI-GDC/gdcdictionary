@@ -41,8 +41,6 @@ required:
   - tumor_stage
   - tumor_grade
   - progression_or_recurrence
-  - days_to_recurrence
-  - days_to_last_known_disease_status
   - last_known_disease_status
 
 preferred:
