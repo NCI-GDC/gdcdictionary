@@ -1,8 +1,22 @@
 language: python
 python:
-  - "2.7"
+  - '2.7'
 before_script:
-    - yes | python setup.py install
-    - pip install -r dev-requirements.txt
-    - pip freeze
-script: "nosetests -v"
+  - yes | python setup.py install
+  - pip install -r dev-requirements.txt
+  - pip freeze
+script:
+  - nosetests -v
+  - python bin/dump_schema.py
+deploy:
+  provider: s3
+  access_key_id: AKIAIKM5YAHQGFDE72SQ
+  secret_access_key:
+    secure: ZTcjEHtJnAM39kLA55EiePoqZncTPeEZNTFX7E5xkc3TLAqgJlpjpoH40Qq7cn5gzdZ0Z9YWlOCyIV0Va6Oxc7XJVK/lSzioelseKnz+yscUq8aAJluy1INx7uXEbiPwRNz+bfy5uYOU/Bn/+6/I4Wc3MbvNRdbwF57hXdn6WjD7s+/T65l2PL3iN4MqLRmzuC+BRztOugnWM6s/za7pcA7AP9j367HX0yt/31h9CPIZuGFSItWjmxEFAB7VfCqN+fF7ZisOwGRDJkzzEv6eJbpsCq1m1Jl3TYfQoX96mUh0Pa2frk69enDVSsOkDeQ82DrREf51wdfk6Gs/YmrrVSoaBM0Cm97Ssd7fr2erxTlIdfRvPDN3vncWzsnvVZHkez2owqWV9TEaAgbVsI6myINAX0Ibh8beLkCHjFLXYoOBglNGrc2DC2M9ZBpM18nJ2tZVAva2t53MSFtcRw06xu4E9+ZBMZeVacXM1BA7M6APQVSDwrHJk3BVgaz+Wi+iUFZkmCujI5xS1PNta+iVZ6yJyiMd2l2oLsikcs9qYI94aZvmHYFSxq+LdZfIpov/10dPt800jHDgszKcGJ4rGGZOTFguI7fDPrkkTgihLthRuBGc5umMI4hdJZ4CB1JXCkWK/wk7hdBuMye7VzAEc9XfFflAUb+3H7T1PfhC+MM=
+  bucket: dictionary-artifacts
+  local-dir: artifacts
+  upload-dir: datadictionary/$TRAVIS_BRANCH
+  skip_cleanup: true
+  on:
+    repo: uc-cdis/datadictionary
+    all_branches: true
