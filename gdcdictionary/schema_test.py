@@ -17,7 +17,7 @@ import os
 import argparse
 import json
 import unittest
-from python import GDCDictionary
+from gdcdictionary import gdcdictionary
 
 
 
@@ -96,7 +96,7 @@ def validate_schemata(schemata, metaschema):
 
 class SchemaTest(unittest.TestCase):
     def setUp(self):
-        self.dictionary = GDCDictionary()
+        self.dictionary = gdcdictionary
         self.definitions = yaml.load(open(os.path.join(CUR_DIR, 'schemas','_definitions.yaml'),'r'))
 
     def test_schemas(self):
@@ -166,7 +166,7 @@ if __name__ == '__main__':
     ####################
 
     # Load schemata
-    dictionary = GDCDictionary()
+    dictionary = gdcdictionary
 
     for f in args.jsonfiles:
         doc = json.load(f)
