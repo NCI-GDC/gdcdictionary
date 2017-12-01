@@ -1,8 +1,20 @@
 language: python
 python:
-  - "2.7"
+- '2.7'
 before_script:
-    - yes | python setup.py install
-    - pip install -r dev-requirements.txt
-    - pip freeze
-script: "nosetests -v"
+- yes | python setup.py install
+- git clone https://github.com/uc-cdis/dictionaryutils; cd dictionaryutils
+script:
+- ./run_tests.sh
+deploy:
+  provider: s3
+  access_key_id: AKIAJFMIA7GOK3XQMEVQ
+  secret_access_key:
+    secure: k2t4uLgPgehydAEFdopEpjufwgOyDzdjItdhnVfc80ZDNn7P6KcaWTvq1dawimBo0EzJHN5fi3mbVfe1f+SkqpY5ThLWx7LzWW6gDj7TbiIS3Jm91IovnTKwS2I+1724M/zQ0Qw9UtjbbQ4nWy1L4/Q/qMYIKiltq+gbLEa1ThvW+FFWmZistcB2C6xYmsfFKDgrNEfJY9BanJWoApG3a6sNniCk62Sygzy+rfvDuJMAWloeBB6+1OM14/saFJ/hSg7FkY+RLekuxsV0ER1gLKISnTYzy6NbTVweJ14j5V86DFFfDLy75fb69Blkc0iEkO21ajTAnWSeR6Xcb20i5j9k+LWl8K13Bag0ImFg5yJ2m/F/GUDxzT19acRbTDmE9O2lfQZF+r2BYzCuUUMvUoKfUQG9C161OvukmTVJGzCpK3dLs8w0SsO1wYBJiAJGtkXZDUMLidT+FRFGKXo8nsSg3UT1iV317E+FfRexSVTfhwPMrHuY9tkg56REBurNWaxSwUqeos6qwiKVHu5zCfcIcE3S6moDRE6uOKKChyJDCwcxXWCSMYSyPYxkvLDcAkoIqNjzfC/krMIYaGE0KhdxrLPaMmLdwEByTjvOR7UC0u8MTR4WNJn2NxjOiT/xDJZMNg/+e6vYzCqXoOhTbcjlpv/a285IEh7Z8MlZZ5w=
+  bucket: dictionary-artifacts
+  local-dir: artifacts
+  upload-dir: bpadictionary/$TRAVIS_BRANCH
+  skip_cleanup: true
+  on:
+    repo: occ-data/bpadictionary
+    all_branches: true
