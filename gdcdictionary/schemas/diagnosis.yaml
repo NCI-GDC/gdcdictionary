@@ -74,7 +74,7 @@ properties:
     term:
       $ref: "_terms.yaml#/age_at_diagnosis"
     type:
-      - number
+      - integer
       - "null"
     maximum: 32872
     minimum: 0
@@ -412,8 +412,8 @@ properties:
     term:
       $ref: "_terms.yaml#/cause_of_death"
     enum:
-      - Cancer Related 
-      - Not Cancer Related 
+      - Cancer Related
+      - Not Cancer Related
       - Unknown
 
   circumferential_resection_margin:
@@ -540,7 +540,7 @@ properties:
       $ref: "_terms.yaml#/hiv_positive"
     enum:
       - "Yes"
-      - "No" 
+      - "No"
       - Unknown
 
   hpv_positive_type:
@@ -609,7 +609,7 @@ properties:
   lymph_nodes_positive:
     term:
       $ref: "_terms.yaml#/lymph_nodes_positive"
-    type: integer 
+    type: integer
 
   lymphatic_invasion_present:
     term:
@@ -897,7 +897,7 @@ properties:
     term:
       $ref: "_terms.yaml#/year_of_diagnosis"
     type:
-      - number
+      - integer
       - "null"
 
   cases:
