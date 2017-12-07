@@ -64,6 +64,7 @@ properties:
       $ref: "_terms.yaml#/data_format"
     enum:
       - XML
+      - TSV
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
