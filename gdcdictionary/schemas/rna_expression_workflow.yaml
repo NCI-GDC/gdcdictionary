@@ -66,7 +66,6 @@ properties:
       - HTSeq - FPKM-UQ
       - HTSeq - Counts
       - Cufflinks
-      - Kallisto
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
   submitted_aligned_reads_files:
