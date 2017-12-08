@@ -1,16 +1,17 @@
 {
-    "gender": "male",
+    "type": "demographic",
     "submitter_id": "E9EDB78B-6897-4205-B9AA-0CEF8AAB5A1F_demographic",
+    "age_at_index":33,
+    "cause_of_death":"Cancer Related",
     "days_to_birth":-12414,
     "days_to_death":1241,
-    "cause_of_death":"Cancer Related",
+    "ethnicity": "not hispanic or latino",
+    "gender": "male",
+    "race": "white",
     "vital_status":"Dead",
     "year_of_birth": 1652,
-    "race": "white",
+    "year_of_death": 2009,
     "cases": {
         "submitter_id": "BLGSP-71-06-00019"
-    },
-    "type": "demographic",
-    "ethnicity": "not hispanic or latino",
-    "year_of_death": 2009
+    }
 }
