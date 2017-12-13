@@ -50,31 +50,36 @@ properties:
   type:
     type: string
   id:
+    description: "UUID for the project" # TOREVIEW
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "UUID for the project" # TOREVIEW
-  name:
-    type: string
-    description: "Display name for the project" # TOREVIEW
-  dbgap_accession_number:
-    type: string
-    description: "The dbgap accession number for the project." # TOREVIEW
-  primary_site:
-    type: string
-    description: "Primary site for the project" # TOREVIEW
-  code:
-    type: string
-    description: "Project code" # TOREVIEW
-  disease_type:
-    type: string
-    description: "Full name for the project" # TOREVIEW
-  programs:
-    $ref: "_definitions.yaml#/to_one"
-    description: >
-      Indicates that the project is logically part of the indicated project.
 
+  awg_review:
+    description: >
+      Indicates that the project is an AWG project.
+    default: false
+    type: boolean
+  code:
+    description: "Project code" # TOREVIEW
+    type: string
+  dbgap_accession_number:
+    description: "The dbgap accession number for the project." # TOREVIEW
+    type: string
+  disease_type:
+    description: "Full name for the project" # TOREVIEW
+    type: string
+  intended_release_date:
+    description: Tracks a Project's intended release date.
+    type: string
+    format: date-time
+  name:
+    description: "Display name for the project" # TOREVIEW
+    type: string
+  primary_site:
+    description: "Primary site for the project" # TOREVIEW
+    type: string
   state:
-    description: |
+    description: >
       The possible states a project can be in.  All but `open` are
       equivalent to some type of locked state.
     default: open
@@ -117,21 +122,25 @@ properties:
         # DEPRECATED(2016-03-01): synonymous with closed. included for
         #                         backwards compatibility
         - legacy
-
+  release_requested:
+    description: >
+      User requests that the GDC release the project. Release can only be requested if the project
+      is releasable.
+    default: false
+    type: boolean
   released:
-    description: |
+    description: >
       To release a project is to tell the GDC to include all submitted
       entities in the next GDC index.
     default: false
     type: boolean
-
   releasable:
-    description: |
+    description: >
       A project can only be released by the user when `releasable` is true.
     default: false
     type: boolean
 
-  intended_release_date:
-    description: Tracks a Project's intended release date.
-    type: string
-    format: date-time
+  programs:
+    description: >
+      Indicates that the project is logically part of the indicated project.
+    $ref: "_definitions.yaml#/to_one"
