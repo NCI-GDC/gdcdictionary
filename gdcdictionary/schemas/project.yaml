@@ -106,6 +106,7 @@ properties:
         #   - release (project.released -> true)
         - processing
 
+        - processed
 
         # closed: The closed state is introduced to replace the
         #         ``legacy`` state and means that no further action
