@@ -1,4 +1,5 @@
 {
+    "is_legacy":false,
     "code": "BLGSP",
     "disease_type": "Burkitt Lymphoma",
     "name": "Burkitt Lymphoma Genome Sequencing Project",
