@@ -360,6 +360,12 @@ properties:
     term:
       $ref: "_terms.yaml#/composition"
     enum:
+      - 2D Classical Conditionally Reprogrammed Cells
+      - 2D Modified Conditionally Reprogrammed Cells
+      - 3D Organoid
+      - 3D Air-Liquid Interface Organoid
+      - 3D Neurosphere
+      - Adherent Cell Line
       - Buccal Cells
       - Buffy Coat
       - Bone Marrow Components
@@ -371,6 +377,7 @@ properties:
       - Fibroblasts from Bone Marrow Normal
       - Granulocytes
       - Human Original Cells
+      - Liquid Suspension Cell Line
       - Lymphocytes
       - Mononuclear Cells from Bone Marrow Normal
       - Peripheral Blood Components NOS
