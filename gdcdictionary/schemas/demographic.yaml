@@ -59,6 +59,13 @@ properties:
       - string
       - "null"
 
+  age_at_index:
+    term:
+      $ref: "_terms.yaml#/age_at_index"
+    type:
+      - integer
+      - "null"
+
   cause_of_death:
     term:
       $ref: "_terms.yaml#/cause_of_death"

@@ -1,14 +1,17 @@
 {
-    "cigarettes_per_day": -1.0,
-    "weight": -1.0,
-    "alcohol_history": "",
-    "alcohol_intensity": "",
-    "bmi": -1.0,
-    "years_smoked": -1.0,
+    "type": "exposure",
     "submitter_id": "E9EDB78B-6897-4205-B9AA-0CEF8AAB5A1F_exposure",
+    "alcohol_history": "Yes",
+    "alcohol_intensity": "Daily Drinker",
+    "bmi": -1.0,
+    "cigarettes_per_day": -1.0,
+    "height": -1.0,
+    "tobacco_smoking_onset_year":1955,
+    "tobacco_smoking_quit_year":1999,
+    "tobacco_smoking_status":"1",
+    "weight": -1.0,
+    "years_smoked": 44,
     "cases": {
         "submitter_id": "BLGSP-71-06-00019"
-    },
-    "height": -1.0,
-    "type": "exposure"
+    }
 }

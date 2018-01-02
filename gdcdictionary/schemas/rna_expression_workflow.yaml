@@ -61,11 +61,17 @@ properties:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum:
+      - Cufflinks
       - DEXSeq
       - HTSeq - FPKM
       - HTSeq - FPKM-UQ
       - HTSeq - Counts
-      - Cufflinks
+      - Kallisto - HDF5
+      - Kallisto - Quantification
+      - RNA-SeQC - Counts
+      - RNA-SeQC - FPKM
+      - RSEM - Quantification
+      - STAR - Counts
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
   submitted_aligned_reads_files:

@@ -50,5 +50,7 @@ properties:
       - FM Simple Somatic Mutation
       - FM Copy Number Variation
       - FM Structural Variation
+      - GENIE Simple Somatic Mutation
+      - GENIE Copy Number Variation
   submitted_genomic_profiles:
     $ref: "_definitions.yaml#/to_one"
