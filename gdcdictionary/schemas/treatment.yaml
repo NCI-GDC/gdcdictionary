@@ -55,17 +55,17 @@ properties:
   days_to_treatment:
     term:
       $ref: "_terms.yaml#/days_to_treatment"
-    type: number
+    type: integer
 
   days_to_treatment_end:
     term:
       $ref: "_terms.yaml#/days_to_treatment_end"
-    type: number
+    type: integer
 
   days_to_treatment_start:
     term:
       $ref: "_terms.yaml#/days_to_treatment_start"
-    type: number
+    type: integer
 
   regimen_or_line_of_therapy:
     term:
