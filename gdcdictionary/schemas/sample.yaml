@@ -52,6 +52,12 @@ links:
     target_type: diagnosis
     multiplicity: many_to_one
     required: false
+  - name: parent_samples
+    backref: child_samples
+    label: derived_from
+    multiplicity: many_to_one
+    target_type: sample
+    required: false
 
 # Sample properties
 # Currently there are many TCGA-specific fields in the DB, this is an attempt
@@ -686,6 +692,8 @@ properties:
   tissue_source_sites:
     $ref: "_definitions.yaml#/to_one"
   diagnoses:
+    $ref: "_definitions.yaml#/to_one"
+  parent_samples:
     $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string
