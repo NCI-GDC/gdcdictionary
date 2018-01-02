@@ -618,6 +618,7 @@ properties:
       - "Yes"
       - "No"
       - Unknown
+      - Not Reported
 
   method_of_diagnosis:
     term:
