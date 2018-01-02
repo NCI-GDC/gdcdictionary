@@ -179,9 +179,12 @@ properties:
     enum:
       - Complete Response
       - Partial Response
+      - Progressive Disease
+      - Stable Disease
       - Treatment Ongoing
       - Treatment Stopped Due to Toxicity
       - Unknown
+      - Not Reported
 
   treatment_type:
     term:
