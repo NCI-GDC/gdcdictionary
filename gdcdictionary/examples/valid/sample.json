@@ -24,5 +24,8 @@
     "tumor_descriptor": "NOS",
     "cases": {
         "submitter_id": "BLGSP-71-06-00019"
+    },
+    "parent_samples": {
+        "submitter_id": "BLGSP-71-06-00019.0"
     }
 }

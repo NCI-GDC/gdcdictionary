@@ -1,6 +1,7 @@
 {
     "type": "project",
     "awg_review": false,
+    "is_legacy":false,
     "code": "BLGSP",
     "dbgap_accession_number": "phs000527",
     "disease_type": "Burkitt Lymphoma",
