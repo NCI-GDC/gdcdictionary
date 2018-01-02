@@ -363,6 +363,8 @@ properties:
       - Stage II
       - Stage III
       - Stage IV
+      - Unknown
+      - Not Reported
 
   best_overall_response:
     term:
