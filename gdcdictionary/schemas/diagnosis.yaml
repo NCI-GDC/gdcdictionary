@@ -850,6 +850,8 @@ properties:
       - R1
       - R2
       - RX
+      - Unknown
+      - Not Reported
 
   site_of_resection_or_biopsy:
     term:
