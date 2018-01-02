@@ -27,7 +27,7 @@ links:
     backref: submitted_genomic_profiles
     label: data_from
     target_type: read_group
-    multiplicity: one_to_one
+    multiplicity: one_to_many
     required: true
 
 required:
@@ -59,6 +59,7 @@ properties:
       $ref: "_terms.yaml#/data_type"
     enum:
       - FoundationOne Report
+      - GENIE Report
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"

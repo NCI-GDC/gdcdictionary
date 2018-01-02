@@ -8,7 +8,7 @@ category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing the structural variation data. 
+  Data file containing the structural variation data.
 additionalProperties: false
 submittable: false
 validators: null
@@ -23,12 +23,21 @@ systemProperties:
   - error_type
 
 links:
-  - name: genomic_profile_harmonization_workflows
-    backref: structural_variations
-    label: data_from
-    target_type: genomic_profile_harmonization_workflow
-    multiplicity: one_to_one
+  - exclusive: true
     required: true
+    subgroup:
+      - name: genomic_profile_harmonization_workflows
+        backref: structural_variations
+        label: data_from
+        target_type: genomic_profile_harmonization_workflow
+        multiplicity: one_to_one
+        required: false
+      - name: structural_variant_calling_workflows
+        backref: structural_variations
+        label: data_from
+        target_type: structural_variant_calling_workflow
+        multiplicity: many_to_one
+        required: false
 
 uniqueKeys:
   - [ id ]
@@ -42,7 +51,6 @@ required:
   - md5sum
   - data_category
   - data_type
-  - genomic_profile_harmonization_workflows
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
@@ -52,21 +60,34 @@ properties:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Somatic Structural Variation 
+      - Somatic Structural Variation
+      - Structural Variation
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
+      - Structural Alteration
       - Structural Rearrangement
+      - Transcript Fusion
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
+      - CSV
+      - FASTA
       - GVF
+      - JSON
+      - TSV
+      - TXT
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
+      - RNA-Seq
       - Targeted Sequencing
+      - WGS
+      - WXS
   genomic_profile_harmonization_workflows:
+    $ref: "_definitions.yaml#/to_one"
+  structural_variant_calling_workflows:
     $ref: "_definitions.yaml#/to_one"
