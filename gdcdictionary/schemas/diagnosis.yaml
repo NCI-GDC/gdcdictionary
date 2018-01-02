@@ -344,6 +344,8 @@ properties:
       - Stage II
       - Stage III
       - Stage IV
+      - Unknown
+      - Not Reported
 
   ann_arbor_extranodal_involvement:
     term:
