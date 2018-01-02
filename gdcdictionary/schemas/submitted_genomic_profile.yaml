@@ -65,6 +65,7 @@ properties:
       $ref: "_terms.yaml#/data_format"
     enum:
       - XML
+      - TSV
       - MAF
   experimental_strategy:
     term:
