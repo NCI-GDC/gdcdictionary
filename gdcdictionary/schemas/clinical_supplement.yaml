@@ -66,10 +66,11 @@ properties:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
-      - FoundationOne XML
       - BCR XML
-      - XLSX
+      - CDC JSON
+      - FoundationOne XML
       - OMF
+      - XLSX
   cases:
     $ref: "_definitions.yaml#/to_many"
   archives:

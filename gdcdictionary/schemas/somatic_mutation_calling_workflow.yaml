@@ -51,5 +51,6 @@ properties:
       - MuSE
       - VarScan2
       - SomaticSniper
+      - Pindel
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
