@@ -54,6 +54,16 @@ age_at_diagnosis:
     cde_version: 2.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3225640&version=2.0"
 
+age_at_index:
+  description: >
+    The patient's age (in years) on the reference or anchor date date used during date obfuscation.
+  termDef:
+    term: Patient Age at Index
+    source: caDSR
+    cde_id: 6028530
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6028530&version=1.0"
+
 ajcc_clinical_m:
   description: >
     Extent of the distant metastasis for the cancer based on evidence obtained from clinical
