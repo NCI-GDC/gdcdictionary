@@ -738,13 +738,13 @@ days_to_progression:
 days_to_recurrence:
   description: >
     Number of days between the date used for index and the date the patient was diagnosed with a
-    recurrent malignancy. 
+    recurrent malignancy.
   termDef:
-    term: null 
+    term: null
     source: null
-    cde_id: null 
-    cde_version: null 
-    term_url: null 
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 days_to_sample_procurement:
   description: >
@@ -963,6 +963,46 @@ flow_cell_barcode: # TOREVIEW
   description: >
     Flow Cell Barcode.
 
+fragment_maximum_length:
+  description: >
+    Maximum length of the sequenced fragments (e.g., as predicted by Agilent Bioanalyzer).
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+fragment_mean_length:
+  description: >
+    Mean length of the sequenced fragments (e.g., as predicted by Agilent Bioanalyzer).
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+fragment_minimum_length:
+  description: >
+    Minimum length of the sequenced fragments (e.g., as predicted by Agilent Bioanalyzer).
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+fragment_standard_deviation_length:
+  description: >
+    Standard deviation of the sequenced fragments length (e.g., as predicted by Agilent Bioanalyzer).
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 freezing_method:
   description: >
     Text term that represents the method used for freezing the sample.
@@ -1106,7 +1146,7 @@ igl_kappa:
   description: >
     The patient's serum immunoglobulin light chain kappa value at a certain point in time.
   termDef:
-    term: null 
+    term: null
     source: null
     cde_id: null
     cde_version: null
@@ -1197,6 +1237,17 @@ iss_stage:
     cde_id: 2465385
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2465385&version=1.0"
+
+lane_number:
+  description: >
+    The basic machine unit for sequencing. For Illumina machines, this reflects the physical lane
+    number.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 last_known_disease_status:
   description: >
@@ -1336,6 +1387,11 @@ m_protein:
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64561&version=3.0"
 
+md5sum: # TOREVIEW
+  description: >
+    The 128-bit hash value expressed as a 32 digit hexadecimal number used as a file's digital
+    fingerprint.
+
 method_of_diagnosis:
   description: >
     The method used to initially the patient's diagnosis.
@@ -1355,11 +1411,6 @@ method_of_sample_procurement:
     cde_id: null
     cde_version: null
     term_url: null
-
-md5sum: # TOREVIEW
-  description: >
-    The 128-bit hash value expressed as a 32 digit hexadecimal number used as a file's digital
-    fingerprint.
 
 microsatellite_instability_abnormal:
   description: >
@@ -1386,6 +1437,16 @@ morphology:
     cde_id: 3226275
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3226275&version=1.0"
+
+multiplex_barcode:
+  description: >
+    The barcode/index sequence used.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 new_event_anatomic_site:
   description: >
@@ -2110,7 +2171,7 @@ treatment_or_therapy:
 
 treatment_outcome:
   description: >
-    Text term that describes the patient¿s final outcome after the treatment was administered.
+    Text term that describes the patient's final outcome after the treatment was administered.
   termDef:
     term: Treatment Outcome Type
     source: caDSR
