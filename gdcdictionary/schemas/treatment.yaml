@@ -94,6 +94,8 @@ properties:
       - Breast
       - Cervical
       - Chest Wall
+      - Distant Recurrence
+      - Distant Site
       - Effusion
       - Epitrochlear
       - Eye
@@ -119,6 +121,7 @@ properties:
       - Inguinal
       - Internal Mammary Nodes
       - Leg
+      - Local Recurrence
       - Lung
       - Lymph Nodes
       - Lymph node, distant (specify site)
@@ -134,11 +137,13 @@ properties:
       - Parotid
       - Pelvis
       - Popliteal
+      - Primary Tumor Field
       - Primary tumor site
       - Prostate
       - Prostate Bed
       - Prostate, Seminal Vesicles and Lymph Nodes
       - Rectum
+      - Regional Site
       - Retroperitoneal
       - Sacrum
       - Seminal vesicles
