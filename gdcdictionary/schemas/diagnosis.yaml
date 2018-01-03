@@ -589,8 +589,11 @@ properties:
     enum:
       - Bilateral
       - Left
+      - Midline
       - Right
+      - Unilateral
       - Unknown
+      - Not Reported
 
   ldh_level_at_diagnosis:
     term:
