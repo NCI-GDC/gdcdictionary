@@ -7,7 +7,7 @@
     "regimen_or_line_of_therapy":"First Line of Therapy",
     "therapeutic_agents": "",
     "treatment_anatomic_site": "Arm", 
-    "treatment_intent_type": "",
+    "treatment_intent_type": "Cure",
     "treatment_or_therapy": "unknown",
     "treatment_type": "Other",
     "diagnoses": {

@@ -162,7 +162,16 @@ properties:
   treatment_intent_type:
     term:
       $ref: "_terms.yaml#/treatment_intent_type"
-    type: string
+    enum:
+      - Adjuvant
+      - Cancer Control
+      - Cure
+      - Initial
+      - Palliative
+      - Prevention
+      - Progression
+      - Unknown
+      - Not Reported
 
   treatment_or_therapy:
     term:
