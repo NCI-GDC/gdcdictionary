@@ -63,7 +63,110 @@ properties:
   disease_type:
     term:
       $ref: "_terms.yaml#/disease_type"
-    type: string
+    enum:
+      - Acinar Cell Neoplasms
+      - Adenomas and Adenocarcinomas
+      - Adnexal and Skin Appendage Neoplasms
+      - Basal Cell Neoplasms
+      - Blood Vessel Tumors
+      - Chronic Myeloproliferative Disorders
+      - Complex Epithelial Neoplasms
+      - Complex Mixed and Stromal Neoplasms
+      - Cystic, Mucinous and Serous Neoplasms
+      - Ductal and Lobular Neoplasms
+      - Epithelial Neoplasms, NOS
+      - Fibroepithelial Neoplasms
+      - Fibromatous Neoplasms
+      - Germ Cell Neoplasms
+      - Giant Cell Tumors
+      - Gliomas
+      - Granular Cell Tumors and Alveolar Soft Part Sarcomas
+      - Hodgkin Lymphoma
+      - Immunoproliferative Diseases
+      - Leukemias, NOS
+      - Lipomatous Neoplasms
+      - Lymphatic Vessel Tumors
+      - Lymphoid Leukemias
+      - Malignant Lymphomas, NOS or Diffuse
+      - Mast Cell Tumors
+      - Mature B-Cell Lymphomas
+      - Mature T- and NK-Cell Lymphomas
+      - Meningiomas
+      - Mesonephromas
+      - Mesothelial Neoplasms
+      - Miscellaneous Bone Tumors
+      - Miscellaneous Tumors
+      - Mucoepidermoid Neoplasms
+      - Myelodysplastic Syndromes
+      - Myeloid Leukemias
+      - Myomatous Neoplasms
+      - Myxomatous Neoplasms
+      - Neoplasms, NOS
+      - Neoplasms of Histiocytes and Accessory Lymphoid Cells
+      - Nerve Sheath Tumors
+      - Neuroepitheliomatous Neoplasms
+      - Nevi and Melanomas
+      - Odontogenic Tumors
+      - Osseous and Chondromatous Neoplasms
+      - Other Hematologic Disorders
+      - Other Leukemias
+      - Paragangliomas and Glomus Tumors
+      - Plasma Cell Tumors
+      - Precursor Cell Lymphoblastic Lymphoma
+      - Soft Tissue Tumors and Sarcomas, NOS
+      - Specialized Gonadal Neoplasms
+      - Squamous Cell Neoplasms
+      - Synovial-like Neoplasms
+      - Thymic Epithelial Neoplasms
+      - Transitional Cell Papillomas and Carcinomas
+      - Trophoblastic neoplasms
+      - Unknown
+      - Not Reported
+      - Acute Lymphoblastic Leukemia
+      - Acute Myeloid Leukemia
+      - Adrenocortical Carcinoma
+      - Bladder Urothelial Carcinoma
+      - Brain Lower Grade Glioma
+      - Breast Invasive Carcinoma
+      - Burkitt Lymphoma
+      - Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma
+      - Cholangiocarcinoma
+      - Chronic Lymphocytic Leukemia
+      - Clear Cell Sarcoma of the Kidney
+      - Colon Adenocarcinoma
+      - Esophageal Carcinoma
+      - Glioblastoma Multiforme
+      - Head and Neck Squamous Cell Carcinoma
+      - High-Risk Wilms Tumor
+      - HIV+ Tumor Molecular Characterization Project - Cervical Cancer
+      - HIV+ Tumor Molecular Characterization Project - Lung Cancer
+      - Kidney Chromophobe
+      - Kidney Renal Clear Cell Carcinoma
+      - Kidney Renal Papillary Cell Carcinoma
+      - Liver Hepatocellular Carcinoma
+      - Lung Adenocarcinoma
+      - Lung Squamous Cell Carcinoma
+      - Lymphoid Neoplasm Diffuse Large B-cell Lymphoma
+      - Mesothelioma
+      - Multiple Myeloma
+      - Neuroblastoma
+      - Not Applicable
+      - Osteosarcoma
+      - Ovarian Serous Cystadenocarcinoma
+      - Pancreatic Adenocarcinoma
+      - Pheochromocytoma and Paraganglioma
+      - Prostate Adenocarcinoma
+      - Rectum Adenocarcinoma
+      - Rhabdoid Tumor
+      - Sarcoma
+      - Skin Cutaneous Melanoma
+      - Stomach Adenocarcinoma
+      - Testicular Germ Cell Tumors
+      - Thymoma
+      - Thyroid Carcinoma
+      - Uterine Carcinosarcoma
+      - Uterine Corpus Endometrial Carcinoma
+      - Uveal Melanoma
   index_date:
     term:
       $ref: "_terms.yaml#/index_date"
