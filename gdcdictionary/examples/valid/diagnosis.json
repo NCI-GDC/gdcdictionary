@@ -31,7 +31,7 @@
     "progression_or_recurrence": "unknown",
     "site_of_resection_or_biopsy": "c34.3",
     "tissue_or_organ_of_origin": "c34.3",
-    "tumor_grade": "",
+    "tumor_grade": "GX",
     "tumor_stage": "stage iiia",
     "vital_status": "dead",
     "year_of_diagnosis": 2077,
