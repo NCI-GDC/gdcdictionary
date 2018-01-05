@@ -24,7 +24,7 @@
     "morphology": "8255/3",
     "new_event_anatomic_site": "Bone",
     "new_event_type": "Distant Metastasis",
-    "primary_diagnosis": "c34.3",
+    "primary_diagnosis":"Hepatosplenic gamma-delta cell lymphoma",
     "prior_malignancy": "no",
     "progression_free_survival": 12434,
     "progression_free_survival_event":"Death",
