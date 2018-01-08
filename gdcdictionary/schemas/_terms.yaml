@@ -380,13 +380,13 @@ biospecimen_anatomic_site:
 
 bmi:
   description: >
-    The body mass divided by the square of the body height expressed in units of kg/m^2.
+    A calculated numerical quantity that represents an individual's weight to height ratio.
   termDef:
-    term: Body Mass Index (BMI)
+    term: Body Mass Index Value
     source: caDSR
-    cde_id: 4973892
-    cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4973892&version=1.0"
+    cde_id: 2006410
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2006410&version=3.0"
 
 bun:
   description: >
