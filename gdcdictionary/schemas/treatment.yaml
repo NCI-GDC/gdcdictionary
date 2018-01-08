@@ -197,16 +197,28 @@ properties:
       $ref: "_terms.yaml#/treatment_type"
     enum:
       - Ablation
+      - Brachytherapy
+      - Chemoembolization
       - Chemotherapy
       - Concurrent Chemoradiation
       - Cryoablation
       - Embolization
+      - Ethanol Injection Ablation
+      - External Beam Radiation
       - Hormone Therapy
+      - I-131 Radiation Therapy
       - Internal Radiation
       - Immunotherapy (Including Vaccines)
+      - Microwave Ablation
       - Other
       - Pharmaceutical Therapy
+      - Radiation
       - Radiation Therapy
+      - Radioembolization
+      - Radiofrequency Ablation
+      - Radioisotope Radiation
+      - Radiosurgical Ablation
+      - Stem Cell Transplantation
       - Stem Cell Treatment
       - Surgery
       - Targeted Molecular Therapy
