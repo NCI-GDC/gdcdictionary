@@ -4008,7 +4008,18 @@ properties:
   tumor_grade:
     term:
       $ref: "_terms.yaml#/tumor_grade"
-    type: string
+    enum:
+      - G1
+      - G2
+      - G3
+      - G4
+      - GX
+      - GB
+      - High Grade
+      - Low Grade
+      - Unknown
+      - Not Reported
+      - not reported
 
   tumor_stage:
     term:
