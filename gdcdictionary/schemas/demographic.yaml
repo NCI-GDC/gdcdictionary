@@ -71,7 +71,11 @@ properties:
       $ref: "_terms.yaml#/cause_of_death"
     enum:
       - Cancer Related
+      - End-stage Renal Disease
+      - Infection
       - Not Cancer Related
+      - Spinal Muscular Atrophy
+      - Toxicity
       - Not Reported
       - Unknown
 
