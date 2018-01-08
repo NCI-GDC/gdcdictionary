@@ -5130,6 +5130,16 @@ properties:
       - Not Reported
       - Not Allowed To Collect
 
+  vascular_invasion_type:
+    term:
+      $ref: "_terms.yaml#/vascular_invasion_type"
+    enum:
+      - Macro
+      - Micro
+      - No Vascular Invasion
+      - Unknown
+      - Not Reported
+
   vital_status:
     term:
       $ref: "_terms.yaml#/vital_status"

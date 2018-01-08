@@ -2267,6 +2267,16 @@ vascular_invasion_present:
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64358&version=3.0"
 
+vascular_invasion_type:
+  description: >
+    Text term that represents the type of vascular tumor invasion.
+  termDef:
+    term: Vascular Tumor Cell Invasion Type
+    source: caDSR
+    cde_id: 3168001
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3168001&version=1.0"
+
 vital_status:
   description: >
     The survival state of the person registered on the protocol.

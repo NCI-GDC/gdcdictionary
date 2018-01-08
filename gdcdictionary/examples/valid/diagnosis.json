@@ -33,6 +33,7 @@
     "tissue_or_organ_of_origin": "c34.3",
     "tumor_grade": "GX",
     "tumor_stage": "stage iiia",
+    "vascular_invasion_type":"Micro",
     "vital_status": "dead",
     "year_of_diagnosis": 2077,
     "cases": {
