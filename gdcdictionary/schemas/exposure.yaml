@@ -67,7 +67,14 @@ properties:
   alcohol_intensity:
     term:
       $ref: "_terms.yaml#/alcohol_intensity"
-    type: string
+    enum:
+      - Drinker
+      - Heavy Drinker
+      - Lifelong Non-Drinker
+      - Non-Drinker
+      - Occasional Drinker
+      - Unknown
+      - Not Reported
 
   bmi:
     term:
