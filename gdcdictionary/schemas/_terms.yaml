@@ -442,6 +442,17 @@ cause_of_response:
     cde_version: null
     term_url: null
 
+cea_level:
+  description: >
+    The value for carcinoembryonic antigen, a substance that is sometimes found in an increased
+    amount in the blood of people with certain cancers.
+  termDef:
+    term: Laboratory Procedure Carcinoembryonic Antigen Outcome Value
+    source: caDSR
+    cde_id: 2752
+    cde_version: 2.31
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2752&version=2.31"
+
 cea_level_preoperative:
   description: >
     Numeric value of the Carcinoembryonic antigen or CEA at the time before surgery. [Manually-
@@ -1807,6 +1818,17 @@ progression_or_recurrence:
     cde_id: 3121376
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3121376&version=1.0"
+
+progression_or_recurrence_anatomic_site:
+  description: >
+    Text term that describes the anatomic site of the progression or recurrent tumor or relapsed
+    disease.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 project_id: # TOREVIEW
   description: >
