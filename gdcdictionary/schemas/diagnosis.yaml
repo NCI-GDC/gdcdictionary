@@ -141,16 +141,21 @@ properties:
       - Stage IB Cervix
       - Stage IB1
       - Stage IB2
+      - Stage IC
       - Stage II
       - Stage II Cervix
       - Stage IIA
+      - Stage IIA1
+      - Stage IIA2
       - Stage IIA Cervix
       - Stage IIB
       - Stage IIC
+      - Stage IIC1
       - Stage III
       - Stage IIIA
       - Stage IIIB
       - Stage IIIC
+      - Stage IIIC2
       - Stage IS
       - Stage IV
       - Stage IVA
