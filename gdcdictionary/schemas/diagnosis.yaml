@@ -1887,6 +1887,7 @@ properties:
       - "Yes"
       - "No"
       - Unknown
+      - Not Reported
 
   primary_diagnosis:
     term:
