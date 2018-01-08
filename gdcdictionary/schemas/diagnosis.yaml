@@ -629,15 +629,20 @@ properties:
       - Bone Marrow Aspirate
       - Core Biopsy
       - Cytology
+      - Cystoscopy
       - Debulking
       - Diagnostic Imaging
+      - Dilation and Curettage Procedure
+      - Enucleation
       - Excisional Biopsy
       - Fine Needle Aspiration
       - Incisional Biopsy
       - Laparoscopy
       - Laparotomy
       - Other
+      - Pap Smear
       - Surgical Resection
+      - Thoracentesis
       - Ultrasound Guided Biopsy
       - Unknown
       - Not Reported
