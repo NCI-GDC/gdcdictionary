@@ -4,7 +4,7 @@ id: "follow_up"
 title: Follow-Up
 type: object
 namespace: http://gdc.nci.nih.gov
-category: clinical 
+category: clinical
 program: '*'
 project: '*'
 description: >
@@ -901,7 +901,9 @@ properties:
       - Asthma
       - Atrial Fibrillation
       - Avascular Necrosis
+      - Barrett's Esophagus
       - Basal Cell Carcinoma
+      - Behcet's Disease
       - Blood Clots
       - Bone Fracture(s)
       - Bronchitis
@@ -910,6 +912,8 @@ properties:
       - Cataracts
       - Cerebrovascular Disease
       - Chronic Renal Failure
+      - Colon Polyps
+      - Common Variable Immunodeficiency
       - Congestive Heart Failure (CHF)
       - Connective Tissue Disorder
       - COPD
@@ -920,14 +924,18 @@ properties:
       - Diabetes
       - Diabetic Neuropathy
       - Diet Controlled Diabetes
+      - Diverticulitis
       - DVT/PE
       - Dyslipidemia
       - Epilepsy
+      - Eczema
+      - Epstei-Barr Virus
       - Gastroesophageal Reflux Disease
       - GERD
       - Glaucoma
       - Gout
       - Gonadal Dysfunction
+      - Hashimoto's Thyroiditis
       - Headache
       - Heart Disease
       - Hemorrhagic Cystitis
@@ -935,12 +943,14 @@ properties:
       - Hepatitis B Infection
       - Hepatitis C Infection
       - HIV / AIDS
+      - Human Papillomavirus Infection
       - HUS/TTP
       - Hypercholesterolemia
       - Hypercalcemia
       - Hyperglycemia
       - Hyperlipidemia
       - Hypertension
+      - Hypospadias
       - Hypothyroidism
       - Inflammatory Bowel Disease
       - Insulin Controlled Diabetes
@@ -954,6 +964,7 @@ properties:
       - Liver Toxicity (Non-Infectious)
       - Lupus
       - MAI
+      - Myasthenia Gravis
       - Myocardial Infarction
       - Obesity
       - Organ transplant (site)
@@ -976,6 +987,7 @@ properties:
       - Renal Dialysis
       - Renal Insufficiency
       - Rheumatologic Disease
+      - Rheumatoid Arthritis
       - Sarcoidosis
       - Seizure
       - Sleep apnea
@@ -984,6 +996,8 @@ properties:
       - Transient Ischemic Attack
       - Tuberculosis
       - Ulcerative Colitis
+      - Unknown
+      - Not Reported
   creatinine:
     term:
       $ref: "_terms.yaml#/creatinine"
@@ -1127,4 +1141,4 @@ properties:
 
   # Links
   cases:
-    $ref: "_definitions.yaml#/to_one" 
+    $ref: "_definitions.yaml#/to_one"
