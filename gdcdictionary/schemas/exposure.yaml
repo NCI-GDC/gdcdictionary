@@ -56,7 +56,13 @@ properties:
   alcohol_history:
     term:
       $ref: "_terms.yaml#/alcohol_history"
-    type: string
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+      - "no"
+      - "yes"
 
   alcohol_intensity:
     term:
