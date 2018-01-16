@@ -5665,6 +5665,7 @@ properties:
       - unknown
       - not reported
       - Not Allowed To Collect
+      - not allowed to collect
       - pending # this is from TARGET RT clinical data
 
   year_of_diagnosis:
