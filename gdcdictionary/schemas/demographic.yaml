@@ -112,6 +112,7 @@ properties:
       - Unknown
       - not reported
       - not allowed to collect
+      - unknown
 
   ethnicity:
     term:
