@@ -122,6 +122,7 @@ properties:
       - Unknown
       - not reported
       - not allowed to collect
+      - unknown
 
   year_of_birth:
     term:
