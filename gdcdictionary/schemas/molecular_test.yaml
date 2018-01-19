@@ -1,0 +1,42 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "molecular_test"
+title: Molecular Test
+type: object
+category: clinical 
+namespace: https://gdc.cancer.gov/ 
+program: '*'
+project: '*'
+description: >
+  Information pertaining to any molecular tests performed on the patient during a clinical event. 
+additionalProperties: false
+submittable: true
+validators: []
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+required:
+  - submitter_id
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+links:
+  - name: follow_ups
+    backref: molecular_tests
+    label: performed_at
+    target_type: follow_up
+    multiplicity: many_to_one
+    required: true
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  follow_ups:
+    $ref: "_definitions.yaml#/to_one"

@@ -1,0 +1,5 @@
+{
+    "type":"molecular_test",
+    "submitter_id":"molecular_test_1",
+    "follow_ups": {"submitter_id":"visit_1"}
+}
