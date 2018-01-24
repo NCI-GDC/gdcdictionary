@@ -52,6 +52,12 @@ links:
     target_type: diagnosis
     multiplicity: many_to_one
     required: false
+  - name: parent_samples
+    backref: child_samples
+    label: derived_from
+    multiplicity: many_to_one
+    target_type: sample
+    required: false
 
 # Sample properties
 # Currently there are many TCGA-specific fields in the DB, this is an attempt
@@ -360,6 +366,12 @@ properties:
     term:
       $ref: "_terms.yaml#/composition"
     enum:
+      - 2D Classical Conditionally Reprogrammed Cells
+      - 2D Modified Conditionally Reprogrammed Cells
+      - 3D Organoid
+      - 3D Air-Liquid Interface Organoid
+      - 3D Neurosphere
+      - Adherent Cell Line
       - Buccal Cells
       - Buffy Coat
       - Bone Marrow Components
@@ -371,6 +383,7 @@ properties:
       - Fibroblasts from Bone Marrow Normal
       - Granulocytes
       - Human Original Cells
+      - Liquid Suspension Cell Line
       - Lymphocytes
       - Mononuclear Cells from Bone Marrow Normal
       - Peripheral Blood Components NOS
@@ -433,6 +446,7 @@ properties:
       - Abdomino-perineal Resection of Rectum
       - Anterior Resection of Rectum
       - Aspirate
+      - Autopsy
       - Biopsy
       - Blood Draw
       - Bone Marrow Aspirate
@@ -510,8 +524,14 @@ properties:
     term:
       $ref: "_terms.yaml#/sample_type"
     enum:
+      - 2D Classical Conditionally Reprogrammed Cells
+      - 2D Modified Conditionally Reprogrammed Cells
+      - 3D Organoid
+      - 3D Air-Liquid Interface Organoid
+      - 3D Neurosphere
       - Additional Metastatic
       - Additional - New Primary
+      - Adherent Cell Line
       - Blood Derived Cancer - Bone Marrow, Post-treatment
       - Blood Derived Cancer - Peripheral Blood, Post-treatment
       - Blood Derived Normal
@@ -528,6 +548,7 @@ properties:
       - GenomePlex (Rubicon) Amplified DNA
       - Granulocytes
       - Human Tumor Original Cells
+      - Liquid Suspension Cell Line
       - Lymphoid Normal
       - Metastatic
       - Mononuclear Cells from Bone Marrow Normal
@@ -686,6 +707,8 @@ properties:
   tissue_source_sites:
     $ref: "_definitions.yaml#/to_one"
   diagnoses:
+    $ref: "_definitions.yaml#/to_one"
+  parent_samples:
     $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string

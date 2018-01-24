@@ -55,17 +55,17 @@ properties:
   days_to_treatment:
     term:
       $ref: "_terms.yaml#/days_to_treatment"
-    type: number
+    type: integer
 
   days_to_treatment_end:
     term:
       $ref: "_terms.yaml#/days_to_treatment_end"
-    type: number
+    type: integer
 
   days_to_treatment_start:
     term:
       $ref: "_terms.yaml#/days_to_treatment_start"
-    type: number
+    type: integer
 
   regimen_or_line_of_therapy:
     term:
@@ -94,6 +94,8 @@ properties:
       - Breast
       - Cervical
       - Chest Wall
+      - Distant Recurrence
+      - Distant Site
       - Effusion
       - Epitrochlear
       - Eye
@@ -119,6 +121,7 @@ properties:
       - Inguinal
       - Internal Mammary Nodes
       - Leg
+      - Local Recurrence
       - Lung
       - Lymph Nodes
       - Lymph node, distant (specify site)
@@ -134,11 +137,13 @@ properties:
       - Parotid
       - Pelvis
       - Popliteal
+      - Primary Tumor Field
       - Primary tumor site
       - Prostate
       - Prostate Bed
       - Prostate, Seminal Vesicles and Lymph Nodes
       - Rectum
+      - Regional Site
       - Retroperitoneal
       - Sacrum
       - Seminal vesicles
@@ -162,7 +167,16 @@ properties:
   treatment_intent_type:
     term:
       $ref: "_terms.yaml#/treatment_intent_type"
-    type: string
+    enum:
+      - Adjuvant
+      - Cancer Control
+      - Cure
+      - Initial
+      - Palliative
+      - Prevention
+      - Progression
+      - Unknown
+      - Not Reported
 
   treatment_or_therapy:
     term:
@@ -179,25 +193,40 @@ properties:
     enum:
       - Complete Response
       - Partial Response
+      - Progressive Disease
+      - Stable Disease
       - Treatment Ongoing
       - Treatment Stopped Due to Toxicity
       - Unknown
+      - Not Reported
 
   treatment_type:
     term:
       $ref: "_terms.yaml#/treatment_type"
     enum:
       - Ablation
+      - Brachytherapy
+      - Chemoembolization
       - Chemotherapy
       - Concurrent Chemoradiation
       - Cryoablation
       - Embolization
+      - Ethanol Injection Ablation
+      - External Beam Radiation
       - Hormone Therapy
+      - I-131 Radiation Therapy
       - Internal Radiation
       - Immunotherapy (Including Vaccines)
+      - Microwave Ablation
       - Other
       - Pharmaceutical Therapy
+      - Radiation
       - Radiation Therapy
+      - Radioembolization
+      - Radiofrequency Ablation
+      - Radioisotope Radiation
+      - Radiosurgical Ablation
+      - Stem Cell Transplantation
       - Stem Cell Treatment
       - Surgery
       - Targeted Molecular Therapy

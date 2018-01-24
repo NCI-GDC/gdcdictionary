@@ -59,12 +59,23 @@ properties:
       - string
       - "null"
 
+  age_at_index:
+    term:
+      $ref: "_terms.yaml#/age_at_index"
+    type:
+      - integer
+      - "null"
+
   cause_of_death:
     term:
       $ref: "_terms.yaml#/cause_of_death"
     enum:
       - Cancer Related
+      - End-stage Renal Disease
+      - Infection
       - Not Cancer Related
+      - Spinal Muscular Atrophy
+      - Toxicity
       - Not Reported
       - Unknown
 
@@ -101,6 +112,7 @@ properties:
       - Unknown
       - not reported
       - not allowed to collect
+      - unknown
 
   ethnicity:
     term:
@@ -111,6 +123,7 @@ properties:
       - Unknown
       - not reported
       - not allowed to collect
+      - unknown
 
   year_of_birth:
     term:

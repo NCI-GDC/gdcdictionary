@@ -29,7 +29,7 @@ links:
     required: true
 
 preferred:
-  - cigarettes_per_day 
+  - cigarettes_per_day
   - years_smoked
 
 uniqueKeys:
@@ -56,12 +56,25 @@ properties:
   alcohol_history:
     term:
       $ref: "_terms.yaml#/alcohol_history"
-    type: string
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+      - "no"
+      - "yes"
 
   alcohol_intensity:
     term:
       $ref: "_terms.yaml#/alcohol_intensity"
-    type: string
+    enum:
+      - Drinker
+      - Heavy Drinker
+      - Lifelong Non-Drinker
+      - Non-Drinker
+      - Occasional Drinker
+      - Unknown
+      - Not Reported
 
   bmi:
     term:
@@ -97,13 +110,12 @@ properties:
     term:
       $ref: "_terms.yaml#/tobacco_smoking_status"
     enum:
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "7"
       - Unknown
       - Not Reported
       - Not Allowed To Collect

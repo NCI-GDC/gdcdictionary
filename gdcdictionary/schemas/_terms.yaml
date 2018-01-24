@@ -54,6 +54,16 @@ age_at_diagnosis:
     cde_version: 2.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3225640&version=2.0"
 
+age_at_index:
+  description: >
+    The patient's age (in years) on the reference or anchor date date used during date obfuscation.
+  termDef:
+    term: Patient Age at Index
+    source: caDSR
+    cde_id: 6028530
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6028530&version=1.0"
+
 ajcc_clinical_m:
   description: >
     Extent of the distant metastasis for the cancer based on evidence obtained from clinical
@@ -370,13 +380,13 @@ biospecimen_anatomic_site:
 
 bmi:
   description: >
-    The body mass divided by the square of the body height expressed in units of kg/m^2.
+    A calculated numerical quantity that represents an individual's weight to height ratio.
   termDef:
-    term: Body Mass Index (BMI)
+    term: Body Mass Index Value
     source: caDSR
-    cde_id: 4973892
-    cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4973892&version=1.0"
+    cde_id: 2006410
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2006410&version=3.0"
 
 bun:
   description: >
@@ -431,6 +441,17 @@ cause_of_response:
     cde_id: null
     cde_version: null
     term_url: null
+
+cea_level:
+  description: >
+    The value for carcinoembryonic antigen, a substance that is sometimes found in an increased
+    amount in the blood of people with certain cancers.
+  termDef:
+    term: Laboratory Procedure Carcinoembryonic Antigen Outcome Value
+    source: caDSR
+    cde_id: 2752
+    cde_version: 2.31
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2752&version=2.31"
 
 cea_level_preoperative:
   description: >
@@ -738,13 +759,13 @@ days_to_progression:
 days_to_recurrence:
   description: >
     Number of days between the date used for index and the date the patient was diagnosed with a
-    recurrent malignancy. 
+    recurrent malignancy.
   termDef:
-    term: null 
+    term: null
     source: null
-    cde_id: null 
-    cde_version: null 
-    term_url: null 
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 days_to_sample_procurement:
   description: >
@@ -963,6 +984,46 @@ flow_cell_barcode: # TOREVIEW
   description: >
     Flow Cell Barcode.
 
+fragment_maximum_length:
+  description: >
+    Maximum length of the sequenced fragments (e.g., as predicted by Agilent Bioanalyzer).
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+fragment_mean_length:
+  description: >
+    Mean length of the sequenced fragments (e.g., as predicted by Agilent Bioanalyzer).
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+fragment_minimum_length:
+  description: >
+    Minimum length of the sequenced fragments (e.g., as predicted by Agilent Bioanalyzer).
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+fragment_standard_deviation_length:
+  description: >
+    Standard deviation of the sequenced fragments length (e.g., as predicted by Agilent Bioanalyzer).
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 freezing_method:
   description: >
     Text term that represents the method used for freezing the sample.
@@ -1106,7 +1167,7 @@ igl_kappa:
   description: >
     The patient's serum immunoglobulin light chain kappa value at a certain point in time.
   termDef:
-    term: null 
+    term: null
     source: null
     cde_id: null
     cde_version: null
@@ -1197,6 +1258,17 @@ iss_stage:
     cde_id: 2465385
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2465385&version=1.0"
+
+lane_number:
+  description: >
+    The basic machine unit for sequencing. For Illumina machines, this reflects the physical lane
+    number.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 last_known_disease_status:
   description: >
@@ -1336,6 +1408,11 @@ m_protein:
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64561&version=3.0"
 
+md5sum: # TOREVIEW
+  description: >
+    The 128-bit hash value expressed as a 32 digit hexadecimal number used as a file's digital
+    fingerprint.
+
 method_of_diagnosis:
   description: >
     The method used to initially the patient's diagnosis.
@@ -1355,11 +1432,6 @@ method_of_sample_procurement:
     cde_id: null
     cde_version: null
     term_url: null
-
-md5sum: # TOREVIEW
-  description: >
-    The 128-bit hash value expressed as a 32 digit hexadecimal number used as a file's digital
-    fingerprint.
 
 microsatellite_instability_abnormal:
   description: >
@@ -1386,6 +1458,16 @@ morphology:
     cde_id: 3226275
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3226275&version=1.0"
+
+multiplex_barcode:
+  description: >
+    The barcode/index sequence used.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 new_event_anatomic_site:
   description: >
@@ -1736,6 +1818,17 @@ progression_or_recurrence:
     cde_id: 3121376
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3121376&version=1.0"
+
+progression_or_recurrence_anatomic_site:
+  description: >
+    Text term that describes the anatomic site of the progression or recurrent tumor or relapsed
+    disease.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 project_id: # TOREVIEW
   description: >
@@ -2110,7 +2203,7 @@ treatment_or_therapy:
 
 treatment_outcome:
   description: >
-    Text term that describes the patient¿s final outcome after the treatment was administered.
+    Text term that describes the patient's final outcome after the treatment was administered.
   termDef:
     term: Treatment Outcome Type
     source: caDSR
@@ -2195,6 +2288,16 @@ vascular_invasion_present:
     cde_id: 64358
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64358&version=3.0"
+
+vascular_invasion_type:
+  description: >
+    Text term that represents the type of vascular tumor invasion.
+  termDef:
+    term: Vascular Tumor Cell Invasion Type
+    source: caDSR
+    cde_id: 3168001
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3168001&version=1.0"
 
 vital_status:
   description: >
