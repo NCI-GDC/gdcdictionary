@@ -6,7 +6,6 @@ type: object
 description: "Sequencing reads from one lane of an NGS experiment."
 namespace: https://www.bloodpac.org
 category: biospecimen
-validators: null
 project: '*'
 program: '*'
 additionalProperties: false
