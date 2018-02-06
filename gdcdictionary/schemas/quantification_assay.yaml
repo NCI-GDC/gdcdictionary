@@ -46,18 +46,22 @@ properties:
     description: "The specific instrument type used to perform the assay."
     enum:
       - Agilent TapeStation 
+      - BioTek
       - CytoTrapNano CTC Platform
       - Epic Sciences CTC Platform
       - HD-SCA Platform
+      - Qubit
   assay_instrument_model:
     description: "The specific model of instrument used to perform the assay."
     enum:
       - Agilent 2200 TapeStation
       - Agilent 4200 TapeStation 
+      - BioTek Synergy 4
       - C88801-RU
       - ESRUO-01
       - Fluidigm Hyperion
       - HDSCA Enumeration
+      - Qubit 3.0
   assay_kit_name:
     description: "Name of the assay kit used."
     type: string
@@ -71,6 +75,7 @@ properties:
     description: "General methodology used to perform the assay (e.g. PCR, Sequencing)."
     enum:
       - DNA Electrophoresis 
+      - Fluorometer
       - Immunohistochemistry
   cell_count:
     description: >
