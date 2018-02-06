@@ -73,7 +73,9 @@ properties:
   hours_to_freezer_lower:
     description: >
       The lower limit on the amount of time, in hours, that it took between the sample being
-      fractionated and the aliquot being frozen or otherwise preserved.
+      fractionated and the aliquot being frozen or otherwise preserved. If the exact time is known,
+      make this value equal to that of the upper limit. If the time is completely unknown, enter
+      Unknown. If no fractionation was performed on this sample, enter Not Applicable.
     type:
       - number
       - string
@@ -84,8 +86,10 @@ properties:
       - type: number
   hours_to_freezer_upper:
     description: >
-      The upper limit on the amount of time, in hours, that it took between the sample being fractionated
-      and the aliquot being frozen or otherwise preserved.
+      The upper limit on the amount of time, in hours, that it took between the sample being
+      fractionated and the aliquot being frozen or otherwise preserved. If the exact time is known,
+      make this value equal to that of the lower limit. If the time is completely unknown, enter
+      Unknown. If no fractionation was performed on this sample, enter Not Applicable.
     type:
       - number
       - string

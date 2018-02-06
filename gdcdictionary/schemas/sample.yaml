@@ -25,7 +25,7 @@ systemProperties:
 required:
   - submitter_id
   - composition
-  - biospecimens 
+  - biospecimens
 
 uniqueKeys:
   - [id]
@@ -80,7 +80,9 @@ properties:
   hours_to_fractionation_lower:
     description: >
       The lower limit on the amount of time, in hours, between the blood draw and the fractionation
-      into its components.
+      into its components. If the exact time is known, make this value equal to that of the upper
+      limit. If the time is completely unknown, enter Unknown. If no fractionation was performed on
+      this sample, enter Not Applicable.
     type:
       - number
       - string
@@ -91,8 +93,10 @@ properties:
       - type: number
   hours_to_fractionation_upper:
     description: >
-      The upper limit on the amount of time, in hours, between the blood draw and the fractionation 
-      into its components.
+      The upper limit on the amount of time, in hours, between the blood draw and the fractionation
+      into its components. If the exact time is known, make this value equal to that of the lower
+      limit. If the time is completely unknown, enter Unknown. If no fractionation was performed on
+      this sample, enter Not Applicable.
     type:
       - number
       - string
