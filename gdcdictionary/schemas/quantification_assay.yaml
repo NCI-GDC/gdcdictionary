@@ -50,6 +50,7 @@ properties:
       - CytoTrapNano CTC Platform
       - Epic Sciences CTC Platform
       - HD-SCA Platform
+      - Molecular Devices SpectraMax
       - Qubit
   assay_instrument_model:
     description: "The specific model of instrument used to perform the assay."
@@ -61,6 +62,7 @@ properties:
       - ESRUO-01
       - Fluidigm Hyperion
       - HDSCA Enumeration
+      - Molecular Devices SpectraMax M2
       - Qubit 3.0
   assay_kit_name:
     description: "Name of the assay kit used."
