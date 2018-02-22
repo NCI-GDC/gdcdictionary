@@ -1,3 +1,8 @@
+""" A file to hold all test utilities. Note the project 
+specific overrrides are not being used in the GDC currently.
+
+"""
+
 import copy
 import os
 import json
@@ -8,19 +13,19 @@ from jsonschema import validate
 
 from gdcdictionary import ROOT_DIR, GDCDictionary
 
-def load_yaml_schema(path):
+def load_yaml(path):
     with open(path, 'r') as f:
         return yaml.load(f)
         
 DATA_DIR = os.path.join(ROOT_DIR, 'examples')
-project1 = load_yaml_schema(os.path.join(ROOT_DIR, 'schemas/projects/project1.yaml'))
+project1 = load_yaml(os.path.join(ROOT_DIR, 'schemas/projects/project1.yaml'))
 projects = {'project1': project1}
 
 class BaseTest(unittest.TestCase):
 
     def setUp(self):
         self.dictionary = GDCDictionary()
-        self.definitions = yaml.load(open(os.path.join(ROOT_DIR, 'schemas','_definitions.yaml'),'r'))
+        self.definitions = load_yaml(os.path.join(ROOT_DIR, 'schemas','_definitions.yaml'))
 
 def merge_schemas(a, b, path=None):
     """Recursively zip schemas together
