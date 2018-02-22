@@ -1,18 +1,18 @@
 """This is an example of json schema for the GDC using schemas defined
-in local yaml files.
+in local yaml files (see gdcdictionary/examples).
 
-Included are a few functions to augment jsonschema and the python
-validator.
+This test class is making sure the example jsons comply with the schema.
+
+Note this is NOT testing that the schema is sane. Just that we adhere
+to it
 
 """
 
 
 from jsonschema import validate, ValidationError
-import yaml
 import glob
 import os
 import json
-from gdcdictionary.python import GDCDictionary
 from gdcdictionary import ROOT_DIR
 
 from utils import validate_entity, BaseTest
