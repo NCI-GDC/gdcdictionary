@@ -1747,8 +1747,7 @@ primary_site:
 
 prior_malignancy:
   description: >
-    Text term to describe the patient's history of prior cancer diagnosis and the spatial location
-    of any previous cancer occurrence.
+    The yes/no/unknown indicator used to describe the patient's history of prior cancer diagnosis.
   termDef:
     term: Prior Cancer Diagnosis Occurrence Description Text
     source: caDSR
