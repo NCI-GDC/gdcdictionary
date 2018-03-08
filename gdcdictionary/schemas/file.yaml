@@ -154,7 +154,7 @@ properties:
     type: string
     description: "The file (object) name" # TOREVIEW
   file_size:
-    type: number
+    type: integer
     description: "The size file (object) in bytes"
   md5sum:
     type: string
@@ -167,7 +167,7 @@ properties:
     $ref: "_definitions.yaml#/data_file_error_type"
   state_comment:
     type: string
-    description: > 
+    description: >
       Optional comment about why the file is in the
       current state, mainly for invalid state.
 
