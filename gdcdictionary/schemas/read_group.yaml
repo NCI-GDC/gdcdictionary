@@ -209,6 +209,12 @@ properties:
     type: string
   read_length:
     type: integer
+  read_pair_number:
+    term:
+      $ref: "_terms.yaml#/read_pair_number"
+    enum:
+      - R1
+      - R2
   RIN:
     term:
       $ref: "_terms.yaml#/RIN"
