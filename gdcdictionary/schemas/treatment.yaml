@@ -53,11 +53,6 @@ properties:
       - string
       - "null"
 
-  days_to_treatment:
-    term:
-      $ref: "_terms.yaml#/days_to_treatment"
-    type: integer
-
   days_to_treatment_end:
     term:
       $ref: "_terms.yaml#/days_to_treatment_end"
