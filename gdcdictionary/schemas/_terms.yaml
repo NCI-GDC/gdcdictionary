@@ -1815,8 +1815,8 @@ m_protein:
 
 md5sum: # TOREVIEW
   description: >
-    The 128-bit hash value expressed as a 32 digit hexadecimal number used as a file's digital
-    fingerprint.
+    The 128-bit hash value expressed as a 32 digit hexadecimal number (in lower case) used as a
+    file's digital fingerprint.
 
 menopause_status:
   description: >
