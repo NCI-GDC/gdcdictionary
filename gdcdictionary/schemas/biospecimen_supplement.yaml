@@ -69,8 +69,6 @@ properties:
       - FoundationOne XML
       - BCR XML
       - XLSX
-      - SSF
-      - PPS
   cases:
     $ref: "_definitions.yaml#/to_many"
   archives:
