@@ -178,6 +178,7 @@ properties:
       - Unstranded
       - First_Stranded
       - Second_Stranded
+      - Not Applicable
   library_strategy:
     term:
       $ref: "_terms.yaml#/library_strategy"
