@@ -75,7 +75,7 @@ properties:
       - TSV
       - XLSX
       - SSF
-      - PPF
+      - PPS
   cases:
     $ref: "_definitions.yaml#/to_many"
   archives:
