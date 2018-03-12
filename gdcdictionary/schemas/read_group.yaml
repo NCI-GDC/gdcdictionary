@@ -160,7 +160,6 @@ properties:
       - PCR
       - Affinity_Enrichment
       - Affinity Enrichment
-      - Poly-T_Enrichment
       - Poly-T Enrichment
       - Random
       - RNA_Depletion
