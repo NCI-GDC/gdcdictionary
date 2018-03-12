@@ -55,6 +55,7 @@ properties:
       - BWA
       - BWA-aln
       - BWA-mem
+      - BWA with Mark Duplicates and BQSR
       - STAR 2-Pass
       - STAR 2-Pass Genome
       - STAR 2-Pass Transcriptome
