@@ -1715,6 +1715,16 @@ portion_weight:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432593&version=1.0"
 
+premature_at_birth:
+  description: >
+    The yes/no/unknown indicator used to describe whether the patient was premature (less than 37 weeks gestation) at birth.
+  termDef:
+    term: Premature Infant Birth Status Indicator
+    source: caDSR
+    cde_id: 6010765
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6010765&version=1.0"
+
 preservation_method:
   description: >
     Text term that represents the method used to preserve the sample.
@@ -2318,6 +2328,16 @@ wbc:
     cde_id: 58312
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=58312&version=3.0"
+
+weeks_gestation_at_birth:
+  description: >
+    Numeric value used to describe the number of weeks starting  from the approximate date of the biological mother's last menstrual period and ending with the birth of the patient.
+  termDef:
+    term: Pregnancy Week Number Count
+    source: caDSR
+    cde_id: 2737369
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2737369&version=1.0"
 
 weight:
   description: >

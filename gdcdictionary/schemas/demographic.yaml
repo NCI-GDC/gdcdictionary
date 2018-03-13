@@ -146,6 +146,20 @@ properties:
       - Unknown
       - Not Reported
 
+   premature_at_birth:
+    term:
+      $ref: "_terms.yaml#/premature_at_birth"
+    enum:
+      - Yes
+      - No
+      - Unknown
+      - Not Reported
+
+   weeks_gestation_at_birth:
+    term:
+      $ref: "_terms.yaml#/weeks_gestation_at_birth"
+    type: number
+
   cases:
     $ref: "_definitions.yaml#/to_one"
   project_id:
