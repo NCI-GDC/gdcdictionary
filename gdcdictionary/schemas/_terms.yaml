@@ -164,7 +164,7 @@ albumin:
     cde_version: 4.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=58274&version=4.0"
 
-alcohol_days_per week:
+alcohol_days_per_week:
   description: >
     Numeric value used to describe the average number of days each week that a person consumes an alcoholic beverage.
   termDef:

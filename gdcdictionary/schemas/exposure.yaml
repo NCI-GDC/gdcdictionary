@@ -130,9 +130,9 @@ properties:
       $ref: "_terms.yaml#/years_smoked"
     type: number
 
-  alcohol_days_per week:
+  alcohol_days_per_week:
     term:
-      $ref: "_terms.yaml#/alcohol_days_per week"
+      $ref: "_terms.yaml#/alcohol_days_per_week"
     type: number
 
   alcohol_drinks_per_day:
