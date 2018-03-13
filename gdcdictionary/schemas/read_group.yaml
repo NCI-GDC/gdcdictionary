@@ -155,7 +155,6 @@ properties:
     term:
       $ref: "_terms.yaml#/library_selection"
     enum:
-      - Hybrid_Selection
       - Hybrid Selection
       - PCR
       - Affinity_Enrichment
