@@ -190,10 +190,7 @@ properties:
       - ChIP-Seq
       - miRNA-Seq
       - Bisulfite-Seq
-      - Validation
-      - Amplicon
-      - Targeted Sequencing
-      - Other
+      - Targeted Sequencing 
   multiplex_barcode:
     term:
       $ref: "_terms.yaml#/multiplex_barcode"
