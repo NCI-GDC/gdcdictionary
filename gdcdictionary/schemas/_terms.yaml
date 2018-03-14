@@ -164,26 +164,6 @@ albumin:
     cde_version: 4.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=58274&version=4.0"
 
-alcohol_days_per_week:
-  description: >
-    Numeric value used to describe the average number of days each week that a person consumes an alcoholic beverage.
-  termDef:
-    term: Alcohol Consumption Weekly Days Usage Number
-    source: caDSR
-    cde_id: 3114013
-    cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3114013&version=1.0"
-
-alcohol_drinks_per_day:
-  description: >
-    Numeric value used to describe the average number of alcoholic beverages  a person consumes per day.
-  termDef:
-    term: Person Daily Alcohol Consumption Count
-    source: caDSR
-    cde_id: 3124961
-    cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3124961&version=1.0"
-
 alcohol_history:
   description: >
     A response to a question that asks whether the participant has consumed at least 12 drinks of
