@@ -2504,6 +2504,22 @@ section_location: # TOREVIEW
   description: >
     Tissue source of the slide.
 
+selected_normal_low_pass_wgs:
+  description: >
+    Denotes which low-pass WGS normal aliquot to submitter prefers to use for variant calling. Only one normal per experimental strategy per case can be selected. 
+
+selected_normal_targeted_sequencing: 
+  description: >
+    Denotes which targeted_sequencing normal aliquot to submitter prefers to use for variant calling. Only one normal per experimental strategy per case can be selected.
+
+selected_normal_wgs: 
+  description: >
+    Denotes which WGS normal aliquot to submitter prefers to use for variant calling. Only one normal per experimental strategy per case can be selected.
+
+selected_normal_wxs: 
+  description: >
+    Denotes which WXS normal aliquot to submitter prefers to use for variant calling. Only one normal per experimental strategy per case can be selected.
+
 sequencing_center: # TOREVIEW
   description: >
     Name of the center that provided the sequence files.
