@@ -982,7 +982,7 @@ file_state: # TOREVIEW
 
 flow_cell_barcode: # TOREVIEW
   description: >
-    Flow Cell Barcode.
+    Flow cell barcode. Wrong or missing information may affect analysis results.
 
 fragment_maximum_length:
   description: >
@@ -1261,8 +1261,8 @@ iss_stage:
 
 lane_number:
   description: >
-    The basic machine unit for sequencing. For Illumina machines, this reflects the physical lane
-    number.
+    The basic machine unit for sequencing. For Illumina machines, this reflects the physical lane number. 
+    Wrong or missing information may affect analysis results.
   termDef:
     term: null
     source: null
@@ -1461,7 +1461,7 @@ morphology:
 
 multiplex_barcode:
   description: >
-    The barcode/index sequence used.
+    The barcode/index sequence used. Wrong or missing information may affect analysis results.
   termDef:
     term: null
     source: null
