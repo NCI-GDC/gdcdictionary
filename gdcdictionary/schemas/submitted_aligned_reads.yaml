@@ -71,9 +71,11 @@ properties:
       - WGS
       - WXS
       - Low Pass WGS
-      - Validation
       - RNA-Seq
       - miRNA-Seq
-      - Total RNA-Seq
+      - Targeted Sequencing
+      - Bisulfite-Seq
+      - ChIP-Seq
+      - ATAC-Seq
   read_groups:
     $ref: "_definitions.yaml#/to_many"
