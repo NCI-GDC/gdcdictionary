@@ -129,7 +129,7 @@ properties:
     term:
       $ref: "_terms.yaml#/year_of_birth"
     type:
-      - number
+      - integer
       - "null"
 
   year_of_death:
