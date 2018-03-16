@@ -35,6 +35,7 @@ required:
   - experiment_name
   - sequencing_center
   - platform
+  - library_selection
   - library_strategy
   - library_name
   - is_paired_end
