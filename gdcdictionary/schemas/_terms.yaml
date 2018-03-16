@@ -829,7 +829,8 @@ disease_response:
 
 disease_type: # TOREVIEW
   description: >
-    Full name for the project.
+    The text term used to describe the type of malignant disease, as categorized by the World
+    Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).
   termDef:
     term: Disease Type
     source: null
@@ -1737,7 +1738,8 @@ primary_diagnosis:
 
 primary_site:
   description: >
-    Primary site for the project.
+    The text term used to describe the general location of the malignant disease, as categorized by
+    the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).
   termDef:
     term: Primary Site
     source: null
