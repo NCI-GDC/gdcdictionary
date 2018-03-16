@@ -3,9 +3,8 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "analyte"
 title: Analyte
 type: object
-program: '*'
-project: '*'
 category: biospecimen
+program: '*'
 project: '*'
 description: >
   A liquid bulk product produced according to specified lab protocols, from a sample or analyte,
