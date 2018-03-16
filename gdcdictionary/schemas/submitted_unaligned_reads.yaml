@@ -48,6 +48,7 @@ properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
     enum: [ "submitted_unaligned_reads" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -55,16 +56,19 @@ properties:
       - Sequencing Data
       - Sequencing Reads
       - Raw Sequencing Data
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Unaligned Reads" ]
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
       - BAM
       - FASTQ
+
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
@@ -72,9 +76,8 @@ properties:
       - WGS
       - WXS
       - Low Pass WGS
-      - Validation
       - RNA-Seq
       - miRNA-Seq
-      - Total RNA-Seq
+  
   read_groups:
     $ref: "_definitions.yaml#/to_one"
