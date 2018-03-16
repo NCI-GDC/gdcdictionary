@@ -164,10 +164,6 @@ properties:
     description: >
       Indicates that the project is logically part of the indicated project.
     $ref: "_definitions.yaml#/to_one"
-  intended_release_date:
-    description: Tracks a Project's intended release date.
-    type: string
-    format: date-time
 
   is_legacy:
     description: >
