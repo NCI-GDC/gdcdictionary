@@ -6057,11 +6057,13 @@ properties:
     term:
       $ref: "_terms.yaml#/vascular_invasion_present"
     enum:
-      - "Yes"
+      - Extramural
+      - Intramural
       - "No"
-      - Unknown
-      - Not Reported
       - Not Allowed To Collect
+      - Not Reported
+      - Unknown
+      - "Yes"
 
   vascular_invasion_type:
     term:
