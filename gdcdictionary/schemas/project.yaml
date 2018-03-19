@@ -141,6 +141,12 @@ properties:
     default: false
     type: boolean
 
+  request_submission:
+    description: >
+      Indicates that the user has requested submission to the GDC for harmonization.
+    default: false
+    type: boolean
+
   programs:
     description: >
       Indicates that the project is logically part of the indicated project.
