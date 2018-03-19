@@ -1500,6 +1500,51 @@ normal_tumor_genotype_snp_match:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4588156&version=1.0"
 
+no_matched_normal_low_pass_wgs:
+  description: >
+    There will be no matched normal low pass WGS aliquots for this case that can be used for variant
+    calling purposes. The GDC may elect to use a single tumor calling pipeline to process this data.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+no_matched_normal_targeted_sequencing:
+  description: >
+    There will be no matched normal Targeted Sequencing aliquots for this case that can be used for
+    variant calling purposes. The GDC may elect to use a single tumor calling pipeline to process
+    this data.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+no_matched_normal_wgs:
+  description: >
+    There will be no matched normal WGS aliquots for this case that can be used for variant calling
+    purposes. The GDC may elect to use a single tumor calling pipeline to process this data.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+no_matched_normal_wxs:
+  description: >
+    There will be no matched normal WXS aliquots for this case that can be used for variant calling
+    purposes. The GDC may elect to use a single tumor calling pipeline to process this data.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 number_proliferating_cells:
   description: >
     Numeric value that represents the count of proliferating cells determined during pathologic
