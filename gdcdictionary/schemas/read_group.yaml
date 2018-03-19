@@ -174,7 +174,6 @@ properties:
       - RNA_Depletion
       - rRNA Depletion
       - miRNA Size Fractionation
-      - Targeted Sequencing
       - Other
   library_strand:
     term:
