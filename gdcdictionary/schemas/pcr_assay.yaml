@@ -83,6 +83,7 @@ properties:
       - Nonsense
       - Insertion
       - Deleteion
+      - Deletion
       - Duplication
       - Frameshift
       - Unspecified
