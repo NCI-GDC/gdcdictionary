@@ -1,0 +1,11 @@
+{
+    "type":"gdc_release",
+    "submitter_id":"release-1",
+    "major_version":1,
+    "minor_version":2,
+    "release_date":"2018-07-04",
+    "released":false,
+    "cases": {
+        "submitter_id":"case1"
+    }
+}

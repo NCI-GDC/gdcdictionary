@@ -1,0 +1,82 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "gdc_release"
+title: GDC Release 
+type: object
+namespace: http://gdc.nci.nih.gov
+category: administrative 
+program: '*'
+project: '*'
+description: >
+  Internal node to store different GDC releases.
+additionalProperties: false
+submittable: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: gdc_releases
+    label: describes
+    target_type: case
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - major_version
+  - minor_version
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+# Ubiquitous Properties 
+  type:
+    enum: [ "gdc_release" ] 
+  id:
+    $ref: "_definitions.yaml#/UUID"
+    systemAlias: node_id
+  submitter_id:
+    type:
+      - string
+    description: >
+      A project-specific identifier for a node. This property is the calling card/nickname/alias for
+      a unit of submission. It can be used in place of the UUID for identifying or recalling a node.
+  state:
+    $ref: "_definitions.yaml#/state"
+  project_id:
+    $ref: "_definitions.yaml#/project_id"
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
+
+  # Node Properties
+  major_version:
+    term:
+      $ref: "_terms.yaml#/major_version"
+    type: integer
+  minor_version:
+    term:
+      $ref: "_terms.yaml#/minor_version"
+    type: integer
+  release_date:
+    term:
+      $ref: "_terms.yaml#/release_date"
+    type: date_time
+  released:
+    term:
+      $ref: "_terms.yaml#/released"
+    type: boolean
+
+  # Links
+  cases:
+    $ref: "_definitions.yaml#/to_one"  
