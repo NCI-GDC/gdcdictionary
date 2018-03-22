@@ -1922,10 +1922,6 @@ released:
   description: >
     Indicates if it is the current release.
 
-release_date:
-  description: >
-    The date when the release is made public.
-
 residual_disease:
   description: >
     Text terms to describe the status of a tissue margin following surgical resection.

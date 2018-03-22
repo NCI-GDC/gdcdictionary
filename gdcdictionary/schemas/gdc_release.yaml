@@ -69,9 +69,7 @@ properties:
       $ref: "_terms.yaml#/minor_version"
     type: integer
   release_date:
-    term:
-      $ref: "_terms.yaml#/release_date"
-    type: date_time
+    $ref: "_definitions.yaml#/datetime"
   released:
     term:
       $ref: "_terms.yaml#/released"
