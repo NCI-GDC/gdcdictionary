@@ -16,7 +16,6 @@ validators: null
 systemProperties:
   - id
   - project_id
-  - state
   - created_datetime
   - updated_datetime
 
@@ -50,8 +49,6 @@ properties:
     description: >
       A project-specific identifier for a node. This property is the calling card/nickname/alias for
       a unit of submission. It can be used in place of the UUID for identifying or recalling a node.
-  state:
-    $ref: "_definitions.yaml#/state"
   project_id:
     $ref: "_definitions.yaml#/project_id"
   created_datetime:
