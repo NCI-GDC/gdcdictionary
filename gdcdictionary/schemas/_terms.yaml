@@ -1408,6 +1408,10 @@ m_protein:
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64561&version=3.0"
 
+major_version:
+  description: >
+    The number identifying the major version.
+
 md5sum: # TOREVIEW
   description: >
     The 128-bit hash value expressed as a 32 digit hexadecimal number used as a file's digital
@@ -1442,6 +1446,10 @@ microsatellite_instability_abnormal:
     cde_id: 3123142
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3123142&version=1.0"
+
+minor_version:
+  description: >
+    The number identifying the minor version.
 
 morphology:
   description: >
@@ -1909,6 +1917,10 @@ relative_with_cancer_history:
     cde_id: 3901752
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3901752&version=1.0"
+
+released:
+  description: >
+    Indicates if it is the current release.
 
 residual_disease:
   description: >
