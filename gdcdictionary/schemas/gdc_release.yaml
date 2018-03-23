@@ -5,8 +5,8 @@ title: GDC Release
 type: object
 namespace: http://gdc.nci.nih.gov
 category: administrative 
-program: '*'
-project: '*'
+program: 'GDC'
+project: 'MISC'
 description: >
   Internal node to store different GDC releases.
 additionalProperties: false
