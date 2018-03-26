@@ -82,24 +82,123 @@ properties:
       $ref: "_terms.yaml#/treatment_anatomic_site"
     enum:
       - Abdomen, total
+      - Abdominal Wall
+      - Acetabulum
+      - Adenoid
+      - Adipose
+      - Adrenal
+      - Alveolar Ridge
+      - Amniotic Fluid
+      - Ampulla of Vater
+      - Anal Sphincter
+      - Ankle
+      - Anorectum
+      - Antecubital Fossa
+      - Antrum
+      - Anus
+      - Aorta
+      - Aortic Body
+      - Appendix
+      - Aqueous Fluid
       - Arm
+      - Artery
+      - Ascending Colon
+      - Ascending Colon Hepatic Flexure
       - Ascites
+      - Auditory Canal
+      - Autonomic Nervous System
+      - Axilla
       - Axillary
+      - Back
+      - Bile Duct
+      - Bladder
+      - Blood
+      - Blood vessel
       - Body, total
       - Bone
+      - Bone Marrow
       - Bone, non-spine
+      - Bowel
+      - Brain
+      - Brain Stem
       - Brain, focal
       - Brain, whole
       - Brain-C2
       - Breast
+      - Broad Ligament
+      - Bronchiole
+      - Bronchus
+      - Brow
+      - Buccal Cavity
+      - Buccal Mucosa
+      - Buttock
+      - Calf
+      - Capillary
+      - Cardia
+      - Carina
+      - Carotid Artery
+      - Carotid Body
+      - Cartilage
+      - Cecum
+      - Cell-Line
+      - Central Nervous System
+      - Cerebellum
+      - Cerebral Cortex
+      - Cerebrospinal Fluid
+      - Cerebrum
       - Cervical
+      - Cervical Spine
+      - Cervix
+      - Chest
       - Chest Wall
+      - Chin
+      - Clavicle
+      - Clitoris
+      - Colon
+      - Colon - Mucosa Only
+      - Common Duct
+      - Conjunctiva
+      - Connective Tissue
+      - Dermal
+      - Descending Colon
+      - Diaphragm
       - Distant Recurrence
       - Distant Site
+      - Duodenum
+      - Ear
+      - Ear Canal
+      - Ear, Pinna (External)
       - Effusion
+      - Elbow
+      - Endocrine Gland
+      - Epididymis
+      - Epidural Space
       - Epitrochlear
+      - Esophagogastric junction
+      - Esophagus
+      - Esophagus - Mucosa Only
       - Eye
+      - Fallopian Tube
       - Femoral
+      - Femoral Artery
+      - Femoral Vein
+      - Femur
+      - Fibroblasts
+      - Fibula
+      - Finger
+      - Floor of Mouth
+      - Fluid
+      - Foot
+      - Forearm
+      - Forehead
+      - Foreskin
+      - Frontal Cortex
+      - Frontal Lobe
+      - Fundus of stomach
+      - Gallbladder
+      - Ganglia
+      - Gastroesophageal Junction
+      - Gastrointestinal Tract
       - Gastrointestinal, Colon
       - Gastrointestinal, Gallbladder
       - Gastrointestinal, Intestine
@@ -113,54 +212,217 @@ properties:
       - Genitourinary, NOS
       - Genitourinary, Prostate
       - Genitourinary, Prostate and Seminal Vesicles
+      - Groin
+      - Gum
+      - Hand
+      - Hard Palate
       - Head
+      - Head and Neck
+      - Head - face or neck, NOS
       - Head, Face, or Neck
+      - Heart
+      - Hepatic
+      - Hepatic Duct
+      - Hepatic Vein
       - Hilar
+      - Hip
+      - Hippocampus
+      - Humerus
+      - Hypopharynx
+      - Ileocecal Valve
+      - Ileum
       - Iliac-common
       - Iliac-external
+      - Ilium
+      - Index finger
       - Inguinal
       - Internal Mammary Nodes
+      - Ischium
+      - Islet Cells
+      - Jaw
+      - Jejunum
+      - Joint
+      - Kidney
+      - Knee
+      - Lacrimal Gland
+      - Large Bowel
+      - Laryngopharynx
+      - Larynx
       - Leg
+      - Leptomeninges
+      - Ligament
+      - Lip
+      - Liver
       - Local Recurrence
+      - Lumbar Spine
       - Lung
+      - Lymph Node
+      - Lymph Node(s) Axilla
+      - Lymph Node(s) Cervical
+      - Lymph Node(s) Epitrochlear
+      - Lymph Node(s) Femoral
+      - Lymph Node(s) Hilar
+      - Lymph Node(s) Iliac-common
+      - Lymph Node(s) Iliac-external
+      - Lymph Node(s) Inguinal
+      - Lymph Node(s) Internal Mammary
+      - Lymph Node(s) Mammary
+      - Lymph Node(s) Mesenteric
+      - Lymph Node(s) Occipital
+      - Lymph Node(s) Parotid
+      - Lymph Node(s) Pelvic
+      - Lymph Node(s) Popliteal
+      - Lymph Node(s) Retroperitoneal
+      - Lymph Node(s) Splenic
+      - Lymph Node(s) Subclavicular
+      - Lymph Node(s) Submandibular
+      - Lymph Node(s) Supraclavicular
       - Lymph Nodes
+      - Lymph Nodes(s) Mediastinal
+      - Lymph node(s) Distant
+      - Lymph node(s) Paraaortic
+      - Lymph node(s) Regional
+      - Lymph node(s) Scalene
       - Lymph node, distant (specify site)
       - Lymph node, locoregional (specify site)
+      - Mandible
       - Mantle
+      - Maxilla
       - Mediastinal
+      - Mediastinal Soft Tissue
       - Mediastinum
       - Mesenteric
+      - Mesentery
+      - Mesothelium
+      - Middle finger
+      - Mitochondria
+      - Muscle
+      - Nails
+      - Nasal Cavity
+      - Nasal Soft Tissue
+      - Nasopharynx
+      - Neck
+      - Nerve
+      - Nerve(s) Cranial
       - Occipital
+      - Occipital Cortex
+      - Ocular Orbits
+      - Omentum
+      - Oral Cavity
+      - Oral Cavity - Mucosa Only
+      - Oropharynx
       - Other
+      - Ovary
+      - Palate
+      - Pancreas
       - Paraaortic
       - Parametrium
+      - Paraspinal Ganglion
+      - Parathyroid
       - Parotid
+      - Parotid Gland
+      - Patella
       - Pelvis
+      - Penis
+      - Pericardium
+      - Periorbital Soft Tissue
+      - Peritoneal Cavity
+      - Peritoneum
+      - Pharynx
+      - Pineal
+      - Pineal Gland
+      - Pituitary Gland
+      - Placenta
+      - Pleura
       - Popliteal
+      - Popliteal fossa
+      - Pouch
       - Primary Tumor Field
       - Primary tumor site
       - Prostate
       - Prostate Bed
       - Prostate, Seminal Vesicles and Lymph Nodes
+      - Pylorus
+      - Rectosigmoid Junction
       - Rectum
       - Regional Site
+      - Retina
+      - Retro-Orbital Region
       - Retroperitoneal
+      - Retroperitoneum
+      - Rib
+      - Ring finger
+      - Round Ligament
       - Sacrum
+      - Salivary Gland
+      - Scalp
+      - Scapula
+      - Sciatic Nerve
+      - Scrotum
+      - Seminal Vesicle
       - Seminal vesicles
       - Shoulder
+      - Sigmoid Colon
+      - Sinus
+      - Sinus(es), Maxillary
+      - Skeletal Muscle
+      - Skin
       - Skin, lower extremity, local
       - Skin, total
       - Skin, trunk, local
       - Skin, upper extremity, local
+      - Skull
+      - Small Bowel
+      - Small Bowel - Mucosa Only
+      - Small finger
+      - Soft Tissue
+      - Spinal Column
+      - Spinal Cord
       - Spine
       - Spine, whole
+      - Spleen
       - Splenic
+      - Splenic Flexure
+      - Sternum
+      - Stomach
+      - Stomach - Mucosa Only
+      - Subcutaneous Tissue
       - Submandibular
       - Supraclavicular
       - Supraclavicular/Axillary Level 3
+      - Synovium
+      - Temporal Cortex
+      - Tendon
+      - Testis
+      - Thigh
+      - Thoracic Spine
       - Thorax
+      - Throat
+      - Thumb
+      - Thymus
+      - Thyroid
+      - Tibia
+      - Tongue
+      - Tonsil
+      - Tonsil (Pharyngeal)
+      - Trachea / Major Bronchi
+      - Transverse Colon
       - Trunk
+      - Umbilical Cord
       - Unknown
+      - Ureter
+      - Urethra
+      - Urinary Tract
+      - Uterus
+      - Uvula
+      - Vagina
+      - Vas Deferens
+      - Vein
+      - Venous
+      - Vertebra
+      - Vulva
+      - White Blood Cells
+      - Wrist
       - Not Reported
       - Not Allowed To Collect
 
