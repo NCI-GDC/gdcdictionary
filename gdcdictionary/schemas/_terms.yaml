@@ -266,14 +266,14 @@ ann_arbor_b_symptoms:
 
 ann_arbor_clinical_stage:
   description: >
-    The classification of the clinically confirmed anatomic disease extent of lymphoma (Hodgkin's
-    and Non-Hodgkins) based on the Ann Arbor Staging System.
+    The text term used to describe the clinical classification of lymphoma, as defined by the Ann
+    Arbor Lymphoma Staging System.
   termDef:
     term: Ann Arbor Clinical Stage
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    source: caDSR
+    cde_id: 5615604
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5615604&version=1.0"
 
 ann_arbor_extranodal_involvement:
   description: >
@@ -288,14 +288,14 @@ ann_arbor_extranodal_involvement:
 
 ann_arbor_pathologic_stage:
   description: >
-    The classification of the pathologically confirmed anatomic disease extent of lymphoma
-    (Hodgkin's and Non-Hodgkins) based on the Ann Arbor Staging System.
+    The text term used to describe the pathologic classification of lymphoma, as defined by the Ann
+    Arbor Lymphoma Staging System.
   termDef:
     term: Ann Arbor Pathologic Stage
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    source: caDSR
+    cde_id: 5615605
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5615605&version=1.0"
 
 ann_arbor_tumor_stage:
   description: >
