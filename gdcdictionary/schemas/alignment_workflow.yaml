@@ -53,6 +53,7 @@ properties:
   workflow_type:
     enum:
       - BWA
+      - BWA with BQSR
       - BWA-aln
       - BWA-mem
       - STAR 2-Pass
