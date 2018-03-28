@@ -65,10 +65,6 @@ properties:
     $ref: "_definitions.yaml#/datetime"
 
   # Node properties
-  absolute_neutrophil:
-    term:
-      $ref: "_terms.yaml#/absolute_neutrophil"
-    type: number
   adverse_event:
     term:
       $ref: "_terms.yaml#/adverse_event"
@@ -863,42 +859,14 @@ properties:
       - Wound Dehiscence
       - Wound Infection
       - Wrist Fracture
-  albumin:
-    term:
-      $ref: "_terms.yaml#/albumin"
-    type: number
-  beta_2_microglobulin:
-    term:
-      $ref: "_terms.yaml#/beta_2_microglobulin"
-    type: number
   bmi:
     term:
       $ref: "_terms.yaml#/bmi"
-    type: number
-  bun:
-    term:
-      $ref: "_terms.yaml#/bun"
-    type: number
-  calcium:
-    term:
-      $ref: "_terms.yaml#/calcium"
     type: number
   cause_of_response:
     term:
       $ref: "_terms.yaml#/cause_of_response"
     type: string
-  cea_level:
-    term:
-      $ref: "_terms.yaml#/cea_level"
-    type: number
-  colon_polyps_history:
-    term:
-      $ref: "_terms.yaml#colon_polyps_history"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-      - Not Reported
   comorbidity:
     term:
       $ref: "_terms.yaml#/comorbidity"
@@ -1010,14 +978,6 @@ properties:
       - Ulcerative Colitis
       - Unknown
       - Not Reported
-  creatinine:
-    term:
-      $ref: "_terms.yaml#/creatinine"
-    type: number
-  crp:
-    term:
-      $ref: "_terms.yaml#/crp"
-    type: number
   days_to_adverse_event:
     term:
       $ref: "_terms.yaml#/days_to_adverse_event"
@@ -1029,10 +989,6 @@ properties:
   days_to_follow_up:
     term:
       $ref: "_terms.yaml#/days_to_follow_up"
-    type: integer
-  days_to_hiv_diagnosis:
-    term:
-      $ref: "_terms.yaml#/days_to_hiv_diagnosis"
     type: integer
   days_to_progression:
     term:
@@ -1086,30 +1042,6 @@ properties:
       - "3"
       - "4"
       - "5"
-  estrogen_receptor_percent_positive_ihc:
-    term:
-      $ref: "_terms.yaml#/estrogen_receptor_percent_positive_ihc"
-    enum:
-      - <10%
-      - 10-19%
-      - 20-29%
-      - 30-39%
-      - 40-49%
-      - 50-59%
-      - 60-69%
-      - 70-79%
-      - 80-89%
-      - 90-100%
-  estrogen_receptor_result_ihc:
-    term:
-      $ref: "_terms.yaml#/estrogen_receptor_result_ihc"
-    enum:
-      - Equivocal
-      - Negative
-      - Not Performed
-      - Positive
-      - Unknown
-      - Not Reported
   fev1_ref_post_bronch_percent:
     term:
       $ref: "_terms.yaml#/fev1_ref_post_bronch_percent"
@@ -1126,60 +1058,10 @@ properties:
     term:
       $ref: "_terms.yaml#/fev1_fvc_post_bronch_percent"
     type: number
-  glucose:
-    term:
-      $ref: "_terms.yaml#/glucose"
-    type: number
   height:
     term:
       $ref: "_terms.yaml#/height"
     type: number
-  hemoglobin:
-    term:
-      $ref: "_terms.yaml#/hemoglobin"
-    type: number
-  her2_erbb2_percent_positive_ihc:
-    term:
-      $ref: "_terms.yaml#/her2_erbb2_percent_positive_ihc"
-    enum:
-      - <10%
-      - 10-19%
-      - 20-29%
-      - 30-39%
-      - 40-49%
-      - 50-59%
-      - 60-69%
-      - 70-79%
-      - 80-89%
-      - 90-100%
-  her2_erbb2_result_fish:
-    term:
-      $ref: "_terms.yaml#/her2_erbb2_result_fish"
-    enum:
-      - Equivocal
-      - Negative
-      - Not Performed
-      - Positive
-      - Unknown
-      - Not Reported
-  her2_erbb2_result_ihc:
-    term:
-      $ref: "_terms.yaml#/her2_erbb2_result_ihc"
-    enum:
-      - Equivocal
-      - Negative
-      - Not Performed
-      - Positive
-      - Unknown
-      - Not Reported
-  hiv_positive:
-    term:
-      $ref: "_terms.yaml#/hiv_positive"
-    enum:
-      - "Yes"
-      - "No"
-      - Not Reported
-      - Unknown
   hpv_positive_type:
     term:
       $ref: "_terms.yaml#/hpv_positive_type"
@@ -1203,83 +1085,6 @@ properties:
       - "73"
       - "82"
       - Other
-      - Unknown
-      - Not Reported
-  hpv_status:
-    term:
-      $ref: "_terms.yaml#/hpv_status"
-    enum:
-      - Equivocal
-      - Negative
-      - Positive
-      - Unknown
-      - Not Reported
-  iga:
-    term:
-      $ref: "_terms.yaml#/iga"
-    type: number
-  igg:
-    term:
-      $ref: "_terms.yaml#/igg"
-    type: number
-  igl_kappa:
-    term:
-      $ref: "_terms.yaml#/igl_kappa"
-    type: number
-  igl_lambda:
-    term:
-      $ref: "_terms.yaml#/igl_lambda"
-    type: number
-  igm:
-    term:
-      $ref: "_terms.yaml#/igm"
-    type: number
-  ldh_level:
-    term:
-      $ref: "_terms.yaml#/ldh_level"
-    type: number
-  ldh_normal_range_upper:
-    term:
-      $ref: "_terms.yaml#/ldh_normal_range_upper"
-    type: number
-  m_protein:
-    term:
-      $ref: "_terms.yaml#/m_protein"
-    type: number
-  microsatellite_instability_abnormal:
-    term:
-      $ref: "_terms.yaml#/microsatellite_instability_abnormal"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-      - Not Reported
-  platelet_count:
-    term:
-      $ref: "_terms.yaml#/platelet_count"
-    type: number
-  progesterone_receptor_percent_positive_ihc:
-    term:
-      $ref: "_terms.yaml#/progesterone_receptor_percent_positive_ihc"
-    enum:
-      - <10%
-      - 10-19%
-      - 20-29%
-      - 30-39%
-      - 40-49%
-      - 50-59%
-      - 60-69%
-      - 70-79%
-      - 80-89%
-      - 90-100%
-  progesterone_receptor_result_ihc:
-    term:
-      $ref: "_terms.yaml#/progesterone_receptor_result_ihc"
-    enum:
-      - Equivocal
-      - Negative
-      - Not Performed
-      - Positive
       - Unknown
       - Not Reported
   progression_or_recurrence:
@@ -1626,14 +1431,6 @@ properties:
       - Overlapping lesion of biliary tract
       - Unknown
       - Not Reported
-  total_protein:
-    term:
-      $ref: "_terms.yaml#/total_protein"
-    type: number
-  wbc:
-    term:
-      $ref: "_terms.yaml#/wbc"
-    type: number
   weight:
     term:
       $ref: "_terms.yaml#/weight"
