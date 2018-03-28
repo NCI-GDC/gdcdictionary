@@ -888,8 +888,11 @@ properties:
       $ref: "_terms.yaml#/comorbidity"
     enum:
       - Acute Renal Failure
+      - Adenocarcinoma
       - Adrenocortical Insufficiency
+      - Adenomatous Polyposis Coli
       - Allergies
+      - Alpha-1 Antitrypsin
       - Anemia
       - Anxiety
       - Arrhythmia
@@ -899,13 +902,17 @@ properties:
       - Avascular Necrosis
       - Barrett's Esophagus
       - Basal Cell Carcinoma
+      - Beckwith-Wiedemann
       - Behcet's Disease
+      - Biliary Disorder
       - Blood Clots
       - Bone Fracture(s)
       - Bronchitis
       - Calcium Channel Blockers
       - Cancer
       - Cataracts
+      - Celiac Disease
+      - Cirrhosis, Unknown Etiology
       - Cerebrovascular Disease
       - Chronic Renal Failure
       - Colon Polyps
@@ -914,10 +921,12 @@ properties:
       - Connective Tissue Disorder
       - COPD
       - Coronary Artery Disease
+      - Crohn's Disease
       - Cryptogenic Organizing Pneumonia
       - Deep Vein Thrombosis / Thromboembolism
       - Depression
       - Diabetes
+      - Diabetes, Type II
       - Diabetic Neuropathy
       - Diet Controlled Diabetes
       - Diverticulitis
@@ -926,11 +935,16 @@ properties:
       - Epilepsy
       - Eczema
       - Epstein-Barr Virus
+      - Familial Adenomatous Polyposis
+      - Fanconi Anemia
       - Gastroesophageal Reflux Disease
       - GERD
       - Glaucoma
+      - Glycogen Storage Disease
       - Gout
       - Gonadal Dysfunction
+      - Gorlin Syndrome
+      - H. pylori Infection
       - Hashimoto's Thyroiditis
       - Headache
       - Heart Disease
@@ -938,6 +952,7 @@ properties:
       - Hepatitis
       - Hepatitis B Infection
       - Hepatitis C Infection
+      - Hereditary Non-polyposis Colon Cancer
       - HIV / AIDS
       - Human Papillomavirus Infection
       - HUS/TTP
@@ -951,6 +966,7 @@ properties:
       - Inflammatory Bowel Disease
       - Insulin Controlled Diabetes
       - Interstitial Pneumontis or ARDS
+      - Intraductal Papillary Mucinous Neoplasm
       - Iron Overload
       - Ischemic Heart Disease
       - ITP
@@ -958,10 +974,13 @@ properties:
       - Kidney Disease
       - Liver Cirrhosis (Liver Disease)
       - Liver Toxicity (Non-Infectious)
+      - Li-Fraumeni Syndrome
       - Lupus
+      - Lynch Syndrome
       - MAI
       - Myasthenia Gravis
       - Myocardial Infarction
+      - Neuroendocrine Tumor
       - Obesity
       - Organ transplant (site)
       - Osteoarthritis
@@ -975,6 +994,7 @@ properties:
       - Peptic Ulcer (Ulcer)
       - Peripheral Neuropathy
       - Peripheral Vascular Disease
+      - Peutz-Jeghers Disease
       - Pregnancy in Patient or Partner
       - Psoriasis
       - Pulmonary Fibrosis
@@ -984,6 +1004,7 @@ properties:
       - Renal Insufficiency
       - Rheumatologic Disease
       - Rheumatoid Arthritis
+      - Rubinstein-Taybi Syndrome
       - Sarcoidosis
       - Seizure
       - Sleep apnea
@@ -991,6 +1012,8 @@ properties:
       - Stroke
       - Transient Ischemic Attack
       - Tuberculosis
+      - Turcot Syndrome
+      - Tyrosinemia
       - Ulcerative Colitis
       - Unknown
       - Not Reported
