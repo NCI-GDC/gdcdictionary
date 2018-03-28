@@ -483,6 +483,8 @@ properties:
       - Other
       - Other Surgical Resection
       - Pan-Procto Colectomy
+      - Pancreatectomy
+      - Paracentesis
       - Pneumonectomy
       - Right Hemicolectomy
       - Sigmoid Colectomy
@@ -497,6 +499,7 @@ properties:
       - Transverse Colectomy
       - Tumor Resection
       - Wedge Resection
+      - Whipple Procedure
       - Unknown
       - Not Reported
       - Not Allowed To Collect
