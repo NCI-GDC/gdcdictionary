@@ -192,11 +192,14 @@ properties:
       $ref: "_terms.yaml#/treatment_outcome"
     enum:
       - Complete Response
+      - Mixed Response
+      - No Response
       - Partial Response
       - Progressive Disease
       - Stable Disease
       - Treatment Ongoing
       - Treatment Stopped Due to Toxicity
+      - Very Good Partial Response
       - Unknown
       - Not Reported
 
