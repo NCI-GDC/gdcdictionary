@@ -114,7 +114,7 @@ properties:
       - Bile Duct
       - Bladder
       - Blood
-      - Blood vessel
+      - Blood Vessel
       - Body, total
       - Bone
       - Bone Marrow
@@ -175,7 +175,7 @@ properties:
       - Epididymis
       - Epidural Space
       - Epitrochlear
-      - Esophagogastric junction
+      - Esophagogastric Junction
       - Esophagus
       - Esophagus - Mucosa Only
       - Eye
@@ -195,7 +195,7 @@ properties:
       - Foreskin
       - Frontal Cortex
       - Frontal Lobe
-      - Fundus of stomach
+      - Fundus of Stomach
       - Gallbladder
       - Ganglia
       - Gastroesophageal Junction
@@ -211,8 +211,8 @@ properties:
       - Hand
       - Hard Palate
       - Head
+      - Head - Face Or Neck, Nos
       - Head and Neck
-      - Head - face or neck, NOS
       - Head, Face, or Neck
       - Heart
       - Hepatic
@@ -228,7 +228,7 @@ properties:
       - Iliac-common
       - Iliac-external
       - Ilium
-      - Index finger
+      - Index Finger
       - Inguinal
       - Internal Mammary Nodes
       - Ischium
@@ -253,30 +253,30 @@ properties:
       - Lymph Node
       - Lymph Node(s) Axilla
       - Lymph Node(s) Cervical
+      - Lymph Node(s) Distant
       - Lymph Node(s) Epitrochlear
       - Lymph Node(s) Femoral
       - Lymph Node(s) Hilar
-      - Lymph Node(s) Iliac-common
-      - Lymph Node(s) Iliac-external
+      - Lymph Node(s) Iliac-Common
+      - Lymph Node(s) Iliac-External
       - Lymph Node(s) Inguinal
       - Lymph Node(s) Internal Mammary
       - Lymph Node(s) Mammary
+      - Lymph Node(s) Mediastinal
       - Lymph Node(s) Mesenteric
       - Lymph Node(s) Occipital
+      - Lymph Node(s) Paraaortic
       - Lymph Node(s) Parotid
       - Lymph Node(s) Pelvic
       - Lymph Node(s) Popliteal
+      - Lymph Node(s) Regional
       - Lymph Node(s) Retroperitoneal
+      - Lymph Node(s) Scalene
       - Lymph Node(s) Splenic
       - Lymph Node(s) Subclavicular
       - Lymph Node(s) Submandibular
       - Lymph Node(s) Supraclavicular
       - Lymph Nodes
-      - Lymph Nodes(s) Mediastinal
-      - Lymph node(s) Distant
-      - Lymph node(s) Paraaortic
-      - Lymph node(s) Regional
-      - Lymph node(s) Scalene
       - Lymph node, distant (specify site)
       - Lymph node, locoregional (specify site)
       - Mandible
@@ -288,7 +288,7 @@ properties:
       - Mesenteric
       - Mesentery
       - Mesothelium
-      - Middle finger
+      - Middle Finger
       - Mitochondria
       - Muscle
       - Nails
@@ -329,7 +329,7 @@ properties:
       - Placenta
       - Pleura
       - Popliteal
-      - Popliteal fossa
+      - Popliteal Fossa
       - Pouch
       - Primary Tumor Field
       - Primary tumor site
@@ -345,7 +345,7 @@ properties:
       - Retroperitoneal
       - Retroperitoneum
       - Rib
-      - Ring finger
+      - Ring Finger
       - Round Ligament
       - Sacrum
       - Salivary Gland
@@ -368,7 +368,7 @@ properties:
       - Skull
       - Small Bowel
       - Small Bowel - Mucosa Only
-      - Small finger
+      - Small Finger
       - Soft Tissue
       - Spinal Column
       - Spinal Cord
@@ -417,8 +417,9 @@ properties:
       - Vulva
       - White Blood Cells
       - Wrist
+      - Not Allowed To Collect
       - Not Reported
-
+ 
   treatment_intent_type:
     term:
       $ref: "_terms.yaml#/treatment_intent_type"
