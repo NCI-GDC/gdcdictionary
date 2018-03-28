@@ -398,6 +398,7 @@ properties:
       - Saliva
       - Sputum
       - Solid Tissue
+      - Sorted Cells
       - Whole Bone Marrow
       - Unknown
       - Not Reported
