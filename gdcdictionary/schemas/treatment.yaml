@@ -29,7 +29,8 @@ links:
     multiplicity: many_to_one
     required: true
 
-
+deprecated:
+  - days_to_treatment
 
 uniqueKeys:
   #unclear if want submitter ID for clinical

@@ -32,6 +32,12 @@ preferred:
   - cigarettes_per_day
   - years_smoked
 
+deprecated:
+  - bmi
+  - cigarettes_per_day
+  - height
+  - weight
+
 uniqueKeys:
   #unclear if want submitter ID for clinical
   - [id]
