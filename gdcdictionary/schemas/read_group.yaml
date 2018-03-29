@@ -42,6 +42,13 @@ required:
   - read_group_name
   - target_capture_kit
 
+deprecated:
+  - target_capture_kit_catalog_number
+  - target_capture_kit_name
+  - target_capture_kit_target_region
+  - target_capture_kit_vendor
+  - target_capture_kit_version
+
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]
@@ -89,15 +96,15 @@ properties:
   fragment_mean_length:
     term:
       $ref: "_terms.yaml#/fragment_mean_length"
-    type: number 
+    type: number
   fragment_minimum_length:
-    term: 
+    term:
       $ref: "_terms.yaml#/fragment_minimum_length"
     type: integer
   fragment_standard_deviation_length:
     term:
       $ref: "_terms.yaml#/fragment_standard_deviation_length"
-    type: number 
+    type: number
   includes_spike_ins:
     term:
       $ref: "_terms.yaml#/includes_spike_ins"
@@ -188,7 +195,7 @@ properties:
       - Bisulfite-Seq
       - Validation
       - Amplicon
-      - Targeted Sequencing 
+      - Targeted Sequencing
       - Other
   multiplex_barcode:
     term:
