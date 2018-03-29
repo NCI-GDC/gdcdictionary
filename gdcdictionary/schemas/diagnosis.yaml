@@ -336,6 +336,43 @@ properties:
       - Not Reported
       - Not Allowed To Collect
 
+  ajcc_staging_system_edition:
+     term:
+       $ref: "_terms.yaml#/ajcc_staging_system_edition"
+     enum:
+       - 1st
+       - 2nd
+       - 3rd
+       - 4th
+       - 5th
+       - 6th
+       - 7th
+       - 8th
+       - Unknown
+       - Not Reported
+
+  anaplasia_present:
+    term:
+      $ref: "_terms.yaml#/anaplasia_present"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
+  anaplasia_present_type:
+    term:
+      $ref: "_terms.yaml#/anaplasia_present_type"
+    enum:
+      - Absent
+      - Diffuse
+      - Equivocal
+      - Focal
+      - Present
+      - Sclerosis
+      - Unknown
+      - Not Reported
+
   ann_arbor_b_symptoms:
     term:
       $ref: "_terms.yaml#/ann_arbor_b_symptoms"
@@ -430,6 +467,24 @@ properties:
       - Not Cancer Related
       - Unknown
 
+  child_pugh_classification:
+    term:
+      $ref: "_terms.yaml#/child_pugh_classification"
+    enum:
+      - A
+      - A5
+      - A6
+      - B
+      - B7
+      - B8
+      - B9
+      - C
+      - C10
+      - C11
+      - C12
+      - Unknown
+      - Not Reported
+
   circumferential_resection_margin:
     term:
       $ref: "_terms.yaml#/circumferential_resection_margin"
@@ -446,6 +501,48 @@ properties:
       - Unknown
       - not reported
       - Not Allowed To Collect
+
+  cog_neuroblastoma_risk_group:
+    term:
+      $ref: "_terms.yaml#/cog_neuroblastoma_risk_group"
+    enum:
+      - High Risk
+      - Intermediate Risk
+      - Low Risk
+      - Unknown
+      - Not Reported
+
+  cog_rhabdomyosarcoma_risk_group:
+    term:
+      $ref: "_terms.yaml#/cog_rhabdomyosarcoma_risk_group"
+    enum:
+      - High Risk
+      - Intermediate Risk
+      - Low Risk
+      - Unknown
+      - Not Reported
+
+  cog_renal_stage:
+    term:
+      $ref: "_terms.yaml#/cog_renal_stage"
+    enum:
+      - Stage I
+      - Stage II
+      - Stage III
+      - Stage IV
+      - Unknown
+      - Not Reported
+
+  cog_liver_stage:
+    term:
+      $ref: "_terms.yaml#/cog_liver_stage"
+    enum:
+      - Stage I
+      - Stage II
+      - Stage III
+      - Stage IV
+      - Unknown
+      - Not Applicable
 
   colon_polyps_history:
     term:
@@ -518,6 +615,65 @@ properties:
       - number
       - "null"
 
+  enneking_msts_grade:
+    term:
+      $ref: "_terms.yaml#/enneking_msts_grade"
+    enum:
+      - High Grade (G2)
+      - Low Grade (G1)
+      - Unknown
+      - Not Reported
+
+  enneking_msts_metastasis:
+    term:
+      $ref: "_terms.yaml#/enneking_msts_metastasis"
+    enum:
+      - No Metastasis (M0)
+      - Regional or Distant Metastasis (M1)
+      - Unknown
+      - Not Reported
+
+  enneking_msts_stage:
+    term:
+      $ref: "_terms.yaml#/enneking_msts_stage"
+    enum:
+      - Stage IA
+      - Stage IB
+      - Stage IIA
+      - Stage IIB
+      - Stage III
+      - Unknown
+      - Not Reported
+
+  enneking_msts_tumor_site:
+    term:
+      $ref: "_terms.yaml#/enneking_msts_tumor_site"
+    enum:
+      - Extracompartmental (T2)
+      - Intracompartmental (T1)
+      - Unknown
+      - Not Reported
+
+  esophageal_columnar_dysplasia_degree:
+    term:
+      $ref: "_terms.yaml#/esophageal_columnar_dysplasia_degree"
+    enum:
+      - High Grade Dysplasia
+      - Indefinite for Dysplasia
+      - Low Grade Dysplasia
+      - Negative/ No Dysplasia
+      - Unknown
+      - Not Reported
+
+  esophageal_columnar_metaplasia_present:
+    term:
+      $ref: "_terms.yaml#/esophageal_columnar_metaplasia_present"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
   figo_stage:
     term:
       $ref: "_terms.yaml#/figo_stage"
@@ -550,6 +706,42 @@ properties:
       - Not Reported
       - Not Allowed To Collect
 
+  first_symptom_prior_to_diagnosis:
+    term:
+      $ref: "_terms.yaml#/first_symptom_prior_to_diagnosis"
+    enum:
+      - Altered Mental Status
+      - Headaches
+      - Motor or Movement Changes
+      - Seizures
+      - Sensory Changes
+      - Visual Changes
+      - Unknown
+      - Not Reported
+
+  gastric_esophageal_junction_involvement:
+    term:
+      $ref: "_terms.yaml#/gastric_esophageal_junction_involvement"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
+  goblet_cells_columnar_mucosa_present:
+    term:
+      $ref: "_terms.yaml#/goblet_cells_columnar_mucosa_present"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
+  gross_tumor_weight:
+    term:
+      $ref: "_terms.yaml#/gross_tumor_weight"
+    type: number
+
   hiv_positive:
     term:
       $ref: "_terms.yaml#/hiv_positive"
@@ -574,6 +766,94 @@ properties:
       - Negative
       - Positive
       - Unknown
+
+  icd_10_code:
+    term:
+      $ref: "_terms.yaml#/icd_10_code"
+    type: string
+    pattern: ^[A-TV-Z][0-9][A-Z0-9](\.?[A-Z0-9]{1,4})?$
+
+  inpc_grade:
+    term:
+      $ref: "_terms.yaml#/inpc_grade"
+    enum:
+      - Differentiating
+      - Poorly Differentiated
+      - Undifferentiated
+      - Unknown
+      - Not Reported
+
+  inpc_histologic_group:
+    term:
+      $ref: "_terms.yaml#/inpc_histologic_group"
+    enum:
+      - Favorable
+      - Unfavorable
+      - Unknown
+      - Not Reported
+
+  inrg_stage:
+    term:
+      $ref: "_terms.yaml#/inrg_stage"
+    enum:
+      - L1
+      - L2
+      - M
+      - Ms
+      - Unknown
+      - Not Reported
+
+  inss_stage:
+    term:
+      $ref: "_terms.yaml#/inss_stage"
+    enum:
+      - Stage 1
+      - Stage 2A
+      - Stage 2B
+      - Stage 3
+      - Stage 4
+      - Stage 4S
+      - Unknown
+      - Not Reported
+
+  irs_group:
+    term:
+      $ref: "_terms.yaml#/irs_group"
+    enum:
+      - Group I
+      - Group Ia
+      - Group Ib
+      - Group II
+      - Group IIa
+      - Group IIb
+      - Group IIc
+      - Group III
+      - Group IIIa
+      - Group IIIb
+      - Group IV
+      - Unknown
+      - Not Reported
+
+  irs_stage:
+    term:
+      $ref: "_terms.yaml#/irs_stage"
+    enum:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+
+  ishak_fibrosis_score:
+    term:
+      $ref: "_terms.yaml#/ishak_fibrosis_score"
+    enum:
+      - 0 - No Fibrosis
+      - 1,2 - Portal Fibrosis
+      - 3,4 - Fibrous Speta
+      - 5 - Nodular Formation and Incomplete Cirrhosis
+      - 6 - Established Cirrhosis
+      - Unknown
+      - Not Reported
 
   iss_stage:
     term:
@@ -638,6 +918,54 @@ properties:
       - Unknown
       - Not Reported
 
+  meduloblastoma_molecular_classification:
+    term:
+      $ref: "_terms.yaml#/meduloblastoma_molecular_classification"
+    enum:
+      - Not Determined
+      - Non-WNT/non-SHH Activated
+      - SHH-Activated
+      - WNT-Activated
+      - Unknown
+      - Not Reported
+
+  metastasis_at_diagnosis:
+    term:
+      $ref: "_terms.yaml#/metastasis_at_diagnosis"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
+  metastasis_at_diagnosis_site:
+    term:
+      $ref: "_terms.yaml#/metastasis_at_diagnosis_site"
+    enum:
+      - Abdomen
+      - Adrenal Gland
+      - Ascites
+      - Bone
+      - Bone Marrow
+      - Brain
+      - Cerebrospinal Fluid
+      - Central Nervous System
+      - Distant Nodes
+      - Distant Organ
+      - Liver
+      - Lung
+      - Lymph Node(s) Axilla
+      - Lymph Node(s)
+      - Mediastinum
+      - Peritoneal Cavity
+      - Peritoneum
+      - Pleura
+      - Skin
+      - Soft Tissue
+      - Spinal Cord
+      - Unknown
+      - Not Reported
+
   method_of_diagnosis:
     term:
       $ref: "_terms.yaml#/method_of_diagnosis"
@@ -666,6 +994,25 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+
+  micropapillary_features:
+    term:
+      $ref: "_terms.yaml#/micropapillary_features"
+    enum:
+      - Absent
+      - Present
+      - Unknown
+      - Not Reported
+
+  mitosis_karyorrhexis_index:
+    term:
+      $ref: "_terms.yaml#/mitosis_karyorrhexis_index"
+    enum:
+      - High
+      - Intermediate
+      - Low
+      - Unknown
+      - Not Reported
 
   morphology:
     term:
@@ -1905,6 +2252,26 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Unknown
+      - Not Reported
+
+  peripancreatic_lymph_nodes_positive:
+    term:
+      $ref: "_terms.yaml#/peripancreatic_lymph_nodes_positive"
+    enum:
+      - "0"
+      - 1-3
+      - 4 or More
+      - Unknown
+      - Not Reported
+
+  peripancreatic_lymph_nodes_tested:
+    term:
+      $ref: "_terms.yaml#/peripancreatic_lymph_nodes_tested"
+    enum:
+      - "0"
+      - 1-3
+      - 4 or More
       - Unknown
       - Not Reported
 
@@ -5116,6 +5483,26 @@ properties:
       - C80.9
       - not reported
 
+  supratentorial_localization:
+    term:
+      $ref: "_terms.yaml#/supratentorial_localization"
+    enum:
+      - Cerebral Cortex
+      - Deep Gray (e.g. Basal Ganglia, Thalamus)
+      - Spinal Cord
+      - White Matter
+      - Unknown
+      - Not Reported
+
+  synchronous_malignancy:
+    term:
+      $ref: "_terms.yaml#/synchronous_malignancy"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
   tissue_or_organ_of_origin:
     term:
       $ref: "_terms.yaml#/tissue_or_organ_of_origin"
@@ -5614,6 +6001,15 @@ properties:
       - C80.9
       - not reported
 
+  tumor_confined_to_organ_of_origin:
+    term:
+      $ref: "_terms.yaml#/tumor_confined_to_organ_of_origin"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Applicable
+
   tumor_grade:
     term:
       $ref: "_terms.yaml#/tumor_grade"
@@ -5629,6 +6025,11 @@ properties:
       - Unknown
       - Not Reported
       - not reported
+
+  tumor_largest_dimension_diameter:
+    term:
+      $ref: "_terms.yaml#/tumor_largest_dimension_diameter"
+    type: number
 
   tumor_stage:
     term:
@@ -5667,6 +6068,15 @@ properties:
       - Not Allowed To Collect
       - not allowed to collect
       - pending # this is from TARGET RT clinical data
+
+  wilms_tumor_histologic_subtype:
+    term:
+      $ref: "_terms.yaml#/wilms_tumor_histologic_subtype"
+    enum:
+      - Favorable
+      - Unfavorable
+      - Unknown
+      - Not Reported
 
   year_of_diagnosis:
     term:
