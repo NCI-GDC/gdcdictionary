@@ -163,6 +163,9 @@ properties:
       - Endocrine Gland
       - Epididymis
       - Epidural Space
+      - Esophageal; Distal
+      - Esophageal; Mid
+      - Esophageal; Proximal
       - Esophagogastric Junction
       - Esophagus
       - Esophagus - Mucosa Only
@@ -196,6 +199,7 @@ properties:
       - Heart
       - Hepatic
       - Hepatic Duct
+      - Hepatic Flexure
       - Hepatic Vein
       - Hip
       - Hippocampus
