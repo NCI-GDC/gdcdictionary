@@ -232,7 +232,7 @@ properties:
     term:
       $ref: "_terms.yaml#/spike_ins_fasta"
     type: string
-target_capture_kit:
+  target_capture_kit:
     term:
       $ref: "_terms.yaml#/target_capture_kit"
     enum:
