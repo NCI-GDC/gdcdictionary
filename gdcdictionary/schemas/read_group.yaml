@@ -4,7 +4,7 @@ id: "read_group"
 title: Read Group
 type: object
 description: "Sequencing reads from one lane of an NGS experiment."
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: biospecimen
 validators: null
 project: '*'
