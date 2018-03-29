@@ -40,6 +40,7 @@ required:
   - is_paired_end
   - read_length
   - read_group_name
+  - target_capture_kit
 
 uniqueKeys:
   - [ id ]
@@ -231,6 +232,43 @@ properties:
     term:
       $ref: "_terms.yaml#/spike_ins_fasta"
     type: string
+target_capture_kit:
+    term:
+      $ref: "_terms.yaml#/target_capture_kit"
+    enum:
+      - Nextera Rapid Capture Exome v1.2
+      - Custom SureSelect TARGET-AML_NBL_WT Panel - 2.8 Mb
+      - Custom SeqCap EZ TARGET-OS Panel - 7.0 Mb
+      - Custom Large Construct Capture TARGET-OS Panel - 8 Genes
+      - TruSeq Exome Enrichment - 62 Mb
+      - SureSelect Human All Exon v3
+      - SureSelect Human All Exon v5
+      - Custom HaloPlex DLBCL Panel - 370 Genes
+      - Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 203 Genes
+      - Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 88 Genes
+      - SeqCap EZ HGSC VCRome v2.1
+      - Custom SeqCap EZ HGSC VCRome v2.1 ER Augmented v1
+      - Custom SeqCap EZ HGSC VCRome v2.1 ER Augmented v2
+      - Custom GENIE-DFCI OncoPanel - 275 Genes
+      - Custom GENIE-DFCI Oncopanel - 300 Genes
+      - Custom GENIE-DFCI Oncopanel - 447 Genes
+      - Custom MSK IMPACT Panel - 341 Genes
+      - Custom MSK IMPACT Panel - 410 Genes
+      - Custom MSK IMPACT Panel - 468 Genes
+      - Ion AmpliSeq Cancer Hotspot Panel v2 
+      - Custom Ion AmpliSeq Hotspot GENIE-MOSC3 Augmented Panel - 74 Genes 
+      - Custom AmpliSeq Cancer Hotspot GENIE-MDA Augmented Panel v1 - 46 Genes
+      - Ion AmpliSeq Comprehensive Cancer Panel
+      - TruSeq Amplicon Cancer Panel
+      - TruSight Myeloid Sequencing Panel
+      - Custom SureSelect GENIE-UHN Panel - 555 Genes
+      - Foundation Medicine T5a Panel - 322 Genes
+      - Foundation Medicine T7 Panel - 429 Genes
+      - Custom Solid Tumor GENIE-VICC Panel - 34 Genes
+      - Custom Myeloid GENIE-VICC Panel - 37 Genes
+      - Custom SureSelect CGCI-BLGSP Panel - 4.6 Mb
+      - Not Applicable
+      - Unknown 
   target_capture_kit_catalog_number:
     term:
       $ref: "_terms.yaml#/target_capture_kit_catalog_number"
@@ -255,7 +293,7 @@ properties:
     term:
       $ref: "_terms.yaml#/to_trim_adapter_sequence"
     type: boolean
-
+ 
   aliquots:
     $ref: "_definitions.yaml#/to_one"
 

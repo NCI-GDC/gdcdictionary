@@ -2144,6 +2144,11 @@ state: # TOREVIEW
   description: >
     The current state of the object.
 
+target_capture_kit:
+  description: >
+    Description that can uniquely identify a target capture kit. Suggested value is a 
+    combination of vendor, kit name, and kit version.
+
 target_capture_kit_name: # TOREVIEW
   description: >
     Name of Target Capture Kit.
