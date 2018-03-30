@@ -32,6 +32,12 @@ links:
     target_type: case
     multiplicity: many_to_one
     required: true
+  - name: diagnoses
+    backref: follow_ups
+    label: describes
+    target_type: diagnosis
+    multiplicity: many_to_one
+    required: false
 
 required:
   - submitter_id
@@ -1588,4 +1594,6 @@ properties:
 
   # Links
   cases:
+    $ref: "_definitions.yaml#/to_one"
+  diagnoses:
     $ref: "_definitions.yaml#/to_one"
