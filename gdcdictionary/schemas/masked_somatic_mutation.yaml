@@ -75,10 +75,11 @@ properties:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
+      - Low Pass WGS
+      - Targeted Sequencing
+      - Validation
       - WGS
       - WXS
-      - Low Pass WGS
-      - Validation
   projects:
     $ref: "_definitions.yaml#/to_one"
   somatic_aggregation_workflows:
