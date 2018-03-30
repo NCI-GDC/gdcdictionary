@@ -165,7 +165,6 @@ properties:
     enum:
       - Hybrid Selection
       - PCR
-      - Affinity_Enrichment
       - Affinity Enrichment
       - Poly-T_Enrichment
       - Poly-T Enrichment
