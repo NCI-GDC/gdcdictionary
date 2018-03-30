@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "demographic"
 title: Demographic
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: clinical
 program: '*'
 project: '*'
@@ -129,13 +129,13 @@ properties:
     term:
       $ref: "_terms.yaml#/year_of_birth"
     type:
-      - number
+      - integer
       - "null"
 
   year_of_death:
     term:
       $ref: "_terms.yaml#/year_of_death"
-    type: number
+    type: integer
 
   vital_status:
     term:
@@ -145,6 +145,20 @@ properties:
       - Dead
       - Unknown
       - Not Reported
+
+  premature_at_birth:
+    term:
+      $ref: "_terms.yaml#/premature_at_birth"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
+  weeks_gestation_at_birth:
+    term:
+      $ref: "_terms.yaml#/weeks_gestation_at_birth"
+    type: number
 
   cases:
     $ref: "_definitions.yaml#/to_one"

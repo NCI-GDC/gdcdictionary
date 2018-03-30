@@ -23,9 +23,7 @@ systemProperties:
 required:
   - code
   - name
-  - disease_type
   - state
-  - primary_site
   - programs
   - dbgap_accession_number
 
@@ -49,6 +47,7 @@ constraints: null
 properties:
   type:
     type: string
+
   id:
     description: "UUID for the project" # TOREVIEW
     $ref: "_definitions.yaml#/UUID"
@@ -59,25 +58,44 @@ properties:
       Indicates that the project is an AWG project.
     default: false
     type: boolean
+
   code:
     description: "Project code" # TOREVIEW
     type: string
+
   dbgap_accession_number:
     description: "The dbgap accession number for the project." # TOREVIEW
     type: string
+
   disease_type:
     description: "Full name for the project" # TOREVIEW
     type: string
+
   intended_release_date:
     description: Tracks a Project's intended release date.
     type: string
     format: date-time
+
+  is_legacy:
+    description: >
+      Indicates whether a project will appear in the Legacy Archive.
+    default: false
+    type: boolean
+  
+  in_review:
+    description: >
+      Indicates that the project is under review by the submitter. Upload and data modification is disabled.
+    default: false
+    type: boolean
+
   name:
     description: "Display name for the project" # TOREVIEW
     type: string
+
   primary_site:
     description: "Primary site for the project" # TOREVIEW
     type: string
+
   state:
     description: >
       The possible states a project can be in.  All but `open` are
@@ -123,35 +141,44 @@ properties:
         # DEPRECATED(2016-03-01): synonymous with closed. included for
         #                         backwards compatibility
         - legacy
+
   release_requested:
     description: >
       User requests that the GDC release the project. Release can only be requested if the project
       is releasable.
     default: false
     type: boolean
+
   released:
     description: >
       To release a project is to tell the GDC to include all submitted
       entities in the next GDC index.
     default: false
     type: boolean
+
   releasable:
     description: >
       A project can only be released by the user when `releasable` is true.
     default: false
+    type: boolean
+  request_submission:
+    description: >
+      Indicates that the user has requested submission to the GDC for harmonization.
+    default: false
+    type: boolean
+  submission_enabled:
+    description: >
+      Indicates if submission to a project is allowed.
+    default: true
     type: boolean
 
   programs:
     description: >
       Indicates that the project is logically part of the indicated project.
     $ref: "_definitions.yaml#/to_one"
+
   intended_release_date:
     description: Tracks a Project's intended release date.
     type: string
     format: date-time
 
-  is_legacy:
-    description: >
-      Indicates whether a project will appear in the Legacy Archive.
-    default: false
-    type: boolean
