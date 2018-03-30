@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "diagnosis"
 title: Diagnosis
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: clinical
 program: '*'
 project: '*'
