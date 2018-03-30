@@ -42,6 +42,7 @@ properties:
   $ref: "_definitions.yaml#/workflow_properties"
   type:
     enum: [ "genomic_profile_harmonization_workflow" ]
+
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
@@ -52,5 +53,7 @@ properties:
       - FM Structural Variation
       - GENIE Simple Somatic Mutation
       - GENIE Copy Number Variation
+      - VCF LiftOver
+
   submitted_genomic_profiles:
     $ref: "_definitions.yaml#/to_one"
