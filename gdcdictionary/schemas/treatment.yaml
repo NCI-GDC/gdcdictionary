@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "treatment"
 title: Treatment
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: clinical
 program: '*'
 project: '*'
@@ -28,6 +28,9 @@ links:
     target_type: diagnosis
     multiplicity: many_to_one
     required: true
+
+deprecated:
+  - days_to_treatment
 
 uniqueKeys:
   #unclear if want submitter ID for clinical
@@ -175,8 +178,6 @@ properties:
       - Microwave Ablation
       - Other
       - Pharmaceutical Therapy
-      - Radiation
-      - Radiation Therapy
       - Radioembolization
       - Radiofrequency Ablation
       - Radioisotope Radiation
