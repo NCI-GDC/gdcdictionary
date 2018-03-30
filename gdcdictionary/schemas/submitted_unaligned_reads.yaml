@@ -80,8 +80,6 @@ properties:
       - miRNA-Seq
       - RNA-Seq
       - Targeted Sequencing
-      - Total RNA-Seq
-      - Validation
       - WGS
       - WXS
 
