@@ -366,6 +366,19 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+  biospecimen_laterality:
+    term:
+      $ref: "_terms.yaml#/biospecimen_laterality"
+    enum:
+      - Bilateral
+      - Left
+      - Right
+      - Unknown
+      - Not Reported
+  catalog_reference:
+    term:
+      $ref: "_terms.yaml#/catalog_reference"
+    type: string
   composition:
     term:
       $ref: "_terms.yaml#/composition"
@@ -424,10 +437,27 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+  distance_normal_to_tumor:
+    term:
+      $ref: "_terms.yaml#/distance_normal_to_tumor"
+    enum:
+      - Adjacent (< or = 2cm)
+      - Distal (>2cm)
+      - Unknown
+      - Not Reported
+  distributor_reference:
+    term:
+      $ref: "_terms.yaml#/distributor_reference"
+    type: string
   freezing_method:
     term:
       $ref: "_terms.yaml#/freezing_method"
     type: string
+  growth_rate:
+    term:
+      $ref: "_terms.yaml#/growth_rate"
+    type: integer
+    minimum: 0
   initial_weight:
     term:
       $ref: "_terms.yaml#/initial_weight"
@@ -528,6 +558,11 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+  passage_count:
+    term:
+      $ref: "_terms.yaml#/passage_count"
+    type: integer
+    minimum: 0
   sample_type:
     term:
       $ref: "_terms.yaml#/sample_type"
