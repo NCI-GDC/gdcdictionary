@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "submitted_aligned_reads"
 title: Submitted Aligned Reads
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: data_file
 program: '*'
 project: '*'
@@ -71,9 +71,11 @@ properties:
       - WGS
       - WXS
       - Low Pass WGS
-      - Validation
       - RNA-Seq
       - miRNA-Seq
-      - Total RNA-Seq
+      - Targeted Sequencing
+      - Bisulfite-Seq
+      - ChIP-Seq
+      - ATAC-Seq
   read_groups:
     $ref: "_definitions.yaml#/to_many"
