@@ -166,7 +166,6 @@ properties:
       - Hybrid Selection
       - PCR
       - Affinity Enrichment
-      - Poly-T_Enrichment
       - Poly-T Enrichment
       - Random
       - rRNA Depletion
