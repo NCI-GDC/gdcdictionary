@@ -49,6 +49,23 @@ preferred:
   - days_to_birth
   - site_of_resection_or_biopsy
 
+deprecated:
+  - cause_of_death
+  - colon_polyps_history
+  - days_to_birth
+  - days_to_death
+  - days_to_hiv_diagnosis
+  - days_to_new_event
+  - hiv_positive
+  - hpv_positive_type
+  - hpv_status
+  - ldh_normal_range_upper
+  - new_event_anatomic_site
+  - new_event_type
+  - overall_survival
+  - progression_free_survival
+  - progression_free_survival_event
+
 uniqueKeys:
   #unclear if want submitter ID for clinical
   - [id]
