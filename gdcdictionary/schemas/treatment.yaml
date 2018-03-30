@@ -167,6 +167,8 @@ properties:
     enum:
       - Ablation
       - Brachytherapy
+      - Brachytherapy, High Dose
+      - Brachytherapy, Low Dose
       - Chemoembolization
       - Chemotherapy
       - Concurrent Chemoradiation
@@ -181,12 +183,21 @@ properties:
       - Microwave Ablation
       - Other
       - Pharmaceutical Therapy
+      - Radiation
+      - Radiation, 2D Conventional
+      - Radiation, 3D Conformal
+      - Radiation, Intensity-Modulated Radiotherapy
+      - Radiation, Proton Beam
+      - Radiation, Stereotactic Body
+      - Radiation Therapy
+      - Radiation Therapy, NOS
       - Radioembolization
       - Radiofrequency Ablation
       - Radioisotope Radiation
       - Radiosurgical Ablation
       - Stem Cell Transplantation
       - Stem Cell Treatment
+      - Stereotactic Radiosurgery
       - Surgery
       - Targeted Molecular Therapy
       - Unknown
