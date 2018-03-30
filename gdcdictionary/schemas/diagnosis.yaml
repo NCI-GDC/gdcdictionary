@@ -109,6 +109,8 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Not Allowed To Collect
 
   ajcc_clinical_n:
     term:
@@ -140,6 +142,8 @@ properties:
       - NX
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
+    deprecated_enum:
       - Not Allowed To Collect
 
   ajcc_clinical_stage:
@@ -182,6 +186,11 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Not Allowed To Collect
+      - Stage IB Cervix
+      - Stage II Cervix
+      - Stage IIA Cervix
 
   ajcc_clinical_t:
     term:
@@ -224,6 +233,8 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Not Allowed To Collect
 
   ajcc_pathologic_m:
     term:
@@ -239,6 +250,8 @@ properties:
       - cM0 (i+)
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
+    deprecated_enum:
       - Not Allowed To Collect
 
   ajcc_pathologic_n:
@@ -271,6 +284,8 @@ properties:
       - NX
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
+    deprecated_enum:
       - Not Allowed To Collect
 
   ajcc_pathologic_stage:
@@ -351,6 +366,8 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Not Allowed To Collect
 
   ajcc_staging_system_edition:
      term:
@@ -398,6 +415,8 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Not Allowed To Collect
 
   ann_arbor_clinical_stage:
     term:
@@ -418,6 +437,8 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
+    deprecated_enum:
       - Not Allowed To Collect
 
   ann_arbor_pathologic_stage:
@@ -473,6 +494,8 @@ properties:
       - "Sporadic, pediatric"
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
+    deprecated_enum:
       - Not Allowed To Collect
 
   cause_of_death:
@@ -720,6 +743,8 @@ properties:
       - Stage IVB
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
+    deprecated_enum:
       - Not Allowed To Collect
 
   first_symptom_prior_to_diagnosis:
@@ -1009,6 +1034,8 @@ properties:
       - Ultrasound Guided Biopsy
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
+    deprecated_enum:
       - Not Allowed To Collect
 
   micropapillary_features:
@@ -2123,6 +2150,8 @@ properties:
       - 9992/3
       - Unknown
       - Not Reported
+    deprecated_enum:
+      - not reported
 
   new_event_anatomic_site:
     term:
@@ -4943,6 +4972,194 @@ properties:
       - C80.1
       - C83.3
       - not reported
+    deprecated_enum:
+      - acute leukemia of ambiguous lineage
+      - acute lymphoblastic leukemia
+      - c00.9
+      - c01
+      - c02.1
+      - c02.2
+      - c02.9
+      - c03.0
+      - c03.1
+      - c03.9
+      - c04.0
+      - c04.9
+      - c05.0
+      - c05.9
+      - c06.0
+      - c06.2
+      - c06.9
+      - c07
+      - c08.0
+      - c09.9
+      - c10.3
+      - c10.9
+      - c13.9
+      - c14.8
+      - c15.3
+      - c15.4
+      - c15.5
+      - c15.9
+      - c16.0
+      - c16.1
+      - c16.2
+      - c16.3
+      - c16.5
+      - c16.9
+      - c17.9
+      - c18.0
+      - c18.2
+      - c18.3
+      - c18.4
+      - c18.5
+      - c18.6
+      - c18.7
+      - c18.9
+      - c19
+      - c20
+      - c22.0
+      - c22.1
+      - c24.0
+      - c24.1
+      - c25.0
+      - c25.1
+      - c25.2
+      - c25.8
+      - c25.9
+      - c32.1
+      - c32.32
+      - c32.9
+      - c34.0
+      - c34.00
+      - c34.1
+      - c34.10
+      - c34.11
+      - c34.12
+      - c34.2
+      - c34.3
+      - c34.30
+      - c34.31
+      - c34.32
+      - c34.8
+      - c34.80
+      - c34.81
+      - c34.82
+      - c34.9
+      - c34.90
+      - c34.91
+      - c34.92
+      - c37
+      - c38.0
+      - c38.1
+      - c38.3
+      - c38.4
+      - c40.2
+      - c40.3
+      - c41.0
+      - c41.1
+      - c43.51
+      - c44.2
+      - c44.3
+      - c44.31
+      - c44.399
+      - c44.4
+      - c44.5
+      - c44.50
+      - c44.6
+      - c44.601
+      - c44.7
+      - c44.701
+      - c44.9
+      - c45.0
+      - c47.1
+      - c48.0
+      - c48.1
+      - c48.2
+      - c49.0
+      - c49.1
+      - c49.10
+      - c49.2
+      - c49.20
+      - c49.3
+      - c49.4
+      - c49.5
+      - c49.6
+      - c49.8
+      - c49.9
+      - c50.2
+      - c50.3
+      - c50.4
+      - c50.5
+      - c50.8
+      - c50.9
+      - c50.919
+      - c51.9
+      - c52
+      - c53.0
+      - c53.1
+      - c53.9
+      - c54.0
+      - c54.1
+      - c54.2
+      - c54.3
+      - c54.9
+      - c55
+      - c56.9
+      - c61
+      - c61.9
+      - c62.9
+      - c62.90
+      - c63.1
+      - c64.1
+      - c64.2
+      - c64.9
+      - c67.0
+      - c67.1
+      - c67.2
+      - c67.3
+      - c67.4
+      - c67.5
+      - c67.6
+      - c67.9
+      - c69.30
+      - c69.40
+      - c69.80
+      - c69.90
+      - c70.1
+      - c71.0
+      - c71.1
+      - c71.2
+      - c71.3
+      - c71.4
+      - c71.6
+      - c71.7
+      - c71.8
+      - c71.9
+      - c72.0
+      - c72.9
+      - c73
+      - c74.0
+      - c74.1
+      - c74.9
+      - c75.5
+      - c76.0
+      - c76.1
+      - c76.2
+      - c76.3
+      - c77.0
+      - c77.1
+      - c77.2
+      - c77.3
+      - c77.4
+      - c77.5
+      - c77.9
+      - c78.02
+      - c78.6
+      - c80
+      - c80.1
+      - c83.3
+      - not reported
 
   prior_malignancy:
     term:
@@ -5498,6 +5715,171 @@ properties:
       - C77.9
       - C80.9
       - not reported
+    deprecated_enum:
+      - 8140/3
+      - c00.9
+      - c000
+      - c01.9
+      - c02.1
+      - c02.2
+      - c02.9
+      - c03.0
+      - c03.1
+      - c03.9
+      - c04.0
+      - c04.9
+      - c05.0
+      - c05.9
+      - c06.0
+      - c06.2
+      - c06.9
+      - c07.9
+      - c08.0
+      - c09.9
+      - c10.3
+      - c10.9
+      - c13.9
+      - c14.8
+      - c15.1
+      - c15.3
+      - c15.4
+      - c15.5
+      - c15.9
+      - c16.0
+      - c16.1
+      - c16.2
+      - c16.3
+      - c16.5
+      - c16.9
+      - c17.0
+      - c17.1
+      - c17.9
+      - c18.0
+      - c18.2
+      - c18.3
+      - c18.4
+      - c18.5
+      - c18.6
+      - c18.7
+      - c18.9
+      - c19.9
+      - c20.9
+      - c21.8
+      - c22.0
+      - c22.1
+      - c220
+      - c24.0
+      - c24.1
+      - c25.0
+      - c25.1
+      - c25.2
+      - c25.8
+      - c25.9
+      - c30.0
+      - c32.1
+      - c32.9
+      - c34.0
+      - c34.1
+      - c34.2
+      - c34.3
+      - c34.32
+      - c34.8
+      - c34.9
+      - c37.9
+      - c38.0
+      - c38.1
+      - c38.3
+      - c38.4
+      - c40.0
+      - c40.2
+      - c40.3
+      - c41.0
+      - c41.1
+      - c44.2
+      - c44.3
+      - c44.4
+      - c44.5
+      - c44.6
+      - c44.7
+      - c44.9
+      - c47.1
+      - c48.0
+      - c48.1
+      - c48.2
+      - c49.0
+      - c49.1
+      - c49.2
+      - c49.3
+      - c49.4
+      - c49.5
+      - c49.6
+      - c49.8
+      - c49.9
+      - c50.2
+      - c50.3
+      - c50.4
+      - c50.5
+      - c50.8
+      - c50.9
+      - c51.9
+      - c52.9
+      - c53.0
+      - c53.1
+      - c53.9
+      - c54.0
+      - c54.1
+      - c54.2
+      - c54.3
+      - c54.9
+      - c55.9
+      - c56.9
+      - c61.9
+      - c62.9
+      - c63.1
+      - c64.9
+      - c649
+      - c67.0
+      - c67.1
+      - c67.2
+      - c67.3
+      - c67.4
+      - c67.5
+      - c67.6
+      - c67.9
+      - c69.3
+      - c69.4
+      - c69.8
+      - c69.9
+      - c70.1
+      - c71.0
+      - c71.1
+      - c71.2
+      - c71.3
+      - c71.4
+      - c71.6
+      - c71.7
+      - c71.8
+      - c71.9
+      - c72.0
+      - c72.9
+      - c73.9
+      - c74.0
+      - c74.1
+      - c74.9
+      - c75.5
+      - c76.0
+      - c76.1
+      - c76.2
+      - c76.3
+      - c77.0
+      - c77.1
+      - c77.2
+      - c77.3
+      - c77.4
+      - c77.5
+      - c77.9
+      - c80.9
+      - not reported
 
   supratentorial_localization:
     term:
@@ -6016,6 +6398,168 @@ properties:
       - C77.9
       - C80.9
       - not reported
+    deprecated_enum:
+      - 8140/3
+      - c00.9
+      - c01.9
+      - c02.1
+      - c02.2
+      - c02.9
+      - c03.0
+      - c03.1
+      - c03.9
+      - c04.0
+      - c04.9
+      - c05.0
+      - c05.9
+      - c06.0
+      - c06.2
+      - c06.9
+      - c07.9
+      - c08.0
+      - c09.9
+      - c10.3
+      - c10.9
+      - c13.9
+      - c14.8
+      - c15.1
+      - c15.3
+      - c15.4
+      - c15.5
+      - c15.9
+      - c16.0
+      - c16.1
+      - c16.2
+      - c16.3
+      - c16.5
+      - c16.9
+      - c17.0
+      - c17.1
+      - c17.9
+      - c18.0
+      - c18.2
+      - c18.3
+      - c18.4
+      - c18.5
+      - c18.6
+      - c18.7
+      - c18.9
+      - c19.9
+      - c20.9
+      - c21.8
+      - c22.0
+      - c22.1
+      - c24.0
+      - c24.1
+      - c25.0
+      - c25.1
+      - c25.2
+      - c25.8
+      - c25.9
+      - c30.0
+      - c32.1
+      - c32.9
+      - c34.0
+      - c34.1
+      - c34.2
+      - c34.3
+      - c34.32
+      - c34.8
+      - c34.9
+      - c37.9
+      - c38.0
+      - c38.1
+      - c38.3
+      - c38.4
+      - c40.0
+      - c40.2
+      - c40.3
+      - c41.0
+      - c41.1
+      - c44.2
+      - c44.3
+      - c44.4
+      - c44.5
+      - c44.6
+      - c44.7
+      - c44.9
+      - c47.1
+      - c48.0
+      - c48.1
+      - c48.2
+      - c49.0
+      - c49.1
+      - c49.2
+      - c49.3
+      - c49.4
+      - c49.5
+      - c49.6
+      - c49.8
+      - c49.9
+      - c50.2
+      - c50.3
+      - c50.4
+      - c50.5
+      - c50.8
+      - c50.9
+      - c51.9
+      - c52.9
+      - c53.0
+      - c53.1
+      - c53.9
+      - c54.0
+      - c54.1
+      - c54.2
+      - c54.3
+      - c54.9
+      - c55.9
+      - c56.9
+      - c61.9
+      - c62.9
+      - c63.1
+      - c64.9
+      - c67.0
+      - c67.1
+      - c67.2
+      - c67.3
+      - c67.4
+      - c67.5
+      - c67.6
+      - c67.9
+      - c69.3
+      - c69.4
+      - c69.8
+      - c69.9
+      - c70.1
+      - c71.0
+      - c71.1
+      - c71.2
+      - c71.3
+      - c71.4
+      - c71.6
+      - c71.7
+      - c71.8
+      - c71.9
+      - c72.0
+      - c72.9
+      - c73.9
+      - c74.0
+      - c74.1
+      - c74.9
+      - c75.5
+      - c76.0
+      - c76.1
+      - c76.2
+      - c76.3
+      - c77.0
+      - c77.1
+      - c77.2
+      - c77.3
+      - c77.4
+      - c77.5
+      - c77.9
+      - c80.9
+      - not reported
 
   tumor_confined_to_organ_of_origin:
     term:
@@ -6040,6 +6584,8 @@ properties:
       - Low Grade
       - Unknown
       - Not Reported
+      - not reported
+    deprecated_enum:
       - not reported
 
   tumor_largest_dimension_diameter:

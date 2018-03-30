@@ -167,6 +167,52 @@ properties:
       - Uterine Carcinosarcoma
       - Uterine Corpus Endometrial Carcinoma
       - Uveal Melanoma
+    deprecated_enum:
+      - Acute Lymphoblastic Leukemia
+      - Acute Myeloid Leukemia
+      - Adrenocortical Carcinoma
+      - Bladder Urothelial Carcinoma
+      - Brain Lower Grade Glioma
+      - Breast Invasive Carcinoma
+      - Burkitt Lymphoma
+      - Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma
+      - Cholangiocarcinoma
+      - Chronic Lymphocytic Leukemia
+      - Clear Cell Sarcoma of the Kidney
+      - Colon Adenocarcinoma
+      - Esophageal Carcinoma
+      - Glioblastoma Multiforme
+      - Head and Neck Squamous Cell Carcinoma
+      - High-Risk Wilms Tumor
+      - HIV+ Tumor Molecular Characterization Project - Cervical Cancer
+      - HIV+ Tumor Molecular Characterization Project - Lung Cancer
+      - Kidney Chromophobe
+      - Kidney Renal Clear Cell Carcinoma
+      - Kidney Renal Papillary Cell Carcinoma
+      - Liver Hepatocellular Carcinoma
+      - Lung Adenocarcinoma
+      - Lung Squamous Cell Carcinoma
+      - Lymphoid Neoplasm Diffuse Large B-cell Lymphoma
+      - Mesothelioma
+      - Multiple Myeloma
+      - Neuroblastoma
+      - Not Applicable
+      - Osteosarcoma
+      - Ovarian Serous Cystadenocarcinoma
+      - Pancreatic Adenocarcinoma
+      - Pheochromocytoma and Paraganglioma
+      - Prostate Adenocarcinoma
+      - Rectum Adenocarcinoma
+      - Rhabdoid Tumor
+      - Sarcoma
+      - Skin Cutaneous Melanoma
+      - Stomach Adenocarcinoma
+      - Testicular Germ Cell Tumors
+      - Thymoma
+      - Thyroid Carcinoma
+      - Uterine Carcinosarcoma
+      - Uterine Corpus Endometrial Carcinoma
+      - Uveal Melanoma
   index_date:
     term:
       $ref: "_terms.yaml#/index_date"
@@ -275,6 +321,27 @@ properties:
       - Soft Tissue
       - Thyroid
       - Uterus
+    deprecated_enum:
+      - Adrenal Gland
+      - Bile Duct
+      - Blood
+      - Bone
+      - Bone Marrow
+      - Cervix
+      - Colorectal
+      - Eye
+      - Head and Neck
+      - Liver
+      - Lung
+      - Lymph Nodes
+      - Nervous System
+      - Not Applicable
+      - Pleura
+      - Prostate
+      - Soft Tissue
+      - Thyroid
+      - Uterus
+
   projects:
     $ref: "_definitions.yaml#/to_one"
   tissue_source_sites:
