@@ -141,6 +141,12 @@ properties:
     default: false
     type: boolean
 
+  submission_enabled:
+    description: >
+      Indicates if submission to a project is allowed.
+    default: true
+    type: boolean
+
   programs:
     description: >
       Indicates that the project is logically part of the indicated project.
