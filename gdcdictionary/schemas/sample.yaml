@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "sample"
 title: Sample
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: biospecimen
 program: '*'
 project: '*'
@@ -163,6 +163,9 @@ properties:
       - Endocrine Gland
       - Epididymis
       - Epidural Space
+      - Esophageal; Distal
+      - Esophageal; Mid
+      - Esophageal; Proximal
       - Esophagogastric Junction
       - Esophagus
       - Esophagus - Mucosa Only
@@ -196,6 +199,7 @@ properties:
       - Heart
       - Hepatic
       - Hepatic Duct
+      - Hepatic Flexure
       - Hepatic Vein
       - Hip
       - Hippocampus
@@ -394,6 +398,7 @@ properties:
       - Saliva
       - Sputum
       - Solid Tissue
+      - Sorted Cells
       - Whole Bone Marrow
       - Unknown
       - Not Reported
@@ -483,6 +488,8 @@ properties:
       - Other
       - Other Surgical Resection
       - Pan-Procto Colectomy
+      - Pancreatectomy
+      - Paracentesis
       - Pneumonectomy
       - Right Hemicolectomy
       - Sigmoid Colectomy
@@ -497,6 +504,7 @@ properties:
       - Transverse Colectomy
       - Tumor Resection
       - Wedge Resection
+      - Whipple Procedure
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -552,6 +560,7 @@ properties:
       - Lymphoid Normal
       - Metastatic
       - Mononuclear Cells from Bone Marrow Normal
+      - Next Generation Cancer Model
       - Primary Blood Derived Cancer - Peripheral Blood
       - Recurrent Blood Derived Cancer - Peripheral Blood
       - Pleural Effusion

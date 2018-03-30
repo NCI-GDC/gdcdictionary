@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "methylation_liftover_workflow"
 title: Methylation Liftover Workflow
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: analysis
 program: '*'
 project: '*'

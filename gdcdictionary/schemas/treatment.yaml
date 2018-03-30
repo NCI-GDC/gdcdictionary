@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "treatment"
 title: Treatment
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: clinical
 program: '*'
 project: '*'
@@ -29,7 +29,8 @@ links:
     multiplicity: many_to_one
     required: true
 
-
+deprecated:
+  - days_to_treatment
 
 uniqueKeys:
   #unclear if want submitter ID for clinical
@@ -202,13 +203,6 @@ properties:
       - Gastrointestinal, Colon
       - Gastrointestinal, Gallbladder
       - Gastrointestinal, Intestine
-      - Gastrointestinal, Liver
-      - Gastrointestinal, NOS
-      - Gastrointestinal, Pancreas
-      - Gastrointestinal, Rectum
-      - Gastrointestinal, Stomach
-      - Genitourinary, Bladder
-      - Genitourinary, Kidney
       - Genitourinary, NOS
       - Genitourinary, Prostate
       - Genitourinary, Prostate and Seminal Vesicles
@@ -425,7 +419,7 @@ properties:
       - Wrist
       - Not Allowed To Collect
       - Not Reported
- 
+
   treatment_intent_type:
     term:
       $ref: "_terms.yaml#/treatment_intent_type"
@@ -454,11 +448,14 @@ properties:
       $ref: "_terms.yaml#/treatment_outcome"
     enum:
       - Complete Response
+      - Mixed Response
+      - No Response
       - Partial Response
       - Progressive Disease
       - Stable Disease
       - Treatment Ongoing
       - Treatment Stopped Due to Toxicity
+      - Very Good Partial Response
       - Unknown
       - Not Reported
 
@@ -482,8 +479,6 @@ properties:
       - Microwave Ablation
       - Other
       - Pharmaceutical Therapy
-      - Radiation
-      - Radiation Therapy
       - Radioembolization
       - Radiofrequency Ablation
       - Radioisotope Radiation
