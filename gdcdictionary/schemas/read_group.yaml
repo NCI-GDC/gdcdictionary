@@ -4,7 +4,7 @@ id: "read_group"
 title: Read Group
 type: object
 description: "Sequencing reads from one lane of an NGS experiment."
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: biospecimen
 validators: null
 project: '*'
@@ -40,6 +40,14 @@ required:
   - is_paired_end
   - read_length
   - read_group_name
+  - target_capture_kit
+
+deprecated:
+  - target_capture_kit_catalog_number
+  - target_capture_kit_name
+  - target_capture_kit_target_region
+  - target_capture_kit_vendor
+  - target_capture_kit_version
 
 uniqueKeys:
   - [ id ]
@@ -88,15 +96,15 @@ properties:
   fragment_mean_length:
     term:
       $ref: "_terms.yaml#/fragment_mean_length"
-    type: number 
+    type: number
   fragment_minimum_length:
-    term: 
+    term:
       $ref: "_terms.yaml#/fragment_minimum_length"
     type: integer
   fragment_standard_deviation_length:
     term:
       $ref: "_terms.yaml#/fragment_standard_deviation_length"
-    type: number 
+    type: number
   includes_spike_ins:
     term:
       $ref: "_terms.yaml#/includes_spike_ins"
@@ -166,7 +174,6 @@ properties:
       - RNA_Depletion
       - rRNA Depletion
       - miRNA Size Fractionation
-      - Targeted Sequencing
       - Other
   library_strand:
     term:
@@ -187,7 +194,7 @@ properties:
       - Bisulfite-Seq
       - Validation
       - Amplicon
-      - Targeted Sequencing 
+      - Targeted Sequencing
       - Other
   multiplex_barcode:
     term:
@@ -231,6 +238,43 @@ properties:
     term:
       $ref: "_terms.yaml#/spike_ins_fasta"
     type: string
+  target_capture_kit:
+    term:
+      $ref: "_terms.yaml#/target_capture_kit"
+    enum:
+      - Custom AmpliSeq Cancer Hotspot GENIE-MDA Augmented Panel v1 - 46 Genes
+      - Custom GENIE-DFCI OncoPanel - 275 Genes
+      - Custom GENIE-DFCI Oncopanel - 300 Genes
+      - Custom GENIE-DFCI Oncopanel - 447 Genes
+      - Custom HaloPlex DLBCL Panel - 370 Genes
+      - Custom Ion AmpliSeq Hotspot GENIE-MOSC3 Augmented Panel - 74 Genes
+      - Custom Large Construct Capture TARGET-OS Panel - 8 Genes
+      - Custom MSK IMPACT Panel - 341 Genes
+      - Custom MSK IMPACT Panel - 410 Genes
+      - Custom MSK IMPACT Panel - 468 Genes
+      - Custom Myeloid GENIE-VICC Panel - 37 Genes
+      - Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 203 Genes
+      - Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 88 Genes
+      - Custom SeqCap EZ HGSC VCRome v2.1 ER Augmented v1
+      - Custom SeqCap EZ HGSC VCRome v2.1 ER Augmented v2
+      - Custom SeqCap EZ TARGET-OS Panel - 7.0 Mb
+      - Custom Solid Tumor GENIE-VICC Panel - 34 Genes
+      - Custom SureSelect CGCI-BLGSP Panel - 4.6 Mb
+      - Custom SureSelect GENIE-UHN Panel - 555 Genes
+      - Custom SureSelect TARGET-AML_NBL_WT Panel - 2.8 Mb
+      - Foundation Medicine T5a Panel - 322 Genes
+      - Foundation Medicine T7 Panel - 429 Genes
+      - Ion AmpliSeq Cancer Hotspot Panel v2
+      - Ion AmpliSeq Comprehensive Cancer Panel
+      - Nextera Rapid Capture Exome v1.2
+      - SeqCap EZ HGSC VCRome v2.1
+      - SureSelect Human All Exon v3
+      - SureSelect Human All Exon v5
+      - TruSeq Amplicon Cancer OncoPanel
+      - TruSeq Exome Enrichment - 62 Mb
+      - TruSight Myeloid Sequencing Panel
+      - Not Applicable
+      - Unknown
   target_capture_kit_catalog_number:
     term:
       $ref: "_terms.yaml#/target_capture_kit_catalog_number"
@@ -255,7 +299,7 @@ properties:
     term:
       $ref: "_terms.yaml#/to_trim_adapter_sequence"
     type: boolean
-
+ 
   aliquots:
     $ref: "_definitions.yaml#/to_one"
 
