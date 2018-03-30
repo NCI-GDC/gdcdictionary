@@ -2715,10 +2715,10 @@ treatment_anatomic_site:
     The anatomic site or field targeted by a treatment regimen or single agent therapy.
   termDef:
     term: Treatment Anatomic Site
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    source: caDSR
+    cde_id: 5615611
+    cde_version: 1.0
+    term_url: https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5615611&version=1.0
 
 treatment_intent_type:
   description: >
