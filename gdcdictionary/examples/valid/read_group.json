@@ -12,7 +12,7 @@
     "is_paired_end": true,
     "lane_number":4,
     "library_strategy": "WXS",
-    "library_selection": "Hybrid_Selection",
+    "library_selection": "Hybrid Selection",
     "library_name": "Solexa-34688",
     "multiplex_barcode":"AWDS342",
     "platform": "Illumina",
