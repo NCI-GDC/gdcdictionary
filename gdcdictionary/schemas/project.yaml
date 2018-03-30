@@ -23,9 +23,7 @@ systemProperties:
 required:
   - code
   - name
-  - disease_type
   - state
-  - primary_site
   - programs
   - dbgap_accession_number
 
