@@ -12,6 +12,7 @@ description: >
   (GDC synonym for NCIt C15783)
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

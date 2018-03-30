@@ -12,6 +12,7 @@ description: >
   protected MAFs in the GDC DNA-Seq pipelines.
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

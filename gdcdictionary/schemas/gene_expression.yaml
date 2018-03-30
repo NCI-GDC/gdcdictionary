@@ -11,6 +11,7 @@ description: >
   Data file containing gene expression information generated internally by the GDC.
 additionalProperties: false
 submittable: false
+downloadable: true
 validators: null
 
 systemProperties:

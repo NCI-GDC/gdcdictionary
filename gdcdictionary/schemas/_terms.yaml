@@ -14,6 +14,7 @@ a260_a280_ratio:
 aa_change:
   description: >
     Alphanumeric value used to describe the amino acid change for a specific genetic variant.
+    Example: R116Q. 
   termDef:
     term: Molecular Laboratory Procedure Amino Acid Change Text
     source: caDSR
@@ -166,9 +167,9 @@ ajcc_pathologic_t:
 
 ajcc_staging_system_edition:
   description: >
-    the version or edition of the American Joint Committee on Cancer Cancer Staging Handbooks, a
-    publication by the group formed for the purpose of developing a system of clinical staging
-    for cancer that is acceptable to the American medical profession and is compatible with
+    The text term used to describe the version or edition of the American Joint Committee on Cancer
+    Staging Handbooks, a publication by the group formed for the purpose of developing a system of
+    staging for cancer that is acceptable to the American medical profession and is compatible with
     other accepted classifications.
   termDef:
     term: American Joint Committee on Cancer Publication Version Type
@@ -309,9 +310,9 @@ anaplasia_present:
 
 anaplasia_present_type:
   description: >
-    Information related to morphologic findings indicating the presence of a malignant cellular
-    infiltrate characterized by the presence of large pleomorphic cells, necrosis, and high
-    mitotic activity in a tissue sample.
+    The text term used to describe the morphologic findings indicating the presence of a malignant
+    cellular infiltrate characterized by the presence of large pleomorphic cells, necrosis, and
+    high mitotic activity in a tissue sample.
   termDef:
     term: Anaplastic Lesion Classification Category
     source: caDSR
@@ -386,8 +387,8 @@ antigen:
 
 barretts_esophagus_goblet_cells_present:
   description: >
-    Indicator to signify whether or not goblet cells were present in an individual diagnosed
-    with Barrett's Esophagus.
+    The yes/no/unknown indicator used to describe whether goblet cells were determined to be present
+    in a patient diagnosed with Barrett's esophagus.
   termDef:
     term: Barrett's Esophagus Diagnosis Goblet Cell Present Indicator
     source: caDSR
@@ -615,8 +616,8 @@ cell_count:
 
 child_pugh_classification:
   description: >
-    The grade from an assessment method used in the prognosis of chronic liver disease, mainly
-    cirrhosis.
+    The text term used to describe the classification used in the prognosis of chronic liver
+    disease, mainly cirrhosis.
   termDef:
     term: Child-Pugh Classification Grade
     source: caDSR
@@ -705,8 +706,8 @@ cog_rhabdomyosarcoma_risk_group:
 
 cog_renal_stage:
   description: >
-    Extent of Wilms tumor using the International Society of Paediatric Oncology/Children's
-    Oncology Group/National Wilms' Tumor Study Group staging system.
+    The text term used to describe the staging classification of renal tumors, as defined by the
+    Children's Oncology Group (COG).
   termDef:
     term: SIOP/COG/NWTSG Staging System Wilms Tumor Stage
     source: caDSR
@@ -716,7 +717,9 @@ cog_renal_stage:
 
 cog_liver_stage:
   description: >
-    Extent of the primary liver tumor prior to treatment using the PRETEXT staging system.
+    The text term used to describe the staging classification of liver tumors, as defined by the
+    Children's Oncology Group (COG). This staging system specifically describes the extent of the
+    primary tumor prior to treatment.
   termDef:
     term: PRETEXT Staging System Primary Childhood Malignant Liver Tumor Stage
     source: caDSR
@@ -726,7 +729,7 @@ cog_liver_stage:
 
 comorbidity:
   description: >
-    Text term to identify a coexistent disease or condition in a person.
+    The text term used ot describe the method used to diagnose the patient's comorbidity disease.
   termDef:
     term: Person Comorbidity Condition Name
     source: caDSR
@@ -823,9 +826,10 @@ current_weight:
 
 cytoband:
   description: >
-    Alphanumeric value used to describe the cytoband or chromosomal location targeted or
-    included in molecular analysis. If a specific genetic variant is being reported, this
-    property can be used to capture the cytoband where the variant is located.
+    Alphanumeric value used to describe the cytoband or chromosomal location targeted or included in
+    molecular analysis. If a specific genetic variant is being reported, this property can be used
+    to capture the cytoband where the variant is located. 
+    Format: [chromosome][chromosome arm].[band+sub-bands]. Example: 17p13.1.
   termDef:
     term: Molecular Laboratory Procedure Cytoband Text
     source: caDSR
@@ -1056,7 +1060,7 @@ days_to_treatment_start:
 
 diabetes_treatment_type:
   description: >
-    Types of treatment used to manage Diabetes.
+    Text term used to describe the types of treatment used to manage diabetes.
   termDef:
     term: Diabetes Mellitus Treatment Type
     source: caDSR
@@ -1132,7 +1136,8 @@ dlco_ref_predictive_percent:
 
 dna_change:
   description: >
-    Alphanumeric value used to describe the dna change of a specific genetic variant.
+    Alphanumeric value used to describe the dna change for a specific genetic variant.
+    Example: c.347C>A. 
   termDef:
     term: Molecular Laboratory Procedure DNA Change Text
     source: caDSR
@@ -1162,14 +1167,14 @@ encoding:
 
 enneking_msts_grade:
   description: >
-    Text term that represents the surgical grade of the musculoskeletal sarcoma, using the
+    The text term used to describe the surgical grade of the musculoskeletal sarcoma, using the
     Enneking staging system approved by the Musculoskeletal Tumor Society (MSTS).
   termDef:
-    term: Enneking Musculoskeletal Tumor Society Staging System Surgical Grade
+    term: Enneking Musculoskeletal Tumor Society System Surgical Grade
     source: caDSR
     cde_id: 6003955
-    cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6003955&version=1.0"
+    cde_version: 2.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6003955&version=2.0"
 
 enneking_msts_metastasis:
   description: >
@@ -1217,7 +1222,8 @@ esophageal_columnar_dysplasia_degree:
 
 esophageal_columnar_metaplasia_present:
   description: >
-    Indicator to signify whether or not esophageal columnar metaplasia is present.
+    The yes/no/unknown indicator used to describe whether esophageal columnar metaplasia was
+    determined to be present.
   termDef:
     term: Esophageal Columnar Metaplasia Present Indicator
     source: caDSR
@@ -1460,7 +1466,8 @@ glucose:
 
 goblet_cells_columnar_mucosa_present:
   description: >
-    Indicator to signify whether or not goblet cells were present in esophageal columnar mucosa.
+    The yes/no/unknown indicator used to describe whether goblet cells were determined to be present
+    in the esophageal columnar mucosa.
   termDef:
     term: Esophageal Columnar Mucosa Goblet Cell Present Indicator
     source: caDSR
@@ -1470,7 +1477,7 @@ goblet_cells_columnar_mucosa_present:
 
 gross_tumor_weight:
   description: >
-    Numeric value used to describe the gross pathologic tumor weight.
+    Numeric value used to describe the gross pathologic tumor weight, measured in grams.
   termDef:
     term: Tumor Tissue Weight Number
     source: caDSR
@@ -1597,8 +1604,8 @@ hpv_status:
 
 icd_10_code:
   description: >
-    The coded response for disease from the tenth version of the International Classification of
-    Disease (ICD-10).
+    Alphanumeric value used to describe the  disease code from the tenth version of the
+    International Classification of Disease (ICD-10).
   termDef:
     term: International Classification of Disease, Tenth Revision Code
     source: caDSR
@@ -1698,9 +1705,10 @@ inpc_grade:
 
 inpc_histologic_group:
   description: >
-    Text term that represents the International Neuroblastoma Pathology Classification (INPC)
-    histology score category based on age, mitosis-karyorhexis index, stromal content and degree
-    of tumor cell differentiation.
+    The text term used to describe the classification of neuroblastomas distinguishing between
+    favorable and unfavorable histologic groups. The histologic score, defined by the International
+    Neuroblastoma Pathology Classification (INPC), is based on age, mitosis-karyorrhexis index (MKI),
+    stromal content and degree of tumor cell differentiation.
   termDef:
     term: International Neuroblastoma Pathology Classification Histology Score Category
     source: caDSR
@@ -1710,8 +1718,8 @@ inpc_histologic_group:
 
 inrg_stage:
   description: >
-    Information regarding patient with neuroblastoma disease in classification system developed
-    to establish a consensus approach for pretreatment risk stratification of neuroblastomas.
+    The text term used to describe the staging classification of neuroblastic tumors, as defined by
+    the International Neuroblastoma Risk Group (INRG).
   termDef:
     term: Patient International Neuroblastoma Risk Group Classification System Stage
     source: caDSR
@@ -1758,11 +1766,8 @@ irs_group:
 
 irs_stage:
   description: >
-    The extent of a cancer in the body of a rare aggressive malignant mesenchymal neoplasm
-    arising from skeletal muscle._A rare aggressive malignant mesenchymal neoplasm arising from
-    skeletal muscle. It usually occurs in children and young adults. Only a small percentage of
-    tumors arise in the skeletal muscle of the extremities. The majority arise in other
-    anatomical sites.
+    The text term used to describe the classification of rhabdomyosarcoma tumors, as defined by the
+    Intergroup Rhabdomyosarcoma Study (IRS).
   termDef:
     term: Rhabdomyosarcoma Diagnosis Assessment Stage
     source: caDSR
@@ -1787,8 +1792,7 @@ is_paired_end: # TOREVIEW
 
 ishak_fibrosis_score:
   description: >
-    The score or group of scores as described by Dr. Kamal G. Ishak and colleagues to assess the
-    histopathologic degree of liver damage.
+    The text term used to describe the classification of the histopathologic degree of liver damage.
   termDef:
     term: Liver Fibrosis Ishak Score Category
     source: caDSR
@@ -1935,6 +1939,7 @@ loci_count:
 locus:
   description: >
     Alphanumeric value used to describe the locus of a specific genetic variant.
+    Example: NM_001126114. 
   termDef:
     term: Molecular Laboratory Procedure Locus Location Text
     source: caDSR
@@ -2000,9 +2005,10 @@ md5sum: # TOREVIEW
     The 128-bit hash value expressed as a 32 digit hexadecimal number used as a file's digital
     fingerprint.
 
-meduloblastoma_molecular_classification:
+medulloblastoma_molecular_classification:
   description: >
-    Stratification of medulloblastoma based on molecular features.
+    The text term used to describe the classification of medulloblastoma tumors based on molecular
+    features.
   termDef:
     term: Medulloblastoma Genetic Finding Subclass Category
     source: caDSR
@@ -2022,8 +2028,7 @@ menopause_status:
 
 metastasis_at_diagnosis:
   description: >
-    The yes/no/unknown indicator used to describe whether metastatic disease was confirmed at
-    diagnosis.
+    The text term used to describe the extent of metastatic disease present at diagnosis.
   termDef:
     term: Metastatic Disease at Diagnosis Indicator
     source: caDSR
@@ -2063,7 +2068,8 @@ method_of_sample_procurement:
 
 micropapillary_features:
   description: >
-    Text term to identify whether a tumor presents with micropapillary features.
+    The yes/no/unknown indicator used to describe whether micropapillary features were determined
+    to be present.
   termDef:
     term: Tumor Micropapillary Features Present Status
     source: caDSR
@@ -2083,7 +2089,8 @@ microsatellite_instability_abnormal:
 
 mismatch_repair_mutation:
   description: >
-    A yes/no/unknown indicator used to describe whether a gene has undergone mismatch repair.
+    The yes/no/unknown indicator used to describe whether the mutation included in molecular testing
+    was known to have an affect on the mismatch repair process. 
   termDef:
     term: Gene Mutation Mismatch Repair Indicator
     source: caDSR
@@ -2428,7 +2435,8 @@ perineural_invasion_present:
 
 peripancreatic_lymph_nodes_positive:
   description: >
-    Numeric range of the number of paripancreatic lymph nodes with disease involvement.
+    Enumerated numeric value or range of values used to describe the number of peripancreatic lymph
+    nodes determined to be positive.
   termDef:
     term: Peripancreatic Lymph Node Positive Finding Range
     source: caDSR
@@ -2438,13 +2446,14 @@ peripancreatic_lymph_nodes_positive:
 
 peripancreatic_lymph_nodes_tested:
   description: >
-    Numeric range of the number of paripancreatic lymph nodes with disease involvement.
+    The total number of peripancreatic lymph nodes tested for the presence of pancreatic cancer
+    cells.
   termDef:
-    term: Peripancreatic Lymph Node Positive Finding Range
+    term: Peripancreatic Lymph Node Examined Count
     source: caDSR
-    cde_id: 5983082
-    cde_version: 2.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5983082&version=2.0"
+    cde_id: 6050944
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6050944&version=1.0"
 
 platelet_count:
   description: >
@@ -2617,7 +2626,7 @@ progression_or_recurrence_anatomic_site:
 
 progression_or_recurrence_type:
   description: >
-    The text term used to describe the type of progressive or recurrent disease.
+    The text term used to describe the type of progressive or recurrent disease or relapsed disease.
   termDef:
     term: Progression or Recurrence Description Type
     source: caDSR
@@ -2686,8 +2695,8 @@ reflux_treatment:
 
 reflux_treatment_type:
   description: >
-    Text term to describe the kind of therapeutic procedure given to an individual clinically
-    diagnosed with gastroesophageal reflux disease.
+    Text term used to describe the types of treatment used to manage gastroesophageal reflux disease
+    (GERD).
   termDef:
     term: Gastroesophageal Reflux Disease Treatment Type
     source: caDSR
@@ -2781,8 +2790,8 @@ risk_factor:
 
 rna_change:
   description: >
-    Alphanumeric value used to describe the Ribonucleic Acid (RNA) change for a specific genetic
-    variant.
+    Alphanumeric value used to describe the rna change for a specific genetic variant.
+    Example: r.76a>c 
   termDef:
     term: Molecular Laboratory Procedure RNA Change Text
     source: caDSR
@@ -2985,7 +2994,8 @@ test_analyte_type:
 
 test_result:
   description: >
-    The text term used to describe the result of the molecular test.
+    The text term used to describe the result of the molecular test. If the test result was a
+    numeric value see test_value. 
   termDef:
     term: Molecular Laboratory Procedure Outcome
     source: caDSR
@@ -2995,7 +3005,8 @@ test_result:
 
 test_units:
   description: >
-    The text term used to describe the units of the test value for a molecular test.
+    The text term used to describe the units of the test value for a molecular test. This property
+    is used in conjunction with test_value. 
   termDef:
     term: Molecular Laboratory Procedure Outcome Unit of Measure
     source: caDSR
@@ -3195,11 +3206,8 @@ tumor_code_id: # TOREVIEW
 
 tumor_confined_to_organ_of_origin:
   description: >
-    The yes/no/unknown/not applicable indicator of the origin of a benign or malignant
-    pathologic structure in any part of the body, resulting from a neoplastic accumulation of
-    cells._A unique macroscopic (gross) anatomic structure that performs specific functions.  It
-    is composed of various tissues.  An organ is part of an anatomic system or a body region.
-    Representative examples include the heart, lung, liver, spleen, and uterus.
+    The yes/no/unknown indicator used to describe whether the tumor is confined to the organ where
+    it originated and did not spread to a proximal or distant location within the body.
   termDef:
     term: Tumor Mass Organ Origin Yes No Unknown Not Applicable Indicator
     source: caDSR
@@ -3231,7 +3239,8 @@ tumor_grade:
 
 tumor_largest_dimension_diameter:
   description: >
-    The length of the largest dimension/diameter of a tumor, regardless of anatomical plane.
+    Numeric value used to describe the maximum diameter or dimension of the primary tumor, measured
+    in centimeters.
   termDef:
     term: Tumor Largest Dimension Measurement
     source: caDSR
@@ -3300,7 +3309,7 @@ vascular_invasion_type:
 viral_hepatitis_serologies:
   description: >
     Text term that describes the kind of serological laboratory test used to determine the
-    positive or negative test result for hepatitis.
+    patient's hepatitus status.
   termDef:
     term: Viral Hepatitis Laboratory Procedure Serology Test Method Type
     source: caDSR
@@ -3361,10 +3370,8 @@ well_number:
 
 wilms_tumor_histologic_subtype:
   description: >
-    Enumerated set of values to denote favorable, unfavorable, or unknown value related to an
-    established or verified written or verbal account, representation, statement, or explanation
-    of the study of the structure of the cells and their arrangement to constitute tissues and,
-    finally, the association among these to form organs.
+    The text term used to describe the classification of Wilms tumors distinguishing between
+    favorable and unfavorable histologic groups.
   termDef:
     term: Disease Histology Confirmation Favorable Status
     source: caDSR

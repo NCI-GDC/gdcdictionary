@@ -12,6 +12,7 @@ description: >
   characterization by age, sex, or race).
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:

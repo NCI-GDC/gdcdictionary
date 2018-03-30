@@ -11,6 +11,7 @@ description: >
   A physical sub-part of any sample.
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:

@@ -12,6 +12,7 @@ description: >
   data.
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

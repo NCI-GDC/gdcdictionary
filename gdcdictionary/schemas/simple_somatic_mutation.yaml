@@ -12,6 +12,7 @@ description: >
   from aligned reads.
 additionalProperties: false
 submittable: false
+downloadable: true
 validators: null
 
 systemProperties:

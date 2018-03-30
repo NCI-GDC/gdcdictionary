@@ -11,6 +11,7 @@ description: >
   Data file containing the pathology report.
 additionalProperties: false
 submittable: true
+downloadable: true
 validators: null
 
 systemProperties:

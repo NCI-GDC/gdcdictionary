@@ -9,6 +9,8 @@ program: '*'
 project: '*'
 description: >
   Data file containing submitted beta values from a nucleotide methylation array.
+submittable: true
+downloadable: false
 additionalProperties: false
 validators: null
 

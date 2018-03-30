@@ -12,6 +12,7 @@ description: >
   pipelines.
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

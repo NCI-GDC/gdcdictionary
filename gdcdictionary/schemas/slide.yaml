@@ -11,6 +11,7 @@ description: >
   A digital image, microscopic or otherwise, of any sample, portion, or sub-part thereof. (GDC)
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:

@@ -12,6 +12,7 @@ description: >
   may be obtained as files. (GDC)
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

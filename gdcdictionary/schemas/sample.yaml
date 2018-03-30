@@ -15,6 +15,7 @@ description: >
   embryos, and body excretory products.
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:

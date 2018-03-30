@@ -11,6 +11,7 @@ description: >
   requirement. (NCIt C47885)
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

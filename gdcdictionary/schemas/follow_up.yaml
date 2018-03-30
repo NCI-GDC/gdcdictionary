@@ -16,6 +16,7 @@ description: >
   something that has already been done.
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:
