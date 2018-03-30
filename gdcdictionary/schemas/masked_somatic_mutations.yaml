@@ -78,7 +78,6 @@ properties:
       - WGS
       - WXS
       - Low Pass WGS
-      - Validation
   projects:
     $ref: "_definitions.yaml#/to_one"
   somatic_aggregation_workflows:
