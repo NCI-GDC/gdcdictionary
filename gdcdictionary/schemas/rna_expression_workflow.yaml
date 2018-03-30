@@ -12,6 +12,7 @@ description: >
   unharmonized or GDC harmonized data.
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

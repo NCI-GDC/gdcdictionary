@@ -12,6 +12,7 @@ description: >
   together. (NCIt C42883)
 additionalProperties: false
 submittable: false
+downloadable: true
 validators: null
 
 systemProperties:

@@ -10,6 +10,7 @@ project: '*'
 description: "Publication for a legacy file (depreciated)."
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

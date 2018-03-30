@@ -11,6 +11,7 @@ description: >
   Data file containing miRNA expression information  generated internally by the GDC.
 additionalProperties: false
 submittable: false
+downloadable: true
 validators: null
 
 systemProperties:

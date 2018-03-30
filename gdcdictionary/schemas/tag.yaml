@@ -10,6 +10,7 @@ project: '*'
 description: "Any comment or other information about an entity"
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

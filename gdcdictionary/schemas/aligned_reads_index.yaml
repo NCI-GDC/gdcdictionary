@@ -10,6 +10,7 @@ project: '*'
 description: "Data file containing the index for a set of aligned reads."
 additionalProperties: false
 submittable: true
+downloadable: true 
 validators: null
 
 systemProperties:

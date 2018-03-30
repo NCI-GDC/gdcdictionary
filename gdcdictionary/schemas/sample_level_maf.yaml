@@ -11,6 +11,7 @@ description: >
   Data file containing the all of the somatic mutation calls for the sample.
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

@@ -12,6 +12,7 @@ description: >
   (NCIt C103264)
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

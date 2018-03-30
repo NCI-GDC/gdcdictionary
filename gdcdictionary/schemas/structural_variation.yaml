@@ -11,6 +11,7 @@ description: >
   Data file containing the structural variation data.
 additionalProperties: false
 submittable: false
+downloadable: true
 validators: null
 
 systemProperties:

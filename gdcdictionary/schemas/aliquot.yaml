@@ -11,6 +11,7 @@ description: >
   volume or weight.
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: []
 
 systemProperties:

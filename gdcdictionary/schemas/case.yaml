@@ -12,6 +12,7 @@ description: >
   context of a specific project.
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:

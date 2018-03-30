@@ -11,6 +11,7 @@ description: >
   intended for further analysis.
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:

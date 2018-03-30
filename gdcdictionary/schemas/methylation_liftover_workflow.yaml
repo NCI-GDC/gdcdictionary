@@ -9,6 +9,8 @@ program: '*'
 project: '*'
 description: >
   Metadata for the methylation liftover workflow used to harmonize TCGA methylation data.
+submittable: false
+downloadable: false
 additionalProperties: false
 validators: null
 
