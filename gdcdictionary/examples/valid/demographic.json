@@ -11,6 +11,8 @@
     "vital_status":"Dead",
     "year_of_birth": 1652,
     "year_of_death": 2009,
+    "premature_at_birth": "No",
+    "weeks_gestation_at_birth": 40,
     "cases": {
         "submitter_id": "BLGSP-71-06-00019"
     }
