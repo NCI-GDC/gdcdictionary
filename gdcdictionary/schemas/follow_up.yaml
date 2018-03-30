@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "follow_up"
 title: Follow-Up
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: clinical
 program: '*'
 project: '*'
@@ -859,6 +859,14 @@ properties:
       - Wound Dehiscence
       - Wound Infection
       - Wrist Fracture
+  barretts_esophagus_goblet_cells_present:
+    term:
+      $ref: "_terms.yaml#/barretts_esophagus_goblet_cells_present"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
   bmi:
     term:
       $ref: "_terms.yaml#/bmi"
@@ -872,8 +880,11 @@ properties:
       $ref: "_terms.yaml#/comorbidity"
     enum:
       - Acute Renal Failure
+      - Adenocarcinoma
       - Adrenocortical Insufficiency
+      - Adenomatous Polyposis Coli
       - Allergies
+      - Alpha-1 Antitrypsin
       - Anemia
       - Anxiety
       - Arrhythmia
@@ -883,13 +894,17 @@ properties:
       - Avascular Necrosis
       - Barrett's Esophagus
       - Basal Cell Carcinoma
+      - Beckwith-Wiedemann
       - Behcet's Disease
+      - Biliary Disorder
       - Blood Clots
       - Bone Fracture(s)
       - Bronchitis
       - Calcium Channel Blockers
       - Cancer
       - Cataracts
+      - Celiac Disease
+      - Cirrhosis, Unknown Etiology
       - Cerebrovascular Disease
       - Chronic Renal Failure
       - Colon Polyps
@@ -898,10 +913,12 @@ properties:
       - Connective Tissue Disorder
       - COPD
       - Coronary Artery Disease
+      - Crohn's Disease
       - Cryptogenic Organizing Pneumonia
       - Deep Vein Thrombosis / Thromboembolism
       - Depression
       - Diabetes
+      - Diabetes, Type II
       - Diabetic Neuropathy
       - Diet Controlled Diabetes
       - Diverticulitis
@@ -910,11 +927,16 @@ properties:
       - Epilepsy
       - Eczema
       - Epstein-Barr Virus
+      - Familial Adenomatous Polyposis
+      - Fanconi Anemia
       - Gastroesophageal Reflux Disease
       - GERD
       - Glaucoma
+      - Glycogen Storage Disease
       - Gout
       - Gonadal Dysfunction
+      - Gorlin Syndrome
+      - H. pylori Infection
       - Hashimoto's Thyroiditis
       - Headache
       - Heart Disease
@@ -922,6 +944,7 @@ properties:
       - Hepatitis
       - Hepatitis B Infection
       - Hepatitis C Infection
+      - Hereditary Non-polyposis Colon Cancer
       - HIV / AIDS
       - Human Papillomavirus Infection
       - HUS/TTP
@@ -935,6 +958,7 @@ properties:
       - Inflammatory Bowel Disease
       - Insulin Controlled Diabetes
       - Interstitial Pneumontis or ARDS
+      - Intraductal Papillary Mucinous Neoplasm
       - Iron Overload
       - Ischemic Heart Disease
       - ITP
@@ -942,10 +966,13 @@ properties:
       - Kidney Disease
       - Liver Cirrhosis (Liver Disease)
       - Liver Toxicity (Non-Infectious)
+      - Li-Fraumeni Syndrome
       - Lupus
+      - Lynch Syndrome
       - MAI
       - Myasthenia Gravis
       - Myocardial Infarction
+      - Neuroendocrine Tumor
       - Obesity
       - Organ transplant (site)
       - Osteoarthritis
@@ -959,6 +986,7 @@ properties:
       - Peptic Ulcer (Ulcer)
       - Peripheral Neuropathy
       - Peripheral Vascular Disease
+      - Peutz-Jeghers Disease
       - Pregnancy in Patient or Partner
       - Psoriasis
       - Pulmonary Fibrosis
@@ -968,6 +996,7 @@ properties:
       - Renal Insufficiency
       - Rheumatologic Disease
       - Rheumatoid Arthritis
+      - Rubinstein-Taybi Syndrome
       - Sarcoidosis
       - Seizure
       - Sleep apnea
@@ -975,7 +1004,18 @@ properties:
       - Stroke
       - Transient Ischemic Attack
       - Tuberculosis
+      - Turcot Syndrome
+      - Tyrosinemia
       - Ulcerative Colitis
+      - Unknown
+      - Not Reported
+  comorbidity_method_of_diagnosis:
+    term:
+      $ref: "_terms.yaml#/comorbidity_method_of_diagnosis"
+    enum:
+      - Histology
+      - Pathology
+      - Radiology
       - Unknown
       - Not Reported
   days_to_adverse_event:
@@ -998,6 +1038,21 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_recurrence"
     type: integer
+  diabetes_treatment_type:
+    term:
+      $ref: "_terms.yaml#/diabetes_treatment_type"
+    enum:
+      - Alpha-Glucosidase Inhibitor
+      - Biguanide
+      - Diet
+      - Injected Insulin
+      - Insulin
+      - Oral Hypoglycemic
+      - Sulfonylurea
+      - Thiazolidinedione
+      - Other
+      - Unknown
+      - Not Reported
   disease_response:
     term:
       $ref: "_terms.yaml#/disease_response"
@@ -1087,6 +1142,36 @@ properties:
       - Other
       - Unknown
       - Not Reported
+  karnofsky_performance_status:
+    term:
+      $ref: "_terms.yaml#/karnofsky_performance_status"
+    enum:
+      - "0"
+      - "10"
+      - "20"
+      - "30"
+      - "40"
+      - "50"
+      - "60"
+      - "70"
+      - "80"
+      - "90"
+      - "100"
+      - Unknown
+      - Not Reported
+  menopause_status:
+    term:
+      $ref: "_terms.yaml#/menopause_status"
+    enum:
+      - Premenopausal
+      - Perimenopausal
+      - Postmenopausal
+      - Unknown
+      - Not Reported
+  pancreatitis_onset_year:
+    term:
+      $ref: "_terms.yaml#/pancreatitis_onset_year"
+    type: integer
   progression_or_recurrence:
     term:
       $ref: "_terms.yaml#/progression_or_recurrence"
@@ -1429,6 +1514,71 @@ properties:
       - Cheek mucosa
       - Clitoris
       - Overlapping lesion of biliary tract
+      - Unknown
+      - Not Reported
+  progression_or_recurrence_type:
+    term:
+      $ref: "_terms.yaml#/progression_or_recurrence_type"
+    enum:
+      - Distant
+      - Local
+      - Regional
+      - Unknown
+      - Not Reported
+  reflux_treatment:
+    term:
+      $ref: "_terms.yaml#/reflux_treatment"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+  reflux_treatment_type:
+    term:
+      $ref: "_terms.yaml#/reflux_treatment_type"
+    enum:
+      - Antacids
+      - H2 Blockers
+      - Medically Treated
+      - No Treatment
+      - Not Applicable
+      - Not Reported
+      - Proton Pump Inhibitors
+      - Surgically Treated
+      - Unknown
+  risk_factor:
+    term:
+      $ref: "_terms.yaml#/risk_factor"
+    enum:
+      - Beckwith-Wiedemann
+      - Colon Polyps
+      - Denys-Drash Syndrome
+      - Diabetes, Type II
+      - Diet
+      - Familial Adenomatous Polyposis
+      - Fanconi Anemia
+      - Gorlin Syndrome
+      - Hemihypertrophy
+      - Li-Fraumeni Syndrome
+      - Lynch Syndrome
+      - Obesity
+      - Rubinstein-Taybi Syndrome
+      - Turcot Syndrome
+      - Wagr Syndrome
+      - Unknown
+      - Not Reported
+  viral_hepatitis_serologies:
+    term:
+      $ref: "_terms.yaml#/viral_hepatitis_serologies"
+    enum:
+      - HBV Core Antibody
+      - HBV DNA
+      - HBV Genotype
+      - HBV Surface Antibody
+      - HCV Genotype
+      - Hepatitis B Surface Antigen
+      - Hepatitis C Antibody
+      - Hepatitis C Virus RNA
       - Unknown
       - Not Reported
   weight:
