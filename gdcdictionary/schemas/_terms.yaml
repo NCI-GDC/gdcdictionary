@@ -2424,6 +2424,11 @@ synchronous_malignancy:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142390&version=1.0"
 
+target_capture_kit:
+  description: >
+    Description that can uniquely identify a target capture kit. Suggested value is a 
+    combination of vendor, kit name, and kit version.
+
 target_capture_kit_name: # TOREVIEW
   description: >
     Name of Target Capture Kit.
