@@ -867,6 +867,14 @@ properties:
     term:
       $ref: "_terms.yaml#/albumin"
     type: number
+  barretts_esophagus_goblet_cells_present:
+    term:
+      $ref: "_terms.yaml#/barretts_esophagus_goblet_cells_present"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
   beta_2_microglobulin:
     term:
       $ref: "_terms.yaml#/beta_2_microglobulin"
@@ -1010,6 +1018,15 @@ properties:
       - Ulcerative Colitis
       - Unknown
       - Not Reported
+  comorbidity_method_of_diagnosis:
+    term:
+      $ref: "_terms.yaml#/comorbidity_method_of_diagnosis"
+    enum:
+      - Histology
+      - Pathology
+      - Radiology
+      - Unknown
+      - Not Reported
   creatinine:
     term:
       $ref: "_terms.yaml#/creatinine"
@@ -1042,6 +1059,21 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_recurrence"
     type: integer
+  diabetes_treatment_type:
+    term:
+      $ref: "_terms.yaml#/diabetes_treatment_type"
+    enum:
+      - Alpha-Glucosidase Inhibitor
+      - Biguanide
+      - Diet
+      - Injected Insulin
+      - Insulin
+      - Oral Hypoglycemic
+      - Sulfonylurea
+      - Thiazolidinedione
+      - Other
+      - Unknown
+      - Not Reported
   disease_response:
     term:
       $ref: "_terms.yaml#/disease_response"
@@ -1234,6 +1266,23 @@ properties:
     term:
       $ref: "_terms.yaml#/igm"
     type: number
+  karnofsky_performance_status:
+    term:
+      $ref: "_terms.yaml#/karnofsky_performance_status"
+    enum:
+      - "0"
+      - "10"
+      - "20"
+      - "30"
+      - "40"
+      - "50"
+      - "60"
+      - "70"
+      - "80"
+      - "90"
+      - "100"
+      - Unknown
+      - Not Reported
   ldh_level:
     term:
       $ref: "_terms.yaml#/ldh_level"
@@ -1246,6 +1295,15 @@ properties:
     term:
       $ref: "_terms.yaml#/m_protein"
     type: number
+  menopause_status:
+    term:
+      $ref: "_terms.yaml#/menopause_status"
+    enum:
+      - Premenopausal
+      - Perimenopausal
+      - Postmenopausal
+      - Unknown
+      - Not Reported
   microsatellite_instability_abnormal:
     term:
       $ref: "_terms.yaml#/microsatellite_instability_abnormal"
@@ -1254,6 +1312,10 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+  pancreatitis_onset_year:
+    term:
+      $ref: "_terms.yaml#/pancreatitis_onset_year"
+    type: integer
   platelet_count:
     term:
       $ref: "_terms.yaml#/platelet_count"
@@ -1626,10 +1688,75 @@ properties:
       - Overlapping lesion of biliary tract
       - Unknown
       - Not Reported
+  progression_or_recurrence_type:
+    term:
+      $ref: "_terms.yaml#/progression_or_recurrence_type"
+    enum:
+      - Distant
+      - Local
+      - Regional
+      - Unknown
+      - Not Reported
+  reflux_treatment:
+    term:
+      $ref: "_terms.yaml#/reflux_treatment"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+  reflux_treatment_type:
+    term:
+      $ref: "_terms.yaml#/reflux_treatment_type"
+    enum:
+      - Antacids
+      - H2 Blockers
+      - Medically Treated
+      - No Treatment
+      - Not Applicable
+      - Not Reported
+      - Proton Pump Inhibitors
+      - Surgically Treated
+      - Unknown
+  risk_factor:
+    term:
+      $ref: "_terms.yaml#/risk_factor"
+    enum:
+      - Beckwith-Wiedemann
+      - Colon Polyps
+      - Denys-Drash Syndrome
+      - Diabetes, Type II
+      - Diet
+      - Familial Adenomatous Polyposis
+      - Fanconi Anemia
+      - Gorlin Syndrome
+      - Hemihypertrophy
+      - Li-Fraumeni Syndrome
+      - Lynch Syndrome
+      - Obesity
+      - Rubinstein-Taybi Syndrome
+      - Turcot Syndrome
+      - Wagr Syndrome
+      - Unknown
+      - Not Reported
   total_protein:
     term:
       $ref: "_terms.yaml#/total_protein"
     type: number
+  viral_hepatitis_serologies:
+    term:
+      $ref: "_terms.yaml#/viral_hepatitis_serologies"
+    enum:
+      - HBV Core Antibody
+      - HBV DNA
+      - HBV Genotype
+      - HBV Surface Antibody
+      - HCV Genotype
+      - Hepatitis B Surface Antigen
+      - Hepatitis C Antibody
+      - Hepatitis C Virus RNA
+      - Unknown
+      - Not Reported
   wbc:
     term:
       $ref: "_terms.yaml#/wbc"

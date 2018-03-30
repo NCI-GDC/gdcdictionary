@@ -344,6 +344,17 @@ ann_arbor_tumor_stage:
     cde_version: null
     term_url: null
 
+barretts_esophagus_goblet_cells_present:
+  description: >
+    Indicator to signify whether or not goblet cells were present in an individual diagnosed
+    with Barrett's Esophagus.
+  termDef:
+    term: Barrett's Esophagus Diagnosis Goblet Cell Present Indicator
+    source: caDSR
+    cde_id: 3440216
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440216&version=1.0"
+
 base_caller_name: # TOREVIEW
   description: >
     Name of the base caller.
@@ -608,6 +619,17 @@ comorbidity:
     cde_id: 2970715
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2970715&version=1.0"
+
+comorbidity_method_of_diagnosis:
+  description: >
+    The text term used to describe the method used to diagnose the patient's comorbidity
+    disease.
+  termDef:
+    term: Comorbidity Disease Diagnosis Method Type
+    source: caDSR
+    cde_id: 6142386
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142386&version=1.0"
 
 composition:
   description: >
@@ -894,6 +916,16 @@ days_to_treatment_start:
     cde_id: 5102411
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5102411&version=1.0"
+
+diabetes_treatment_type:
+  description: >
+    Types of treatment used to manage Diabetes.
+  termDef:
+    term: Diabetes Mellitus Treatment Type
+    source: caDSR
+    cde_id: 3587247
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3587247&version=1.0"
 
 diagnosis_pathologically_confirmed:
   description: >
@@ -1550,6 +1582,16 @@ iss_stage:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2465385&version=1.0"
 
+karnofsky_performance_status:
+  description: >
+    Text term used to describe the classification used of the functional capabilities of a person.
+  termDef:
+    term: Karnofsky Performance Status Score
+    source: caDSR
+    cde_id: 2003853
+    cde_version: 4.2
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2003853&version=4.2"
+
 lane_number:
   description: >
     The basic machine unit for sequencing. For Illumina machines, this reflects the physical lane
@@ -1703,6 +1745,16 @@ md5sum: # TOREVIEW
   description: >
     The 128-bit hash value expressed as a 32 digit hexadecimal number used as a file's digital
     fingerprint.
+
+menopause_status:
+  description: >
+    Text term used to describe the patient's menopause status.
+  termDef:
+    term: Patient Menopause Status
+    source: caDSR
+    cde_id: 2434914
+    cde_version: 1.1
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2434914&version=1.1"
 
 meduloblastoma_molecular_classification:
   description: >
@@ -1884,6 +1936,17 @@ pack_years_smoked:
     cde_id: 2955385
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2955385&version=1.0"
+
+pancreatitis_onset_year:
+  description: >
+    Numeric value to represent the year that the patient was diagnosed with clinical chronic
+    pancreatitis.
+  termDef:
+    term: Chronic Pancreatitis Diagnosis Year Number
+    source: caDSR
+    cde_id: 3457763
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3457763&version=1.0"
 
 percent_eosinophil_infiltration:
   description: >
@@ -2193,6 +2256,16 @@ progression_or_recurrence_anatomic_site:
     cde_version: null
     term_url: null
 
+progression_or_recurrence_type:
+  description: >
+    The text term used to describe the type of progressive or recurrent disease.
+  termDef:
+    term: Progression or Recurrence Description Type
+    source: caDSR
+    cde_id: 6142385
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142385&version=1.0"
+
 project_id: # TOREVIEW
   description: >
     Unique ID for any specific defined piece of work that is undertaken or attempted to
@@ -2230,6 +2303,27 @@ read_length: # TOREVIEW
 read_group_name: # TOREVIEW
   description: >
     The name of the read group.
+
+reflux_treatment:
+  description: >
+    The yes/no/unknown indicator used to describe whether the patient received reflux treatment.
+  termDef:
+    term: Gastroesophageal Reflux Disease Therapeutic Procedure Performed Indicator
+    source: caDSR
+    cde_id: 6133607
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6133607&version=1.0"
+
+reflux_treatment_type:
+  description: >
+    Text term to describe the kind of therapeutic procedure given to an individual clinically
+    diagnosed with gastroesophageal reflux disease.
+  termDef:
+    term: Gastroesophageal Reflux Disease Treatment Type
+    source: caDSR
+    cde_id: 3440206
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440206&version=1.0"
 
 regimen_or_line_of_therapy:
   description: >
@@ -2303,6 +2397,17 @@ RIN:
     cde_id: 5278775
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5278775&version=1.0"
+
+risk_factor:
+  description: >
+    The text term used to describe a risk factor the patient had at the time of or prior to
+    their diagnosis.
+  termDef:
+    term: Risk Factor Description Type
+    source: caDSR
+    cde_id: 6142389
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142389&version=1.0"
 
 sample_type:
   description: >
@@ -2712,6 +2817,17 @@ vascular_invasion_type:
     cde_id: 3168001
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3168001&version=1.0"
+
+viral_hepatitis_serologies:
+  description: >
+    Text term that describes the kind of serological laboratory test used to determine the
+    positive or negative test result for hepatitis.
+  termDef:
+    term: Viral Hepatitis Laboratory Procedure Serology Test Method Type
+    source: caDSR
+    cde_id: 4395982
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4395982&version=1.0"
 
 vital_status:
   description: >
