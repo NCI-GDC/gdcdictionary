@@ -154,6 +154,19 @@ ajcc_pathologic_t:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3045435&version=1.0"
 
+ajcc_staging_system_edition:
+  description: >
+    the version or edition of the American Joint Committee on Cancer Cancer Staging Handbooks, a
+    publication by the group formed for the purpose of developing a system of clinical staging
+    for cancer that is acceptable to the American medical profession and is compatible with
+    other accepted classifications.
+  termDef:
+    term: American Joint Committee on Cancer Publication Version Type
+    source: caDSR
+    cde_id: 2722309
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2722309&version=1.0"
+
 albumin:
   description: >
     The value of a lab test used to determine the albumin level in the blood.
@@ -253,6 +266,29 @@ analyte_volume:
     cde_version: null
     term_url: null
 
+anaplasia_present:
+  description: >
+    Yes/no/unknown/not reported indicator used to describe whether anaplasia was present at the
+    time of diagnosis.
+  termDef:
+    term: Anaplastic Lesion Present Indicator
+    source: caDSR
+    cde_id: 6059599
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6059599&version=1.0"
+
+anaplasia_present_type:
+  description: >
+    Information related to morphologic findings indicating the presence of a malignant cellular
+    infiltrate characterized by the presence of large pleomorphic cells, necrosis, and high
+    mitotic activity in a tissue sample.
+  termDef:
+    term: Anaplastic Lesion Classification Category
+    source: caDSR
+    cde_id: 4925534
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4925534&version=1.0"
+
 ann_arbor_b_symptoms:
   description: >
     Text term to signify whether lymphoma B-symptoms are present as noted in the patient's medical
@@ -266,14 +302,14 @@ ann_arbor_b_symptoms:
 
 ann_arbor_clinical_stage:
   description: >
-    The classification of the clinically confirmed anatomic disease extent of lymphoma (Hodgkin's
-    and Non-Hodgkins) based on the Ann Arbor Staging System.
+    The text term used to describe the clinical classification of lymphoma, as defined by the Ann
+    Arbor Lymphoma Staging System.
   termDef:
     term: Ann Arbor Clinical Stage
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    source: caDSR
+    cde_id: 5615604
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5615604&version=1.0"
 
 ann_arbor_extranodal_involvement:
   description: >
@@ -288,14 +324,14 @@ ann_arbor_extranodal_involvement:
 
 ann_arbor_pathologic_stage:
   description: >
-    The classification of the pathologically confirmed anatomic disease extent of lymphoma
-    (Hodgkin's and Non-Hodgkins) based on the Ann Arbor Staging System.
+    The text term used to describe the pathologic classification of lymphoma, as defined by the Ann
+    Arbor Lymphoma Staging System.
   termDef:
     term: Ann Arbor Pathologic Stage
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    source: caDSR
+    cde_id: 5615605
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5615605&version=1.0"
 
 ann_arbor_tumor_stage:
   description: >
@@ -307,6 +343,17 @@ ann_arbor_tumor_stage:
     cde_id: null
     cde_version: null
     term_url: null
+
+barretts_esophagus_goblet_cells_present:
+  description: >
+    Indicator to signify whether or not goblet cells were present in an individual diagnosed
+    with Barrett's Esophagus.
+  termDef:
+    term: Barrett's Esophagus Diagnosis Goblet Cell Present Indicator
+    source: caDSR
+    cde_id: 3440216
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440216&version=1.0"
 
 base_caller_name: # TOREVIEW
   description: >
@@ -464,6 +511,17 @@ cea_level_preoperative:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2716510&version=1.0"
 
+child_pugh_classification:
+  description: >
+    The grade from an assessment method used in the prognosis of chronic liver disease, mainly
+    cirrhosis.
+  termDef:
+    term: Child-Pugh Classification Grade
+    source: caDSR
+    cde_id: 2931791
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2931791&version=1.0"
+
 cigarettes_per_day:
   description: >
     The average number of cigarettes smoked per day.
@@ -508,6 +566,50 @@ colon_polyps_history:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3107197&version=1.0"
 
+cog_neuroblastoma_risk_group:
+  description: >
+    Text term that represents the categorization of patients on the basis of prognostic factors
+    per a system developed by Children's Oncology Group (COG). Risk level is used to assign
+    treatment intensity.
+  termDef:
+    term: Children's Oncology Group Neuroblastoma Risk Group Assignment Category
+    source: caDSR
+    cde_id: 4616452
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4616452&version=1.0"
+
+cog_rhabdomyosarcoma_risk_group:
+  description: >
+    Text term used to describe the classification of rhabdomyosarcoma, as defined by the
+    Children's Oncology Group (COG).
+  termDef:
+    term: Rhabdomyosarcoma Children's Oncology Group Risk Assessment Category
+    source: caDSR
+    cde_id: 6133604
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6133604&version=1.0"
+
+cog_renal_stage:
+  description: >
+    Extent of Wilms tumor using the International Society of Paediatric Oncology/Children's
+    Oncology Group/National Wilms' Tumor Study Group staging system.
+  termDef:
+    term: SIOP/COG/NWTSG Staging System Wilms Tumor Stage
+    source: caDSR
+    cde_id: 6013641
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6013641&version=1.0"
+
+cog_liver_stage:
+  description: >
+    Extent of the primary liver tumor prior to treatment using the PRETEXT staging system.
+  termDef:
+    term: PRETEXT Staging System Primary Childhood Malignant Liver Tumor Stage
+    source: caDSR
+    cde_id: 6013618
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6013618&version=1.0"
+
 comorbidity:
   description: >
     Text term to identify a coexistent disease or condition in a person.
@@ -517,6 +619,17 @@ comorbidity:
     cde_id: 2970715
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2970715&version=1.0"
+
+comorbidity_method_of_diagnosis:
+  description: >
+    The text term used to describe the method used to diagnose the patient's comorbidity
+    disease.
+  termDef:
+    term: Comorbidity Disease Diagnosis Method Type
+    source: caDSR
+    cde_id: 6142386
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142386&version=1.0"
 
 composition:
   description: >
@@ -804,6 +917,16 @@ days_to_treatment_start:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5102411&version=1.0"
 
+diabetes_treatment_type:
+  description: >
+    Types of treatment used to manage Diabetes.
+  termDef:
+    term: Diabetes Mellitus Treatment Type
+    source: caDSR
+    cde_id: 3587247
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3587247&version=1.0"
+
 diagnosis_pathologically_confirmed:
   description: >
     The histologic description of tissue or cells confirmed by a pathology review of frozen or
@@ -829,7 +952,8 @@ disease_response:
 
 disease_type: # TOREVIEW
   description: >
-    Full name for the project.
+    The text term used to describe the type of malignant disease, as categorized by the World
+    Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).
   termDef:
     term: Disease Type
     source: null
@@ -867,6 +991,71 @@ encoding:
     cde_id: null
     cde_version: null
     term_url: "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/1%20Basic%20Statistics.html"
+
+enneking_msts_grade:
+  description: >
+    Text term that represents the surgical grade of the musculoskeletal sarcoma, using the
+    Enneking staging system approved by the Musculoskeletal Tumor Society (MSTS).
+  termDef:
+    term: Enneking Musculoskeletal Tumor Society Staging System Surgical Grade
+    source: caDSR
+    cde_id: 6003955
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6003955&version=1.0"
+
+enneking_msts_metastasis:
+  description: >
+    Text term and code that represents the metastatic stage of the musculoskeletal sarcoma,
+    using the Enneking staging system approved by the Musculoskeletal Tumor Society (MSTS).
+  termDef:
+    term: Enneking Musculoskeletal Tumor Society Staging System Metastasis Stage
+    source: caDSR
+    cde_id: 6003958
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6003958&version=1.0"
+
+enneking_msts_stage:
+  description: >
+    Text term used to describe the stage of the musculoskeletal sarcoma, using the Enneking
+    staging system approved by the Musculoskeletal Tumor Society (MSTS).
+  termDef:
+    term: Enneking Musculoskeletal Tumor Society Staging System Stage
+    source: caDSR
+    cde_id: 6060045
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6060045&version=1.0"
+
+enneking_msts_tumor_site:
+  description: >
+    Text term and code that represents the tumor site of the musculoskeletal sarcoma, using the
+    Enneking staging system approved by the Musculoskeletal Tumor Society (MSTS).
+  termDef:
+    term: Enneking Musculoskeletal Tumor Society Staging System Tumor Stage
+    source: caDSR
+    cde_id: 6003957
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6003957&version=1.0"
+
+esophageal_columnar_dysplasia_degree:
+  description: >
+    Text term to describe the amount of dysplasia found within the benign esophageal columnar
+    mucosa.
+  termDef:
+    term: Non-cancerous Esophageal Columnar Mucosa Dysplasia Grade Result
+    source: caDSR
+    cde_id: 3440917
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440917&version=1.0"
+
+esophageal_columnar_metaplasia_present:
+  description: >
+    Indicator to signify whether or not esophageal columnar metaplasia is present.
+  termDef:
+    term: Esophageal Columnar Metaplasia Present Indicator
+    source: caDSR
+    cde_id: 3440218
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440218&version=1.0"
 
 estrogen_receptor_percent_positive_ihc:
   description: >
@@ -980,6 +1169,17 @@ file_state: # TOREVIEW
   description: >
     The current state of the data file object.
 
+first_symptom_prior_to_diagnosis:
+  description: >
+    Text term used to describe the patient's first symptom experienced prior to diagnosis and
+    thought to be related to the disease.
+  termDef:
+    term: DiseaseFirst Symptom Type
+    source: caDSR
+    cde_id: 6133605
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6133605&version=1.0"
+
 flow_cell_barcode: # TOREVIEW
   description: >
     Flow Cell Barcode.
@@ -1034,6 +1234,17 @@ freezing_method:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432607&version=1.0"
 
+gastric_esophageal_junction_involvement:
+  description: >
+    The yes/no/unknown/not reported indicator used to describe whether the tumor is located
+    across the gastroesophageal junction.
+  termDef:
+    term: Esophageal Tumor Across Gastroesophageal Junction Indicator
+    source: caDSR
+    cde_id: 6059632
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6059632&version=1.0"
+
 gender:
   description: >
     Text designations that identify gender. Gender is described as the assemblage of properties that
@@ -1055,6 +1266,26 @@ glucose:
     cde_id: 2004319
     cde_version: 4.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2004319&version=4.0"
+
+goblet_cells_columnar_mucosa_present:
+  description: >
+    Indicator to signify whether or not goblet cells were present in esophageal columnar mucosa.
+  termDef:
+    term: Esophageal Columnar Mucosa Goblet Cell Present Indicator
+    source: caDSR
+    cde_id: 3440219
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440219&version=1.0"
+
+gross_tumor_weight:
+  description: >
+    Numeric value used to describe the gross pathologic tumor weight.
+  termDef:
+    term: Tumor Tissue Weight Number
+    source: caDSR
+    cde_id: 6133606
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6133606&version=1.0"
 
 height:
   description: >
@@ -1141,6 +1372,17 @@ hpv_status:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2230033&version=1.0"
 
+icd_10_code:
+  description: >
+    The coded response for disease from the tenth version of the International Classification of
+    Disease (ICD-10).
+  termDef:
+    term: International Classification of Disease, Tenth Revision Code
+    source: caDSR
+    cde_id: 3226287
+    cde_version: 2.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3226287&version=2.0"
+
 iga:
   description: >
     The numeric value, in mg/dL, for the amount of immunoglobulin type A
@@ -1219,6 +1461,52 @@ initial_weight:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432605&version=1.0"
 
+inpc_grade:
+  description: >
+    Text term used to describe the classification of neuroblastic differentiation within
+    neuroblastoma tumors, as defined by the International Neuroblastoma Pathology Classification
+    (INPC).
+  termDef:
+    term: International Neuroblastoma Pathology Classification Grade Category
+    source: caDSR
+    cde_id: 6133602
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6133602&version=1.0"
+
+inpc_histologic_group:
+  description: >
+    Text term that represents the International Neuroblastoma Pathology Classification (INPC)
+    histology score category based on age, mitosis-karyorhexis index, stromal content and degree
+    of tumor cell differentiation.
+  termDef:
+    term: International Neuroblastoma Pathology Classification Histology Score Category
+    source: caDSR
+    cde_id: 4616372
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4616372&version=1.0"
+
+inrg_stage:
+  description: >
+    Information regarding patient with neuroblastoma disease in classification system developed
+    to establish a consensus approach for pretreatment risk stratification of neuroblastomas.
+  termDef:
+    term: Patient International Neuroblastoma Risk Group Classification System Stage
+    source: caDSR
+    cde_id: 5777238
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5777238&version=1.0"
+
+inss_stage:
+  description: >
+    Text term used to describe the staging classification of neuroblastic tumors, as defined by
+    the International Neuroblastoma Staging System (INSS).
+  termDef:
+    term: International Neuroblastoma Staging System Stage
+    source: caDSR
+    cde_id: 6133603
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6133603&version=1.0"
+
 instrument_model:
   description: >
     Numeric value that represents the sample dimension that is greater than the shortest
@@ -1233,6 +1521,31 @@ instrument_model:
 intermediate_dimension: # TOREVIEW
   description: >
     Intermediate dimension of the sample, in millimeters.
+
+irs_group:
+  description: >
+    Text term used to describe the classification of rhabdomyosarcoma tumors, as defined by the
+    Intergroup Rhabdomyosarcoma Study (IRS).
+  termDef:
+    term: Intergroup Rhabdomyosarcoma Study Group Stage
+    source: caDSR
+    cde_id: 6141658
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6141658&version=1.0"
+
+irs_stage:
+  description: >
+    The extent of a cancer in the body of a rare aggressive malignant mesenchymal neoplasm
+    arising from skeletal muscle._A rare aggressive malignant mesenchymal neoplasm arising from
+    skeletal muscle. It usually occurs in children and young adults. Only a small percentage of
+    tumors arise in the skeletal muscle of the extremities. The majority arise in other
+    anatomical sites.
+  termDef:
+    term: Rhabdomyosarcoma Diagnosis Assessment Stage
+    source: caDSR
+    cde_id: 5162089
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5162089&version=1.0"
 
 is_ffpe:
   description: >
@@ -1249,6 +1562,17 @@ is_paired_end: # TOREVIEW
   description: >
     Are the reads paired end?
 
+ishak_fibrosis_score:
+  description: >
+    The score or group of scores as described by Dr. Kamal G. Ishak and colleagues to assess the
+    histopathologic degree of liver damage.
+  termDef:
+    term: Liver Fibrosis Ishak Score Category
+    source: caDSR
+    cde_id: 3182621
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3182621&version=1.0"
+
 iss_stage:
   description: >
     The multiple myeloma disease stage at diagnosis.
@@ -1258,6 +1582,16 @@ iss_stage:
     cde_id: 2465385
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2465385&version=1.0"
+
+karnofsky_performance_status:
+  description: >
+    Text term used to describe the classification used of the functional capabilities of a person.
+  termDef:
+    term: Karnofsky Performance Status Score
+    source: caDSR
+    cde_id: 2003853
+    cde_version: 4.2
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2003853&version=4.2"
 
 lane_number:
   description: >
@@ -1413,6 +1747,47 @@ md5sum: # TOREVIEW
     The 128-bit hash value expressed as a 32 digit hexadecimal number used as a file's digital
     fingerprint.
 
+menopause_status:
+  description: >
+    Text term used to describe the patient's menopause status.
+  termDef:
+    term: Patient Menopause Status
+    source: caDSR
+    cde_id: 2434914
+    cde_version: 1.1
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2434914&version=1.1"
+
+meduloblastoma_molecular_classification:
+  description: >
+    Stratification of medulloblastoma based on molecular features.
+  termDef:
+    term: Medulloblastoma Genetic Finding Subclass Category
+    source: caDSR
+    cde_id: 6002209
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6002209&version=1.0"
+
+metastasis_at_diagnosis:
+  description: >
+    The yes/no/unknown indicator used to describe whether metastatic disease was confirmed at
+    diagnosis.
+  termDef:
+    term: Metastatic Disease at Diagnosis Indicator
+    source: caDSR
+    cde_id: 6133614
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6133614&version=1.0"
+
+metastasis_at_diagnosis_site:
+  description: >
+    Text term to identify an anatomic site in which metastatic disease involvement is found.
+  termDef:
+    term: Metastatic Disease Anatomic Site Name
+    source: caDSR
+    cde_id: 3029815
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3029815&version=1.0"
+
 method_of_diagnosis:
   description: >
     The method used to initially the patient's diagnosis.
@@ -1433,6 +1808,16 @@ method_of_sample_procurement:
     cde_version: null
     term_url: null
 
+micropapillary_features:
+  description: >
+    Text term to identify whether a tumor presents with micropapillary features.
+  termDef:
+    term: Tumor Micropapillary Features Present Status
+    source: caDSR
+    cde_id: 6068784
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6068784&version=1.0"
+
 microsatellite_instability_abnormal:
   description: >
     The yes/no indicator to signify the status of a tumor for microsatellite instability.
@@ -1442,6 +1827,17 @@ microsatellite_instability_abnormal:
     cde_id: 3123142
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3123142&version=1.0"
+
+mitosis_karyorrhexis_index:
+  description: >
+    Text term that represents the component of the International Neuroblastoma Pathology
+    Classification (INPC) for mitosis-karyorrhexis index (MKI).
+  termDef:
+    term: International Neuroblastoma Pathology Classification Mitosis Karyorrhexis Index Category
+    source: caDSR
+    cde_id: 4616412
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4616412&version=1.0"
 
 morphology:
   description: >
@@ -1500,6 +1896,51 @@ normal_tumor_genotype_snp_match:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4588156&version=1.0"
 
+no_matched_normal_low_pass_wgs:
+  description: >
+    There will be no matched normal low pass WGS aliquots for this case that can be used for variant
+    calling purposes. The GDC may elect to use a single tumor calling pipeline to process this data.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+no_matched_normal_targeted_sequencing:
+  description: >
+    There will be no matched normal Targeted Sequencing aliquots for this case that can be used for
+    variant calling purposes. The GDC may elect to use a single tumor calling pipeline to process
+    this data.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+no_matched_normal_wgs:
+  description: >
+    There will be no matched normal WGS aliquots for this case that can be used for variant calling
+    purposes. The GDC may elect to use a single tumor calling pipeline to process this data.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+no_matched_normal_wxs:
+  description: >
+    There will be no matched normal WXS aliquots for this case that can be used for variant calling
+    purposes. The GDC may elect to use a single tumor calling pipeline to process this data.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 number_proliferating_cells:
   description: >
     Numeric value that represents the count of proliferating cells determined during pathologic
@@ -1541,6 +1982,17 @@ pack_years_smoked:
     cde_id: 2955385
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2955385&version=1.0"
+
+pancreatitis_onset_year:
+  description: >
+    Numeric value to represent the year that the patient was diagnosed with clinical chronic
+    pancreatitis.
+  termDef:
+    term: Chronic Pancreatitis Diagnosis Year Number
+    source: caDSR
+    cde_id: 3457763
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3457763&version=1.0"
 
 percent_eosinophil_infiltration:
   description: >
@@ -1681,6 +2133,26 @@ perineural_invasion_present:
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64181&version=3.0"
 
+peripancreatic_lymph_nodes_positive:
+  description: >
+    Numeric range of the number of paripancreatic lymph nodes with disease involvement.
+  termDef:
+    term: Peripancreatic Lymph Node Positive Finding Range
+    source: caDSR
+    cde_id: 5983082
+    cde_version: 2.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5983082&version=2.0"
+
+peripancreatic_lymph_nodes_tested:
+  description: >
+    Numeric range of the number of paripancreatic lymph nodes with disease involvement.
+  termDef:
+    term: Peripancreatic Lymph Node Positive Finding Range
+    source: caDSR
+    cde_id: 5983082
+    cde_version: 2.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5983082&version=2.0"
+
 platelet_count:
   description: >
     The absolute peripheral platelet count (in 1000/uL).
@@ -1737,7 +2209,8 @@ primary_diagnosis:
 
 primary_site:
   description: >
-    Primary site for the project.
+    The text term used to describe the general location of the malignant disease, as categorized by
+    the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).
   termDef:
     term: Primary Site
     source: null
@@ -1830,6 +2303,16 @@ progression_or_recurrence_anatomic_site:
     cde_version: null
     term_url: null
 
+progression_or_recurrence_type:
+  description: >
+    The text term used to describe the type of progressive or recurrent disease.
+  termDef:
+    term: Progression or Recurrence Description Type
+    source: caDSR
+    cde_id: 6142385
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142385&version=1.0"
+
 project_id: # TOREVIEW
   description: >
     Unique ID for any specific defined piece of work that is undertaken or attempted to
@@ -1867,6 +2350,27 @@ read_length: # TOREVIEW
 read_group_name: # TOREVIEW
   description: >
     The name of the read group.
+
+reflux_treatment:
+  description: >
+    The yes/no/unknown indicator used to describe whether the patient received reflux treatment.
+  termDef:
+    term: Gastroesophageal Reflux Disease Therapeutic Procedure Performed Indicator
+    source: caDSR
+    cde_id: 6133607
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6133607&version=1.0"
+
+reflux_treatment_type:
+  description: >
+    Text term to describe the kind of therapeutic procedure given to an individual clinically
+    diagnosed with gastroesophageal reflux disease.
+  termDef:
+    term: Gastroesophageal Reflux Disease Treatment Type
+    source: caDSR
+    cde_id: 3440206
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440206&version=1.0"
 
 regimen_or_line_of_therapy:
   description: >
@@ -1940,6 +2444,17 @@ RIN:
     cde_id: 5278775
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5278775&version=1.0"
+
+risk_factor:
+  description: >
+    The text term used to describe a risk factor the patient had at the time of or prior to
+    their diagnosis.
+  termDef:
+    term: Risk Factor Description Type
+    source: caDSR
+    cde_id: 6142389
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142389&version=1.0"
 
 sample_type:
   description: >
@@ -2038,6 +2553,33 @@ spike_ins_concentration: # TOREVIEW
 state: # TOREVIEW
   description: >
     The current state of the object.
+
+supratentorial_localization:
+  description: >
+    Text term to specify the location of the supratentorial tumor.
+  termDef:
+    term: Tumor Location Central Nervous System Tissue Type
+    source: caDSR
+    cde_id: 3133891
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3133891&version=1.0"
+
+synchronous_malignancy:
+  description: >
+    A yes/no/unknown indicator used to describe whether the patient had an additional malignant
+    diagnosis at the same time the tumor used for sequencing was diagnosed. If both tumors were
+    sequenced, both tumors would have synchronous malignancies.
+  termDef:
+    term: Malignant Disease Diagnosis Synchronous Indicator
+    source: caDSR
+    cde_id: 6142390
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142390&version=1.0"
+
+target_capture_kit:
+  description: >
+    Description that can uniquely identify a target capture kit. Suggested value is a 
+    combination of vendor, kit name, and kit version.
 
 target_capture_kit_name: # TOREVIEW
   description: >
@@ -2175,10 +2717,10 @@ treatment_anatomic_site:
     The anatomic site or field targeted by a treatment regimen or single agent therapy.
   termDef:
     term: Treatment Anatomic Site
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    source: caDSR
+    cde_id: 5615611
+    cde_version: 1.0
+    term_url: https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5615611&version=1.0
 
 treatment_intent_type:
   description: >
@@ -2221,17 +2763,6 @@ treatment_type:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5102381&version=1.0"
 
-tumor_grade:
-  description: >
-    Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation
-    and aggressiveness.
-  termDef:
-    term: Neoplasm Histologic Grade
-    source: caDSR
-    cde_id: 2785839
-    cde_version: 2.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2785839&version=2.0"
-
 tumor_code: # TOREVIEW
   description: >
     Diagnostic tumor code of the tissue sample source.
@@ -2239,6 +2770,20 @@ tumor_code: # TOREVIEW
 tumor_code_id: # TOREVIEW
   description: >
     BCR-defined id code for the tumor sample.
+
+tumor_confined_to_organ_of_origin:
+  description: >
+    The yes/no/unknown/not applicable indicator of the origin of a benign or malignant
+    pathologic structure in any part of the body, resulting from a neoplastic accumulation of
+    cells._A unique macroscopic (gross) anatomic structure that performs specific functions.  It
+    is composed of various tissues.  An organ is part of an anatomic system or a body region.
+    Representative examples include the heart, lung, liver, spleen, and uterus.
+  termDef:
+    term: Tumor Mass Organ Origin Yes No Unknown Not Applicable Indicator
+    source: caDSR
+    cde_id: 4925494
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4925494&version=1.0"
 
 tumor_descriptor:
   description: >
@@ -2250,6 +2795,27 @@ tumor_descriptor:
     cde_id: 3288124
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3288124&version=1.0"
+
+tumor_grade:
+  description: >
+    Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation
+    and aggressiveness.
+  termDef:
+    term: Neoplasm Histologic Grade
+    source: caDSR
+    cde_id: 2785839
+    cde_version: 2.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2785839&version=2.0"
+
+tumor_largest_dimension_diameter:
+  description: >
+    The length of the largest dimension/diameter of a tumor, regardless of anatomical plane.
+  termDef:
+    term: Tumor Largest Dimension Measurement
+    source: caDSR
+    cde_id: 64215
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64215&version=3.0"
 
 tumor_stage:
   description: >
@@ -2299,6 +2865,17 @@ vascular_invasion_type:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3168001&version=1.0"
 
+viral_hepatitis_serologies:
+  description: >
+    Text term that describes the kind of serological laboratory test used to determine the
+    positive or negative test result for hepatitis.
+  termDef:
+    term: Viral Hepatitis Laboratory Procedure Serology Test Method Type
+    source: caDSR
+    cde_id: 4395982
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4395982&version=1.0"
+
 vital_status:
   description: >
     The survival state of the person registered on the protocol.
@@ -2339,6 +2916,19 @@ well_number:
     cde_id: 5432613
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432613&version=1.0"
+
+wilms_tumor_histologic_subtype:
+  description: >
+    Enumerated set of values to denote favorable, unfavorable, or unknown value related to an
+    established or verified written or verbal account, representation, statement, or explanation
+    of the study of the structure of the cells and their arrangement to constitute tissues and,
+    finally, the association among these to form organs.
+  termDef:
+    term: Disease Histology Confirmation Favorable Status
+    source: caDSR
+    cde_id: 4358735
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4358735&version=1.0"
 
 workflow_type:
   description: >

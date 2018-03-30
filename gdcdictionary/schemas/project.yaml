@@ -83,6 +83,12 @@ properties:
       Indicates whether a project will appear in the Legacy Archive.
     default: false
     type: boolean
+  
+  in_review:
+    description: >
+      Indicates that the project is under review by the submitter. Upload and data modification is disabled.
+    default: false
+    type: boolean
 
   name:
     description: "Display name for the project" # TOREVIEW
@@ -157,6 +163,16 @@ properties:
       A project can only be released by the user when `releasable` is true.
     default: false
     type: boolean
+  request_submission:
+    description: >
+      Indicates that the user has requested submission to the GDC for harmonization.
+    default: false
+    type: boolean
+  submission_enabled:
+    description: >
+      Indicates if submission to a project is allowed.
+    default: true
+    type: boolean
 
   programs:
     description: >
@@ -167,3 +183,4 @@ properties:
     description: Tracks a Project's intended release date.
     type: string
     format: date-time
+
