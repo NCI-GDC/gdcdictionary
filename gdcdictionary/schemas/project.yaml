@@ -147,7 +147,11 @@ properties:
       A project can only be released by the user when `releasable` is true.
     default: false
     type: boolean
-
+  request_submission:
+    description: >
+      Indicates that the user has requested submission to the GDC for harmonization.
+    default: false
+    type: boolean
   submission_enabled:
     description: >
       Indicates if submission to a project is allowed.
