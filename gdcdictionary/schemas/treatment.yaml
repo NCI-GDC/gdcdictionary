@@ -502,6 +502,8 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Not Allowed To Collect
 
   diagnoses:
     $ref: "_definitions.yaml#/to_one"

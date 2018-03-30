@@ -403,6 +403,8 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Not Allowed To Collect
   current_weight:
     term:
       $ref: "_terms.yaml#/current_weight"
@@ -423,6 +425,8 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
+    deprecated_enum:
       - Not Allowed To Collect
   freezing_method:
     term:
@@ -528,6 +532,8 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Not Allowed To Collect
   sample_type:
     term:
       $ref: "_terms.yaml#/sample_type"
@@ -628,6 +634,8 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Not Allowed To Collect
   tumor_code:
     term:
       $ref: "_terms.yaml#/tumor_code"
@@ -699,7 +707,8 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
-    description: "A description of the tumor from which the sample was derived." # TOREVIEW
+    deprecated_enum:
+      - Not Allowed To Collect
   cases:
     #should this be to_one
     $ref: "_definitions.yaml#/to_one"

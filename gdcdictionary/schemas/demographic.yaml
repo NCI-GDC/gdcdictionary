@@ -113,6 +113,8 @@ properties:
       - not reported
       - not allowed to collect
       - unknown
+    deprecated_enum:
+      - unknown
 
   ethnicity:
     term:
@@ -123,6 +125,8 @@ properties:
       - Unknown
       - not reported
       - not allowed to collect
+      - unknown
+    deprecated_enum:
       - unknown
 
   year_of_birth:

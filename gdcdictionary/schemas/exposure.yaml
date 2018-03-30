@@ -69,6 +69,9 @@ properties:
       - Not Reported
       - "no"
       - "yes"
+    deprecated_enum:
+      - "no"
+      - "yes"
 
   alcohol_intensity:
     term:
@@ -124,6 +127,8 @@ properties:
       - "7"
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
+    deprecated_enum:
       - Not Allowed To Collect
 
   weight:
