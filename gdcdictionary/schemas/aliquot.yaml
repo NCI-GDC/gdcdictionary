@@ -57,11 +57,14 @@ constraints: null
 properties:
   type:
     type: string
+
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
+
   state:
     $ref: "_definitions.yaml#/state"
+
   submitter_id:
     type:
       - string
@@ -69,30 +72,63 @@ properties:
     description: >
       The legacy barcode used before prior to the use
       UUIDs. For TCGA this is bcraliquotbarcode.
+
   aliquot_quantity:
     term:
       $ref: "_terms.yaml#/aliquot_quantity"
     type: number
+
   aliquot_volume:
     term:
       $ref: "_terms.yaml#/aliquot_volume"
     type: number
+
   amount:
     term:
       $ref: "_terms.yaml#/amount"
     type: number
+
   analytes:
     $ref: "_definitions.yaml#/to_one"
+
   analyte_type:
     $ref: "analyte.yaml#/properties/analyte_type"
+
   analyte_type_id:
     $ref: "analyte.yaml#/properties/analyte_type_id"
+
   concentration:
     term:
       $ref: "_terms.yaml#/concentration"
     type: number
+
+  no_matched_normal_low_pass_wgs:
+    term:
+      $ref: "_terms.yaml#/no_matched_normal_low_pass_wgs"
+    type: boolean
+    default: false
+
+  no_matched_normal_targeted_sequencing:
+    term:
+      $ref: "_terms.yaml#/no_matched_normal_targeted_sequencing"
+    type: boolean
+    default: false
+
+  no_matched_normal_wgs:
+    term:
+      $ref: "_terms.yaml#/no_matched_normal_wgs"
+    type: boolean
+    default: false
+
+  no_matched_normal_wxs:
+    term:
+      $ref: "_terms.yaml#/no_matched_normal_wxs"
+    type: boolean
+    default: false
+
   project_id:
     $ref: "_definitions.yaml#/project_id"
+
   source_center:
     term:
       $ref: "_terms.yaml#/source_center"
@@ -117,11 +153,15 @@ properties:
       $ref: "_terms.yaml#/selected_normal_low_pass_wgs"
     type: boolean 
     default: false
+  
   samples:
     $ref: "_definitions.yaml#/to_one"
+
   centers:
     $ref: "_definitions.yaml#/to_one"
+
   created_datetime:
     $ref: "_definitions.yaml#/datetime"
+
   updated_datetime:
     $ref: "_definitions.yaml#/datetime"
