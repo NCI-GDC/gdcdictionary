@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "treatment"
 title: Treatment
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: clinical
 program: '*'
 project: '*'
@@ -29,7 +29,8 @@ links:
     multiplicity: many_to_one
     required: true
 
-
+deprecated:
+  - days_to_treatment
 
 uniqueKeys:
   #unclear if want submitter ID for clinical
@@ -82,87 +83,342 @@ properties:
       $ref: "_terms.yaml#/treatment_anatomic_site"
     enum:
       - Abdomen, total
+      - Abdominal Wall
+      - Acetabulum
+      - Adenoid
+      - Adipose
+      - Adrenal
+      - Alveolar Ridge
+      - Amniotic Fluid
+      - Ampulla of Vater
+      - Anal Sphincter
+      - Ankle
+      - Anorectum
+      - Antecubital Fossa
+      - Antrum
+      - Anus
+      - Aorta
+      - Aortic Body
+      - Appendix
+      - Aqueous Fluid
       - Arm
+      - Artery
+      - Ascending Colon
+      - Ascending Colon Hepatic Flexure
       - Ascites
+      - Auditory Canal
+      - Autonomic Nervous System
+      - Axilla
       - Axillary
+      - Back
+      - Bile Duct
+      - Bladder
+      - Blood
+      - Blood Vessel
       - Body, total
       - Bone
+      - Bone Marrow
       - Bone, non-spine
+      - Bowel
+      - Brain
+      - Brain Stem
       - Brain, focal
       - Brain, whole
       - Brain-C2
       - Breast
+      - Broad Ligament
+      - Bronchiole
+      - Bronchus
+      - Brow
+      - Buccal Cavity
+      - Buccal Mucosa
+      - Buttock
+      - Calf
+      - Capillary
+      - Cardia
+      - Carina
+      - Carotid Artery
+      - Carotid Body
+      - Cartilage
+      - Cecum
+      - Cell-Line
+      - Central Nervous System
+      - Cerebellum
+      - Cerebral Cortex
+      - Cerebrospinal Fluid
+      - Cerebrum
       - Cervical
+      - Cervical Spine
+      - Cervix
+      - Chest
       - Chest Wall
+      - Chin
+      - Clavicle
+      - Clitoris
+      - Colon
+      - Colon - Mucosa Only
+      - Common Duct
+      - Conjunctiva
+      - Connective Tissue
+      - Dermal
+      - Descending Colon
+      - Diaphragm
       - Distant Recurrence
       - Distant Site
+      - Duodenum
+      - Ear
+      - Ear Canal
+      - Ear, Pinna (External)
       - Effusion
+      - Elbow
+      - Endocrine Gland
+      - Epididymis
+      - Epidural Space
       - Epitrochlear
+      - Esophagogastric Junction
+      - Esophagus
+      - Esophagus - Mucosa Only
       - Eye
+      - Fallopian Tube
       - Femoral
+      - Femoral Artery
+      - Femoral Vein
+      - Femur
+      - Fibroblasts
+      - Fibula
+      - Finger
+      - Floor of Mouth
+      - Fluid
+      - Foot
+      - Forearm
+      - Forehead
+      - Foreskin
+      - Frontal Cortex
+      - Frontal Lobe
+      - Fundus of Stomach
+      - Gallbladder
+      - Ganglia
+      - Gastroesophageal Junction
+      - Gastrointestinal Tract
       - Gastrointestinal, Colon
       - Gastrointestinal, Gallbladder
       - Gastrointestinal, Intestine
-      - Gastrointestinal, Liver
-      - Gastrointestinal, NOS
-      - Gastrointestinal, Pancreas
-      - Gastrointestinal, Rectum
-      - Gastrointestinal, Stomach
-      - Genitourinary, Bladder
-      - Genitourinary, Kidney
       - Genitourinary, NOS
       - Genitourinary, Prostate
       - Genitourinary, Prostate and Seminal Vesicles
+      - Groin
+      - Gum
+      - Hand
+      - Hard Palate
       - Head
+      - Head - Face Or Neck, Nos
+      - Head and Neck
       - Head, Face, or Neck
+      - Heart
+      - Hepatic
+      - Hepatic Duct
+      - Hepatic Vein
       - Hilar
+      - Hip
+      - Hippocampus
+      - Humerus
+      - Hypopharynx
+      - Ileocecal Valve
+      - Ileum
       - Iliac-common
       - Iliac-external
+      - Ilium
+      - Index Finger
       - Inguinal
       - Internal Mammary Nodes
+      - Ischium
+      - Islet Cells
+      - Jaw
+      - Jejunum
+      - Joint
+      - Kidney
+      - Knee
+      - Lacrimal Gland
+      - Large Bowel
+      - Laryngopharynx
+      - Larynx
       - Leg
+      - Leptomeninges
+      - Ligament
+      - Lip
+      - Liver
       - Local Recurrence
+      - Lumbar Spine
       - Lung
+      - Lymph Node
+      - Lymph Node(s) Axilla
+      - Lymph Node(s) Cervical
+      - Lymph Node(s) Distant
+      - Lymph Node(s) Epitrochlear
+      - Lymph Node(s) Femoral
+      - Lymph Node(s) Hilar
+      - Lymph Node(s) Iliac-Common
+      - Lymph Node(s) Iliac-External
+      - Lymph Node(s) Inguinal
+      - Lymph Node(s) Internal Mammary
+      - Lymph Node(s) Mammary
+      - Lymph Node(s) Mediastinal
+      - Lymph Node(s) Mesenteric
+      - Lymph Node(s) Occipital
+      - Lymph Node(s) Paraaortic
+      - Lymph Node(s) Parotid
+      - Lymph Node(s) Pelvic
+      - Lymph Node(s) Popliteal
+      - Lymph Node(s) Regional
+      - Lymph Node(s) Retroperitoneal
+      - Lymph Node(s) Scalene
+      - Lymph Node(s) Splenic
+      - Lymph Node(s) Subclavicular
+      - Lymph Node(s) Submandibular
+      - Lymph Node(s) Supraclavicular
       - Lymph Nodes
       - Lymph node, distant (specify site)
       - Lymph node, locoregional (specify site)
+      - Mandible
       - Mantle
+      - Maxilla
       - Mediastinal
+      - Mediastinal Soft Tissue
       - Mediastinum
       - Mesenteric
+      - Mesentery
+      - Mesothelium
+      - Middle Finger
+      - Mitochondria
+      - Muscle
+      - Nails
+      - Nasal Cavity
+      - Nasal Soft Tissue
+      - Nasopharynx
+      - Neck
+      - Nerve
+      - Nerve(s) Cranial
       - Occipital
+      - Occipital Cortex
+      - Ocular Orbits
+      - Omentum
+      - Oral Cavity
+      - Oral Cavity - Mucosa Only
+      - Oropharynx
       - Other
+      - Ovary
+      - Palate
+      - Pancreas
       - Paraaortic
       - Parametrium
+      - Paraspinal Ganglion
+      - Parathyroid
       - Parotid
+      - Parotid Gland
+      - Patella
       - Pelvis
+      - Penis
+      - Pericardium
+      - Periorbital Soft Tissue
+      - Peritoneal Cavity
+      - Peritoneum
+      - Pharynx
+      - Pineal
+      - Pineal Gland
+      - Pituitary Gland
+      - Placenta
+      - Pleura
       - Popliteal
+      - Popliteal Fossa
+      - Pouch
       - Primary Tumor Field
       - Primary tumor site
       - Prostate
       - Prostate Bed
       - Prostate, Seminal Vesicles and Lymph Nodes
+      - Pylorus
+      - Rectosigmoid Junction
       - Rectum
       - Regional Site
+      - Retina
+      - Retro-Orbital Region
       - Retroperitoneal
+      - Retroperitoneum
+      - Rib
+      - Ring Finger
+      - Round Ligament
       - Sacrum
+      - Salivary Gland
+      - Scalp
+      - Scapula
+      - Sciatic Nerve
+      - Scrotum
+      - Seminal Vesicle
       - Seminal vesicles
       - Shoulder
+      - Sigmoid Colon
+      - Sinus
+      - Sinus(es), Maxillary
+      - Skeletal Muscle
+      - Skin
       - Skin, lower extremity, local
       - Skin, total
       - Skin, trunk, local
       - Skin, upper extremity, local
+      - Skull
+      - Small Bowel
+      - Small Bowel - Mucosa Only
+      - Small Finger
+      - Soft Tissue
+      - Spinal Column
+      - Spinal Cord
       - Spine
       - Spine, whole
+      - Spleen
       - Splenic
+      - Splenic Flexure
+      - Sternum
+      - Stomach
+      - Stomach - Mucosa Only
+      - Subcutaneous Tissue
       - Submandibular
       - Supraclavicular
       - Supraclavicular/Axillary Level 3
+      - Synovium
+      - Temporal Cortex
+      - Tendon
+      - Testis
+      - Thigh
+      - Thoracic Spine
       - Thorax
+      - Throat
+      - Thumb
+      - Thymus
+      - Thyroid
+      - Tibia
+      - Tongue
+      - Tonsil
+      - Tonsil (Pharyngeal)
+      - Trachea / Major Bronchi
+      - Transverse Colon
       - Trunk
+      - Umbilical Cord
       - Unknown
-      - Not Reported
+      - Ureter
+      - Urethra
+      - Urinary Tract
+      - Uterus
+      - Uvula
+      - Vagina
+      - Vas Deferens
+      - Vein
+      - Venous
+      - Vertebra
+      - Vulva
+      - White Blood Cells
+      - Wrist
       - Not Allowed To Collect
+      - Not Reported
 
   treatment_intent_type:
     term:
@@ -172,6 +428,7 @@ properties:
       - Cancer Control
       - Cure
       - Initial
+      - Neoadjuvant
       - Palliative
       - Prevention
       - Progression
@@ -192,11 +449,14 @@ properties:
       $ref: "_terms.yaml#/treatment_outcome"
     enum:
       - Complete Response
+      - Mixed Response
+      - No Response
       - Partial Response
       - Progressive Disease
       - Stable Disease
       - Treatment Ongoing
       - Treatment Stopped Due to Toxicity
+      - Very Good Partial Response
       - Unknown
       - Not Reported
 
@@ -206,6 +466,8 @@ properties:
     enum:
       - Ablation
       - Brachytherapy
+      - Brachytherapy, High Dose
+      - Brachytherapy, Low Dose
       - Chemoembolization
       - Chemotherapy
       - Concurrent Chemoradiation
@@ -221,17 +483,26 @@ properties:
       - Other
       - Pharmaceutical Therapy
       - Radiation
+      - Radiation, 2D Conventional
+      - Radiation, 3D Conformal
+      - Radiation, Intensity-Modulated Radiotherapy
+      - Radiation, Proton Beam
+      - Radiation, Stereotactic Body
       - Radiation Therapy
+      - Radiation Therapy, NOS
       - Radioembolization
       - Radiofrequency Ablation
       - Radioisotope Radiation
       - Radiosurgical Ablation
       - Stem Cell Transplantation
       - Stem Cell Treatment
+      - Stereotactic Radiosurgery
       - Surgery
       - Targeted Molecular Therapy
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
+    deprecated_enum:
       - Not Allowed To Collect
 
   diagnoses:

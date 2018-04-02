@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "biospecimen_supplement"
 title: Biospecimen Supplement
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: data_file
 project: '*'
 program: '*'
@@ -66,11 +66,14 @@ properties:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
-      - FoundationOne XML
+      - BCR Auxiliary XML
+      - BCR Biotab
+      - BCR SSF XML
+      - BCR PPS XML
       - BCR XML
+      - FoundationOne XML
+      - TSV
       - XLSX
-      - SSF
-      - PPS
   cases:
     $ref: "_definitions.yaml#/to_many"
   archives:

@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "exposure"
 title: Exposure
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: clinical
 program: '*'
 project: '*'
@@ -29,8 +29,14 @@ links:
     required: true
 
 preferred:
-  - cigarettes_per_day
+  - pack_years_smoked
   - years_smoked
+
+deprecated:
+  - bmi
+  - cigarettes_per_day
+  - height
+  - weight
 
 uniqueKeys:
   #unclear if want submitter ID for clinical
@@ -61,6 +67,9 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+      - "no"
+      - "yes"
+    deprecated_enum:
       - "no"
       - "yes"
 
@@ -119,6 +128,8 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Not Allowed To Collect
 
   weight:
     term:
@@ -128,6 +139,16 @@ properties:
   years_smoked:
     term:
       $ref: "_terms.yaml#/years_smoked"
+    type: number
+
+  alcohol_days_per_week:
+    term:
+      $ref: "_terms.yaml#/alcohol_days_per_week"
+    type: number
+
+  alcohol_drinks_per_day:
+    term:
+      $ref: "_terms.yaml#/alcohol_drinks_per_day"
     type: number
 
   cases:

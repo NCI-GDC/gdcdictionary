@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "clinical_supplement"
 title: Clinical Supplement
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: data_file
 project: '*'
 program: '*'
@@ -66,10 +66,13 @@ properties:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
+      - BCR Biotab
+      - BCR OMF XML
       - BCR XML
       - CDC JSON
       - FoundationOne XML
       - OMF
+      - TSV
       - XLSX
   cases:
     $ref: "_definitions.yaml#/to_many"

@@ -1,15 +1,15 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "germline_mutation_calling_workflow"
-title: Germline Mutation Calling Workflow
+id: "copy_number_variation_workflow"
+title: Copy Number Variation Workflow
 type: object
 namespace: https://gdc.cancer.gov
 category: analysis
 program: '*'
 project: '*'
 description: >
-  Metadata for the germline mutation calling pipeline used to call variants in the GDC DNA-Seq
-  pipelines.
+  Metadata for the Copy Number Variation pipeline used to estimate copy number changes from
+  different molecular data sources.
 additionalProperties: false
 submittable: false
 validators: null
@@ -22,18 +22,17 @@ systemProperties:
   - state
 
 links:
-  - name: aligned_reads_files
-    backref: germline_mutation_calling_workflows
+  - name: copy_number_segments
+    backref: copy_number_variation_workflows
     label: performed_on
-    target_type: aligned_reads
-    multiplicity: one_to_many
+    target_type: copy_number_segment
+    multiplicity: many_to_many
     required: true
 
 required:
   - submitter_id
   - workflow_link
   - workflow_type
-  - aligned_reads_files
 
 uniqueKeys:
   - [ id ]
@@ -42,10 +41,17 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
   type:
-    enum: [ "germline_mutation_calling_workflow" ]
+    enum:
+      - copy_number_variation_workflow
+
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
-    enum: [ "HaplotypeCaller" ]
-  aligned_reads_files:
+    enum:
+      - GISTIC - Copy Number Score
+      - GISTIC - Arm Level Copy Number
+      - GISTIC - Focal Deletion
+      - GISTIC - Focal Amplification
+
+  copy_number_segments:
     $ref: "_definitions.yaml#/to_many"
