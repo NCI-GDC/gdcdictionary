@@ -86,7 +86,6 @@ properties:
       - WGS
       - WXS
       - Low Pass WGS
-      - Validation
   projects:
     $ref: "_definitions.yaml#/to_one"
   genomic_profile_harmonization_workflows:
