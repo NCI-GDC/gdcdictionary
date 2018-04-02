@@ -66,8 +66,13 @@ properties:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
-      - FoundationOne XML
+      - BCR Auxiliary XML
+      - BCR Biotab
+      - BCR SSF XML
+      - BCR PPS XML
       - BCR XML
+      - FoundationOne XML
+      - TSV
       - XLSX
   cases:
     $ref: "_definitions.yaml#/to_many"
