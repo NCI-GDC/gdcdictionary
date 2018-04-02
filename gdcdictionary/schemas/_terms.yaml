@@ -11,6 +11,16 @@ a260_a280_ratio:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432595&version=1.0"
 
+aa_change:
+  description: >
+    Alphanumeric value used to describe the amino acid change for a specific genetic variant.
+  termDef:
+    term: Molecular Laboratory Procedure Amino Acid Change Text
+    source: caDSR
+    cde_id: 6142508
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142508&version=1.0"
+
 absolute_neutrophil:
   description: >
     The value, in 1000/uL, for the medical procedure that involves testing a
@@ -364,6 +374,16 @@ ann_arbor_tumor_stage:
     cde_version: null
     term_url: null
 
+antigen:
+  description: >
+    The text term used to describe an antigen included in molecular testing.
+  termDef:
+    term: Molecular Laboratory Procedure Antigen Name
+    source: caDSR
+    cde_id: 6142523
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142523&version=1.0"
+
 barretts_esophagus_goblet_cells_present:
   description: >
     Indicator to signify whether or not goblet cells were present in an individual diagnosed
@@ -454,6 +474,38 @@ biospecimen_laterality:
     cde_id: 2007875
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2007875&version=1.0"
+
+blood_test:
+  description: >
+    Text term used to describe a specific blood test.
+  termDef:
+    term: Laboratory Procedure Blood Test Name
+    source: caDSR
+    cde_id: 6142767
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142767&version=1.0"
+
+blood_test_normal_range_lower:
+  description: >
+    Numeric value used to describe the lower limit of the normal range used to describe a
+    healthy individual at the institution where the test was completed.
+  termDef:
+    term: Laboratory Procedure Lower Limit of Normal Value
+    source: caDSR
+    cde_id: 6142571
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142571&version=1.0"
+
+blood_test_normal_range_upper:
+  description: >
+    Numeric value used to describe the upper limit of the normal range used to describe a
+    healthy individual at the institution where the test was completed.
+  termDef:
+    term: Laboratory Procedure Upper Limit of Normal Value
+    source: caDSR
+    cde_id: 6142535
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142535&version=1.0"
 
 bmi:
   description: >
@@ -551,6 +603,16 @@ cea_level_preoperative:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2716510&version=1.0"
 
+cell_count:
+  description: >
+    Numeric value used to describe the number of cells used for molecular testing.
+  termDef:
+    term: Molecular Laboratory Procedure Cell Count
+    source: caDSR
+    cde_id: 6142528
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142528&version=1.0"
+
 child_pugh_classification:
   description: >
     The grade from an assessment method used in the prognosis of chronic liver disease, mainly
@@ -561,6 +623,18 @@ child_pugh_classification:
     cde_id: 2931791
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2931791&version=1.0"
+
+chromosome:
+  description: >
+    The text term used to describe a chromosome targeted or included in molecular testing. If a
+    specific genetic variant is being reported, this property can be used to capture the
+    chromosome where that variant is located.
+  termDef:
+    term: Molecular Laboratory Procedure Chromosome Name
+    source: caDSR
+    cde_id: 6142404
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142404&version=1.0"
 
 cigarettes_per_day:
   description: >
@@ -692,6 +766,17 @@ concentration:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432594&version=1.0"
 
+copy_number:
+  description: >
+    Numeric value used to describe the number of times a section of the genome is repeated or copied
+    within an insertion, duplication or deletion variant.
+  termDef:
+    term: Molecular Laboratory Procedure Copy Number Count
+    source: caDSR
+    cde_id: 6142519
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142519&version=1.0"
+
 creatinine:
   description: >
     The value, in mg/dL, for the medical procedure that involves testing a sample of blood for
@@ -735,6 +820,18 @@ current_weight:
     cde_id: 5432606
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432606&version=1.0"
+
+cytoband:
+  description: >
+    Alphanumeric value used to describe the cytoband or chromosomal location targeted or
+    included in molecular analysis. If a specific genetic variant is being reported, this
+    property can be used to capture the cytoband where the variant is located.
+  termDef:
+    term: Molecular Laboratory Procedure Cytoband Text
+    source: caDSR
+    cde_id: 6142405
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142405&version=1.0"
 
 data_category: # TOREVIEW
   description: >
@@ -1033,6 +1130,16 @@ dlco_ref_predictive_percent:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2180255&version=1.0"
 
+dna_change:
+  description: >
+    Alphanumeric value used to describe the dna change of a specific genetic variant.
+  termDef:
+    term: Molecular Laboratory Procedure DNA Change Text
+    source: caDSR
+    cde_id: 6142507
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142507&version=1.0"
+
 ecog_performance_status:
   description: >
     The ECOG functional performance status of the patient/participant.
@@ -1149,6 +1256,18 @@ ethnicity:
     cde_id: 2192217
     cde_version: 2.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2192217&version=2.0"
+
+exon:
+  description: >
+    The text term used to describe a specific exon targeted or included in molecular analysis.
+    If a specific genetic variant is being reported, this property can be used to capture the
+    exon where that variant is located.
+  termDef:
+    term: Molecular Laboratory Procedure Exon Identification Number
+    source: caDSR
+    cde_id: 6142411
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142411&version=1.0"
 
 experiment_name: # TOREVIEW
   description: >
@@ -1318,6 +1437,17 @@ gender:
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2200604&version=3.0"
 
+gene_symbol:
+  description: >
+    The text term used to describe a gene targeted or included in molecular analysis. For
+    rearrangements, this is shold be used to represent the reference gene.
+  termDef:
+    term: Molecular Analysis Gene Symbol Code
+    source: caDSR
+    cde_id: 6142392
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142392&version=1.0"
+
 glucose:
   description: >
     The numeric value for the amount of glucose found in blood serum.
@@ -1411,6 +1541,28 @@ her2_erbb2_result_ihc:
     cde_id: 2957563
     cde_version: 2.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2957563&version=2.0"
+
+histone_family:
+  description: >
+    The text term used to describe the family, or classification of a group of basic proteins
+    found in chromatin, called histones.
+  termDef:
+    term: Molecular Laboratory Procedure Histone Family Category
+    source: caDSR
+    cde_id: 6142511
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142511&version=1.0"
+
+histone_variant:
+  description: >
+    The text term used to describe a specific histone variants, which are proteins that
+    substitute for the core canonical histones.
+  termDef:
+    term: Molecular Laboratory Procedure Histone Family Variant Type
+    source: caDSR
+    cde_id: 6142515
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142515&version=1.0"
 
 hiv_positive:
   description: >
@@ -1760,6 +1912,36 @@ library_strand: # TOREVIEW
   description: >
     Library stranded-ness.
 
+loci_abnormal_count:
+  description: >
+    Numeric value used to describe the number of loci determined to be abnormal.
+  termDef:
+    term: Abnormal Locus Testing Count
+    source: caDSR
+    cde_id: 6074182
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6074182&version=1.0"
+
+loci_count:
+  description: >
+    Numeric value used to describe the number of loci tested.
+  termDef:
+    term: Locus Testing Count
+    source: caDSR
+    cde_id: 6074183
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6074183&version=1.0"
+
+locus:
+  description: >
+    Alphanumeric value used to describe the locus of a specific genetic variant.
+  termDef:
+    term: Molecular Laboratory Procedure Locus Location Text
+    source: caDSR
+    cde_id: 6142506
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142506&version=1.0"
+
 longest_dimension:
   description: >
     Numeric value that represents the longest dimension of the sample, measured in millimeters.
@@ -1899,6 +2081,16 @@ microsatellite_instability_abnormal:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3123142&version=1.0"
 
+mismatch_repair_mutation:
+  description: >
+    A yes/no/unknown indicator used to describe whether a gene has undergone mismatch repair.
+  termDef:
+    term: Gene Mutation Mismatch Repair Indicator
+    source: caDSR
+    cde_id: 6142534
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142534&version=1.0"
+
 mitosis_karyorrhexis_index:
   description: >
     Text term that represents the component of the International Neuroblastoma Pathology
@@ -1909,6 +2101,26 @@ mitosis_karyorrhexis_index:
     cde_id: 4616412
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4616412&version=1.0"
+
+molecular_analysis_method:
+  description: >
+    The text term used to describe the method used for molecular analysis.
+  termDef:
+    term: Molecular Laboratory Procedure Method Name
+    source: caDSR
+    cde_id: 6142401
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142401&version=1.0"
+
+molecular_consequence:
+  description: >
+    The text term used to describe the molecular consequence of genetic variation.
+  termDef:
+    term: Molecular Laboratory Procedure Outcome Consequence Type
+    source: caDSR
+    cde_id: 6142403
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142403&version=1.0"
 
 morphology:
   description: >
@@ -2248,6 +2460,16 @@ platform: # TOREVIEW
   description: >
     Name of the platform used to obtain data.
 
+ploidy:
+  description: >
+    Text term used to describe the number of sets of homologous chromosomes.
+  termDef:
+    term: Molecular Laboratory Procedure Ploidy Result Type
+    source: caDSR
+    cde_id: 6142527
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142527&version=1.0"
+
 portion_number:
   description: >
     Numeric value that represents the sequential number assigned to a portion of the sample.
@@ -2557,6 +2779,17 @@ risk_factor:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142389&version=1.0"
 
+rna_change:
+  description: >
+    Alphanumeric value used to describe the Ribonucleic Acid (RNA) change for a specific genetic
+    variant.
+  termDef:
+    term: Molecular Laboratory Procedure RNA Change Text
+    source: caDSR
+    cde_id: 6142509
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142509&version=1.0"
+
 sample_type:
   description: >
     Text term to describe the source of a biospecimen used for a laboratory test.
@@ -2570,6 +2803,17 @@ sample_type:
 sample_type_id: # TOREVIEW
   description: >
     The accompanying sample type id for the sample type.
+
+second_gene_symbol:
+  description: >
+    The text term used to describe a secondary gene targeted or included in molecular analysis.
+    For rearrangements, this is should represent the location of the variant.
+  termDef:
+    term: Molecular Analysis Secondary Gene Symbol Code
+    source: caDSR
+    cde_id: 6142393
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142393&version=1.0"
 
 section_location: # TOREVIEW
   description: >
@@ -2648,6 +2892,17 @@ source_center: # TOREVIEW
   description: >
     Name of the center that provided the item.
 
+specialized_molecular_test:
+  description: >
+    Text term used to describe a specific test that is not covered in the list of molecular
+    analysis methods.
+  termDef:
+    term: Molecular Laboratory Procedure Specialized Text
+    source: caDSR
+    cde_id: 6142526
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142526&version=1.0"
+
 spectrophotometer_method:
   description: >
     Name of the method used to determine the concentration of purified nucleic acid within a
@@ -2717,6 +2972,46 @@ target_capture_kit_version: # TOREVIEW
 target_capture_kit_target_region: # TOREVIEW
   description: >
     Target Capture Kit BED file.
+
+test_analyte_type:
+  description: >
+    The text term used to describe the type of analyte used for molecular testing.
+  termDef:
+    term: Molecular Laboratory Procedure Analyte Type
+    source: caDSR
+    cde_id: 6142394
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142394&version=1.0"
+
+test_result:
+  description: >
+    The text term used to describe the result of the molecular test.
+  termDef:
+    term: Molecular Laboratory Procedure Outcome
+    source: caDSR
+    cde_id: 6142397
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142397&version=1.0"
+
+test_units:
+  description: >
+    The text term used to describe the units of the test value for a molecular test.
+  termDef:
+    term: Molecular Laboratory Procedure Outcome Unit of Measure
+    source: caDSR
+    cde_id: 6142525
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142525&version=1.0"
+
+test_value:
+  description: >
+    The text term or numeric value used to describe a sepcific result of a molecular test.
+  termDef:
+    term: Molecular Laboratory Procedure Outcome Text
+    source: caDSR
+    cde_id: 6142524
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142524&version=1.0"
 
 therapeutic_agents:
   description: >
@@ -2828,6 +3123,16 @@ total_sequences:
     cde_id: null
     cde_version: null
     term_url: "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/1%20Basic%20Statistics.html"
+
+transcript:
+  description: >
+    Alphanumeric value used to describe the transcript of a specific genetic variant.
+  termDef:
+    term: Molecular Laboratory Procedure Transcript Location Text
+    source: caDSR
+    cde_id: 6142465
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142465&version=1.0"
 
 treatment_anatomic_site:
   description: >
@@ -2960,6 +3265,16 @@ UUID:
     cde_id: C54100
     cde_version: null
     term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.02d&ns=NCI_Thesaurus&code=C54100"
+
+variant_type:
+  description: >
+    The text term used to describe the type of genetic variation.
+  termDef:
+    term: Molecular Laboratory Procedure Genetic Variant Type
+    source: caDSR
+    cde_id: 6142402
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142402&version=1.0"
 
 vascular_invasion_present:
   description: >
@@ -3100,3 +3415,13 @@ years_smoked:
     cde_id: 3137957
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3137957&version=1.0"
+
+zygosity:
+  description: >
+    The text term used to describe the zygosity of a specific genetic variant.
+  termDef:
+    term: Molecular Laboratory Procedure Genetic Zygosity Type
+    source: caDSR
+    cde_id: 6142510
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142510&version=1.0"
