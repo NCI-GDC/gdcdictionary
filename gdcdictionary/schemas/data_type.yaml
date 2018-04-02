@@ -10,6 +10,7 @@ project: '*'
 description: "Data type of a legacy file (depreciated)."
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

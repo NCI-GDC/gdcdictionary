@@ -11,6 +11,7 @@ description: >
   Record of a patient's background regarding cancer events of blood relatives.
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:

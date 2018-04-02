@@ -11,6 +11,7 @@ description: >
   Information pertaining to any molecular tests performed on the patient during a clinical event.
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: []
 
 systemProperties:

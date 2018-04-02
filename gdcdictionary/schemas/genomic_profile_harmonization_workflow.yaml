@@ -11,6 +11,7 @@ description: >
   Metadata for the harmonization of genomic profiling reports.
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

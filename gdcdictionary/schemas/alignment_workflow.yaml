@@ -11,6 +11,7 @@ description: >
   Metadata for the alignment pipeline used to align reads in the GDC harmonization pipelines.
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

@@ -12,6 +12,7 @@ description: >
   with respect to GDC prescribed or defined data formats. (GDC subclass of NCIt C19711)
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

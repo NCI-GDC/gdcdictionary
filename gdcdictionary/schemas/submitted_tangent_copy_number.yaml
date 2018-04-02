@@ -11,6 +11,7 @@ description: >
   Data file containing tangent normalized copy number information from an aliquot.
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:

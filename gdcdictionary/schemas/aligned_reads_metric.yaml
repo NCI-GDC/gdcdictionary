@@ -10,6 +10,7 @@ program: '*'
 description: "Data file containing metrics from the harmonization pipelines."
 additionalProperties: false
 submittable: false
+downloadable: true
 validators: null
 
 systemProperties:

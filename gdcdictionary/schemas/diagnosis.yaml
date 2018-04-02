@@ -13,6 +13,7 @@ description: >
   kind; the concise results of such an investigation.
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:

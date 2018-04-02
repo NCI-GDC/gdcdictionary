@@ -12,6 +12,7 @@ description: >
   the course of a pathologic process.
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:

@@ -12,6 +12,7 @@ description: >
   different molecular data sources.
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:
