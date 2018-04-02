@@ -14,6 +14,7 @@ a260_a280_ratio:
 aa_change:
   description: >
     Alphanumeric value used to describe the amino acid change for a specific genetic variant.
+    Example: R116Q. 
   termDef:
     term: Molecular Laboratory Procedure Amino Acid Change Text
     source: caDSR
@@ -823,9 +824,10 @@ current_weight:
 
 cytoband:
   description: >
-    Alphanumeric value used to describe the cytoband or chromosomal location targeted or
-    included in molecular analysis. If a specific genetic variant is being reported, this
-    property can be used to capture the cytoband where the variant is located.
+    Alphanumeric value used to describe the cytoband or chromosomal location targeted or included in
+    molecular analysis. If a specific genetic variant is being reported, this property can be used
+    to capture the cytoband where the variant is located. 
+    Format: [chromosome][chromosome arm].[band+sub-bands]. Example: 17p13.1.
   termDef:
     term: Molecular Laboratory Procedure Cytoband Text
     source: caDSR
@@ -1132,7 +1134,8 @@ dlco_ref_predictive_percent:
 
 dna_change:
   description: >
-    Alphanumeric value used to describe the dna change of a specific genetic variant.
+    Alphanumeric value used to describe the dna change for a specific genetic variant.
+    Example: c.347C>A. 
   termDef:
     term: Molecular Laboratory Procedure DNA Change Text
     source: caDSR
@@ -1935,6 +1938,7 @@ loci_count:
 locus:
   description: >
     Alphanumeric value used to describe the locus of a specific genetic variant.
+    Example: NM_001126114. 
   termDef:
     term: Molecular Laboratory Procedure Locus Location Text
     source: caDSR
@@ -2083,7 +2087,8 @@ microsatellite_instability_abnormal:
 
 mismatch_repair_mutation:
   description: >
-    A yes/no/unknown indicator used to describe whether a gene has undergone mismatch repair.
+    The yes/no/unknown indicator used to describe whether the mutation included in molecular testing
+    was known to have an affect on the mismatch repair process. 
   termDef:
     term: Gene Mutation Mismatch Repair Indicator
     source: caDSR
@@ -2781,8 +2786,8 @@ risk_factor:
 
 rna_change:
   description: >
-    Alphanumeric value used to describe the Ribonucleic Acid (RNA) change for a specific genetic
-    variant.
+    Alphanumeric value used to describe the rna change for a specific genetic variant.
+    Example: r.76a>c 
   termDef:
     term: Molecular Laboratory Procedure RNA Change Text
     source: caDSR
@@ -2985,7 +2990,8 @@ test_analyte_type:
 
 test_result:
   description: >
-    The text term used to describe the result of the molecular test.
+    The text term used to describe the result of the molecular test. If the test result was a
+    numeric value see test_value. 
   termDef:
     term: Molecular Laboratory Procedure Outcome
     source: caDSR
@@ -2995,7 +3001,8 @@ test_result:
 
 test_units:
   description: >
-    The text term used to describe the units of the test value for a molecular test.
+    The text term used to describe the units of the test value for a molecular test. This property
+    is used in conjunction with test_value. 
   termDef:
     term: Molecular Laboratory Procedure Outcome Unit of Measure
     source: caDSR
