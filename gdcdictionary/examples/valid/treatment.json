@@ -1,7 +1,6 @@
 {
     "type": "treatment",
     "submitter_id": "E9EDB78B-6897-4205-B9AA-0CEF8AAB5A1F_treatment",
-    "days_to_treatment": -1,
     "days_to_treatment_end": 14,
     "days_to_treatment_start": 25,
     "regimen_or_line_of_therapy":"First Line of Therapy",
