@@ -960,9 +960,9 @@ properties:
       - Unknown
       - Not Reported
 
-  meduloblastoma_molecular_classification:
+  medulloblastoma_molecular_classification:
     term:
-      $ref: "_terms.yaml#/meduloblastoma_molecular_classification"
+      $ref: "_terms.yaml#/medulloblastoma_molecular_classification"
     enum:
       - Not Determined
       - Non-WNT/non-SHH Activated
@@ -2314,12 +2314,7 @@ properties:
   peripancreatic_lymph_nodes_tested:
     term:
       $ref: "_terms.yaml#/peripancreatic_lymph_nodes_tested"
-    enum:
-      - "0"
-      - 1-3
-      - 4 or More
-      - Unknown
-      - Not Reported
+    type: number
 
   primary_diagnosis:
     term:
