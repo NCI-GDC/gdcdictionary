@@ -386,8 +386,8 @@ antigen:
 
 barretts_esophagus_goblet_cells_present:
   description: >
-    Indicator to signify whether or not goblet cells were present in an individual diagnosed
-    with Barrett's Esophagus.
+    The yes/no/unknown indicator used to describe whether goblet cells were determined to be present
+    in a patient diagnosed with Barrett's esophagus.
   termDef:
     term: Barrett's Esophagus Diagnosis Goblet Cell Present Indicator
     source: caDSR
@@ -726,7 +726,7 @@ cog_liver_stage:
 
 comorbidity:
   description: >
-    Text term to identify a coexistent disease or condition in a person.
+    The text term used ot describe the method used to diagnose the patient's comorbidity disease.
   termDef:
     term: Person Comorbidity Condition Name
     source: caDSR
@@ -1056,7 +1056,7 @@ days_to_treatment_start:
 
 diabetes_treatment_type:
   description: >
-    Types of treatment used to manage Diabetes.
+    Text term used to describe the types of treatment used to manage diabetes.
   termDef:
     term: Diabetes Mellitus Treatment Type
     source: caDSR
@@ -2617,7 +2617,7 @@ progression_or_recurrence_anatomic_site:
 
 progression_or_recurrence_type:
   description: >
-    The text term used to describe the type of progressive or recurrent disease.
+    The text term used to describe the type of progressive or recurrent disease or relapsed disease.
   termDef:
     term: Progression or Recurrence Description Type
     source: caDSR
@@ -2686,8 +2686,8 @@ reflux_treatment:
 
 reflux_treatment_type:
   description: >
-    Text term to describe the kind of therapeutic procedure given to an individual clinically
-    diagnosed with gastroesophageal reflux disease.
+    Text term used to describe the types of treatment used to manage gastroesophageal reflux disease
+    (GERD).
   termDef:
     term: Gastroesophageal Reflux Disease Treatment Type
     source: caDSR
@@ -3300,7 +3300,7 @@ vascular_invasion_type:
 viral_hepatitis_serologies:
   description: >
     Text term that describes the kind of serological laboratory test used to determine the
-    positive or negative test result for hepatitis.
+    patient's hepatitus status.
   termDef:
     term: Viral Hepatitis Laboratory Procedure Serology Test Method Type
     source: caDSR
