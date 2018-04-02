@@ -445,6 +445,16 @@ biospecimen_anatomic_site:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4742851&version=1.0"
 
+biospecimen_laterality:
+  description: >
+    For tumors in paired organs, designates the side on which the specimen was obtained.
+  termDef:
+    term: Specimen Laterality
+    source: caDSR
+    cde_id: 2007875
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2007875&version=1.0"
+
 bmi:
   description: >
     A calculated numerical quantity that represents an individual's weight to height ratio.
@@ -487,6 +497,16 @@ calcium:
     cde_id: 2630716
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2630716&version=1.0"
+
+catalog_reference:
+  description: >
+    HCMI catalog reference number for cancer model.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 cause_of_death:
   description: >
@@ -981,6 +1001,27 @@ disease_type: # TOREVIEW
     cde_version: null
     term_url: null
 
+distance_normal_to_tumor:
+  description: >
+    Text term to signify the distance between the tumor tissue and the normal control tissue
+    that was procured for matching normal DNA.
+  termDef:
+    term: Tumor To Normal Control Tissue DNA Distance Category
+    source: caDSR
+    cde_id: 3088708
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3088708&version=1.0"
+
+distributor_reference:
+  description: >
+    Distributor reference number for cancer model.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 dlco_ref_predictive_percent:
   description: >
     The value, as a percentage of predicted lung volume, measuring the amount of carbon monoxide
@@ -1307,6 +1348,16 @@ gross_tumor_weight:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6133606&version=1.0"
 
+growth_rate:
+  description: >
+    Rate at which the model grows, measured as hours to time to split.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 height:
   description: >
     The height of the patient in centimeters.
@@ -1615,7 +1666,7 @@ karnofsky_performance_status:
 
 lane_number:
   description: >
-    The basic machine unit for sequencing. For Illumina machines, this reflects the physical lane number. 
+    The basic machine unit for sequencing. For Illumina machines, this reflects the physical lane number.
     Wrong or missing information may affect analysis results.
   termDef:
     term: null
@@ -2013,6 +2064,16 @@ pancreatitis_onset_year:
     cde_id: 3457763
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3457763&version=1.0"
+
+passage_count:
+  description: >
+    Number of passages (splits) between the original tissue and this model.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 percent_eosinophil_infiltration:
   description: >
@@ -2506,17 +2567,17 @@ section_location: # TOREVIEW
 
 selected_normal_low_pass_wgs:
   description: >
-    Denotes which low-pass WGS normal aliquot to submitter prefers to use for variant calling. Only one normal per experimental strategy per case can be selected. 
+    Denotes which low-pass WGS normal aliquot to submitter prefers to use for variant calling. Only one normal per experimental strategy per case can be selected.
 
-selected_normal_targeted_sequencing: 
+selected_normal_targeted_sequencing:
   description: >
     Denotes which targeted_sequencing normal aliquot to submitter prefers to use for variant calling. Only one normal per experimental strategy per case can be selected.
 
-selected_normal_wgs: 
+selected_normal_wgs:
   description: >
     Denotes which WGS normal aliquot to submitter prefers to use for variant calling. Only one normal per experimental strategy per case can be selected.
 
-selected_normal_wxs: 
+selected_normal_wxs:
   description: >
     Denotes which WXS normal aliquot to submitter prefers to use for variant calling. Only one normal per experimental strategy per case can be selected.
 
@@ -2624,7 +2685,7 @@ synchronous_malignancy:
 
 target_capture_kit:
   description: >
-    Description that can uniquely identify a target capture kit. Suggested value is a 
+    Description that can uniquely identify a target capture kit. Suggested value is a
     combination of vendor, kit name, and kit version.
 
 target_capture_kit_name: # TOREVIEW

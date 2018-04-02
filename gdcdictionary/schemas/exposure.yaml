@@ -29,7 +29,7 @@ links:
     required: true
 
 preferred:
-  - cigarettes_per_day
+  - pack_years_smoked
   - years_smoked
 
 deprecated:
