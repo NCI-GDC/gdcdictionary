@@ -12,7 +12,7 @@
     "is_paired_end": true,
     "lane_number":4,
     "library_strategy": "WXS",
-    "library_selection": "Hybrid_Selection",
+    "library_selection": "Hybrid Selection",
     "library_name": "Solexa-34688",
     "multiplex_barcode":"AWDS342",
     "platform": "Illumina",
@@ -21,6 +21,7 @@
     "read_pair_number": "R1",
     "sequencing_center": "BI",
     "sequencing_date": "2010-08-04",
+    "target_capture_kit":"SureSelect Human All Exon v5",
     "aliquots": [
         {
             "submitter_id": "2c9108eb-c59a-4227-b650-56e61b3aa0ea"
