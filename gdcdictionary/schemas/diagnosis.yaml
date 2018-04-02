@@ -46,7 +46,6 @@ required:
   - last_known_disease_status
 
 preferred:
-  - days_to_birth
   - site_of_resection_or_biopsy
 
 deprecated:
