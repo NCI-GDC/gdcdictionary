@@ -2441,6 +2441,17 @@ read_group_name: # TOREVIEW
   description: >
     The name of the read group.
 
+read_pair_number:
+  description: >
+    Denotes whether a submitted FASTQ file contains forward (R1) or reverse (R2) reads for
+    paired-end sequencing.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 reflux_treatment:
   description: >
     The yes/no/unknown indicator used to describe whether the patient received reflux treatment.

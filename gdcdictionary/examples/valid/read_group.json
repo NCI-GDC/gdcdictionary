@@ -18,6 +18,7 @@
     "platform": "Illumina",
     "read_length": 75,
     "read_group_name": "205DD.3",
+    "read_pair_number": "R1",
     "sequencing_center": "BI",
     "sequencing_date": "2010-08-04",
     "target_capture_kit":"SureSelect Human All Exon v5",
