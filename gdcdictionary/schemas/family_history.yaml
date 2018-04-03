@@ -29,36 +29,13 @@ links:
     multiplicity: many_to_one
     required: true
 
-
 uniqueKeys:
   #unclear if want submitter ID for clinical
   - [id]
   - [project_id, submitter_id]
 
 properties:
-  type:
-    enum: [ "family_history" ]
-
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-
-  state:
-    $ref: "_definitions.yaml#/state"
-
-  submitter_id:
-    type:
-      - string
-      - "null"
-
-  relative_with_cancer_history:
-    term:
-      $ref: "_terms.yaml#/relative_with_cancer_history"
-    enum:
-      - "yes"
-      - "no"
-      - unknown
-      - not reported
+  $ref: "_definitions.yaml#/ubiquitous_properties"
 
   relationship_type:
     term:
@@ -246,11 +223,14 @@ properties:
       - Unknown
       - Not Reported
 
+  relative_with_cancer_history:
+    term:
+      $ref: "_terms.yaml#/relative_with_cancer_history"
+    enum:
+      - "yes"
+      - "no"
+      - unknown
+      - not reported
+
   cases:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

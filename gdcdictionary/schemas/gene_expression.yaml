@@ -40,7 +40,6 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - rna_expression_workflows
 
 uniqueKeys:
   - [ id ]
@@ -48,12 +47,12 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "gene_expression" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum: [ "Transcriptome Profiling" ]
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
@@ -61,6 +60,7 @@ properties:
       - Exon Expression Quantification
       - Gene Expression Quantification
       - Isoform Expression Quantification
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
@@ -69,11 +69,13 @@ properties:
       - HDF5
       - TSV
       - TXT
+
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
       - RNA-Seq
       - Total RNA-Seq
+
   rna_expression_workflows:
     $ref: "_definitions.yaml#/to_one"

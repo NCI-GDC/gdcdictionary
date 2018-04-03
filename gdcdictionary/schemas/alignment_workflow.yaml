@@ -49,8 +49,10 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
+
   type:
     enum: [ "alignment_workflow" ]
+
   workflow_type:
     enum:
       - BWA
@@ -61,6 +63,7 @@ properties:
       - STAR 2-Pass
       - STAR 2-Pass Genome
       - STAR 2-Pass Transcriptome
+
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
   submitted_unaligned_reads_files:

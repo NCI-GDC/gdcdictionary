@@ -55,7 +55,6 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - projects
 
 uniqueKeys:
   - [ id ]
@@ -63,23 +62,25 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "masked_somatic_mutation" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum: [ "Simple Nucleotide Variation" ]
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
       - Masked Somatic Mutation
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
       - MAF
       - TSV
+
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
@@ -88,6 +89,7 @@ properties:
       - Targeted Sequencing
       - WGS
       - WXS
+
   projects:
     $ref: "_definitions.yaml#/to_one"
   genomic_profile_harmonization_workflows:

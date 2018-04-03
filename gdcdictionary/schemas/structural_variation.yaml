@@ -55,14 +55,14 @@ required:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "structural_variation" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
       - Somatic Structural Variation
       - Structural Variation
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
@@ -70,6 +70,7 @@ properties:
       - Structural Alteration
       - Structural Rearrangement
       - Transcript Fusion
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
@@ -80,6 +81,7 @@ properties:
       - JSON
       - TSV
       - TXT
+
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
@@ -88,6 +90,7 @@ properties:
       - Targeted Sequencing
       - WGS
       - WXS
+
   genomic_profile_harmonization_workflows:
     $ref: "_definitions.yaml#/to_one"
   structural_variant_calling_workflows:

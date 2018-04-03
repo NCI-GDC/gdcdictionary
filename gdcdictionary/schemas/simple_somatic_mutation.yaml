@@ -57,8 +57,6 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "simple_somatic_mutation" ]
 
   data_category:
     term:
@@ -90,8 +88,7 @@ properties:
       - Validation
       - Targeted Sequencing
 
-  somatic_mutation_calling_workflows:
-    $ref: "_definitions.yaml#/to_one"
-
   genomic_profile_harmonization_workflows:
+    $ref: "_definitions.yaml#/to_one"
+  somatic_mutation_calling_workflows:
     $ref: "_definitions.yaml#/to_one"
