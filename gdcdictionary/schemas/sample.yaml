@@ -28,7 +28,6 @@ systemProperties:
 required:
   - submitter_id
   - sample_type
-  - cases
 
 uniqueKeys:
   - [id]
@@ -60,24 +59,9 @@ links:
     target_type: sample
     required: false
 
-# Sample properties
-# Currently there are many TCGA-specific fields in the DB, this is an attempt
-# to minimize the core fields
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
-    description: >
-      The legacy barcode used before prior to the use UUIDs, varies by project.
-      For TCGA this is bcrsamplebarcode.
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
   biospecimen_anatomic_site:
     term:
       $ref: "_terms.yaml#/biospecimen_anatomic_site"
@@ -367,6 +351,7 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+
   biospecimen_laterality:
     term:
       $ref: "_terms.yaml#/biospecimen_laterality"
@@ -376,10 +361,12 @@ properties:
       - Right
       - Unknown
       - Not Reported
+
   catalog_reference:
     term:
       $ref: "_terms.yaml#/catalog_reference"
     type: string
+
   composition:
     term:
       $ref: "_terms.yaml#/composition"
@@ -419,18 +406,22 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+
   current_weight:
     term:
       $ref: "_terms.yaml#/current_weight"
     type: number
+
   days_to_collection:
     term:
       $ref: "_terms.yaml#/days_to_collection"
     type: integer
+
   days_to_sample_procurement:
     term:
       $ref: "_terms.yaml#/days_to_sample_procurement"
     type: integer
+
   diagnosis_pathologically_confirmed:
     term:
       ref: "_terms.yaml#/diagnosis_pathologically_confirmed"
@@ -442,6 +433,7 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+
   distance_normal_to_tumor:
     term:
       $ref: "_terms.yaml#/distance_normal_to_tumor"
@@ -450,35 +442,43 @@ properties:
       - Distal (>2cm)
       - Unknown
       - Not Reported
+
   distributor_reference:
     term:
       $ref: "_terms.yaml#/distributor_reference"
     type: string
+
   freezing_method:
     term:
       $ref: "_terms.yaml#/freezing_method"
     type: string
+
   growth_rate:
     term:
       $ref: "_terms.yaml#/growth_rate"
     type: integer
     minimum: 0
+
   initial_weight:
     term:
       $ref: "_terms.yaml#/initial_weight"
     type: number
+
   intermediate_dimension:
     terms:
       $ref: "_terms.yaml#/intermediate_dimension"
     type: string
+
   is_ffpe:
     term:
       $ref: "_terms.yaml#/is_ffpe"
     type: boolean
+
   longest_dimension:
     terms:
       $ref: "_terms.yaml#/longest_dimension"
     type: string
+
   method_of_sample_procurement:
     term:
       $ref: "_terms.yaml#/method_of_sample_procurement"
@@ -543,14 +543,14 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+
   oct_embedded:
     term:
       $ref: "_terms.yaml#/oct_embedded"
     type: string
+
   pathology_report_uuid:
     type: string
-    description: "UUID of the related pathology report." # are we still doing this? seems like the links handle this now
-  preservation_method:
     term:
       $ref: "_terms.yaml#/preservation_method"
     enum:
@@ -565,11 +565,13 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+
   passage_count:
     term:
       $ref: "_terms.yaml#/passage_count"
     type: integer
     minimum: 0
+
   sample_type:
     term:
       $ref: "_terms.yaml#/sample_type"
@@ -617,6 +619,7 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+
   sample_type_id:
     term:
       $ref: "_terms.yaml#/sample_type_id"
@@ -647,18 +650,22 @@ properties:
       - '60'
       - '61'
       - '99'
+
   shortest_dimension:
     term:
       $ref: "_terms.yaml#/shortest_dimension"
     type: string
+
   time_between_clamping_and_freezing:
     term:
       $ref: "_terms.yaml#/time_between_clamping_and_freezing"
     type: string
+
   time_between_excision_and_freezing:
     term:
       $ref: "_terms.yaml#/time_between_excision_and_freezing"
     type: string
+
   tissue_type:
     term:
       $ref: "_terms.yaml#/tissue_type"
@@ -672,6 +679,7 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+
   tumor_code:
     term:
       $ref: "_terms.yaml#/tumor_code"
@@ -701,6 +709,7 @@ properties:
       - NHL, Burkitt lymphoma (BL)
       - Rhabdomyosarcoma
       - Soft tissue sarcoma, non-rhabdomyosarcoma
+
   tumor_code_id:
     term:
       $ref: "_terms.yaml#/tumor_code_id"
@@ -730,6 +739,7 @@ properties:
       - "71"
       - "80"
       - "81"
+
   tumor_descriptor:
     term:
       $ref: "_terms.yaml#/tumor_descriptor"
@@ -745,21 +755,12 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+
   cases:
-    #should this be to_one
-    $ref: "_definitions.yaml#/to_one"
-    description: >
-      Indicates that the sample is physically derived from the subject
-      of the linked to case via some process/protocol
-  tissue_source_sites:
     $ref: "_definitions.yaml#/to_one"
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
   parent_samples:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    type: string
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
+  tissue_source_sites:
+    $ref: "_definitions.yaml#/to_one"

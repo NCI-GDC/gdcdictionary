@@ -45,7 +45,6 @@ required:
   - md5sum
   - data_category
   - data_type
-  - cases
 
 uniqueKeys:
   - [ id ]
@@ -53,16 +52,17 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "clinical_supplement" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum: [ "Clinical" ]
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Clinical Supplement" ]
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
@@ -75,6 +75,7 @@ properties:
       - OMF
       - TSV
       - XLSX
+
   cases:
     $ref: "_definitions.yaml#/to_many"
   archives:

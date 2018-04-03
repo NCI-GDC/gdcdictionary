@@ -34,7 +34,6 @@ required:
   - submitter_id
   - workflow_link
   - workflow_type
-  - simple_somatic_mutations
 
 uniqueKeys:
   - [ id ]
@@ -42,17 +41,17 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
-  type:
-    enum: [ "somatic_annotation_workflow" ]
+
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum:
       - FoundationOne Annotation
-      - MuTect2 Annotation
       - MuSE Annotation
+      - MuTect2 Annotation
       - Pindel Annotation
       - SomaticSniper Annotation
       - VarScan2 Annotation
+
   simple_somatic_mutations:
     $ref: "_definitions.yaml#/to_many"

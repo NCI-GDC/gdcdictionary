@@ -38,7 +38,6 @@ links:
 
 required:
   - submitter_id
-  - projects
 
 uniqueKeys:
   - [id]
@@ -46,21 +45,13 @@ uniqueKeys:
 
 # Case properties
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
   days_to_lost_to_followup:
     term:
       $ref: "_terms.yaml#/days_to_lost_to_followup"
     type: integer
+
   disease_type:
     term:
       $ref: "_terms.yaml#/disease_type"
@@ -214,6 +205,7 @@ properties:
       - Uterine Carcinosarcoma
       - Uterine Corpus Endometrial Carcinoma
       - Uveal Melanoma
+
   index_date:
     term:
       $ref: "_terms.yaml#/index_date"
@@ -221,12 +213,14 @@ properties:
       - Diagnosis
       - First Patient Visit
       - Study Enrollment
+
   lost_to_followup:
     term:
       $ref: "_terms.yaml#/lost_to_followup"
     enum:
       - "Yes"
       - "No"
+
   primary_site:
     term:
       $ref: "_terms.yaml#/primary_site"
@@ -347,9 +341,3 @@ properties:
     $ref: "_definitions.yaml#/to_one"
   tissue_source_sites:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

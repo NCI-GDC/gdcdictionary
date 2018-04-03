@@ -57,9 +57,6 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum:
-      - copy_number_estimate
 
   data_category:
     term:
@@ -99,6 +96,5 @@ properties:
 
   copy_number_variation_workflows:
     $ref: "_definitions.yaml#/to_one"
-
   genomic_profile_harmonization_workflows:
     $ref: "_definitions.yaml#/to_one"

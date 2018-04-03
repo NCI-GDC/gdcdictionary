@@ -39,7 +39,6 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - read_groups
 
 uniqueKeys:
   - [ id ]
@@ -47,8 +46,6 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "submitted_unaligned_reads" ]
 
   data_category:
     term:

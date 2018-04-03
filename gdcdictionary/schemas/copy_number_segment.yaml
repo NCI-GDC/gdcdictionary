@@ -58,36 +58,40 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "copy_number_segment" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
       - Copy Number Variation
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
       - Copy Number Segment
       - Masked Copy Number Segment
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
       - TXT
+
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
       - Genotyping Array
       - Targeted Sequencing
+
   platform:
     term:
       $ref: "_terms.yaml#/platform"
     enum:
       - Affymetrix SNP 6.0
       - Illumina
+
   copy_number_liftover_workflows:
     $ref: "_definitions.yaml#/to_one"
   genomic_profile_harmonization_workflows:

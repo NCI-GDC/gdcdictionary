@@ -50,28 +50,8 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 properties:
-  # Ubiquitous Properties
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  submitter_id:
-    type:
-      - string
-    description: >
-      A project-specific identifier for a node. This property is the calling card/nickname/alias for
-      a unit of submission. It can be used in place of the UUID for identifying or recalling a node.
-  state:
-    $ref: "_definitions.yaml#/state"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
+  $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  # Node properties
   adverse_event:
     term:
       $ref: "_terms.yaml#/adverse_event"
@@ -866,6 +846,7 @@ properties:
       - Wound Dehiscence
       - Wound Infection
       - Wrist Fracture
+
   barretts_esophagus_goblet_cells_present:
     term:
       $ref: "_terms.yaml#/barretts_esophagus_goblet_cells_present"
@@ -878,10 +859,12 @@ properties:
     term:
       $ref: "_terms.yaml#/bmi"
     type: number
+
   cause_of_response:
     term:
       $ref: "_terms.yaml#/cause_of_response"
     type: string
+
   comorbidity:
     term:
       $ref: "_terms.yaml#/comorbidity"
@@ -1016,6 +999,7 @@ properties:
       - Ulcerative Colitis
       - Unknown
       - Not Reported
+
   comorbidity_method_of_diagnosis:
     term:
       $ref: "_terms.yaml#/comorbidity_method_of_diagnosis"
@@ -1025,26 +1009,32 @@ properties:
       - Radiology
       - Unknown
       - Not Reported
+
   days_to_adverse_event:
     term:
       $ref: "_terms.yaml#/days_to_adverse_event"
     type: integer
+
   days_to_comorbidity:
     term:
       $ref: "_terms.yaml#days_to_comorbidity"
     type: integer
+
   days_to_follow_up:
     term:
       $ref: "_terms.yaml#/days_to_follow_up"
     type: integer
+
   days_to_progression:
     term:
       $ref: "_terms.yaml#/days_to_progression"
     type: integer
+
   days_to_recurrence:
     term:
       $ref: "_terms.yaml#/days_to_recurrence"
     type: integer
+
   diabetes_treatment_type:
     term:
       $ref: "_terms.yaml#/diabetes_treatment_type"
@@ -1060,6 +1050,7 @@ properties:
       - Other
       - Unknown
       - Not Reported
+
   disease_response:
     term:
       $ref: "_terms.yaml#/disease_response"
@@ -1090,10 +1081,12 @@ properties:
       - SPD-Surgical Progression
       - TE-Too Early
       - VGPR-Very Good Partial Response
+
   dlco_ref_predictive_percent:
     term:
       $ref: "_terms.yaml#/dlco_ref_predictive_percent"
     type: number
+
   ecog_performance_status:
     term:
       $ref: "_terms.yaml#/ecog_performance_status"
@@ -1104,26 +1097,32 @@ properties:
       - "3"
       - "4"
       - "5"
+
   fev1_ref_post_bronch_percent:
     term:
       $ref: "_terms.yaml#/fev1_ref_post_bronch_percent"
     type: number
+
   fev1_ref_pre_bronch_percent:
     term:
       $ref: "_terms.yaml#/fev1_ref_pre_bronch_percent"
     type: number
+
   fev1_fvc_pre_bronch_percent:
     term:
       $ref: "_terms.yaml#/fev1_fvc_pre_bronch_percent"
     type: number
+
   fev1_fvc_post_bronch_percent:
     term:
       $ref: "_terms.yaml#/fev1_fvc_post_bronch_percent"
     type: number
+
   height:
     term:
       $ref: "_terms.yaml#/height"
     type: number
+
   hpv_positive_type:
     term:
       $ref: "_terms.yaml#/hpv_positive_type"
@@ -1149,6 +1148,7 @@ properties:
       - Other
       - Unknown
       - Not Reported
+
   karnofsky_performance_status:
     term:
       $ref: "_terms.yaml#/karnofsky_performance_status"
@@ -1166,6 +1166,7 @@ properties:
       - "100"
       - Unknown
       - Not Reported
+
   menopause_status:
     term:
       $ref: "_terms.yaml#/menopause_status"
@@ -1175,10 +1176,12 @@ properties:
       - Postmenopausal
       - Unknown
       - Not Reported
+
   pancreatitis_onset_year:
     term:
       $ref: "_terms.yaml#/pancreatitis_onset_year"
     type: integer
+
   progression_or_recurrence:
     term:
       $ref: "_terms.yaml#/progression_or_recurrence"
@@ -1187,6 +1190,7 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+
   progression_or_recurrence_anatomic_site:
     term:
       $ref: "_terms.yaml#/progression_or_recurrence_anatomic_site"
@@ -1523,6 +1527,7 @@ properties:
       - Overlapping lesion of biliary tract
       - Unknown
       - Not Reported
+
   progression_or_recurrence_type:
     term:
       $ref: "_terms.yaml#/progression_or_recurrence_type"
@@ -1532,6 +1537,7 @@ properties:
       - Regional
       - Unknown
       - Not Reported
+
   reflux_treatment:
     term:
       $ref: "_terms.yaml#/reflux_treatment"
@@ -1540,6 +1546,7 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+
   reflux_treatment_type:
     term:
       $ref: "_terms.yaml#/reflux_treatment_type"
@@ -1553,6 +1560,7 @@ properties:
       - Proton Pump Inhibitors
       - Surgically Treated
       - Unknown
+
   risk_factor:
     term:
       $ref: "_terms.yaml#/risk_factor"
@@ -1574,6 +1582,7 @@ properties:
       - Wagr Syndrome
       - Unknown
       - Not Reported
+
   viral_hepatitis_serologies:
     term:
       $ref: "_terms.yaml#/viral_hepatitis_serologies"
@@ -1588,12 +1597,12 @@ properties:
       - Hepatitis C Virus RNA
       - Unknown
       - Not Reported
+
   weight:
     term:
       $ref: "_terms.yaml#/weight"
     type: number
 
-  # Links
   cases:
     $ref: "_definitions.yaml#/to_one"
   diagnoses:

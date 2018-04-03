@@ -33,7 +33,6 @@ required:
   - submitter_id
   - workflow_link
   - workflow_type
-  - submitted_tangent_copy_numbers
 
 uniqueKeys:
   - [ id ]
@@ -41,12 +40,12 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
-  type:
-    enum: [ "copy_number_liftover_workflow" ]
+
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum:
       - DNAcopy
+
   submitted_tangent_copy_numbers:
     $ref: "_definitions.yaml#/to_many"

@@ -34,7 +34,6 @@ required:
   - submitter_id
   - workflow_link
   - workflow_type
-  - annotated_somatic_mutations
 
 uniqueKeys:
   - [ id ]
@@ -42,18 +41,18 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
-  type:
-    enum: [ "somatic_aggregation_workflow" ]
+
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum:
       - FoundationOne Variant Aggregation and Masking
       - GENIE Variant Aggregation and Masking
-      - MuTect2 Variant Aggregation and Masking
       - MuSE Variant Aggregation and Masking
+      - MuTect2 Variant Aggregation and Masking
       - Pindel Variant Aggregation and Masking
       - SomaticSniper Variant Aggregation and Masking
       - VarScan2 Variant Aggregation and Masking
+
   annotated_somatic_mutations:
     $ref: "_definitions.yaml#/to_many"

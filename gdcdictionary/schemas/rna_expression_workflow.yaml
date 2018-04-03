@@ -56,8 +56,7 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
-  type:
-    enum: [ "rna_expression_workflow" ]
+
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
@@ -73,6 +72,7 @@ properties:
       - RNA-SeQC - FPKM
       - RSEM - Quantification
       - STAR - Counts
+
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
   submitted_aligned_reads_files:
