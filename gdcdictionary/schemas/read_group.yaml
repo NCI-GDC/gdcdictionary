@@ -6,7 +6,6 @@ type: object
 description: "Sequencing reads from one lane of an NGS experiment."
 namespace: http://gdc.nci.nih.gov
 category: biospecimen
-validators: null
 project: '*'
 program: '*'
 additionalProperties: false
