@@ -30,6 +30,9 @@ links:
     multiplicity: many_to_one
     required: true
 
+required:
+  - submitter_id
+
 deprecated:
   - days_to_treatment
 
