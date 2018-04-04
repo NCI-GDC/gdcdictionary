@@ -5,8 +5,5 @@
     "workflow_type": "STAR 2-Pass",
     "submitted_aligned_reads_files": {
 	"id": "0cb66276-c29b-4811-a704-38502173c0f8"
-    },
-    "submitted_unaligned_reads_files": {
-	"id": "0cb66276-c29b-4811-a704-38502173c0f8"
     }
 }

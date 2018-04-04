@@ -21,7 +21,7 @@ systemProperties:
   - state
 
 links:
-  - exclusive: false
+  - exclusive: true
     required: true
     subgroup:
       - name: submitted_aligned_reads_files
