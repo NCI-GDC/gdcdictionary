@@ -21,7 +21,6 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
-  - file_state
   - state
   - error_type
 
@@ -45,9 +44,6 @@ required:
   - submitter_id
   - revision
   - projects
-  - file_name
-  - file_size
-  - md5sum
   - state
 
 uniqueKeys:

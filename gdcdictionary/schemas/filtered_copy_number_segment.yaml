@@ -21,7 +21,6 @@ systemProperties:
   - created_datetime
   - updated_datetime
   - state
-  - file_state
   - error_type
 
 links:
@@ -34,10 +33,7 @@ links:
 
 required:
   - submitter_id
-  - file_name
-  - file_size
   - data_format
-  - md5sum
   - data_category
   - data_type
   - experimental_strategy

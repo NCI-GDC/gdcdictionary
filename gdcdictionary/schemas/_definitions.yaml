@@ -160,8 +160,6 @@ project_id:
 
 data_file_properties:
   $ref: "#/ubiquitous_properties"
-  file_state:
-    $ref: "#/file_state"
   error_type:
     $ref: "#/data_file_error_type"
   state_comment:
