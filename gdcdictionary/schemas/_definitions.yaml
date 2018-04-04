@@ -160,12 +160,6 @@ project_id:
 
 data_file_properties:
   $ref: "#/ubiquitous_properties"
-  file_name:
-    $ref: "#/file_name"
-  file_size:
-    $ref: "#/file_size"
-  md5sum:
-    $ref: "#/md5sum"
   file_state:
     $ref: "#/file_state"
   error_type:
