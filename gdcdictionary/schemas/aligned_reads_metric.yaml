@@ -54,8 +54,7 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "aligned_reads_metric" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -63,14 +62,17 @@ properties:
       - Sequencing Data
       - Sequencing Reads
       - Raw Sequencing Data
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Aligned Reads Metrics" ]
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     type: string
+
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
@@ -82,6 +84,7 @@ properties:
       - RNA-Seq
       - miRNA-Seq
       - Total RNA-Seq
+
   alignment_workflows:
     $ref: "_definitions.yaml#/to_one"
   alignment_cocleaning_workflows:

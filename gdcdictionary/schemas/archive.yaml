@@ -57,20 +57,22 @@ uniqueKeys:
 # archive properties
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "archive" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum: [ "Archive" ]
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "TCGA DCC Archive", "TARGET DCC Archive" ]
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum: [ "TARGZ", "MAGETAB" ]
+
   revision:
     type: number
     description: The revision of this archive in the DCC.
@@ -79,9 +81,3 @@ properties:
     $ref: "_definitions.yaml#/to_one"
   related_to_files:
     $ref: "_definitions.yaml#/to_many"
-  project_id:
-    type: string
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

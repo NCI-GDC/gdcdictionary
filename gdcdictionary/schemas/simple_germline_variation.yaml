@@ -40,7 +40,6 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - germline_mutation_calling_workflows
 
 uniqueKeys:
   - [ id ]
@@ -48,20 +47,22 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "simple_germline_variation" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum: [ "Simple Nucleotide Variation" ]
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Simple Germline Variation" ]
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum: [ "VCF" ]
+
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
@@ -70,5 +71,6 @@ properties:
       - WXS
       - Low Pass WGS
       - Validation
+
   germline_mutation_calling_workflows:
     $ref: "_definitions.yaml#/to_one"

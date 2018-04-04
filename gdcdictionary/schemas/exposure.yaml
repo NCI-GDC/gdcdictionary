@@ -45,20 +45,18 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 properties:
-  type:
-    enum: [ "exposure" ]
+  $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
 
-  state:
-    $ref: "_definitions.yaml#/state"
+  alcohol_days_per_week:
+    term:
+      $ref: "_terms.yaml#/alcohol_days_per_week"
+    type: number
 
-  submitter_id:
-    type:
-      - string
-      - "null"
+  alcohol_drinks_per_day:
+    term:
+      $ref: "_terms.yaml#/alcohol_drinks_per_day"
+    type: number
 
   alcohol_history:
     term:
@@ -142,21 +140,5 @@ properties:
       $ref: "_terms.yaml#/years_smoked"
     type: number
 
-  alcohol_days_per_week:
-    term:
-      $ref: "_terms.yaml#/alcohol_days_per_week"
-    type: number
-
-  alcohol_drinks_per_day:
-    term:
-      $ref: "_terms.yaml#/alcohol_drinks_per_day"
-    type: number
-
   cases:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

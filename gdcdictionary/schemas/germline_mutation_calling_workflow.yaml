@@ -34,7 +34,6 @@ required:
   - submitter_id
   - workflow_link
   - workflow_type
-  - aligned_reads_files
 
 uniqueKeys:
   - [ id ]
@@ -42,11 +41,11 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
-  type:
-    enum: [ "germline_mutation_calling_workflow" ]
+
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum: [ "HaplotypeCaller" ]
+
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"

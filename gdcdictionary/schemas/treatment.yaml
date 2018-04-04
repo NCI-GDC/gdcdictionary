@@ -30,6 +30,9 @@ links:
     multiplicity: many_to_one
     required: true
 
+required:
+  - submitter_id
+
 deprecated:
   - days_to_treatment
 
@@ -39,20 +42,7 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 properties:
-  type:
-    enum: [ "treatment" ]
-
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-
-  state:
-    $ref: "_definitions.yaml#/state"
-
-  submitter_id:
-    type:
-      - string
-      - "null"
+  $ref: "_definitions.yaml#/ubiquitous_properties"
 
   days_to_treatment_end:
     term:
@@ -503,12 +493,3 @@ properties:
 
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
-
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-
-  # ======== Timestamps ========
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
