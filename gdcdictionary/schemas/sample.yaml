@@ -649,6 +649,7 @@ properties:
       - '50'
       - '60'
       - '61'
+      - '85'
       - '99'
 
   shortest_dimension:
