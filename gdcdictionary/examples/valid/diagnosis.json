@@ -47,7 +47,7 @@
     "ldh_level_at_diagnosis": 1,
     "ldh_normal_range_upper": 1.5,
     "medulloblastoma_molecular_classification":"Unknown",
-    "metastasis_at_diagnosis":"No",
+    "metastasis_at_diagnosis":"Distant Metastasis",
     "metastasis_at_diagnosis_site":"Abdomen",
     "method_of_diagnosis": "Cytology",
     "micropapillary_features":"Unknown",
