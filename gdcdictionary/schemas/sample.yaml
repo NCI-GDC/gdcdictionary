@@ -551,6 +551,8 @@ properties:
 
   pathology_report_uuid:
     type: string
+    description: "UUID of the related pathology report." # are we still doing this? seems like the links handle this now
+  preservation_method:
     term:
       $ref: "_terms.yaml#/preservation_method"
     enum:
