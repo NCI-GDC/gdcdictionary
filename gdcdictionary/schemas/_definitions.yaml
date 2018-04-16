@@ -57,7 +57,7 @@ file_name:
         $ref: "_terms.yaml#/file_name"
 
 file_size:
-    type: number
+    type: integer
     term: 
         $ref: "_terms.yaml#/file_size"
 
