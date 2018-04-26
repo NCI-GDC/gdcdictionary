@@ -369,7 +369,7 @@ properties:
       - White Blood Cells
       - Wrist
       - Not Reported
- 
+
   treatment_intent_type:
     term:
       $ref: "_terms.yaml#/treatment_intent_type"

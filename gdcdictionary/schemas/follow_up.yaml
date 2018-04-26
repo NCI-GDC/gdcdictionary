@@ -855,10 +855,7 @@ properties:
       - "No"
       - Unknown
       - Not Reported
-  beta_2_microglobulin:
-    term:
-      $ref: "_terms.yaml#/beta_2_microglobulin"
-    type: number
+
   bmi:
     term:
       $ref: "_terms.yaml#/bmi"

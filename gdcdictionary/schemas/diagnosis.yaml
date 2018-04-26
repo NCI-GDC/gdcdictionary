@@ -880,7 +880,7 @@ properties:
     enum:
       - 0 - No Fibrosis
       - 1,2 - Portal Fibrosis
-      - 3,4 - Fibrous Speta
+      - 3,4 - Fibrous Septa
       - 5 - Nodular Formation and Incomplete Cirrhosis
       - 6 - Established Cirrhosis
       - Unknown

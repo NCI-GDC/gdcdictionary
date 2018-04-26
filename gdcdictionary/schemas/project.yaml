@@ -163,25 +163,19 @@ properties:
     default: false
     type: boolean
 
-  submission_enabled:
-    description: >
-      Indicates if submission to a project is allowed.
-    default: true
-    type: boolean
-
   request_submission:
     description: >
       Indicates that the user has requested submission to the GDC for harmonization.
     default: false
     type: boolean
 
+  submission_enabled:
+    description: >
+      Indicates if submission to a project is allowed.
+    default: true
+    type: boolean
+
   programs:
     description: >
       Indicates that the project is logically part of the indicated project.
     $ref: "_definitions.yaml#/to_one"
-
-  is_legacy:
-    description: >
-      Indicates whether a project will appear in the Legacy Archive.
-    default: false
-    type: boolean

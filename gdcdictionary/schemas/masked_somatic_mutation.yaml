@@ -87,6 +87,7 @@ properties:
     enum:
       - Low Pass WGS
       - Targeted Sequencing
+      - Validation
       - WGS
       - WXS
 
