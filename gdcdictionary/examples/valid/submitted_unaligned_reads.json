@@ -9,6 +9,7 @@
     "data_type": "Unaligned Reads",
     "data_format": "FASTQ",
     "experimental_strategy": "WGS",
+    "read_pair_number": "R1",
     "read_groups": {
 	"submitter_id": "read_group_1"
     }
