@@ -41,4 +41,3 @@ class SchemaTest(BaseTest):
 
     def test_schemas(self):
         validate_schemata(self.dictionary.schema, self.dictionary.metaschema)
-
