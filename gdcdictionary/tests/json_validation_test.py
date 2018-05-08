@@ -19,6 +19,7 @@ from utils import validate_entity, BaseTest
 
 DATA_DIR = os.path.join(ROOT_DIR, 'examples')
 
+
 class JsonValidationTests(BaseTest):
 
     def test_valid_files(self):

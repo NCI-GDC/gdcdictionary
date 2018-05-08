@@ -29,6 +29,9 @@ links:
     multiplicity: many_to_one
     required: true
 
+required:
+  - submitter_id
+
 uniqueKeys:
   #unclear if want submitter ID for clinical
   - [id]
