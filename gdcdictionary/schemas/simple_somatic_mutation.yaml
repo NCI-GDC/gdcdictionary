@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "simple_somatic_mutation"
 title: Simple Somatic Mutation
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: data_file
 program: '*'
 project: '*'
@@ -12,6 +12,7 @@ description: >
   from aligned reads.
 additionalProperties: false
 submittable: false
+downloadable: true
 validators: null
 
 systemProperties:
@@ -56,22 +57,27 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "simple_somatic_mutation" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
-    enum: [ "Simple Nucleotide Variation" ]
+    enum: 
+      - Combined Nucleotide Variation
+      - Simple Nucleotide Variation
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
+      - Raw CGI Variant
       - Raw Simple Somatic Mutation
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum: 
       - VCF
+
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
@@ -81,7 +87,8 @@ properties:
       - Low Pass WGS
       - Validation
       - Targeted Sequencing
-  somatic_mutation_calling_workflows:
-    $ref: "_definitions.yaml#/to_one"
+
   genomic_profile_harmonization_workflows:
+    $ref: "_definitions.yaml#/to_one"
+  somatic_mutation_calling_workflows:
     $ref: "_definitions.yaml#/to_one"

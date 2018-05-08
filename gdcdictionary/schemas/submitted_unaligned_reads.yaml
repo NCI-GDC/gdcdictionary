@@ -3,13 +3,14 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "submitted_unaligned_reads"
 title: Submitted Unaligned Reads
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: data_file
 program: '*'
 project: '*'
 description: "Data file containing unaligned reads that have not been GDC Harmonized."
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:
@@ -38,7 +39,6 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - read_groups
 
 uniqueKeys:
   - [ id ]
@@ -46,8 +46,7 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "submitted_unaligned_reads" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -55,26 +54,39 @@ properties:
       - Sequencing Data
       - Sequencing Reads
       - Raw Sequencing Data
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Unaligned Reads" ]
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
       - BAM
       - FASTQ
+
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
+      - ATAC-Seq
+      - Bisulfite-Seq
+      - ChIP-Seq
+      - Low Pass WGS
+      - miRNA-Seq
+      - RNA-Seq
+      - Targeted Sequencing
       - WGS
       - WXS
-      - Low Pass WGS
-      - Validation
-      - RNA-Seq
-      - miRNA-Seq
-      - Total RNA-Seq
+
+  read_pair_number: 
+    term:
+      $ref: "_terms.yaml#/read_pair_number"
+    enum:
+      - R1
+      - R2
+
   read_groups:
     $ref: "_definitions.yaml#/to_one"

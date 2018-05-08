@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "platform"
 title: Platform
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: TBD
 program: '*'
 project: '*'
@@ -12,6 +12,7 @@ description: >
   may be obtained as files. (GDC)
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

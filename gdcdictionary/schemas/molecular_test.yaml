@@ -1,0 +1,1802 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "molecular_test"
+title: Molecular Test
+type: object
+category: clinical
+namespace: https://gdc.cancer.gov/
+program: '*'
+project: '*'
+description: >
+  Information pertaining to any molecular tests performed on the patient during a clinical event.
+additionalProperties: false
+submittable: true
+downloadable: false
+validators: []
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+required:
+  - submitter_id
+  - gene_symbol
+  - molecular_analysis_method
+  - test_result
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+links:
+  - name: follow_ups
+    backref: molecular_tests
+    label: performed_at
+    target_type: follow_up
+    multiplicity: many_to_one
+    required: true
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  aa_change:
+    term:
+      $ref: "_terms.yaml#/aa_change"
+    type: string
+
+  antigen:
+    term:
+      $ref: "_terms.yaml#/antigen"
+    enum:
+      - CA19-9
+      - CEA
+      - Unknown
+      - Not Reported
+
+  blood_test:
+    term:
+      $ref: "_terms.yaml#/blood_test"
+    enum:
+      - Albumin
+      - Beta 2 Microglobulin
+      - BUN
+      - Creatinine
+      - CRP
+      - Glucose
+      - Hemoglobin
+      - IgA
+      - IgG
+      - IgL Kappa
+      - IgL Lambda
+      - IgM
+      - IDH Level
+      - M Protein
+      - Platelet Count
+      - Total Protein
+      - WBC
+      - Alpha Fetoprotein
+      - Total Bilirubin
+      - Unknown
+      - Not Reported
+
+  blood_test_normal_range_lower:
+    term:
+      $ref: "_terms.yaml#/blood_test_normal_range_lower"
+    type: number
+
+  blood_test_normal_range_upper:
+    term:
+      $ref: "_terms.yaml#/blood_test_normal_range_upper"
+    type: number
+
+  cell_count:
+    term:
+      $ref: "_terms.yaml#/cell_count"
+    type: integer
+    minimum: 0
+
+  chromosome:
+    term:
+      $ref: "_terms.yaml#/chromosome"
+    enum:
+      - chr1
+      - chr2
+      - chr3
+      - chr4
+      - chr5
+      - chr6
+      - chr7
+      - chr8
+      - chr9
+      - chr10
+      - chr11
+      - chr12
+      - chr13
+      - chr14
+      - chr15
+      - chr16
+      - chr17
+      - chr18
+      - chr19
+      - chr20
+      - chr21
+      - chr22
+      - chr23
+      - chrM
+      - chrX
+      - chrY
+      - Unknown
+      - Not Reported
+
+  copy_number:
+    term:
+      $ref: "_terms.yaml#/copy_number"
+    type: number
+
+  cytoband:
+    term:
+      $ref: "_terms.yaml#/cytoband"
+    type: string
+
+  dna_change:
+    term:
+      $ref: "_terms.yaml#/dna_change"
+    type: string
+
+  exon:
+    term:
+      $ref: "_terms.yaml#/exon"
+    type: integer
+    minimum: 1
+
+  gene_symbol:
+    term:
+      $ref: "_terms.yaml#/gene_symbol"
+    enum:
+      - A1CF
+      - ABI1
+      - ABL1
+      - ABL2
+      - ACKR3
+      - ACSL3
+      - ACSL6
+      - ACVR1
+      - ACVR2A
+      - AFF1
+      - AFF3
+      - AFF4
+      - AKAP9
+      - AKT1
+      - AKT2
+      - AKT3
+      - ALDH2
+      - ALK
+      - AMER1
+      - ANK1
+      - APC
+      - APOBEC3B
+      - AR
+      - ARAF
+      - ARHGAP26
+      - ARHGAP5
+      - ARHGEF12
+      - ARID1A
+      - ARID1B
+      - ARID2
+      - ARNT
+      - ASPSCR1
+      - ASXL1
+      - ASXL2
+      - ATF1
+      - ATIC
+      - ATM
+      - ATP1A1
+      - ATP2B3
+      - ATR
+      - ATRX
+      - AXIN1
+      - AXIN2
+      - B2M
+      - BAP1
+      - BARD1
+      - BCL10
+      - BCL11A
+      - BCL11B
+      - BCL2
+      - BCL2L12
+      - BCL3
+      - BCL6
+      - BCL7A
+      - BCL9
+      - BCL9L
+      - BCLAF1
+      - BCOR
+      - BCORL1
+      - BCR
+      - BIRC3
+      - BIRC6
+      - BLM
+      - BMP5
+      - BMPR1A
+      - BRAF
+      - BRCA1
+      - BRCA2
+      - BRD3
+      - BRD4
+      - BRIP1
+      - BTG1
+      - BTK
+      - BUB1B
+      - C15orf65
+      - CACNA1D
+      - CALR
+      - CAMTA1
+      - CANT1
+      - CARD11
+      - CARS
+      - CASP8
+      - CBFA2T3
+      - CBFB
+      - CBL
+      - CBLB
+      - CBLC
+      - CCDC6
+      - CCNB1IP1
+      - CCNC
+      - CCND1
+      - CCND2
+      - CCND3
+      - CCNE1
+      - CCR4
+      - CCR7
+      - CD209
+      - CD274
+      - CD28
+      - CD74
+      - CD79A
+      - CD79B
+      - CD99
+      - CDC73
+      - CDH1
+      - CDH10
+      - CDH11
+      - CDH17
+      - CDK12
+      - CDK4
+      - CDK6
+      - CDKN1A
+      - CDKN1B
+      - CDKN2A
+      - CDKN2C
+      - CDX2
+      - CEBPA
+      - CEP89
+      - CHCHD7
+      - CHD2
+      - CHD4
+      - CHEK2
+      - CHIC2
+      - CHST11
+      - CIC
+      - CIITA
+      - CLIP1
+      - CLP1
+      - CLTC
+      - CLTCL1
+      - CNBD1
+      - CNBP
+      - CNOT3
+      - CNTNAP2
+      - CNTRL
+      - COL1A1
+      - COL2A1
+      - COL3A1
+      - COX6C
+      - CREB1
+      - CREB3L1
+      - CREB3L2
+      - CREBBP
+      - CRLF2
+      - CRNKL1
+      - CRTC1
+      - CRTC3
+      - CSF1R
+      - CSF3R
+      - CSMD3
+      - CTCF
+      - CTNNA2
+      - CTNNB1
+      - CTNND1
+      - CTNND2
+      - CUL3
+      - CUX1
+      - CXCR4
+      - CYLD
+      - CYP2C8
+      - CYSLTR2
+      - DAXX
+      - DCAF12L2
+      - DCC
+      - DCTN1
+      - DDB2
+      - DDIT3
+      - DDR2
+      - DDX10
+      - DDX3X
+      - DDX5
+      - DDX6
+      - DEK
+      - DGCR8
+      - DICER1
+      - DNAJB1
+      - DNM2
+      - DNMT3A
+      - DROSHA
+      - DUX4L1
+      - EBF1
+      - ECT2L
+      - EED
+      - EGFR
+      - EIF1AX
+      - EIF3E
+      - EIF4A2
+      - ELF3
+      - ELF4
+      - ELK4
+      - ELL
+      - ELN
+      - EML4
+      - EP300
+      - EPAS1
+      - EPHA3
+      - EPHA7
+      - EPS15
+      - ERBB2
+      - ERBB3
+      - ERBB4
+      - ERC1
+      - ERCC2
+      - ERCC3
+      - ERCC4
+      - ERCC5
+      - ERG
+      - ESR1
+      - ETNK1
+      - ETV1
+      - ETV4
+      - ETV5
+      - ETV6
+      - EWSR1
+      - EXT1
+      - EXT2
+      - EZH2
+      - EZR
+      - FAM131B
+      - FAM135B
+      - FAM46C
+      - FAM47C
+      - FANCA
+      - FANCC
+      - FANCD2
+      - FANCE
+      - FANCF
+      - FANCG
+      - FAS
+      - FAT1
+      - FAT3
+      - FAT4
+      - FBLN2
+      - FBXO11
+      - FBXW7
+      - FCGR2B
+      - FCRL4
+      - FEN1
+      - FES
+      - FEV
+      - FGFR1
+      - FGFR1OP
+      - FGFR2
+      - FGFR3
+      - FGFR4
+      - FH
+      - FHIT
+      - FIP1L1
+      - FKBP9
+      - FLCN
+      - FLI1
+      - FLNA
+      - FLT3
+      - FLT4
+      - FNBP1
+      - FOXA1
+      - FOXL2
+      - FOXO1
+      - FOXO3
+      - FOXO4
+      - FOXP1
+      - FOXR1
+      - FSTL3
+      - FUBP1
+      - FUS
+      - GAS7
+      - GATA1
+      - GATA2
+      - GATA3
+      - GLI1
+      - GMPS
+      - GNA11
+      - GNAQ
+      - GNAS
+      - GOLGA5
+      - GOPC
+      - GPC3
+      - GPHN
+      - GRIN2A
+      - GRM3
+      - H3F3A
+      - H3F3B
+      - HERPUD1
+      - HEY1
+      - HIF1A
+      - HIP1
+      - HIST1H3B
+      - HIST1H4I
+      - HLA-A
+      - HLF
+      - HMGA1
+      - HMGA2
+      - HMGN2P46
+      - HNF1A
+      - HNRNPA2B1
+      - HOOK3
+      - HOXA11
+      - HOXA13
+      - HOXA9
+      - HOXC11
+      - HOXC13
+      - HOXD11
+      - HOXD13
+      - HRAS
+      - HSP90AA1
+      - HSP90AB1
+      - ID3
+      - IDH1
+      - IDH2
+      - IGH
+      - IGK
+      - IGL
+      - IKBKB
+      - IKZF1
+      - IL2
+      - IL21R
+      - IL6ST
+      - IL7R
+      - IRF4
+      - IRS4
+      - ISX
+      - ITGAV
+      - ITK
+      - JAK1
+      - JAK2
+      - JAK3
+      - JAZF1
+      - JUN
+      - KAT6A
+      - KAT6B
+      - KAT7
+      - KCNJ5
+      - KDM5A
+      - KDM5C
+      - KDM6A
+      - KDR
+      - KDSR
+      - KEAP1
+      - KIAA1549
+      - KIF5B
+      - KIT
+      - KLF4
+      - KLF6
+      - KLK2
+      - KMT2A
+      - KMT2C
+      - KMT2D
+      - KNL1
+      - KNSTRN
+      - KRAS
+      - KTN1
+      - LARP4B
+      - LASP1
+      - LCK
+      - LCP1
+      - LEF1
+      - LHFP
+      - LIFR
+      - LMNA
+      - LMO1
+      - LMO2
+      - LPP
+      - LRIG3
+      - LRP1B
+      - LSM14A
+      - LYL1
+      - LZTR1
+      - MAF
+      - MAFB
+      - MALAT1
+      - MALT1
+      - MAML2
+      - MAP2K1
+      - MAP2K2
+      - MAP2K4
+      - MAP3K1
+      - MAP3K13
+      - MAPK1
+      - MAX
+      - MB21D2
+      - MDM2
+      - MDM4
+      - MDS2
+      - MECOM
+      - MED12
+      - MEN1
+      - MET
+      - MGMT
+      - MITF
+      - MKL1
+      - MLF1
+      - MLH1
+      - MLH2
+      - MLLT1
+      - MLLT10
+      - MLLT11
+      - MLLT3
+      - MLLT4
+      - MLLT6
+      - MN1
+      - MNX1
+      - MPL
+      - MSH2
+      - MSH6
+      - MSI2
+      - MSN
+      - MTCP1
+      - MTOR
+      - MUC1
+      - MUC16
+      - MUC4
+      - MUTYH
+      - MYB
+      - MYC
+      - MYCL
+      - MYCN
+      - MYD88
+      - MYH11
+      - MYH9
+      - MYO5A
+      - MYOD1
+      - NAB2
+      - NACA
+      - NBEA
+      - NBN
+      - NCKIPSD
+      - NCOA1
+      - NCOA2
+      - NCOA4
+      - NCOR1
+      - NCOR2
+      - NDRG1
+      - NF1
+      - NF2
+      - NFATC2
+      - NFE2L2
+      - NFIB
+      - NFKB2
+      - NFKBIE
+      - NIN
+      - NKX2-1
+      - NONO
+      - NOTCH1
+      - NOTCH2
+      - NPM1
+      - NR4A3
+      - NRAS
+      - NRG1
+      - NSD1
+      - NSD2
+      - NSD3
+      - NT5C2
+      - NTHL1
+      - NTRK1
+      - NTRK3
+      - NUMA1
+      - NUP214
+      - NUP98
+      - NUTM1
+      - NUTM2A
+      - NUTM2B
+      - OLIG2
+      - OMD
+      - P2RY8
+      - PABPC1
+      - PAFAH1B2
+      - PALB2
+      - PATZ1
+      - PAX3
+      - PAX5
+      - PAX7
+      - PAX8
+      - PBRM1
+      - PBX1
+      - PCBP1
+      - PCM1
+      - PDCD1LG2
+      - PDE4DIP
+      - PDGFB
+      - PDGFRA
+      - PDGFRB
+      - PER1
+      - PGR
+      - PHF6
+      - PHOX2B
+      - PICALM
+      - PIK3CA
+      - PIK3CB
+      - PIK3R1
+      - PIM1
+      - PLAG1
+      - PLCG1
+      - PML
+      - PMS1
+      - PMS2
+      - POLD1
+      - POLE
+      - POLG
+      - POLQ
+      - POT1
+      - POU2AF1
+      - POU5F1
+      - PPARG
+      - PPFIBP1
+      - PPM1D
+      - PPP2R1A
+      - PPP6C
+      - PRCC
+      - PRDM1
+      - PRDM16
+      - PRDM2
+      - PREX2
+      - PRF1
+      - PRKACA
+      - PRKAR1A
+      - PRKCB
+      - PRPF40B
+      - PRRX1
+      - PSIP1
+      - PTCH1
+      - PTEN
+      - PTK6
+      - PTPN11
+      - PTPN13
+      - PTPN6
+      - PTPRB
+      - PTPRC
+      - PTPRK
+      - PTPRT
+      - PWWP2A
+      - QKI
+      - RABEP1
+      - RAC1
+      - RAD21
+      - RAD51B
+      - RAF1
+      - RALGDS
+      - RANBP2
+      - RAP1GDS1
+      - RARA
+      - RB1
+      - RBM10
+      - RBM15
+      - RECQL4
+      - REL
+      - RET
+      - RGPD3
+      - RGS7
+      - RHOA
+      - RHOH
+      - RMI2
+      - RNF213
+      - RNF43
+      - ROBO2
+      - ROS1
+      - RPL10
+      - RPL22
+      - RPL5
+      - RPN1
+      - RSPO2
+      - RSPO3
+      - RUNX1
+      - RUNX1T1
+      - S100A7
+      - SALL4
+      - SBDS
+      - SDC4
+      - SDHA
+      - SDHAF2
+      - SDHB
+      - SDHC
+      - SDHD
+      - SEPT5
+      - SEPT6
+      - SEPT9
+      - SET
+      - SETBP1
+      - SETD2
+      - SF3B1
+      - SFPQ
+      - SFRP4
+      - SGK1
+      - SH2B3
+      - SH3GL1
+      - SHTN1
+      - SIRPA
+      - SKI
+      - SLC34A2
+      - SLC45A3
+      - SMAD2
+      - SMAD3
+      - SMAD4
+      - SMARCA4
+      - SMARCB1
+      - SMARCD1
+      - SMARCE1
+      - SMC1A
+      - SMO
+      - SND1
+      - SNX29
+      - SOCS1
+      - SOX2
+      - SPECC1
+      - SPEN
+      - SPOP
+      - SRC
+      - SRGAP3
+      - SRSF2
+      - SRSF3
+      - SS18
+      - SS18L1
+      - SSX1
+      - SSX2
+      - SSX4
+      - STAG1
+      - STAG2
+      - STAT3
+      - STAT5B
+      - STAT6
+      - STIL
+      - STK11
+      - STRN
+      - SUFU
+      - SUZ12
+      - SYK
+      - TAF15
+      - TAL1
+      - TAL2
+      - TBL1XR1
+      - TBX3
+      - TCEA1
+      - TCF12
+      - TCF3
+      - TCF7L2
+      - TCL1A
+      - TEC
+      - TERT
+      - TET1
+      - TET2
+      - TFE3
+      - TFEB
+      - TFG
+      - TFPT
+      - TFRC
+      - TGFBR2
+      - THRAP3
+      - TLX1
+      - TLX3
+      - TMEM127
+      - TMPRSS2
+      - TNC
+      - TNFAIP3
+      - TNFRSF14
+      - TNFRSF17
+      - TOP1
+      - TP53
+      - TP63
+      - TPM3
+      - TPM4
+      - TPR
+      - TRA
+      - TRAF7
+      - TRB
+      - TRD
+      - TRIM24
+      - TRIM27
+      - TRIM33
+      - TRIP11
+      - TRRAP
+      - TSC1
+      - TSC2
+      - TSHR
+      - U2AF1
+      - UBR5
+      - USP6
+      - USP8
+      - VAV1
+      - VHL
+      - VTI1A
+      - WAS
+      - WDCP
+      - WIF1
+      - WNK2
+      - WRN
+      - WT1
+      - WWTR1
+      - XPA
+      - XPC
+      - XPO1
+      - YWHAE
+      - ZBTB16
+      - ZCCHC8
+      - ZEB1
+      - ZFHX3
+      - ZMYM3
+      - ZNF198
+      - ZNF331
+      - ZNF384
+      - ZNF429
+      - ZNF444
+      - ZNF479
+      - ZNF521
+      - ZNRF3
+      - ZRSR2
+      - Unknown
+      - Not Reported
+
+  histone_family:
+    term:
+      $ref: "_terms.yaml#/histone_family"
+    enum:
+      - H1
+      - H2A
+      - H2B
+      - H3
+      - H4
+      - Unknown
+      - Not Reported
+
+  histone_variant:
+    term:
+      $ref: "_terms.yaml#/histone_variant"
+    enum:
+      - CENP-A
+      - H2A-Bbd
+      - H2A.X
+      - H2A.Z
+      - H2A.Z.1
+      - H2A.Z.2
+      - H2A.Z.2.2
+      - H3.1
+      - H3.2
+      - H3.3
+      - H3.5
+      - H3.X
+      - H3.Y
+      - H3t (H3.4)
+      - mH2A
+      - mH2A.1
+      - mH2A.2
+      - Unknown
+      - Not Reported
+
+  loci_abnormal_count:
+    term:
+      $ref: "_terms.yaml#/loci_abnormal_count"
+    type: integer
+
+  loci_count:
+    term:
+      $ref: "_terms.yaml#/loci_count"
+    type: integer
+
+  locus:
+    term:
+      $ref: "_terms.yaml#/locus"
+    type: string
+
+  mismatch_repair_mutation:
+    term:
+      $ref: "_terms.yaml#/mismatch_repair_mutation"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
+  molecular_analysis_method:
+    term:
+      $ref: "_terms.yaml#/molecular_analysis_method"
+    enum:
+      - Comparative Genomic Hybridization
+      - FISH
+      - Flow Cytometry
+      - IHC
+      - Karyotype
+      - Microarray
+      - Microsatellite Analysis
+      - Nuclear Staining
+      - Other
+      - RNA Sequencing
+      - RT-PCR
+      - Sequencing, NOS
+      - Southern Blotting
+      - Targeted Sequencing
+      - WGS
+      - WXS
+      - Unknown
+      - Not Reported
+
+  molecular_consequence:
+    term:
+      $ref: "_terms.yaml#/molecular_consequence"
+    enum:
+      - 3 Prime UTR Variant
+      - 5 Prime UTR Variant
+      - Coding Sequence Variant
+      - Downstream Gene Variant
+      - Feature Elongation
+      - Feature Truncation
+      - Frameshift Variant
+      - Incomplete Terminal Codon Variant
+      - Inframe Deletion
+      - Inframe Insertion
+      - Intergenic Variant
+      - Intron Variant
+      - Mature miRNA Variant
+      - Missense Variant
+      - NMD Transcript Variant
+      - Non-coding Transcript Exon Variant
+      - Non-coding Transcript Variant
+      - Protein Altering Variant
+      - Regulatory Region Ablation
+      - Regulatory Region Amplification
+      - Regulatory Region Variant
+      - Splice Acceptor Variant
+      - Splice Donor Variant
+      - Splice Region Variant
+      - Start Lost
+      - Stop Gain
+      - Stop Lost
+      - Stop Retained Variant
+      - Synonymous Variant
+      - TF Binding Site Variant
+      - TFBS Ablation
+      - TFBS Amplification
+      - Transcript Ablation
+      - Transcript Amplification
+      - Upstream Gene Variant
+
+  ploidy:
+    term:
+      $ref: "_terms.yaml#/ploidy"
+    enum:
+      - Aneuploid
+      - Diploid
+      - Hyperdiploid
+      - Hypodiploid
+      - Near Diploid
+      - Tetraploid
+      - Unknown
+      - Not Reported
+
+  rna_change:
+    term:
+      $ref: "_terms.yaml#/rna_change"
+    type: string
+
+  second_gene_symbol:
+    term:
+      $ref: "_terms.yaml#/second_gene_symbol"
+    enum:
+      - A1CF
+      - ABI1
+      - ABL1
+      - ABL2
+      - ACKR3
+      - ACSL3
+      - ACSL6
+      - ACVR1
+      - ACVR2A
+      - AFF1
+      - AFF3
+      - AFF4
+      - AKAP9
+      - AKT1
+      - AKT2
+      - AKT3
+      - ALDH2
+      - ALK
+      - AMER1
+      - ANK1
+      - APC
+      - APOBEC3B
+      - AR
+      - ARAF
+      - ARHGAP26
+      - ARHGAP5
+      - ARHGEF12
+      - ARID1A
+      - ARID1B
+      - ARID2
+      - ARNT
+      - ASPSCR1
+      - ASXL1
+      - ASXL2
+      - ATF1
+      - ATIC
+      - ATM
+      - ATP1A1
+      - ATP2B3
+      - ATR
+      - ATRX
+      - AXIN1
+      - AXIN2
+      - B2M
+      - BAP1
+      - BARD1
+      - BCL10
+      - BCL11A
+      - BCL11B
+      - BCL2
+      - BCL2L12
+      - BCL3
+      - BCL6
+      - BCL7A
+      - BCL9
+      - BCL9L
+      - BCLAF1
+      - BCOR
+      - BCORL1
+      - BCR
+      - BIRC3
+      - BIRC6
+      - BLM
+      - BMP5
+      - BMPR1A
+      - BRAF
+      - BRCA1
+      - BRCA2
+      - BRD3
+      - BRD4
+      - BRIP1
+      - BTG1
+      - BTK
+      - BUB1B
+      - C15orf65
+      - CACNA1D
+      - CALR
+      - CAMTA1
+      - CANT1
+      - CARD11
+      - CARS
+      - CASP8
+      - CBFA2T3
+      - CBFB
+      - CBL
+      - CBLB
+      - CBLC
+      - CCDC6
+      - CCNB1IP1
+      - CCNC
+      - CCND1
+      - CCND2
+      - CCND3
+      - CCNE1
+      - CCR4
+      - CCR7
+      - CD209
+      - CD274
+      - CD28
+      - CD74
+      - CD79A
+      - CD79B
+      - CD99
+      - CDC73
+      - CDH1
+      - CDH10
+      - CDH11
+      - CDH17
+      - CDK12
+      - CDK4
+      - CDK6
+      - CDKN1A
+      - CDKN1B
+      - CDKN2A
+      - CDKN2C
+      - CDX2
+      - CEBPA
+      - CEP89
+      - CHCHD7
+      - CHD2
+      - CHD4
+      - CHEK2
+      - CHIC2
+      - CHST11
+      - CIC
+      - CIITA
+      - CLIP1
+      - CLP1
+      - CLTC
+      - CLTCL1
+      - CNBD1
+      - CNBP
+      - CNOT3
+      - CNTNAP2
+      - CNTRL
+      - COL1A1
+      - COL2A1
+      - COL3A1
+      - COX6C
+      - CREB1
+      - CREB3L1
+      - CREB3L2
+      - CREBBP
+      - CRLF2
+      - CRNKL1
+      - CRTC1
+      - CRTC3
+      - CSF1R
+      - CSF3R
+      - CSMD3
+      - CTCF
+      - CTNNA2
+      - CTNNB1
+      - CTNND1
+      - CTNND2
+      - CUL3
+      - CUX1
+      - CXCR4
+      - CYLD
+      - CYP2C8
+      - CYSLTR2
+      - DAXX
+      - DCAF12L2
+      - DCC
+      - DCTN1
+      - DDB2
+      - DDIT3
+      - DDR2
+      - DDX10
+      - DDX3X
+      - DDX5
+      - DDX6
+      - DEK
+      - DGCR8
+      - DICER1
+      - DNAJB1
+      - DNM2
+      - DNMT3A
+      - DROSHA
+      - DUX4L1
+      - EBF1
+      - ECT2L
+      - EED
+      - EGFR
+      - EIF1AX
+      - EIF3E
+      - EIF4A2
+      - ELF3
+      - ELF4
+      - ELK4
+      - ELL
+      - ELN
+      - EML4
+      - EP300
+      - EPAS1
+      - EPHA3
+      - EPHA7
+      - EPS15
+      - ERBB2
+      - ERBB3
+      - ERBB4
+      - ERC1
+      - ERCC2
+      - ERCC3
+      - ERCC4
+      - ERCC5
+      - ERG
+      - ESR1
+      - ETNK1
+      - ETV1
+      - ETV4
+      - ETV5
+      - ETV6
+      - EWSR1
+      - EXT1
+      - EXT2
+      - EZH2
+      - EZR
+      - FAM131B
+      - FAM135B
+      - FAM46C
+      - FAM47C
+      - FANCA
+      - FANCC
+      - FANCD2
+      - FANCE
+      - FANCF
+      - FANCG
+      - FAS
+      - FAT1
+      - FAT3
+      - FAT4
+      - FBLN2
+      - FBXO11
+      - FBXW7
+      - FCGR2B
+      - FCRL4
+      - FEN1
+      - FES
+      - FEV
+      - FGFR1
+      - FGFR1OP
+      - FGFR2
+      - FGFR3
+      - FGFR4
+      - FH
+      - FHIT
+      - FIP1L1
+      - FKBP9
+      - FLCN
+      - FLI1
+      - FLNA
+      - FLT3
+      - FLT4
+      - FNBP1
+      - FOXA1
+      - FOXL2
+      - FOXO1
+      - FOXO3
+      - FOXO4
+      - FOXP1
+      - FOXR1
+      - FSTL3
+      - FUBP1
+      - FUS
+      - GAS7
+      - GATA1
+      - GATA2
+      - GATA3
+      - GLI1
+      - GMPS
+      - GNA11
+      - GNAQ
+      - GNAS
+      - GOLGA5
+      - GOPC
+      - GPC3
+      - GPHN
+      - GRIN2A
+      - GRM3
+      - H3F3A
+      - H3F3B
+      - HERPUD1
+      - HEY1
+      - HIF1A
+      - HIP1
+      - HIST1H3B
+      - HIST1H4I
+      - HLA-A
+      - HLF
+      - HMGA1
+      - HMGA2
+      - HMGN2P46
+      - HNF1A
+      - HNRNPA2B1
+      - HOOK3
+      - HOXA11
+      - HOXA13
+      - HOXA9
+      - HOXC11
+      - HOXC13
+      - HOXD11
+      - HOXD13
+      - HRAS
+      - HSP90AA1
+      - HSP90AB1
+      - ID3
+      - IDH1
+      - IDH2
+      - IGH
+      - IGK
+      - IGL
+      - IKBKB
+      - IKZF1
+      - IL2
+      - IL21R
+      - IL6ST
+      - IL7R
+      - IRF4
+      - IRS4
+      - ISX
+      - ITGAV
+      - ITK
+      - JAK1
+      - JAK2
+      - JAK3
+      - JAZF1
+      - JUN
+      - KAT6A
+      - KAT6B
+      - KAT7
+      - KCNJ5
+      - KDM5A
+      - KDM5C
+      - KDM6A
+      - KDR
+      - KDSR
+      - KEAP1
+      - KIAA1549
+      - KIF5B
+      - KIT
+      - KLF4
+      - KLF6
+      - KLK2
+      - KMT2A
+      - KMT2C
+      - KMT2D
+      - KNL1
+      - KNSTRN
+      - KRAS
+      - KTN1
+      - LARP4B
+      - LASP1
+      - LCK
+      - LCP1
+      - LEF1
+      - LHFP
+      - LIFR
+      - LMNA
+      - LMO1
+      - LMO2
+      - LPP
+      - LRIG3
+      - LRP1B
+      - LSM14A
+      - LYL1
+      - LZTR1
+      - MAF
+      - MAFB
+      - MALAT1
+      - MALT1
+      - MAML2
+      - MAP2K1
+      - MAP2K2
+      - MAP2K4
+      - MAP3K1
+      - MAP3K13
+      - MAPK1
+      - MAX
+      - MB21D2
+      - MDM2
+      - MDM4
+      - MDS2
+      - MECOM
+      - MED12
+      - MEN1
+      - MET
+      - MGMT
+      - MITF
+      - MKL1
+      - MLF1
+      - MLH1
+      - MLH2
+      - MLLT1
+      - MLLT10
+      - MLLT11
+      - MLLT3
+      - MLLT4
+      - MLLT6
+      - MN1
+      - MNX1
+      - MPL
+      - MSH2
+      - MSH6
+      - MSI2
+      - MSN
+      - MTCP1
+      - MTOR
+      - MUC1
+      - MUC16
+      - MUC4
+      - MUTYH
+      - MYB
+      - MYC
+      - MYCL
+      - MYCN
+      - MYD88
+      - MYH11
+      - MYH9
+      - MYO5A
+      - MYOD1
+      - NAB2
+      - NACA
+      - NBEA
+      - NBN
+      - NCKIPSD
+      - NCOA1
+      - NCOA2
+      - NCOA4
+      - NCOR1
+      - NCOR2
+      - NDRG1
+      - NF1
+      - NF2
+      - NFATC2
+      - NFE2L2
+      - NFIB
+      - NFKB2
+      - NFKBIE
+      - NIN
+      - NKX2-1
+      - NONO
+      - NOTCH1
+      - NOTCH2
+      - NPM1
+      - NR4A3
+      - NRAS
+      - NRG1
+      - NSD1
+      - NSD2
+      - NSD3
+      - NT5C2
+      - NTHL1
+      - NTRK1
+      - NTRK3
+      - NUMA1
+      - NUP214
+      - NUP98
+      - NUTM1
+      - NUTM2A
+      - NUTM2B
+      - OLIG2
+      - OMD
+      - P2RY8
+      - PABPC1
+      - PAFAH1B2
+      - PALB2
+      - PATZ1
+      - PAX3
+      - PAX5
+      - PAX7
+      - PAX8
+      - PBRM1
+      - PBX1
+      - PCBP1
+      - PCM1
+      - PDCD1LG2
+      - PDE4DIP
+      - PDGFB
+      - PDGFRA
+      - PDGFRB
+      - PER1
+      - PGR
+      - PHF6
+      - PHOX2B
+      - PICALM
+      - PIK3CA
+      - PIK3CB
+      - PIK3R1
+      - PIM1
+      - PLAG1
+      - PLCG1
+      - PML
+      - PMS1
+      - PMS2
+      - POLD1
+      - POLE
+      - POLG
+      - POLQ
+      - POT1
+      - POU2AF1
+      - POU5F1
+      - PPARG
+      - PPFIBP1
+      - PPM1D
+      - PPP2R1A
+      - PPP6C
+      - PRCC
+      - PRDM1
+      - PRDM16
+      - PRDM2
+      - PREX2
+      - PRF1
+      - PRKACA
+      - PRKAR1A
+      - PRKCB
+      - PRPF40B
+      - PRRX1
+      - PSIP1
+      - PTCH1
+      - PTEN
+      - PTK6
+      - PTPN11
+      - PTPN13
+      - PTPN6
+      - PTPRB
+      - PTPRC
+      - PTPRK
+      - PTPRT
+      - PWWP2A
+      - QKI
+      - RABEP1
+      - RAC1
+      - RAD21
+      - RAD51B
+      - RAF1
+      - RALGDS
+      - RANBP2
+      - RAP1GDS1
+      - RARA
+      - RB1
+      - RBM10
+      - RBM15
+      - RECQL4
+      - REL
+      - RET
+      - RGPD3
+      - RGS7
+      - RHOA
+      - RHOH
+      - RMI2
+      - RNF213
+      - RNF43
+      - ROBO2
+      - ROS1
+      - RPL10
+      - RPL22
+      - RPL5
+      - RPN1
+      - RSPO2
+      - RSPO3
+      - RUNX1
+      - RUNX1T1
+      - S100A7
+      - SALL4
+      - SBDS
+      - SDC4
+      - SDHA
+      - SDHAF2
+      - SDHB
+      - SDHC
+      - SDHD
+      - SEPT5
+      - SEPT6
+      - SEPT9
+      - SET
+      - SETBP1
+      - SETD2
+      - SF3B1
+      - SFPQ
+      - SFRP4
+      - SGK1
+      - SH2B3
+      - SH3GL1
+      - SHTN1
+      - SIRPA
+      - SKI
+      - SLC34A2
+      - SLC45A3
+      - SMAD2
+      - SMAD3
+      - SMAD4
+      - SMARCA4
+      - SMARCB1
+      - SMARCD1
+      - SMARCE1
+      - SMC1A
+      - SMO
+      - SND1
+      - SNX29
+      - SOCS1
+      - SOX2
+      - SPECC1
+      - SPEN
+      - SPOP
+      - SRC
+      - SRGAP3
+      - SRSF2
+      - SRSF3
+      - SS18
+      - SS18L1
+      - SSX1
+      - SSX2
+      - SSX4
+      - STAG1
+      - STAG2
+      - STAT3
+      - STAT5B
+      - STAT6
+      - STIL
+      - STK11
+      - STRN
+      - SUFU
+      - SUZ12
+      - SYK
+      - TAF15
+      - TAL1
+      - TAL2
+      - TBL1XR1
+      - TBX3
+      - TCEA1
+      - TCF12
+      - TCF3
+      - TCF7L2
+      - TCL1A
+      - TEC
+      - TERT
+      - TET1
+      - TET2
+      - TFE3
+      - TFEB
+      - TFG
+      - TFPT
+      - TFRC
+      - TGFBR2
+      - THRAP3
+      - TLX1
+      - TLX3
+      - TMEM127
+      - TMPRSS2
+      - TNC
+      - TNFAIP3
+      - TNFRSF14
+      - TNFRSF17
+      - TOP1
+      - TP53
+      - TP63
+      - TPM3
+      - TPM4
+      - TPR
+      - TRA
+      - TRAF7
+      - TRB
+      - TRD
+      - TRIM24
+      - TRIM27
+      - TRIM33
+      - TRIP11
+      - TRRAP
+      - TSC1
+      - TSC2
+      - TSHR
+      - U2AF1
+      - UBR5
+      - USP6
+      - USP8
+      - VAV1
+      - VHL
+      - VTI1A
+      - WAS
+      - WDCP
+      - WIF1
+      - WNK2
+      - WRN
+      - WT1
+      - WWTR1
+      - XPA
+      - XPC
+      - XPO1
+      - YWHAE
+      - ZBTB16
+      - ZCCHC8
+      - ZEB1
+      - ZFHX3
+      - ZMYM3
+      - ZNF198
+      - ZNF331
+      - ZNF384
+      - ZNF429
+      - ZNF444
+      - ZNF479
+      - ZNF521
+      - ZNRF3
+      - ZRSR2
+      - Unknown
+      - Not Reported
+
+  specialized_molecular_test:
+    term:
+      $ref: "_terms.yaml#/specialized_molecular_test"
+    type: string
+
+  test_analyte_type:
+    term:
+      $ref: "_terms.yaml#/test_analyte_type"
+    enum:
+      - DNA
+      - mRNA
+      - miRNA
+      - Protein
+      - Total RNA
+      - Unknown
+      - Not Reported
+
+  test_result:
+    term:
+      $ref: "_terms.yaml#/test_result"
+    enum:
+      - Positive
+      - Negative
+      - Equivocal
+      - High
+      - Low
+      - Test Value Reported
+      - Unknown
+      - Not Reported
+
+  test_units:
+    term:
+      $ref: "_terms.yaml#/test_units"
+    type: string
+
+  test_value:
+    term:
+      $ref: "_terms.yaml#/test_value"
+    type: number
+
+  transcript:
+    term:
+      $ref: "_terms.yaml#/transcript"
+    type: string
+
+  variant_type:
+    term:
+      $ref: "_terms.yaml#/variant_type"
+    enum:
+      - Alleles
+      - Amplification
+      - Chrimerism
+      - Conversion
+      - Deletion
+      - Deletion-Insertion
+      - Duplication
+      - Extension
+      - Hypermethylation
+      - Insertion
+      - Inversion
+      - Methylation
+      - Mosaicism
+      - Other
+      - Partial Methylation
+      - Rearrangement
+      - Repeated Sequences
+      - Splice
+      - Substitution
+      - Translocation
+      - Unknown
+      - Not Reported
+
+  zygosity:
+    term:
+      $ref: "_terms.yaml#/zygosity"
+    enum:
+      - Heterozygous
+      - Hemizygous
+      - Homozygous
+      - Nullizygous
+      - Unknown
+      - Not Reported
+
+  follow_ups:
+    $ref: "_definitions.yaml#/to_one"

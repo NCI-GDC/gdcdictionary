@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "slide"
 title: Slide
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: biospecimen
 program: '*'
 project: '*'
@@ -11,6 +11,7 @@ description: >
   A digital image, microscopic or otherwise, of any sample, portion, or sub-part thereof. (GDC)
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:
@@ -45,81 +46,75 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
-# slide properties
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
-    description: >
-      The legacy barcode used before prior to the use UUIDs, varies by project.
-      For TCGA, this is bcrslidebarcode.
-  section_location:
-    term:
-      $ref: "_terms.yaml#/section_location"
-    type: string
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
   number_proliferating_cells:
     term:
       $ref: "_terms.yaml#/number_proliferating_cells"
     type: integer
+
   percent_tumor_cells:
     term:
       $ref: "_terms.yaml#/percent_tumor_cells"
     type: number
+
   percent_tumor_nuclei:
     term:
       $ref: "_terms.yaml#/percent_tumor_nuclei"
     type: number
+
   percent_normal_cells:
     term:
       $ref: "_terms.yaml#/percent_normal_cells"
     type: number
+
   percent_necrosis:
     term:
       $ref: "_terms.yaml#/percent_necrosis"
     type: number
+
   percent_stromal_cells:
     term:
       $ref: "_terms.yaml#/percent_stromal_cells"
     type: number
+
   percent_inflam_infiltration:
     term:
       $ref: "_terms.yaml#/percent_inflam_infiltration"
     type: number
+
   percent_lymphocyte_infiltration:
     term:
       $ref: "_terms.yaml#/percent_lymphocyte_infiltration"
     type: number
+
   percent_monocyte_infiltration:
     term:
       $ref: "_terms.yaml#/percent_monocyte_infiltration"
     type: number
+
   percent_granulocyte_infiltration:
     term:
       $ref: "_terms.yaml#/percent_granulocyte_infiltration"
     type: number
+
   percent_neutrophil_infiltration:
     term:
       $ref: "_terms.yaml#/percent_neutrophil_infiltration"
     type: number
+
   percent_eosinophil_infiltration:
     term:
       $ref: "_terms.yaml#/percent_eosinophil_infiltration"
     type: number
+
+  section_location:
+    term:
+      $ref: "_terms.yaml#/section_location"
+    type: string
+
   portions:
     $ref: "_definitions.yaml#/to_many"
   samples:
     $ref: "_definitions.yaml#/to_many"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

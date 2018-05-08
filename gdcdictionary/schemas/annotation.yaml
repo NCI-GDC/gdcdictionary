@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "annotation"
 title: Annotation
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: notation
 program: '*'
 project: '*'
@@ -13,6 +13,7 @@ description: >
   other types of information. (NCIt C44272)
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:
@@ -26,34 +27,28 @@ links:
   - exclusive: false
     required: true
     subgroup:
-      - name: cases
+      - name: aggregated_somatic_mutations
         label: annotates
         backref: annotations
-        target_type: case
+        target_type: aggregated_somatic_mutation
         multiplicity: many_to_many
         required: false
-      - name: samples
+      - name: aligned_reads_indexes
         label: annotates
         backref: annotations
-        target_type: sample
+        target_type: aligned_reads_index
         multiplicity: many_to_many
         required: false
-      - name: slides
+      - name: aligned_reads_metrics
         label: annotates
         backref: annotations
-        target_type: slide
+        target_type: aligned_reads_metric
         multiplicity: many_to_many
         required: false
-      - name: portions
+      - name: aligned_reads_files
         label: annotates
         backref: annotations
-        target_type: portion
-        multiplicity: many_to_many
-        required: false
-      - name: analytes
-        label: annotates
-        backref: annotations
-        target_type: analyte
+        target_type: aligned_reads
         multiplicity: many_to_many
         required: false
       - name: aliquots
@@ -62,16 +57,28 @@ links:
         target_type: aliquot
         multiplicity: many_to_many
         required: false
-      - name: files
+      - name: analysis_metadata_files
         label: annotates
         backref: annotations
-        target_type: file
+        target_type: analysis_metadata
         multiplicity: many_to_many
         required: false
-      - name: clinical_supplements
+      - name: analytes
         label: annotates
         backref: annotations
-        target_type: clinical_supplement
+        target_type: analyte
+        multiplicity: many_to_many
+        required: false
+      - name: annotated_somatic_mutations
+        label: annotates
+        backref: annotations
+        target_type: annotated_somatic_mutation
+        multiplicity: many_to_many
+        required: false
+      - name: archives
+        label: annotates
+        backref: annotations
+        target_type: archive
         multiplicity: many_to_many
         required: false
       - name: biospecimen_supplements
@@ -80,10 +87,220 @@ links:
         target_type: biospecimen_supplement
         multiplicity: many_to_many
         required: false
+      - name: cases
+        label: annotates
+        backref: annotations
+        target_type: case
+        multiplicity: many_to_many
+        required: false
+      - name: centers
+        label: annotates
+        backref: annotations
+        target_type: center
+        multiplicity: many_to_many
+        required: false
+      - name: clinical_supplements
+        label: annotates
+        backref: annotations
+        target_type: clinical_supplement
+        multiplicity: many_to_many
+        required: false
+      - name: copy_number_segments
+        label: annotates
+        backref: annotations
+        target_type: copy_number_segment
+        multiplicity: many_to_many
+        required: false
+      - name: demographics
+        label: annotates
+        backref: annotations
+        target_type: demographic
+        multiplicity: many_to_many
+        required: false
+      - name: diagnoses
+        label: annotates
+        backref: annotations
+        target_type: diagnosis
+        multiplicity: many_to_many
+        required: false
+      - name: experiment_metadata_files
+        label: annotates
+        backref: annotations
+        target_type: experiment_metadata
+        multiplicity: many_to_many
+        required: false
+      - name: exposures
+        label: annotates
+        backref: annotations
+        target_type: exposure
+        multiplicity: many_to_many
+        required: false
+      - name: family_histories
+        label: annotates
+        backref: annotations
+        target_type: family_history
+        multiplicity: many_to_many
+        required: false
+      - name: files
+        label: annotates
+        backref: annotations
+        target_type: file
+        multiplicity: many_to_many
+        required: false
+      - name: filtered_copy_number_segments
+        label: annotates
+        backref: annotations
+        target_type: filtered_copy_number_segment
+        multiplicity: many_to_many
+        required: false
+      - name: follow_ups
+        label: annotates
+        backref: annotations
+        target_type: follow_up
+        multiplicity: many_to_many
+        required: false
+      - name: gene_expressions
+        label: annotates
+        backref: annotations
+        target_type: gene_expression
+        multiplicity: many_to_many
+        required: false
+      - name: masked_somatic_mutations
+        label: annotates
+        backref: annotations
+        target_type: masked_somatic_mutation
+        multiplicity: many_to_many
+        required: false
+      - name: methylation_beta_values
+        label: annotates
+        backref: annotations
+        target_type: methylation_beta_value
+        multiplicity: many_to_many
+        required: false
+      - name: mirna_expressions
+        label: annotates
+        backref: annotations
+        target_type: mirna_expression
+        multiplicity: many_to_many
+        required: false
+      - name: pathology_reports
+        label: annotates
+        backref: annotations
+        target_type: pathology_report
+        multiplicity: many_to_many
+        required: false
+      - name: portions
+        label: annotates
+        backref: annotations
+        target_type: portion
+        multiplicity: many_to_many
+        required: false
+      - name: read_group_qcs
+        label: annotates
+        backref: annotations
+        target_type: read_group_qc
+        multiplicity: many_to_many
+        required: false
       - name: read_groups
         label: annotates
         backref: annotations
         target_type: read_group
+        multiplicity: many_to_many
+        required: false  
+      - name: run_metadata_files
+        label: annotates
+        backref: annotations
+        target_type: run_metadata
+        multiplicity: many_to_many
+        required: false
+      - name: sample_level_mafs
+        label: annotates
+        backref: annotations
+        target_type: sample_level_maf
+        multiplicity: many_to_many
+        required: false
+      - name: samples
+        label: annotates
+        backref: annotations
+        target_type: sample
+        multiplicity: many_to_many
+        required: false
+      - name: simple_germline_variations
+        label: annotates
+        backref: annotations
+        target_type: simple_germline_variation
+        multiplicity: many_to_many
+        required: false
+      - name: simple_somatic_mutations
+        label: annotates
+        backref: annotations
+        target_type: simple_somatic_mutation
+        multiplicity: many_to_many
+        required: false
+      - name: slide_images
+        label: annotates
+        backref: annotations
+        target_type: slide_image
+        multiplicity: many_to_many
+        required: false
+      - name: slides
+        label: annotates
+        backref: annotations
+        target_type: slide
+        multiplicity: many_to_many
+        required: false
+      - name: somatic_mutation_indexes
+        label: annotates
+        backref: annotations
+        target_type: somatic_mutation_index
+        multiplicity: many_to_many
+        required: false
+      - name: structural_variations
+        label: annotates
+        backref: annotations
+        target_type: structural_variation
+        multiplicity: many_to_many
+        required: false
+      - name: submitted_aligned_reads_files
+        label: annotates
+        backref: annotations
+        target_type: submitted_aligned_reads
+        multiplicity: many_to_many
+        required: false
+      - name: submitted_genomic_profiles
+        label: annotates
+        backref: annotations
+        target_type: submitted_genomic_profile
+        multiplicity: many_to_many
+        required: false
+      - name: submitted_methylation_beta_values
+        label: annotates
+        backref: annotations
+        target_type: submitted_methylation_beta_value
+        multiplicity: many_to_many
+        required: false
+      - name: submitted_tangent_copy_numbers
+        label: annotates
+        backref: annotations
+        target_type: submitted_tangent_copy_number
+        multiplicity: many_to_many
+        required: false
+      - name: submitted_unaligned_reads_files
+        label: annotates
+        backref: annotations
+        target_type: submitted_unaligned_reads
+        multiplicity: many_to_many
+        required: false
+      - name: tissue_source_sites
+        label: annotates
+        backref: annotations
+        target_type: tissue_source_site
+        multiplicity: many_to_many
+        required: false
+      - name: treatments
+        label: annotates
+        backref: annotations
+        target_type: treatment
         multiplicity: many_to_many
         required: false
 
@@ -97,17 +314,8 @@ uniqueKeys:
 
 # annotation properties
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  submitter_id:
-    type:
-      - string
-      - "null"
-  state:
-    $ref: "_definitions.yaml#/state"
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
   category:
     enum:
       - Acceptable treatment for TCGA tumor
@@ -153,46 +361,117 @@ properties:
       - Tumor type incorrect
       - WGA Failure
     description: "Top level characterization of the annotation." # TOREVEIW
+
   classification:
     type: string
     description: "Top level classification of the annotation." # TOREVIEW
+
   creator:
     type: string
     description: "Name of the person or entity responsible for the creation of the annotation." # TOREVIEW
-  status:
-    type: string
-    description: "Status of the annotation." # TOREVIEW; is there an enum?
+
   notes:
     type: string
     description: "Open entry for any further description or characterization of the data." # TOREVIEW
 
-  cases:
+  status:
+    type: string
+    description: "Status of the annotation." # TOREVIEW; is there an enum?
+
+  aggregated_somatic_mutations:
     $ref: "_definitions.yaml#/to_many"
-  samples:
+  aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
-  slides:
+  aligned_reads_indexes:
     $ref: "_definitions.yaml#/to_many"
-  portions:
-    $ref: "_definitions.yaml#/to_many"
-  analytes:
+  aligned_reads_metrics:
     $ref: "_definitions.yaml#/to_many"
   aliquots:
     $ref: "_definitions.yaml#/to_many"
-  files:
+  analysis_metadata_files:
     $ref: "_definitions.yaml#/to_many"
-  read_groups:
+  analytes:
     $ref: "_definitions.yaml#/to_many"
-  clinical_supplements:
+  annotated_somatic_mutations:
+    $ref: "_definitions.yaml#/to_many"
+  archives:
     $ref: "_definitions.yaml#/to_many"
   biospecimen_supplements:
     $ref: "_definitions.yaml#/to_many"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
+  cases:
+    $ref: "_definitions.yaml#/to_many"
+  centers:
+    $ref: "_definitions.yaml#/to_many"
+  clinical_supplements:
+    $ref: "_definitions.yaml#/to_many"
+  copy_number_segments:
+    $ref: "_definitions.yaml#/to_many"
+  demographics:
+    $ref: "_definitions.yaml#/to_many"
+  diagnoses:
+    $ref: "_definitions.yaml#/to_many"
+  experiment_metadata_files:
+    $ref: "_definitions.yaml#/to_many"
+  exposures:
+    $ref: "_definitions.yaml#/to_many"
+  family_histories:
+    $ref: "_definitions.yaml#/to_many"
+  files:
+    $ref: "_definitions.yaml#/to_many"
+  filtered_copy_number_segments:
+    $ref: "_definitions.yaml#/to_many"
+  follow_ups:
+    $ref: "_definitions.yaml#/to_many"
+  gene_expressions:
+    $ref: "_definitions.yaml#/to_many"
+  masked_somatic_mutations:
+    $ref: "_definitions.yaml#/to_many"
+  methylation_beta_values:
+    $ref: "_definitions.yaml#/to_many"
+  mirna_expressions:
+    $ref: "_definitions.yaml#/to_many"
+  pathology_reports:
+    $ref: "_definitions.yaml#/to_many"
+  portions:
+    $ref: "_definitions.yaml#/to_many"
+  read_groups:
+    $ref: "_definitions.yaml#/to_many"
+  read_group_qcs:
+    $ref: "_definitions.yaml#/to_many"
+  run_metadata_files:
+    $ref: "_definitions.yaml#/to_many"
+  samples:
+    $ref: "_definitions.yaml#/to_many"
+  sample_level_mafs:
+    $ref: "_definitions.yaml#/to_many"
+  simple_germline_variations:
+    $ref: "_definitions.yaml#/to_many"
+  simple_somatic_mutations:
+    $ref: "_definitions.yaml#/to_many"
+  slide_images:
+    $ref: "_definitions.yaml#/to_many"
+  slides:
+    $ref: "_definitions.yaml#/to_many"
+  somatic_mutation_indexes:
+    $ref: "_definitions.yaml#/to_many"
+  structural_variations:
+    $ref: "_definitions.yaml#/to_many"
+  submitted_aligned_reads_files:
+    $ref: "_definitions.yaml#/to_many"
+  submitted_genomic_profiles:
+    $ref: "_definitions.yaml#/to_many"
+  submitted_methylation_beta_values:
+    $ref: "_definitions.yaml#/to_many"
+  submitted_tangent_copy_numbers:
+    $ref: "_definitions.yaml#/to_many"
+  submitted_unaligned_reads_files:
+    $ref: "_definitions.yaml#/to_many"
+  tissue_source_sites:
+    $ref: "_definitions.yaml#/to_many"
+  treatments:
+    $ref: "_definitions.yaml#/to_many"
+
   legacy_created_datetime:
     $ref: "_definitions.yaml#/datetime"
   legacy_updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
     $ref: "_definitions.yaml#/datetime"

@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "tissue_source_site"
 title: Tissue Source Site
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: administrative
 program: '*'
 project: '*'
@@ -12,6 +12,7 @@ description: >
   (NCIt C103264)
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

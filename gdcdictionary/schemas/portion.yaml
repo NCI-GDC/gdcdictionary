@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "portion"
 title: Portion
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: biospecimen
 program: '*'
 project: '*'
@@ -11,6 +11,7 @@ description: >
   A physical sub-part of any sample.
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:
@@ -22,7 +23,6 @@ systemProperties:
 
 required:
   - submitter_id
-  - samples
 
 uniqueKeys:
   - [id]
@@ -43,46 +43,26 @@ links:
     required: false
 
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-    description: "The UUID for the portion" # TOREVIEW
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
-    description: >
-      The legacy barcode used before prior to the use UUIDs, varies by
-      project. For TCGA this is bcrportionbarcode.
-  weight:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  creation_datetime:
     term:
-      $ref: "_terms.yaml#/portion_weight"
+      $ref: "_terms.yaml#/creation_datetime"
     type: number
   is_ffpe:
     term:
       $ref: "_terms.yaml#/is_ffpe"
     type: boolean
-  creation_datetime:
-    term:
-      $ref: "_terms.yaml#/creation_datetime"
-    type: number
   portion_number:
     term:
       $ref: "_terms.yaml#/portion_number"
     type: string
+  weight:
+    term:
+      $ref: "_terms.yaml#/portion_weight"
+    type: number
 
   samples:
     $ref: "_definitions.yaml#/to_one"
   centers:
     $ref: "_definitions.yaml#/to_one"
-
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

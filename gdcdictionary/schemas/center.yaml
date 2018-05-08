@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "center"
 title: Center
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: administrative
 program: '*'
 project: '*'
@@ -12,6 +12,7 @@ description: >
   with respect to GDC prescribed or defined data formats. (GDC subclass of NCIt C19711)
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

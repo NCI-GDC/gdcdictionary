@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "diagnosis"
 title: Diagnosis
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: clinical
 program: '*'
 project: '*'
@@ -13,6 +13,7 @@ description: >
   kind; the concise results of such an investigation.
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:
@@ -46,8 +47,24 @@ required:
   - last_known_disease_status
 
 preferred:
-  - days_to_birth
   - site_of_resection_or_biopsy
+
+deprecated:
+  - cause_of_death
+  - colon_polyps_history
+  - days_to_birth
+  - days_to_death
+  - days_to_hiv_diagnosis
+  - days_to_new_event
+  - hiv_positive
+  - hpv_positive_type
+  - hpv_status
+  - ldh_normal_range_upper
+  - new_event_anatomic_site
+  - new_event_type
+  - overall_survival
+  - progression_free_survival
+  - progression_free_survival_event
 
 uniqueKeys:
   #unclear if want submitter ID for clinical
@@ -55,20 +72,7 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 properties:
-  type:
-    type: string
-
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-
-  state:
-    $ref: "_definitions.yaml#/state"
-
-  submitter_id:
-    type:
-      - string
-      - "null"
+  $ref: "_definitions.yaml#ubiquitous_properties"
 
   age_at_diagnosis:
     term:
@@ -92,6 +96,8 @@ properties:
       - cM0 (i+)
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
+    deprecated_enum:
       - Not Allowed To Collect
 
   ajcc_clinical_n:
@@ -124,6 +130,8 @@ properties:
       - NX
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
+    deprecated_enum:
       - Not Allowed To Collect
 
   ajcc_clinical_stage:
@@ -166,6 +174,11 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Not Allowed To Collect
+      - Stage IB Cervix
+      - Stage II Cervix
+      - Stage IIA Cervix
 
   ajcc_clinical_t:
     term:
@@ -208,6 +221,8 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Not Allowed To Collect
 
   ajcc_pathologic_m:
     term:
@@ -223,6 +238,8 @@ properties:
       - cM0 (i+)
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
+    deprecated_enum:
       - Not Allowed To Collect
 
   ajcc_pathologic_n:
@@ -255,6 +272,8 @@ properties:
       - NX
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
+    deprecated_enum:
       - Not Allowed To Collect
 
   ajcc_pathologic_stage:
@@ -335,6 +354,45 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Not Allowed To Collect
+
+  ajcc_staging_system_edition:
+     term:
+       $ref: "_terms.yaml#/ajcc_staging_system_edition"
+     enum:
+       - 1st
+       - 2nd
+       - 3rd
+       - 4th
+       - 5th
+       - 6th
+       - 7th
+       - 8th
+       - Unknown
+       - Not Reported
+
+  anaplasia_present:
+    term:
+      $ref: "_terms.yaml#/anaplasia_present"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
+  anaplasia_present_type:
+    term:
+      $ref: "_terms.yaml#/anaplasia_present_type"
+    enum:
+      - Absent
+      - Diffuse
+      - Equivocal
+      - Focal
+      - Present
+      - Sclerosis
+      - Unknown
+      - Not Reported
 
   ann_arbor_b_symptoms:
     term:
@@ -344,6 +402,8 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
+    deprecated_enum:
       - Not Allowed To Collect
 
   ann_arbor_clinical_stage:
@@ -365,6 +425,8 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
+    deprecated_enum:
       - Not Allowed To Collect
 
   ann_arbor_pathologic_stage:
@@ -421,6 +483,8 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Not Allowed To Collect
 
   cause_of_death:
     term:
@@ -429,6 +493,24 @@ properties:
       - Cancer Related
       - Not Cancer Related
       - Unknown
+
+  child_pugh_classification:
+    term:
+      $ref: "_terms.yaml#/child_pugh_classification"
+    enum:
+      - A
+      - A5
+      - A6
+      - B
+      - B7
+      - B8
+      - B9
+      - C
+      - C10
+      - C11
+      - C12
+      - Unknown
+      - Not Reported
 
   circumferential_resection_margin:
     term:
@@ -446,6 +528,48 @@ properties:
       - Unknown
       - not reported
       - Not Allowed To Collect
+
+  cog_neuroblastoma_risk_group:
+    term:
+      $ref: "_terms.yaml#/cog_neuroblastoma_risk_group"
+    enum:
+      - High Risk
+      - Intermediate Risk
+      - Low Risk
+      - Unknown
+      - Not Reported
+
+  cog_rhabdomyosarcoma_risk_group:
+    term:
+      $ref: "_terms.yaml#/cog_rhabdomyosarcoma_risk_group"
+    enum:
+      - High Risk
+      - Intermediate Risk
+      - Low Risk
+      - Unknown
+      - Not Reported
+
+  cog_renal_stage:
+    term:
+      $ref: "_terms.yaml#/cog_renal_stage"
+    enum:
+      - Stage I
+      - Stage II
+      - Stage III
+      - Stage IV
+      - Unknown
+      - Not Reported
+
+  cog_liver_stage:
+    term:
+      $ref: "_terms.yaml#/cog_liver_stage"
+    enum:
+      - Stage I
+      - Stage II
+      - Stage III
+      - Stage IV
+      - Unknown
+      - Not Reported
 
   colon_polyps_history:
     term:
@@ -518,6 +642,65 @@ properties:
       - number
       - "null"
 
+  enneking_msts_grade:
+    term:
+      $ref: "_terms.yaml#/enneking_msts_grade"
+    enum:
+      - High Grade (G2)
+      - Low Grade (G1)
+      - Unknown
+      - Not Reported
+
+  enneking_msts_metastasis:
+    term:
+      $ref: "_terms.yaml#/enneking_msts_metastasis"
+    enum:
+      - No Metastasis (M0)
+      - Regional or Distant Metastasis (M1)
+      - Unknown
+      - Not Reported
+
+  enneking_msts_stage:
+    term:
+      $ref: "_terms.yaml#/enneking_msts_stage"
+    enum:
+      - Stage IA
+      - Stage IB
+      - Stage IIA
+      - Stage IIB
+      - Stage III
+      - Unknown
+      - Not Reported
+
+  enneking_msts_tumor_site:
+    term:
+      $ref: "_terms.yaml#/enneking_msts_tumor_site"
+    enum:
+      - Extracompartmental (T2)
+      - Intracompartmental (T1)
+      - Unknown
+      - Not Reported
+
+  esophageal_columnar_dysplasia_degree:
+    term:
+      $ref: "_terms.yaml#/esophageal_columnar_dysplasia_degree"
+    enum:
+      - High Grade Dysplasia
+      - Indefinite for Dysplasia
+      - Low Grade Dysplasia
+      - Negative/ No Dysplasia
+      - Unknown
+      - Not Reported
+
+  esophageal_columnar_metaplasia_present:
+    term:
+      $ref: "_terms.yaml#/esophageal_columnar_metaplasia_present"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
   figo_stage:
     term:
       $ref: "_terms.yaml#/figo_stage"
@@ -549,6 +732,44 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Not Allowed To Collect
+
+  first_symptom_prior_to_diagnosis:
+    term:
+      $ref: "_terms.yaml#/first_symptom_prior_to_diagnosis"
+    enum:
+      - Altered Mental Status
+      - Headaches
+      - Motor or Movement Changes
+      - Seizures
+      - Sensory Changes
+      - Visual Changes
+      - Unknown
+      - Not Reported
+
+  gastric_esophageal_junction_involvement:
+    term:
+      $ref: "_terms.yaml#/gastric_esophageal_junction_involvement"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
+  goblet_cells_columnar_mucosa_present:
+    term:
+      $ref: "_terms.yaml#/goblet_cells_columnar_mucosa_present"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
+  gross_tumor_weight:
+    term:
+      $ref: "_terms.yaml#/gross_tumor_weight"
+    type: number
 
   hiv_positive:
     term:
@@ -574,6 +795,96 @@ properties:
       - Negative
       - Positive
       - Unknown
+
+  icd_10_code:
+    term:
+      $ref: "_terms.yaml#/icd_10_code"
+    type: string
+    pattern: ^[A-TV-Z][0-9][A-Z0-9](\.?[A-Z0-9]{1,4})?$
+
+  inpc_grade:
+    term:
+      $ref: "_terms.yaml#/inpc_grade"
+    enum:
+      - Differentiating
+      - Poorly Differentiated
+      - Undifferentiated
+      - Unknown
+      - Not Reported
+
+  inpc_histologic_group:
+    term:
+      $ref: "_terms.yaml#/inpc_histologic_group"
+    enum:
+      - Favorable
+      - Unfavorable
+      - Unknown
+      - Not Reported
+
+  inrg_stage:
+    term:
+      $ref: "_terms.yaml#/inrg_stage"
+    enum:
+      - L1
+      - L2
+      - M
+      - Ms
+      - Unknown
+      - Not Reported
+
+  inss_stage:
+    term:
+      $ref: "_terms.yaml#/inss_stage"
+    enum:
+      - Stage 1
+      - Stage 2A
+      - Stage 2B
+      - Stage 3
+      - Stage 4
+      - Stage 4S
+      - Unknown
+      - Not Reported
+
+  irs_group:
+    term:
+      $ref: "_terms.yaml#/irs_group"
+    enum:
+      - Group I
+      - Group Ia
+      - Group Ib
+      - Group II
+      - Group IIa
+      - Group IIb
+      - Group IIc
+      - Group III
+      - Group IIIa
+      - Group IIIb
+      - Group IV
+      - Unknown
+      - Not Reported
+
+  irs_stage:
+    term:
+      $ref: "_terms.yaml#/irs_stage"
+    enum:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - Unknown
+      - Not Reported
+
+  ishak_fibrosis_score:
+    term:
+      $ref: "_terms.yaml#/ishak_fibrosis_score"
+    enum:
+      - 0 - No Fibrosis
+      - 1,2 - Portal Fibrosis
+      - 3,4 - Fibrous Septa
+      - 5 - Nodular Formation and Incomplete Cirrhosis
+      - 6 - Established Cirrhosis
+      - Unknown
+      - Not Reported
 
   iss_stage:
     term:
@@ -638,6 +949,56 @@ properties:
       - Unknown
       - Not Reported
 
+  medulloblastoma_molecular_classification:
+    term:
+      $ref: "_terms.yaml#/medulloblastoma_molecular_classification"
+    enum:
+      - Not Determined
+      - Non-WNT/non-SHH Activated
+      - SHH-Activated
+      - WNT-Activated
+      - Unknown
+      - Not Reported
+
+  metastasis_at_diagnosis:
+    term:
+      $ref: "_terms.yaml#/metastasis_at_diagnosis"
+    enum:
+      - Distant Metastasis
+      - Metastasis, NOS
+      - No Metastasis
+      - Regional Metastasis
+      - Unknown
+      - Not Reported
+
+  metastasis_at_diagnosis_site:
+    term:
+      $ref: "_terms.yaml#/metastasis_at_diagnosis_site"
+    enum:
+      - Abdomen
+      - Adrenal Gland
+      - Ascites
+      - Bone
+      - Bone Marrow
+      - Brain
+      - Cerebrospinal Fluid
+      - Central Nervous System
+      - Distant Nodes
+      - Distant Organ
+      - Liver
+      - Lung
+      - Lymph Node(s) Axilla
+      - Lymph Node(s)
+      - Mediastinum
+      - Peritoneal Cavity
+      - Peritoneum
+      - Pleura
+      - Skin
+      - Soft Tissue
+      - Spinal Cord
+      - Unknown
+      - Not Reported
+
   method_of_diagnosis:
     term:
       $ref: "_terms.yaml#/method_of_diagnosis"
@@ -666,6 +1027,27 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Not Allowed To Collect
+
+  micropapillary_features:
+    term:
+      $ref: "_terms.yaml#/micropapillary_features"
+    enum:
+      - Absent
+      - Present
+      - Unknown
+      - Not Reported
+
+  mitosis_karyorrhexis_index:
+    term:
+      $ref: "_terms.yaml#/mitosis_karyorrhexis_index"
+    enum:
+      - High
+      - Intermediate
+      - Low
+      - Unknown
+      - Not Reported
 
   morphology:
     term:
@@ -1760,6 +2142,8 @@ properties:
       - 9992/3
       - Unknown
       - Not Reported
+    deprecated_enum:
+      - not reported
 
   new_event_anatomic_site:
     term:
@@ -1907,6 +2291,21 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+
+  peripancreatic_lymph_nodes_positive:
+    term:
+      $ref: "_terms.yaml#/peripancreatic_lymph_nodes_positive"
+    enum:
+      - "0"
+      - 1-3
+      - 4 or More
+      - Unknown
+      - Not Reported
+
+  peripancreatic_lymph_nodes_tested:
+    term:
+      $ref: "_terms.yaml#/peripancreatic_lymph_nodes_tested"
+    type: number
 
   primary_diagnosis:
     term:
@@ -4560,6 +4959,194 @@ properties:
       - C80.1
       - C83.3
       - not reported
+    deprecated_enum:
+      - acute leukemia of ambiguous lineage
+      - acute lymphoblastic leukemia
+      - c00.9
+      - c01
+      - c02.1
+      - c02.2
+      - c02.9
+      - c03.0
+      - c03.1
+      - c03.9
+      - c04.0
+      - c04.9
+      - c05.0
+      - c05.9
+      - c06.0
+      - c06.2
+      - c06.9
+      - c07
+      - c08.0
+      - c09.9
+      - c10.3
+      - c10.9
+      - c13.9
+      - c14.8
+      - c15.3
+      - c15.4
+      - c15.5
+      - c15.9
+      - c16.0
+      - c16.1
+      - c16.2
+      - c16.3
+      - c16.5
+      - c16.9
+      - c17.9
+      - c18.0
+      - c18.2
+      - c18.3
+      - c18.4
+      - c18.5
+      - c18.6
+      - c18.7
+      - c18.9
+      - c19
+      - c20
+      - c22.0
+      - c22.1
+      - c24.0
+      - c24.1
+      - c25.0
+      - c25.1
+      - c25.2
+      - c25.8
+      - c25.9
+      - c32.1
+      - c32.32
+      - c32.9
+      - c34.0
+      - c34.00
+      - c34.1
+      - c34.10
+      - c34.11
+      - c34.12
+      - c34.2
+      - c34.3
+      - c34.30
+      - c34.31
+      - c34.32
+      - c34.8
+      - c34.80
+      - c34.81
+      - c34.82
+      - c34.9
+      - c34.90
+      - c34.91
+      - c34.92
+      - c37
+      - c38.0
+      - c38.1
+      - c38.3
+      - c38.4
+      - c40.2
+      - c40.3
+      - c41.0
+      - c41.1
+      - c43.51
+      - c44.2
+      - c44.3
+      - c44.31
+      - c44.399
+      - c44.4
+      - c44.5
+      - c44.50
+      - c44.6
+      - c44.601
+      - c44.7
+      - c44.701
+      - c44.9
+      - c45.0
+      - c47.1
+      - c48.0
+      - c48.1
+      - c48.2
+      - c49.0
+      - c49.1
+      - c49.10
+      - c49.2
+      - c49.20
+      - c49.3
+      - c49.4
+      - c49.5
+      - c49.6
+      - c49.8
+      - c49.9
+      - c50.2
+      - c50.3
+      - c50.4
+      - c50.5
+      - c50.8
+      - c50.9
+      - c50.919
+      - c51.9
+      - c52
+      - c53.0
+      - c53.1
+      - c53.9
+      - c54.0
+      - c54.1
+      - c54.2
+      - c54.3
+      - c54.9
+      - c55
+      - c56.9
+      - c61
+      - c61.9
+      - c62.9
+      - c62.90
+      - c63.1
+      - c64.1
+      - c64.2
+      - c64.9
+      - c67.0
+      - c67.1
+      - c67.2
+      - c67.3
+      - c67.4
+      - c67.5
+      - c67.6
+      - c67.9
+      - c69.30
+      - c69.40
+      - c69.80
+      - c69.90
+      - c70.1
+      - c71.0
+      - c71.1
+      - c71.2
+      - c71.3
+      - c71.4
+      - c71.6
+      - c71.7
+      - c71.8
+      - c71.9
+      - c72.0
+      - c72.9
+      - c73
+      - c74.0
+      - c74.1
+      - c74.9
+      - c75.5
+      - c76.0
+      - c76.1
+      - c76.2
+      - c76.3
+      - c77.0
+      - c77.1
+      - c77.2
+      - c77.3
+      - c77.4
+      - c77.5
+      - c77.9
+      - c78.02
+      - c78.6
+      - c80
+      - c80.1
+      - c83.3
+      - not reported
 
   prior_malignancy:
     term:
@@ -5115,6 +5702,191 @@ properties:
       - C77.9
       - C80.9
       - not reported
+    deprecated_enum:
+      - 8140/3
+      - c00.9
+      - c000
+      - c01.9
+      - c02.1
+      - c02.2
+      - c02.9
+      - c03.0
+      - c03.1
+      - c03.9
+      - c04.0
+      - c04.9
+      - c05.0
+      - c05.9
+      - c06.0
+      - c06.2
+      - c06.9
+      - c07.9
+      - c08.0
+      - c09.9
+      - c10.3
+      - c10.9
+      - c13.9
+      - c14.8
+      - c15.1
+      - c15.3
+      - c15.4
+      - c15.5
+      - c15.9
+      - c16.0
+      - c16.1
+      - c16.2
+      - c16.3
+      - c16.5
+      - c16.9
+      - c17.0
+      - c17.1
+      - c17.9
+      - c18.0
+      - c18.2
+      - c18.3
+      - c18.4
+      - c18.5
+      - c18.6
+      - c18.7
+      - c18.9
+      - c19.9
+      - c20.9
+      - c21.8
+      - c22.0
+      - c22.1
+      - c220
+      - c24.0
+      - c24.1
+      - c25.0
+      - c25.1
+      - c25.2
+      - c25.8
+      - c25.9
+      - c30.0
+      - c32.1
+      - c32.9
+      - c34.0
+      - c34.1
+      - c34.2
+      - c34.3
+      - c34.32
+      - c34.8
+      - c34.9
+      - c37.9
+      - c38.0
+      - c38.1
+      - c38.3
+      - c38.4
+      - c40.0
+      - c40.2
+      - c40.3
+      - c41.0
+      - c41.1
+      - c44.2
+      - c44.3
+      - c44.4
+      - c44.5
+      - c44.6
+      - c44.7
+      - c44.9
+      - c47.1
+      - c48.0
+      - c48.1
+      - c48.2
+      - c49.0
+      - c49.1
+      - c49.2
+      - c49.3
+      - c49.4
+      - c49.5
+      - c49.6
+      - c49.8
+      - c49.9
+      - c50.2
+      - c50.3
+      - c50.4
+      - c50.5
+      - c50.8
+      - c50.9
+      - c51.9
+      - c52.9
+      - c53.0
+      - c53.1
+      - c53.9
+      - c54.0
+      - c54.1
+      - c54.2
+      - c54.3
+      - c54.9
+      - c55.9
+      - c56.9
+      - c61.9
+      - c62.9
+      - c63.1
+      - c64.9
+      - c649
+      - c67.0
+      - c67.1
+      - c67.2
+      - c67.3
+      - c67.4
+      - c67.5
+      - c67.6
+      - c67.9
+      - c69.3
+      - c69.4
+      - c69.8
+      - c69.9
+      - c70.1
+      - c71.0
+      - c71.1
+      - c71.2
+      - c71.3
+      - c71.4
+      - c71.6
+      - c71.7
+      - c71.8
+      - c71.9
+      - c72.0
+      - c72.9
+      - c73.9
+      - c74.0
+      - c74.1
+      - c74.9
+      - c75.5
+      - c76.0
+      - c76.1
+      - c76.2
+      - c76.3
+      - c77.0
+      - c77.1
+      - c77.2
+      - c77.3
+      - c77.4
+      - c77.5
+      - c77.9
+      - c80.9
+      - not reported
+
+  supratentorial_localization:
+    term:
+      $ref: "_terms.yaml#/supratentorial_localization"
+    enum:
+      - Cerebral Cortex
+      - Deep Gray (e.g. Basal Ganglia, Thalamus)
+      - Spinal Cord
+      - White Matter
+      - Unknown
+      - Not Reported
+
+  synchronous_malignancy:
+    term:
+      $ref: "_terms.yaml#/synchronous_malignancy"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
 
   tissue_or_organ_of_origin:
     term:
@@ -5613,6 +6385,177 @@ properties:
       - C77.9
       - C80.9
       - not reported
+    deprecated_enum:
+      - 8140/3
+      - c00.9
+      - c01.9
+      - c02.1
+      - c02.2
+      - c02.9
+      - c03.0
+      - c03.1
+      - c03.9
+      - c04.0
+      - c04.9
+      - c05.0
+      - c05.9
+      - c06.0
+      - c06.2
+      - c06.9
+      - c07.9
+      - c08.0
+      - c09.9
+      - c10.3
+      - c10.9
+      - c13.9
+      - c14.8
+      - c15.1
+      - c15.3
+      - c15.4
+      - c15.5
+      - c15.9
+      - c16.0
+      - c16.1
+      - c16.2
+      - c16.3
+      - c16.5
+      - c16.9
+      - c17.0
+      - c17.1
+      - c17.9
+      - c18.0
+      - c18.2
+      - c18.3
+      - c18.4
+      - c18.5
+      - c18.6
+      - c18.7
+      - c18.9
+      - c19.9
+      - c20.9
+      - c21.8
+      - c22.0
+      - c22.1
+      - c24.0
+      - c24.1
+      - c25.0
+      - c25.1
+      - c25.2
+      - c25.8
+      - c25.9
+      - c30.0
+      - c32.1
+      - c32.9
+      - c34.0
+      - c34.1
+      - c34.2
+      - c34.3
+      - c34.32
+      - c34.8
+      - c34.9
+      - c37.9
+      - c38.0
+      - c38.1
+      - c38.3
+      - c38.4
+      - c40.0
+      - c40.2
+      - c40.3
+      - c41.0
+      - c41.1
+      - c44.2
+      - c44.3
+      - c44.4
+      - c44.5
+      - c44.6
+      - c44.7
+      - c44.9
+      - c47.1
+      - c48.0
+      - c48.1
+      - c48.2
+      - c49.0
+      - c49.1
+      - c49.2
+      - c49.3
+      - c49.4
+      - c49.5
+      - c49.6
+      - c49.8
+      - c49.9
+      - c50.2
+      - c50.3
+      - c50.4
+      - c50.5
+      - c50.8
+      - c50.9
+      - c51.9
+      - c52.9
+      - c53.0
+      - c53.1
+      - c53.9
+      - c54.0
+      - c54.1
+      - c54.2
+      - c54.3
+      - c54.9
+      - c55.9
+      - c56.9
+      - c61.9
+      - c62.9
+      - c63.1
+      - c64.9
+      - c67.0
+      - c67.1
+      - c67.2
+      - c67.3
+      - c67.4
+      - c67.5
+      - c67.6
+      - c67.9
+      - c69.3
+      - c69.4
+      - c69.8
+      - c69.9
+      - c70.1
+      - c71.0
+      - c71.1
+      - c71.2
+      - c71.3
+      - c71.4
+      - c71.6
+      - c71.7
+      - c71.8
+      - c71.9
+      - c72.0
+      - c72.9
+      - c73.9
+      - c74.0
+      - c74.1
+      - c74.9
+      - c75.5
+      - c76.0
+      - c76.1
+      - c76.2
+      - c76.3
+      - c77.0
+      - c77.1
+      - c77.2
+      - c77.3
+      - c77.4
+      - c77.5
+      - c77.9
+      - c80.9
+      - not reported
+
+  tumor_confined_to_organ_of_origin:
+    term:
+      $ref: "_terms.yaml#/tumor_confined_to_organ_of_origin"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
 
   tumor_grade:
     term:
@@ -5629,6 +6572,13 @@ properties:
       - Unknown
       - Not Reported
       - not reported
+    deprecated_enum:
+      - not reported
+
+  tumor_largest_dimension_diameter:
+    term:
+      $ref: "_terms.yaml#/tumor_largest_dimension_diameter"
+    type: number
 
   tumor_stage:
     term:
@@ -5639,11 +6589,13 @@ properties:
     term:
       $ref: "_terms.yaml#/vascular_invasion_present"
     enum:
-      - "Yes"
+      - Extramural
+      - Intramural
       - "No"
-      - Unknown
-      - Not Reported
       - Not Allowed To Collect
+      - Not Reported
+      - Unknown
+      - "Yes"
 
   vascular_invasion_type:
     term:
@@ -5668,6 +6620,15 @@ properties:
       - not allowed to collect
       - pending # this is from TARGET RT clinical data
 
+  wilms_tumor_histologic_subtype:
+    term:
+      $ref: "_terms.yaml#/wilms_tumor_histologic_subtype"
+    enum:
+      - Favorable
+      - Unfavorable
+      - Unknown
+      - Not Reported
+
   year_of_diagnosis:
     term:
       $ref: "_terms.yaml#/year_of_diagnosis"
@@ -5677,9 +6638,3 @@ properties:
 
   cases:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

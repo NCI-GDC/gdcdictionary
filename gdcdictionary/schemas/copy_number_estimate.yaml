@@ -1,15 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "copy_number_segment"
-title: Copy Number Segment
+id: "copy_number_estimate"
+title: Copy Number Estimate
 type: object
 namespace: https://gdc.cancer.gov
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing the copy number data from a copy number liftover workflow. Contains all copy
-  numbers detected.
+  Data file containing copy number variation information generated internally by the GDC.
 additionalProperties: false
 submittable: false
 downloadable: true
@@ -28,14 +27,14 @@ links:
   - exclusive: true
     required: true
     subgroup:
-      - name: copy_number_liftover_workflows
-        backref: copy_number_segments
+      - name: copy_number_variation_workflows
+        backref: copy_number_estimates
         label: derived_from
-        target_type: copy_number_liftover_workflow
+        target_type: copy_number_variation_workflow
         multiplicity: one_to_one
         required: false
       - name: genomic_profile_harmonization_workflows
-        backref: copy_number_segments
+        backref: copy_number_estimates
         label: derived_from
         target_type: genomic_profile_harmonization_workflow
         multiplicity: one_to_one
@@ -69,8 +68,9 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - Copy Number Segment
-      - Masked Copy Number Segment
+      - Gene Level Copy Number
+      - Gene Level Copy Number Scores
+      - Cohort Level Copy Number Scores
 
   data_format:
     term:
@@ -84,6 +84,7 @@ properties:
     enum:
       - Genotyping Array
       - Targeted Sequencing
+      - WGS
 
   platform:
     term:
@@ -91,8 +92,9 @@ properties:
     enum:
       - Affymetrix SNP 6.0
       - Illumina
+      - Ion Torrent
 
-  copy_number_liftover_workflows:
+  copy_number_variation_workflows:
     $ref: "_definitions.yaml#/to_one"
   genomic_profile_harmonization_workflows:
     $ref: "_definitions.yaml#/to_one"

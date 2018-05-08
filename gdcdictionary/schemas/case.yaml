@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "case"
 title: Case
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: administrative
 program: '*'
 project: '*'
@@ -12,6 +12,7 @@ description: >
   context of a specific project.
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:
@@ -37,7 +38,6 @@ links:
 
 required:
   - submitter_id
-  - projects
 
 uniqueKeys:
   - [id]
@@ -45,21 +45,13 @@ uniqueKeys:
 
 # Case properties
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
   days_to_lost_to_followup:
     term:
       $ref: "_terms.yaml#/days_to_lost_to_followup"
     type: integer
+
   disease_type:
     term:
       $ref: "_terms.yaml#/disease_type"
@@ -167,6 +159,53 @@ properties:
       - Uterine Carcinosarcoma
       - Uterine Corpus Endometrial Carcinoma
       - Uveal Melanoma
+    deprecated_enum:
+      - Acute Lymphoblastic Leukemia
+      - Acute Myeloid Leukemia
+      - Adrenocortical Carcinoma
+      - Bladder Urothelial Carcinoma
+      - Brain Lower Grade Glioma
+      - Breast Invasive Carcinoma
+      - Burkitt Lymphoma
+      - Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma
+      - Cholangiocarcinoma
+      - Chronic Lymphocytic Leukemia
+      - Clear Cell Sarcoma of the Kidney
+      - Colon Adenocarcinoma
+      - Esophageal Carcinoma
+      - Glioblastoma Multiforme
+      - Head and Neck Squamous Cell Carcinoma
+      - High-Risk Wilms Tumor
+      - HIV+ Tumor Molecular Characterization Project - Cervical Cancer
+      - HIV+ Tumor Molecular Characterization Project - Lung Cancer
+      - Kidney Chromophobe
+      - Kidney Renal Clear Cell Carcinoma
+      - Kidney Renal Papillary Cell Carcinoma
+      - Liver Hepatocellular Carcinoma
+      - Lung Adenocarcinoma
+      - Lung Squamous Cell Carcinoma
+      - Lymphoid Neoplasm Diffuse Large B-cell Lymphoma
+      - Mesothelioma
+      - Multiple Myeloma
+      - Neuroblastoma
+      - Not Applicable
+      - Osteosarcoma
+      - Ovarian Serous Cystadenocarcinoma
+      - Pancreatic Adenocarcinoma
+      - Pheochromocytoma and Paraganglioma
+      - Prostate Adenocarcinoma
+      - Rectum Adenocarcinoma
+      - Rhabdoid Tumor
+      - Sarcoma
+      - Skin Cutaneous Melanoma
+      - Stomach Adenocarcinoma
+      - Testicular Germ Cell Tumors
+      - Thymoma
+      - Thyroid Carcinoma
+      - Uterine Carcinosarcoma
+      - Uterine Corpus Endometrial Carcinoma
+      - Uveal Melanoma
+
   index_date:
     term:
       $ref: "_terms.yaml#/index_date"
@@ -174,12 +213,14 @@ properties:
       - Diagnosis
       - First Patient Visit
       - Study Enrollment
+
   lost_to_followup:
     term:
       $ref: "_terms.yaml#/lost_to_followup"
     enum:
       - "Yes"
       - "No"
+
   primary_site:
     term:
       $ref: "_terms.yaml#/primary_site"
@@ -275,13 +316,28 @@ properties:
       - Soft Tissue
       - Thyroid
       - Uterus
+    deprecated_enum:
+      - Adrenal Gland
+      - Bile Duct
+      - Blood
+      - Bone
+      - Bone Marrow
+      - Cervix
+      - Colorectal
+      - Eye
+      - Head and Neck
+      - Liver
+      - Lung
+      - Lymph Nodes
+      - Nervous System
+      - Not Applicable
+      - Pleura
+      - Prostate
+      - Soft Tissue
+      - Thyroid
+      - Uterus
+
   projects:
     $ref: "_definitions.yaml#/to_one"
   tissue_source_sites:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

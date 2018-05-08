@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "exposure"
 title: Exposure
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: clinical
 program: '*'
 project: '*'
@@ -11,6 +11,7 @@ description: >
   Clinically relevant patient information not immediately resulting from genetic predispositions.
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:
@@ -29,8 +30,14 @@ links:
     required: true
 
 preferred:
-  - cigarettes_per_day
+  - pack_years_smoked
   - years_smoked
+
+deprecated:
+  - bmi
+  - cigarettes_per_day
+  - height
+  - weight
 
 uniqueKeys:
   #unclear if want submitter ID for clinical
@@ -38,20 +45,18 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 properties:
-  type:
-    enum: [ "exposure" ]
+  $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
 
-  state:
-    $ref: "_definitions.yaml#/state"
+  alcohol_days_per_week:
+    term:
+      $ref: "_terms.yaml#/alcohol_days_per_week"
+    type: number
 
-  submitter_id:
-    type:
-      - string
-      - "null"
+  alcohol_drinks_per_day:
+    term:
+      $ref: "_terms.yaml#/alcohol_drinks_per_day"
+    type: number
 
   alcohol_history:
     term:
@@ -61,6 +66,9 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+      - "no"
+      - "yes"
+    deprecated_enum:
       - "no"
       - "yes"
 
@@ -119,6 +127,8 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Not Allowed To Collect
 
   weight:
     term:
@@ -132,9 +142,3 @@ properties:
 
   cases:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

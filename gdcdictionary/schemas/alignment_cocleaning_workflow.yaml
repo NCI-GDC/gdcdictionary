@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "alignment_cocleaning_workflow"
 title: Alignment Cocleaning Workflow
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: analysis
 program: '*'
 project: '*'
@@ -12,6 +12,7 @@ description: >
   pipelines.
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:
@@ -49,12 +50,12 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
-  type:
-    enum: [ "alignment_cocleaning_workflow" ]
+
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum: [ "BWA with Mark Duplicates and Cocleaning" ]
+
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
   submitted_unaligned_reads_files:

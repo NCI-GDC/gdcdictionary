@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "mirna_expression_workflow"
 title: miRNA Expression Workflow
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: analysis
 program: '*'
 project: '*'
@@ -12,6 +12,7 @@ description: >
   data.
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:
@@ -40,11 +41,11 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
-  type:
-    enum: [ "mirna_expression_workflow" ]
+
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum: [ "BCGSC miRNA Profiling" ]
+
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"

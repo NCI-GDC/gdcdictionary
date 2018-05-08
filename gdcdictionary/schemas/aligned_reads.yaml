@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "aligned_reads"
 title: Aligned Reads
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: data_file
 program: '*'
 project: '*'
@@ -11,6 +11,7 @@ description: >
   Data file containing aligned reads that are generated internally by the GDC.
 additionalProperties: false
 submittable: false
+downloadable: true
 validators: null
 
 systemProperties:
@@ -71,8 +72,7 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "aligned_reads" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -80,14 +80,17 @@ properties:
       - Sequencing Data
       - Sequencing Reads
       - Raw Sequencing Data
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Aligned Reads" ]
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum: [ "BAM" ]
+
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
@@ -99,8 +102,10 @@ properties:
       - RNA-Seq
       - miRNA-Seq
       - Total RNA-Seq
+
   platform:
     $ref: "read_group.yaml#/properties/platform"
+
   alignment_cocleaning_workflows:
     $ref: "_definitions.yaml#/to_one"
   alignment_workflows:

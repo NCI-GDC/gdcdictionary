@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "aggregated_somatic_mutation"
 title: Aggregated Somatic Mutation
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: data_file
 project: '*'
 program: '*'
@@ -11,6 +11,7 @@ description: >
   MAF/TSV files that contain all of the somatic mutations for all of the cases for a project.
 additionalProperties: false
 submittable: false
+downloadable: true
 validators: null
 
 systemProperties:
@@ -54,23 +55,25 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "aggregated_somatic_mutation" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum: [ "Simple Nucleotide Variation" ]
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
       - Aggregated Somatic Mutation
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
       - MAF
       - TSV
+
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
@@ -80,6 +83,7 @@ properties:
       - Low Pass WGS
       - Validation
       - Targeted Sequencing
+
   projects:
     $ref: "_definitions.yaml#/to_one"
   somatic_aggregation_workflows:
