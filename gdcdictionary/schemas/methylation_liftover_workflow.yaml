@@ -3,12 +3,14 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "methylation_liftover_workflow"
 title: Methylation Liftover Workflow
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: analysis
 program: '*'
 project: '*'
 description: >
   Metadata for the methylation liftover workflow used to harmonize TCGA methylation data.
+submittable: false
+downloadable: false
 additionalProperties: false
 validators: null
 
@@ -31,7 +33,6 @@ required:
   - submitter_id
   - workflow_link
   - workflow_type
-  - submitted_methylation_beta_values
 
 uniqueKeys:
   - [ id ]
@@ -39,12 +40,12 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
-  type:
-    enum: [ "methylation_liftover_workflow" ]
+
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum:
       - Liftover #NEEDS NAME
+
   submitted_methylation_beta_values:
     $ref: "_definitions.yaml#/to_many"

@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "demographic"
 title: Demographic
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: clinical
 program: '*'
 project: '*'
@@ -12,6 +12,7 @@ description: >
   characterization by age, sex, or race).
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:
@@ -30,12 +31,13 @@ links:
     required: true
 
 required:
-  - cases
-  - race
+  - submitter_id
   - ethnicity
   - gender
+  - race
 
 preferred:
+  - days_to_birth
   - year_of_death
 
 uniqueKeys:
@@ -44,20 +46,7 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 properties:
-  type:
-    type: string
-
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-
-  state:
-    $ref: "_definitions.yaml#/state"
-
-  submitter_id:
-    type:
-      - string
-      - "null"
+  $ref: "_definitions.yaml#/ubiquitous_properties"
 
   age_at_index:
     term:
@@ -89,6 +78,19 @@ properties:
       $ref: "_terms.yaml#/days_to_death"
     type: integer
 
+  ethnicity:
+    term:
+      $ref: "_terms.yaml#/ethnicity"
+    enum:
+      - hispanic or latino
+      - not hispanic or latino
+      - Unknown
+      - not reported
+      - not allowed to collect
+      - unknown
+    deprecated_enum:
+      - unknown
+
   gender:
     term:
       $ref: "_terms.yaml#/gender"
@@ -98,6 +100,15 @@ properties:
       - unknown
       - unspecified
       - not reported
+
+  premature_at_birth:
+    term:
+      $ref: "_terms.yaml#/premature_at_birth"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
 
   race:
     term:
@@ -113,29 +124,8 @@ properties:
       - not reported
       - not allowed to collect
       - unknown
-
-  ethnicity:
-    term:
-      $ref: "_terms.yaml#/ethnicity"
-    enum:
-      - hispanic or latino
-      - not hispanic or latino
-      - Unknown
-      - not reported
-      - not allowed to collect
+    deprecated_enum:
       - unknown
-
-  year_of_birth:
-    term:
-      $ref: "_terms.yaml#/year_of_birth"
-    type:
-      - number
-      - "null"
-
-  year_of_death:
-    term:
-      $ref: "_terms.yaml#/year_of_death"
-    type: number
 
   vital_status:
     term:
@@ -146,11 +136,22 @@ properties:
       - Unknown
       - Not Reported
 
+  weeks_gestation_at_birth:
+    term:
+      $ref: "_terms.yaml#/weeks_gestation_at_birth"
+    type: number
+
+  year_of_birth:
+    term:
+      $ref: "_terms.yaml#/year_of_birth"
+    type:
+      - integer
+      - "null"
+
+  year_of_death:
+    term:
+      $ref: "_terms.yaml#/year_of_death"
+    type: integer
+
   cases:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

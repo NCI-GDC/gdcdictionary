@@ -3,13 +3,14 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "aligned_reads_index"
 title: Aligned Reads Index
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: index_file
 program: '*'
 project: '*'
 description: "Data file containing the index for a set of aligned reads."
 additionalProperties: false
 submittable: true
+downloadable: true 
 validators: null
 
 systemProperties:
@@ -53,8 +54,7 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "aligned_reads_index" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -62,14 +62,17 @@ properties:
       - Sequencing Data
       - Sequencing Reads
       - Raw Sequencing Data
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Aligned Reads Index" ]
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum: [ "BAI" ]
+
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
   aligned_reads_files:

@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "follow_up"
 title: Follow-Up
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: clinical
 program: '*'
 project: '*'
@@ -16,6 +16,7 @@ description: >
   something that has already been done.
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:
@@ -32,6 +33,12 @@ links:
     target_type: case
     multiplicity: many_to_one
     required: true
+  - name: diagnoses
+    backref: follow_ups
+    label: describes
+    target_type: diagnosis
+    multiplicity: many_to_one
+    required: false
 
 required:
   - submitter_id
@@ -43,32 +50,8 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 properties:
-  # Ubiquitous Properties
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  submitter_id:
-    type:
-      - string
-    description: >
-      A project-specific identifier for a node. This property is the calling card/nickname/alias for
-      a unit of submission. It can be used in place of the UUID for identifying or recalling a node.
-  state:
-    $ref: "_definitions.yaml#/state"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
+  $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  # Node properties
-  absolute_neutrophil:
-    term:
-      $ref: "_terms.yaml#/absolute_neutrophil"
-    type: number
   adverse_event:
     term:
       $ref: "_terms.yaml#/adverse_event"
@@ -863,49 +846,36 @@ properties:
       - Wound Dehiscence
       - Wound Infection
       - Wrist Fracture
-  albumin:
+
+  barretts_esophagus_goblet_cells_present:
     term:
-      $ref: "_terms.yaml#/albumin"
-    type: number
-  beta_2_microglobulin:
-    term:
-      $ref: "_terms.yaml#/beta_2_microglobulin"
-    type: number
-  bmi:
-    term:
-      $ref: "_terms.yaml#/bmi"
-    type: number
-  bun:
-    term:
-      $ref: "_terms.yaml#/bun"
-    type: number
-  calcium:
-    term:
-      $ref: "_terms.yaml#/calcium"
-    type: number
-  cause_of_response:
-    term:
-      $ref: "_terms.yaml#/cause_of_response"
-    type: string
-  cea_level:
-    term:
-      $ref: "_terms.yaml#/cea_level"
-    type: number
-  colon_polyps_history:
-    term:
-      $ref: "_terms.yaml#colon_polyps_history"
+      $ref: "_terms.yaml#/barretts_esophagus_goblet_cells_present"
     enum:
       - "Yes"
       - "No"
       - Unknown
       - Not Reported
+
+  bmi:
+    term:
+      $ref: "_terms.yaml#/bmi"
+    type: number
+
+  cause_of_response:
+    term:
+      $ref: "_terms.yaml#/cause_of_response"
+    type: string
+
   comorbidity:
     term:
       $ref: "_terms.yaml#/comorbidity"
     enum:
       - Acute Renal Failure
+      - Adenocarcinoma
       - Adrenocortical Insufficiency
+      - Adenomatous Polyposis Coli
       - Allergies
+      - Alpha-1 Antitrypsin
       - Anemia
       - Anxiety
       - Arrhythmia
@@ -915,13 +885,17 @@ properties:
       - Avascular Necrosis
       - Barrett's Esophagus
       - Basal Cell Carcinoma
+      - Beckwith-Wiedemann
       - Behcet's Disease
+      - Biliary Disorder
       - Blood Clots
       - Bone Fracture(s)
       - Bronchitis
       - Calcium Channel Blockers
       - Cancer
       - Cataracts
+      - Celiac Disease
+      - Cirrhosis, Unknown Etiology
       - Cerebrovascular Disease
       - Chronic Renal Failure
       - Colon Polyps
@@ -930,10 +904,12 @@ properties:
       - Connective Tissue Disorder
       - COPD
       - Coronary Artery Disease
+      - Crohn's Disease
       - Cryptogenic Organizing Pneumonia
       - Deep Vein Thrombosis / Thromboembolism
       - Depression
       - Diabetes
+      - Diabetes, Type II
       - Diabetic Neuropathy
       - Diet Controlled Diabetes
       - Diverticulitis
@@ -942,11 +918,16 @@ properties:
       - Epilepsy
       - Eczema
       - Epstein-Barr Virus
+      - Familial Adenomatous Polyposis
+      - Fanconi Anemia
       - Gastroesophageal Reflux Disease
       - GERD
       - Glaucoma
+      - Glycogen Storage Disease
       - Gout
       - Gonadal Dysfunction
+      - Gorlin Syndrome
+      - H. pylori Infection
       - Hashimoto's Thyroiditis
       - Headache
       - Heart Disease
@@ -954,6 +935,7 @@ properties:
       - Hepatitis
       - Hepatitis B Infection
       - Hepatitis C Infection
+      - Hereditary Non-polyposis Colon Cancer
       - HIV / AIDS
       - Human Papillomavirus Infection
       - HUS/TTP
@@ -967,6 +949,7 @@ properties:
       - Inflammatory Bowel Disease
       - Insulin Controlled Diabetes
       - Interstitial Pneumontis or ARDS
+      - Intraductal Papillary Mucinous Neoplasm
       - Iron Overload
       - Ischemic Heart Disease
       - ITP
@@ -974,10 +957,13 @@ properties:
       - Kidney Disease
       - Liver Cirrhosis (Liver Disease)
       - Liver Toxicity (Non-Infectious)
+      - Li-Fraumeni Syndrome
       - Lupus
+      - Lynch Syndrome
       - MAI
       - Myasthenia Gravis
       - Myocardial Infarction
+      - Neuroendocrine Tumor
       - Obesity
       - Organ transplant (site)
       - Osteoarthritis
@@ -991,6 +977,7 @@ properties:
       - Peptic Ulcer (Ulcer)
       - Peripheral Neuropathy
       - Peripheral Vascular Disease
+      - Peutz-Jeghers Disease
       - Pregnancy in Patient or Partner
       - Psoriasis
       - Pulmonary Fibrosis
@@ -1000,6 +987,7 @@ properties:
       - Renal Insufficiency
       - Rheumatologic Disease
       - Rheumatoid Arthritis
+      - Rubinstein-Taybi Syndrome
       - Sarcoidosis
       - Seizure
       - Sleep apnea
@@ -1007,41 +995,63 @@ properties:
       - Stroke
       - Transient Ischemic Attack
       - Tuberculosis
+      - Turcot Syndrome
+      - Tyrosinemia
       - Ulcerative Colitis
       - Unknown
       - Not Reported
-  creatinine:
+
+  comorbidity_method_of_diagnosis:
     term:
-      $ref: "_terms.yaml#/creatinine"
-    type: number
-  crp:
-    term:
-      $ref: "_terms.yaml#/crp"
-    type: number
+      $ref: "_terms.yaml#/comorbidity_method_of_diagnosis"
+    enum:
+      - Histology
+      - Pathology
+      - Radiology
+      - Unknown
+      - Not Reported
+
   days_to_adverse_event:
     term:
       $ref: "_terms.yaml#/days_to_adverse_event"
     type: integer
+
   days_to_comorbidity:
     term:
       $ref: "_terms.yaml#days_to_comorbidity"
     type: integer
+
   days_to_follow_up:
     term:
       $ref: "_terms.yaml#/days_to_follow_up"
     type: integer
-  days_to_hiv_diagnosis:
-    term:
-      $ref: "_terms.yaml#/days_to_hiv_diagnosis"
-    type: integer
+
   days_to_progression:
     term:
       $ref: "_terms.yaml#/days_to_progression"
     type: integer
+
   days_to_recurrence:
     term:
       $ref: "_terms.yaml#/days_to_recurrence"
     type: integer
+
+  diabetes_treatment_type:
+    term:
+      $ref: "_terms.yaml#/diabetes_treatment_type"
+    enum:
+      - Alpha-Glucosidase Inhibitor
+      - Biguanide
+      - Diet
+      - Injected Insulin
+      - Insulin
+      - Oral Hypoglycemic
+      - Sulfonylurea
+      - Thiazolidinedione
+      - Other
+      - Unknown
+      - Not Reported
+
   disease_response:
     term:
       $ref: "_terms.yaml#/disease_response"
@@ -1072,10 +1082,12 @@ properties:
       - SPD-Surgical Progression
       - TE-Too Early
       - VGPR-Very Good Partial Response
+
   dlco_ref_predictive_percent:
     term:
       $ref: "_terms.yaml#/dlco_ref_predictive_percent"
     type: number
+
   ecog_performance_status:
     term:
       $ref: "_terms.yaml#/ecog_performance_status"
@@ -1086,100 +1098,32 @@ properties:
       - "3"
       - "4"
       - "5"
-  estrogen_receptor_percent_positive_ihc:
-    term:
-      $ref: "_terms.yaml#/estrogen_receptor_percent_positive_ihc"
-    enum:
-      - <10%
-      - 10-19%
-      - 20-29%
-      - 30-39%
-      - 40-49%
-      - 50-59%
-      - 60-69%
-      - 70-79%
-      - 80-89%
-      - 90-100%
-  estrogen_receptor_result_ihc:
-    term:
-      $ref: "_terms.yaml#/estrogen_receptor_result_ihc"
-    enum:
-      - Equivocal
-      - Negative
-      - Not Performed
-      - Positive
-      - Unknown
-      - Not Reported
+
   fev1_ref_post_bronch_percent:
     term:
       $ref: "_terms.yaml#/fev1_ref_post_bronch_percent"
     type: number
+
   fev1_ref_pre_bronch_percent:
     term:
       $ref: "_terms.yaml#/fev1_ref_pre_bronch_percent"
     type: number
+
   fev1_fvc_pre_bronch_percent:
     term:
       $ref: "_terms.yaml#/fev1_fvc_pre_bronch_percent"
     type: number
+
   fev1_fvc_post_bronch_percent:
     term:
       $ref: "_terms.yaml#/fev1_fvc_post_bronch_percent"
     type: number
-  glucose:
-    term:
-      $ref: "_terms.yaml#/glucose"
-    type: number
+
   height:
     term:
       $ref: "_terms.yaml#/height"
     type: number
-  hemoglobin:
-    term:
-      $ref: "_terms.yaml#/hemoglobin"
-    type: number
-  her2_erbb2_percent_positive_ihc:
-    term:
-      $ref: "_terms.yaml#/her2_erbb2_percent_positive_ihc"
-    enum:
-      - <10%
-      - 10-19%
-      - 20-29%
-      - 30-39%
-      - 40-49%
-      - 50-59%
-      - 60-69%
-      - 70-79%
-      - 80-89%
-      - 90-100%
-  her2_erbb2_result_fish:
-    term:
-      $ref: "_terms.yaml#/her2_erbb2_result_fish"
-    enum:
-      - Equivocal
-      - Negative
-      - Not Performed
-      - Positive
-      - Unknown
-      - Not Reported
-  her2_erbb2_result_ihc:
-    term:
-      $ref: "_terms.yaml#/her2_erbb2_result_ihc"
-    enum:
-      - Equivocal
-      - Negative
-      - Not Performed
-      - Positive
-      - Unknown
-      - Not Reported
-  hiv_positive:
-    term:
-      $ref: "_terms.yaml#/hiv_positive"
-    enum:
-      - "Yes"
-      - "No"
-      - Not Reported
-      - Unknown
+
   hpv_positive_type:
     term:
       $ref: "_terms.yaml#/hpv_positive_type"
@@ -1205,83 +1149,40 @@ properties:
       - Other
       - Unknown
       - Not Reported
-  hpv_status:
+
+  karnofsky_performance_status:
     term:
-      $ref: "_terms.yaml#/hpv_status"
+      $ref: "_terms.yaml#/karnofsky_performance_status"
     enum:
-      - Equivocal
-      - Negative
-      - Positive
+      - "0"
+      - "10"
+      - "20"
+      - "30"
+      - "40"
+      - "50"
+      - "60"
+      - "70"
+      - "80"
+      - "90"
+      - "100"
       - Unknown
       - Not Reported
-  iga:
+
+  menopause_status:
     term:
-      $ref: "_terms.yaml#/iga"
-    type: number
-  igg:
-    term:
-      $ref: "_terms.yaml#/igg"
-    type: number
-  igl_kappa:
-    term:
-      $ref: "_terms.yaml#/igl_kappa"
-    type: number
-  igl_lambda:
-    term:
-      $ref: "_terms.yaml#/igl_lambda"
-    type: number
-  igm:
-    term:
-      $ref: "_terms.yaml#/igm"
-    type: number
-  ldh_level:
-    term:
-      $ref: "_terms.yaml#/ldh_level"
-    type: number
-  ldh_normal_range_upper:
-    term:
-      $ref: "_terms.yaml#/ldh_normal_range_upper"
-    type: number
-  m_protein:
-    term:
-      $ref: "_terms.yaml#/m_protein"
-    type: number
-  microsatellite_instability_abnormal:
-    term:
-      $ref: "_terms.yaml#/microsatellite_instability_abnormal"
+      $ref: "_terms.yaml#/menopause_status"
     enum:
-      - "Yes"
-      - "No"
+      - Premenopausal
+      - Perimenopausal
+      - Postmenopausal
       - Unknown
       - Not Reported
-  platelet_count:
+
+  pancreatitis_onset_year:
     term:
-      $ref: "_terms.yaml#/platelet_count"
-    type: number
-  progesterone_receptor_percent_positive_ihc:
-    term:
-      $ref: "_terms.yaml#/progesterone_receptor_percent_positive_ihc"
-    enum:
-      - <10%
-      - 10-19%
-      - 20-29%
-      - 30-39%
-      - 40-49%
-      - 50-59%
-      - 60-69%
-      - 70-79%
-      - 80-89%
-      - 90-100%
-  progesterone_receptor_result_ihc:
-    term:
-      $ref: "_terms.yaml#/progesterone_receptor_result_ihc"
-    enum:
-      - Equivocal
-      - Negative
-      - Not Performed
-      - Positive
-      - Unknown
-      - Not Reported
+      $ref: "_terms.yaml#/pancreatitis_onset_year"
+    type: integer
+
   progression_or_recurrence:
     term:
       $ref: "_terms.yaml#/progression_or_recurrence"
@@ -1290,6 +1191,7 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+
   progression_or_recurrence_anatomic_site:
     term:
       $ref: "_terms.yaml#/progression_or_recurrence_anatomic_site"
@@ -1626,19 +1528,83 @@ properties:
       - Overlapping lesion of biliary tract
       - Unknown
       - Not Reported
-  total_protein:
+
+  progression_or_recurrence_type:
     term:
-      $ref: "_terms.yaml#/total_protein"
-    type: number
-  wbc:
+      $ref: "_terms.yaml#/progression_or_recurrence_type"
+    enum:
+      - Distant
+      - Local
+      - Regional
+      - Unknown
+      - Not Reported
+
+  reflux_treatment:
     term:
-      $ref: "_terms.yaml#/wbc"
-    type: number
+      $ref: "_terms.yaml#/reflux_treatment"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
+  reflux_treatment_type:
+    term:
+      $ref: "_terms.yaml#/reflux_treatment_type"
+    enum:
+      - Antacids
+      - H2 Blockers
+      - Medically Treated
+      - No Treatment
+      - Not Applicable
+      - Not Reported
+      - Proton Pump Inhibitors
+      - Surgically Treated
+      - Unknown
+
+  risk_factor:
+    term:
+      $ref: "_terms.yaml#/risk_factor"
+    enum:
+      - Beckwith-Wiedemann
+      - Colon Polyps
+      - Denys-Drash Syndrome
+      - Diabetes, Type II
+      - Diet
+      - Familial Adenomatous Polyposis
+      - Fanconi Anemia
+      - Gorlin Syndrome
+      - Hemihypertrophy
+      - Li-Fraumeni Syndrome
+      - Lynch Syndrome
+      - Obesity
+      - Rubinstein-Taybi Syndrome
+      - Turcot Syndrome
+      - Wagr Syndrome
+      - Unknown
+      - Not Reported
+
+  viral_hepatitis_serologies:
+    term:
+      $ref: "_terms.yaml#/viral_hepatitis_serologies"
+    enum:
+      - HBV Core Antibody
+      - HBV DNA
+      - HBV Genotype
+      - HBV Surface Antibody
+      - HCV Genotype
+      - Hepatitis B Surface Antigen
+      - Hepatitis C Antibody
+      - Hepatitis C Virus RNA
+      - Unknown
+      - Not Reported
+
   weight:
     term:
       $ref: "_terms.yaml#/weight"
     type: number
 
-  # Links
   cases:
+    $ref: "_definitions.yaml#/to_one"
+  diagnoses:
     $ref: "_definitions.yaml#/to_one"

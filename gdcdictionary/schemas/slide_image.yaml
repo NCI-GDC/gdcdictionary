@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "slide_image"
 title: Slide Image
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: data_file
 program: '*'
 project: '*'
@@ -11,6 +11,7 @@ description: >
   Data file containing image of a slide.
 additionalProperties: false
 submittable: true
+downloadable: true
 validators: null
 
 systemProperties:
@@ -39,7 +40,6 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - slides
 
 uniqueKeys:
   - [ id ]
@@ -47,18 +47,19 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "slide_image" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum: [ "Biospecimen" ]
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
       - Cell Culture Image
       - Slide Image
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
@@ -66,16 +67,20 @@ properties:
       - JPEG
       - SVS
       - TIFF
+
   experimental_strategy:
     description: "Classification of the image type with respect to its experimental use."
     enum:
       - Cell Culture
       - Diagnostic Slide
       - Tissue Slide
+
   imaging_date:
     $ref: "_definitions.yaml#/datetime"
+
   magnification:
     description: "Magnification used to capture the iamge."
     type: number
+
   slides:
     $ref: "_definitions.yaml#/to_one"

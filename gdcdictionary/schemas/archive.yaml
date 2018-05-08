@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "archive"
 title: Archive
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: data_file
 program: '*'
 project: '*'
@@ -13,6 +13,7 @@ description: >
   GDC, or obtained by another route. (GDC subclass of NCIt C114463)
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:
@@ -56,20 +57,22 @@ uniqueKeys:
 # archive properties
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "archive" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum: [ "Archive" ]
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "TCGA DCC Archive", "TARGET DCC Archive" ]
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum: [ "TARGZ", "MAGETAB" ]
+
   revision:
     type: number
     description: The revision of this archive in the DCC.
@@ -78,9 +81,3 @@ properties:
     $ref: "_definitions.yaml#/to_one"
   related_to_files:
     $ref: "_definitions.yaml#/to_many"
-  project_id:
-    type: string
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

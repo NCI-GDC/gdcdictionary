@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "sample_level_maf"
 title: Sample Level MAF
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: data_file
 program: '*'
 project: '*'
@@ -11,6 +11,7 @@ description: >
   Data file containing the all of the somatic mutation calls for the sample.
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:
@@ -39,7 +40,6 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - somatic_annotation_workflows
 
 uniqueKeys:
   - [ id ]
@@ -47,21 +47,23 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "sample_level_maf" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum: [ "Simple Nucleotide Variation" ]
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Sample Level MAF" ]
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
       - MAF
+
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
@@ -70,5 +72,6 @@ properties:
       - WXS
       - Low Pass WGS
       - Validation
+
   somatic_annotation_workflows:
     $ref: "_definitions.yaml#/to_one"

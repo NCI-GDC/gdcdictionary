@@ -3,13 +3,14 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "experimental_strategy"
 title: Experimental Strategy
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: TBD
 program: '*'
 project: '*'
 description: "Experimental strategy of a legacy file (depreciated)."
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:

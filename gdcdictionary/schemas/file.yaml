@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "file"
 title: File
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: data_file
 program: '*'
 project: '*'
@@ -12,6 +12,7 @@ description: >
   together. (NCIt C42883)
 additionalProperties: false
 submittable: false
+downloadable: true
 validators: null
 
 systemProperties:
@@ -140,36 +141,7 @@ uniqueKeys:
 
 # File properties
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  submitter_id:
-    type:
-      - string
-      - "null"
-    description: "The file id assigned by the submitter" # TOREVIEW
-  file_name:
-    type: string
-    description: "The file (object) name" # TOREVIEW
-  file_size:
-    type: number
-    description: "The size file (object) in bytes"
-  md5sum:
-    type: string
-    description: "The MD5 hash of this file"
-  file_state:
-    $ref: "_definitions.yaml#/file_state"
-  state:
-    $ref: "_definitions.yaml#/state"
-  error_type:
-    $ref: "_definitions.yaml#/data_file_error_type"
-  state_comment:
-    type: string
-    description: > 
-      Optional comment about why the file is in the
-      current state, mainly for invalid state.
+  $ref: "_definitions.yaml#/data_file_properties"
 
   aliquots:
     $ref: "_definitions.yaml#/to_many"
@@ -203,9 +175,3 @@ properties:
     $ref: "_definitions.yaml#/to_one"
   described_cases:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    type: string
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

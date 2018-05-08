@@ -10,6 +10,7 @@ project: '*'
 description: "Data file containing the index for a set of aligned reads."
 additionalProperties: false
 submittable: true
+downloadable: true 
 validators: null
 
 systemProperties:
@@ -53,24 +54,26 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "somatic_mutation_index" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
       - Simple Nucleotide Variation 
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
       - Somatic Mutation Index
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum: 
       - TBI 
-  simple_somatic_mutations:
-    $ref: "_definitions.yaml#/to_one"
+
   annotated_somatic_mutations:
+    $ref: "_definitions.yaml#/to_one"
+  simple_somatic_mutations:
     $ref: "_definitions.yaml#/to_one"

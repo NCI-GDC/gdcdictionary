@@ -3,13 +3,14 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "read_group_qc"
 title: Read Group QC
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: notation
 project: '*'
 program: '*'
 description: "GDC QC run metadata."
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:
@@ -44,24 +45,22 @@ links:
 
 required:
   - submitter_id
-  - workflow_link
-  - type
-  - percent_gc_content
-  - encoding
-  - total_sequences
+  - adapter_content
   - basic_statistics
+  - encoding
+  - kmer_content
+  - overrepresented_sequences
   - per_base_sequence_quality
   - per_tile_sequence_quality
   - per_sequence_quality_score
   - per_base_sequence_content
   - per_sequence_gc_content
   - per_base_n_content
+  - percent_gc_content
   - sequence_length_distribution
   - sequence_duplication_levels
-  - overrepresented_sequences
-  - adapter_content
-  - kmer_content
-  - read_groups
+  - total_sequences
+  - workflow_link
 
 uniqueKeys:
   - [ id ]
@@ -69,54 +68,70 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
-  type:
-    enum: [ "read_group_qc" ]
-  workflow_type:
+
+  adapter_content:
+    $ref: "_definitions.yaml#/qc_metrics_state"
+
+  basic_statistics:
+    $ref: "_definitions.yaml#/qc_metrics_state"
+
+  encoding:
     term:
-      $ref: "_terms.yaml#/workflow_type"
-    enum: [ "Read Group Quality Control" ]
+      $ref: "_terms.yaml#/encoding"
+    type: string
+
   fastq_name:
     term:
       $ref: "_terms.yaml#/file_name"
     type: string
+
+  kmer_content:
+    $ref: "_definitions.yaml#/qc_metrics_state"
+
+  overrepresented_sequences:
+    $ref: "_definitions.yaml#/qc_metrics_state"
+
+  per_base_sequence_quality:
+    $ref: "_definitions.yaml#/qc_metrics_state"
+
+  per_tile_sequence_quality:
+    $ref: "_definitions.yaml#/qc_metrics_state"
+
+  per_sequence_quality_score:
+    $ref: "_definitions.yaml#/qc_metrics_state"
+
+  per_base_sequence_content:
+    $ref: "_definitions.yaml#/qc_metrics_state"
+
+  per_sequence_gc_content:
+    $ref: "_definitions.yaml#/qc_metrics_state"
+
+  per_base_n_content:
+    $ref: "_definitions.yaml#/qc_metrics_state"
+
   percent_gc_content:
     term:
       $ref: "_terms.yaml#/percent_gc_content"
     type: integer
     minimum: 0
     maximum: 100
-  encoding:
-    term:
-      $ref: "_terms.yaml#/encoding"
-    type: string
+
+  sequence_length_distribution:
+    $ref: "_definitions.yaml#/qc_metrics_state"
+
+  sequence_duplication_levels:
+    $ref: "_definitions.yaml#/qc_metrics_state"
+
   total_sequences:
     term:
       $ref: "_terms.yaml#/total_sequences"
     type: integer
-  basic_statistics:
-    $ref: "_definitions.yaml#/qc_metrics_state"
-  per_base_sequence_quality:
-    $ref: "_definitions.yaml#/qc_metrics_state"
-  per_tile_sequence_quality:
-    $ref: "_definitions.yaml#/qc_metrics_state"
-  per_sequence_quality_score:
-    $ref: "_definitions.yaml#/qc_metrics_state"
-  per_base_sequence_content:
-    $ref: "_definitions.yaml#/qc_metrics_state"
-  per_sequence_gc_content:
-    $ref: "_definitions.yaml#/qc_metrics_state"
-  per_base_n_content:
-    $ref: "_definitions.yaml#/qc_metrics_state"
-  sequence_length_distribution:
-    $ref: "_definitions.yaml#/qc_metrics_state"
-  sequence_duplication_levels:
-    $ref: "_definitions.yaml#/qc_metrics_state"
-  overrepresented_sequences:
-    $ref: "_definitions.yaml#/qc_metrics_state"
-  adapter_content:
-    $ref: "_definitions.yaml#/qc_metrics_state"
-  kmer_content:
-    $ref: "_definitions.yaml#/qc_metrics_state"
+
+  workflow_type:
+    term:
+      $ref: "_terms.yaml#/workflow_type"
+    enum: [ "Read Group Quality Control" ]
+
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
   submitted_unaligned_reads_files:

@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "biospecimen_supplement"
 title: Biospecimen Supplement
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: data_file
 project: '*'
 program: '*'
@@ -11,6 +11,7 @@ description: >
   Data file containing biospecimen metadata information.
 additionalProperties: false
 submittable: true
+downloadable: true
 validators: null
 
 systemProperties:
@@ -44,7 +45,6 @@ required:
   - md5sum
   - data_category
   - data_type
-  - cases
 
 uniqueKeys:
   - [ id ]
@@ -52,25 +52,30 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "biospecimen_supplement" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum: [ "Biospecimen" ]
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Biospecimen Supplement" ]
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
-      - FoundationOne XML
+      - BCR Auxiliary XML
+      - BCR Biotab
+      - BCR SSF XML
+      - BCR PPS XML
       - BCR XML
+      - FoundationOne XML
+      - TSV
       - XLSX
-      - SSF
-      - PPS
+
   cases:
     $ref: "_definitions.yaml#/to_many"
   archives:

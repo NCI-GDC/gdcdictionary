@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "submitted_aligned_reads"
 title: Submitted Aligned Reads
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: data_file
 program: '*'
 project: '*'
@@ -11,6 +11,7 @@ description: >
   Data file containing aligned reads that are used as input to GDC workflows.
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:
@@ -39,7 +40,6 @@ required:
   - data_category
   - data_type
   - experimental_strategy
-  - read_groups
 
 uniqueKeys:
   - [ id ]
@@ -47,8 +47,7 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "submitted_aligned_reads" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -56,14 +55,17 @@ properties:
       - Sequencing Data
       - Sequencing Reads
       - Raw Sequencing Data
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Aligned Reads" ]
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum: [ "BAM" ]
+
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
@@ -71,9 +73,12 @@ properties:
       - WGS
       - WXS
       - Low Pass WGS
-      - Validation
       - RNA-Seq
       - miRNA-Seq
-      - Total RNA-Seq
+      - Targeted Sequencing
+      - Bisulfite-Seq
+      - ChIP-Seq
+      - ATAC-Seq
+
   read_groups:
     $ref: "_definitions.yaml#/to_many"

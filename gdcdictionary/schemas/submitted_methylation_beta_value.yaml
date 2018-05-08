@@ -9,6 +9,8 @@ program: '*'
 project: '*'
 description: >
   Data file containing submitted beta values from a nucleotide methylation array.
+submittable: true
+downloadable: false
 additionalProperties: false
 validators: null
 
@@ -38,7 +40,6 @@ required:
   - data_category
   - data_type
   - experimental_strategy
-  - aliquots
 
 uniqueKeys:
   - [ id ]
@@ -46,33 +47,37 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "submitted_methylation_beta_value" ]
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
       - DNA Methylation
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
       - Methylation Beta Value
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
       - TXT
+
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
       - Methylation Array
+
   platform:
     term:
       $ref: "_terms.yaml#/platform"
     enum:
       - Illumina Human Methylation 27
       - Illumina Human Methylation 450
+
   aliquots:
     $ref: "_definitions.yaml#/to_one"

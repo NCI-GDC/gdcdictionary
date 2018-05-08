@@ -4,13 +4,13 @@ id: "read_group"
 title: Read Group
 type: object
 description: "Sequencing reads from one lane of an NGS experiment."
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: biospecimen
-validators: null
 project: '*'
 program: '*'
 additionalProperties: false
 submittable: true
+downloadable: false
 validators: null
 
 systemProperties:
@@ -29,78 +29,88 @@ links:
     backref: read_groups
 
 required:
-  - type
   - submitter_id
   - aliquots
   - experiment_name
   - sequencing_center
   - platform
+  - library_selection
   - library_strategy
   - library_name
   - is_paired_end
   - read_length
   - read_group_name
+  - target_capture_kit
+
+deprecated:
+  - target_capture_kit_catalog_number
+  - target_capture_kit_name
+  - target_capture_kit_target_region
+  - target_capture_kit_vendor
+  - target_capture_kit_version
 
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]
 
 properties:
-  id:
-    $ref: "_definitions.yaml#/UUID"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  submitter_id:
-    type: string
-  state:
-    $ref: "_definitions.yaml#/state"
-  type:
-    enum: [ "read_group" ]
+  $ref: "_definitions.yaml#/ubiquitous_properties"
 
   adapter_name:
     term:
       $ref: "_terms.yaml#/adapter_name"
     type: string
+
   adapter_sequence:
     term:
       $ref: "_terms.yaml#/adapter_sequence"
     type: string
+
   base_caller_name:
     term:
       $ref: "_terms.yaml#/base_caller_name"
     type: string
+
   base_caller_version:
     term:
       $ref: "_terms.yaml#/base_caller_version"
     type: string
+
   experiment_name:
     term:
       $ref: "_terms.yaml#/experiment_name"
     type: string
+
   flow_cell_barcode:
     term:
       $ref: "_terms.yaml#/flow_cell_barcode"
     type: string
+
   fragment_maximum_length:
     term:
       $ref: "_terms.yaml#/fragment_maximum_length"
     type: integer
+
   fragment_mean_length:
     term:
       $ref: "_terms.yaml#/fragment_mean_length"
-    type: number 
+    type: number
+
   fragment_minimum_length:
-    term: 
+    term:
       $ref: "_terms.yaml#/fragment_minimum_length"
     type: integer
+
   fragment_standard_deviation_length:
     term:
       $ref: "_terms.yaml#/fragment_standard_deviation_length"
-    type: number 
+    type: number
+
   includes_spike_ins:
     term:
       $ref: "_terms.yaml#/includes_spike_ins"
     type: boolean
+
   instrument_model:
     terms:
       $ref: "_terms.yaml#/instrument_model"
@@ -123,51 +133,55 @@ properties:
       - Ion Torrent Proton
       - PacBio RS
       - Other
+
   is_paired_end:
     term:
       $ref: "_terms.yaml#/is_paired_end"
     type: boolean
+
   lane_number:
     term:
       $ref: "_terms.yaml#/lane_number"
     type: integer
+
   library_name:
     term:
       $ref: "_terms.yaml#/library_name"
     type: string
+
   library_preparation_kit_name:
     term:
       $ref: "_terms.yaml#/library_preparation_kit_name"
     type: string
+
   library_preparation_kit_vendor:
     term:
       $ref: "_terms.yaml#/library_preparation_kit_vendor"
     type: string
+
   library_preparation_kit_catalog_number:
     term:
       $ref: "_terms.yaml#/library_preparation_kit_catalog_number"
     type: string
+
   library_preparation_kit_version:
     term:
       $ref: "_terms.yaml#/library_preparation_kit_version"
     type: string
+
   library_selection:
     term:
       $ref: "_terms.yaml#/library_selection"
     enum:
-      - Hybrid_Selection
       - Hybrid Selection
       - PCR
-      - Affinity_Enrichment
       - Affinity Enrichment
-      - Poly-T_Enrichment
       - Poly-T Enrichment
       - Random
-      - RNA_Depletion
       - rRNA Depletion
       - miRNA Size Fractionation
-      - Targeted Sequencing
       - Other
+
   library_strand:
     term:
       $ref: "_terms.yaml#/library_strand"
@@ -175,6 +189,8 @@ properties:
       - Unstranded
       - First_Stranded
       - Second_Stranded
+      - Not Applicable
+
   library_strategy:
     term:
       $ref: "_terms.yaml#/library_strategy"
@@ -185,14 +201,13 @@ properties:
       - ChIP-Seq
       - miRNA-Seq
       - Bisulfite-Seq
-      - Validation
-      - Amplicon
-      - Targeted Sequencing 
-      - Other
+      - Targeted Sequencing
+
   multiplex_barcode:
     term:
       $ref: "_terms.yaml#/multiplex_barcode"
     type: string
+
   platform:
     term:
       $ref: "_terms.yaml#/platform"
@@ -204,62 +219,109 @@ properties:
       - Complete Genomics
       - PacBio
       - Other
+
   read_group_name:  # it may be good to assign UUID to read group
     description: "Read Group Name"
     type: string
+
   read_length:
     type: integer
+
   RIN:
     term:
       $ref: "_terms.yaml#/RIN"
     type: number
+
   sequencing_center:
     term:
       $ref: "_terms.yaml#/sequencing_center"
     type: string
+
   sequencing_date:
     $ref: "_definitions.yaml#/datetime"
+
   size_selection_range:
     term:
       $ref: "_terms.yaml#/size_selection_range"
     type: string
+
   spike_ins_concentration:
     term:
       $ref: "_terms.yaml#/spike_ins_concentration"
     type: string
+
   spike_ins_fasta:
     term:
       $ref: "_terms.yaml#/spike_ins_fasta"
     type: string
+
+  target_capture_kit:
+    term:
+      $ref: "_terms.yaml#/target_capture_kit"
+    enum:
+      - Custom AmpliSeq Cancer Hotspot GENIE-MDA Augmented Panel v1 - 46 Genes
+      - Custom GENIE-DFCI OncoPanel - 275 Genes
+      - Custom GENIE-DFCI Oncopanel - 300 Genes
+      - Custom GENIE-DFCI Oncopanel - 447 Genes
+      - Custom HaloPlex DLBCL Panel - 370 Genes
+      - Custom Ion AmpliSeq Hotspot GENIE-MOSC3 Augmented Panel - 74 Genes
+      - Custom Large Construct Capture TARGET-OS Panel - 8 Genes
+      - Custom MSK IMPACT Panel - 341 Genes
+      - Custom MSK IMPACT Panel - 410 Genes
+      - Custom MSK IMPACT Panel - 468 Genes
+      - Custom Myeloid GENIE-VICC Panel - 37 Genes
+      - Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 203 Genes
+      - Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 88 Genes
+      - Custom SeqCap EZ HGSC VCRome v2.1 ER Augmented v1
+      - Custom SeqCap EZ HGSC VCRome v2.1 ER Augmented v2
+      - Custom SeqCap EZ TARGET-OS Panel - 7.0 Mb
+      - Custom Solid Tumor GENIE-VICC Panel - 34 Genes
+      - Custom SureSelect CGCI-BLGSP Panel - 4.6 Mb
+      - Custom SureSelect GENIE-UHN Panel - 555 Genes
+      - Custom SureSelect TARGET-AML_NBL_WT Panel - 2.8 Mb
+      - Foundation Medicine T5a Panel - 322 Genes
+      - Foundation Medicine T7 Panel - 429 Genes
+      - Ion AmpliSeq Cancer Hotspot Panel v2
+      - Ion AmpliSeq Comprehensive Cancer Panel
+      - Nextera Rapid Capture Exome v1.2
+      - SeqCap EZ HGSC VCRome v2.1
+      - SureSelect Human All Exon v3
+      - SureSelect Human All Exon v5
+      - TruSeq Amplicon Cancer Panel
+      - TruSeq Exome Enrichment - 62 Mb
+      - TruSight Myeloid Sequencing Panel
+      - Not Applicable
+      - Unknown
+
   target_capture_kit_catalog_number:
     term:
       $ref: "_terms.yaml#/target_capture_kit_catalog_number"
     type: string
+
   target_capture_kit_name:  # conditionally required for WXS etc
     term:
       $ref: "_terms.yaml#/target_capture_kit_name"
     type: string
+
   target_capture_kit_target_region:
     term:
       $ref: "_terms.yaml#/target_capture_kit_target_region"
     type: string
+
   target_capture_kit_vendor:
     term:
       $ref: "_terms.yaml#/target_capture_kit_vendor"
     type: string
+
   target_capture_kit_version:
     term:
       $ref: "_terms.yaml#/target_capture_kit_version"
     type: string
+
   to_trim_adapter_sequence:
     term:
       $ref: "_terms.yaml#/to_trim_adapter_sequence"
     type: boolean
-
+ 
   aliquots:
     $ref: "_definitions.yaml#/to_one"
-
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

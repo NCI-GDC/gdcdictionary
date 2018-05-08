@@ -3,13 +3,14 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "data_type"
 title: Data Type
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: TBD
 program: '*'
 project: '*'
 description: "Data type of a legacy file (depreciated)."
 additionalProperties: false
 submittable: false
+downloadable: false
 validators: null
 
 systemProperties:
