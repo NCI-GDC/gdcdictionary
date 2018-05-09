@@ -29,7 +29,7 @@ links:
     backref: aggregated_somatic_mutations
     label: derived_from
     target_type: project
-    multiplicity: many_to_one
+    multiplicity: many_to_many
     required: true
   - name: somatic_aggregation_workflows
     backref: aggregated_somatic_mutations
@@ -90,6 +90,6 @@ properties:
       - WXS
 
   projects:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_many"
   somatic_aggregation_workflows:
     $ref: "_definitions.yaml#/to_one"

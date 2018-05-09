@@ -37,7 +37,7 @@ links:
         backref: aligned_reads_indexes
         label: derived_from
         target_type: aligned_reads
-        multiplicity: one_to_one
+        multiplicity: many_to_many
         required: false
 
 required:
