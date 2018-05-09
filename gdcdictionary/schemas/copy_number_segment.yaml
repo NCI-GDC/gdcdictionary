@@ -32,7 +32,7 @@ links:
         backref: copy_number_segments
         label: derived_from
         target_type: copy_number_liftover_workflow
-        multiplicity: one_to_one
+        multiplicity: many_to_many
         required: false
       - name: genomic_profile_harmonization_workflows
         backref: copy_number_segments
@@ -93,6 +93,6 @@ properties:
       - Illumina
 
   copy_number_liftover_workflows:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_many"
   genomic_profile_harmonization_workflows:
     $ref: "_definitions.yaml#/to_one"
