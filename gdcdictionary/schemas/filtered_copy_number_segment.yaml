@@ -30,7 +30,7 @@ links:
     backref: filtered_copy_number_segments
     label: data_from
     target_type: copy_number_liftover_workflow
-    multiplicity: many_to_one
+    multiplicity: many_to_many
     required: true
 
 required:
@@ -76,4 +76,4 @@ properties:
       - Genotyping Array
 
   copy_number_liftover_workflows:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_many"
