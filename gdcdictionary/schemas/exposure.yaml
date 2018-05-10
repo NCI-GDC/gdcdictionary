@@ -30,6 +30,7 @@ links:
     required: true
 
 preferred:
+  - submitter_id
   - pack_years_smoked
   - years_smoked
 
