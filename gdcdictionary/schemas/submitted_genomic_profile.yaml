@@ -28,7 +28,7 @@ links:
     backref: submitted_genomic_profiles
     label: data_from
     target_type: read_group
-    multiplicity: one_to_many
+    multiplicity: many_to_many
     required: true
 
 required:
@@ -83,4 +83,4 @@ properties:
       - WGS
 
   read_groups:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_many"
