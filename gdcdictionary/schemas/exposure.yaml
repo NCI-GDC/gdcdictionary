@@ -29,8 +29,10 @@ links:
     multiplicity: many_to_one
     required: true
 
-preferred:
+required:
   - submitter_id
+
+preferred:
   - pack_years_smoked
   - years_smoked
 
