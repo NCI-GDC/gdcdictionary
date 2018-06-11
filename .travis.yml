@@ -1,13 +1,11 @@
 language: python
 python:
-  - '2.7'
+- '2.7'
 before_script:
-  - yes | python setup.py install
-  - pip install -r dev-requirements.txt
-  - pip freeze
+- yes | python setup.py install
+- git clone https://github.com/uc-cdis/dictionaryutils; cd dictionaryutils
 script:
-  - nosetests -v
-  - python bin/dump_schema.py
+- ./run_tests.sh
 deploy:
   provider: s3
   access_key_id: AKIAIKM5YAHQGFDE72SQ
