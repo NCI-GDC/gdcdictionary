@@ -225,3 +225,24 @@ workflow_properties:
     $ref: "#/datetime"
   updated_datetime:
     $ref: "#/datetime"
+
+ubiquitous_properties:
+  type:
+    type: string
+  id:
+    $ref: "#/UUID"
+    systemAlias: node_id
+  submitter_id:
+    type:
+      - string
+    description: >
+      A project-specific identifier for a node. This property is the calling card/nickname/alias for
+      a unit of submission. It can be used in place of the UUID for identifying or recalling a node.
+  state:
+    $ref: "#/state"
+  project_id:
+    $ref: "#/project_id"
+  created_datetime:
+    $ref: "#/datetime"
+  updated_datetime:
+    $ref: "#/datetime"

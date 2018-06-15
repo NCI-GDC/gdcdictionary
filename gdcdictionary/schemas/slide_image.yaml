@@ -29,6 +29,12 @@ links:
     target_type: slide
     multiplicity: many_to_one
     required: true
+  - name: core_metadata_collections
+    backref: slide_images
+    label: data_from
+    target_type: core_metadata_collection
+    multiplicity: many_to_many
+    required: false
 
 required:
   - submitter_id
@@ -96,3 +102,5 @@ properties:
     type: string
   slides:
     $ref: "_definitions.yaml#/to_one"
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_many"

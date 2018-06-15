@@ -29,6 +29,12 @@ links:
     target_type: read_group
     multiplicity: one_to_many
     required: true
+  - name: core_metadata_collections
+    backref: submitted_aligned_reads_files
+    label: data_from
+    target_type: core_metadata_collection
+    multiplicity: many_to_many
+    required: false
 
 required:
   - submitter_id
@@ -81,4 +87,6 @@ properties:
       - Total RNA-Seq
       - DNA Panel
   read_groups:
+    $ref: "_definitions.yaml#/to_many"
+  core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
