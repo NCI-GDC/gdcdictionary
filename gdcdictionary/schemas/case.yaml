@@ -212,6 +212,7 @@ properties:
     enum:
       - Diagnosis
       - First Patient Visit
+      - Sample Procurement
       - Study Enrollment
 
   lost_to_followup:
