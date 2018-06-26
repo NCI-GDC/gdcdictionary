@@ -32,6 +32,7 @@ links:
     required: true
 
 required:
+  - submitter_id
   - age_at_diagnosis
   - days_to_last_follow_up
   - vital_status
