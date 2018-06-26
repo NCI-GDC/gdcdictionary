@@ -72,6 +72,7 @@ properties:
       - RNA-SeQC - FPKM
       - RSEM - Quantification
       - STAR - Counts
+      - STAR - FPKM
 
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
