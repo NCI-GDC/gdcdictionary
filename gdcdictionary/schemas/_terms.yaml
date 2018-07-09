@@ -1026,6 +1026,16 @@ days_to_sample_procurement:
     The number of days from the date the patient was diagnosed to the date of the procedure that
     produced the sample.
 
+days_to_sequencing:
+  description: >
+    Number of days between the date used for index and the date the read group was sequenced.
+  termDef:
+    term: Days to Sequencing
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 days_to_treatment:
   description: >
     Number of days from date of initial pathologic diagnosis that treatment began.
