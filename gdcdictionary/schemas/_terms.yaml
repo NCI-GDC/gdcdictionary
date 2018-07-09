@@ -3025,7 +3025,7 @@ test_value:
 
 therapeutic_agents:
   description: >
-    Text identification of the individual agent(s) used as part of a prior treatment regimen.
+    Text identification of the individual agent(s) used as part of a treatment regimen.
   termDef:
     term: Prior Therapy Regimen Text
     source: caDSR
