@@ -11,6 +11,7 @@ description: "Data file containing metrics from the harmonization pipelines."
 additionalProperties: false
 submittable: false
 downloadable: true
+previous_version_downloadable: true
 validators: null
 
 systemProperties:
