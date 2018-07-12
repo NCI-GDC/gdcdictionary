@@ -1566,20 +1566,73 @@ properties:
     term:
       $ref: "_terms.yaml#/risk_factor"
     enum:
+      - Alcohol Consumption
+      - Allergy, Animal, NOS
+      - Allergy, Ant
+      - Allergy, Bee
+      - Allergy, Cat
+      - Allergy, Dairy or Lactose
+      - Allergy, Dog
+      - Allergy, Eggs
+      - Allergy, Food, NOS
+      - Allergy, Fruit
+      - Allergy, Meat
+      - Allergy, Mold or Dust
+      - Allergy, Nuts
+      - Allergy, Processed Foods
+      - Allergy, Seafood
+      - Allergy, Wasp
+      - Barrett's Esophagus
       - Beckwith-Wiedemann
+      - Behcet's Disease
+      - Cancer
+      - Cirrhosis
       - Colon Polyps
+      - Common variable immune deficiency (CVID)
       - Denys-Drash Syndrome
+      - Diabetes, NOS
+      - Diabetes, Type I
       - Diabetes, Type II
       - Diet
+      - Diverticulitis
+      - Eczema
+      - Epstein-Barr Virus
       - Familial Adenomatous Polyposis
       - Fanconi Anemia
+      - Gilbert's Syndrome
       - Gorlin Syndrome
+      - Hashimoto's Thyroiditis
+      - Hay Fever
+      - Headache
+      - Hematologic Disorder, NOS
       - Hemihypertrophy
+      - Hepatic Encephalopathy
+      - Hepatitis B Infection
+      - Hepatitis C Infection
+      - Hepatitis, NOS
+      - HIV
+      - Human Papillomavirus Infection
+      - Hypospadias
       - Li-Fraumeni Syndrome
+      - Lymphocytic Thyroiditis
       - Lynch Syndrome
+      - Myasthenia Gravis
       - Obesity
+      - Oral Contraceptives
+      - Pancreatitis
+      - Rheumatoid Arthritis
       - Rubinstein-Taybi Syndrome
+      - Sarcoidosis
+      - Seizure
+      - Sensory Changes
+      - Tattoo
+      - Thyroid Nodular Hyperplasia
+      - Tobacco, NOS
+      - Tobacco, Smokeless
+      - Tobacco, Smoking
       - Turcot Syndrome
+      - Undescended Testis
+      - Vision Changes
       - Wagr Syndrome
       - Unknown
       - Not Reported
