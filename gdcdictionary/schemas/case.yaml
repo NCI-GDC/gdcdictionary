@@ -214,6 +214,7 @@ properties:
       - Diagnosis
       - First Patient Visit
       - First Treatment
+      - Initial Genomic Sequencing
       - Sample Procurement
       - Study Enrollment
 
