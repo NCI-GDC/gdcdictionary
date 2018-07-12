@@ -1017,11 +1017,14 @@ properties:
       - Enucleation
       - Excisional Biopsy
       - Fine Needle Aspiration
+      - Imaging
       - Incisional Biopsy
       - Laparoscopy
       - Laparotomy
       - Other
       - Pap Smear
+      - Physical Exam
+      - Pathologic Review
       - Surgical Resection
       - Thoracentesis
       - Ultrasound Guided Biopsy
