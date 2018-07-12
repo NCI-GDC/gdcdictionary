@@ -6602,6 +6602,8 @@ properties:
     term:
       $ref: "_terms.yaml#/vascular_invasion_type"
     enum:
+      - Extramural
+      - Intramural
       - Macro
       - Micro
       - No Vascular Invasion
