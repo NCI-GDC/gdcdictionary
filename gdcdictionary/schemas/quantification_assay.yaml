@@ -64,6 +64,9 @@ properties:
       - HDSCA Enumeration
       - Molecular Devices SpectraMax M2
       - Qubit 3.0
+  assay_instrument_mode:
+    description: "The specific mode the assay instrument was run in (e.g., 'High Sensitivity')."
+    type: string
   assay_kit_name:
     description: "Name of the assay kit used."
     type: string
@@ -79,6 +82,8 @@ properties:
       - DNA Electrophoresis
       - Fluorometer
       - Immunohistochemistry
+      - PCR
+      - Sequencing
   cell_count:
     description: >
       If the analyte is cell count, report total whole number of cells counted here.
