@@ -36,7 +36,7 @@ required:
   - is_paired_end
   - read_length_lower
   - read_length_upper
-  - analytes 
+  - analytes
 
 uniqueKeys:
   - [ id ]
@@ -107,6 +107,7 @@ properties:
     term:
       $ref: "_terms.yaml#/library_selection"
     enum:
+      - Amplicon
       - Hybrid Selection
       - PCR
       - Affinity Enrichment

@@ -22,7 +22,7 @@ systemProperties:
 
 links:
   - name: analytes
-    backref: quantification_assays 
+    backref: quantification_assays
     label: data_from
     target_type: analyte
     multiplicity: many_to_one
@@ -45,7 +45,7 @@ properties:
   assay_instrument:
     description: "The specific instrument type used to perform the assay."
     enum:
-      - Agilent TapeStation 
+      - Agilent TapeStation
       - BioTek
       - CytoTrapNano CTC Platform
       - Epic Sciences CTC Platform
@@ -56,7 +56,7 @@ properties:
     description: "The specific model of instrument used to perform the assay."
     enum:
       - Agilent 2200 TapeStation
-      - Agilent 4200 TapeStation 
+      - Agilent 4200 TapeStation
       - BioTek Synergy 4
       - C88801-RU
       - ESRUO-01
@@ -64,6 +64,9 @@ properties:
       - HDSCA Enumeration
       - Molecular Devices SpectraMax M2
       - Qubit 3.0
+  assay_instrument_mode:
+    description: "The specific mode an instrument was run in (e.g., "High Sensitivity")."
+    type: string
   assay_kit_name:
     description: "Name of the assay kit used."
     type: string
@@ -76,18 +79,23 @@ properties:
   assay_method:
     description: "General methodology used to perform the assay (e.g. PCR, Sequencing)."
     enum:
-      - DNA Electrophoresis 
+      - DNA Electrophoresis
       - Fluorometer
       - Immunohistochemistry
   cell_count:
     description: >
       If the analyte is cell count, report total whole number of cells counted here.
-    type: integer 
+    type: integer
   cell_concentration:
     description: >
       If the analyte is cell count, report the concentrations of the cells in the aliquot (counted
-      cells per assay volume mL). Report the calculated concentration in cells per milliliters. 
+      cells per assay volume mL). Report the calculated concentration in cells per milliliters.
     type: number
+  experimental_step:
+    description: "A description of the experimental purpose or step for which the assay was performed."
+    enum:
+      - DNA Extraction
+      - Library Building
   molecular_concentration:
     description: >
       If the analyte is a molecule (e.g. DNA or RNA), report the observed concentration in nanograms

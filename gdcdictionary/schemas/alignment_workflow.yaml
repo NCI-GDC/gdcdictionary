@@ -1,0 +1,61 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "alignment_workflow"
+title: Alignment Workflow
+type: object
+namespace: https://www.bloodpac.org
+category: analysis
+program: '*'
+project: '*'
+description: >
+  A description of the specific bioinformatics workflow or pipeline used for sequence alignment.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - name: submitted_aligned_reads_files
+    backref: alignment_workflows
+    label: performed_on
+    target_type: submitted_aligned_reads
+    multiplicity: many_to_many
+    required: true
+
+required:
+  - submitter_id
+  - submitted_aligned_reads_files
+  - workflow_name
+  - workflow_version
+  - workflow_description
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/workflow_properties"
+
+  workflow_description:
+    description: "A brief description of the workflow or pipeline used to generate the data."
+    type: string
+  workflow_link:
+    description: "A link to the Github repository or other place where the pipeline is available to view."
+    type: string
+  workflow_name:
+    description: "The name of an encapsulated bioinformatics workflow or pipeline."
+    type: string
+  workflow_version:
+    description: "The version of the pipeline used."
+    type: string
+
+  submitted_aligned_reads_files:
+    $ref: "_definitions.yaml#/to_many"

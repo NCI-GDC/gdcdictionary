@@ -1,0 +1,53 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "quantification_assay_peak"
+title: Quantification Assay Peak
+type: object
+namespace: https://www.bloodpac.org
+category: notation
+program: '*'
+project: '*'
+description: >
+  The description of a peak in a quantification assay trace.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: quantification_assay_qcs
+    backref: quantification_assay_peaks
+    label: data_from
+    target_type: quantification_assay_qc
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - quantification_assay_qcs
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  kurtosis:
+    description: "Description of the kurtosis of a peak in a quantification assay trace."
+    type: string
+  peak_center:
+    description: "The center of a peak in a quantification assay trace."
+    type: string
+  peak_width:
+    description: "The width of a peak in a quantification assay trace."
+    type: string
+
+  quantification_assay_qcs:
+    $ref: "_definitions.yaml#/to_one"
