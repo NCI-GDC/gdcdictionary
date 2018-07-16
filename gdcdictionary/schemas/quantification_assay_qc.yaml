@@ -1,0 +1,67 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "quantification_assay_qc"
+title: Quantification Assay QC
+type: object
+namespace: https://www.bloodpac.org
+category: data_file
+program: '*'
+project: '*'
+description: >
+  Data file containing the fragment analyzer or bioanalyzer trace from a quantification assay.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - name: quantification_assays
+    backref: quantification_assay_qcs
+    label: data_from
+    target_type: quantification_assay
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - md5sum
+  - data_category
+  - data_type
+  - data_format
+  - quantification_assays
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+
+  data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
+    enum:
+      - Fragment Analyzer Trace
+      - Bioanalyzer Trace
+  data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
+    enum:
+      - Quantification Assay Trace
+  data_format:
+    term:
+      $ref: "_terms.yaml#/data_format"
+    type: string
+
+  quantification_assays:
+    $ref: "_definitions.yaml#/to_one"
