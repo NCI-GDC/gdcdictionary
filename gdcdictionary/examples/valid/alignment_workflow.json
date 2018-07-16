@@ -1,10 +1,10 @@
 {
     "type":"alignment_workflow",
     "submitter_id":"alignment_workflow_01",
-	"workflow_name":"my_favorite_pipeline_1",
-	"workflow_version":"v1.2",
-	"workflow_description":"A great pipeline for doing alignments.",
-	"workflow_link":"https://github.com/fav-aligner.cwl",
+    "workflow_name":"my_favorite_pipeline_1",
+    "workflow_version":"v1.2",
+    "workflow_description":"A great pipeline for doing alignments.",
+    "workflow_link":"https://github.com/fav-aligner.cwl",
     "submitted_aligned_reads_files": {
          "submitter_id":"bam_01"
     }
