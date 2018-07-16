@@ -1057,6 +1057,7 @@ properties:
       $ref: "_terms.yaml#/disease_response"
     enum:
       - AJ-Adjuvant Therapy
+      - BED-Biochemical Evidence of Disease
       - CPD-Clinical Progression
       - CR-Complete Response
       - CRU-Complete Response Unconfirmed
@@ -1071,6 +1072,8 @@ properties:
       - PA-Palliative Therapy
       - PB-Palliative Benefit
       - PD-Progressive Disease
+      - PDM-Persistent Distant Metastasis
+      - PLD-Persistent Locoregional Disease
       - PPD-Pseudoprogression
       - PR-Partial Response
       - PSR-Pseudoresponse
@@ -1081,7 +1084,9 @@ properties:
       - SD-Stable Disease
       - SPD-Surgical Progression
       - TE-Too Early
+      - TF-Tumor Free
       - VGPR-Very Good Partial Response
+      - WT-With Tumor
 
   dlco_ref_predictive_percent:
     term:
