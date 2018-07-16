@@ -65,7 +65,7 @@ properties:
       - Molecular Devices SpectraMax M2
       - Qubit 3.0
   assay_instrument_mode:
-    description: "The specific mode an instrument was run in (e.g., "High Sensitivity")."
+    description: "The specific mode an instrument was run in (e.g., High Sensitivity)."
     type: string
   assay_kit_name:
     description: "Name of the assay kit used."
