@@ -36,7 +36,7 @@ required:
   - is_paired_end
   - read_length_lower
   - read_length_upper
-  - analytes
+  - analytes 
 
 uniqueKeys:
   - [ id ]
@@ -52,15 +52,6 @@ properties:
   barcoding_applied:
     description: "True/False: was barcoding applied?"
     type: boolean
-  coverage:
-    description: "The sequencing coverage (e/g/, 50,000x per sample)."
-    type: string
-  customization:
-    description: "A description of any special setup or customization not included elsewhere."
-    type: string
-  cycles:
-    description: "The number of cycles (e.g., 75 PE)."
-    type: string
   flow_cell_barcode:
     term:
       $ref: "_terms.yaml#/flow_cell_barcode"
@@ -116,10 +107,9 @@ properties:
     term:
       $ref: "_terms.yaml#/library_selection"
     enum:
-      - Affinity Enrichment
-      - Amplicon
       - Hybrid Selection
       - PCR
+      - Affinity Enrichment
       - Poly-T Enrichment
       - RNA Depletion
       - Targeted Sequencing
