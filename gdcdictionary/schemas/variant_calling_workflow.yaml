@@ -44,12 +44,5 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
 
-  workflow_description:
-    description: "A brief description of the workflow or pipeline used to generate the data."
-    type: string
-  workflow_name:
-    description: "The name of an encapsulated bioinformatics workflow or pipeline."
-    type: string
-
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"

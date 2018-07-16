@@ -179,6 +179,12 @@ data_file_properties:
 
 workflow_properties:
   $ref: "#/ubiquitous_properties"
+  workflow_description:
+    description: "A brief description of the workflow or pipeline used to generate the data."
+    type: string
+  workflow_name:
+    description: "The name of an encapsulated bioinformatics workflow or pipeline."
+    type: string
   workflow_link:
     description: "Link to Github hash for the CWL workflow used."
     type: string
