@@ -1,0 +1,14 @@
+{
+    "type": "quantification_assay_qc",
+    "id": "1657a524-1827-4aff-b28b-f004d835f9d2",
+    "submitter_id": "TCGA-DQ-5630-01A-01R-1870-01",
+    "file_name": "UC_qa_qc.a38e0f12-7b18-4856-9cc8-314d8f0b63d6.1.jpeg",
+    "file_size": 5747943025,
+    "md5sum": "d81203da215be180128f260b788900b5",
+    "data_category": "Bioanalyzer Trace",
+    "data_type": "Quantification Assay Trace",
+    "data_format": "jpeg",
+    "quantification_assays": {
+	"submitter_id": "quantification_assay_1"
+    }
+}

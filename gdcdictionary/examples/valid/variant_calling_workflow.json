@@ -1,0 +1,11 @@
+{
+    "type":"variant_calling_workflow",
+    "submitter_id":"variant_calling_workflow_01",
+	"workflow_name":"my_favorite_pipeline_01",
+	"workflow_version":"v1.4",
+	"workflow_description":"A great pipeline for calling variants.",
+	"workflow_link":"https://github.com/variant_calling_pipeline.cwl",
+    "submitted_aligned_reads_files": {
+         "submitter_id":"bam_01"
+    }
+}
