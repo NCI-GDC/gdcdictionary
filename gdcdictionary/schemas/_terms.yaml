@@ -288,7 +288,7 @@ biomarker_name:
     term: Biomarker Name
     source: caDSR
     cde_id: 5473
-    cde_version: 11.0 
+    cde_version: 11.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5473&version=2.31"
 
 biomarker_result:
@@ -618,7 +618,7 @@ dlco_ref_predictive_percent:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2180255&version=1.0"
 
-encoding: 
+encoding:
   description: >
     Version of ASCII encoding of quality values found in the file.
   termDef:
@@ -1080,6 +1080,9 @@ number_proliferating_cells:
     cde_id: 5432636
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5432636&version=1.0"
+
+object_id:
+  description: "The GUID of the object in the index service."
 
 oct_embedded:
   description: >
@@ -1710,7 +1713,7 @@ tumor_grade:
 
 tumor_code: # TOREVIEW
   description: >
-    A specification of a cancer through cellular origin and localization. 
+    A specification of a cancer through cellular origin and localization.
 
 tumor_code_id: # TOREVIEW
   description: >

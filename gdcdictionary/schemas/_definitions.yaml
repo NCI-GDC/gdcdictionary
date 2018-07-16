@@ -71,6 +71,10 @@ md5sum:
     term:
         $ref: "_terms.yaml#/md5sum"
 
+object_id:
+    type: string
+    description: "The GUID of the object in the index service."
+
 release_state:
     description: "Release state of an entity."
     default: unreleased
@@ -170,6 +174,8 @@ data_file_properties:
     $ref: "#/file_state"
   error_type:
     $ref: "#/data_file_error_type"
+  object_id:
+    $ref: "#/object_id"
 
 workflow_properties:
   $ref: "#/ubiquitous_properties"
