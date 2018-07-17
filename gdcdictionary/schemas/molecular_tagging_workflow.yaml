@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "alignment_workflow"
-title: Alignment Workflow
+id: "molecular_tagging_workflow"
+title: Molecular Tagging Workflow
 type: object
 namespace: https://www.bloodpac.org
 category: analysis
 program: '*'
 project: '*'
 description: >
-  A description of the specific bioinformatics workflow or pipeline used for sequence alignment.
+  A description of the specific bioinformatics workflow or pipeline used for molecular tagging of sequenced reads.
 additionalProperties: false
 submittable: true
 validators: null
@@ -23,12 +23,21 @@ systemProperties:
   - error_type
 
 links:
-  - name: input_submitted_unaligned_reads_files
-    backref: alignment_workflows
-    label: performed_on
-    target_type: submitted_unaligned_reads
-    multiplicity: many_to_many
+  - exclusive: true
     required: true
+    subgroup:
+      - name: input_submitted_aligned_reads_files
+        backref: alignment_workflows
+        label: performed_on
+        target_type: submitted_aligned_reads
+        multiplicity: many_to_many
+        required: false
+      - name: input_submitted_unaligned_reads_files
+        backref: alignment_workflows
+        label: performed_on
+        target_type: submitted_unaligned_reads
+        multiplicity: many_to_many
+        required: false
   - name: output_submitted_aligned_reads_files
     backref: alignment_workflows
     label: generate
@@ -49,6 +58,8 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
 
+  input_submitted_aligned_reads_files:
+    $ref: "_definitions.yaml#/to_many"
   input_submitted_unaligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
   output_submitted_aligned_reads_files:
