@@ -24,7 +24,7 @@ systemProperties:
 
 links:
   - name: input_submitted_unaligned_reads_files
-    backref: alignment_workflows
+    backref: associated_alignment_workflows
     label: performed_on
     target_type: submitted_unaligned_reads
     multiplicity: many_to_many

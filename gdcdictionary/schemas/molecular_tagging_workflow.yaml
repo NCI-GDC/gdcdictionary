@@ -27,13 +27,13 @@ links:
     required: true
     subgroup:
       - name: input_submitted_aligned_reads_files
-        backref: alignment_workflows
+        backref: associated_alignment_workflows_aligned
         label: performed_on
         target_type: submitted_aligned_reads
         multiplicity: many_to_many
         required: false
       - name: input_submitted_unaligned_reads_files
-        backref: alignment_workflows
+        backref: associated_alignment_workflows_unaligned
         label: performed_on
         target_type: submitted_unaligned_reads
         multiplicity: many_to_many

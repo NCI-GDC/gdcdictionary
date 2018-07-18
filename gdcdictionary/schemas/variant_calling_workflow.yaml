@@ -24,7 +24,7 @@ systemProperties:
 
 links:
   - name: input_submitted_aligned_reads_files
-    backref: variant_calling_workflows
+    backref: associated_variant_calling_workflows
     label: performed_on
     target_type: submitted_aligned_reads
     multiplicity: many_to_many
