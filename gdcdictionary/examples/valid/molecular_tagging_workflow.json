@@ -5,7 +5,10 @@
     "workflow_version":"v1.2",
     "workflow_description":"A great pipeline for doing molecular tagging.",
     "workflow_link":"https://github.com/fav-tagger.cwl",
-    "submitted_aligned_reads_files": {
+    "input_submitted_aligned_reads_files": {
          "submitter_id":"bam_01"
-    }
+    },
+	"output_submitted_aligned_reads_files": {
+		 "submitter_id":"bam_02"
+	}
 }
