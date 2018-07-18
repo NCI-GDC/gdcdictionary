@@ -1,0 +1,14 @@
+{
+    "type":"molecular_tagging_workflow",
+    "submitter_id":"tagging_workflow_01",
+    "workflow_name":"my_favorite_pipeline_1",
+    "workflow_version":"v1.2",
+    "workflow_description":"A great pipeline for doing molecular tagging.",
+    "workflow_link":"https://github.com/fav-tagger.cwl",
+    "input_submitted_aligned_reads_files": {
+         "submitter_id":"bam_01"
+    },
+    "output_submitted_aligned_reads_files": {
+         "submitter_id":"bam_02"
+    }
+}
