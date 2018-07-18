@@ -8,7 +8,7 @@
     "input_submitted_unaligned_reads_files": {
          "submitter_id":"bam_01"
     },
-	"output_submitted_aligned_reads_files": {
+    "output_submitted_aligned_reads_files": {
          "submitter_id":"bam_02"
     }
 }
