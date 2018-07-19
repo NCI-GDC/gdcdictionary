@@ -981,11 +981,11 @@ days_to_lost_to_followup:
     The number of days between the date used for index and to the date the patient was lost to
     follow-up.
   termDef:
-    term: null
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: Index Date To Lost To Follow-up Day Count
+    source: caDSR
+    cde_id: 6154721
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154721&version=1.0"
 
 days_to_new_event:
   description: >
@@ -1106,11 +1106,11 @@ disease_type: # TOREVIEW
     The text term used to describe the type of malignant disease, as categorized by the World
     Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).
   termDef:
-    term: Disease Type
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: ICD-O Disease Diagnosis Category
+    source: caDSR
+    cde_id: 6161017
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161017&version=1.0"
 
 distance_normal_to_tumor:
   description: >
@@ -1681,14 +1681,14 @@ includes_spike_ins: # TOREVIEW
 
 index_date:
   description: >
-    The reference or anchor date used during date obfuscation, where a single date is obscurred by
-    creating one or more date ranges in relation to this date.
+    The text term used to describe the reference or anchor date used when for date obfuscation,
+    where a single date is obscurred by creating one or more date ranges in relation to this date.
   termDef:
-    term: null
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: Index Date Type
+    source: caDSR
+    cde_id: 6154722
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154722&version=1.0"
 
 initial_weight:
   description: >
@@ -1968,13 +1968,14 @@ longest_dimension:
 
 lost_to_followup:
   description: >
-    A yes/no indicator related to whether a patient was unable to be contacted for follow-up.
+    The yes/no/unknown indicator used to describe whether a patient was unable to be contacted or
+    seen for follow-up information.
   termDef:
-    term: Patient Lost Follow-Up Ind-2
+    term: Patient Lost Follow-up Indicator
     source: caDSR
-    cde_id: 61333
-    cde_version: 3.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=61333&version=3.0"
+    cde_id: 6161018
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161018&version=1.0"
 
 lymph_nodes_positive:
   description: >
@@ -2543,11 +2544,11 @@ primary_site:
     The text term used to describe the general location of the malignant disease, as categorized by
     the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).
   termDef:
-    term: Primary Site
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: ICD-O Primary Anatomic Site Category
+    source: caDSR
+    cde_id: 6161019
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161019&version=1.0"
 
 prior_malignancy:
   description: >
