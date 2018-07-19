@@ -921,14 +921,13 @@ days_to_best_overall_response:
 
 days_to_birth:
   description: >
-    Number of days between the date used for index and the date from a person's date of birth
-    represented as a calculated negative number of days.
+    Number of days between the date used for index and the date the patient was born.
   termDef:
-    term: Person Birth Date Less Initial Pathologic Diagnosis Date Calculated Day Value
+    term: Index Date To Birth Day Count
     source: caDSR
-    cde_id: 3008233
+    cde_id: 6154723
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3008233&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154723&version=1.0"
 
 days_to_collection:
   description: >
@@ -954,14 +953,13 @@ days_to_comorbidity:
 
 days_to_death:
   description: >
-    Number of days between the date used for index and the date from a person's date of death
-    represented as a calculated number of days.
+    Number of days between the date used for index and the date the patient died.
   termDef:
-    term: Death Less Initial Pathologic Diagnosis Date Calculated Day Value
+    term: Index Date to Death Day Count
     source: caDSR
-    cde_id: 3165475
+    cde_id: 6154724
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3165475&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154724&version=1.0"
 
 days_to_diagnosis:
   description: >
