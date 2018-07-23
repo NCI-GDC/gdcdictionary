@@ -2736,14 +2736,14 @@ relationship_type:
 
 relative_with_cancer_history:
   description: >
-    Indicator to signify whether or not an individual's biological relative has been diagnosed with
-    another type of cancer.
+    The yes/no/unknown indicator used to describe whether any of the patient's relatives have a
+    history of cancer.
   termDef:
-    term: Other Cancer Biological Relative History Indicator
+    term: Relative Malignant Diagnosis Indicator
     source: caDSR
-    cde_id: 3901752
+    cde_id: 6161023
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3901752&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161023&version=1.0"
 
 residual_disease:
   description: >
