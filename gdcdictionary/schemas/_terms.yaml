@@ -649,15 +649,15 @@ cigarettes_per_day:
 
 circumferential_resection_margin:
   description: >
-    A value in millimeters indicating the measured length between a malignant lesion of the
-    colon or rectum and the nearest radial (or circumferential) border of tissue removed during
-    cancer surgery.
+    Numeric value used to describe the non-peritonealised bare area of rectum, comprising anterior
+    and posterior segments, when submitted as a surgical specimen resulting from excision of cancer
+    of the rectum.
   termDef:
-    term: Colorectal Surgical Margin Circumferential Distance Measurement
+    term: Circumferential Resection Margin Measurement
     source: caDSR
-    cde_id: 64202
+    cde_id: 6161030
     cde_version: 3.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64202&version=3.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161030&version=1.0"
 
 classification_of_tumor:
   description: >
@@ -869,14 +869,14 @@ days_to_adverse_event:
 
 days_to_best_overall_response:
   description: >
-    Number of days between the date used for index and the date of the patient's best overall
-    response.
+    Number of days between the date used for index and the date of the patient was thought to have
+    the best overall response to their disease.
   termDef:
-    term: null
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: Index Date To Overall Best Response Day Count
+    source: caDSR
+    cde_id: 6154732
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154732&version=1.0"
 
 days_to_birth:
   description: >
@@ -924,13 +924,14 @@ days_to_death:
 
 days_to_diagnosis:
   description: >
-    Number of days between the date used for index and the date of diagnosis.
+    Number of days between the date used for index and the date the patient was diagnosed with the
+    malignant disease.
   termDef:
-    term: null
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: Index Date To Disease Diagnosis Day Count
+    source: caDSR
+    cde_id: 6154733
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154733&version=1.0"
 
 days_to_follow_up:
   description: >
@@ -2047,13 +2048,13 @@ metastasis_at_diagnosis_site:
 
 method_of_diagnosis:
   description: >
-    The method used to initially the patient's diagnosis.
+    Text term used to describe the method used to confirm the patients malignant diagnosis.
   termDef:
-    term: Method of Diagnosis
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: Disease Method of Diagnosis Type
+    source: caDSR
+    cde_id: 6161031
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161031&version=1.0"
 
 method_of_sample_procurement:
   description: >
@@ -2520,13 +2521,14 @@ preservation_method:
 
 primary_diagnosis:
   description: >
-    Text term for the structural pattern of cancer cells used to define a microscopic diagnosis.
+    Text term used to describe the patient's histologic diagnosis, as described by the World Health
+    Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).
   termDef:
-    term: Neoplasm Histologic Type Name
+    term: ICD-O Primary Disease Diagnosis Type
     source: caDSR
-    cde_id: 3081934
-    cde_version: 3.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3081934&version=3.0"
+    cde_id: 6161032
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161032&version=1.0"
 
 primary_site:
   description: >
@@ -2859,17 +2861,15 @@ shortest_dimension:
 
 site_of_resection_or_biopsy:
   description: >
-    The third edition of the International Classification of Diseases for Oncology, published in
-    2000, used principally in tumor and cancer registries for coding the site (topography) and the
-    histology (morphology) of neoplasms. The description of an anatomical region or of a body part.
-    Named locations of, or within, the body. A system of numbered categories for representation of
-    data.
+    The text term used to describe the anatomic site of origin, of the patient's malignant disease,
+    as described by the World Health Organization's (WHO) International Classification of Diseases
+    for Oncology (ICD-O).
   termDef:
-    term: International Classification of Diseases for Oncology, Third Edition ICD-O-3 Site Code
+    term: ICD-O Origin of Disease Anatomic Site
     source: caDSR
-    cde_id: 3226281
+    cde_id: 6161034
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3226281&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161034&version=1.0"
 
 size_selection_range: # TOREVIEW
   description: >
@@ -3057,13 +3057,15 @@ time_between_excision_and_freezing:
 
 tissue_or_organ_of_origin:
   description: >
-    Text term that describes the anatomic site of the tumor or disease.
+    The text term used to describe the anatomic site of origin, of the patient's malignant disease,
+    as described by the World Health Organization's (WHO) International Classification of Diseases
+    for Oncology (ICD-O).
   termDef:
-    term: Tumor Disease Anatomic Site
+    term: ICD-O Origin of Disease Anatomic Site
     source: caDSR
-    cde_id: 3427536
-    cde_version: 3.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3427536&version=3.0"
+    cde_id: 6161035
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161035&version=1.0"
 
 tissue_type:
   description: >
