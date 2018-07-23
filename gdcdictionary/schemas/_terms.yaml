@@ -2723,6 +2723,27 @@ relationship_age_at_diagnosis:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5300571&version=1.0"
 
+relationship_gender:
+  description: >
+    The text term used to describe the gender of the patient's relative with a history of cancer.
+  termDef:
+    term: Relative Gender Type
+    source: caDSR
+    cde_id: 6161021
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161021&version=1.0"
+
+relationship_primary_diagnosis:
+  description: >
+    The text term used to describe the malignant diagnosis of the patient's relative with a history
+    of cancer.
+  termDef:
+    term: Relative Malignant Diagnosis Name
+    source: caDSR
+    cde_id: 6161022
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161022&version=1.0"
+
 relationship_type:
   description: >
     The subgroup that describes the state of connectedness between members of the unit of society
