@@ -92,6 +92,34 @@ properties:
       $ref: "_terms.yaml#/blood_test_normal_range_upper"
     type: number
 
+  biospecimen_type:
+    term:
+      $ref: "_terms.yaml#/biospecimen_type"
+    enum:
+      - Blood
+      - Bone Marrow
+      - Buccal Mucosa
+      - Buffy Coat
+      - Cerebrospinal Fluid
+      - Connective Tissue
+      - Embryonic Fluid
+      - Embryonic Tissue
+      - Feces
+      - Granulocyte
+      - Muscle Tissue
+      - Nerve Tissue
+      - Peritoneal Fluid
+      - Plasma
+      - Pleural Fluid
+      - Saliva
+      - Serum
+      - Skin
+      - Soft Tissue
+      - Tissue, NOS
+      - Urine
+      - Unknown
+      - Not Reported
+
   cell_count:
     term:
       $ref: "_terms.yaml#/cell_count"
@@ -896,6 +924,52 @@ properties:
       - mH2A
       - mH2A.1
       - mH2A.2
+      - Unknown
+      - Not Reported
+
+  laboratory_test:
+    term:
+      $ref: "_terms.yaml#/laboratory_test"
+    enum:
+      - Absolute Neutrophil
+      - Albumin
+      - Alpha Fetoprotein
+      - Neutrophil Bands
+      - Basophil
+      - Beta 2 Microglobulin
+      - Myeloblasts
+      - Lymphoblasts
+      - Blood Urea Nitrogen
+      - Calcium
+      - Cellularity
+      - Creatinine
+      - C-Reactive Protein
+      - Eosinophil
+      - Glucose
+      - Hematocrit
+      - Hemoglobin
+      - Human Chorionic Gonadotropin
+      - Immunoglobulin A
+      - Immunoglobulin G
+      - Immunoglobulin M
+      - Lactate Dehydrogenase
+      - Leukocytes
+      - Luteinizing Hormone
+      - Lymphocytes
+      - M Protein
+      - Metamyelocytes
+      - Myelocytes
+      - Platelets
+      - Prolymphocytes
+      - Promonocytes
+      - Promyelocytes
+      - Segmented Neutrophil
+      - Serum Free Immunoglobulin Light Chain, Kappa
+      - Serum Free Immunoglobulin Light Chain, Lambda
+      - Serum Free Immunoglobulin Light Chain, NOS
+      - Testosterone
+      - Total Bilirubin
+      - Total Protein
       - Unknown
       - Not Reported
 
