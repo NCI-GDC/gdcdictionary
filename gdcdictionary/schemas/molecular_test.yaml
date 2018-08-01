@@ -1772,9 +1772,11 @@ properties:
       - Deletion-Insertion
       - Duplication
       - Extension
+      - Gain
       - Hypermethylation
       - Insertion
       - Inversion
+      - Loss
       - Methylation
       - Mosaicism
       - Other
