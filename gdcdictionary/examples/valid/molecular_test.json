@@ -3,7 +3,6 @@
     "submitter_id":"molecular_test_1",
     "aa_change":"FJRs1d6C2z",
     "antigen":"CA19-9",
-    "blood_test":"Total Protein",
     "blood_test_normal_range_lower":73.298581,
     "blood_test_normal_range_upper":98.050881,
     "cell_count":35,
