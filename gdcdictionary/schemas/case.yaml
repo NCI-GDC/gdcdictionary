@@ -213,6 +213,7 @@ properties:
     enum:
       - Diagnosis
       - First Patient Visit
+      - First Treatment
       - Sample Procurement
       - Study Enrollment
 
