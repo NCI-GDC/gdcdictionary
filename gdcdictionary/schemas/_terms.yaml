@@ -1680,6 +1680,16 @@ index_date:
     cde_version: null
     term_url: null
 
+initial_disease_status:
+  description: >
+    The text term used to describe the status of the patient's malignancy when the treatment began.
+  termDef:
+    term: Initial Disease Status Type
+    source: caBIG
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 initial_weight:
   description: >
     Numeric value that represents the initial weight of the sample, measured in milligrams.
