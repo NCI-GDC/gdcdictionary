@@ -385,6 +385,36 @@ antigen:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142523&version=1.0"
 
+average_base_quality:
+  description: >
+    Average base quality collected from samtools.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+average_insert_size:
+  description: >
+    Average insert size collected from samtools.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+average_read_length:
+  description: >
+    Average read length collected from samtools.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 barretts_esophagus_goblet_cells_present:
   description: >
     The yes/no/unknown indicator used to describe whether goblet cells were determined to be present
@@ -2004,6 +2034,17 @@ md5sum: # TOREVIEW
     The 128-bit hash value expressed as a 32 digit hexadecimal number (in lower case) used as a
     file's digital fingerprint.
 
+mean_coverage:
+  description: >
+    Mean coverage for whole genome sequencing, or mean target coverage for whole exome and targeted
+    sequencing, collected from Picard Tools.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 medulloblastoma_molecular_classification:
   description: >
     The text term used to describe the classification of medulloblastoma tumors based on molecular
@@ -2271,6 +2312,16 @@ pack_years_smoked:
     cde_id: 2955385
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2955385&version=1.0"
+
+pairs_on_diff_chr:
+  description: >
+    Pairs on different chromosomes collected from samtools.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 pancreatitis_onset_year:
   description: >
@@ -2637,6 +2688,68 @@ project_id: # TOREVIEW
   description: >
     Unique ID for any specific defined piece of work that is undertaken or attempted to
     meet a single requirement.
+
+proportion_base_mismatch:
+  description: >
+    Proportion of mismatched bases collected from samtools.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+proportion_coverage_10X:
+  description: >
+    Proportion of all reference bases for whole genome sequencing, or targeted bases for whole exome
+    and targeted sequencing, that achieves 10X or greater coverage from Picard Tools.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+proportion_coverage_30X:
+  description: >
+    Proportion of all reference bases for whole genome sequencing, or targeted bases for whole exome
+    and targeted sequencing, that achieves 30X or greater coverage from Picard Tools.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+proportion_reads_duplicated:
+  description: >
+    Proportion of duplicated reads collected from samtools.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+proportion_reads_mapped:
+  description: >
+    Proportion of mapped reads collected from samtools.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+proportion_targets_no_coverage:
+  description: >
+    Proportion of targets that did not reach 1X coverage over any base from Picard Tools.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 qc_metric_state:
   description: >
@@ -3123,6 +3236,16 @@ total_protein:
     cde_id: 2181536
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2181536&version=1.0"
+
+total_reads:
+  description: >
+    Total number of reads collected from samtools.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 total_sequences:
   description: >
