@@ -29,7 +29,7 @@ links:
         backref: read_group_qcs
         label: data_from
         target_type: submitted_aligned_reads
-        multiplicity: one_to_one
+        multiplicity: many_to_one
         required: false
       - name: submitted_unaligned_reads_files
         backref: read_group_qcs
