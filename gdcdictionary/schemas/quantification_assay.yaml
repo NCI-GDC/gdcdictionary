@@ -49,15 +49,17 @@ properties:
       - BioTek
       - CytoTrapNano CTC Platform
       - Epic Sciences CTC Platform
+      - Fragment Analyzer
       - HD-SCA Platform
       - Molecular Devices SpectraMax
       - Qubit
-      - Fragment Analyzer
   assay_instrument_model:
     description: "The specific model of instrument used to perform the assay."
     enum:
+      - Advanced Analytical Fragment Analyzer
       - Agilent 2200 TapeStation
       - Agilent 4200 TapeStation
+      - Agilent Bioanalyzer 2100
       - BioTek Synergy 4
       - C88801-RU
       - ESRUO-01
@@ -65,8 +67,6 @@ properties:
       - HDSCA Enumeration
       - Molecular Devices SpectraMax M2
       - Qubit 3.0
-      - Advanced Analytical Fragment Analyzer
-      - Agilent Bioanalyzer 2100
   assay_instrument_mode:
     description: "The specific mode an instrument was run in (e.g., High Sensitivity)."
     type: string
