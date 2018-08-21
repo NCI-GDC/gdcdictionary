@@ -52,6 +52,7 @@ properties:
       - HD-SCA Platform
       - Molecular Devices SpectraMax
       - Qubit
+      - Fragment Analyzer
   assay_instrument_model:
     description: "The specific model of instrument used to perform the assay."
     enum:
@@ -64,6 +65,8 @@ properties:
       - HDSCA Enumeration
       - Molecular Devices SpectraMax M2
       - Qubit 3.0
+      - Advanced Analytical Fragment Analyzer
+      - Agilent Bioanalyzer 2100
   assay_instrument_mode:
     description: "The specific mode an instrument was run in (e.g., High Sensitivity)."
     type: string

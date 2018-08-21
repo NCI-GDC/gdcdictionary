@@ -1744,6 +1744,11 @@ tumor_stage:
     cde_version: null
     term_url: "https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C16899"
 
+universal_molecular_identifier:
+  description: >
+    Short sequences or barcodes added to each read for next generation sequencing protocols used to detect and quantify unique transcripts.
+  type: string
+
 UUID:
   description: >
     A 128-bit identifier. Depending on the mechanism used to generate it, it is either guaranteed to
