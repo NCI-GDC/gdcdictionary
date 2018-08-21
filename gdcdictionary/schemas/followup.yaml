@@ -990,12 +990,12 @@ properties:
   ecog_performance_status:
     description: "The ECOG functional performance status of the patient/participant."
     enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
   height:
     description: "The height of the patient in centimeters."
     type: number
