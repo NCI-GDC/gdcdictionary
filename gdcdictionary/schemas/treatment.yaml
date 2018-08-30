@@ -55,6 +55,17 @@ properties:
       $ref: "_terms.yaml#/days_to_treatment_start"
     type: integer
 
+  initial_disease_status:
+    term:
+      $ref: "_terms.yaml#/initial_disease_status"
+    enum:
+      - Initial Diagnosis
+      - Progressive Disease
+      - Recurrent Disease
+      - Residual Disease
+      - Unknown
+      - Not Reported
+
   regimen_or_line_of_therapy:
     term:
       $ref: "_terms.yaml#/regimen_or_line_of_therapy"
