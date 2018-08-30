@@ -979,17 +979,25 @@ properties:
       - Brain
       - Cerebrospinal Fluid
       - Central Nervous System
+      - Colon
       - Distant Nodes
       - Distant Organ
+      - Groin
       - Liver
       - Lung
-      - Lymph Node(s) Axilla
-      - Lymph Node(s)
+      - Lymph Node, Axillary
+      - Lymph Node, Inguinal
+      - Lymph Node, NOS
       - Mediastinum
+      - Omentum
+      - Ovary
+      - Pelvis
       - Peritoneal Cavity
       - Peritoneum
       - Pleura
+      - Scalp
       - Skin
+      - Small Intestine
       - Soft Tissue
       - Spinal Cord
       - Unknown
