@@ -60,10 +60,13 @@ properties:
       $ref: "_terms.yaml#/cause_of_death"
     enum:
       - Cancer Related
+      - Cardiovascular Disorder, NOS
       - End-stage Renal Disease
       - Infection
       - Not Cancer Related
+      - Renal Disorder, NOS
       - Spinal Muscular Atrophy
+      - Surgical Complications
       - Toxicity
       - Not Reported
       - Unknown
