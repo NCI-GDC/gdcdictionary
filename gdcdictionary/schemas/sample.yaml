@@ -28,6 +28,7 @@ systemProperties:
 required:
   - submitter_id
   - sample_type
+  - tissue_type
 
 uniqueKeys:
   - [id]
