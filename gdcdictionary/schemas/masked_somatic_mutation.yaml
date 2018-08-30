@@ -92,7 +92,6 @@ properties:
       - miRNA-Seq
       - RNA-Seq
       - Targeted Sequencing
-      - Validation
       - WGS
       - WXS
 
