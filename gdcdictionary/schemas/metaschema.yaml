@@ -17,6 +17,7 @@ required:
   - systemProperties #non-user facing values required by backend
   - submittable
   - downloadable
+  - previous_version_downloadable
   #Require core JSON schema fields here if desired, requiring id
   - id
 
@@ -115,6 +116,10 @@ properties:
 
   downloadable:
     description: "Indicates if a file can be downloaded by a user with downloader access."
+    type: boolean
+
+  previous_version_downloadable:
+    description: "Indicates if the previous version of a file is available for download."
     type: boolean
 
   validators:
