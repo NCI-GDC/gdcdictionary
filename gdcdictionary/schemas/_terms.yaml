@@ -3177,7 +3177,7 @@ treatment_intent_type:
 treatment_or_therapy:
   description: >
     A yes/no/unknown/not applicable indicator related to the administration of therapeutic agents
-    received before the body specimen was collected.
+    received.
   termDef:
     term: Therapeutic Procedure Prior Specimen Collection Administered Yes No Unknown Not Applicable Indicator
     source: caDSR
