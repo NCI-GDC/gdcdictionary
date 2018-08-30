@@ -213,12 +213,6 @@ links:
         target_type: run_metadata
         multiplicity: many_to_many
         required: false
-      - name: sample_level_mafs
-        label: annotates
-        backref: annotations
-        target_type: sample_level_maf
-        multiplicity: many_to_many
-        required: false
       - name: samples
         label: annotates
         backref: annotations
@@ -441,8 +435,6 @@ properties:
   run_metadata_files:
     $ref: "_definitions.yaml#/to_many"
   samples:
-    $ref: "_definitions.yaml#/to_many"
-  sample_level_mafs:
     $ref: "_definitions.yaml#/to_many"
   simple_germline_variations:
     $ref: "_definitions.yaml#/to_many"
