@@ -880,7 +880,7 @@ days_to_best_overall_response:
 
 days_to_birth:
   description: >
-    Time interval from a person's date of birth to the date of initial pathologic diagnosis,
+    Number of days between the date used for index and the date from a person's date of birth
     represented as a calculated negative number of days.
   termDef:
     term: Person Birth Date Less Initial Pathologic Diagnosis Date Calculated Day Value
@@ -913,7 +913,7 @@ days_to_comorbidity:
 
 days_to_death:
   description: >
-    Time interval from a person's date of death to the date of initial pathologic diagnosis,
+    Number of days between the date used for index and the date from a person's date of death
     represented as a calculated number of days.
   termDef:
     term: Death Less Initial Pathologic Diagnosis Date Calculated Day Value
