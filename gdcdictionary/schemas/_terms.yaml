@@ -476,6 +476,17 @@ biospecimen_laterality:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2007875&version=1.0"
 
+biospecimen_type:
+  description:
+    The text term used to describe the biological material used for testing, diagnostic, treatment
+    or research purposes.
+  termDef:
+    term: Biospecimen Type
+    source: caBIG
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 blood_test:
   description: >
     Text term used to describe a specific blood test.
@@ -1824,6 +1835,17 @@ karnofsky_performance_status:
     cde_id: 2003853
     cde_version: 4.2
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2003853&version=4.2"
+
+laboratory_test:
+  description: >
+    The text term used to describe the medical testing used to diagnose, treat or further understand
+    a patient's disease.
+  termDef:
+    term: Laboratory Test Type
+    source: caBIG
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 lane_number:
   description: >
