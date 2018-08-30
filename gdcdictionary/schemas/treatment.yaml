@@ -415,11 +415,21 @@ properties:
     term:
       $ref: "_terms.yaml#/treatment_type"
     enum:
-      - Ablation
-      - Brachytherapy
+      - Ablation, Cryo
+      - Ablation, Ethanol Injection
+      - Ablation, Microwave
+      - Ablation, NOS
+      - Ablation, Radiofrequency
+      - Ablation, Radiosurgical
+      - Ancillary Treatment
+      - Antiseizure Treatment
+      - Bisphosphonate Therapy
+      - Blinded Study, Treatment Unknown
       - Brachytherapy, High Dose
       - Brachytherapy, Low Dose
+      - Brachytherapy, NOS
       - Chemoembolization
+      - Chemoprotectant
       - Chemotherapy
       - Concurrent Chemoradiation
       - Cryoablation
@@ -430,22 +440,37 @@ properties:
       - I-131 Radiation Therapy
       - Internal Radiation
       - Immunotherapy (Including Vaccines)
-      - Microwave Ablation
+      - Isolated Limb Perfusion (ILP)
+      - Organ Transplantation
       - Other
-      - Pharmaceutical Therapy
+      - Pharmaceutical Therapy, NOS
+      - Pleurodesis
       - Radiation, 2D Conventional
       - Radiation, 3D Conformal
+      - Radiation, Combination
+      - Radiation, Cyberknife
+      - Radiation, External Beam
+      - Radiation, Implants
       - Radiation, Intensity-Modulated Radiotherapy
+      - Radiation, Internal
       - Radiation, Proton Beam
-      - Radiation, Stereotactic Body
+      - Radiation, Radioisotope
+      - Radiation, Stereotactic/Gamma Knife/SRS
+      - Radiation, Systemic
       - Radiation Therapy, NOS
+      - Radioactive Iodine Therapy
       - Radioembolization
-      - Radiofrequency Ablation
-      - Radioisotope Radiation
-      - Radiosurgical Ablation
-      - Stem Cell Transplantation
+      - Radiosensitizing Agent
       - Stem Cell Treatment
+      - Stem Cell Transplantation, Autologous
+      - Stem Cell Transplantation, Double Autologous
+      - Stem Cell Transplantation, Allogeneic
+      - Stem Cell Transplantation, Non-Myeloablative
+      - Stem Cell Transplantation, Syngenic
+      - Stem Cell Transplantation, Haploidentical
+      - Stem Cell Transplantation, NOS
       - Stereotactic Radiosurgery
+      - Steroid Therapy
       - Surgery
       - Targeted Molecular Therapy
       - Unknown
