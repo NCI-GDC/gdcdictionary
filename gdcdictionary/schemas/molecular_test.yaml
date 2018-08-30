@@ -52,8 +52,33 @@ properties:
     term:
       $ref: "_terms.yaml#/antigen"
     enum:
+      - BCL6
       - CA19-9
+      - CCND1
+      - CD10
+      - CD117
+      - CD138
+      - CD14
+      - CD15
+      - CD19
+      - CD20
+      - CD22
+      - CD23
+      - CD25
+      - CD3
+      - CD30
+      - CD33
+      - CD34
+      - CD45
+      - CD5
+      - CD56
+      - CD7
+      - CD79A
       - CEA
+      - HLA-DR
+      - Mesothelin
+      - NSE
+      - Squamous Cell Carcinoma Antigen (SCCA)
       - Unknown
       - Not Reported
 
