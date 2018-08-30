@@ -1538,6 +1538,7 @@ properties:
     term:
       $ref: "_terms.yaml#/progression_or_recurrence_type"
     enum:
+      - Biochemical
       - Distant
       - Local
       - Regional
