@@ -922,13 +922,6 @@ properties:
       - Unknown
       - Not Reported
 
-  ldh_level_at_diagnosis:
-    term:
-      $ref: "_terms.yaml#/ldh_level_at_diagnosis"
-    type:
-      - number
-      - "null"
-
   ldh_normal_range_upper:
     term:
       $ref: "_terms.yaml#/ldh_normal_range_upper"

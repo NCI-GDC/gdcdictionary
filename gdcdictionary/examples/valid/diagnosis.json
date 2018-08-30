@@ -44,7 +44,6 @@
     "ishak_fibrosis_score":"1,2 - Portal Fibrosis",
     "iss_stage":"I",
     "last_known_disease_status": "Unknown tumor status",
-    "ldh_level_at_diagnosis": 1,
     "ldh_normal_range_upper": 1.5,
     "medulloblastoma_molecular_classification":"Unknown",
     "metastasis_at_diagnosis":"Distant Metastasis",
