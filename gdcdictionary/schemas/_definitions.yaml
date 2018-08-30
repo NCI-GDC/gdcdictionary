@@ -152,6 +152,8 @@ qc_metrics_state:
         - FAIL
         - PASS
         - WARN
+        - Unknown
+        - Not Reported
 
 project_id:
     type: string
