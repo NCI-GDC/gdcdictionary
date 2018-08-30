@@ -46,6 +46,7 @@ properties:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum:
+      - GATK4 MuTect2
       - MuSE
       - MuTect2
       - Pindel
