@@ -76,6 +76,11 @@ properties:
       $ref: "_terms.yaml#/base_caller_version"
     type: string
 
+  days_to_sequencing:
+    term:
+      $ref: "_terms.yaml#/days_to_sequencing"
+    type: integer
+
   experiment_name:
     term:
       $ref: "_terms.yaml#/experiment_name"
