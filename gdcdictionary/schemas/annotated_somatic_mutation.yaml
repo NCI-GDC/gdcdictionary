@@ -71,11 +71,15 @@ properties:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
+      - ATAC-Seq
+      - Bisulfite-Seq
+      - ChIP-Seq
+      - Low Pass WGS
+      - miRNA-Seq
+      - RNA-Seq
+      - Targeted Sequencing
       - WGS
       - WXS
-      - Low Pass WGS
-      - Validation
-      - Targeted Sequencing
 
   somatic_annotation_workflows:
     $ref: "_definitions.yaml#/to_one"
