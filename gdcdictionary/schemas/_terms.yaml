@@ -1047,25 +1047,23 @@ days_to_treatment:
 
 days_to_treatment_end:
   description: >
-    Time interval from the date of the initial pathologic diagnosis to the date of treatment end,
-    represented as a calculated number of days.
+    Number of days between the date used for index and the date the treatment ended.
   termDef:
-    term: Treatment End Subtract First Pathologic Diagnosis Day Calculation Value
+    term: Index Date To Treatment End Day Count
     source: caDSR
-    cde_id: 5102431
+    cde_id: 6154725
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5102431&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154725&version=1.0"
 
 days_to_treatment_start:
   description: >
-    Time interval from the date of the initial pathologic diagnosis to the start of treatment,
-    represented as a calculated number of days.
+    Number of days between the date used for index and the date the treatment started.
   termDef:
-    term: Treatment Start Subtract First Pathologic Diagnosis Time Day Calculation Value
+    term: Index Date To Treatment Start Day Count
     source: caDSR
-    cde_id: 5102411
+    cde_id: 6154726
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5102411&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154726&version=1.0"
 
 diabetes_treatment_type:
   description: >
@@ -2714,13 +2712,13 @@ reflux_treatment_type:
 
 regimen_or_line_of_therapy:
   description: >
-    The name of a regimen or line of therapy assigned to the patient.
+    The text term used to describe the regimen or line of therapy.
   termDef:
-    term: Treatment Regimen or Line of Therapy
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: Regimen or Line of Therapy Text
+    source: caDSR
+    cde_id: 6161024
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161024&version=1.0"
 
 relationship_age_at_diagnosis:
   description: >
