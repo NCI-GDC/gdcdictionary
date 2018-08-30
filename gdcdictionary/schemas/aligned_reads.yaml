@@ -96,13 +96,16 @@ properties:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - WGS
-      - WXS
+      - ATAC-Seq
+      - Bisulfite-Seq
+      - ChIP-Seq
       - Low Pass WGS
-      - Validation
       - RNA-Seq
       - miRNA-Seq
-      - Total RNA-Seq
+      - Targeted Sequencing
+      - Validation
+      - WGS
+      - WXS
 
   platform:
     $ref: "read_group.yaml#/properties/platform"
