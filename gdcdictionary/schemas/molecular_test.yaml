@@ -978,9 +978,11 @@ properties:
       $ref: "_terms.yaml#/molecular_analysis_method"
     enum:
       - Comparative Genomic Hybridization
+      - Cytogenetics, NOS
       - FISH
       - Flow Cytometry
       - IHC
+      - ISH
       - Karyotype
       - Microarray
       - Microsatellite Analysis
