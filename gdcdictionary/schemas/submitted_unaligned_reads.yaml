@@ -88,6 +88,7 @@ properties:
     enum:
       - R1
       - R2
+      - Not Applicable
 
   read_groups:
     $ref: "_definitions.yaml#/to_one"
