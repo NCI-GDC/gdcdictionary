@@ -57,32 +57,6 @@ properties:
       - Unknown
       - Not Reported
 
-  blood_test:
-    term:
-      $ref: "_terms.yaml#/blood_test"
-    enum:
-      - Albumin
-      - Beta 2 Microglobulin
-      - BUN
-      - Creatinine
-      - CRP
-      - Glucose
-      - Hemoglobin
-      - IgA
-      - IgG
-      - IgL Kappa
-      - IgL Lambda
-      - IgM
-      - IDH Level
-      - M Protein
-      - Platelet Count
-      - Total Protein
-      - WBC
-      - Alpha Fetoprotein
-      - Total Bilirubin
-      - Unknown
-      - Not Reported
-
   blood_test_normal_range_lower:
     term:
       $ref: "_terms.yaml#/blood_test_normal_range_lower"
