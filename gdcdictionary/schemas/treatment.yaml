@@ -401,8 +401,10 @@ properties:
     enum:
       - Complete Response
       - Mixed Response
+      - No Measurable Disease
       - No Response
       - Partial Response
+      - Persistent Disease
       - Progressive Disease
       - Stable Disease
       - Treatment Ongoing
