@@ -573,14 +573,13 @@ cause_of_death:
 
 cause_of_response:
   description: >
-    A specific regimen or line of therapy responsible for the patient's observed improvement achieved
-    at a certain point in time during a patient's treatment protocol.
+    The text term used to describe the suspected cause or reason for the patient disease response.
   termDef:
-    term: null
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: Disease Response Reason Text
+    source: caDSR
+    cde_id: 6161025
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161025&version=1.0"
 
 cea_level:
   description: >
@@ -729,13 +728,14 @@ cog_liver_stage:
 
 comorbidity:
   description: >
-    The text term used ot describe the method used to diagnose the patient's comorbidity disease.
+    Number of days between the date used for index and the date of the patient was diagnosed with
+    the comorbidity.
   termDef:
-    term: Person Comorbidity Condition Name
+    term: Index Date To Comorbidity Day Count
     source: caDSR
-    cde_id: 2970715
+    cde_id: 6154729
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2970715&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154729&version=1.0"
 
 comorbidity_method_of_diagnosis:
   description: >
@@ -859,13 +859,13 @@ datetime:
 
 days_to_adverse_event:
   description: >
-    Number of days between the date used for index and the date the patient had an adverse event.
+    Number of days between the date used for index and the date of the patient's adverse event.
   termDef:
-    term: null
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: Index Date To Adverse Event Day Count
+    source: caDSR
+    cde_id: 6154728
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154728&version=1.0"
 
 days_to_best_overall_response:
   description: >
@@ -935,14 +935,14 @@ days_to_diagnosis:
 
 days_to_follow_up:
   description: >
-    Number of days between the date used for index and the date the patient was seen or contacted at
-    follow-up.
+    Number of days between the date used for index and the date of the patient's last follow-up
+    appointment or contact.
   termDef:
-    term: null
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: Index Date To Follow-up Day Count
+    source: caDSR
+    cde_id: 6154727
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154727&version=1.0"
 
 days_to_hiv_diagnosis:
   description: >
@@ -1002,25 +1002,23 @@ days_to_new_event:
 
 days_to_progression:
   description: >
-    Number of days between the date used for index and the date the patient was diagnosed with
-    progression of disease.
+    Number of days between the date used for index and the date the patient's disease progressed.
   termDef:
-    term: null
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: Index Date To Progression Day Count
+    source: caDSR
+    cde_id: 6154730
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154730&version=1.0"
 
 days_to_recurrence:
   description: >
-    Number of days between the date used for index and the date the patient was diagnosed with a
-    recurrent malignancy.
+    Number of days between the date used for index and the date the patient's disease recurred.
   termDef:
-    term: null
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: Index Date To Recurrence Day Count
+    source: caDSR
+    cde_id: 6154731
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154731&version=1.0"
 
 days_to_sample_procurement:
   description: >
@@ -1093,14 +1091,13 @@ diagnosis_pathologically_confirmed:
 
 disease_response:
   description: >
-    The observed improvement achieved at a certain point in time during a patient's treatment
-    protocol.
+    Code assigned to describe the patient's response or outcome to the disease.
   termDef:
-    term: null
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: Disease Response Code
+    source: caDSR
+    cde_id: 5750671
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5750671&version=1.0"
 
 disease_type: # TOREVIEW
   description: >
@@ -2627,14 +2624,13 @@ progression_or_recurrence:
 
 progression_or_recurrence_anatomic_site:
   description: >
-    Text term that describes the anatomic site of the progression or recurrent tumor or relapsed
-    disease.
+    The text term used to describe the anatomic site of the progressive or recurrent disease.
   termDef:
-    term: null
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: Progression or Recurrence Anatomic Site Category
+    source: caDSR
+    cde_id: 6161026
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161026&version=1.0"
 
 progression_or_recurrence_type:
   description: >
