@@ -1738,11 +1738,13 @@ properties:
     term:
       $ref: "_terms.yaml#/test_result"
     enum:
-      - Positive
-      - Negative
+      - Abnormal, NOS
       - Equivocal
       - High
       - Low
+      - Negative
+      - Normal
+      - Positive
       - Test Value Reported
       - Unknown
       - Not Reported
