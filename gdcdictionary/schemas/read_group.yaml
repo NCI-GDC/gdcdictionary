@@ -81,6 +81,7 @@ properties:
       - Illumina HiSeq 2000
       - Illumina HiSeq 2500
       - Illumina HiSeq 4000
+      - Illumina MiniSeq
       - Illumina MiSeq
       - Illumina NextSeq
       - Ion Torrent PGM

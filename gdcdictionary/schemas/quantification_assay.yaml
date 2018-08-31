@@ -45,6 +45,7 @@ properties:
   assay_instrument:
     description: "The specific instrument type used to perform the assay."
     enum:
+      - ABI QuantStudio
       - Agilent TapeStation
       - BioTek
       - CytoTrapNano CTC Platform
@@ -56,6 +57,7 @@ properties:
   assay_instrument_model:
     description: "The specific model of instrument used to perform the assay."
     enum:
+      - ABI QuantStudio 5
       - Advanced Analytical Fragment Analyzer
       - Agilent 2200 TapeStation
       - Agilent 4200 TapeStation
@@ -85,6 +87,7 @@ properties:
       - DNA Electrophoresis
       - Fluorometer
       - Immunohistochemistry
+      - qPCR
   cell_count:
     description: >
       If the analyte is cell count, report total whole number of cells counted here.
