@@ -921,7 +921,8 @@ days_to_best_overall_response:
 
 days_to_birth:
   description: >
-    Number of days between the date used for index and the date the patient was born.
+    Number of days between the date used for index and the date from a person's date of birth
+    represented as a calculated negative number of days.
   termDef:
     term: Index Date To Birth Day Count
     source: caDSR
@@ -953,7 +954,8 @@ days_to_comorbidity:
 
 days_to_death:
   description: >
-    Number of days between the date used for index and the date the patient died.
+    Number of days between the date used for index and the date from a person's date of death
+    represented as a calculated number of days.
   termDef:
     term: Index Date to Death Day Count
     source: caDSR
