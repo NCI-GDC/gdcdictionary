@@ -696,7 +696,7 @@ circumferential_resection_margin:
     term: Circumferential Resection Margin Measurement
     source: caDSR
     cde_id: 6161030
-    cde_version: 3.0
+    cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161030&version=1.0"
 
 classification_of_tumor:
