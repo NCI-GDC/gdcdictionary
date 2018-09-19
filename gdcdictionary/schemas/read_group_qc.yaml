@@ -11,6 +11,7 @@ description: "GDC QC run metadata."
 additionalProperties: false
 submittable: false
 downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -45,21 +46,6 @@ links:
 
 required:
   - submitter_id
-  - adapter_content
-  - basic_statistics
-  - encoding
-  - kmer_content
-  - overrepresented_sequences
-  - per_base_sequence_quality
-  - per_tile_sequence_quality
-  - per_sequence_quality_score
-  - per_base_sequence_content
-  - per_sequence_gc_content
-  - per_base_n_content
-  - percent_gc_content
-  - sequence_length_distribution
-  - sequence_duplication_levels
-  - total_sequences
   - workflow_link
 
 uniqueKeys:

@@ -12,6 +12,7 @@ description: >
 additionalProperties: false
 submittable: false
 downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -61,6 +62,7 @@ properties:
       - BWA-mem
       - BWA with Mark Duplicates and BQSR
       - STAR 2-Pass
+      - STAR 2-Pass Chimeric
       - STAR 2-Pass Genome
       - STAR 2-Pass Transcriptome
 

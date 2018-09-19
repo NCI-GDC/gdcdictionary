@@ -13,6 +13,7 @@ description: >
 additionalProperties: false
 submittable: false
 downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -27,7 +28,7 @@ links:
     backref: somatic_mutation_calling_workflows
     label: performed_on
     target_type: aligned_reads
-    multiplicity: one_to_many
+    multiplicity: many_to_many
     required: true
 
 required:
@@ -46,6 +47,7 @@ properties:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum:
+      - GATK4 MuTect2
       - MuSE
       - MuTect2
       - Pindel

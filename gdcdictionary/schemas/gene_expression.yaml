@@ -12,6 +12,7 @@ description: >
 additionalProperties: false
 submittable: false
 downloadable: true
+previous_version_downloadable: true
 validators: null
 
 systemProperties:
@@ -60,6 +61,7 @@ properties:
       - Exon Expression Quantification
       - Gene Expression Quantification
       - Isoform Expression Quantification
+      - Splice Junction Quantification
 
   data_format:
     term:

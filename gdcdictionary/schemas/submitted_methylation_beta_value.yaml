@@ -11,6 +11,7 @@ description: >
   Data file containing submitted beta values from a nucleotide methylation array.
 submittable: true
 downloadable: false
+previous_version_downloadable: true
 additionalProperties: false
 validators: null
 

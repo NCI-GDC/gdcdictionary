@@ -13,6 +13,7 @@ description: >
 additionalProperties: false
 submittable: false
 downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -72,6 +73,7 @@ properties:
       - RNA-SeQC - FPKM
       - RSEM - Quantification
       - STAR - Counts
+      - STAR - FPKM
 
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"

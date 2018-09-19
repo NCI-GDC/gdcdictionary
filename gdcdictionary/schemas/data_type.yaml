@@ -11,6 +11,7 @@ description: "Data type of a legacy file (depreciated)."
 additionalProperties: false
 submittable: false
 downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:

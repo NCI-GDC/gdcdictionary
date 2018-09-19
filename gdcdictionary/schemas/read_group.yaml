@@ -11,6 +11,7 @@ program: '*'
 additionalProperties: false
 submittable: true
 downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -75,6 +76,11 @@ properties:
     term:
       $ref: "_terms.yaml#/base_caller_version"
     type: string
+
+  days_to_sequencing:
+    term:
+      $ref: "_terms.yaml#/days_to_sequencing"
+    type: integer
 
   experiment_name:
     term:
@@ -270,6 +276,7 @@ properties:
       - Custom MSK IMPACT Panel - 410 Genes
       - Custom MSK IMPACT Panel - 468 Genes
       - Custom Myeloid GENIE-VICC Panel - 37 Genes
+      - Custom Personalis ACEcp VAREPOP-APOLLO Panel v2
       - Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 203 Genes
       - Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 88 Genes
       - Custom SeqCap EZ HGSC VCRome v2.1 ER Augmented v1
@@ -287,9 +294,11 @@ properties:
       - SeqCap EZ HGSC VCRome v2.1
       - SureSelect Human All Exon v3
       - SureSelect Human All Exon v5
+      - SureSelect Human All Exon v5 + UTR
       - TruSeq Amplicon Cancer Panel
       - TruSeq Exome Enrichment - 62 Mb
       - TruSight Myeloid Sequencing Panel
+      - xGen Exome Research Panel v1.0
       - Not Applicable
       - Unknown
 
@@ -322,6 +331,6 @@ properties:
     term:
       $ref: "_terms.yaml#/to_trim_adapter_sequence"
     type: boolean
- 
+
   aliquots:
     $ref: "_definitions.yaml#/to_one"
