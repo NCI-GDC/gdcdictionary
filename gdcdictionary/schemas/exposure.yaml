@@ -29,7 +29,7 @@ links:
     required: true
 
 preferred:
-  - cigarettes_per_day 
+  - cigarettes_per_day
   - years_smoked
 
 uniqueKeys:
@@ -97,13 +97,13 @@ properties:
     term:
       $ref: "_terms.yaml#/tobacco_smoking_status"
     enum:
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
       - Unknown
       - Not Reported
       - Not Allowed To Collect
