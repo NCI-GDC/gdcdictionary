@@ -10,6 +10,8 @@ description: >
   A broad framework of goals to be achieved. (NCIt C52647)
 additionalProperties: false
 submittable: false
+downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:

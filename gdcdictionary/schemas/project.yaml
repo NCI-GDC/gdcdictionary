@@ -11,6 +11,8 @@ description: >
   requirement. (NCIt C47885)
 additionalProperties: false
 submittable: false
+downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -23,9 +25,7 @@ systemProperties:
 required:
   - code
   - name
-  - disease_type
   - state
-  - primary_site
   - programs
   - dbgap_accession_number
 
@@ -49,33 +49,58 @@ constraints: null
 properties:
   type:
     type: string
+
   id:
+    description: "UUID for the project" # TOREVIEW
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-    description: "UUID for the project" # TOREVIEW
-  name:
-    type: string
-    description: "Display name for the project" # TOREVIEW
-  dbgap_accession_number:
-    type: string
-    description: "The dbgap accession number for the project." # TOREVIEW
-  primary_site:
-    type: string
-    description: "Primary site for the project" # TOREVIEW
+
+  awg_review:
+    description: >
+      Indicates that the project is an AWG project.
+    default: false
+    type: boolean
+
   code:
+    description: "Project code" # TOREVIEW
+    type: string
+
+  dbgap_accession_number:
+    description: "The dbgap accession number for the project." # TOREVIEW
     type: string
     pattern: "^[A-Z0-9]+$"
     description: "Project code" # TOREVIEW
   disease_type:
-    type: string
     description: "Full name for the project" # TOREVIEW
-  programs:
-    $ref: "_definitions.yaml#/to_one"
+    type: string
+
+  intended_release_date:
+    description: Tracks a Project's intended release date.
+    type: string
+    format: date-time
+
+  in_review:
     description: >
-      Indicates that the project is logically part of the indicated project.
+      Indicates that the project is under review by the submitter. Upload and data modification is disabled.
+    default: false
+    type: boolean
+
+  is_legacy:
+    description: >
+      Indicates whether a project will appear in the Legacy Archive.
+    default: false
+    type: boolean
+
+  name:
+    description: "Display name for the project" # TOREVIEW
+    type: string
+
+  primary_site:
+    description: "Primary site for the project" # TOREVIEW
+    type: string
 
   state:
-    description: |
+    description: >
       The possible states a project can be in.  All but `open` are
       equivalent to some type of locked state.
     default: open
@@ -107,6 +132,7 @@ properties:
         #   - release (project.released -> true)
         - processing
 
+        - processed
 
         # closed: The closed state is introduced to replace the
         #         ``legacy`` state and means that no further action
@@ -119,20 +145,39 @@ properties:
         #                         backwards compatibility
         - legacy
 
+  release_requested:
+    description: >
+      User requests that the GDC release the project. Release can only be requested if the project
+      is releasable.
+    default: false
+    type: boolean
+
   released:
-    description: |
+    description: >
       To release a project is to tell the GDC to include all submitted
       entities in the next GDC index.
     default: false
     type: boolean
 
   releasable:
-    description: |
+    description: >
       A project can only be released by the user when `releasable` is true.
     default: false
     type: boolean
 
-  intended_release_date:
-    description: Tracks a Project's intended release date.
-    type: string
-    format: date-time
+  request_submission:
+    description: >
+      Indicates that the user has requested submission to the GDC for harmonization.
+    default: false
+    type: boolean
+
+  submission_enabled:
+    description: >
+      Indicates if submission to a project is allowed.
+    default: true
+    type: boolean
+
+  programs:
+    description: >
+      Indicates that the project is logically part of the indicated project.
+    $ref: "_definitions.yaml#/to_one"

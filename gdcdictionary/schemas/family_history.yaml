@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "family_history"
 title: Family History
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: clinical
 program: '*'
 project: '*'
@@ -11,6 +11,8 @@ description: >
   Record of a patient's background regarding cancer events of blood relatives.
 additionalProperties: false
 submittable: true
+downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -20,6 +22,9 @@ systemProperties:
   - created_datetime
   - updated_datetime
 
+required:
+  - submitter_id
+
 links:
   - name: cases
     backref: family_histories
@@ -28,45 +33,138 @@ links:
     multiplicity: many_to_one
     required: true
 
-
 uniqueKeys:
   #unclear if want submitter ID for clinical
   - [id]
   - [project_id, submitter_id]
 
 properties:
-  type:
-    enum: [ "family_history" ]
-
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-
-  state:
-    $ref: "_definitions.yaml#/state"
-
-  submitter_id:
-    type:
-      - string
-      - "null"
-
-  relative_with_cancer_history:
-    term:
-      $ref: "_terms.yaml#/relative_with_cancer_history"
-    enum:
-      - "yes"
-      - "no"
-      - unknown
-      - not reported
+  $ref: "_definitions.yaml#/ubiquitous_properties"
 
   relationship_type:
     term:
       $ref: "_terms.yaml#/relationship_type"
-    type: string
+    enum:
+      - Adopted Daughter
+      - Adopted Son
+      - Adoptive Brother
+      - Adoptive Father
+      - Adoptive Mother
+      - Adoptive Sister
+      - Aunt
+      - Brother
+      - Brother-in-law
+      - Child
+      - Cousin
+      - Daughter
+      - Daughter-in-law
+      - Domestic Partner
+      - Father
+      - Father-in-law
+      - Female Cousin
+      - First Cousin
+      - First Cousin Once Removed
+      - Foster Brother
+      - Foster Daughter
+      - Foster Father
+      - Foster Mother
+      - Foster Sister
+      - Foster Son
+      - Fraternal Twin Brother
+      - Fraternal Twin Sibling
+      - Fraternal Twin Sister
+      - Full Brother
+      - Full Sister
+      - Grand Nephew
+      - Grand Niece
+      - Grandchild
+      - Granddaughter
+      - Grandfather
+      - Grandmother
+      - Grandparent
+      - Grandson
+      - Great Grandchild
+      - Half Brother
+      - Half Sibling
+      - Half Sister
+      - Husband
+      - Identical Twin Brother
+      - Identical Twin Sibling
+      - Identical Twin Sister
+      - Legal Guardian
+      - Male Cousin
+      - Maternal Aunt
+      - Maternal First Cousin
+      - Maternal First Cousin Once Removed
+      - Maternal Grandfather
+      - Maternal Grandmother
+      - Maternal Grandparent
+      - Maternal Great Aunt
+      - Maternal Great Grandparent
+      - Maternal Great Uncle
+      - Maternal Half Brother
+      - Maternal Half Sibling
+      - Maternal Half Sister
+      - Maternal Uncle
+      - Mother
+      - Mother-in-law
+      - Natural Brother
+      - Natural Child
+      - Natural Daughter
+      - Natural Father
+      - Natural Grandchild
+      - Natural Grandfather
+      - Natural Grandmother
+      - Natural Grandparent
+      - Natural Mother
+      - Natural Parent
+      - Natural Sibling
+      - Natural Sister
+      - Natural Son
+      - Nephew
+      - Niece
+      - Niece Second Degree Relative
+      - Other
+      - Parent
+      - Paternal Aunt
+      - Paternal First Cousin
+      - Paternal First Cousin Once Removed
+      - Paternal Grandfather
+      - Paternal Grandmother
+      - Paternal Grandparent
+      - Paternal Great Aunt
+      - Paternal Great Grandparent
+      - Paternal Great Uncle
+      - Paternal Half Brother
+      - Paternal Half Sibling
+      - Paternal Half Sister
+      - Paternal Uncle
+      - Refused
+      - Sibling
+      - Sister
+      - Sister-in-law
+      - Son
+      - Son-in-law
+      - Spouse
+      - Step Child
+      - Step Sibling
+      - Stepbrother
+      - Stepdaughter
+      - Stepfather
+      - Stepmother
+      - Stepsister
+      - Stepson
+      - Twin Sibling
+      - Uncle
+      - Unrelated
+      - Ward
+      - Wife
+      - Unknown
+      - Not Reported
 
   relationship_gender:
     term:
-      $ref: "_terms.yaml#/gender"
+      $ref: "_terms.yaml#/relationship_gender"
     enum:
       - female
       - male
@@ -81,14 +179,62 @@ properties:
 
   relationship_primary_diagnosis:
     term:
-      $ref: "_terms.yaml#/primary_diagnosis"
-    type: string
+      $ref: "_terms.yaml#/relationship_primary_diagnosis"
+    enum:
+      - Adrenal Gland Cancer
+      - Basal Cell Cancer
+      - Bile Duct Cancer
+      - Bladder Cancer
+      - Blood Cancer
+      - Bone Cancer
+      - Brain Cancer
+      - Breast Cancer
+      - Cancer
+      - Cervical Cancer
+      - Chondrosarcoma
+      - CNS Cancer
+      - Colorectal Cancer
+      - Esophageal Cancer
+      - Gallbladder Cancer
+      - Gastric Cancer
+      - Gynecologic Cancer
+      - Head and Neck Cancer
+      - Hematologic Cancer
+      - Kaposi Sarcoma
+      - Kidney Cancer
+      - Laryngeal Cancer
+      - Leukemia
+      - Liver Cancer
+      - Lung Cancer
+      - Lymph Node Cancer
+      - Lymphoma
+      - Melanoma
+      - Mesothelioma
+      - Multiple Myeloma
+      - Ovarian Cancer
+      - Pancreas Cancer
+      - Prostate Cancer
+      - Rectal Cancer
+      - Sarcoma
+      - Skin Cancer
+      - Spleen Cancer
+      - Testicular Cancer
+      - Throat Cancer
+      - Thyroid Cancer
+      - Tongue Cancer
+      - Tonsillar Cancer
+      - Uterine Cancer
+      - Unknown
+      - Not Reported
+
+  relative_with_cancer_history:
+    term:
+      $ref: "_terms.yaml#/relative_with_cancer_history"
+    enum:
+      - "yes"
+      - "no"
+      - unknown
+      - not reported
 
   cases:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

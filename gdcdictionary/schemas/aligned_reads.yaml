@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "aligned_reads"
 title: Aligned Reads
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: data_file
 program: '*'
 project: '*'
@@ -11,6 +11,8 @@ description: >
   Data file containing aligned reads that are generated internally by the GDC.
 additionalProperties: false
 submittable: false
+downloadable: true
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -71,8 +73,22 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "aligned_reads" ]
+
+  average_base_quality:
+    term:
+      $ref: "_terms.yaml#/average_base_quality"
+    type: number
+
+  average_insert_size:
+    term:
+      $ref: "_terms.yaml#/average_insert_size"
+    type: integer
+
+  average_read_length:
+    term:
+      $ref: "_terms.yaml#/average_read_length"
+    type: integer
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -80,27 +96,80 @@ properties:
       - Sequencing Data
       - Sequencing Reads
       - Raw Sequencing Data
+
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Aligned Reads" ]
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum: [ "BAM" ]
+
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - WGS
-      - WXS
+      - ATAC-Seq
+      - Bisulfite-Seq
+      - ChIP-Seq
       - Low Pass WGS
-      - Validation
       - RNA-Seq
       - miRNA-Seq
-      - Total RNA-Seq
+      - Targeted Sequencing
+      - Validation
+      - WGS
+      - WXS
+
+  mean_coverage:
+    term:
+      $ref: "_terms.yaml#/mean_coverage"
+    type: number
+
+  pairs_on_diff_chr:
+    term:
+      $ref: "_terms.yaml#/pairs_on_diff_chr"
+    type: integer
+
   platform:
     $ref: "read_group.yaml#/properties/platform"
+
+  proportion_base_mismatch:
+    term:
+      $ref: "_terms.yaml#/proportion_base_mismatch"
+    type: number
+
+  proportion_coverage_10X:
+    term:
+      $ref: "_terms.yaml#/proportion_coverage_10X"
+    type: number
+
+  proportion_coverage_30X:
+    term:
+      $ref: "_terms.yaml#/proportion_coverage_30X"
+    type: number
+
+  proportion_reads_duplicated:
+    term:
+      $ref: "_terms.yaml#/proportion_reads_duplicated"
+    type: number
+
+  proportion_reads_mapped:
+    term:
+      $ref: "_terms.yaml#/proportion_reads_mapped"
+    type: number
+
+  proportion_targets_no_coverage:
+    term:
+      $ref: "_terms.yaml#/proportion_targets_no_coverage"
+    type: number
+
+  total_reads:
+    term:
+      $ref: "_terms.yaml#/total_reads"
+    type: integer
+
   alignment_cocleaning_workflows:
     $ref: "_definitions.yaml#/to_one"
   alignment_workflows:

@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "somatic_annotation_workflow"
 title: Somatic Annotation Workflow
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: analysis
 program: '*'
 project: '*'
@@ -12,6 +12,8 @@ description: >
   GDC DNA-Seq pipelines.
 additionalProperties: false
 submittable: false
+downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -33,7 +35,6 @@ required:
   - submitter_id
   - workflow_link
   - workflow_type
-  - simple_somatic_mutations
 
 uniqueKeys:
   - [ id ]
@@ -41,16 +42,18 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
-  type:
-    enum: [ "somatic_annotation_workflow" ]
+
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum:
-      - MuTect2 Annotation
+      - FoundationOne Annotation
+      - GATK4 MuTect2 Annotation
       - MuSE Annotation
+      - MuTect2 Annotation
+      - Pindel Annotation
       - SomaticSniper Annotation
       - VarScan2 Annotation
-      - FoundationOne Annotation
+
   simple_somatic_mutations:
     $ref: "_definitions.yaml#/to_many"

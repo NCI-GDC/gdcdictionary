@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "genomic_profile_harmonization_workflow"
 title: Genomic Profile Harmonization Workflow
 type: object
-namespace:  http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: analysis 
 program: '*'
 project: '*'
@@ -11,6 +11,8 @@ description: >
   Metadata for the harmonization of genomic profiling reports.
 additionalProperties: false
 submittable: false
+downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -32,16 +34,14 @@ required:
   - submitter_id
   - workflow_link
   - workflow_type
-  - submitted_genomic_profiles
-  
+
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]
 
 properties:
   $ref: "_definitions.yaml#/workflow_properties"
-  type:
-    enum: [ "genomic_profile_harmonization_workflow" ]
+
   workflow_type:
     term:
       $ref: "_terms.yaml#/workflow_type"
@@ -50,5 +50,9 @@ properties:
       - FM Simple Somatic Mutation
       - FM Copy Number Variation
       - FM Structural Variation
+      - GENIE Simple Somatic Mutation
+      - GENIE Copy Number Variation
+      - VCF LiftOver
+
   submitted_genomic_profiles:
     $ref: "_definitions.yaml#/to_one"
