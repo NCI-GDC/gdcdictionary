@@ -81,7 +81,7 @@ links:
     required: false
   - name: tags
     backref: files
-    label: memeber_of
+    label: member_of
     target_type: tag
     multiplicity: many_to_many
     required: false
