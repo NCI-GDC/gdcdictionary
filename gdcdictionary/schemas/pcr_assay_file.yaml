@@ -56,7 +56,7 @@ properties:
 
   analysis_software:
     description: >
-      The software used to process PCR assay raw data
+      The software used to process PCR assay raw data.
     enum:
       - "BD Accuri C6"
       - "Q-Rex"
