@@ -24,18 +24,18 @@ links:
   - exclusive: false
     required: true
     subgroup:
-  - name: pcr_assays
-    backref: pcr_assay_files
-    label: data_from
-    target_type: pcr_assay
-    multiplicity: many_to_one
-    required: false
-  - name: analytes
-    backref: pcr_assay_files
-    label: data_from
-    target_type: analyte
-    multiplicity: many_to_one
-    required: false
+      - name: pcr_assays
+        backref: pcr_assay_files
+        label: data_from
+        target_type: pcr_assay
+        multiplicity: many_to_one
+        required: false
+      - name: analytes
+        backref: pcr_assay_files
+        label: data_from
+        target_type: analyte
+        multiplicity: many_to_one
+        required: false
 
 required:
   - submitter_id
