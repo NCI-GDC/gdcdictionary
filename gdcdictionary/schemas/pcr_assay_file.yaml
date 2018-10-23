@@ -89,8 +89,8 @@ properties:
       - "TSV"
 
   experimental_strategy:
-    description: >
-      The PCR assay strategy used to generate the data file.
+    term:
+      $ref: "_terms.yaml#/experimental_strategy"
     enum:
       - "ddPCR"
 
