@@ -1,0 +1,15 @@
+{
+    "type":"pcr_assay_file",
+    "submitter_id":"pcr data file 1",
+	"analysis_software":"QuantaSoft",
+	"data_category":"Mutant Allele Fractions",
+	"data_type":"Tabulated Results",
+	"data_format":"CSV",
+	"experimental_strategy":"ddPCR",
+	"file_name":"results.csv",
+	"file_size":"12381660",
+	"md5sum":"d0880b77467c7782009520f8729cc50e",
+    "analytes": {
+         "submitter_id":"DNA_assay_input242"
+    }
+}
