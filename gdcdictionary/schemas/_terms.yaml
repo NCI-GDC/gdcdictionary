@@ -666,7 +666,7 @@ experiment_name: # TOREVIEW
 
 experimental_strategy: # TOREVIEW
   description: >
-    The sequencing strategy used to generate the data file.
+    The experimental strategy used to generate the data file.
 
 fastq_name: # TOREVIEW
   description: >
