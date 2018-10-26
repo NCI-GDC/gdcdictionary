@@ -946,11 +946,11 @@ days_to_comorbidity:
     Number of days between the date used for index and the date the patient was diagnosed with a
     comorbidity.
   termDef:
-    term: null
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: Index Date To Comorbidity Day Count
+    source: caDSR
+    cde_id: 6154729
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154729&version=1.0"
 
 days_to_death:
   description: >
