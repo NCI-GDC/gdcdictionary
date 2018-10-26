@@ -231,7 +231,9 @@ properties:
     type: string
 
   read_length:
-    type: integer
+    type:
+     - integer
+     - "null"
 
   RIN:
     term:
