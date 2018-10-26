@@ -6587,6 +6587,17 @@ properties:
       $ref: "_terms.yaml#/tumor_largest_dimension_diameter"
     type: number
 
+  tumor_regression_grade:
+    term:
+      $ref: "_terms.yaml#/tumor_regression_grade"
+    enum:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - Unknown
+      - Not Reported
+
   tumor_stage:
     term:
       $ref: "_terms.yaml#/tumor_stage"

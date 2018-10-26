@@ -68,6 +68,7 @@
     "tumor_confined_to_organ_of_origin":"Unknown",
     "tumor_grade": "GX",
     "tumor_largest_dimension_diameter":2.5,
+    "tumor_regression_grade":"2",
     "tumor_stage": "stage iiia",
     "vascular_invasion_type":"Micro",
     "vital_status": "dead",
