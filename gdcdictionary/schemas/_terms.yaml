@@ -769,14 +769,14 @@ cog_liver_stage:
 
 comorbidity:
   description: >
-    Number of days between the date used for index and the date of the patient was diagnosed with
-    the comorbidity.
+    The text term used to describe a comorbidity disease, which coexists with the patient's
+    malignant disease.
   termDef:
     term: Index Date To Comorbidity Day Count
     source: caDSR
-    cde_id: 6154729
+    cde_id: 2970715
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154729&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2970715&version=1.0"
 
 comorbidity_method_of_diagnosis:
   description: >
