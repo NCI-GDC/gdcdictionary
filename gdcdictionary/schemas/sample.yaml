@@ -659,7 +659,7 @@ properties:
   shortest_dimension:
     term:
       $ref: "_terms.yaml#/shortest_dimension"
-    type: string
+    type: number
 
   time_between_clamping_and_freezing:
     term:
