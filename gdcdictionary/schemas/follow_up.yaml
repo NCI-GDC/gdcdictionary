@@ -1550,15 +1550,6 @@ properties:
       - Unknown
       - Not Reported
 
-  reflux_treatment:
-    term:
-      $ref: "_terms.yaml#/reflux_treatment"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-      - Not Reported
-
   reflux_treatment_type:
     term:
       $ref: "_terms.yaml#/reflux_treatment_type"
