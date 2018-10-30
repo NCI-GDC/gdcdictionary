@@ -16,7 +16,7 @@
     "initial_weight": 0.5,
     "intermediate_dimension": "1.2",
     "is_ffpe": true,
-    "longest_dimension": "1.5",
+    "longest_dimension": 1.5,
     "method_of_sample_procurement": "Indeterminant",
     "oct_embedded": "false",
     "passage_count":0,
