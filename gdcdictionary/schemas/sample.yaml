@@ -677,7 +677,7 @@ properties:
   time_between_excision_and_freezing:
     term:
       $ref: "_terms.yaml#/time_between_excision_and_freezing"
-    type: string
+    type: number
 
   tissue_type:
     term:
