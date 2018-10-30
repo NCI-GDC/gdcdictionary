@@ -52,9 +52,11 @@ properties:
   age_at_index:
     term:
       $ref: "_terms.yaml#/age_at_index"
-    type:
-      - integer
-      - "null"
+    oneOf:
+      - type: integer
+        minimum: 0
+        maximum: 32872
+      - type: "null"
 
   cause_of_death:
     term:
@@ -76,11 +78,15 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_birth"
     type: integer
+    minimum: -32872
+    maximum: 0
 
   days_to_death:
     term:
       $ref: "_terms.yaml#/days_to_death"
     type: integer
+    minimum: -32872
+    maximum: 32872
 
   ethnicity:
     term:
