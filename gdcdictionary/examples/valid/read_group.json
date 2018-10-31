@@ -15,7 +15,7 @@
     "library_strategy": "WXS",
     "library_selection": "Hybrid Selection",
     "library_name": "Solexa-34688",
-    "multiplex_barcode":"AWDS342",
+    "multiplex_barcode":"TCTC12GGTC+GAAGTG1234GA",
     "platform": "Illumina",
     "read_length": 75,
     "read_group_name": "205DD.3",
