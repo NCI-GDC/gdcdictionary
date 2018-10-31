@@ -418,11 +418,15 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_collection"
     type: integer
+    minimum: -32872
+    maximum: 32872
 
   days_to_sample_procurement:
     term:
       $ref: "_terms.yaml#/days_to_sample_procurement"
     type: integer
+    minimum: -32872
+    maximum: 32872
 
   diagnosis_pathologically_confirmed:
     term:
