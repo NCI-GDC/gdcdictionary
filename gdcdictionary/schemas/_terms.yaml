@@ -2960,6 +2960,17 @@ risk_factor:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142389&version=1.0"
 
+risk_factor_treatment:
+  description: >
+    The yes/no/unknown indicator used to describe whether the patient received treatment for a risk
+    factor the patient had at the time of or prior to their diagnosis.
+  termDef:
+    term: Risk Factor Treatment Indicator
+    source: caDSR
+    cde_id: 6514356
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6514356&version=1.0"
+
 rna_change:
   description: >
     Alphanumeric value used to describe the rna change for a specific genetic variant.

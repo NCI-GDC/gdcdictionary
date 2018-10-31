@@ -1648,6 +1648,15 @@ properties:
       - Unknown
       - Not Reported
 
+  risk_factor_treatment:
+    term:
+      $ref: "_terms.yaml#/risk_factor_treatment"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
   viral_hepatitis_serologies:
     term:
       $ref: "_terms.yaml#/viral_hepatitis_serologies"

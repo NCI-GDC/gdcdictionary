@@ -31,6 +31,7 @@
     "reflux_treatment":"Yes",
     "reflux_treatment_type":"Medically Treated",
     "risk_factor":"Obesity",
+    "risk_factor_treatment": "Yes",
     "viral_hepatitis_serologies":"HBV Surface Antibody",
     "weight":123,
     "cases": {
