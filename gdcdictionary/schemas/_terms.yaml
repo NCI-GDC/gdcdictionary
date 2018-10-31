@@ -3337,6 +3337,16 @@ treatment_anatomic_site:
     cde_version: 1.0
     term_url: https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5615611&version=1.0
 
+treatment_effect:
+  description: >
+    The text term used to describe the pathologic effect a treatment(s) had on the tumor.
+  termDef:
+    term: Treatment Effect Type
+    source: caDSR
+    cde_id: 6514354
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6514354&version=1.0"
+
 treatment_intent_type:
   description: >
     Text term to identify the reason for the administration of a treatment regimen. [Manually-curated]
