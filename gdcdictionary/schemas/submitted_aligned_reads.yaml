@@ -53,9 +53,7 @@ properties:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Sequencing Data
       - Sequencing Reads
-      - Raw Sequencing Data
 
   data_type:
     term:
