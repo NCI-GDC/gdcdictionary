@@ -1132,6 +1132,15 @@ properties:
       $ref: "_terms.yaml#/height"
     type: number
 
+  hepatitis_sustained_virological_response:
+    term:
+      $ref: "_terms.yaml#/hepatitis_sustained_virological_response"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
   hpv_positive_type:
     term:
       $ref: "_terms.yaml#/hpv_positive_type"
