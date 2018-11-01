@@ -176,6 +176,8 @@ properties:
     term:
       $ref: "_terms.yaml#/relationship_age_at_diagnosis"
     type: number
+    minimum: 0
+    maximum: 90
 
   relationship_primary_diagnosis:
     term:
