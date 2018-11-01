@@ -527,6 +527,7 @@ properties:
       - Pan-Procto Colectomy
       - Pancreatectomy
       - Paracentesis
+      - Partial Hepatectomy
       - Pneumonectomy
       - Right Hemicolectomy
       - Sigmoid Colectomy
@@ -535,6 +536,7 @@ properties:
       - Surgical Resection
       - Thoracoscopic Biopsy
       - Total Colectomy
+      - Total Hepatectomy
       - Total Mastectomy
       - Transplant
       - Transurethral resection (TURBT)
