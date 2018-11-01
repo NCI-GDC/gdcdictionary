@@ -89,6 +89,16 @@ properties:
       $ref: "_terms.yaml#/average_read_length"
     type: integer
 
+  contamination:
+    term:
+      $ref: "_terms.yaml#/contamination"
+    type: number
+
+  contamination_error:
+    term:
+      $ref: "_terms.yaml#/contamination_error"
+    type: number
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
