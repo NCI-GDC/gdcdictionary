@@ -1589,6 +1589,7 @@ properties:
       $ref: "_terms.yaml#/risk_factor"
     enum:
       - Alcohol Consumption
+      - Alcoholic Liver Disease
       - Allergy, Animal, NOS
       - Allergy, Ant
       - Allergy, Bee
@@ -1604,10 +1605,14 @@ properties:
       - Allergy, Processed Foods
       - Allergy, Seafood
       - Allergy, Wasp
+      - Alpha-1 Antitrypsin Deficiency
+      - Autoimmune Atrophic Chronic Gastritis
       - Barrett's Esophagus
       - Beckwith-Wiedemann
       - Behcet's Disease
       - Cancer
+      - Cholelithiasis
+      - Chronic Hepatitis
       - Cirrhosis
       - Colon Polyps
       - Common variable immune deficiency (CVID)
@@ -1621,32 +1626,47 @@ properties:
       - Epstein-Barr Virus
       - Familial Adenomatous Polyposis
       - Fanconi Anemia
+      - Fibrosis
+      - Gastric Polyp(s)
       - Gilbert's Syndrome
       - Gorlin Syndrome
       - Hashimoto's Thyroiditis
       - Hay Fever
       - Headache
+      - Helicobacter Pylori-Associated Gastritis
       - Hematologic Disorder, NOS
       - Hemihypertrophy
+      - Hemochromatosis
       - Hepatic Encephalopathy
       - Hepatitis B Infection
       - Hepatitis C Infection
       - Hepatitis, NOS
+      - High Grade Dysplasia
       - HIV
       - Human Papillomavirus Infection
       - Hypospadias
+      - Intestinal Metaplasia
+      - Iron Overload
       - Li-Fraumeni Syndrome
+      - Low Grade Dysplasia
       - Lymphocytic Thyroiditis
       - Lynch Syndrome
       - Myasthenia Gravis
+      - Nonalcoholic Fatty Liver Disease
+      - Nonalcoholic Steatohepatitis
       - Obesity
       - Oral Contraceptives
       - Pancreatitis
+      - Parasitic Disease of Biliary Tract
+      - Primary Sclerosing Cholangitis
+      - Recurrent Pyogenic Cholangitis
+      - Reflux Disease
       - Rheumatoid Arthritis
       - Rubinstein-Taybi Syndrome
       - Sarcoidosis
       - Seizure
       - Sensory Changes
+      - Steatosis
       - Tattoo
       - Thyroid Nodular Hyperplasia
       - Tobacco, NOS
