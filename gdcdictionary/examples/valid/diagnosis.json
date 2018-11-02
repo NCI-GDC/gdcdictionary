@@ -45,6 +45,7 @@
     "iss_stage":"I",
     "last_known_disease_status": "Unknown tumor status",
     "ldh_normal_range_upper": 1.5,
+    "lymph_nodes_tested":10,
     "medulloblastoma_molecular_classification":"Unknown",
     "metastasis_at_diagnosis":"Distant Metastasis",
     "metastasis_at_diagnosis_site":"Abdomen",

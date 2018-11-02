@@ -936,6 +936,11 @@ properties:
       $ref: "_terms.yaml#/lymph_nodes_positive"
     type: integer
 
+  lymph_nodes_tested:
+    term:
+      $ref: "_terms.yaml#/lymph_nodes_tested"
+    type: integer
+
   lymphatic_invasion_present:
     term:
       $ref: "_terms.yaml#/lymphatic_invasion_present"

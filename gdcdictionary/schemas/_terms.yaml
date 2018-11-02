@@ -2045,6 +2045,17 @@ lymph_nodes_positive:
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=89&version=3.0"
 
+lymph_nodes_tested:
+  description: >
+    The number of lymph nodes tested to determine whether lymph nodes were  involved with disease
+    as determined by a pathologic examination.
+  termDef:
+    term: Lymph Node Examined Count
+    source: caDSR
+    cde_id: 3
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3&version=3.0"
+
 lymphatic_invasion_present:
   description: >
     A yes/no indicator to ask if small or thin-walled vessel invasion is present, indicating
