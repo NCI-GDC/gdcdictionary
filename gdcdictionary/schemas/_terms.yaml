@@ -1809,6 +1809,17 @@ intermediate_dimension: # TOREVIEW
   description: >
     Intermediate dimension of the sample, in millimeters.
 
+intron:
+  description: >
+    Intron number targeted or included in molecular analysis. If a specific genetic variant is being
+    reported, this property can be used to capture the intron where that variant is located.
+  termDef:
+    term: Molecular Laboratory Procedure Intron Identifier
+    source: caDSR
+    cde_id: 6514355
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6514355&version=1.0"
+
 irs_group:
   description: >
     Text term used to describe the classification of rhabdomyosarcoma tumors, as defined by the
