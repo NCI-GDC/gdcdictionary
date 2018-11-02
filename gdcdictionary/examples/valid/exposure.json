@@ -6,6 +6,7 @@
     "bmi": -1.0,
     "cigarettes_per_day": -1.0,
     "height": -1.0,
+    "radon_exposure":"Unknown",
     "tobacco_smoking_onset_year":1955,
     "tobacco_smoking_quit_year":1999,
     "tobacco_smoking_status":"1",

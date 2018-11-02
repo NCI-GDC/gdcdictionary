@@ -108,6 +108,15 @@ properties:
       $ref: "_terms.yaml#/pack_years_smoked"
     type: number
 
+  radon_exposure:
+    term:
+      $ref: "_terms.yaml#/radon_exposure"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
   tobacco_smoking_onset_year:
     term:
       $ref: "_terms.yaml#/tobacco_smoking_onset_year"
