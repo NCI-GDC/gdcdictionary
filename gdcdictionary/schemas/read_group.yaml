@@ -201,13 +201,14 @@ properties:
     term:
       $ref: "_terms.yaml#/library_strategy"
     enum:
-      - WGS
-      - WXS
-      - RNA-Seq
+      - ATAC-Seq
+      - Bisulfite-Seq
       - ChIP-Seq
       - miRNA-Seq
-      - Bisulfite-Seq
+      - RNA-Seq
       - Targeted Sequencing
+      - WGS
+      - WXS
 
   multiplex_barcode:
     term:
