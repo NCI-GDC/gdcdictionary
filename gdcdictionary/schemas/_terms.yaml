@@ -385,6 +385,16 @@ antigen:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142523&version=1.0"
 
+asbestos_exposure:
+  description: >
+    The yes/no/unknown indicator used to describe whether the patient was exposed to asbestos.
+  termDef:
+    term: Asbestos Exposure Ind-3
+    source: caDSR
+    cde_id: 1253
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=1253&version=3.0"
+
 average_base_quality:
   description: >
     Average base quality collected from samtools.
