@@ -1106,6 +1106,8 @@ properties:
       - "3"
       - "4"
       - "5"
+      - Unknown
+      - Not Reported
 
   fev1_ref_post_bronch_percent:
     term:
