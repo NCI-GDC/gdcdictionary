@@ -1090,6 +1090,8 @@ properties:
       - TF-Tumor Free
       - VGPR-Very Good Partial Response
       - WT-With Tumor
+      - Unknown
+      - Not Reported
 
   dlco_ref_predictive_percent:
     term:
