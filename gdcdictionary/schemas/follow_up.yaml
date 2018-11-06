@@ -898,6 +898,7 @@ properties:
       - Celiac Disease
       - Cirrhosis, Unknown Etiology
       - Cerebrovascular Disease
+      - Cholelithiasis
       - Chronic Renal Failure
       - Colon Polyps
       - Common Variable Immunodeficiency
@@ -908,6 +909,7 @@ properties:
       - Crohn's Disease
       - Cryptogenic Organizing Pneumonia
       - Deep Vein Thrombosis / Thromboembolism
+      - Denys-Drash Syndrome
       - Depression
       - Diabetes
       - Diabetes, Type II
@@ -921,6 +923,7 @@ properties:
       - Epstein-Barr Virus
       - Familial Adenomatous Polyposis
       - Fanconi Anemia
+      - Fibrosis
       - Gastroesophageal Reflux Disease
       - GERD
       - Glaucoma
@@ -932,13 +935,16 @@ properties:
       - Hashimoto's Thyroiditis
       - Headache
       - Heart Disease
+      - Hemihypertrophy
       - Hemorrhagic Cystitis
       - Hepatitis
       - Hepatitis A Infection
       - Hepatitis B Infection
       - Hepatitis C Infection
+      - Hepatitis, Chronic
       - Hereditary Non-polyposis Colon Cancer
       - Herpes
+      - High Grade Liver Dysplastic Nodule
       - HIV / AIDS
       - Human Papillomavirus Infection
       - HUS/TTP
@@ -961,12 +967,14 @@ properties:
       - Liver Cirrhosis (Liver Disease)
       - Liver Toxicity (Non-Infectious)
       - Li-Fraumeni Syndrome
+      - Low Grade Liver Dysplastic Nodule
       - Lupus
       - Lynch Syndrome
       - MAI
       - Myasthenia Gravis
       - Myocardial Infarction
       - Neuroendocrine Tumor
+      - Nonalcoholic Steatohepatitis
       - Obesity
       - Organ transplant (site)
       - Osteoarthritis
@@ -982,6 +990,7 @@ properties:
       - Peripheral Vascular Disease
       - Peutz-Jeghers Disease
       - Pregnancy in Patient or Partner
+      - Primary Sclerosing Cholangitis
       - Psoriasis
       - Pulmonary Fibrosis
       - Pulmonary Hemorrhage
@@ -995,12 +1004,14 @@ properties:
       - Seizure
       - Sleep apnea
       - Smoking
+      - Steatosis
       - Stroke
       - Transient Ischemic Attack
       - Tuberculosis
       - Turcot Syndrome
       - Tyrosinemia
       - Ulcerative Colitis
+      - Wagr Syndrome
       - Unknown
       - Not Reported
 
