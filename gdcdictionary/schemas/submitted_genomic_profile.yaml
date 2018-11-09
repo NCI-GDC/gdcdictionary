@@ -12,6 +12,7 @@ description: >
 additionalProperties: false
 submittable: true
 downloadable: false
+previous_version_downloadable: true
 validators: null
 
 systemProperties:
@@ -79,8 +80,15 @@ properties:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
+      - ATAC-Seq
+      - Bisulfite-Seq
+      - ChIP-Seq
+      - Low Pass WGS
+      - miRNA-Seq
+      - RNA-Seq
       - Targeted Sequencing
       - WGS
+      - WXS
 
   read_groups:
     $ref: "_definitions.yaml#/to_many"

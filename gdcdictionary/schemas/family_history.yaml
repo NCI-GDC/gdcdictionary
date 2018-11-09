@@ -12,6 +12,7 @@ description: >
 additionalProperties: false
 submittable: true
 downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -163,7 +164,7 @@ properties:
 
   relationship_gender:
     term:
-      $ref: "_terms.yaml#/gender"
+      $ref: "_terms.yaml#/relationship_gender"
     enum:
       - female
       - male
@@ -178,7 +179,7 @@ properties:
 
   relationship_primary_diagnosis:
     term:
-      $ref: "_terms.yaml#/primary_diagnosis"
+      $ref: "_terms.yaml#/relationship_primary_diagnosis"
     enum:
       - Adrenal Gland Cancer
       - Basal Cell Cancer

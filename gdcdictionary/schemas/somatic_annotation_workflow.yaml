@@ -13,6 +13,7 @@ description: >
 additionalProperties: false
 submittable: false
 downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -47,6 +48,7 @@ properties:
       $ref: "_terms.yaml#/workflow_type"
     enum:
       - FoundationOne Annotation
+      - GATK4 MuTect2 Annotation
       - MuSE Annotation
       - MuTect2 Annotation
       - Pindel Annotation

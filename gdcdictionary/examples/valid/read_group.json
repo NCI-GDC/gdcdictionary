@@ -2,6 +2,7 @@
     "id": "b4918128-f3e5-496a-bcd7-a4ec8d7dd1d9",
     "submitter_id": "205DDABXX100804.3.C317.TCGA-AB-2899-03A-01W-0733-08.4.bam",
     "type": "read_group",
+    "days_to_sequencing":6,
     "experiment_name": "Resequencing",
     "flow_cell_barcode": "205DDABXX",
     "fragment_maximum_length":250,

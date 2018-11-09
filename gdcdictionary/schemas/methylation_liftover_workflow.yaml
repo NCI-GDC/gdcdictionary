@@ -11,6 +11,7 @@ description: >
   Metadata for the methylation liftover workflow used to harmonize TCGA methylation data.
 submittable: false
 downloadable: false
+previous_version_downloadable: false
 additionalProperties: false
 validators: null
 

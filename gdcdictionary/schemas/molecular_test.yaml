@@ -12,6 +12,7 @@ description: >
 additionalProperties: false
 submittable: true
 downloadable: false
+previous_version_downloadable: false
 validators: []
 
 systemProperties:
@@ -51,34 +52,33 @@ properties:
     term:
       $ref: "_terms.yaml#/antigen"
     enum:
+      - BCL6
       - CA19-9
+      - CCND1
+      - CD10
+      - CD117
+      - CD138
+      - CD14
+      - CD15
+      - CD19
+      - CD20
+      - CD22
+      - CD23
+      - CD25
+      - CD3
+      - CD30
+      - CD33
+      - CD34
+      - CD45
+      - CD5
+      - CD56
+      - CD7
+      - CD79A
       - CEA
-      - Unknown
-      - Not Reported
-
-  blood_test:
-    term:
-      $ref: "_terms.yaml#/blood_test"
-    enum:
-      - Albumin
-      - Beta 2 Microglobulin
-      - BUN
-      - Creatinine
-      - CRP
-      - Glucose
-      - Hemoglobin
-      - IgA
-      - IgG
-      - IgL Kappa
-      - IgL Lambda
-      - IgM
-      - IDH Level
-      - M Protein
-      - Platelet Count
-      - Total Protein
-      - WBC
-      - Alpha Fetoprotein
-      - Total Bilirubin
+      - HLA-DR
+      - Mesothelin
+      - NSE
+      - Squamous Cell Carcinoma Antigen (SCCA)
       - Unknown
       - Not Reported
 
@@ -91,6 +91,34 @@ properties:
     term:
       $ref: "_terms.yaml#/blood_test_normal_range_upper"
     type: number
+
+  biospecimen_type:
+    term:
+      $ref: "_terms.yaml#/biospecimen_type"
+    enum:
+      - Blood
+      - Bone Marrow
+      - Buccal Mucosa
+      - Buffy Coat
+      - Cerebrospinal Fluid
+      - Connective Tissue
+      - Embryonic Fluid
+      - Embryonic Tissue
+      - Feces
+      - Granulocyte
+      - Muscle Tissue
+      - Nerve Tissue
+      - Peritoneal Fluid
+      - Plasma
+      - Pleural Fluid
+      - Saliva
+      - Serum
+      - Skin
+      - Soft Tissue
+      - Tissue, NOS
+      - Urine
+      - Unknown
+      - Not Reported
 
   cell_count:
     term:
@@ -862,6 +890,7 @@ properties:
       - ZRSR2
       - Unknown
       - Not Reported
+      - Not Applicable
 
   histone_family:
     term:
@@ -899,6 +928,52 @@ properties:
       - Unknown
       - Not Reported
 
+  laboratory_test:
+    term:
+      $ref: "_terms.yaml#/laboratory_test"
+    enum:
+      - Absolute Neutrophil
+      - Albumin
+      - Alpha Fetoprotein
+      - Neutrophil Bands
+      - Basophil
+      - Beta 2 Microglobulin
+      - Myeloblasts
+      - Lymphoblasts
+      - Blood Urea Nitrogen
+      - Calcium
+      - Cellularity
+      - Creatinine
+      - C-Reactive Protein
+      - Eosinophil
+      - Glucose
+      - Hematocrit
+      - Hemoglobin
+      - Human Chorionic Gonadotropin
+      - Immunoglobulin A
+      - Immunoglobulin G
+      - Immunoglobulin M
+      - Lactate Dehydrogenase
+      - Leukocytes
+      - Luteinizing Hormone
+      - Lymphocytes
+      - M Protein
+      - Metamyelocytes
+      - Myelocytes
+      - Platelets
+      - Prolymphocytes
+      - Promonocytes
+      - Promyelocytes
+      - Segmented Neutrophil
+      - Serum Free Immunoglobulin Light Chain, Kappa
+      - Serum Free Immunoglobulin Light Chain, Lambda
+      - Serum Free Immunoglobulin Light Chain, NOS
+      - Testosterone
+      - Total Bilirubin
+      - Total Protein
+      - Unknown
+      - Not Reported
+
   loci_abnormal_count:
     term:
       $ref: "_terms.yaml#/loci_abnormal_count"
@@ -928,9 +1003,11 @@ properties:
       $ref: "_terms.yaml#/molecular_analysis_method"
     enum:
       - Comparative Genomic Hybridization
+      - Cytogenetics, NOS
       - FISH
       - Flow Cytometry
       - IHC
+      - ISH
       - Karyotype
       - Microarray
       - Microsatellite Analysis
@@ -1736,11 +1813,13 @@ properties:
     term:
       $ref: "_terms.yaml#/test_result"
     enum:
-      - Positive
-      - Negative
+      - Abnormal, NOS
       - Equivocal
       - High
       - Low
+      - Negative
+      - Normal
+      - Positive
       - Test Value Reported
       - Unknown
       - Not Reported
@@ -1772,9 +1851,11 @@ properties:
       - Deletion-Insertion
       - Duplication
       - Extension
+      - Gain
       - Hypermethylation
       - Insertion
       - Inversion
+      - Loss
       - Methylation
       - Mosaicism
       - Other

@@ -11,6 +11,7 @@ description: "Data file containing unaligned reads that have not been GDC Harmon
 additionalProperties: false
 submittable: true
 downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -39,6 +40,7 @@ required:
   - data_type
   - data_format
   - experimental_strategy
+  - read_pair_number
 
 uniqueKeys:
   - [ id ]
@@ -87,6 +89,7 @@ properties:
     enum:
       - R1
       - R2
+      - Not Applicable
 
   read_groups:
     $ref: "_definitions.yaml#/to_one"

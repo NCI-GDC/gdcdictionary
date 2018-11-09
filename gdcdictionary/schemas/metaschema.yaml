@@ -17,6 +17,7 @@ required:
   - systemProperties #non-user facing values required by backend
   - submittable
   - downloadable
+  - previous_version_downloadable
   #Require core JSON schema fields here if desired, requiring id
   - id
 
@@ -88,6 +89,7 @@ definitions:
 
 properties:
   category:
+    description: "Generalized role that the node has in the commons data model. *_file nodes are reserved for those nodes that have corresponding files in object story."
     type: string
     enum:
       - administrative
@@ -104,6 +106,7 @@ properties:
       - TBD
 
   unique_keys:
+    description: "Properties or list of properties that can be used to identify this node, and only this node, within the commons."
     type: array
     items:
       type: array
@@ -111,13 +114,19 @@ properties:
         type: string
 
   submittable:
+    description: "True/False keyword used to indicate whether this node should be allowed to be user-submitted through normal submission processes."
     type: boolean
 
   downloadable:
     description: "Indicates if a file can be downloaded by a user with downloader access."
     type: boolean
 
+  previous_version_downloadable:
+    description: "Indicates if the previous version of a file is available for download."
+    type: boolean
+
   validators:
+    description: "Feature under development to allow cross validation among properties. Not intended to be used in its current form."
     type:
       - array
       - "null"
@@ -125,7 +134,16 @@ properties:
       $ref: "#/definitions/validator_def"
 
   system_properties:
+    description: "Properties that will be automatically filled by the system unless otherwise defined by the user."
     type: array
+
+  program:
+    type: string
+    description: "Denotes the programs within the commons for which this schema may be used."
+
+  project:
+    type: string
+    description: "Denotes the projects within the commons for which this schema may be used."
 
   properties:
     type: object
@@ -137,6 +155,7 @@ properties:
 
   links:
     title: "Define a link to other GDC entities"
+    description: "Array used to connect two entities within the commons."
     type: array
     items:
       oneOf:

@@ -13,6 +13,7 @@ description: >
 additionalProperties: false
 submittable: true
 downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -212,6 +213,9 @@ properties:
     enum:
       - Diagnosis
       - First Patient Visit
+      - First Treatment
+      - Initial Genomic Sequencing
+      - Sample Procurement
       - Study Enrollment
 
   lost_to_followup:

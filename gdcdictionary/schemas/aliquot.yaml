@@ -12,6 +12,7 @@ description: >
 additionalProperties: false
 submittable: true
 downloadable: false
+previous_version_downloadable: false
 validators: []
 
 systemProperties:
@@ -29,7 +30,7 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 links:
-  - exclusive: false
+  - exclusive: true
     required: true
     subgroup:
       - name: analytes
@@ -112,27 +113,27 @@ properties:
   selected_normal_wxs:
     term:
       $ref: "_terms.yaml#/selected_normal_wxs"
-    type: boolean 
+    type: boolean
     default: false
 
   selected_normal_wgs:
     term:
       $ref: "_terms.yaml#/selected_normal_wgs"
-    type: boolean 
+    type: boolean
     default: false
 
   selected_normal_targeted_sequencing:
     term:
       $ref: "_terms.yaml#/selected_normal_targeted_sequencing"
-    type: boolean 
+    type: boolean
     default: false
 
   selected_normal_low_pass_wgs:
     term:
       $ref: "_terms.yaml#/selected_normal_low_pass_wgs"
-    type: boolean 
+    type: boolean
     default: false
-  
+
   analytes:
     $ref: "_definitions.yaml#/to_one"
   samples:

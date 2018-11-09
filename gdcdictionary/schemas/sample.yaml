@@ -16,6 +16,7 @@ description: >
 additionalProperties: false
 submittable: true
 downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -28,6 +29,7 @@ systemProperties:
 required:
   - submitter_id
   - sample_type
+  - tissue_type
 
 uniqueKeys:
   - [id]

@@ -17,6 +17,7 @@ description: >
 additionalProperties: false
 submittable: true
 downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -933,9 +934,11 @@ properties:
       - Heart Disease
       - Hemorrhagic Cystitis
       - Hepatitis
+      - Hepatitis A Infection
       - Hepatitis B Infection
       - Hepatitis C Infection
       - Hereditary Non-polyposis Colon Cancer
+      - Herpes
       - HIV / AIDS
       - Human Papillomavirus Infection
       - HUS/TTP
@@ -1057,6 +1060,7 @@ properties:
       $ref: "_terms.yaml#/disease_response"
     enum:
       - AJ-Adjuvant Therapy
+      - BED-Biochemical Evidence of Disease
       - CPD-Clinical Progression
       - CR-Complete Response
       - CRU-Complete Response Unconfirmed
@@ -1071,6 +1075,8 @@ properties:
       - PA-Palliative Therapy
       - PB-Palliative Benefit
       - PD-Progressive Disease
+      - PDM-Persistent Distant Metastasis
+      - PLD-Persistent Locoregional Disease
       - PPD-Pseudoprogression
       - PR-Partial Response
       - PSR-Pseudoresponse
@@ -1081,7 +1087,9 @@ properties:
       - SD-Stable Disease
       - SPD-Surgical Progression
       - TE-Too Early
+      - TF-Tumor Free
       - VGPR-Very Good Partial Response
+      - WT-With Tumor
 
   dlco_ref_predictive_percent:
     term:
@@ -1142,8 +1150,10 @@ properties:
       - "56"
       - "58"
       - "59"
+      - "63"
       - "66"
       - "68"
+      - "70"
       - "73"
       - "82"
       - Other
@@ -1533,6 +1543,7 @@ properties:
     term:
       $ref: "_terms.yaml#/progression_or_recurrence_type"
     enum:
+      - Biochemical
       - Distant
       - Local
       - Regional
@@ -1566,20 +1577,73 @@ properties:
     term:
       $ref: "_terms.yaml#/risk_factor"
     enum:
+      - Alcohol Consumption
+      - Allergy, Animal, NOS
+      - Allergy, Ant
+      - Allergy, Bee
+      - Allergy, Cat
+      - Allergy, Dairy or Lactose
+      - Allergy, Dog
+      - Allergy, Eggs
+      - Allergy, Food, NOS
+      - Allergy, Fruit
+      - Allergy, Meat
+      - Allergy, Mold or Dust
+      - Allergy, Nuts
+      - Allergy, Processed Foods
+      - Allergy, Seafood
+      - Allergy, Wasp
+      - Barrett's Esophagus
       - Beckwith-Wiedemann
+      - Behcet's Disease
+      - Cancer
+      - Cirrhosis
       - Colon Polyps
+      - Common variable immune deficiency (CVID)
       - Denys-Drash Syndrome
+      - Diabetes, NOS
+      - Diabetes, Type I
       - Diabetes, Type II
       - Diet
+      - Diverticulitis
+      - Eczema
+      - Epstein-Barr Virus
       - Familial Adenomatous Polyposis
       - Fanconi Anemia
+      - Gilbert's Syndrome
       - Gorlin Syndrome
+      - Hashimoto's Thyroiditis
+      - Hay Fever
+      - Headache
+      - Hematologic Disorder, NOS
       - Hemihypertrophy
+      - Hepatic Encephalopathy
+      - Hepatitis B Infection
+      - Hepatitis C Infection
+      - Hepatitis, NOS
+      - HIV
+      - Human Papillomavirus Infection
+      - Hypospadias
       - Li-Fraumeni Syndrome
+      - Lymphocytic Thyroiditis
       - Lynch Syndrome
+      - Myasthenia Gravis
       - Obesity
+      - Oral Contraceptives
+      - Pancreatitis
+      - Rheumatoid Arthritis
       - Rubinstein-Taybi Syndrome
+      - Sarcoidosis
+      - Seizure
+      - Sensory Changes
+      - Tattoo
+      - Thyroid Nodular Hyperplasia
+      - Tobacco, NOS
+      - Tobacco, Smokeless
+      - Tobacco, Smoking
       - Turcot Syndrome
+      - Undescended Testis
+      - Vision Changes
       - Wagr Syndrome
       - Unknown
       - Not Reported
