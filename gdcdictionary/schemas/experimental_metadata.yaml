@@ -28,7 +28,7 @@ links:
     label: derived_from
     target_type: experiment
     multiplicity: many_to_many
-    required: false
+    required: true
 
 required:
   - submitter_id
