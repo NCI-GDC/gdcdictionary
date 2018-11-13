@@ -3408,6 +3408,17 @@ tumor_descriptor:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3288124&version=1.0"
 
+tumor_focality:
+  description: >
+    The text term used to describe whether the patient's disease originated in a single location or
+    multiple locations.
+  termDef:
+    term: Primary Neoplasm Focus Type
+    source: caDSR
+    cde_id: 3174022
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3174022&version=1.0"
+
 tumor_grade:
   description: >
     Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation

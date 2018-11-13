@@ -6741,6 +6741,15 @@ properties:
       - Unknown
       - Not Reported
 
+  tumor_focality:
+    term:
+      $ref: "_terms.yaml#/tumor_focality"
+    enum:
+      - Multifocal
+      - Unifocal
+      - Unknown
+      - Not Reported
+
   tumor_grade:
     term:
       $ref: "_terms.yaml#/tumor_grade"

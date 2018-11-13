@@ -67,6 +67,7 @@
     "synchronous_malignancy":"Yes",
     "tissue_or_organ_of_origin": "Bone marrow",
     "tumor_confined_to_organ_of_origin":"Unknown",
+    "tumor_focality":"Multifocal",
     "tumor_grade": "GX",
     "tumor_largest_dimension_diameter":2.5,
     "tumor_stage": "stage iiia",
