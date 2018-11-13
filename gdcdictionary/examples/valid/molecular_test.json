@@ -14,6 +14,7 @@
     "exon":37,
     "histone_family":"H2A",
     "histone_variant":"H3.1",
+    "intron":"12a",
     "loci_abnormal_count":6,
     "loci_count":76,
     "locus":"gbkR1Ritg8on55F3",
