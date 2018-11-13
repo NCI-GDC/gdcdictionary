@@ -144,7 +144,9 @@ properties:
   is_paired_end:
     term:
       $ref: "_terms.yaml#/is_paired_end"
-    type: boolean
+    type:
+      - boolean
+      - "null"
 
   lane_number:
     term:
