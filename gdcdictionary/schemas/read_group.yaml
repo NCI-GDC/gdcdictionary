@@ -66,6 +66,7 @@ properties:
     term:
       $ref: "_terms.yaml#/adapter_sequence"
     type: string
+    pattern: "^[ACGTURYSWKMBDHVN]+$"
 
   base_caller_name:
     term:
