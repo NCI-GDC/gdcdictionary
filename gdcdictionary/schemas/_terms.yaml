@@ -3452,6 +3452,17 @@ tumor_largest_dimension_diameter:
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64215&version=3.0"
 
+tumor_regression_grade:
+  description: >
+    A numeric value used to measure therapeutic response of the primary tumor and predict patient
+    outcomes based on a three-point tumor regression grading system.
+  termDef:
+    term: Modified Ryan Scheme for Tumor Regression Score 3 Point Scale
+    source: caDSR
+    cde_id: 6471217
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6471217&version=1.0"
+
 tumor_stage:
   description: >
     The extent of a cancer in the body. Staging is usually based on the size of the tumor, whether
