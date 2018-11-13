@@ -1029,26 +1029,36 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_adverse_event"
     type: integer
+    minimum: -32872
+    maximum: 32872
 
   days_to_comorbidity:
     term:
       $ref: "_terms.yaml#days_to_comorbidity"
     type: integer
+    minimum: -32872
+    maximum: 32872
 
   days_to_follow_up:
     term:
       $ref: "_terms.yaml#/days_to_follow_up"
     type: integer
+    minimum: -32872
+    maximum: 32872
 
   days_to_progression:
     term:
       $ref: "_terms.yaml#/days_to_progression"
     type: integer
+    minimum: -32872
+    maximum: 32872
 
   days_to_recurrence:
     term:
       $ref: "_terms.yaml#/days_to_recurrence"
     type: integer
+    minimum: -32872
+    maximum: 32872
 
   diabetes_treatment_type:
     term:
