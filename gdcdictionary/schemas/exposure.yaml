@@ -88,6 +88,15 @@ properties:
       - Unknown
       - Not Reported
 
+  asbestos_exposure:
+    term:
+      $ref: "_terms.yaml#asbestos_exposure"
+    enum:
+      - "Yes"
+      - "No"
+      - Unkown
+      - Not Reported
+
   bmi:
     term:
       $ref: "_terms.yaml#/bmi"
