@@ -2825,6 +2825,16 @@ race:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2192199&version=1.0"
 
+radon_exposure:
+  description: >
+    The yes/no/unknown indicator used to describe whether the patient was exposed to radon.
+  termDef:
+    term: Person Lifetime Risk Radon Exposure Indicator
+    source: caDSR
+    cde_id: 2816352
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2816352&version=1.0"
+
 read_length: # TOREVIEW
   description: >
     The length of the reads.
