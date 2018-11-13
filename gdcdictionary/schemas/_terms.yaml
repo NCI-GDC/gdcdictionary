@@ -1563,6 +1563,17 @@ hemoglobin:
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2190&version=3.0"
 
+hepatitis_sustained_virological_response:
+  description: >
+    The yes/no/unknown indicator used to describe whether the patient received treatment for a risk
+    factor the patient had at the time of or prior to their diagnosis.
+  termDef:
+    term: Viral Hepatitis Sustained Virologic Response Post Treatment Indicator
+    source: caDSR
+    cde_id: 6423783
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6423783&version=1.0"
+
 her2_erbb2_percent_positive_ihc:
   description: >
     Classification to represent the number of positive HER2/ERBB2 cells in a specimen or sample.
