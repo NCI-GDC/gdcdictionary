@@ -288,7 +288,7 @@ analyte_type_id:
 
 analyte_volume:
   description: >
-    The volume in microliters (ml) of the analyte(s) derived from the analyte(s) shipped for
+    The volume in microliters (ul) of the analyte(s) derived from the analyte(s) shipped for
     sequencing and characterization.
   termDef:
     term: Biospecimen Analyte Volume
