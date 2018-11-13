@@ -215,6 +215,7 @@ properties:
     term:
       $ref: "_terms.yaml#/multiplex_barcode"
     type: string
+    pattern: "^[0-9ACGTURYSWKMBDHVN]+(\\+[0-9ACGTURYSWKMBDHVN]+)?$"
 
   platform:
     term:
