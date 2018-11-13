@@ -473,7 +473,7 @@ properties:
   intermediate_dimension:
     terms:
       $ref: "_terms.yaml#/intermediate_dimension"
-    type: string
+    type: number
 
   is_ffpe:
     term:
