@@ -1845,6 +1845,7 @@ properties:
     term:
       $ref: "_terms.yaml#/transcript"
     type: string
+    pattern: "^ENST[0-9]{11}(\\.(0|[1-9][0-9]*))?$"
 
   variant_type:
     term:
