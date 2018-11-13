@@ -386,6 +386,16 @@ properties:
       - Wrist
       - Not Reported
 
+  treatment_effect:
+    term:
+      $ref: "_terms.yaml#/treatment_effect"
+    enum:
+      - Complete Necrosis (No Viable Tumor)
+      - Incomplete Necrosis (Viable Tumor Present)
+      - No Necrosis
+      - Unknown
+      - Not Reported
+
   treatment_intent_type:
     term:
       $ref: "_terms.yaml#/treatment_intent_type"
