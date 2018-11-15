@@ -31,7 +31,17 @@ adapter_sequence: # TOREVIEW
 
 age_at_diagnosis:
   description: >
-    Age at the time of diagnosis expressed in number of days since birth.
+    Age at the time of diagnosis expressed in number of days since birth. If the age at diagnosis is greater than 32872 days (89 years), then see 'age_at_diagnosis_gt89'.
+  termDef:
+    term: Patient Diagnosis Age Day Value
+    source: caDSR
+    cde_id: 3225640
+    cde_version: 2.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3225640&version=2.0"
+
+age_at_diagnosis_gt89:
+  description: >
+    Indicate if the age at the time of diagnosis expressed in number of days since birth is greater than 32872 days (89 years).
   termDef:
     term: Patient Diagnosis Age Day Value
     source: caDSR
@@ -1382,7 +1392,17 @@ read_group_name: # TOREVIEW
 
 relationship_age_at_diagnosis:
   description: >
-    The age (in years) when the patient's relative was first diagnosed.
+    The age (in years) when the patient's relative was first diagnosed; if age is greater than 89 years, use 'relationship_age_at_diagnosis_gt89'.
+  termDef:
+    term: Relative Diagnosis Age Value
+    source: caDSR
+    cde_id: 5300571
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5300571&version=1.0"
+
+relationship_age_at_diagnosis_gt89:
+  description: >
+    Indicate whether the age (in years) when the patient's relative was first diagnosed is greater than 89 years.
   termDef:
     term: Relative Diagnosis Age Value
     source: caDSR
