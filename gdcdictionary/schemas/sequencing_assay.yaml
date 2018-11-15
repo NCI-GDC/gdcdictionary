@@ -8,7 +8,7 @@ category: notation
 program: '*'
 project: '*'
 description: >
-  Information pertaining to processed results obtained from a sequencing assay. 
+  Information pertaining to processed results obtained from a sequencing assay.
 additionalProperties: false
 submittable: true
 validators: null
@@ -26,7 +26,7 @@ links:
     label: data_from
     target_type: read_group
     multiplicity: many_to_many
-    required: false
+    required: true
 
 required:
   - submitter_id
@@ -43,7 +43,7 @@ properties:
     description: "General name or description of the method used to characterize the analyte."
     enum:
       - Targeted Sequencing
-      - Copy Number Analysis 
+      - Copy Number Analysis
   assay_target:
     description: "Gene of interest for the assay."
     type: string
