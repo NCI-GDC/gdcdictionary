@@ -1807,8 +1807,7 @@ inss_stage:
 
 instrument_model:
   description: >
-    Numeric value that represents the sample dimension that is greater than the shortest
-    dimension and less than the longest dimension, measured in millimeters.
+    Specific model of sequencing instrument used.
   termDef:
     term: Tissue Sample Intermediate Dimension Millimeter Measurement
     source: caDSR
