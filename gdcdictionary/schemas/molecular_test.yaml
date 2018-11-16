@@ -177,8 +177,8 @@ properties:
   exon:
     term:
       $ref: "_terms.yaml#/exon"
-    type: integer
-    minimum: 1
+    type: string
+    pattern: "^(0|[1-9][0-9]{0,3})[a-z]?$"
 
   gene_symbol:
     term:
@@ -928,6 +928,12 @@ properties:
       - Unknown
       - Not Reported
 
+  intron:
+    term:
+      $ref: "_terms.yaml#/intron"
+    type: string
+    pattern: "^(0|[1-9][0-9]{0,3})[a-z]?$"
+
   laboratory_test:
     term:
       $ref: "_terms.yaml#/laboratory_test"
@@ -988,6 +994,7 @@ properties:
     term:
       $ref: "_terms.yaml#/locus"
     type: string
+    pattern: "^(AC_|NC_|NG_|NT_|NW_|NZ_b|NM_|NR_|XM_c|XR_c|AP_|NP_|YP_c|XP_c|WP_)[0-9]+(\\.(0|[1-9][0-9]{0,3}))?$"
 
   mismatch_repair_mutation:
     term:
@@ -1838,6 +1845,7 @@ properties:
     term:
       $ref: "_terms.yaml#/transcript"
     type: string
+    pattern: "^ENST[0-9]{11}(\\.(0|[1-9][0-9]*))?$"
 
   variant_type:
     term:
