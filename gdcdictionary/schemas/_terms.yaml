@@ -823,6 +823,14 @@ concentration:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432594&version=1.0"
 
+contamination:
+  description: >
+    Fraction of reads coming from cross-sample contamination collected from GATK4.
+
+contamination_error:
+  description: >
+    Estimation error of cross-sample contamination collected from GATK4.
+
 copy_number:
   description: >
     Numeric value used to describe the number of times a section of the genome is repeated or copied
