@@ -49,11 +49,15 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_treatment_end"
     type: integer
+    minimum: -32872
+    maximum: 32872
 
   days_to_treatment_start:
     term:
       $ref: "_terms.yaml#/days_to_treatment_start"
     type: integer
+    minimum: -32872
+    maximum: 32872
 
   initial_disease_status:
     term:
@@ -380,6 +384,16 @@ properties:
       - Vulva
       - White Blood Cells
       - Wrist
+      - Not Reported
+
+  treatment_effect:
+    term:
+      $ref: "_terms.yaml#/treatment_effect"
+    enum:
+      - Complete Necrosis (No Viable Tumor)
+      - Incomplete Necrosis (Viable Tumor Present)
+      - No Necrosis
+      - Unknown
       - Not Reported
 
   treatment_intent_type:
