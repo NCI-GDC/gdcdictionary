@@ -1,0 +1,113 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "raw_methylation_array"
+title: Raw Methylation Array
+type: object
+namespace: https://gdc.cancer.gov
+category: data_file
+program: '*'
+project: '*'
+description: >
+  Data file containing channel data from a methylation array.
+additionalProperties: false
+submittable: true
+downloadable: true
+previous_version_downloadable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - name: aliquots
+    backref: raw_methylation_arrays
+    label: data_from
+    target_type: aliquot
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - md5sum
+  - data_category
+  - data_format
+  - data_type
+  - experimental_strategy
+  - platform
+  - channel
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+
+  data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
+    enum:
+      - DNA Methylation
+
+  data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
+    enum:
+      - Raw Intensities
+
+  data_format:
+    term:
+      $ref: "_terms.yaml#/data_format"
+    enum:
+      - IDAT
+
+  experimental_strategy:
+    term:
+      $ref: "_terms.yaml#/experimental_strategy"
+    enum:
+      - Methylation Array
+
+  platform:
+    term:
+      $ref: "_terms.yaml#/platform"
+    enum:
+      - Illumina Human Methylation 27
+      - Illumina Human Methylation 450
+
+  channel:
+    term:
+      $ref: "_terms.yaml#/channel"
+    enum:
+      - Green
+      - Red
+
+  chip_id:
+    term:
+      $ref: "_terms.yaml#/chip_id"
+    type: string
+
+  chip_position:
+    term:
+      $ref: "_terms.yaml#/chip_position"
+    type: string
+
+  plate_name:
+    term:
+      $ref: "_terms.yaml#/plate_name"
+    type: string
+
+  plate_well:
+    term:
+      $ref: "_terms.yaml#/plate_well"
+    type: string
+
+  aliquots:
+    $ref: "_definitions.yaml#/to_one"

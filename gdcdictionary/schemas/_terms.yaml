@@ -654,6 +654,10 @@ cell_count:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142528&version=1.0"
 
+channel:
+  description: >
+    The corresponding color channel used to generate this data file.
+
 child_pugh_classification:
   description: >
     The text term used to describe the classification used in the prognosis of chronic liver
@@ -664,6 +668,15 @@ child_pugh_classification:
     cde_id: 2931791
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2931791&version=1.0"
+
+chip_id:
+  description: >
+    User specified identifier for the chip used to perform the methylation microarray.
+
+chip_position:
+  description: >
+    User specified identifier for the specific position on the chip that the sample was loaded into
+    to perform the methylation microarray.
 
 chromosome:
   description: >
@@ -2553,6 +2566,15 @@ peripancreatic_lymph_nodes_tested:
     cde_id: 6050944
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6050944&version=1.0"
+
+plate_name:
+  description: >
+    User specified identifier of the plate used to prepare the sample for analysis.
+
+plate_well:
+  description: >
+    User specified identifier for the specific well of the plate used to prepare the sample for
+    analysis.
 
 platelet_count:
   description: >
