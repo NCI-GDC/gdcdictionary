@@ -2068,6 +2068,17 @@ lymph_nodes_positive:
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=89&version=3.0"
 
+lymph_nodes_tested:
+  description: >
+    The number of lymph nodes tested to determine whether lymph nodes were  involved with disease
+    as determined by a pathologic examination.
+  termDef:
+    term: Lymph Node Examined Count
+    source: caDSR
+    cde_id: 3
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3&version=3.0"
+
 lymphatic_invasion_present:
   description: >
     A yes/no indicator to ask if small or thin-walled vessel invasion is present, indicating
@@ -3451,6 +3462,17 @@ tumor_descriptor:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3288124&version=1.0"
 
+tumor_focality:
+  description: >
+    The text term used to describe whether the patient's disease originated in a single location or
+    multiple locations.
+  termDef:
+    term: Primary Neoplasm Focus Type
+    source: caDSR
+    cde_id: 3174022
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3174022&version=1.0"
+
 tumor_grade:
   description: >
     Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation
@@ -3472,6 +3494,17 @@ tumor_largest_dimension_diameter:
     cde_id: 64215
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64215&version=3.0"
+
+tumor_regression_grade:
+  description: >
+    A numeric value used to measure therapeutic response of the primary tumor and predict patient
+    outcomes based on a three-point tumor regression grading system.
+  termDef:
+    term: Modified Ryan Scheme for Tumor Regression Score 3 Point Scale
+    source: caDSR
+    cde_id: 6471217
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6471217&version=1.0"
 
 tumor_stage:
   description: >
