@@ -21,6 +21,7 @@
     "fev1_fvc_post_bronch_percent":34.54,
     "fev1_fvc_pre_bronch_percent":33.3,
     "height":162,
+    "hepatitis_sustained_virological_response": "No",
     "hpv_positive_type":"68",
     "karnofsky_performance_status":"10",
     "menopause_status":"Not Reported",
@@ -28,9 +29,9 @@
     "progression_or_recurrence":"Yes",
     "progression_or_recurrence_anatomic_site":"Ampulla of Vater",
     "progression_or_recurrence_type":"Distant",
-    "reflux_treatment":"Yes",
     "reflux_treatment_type":"Medically Treated",
     "risk_factor":"Obesity",
+    "risk_factor_treatment": "Yes",
     "viral_hepatitis_serologies":"HBV Surface Antibody",
     "weight":123,
     "cases": {

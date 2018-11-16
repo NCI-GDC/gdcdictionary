@@ -769,14 +769,14 @@ cog_liver_stage:
 
 comorbidity:
   description: >
-    Number of days between the date used for index and the date of the patient was diagnosed with
-    the comorbidity.
+    The text term used to describe a comorbidity disease, which coexists with the patient's
+    malignant disease.
   termDef:
     term: Index Date To Comorbidity Day Count
     source: caDSR
-    cde_id: 6154729
+    cde_id: 2970715
     cde_version: 1.0
-    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154729&version=1.0"
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2970715&version=1.0"
 
 comorbidity_method_of_diagnosis:
   description: >
@@ -946,11 +946,11 @@ days_to_comorbidity:
     Number of days between the date used for index and the date the patient was diagnosed with a
     comorbidity.
   termDef:
-    term: null
-    source: null
-    cde_id: null
-    cde_version: null
-    term_url: null
+    term: Index Date To Comorbidity Day Count
+    source: caDSR
+    cde_id: 6154729
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154729&version=1.0"
 
 days_to_death:
   description: >
@@ -1562,6 +1562,17 @@ hemoglobin:
     cde_id: 2190
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2190&version=3.0"
+
+hepatitis_sustained_virological_response:
+  description: >
+    The yes/no/unknown indicator used to describe whether the patient received treatment for a risk
+    factor the patient had at the time of or prior to their diagnosis.
+  termDef:
+    term: Viral Hepatitis Sustained Virologic Response Post Treatment Indicator
+    source: caDSR
+    cde_id: 6423783
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6423783&version=1.0"
 
 her2_erbb2_percent_positive_ihc:
   description: >
@@ -2959,6 +2970,17 @@ risk_factor:
     cde_id: 6142389
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142389&version=1.0"
+
+risk_factor_treatment:
+  description: >
+    The yes/no/unknown indicator used to describe whether the patient received treatment for a risk
+    factor the patient had at the time of or prior to their diagnosis.
+  termDef:
+    term: Risk Factor Treatment Indicator
+    source: caDSR
+    cde_id: 6514356
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6514356&version=1.0"
 
 rna_change:
   description: >

@@ -898,6 +898,7 @@ properties:
       - Celiac Disease
       - Cirrhosis, Unknown Etiology
       - Cerebrovascular Disease
+      - Cholelithiasis
       - Chronic Renal Failure
       - Colon Polyps
       - Common Variable Immunodeficiency
@@ -908,6 +909,7 @@ properties:
       - Crohn's Disease
       - Cryptogenic Organizing Pneumonia
       - Deep Vein Thrombosis / Thromboembolism
+      - Denys-Drash Syndrome
       - Depression
       - Diabetes
       - Diabetes, Type II
@@ -921,6 +923,7 @@ properties:
       - Epstein-Barr Virus
       - Familial Adenomatous Polyposis
       - Fanconi Anemia
+      - Fibrosis
       - Gastroesophageal Reflux Disease
       - GERD
       - Glaucoma
@@ -932,13 +935,16 @@ properties:
       - Hashimoto's Thyroiditis
       - Headache
       - Heart Disease
+      - Hemihypertrophy
       - Hemorrhagic Cystitis
       - Hepatitis
       - Hepatitis A Infection
       - Hepatitis B Infection
       - Hepatitis C Infection
+      - Hepatitis, Chronic
       - Hereditary Non-polyposis Colon Cancer
       - Herpes
+      - High Grade Liver Dysplastic Nodule
       - HIV / AIDS
       - Human Papillomavirus Infection
       - HUS/TTP
@@ -961,12 +967,14 @@ properties:
       - Liver Cirrhosis (Liver Disease)
       - Liver Toxicity (Non-Infectious)
       - Li-Fraumeni Syndrome
+      - Low Grade Liver Dysplastic Nodule
       - Lupus
       - Lynch Syndrome
       - MAI
       - Myasthenia Gravis
       - Myocardial Infarction
       - Neuroendocrine Tumor
+      - Nonalcoholic Steatohepatitis
       - Obesity
       - Organ transplant (site)
       - Osteoarthritis
@@ -982,6 +990,7 @@ properties:
       - Peripheral Vascular Disease
       - Peutz-Jeghers Disease
       - Pregnancy in Patient or Partner
+      - Primary Sclerosing Cholangitis
       - Psoriasis
       - Pulmonary Fibrosis
       - Pulmonary Hemorrhage
@@ -995,12 +1004,14 @@ properties:
       - Seizure
       - Sleep apnea
       - Smoking
+      - Steatosis
       - Stroke
       - Transient Ischemic Attack
       - Tuberculosis
       - Turcot Syndrome
       - Tyrosinemia
       - Ulcerative Colitis
+      - Wagr Syndrome
       - Unknown
       - Not Reported
 
@@ -1018,26 +1029,36 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_adverse_event"
     type: integer
+    minimum: -32872
+    maximum: 32872
 
   days_to_comorbidity:
     term:
       $ref: "_terms.yaml#days_to_comorbidity"
     type: integer
+    minimum: -32872
+    maximum: 32872
 
   days_to_follow_up:
     term:
       $ref: "_terms.yaml#/days_to_follow_up"
     type: integer
+    minimum: -32872
+    maximum: 32872
 
   days_to_progression:
     term:
       $ref: "_terms.yaml#/days_to_progression"
     type: integer
+    minimum: -32872
+    maximum: 32872
 
   days_to_recurrence:
     term:
       $ref: "_terms.yaml#/days_to_recurrence"
     type: integer
+    minimum: -32872
+    maximum: 32872
 
   diabetes_treatment_type:
     term:
@@ -1090,6 +1111,8 @@ properties:
       - TF-Tumor Free
       - VGPR-Very Good Partial Response
       - WT-With Tumor
+      - Unknown
+      - Not Reported
 
   dlco_ref_predictive_percent:
     term:
@@ -1106,6 +1129,8 @@ properties:
       - "3"
       - "4"
       - "5"
+      - Unknown
+      - Not Reported
 
   fev1_ref_post_bronch_percent:
     term:
@@ -1131,6 +1156,15 @@ properties:
     term:
       $ref: "_terms.yaml#/height"
     type: number
+
+  hepatitis_sustained_virological_response:
+    term:
+      $ref: "_terms.yaml#/hepatitis_sustained_virological_response"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
 
   hpv_positive_type:
     term:
@@ -1550,15 +1584,6 @@ properties:
       - Unknown
       - Not Reported
 
-  reflux_treatment:
-    term:
-      $ref: "_terms.yaml#/reflux_treatment"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-      - Not Reported
-
   reflux_treatment_type:
     term:
       $ref: "_terms.yaml#/reflux_treatment_type"
@@ -1578,6 +1603,7 @@ properties:
       $ref: "_terms.yaml#/risk_factor"
     enum:
       - Alcohol Consumption
+      - Alcoholic Liver Disease
       - Allergy, Animal, NOS
       - Allergy, Ant
       - Allergy, Bee
@@ -1593,10 +1619,14 @@ properties:
       - Allergy, Processed Foods
       - Allergy, Seafood
       - Allergy, Wasp
+      - Alpha-1 Antitrypsin Deficiency
+      - Autoimmune Atrophic Chronic Gastritis
       - Barrett's Esophagus
       - Beckwith-Wiedemann
       - Behcet's Disease
       - Cancer
+      - Cholelithiasis
+      - Chronic Hepatitis
       - Cirrhosis
       - Colon Polyps
       - Common variable immune deficiency (CVID)
@@ -1610,32 +1640,47 @@ properties:
       - Epstein-Barr Virus
       - Familial Adenomatous Polyposis
       - Fanconi Anemia
+      - Fibrosis
+      - Gastric Polyp(s)
       - Gilbert's Syndrome
       - Gorlin Syndrome
       - Hashimoto's Thyroiditis
       - Hay Fever
       - Headache
+      - Helicobacter Pylori-Associated Gastritis
       - Hematologic Disorder, NOS
       - Hemihypertrophy
+      - Hemochromatosis
       - Hepatic Encephalopathy
       - Hepatitis B Infection
       - Hepatitis C Infection
       - Hepatitis, NOS
+      - High Grade Dysplasia
       - HIV
       - Human Papillomavirus Infection
       - Hypospadias
+      - Intestinal Metaplasia
+      - Iron Overload
       - Li-Fraumeni Syndrome
+      - Low Grade Dysplasia
       - Lymphocytic Thyroiditis
       - Lynch Syndrome
       - Myasthenia Gravis
+      - Nonalcoholic Fatty Liver Disease
+      - Nonalcoholic Steatohepatitis
       - Obesity
       - Oral Contraceptives
       - Pancreatitis
+      - Parasitic Disease of Biliary Tract
+      - Primary Sclerosing Cholangitis
+      - Recurrent Pyogenic Cholangitis
+      - Reflux Disease
       - Rheumatoid Arthritis
       - Rubinstein-Taybi Syndrome
       - Sarcoidosis
       - Seizure
       - Sensory Changes
+      - Steatosis
       - Tattoo
       - Thyroid Nodular Hyperplasia
       - Tobacco, NOS
@@ -1645,6 +1690,15 @@ properties:
       - Undescended Testis
       - Vision Changes
       - Wagr Syndrome
+      - Unknown
+      - Not Reported
+
+  risk_factor_treatment:
+    term:
+      $ref: "_terms.yaml#/risk_factor_treatment"
+    enum:
+      - "Yes"
+      - "No"
       - Unknown
       - Not Reported
 
