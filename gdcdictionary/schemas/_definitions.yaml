@@ -68,6 +68,7 @@ file_format:
 
 md5sum:
     type: string
+    pattern: "^[a-f0-9]{32}$"
     term:
         $ref: "_terms.yaml#/md5sum"
 
