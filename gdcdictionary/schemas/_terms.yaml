@@ -385,6 +385,16 @@ antigen:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142523&version=1.0"
 
+asbestos_exposure:
+  description: >
+    The yes/no/unknown indicator used to describe whether the patient was exposed to asbestos.
+  termDef:
+    term: Asbestos Exposure Ind-3
+    source: caDSR
+    cde_id: 1253
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=1253&version=3.0"
+
 average_base_quality:
   description: >
     Average base quality collected from samtools.
@@ -2876,6 +2886,16 @@ race:
     cde_id: 2192199
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2192199&version=1.0"
+
+radon_exposure:
+  description: >
+    The yes/no/unknown indicator used to describe whether the patient was exposed to radon.
+  termDef:
+    term: Person Lifetime Risk Radon Exposure Indicator
+    source: caDSR
+    cde_id: 2816352
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2816352&version=1.0"
 
 read_length: # TOREVIEW
   description: >
