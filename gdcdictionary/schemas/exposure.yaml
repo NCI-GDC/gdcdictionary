@@ -67,6 +67,8 @@ properties:
     term:
       $ref: "_terms.yaml#/years_smoked"
     type: number
+    maximum: 89
+    minimum: 0
 
   cases:
     $ref: "_definitions.yaml#/to_one"
