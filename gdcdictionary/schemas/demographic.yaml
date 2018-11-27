@@ -53,8 +53,8 @@ properties:
     description: >
       The number of days between the index date and the date of patient birth. If the number of days is greater than 32872 (89 years), then please use 'days_to_birth_gt89'.
     type: integer
-    maximum: 0
-    minimum: -32872
+    maximum: 32872
+    minimum: 0
 
   days_to_birth_gt89:
     description: >
