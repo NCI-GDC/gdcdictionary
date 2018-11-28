@@ -603,11 +603,12 @@ properties:
   days_to_death:
     term:
       $ref: "_terms.yaml#/days_to_death"
-    oneOf:
-      - type: number
-        minimum: -32872
-        maximum: 32872
-      - type: "null"
+    type:
+      - number
+      - "null"
+    minimum: -32872
+    maximum: 32872
+
 
   days_to_diagnosis:
     term:
