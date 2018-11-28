@@ -57,7 +57,7 @@ properties:
   portion_number:
     term:
       $ref: "_terms.yaml#/portion_number"
-    type: integer
+    type: string
   weight:
     term:
       $ref: "_terms.yaml#/portion_weight"
