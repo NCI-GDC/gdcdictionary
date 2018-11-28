@@ -600,14 +600,22 @@ properties:
         maximum: 0
       - type: "null"
 
+  # NOTE: This node is not using oneOf because
+  # of the way we're doing an aggregation for the
+  # portal. If for some reason this causes an issue
+  # with the submission of 'null' as a value, we will
+  # need to revisit this with OICR to make sure the
+  # aggregation queries work as expected.
+  # - joe 11/28/2018
   days_to_death:
     term:
       $ref: "_terms.yaml#/days_to_death"
-    oneOf:
-      - type: number
-        minimum: -32872
-        maximum: 32872
-      - type: "null"
+    type:
+      - number
+      - "null"
+    minimum: -32872
+    maximum: 32872
+
 
   days_to_diagnosis:
     term:
