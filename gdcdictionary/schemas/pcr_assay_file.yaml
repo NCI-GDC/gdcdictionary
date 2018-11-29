@@ -28,13 +28,13 @@ links:
         backref: pcr_assay_files
         label: data_from
         target_type: pcr_assay
-        multiplicity: many_to_one
+        multiplicity: many_to_many
         required: false
       - name: analytes
         backref: pcr_assay_files
         label: data_from
         target_type: analyte
-        multiplicity: many_to_one
+        multiplicity: many_to_many
         required: false
 
 required:
