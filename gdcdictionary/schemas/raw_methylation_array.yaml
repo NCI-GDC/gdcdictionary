@@ -81,6 +81,7 @@ properties:
     enum:
       - Illumina Human Methylation 27
       - Illumina Human Methylation 450
+      - Illumina Methylation Epic
 
   channel:
     term:
