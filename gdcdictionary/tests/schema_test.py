@@ -40,5 +40,8 @@ class SchemaTest(BaseTest):
         self.traverse_schema_with_conditional(self.dictionary.schema, trigger, test_enum)
 
     def test_schemas(self):
-        validate_schemata(self.dictionary.schema, self.dictionary.metaschema)
-
+        try:
+            # Want to traverse the whole thing
+            validate_schemata(self.dictionary.schema, self.dictionary.metaschema)
+        except Exception as e:
+            self.errors.append(e.message)
