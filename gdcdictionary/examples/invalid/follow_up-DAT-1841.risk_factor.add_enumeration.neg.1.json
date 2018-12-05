@@ -1,0 +1,12 @@
+[
+  {
+    "project_id": "QA-DICT", 
+    "days_to_follow_up": 1, 
+    "type": "follow_up", 
+    "cases": {
+      "submitter_id": "QA-DICT-0016"
+    }, 
+    "risk_factor": "ALCOHOLIC LIVER DISEASE", 
+    "submitter_id": "QA-DICT-follow_up-0016"
+  }
+]

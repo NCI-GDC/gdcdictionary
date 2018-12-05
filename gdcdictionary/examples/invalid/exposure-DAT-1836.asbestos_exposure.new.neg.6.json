@@ -1,0 +1,11 @@
+[
+  {
+    "project_id": "QA-DICT", 
+    "asbestos_exposure": "Yesabcxyz", 
+    "cases": {
+      "submitter_id": "QA-DICT-0014"
+    }, 
+    "type": "exposure", 
+    "submitter_id": "QA-DICT-exposure-0014"
+  }
+]

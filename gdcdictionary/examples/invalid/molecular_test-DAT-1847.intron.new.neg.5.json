@@ -1,0 +1,16 @@
+[
+  {
+    "follow_ups": {
+      "submitter_id": "QA-DICT-follow_up-0017"
+    }, 
+    "test_result": "Abnormal, NOS", 
+    "intron": {
+      "some": "object"
+    }, 
+    "submitter_id": "QA-DICT-molecular_test-0017", 
+    "molecular_analysis_method": "Comparative Genomic Hybridization", 
+    "gene_symbol": "A1CF", 
+    "project_id": "QA-DICT", 
+    "type": "molecular_test"
+  }
+]

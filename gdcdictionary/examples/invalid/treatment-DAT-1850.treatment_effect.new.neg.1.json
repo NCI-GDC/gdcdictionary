@@ -1,0 +1,11 @@
+[
+  {
+    "diagnoses": {
+      "submitter_id": "QA-DICT-diagnosis-0021"
+    }, 
+    "project_id": "QA-DICT", 
+    "treatment_effect": "COMPLETE NECROSIS (NO VIABLE TUMOR)", 
+    "type": "treatment", 
+    "submitter_id": "QA-DICT-treatment-0021"
+  }
+]
