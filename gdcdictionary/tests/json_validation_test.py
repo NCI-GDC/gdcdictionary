@@ -36,7 +36,7 @@ class JsonValidationTests(BaseTest):
                 else:
                     raise Exception("Invalid json")
             except ValidationError as e:
-                self.errors.append(e)
+                self.errors.add(e.message)
 
     def test_invalid_files(self):
         for path in glob.glob(os.path.join(DATA_DIR, 'invalid', '*.json')):

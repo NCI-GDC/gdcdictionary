@@ -44,4 +44,4 @@ class SchemaTest(BaseTest):
             # Want to traverse the whole thing
             validate_schemata(self.dictionary.schema, self.dictionary.metaschema)
         except Exception as e:
-            self.errors.append(e.message)
+            self.errors.add(e.message)

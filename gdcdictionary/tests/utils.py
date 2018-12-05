@@ -26,7 +26,7 @@ class BaseTest(unittest.TestCase):
     def setUp(self):
         self.dictionary = GDCDictionary()
         self.definitions = load_yaml(os.path.join(ROOT_DIR, 'schemas','_definitions.yaml'))
-        self.errors = []
+        self.errors = set()
 
     def tearDown(self):
         assert not any(self.errors), self.errors
