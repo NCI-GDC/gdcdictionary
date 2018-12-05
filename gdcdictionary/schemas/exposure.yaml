@@ -94,7 +94,7 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Unkown
+      - Unknown
       - Not Reported
 
   bmi:
