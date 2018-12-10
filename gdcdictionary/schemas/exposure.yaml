@@ -88,6 +88,15 @@ properties:
       - Unknown
       - Not Reported
 
+  asbestos_exposure:
+    term:
+      $ref: "_terms.yaml#asbestos_exposure"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
   bmi:
     term:
       $ref: "_terms.yaml#/bmi"
@@ -107,6 +116,15 @@ properties:
     term:
       $ref: "_terms.yaml#/pack_years_smoked"
     type: number
+
+  radon_exposure:
+    term:
+      $ref: "_terms.yaml#/radon_exposure"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
 
   tobacco_smoking_onset_year:
     term:

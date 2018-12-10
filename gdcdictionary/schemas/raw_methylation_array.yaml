@@ -1,17 +1,18 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "submitted_unaligned_reads"
-title: Submitted Unaligned Reads
+id: "raw_methylation_array"
+title: Raw Methylation Array
 type: object
 namespace: https://gdc.cancer.gov
 category: data_file
 program: '*'
 project: '*'
-description: "Data file containing unaligned reads that have not been GDC Harmonized."
+description: >
+  Data file containing channel data from a methylation array.
 additionalProperties: false
 submittable: true
-downloadable: false
-previous_version_downloadable: false
+downloadable: true
+previous_version_downloadable: true
 validators: null
 
 systemProperties:
@@ -24,10 +25,10 @@ systemProperties:
   - error_type
 
 links:
-  - name: read_groups
-    backref: submitted_unaligned_reads_files # pretty ugly
+  - name: aliquots
+    backref: raw_methylation_arrays
     label: data_from
-    target_type: read_group
+    target_type: aliquot
     multiplicity: many_to_one
     required: true
 
@@ -37,10 +38,11 @@ required:
   - file_size
   - md5sum
   - data_category
-  - data_type
   - data_format
+  - data_type
   - experimental_strategy
-  - read_pair_number
+  - platform
+  - channel
 
 uniqueKeys:
   - [ id ]
@@ -53,41 +55,60 @@ properties:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Sequencing Reads
+      - DNA Methylation
 
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Unaligned Reads" ]
+    enum:
+      - Raw Intensities
 
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
-      - BAM
-      - FASTQ
+      - IDAT
 
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - ATAC-Seq
-      - Bisulfite-Seq
-      - ChIP-Seq
-      - Low Pass WGS
-      - miRNA-Seq
-      - RNA-Seq
-      - Targeted Sequencing
-      - WGS
-      - WXS
+      - Methylation Array
 
-  read_pair_number: 
+  platform:
     term:
-      $ref: "_terms.yaml#/read_pair_number"
+      $ref: "_terms.yaml#/platform"
     enum:
-      - R1
-      - R2
-      - Not Applicable
+      - Illumina Human Methylation 27
+      - Illumina Human Methylation 450
+      - Illumina Methylation Epic
 
-  read_groups:
+  channel:
+    term:
+      $ref: "_terms.yaml#/channel"
+    enum:
+      - Green
+      - Red
+
+  chip_id:
+    term:
+      $ref: "_terms.yaml#/chip_id"
+    type: string
+
+  chip_position:
+    term:
+      $ref: "_terms.yaml#/chip_position"
+    type: string
+
+  plate_name:
+    term:
+      $ref: "_terms.yaml#/plate_name"
+    type: string
+
+  plate_well:
+    term:
+      $ref: "_terms.yaml#/plate_well"
+    type: string
+
+  aliquots:
     $ref: "_definitions.yaml#/to_one"

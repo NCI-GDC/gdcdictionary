@@ -176,6 +176,8 @@ properties:
     term:
       $ref: "_terms.yaml#/relationship_age_at_diagnosis"
     type: number
+    minimum: 0
+    maximum: 90
 
   relationship_primary_diagnosis:
     term:
@@ -195,8 +197,10 @@ properties:
       - CNS Cancer
       - Colorectal Cancer
       - Esophageal Cancer
+      - Ewing Sarcoma
       - Gallbladder Cancer
       - Gastric Cancer
+      - Glioblastoma
       - Gynecologic Cancer
       - Head and Neck Cancer
       - Hematologic Cancer
@@ -211,10 +215,13 @@ properties:
       - Melanoma
       - Mesothelioma
       - Multiple Myeloma
+      - Neuroblastoma
+      - Osteosarcoma
       - Ovarian Cancer
       - Pancreas Cancer
       - Prostate Cancer
       - Rectal Cancer
+      - Rhabdomyosarcoma
       - Sarcoma
       - Skin Cancer
       - Spleen Cancer
@@ -224,6 +231,7 @@ properties:
       - Tongue Cancer
       - Tonsillar Cancer
       - Uterine Cancer
+      - Wilms Tumor
       - Unknown
       - Not Reported
 

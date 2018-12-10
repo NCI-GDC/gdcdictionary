@@ -418,11 +418,15 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_collection"
     type: integer
+    minimum: -32872
+    maximum: 32872
 
   days_to_sample_procurement:
     term:
       $ref: "_terms.yaml#/days_to_sample_procurement"
     type: integer
+    minimum: -32872
+    maximum: 32872
 
   diagnosis_pathologically_confirmed:
     term:
@@ -469,7 +473,7 @@ properties:
   intermediate_dimension:
     terms:
       $ref: "_terms.yaml#/intermediate_dimension"
-    type: string
+    type: number
 
   is_ffpe:
     term:
@@ -479,7 +483,7 @@ properties:
   longest_dimension:
     terms:
       $ref: "_terms.yaml#/longest_dimension"
-    type: string
+    type: number
 
   method_of_sample_procurement:
     term:
@@ -527,6 +531,7 @@ properties:
       - Pan-Procto Colectomy
       - Pancreatectomy
       - Paracentesis
+      - Partial Hepatectomy
       - Pneumonectomy
       - Right Hemicolectomy
       - Sigmoid Colectomy
@@ -535,6 +540,7 @@ properties:
       - Surgical Resection
       - Thoracoscopic Biopsy
       - Total Colectomy
+      - Total Hepatectomy
       - Total Mastectomy
       - Transplant
       - Transurethral resection (TURBT)
@@ -554,6 +560,7 @@ properties:
   pathology_report_uuid:
     type: string
     description: "UUID of the related pathology report." # are we still doing this? seems like the links handle this now
+
   preservation_method:
     term:
       $ref: "_terms.yaml#/preservation_method"
@@ -659,17 +666,17 @@ properties:
   shortest_dimension:
     term:
       $ref: "_terms.yaml#/shortest_dimension"
-    type: string
+    type: number
 
   time_between_clamping_and_freezing:
     term:
       $ref: "_terms.yaml#/time_between_clamping_and_freezing"
-    type: string
+    type: number
 
   time_between_excision_and_freezing:
     term:
       $ref: "_terms.yaml#/time_between_excision_and_freezing"
-    type: string
+    type: number
 
   tissue_type:
     term:

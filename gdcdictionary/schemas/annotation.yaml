@@ -40,12 +40,6 @@ links:
         target_type: aligned_reads_index
         multiplicity: many_to_many
         required: false
-      - name: aligned_reads_metrics
-        label: annotates
-        backref: annotations
-        target_type: aligned_reads_metric
-        multiplicity: many_to_many
-        required: false
       - name: aligned_reads_files
         label: annotates
         backref: annotations
@@ -378,8 +372,6 @@ properties:
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
   aligned_reads_indexes:
-    $ref: "_definitions.yaml#/to_many"
-  aligned_reads_metrics:
     $ref: "_definitions.yaml#/to_many"
   aliquots:
     $ref: "_definitions.yaml#/to_many"

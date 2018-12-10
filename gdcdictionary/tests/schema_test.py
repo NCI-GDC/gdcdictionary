@@ -15,7 +15,6 @@ class SchemaTest(BaseTest):
     def traverse_schema_with_conditional(self, root, conditional_func, test_func):
         if conditional_func(root):
             test_func(root)
-            return
 
         if isinstance(root, list):
             for child in root:

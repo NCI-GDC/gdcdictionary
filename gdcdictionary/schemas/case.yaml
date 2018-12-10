@@ -52,6 +52,8 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_lost_to_followup"
     type: integer
+    minimum: -32872
+    maximum: 32872
 
   disease_type:
     term:
@@ -294,7 +296,6 @@ properties:
       - Thyroid gland
       - Tonsil
       - Trachea
-      - Unknown primary site
       - Ureter
       - Uterus, NOS
       - Vagina

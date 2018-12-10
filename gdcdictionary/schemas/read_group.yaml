@@ -143,7 +143,9 @@ properties:
   is_paired_end:
     term:
       $ref: "_terms.yaml#/is_paired_end"
-    type: boolean
+    type:
+      - boolean
+      - "null"
 
   lane_number:
     term:
@@ -201,18 +203,20 @@ properties:
     term:
       $ref: "_terms.yaml#/library_strategy"
     enum:
-      - WGS
-      - WXS
-      - RNA-Seq
+      - ATAC-Seq
+      - Bisulfite-Seq
       - ChIP-Seq
       - miRNA-Seq
-      - Bisulfite-Seq
+      - RNA-Seq
       - Targeted Sequencing
+      - WGS
+      - WXS
 
   multiplex_barcode:
     term:
       $ref: "_terms.yaml#/multiplex_barcode"
     type: string
+    pattern: "^[0-9ACGTURYSWKMBDHVN]+(\\+[0-9ACGTURYSWKMBDHVN]+)?$"
 
   platform:
     term:
@@ -231,7 +235,9 @@ properties:
     type: string
 
   read_length:
-    type: integer
+    type:
+     - integer
+     - "null"
 
   RIN:
     term:
@@ -294,6 +300,7 @@ properties:
       - SeqCap EZ HGSC VCRome v2.1
       - SureSelect Human All Exon v3
       - SureSelect Human All Exon v5
+      - SureSelect Human All Exon v4
       - SureSelect Human All Exon v5 + UTR
       - TruSeq Amplicon Cancer Panel
       - TruSeq Exome Enrichment - 62 Mb

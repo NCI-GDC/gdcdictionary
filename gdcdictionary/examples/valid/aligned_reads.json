@@ -4,12 +4,14 @@
     "submitter_id": "TCGA-AB-2837-03B-01W-0728-08",
     "file_name": "C317.TCGA-AB-2837-03B-01W-0728-08.3.bam",
     "file_size": 28165335141,
-    "md5sum": "d3266f2577584713ea17f94d331f30c4",
-    "data_category": "Sequencing Data",
+    "md5sum": "772b51c2b65b2512426e304bc6f7cab7",
+    "data_category": "Sequencing Reads",
     "data_type": "Aligned Reads",
     "data_format": "BAM",
     "experimental_strategy": "WXS",
     "platform" : "Illumina",
+    "contamination":1,
+    "contamination_error": 0.3,
     "alignment_cocleaning_workflows": {
 	"submitter_id": "Jeremiah's_super_secret_pipeline_v423"
     }
