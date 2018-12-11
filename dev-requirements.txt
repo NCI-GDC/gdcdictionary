@@ -1,3 +1,0 @@
--e git+https://git@github.com/NCI-GDC/cdisutils.git@8a8e599fdab5ade9bd8c586132d974a102e5d72d#egg=cdisutils
--e git+https://git@github.com/NCI-GDC/psqlgraph.git@7b5de7d56aa3159a9526940eb273579ddbf084ca#egg=psqlgraph
--e git+https://git@github.com/NCI-GDC/gdcdatamodel.git@755c6d7c380b69dc36dced55700bc9e24a084db1#egg=gdcdatamodel

@@ -23,21 +23,30 @@ systemProperties:
   - error_type
 
 links:
-  - exclusive: true
+  - exclusive: false
     required: true
     subgroup:
-      - name: aliquots
-        backref: submitted_copy_number_files
-        label: derived_from
-        target_type: aliquot
-        multiplicity: one_to_one
-        required: false
-      - name: read_groups
-        backref: submitted_copy_number_files
-        label: derived_from
-        target_type: read_group
-        multiplicity: many_to_many
-        required: false
+    - name: core_metadata_collections
+      backref: submitted_copy_number_files
+      label: data_from
+      target_type: core_metadata_collection
+      multiplicity: many_to_many
+      required: false
+    - exclusive: true
+      required: false
+      subgroup:
+        - name: aliquots
+          backref: submitted_copy_number_files
+          label: derived_from
+          target_type: aliquot
+          multiplicity: one_to_one
+          required: false
+        - name: read_groups
+          backref: submitted_copy_number_files
+          label: derived_from
+          target_type: read_group
+          multiplicity: many_to_many
+          required: false
 
 required:
   - submitter_id
@@ -76,4 +85,6 @@ properties:
   aliquots:
     $ref: "_definitions.yaml#/to_one"
   read_groups:
+    $ref: "_definitions.yaml#/to_many"
+  core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"

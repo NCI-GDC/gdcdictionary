@@ -22,18 +22,21 @@ systemProperties:
   - error_type
 
 links:
-  - name: submitted_aligned_reads_files
-    backref: aligned_reads_indexes
-    label: derived_from
-    target_type: submitted_aligned_reads
-    multiplicity: one_to_one
+  - exclusive: false
     required: true
-  - name: core_metadata_collections
-    backref: aligned_reads_indexes
-    label: data_from
-    target_type: core_metadata_collection
-    multiplicity: many_to_many
-    required: false
+    subgroup:
+    - name: submitted_aligned_reads_files
+      backref: aligned_reads_indexes
+      label: derived_from
+      target_type: submitted_aligned_reads
+      multiplicity: one_to_one
+      required: false
+    - name: core_metadata_collections
+      backref: aligned_reads_indexes
+      label: data_from
+      target_type: core_metadata_collection
+      multiplicity: many_to_many
+      required: false
 
 required:
   - submitter_id

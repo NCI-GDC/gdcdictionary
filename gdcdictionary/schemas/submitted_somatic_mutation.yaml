@@ -23,12 +23,21 @@ systemProperties:
   - error_type
 
 links:
-  - name: read_groups
-    backref: submitted_somatic_mutations
-    label: derived_from
-    target_type: read_group
-    multiplicity: many_to_many
-    required: true 
+  - exclusive: false
+    required: true
+    subgroup:
+    - name: core_metadata_collections
+      backref: submitted_somatic_mutations
+      label: data_from
+      target_type: core_metadata_collection
+      multiplicity: many_to_many
+      required: false
+    - name: read_groups
+      backref: submitted_somatic_mutations
+      label: derived_from
+      target_type: read_group
+      multiplicity: many_to_many
+      required: false
 
 required:
   - submitter_id
@@ -69,4 +78,6 @@ properties:
     description: "The total number of variants detected carrying a base change difference from the reference genome."
     type: integer
   read_groups:
+    $ref: "_definitions.yaml#/to_many"
+  core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"

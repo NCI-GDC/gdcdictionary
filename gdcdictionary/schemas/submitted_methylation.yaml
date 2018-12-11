@@ -22,12 +22,21 @@ systemProperties:
   - error_type
 
 links:
-  - name: aliquots
-    backref: submitted_methylation_files
-    label: data_from
-    target_type: aliquot
-    multiplicity: many_to_one
+  - exclusive: false
     required: true
+    subgroup:
+    - name: core_metadata_collections
+      backref: submitted_methylation_files
+      label: data_from
+      target_type: core_metadata_collection
+      multiplicity: many_to_many
+      required: false
+    - name: aliquots
+      backref: submitted_methylation_files
+      label: data_from
+      target_type: aliquot
+      multiplicity: many_to_one
+      required: false
 
 required:
   - submitter_id
@@ -73,3 +82,5 @@ properties:
       - Illumina Infinium HumanMethylation450K
   aliquots:
     $ref: "_definitions.yaml#/to_one"
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_many"
