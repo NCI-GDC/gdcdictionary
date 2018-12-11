@@ -30,12 +30,20 @@ required:
   - biospecimen_type
   - biospecimen_anatomic_site
   - blood_tube_type
-  - days_to_collection
-  - days_to_procurement
   - method_of_procurement
   - procured_or_purchased
   - tissue_type
   - cases
+oneOf:
+  - required:
+    - days_to_collection
+  - required:
+    - days_to_collection_not_reported
+oneOf:
+  - required:
+    - days_to_procurement
+  - required:
+    - days_to_procurement_not_reported
 
 links:
   - name: cases
@@ -56,526 +64,539 @@ properties:
     term:
       $ref: "_terms.yaml#/biospecimen_anatomic_site"
     enum:
-      - Abdomen
-      - Abdominal Wall
-      - Acetabulum
-      - Adenoid
-      - Adipose
-      - Adrenal
-      - Alveolar Ridge
-      - Amniotic Fluid
-      - Ampulla of Vater
-      - Anal Sphincter
-      - Ankle
-      - Anorectum
-      - Antecubital Fossa
-      - Antrum
-      - Anus
-      - Aorta
-      - Aortic Body
-      - Appendix
-      - Aqueous Fluid
-      - Arm
-      - Artery
-      - Ascending Colon
-      - Ascending Colon Hepatic Flexure
-      - Auditory Canal
-      - Autonomic Nervous System
-      - Axilla
-      - Back
-      - Bile Duct
-      - Bladder
-      - Blood
-      - Blood Vessel
-      - Bone
-      - Bone Marrow
-      - Bowel
-      - Brain
-      - Brain Stem
-      - Breast
-      - Broad Ligament
-      - Bronchiole
-      - Bronchus
-      - Brow
-      - Buccal Cavity
-      - Buccal Mucosa
-      - Buttock
-      - Calf
-      - Capillary
-      - Cardia
-      - Carina
-      - Carotid Artery
-      - Carotid Body
-      - Cartilage
-      - Cecum
-      - Cell-Line
-      - Central Nervous System
-      - Cerebellum
-      - Cerebral Cortex
-      - Cerebrospinal Fluid
-      - Cerebrum
-      - Cervical Spine
-      - Cervix
-      - Chest
-      - Chest Wall
-      - Chin
-      - Clavicle
-      - Clitoris
-      - Colon
-      - Colon (Mucosa Only)
-      - Common Duct
-      - Conjunctiva
-      - Connective Tissue
-      - Dermal
-      - Descending Colon
-      - Diaphragm
-      - Duodenum
-      - Ear
-      - Ear Canal
-      - Ear, Pinna (External)
-      - Effusion
-      - Elbow
-      - Endocrine Gland
-      - Epididymis
-      - Epidural Space
-      - Esophagogastric Junction
-      - Esophagus
-      - Esophagus (Mucosa Only)
-      - Eye
-      - Fallopian Tube
-      - Femoral Artery
-      - Femoral Vein
-      - Femur
-      - Fibroblasts
-      - Fibula
-      - Finger
-      - Floor of Mouth
-      - Fluid
-      - Foot
-      - Forearm
-      - Forehead
-      - Foreskin
-      - Frontal Cortex
-      - Frontal Lobe
-      - Fundus of Stomach
-      - Gallbladder
-      - Ganglia
-      - Gastroesophageal Junction
-      - Gastrointestinal Tract
-      - Groin
-      - Gum
-      - Hand
-      - Hard Palate
-      - Head and Neck
-      - Head (Face Or Neck) NOS
-      - Heart
-      - Hepatic
-      - Hepatic Duct
-      - Hepatic Vein
-      - Hip
-      - Hippocampus
-      - Humerus
-      - Hypopharynx
-      - Ileum
-      - Ilium
-      - Index Finger
-      - Ischium
-      - Islet Cells
-      - Jaw
-      - Jejunum
-      - Joint
-      - Kidney
-      - Knee
-      - Lacrimal Gland
-      - Large Bowel
-      - Laryngopharynx
-      - Larynx
-      - Leg
-      - Leptomeninges
-      - Ligament
-      - Lip
-      - Liver
-      - Lumbar Spine
-      - Lung
-      - Lymph Node
-      - Lymph Node(s) Axilla
-      - Lymph Node(s) Cervical
-      - Lymph Node(s) Distant
-      - Lymph Node(s) Epitrochlear
-      - Lymph Node(s) Femoral
-      - Lymph Node(s) Hilar
-      - Lymph Node(s) Iliac-Common
-      - Lymph Node(s) Iliac-External
-      - Lymph Node(s) Inguinal
-      - Lymph Node(s) Internal Mammary
-      - Lymph Node(s) Mammary
-      - Lymph Node(s) Mesenteric
-      - Lymph Node(s) Occipital
-      - Lymph Node(s) Paraaortic
-      - Lymph Node(s) Parotid
-      - Lymph Node(s) Pelvic
-      - Lymph Node(s) Popliteal
-      - Lymph Node(s) Regional
-      - Lymph Node(s) Retroperitoneal
-      - Lymph Node(s) Scalene
-      - Lymph Node(s) Splenic
-      - Lymph Node(s) Subclavicular
-      - Lymph Node(s) Submandibular
-      - Lymph Node(s) Supraclavicular
-      - Lymph Nodes(s) Mediastinal
-      - Mandible
-      - Maxilla
-      - Mediastinal Soft Tissue
-      - Mediastinum
-      - Mesentery
-      - Mesothelium
-      - Middle Finger
-      - Mitochondria
-      - Muscle
-      - Nails
-      - Nasal Cavity
-      - Nasal Soft Tissue
-      - Nasopharynx
-      - Neck
-      - Nerve
-      - Nerve(s) Cranial
-      - Occipital Cortex
-      - Ocular Orbits
-      - Omentum
-      - Oral Cavity
-      - Oral Cavity (Mucosa Only)
-      - Oropharynx
-      - Other
-      - Ovary
-      - Palate
-      - Pancreas
-      - Paraspinal Ganglion
-      - Parathyroid
-      - Parotid Gland
-      - Patella
-      - Pelvis
-      - Penis
-      - Pericardium
-      - Periorbital Soft Tissue
-      - Peritoneal Cavity
-      - Peritoneum
-      - Pharynx
-      - Pineal
-      - Pineal Gland
-      - Pituitary Gland
-      - Placenta
-      - Pleura
-      - Popliteal Fossa
-      - Prostate
-      - Pylorus
-      - Rectosigmoid Junction
-      - Rectum
-      - Retina
-      - Retro-Orbital Region
-      - Retroperitoneum
-      - Rib
-      - Ring Finger
-      - Round Ligament
-      - Sacrum
-      - Salivary Gland
-      - Scalp
-      - Scapula
-      - Sciatic Nerve
-      - Scrotum
-      - Seminal Vesicle
-      - Shoulder
-      - Sigmoid Colon
-      - Sinus
-      - Sinus(es), Maxillary
-      - Skeletal Muscle
-      - Skin
-      - Skull
-      - Small Bowel
-      - Small Bowel (Mucosa Only)
-      - Small Finger
-      - Soft Tissue
-      - Spinal Column
-      - Spinal Cord
-      - Spleen
-      - Splenic Flexure
-      - Sternum
-      - Stomach
-      - Stomach (Mucosa Only)
-      - Subcutaneous Tissue
-      - Synovium
-      - Temporal Cortex
-      - Tendon
-      - Testis
-      - Thigh
-      - Thoracic Spine
-      - Thorax
-      - Throat
-      - Thumb
-      - Thymus
-      - Thyroid
-      - Tibia
-      - Tongue
-      - Tonsil
-      - Tonsil (Pharyngeal)
-      - Trachea Major Bronchi
-      - Transverse Colon
-      - Trunk
-      - Umbilical Cord
-      - Ureter
-      - Urethra
-      - Urinary Tract
-      - Uterus
-      - Uvula
-      - Vagina
-      - Vas Deferens
-      - Vein
-      - Venous
-      - Vertebra
-      - Vulva
-      - White Blood Cells
-      - Wrist
-      - Unknown
+      - "Abdomen"
+      - "Abdominal Wall"
+      - "Acetabulum"
+      - "Adenoid"
+      - "Adipose"
+      - "Adrenal"
+      - "Alveolar Ridge"
+      - "Amniotic Fluid"
+      - "Ampulla of Vater"
+      - "Anal Sphincter"
+      - "Ankle"
+      - "Anorectum"
+      - "Antecubital Fossa"
+      - "Antrum"
+      - "Anus"
+      - "Aorta"
+      - "Aortic Body"
+      - "Appendix"
+      - "Aqueous Fluid"
+      - "Arm"
+      - "Artery"
+      - "Ascending Colon"
+      - "Ascending Colon Hepatic Flexure"
+      - "Auditory Canal"
+      - "Autonomic Nervous System"
+      - "Axilla"
+      - "Back"
+      - "Bile Duct"
+      - "Bladder"
+      - "Blood"
+      - "Blood Vessel"
+      - "Bone"
+      - "Bone Marrow"
+      - "Bowel"
+      - "Brain"
+      - "Brain Stem"
+      - "Breast"
+      - "Broad Ligament"
+      - "Bronchiole"
+      - "Bronchus"
+      - "Brow"
+      - "Buccal Cavity"
+      - "Buccal Mucosa"
+      - "Buttock"
+      - "Calf"
+      - "Capillary"
+      - "Cardia"
+      - "Carina"
+      - "Carotid Artery"
+      - "Carotid Body"
+      - "Cartilage"
+      - "Cecum"
+      - "Cell-Line"
+      - "Central Nervous System"
+      - "Cerebellum"
+      - "Cerebral Cortex"
+      - "Cerebrospinal Fluid"
+      - "Cerebrum"
+      - "Cervical Spine"
+      - "Cervix"
+      - "Chest"
+      - "Chest Wall"
+      - "Chin"
+      - "Clavicle"
+      - "Clitoris"
+      - "Colon"
+      - "Colon (Mucosa Only)"
+      - "Common Duct"
+      - "Conjunctiva"
+      - "Connective Tissue"
+      - "Dermal"
+      - "Descending Colon"
+      - "Diaphragm"
+      - "Duodenum"
+      - "Ear"
+      - "Ear Canal"
+      - "Ear, Pinna (External)"
+      - "Effusion"
+      - "Elbow"
+      - "Endocrine Gland"
+      - "Epididymis"
+      - "Epidural Space"
+      - "Esophagogastric Junction"
+      - "Esophagus"
+      - "Esophagus (Mucosa Only)"
+      - "Eye"
+      - "Fallopian Tube"
+      - "Femoral Artery"
+      - "Femoral Vein"
+      - "Femur"
+      - "Fibroblasts"
+      - "Fibula"
+      - "Finger"
+      - "Floor of Mouth"
+      - "Fluid"
+      - "Foot"
+      - "Forearm"
+      - "Forehead"
+      - "Foreskin"
+      - "Frontal Cortex"
+      - "Frontal Lobe"
+      - "Fundus of Stomach"
+      - "Gallbladder"
+      - "Ganglia"
+      - "Gastroesophageal Junction"
+      - "Gastrointestinal Tract"
+      - "Groin"
+      - "Gum"
+      - "Hand"
+      - "Hard Palate"
+      - "Head and Neck"
+      - "Head (Face Or Neck) NOS"
+      - "Heart"
+      - "Hepatic"
+      - "Hepatic Duct"
+      - "Hepatic Vein"
+      - "Hip"
+      - "Hippocampus"
+      - "Humerus"
+      - "Hypopharynx"
+      - "Ileum"
+      - "Ilium"
+      - "Index Finger"
+      - "Ischium"
+      - "Islet Cells"
+      - "Jaw"
+      - "Jejunum"
+      - "Joint"
+      - "Kidney"
+      - "Knee"
+      - "Lacrimal Gland"
+      - "Large Bowel"
+      - "Laryngopharynx"
+      - "Larynx"
+      - "Leg"
+      - "Leptomeninges"
+      - "Ligament"
+      - "Lip"
+      - "Liver"
+      - "Lumbar Spine"
+      - "Lung"
+      - "Lymph Node"
+      - "Lymph Node(s) Axilla"
+      - "Lymph Node(s) Cervical"
+      - "Lymph Node(s) Distant"
+      - "Lymph Node(s) Epitrochlear"
+      - "Lymph Node(s) Femoral"
+      - "Lymph Node(s) Hilar"
+      - "Lymph Node(s) Iliac-Common"
+      - "Lymph Node(s) Iliac-External"
+      - "Lymph Node(s) Inguinal"
+      - "Lymph Node(s) Internal Mammary"
+      - "Lymph Node(s) Mammary"
+      - "Lymph Node(s) Mesenteric"
+      - "Lymph Node(s) Occipital"
+      - "Lymph Node(s) Paraaortic"
+      - "Lymph Node(s) Parotid"
+      - "Lymph Node(s) Pelvic"
+      - "Lymph Node(s) Popliteal"
+      - "Lymph Node(s) Regional"
+      - "Lymph Node(s) Retroperitoneal"
+      - "Lymph Node(s) Scalene"
+      - "Lymph Node(s) Splenic"
+      - "Lymph Node(s) Subclavicular"
+      - "Lymph Node(s) Submandibular"
+      - "Lymph Node(s) Supraclavicular"
+      - "Lymph Nodes(s) Mediastinal"
+      - "Mandible"
+      - "Maxilla"
+      - "Mediastinal Soft Tissue"
+      - "Mediastinum"
+      - "Mesentery"
+      - "Mesothelium"
+      - "Middle Finger"
+      - "Mitochondria"
+      - "Muscle"
+      - "Nails"
+      - "Nasal Cavity"
+      - "Nasal Soft Tissue"
+      - "Nasopharynx"
+      - "Neck"
+      - "Nerve"
+      - "Nerve(s) Cranial"
+      - "Occipital Cortex"
+      - "Ocular Orbits"
+      - "Omentum"
+      - "Oral Cavity"
+      - "Oral Cavity (Mucosa Only)"
+      - "Oropharynx"
+      - "Other"
+      - "Ovary"
+      - "Palate"
+      - "Pancreas"
+      - "Paraspinal Ganglion"
+      - "Parathyroid"
+      - "Parotid Gland"
+      - "Patella"
+      - "Pelvis"
+      - "Penis"
+      - "Pericardium"
+      - "Periorbital Soft Tissue"
+      - "Peritoneal Cavity"
+      - "Peritoneum"
+      - "Pharynx"
+      - "Pineal"
+      - "Pineal Gland"
+      - "Pituitary Gland"
+      - "Placenta"
+      - "Pleura"
+      - "Popliteal Fossa"
+      - "Prostate"
+      - "Pylorus"
+      - "Rectosigmoid Junction"
+      - "Rectum"
+      - "Retina"
+      - "Retro-Orbital Region"
+      - "Retroperitoneum"
+      - "Rib"
+      - "Ring Finger"
+      - "Round Ligament"
+      - "Sacrum"
+      - "Salivary Gland"
+      - "Scalp"
+      - "Scapula"
+      - "Sciatic Nerve"
+      - "Scrotum"
+      - "Seminal Vesicle"
+      - "Shoulder"
+      - "Sigmoid Colon"
+      - "Sinus"
+      - "Sinus(es), Maxillary"
+      - "Skeletal Muscle"
+      - "Skin"
+      - "Skull"
+      - "Small Bowel"
+      - "Small Bowel (Mucosa Only)"
+      - "Small Finger"
+      - "Soft Tissue"
+      - "Spinal Column"
+      - "Spinal Cord"
+      - "Spleen"
+      - "Splenic Flexure"
+      - "Sternum"
+      - "Stomach"
+      - "Stomach (Mucosa Only)"
+      - "Subcutaneous Tissue"
+      - "Synovium"
+      - "Temporal Cortex"
+      - "Tendon"
+      - "Testis"
+      - "Thigh"
+      - "Thoracic Spine"
+      - "Thorax"
+      - "Throat"
+      - "Thumb"
+      - "Thymus"
+      - "Thyroid"
+      - "Tibia"
+      - "Tongue"
+      - "Tonsil"
+      - "Tonsil (Pharyngeal)"
+      - "Trachea Major Bronchi"
+      - "Transverse Colon"
+      - "Trunk"
+      - "Umbilical Cord"
+      - "Ureter"
+      - "Urethra"
+      - "Urinary Tract"
+      - "Uterus"
+      - "Uvula"
+      - "Vagina"
+      - "Vas Deferens"
+      - "Vein"
+      - "Venous"
+      - "Vertebra"
+      - "Vulva"
+      - "White Blood Cells"
+      - "Wrist"
+      - "Unknown"
+
   biospecimen_type:
-    description: "A top level description of the biospecimen. Is the biospecimen a fluid or solid tissue?"
+    description: >
+      A top level description of the biospecimen. Is the biospecimen a fluid or solid tissue?
     enum:
-      - Fluid
-      - Solid Tissue
+      - "Fluid"
+      - "Solid Tissue"
+
   biospecimen_volume:
-    description: "For fluid biospecimens this is the total volume in milliliters."
+    description: >
+      For fluid biospecimens this is the total volume in milliliters.
     type: number
+
   biospecimen_weight:
-    description: "For solid tissue biospecimens this is the total weight in milligrams."
+    description: >
+      For solid tissue biospecimens this is the total weight in milligrams.
     type: number
+
   blood_draw_method:
     description: >
-      The name or generalized description of the method used to draw a blood biospecimen.
-      Alternatively, if you have provided a blood draw protocol, put the associated file_name here.
+      The name or generalized description of the method used to draw a blood biospecimen. Alternatively, if you have provided a blood draw protocol, put the associated file_name here.
     type: string
+
   blood_tube_type:
-    description: "The kind of tube used to collect the sample(s) taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes."
+    description: >
+      The kind of tube used to collect the sample(s) taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes.
     enum:
-      - EDTA
-      - CellSave
-      - Streck
-      - Acid Citrate Dextrose (ACD)
-      - Not Applicable
+      - "EDTA"
+      - "CellSave"
+      - "Streck"
+      - "Acid Citrate Dextrose (ACD)"
+      - "Not Applicable"
+      - "Unknown"
+
   clinical_site:
-    description: "The name or identifier for the clinical site at which the biospecimen was taken from the patient."
+    description: >
+      The name or identifier for the clinical site at which the biospecimen was taken from the patient.
     type: string
+
   collaboration_id:
     description: >
-      In cases where the same biospecimen is used by multiple institutions, a deidenfitied id may be
-      provided here to tie those together. Work with your collaborators assure the same id is used
-      in all projects.
+      In cases where the same biospecimen is used by multiple institutions, a deidenfitied id may provided here to tie those together. Work with your collaborators assure the same id is in all projects.
     type: string
+
   days_to_collection:
     description: >
-      The number of days between the index date and the date the biospecimen was collected at the
-      laboratory. Use Unknown if the date of the event is not known. Use Not Applicable if the event
-      never happened.
-    type:
-      - integer
-      - string
-    oneOf:
-      - enum:
-          - Not Applicable
-          - Unknown
-      - type: integer
+      The number of days between the index date and the date the biospecimen was collected at laboratory.
+    type: integer
+
+  days_to_collection_not_reported:
+    description: >
+      True/False indicator of whether the number of days between the index date and the date the biospecimen was collected at laboratory is reported.
+    type: boolean
+
   days_to_procurement:
     description: >
-      The number of days between the index date and the date the biospecimen was taken from the
-      patient (such as the blood draw). Use Unknown if the date of the event is not known. Use Not
-      Applicable if the event never happened."
-    type:
-      - integer
-      - string
-    oneOf:
-      - enum:
-          - Not Applicable
-          - Unknown
-      - type: integer
+      The number of days between the index date and the date the biospecimen was taken from the patient (such as the blood draw).
+    type: integer
+
+  days_to_procurement_not_reported:
+    description: >
+      True/False indicator of whether the number of days between the index date and the date the biospecimen was taken from the patient is reported.
+    type: boolean
+
   disease_type:
-    description: "The primary disease of the patient from which the biospecimen was taken."
+    description: >
+      The primary disease of the patient from which the biospecimen was taken.
     enum:
-      - Blood Cancer
-      - Breast Cancer
-      - Colorectal Cancer
-      - Gastric Cancer
-      - Kidney Cancer
-      - Liver Cancer
-      - Lung Cancer
-      - Melanoma
-      - Ovarian Cancer
-      - Pancreatic Cancer
-      - Prostate Cancer
-      - Sarcoma
-      - Uterine Cancer
-      - Healthy
-      - Unknown
+      - "Blood Cancer"
+      - "Breast Cancer"
+      - "Colorectal Cancer"
+      - "Gastric Cancer"
+      - "Kidney Cancer"
+      - "Liver Cancer"
+      - "Lung Cancer"
+      - "Melanoma"
+      - "Ovarian Cancer"
+      - "Pancreatic Cancer"
+      - "Prostate Cancer"
+      - "Sarcoma"
+      - "Uterine Cancer"
+      - "Healthy"
+      - "Unknown"
+
   metastatic_bone:
     description: >
-      True/False indicator of whether metastasis had been confirmed in an area of bone of the
-      patient from which the biospecimen was taken.
+      True/False indicator of whether metastasis had been confirmed in an area of bone of the patient from which the biospecimen was taken.
     type: boolean
+
   metastatic_lymph_node:
     description: >
-      True/False indicator of whether metastasis had been confirmed in the lymph nodes of the
-      patient from which the biospecimen was taken.
+      True/False indicator of whether metastasis had been confirmed in the lymph nodes of the patient from which the biospecimen was taken.
     type: boolean
+
   metastatic_visceral:
     description: >
-      True/False indicator of whether metastasis had been confirmed in the viscera of the
-      patient from which the biospecimen was taken.
+      True/False indicator of whether metastasis had been confirmed in the viscera of the patient from which the biospecimen was taken.
     type: boolean
+
   method_of_procurement:
     term:
       $ref: "_terms.yaml#/method_of_sample_procurement"
     enum:
-      - Biopsy
-      - Blood Draw
-      - Unknown
+      - "Biopsy"
+      - "Blood Draw"
+      - "Not Applicable"
+      - "Unknown"
+
   primary_site:
     description: >
       The site of the primary tumor for the patient from which the biospecimen was taken.
     enum:
-      - Bone
-      - Bone Marrow
-      - Brain
-      - Breast
-      - Central Nervous System
-      - Cervix
-      - Colorectal
-      - Corpus Uteri
-      - Digestive Organs
-      - Endocrine Gland
-      - Esophagus
-      - Eye
-      - Female Genital Organs
-      - Head and Neck
-      - Hematopoietic System
-      - Integumentary System
-      - Joints and Articular Cartilage
-      - Kidney
-      - Liver
-      - Lung
-      - Lymph Node
-      - Male Genital Organs
-      - Other Sites
-      - Ovary
-      - Pancreas
-      - Pleura
-      - Prostate
-      - Retroperitoneum and Peritoneum
-      - Skin
-      - Soft Tissue
-      - Stomach
-      - Testis
-      - Thoracic Organs
-      - Thymus
-      - Thyroid
-      - Unknown
-      - Urinary System
-      - Uterus
+      - "Bone"
+      - "Bone Marrow"
+      - "Brain"
+      - "Breast"
+      - "Central Nervous System"
+      - "Cervix"
+      - "Colorectal"
+      - "Corpus Uteri"
+      - "Digestive Organs"
+      - "Endocrine Gland"
+      - "Esophagus"
+      - "Eye"
+      - "Female Genital Organs"
+      - "Head and Neck"
+      - "Hematopoietic System"
+      - "Integumentary System"
+      - "Joints and Articular Cartilage"
+      - "Kidney"
+      - "Liver"
+      - "Lung"
+      - "Lymph Node"
+      - "Male Genital Organs"
+      - "Other Sites"
+      - "Ovary"
+      - "Pancreas"
+      - "Pleura"
+      - "Prostate"
+      - "Retroperitoneum and Peritoneum"
+      - "Skin"
+      - "Soft Tissue"
+      - "Stomach"
+      - "Testis"
+      - "Thoracic Organs"
+      - "Thymus"
+      - "Thyroid"
+      - "Unknown"
+      - "Urinary System"
+      - "Uterus"
+
   procured_or_purchased:
     description: >
       Was the biospecimen purchased from a vendor or procured from a study participant.
     enum:
-      - Procured
-      - Purchased
+      - "Procured"
+      - "Purchased"
+
   procurement_temperature:
     description: >
-      The temperature, in centigrade, at which the biospecimen was kept after procuring it from the
-      patient. Use 20 for room temperature; 0 for on ice.
+      The temperature, in centigrade, at which the biospecimen was kept after procuring it from the patient. Use 20 for room temperature; 0 for on ice.
     type: number
+
   shipping_temperature:
     description: >
-      The temperature, in centigrade, at which the biospecimen was kept while it was being
-      transported from the procurement site to its processing destination.
+      The temperature, in centigrade, at which the biospecimen was kept while it was being transported from the procurement site to its processing destination.
     type: number
+
   tissue_type:
     term:
       $ref: "_terms.yaml#/tissue_type"
     enum:
-      - Tumor
-      - Normal
-      - Abnormal
-      - Peritumoral
-      - Unknown
+      - "Tumor"
+      - "Normal"
+      - "Abnormal"
+      - "Peritumoral"
+      - "Unknown"
+
   tumor_code:
     term:
       $ref: "_terms.yaml#/tumor_code"
     enum:
-      - Acinar Cell Neoplasms
-      - Adenomas and Adenocarcinomas
-      - Adnexal and Skin Appendage Neoplasms
-      - Basal Cell Neoplasms
-      - Blood Vessel Tumors
-      - Chronic Myeloproliferative Disorders
-      - Complex Epithelial Neoplasms
-      - Complex Mixed and Stromal Neoplasms
-      - Cystic, Mucinous and Serous Neoplasms
-      - Ductal and Lobular Neoplams
-      - Epithelial Neoplasms, NOS
-      - Fibroepithelial Neoplasms
-      - Fibromatous Neoplasms
-      - Germ Cell Neoplasms
-      - Giant Cell Tumors
-      - Gliomas
-      - Granular Cell Tumors and Alveolar Soft Part Sarcomas
-      - Hodgkin Lymphoma
-      - Immunoproliferative Disease
-      - Leukemias, NOS
-      - Lipomatous Neoplasms
-      - Lymphatic Vessel Tumors
-      - Lymphoid Leukemias
-      - Malignant Lymphomas, NOS or Diffuse
-      - Mast Cell Tumors
-      - Mature B-Cell Lymphomas
-      - Mature T- and NK-Cell Lymphomas
-      - Meningiomas
-      - Mesonephromas
-      - Mesothelial Neoplasms
-      - Miscellaneous Bone Tumors
-      - Miscellaneous Tumors
-      - Mucoepidermoid Neoplasms
-      - Myelodysplastic Syndromes
-      - Myeloid Leukemias
-      - Myomatous Neoplasms
-      - Myxomatous Neoplasms
-      - Neoplasms
-      - Neoplasms of Histiocytes and Accessory Lymphoid Cells
-      - Nerve Sheath Tumors
-      - Neuroepitheliomatous Neoplasms
-      - Nevi and Melanomas
-      - Odontogenic Tumors
-      - Osseous and Chondromatous Neoplasms
-      - Other Hematologic Disorders
-      - Other Leukemias
-      - Paragangliomas and Glomus Tumors
-      - Plasma Cell Tumors
-      - Precursor Cell Lymphoblastic Lymphoma
-      - Soft Tissue Tumors and Sarcomas, NOS
-      - Specialized Gonadal Neoplasms
-      - Squamous Cell Neoplasms
-      - Synovial-like Neoplasms
-      - Thymic Epithelial Neoplasms
-      - Transitional Cell Papillomas and Carcinomas
-      - Non Cancerous Tissue
+      - "Acinar Cell Neoplasms"
+      - "Adenomas and Adenocarcinomas"
+      - "Adnexal and Skin Appendage Neoplasms"
+      - "Basal Cell Neoplasms"
+      - "Blood Vessel Tumors"
+      - "Chronic Myeloproliferative Disorders"
+      - "Complex Epithelial Neoplasms"
+      - "Complex Mixed and Stromal Neoplasms"
+      - "Cystic, Mucinous and Serous Neoplasms"
+      - "Ductal and Lobular Neoplams"
+      - "Epithelial Neoplasms, NOS"
+      - "Fibroepithelial Neoplasms"
+      - "Fibromatous Neoplasms"
+      - "Germ Cell Neoplasms"
+      - "Giant Cell Tumors"
+      - "Gliomas"
+      - "Granular Cell Tumors and Alveolar Soft Part Sarcomas"
+      - "Hodgkin Lymphoma"
+      - "Immunoproliferative Disease"
+      - "Leukemias, NOS"
+      - "Lipomatous Neoplasms"
+      - "Lymphatic Vessel Tumors"
+      - "Lymphoid Leukemias"
+      - "Malignant Lymphomas, NOS or Diffuse"
+      - "Mast Cell Tumors"
+      - "Mature B-Cell Lymphomas"
+      - "Mature T- and NK-Cell Lymphomas"
+      - "Meningiomas"
+      - "Mesonephromas"
+      - "Mesothelial Neoplasms"
+      - "Miscellaneous Bone Tumors"
+      - "Miscellaneous Tumors"
+      - "Mucoepidermoid Neoplasms"
+      - "Myelodysplastic Syndromes"
+      - "Myeloid Leukemias"
+      - "Myomatous Neoplasms"
+      - "Myxomatous Neoplasms"
+      - "Neoplasms"
+      - "Neoplasms of Histiocytes and Accessory Lymphoid Cells"
+      - "Nerve Sheath Tumors"
+      - "Neuroepitheliomatous Neoplasms"
+      - "Nevi and Melanomas"
+      - "Odontogenic Tumors"
+      - "Osseous and Chondromatous Neoplasms"
+      - "Other Hematologic Disorders"
+      - "Other Leukemias"
+      - "Paragangliomas and Glomus Tumors"
+      - "Plasma Cell Tumors"
+      - "Precursor Cell Lymphoblastic Lymphoma"
+      - "Soft Tissue Tumors and Sarcomas, NOS"
+      - "Specialized Gonadal Neoplasms"
+      - "Squamous Cell Neoplasms"
+      - "Synovial-like Neoplasms"
+      - "Thymic Epithelial Neoplasms"
+      - "Transitional Cell Papillomas and Carcinomas"
+      - "Non Cancerous Tissue"
+
   tumor_descriptor:
     term:
       $ref: "_terms.yaml#/tumor_descriptor"
     enum:
-      - Metastatic
-      - Not Applicable
-      - Primary
-      - Recurrence
-      - Xenograft
-      - NOS
-      - Unknown
+      - "Metastatic"
+      - "Not Applicable"
+      - "Primary"
+      - "Recurrence"
+      - "Xenograft"
+      - "NOS"
+      - "Unknown"
+
   tumor_morphology:
     description: >
-      The specific description of the tumor morphology. Please use the ICD-0-3 code name (e.g.
-      "Neoplasm, benign", "Carcinoma, Nos", or "Hepatocellular adenoma").
+      The specific description of the tumor morphology. Please use the ICD-0-3 code name (e.g. "Neoplasm, benign", "Carcinoma, Nos", or "Hepatocellular adenoma").
     type: string
 
   cases:
