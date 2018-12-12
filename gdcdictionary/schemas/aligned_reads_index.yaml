@@ -46,7 +46,6 @@ required:
   - data_category
   - data_type
   - data_format
-  - submitted_aligned_reads_files
 
 uniqueKeys:
   - [ id ]
