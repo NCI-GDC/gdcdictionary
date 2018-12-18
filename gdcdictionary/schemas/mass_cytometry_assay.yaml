@@ -1,9 +1,9 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "mass_cytometry_assay"
-title: Mass Cytometry Assay 
+title: Mass Cytometry Assay
 type: object
-namespace: https://www.bloodpac.org/ 
+namespace: https://www.bloodpac.org/
 category: data_file
 program: '*'
 project: '*'
@@ -26,12 +26,21 @@ systemProperties:
   - error_type
 
 links:
-  - name: analytes
-    backref: mass_cytometry_assays 
-    label: data_from
-    target_type: analyte
-    multiplicity: one_to_one
+  - exclusive: false
     required: true
+    subgroup:
+      - name: core_metadata_collections
+        backref: mass_cytometry_assays
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: one_to_one
+        required: false
+      - name: analytes
+        backref: mass_cytometry_assays
+        label: data_from
+        target_type: analyte
+        multiplicity: one_to_one
+        required: false
 
 required:
   - submitter_id
@@ -44,7 +53,7 @@ required:
   - assay_method
   - assay_instrument
   - assay_instrument_model
-  - analytes 
+  - analytes
 
 uniqueKeys:
   - [ id ]
@@ -57,24 +66,24 @@ properties:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Mass Cytometry 
+      - Mass Cytometry
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: 
+    enum:
       - Raw IMC Data
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
       - TXT
-  assay_method: 
+  assay_method:
     enum:
       - Imaging Mass Cytometry
   assay_instrument:
-    type: string 
+    type: string
   assay_instrument_model:
-    type: string 
+    type: string
   panel_used:
     description: >
       The name or general description of the panel used for this mass cytometry assay.
@@ -87,4 +96,6 @@ properties:
     type: string
 
   analytes:
+    $ref: "_definitions.yaml#/to_one"
+  core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"

@@ -24,6 +24,12 @@ links:
   - exclusive: false
     required: true
     subgroup:
+      - name: core_metadata_collections
+        backref: pcr_assay_files
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: one_to_one
+        required: false
       - name: pcr_assays
         backref: pcr_assay_files
         label: data_from
@@ -97,4 +103,6 @@ properties:
   analytes:
     $ref: "_definitions.yaml#/to_one"
   pcr_assays:
+    $ref: "_definitions.yaml#/to_one"
+  core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"
