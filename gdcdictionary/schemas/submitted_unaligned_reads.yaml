@@ -47,7 +47,6 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - read_groups
 
 uniqueKeys:
   - [ id ]

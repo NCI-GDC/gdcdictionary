@@ -49,7 +49,6 @@ required:
   - assay_method
   - assay_instrument
   - assay_instrument_model
-  - analytes
 
 uniqueKeys:
   - [ id ]

@@ -50,7 +50,6 @@ required:
   - data_type
   - data_format
   - assay_target
-  - mass_cytometry_assays
 
 uniqueKeys:
   - [ id ]
