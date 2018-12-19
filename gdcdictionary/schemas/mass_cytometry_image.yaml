@@ -1,9 +1,9 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "mass_cytometry_image"
-title: Mass Cytometry Image 
+title: Mass Cytometry Image
 type: object
-namespace: https://www.bloodpac.org/ 
+namespace: https://www.bloodpac.org/
 category: data_file
 program: '*'
 project: '*'
@@ -23,13 +23,23 @@ systemProperties:
   - file_state
   - error_type
 
+
 links:
-  - name: mass_cytometry_assays
-    backref: mass_cytometry_images 
-    label: data_from
-    target_type: mass_cytometry_assay
-    multiplicity: many_to_one
+  - exclusive: false
     required: true
+    subgroup:
+      - name: core_metadata_collections
+        backref: mass_cytometry_images
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: one_to_one
+        required: false
+      - name: mass_cytometry_assays
+        backref: mass_cytometry_images
+        label: data_from
+        target_type: mass_cytometry_assay
+        multiplicity: many_to_one
+        required: false
 
 required:
   - submitter_id
@@ -40,7 +50,6 @@ required:
   - data_type
   - data_format
   - assay_target
-  - mass_cytometry_assays 
 
 uniqueKeys:
   - [ id ]
@@ -53,11 +62,11 @@ properties:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Mass Cytometry 
+      - Mass Cytometry
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: 
+    enum:
       - Single Channel IMC Image
   data_format:
     term:
@@ -67,8 +76,10 @@ properties:
       - JPG
       - TIF
   assay_target:
-    description: "The protein marker identified in this assay." 
-    type: string 
+    description: "The protein marker identified in this assay."
+    type: string
 
   mass_cytometry_assays:
+    $ref: "_definitions.yaml#/to_one"
+  core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"

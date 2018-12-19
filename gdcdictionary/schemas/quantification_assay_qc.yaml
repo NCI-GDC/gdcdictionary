@@ -23,12 +23,21 @@ systemProperties:
   - error_type
 
 links:
-  - name: quantification_assays
-    backref: quantification_assay_qcs
-    label: data_from
-    target_type: quantification_assay
-    multiplicity: many_to_one
+  - exclusive: false
     required: true
+    subgroup:
+      - name: core_metadata_collections
+        backref: quantification_assay_qcs
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: one_to_one
+        required: false
+      - name: quantification_assays
+        backref: quantification_assay_qcs
+        label: data_from
+        target_type: quantification_assay
+        multiplicity: many_to_one
+        required: false
 
 required:
   - submitter_id
@@ -38,7 +47,6 @@ required:
   - data_category
   - data_type
   - data_format
-  - quantification_assays
 
 uniqueKeys:
   - [ id ]
@@ -64,4 +72,6 @@ properties:
     type: string
 
   quantification_assays:
+    $ref: "_definitions.yaml#/to_one"
+  core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"

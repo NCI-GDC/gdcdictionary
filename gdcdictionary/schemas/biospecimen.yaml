@@ -34,12 +34,13 @@ required:
   - procured_or_purchased
   - tissue_type
   - cases
-oneOf:
+allOf:
+- oneOf:
   - required:
     - days_to_collection
   - required:
     - days_to_collection_not_reported
-oneOf:
+- oneOf:
   - required:
     - days_to_procurement
   - required:
