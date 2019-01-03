@@ -50,6 +50,10 @@ properties:
     type:
       - string
       - "null"
+  consent_codes:
+    type: array
+    items:
+      type: string
   primary_site:
     description: "Primary site for the case."
     type: string
