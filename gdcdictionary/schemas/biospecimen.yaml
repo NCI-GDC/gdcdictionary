@@ -25,6 +25,18 @@ systemProperties:
   - created_datetime
   - updated_datetime
 
+links:
+  - name: cases
+    backref: biospecimens
+    label: derived_from
+    target_type: case
+    multiplicity: many_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
 required:
   - submitter_id
   - biospecimen_type
@@ -45,18 +57,6 @@ allOf:
     - days_to_procurement
   - required:
     - days_to_procurement_not_reported
-
-links:
-  - name: cases
-    backref: biospecimens
-    label: derived_from
-    target_type: case
-    multiplicity: many_to_one
-    required: true
-
-uniqueKeys:
-  - [id]
-  - [project_id, submitter_id]
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
@@ -390,20 +390,6 @@ properties:
 
   days_to_collection:
     description: >
-<<<<<<< HEAD
-      The number of days between the index date and the date the biospecimen was collected at the
-      laboratory. Use Unknown if the date of the event is not known. Use Not Applicable if the event
-      never happened.
-    type: integer
-
-  days_to_procurement:
-    description: >
-      The number of days between the index date and the date the biospecimen was taken from the
-      patient (such as the blood draw). Use Unknown if the date of the event is not known. Use Not
-      Applicable if the event never happened."
-    type: integer
-
-=======
       The number of days between the index date and the date the biospecimen was collected at laboratory.
     type: integer
 
@@ -422,7 +408,6 @@ properties:
       True/False indicator of whether the number of days between the index date and the date the biospecimen was taken from the patient is reported.
     type: boolean
 
->>>>>>> fea8e241a57c1279059bd0dc359f14552b37d65f
   disease_type:
     description: >
       The primary disease of the patient from which the biospecimen was taken.
@@ -464,10 +449,7 @@ properties:
     enum:
       - "Biopsy"
       - "Blood Draw"
-<<<<<<< HEAD
-=======
       - "Not Applicable"
->>>>>>> fea8e241a57c1279059bd0dc359f14552b37d65f
       - "Unknown"
 
   primary_site:
