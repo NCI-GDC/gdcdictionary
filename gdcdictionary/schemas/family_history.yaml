@@ -28,11 +28,14 @@ links:
     multiplicity: many_to_one
     required: true
 
-
 uniqueKeys:
   #unclear if want submitter ID for clinical
   - [id]
   - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
 
 properties:
   type:

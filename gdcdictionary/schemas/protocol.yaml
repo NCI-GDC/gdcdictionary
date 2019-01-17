@@ -29,10 +29,11 @@ links:
     label: derived_from
     target_type: study
     multiplicity: many_to_many
-    required: true 
+    required: true
 
 required:
   - submitter_id
+  - type
   - file_name
   - file_size
   - md5sum

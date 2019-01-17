@@ -33,6 +33,11 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
+required:
+  - submitter_id
+  - type
+  - diagnoses
+
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
@@ -40,19 +45,23 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_treatment_end"
     type: number
+
   days_to_treatment_start:
     term:
       $ref: "_terms.yaml#/days_to_treatment_start"
     type: number
+
   regimen_or_line_of_therapy:
     description: >
       General name for a the group of treatments of which this treatment was a part. This reference
       name can be used to identify treatments involved in a certain outcome later one.
     type: string
+
   therapeutic_agents:
     term:
       $ref: "_terms.yaml#/therapeutic_agents"
     type: string
+
   treatment_anatomic_site:
     term:
       $ref: "_terms.yaml#/treatment_anatomic_site"
@@ -132,10 +141,12 @@ properties:
       - Thorax
       - Trunk
       - Unknown
+
   treatment_intent_type:
     term:
       $ref: "_terms.yaml#/treatment_intent_type"
     type: string
+
   treatment_outcome:
     term:
       $ref: "_terms.yaml#/treatment_outcome"
@@ -145,6 +156,7 @@ properties:
       - Treatment Ongoing
       - Treatment Stopped Due to Toxicity
       - Unknown
+
   treatment_type:
     term:
       $ref: "_terms.yaml#/treatment_type"

@@ -24,6 +24,7 @@ systemProperties:
 
 required:
   - submitter_id
+  - type
   - composition
   - biospecimens
 

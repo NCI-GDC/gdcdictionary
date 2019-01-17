@@ -30,6 +30,7 @@ links:
 
 required:
   - submitter_id
+  - type
   - read_groups
 
 uniqueKeys:

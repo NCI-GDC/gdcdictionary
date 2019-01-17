@@ -30,10 +30,11 @@ links:
 
 required:
   - submitter_id
+  - type
   - assay_instrument
   - assay_instrument_model
   - assay_method
-  - assay_target 
+  - assay_target
   - target_measurement
   - target_measurement_units
   - analytes
@@ -50,12 +51,12 @@ properties:
     enum:
       - Bruker Mass Spectrometer
       - CytoTrapNano CTC Platform
-      - Epic Sciences CTC Platform 
+      - Epic Sciences CTC Platform
       - HD-SCA Platform
       - Multi-Array Assay, Meso Scale Discovery
   assay_instrument_model:
     description: "The specific model of instrument used to perform the assay."
-    type: string 
+    type: string
   assay_kit_name:
     description: "Name of the assay kit used."
     type: string
@@ -76,7 +77,7 @@ properties:
     type: string
   target_localization:
     description: "The observed location of the assay target."
-    type: string 
+    type: string
   target_measurement:
     description: "Measurement for the assay target. Specify target_measurement_units as well."
     type: number

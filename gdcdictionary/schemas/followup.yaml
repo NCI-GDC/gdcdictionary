@@ -35,6 +35,7 @@ links:
 
 required:
   - submitter_id
+  - type
   - days_to_followup
   - cases
 
@@ -44,6 +45,7 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
+
   adverse_event:
     description: "Text that represents the Common Terminology Criteria for Adverse Events low level term name for an adverse event."
     enum:
@@ -837,127 +839,33 @@ properties:
       - Wound dehiscence
       - Wound infection
       - Wrist fracture
+
   bmi:
     description: "The body mass divided by the square of the body height expressed in units of kg/m^2."
     type: number
+
   cause_of_response:
     description: >
       A specific regimen or line of therapy responsible for the patient's observed improvement
       achived at a certain point in time during a patient's treatment protocol.
     type: string
-  comorbidity:
-    description: >
-      Text term to identify a coexistent disease or condition in a person.
-    enum:
-      - Acute renal failure
-      - Adrenocortical Insufficiency
-      - Allergies
-      - Anemia
-      - Anxiety
-      - Arrhythmia
-      - Arthritis
-      - Asthma
-      - Atrial Fibrillation
-      - Avascular Necrosis
-      - Basal Cell Carcinoma
-      - Blood Clots
-      - Bone Fracture(s)
-      - Bronchitis
-      - Calcium Channel Blockers
-      - Cancer
-      - Cataracts
-      - Cerebrovascular Disease
-      - Chronic renal failure
-      - Congestive Heart Failure (CHF)
-      - Connective Tissue Disorder
-      - COPD
-      - Coronary Artery Disease
-      - Cryptogenic Organizing Pneumonia
-      - Deep vein thrombosis / Thromboembolism
-      - Depression
-      - Diabetes
-      - Diabetic Neuropathy
-      - Diet controlled Diabetes
-      - DVT/PE
-      - Dyslipidemia
-      - Epilepsy
-      - Gastroesophageal reflux disease
-      - GERD
-      - Glaucoma
-      - Gout
-      - Gonadal dysfunction
-      - Headache
-      - Heart disease
-      - Hemorrhagic Cystitis
-      - Hepatitis
-      - Hepatitis B Infection
-      - Hepatitis C Infection
-      - HIV / AIDS
-      - HUS/TTP
-      - Hypercholesterolemia
-      - Hypercalcemia
-      - Hyperglycemia
-      - Hyperlipidemia
-      - Hypertension
-      - Hypothyroidism
-      - Inflammatory Bowel Disease
-      - Insulin controlled Diabetes
-      - Interstitial Pneumontis or ARDS
-      - Iron Overload
-      - Ischemic heart disease
-      - ITP
-      - Joint replacement
-      - Kidney Disease
-      - Liver Cirrhosis (Liver Disease)
-      - Liver toxicity (non-infectious)
-      - Lupus
-      - MAI
-      - Myocardial Infarction
-      - None
-      - Obesity
-      - Organ transplant (site)
-      - Osteoarthritis
-      - Osteoporosis or Osteopenia
-      - Other
-      - Other cancer within 5 years
-      - Other nonmalignant systemic disease
-      - Other pulmonary complications
-      - Pancreatitis
-      - Pain (various)
-      - Peptic Ulcer (Ulcer)
-      - Peripheral neuropathy
-      - Peripheral Vascular Disease
-      - Pregnancy in patient or partner
-      - Psoriasis
-      - Pulmonary Fibrosis
-      - Pulmonary Hemorrhage
-      - Renal failure (requiring dialysis)
-      - Renal dialysis
-      - Renal Insufficiency
-      - Rheumatologic Disease
-      - Sarcoidosis
-      - Seizure
-      - Sleep apnea
-      - Smoking
-      - Stroke
-      - Transient ischemic attack
-      - Tuberculosis
-      - Ulcerative Colitis
+
   days_to_adverse_event:
     description: "Number of days between the date used for index and the date the patient had an adverse event."
     type: integer
-  days_to_comorbidity:
-    description: "Number of days between the date used for index and the date the patient was diagnosed with a comorbidity."
-    type: integer
+
   days_to_followup:
     description: "Number of days between the date used for index and the date the patient was seen or contacted at follow-up."
     type: integer
+
   days_to_progression:
     description: "Number of days between the date used for index and the date the patient was diagnosed with progression of disease."
     type: integer
+
   days_to_recurrence:
     description: "Number of days between the date used for index and the date the patient was diagnosed with a recurrent malignancy."
     type: integer
+
   disease_response:
     description: "The observed improvement achieved at a certain point in time during a patient's treatment protocol."
     enum:
@@ -987,6 +895,7 @@ properties:
       - SPD-Surgical progression
       - TE-Too early
       - VGPR-Very Good Partial Response
+
   ecog_performance_status:
     description: "The ECOG functional performance status of the patient/participant."
     enum:
@@ -996,15 +905,18 @@ properties:
       - "3"
       - "4"
       - "5"
+
   height:
     description: "The height of the patient in centimeters."
     type: number
+
   progression_or_recurrence:
     description: "Indicator to identify whether a patient has had a recurrent or relapsed malignancy or a progression of disease."
     enum:
       - "Yes"
       - "No"
       - Unknown
+
   weight:
     description: "The weight of the patient measured in kilograms."
     type: number

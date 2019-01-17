@@ -39,6 +39,7 @@ uniqueKeys:
 
 required:
   - submitter_id
+  - type
   - biospecimen_type
   - biospecimen_anatomic_site
   - blood_tube_type
