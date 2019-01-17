@@ -25,6 +25,7 @@ systemProperties:
   - created_datetime
   - updated_datetime
 
+
 links:
   - name: cases
     backref: biospecimens
@@ -32,6 +33,12 @@ links:
     target_type: case
     multiplicity: many_to_one
     required: true
+  - name: followups
+    backref: biospecimens
+    label: derived_from
+    target_type: followup
+    multiplicity: many_to_one
+    required: false
 
 uniqueKeys:
   - [id]
@@ -40,13 +47,13 @@ uniqueKeys:
 required:
   - submitter_id
   - type
+  - cases
   - biospecimen_type
   - biospecimen_anatomic_site
   - blood_tube_type
   - method_of_procurement
   - procured_or_purchased
   - tissue_type
-  - cases
 allOf:
 - oneOf:
   - required:

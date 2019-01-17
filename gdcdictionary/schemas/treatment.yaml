@@ -8,8 +8,7 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  Record of the administration and intention of therapeutic agents provided to a patient to alter
-  the course of a pathologic process.
+  Any medication, treatment or procedure taken by, prescribed to, or administered to a patient, including cancer-directed treatments, palliative or supportive care, non-cancer-directed prescription medications, and over-the-counter agents.
 additionalProperties: false
 submittable: true
 validators: null
@@ -22,12 +21,27 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: diagnoses
-    backref: treatments
-    label: describes #need better term here
-    target_type: diagnosis
-    multiplicity: many_to_one
+  - exclusive: false
     required: true
+    subgroup:
+      - name: diagnoses
+        backref: treatments
+        label: describes
+        target_type: diagnosis
+        multiplicity: many_to_one
+        required: false
+      - name: cases
+        backref: treatments
+        label: describes
+        target_type: case
+        multiplicity: many_to_one
+        required: false
+      - name: followups
+        backref: treatments
+        label: describes
+        target_type: followup
+        multiplicity: many_to_one
+        required: false
 
 uniqueKeys:
   - [id]
@@ -36,7 +50,8 @@ uniqueKeys:
 required:
   - submitter_id
   - type
-  - diagnoses
+  - therapeutic_agents
+  - treatment_class
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
@@ -50,6 +65,16 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_treatment_start"
     type: number
+
+  dosage:
+    description: >
+      The dosage of the medication; please also provide 'dosage_units'.
+    type: number
+
+  dosage_units:
+    description: >
+      The units corresponding to the dosage of the medication; please also provide 'dosage'.
+    type: string
 
   regimen_or_line_of_therapy:
     description: >
@@ -142,6 +167,15 @@ properties:
       - Trunk
       - Unknown
 
+  treatment_class:
+    description: >
+      Indicate whether the treatment or therapeutic agent is cancer-directed, cancer-related supportive care, non-cancer-related prescription, or over-the-counter agent (not prescribed)
+    enum:
+      - "Cancer-directed"
+      - "Cancer-related Supportive Care"
+      - "Non-cancer-related Prescription"
+      - "Over-the-counter Agent"
+
   treatment_intent_type:
     term:
       $ref: "_terms.yaml#/treatment_intent_type"
@@ -178,4 +212,8 @@ properties:
       - Unknown
 
   diagnoses:
+    $ref: "_definitions.yaml#/to_one"
+  cases:
+    $ref: "_definitions.yaml#/to_one"
+  followups:
     $ref: "_definitions.yaml#/to_one"
