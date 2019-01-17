@@ -27,13 +27,14 @@ links:
     multiplicity: many_to_many
     required: true
 
-required:
-  - submitter_id
-  - projects
-
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]
+
+required:
+  - submitter_id
+  - projects
+  - type
 
 properties:
   type:
