@@ -30,12 +30,21 @@ required:
   - biospecimen_type
   - biospecimen_anatomic_site
   - blood_tube_type
-  - days_to_collection
-  - days_to_procurement
   - method_of_procurement
   - procured_or_purchased
   - tissue_type
   - cases
+allOf:
+- oneOf:
+  - required:
+    - days_to_collection
+  - required:
+    - days_to_collection_not_reported
+- oneOf:
+  - required:
+    - days_to_procurement
+  - required:
+    - days_to_procurement_not_reported
 
 links:
   - name: cases
@@ -337,27 +346,30 @@ properties:
       - "Unknown"
 
   biospecimen_type:
-    description: "A top level description of the biospecimen. Is the biospecimen a fluid or solid tissue?"
+    description: >
+      A top level description of the biospecimen. Is the biospecimen a fluid or solid tissue?
     enum:
       - "Fluid"
       - "Solid Tissue"
 
   biospecimen_volume:
-    description: "For fluid biospecimens this is the total volume in milliliters."
+    description: >
+      For fluid biospecimens this is the total volume in milliliters.
     type: number
 
   biospecimen_weight:
-    description: "For solid tissue biospecimens this is the total weight in milligrams."
+    description: >
+      For solid tissue biospecimens this is the total weight in milligrams.
     type: number
 
   blood_draw_method:
     description: >
-      The name or generalized description of the method used to draw a blood biospecimen.
-      Alternatively, if you have provided a blood draw protocol, put the associated file_name here.
+      The name or generalized description of the method used to draw a blood biospecimen. Alternatively, if you have provided a blood draw protocol, put the associated file_name here.
     type: string
 
   blood_tube_type:
-    description: "The kind of tube used to collect the sample(s) taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes."
+    description: >
+      The kind of tube used to collect the sample(s) taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes.
     enum:
       - "EDTA"
       - "CellSave"
@@ -367,18 +379,18 @@ properties:
       - "Unknown"
 
   clinical_site:
-    description: "The name or identifier for the clinical site at which the biospecimen was taken from the patient."
+    description: >
+      The name or identifier for the clinical site at which the biospecimen was taken from the patient.
     type: string
 
   collaboration_id:
     description: >
-      In cases where the same biospecimen is used by multiple institutions, a deidenfitied id may be
-      provided here to tie those together. Work with your collaborators assure the same id is used
-      in all projects.
+      In cases where the same biospecimen is used by multiple institutions, a deidenfitied id may provided here to tie those together. Work with your collaborators assure the same id is in all projects.
     type: string
 
   days_to_collection:
     description: >
+<<<<<<< HEAD
       The number of days between the index date and the date the biospecimen was collected at the
       laboratory. Use Unknown if the date of the event is not known. Use Not Applicable if the event
       never happened.
@@ -391,8 +403,29 @@ properties:
       Applicable if the event never happened."
     type: integer
 
+=======
+      The number of days between the index date and the date the biospecimen was collected at laboratory.
+    type: integer
+
+  days_to_collection_not_reported:
+    description: >
+      True/False indicator of whether the number of days between the index date and the date the biospecimen was collected at laboratory is reported.
+    type: boolean
+
+  days_to_procurement:
+    description: >
+      The number of days between the index date and the date the biospecimen was taken from the patient (such as the blood draw).
+    type: integer
+
+  days_to_procurement_not_reported:
+    description: >
+      True/False indicator of whether the number of days between the index date and the date the biospecimen was taken from the patient is reported.
+    type: boolean
+
+>>>>>>> fea8e241a57c1279059bd0dc359f14552b37d65f
   disease_type:
-    description: "The primary disease of the patient from which the biospecimen was taken."
+    description: >
+      The primary disease of the patient from which the biospecimen was taken.
     enum:
       - "Blood Cancer"
       - "Breast Cancer"
@@ -412,20 +445,17 @@ properties:
 
   metastatic_bone:
     description: >
-      True/False indicator of whether metastasis had been confirmed in an area of bone of the
-      patient from which the biospecimen was taken.
+      True/False indicator of whether metastasis had been confirmed in an area of bone of the patient from which the biospecimen was taken.
     type: boolean
 
   metastatic_lymph_node:
     description: >
-      True/False indicator of whether metastasis had been confirmed in the lymph nodes of the
-      patient from which the biospecimen was taken.
+      True/False indicator of whether metastasis had been confirmed in the lymph nodes of the patient from which the biospecimen was taken.
     type: boolean
 
   metastatic_visceral:
     description: >
-      True/False indicator of whether metastasis had been confirmed in the viscera of the
-      patient from which the biospecimen was taken.
+      True/False indicator of whether metastasis had been confirmed in the viscera of the patient from which the biospecimen was taken.
     type: boolean
 
   method_of_procurement:
@@ -434,6 +464,10 @@ properties:
     enum:
       - "Biopsy"
       - "Blood Draw"
+<<<<<<< HEAD
+=======
+      - "Not Applicable"
+>>>>>>> fea8e241a57c1279059bd0dc359f14552b37d65f
       - "Unknown"
 
   primary_site:
@@ -488,14 +522,12 @@ properties:
 
   procurement_temperature:
     description: >
-      The temperature, in centigrade, at which the biospecimen was kept after procuring it from the
-      patient. Use 20 for room temperature; 0 for on ice.
+      The temperature, in centigrade, at which the biospecimen was kept after procuring it from the patient. Use 20 for room temperature; 0 for on ice.
     type: number
 
   shipping_temperature:
     description: >
-      The temperature, in centigrade, at which the biospecimen was kept while it was being
-      transported from the procurement site to its processing destination.
+      The temperature, in centigrade, at which the biospecimen was kept while it was being transported from the procurement site to its processing destination.
     type: number
 
   tissue_type:
@@ -583,8 +615,7 @@ properties:
 
   tumor_morphology:
     description: >
-      The specific description of the tumor morphology. Please use the ICD-0-3 code name (e.g.
-      "Neoplasm, benign", "Carcinoma, Nos", or "Hepatocellular adenoma").
+      The specific description of the tumor morphology. Please use the ICD-0-3 code name (e.g. "Neoplasm, benign", "Carcinoma, Nos", or "Hepatocellular adenoma").
     type: string
 
   cases:
