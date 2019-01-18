@@ -24,18 +24,26 @@ systemProperties:
   - error_type
 
 links:
-  - name: studies
-    backref: study_metadata_files
-    label: derived_from
-    target_type: study
-    multiplicity: many_to_many
-    required: true 
+  - exclusive: false
+    required: true
+    subgroup:
+      - name: studies
+        backref: study_metadata_files
+        label: derived_from
+        target_type: study
+        multiplicity: many_to_many
+        required: false
+      - name: core_metadata_collections
+        backref: study_metadata_files
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_one
+        required: false
 
 required:
   - submitter_id
+  - type
   - file_name
-  - file_size
-  - md5sum
   - data_category
   - data_type
   - data_format
@@ -70,4 +78,6 @@ properties:
       - TXT
 
   studies:
+    $ref: "_definitions.yaml#/to_many"
+  core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"

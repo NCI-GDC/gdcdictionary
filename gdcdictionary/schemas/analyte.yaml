@@ -24,6 +24,7 @@ systemProperties:
 
 required:
   - submitter_id
+  - type
   - analyte_type
   - analyte_isolation_method
   - aliquots

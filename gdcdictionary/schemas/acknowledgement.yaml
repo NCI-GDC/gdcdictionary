@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "acknowledgement"
-title: Acknowledgement 
+title: Acknowledgement
 type: object
 namespace: https://www.bloodpac.org
 category: administrative
@@ -21,26 +21,49 @@ systemProperties:
 
 links:
   - name: projects
-    backref: acknowledgements 
+    backref: acknowledgements
     label: contribute_to
     target_type: project
     multiplicity: many_to_many
     required: true
 
-required:
-  - submitter_id
-  - projects
-
 uniqueKeys:
   - [ id ]
   - [ project_id, submitter_id ]
 
+required:
+  - submitter_id
+  - type
+  - projects
+
 properties:
-  $ref: "_definitions.yaml#/ubiquitous_properties"
+  type:
+    enum: [ "acknowledgement" ]
+
+  id:
+    $ref: "_definitions.yaml#/UUID"
+    systemAlias: node_id
+
+  state:
+    $ref: "_definitions.yaml#/state"
+
+  submitter_id:
+    type:
+      - string
+      - "null"
 
   acknowledgee:
-    description: "The indvidiual or group being acknowledged by the project."
+    description: "The individual or group being acknowledged by the project."
     type: string
 
   projects:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many_project"
+
+  project_id:
+    type: string
+
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"

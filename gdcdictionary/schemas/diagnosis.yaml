@@ -31,6 +31,8 @@ links:
     required: true
 
 required:
+  - submitter_id
+  - type
   - classification_of_tumor
   - days_to_diagnosis
   - morphology

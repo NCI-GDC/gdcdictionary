@@ -23,6 +23,7 @@ systemProperties:
 
 required:
   - submitter_id
+  - type
   - aliquot_container
   - clinical_or_contrived
   - hours_to_freezer_lower

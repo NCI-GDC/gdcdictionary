@@ -30,6 +30,7 @@ links:
 
 required:
   - submitter_id
+  - type
   - assay_instrument
   - assay_instrument_model
   - assay_method

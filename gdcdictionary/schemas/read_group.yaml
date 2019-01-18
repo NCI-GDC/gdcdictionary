@@ -28,8 +28,8 @@ links:
     backref: read_groups
 
 required:
-  - type
   - submitter_id
+  - type
   - platform
   - instrument_model
   - library_strategy

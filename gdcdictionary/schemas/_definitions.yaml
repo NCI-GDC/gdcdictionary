@@ -13,6 +13,36 @@ parent_uuids:
         $ref: "#/UUID"
     uniqueItems: true
 
+foreign_key_project:
+    type: object
+    # Allow true here because we can have other unique keys defined on
+    # a target type
+    additionalProperties: true
+    #Can either use 'id' which are Gen3 IDs (UUID) or 'code'
+    #which is the user defined ID for project
+    properties:
+        id:
+            $ref: "#/UUID"
+        code:
+            type: string
+
+to_one_project:
+  anyOf:
+    - type: array
+      items:
+        $ref: "#/foreign_key_project"
+        minItems: 1
+        maxItems: 1
+    - $ref: "#/foreign_key_project"
+
+to_many_project:
+  anyOf:
+    - type: array
+      items:
+        $ref: "#/foreign_key_project"
+        minItems: 1
+    - $ref: "#/foreign_key_project"
+
 foreign_key:
     type: object
     # Allow true here because we can have other unique keys defined on

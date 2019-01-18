@@ -31,6 +31,7 @@ links:
 
 required:
   - submitter_id
+  - type
   - data_description
   - study_description
   - study_design
@@ -84,4 +85,4 @@ properties:
       - Detection/Enumeration/Isolation
       - Genetic Analysis
   projects:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one_project"

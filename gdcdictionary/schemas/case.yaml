@@ -8,7 +8,7 @@ category: administrative
 program: '*'
 project: '*'
 description: >
-  The collection of all data related to a specific subject in the context of a specific experiment. 
+  The collection of all data related to a specific subject in the context of a specific experiment.
 additionalProperties: false
 submittable: true
 validators: null
@@ -30,6 +30,7 @@ links:
 
 required:
   - submitter_id
+  - type
   - index_date
   - studies
 

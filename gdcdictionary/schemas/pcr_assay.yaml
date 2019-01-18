@@ -28,16 +28,17 @@ links:
     multiplicity: many_to_one
     required: true
 
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
 required:
   - submitter_id
+  - type
   - assay_instrument
   - assay_instrument_model
   - assay_method
   - analytes
-
-uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
