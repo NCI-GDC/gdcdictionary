@@ -1,0 +1,92 @@
+schema: "http://json-schema.org/draft-04/schema#"
+
+id: "diagnostic_test"
+title: Diagnostic Test
+type: object
+namespace: https://www.bloodpac.org
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Diagnos
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: diagnostic_tests
+    label: describes
+    target_type: case
+    multiplicity: many_to_one
+    required: true
+  - name: followups
+    backref: diagnostic_tests
+    label: describes
+    target_type: followup
+    multiplicity: many_to_one
+    required: false
+  - name: diagnoses
+    backref: diagnostic_tests
+    label: describes
+    target_type: diagnosis
+    multiplicity: many_to_one
+    required: false
+
+required:
+  - submitter_id
+  - type
+  - cases
+  - days_to_test
+  - test_type
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  analyte_name:
+
+  assay_kit_name:
+
+  assay_kit_vendor:
+
+  assay_kit_version:
+
+
+  days_to_test:
+    description: >
+      Number of days between the date used for index and the date the patient was diagnosed with a comorbidity.
+    type: integer
+
+  equipment_manufacturer:
+
+  equipment_model:
+
+  test_anatomic_site:
+
+  test_sample_composition:
+
+  test_result:
+
+  test_type:
+
+  test_units:
+
+  test_value:
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"
+  followups:
+    $ref: "_definitions.yaml#/to_one"
+  diagnoses:
+    $ref: "_definitions.yaml#/to_one"

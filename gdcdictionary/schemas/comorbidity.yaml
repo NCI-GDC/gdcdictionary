@@ -38,7 +38,7 @@ required:
   - submitter_id
   - type
   - cases
-  - comobidity
+  - comorbidity
   - days_to_comorbidity
 
 uniqueKeys:
