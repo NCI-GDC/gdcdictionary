@@ -939,7 +939,7 @@ properties:
 
   time_from_biopsy:
     description: >
-      Hours since the patient last underwent a biopsy.
+      Hours since the patient last underwent a biopsy; please record the biopsy information in the 'diagnostic_test' node and link that record to this followup record.
     type: number
 
   time_from_recreational_drugs:
