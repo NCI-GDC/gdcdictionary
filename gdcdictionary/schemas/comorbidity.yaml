@@ -32,13 +32,13 @@ links:
     label: describes
     target_type: followup
     multiplicity: many_to_one
-    required: true
+    required: false
 
 required:
   - submitter_id
   - type
   - cases
-  - cormobidity
+  - comobidity
   - days_to_comorbidity
 
 uniqueKeys:
