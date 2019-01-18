@@ -27,6 +27,12 @@ links:
     target_type: case
     multiplicity: many_to_one
     required: true
+  - name: followups
+    backref: comorbidities
+    label: describes
+    target_type: followup
+    multiplicity: many_to_one
+    required: true
 
 required:
   - submitter_id
@@ -147,4 +153,6 @@ properties:
     type: integer
 
   cases:
+    $ref: "_definitions.yaml#/to_one"
+  followups:
     $ref: "_definitions.yaml#/to_one"

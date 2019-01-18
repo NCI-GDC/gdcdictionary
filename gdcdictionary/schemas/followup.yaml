@@ -917,6 +917,46 @@ properties:
       - "No"
       - Unknown
 
+  time_from_alcohol:
+    description: >
+      Hours since the patient last consumed alcohol.
+    type: number
+
+  time_from_exercise:
+    description: >
+      Hours since the patient last exercised.
+    type: number
+
+  time_from_food:
+    description: >
+      Hours since the patient last consumed food.
+    type: number
+
+  time_from_physical_trauma:
+    description: >
+      Hours since the patient last experienced physical trauma.
+    type: number
+
+  time_from_biopsy:
+    description: >
+      Hours since the patient last underwent a biopsy.
+    type: number
+
+  time_from_recreational_drugs:
+    description: >
+      Hours since the patient last used recreational drugs.
+    type: number
+
+  time_from_tobacco:
+    description: >
+      Hours since the patient last used tobacco.
+    type: number
+
+  time_from_treatment:
+    description: >
+      Hours since the patient received a treatment, including surgical procedures or medications; please record the treatment information in the 'treatment' node and link that record to this followup record.
+    type: number
+
   weight:
     description: "The weight of the patient measured in kilograms."
     type: number
