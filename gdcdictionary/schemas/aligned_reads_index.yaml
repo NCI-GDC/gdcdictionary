@@ -22,23 +22,29 @@ systemProperties:
   - error_type
 
 links:
-  - name: submitted_aligned_reads_files
-    backref: aligned_reads_indexes
-    label: derived_from
-    target_type: submitted_aligned_reads
-    multiplicity: one_to_one
+  - exclusive: false
     required: true
+    subgroup:
+      - name: core_metadata_collections
+        backref: aligned_reads_indexes
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: one_to_one
+        required: false
+      - name: submitted_aligned_reads_files
+        backref: aligned_reads_indexes
+        label: derived_from
+        target_type: submitted_aligned_reads
+        multiplicity: one_to_one
+        required: false
 
 required:
   - submitter_id
   - type
   - file_name
-  - file_size
-  - md5sum
   - data_category
   - data_type
   - data_format
-  - submitted_aligned_reads_files
 
 uniqueKeys:
   - [ id ]
@@ -65,3 +71,5 @@ properties:
 
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_many"
