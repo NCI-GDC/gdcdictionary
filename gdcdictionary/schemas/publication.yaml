@@ -45,4 +45,4 @@ properties:
     type: string
 
   projects:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_many_project"

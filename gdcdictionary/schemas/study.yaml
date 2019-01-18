@@ -85,4 +85,4 @@ properties:
       - Detection/Enumeration/Isolation
       - Genetic Analysis
   projects:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one_project"
