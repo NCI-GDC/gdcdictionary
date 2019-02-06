@@ -98,7 +98,7 @@ properties:
     description: "Brief description of the data being provided for this experiment."
     type: string
   projects:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one_project"
   project_id:
     $ref: "_definitions.yaml#/project_id"
   created_datetime:
