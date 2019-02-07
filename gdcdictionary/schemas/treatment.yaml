@@ -21,6 +21,10 @@ systemProperties:
   - created_datetime
   - updated_datetime
 
+required:
+  - submitter_id
+  - type
+
 links:
   - name: diagnoses
     backref: treatments

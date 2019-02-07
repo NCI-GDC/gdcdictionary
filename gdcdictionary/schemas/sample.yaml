@@ -26,6 +26,7 @@ systemProperties:
 
 required:
   - submitter_id
+  - type
   - cases
 
 uniqueKeys:

@@ -35,6 +35,8 @@ links:
     required: false
 
 required:
+  - submitter_id
+  - type
   - biomarker_name
   - biomarker_result
   - biomarker_test_method

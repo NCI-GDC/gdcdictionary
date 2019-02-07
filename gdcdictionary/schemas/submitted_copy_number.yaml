@@ -50,6 +50,7 @@ links:
 
 required:
   - submitter_id
+  - type
   - file_name
   - file_size
   - data_format

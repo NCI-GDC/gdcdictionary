@@ -3,6 +3,7 @@
     "name": "Burkitt Lymphoma Genome Sequencing Project",
     "state": "open",
     "type": "project",
+    "dbgap_accession_number": "phs000235.v4.p1"
     "programs": [
         {"name": "CGCI"}
     ]
