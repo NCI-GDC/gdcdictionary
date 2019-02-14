@@ -8,7 +8,7 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  Diagnos
+  The result of a standard clinical test that is performed for diagnostic or health monitoring purposes, including biopsies and other small surgical procedures, biomarker assays, and imaging tests.
 additionalProperties: false
 submittable: true
 validators: null
