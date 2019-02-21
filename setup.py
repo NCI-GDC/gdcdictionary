@@ -20,7 +20,7 @@ setup(
     version=get_version(),
     packages=find_packages(),
     install_requires=[
-        'PyYAML==3.11',
+        'PyYAML==3.13',
         'jsonschema==2.5.1',
     ],
     package_data={
