@@ -23,22 +23,24 @@ class JsonValidationTests(BaseTest):
 
     def test_valid_files(self):
         for path in glob.glob(os.path.join(DATA_DIR, 'valid', '*.json')):
-            print "Validating {}".format(path)
+#            print "Validating {}".format(path)
             doc = json.load(open(path, 'r'))
-            print(doc)
-            if type(doc) == dict:
-                self.add_system_props(doc)
-                validate_entity(doc, self.dictionary.schema)
-            elif type(doc) == list:
-                for entity in doc:
-                    self.add_system_props(entity)
-                    validate_entity(entity, self.dictionary.schema)
-            else:
-                raise Exception("Invalid json")
+            try:
+                if type(doc) == dict:
+                    self.add_system_props(doc)
+                    validate_entity(doc, self.dictionary.schema)
+                elif type(doc) == list:
+                    for entity in doc:
+                        self.add_system_props(entity)
+                        validate_entity(entity, self.dictionary.schema)
+                else:
+                    raise Exception("Invalid json")
+            except ValidationError as e:
+                self.errors.add(e.message)
 
     def test_invalid_files(self):
         for path in glob.glob(os.path.join(DATA_DIR, 'invalid', '*.json')):
-            print "Validating {}".format(path)
+#            print "Ensuring InValidatity {}".format(path)
             doc = json.load(open(path, 'r'))
             if type(doc) == dict:
                 self.add_system_props(doc)

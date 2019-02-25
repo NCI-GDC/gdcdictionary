@@ -16,7 +16,7 @@ from gdcdictionary import ROOT_DIR, GDCDictionary
 def load_yaml(path):
     with open(path, 'r') as f:
         return yaml.load(f)
-        
+
 DATA_DIR = os.path.join(ROOT_DIR, 'examples')
 project1 = load_yaml(os.path.join(ROOT_DIR, 'schemas/projects/project1.yaml'))
 projects = {'project1': project1}
@@ -26,6 +26,10 @@ class BaseTest(unittest.TestCase):
     def setUp(self):
         self.dictionary = GDCDictionary()
         self.definitions = load_yaml(os.path.join(ROOT_DIR, 'schemas','_definitions.yaml'))
+        self.errors = set()
+
+    def tearDown(self):
+        assert not any(self.errors), self.errors
 
 def merge_schemas(a, b, path=None):
     """Recursively zip schemas together
