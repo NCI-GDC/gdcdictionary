@@ -4,6 +4,7 @@
     "creator": "test_script",
     "notes": "This sample is only a test sample!",
     "submitter_id": "28961",
+    "status":"Rescinded",
     "samples": [
         {
             "submitter_id": "BLGSP-71-06-00019s"
