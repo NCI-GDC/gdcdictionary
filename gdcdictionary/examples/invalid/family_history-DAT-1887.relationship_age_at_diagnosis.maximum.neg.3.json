@@ -1,0 +1,11 @@
+[
+  {
+    "cases": {
+      "submitter_id": "QA-DICT-0015"
+    }, 
+    "project_id": "QA-DICT", 
+    "type": "family_history", 
+    "relationship_age_at_diagnosis": 1, 
+    "submitter_id": "QA-DICT-family_history-0015"
+  }
+]

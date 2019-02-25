@@ -1,0 +1,23 @@
+[
+  {
+    "last_known_disease_status": "Distant met recurrence/progression", 
+    "tumor_grade": "G1", 
+    "primary_diagnosis": "aCINAR ADENOCARCINOMA, SARCOMATOID", 
+    "submitter_id": "QA-DICT-diagnosis-0013", 
+    "tissue_or_organ_of_origin": "Abdomen, NOS", 
+    "progression_or_recurrence": "yes", 
+    "vital_status": "alive", 
+    "morphology": "8000/0", 
+    "cases": {
+      "submitter_id": "QA-DICT-0013"
+    }, 
+    "days_to_last_known_disease_status": 1.0, 
+    "tumor_stage": "QA_Dictionary_Test_String", 
+    "days_to_last_follow_up": 1.0, 
+    "site_of_resection_or_biopsy": "Abdomen, NOS", 
+    "project_id": "QA-DICT", 
+    "type": "diagnosis", 
+    "days_to_recurrence": 1.0, 
+    "age_at_diagnosis": 1
+  }
+]

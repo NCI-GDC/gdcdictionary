@@ -1,0 +1,13 @@
+[
+  {
+    "diagnoses": {
+      "submitter_id": "QA-DICT-diagnosis-0021"
+    }, 
+    "days_to_treatment_start": [
+      "QA_Dictionary_Test_Array"
+    ], 
+    "project_id": "QA-DICT", 
+    "type": "treatment", 
+    "submitter_id": "QA-DICT-treatment-0021"
+  }
+]

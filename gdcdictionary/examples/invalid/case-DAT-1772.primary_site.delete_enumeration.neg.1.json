@@ -1,0 +1,11 @@
+[
+  {
+    "primary_site": "Unknown Primary Site", 
+    "project_id": "QA-DICT", 
+    "type": "case", 
+    "projects": {
+      "code": "DICT"
+    }, 
+    "submitter_id": "QA-DICT-0011"
+  }
+]

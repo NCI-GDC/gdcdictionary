@@ -1,0 +1,19 @@
+[
+  {
+    "aliquots": {
+      "submitter_id": "QA-DICT-aliquot-0018"
+    }, 
+    "data_type": "Raw Intensities", 
+    "file_name": "dictionary_test.txt", 
+    "md5sum": "fc2ef64b07b770b9e7ddced8b80e6be5", 
+    "data_format": "Idat", 
+    "submitter_id": "QA-DICT-raw_methylation_array-0018", 
+    "platform": "Illumina Human Methylation 45", 
+    "data_category": "DNA Methylation", 
+    "file_size": 514, 
+    "project_id": "QA-DICT", 
+    "type": "raw_methylation_array", 
+    "channel": "Green", 
+    "experimental_strategy": "Methylation Array"
+  }
+]

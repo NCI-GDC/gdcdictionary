@@ -1,0 +1,13 @@
+[
+  {
+    "project_id": "QA-DICT", 
+    "sample_type": "Additional Metastatic", 
+    "submitter_id": "QA-DICT-sample-0020", 
+    "tissue_type": "Tumor", 
+    "intermediate_dimension": 1.0, 
+    "cases": {
+      "submitter_id": "QA-DICT-0020"
+    }, 
+    "type": "sample"
+  }
+]

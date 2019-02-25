@@ -1,0 +1,15 @@
+[
+  {
+    "project_id": "QA-DICT", 
+    "sample_type": "Additional Metastatic", 
+    "submitter_id": "QA-DICT-sample-0020", 
+    "days_to_collection": [
+      "QA_Dictionary_Test_Array"
+    ], 
+    "tissue_type": "Tumor", 
+    "cases": {
+      "submitter_id": "QA-DICT-0020"
+    }, 
+    "type": "sample"
+  }
+]

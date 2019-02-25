@@ -1,0 +1,16 @@
+[
+  {
+    "project_id": "QA-DICT", 
+    "gender": "female", 
+    "submitter_id": "QA-DICT-demographic-0012", 
+    "race": "white", 
+    "days_to_birth": [
+      "QA_Dictionary_Test_Array"
+    ], 
+    "cases": {
+      "submitter_id": "QA-DICT-0012"
+    }, 
+    "type": "demographic", 
+    "ethnicity": "hispanic or latino"
+  }
+]

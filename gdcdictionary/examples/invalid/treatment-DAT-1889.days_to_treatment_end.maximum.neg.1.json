@@ -1,0 +1,11 @@
+[
+  {
+    "diagnoses": {
+      "submitter_id": "QA-DICT-diagnosis-0021"
+    }, 
+    "project_id": "QA-DICT", 
+    "type": "treatment", 
+    "days_to_treatment_end": true, 
+    "submitter_id": "QA-DICT-treatment-0021"
+  }
+]

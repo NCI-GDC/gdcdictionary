@@ -1,0 +1,20 @@
+[
+  {
+    "library_name": "QA_Dictionary_Test_String", 
+    "project_id": "QA-DICT", 
+    "is_paired_end": true, 
+    "target_capture_kit": "Custom AmpliSeq Cancer Hotspot GENIE-MDA Augmented Panel v1 - 46 Genes", 
+    "read_length": 1, 
+    "submitter_id": "QA-DICT-read_group-0019", 
+    "experiment_name": "QA_Dictionary_Test_String", 
+    "platform": "Illumina", 
+    "aliquots": {
+      "submitter_id": "QA-DICT-aliquot-0019"
+    }, 
+    "library_selection": "Hybrid Selection", 
+    "library_strategy": "ATAC-Seq.!@?/", 
+    "type": "read_group", 
+    "read_group_name": "QA_Dictionary_Test_String", 
+    "sequencing_center": "QA_Dictionary_Test_String"
+  }
+]

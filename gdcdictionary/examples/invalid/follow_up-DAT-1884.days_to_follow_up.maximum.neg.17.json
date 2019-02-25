@@ -1,0 +1,13 @@
+[
+  {
+    "days_to_follow_up": {
+      "some": "object"
+    }, 
+    "project_id": "QA-DICT", 
+    "type": "follow_up", 
+    "cases": {
+      "submitter_id": "QA-DICT-0016"
+    }, 
+    "submitter_id": "QA-DICT-follow_up-0016"
+  }
+]
