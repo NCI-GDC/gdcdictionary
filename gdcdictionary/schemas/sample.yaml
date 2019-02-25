@@ -589,7 +589,9 @@ properties:
     enum:
       - Additional Metastatic
       - Additional - New Primary
+      - Blood Derived Cancer - Bone Marrow
       - Blood Derived Cancer - Bone Marrow, Post-treatment
+      - Blood Derived Cancer - Peripheral Blood
       - Blood Derived Cancer - Peripheral Blood, Post-treatment
       - Blood Derived Normal
       - Bone Marrow Normal
