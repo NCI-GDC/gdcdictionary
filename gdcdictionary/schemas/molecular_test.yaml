@@ -1821,8 +1821,10 @@ properties:
       $ref: "_terms.yaml#/test_result"
     enum:
       - Abnormal, NOS
+      - Copy Number Reported
       - Equivocal
       - High
+      - Intermediate
       - Low
       - Negative
       - Normal
