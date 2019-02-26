@@ -3078,6 +3078,19 @@ sample_type_id: # TOREVIEW
   description: >
     The accompanying sample type id for the sample type.
 
+second_exon:
+  description: >
+    The second exon number involved in molecular variation. If a specific genetic variant is being
+    reported, this property can be used to capture the second exon where that variant is located.
+    This property is typically used for a translocation where two different locations are involved
+    in the variation.
+  termDef:
+    term: Molecular Laboratory Procedure Exon Identification Number
+    source: caDSR
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 second_gene_symbol:
   description: >
     The text term used to describe a secondary gene targeted or included in molecular analysis.
