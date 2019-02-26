@@ -2693,8 +2693,10 @@ primary_diagnosis:
 
 primary_site:
   description: >
-    The text term used to describe the general location of the malignant disease, as categorized by
-    the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).
+    The text term used to describe the primary site of disease, as categorized by the World Health
+    Organization's (WHO) International Classification of Diseases for Oncology (ICD-O). This
+    categorization groups cases into general categories. Reference tissue_or_organ_of_origin on the
+    diagnosis node for more specific primary sites of disease.
   termDef:
     term: ICD-O Primary Anatomic Site Category
     source: caDSR
