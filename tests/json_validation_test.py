@@ -7,6 +7,7 @@ Note this is NOT testing that the schema is sane. Just that we adhere
 to it
 
 """
+from __future__ import print_function
 
 
 from jsonschema import validate, ValidationError
@@ -23,7 +24,7 @@ class JsonValidationTests(BaseTest):
 
     def test_valid_files(self):
         for path in glob.glob(os.path.join(DATA_DIR, 'valid', '*.json')):
-            print "Validating {}".format(path)
+            print("Validating {}".format(path))
             doc = json.load(open(path, 'r'))
             print(doc)
             if type(doc) == dict:
@@ -38,7 +39,7 @@ class JsonValidationTests(BaseTest):
 
     def test_invalid_files(self):
         for path in glob.glob(os.path.join(DATA_DIR, 'invalid', '*.json')):
-            print "Validating {}".format(path)
+            print("Validating {}".format(path))
             doc = json.load(open(path, 'r'))
             if type(doc) == dict:
                 self.add_system_props(doc)

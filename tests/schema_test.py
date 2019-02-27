@@ -6,7 +6,9 @@ have more tests later that need to validate new errors found within the
 schema.
 
 """
-
+from future import standard_library
+standard_library.install_aliases()
+from builtins import str
 from utils import validate_schemata, BaseTest
 
 
@@ -20,13 +22,13 @@ class SchemaTest(BaseTest):
             for child in root:
                 self.traverse_schema_with_conditional(child, conditional_func, test_func)
         elif isinstance(root, dict):
-            for child in root.keys():
+            for child in list(root.keys()):
                 self.traverse_schema_with_conditional(root[child], conditional_func, test_func)
 
     def test_enum_is_string(self):
 
         def trigger(root):
-            if isinstance(root, dict) and 'enum' in root.keys():
+            if isinstance(root, dict) and 'enum' in list(root.keys()):
                 return True
             return False
 

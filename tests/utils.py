@@ -2,7 +2,10 @@
 specific overrrides are not being used in the GDC currently.
 
 """
-
+from __future__ import print_function
+from future import standard_library
+standard_library.install_aliases()
+from builtins import str
 import copy
 import os
 import json
@@ -78,8 +81,8 @@ def validate_entity(entity, schemata, project=None, name=''):
 
 def validate_schemata(schemata, metaschema):
     # validate schemata
-    print('Validating schemas against metaschema... '),
-    for s in schemata.values():
+    print(('Validating schemas against metaschema... '), end=' ')
+    for s in list(schemata.values()):
         validate(s, metaschema)
 
         def assert_link_is_also_prop(link):

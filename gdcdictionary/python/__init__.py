@@ -1,3 +1,7 @@
+from __future__ import print_function
+from future import standard_library
+standard_library.install_aliases()
+from builtins import object
 from copy import deepcopy
 from collections import namedtuple
 from contextlib import contextmanager
@@ -67,7 +71,7 @@ class GDCDictionary(object):
                     f.read().encode("ascii")
                     f.seek(0)
                 except UnicodeDecodeError:
-                    print "Error in file: {}".format(name)
+                    print("Error in file: {}".format(name))
                     raise
             return yaml.safe_load(f)
 
@@ -96,7 +100,7 @@ class GDCDictionary(object):
 
         schemas = {
             schema['id']: self.resolve_schema(schema, deepcopy(schema))
-            for path, schema in yamls.iteritems()
+            for path, schema in yamls.items()
             if path not in self.exclude
         }
         self.schema.update(schemas)
@@ -138,11 +142,11 @@ class GDCDictionary(object):
         """
 
         if isinstance(obj, dict):
-            for key in obj.keys():
+            for key in list(obj.keys()):
                 if key == '$ref':
                     val = obj.pop(key)
                     obj.update(self.resolve_reference(val, root))
-            return {k: self.resolve_schema(v, root) for k, v in obj.items()}
+            return {k: self.resolve_schema(v, root) for k, v in list(obj.items())}
         elif isinstance(obj, list):
             return [self.resolve_schema(item, root) for item in obj]
         else:

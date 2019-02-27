@@ -9,6 +9,7 @@ setup(
     install_requires=[
         'PyYAML>=4.2b1',
         'jsonschema',
+        'future',
     ],
     package_data={
         "gdcdictionary": [
