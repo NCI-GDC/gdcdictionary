@@ -146,12 +146,17 @@ effects.
 **Schema Addition downstream effects**:
 - No large impacts
 
+### Testing
+
+Commits will automagically be run on TravisCI when a Pull Request is opened.
+If you would like to test locally :hey are run via [tox](https://tox.readthedocs.io/en/latest/)
+
 
 ### Versioning
 
 The GDC Dictionary should
 follow [Semantic Versioning](http://semver.org/) by updating the
-`VERSION` file to `MAJOR.MINOR.PATCH` accordingly:
+line in setup.py file to `MAJOR.MINOR.PATCH` accordingly:
 
 1. MAJOR: version when you make incompatible API changes: **Breaking Changes**
    - e.g. 1.2.4 -> 2.0.0
