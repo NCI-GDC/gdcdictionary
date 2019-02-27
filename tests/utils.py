@@ -9,23 +9,25 @@ import json
 import yaml
 import unittest
 
-from jsonschema import validate
+import gdcdictionary
+# Ask was there ever a plan to do this not in python
+from gdcdictionary.python import GDCDictionary
 
-from gdcdictionary import ROOT_DIR, GDCDictionary
+from jsonschema import validate
 
 def load_yaml(path):
     with open(path, 'r') as f:
         return yaml.safe_load(f)
 
-DATA_DIR = os.path.join(ROOT_DIR, 'examples')
-project1 = load_yaml(os.path.join(ROOT_DIR, 'schemas/projects/project1.yaml'))
+DATA_DIR = os.path.join(gdcdictionary.ROOT_DIR, 'examples')
+project1 = load_yaml(os.path.join(gdcdictionary.ROOT_DIR, 'schemas/projects/project1.yaml'))
 projects = {'project1': project1}
 
 class BaseTest(unittest.TestCase):
 
     def setUp(self):
         self.dictionary = GDCDictionary()
-        self.definitions = load_yaml(os.path.join(ROOT_DIR, 'schemas','_definitions.yaml'))
+        self.definitions = load_yaml(os.path.join(gdcdictionary.ROOT_DIR, 'schemas','_definitions.yaml'))
 
 def merge_schemas(a, b, path=None):
     """Recursively zip schemas together
