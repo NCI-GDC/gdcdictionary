@@ -15,7 +15,7 @@ from gdcdictionary import ROOT_DIR, GDCDictionary
 
 def load_yaml(path):
     with open(path, 'r') as f:
-        return yaml.load(f)
+        return yaml.safe_load(f)
         
 DATA_DIR = os.path.join(ROOT_DIR, 'examples')
 project1 = load_yaml(os.path.join(ROOT_DIR, 'schemas/projects/project1.yaml'))

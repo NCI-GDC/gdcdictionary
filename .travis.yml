@@ -1,7 +1,5 @@
 language: python
 python:
   - "2.7"
-before_script:
-    - yes | python setup.py install
-    - pip freeze
-script: "nosetests -v"
+install: pip install tox-travis
+script: tox
