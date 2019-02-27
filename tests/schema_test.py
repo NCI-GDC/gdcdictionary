@@ -8,7 +8,7 @@ schema.
 """
 from future import standard_library
 standard_library.install_aliases()
-from builtins import str
+from past.builtins import basestring
 from utils import validate_schemata, BaseTest
 
 
@@ -36,7 +36,7 @@ class SchemaTest(BaseTest):
             children = root['enum']
             assert isinstance(children, list), "Enums children wasn't a list"
             for child in children:
-                assert isinstance(child, str), "Offending enum found:" + str(child)
+                assert isinstance(child, basestring), "Offending enum found:" + basestring(child)
 
         self.traverse_schema_with_conditional(self.dictionary.schema, trigger, test_enum)
 
