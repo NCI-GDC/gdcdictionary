@@ -1,0 +1,10 @@
+[paths]
+source = gdcdictionary
+
+[run]
+branch = True
+source = gdcdictionary
+omit=.tox/*
+
+[report]
+precision = 2
