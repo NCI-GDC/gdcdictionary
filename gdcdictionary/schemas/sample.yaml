@@ -49,6 +49,7 @@ properties:
       Method, Novartis Protocol #001, 2000 g centrifuge at 4C with gentle deceleration). Alternatively,
       if you have provided a detailed protocol, enter its file_name here.
     type: string
+
   composition:
     term:
       $ref: "_terms.yaml#/composition"
@@ -78,6 +79,7 @@ properties:
       - Solid Tissue
       - Whole Bone Marrow
       - Unknown
+
   hours_to_fractionation_lower:
     description: >
       The lower limit on the amount of time, in hours, between the blood draw and the fractionation
@@ -92,6 +94,7 @@ properties:
           - Not Applicable
           - Unknown
       - type: number
+
   hours_to_fractionation_upper:
     description: >
       The upper limit on the amount of time, in hours, between the blood draw and the fractionation
@@ -106,12 +109,27 @@ properties:
           - Not Applicable
           - Unknown
       - type: number
+
   sample_quantity:
     description: "For solid samples, the mass of the sample in milligrams (mg)."
     type: number
+
   sample_volume:
     description: "For liquid samples, the volume of the sample in millilitres (mL)."
     type: number
+
+  storage_agitation_hours:
+    description: >
+      The number of hours samples were agitated during storage; if a number is given here, also answer 'Yes' to 'storage_agitation'.
+    type: number
+
+  storage_agitation:
+    description: >
+      Indicate whether samples were agitated during storage.
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
 
   biospecimens:
     $ref: "_definitions.yaml#/to_many"
