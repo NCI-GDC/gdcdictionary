@@ -784,6 +784,16 @@ properties:
       - Unknown
       - Not Reported
 
+  gleason_grade_group:
+    term:
+      $ref: "_terms.yaml#/gleason_grade_group"
+    enum:
+      - Group 1
+      - Group 2
+      - Group 3
+      - Group 4
+      - Group 5
+
   goblet_cells_columnar_mucosa_present:
     term:
       $ref: "_terms.yaml#/goblet_cells_columnar_mucosa_present"
@@ -822,6 +832,16 @@ properties:
       - Negative
       - Positive
       - Unknown
+
+  igcccg_stage:
+    term:
+      $ref: "_terms.yaml#/igcccg_stage"
+    enum:
+      - Good Prognosis
+      - Intermediate Prognosis
+      - Poor Prognosis
+      - Unknown
+      - Not Reported
 
   icd_10_code:
     term:
@@ -973,6 +993,17 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+
+  masaoka_stage:
+    term:
+      $ref: "_terms.yaml#/masaoka_stage"
+    enum:
+      - Stage I
+      - Stage IIa
+      - Stage IIb
+      - Stage III
+      - Stage IVa
+      - Stage IVb
 
   medulloblastoma_molecular_classification:
     term:
@@ -5383,6 +5414,16 @@ properties:
       - C83.3
       - not reported
 
+  primary_gleason_grade:
+    term:
+      $ref: "_terms.yaml#/primary_gleason_grade"
+    enum:
+      - Pattern 1
+      - Pattern 2
+      - Pattern 3
+      - Pattern 4
+      - Pattern 5
+
   prior_malignancy:
     term:
       $ref: "_terms.yaml#/prior_malignancy"
@@ -5436,6 +5477,16 @@ properties:
       - RX
       - Unknown
       - Not Reported
+
+  secondary_gleason_grade:
+    term:
+      $ref: "_terms.yaml#/secondary_gleason_grade"
+    enum:
+      - Pattern 1
+      - Pattern 2
+      - Pattern 3
+      - Pattern 4
+      - Pattern 5
 
   site_of_resection_or_biopsy:
     term:
@@ -6874,6 +6925,21 @@ properties:
       - Not Allowed To Collect
       - not allowed to collect
       - pending # this is from TARGET RT clinical data
+
+  weiss_assessment_score:
+    term:
+      $ref: "_terms.yaml#/weiss_assessment_score"
+    enum:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
 
   wilms_tumor_histologic_subtype:
     term:
