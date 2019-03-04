@@ -2556,7 +2556,7 @@ percent_stromal_cells:
 
 percent_tumor_cells:
   description: >
-    Numeric value that represents the percentage of infiltration by granulocytes in a sample.
+    Numeric value that represents the percentage of infiltration by tumor cells in a sample.
   termDef:
     term: Specimen Tumor Cell Percentage Value
     source: caDSR
