@@ -1,0 +1,50 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "methylation_array_harmonization_workflow"
+title: Methylation Array Harmonization Workflow
+type: object
+category: analysis
+namespace: https://gdc.cancer.gov/
+program: '*'
+project: '*'
+description: >
+  Metadata for workflow used to harmonized methylation arrays. 
+additionalProperties: false
+submittable: false
+downloadable: false
+previous_version_downloadable: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: raw_methylation_arrays
+    backref: methylation_array_harmonization_workflows
+    label: performed_on
+    target_type: raw_methylation_array 
+    multiplicity: many_to_many
+    required: true
+
+required:
+  - submitter_id
+  - workflow_link
+  - workflow_type
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+  $ref: "_definitions.yaml#/workflow_properties"
+
+  workflow_type:
+    enum:
+      - SeSAMe Methylation Beta Estimation 
+
+  raw_methylation_arrays:
+    $ref: "_definitions.yaml#/to_many"
