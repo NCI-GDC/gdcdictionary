@@ -11,6 +11,7 @@
     "days_to_comorbidity":21,
     "days_to_follow_up":100,
     "days_to_progression":80,
+    "days_to_progression_free":99,
     "days_to_recurrence":99,
     "diabetes_treatment_type":"Insulin",
     "disease_response":"MX-Mixed Response",
