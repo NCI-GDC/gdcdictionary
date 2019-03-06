@@ -1082,6 +1082,17 @@ days_to_progression:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154730&version=1.0"
 
+days_to_progression_free:
+  description: >
+    Number of days between the date used for index and the date the patient's disease was formally
+    confirmed as progression-free.
+  termDef:
+    term: Index Date To Progression Free Day Count
+    source: caDSR
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 days_to_recurrence:
   description: >
     Number of days between the date used for index and the date the patient's disease recurred.
