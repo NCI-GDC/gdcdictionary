@@ -1088,6 +1088,12 @@ properties:
       $ref: "_terms.yaml#/rna_change"
     type: string
 
+  second_exon:
+    term:
+      $ref: "_terms.yaml#/second_exon"
+    type: string
+    pattern: "^(0|[1-9][0-9]{0,3})[a-z]?$"
+
   second_gene_symbol:
     term:
       $ref: "_terms.yaml#/second_gene_symbol"
