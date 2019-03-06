@@ -364,8 +364,10 @@ properties:
     description: "Open entry for any further description or characterization of the data." # TOREVIEW
 
   status:
-    type: string
     description: "Status of the annotation." # TOREVIEW; is there an enum?
+    enum:
+      - Approved
+      - Rescinded
 
   aggregated_somatic_mutations:
     $ref: "_definitions.yaml#/to_many"
