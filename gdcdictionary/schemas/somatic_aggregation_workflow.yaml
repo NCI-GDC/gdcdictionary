@@ -47,6 +47,7 @@ properties:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum:
+      - Aliquot Ensemble Somatic Variant Merging and Masking
       - FoundationOne Variant Aggregation and Masking
       - GENIE Variant Aggregation and Masking
       - MuSE Variant Aggregation and Masking
