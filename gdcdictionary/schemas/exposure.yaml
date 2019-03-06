@@ -39,7 +39,6 @@ preferred:
 
 deprecated:
   - bmi
-  - cigarettes_per_day
   - height
   - weight
 
