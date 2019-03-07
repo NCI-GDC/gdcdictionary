@@ -9,7 +9,6 @@
     "chromosome":"chr11",
     "copy_number":10.422186,
     "cytoband":"nMiKs0aNCyLU3Ro",
-    "dna_change":"jnWCaykf6ipA",
     "gene_symbol":"FGFR3",
     "exon":"37a",
     "histone_family":"H2A",
@@ -22,7 +21,6 @@
     "molecular_analysis_method":"Not Reported",
     "molecular_consequence":"Splice Region Variant",
     "ploidy":"Unknown",
-    "rna_change":"lrq5x98oGyn4",
     "second_exon":"1z",
     "second_gene_symbol":"BTG1",
     "specialized_molecular_test":"OMcU8xEjBPS8k",
@@ -31,6 +29,7 @@
     "test_units":"QMj9ktESKnld7tOH",
     "test_value":0.615252,
     "transcript":"ENST01232151212.12",
+    "variant_origin":"Germline",
     "variant_type":"Repeated Sequences",
     "zygosity":"Heterozygous",
     "follow_ups": {"submitter_id":"visit_1"}
