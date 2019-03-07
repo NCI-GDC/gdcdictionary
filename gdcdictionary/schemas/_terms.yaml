@@ -733,6 +733,17 @@ classification_of_tumor:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3288124&version=1.0"
 
+coal_dust_exposure:
+  description: >
+    The yes/no/unknown indicator used to describe whether a patient was exposed to fine powder
+    derived by the crushing of coal.
+  termDef:
+    term: Person Coal Dust Exposure Indicator
+    source: caDSR
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 colon_polyps_history:
   description: >
     Yes/No indicator to describe if the subject had a previous history of colon polyps as noted
@@ -1286,6 +1297,18 @@ enneking_msts_tumor_site:
     cde_id: 6003957
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6003957&version=1.0"
+
+environmental_tobacco_smoke_exposure:
+  description: >
+    The yes/no/unknown indicator used to describe whether a patient was exposed to smoke that is
+    emitted from burning tobacco, including cigarettes, pipes, and cigars. This includes tobacco
+    smoke exhaled by smokers.
+  termDef:
+    term: Person Environmental Tobacco Smoke Exposure Indicator
+    source: caDSR
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 esophageal_columnar_dysplasia_degree:
   description: >
@@ -3010,6 +3033,18 @@ residual_disease:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2608702&version=1.0"
 
+respirable_crystalline_silica_exposure:
+  description: >
+    The yes/no/unknown indicator used to describe whether a patient was exposured to respirable
+    crystalline silica, a widespread, naturally occurring, crystalline metal oxide that consists of
+    different forms including quartz, cristobalite, tridymite, tripoli, ganister, chert and novaculite.
+  termDef:
+    term: Person Respirable Cystalline Silica Exposure Indicator
+    source: caDSR
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 ribosomal_rna_28s_16s_ratio:
   description: >
     The 28S/18S ribosomal RNA band ratio used to assess the quality of total RNA.
@@ -3138,6 +3173,16 @@ site_of_resection_or_biopsy:
 size_selection_range: # TOREVIEW
   description: >
     Range of size selection.
+
+smoking_frequency:
+  description: >
+    The text term used to generally decribe how often the patient smokes.
+  termDef:
+    term: Person Smoking Frequency
+    source: caDSR
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 smoking_history:
   description: >
@@ -3318,6 +3363,17 @@ time_between_excision_and_freezing:
     cde_id: 5432612
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432612&version=1.0"
+
+time_between_waking_and_first_smoke:
+  description: >
+    The text term used to describe the approximate amount of time elapsed between the time the
+    patient wakes up in the morning to the time they smoke their first cigarette.
+  termDef:
+    term: Person Smoking Frequency
+    source: caDSR
+    cde_id: 3279220
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3279220&version=1.0"
 
 tissue_or_organ_of_origin:
   description: >
@@ -3568,6 +3624,26 @@ tumor_stage:
     cde_id: C16899
     cde_version: null
     term_url: "https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI%20Thesaurus&code=C16899"
+
+type_of_smoke_exposure:
+  description: >
+    The text term used to describe the patient's specific type of smoke exposure.
+  termDef:
+    term: Person Smoke Exposure Type
+    source: caDSR
+    cde_id: null
+    cde_version: null
+    term_url: null
+
+type_of_tobacco_used:
+  description: >
+    The text term used to describe the specific type of tobacco used by the patient.
+  termDef:
+    term: Person Tobacco Use Type
+    source: caDSR
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 UUID:
   description: >
