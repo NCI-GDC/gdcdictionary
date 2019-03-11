@@ -1053,6 +1053,13 @@ properties:
     minimum: -32872
     maximum: 32872
 
+  days_to_progression_free:
+    term:
+      $ref: "_terms.yaml#/days_to_progression_free"
+    type: integer
+    minimum: -32872
+    maximum: 32872
+
   days_to_recurrence:
     term:
       $ref: "_terms.yaml#/days_to_recurrence"
