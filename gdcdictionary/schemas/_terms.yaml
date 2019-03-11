@@ -3595,6 +3595,16 @@ UUID:
     cde_version: null
     term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.02d&ns=NCI_Thesaurus&code=C54100"
 
+variant_origin:
+  description: >
+    The text term used to describe the biological origin of a specific genetic variant.
+  termDef:
+    term: Genetic Variation Origin Type
+    source: caDSR
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 variant_type:
   description: >
     The text term used to describe the type of genetic variation.

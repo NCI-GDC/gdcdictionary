@@ -169,11 +169,6 @@ properties:
       $ref: "_terms.yaml#/cytoband"
     type: string
 
-  dna_change:
-    term:
-      $ref: "_terms.yaml#/dna_change"
-    type: string
-
   exon:
     term:
       $ref: "_terms.yaml#/exon"
@@ -1083,11 +1078,6 @@ properties:
       - Unknown
       - Not Reported
 
-  rna_change:
-    term:
-      $ref: "_terms.yaml#/rna_change"
-    type: string
-
   second_exon:
     term:
       $ref: "_terms.yaml#/second_exon"
@@ -1854,6 +1844,14 @@ properties:
       $ref: "_terms.yaml#/transcript"
     type: string
     pattern: "^ENST[0-9]{11}(\\.(0|[1-9][0-9]*))?$"
+
+  variant_origin:
+    term:
+      $ref: "_terms.yaml#/variant_origin"
+    enum:
+      - Germline
+      - Somatic
+      - Unknown
 
   variant_type:
     term:
