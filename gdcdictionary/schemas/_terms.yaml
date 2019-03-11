@@ -1531,6 +1531,19 @@ gene_symbol:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142392&version=1.0"
 
+gleason_grade_group:
+  description: >
+    The text term used to describe the overall grouping of grades defined by the Gleason grading
+    classification, which is used to determine the aggressiveness of prostate cancer. Note that this
+    grade describes the entire prostatectomy specimen and is not specific to the sample used for
+    sequencing.
+  termDef:
+    term: Gleason Score Grading System Group Category
+    source: caDSR
+    cde_id: 5918370
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5918370&version=1.0"
+
 glucose:
   description: >
     The numeric value for the amount of glucose found in blood serum.
@@ -1711,6 +1724,17 @@ iga:
     cde_id: 64580
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64580&version=3.0"
+
+igcccg_stage:
+  description: >
+     The text term used to describe the International Germ Cell Cancer Collaborative Group (IGCCCG),
+     a grouping used to further classify metastatic testicular tumors.
+  termDef:
+    term: IGCCCG Stage Group
+    souce: caDSR
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 igg:
   description: >
@@ -2130,6 +2154,17 @@ m_protein:
     cde_id: 64561
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64561&version=3.0"
+
+masaoka_stage:
+  description: >
+    The text term used to describe the Masaoka staging system, a classification that defines
+    prognostic indicators for thymic malignancies and predicts tumor recurrence.
+  termDef:
+    term: Thymoma Masaoka Stage
+    source: caDSR
+    cde_id: 3952848
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3952848&version=1.0" 
 
 md5sum: # TOREVIEW
   description: >
@@ -2691,6 +2726,20 @@ primary_diagnosis:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161032&version=1.0"
 
+primary_gleason_grade:
+  description: >
+    The text term used to describe the primary Gleason score, which describes the pattern of cells
+    making up the largest area of the tumor. The primary and secondary Gleason pattern grades are
+    combined to determine the patient's Gleason grade group, which is used to determine the
+    aggresiveness of prostate cancer. Note that this grade describes the entire prostatectomy
+    specimen and is not specific to the sample used for sequencing.
+  termDef:
+    term: Gleason Primary Score For Prostate Cancer Category
+    source: caDSR
+    cde_id: 5936800
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5936800&version=1.0"
+
 primary_site:
   description: >
     The text term used to describe the general location of the malignant disease, as categorized by
@@ -3088,6 +3137,20 @@ second_gene_symbol:
     cde_id: 6142393
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142393&version=1.0"
+
+secondary_gleason_grade:
+  description: >
+    The text term used to describe the secondary Gleason score, which describes the pattern of cells
+    making up the second largest area of the tumor. The primary and secondary Gleason pattern grades
+    are combined to determine the patient's Gleason grade group, which is used to determine the
+    aggresiveness of prostate cancer. Note that this grade describes the entire prostatectomy
+    specimen and is not specific to the sample used for sequencing.
+  termDef:
+    term: Gleason Secondary Score For Prostate Cancer Category
+    source: caDSR
+    cde_id: 5936802
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5936802&version=1.0"
 
 section_location: # TOREVIEW
   description: >
@@ -3674,6 +3737,21 @@ well_number:
     cde_id: 5432613
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432613&version=1.0"
+
+weiss_assessment_score:
+  description: >
+    The text term used to describe the overall Weiss assessment score, a commonly used assessment
+    describing the malignancy of adrenocortical tumors. The Weiss score is determined based on nine
+    histological criteria including the following: high nuclear grade, mitotic rate greater than
+    five per 50 high power fields (HPF), atypical mitotic figures, eosinophilic tumor cell cytoplasm
+    (greater than 75% tumor cells), diffuse architecture (greater than 33% of tumor), necrosis,
+    venous invasion, sinusoidal invasion, and capsular invasion.
+  termDef:
+    term: Weiss System Category Assessment Total Score
+    source: caDSR
+    cde_id: 3648744
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3648744&version=1.0"
 
 wilms_tumor_histologic_subtype:
   description: >
