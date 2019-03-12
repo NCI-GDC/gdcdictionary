@@ -36,7 +36,6 @@ required:
   - submitter_id
   - age_at_diagnosis
   - days_to_last_follow_up
-  - vital_status
   - primary_diagnosis
   - morphology
   - tissue_or_organ_of_origin
