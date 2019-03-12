@@ -7,7 +7,7 @@ setup(
     version="1.15.0",
     packages=find_packages(),
     install_requires=[
-        'PyYAML>=4.2b1',
+        'PyYAML==3.11',
         'jsonschema',
     ],
     package_data={
