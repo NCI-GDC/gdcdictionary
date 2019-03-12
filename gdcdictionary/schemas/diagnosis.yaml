@@ -51,6 +51,9 @@ required:
 preferred:
   - site_of_resection_or_biopsy
 
+deprecated:
+  - vital_status
+
 uniqueKeys:
   #unclear if want submitter ID for clinical
   - [id]
