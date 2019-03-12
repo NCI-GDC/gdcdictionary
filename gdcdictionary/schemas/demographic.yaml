@@ -36,6 +36,7 @@ required:
   - ethnicity
   - gender
   - race
+  - vital_status
 
 preferred:
   - days_to_birth
