@@ -80,7 +80,7 @@ properties:
     $ref: "_definitions.yaml#/datetime"
 
   magnification:
-    description: "Magnification used to capture the iamge."
+    description: "Magnification used to capture the image."
     type: number
 
   slides:

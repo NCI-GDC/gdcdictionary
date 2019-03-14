@@ -290,7 +290,9 @@ properties:
       - Custom SeqCap EZ TARGET-OS Panel - 7.0 Mb
       - Custom Solid Tumor GENIE-VICC Panel - 34 Genes
       - Custom SureSelect CGCI-BLGSP Panel - 4.6 Mb
+      - Custom SureSelect CGCI-HTMCP-CC Panel - 19.7 Mb
       - Custom SureSelect GENIE-UHN Panel - 555 Genes
+      - Custom SureSelect Human All Exon v1.1 Plus 3 Boosters
       - Custom SureSelect TARGET-AML_NBL_WT Panel - 2.8 Mb
       - Foundation Medicine T5a Panel - 322 Genes
       - Foundation Medicine T7 Panel - 429 Genes
@@ -298,6 +300,7 @@ properties:
       - Ion AmpliSeq Comprehensive Cancer Panel
       - Nextera Rapid Capture Exome v1.2
       - SeqCap EZ HGSC VCRome v2.1
+      - SeqCap EZ Human Exome v2.0
       - SureSelect Human All Exon v3
       - SureSelect Human All Exon v5
       - SureSelect Human All Exon v4

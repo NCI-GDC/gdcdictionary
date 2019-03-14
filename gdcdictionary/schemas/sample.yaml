@@ -589,7 +589,10 @@ properties:
     enum:
       - Additional Metastatic
       - Additional - New Primary
+      - Benign Neoplasms
+      - Blood Derived Cancer - Bone Marrow
       - Blood Derived Cancer - Bone Marrow, Post-treatment
+      - Blood Derived Cancer - Peripheral Blood
       - Blood Derived Cancer - Peripheral Blood, Post-treatment
       - Blood Derived Normal
       - Bone Marrow Normal
@@ -605,9 +608,11 @@ properties:
       - GenomePlex (Rubicon) Amplified DNA
       - Granulocytes
       - Human Tumor Original Cells
+      - In Situ Neoplasms
       - Lymphoid Normal
       - Metastatic
       - Mononuclear Cells from Bone Marrow Normal
+      - Neoplasms of Uncertain and Unknown Behavior
       - Next Generation Cancer Model
       - Primary Blood Derived Cancer - Peripheral Blood
       - Recurrent Blood Derived Cancer - Peripheral Blood
@@ -654,6 +659,9 @@ properties:
       - '17'
       - '18'
       - '20'
+      - '30'
+      - '31'
+      - '32'
       - '40'
       - '41'
       - '42'

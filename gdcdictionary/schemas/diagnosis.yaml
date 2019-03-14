@@ -36,7 +36,6 @@ required:
   - submitter_id
   - age_at_diagnosis
   - days_to_last_follow_up
-  - vital_status
   - primary_diagnosis
   - morphology
   - tissue_or_organ_of_origin
@@ -52,21 +51,7 @@ preferred:
   - site_of_resection_or_biopsy
 
 deprecated:
-  - cause_of_death
-  - colon_polyps_history
-  - days_to_birth
-  - days_to_death
-  - days_to_hiv_diagnosis
-  - days_to_new_event
-  - hiv_positive
-  - hpv_positive_type
-  - hpv_status
-  - ldh_normal_range_upper
-  - new_event_anatomic_site
-  - new_event_type
-  - overall_survival
-  - progression_free_survival
-  - progression_free_survival_event
+  - vital_status
 
 uniqueKeys:
   #unclear if want submitter ID for clinical
@@ -489,14 +474,6 @@ properties:
     deprecated_enum:
       - Not Allowed To Collect
 
-  cause_of_death:
-    term:
-      $ref: "_terms.yaml#/cause_of_death"
-    enum:
-      - Cancer Related
-      - Not Cancer Related
-      - Unknown
-
   child_pugh_classification:
     term:
       $ref: "_terms.yaml#/child_pugh_classification"
@@ -574,16 +551,6 @@ properties:
       - Unknown
       - Not Reported
 
-  colon_polyps_history:
-    term:
-      $ref: "_terms.yaml#/colon_polyps_history"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
   days_to_best_overall_response:
     term:
       $ref: "_terms.yaml#/days_to_best_overall_response"
@@ -591,47 +558,12 @@ properties:
     minimum: -32872
     maximum: 32872
 
-  days_to_birth:
-    term:
-      $ref: "_terms.yaml#/days_to_birth"
-    oneOf:
-      - type: number
-        minimum: -32872
-        maximum: 0
-      - type: "null"
-
-  # NOTE: This node is not using oneOf because
-  # of the way we're doing an aggregation for the
-  # portal. If for some reason this causes an issue
-  # with the submission of 'null' as a value, we will
-  # need to revisit this with OICR to make sure the
-  # aggregation queries work as expected.
-  # - joe 11/28/2018
-  days_to_death:
-    term:
-      $ref: "_terms.yaml#/days_to_death"
-    type:
-      - number
-      - "null"
-    minimum: -32872
-    maximum: 32872
-
-
   days_to_diagnosis:
     term:
       $ref: "_terms.yaml#/days_to_diagnosis"
     type: integer
     minimum: -32872
     maximum: 32872
-
-  days_to_hiv_diagnosis:
-    term:
-      $ref: "_terms.yaml#/days_to_hiv_diagnosis"
-    oneOf:
-      - type: number
-        minimum: -32872
-        maximum: 32872
-      - type: "null"
 
   days_to_last_follow_up:
     term:
@@ -645,15 +577,6 @@ properties:
   days_to_last_known_disease_status:
     term:
       $ref: "_terms.yaml#/days_to_last_known_disease_status"
-    oneOf:
-      - type: number
-        minimum: -32872
-        maximum: 32872
-      - type: "null"
-
-  days_to_new_event:
-    term:
-      $ref: "_terms.yaml#/days_to_new_event"
     oneOf:
       - type: number
         minimum: -32872
@@ -784,6 +707,16 @@ properties:
       - Unknown
       - Not Reported
 
+  gleason_grade_group:
+    term:
+      $ref: "_terms.yaml#/gleason_grade_group"
+    enum:
+      - Group 1
+      - Group 2
+      - Group 3
+      - Group 4
+      - Group 5
+
   goblet_cells_columnar_mucosa_present:
     term:
       $ref: "_terms.yaml#/goblet_cells_columnar_mucosa_present"
@@ -798,30 +731,15 @@ properties:
       $ref: "_terms.yaml#/gross_tumor_weight"
     type: number
 
-  hiv_positive:
+  igcccg_stage:
     term:
-      $ref: "_terms.yaml#/hiv_positive"
+      $ref: "_terms.yaml#/igcccg_stage"
     enum:
-      - "Yes"
-      - "No"
+      - Good Prognosis
+      - Intermediate Prognosis
+      - Poor Prognosis
       - Unknown
-
-  hpv_positive_type:
-    term:
-      $ref: "_terms.yaml#/hpv_positive_type"
-    enum:
-      - HPV 16
-      - HPV 18
-      - Other HPV type(s)
-      - Unknown
-
-  hpv_status:
-    term:
-      $ref: "_terms.yaml#/hpv_status"
-    enum:
-      - Negative
-      - Positive
-      - Unknown
+      - Not Reported
 
   icd_10_code:
     term:
@@ -948,13 +866,6 @@ properties:
       - Unknown
       - Not Reported
 
-  ldh_normal_range_upper:
-    term:
-      $ref: "_terms.yaml#/ldh_normal_range_upper"
-    type:
-      - number
-      - "null"
-
   lymph_nodes_positive:
     term:
       $ref: "_terms.yaml#/lymph_nodes_positive"
@@ -973,6 +884,17 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+
+  masaoka_stage:
+    term:
+      $ref: "_terms.yaml#/masaoka_stage"
+    enum:
+      - Stage I
+      - Stage IIa
+      - Stage IIb
+      - Stage III
+      - Stage IVa
+      - Stage IVb
 
   medulloblastoma_molecular_classification:
     term:
@@ -2218,144 +2140,6 @@ properties:
       - Not Reported
     deprecated_enum:
       - not reported
-
-  new_event_anatomic_site:
-    term:
-      $ref: "_terms.yaml#/new_event_anatomic_site"
-    enum:
-      - Abdomen
-      - Adrenal
-      - Anus
-      - Appendix
-      - Ascites/Peritoneum
-      - Axillary lymph nodes
-      - Bladder
-      - Bone
-      - Bone Marrow
-      - Brain
-      - Breast
-      - Cervical lymph nodes
-      - Cervix
-      - Colon
-      - Conjunctiva
-      - Contralateral Pleura
-      - Distant Metastasis
-      - Epididymis
-      - Epidural
-      - Epitrochlear lymph nodes
-      - Esophagus
-      - Extremities
-      - Femoral lymph nodes
-      - Gallbladder
-      - Gastrointestinal/Abdominal
-      - Head & Neck
-      - Heart
-      - Hilar lymph nodes
-      - Hypopharynx
-      - Iliac Lymph Node
-      - Iliac-common lymph nodes
-      - Iliac-external lymph nodes
-      - Inguinal lymph nodes
-      - Intraocular
-      - Ipsilateral Chest Cavity
-      - Ipsilateral Chest Wall
-      - Ipsilateral Lymph Nodes
-      - Ipsilateral Pleura
-      - Kidney
-      - Large Intestine
-      - Larynx
-      - Leptomeninges
-      - Liver
-      - Lung
-      - Lymph Node Only
-      - Lymph Node(s)
-      - Mandible
-      - Maxilla
-      - Mediastinal Soft Tissue
-      - Mediastinal lymph nodes
-      - Mediastinal/Intra-thoracic
-      - Mesenteric lymph nodes
-      - Nasal Soft Tissue
-      - Nasopharynx
-      - No Known Extranodal Involvement
-      - Non-regional / Distant Lymph Nodes
-      - Not Applicable
-      - Occipital lymph nodes
-      - Oral Cavity
-      - Oropharynx
-      - Other
-      - Other Extranodal Site
-      - Other, specify
-      - Ovary
-      - Pancreas
-      - Paraaortic lymph nodes
-      - Parotid Gland
-      - Parotid lymph nodes
-      - Pelvis
-      - Peri-orbital Soft Tissue
-      - Pericardium
-      - Perihilar Lymph Node
-      - Peripheral Blood
-      - Peritoneal Surfaces
-      - Pleura/Pleural Effusion
-      - Popliteal lymph nodes
-      - Prostate
-      - Pulmonary
-      - Rectum
-      - Renal Pelvis
-      - Retroperitoneal lymph nodes
-      - Retroperitoneum
-      - Salivary Gland
-      - Sinus
-      - Skin
-      - Small Intestine
-      - Soft Tissue
-      - Splenic lymph nodes
-      - Stomach
-      - Submandibular lymph nodes
-      - Supraclavicular lymph nodes
-      - Testes
-      - Thyroid
-      - Trunk
-      - Tumor Bed
-      - Ureter
-      - Urethra
-      - Uterus
-      - Vulva
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
-  new_event_type:
-    term:
-      $ref: "_terms.yaml#/new_event_type"
-    enum:
-      - Biochemical Evidence of Disease
-      - Both Locoregional and Distant Metastasis
-      - Distant Metastasis
-      - Extrahepatic Recurrence
-      - Intrahepatic Recurrence
-      - Intrapleural Progression
-      - Locoregional (Urothelial tumor event)
-      - Locoregional Disease
-      - Locoregional Recurrence
-      - Metachronous Testicular Tumor
-      - Metastatic
-      - New Primary Tumor
-      - New primary Melanoma
-      - No New Tumor Event
-      - Not Applicable
-      - Progression of Disease
-      - Recurrence
-      - Regional Lymph Node
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
-  overall_survival:
-    term:
-      $ref: "_terms.yaml#/overall_survival"
-    type: integer
 
   perineural_invasion_present:
     term:
@@ -5383,6 +5167,16 @@ properties:
       - C83.3
       - not reported
 
+  primary_gleason_grade:
+    term:
+      $ref: "_terms.yaml#/primary_gleason_grade"
+    enum:
+      - Pattern 1
+      - Pattern 2
+      - Pattern 3
+      - Pattern 4
+      - Pattern 5
+
   prior_malignancy:
     term:
       $ref: "_terms.yaml#/prior_malignancy"
@@ -5402,19 +5196,6 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
-
-  progression_free_survival:
-    term:
-      $ref: "_terms.yaml#/progression_free_survival"
-    type: integer
-
-  progression_free_survival_event:
-    term:
-      $ref: "_terms.yaml#/progression_free_survival_event"
-    enum:
-      - Disease Progression
-      - Death
-      - No Event
 
   progression_or_recurrence:
     term:
@@ -5436,6 +5217,16 @@ properties:
       - RX
       - Unknown
       - Not Reported
+
+  secondary_gleason_grade:
+    term:
+      $ref: "_terms.yaml#/secondary_gleason_grade"
+    enum:
+      - Pattern 1
+      - Pattern 2
+      - Pattern 3
+      - Pattern 4
+      - Pattern 5
 
   site_of_resection_or_biopsy:
     term:
@@ -6874,6 +6665,21 @@ properties:
       - Not Allowed To Collect
       - not allowed to collect
       - pending # this is from TARGET RT clinical data
+
+  weiss_assessment_score:
+    term:
+      $ref: "_terms.yaml#/weiss_assessment_score"
+    enum:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
 
   wilms_tumor_histologic_subtype:
     term:

@@ -39,7 +39,6 @@ preferred:
 
 deprecated:
   - bmi
-  - cigarettes_per_day
   - height
   - weight
 
@@ -107,6 +106,22 @@ properties:
       $ref: "_terms.yaml#/cigarettes_per_day"
     type: number
 
+  coal_dust_exposure:
+    term:
+      $ref: "_terms.yaml#/coal_dust_exposure"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+
+  environmental_tobacco_smoke_exposure:
+    term:
+      $ref: "_terms.yaml#/environmental_tobacco_smoke_exposure"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+
   height:
     term:
       $ref: "_terms.yaml#/height"
@@ -125,6 +140,32 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+
+  respirable_crystalline_silica_exposure:
+    term:
+      $ref: "_terms.yaml#/respirable_crystalline_silica_exposure"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+
+  smoking_frequency:
+    term:
+      $ref: "_terms.yaml#/smoking_frequency"
+    enum:
+      - Every day
+      - Some days
+      - Unknown
+
+  time_between_waking_and_first_smoke:
+    term:
+      $ref: "_terms.yaml#/time_between_waking_and_first_smoke"
+    enum:
+      - Within 5 Minutes
+      - 6-30 Minutes
+      - 31-60 Minutes
+      - After 60 Minutes
+      - Unknown
 
   tobacco_smoking_onset_year:
     term:
@@ -151,6 +192,71 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+
+  type_of_smoke_exposure:
+    term:
+      $ref: "_terms.yaml#/type_of_smoke_exposure"
+    enum:
+      - Accidental building fire smoke
+      - Accidental fire smoke, grass
+      - Accidental fire smoke, NOS
+      - Accidental forest fire smoke
+      - Accidental vehicle fire smoke
+      - Aircraft smoke
+      - Burning tree smoke
+      - Coal smoke, NOS
+      - Cooking-related smoke, NOS
+      - Electronic cigarette smoke, NOS
+      - Electrical fire smoke
+      - Environmental tobacco smoke
+      - Factory smokestack smoke
+      - Field burning smoke
+      - Fire smoke, NOS
+      - Furnace or boiler smoke
+      - Gas burning smoke, propane
+      - Grease fire smoke
+      - Grilling smoke
+      - Hashish smoke
+      - Indoor stove or fireplace smoke, coal burning
+      - Indoor stove or fireplace smoke, NOS
+      - Indoor stove or fireplace smoke, wood burning
+      - Machine smoke
+      - Marijuana smoke
+      - No Smoke Exposure
+      - Oil burning smoke, Kerosene
+      - Oil burning smoke, NOS
+      - Recreational fire smoke
+      - Smoke exposure, NOS
+      - Smokehouse smoke
+      - Tobacco smoke, cigar
+      - Tobacco smoke, cigarettes
+      - Tobacco smoke, pipe
+      - Unknown
+      - Volcanic smoke
+      - Waste burning smoke
+      - Wood burning smoke, factory
+      - Wood burning smoke, NOS
+      - Work-related smoke, artificial smoke machines
+      - Work-related smoke, fire fighting
+      - Work-related smoke, foundry
+      - Work-related smoke, generators
+      - Work-related smoke, military
+      - Work-related smoke, NOS
+      - Work-related smoke, paint baking
+      - Work-related smoke, plastics factory
+      - Work-related smoke, plumbing
+      - Work-related smoke, soldering/welding
+
+  type_of_tobacco_used:
+    term:
+      $ref: "_terms.yaml#/type_of_tobacco_used"
+    enum:
+      - Cigarettes
+      - Cigar
+      - Electronic Cigarette
+      - Other
+      - Pipe
+      - Smokeless Tobacco
 
   weight:
     term:

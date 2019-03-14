@@ -226,6 +226,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Unknown
 
   primary_site:
     term:

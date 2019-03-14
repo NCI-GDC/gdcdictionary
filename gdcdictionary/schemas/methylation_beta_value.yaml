@@ -25,12 +25,21 @@ systemProperties:
   - error_type
 
 links:
-  - name: methylation_liftover_workflows
-    backref: methylation_beta_values
-    label: data_from
-    target_type: methylation_liftover_workflow
-    multiplicity: one_to_one
+  - exclusive: true
     required: true
+    subgroup:
+      - name: methylation_array_harmonization_workflows
+        backref: methylation_beta_values
+        label: data_from
+        target_type: methylation_array_harmonization_workflow
+        multiplicity: many_to_one
+        required: false
+      - name: methylation_liftover_workflows
+        backref: methylation_beta_values
+        label: data_from
+        target_type: methylation_liftover_workflow
+        multiplicity: one_to_one
+        required: false
 
 required:
   - submitter_id
@@ -80,6 +89,9 @@ properties:
     enum:
       - Illumina Human Methylation 27
       - Illumina Human Methylation 450
+      - Illumina Methylation Epic
 
+  methylation_array_harmonization_workflows:
+    $ref: "_definitions.yaml#/to_one"
   methylation_liftover_workflows:
     $ref: "_definitions.yaml#/to_one"

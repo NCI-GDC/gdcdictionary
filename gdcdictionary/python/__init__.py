@@ -66,9 +66,9 @@ class GDCDictionary(object):
                 try:
                     f.read().encode("ascii")
                     f.seek(0)
-                except UnicodeDecodeError:
+                except Exception as e:
                     print "Error in file: {}".format(name)
-                    raise
+                    raise e
             return yaml.safe_load(f)
 
 
