@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='gdcdictionary',
-    version="1.15.0",
+    version="1.16.0",
     packages=find_packages(),
     install_requires=[
         'PyYAML==3.11',
