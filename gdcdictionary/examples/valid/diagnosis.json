@@ -16,6 +16,8 @@
     "cog_renal_stage":"Stage IV",
     "cog_liver_stage":"Stage II",
     "days_to_best_overall_response":12512,
+    "days_to_birth": -17238,
+    "days_to_death": 1241,
     "days_to_diagnosis": 0,
     "days_to_last_follow_up": -1.0,
     "days_to_last_known_disease_status": -1,
