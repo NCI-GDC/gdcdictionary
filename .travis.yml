@@ -35,7 +35,6 @@ deploy:
     on:
       tags: true
       repo: uc-cdis/datadictionary
-      branch: develop
       python: 2.7
     password:
       secure: qeCODwlCx6mECz/ITa6nxWZHcgW26OOkaknoziVbbmYCXTiL/PwjS7k7UJtRPS0TdN5edb99wZRXO/E+VTjmg1mQ9dGG0zztRdvflVzBDxbdNKlMo2ueNgLgL6Acpcf1hgLP9zMCTwiI5CQJmC5pALwPFz5KuMOzbTHs+EaifTRiHFBotPACTUmsFzUJWI91/TT87uBMlXV13CTBuTNhMlbg85ycEXgQNDW7WZZx9GC1dO8DxeFO1Jf2DMTzabqi23SKN+QIO4Q2HZ4f+oW3vCzzaVCW6rJZBhWRCsUsC8UHkAY22qE5/uKiJ0azdmcTLmXQaU1CEkZNNTrmVplp7CfggVj55jar2eSufz7w2hr39t1ouXoQ9tZC6l/v0yvqzvFZN9DYu5uFFm0OI0S2paSLaEW+Luc8yQij/TMDaf6O8gW2/g3uliJtk9aJ25m5n36zfRX5suByvsYtmBIRwdI67NpgqPULYz8UrCoey9b0Kijtv9NletyWcOa1cN4U0fm887zgFGud+2v0ubTaXot/FTWIc+vI6FouIDWxFDqOJvAYL8SezFnxW53sGhru0x8s49zLC/NJau4IPPOcQKAHSxJbDApBAeiFmB28+GIbc3inkY4L91hBQMykHQO+6/ePd2xw6Za7C2W8PHkb47OLRPLrLhjTVUSRSGByNyY=
