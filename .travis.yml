@@ -5,24 +5,23 @@ python:
 
 before_script:
 - yes | python setup.py install
-- git clone https://github.com/uc-cdis/dictionaryutils; cd dictionaryutils;
+- git clone https://github.com/uc-cdis/dictionaryutils
 
 script:
-- ./run_tests.sh
+- cd dictionaryutils; ./run_tests.sh; cd ..
 
 before_deploy:
-- sed -i.bak "s/=get_version()/='$TRAVIS_TAG'/g" setup.py
-- cat setup.py
-- if [ $(python setup.py --version) == '0.0.0' ]; then travis_terminate 1; fi
+- if [ ! -z $TRAVIS_TAG ]; then sed -i.bak "s/=get_version()/='$TRAVIS_TAG'/g" setup.py; fi
+- if [ ! -z $TRAVIS_TAG ]; then cat setup.py; fi
+- if [ ! -z $TRAVIS_TAG ]; then if [ $(python setup.py --version) == '0.0.0' ]; then travis_terminate 1; fi; fi
 
 deploy:
-  matrix:
   - provider: s3
     access_key_id: AKIAIKM5YAHQGFDE72SQ
     secret_access_key:
       secure: ZTcjEHtJnAM39kLA55EiePoqZncTPeEZNTFX7E5xkc3TLAqgJlpjpoH40Qq7cn5gzdZ0Z9YWlOCyIV0Va6Oxc7XJVK/lSzioelseKnz+yscUq8aAJluy1INx7uXEbiPwRNz+bfy5uYOU/Bn/+6/I4Wc3MbvNRdbwF57hXdn6WjD7s+/T65l2PL3iN4MqLRmzuC+BRztOugnWM6s/za7pcA7AP9j367HX0yt/31h9CPIZuGFSItWjmxEFAB7VfCqN+fF7ZisOwGRDJkzzEv6eJbpsCq1m1Jl3TYfQoX96mUh0Pa2frk69enDVSsOkDeQ82DrREf51wdfk6Gs/YmrrVSoaBM0Cm97Ssd7fr2erxTlIdfRvPDN3vncWzsnvVZHkez2owqWV9TEaAgbVsI6myINAX0Ibh8beLkCHjFLXYoOBglNGrc2DC2M9ZBpM18nJ2tZVAva2t53MSFtcRw06xu4E9+ZBMZeVacXM1BA7M6APQVSDwrHJk3BVgaz+Wi+iUFZkmCujI5xS1PNta+iVZ6yJyiMd2l2oLsikcs9qYI94aZvmHYFSxq+LdZfIpov/10dPt800jHDgszKcGJ4rGGZOTFguI7fDPrkkTgihLthRuBGc5umMI4hdJZ4CB1JXCkWK/wk7hdBuMye7VzAEc9XfFflAUb+3H7T1PfhC+MM=
     bucket: dictionary-artifacts
-    local-dir: artifacts
+    local-dir: dictionaryutils/artifacts
     upload-dir: datadictionary/$TRAVIS_BRANCH
     skip_cleanup: true
     on:
@@ -34,6 +33,7 @@ deploy:
     skip_cleanup: true
     on:
       tags: true
+      branch: develop
       repo: uc-cdis/datadictionary
       python: 2.7
     password:
@@ -44,6 +44,4 @@ env:
   - secure: P/TYBbm9u30RLGrfNVNMm689qOqHJyBniwKITfgPiK3aujeGdT6Z1XDNPYPgwlWKE5kDPSf1ZA3CfTj2rwUOKWfKANeIH7BRLh0n02hIIwAZUiV1u8/5pQk84mDH5UAMtVOwsAbbRof+tvEjjfrr0EmCGnhcbVrXo7f9jIUXiJcRCMdjGgMmmoRu5WQhIyVfK7n+Qr9p84Vml999VFQkiPcmGTrJxbPE6tiTQoWRWc9ak3q/SEmUUP1F31B5FhF74C5B5DKZyq+oEWmzeXe5noleZ0vzW2uy3qupHh2bj+SZC/WcfNRPxMc49Pjc9sa65GgaLsTvww2nQX6Ioycgz7OOiIayJLFOKlvQ4Fahow1zjjUEI4/5y3bL7vhXFLEUn0dxvWXanmWLsO8cmM0NQ/AeXhrd2/2pblVtBVrimzkQydJANgyTCw2E/Wbvxnkxyc5GfttfRKgABJ/mLWNlKQ4RQNhAXmD7CqH9kd7T1+oyiuQTOj6Bu8wN5IsGuqv41k4aufyq5LN+4F9/ugex05NBGtGm6a9byAq7XjOzpvFWoki8kwVIoJie8gA74kUf05iAl0iQVqCMFPrxNyeH2cngZgfi+rs7KhnoJ9ZctqCDHIg75xPt9heskn2pw59VU1tcs1QOmNEynEMsusC/wA/WbBQrx9ppVovqjvCaozg=
 
 after_deploy:
-- pip install pipenv
-- pipenv run pip install gen3git
-- pipenv run gen3git release
+- if [ ! -z $TRAVIS_TAG ]; then pip install gen3git; gen3git release; fi
