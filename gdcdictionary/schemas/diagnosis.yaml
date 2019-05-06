@@ -50,11 +50,6 @@ required:
 preferred:
   - site_of_resection_or_biopsy
 
-deprecated:
-  - vital_status
-  - days_to_birth
-  - days_to_death
-
 uniqueKeys:
   #unclear if want submitter ID for clinical
   - [id]
@@ -557,31 +552,6 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_best_overall_response"
     type: integer
-    minimum: -32872
-    maximum: 32872
-
-  days_to_birth:
-   term:
-     $ref: "_terms.yaml#/days_to_birth"
-   oneOf:
-     - type: number
-       minimum: -32872
-       maximum: 0
-     - type: "null"
-
-  # NOTE: This node is not using oneOf because
-  # of the way we're doing an aggregation for the
-  # portal. If for some reason this causes an issue
-  # with the submission of 'null' as a value, we will
-  # need to revisit this with OICR to make sure the
-  # aggregation queries work as expected.
-  # - joe 11/28/2018
-  days_to_death:
-    term:
-      $ref: "_terms.yaml#/days_to_death"
-    type:
-      - number
-      - "null"
     minimum: -32872
     maximum: 32872
 
@@ -6679,19 +6649,6 @@ properties:
       - No Vascular Invasion
       - Unknown
       - Not Reported
-
-  vital_status:
-    term:
-      $ref: "_terms.yaml#/vital_status"
-    enum:
-      - alive
-      - dead
-      - lost to follow-up
-      - unknown
-      - not reported
-      - Not Allowed To Collect
-      - not allowed to collect
-      - pending # this is from TARGET RT clinical data
 
   weiss_assessment_score:
     term:
