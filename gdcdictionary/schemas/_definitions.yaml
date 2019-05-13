@@ -202,6 +202,10 @@ data_file_properties:
       - string
       - "null"
     description: "The file ID assigned by the submitter." # TOREVIEW
+  consent_codes:
+    type: array
+    items:
+      type: string
   file_name:
     $ref: "#/file_name"
   file_size:
