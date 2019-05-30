@@ -18,7 +18,7 @@ def get_version():
 
 
 setup(
-    name='gdcdictionary',
+    name='gen3dictionary',
     version=get_version(),
     description="Gen3 generic data dictionary",
     license="Apache",
