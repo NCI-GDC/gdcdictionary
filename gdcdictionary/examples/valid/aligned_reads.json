@@ -9,6 +9,8 @@
     "data_type": "Aligned Reads",
     "data_format": "BAM",
     "experimental_strategy": "WXS",
+    "msi_status": "MSS",
+    "msi_score": 1.2,
     "platform" : "Illumina",
     "contamination":1,
     "contamination_error": 0.3,

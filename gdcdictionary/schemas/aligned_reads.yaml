@@ -135,6 +135,16 @@ properties:
       $ref: "_terms.yaml#/mean_coverage"
     type: number
 
+  msi_status:
+    description: "MSIsensor determination of either microsatellite stability or instability."
+    enum:
+      - MSI
+      - MSS
+
+  msi_score:
+    description: "Numeric score denoting the aligned reads file's MSI score from MSIsensor."
+    type: number
+
   pairs_on_diff_chr:
     term:
       $ref: "_terms.yaml#/pairs_on_diff_chr"
