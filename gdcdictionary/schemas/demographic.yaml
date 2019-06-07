@@ -59,6 +59,11 @@ properties:
         maximum: 32872
       - type: "null"
 
+  age_is_obfuscated:
+    term:
+      $ref: "_terms.yaml#/age_is_obfuscated"
+    type: boolean
+
   cause_of_death:
     term:
       $ref: "_terms.yaml#/cause_of_death"

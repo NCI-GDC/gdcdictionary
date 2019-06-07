@@ -75,6 +75,17 @@ age_at_index:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6028530&version=1.0"
 
+age_is_obfuscated:
+  description: >
+    The age of the patient has been modified for compliance reasons. The actual age differs from
+    what is reported. Other date intervals for this patient may also be modified.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 ajcc_clinical_m:
   description: >
     Extent of the distant metastasis for the cancer based on evidence obtained from clinical
