@@ -70,6 +70,7 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
+      - Allele-specific Copy Number Segment
       - Copy Number Segment
       - Masked Copy Number Segment
 
