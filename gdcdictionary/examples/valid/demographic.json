@@ -2,6 +2,7 @@
     "type": "demographic",
     "submitter_id": "E9EDB78B-6897-4205-B9AA-0CEF8AAB5A1F_demographic",
     "age_at_index":12414,
+    "age_is_obfuscated": true,
     "cause_of_death":"Cancer Related",
     "days_to_birth":-12414,
     "days_to_death":1241,
