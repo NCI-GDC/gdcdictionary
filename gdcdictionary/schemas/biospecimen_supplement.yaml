@@ -73,6 +73,7 @@ properties:
       - BCR SSF XML
       - BCR PPS XML
       - BCR XML
+      - CDC JSON
       - FoundationOne XML
       - TSV
       - XLSX
