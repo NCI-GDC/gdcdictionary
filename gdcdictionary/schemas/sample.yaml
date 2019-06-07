@@ -430,7 +430,7 @@ properties:
 
   diagnosis_pathologically_confirmed:
     term:
-      ref: "_terms.yaml#/diagnosis_pathologically_confirmed"
+      $ref: "_terms.yaml#/diagnosis_pathologically_confirmed"
     enum:
       - "Yes"
       - "No"
