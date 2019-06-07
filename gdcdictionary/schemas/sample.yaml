@@ -516,6 +516,7 @@ properties:
       - Laparoscopic Radical Prostatectomy with Robotics
       - Laparoscopic Radical Prostatectomy without Robotics
       - Left Hemicolectomy
+      - Liquid Biopsy
       - Lobectomy
       - Local Resection (Exoresection; wall resection)
       - Lumpectomy
@@ -594,6 +595,7 @@ properties:
       - Blood Derived Cancer - Bone Marrow, Post-treatment
       - Blood Derived Cancer - Peripheral Blood
       - Blood Derived Cancer - Peripheral Blood, Post-treatment
+      - Blood Derived Liquid Biopsy
       - Blood Derived Normal
       - Bone Marrow Normal
       - Buccal Cell Normal
