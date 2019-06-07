@@ -111,6 +111,27 @@ properties:
       - unknown
       - unspecified
       - not reported
+    enumDef:
+      - enumeration: female
+        source: NCI Thesaurus
+        term_id: C16576
+        term_version: null
+      - enumeration: male
+        source: NCI Thesaurus
+        term_id: C20197
+        term_version: null
+      - enumeration: unknown
+        source: NCI Thesaurus
+        term_id: C17998
+        term_version: null
+      - enumeration: unspecified
+        source: NCI Thesaurus
+        term_id: C38046
+        term_version: null
+      - enumeration: not reported
+        source: NCI Thesaurus
+        term_id: C43234
+        term_version: null
 
   premature_at_birth:
     term:
