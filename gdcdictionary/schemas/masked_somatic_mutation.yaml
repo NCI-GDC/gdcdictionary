@@ -30,7 +30,7 @@ links:
     label: derived_from
     target_type: project
     multiplicity: many_to_one
-    required: true
+    required: false 
   - exclusive: true
     required: true
     subgroup:
