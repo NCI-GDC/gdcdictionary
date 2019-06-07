@@ -30,7 +30,7 @@ links:
     label: derived_from
     target_type: project
     multiplicity: many_to_one
-    required: true
+    required: false 
   - name: somatic_aggregation_workflows
     backref: aggregated_somatic_mutations
     label: data_from
@@ -47,7 +47,6 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - projects
   - somatic_aggregation_workflows
 
 uniqueKeys:
