@@ -40,7 +40,6 @@ required:
   - morphology
   - tissue_or_organ_of_origin
   - site_of_resection_or_biopsy
-  - tumor_stage
   - tumor_grade
   - progression_or_recurrence
   - days_to_recurrence
@@ -49,6 +48,9 @@ required:
 
 preferred:
   - site_of_resection_or_biopsy
+
+deprecated:
+  - tumor_stage
 
 uniqueKeys:
   #unclear if want submitter ID for clinical
