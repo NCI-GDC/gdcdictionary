@@ -3085,6 +3085,16 @@ relative_with_cancer_history:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161023&version=1.0"
 
+relatives_with_cancer_history_count:
+  description: >
+    The number of relatives the patient has with a known history of cancer.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 residual_disease:
   description: >
     Text terms to describe the status of a tissue margin following surgical resection.

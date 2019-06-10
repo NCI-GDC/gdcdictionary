@@ -244,5 +244,10 @@ properties:
       - unknown
       - not reported
 
+  relatives_with_cancer_history_count:
+    term:
+      $ref: "_terms.yaml#/relatives_with_cancer_history_count"
+    type: integer
+
   cases:
     $ref: "_definitions.yaml#/to_one"
