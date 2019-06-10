@@ -12,7 +12,7 @@ description: >
   and filtered.
 additionalProperties: false
 submittable: false
-downloadable: false
+downloadable: true 
 previous_version_downloadable: true
 validators: null
 
