@@ -137,6 +137,7 @@ properties:
       - Illumina NextSeq
       - Ion Torrent PGM
       - Ion Torrent Proton
+      - Ion Torrent S5
       - PacBio RS
       - Other
 
