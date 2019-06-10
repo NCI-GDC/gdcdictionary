@@ -47,6 +47,7 @@ properties:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum:
+      - CaVEMan Annotation
       - FoundationOne Annotation
       - GATK4 MuTect2 Annotation
       - MuSE Annotation
