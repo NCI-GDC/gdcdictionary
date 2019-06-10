@@ -2463,6 +2463,17 @@ oct_embedded:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432538&version=1.0"
 
+ovarian_surface_involvement:
+  description: >
+    The text term that describes whether the surface tissue (outer boundary) of the ovary shows
+    evidence of involvement or presence of cancer.
+  termDef:
+    term: Ovary Surface Involvement Indicator
+    source: caDSR
+    cde_id: 6690674
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6690674&version=1.0"
+
 overall_survival:
   description: >
     Number of days between the date used for index and the patient's date of death or the date the patient was last known to be alive.

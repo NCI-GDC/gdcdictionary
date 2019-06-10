@@ -2138,6 +2138,16 @@ properties:
     deprecated_enum:
       - not reported
 
+  ovarian_surface_involvement:
+    term:
+      $ref: "_terms.yaml#/ovarian_surface_involvement"
+    enum:
+      - Absent
+      - Present
+      - Indeterminate
+      - Unknown
+      - Not Reported
+
   perineural_invasion_present:
     term:
       $ref: "_terms.yaml#/perineural_invasion_present"
