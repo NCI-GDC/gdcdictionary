@@ -2138,6 +2138,16 @@ properties:
     deprecated_enum:
       - not reported
 
+  non_nodal_regional_disease:
+    term:
+      $ref: "_terms.yaml#/non_nodal_regional_disease"
+    enum:
+      - Absent
+      - Indeterminate
+      - Present
+      - Unknown
+      - Not Reported
+
   perineural_invasion_present:
     term:
       $ref: "_terms.yaml#/perineural_invasion_present"
