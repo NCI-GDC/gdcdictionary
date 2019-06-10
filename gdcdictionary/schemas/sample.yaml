@@ -491,6 +491,7 @@ properties:
     enum:
       - Abdomino-perineal Resection of Rectum
       - Anterior Resection of Rectum
+      - Ascites Drainage
       - Aspirate
       - Autopsy
       - Biopsy
@@ -519,8 +520,12 @@ properties:
       - Lobectomy
       - Local Resection (Exoresection; wall resection)
       - Lumpectomy
+      - Lymphadenectomy
+      - Metastasectomy
       - Modified Radical Mastectomy
       - Needle Biopsy
+      - Omentectomy
+      - Oophorectomy
       - Open Craniotomy
       - Open Partial Nephrectomy
       - Open Radical Nephrectomy
@@ -532,12 +537,20 @@ properties:
       - Pancreatectomy
       - Paracentesis
       - Partial Hepatectomy
+      - Peritoneal Lavage
       - Pneumonectomy
+      - Punch Biopsy
+      - Radical Hysterectomy
       - Right Hemicolectomy
+      - Salpingectomy
+      - Salpingo-oophorectomy
       - Sigmoid Colectomy
+      - Simple Hysterectomy
       - Simple Mastectomy
       - Subtotal Resection
+      - Supracervical Hysterectomy
       - Surgical Resection
+      - Thoracentesis
       - Thoracoscopic Biopsy
       - Total Colectomy
       - Total Hepatectomy
@@ -545,6 +558,7 @@ properties:
       - Transplant
       - Transurethral resection (TURBT)
       - Transverse Colectomy
+      - Tumor Debulking
       - Tumor Resection
       - Wedge Resection
       - Whipple Procedure
