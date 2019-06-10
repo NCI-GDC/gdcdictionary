@@ -140,6 +140,8 @@ properties:
       - Ion Torrent S5
       - PacBio RS
       - Other
+      - Unknown
+      - Not Reported
 
   is_paired_end:
     term:
