@@ -838,6 +838,16 @@ properties:
       - Not Reported
       - Unknown
 
+  largest_extrapelvic_peritoneal_focus:
+    term:
+      $ref: "_terms.yaml#/largest_extrapelvic_peritoneal_focus"
+    enum:
+      - Macroscopic (2cm or less)
+      - Macroscopic (greater than 2cm)
+      - Microscopic
+      - Unknown
+      - Not Reported
+
   last_known_disease_status:
     term:
       $ref: "_terms.yaml#/last_known_disease_status"

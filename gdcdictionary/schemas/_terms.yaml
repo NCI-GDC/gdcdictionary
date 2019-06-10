@@ -2008,6 +2008,17 @@ lane_number:
     cde_version: null
     term_url: null
 
+largest_extrapelvic_peritoneal_focus:
+  description: >
+    The text term used to describe the diameter of the largest focus originating outside of the
+    pelvic peritoneal region.
+  termDef:
+    term: Neoplasm Largest External Pelvic Peritoneal Focus Diameter Measurement
+    source: caDSR
+    cde_id: 6690680
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6690680&version=1.0"
+
 last_known_disease_status:
   description: >
     Text term that describes the last known state or condition of an individual's neoplasm.
