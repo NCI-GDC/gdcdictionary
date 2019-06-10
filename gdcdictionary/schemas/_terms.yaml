@@ -2463,6 +2463,16 @@ oct_embedded:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432538&version=1.0"
 
+ovarian_specimen_status:
+  description: >
+    The text term used to describe the physical condition of the involved ovary.
+  termDef:
+    term: Ovarian Specimen Integrity Status
+    source: caDSR
+    cde_id: 6690671
+    cde_version:
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6690671&version=1.0"
+
 overall_survival:
   description: >
     Number of days between the date used for index and the patient's date of death or the date the patient was last known to be alive.
