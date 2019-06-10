@@ -53,6 +53,7 @@ properties:
       $ref: "_terms.yaml#/antigen"
     enum:
       - BCL6
+      - CA-125
       - CA19-9
       - CCND1
       - CD10
