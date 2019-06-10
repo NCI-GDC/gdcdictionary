@@ -2309,6 +2309,18 @@ mismatch_repair_mutation:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142534&version=1.0"
 
+mitotic_count:
+  description: >
+     The number of mitoses identified under the microscope in tumors. The method of counting varies,
+     according to the specific tumor examined. Usually, the mitotic count is determined based on the
+     number of mitoses per high power field (40X) or 10 high power fields.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 mitosis_karyorrhexis_index:
   description: >
     Text term that represents the component of the International Neuroblastoma Pathology

@@ -994,6 +994,11 @@ properties:
       - Unknown
       - Not Reported
 
+  mitotic_count:
+    term:
+      $ref: "_terms.yaml#/mitotic_count"
+    type: integer
+
   mitosis_karyorrhexis_index:
     term:
       $ref: "_terms.yaml#/mitosis_karyorrhexis_index"
