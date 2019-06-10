@@ -1908,6 +1908,17 @@ intermediate_dimension: # TOREVIEW
   description: >
     Intermediate dimension of the sample, in millimeters.
 
+international_prognostic_index:
+  description: >
+    The text term used to describe the International Prognostic Index, which classifies the
+    prognosis of patients with aggressive non-Hodgkin's lymphoma.
+  termDef:
+    term: Patient International Prognostic Index Risk Category
+    source: caDSR
+    cde_id: 2500234
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2500234&version=1.0"
+
 intron:
   description: >
     Intron number targeted or included in molecular analysis. If a specific genetic variant is being
