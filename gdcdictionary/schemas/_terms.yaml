@@ -2676,6 +2676,16 @@ peripancreatic_lymph_nodes_tested:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6050944&version=1.0"
 
+peritoneal_fluid_cytological_status:
+  description: >
+    The text term used to describe the malignant status of the peritoneal fluid determined by cytologic testing.
+  termDef:
+    term: Peritoneal Ascites Cytological Procedure Status
+    source: caDSR
+    cde_id: 6690681
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6690681&version=1.0"
+
 plate_name:
   description: >
     User specified identifier of the plate used to prepare the sample for analysis.

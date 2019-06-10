@@ -2162,6 +2162,17 @@ properties:
       $ref: "_terms.yaml#/peripancreatic_lymph_nodes_tested"
     type: number
 
+  peritoneal_fluid_cytological_status:
+    term:
+      $ref: "_terms.yaml#/peritoneal_fluid_cytological_status"
+    enum:
+      - Atypical
+      - Malignant
+      - Non-Malignant
+      - Unsatisfactory
+      - Unknown
+      - Not Reported
+
   primary_diagnosis:
     term:
       $ref: "_terms.yaml#/primary_diagnosis"
