@@ -2138,6 +2138,15 @@ properties:
     deprecated_enum:
       - not reported
 
+  non_nodal_tumor_deposits:
+    term:
+      $ref: "_terms.yaml#/non_nodal_tumor_deposits"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
   perineural_invasion_present:
     term:
       $ref: "_terms.yaml#/perineural_invasion_present"
