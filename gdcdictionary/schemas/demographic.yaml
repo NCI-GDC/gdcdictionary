@@ -75,6 +75,17 @@ properties:
       - Not Reported
       - Unknown
 
+  cause_of_death_source:
+    term:
+      $ref: "_terms.yaml#/cause_of_death_source"
+    enum:
+      - Autopsy
+      - Death Certificate
+      - Medical Record
+      - Social Security Death Index
+      - Unknown
+      - Not Reported
+
   days_to_birth:
     term:
       $ref: "_terms.yaml#/days_to_birth"

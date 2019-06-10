@@ -633,6 +633,16 @@ cause_of_death:
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2554674&version=3.0"
 
+cause_of_death_source:
+  description: >
+    The text term used to describe the source used to determine the patient's cause of death.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 cause_of_response:
   description: >
     The text term used to describe the suspected cause or reason for the patient disease response.
