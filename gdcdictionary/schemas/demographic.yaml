@@ -123,6 +123,11 @@ properties:
       - unspecified
       - not reported
 
+  occupation_duration_years:
+    term:
+      $ref: "_terms.yaml#/occupation_duration_years"
+    type: integer
+
   premature_at_birth:
     term:
       $ref: "_terms.yaml#/premature_at_birth"
