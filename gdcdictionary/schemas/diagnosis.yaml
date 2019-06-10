@@ -456,6 +456,11 @@ properties:
       - TE-Too Early
       - VGPR-Very Good Partial Response
 
+  breslow_thickness:
+    term:
+      $ref: "_terms.yaml#/breslow_thickness"
+    type: number
+
   burkitt_lymphoma_clinical_variant:
     term:
       $ref: "_terms.yaml#/burkitt_lymphoma_clinical_variant"
