@@ -530,6 +530,8 @@ properties:
       - KNL1
       - KNSTRN
       - KRAS
+      - KRT7
+      - KRT20
       - KTN1
       - LARP4B
       - LASP1
