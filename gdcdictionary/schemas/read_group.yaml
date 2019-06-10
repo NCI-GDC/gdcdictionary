@@ -139,6 +139,8 @@ properties:
       - Ion Torrent Proton
       - PacBio RS
       - Other
+      - Unknown
+      - Not Reported
 
   is_paired_end:
     term:
