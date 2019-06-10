@@ -2463,6 +2463,16 @@ oct_embedded:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432538&version=1.0"
 
+occupation_duration_years:
+  description: >
+    The number of years a patient worked in a specific occupation.
+  termDef:
+    term: Person Occupation Years Number
+    source: caDSR
+    cde_id: 2435424
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2435424&version=1.0"
+
 overall_survival:
   description: >
     Number of days between the date used for index and the patient's date of death or the date the patient was last known to be alive.
