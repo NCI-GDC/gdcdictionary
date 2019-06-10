@@ -1831,9 +1831,11 @@ properties:
       - Equivocal
       - High
       - Intermediate
+      - Loss of Expression
       - Low
       - Negative
       - Normal
+      - Overexpressed
       - Positive
       - Test Value Reported
       - Unknown
