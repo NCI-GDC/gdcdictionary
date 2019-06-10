@@ -352,8 +352,15 @@ properties:
     description: "Top level characterization of the annotation." # TOREVEIW
 
   classification:
-    type: string
     description: "Top level classification of the annotation." # TOREVIEW
+    enum:
+      - Blocking Release
+      - CenterNotification
+      - Complete Data Freeze
+      - Downstream Data Freeze
+      - Notification
+      - Observation
+      - Redaction
 
   creator:
     type: string
