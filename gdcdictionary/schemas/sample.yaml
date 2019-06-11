@@ -618,6 +618,7 @@ properties:
       - Control Analyte
       - DNA
       - EBV Immortalized Normal
+      - Expanded Next Generation Cancer Model
       - FFPE Recurrent
       - FFPE Scrolls
       - Fibroblasts from Bone Marrow Normal
@@ -685,6 +686,7 @@ properties:
       - '60'
       - '61'
       - '85'
+      - '86'
       - '99'
 
   shortest_dimension:
