@@ -268,6 +268,12 @@ links:
         target_type: submitted_genomic_profile
         multiplicity: many_to_many
         required: false
+      - name: submitted_genotyping_arrays
+        label: annotates
+        backref: annotations
+        target_type: submitted_genotyping_array
+        multiplicity: many_to_many
+        required: false
       - name: submitted_methylation_beta_values
         label: annotates
         backref: annotations
@@ -461,6 +467,8 @@ properties:
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
   submitted_genomic_profiles:
+    $ref: "_definitions.yaml#/to_many"
+  submitted_genotyping_arrays:
     $ref: "_definitions.yaml#/to_many"
   submitted_methylation_beta_values:
     $ref: "_definitions.yaml#/to_many"
