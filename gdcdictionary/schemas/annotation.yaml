@@ -190,6 +190,12 @@ links:
         target_type: portion
         multiplicity: many_to_many
         required: false
+      - name: protein_expressions
+        label: annotates
+        backref: annotations
+        target_type: protein_expression
+        multiplicity: many_to_many
+        required: false
       - name: read_group_qcs
         label: annotates
         backref: annotations
@@ -429,6 +435,8 @@ properties:
   pathology_reports:
     $ref: "_definitions.yaml#/to_many"
   portions:
+    $ref: "_definitions.yaml#/to_many"
+  protein_expressions:
     $ref: "_definitions.yaml#/to_many"
   read_groups:
     $ref: "_definitions.yaml#/to_many"
