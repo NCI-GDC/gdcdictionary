@@ -3,6 +3,7 @@ specific overrrides are not being used in the GDC currently.
 
 """
 
+from collections import defaultdict
 import copy
 import os
 import json
@@ -90,3 +91,50 @@ def validate_schemata(schemata, metaschema):
         for subgroup in [l['subgroup'] for l in s['links'] if 'name' not in l]:
             for link in [l['name'] for l in subgroup if 'name' in l]:
                 assert_link_is_also_prop(link)
+
+
+def check_for_cycles(schemata, ignored_types=None):
+    """Assert the given schemata contain no cycles (outside ignored types)."""
+    if ignored_types is None:
+        ignored_types = []
+
+    # Build a bidirectional map representing the links between schema types.
+    forward = defaultdict(set)
+    backward = defaultdict(set)
+    for schema_type, schema in schemata.iteritems():
+        # Ignore cycles involving types that we know don't hurt anything so we
+        # can detect new cycles that might actually hurt.
+        if schema_type in ignored_types:
+            continue
+
+        for link in schema.get('links', []):
+            if 'subgroup' in link:
+                target_types = [g['target_type'] for g in link['subgroup']]
+            else:
+                target_types = [link['target_type']]
+
+            for target_type in target_types:
+                # It's fine for a type to link to itself. Ignore such links
+                # to avoid confusing the below cycle detection algorithm.
+                if target_type != schema_type:
+                    forward[schema_type].add(target_type)
+                    backward[target_type].add(schema_type)
+
+    # Iteratively remove types that have no links pointing to them.
+    # If there are no cycles, this will continue to free up types without
+    # any links until the entire map is cleared out. If a cycle exists,
+    # this process will fail to remove all of the links.
+    removable_types = [
+        schema_type for schema_type in forward
+        if schema_type not in backward
+    ]
+
+    while removable_types:
+        schema_type = removable_types.pop()
+        for target_type in forward[schema_type]:
+            backward[target_type].remove(schema_type)
+            if not backward[target_type]:
+                removable_types.append(target_type)
+                del backward[target_type]
+
+    assert not backward, 'cycle detected among {}'.format(backward.keys())
