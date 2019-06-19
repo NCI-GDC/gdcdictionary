@@ -2135,8 +2135,6 @@ properties:
       - 9992/3
       - Unknown
       - Not Reported
-    deprecated_enum:
-      - not reported
 
   perineural_invasion_present:
     term:
