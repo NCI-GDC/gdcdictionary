@@ -8,7 +8,7 @@ category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing the annotated somatic mutations calls from a harmonized aligned reads file.
+  MAF or VCF files that contain the annotated somatic mutations calls.
 additionalProperties: false
 submittable: false
 downloadable: true 
