@@ -1065,6 +1065,16 @@ properties:
       - Transcript Amplification
       - Upstream Gene Variant
 
+  pathogenicity:
+    term:
+      $ref: "_terms.yaml#/pathogenicity"
+    enum:
+      - Benign
+      - Likely Benign
+      - Likely Pathogenic
+      - Pathogenic
+      - Uncertain Significance
+
   ploidy:
     term:
       $ref: "_terms.yaml#/ploidy"

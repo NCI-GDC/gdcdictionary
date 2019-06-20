@@ -20,6 +20,7 @@
     "mismatch_repair_mutation":"No",
     "molecular_analysis_method":"Not Reported",
     "molecular_consequence":"Splice Region Variant",
+    "pathogenicity":"Benign",
     "ploidy":"Unknown",
     "second_exon":"1z",
     "second_gene_symbol":"BTG1",
