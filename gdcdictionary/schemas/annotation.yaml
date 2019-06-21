@@ -196,6 +196,12 @@ links:
         target_type: protein_expression
         multiplicity: many_to_many
         required: false
+      - name: raw_methylation_arrays
+        label: annotates
+        backref: annotations
+        target_type: raw_methylation_array
+        multiplicity: many_to_many
+        required: false
       - name: read_group_qcs
         label: annotates
         backref: annotations
@@ -436,6 +442,8 @@ properties:
   portions:
     $ref: "_definitions.yaml#/to_many"
   protein_expressions:
+    $ref: "_definitions.yaml#/to_many"
+  raw_methylation_arrays:
     $ref: "_definitions.yaml#/to_many"
   read_groups:
     $ref: "_definitions.yaml#/to_many"
