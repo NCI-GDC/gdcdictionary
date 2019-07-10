@@ -2203,6 +2203,16 @@ properties:
       - Unknown
       - Not Reported
 
+  ovarian_specimen_status:
+    term:
+      $ref: "_terms.yaml#/ovarian_specimen_status"
+    enum:
+      - Ovarian Capsule Intact
+      - Ovarian Capsule Ruptured
+      - Ovarian Capsule Fragmented
+      - Unknown
+      - Not Reported
+
   perineural_invasion_present:
     term:
       $ref: "_terms.yaml#/perineural_invasion_present"
