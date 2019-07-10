@@ -40,6 +40,12 @@ links:
         target_type: genomic_profile_harmonization_workflow
         multiplicity: one_to_one
         required: false
+      - name: somatic_copy_number_workflows 
+        backref: copy_number_estimates
+        label: derived_from
+        target_type: somatic_copy_number_workflow
+        multiplicity: one_to_one
+        required: false
 
 required:
   - submitter_id
@@ -86,6 +92,7 @@ properties:
       - Genotyping Array
       - Targeted Sequencing
       - WGS
+      - WXS
 
   platform:
     term:
@@ -98,4 +105,6 @@ properties:
   copy_number_variation_workflows:
     $ref: "_definitions.yaml#/to_one"
   genomic_profile_harmonization_workflows:
+    $ref: "_definitions.yaml#/to_one"
+  somatic_copy_number_workflows:
     $ref: "_definitions.yaml#/to_one"
