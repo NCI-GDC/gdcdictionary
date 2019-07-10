@@ -795,6 +795,15 @@ properties:
       - Unknown
       - Not Reported
 
+  international_prognostic_index:
+    term:
+      $ref: "_terms.yaml#/international_prognostic_index"
+    enum:
+      - Low Risk
+      - Low-Intermediate Risk
+      - High-Intermediate Risk
+      - High Risk
+
   irs_group:
     term:
       $ref: "_terms.yaml#/irs_group"
