@@ -1643,6 +1643,8 @@ properties:
       - Diabetes, Type II
       - Diet
       - Diverticulitis
+      - Endometriosis
+      - Endosalpingiosis
       - Eczema
       - Epstein-Barr Virus
       - Familial Adenomatous Polyposis
@@ -1687,6 +1689,7 @@ properties:
       - Sarcoidosis
       - Seizure
       - Sensory Changes
+      - Serous tubal intraepithelial carcinoma (STIC)
       - Steatosis
       - Tattoo
       - Thyroid Nodular Hyperplasia
