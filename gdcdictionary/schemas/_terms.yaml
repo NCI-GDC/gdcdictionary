@@ -569,6 +569,17 @@ bmi:
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2006410&version=3.0"
 
+breslow_thickness:
+  description: >
+    The number that describes the distance, in millimeters, between the upper layer of the epidermis
+    and the deepest point of tumor penetration.
+  termDef:
+    term: Breslow Depth Measurement
+    source: caDSR
+    cde_id: 64809
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64809&version=3.0"
+
 bun:
   description: >
     The laboratory value (units of measure unspecified) for a renal lab test for blood urea
@@ -2008,6 +2019,17 @@ lane_number:
     cde_version: null
     term_url: null
 
+largest_extrapelvic_peritoneal_focus:
+  description: >
+    The text term used to describe the diameter of the largest focus originating outside of the
+    pelvic peritoneal region.
+  termDef:
+    term: Neoplasm Largest External Pelvic Peritoneal Focus Diameter Measurement
+    source: caDSR
+    cde_id: 6690680
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6690680&version=1.0"
+
 last_known_disease_status:
   description: >
     Text term that describes the last known state or condition of an individual's neoplasm.
@@ -2309,6 +2331,18 @@ mismatch_repair_mutation:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142534&version=1.0"
 
+mitotic_count:
+  description: >
+     The number of mitoses identified under the microscope in tumors. The method of counting varies,
+     according to the specific tumor examined. Usually, the mitotic count is determined based on the
+     number of mitoses per high power field (40X) or 10 high power fields.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 mitosis_karyorrhexis_index:
   description: >
     Text term that represents the component of the International Neuroblastoma Pathology
@@ -2386,6 +2420,7 @@ new_event_type:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3119721&version=1.0"
 
+
 non_nodal_tumor_deposits:
   description: >
     The yes/no/unknown indicator used to describe the presence of tumor deposits in the pericolic or
@@ -2396,6 +2431,17 @@ non_nodal_tumor_deposits:
     cde_id: 3107051
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3107051&version=1.0"
+
+
+non_nodal_regional_disease:
+  description: >
+    The text term used to describe whether the patient had non-nodal regional disease.
+  termDef:
+    term: null
+    source: caDSR
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 normal_tumor_genotype_snp_match:
   description: >
@@ -2473,6 +2519,17 @@ oct_embedded:
     cde_id: 5432538
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432538&version=1.0"
+
+ovarian_surface_involvement:
+  description: >
+    The text term that describes whether the surface tissue (outer boundary) of the ovary shows
+    evidence of involvement or presence of cancer.
+  termDef:
+    term: Ovary Surface Involvement Indicator
+    source: caDSR
+    cde_id: 6690674
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6690674&version=1.0"
 
 overall_survival:
   description: >
@@ -2644,6 +2701,17 @@ percent_tumor_cells:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432686&version=1.0"
 
+percent_tumor_invasion:
+  description: >
+    The percentage of tumor cells spread locally in a malignant neoplasm through infiltration or
+    destruction of adjacent tissue.
+  termDef:
+    term: null
+    source: caDSR
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 percent_tumor_nuclei:
   description: >
     Numeric value to represent the percentage of tumor nuclei in a malignant neoplasm sample or specimen.
@@ -2686,6 +2754,16 @@ peripancreatic_lymph_nodes_tested:
     cde_id: 6050944
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6050944&version=1.0"
+
+peritoneal_fluid_cytological_status:
+  description: >
+    The text term used to describe the malignant status of the peritoneal fluid determined by cytologic testing.
+  termDef:
+    term: Peritoneal Ascites Cytological Procedure Status
+    source: caDSR
+    cde_id: 6690681
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6690681&version=1.0"
 
 plate_name:
   description: >
