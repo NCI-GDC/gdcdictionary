@@ -2431,6 +2431,15 @@ new_event_type:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3119721&version=1.0"
 
+non_nodal_regional_disease:
+  description: >
+    The text term used to describe whether the patient had non-nodal regional disease.
+  termDef:
+    term: null
+    source: caDSR
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 non_nodal_tumor_deposits:
   description: >
@@ -2442,17 +2451,6 @@ non_nodal_tumor_deposits:
     cde_id: 3107051
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3107051&version=1.0"
-
-
-non_nodal_regional_disease:
-  description: >
-    The text term used to describe whether the patient had non-nodal regional disease.
-  termDef:
-    term: null
-    source: caDSR
-    cde_id: null
-    cde_version: null
-    term_url: null
 
 normal_tumor_genotype_snp_match:
   description: >

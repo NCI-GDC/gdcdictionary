@@ -2179,21 +2179,6 @@ properties:
       - Unknown
       - Not Reported
 
-  percent_tumor_invasion:
-    term:
-      $ref: "_terms.yaml#/percent_tumor_invasion"
-    type: number
-
-  ovarian_surface_involvement:
-    term:
-      $ref: "_terms.yaml#/ovarian_surface_involvement"
-    enum:
-      - Absent
-      - Present
-      - Indeterminate
-      - Unknown
-      - Not Reported
-
   non_nodal_tumor_deposits:
     term:
       $ref: "_terms.yaml#/non_nodal_tumor_deposits"
@@ -2212,6 +2197,21 @@ properties:
       - Ovarian Capsule Fragmented
       - Unknown
       - Not Reported
+
+  ovarian_surface_involvement:
+    term:
+      $ref: "_terms.yaml#/ovarian_surface_involvement"
+    enum:
+      - Absent
+      - Present
+      - Indeterminate
+      - Unknown
+      - Not Reported
+
+  percent_tumor_invasion:
+    term:
+      $ref: "_terms.yaml#/percent_tumor_invasion"
+    type: number
 
   perineural_invasion_present:
     term:
