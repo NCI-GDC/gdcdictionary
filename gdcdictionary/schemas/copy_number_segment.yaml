@@ -41,6 +41,12 @@ links:
         target_type: genomic_profile_harmonization_workflow
         multiplicity: one_to_one
         required: false
+      - name: somatic_copy_number_workflows
+        backref: copy_number_segments
+        label: derived_from
+        target_type: somatic_copy_number_workflow
+        multiplicity: one_to_one
+        required: false
 
 required:
   - submitter_id
@@ -70,6 +76,7 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
+      - Allele-specific Copy Number Segment
       - Copy Number Segment
       - Masked Copy Number Segment
 
@@ -96,4 +103,6 @@ properties:
   copy_number_liftover_workflows:
     $ref: "_definitions.yaml#/to_one"
   genomic_profile_harmonization_workflows:
+    $ref: "_definitions.yaml#/to_one"
+  somatic_copy_number_workflows:
     $ref: "_definitions.yaml#/to_one"
