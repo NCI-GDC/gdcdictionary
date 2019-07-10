@@ -8,6 +8,7 @@
     "ann_arbor_b_symptoms": "Yes",
     "ann_arbor_extranodal_involvement": "No",
     "best_overall_response": "IMR-Immunoresponse",
+    "breslow_thickness":0.1,
     "burkitt_lymphoma_clinical_variant": "Endemic",
     "child_pugh_classification":"C12",
     "classification_of_tumor": "other",

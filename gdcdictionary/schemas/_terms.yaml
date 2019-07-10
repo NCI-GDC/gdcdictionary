@@ -569,6 +569,17 @@ bmi:
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2006410&version=3.0"
 
+breslow_thickness:
+  description: >
+    The number that describes the distance, in millimeters, between the upper layer of the epidermis
+    and the deepest point of tumor penetration.
+  termDef:
+    term: Breslow Depth Measurement
+    source: caDSR
+    cde_id: 64809
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64809&version=3.0"
+
 bun:
   description: >
     The laboratory value (units of measure unspecified) for a renal lab test for blood urea
