@@ -50,8 +50,9 @@ properties:
       - FM Simple Somatic Mutation
       - FM Copy Number Variation
       - FM Structural Variation
-      - GENIE Simple Somatic Mutation
       - GENIE Copy Number Variation
+      - GENIE Simple Somatic Mutation
+      - GENIE Structural Variation
       - VCF LiftOver
 
   submitted_genomic_profiles:
