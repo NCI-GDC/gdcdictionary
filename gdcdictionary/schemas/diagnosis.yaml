@@ -2169,6 +2169,11 @@ properties:
       - Unknown
       - Not Reported
 
+  percent_tumor_invasion:
+    term:
+      $ref: "_terms.yaml#/percent_tumor_invasion"
+    type: number
+
   perineural_invasion_present:
     term:
       $ref: "_terms.yaml#/perineural_invasion_present"

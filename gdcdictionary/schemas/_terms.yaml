@@ -2677,6 +2677,17 @@ percent_tumor_cells:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432686&version=1.0"
 
+percent_tumor_invasion:
+  description: >
+    The percentage of tumor cells spread locally in a malignant neoplasm through infiltration or
+    destruction of adjacent tissue.
+  termDef:
+    term: null
+    source: caDSR
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 percent_tumor_nuclei:
   description: >
     Numeric value to represent the percentage of tumor nuclei in a malignant neoplasm sample or specimen.
