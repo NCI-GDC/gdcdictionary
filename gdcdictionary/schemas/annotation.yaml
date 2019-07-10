@@ -190,6 +190,18 @@ links:
         target_type: portion
         multiplicity: many_to_many
         required: false
+      - name: protein_expressions
+        label: annotates
+        backref: annotations
+        target_type: protein_expression
+        multiplicity: many_to_many
+        required: false
+      - name: raw_methylation_arrays
+        label: annotates
+        backref: annotations
+        target_type: raw_methylation_array
+        multiplicity: many_to_many
+        required: false
       - name: read_group_qcs
         label: annotates
         backref: annotations
@@ -260,6 +272,12 @@ links:
         label: annotates
         backref: annotations
         target_type: submitted_genomic_profile
+        multiplicity: many_to_many
+        required: false
+      - name: submitted_genotyping_arrays
+        label: annotates
+        backref: annotations
+        target_type: submitted_genotyping_array
         multiplicity: many_to_many
         required: false
       - name: submitted_methylation_beta_values
@@ -352,8 +370,15 @@ properties:
     description: "Top level characterization of the annotation." # TOREVEIW
 
   classification:
-    type: string
     description: "Top level classification of the annotation." # TOREVIEW
+    enum:
+      - Blocking Release
+      - CenterNotification
+      - Complete Data Freeze
+      - Downstream Data Freeze
+      - Notification
+      - Observation
+      - Redaction
 
   creator:
     type: string
@@ -423,6 +448,10 @@ properties:
     $ref: "_definitions.yaml#/to_many"
   portions:
     $ref: "_definitions.yaml#/to_many"
+  protein_expressions:
+      $ref: "_definitions.yaml#/to_many"
+  raw_methylation_arrays:
+      $ref: "_definitions.yaml#/to_many"
   read_groups:
     $ref: "_definitions.yaml#/to_many"
   read_group_qcs:
@@ -446,6 +475,8 @@ properties:
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
   submitted_genomic_profiles:
+    $ref: "_definitions.yaml#/to_many"
+  submitted_genotyping_arrays:
     $ref: "_definitions.yaml#/to_many"
   submitted_methylation_beta_values:
     $ref: "_definitions.yaml#/to_many"
