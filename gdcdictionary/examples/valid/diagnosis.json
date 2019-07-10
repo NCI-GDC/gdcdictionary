@@ -49,6 +49,7 @@
     "metastasis_at_diagnosis_site":"Abdomen",
     "method_of_diagnosis": "Cytology",
     "micropapillary_features":"Unknown",
+    "mitotic_count":12,
     "mitosis_karyorrhexis_index":"Not Reported",
     "morphology": "8255/3",
     "peripancreatic_lymph_nodes_positive":"0",
