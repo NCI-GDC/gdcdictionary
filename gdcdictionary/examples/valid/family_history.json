@@ -6,6 +6,7 @@
     "relationship_gender": "unspecified",
     "relationship_age_at_diagnosis": 12,
     "relationship_primary_diagnosis": "Cancer",
+    "relatives_with_cancer_history_count":4,
     "cases": {
         "submitter_id": "patient_z"
     }
