@@ -75,6 +75,17 @@ age_at_index:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6028530&version=1.0"
 
+age_is_obfuscated:
+  description: >
+    The age of the patient has been modified for compliance reasons. The actual age differs from
+    what is reported. Other date intervals for this patient may also be modified.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 ajcc_clinical_m:
   description: >
     Extent of the distant metastasis for the cancer based on evidence obtained from clinical
@@ -632,6 +643,16 @@ cause_of_death:
     cde_id: 2554674
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2554674&version=3.0"
+
+cause_of_death_source:
+  description: >
+    The text term used to describe the source used to determine the patient's cause of death.
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
 
 cause_of_response:
   description: >
@@ -2518,6 +2539,16 @@ number_proliferating_cells:
     cde_id: 5432636
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432636&version=1.0"
+
+occupation_duration_years:
+  description: >
+    The number of years a patient worked in a specific occupation.
+  termDef:
+    term: Person Occupation Years Number
+    source: caDSR
+    cde_id: 2435424
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2435424&version=1.0"
 
 oct_embedded:
   description: >
