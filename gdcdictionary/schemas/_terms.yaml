@@ -2602,6 +2602,18 @@ passage_count:
     cde_version: null
     term_url: null
 
+pathogenicity:
+  description: >
+    The text used to describe a variant's level of involvement in the cause of the patient's disease
+    according to the standards outlined by the American College of Medical Genetics and Genomics
+    (ACMG).
+  termDef:
+    term: null
+    source: null
+    cde_id: null
+    cde_version: null
+    term_url: null
+
 percent_eosinophil_infiltration:
   description: >
     Numeric value to represent the percentage of infiltration by eosinophils in a tumor sample or
