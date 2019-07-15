@@ -69,6 +69,7 @@ properties:
     term:
       $ref: "_terms.yaml#/analyte_type"
     enum:
+      - cfDNA
       - DNA
       - EBV Immortalized Normal
       - FFPE DNA
