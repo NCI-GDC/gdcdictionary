@@ -1,16 +1,16 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "aggregated_somatic_mutation"
-title: Aggregated Somatic Mutation
+id: "submitted_genotyping_array"
+title: Submitted Genotyping Array
 type: object
 namespace: https://gdc.cancer.gov
 category: data_file
-project: '*'
 program: '*'
+project: '*'
 description: >
-  MAF/TSV files that contain all somatic mutations from multiple somatic variant callers and/or multiple cases.
+  Data file containing raw data from a genotyping array. 
 additionalProperties: false
-submittable: false
+submittable: true 
 downloadable: true
 previous_version_downloadable: true
 validators: null
@@ -25,16 +25,10 @@ systemProperties:
   - error_type
 
 links:
-  - name: projects
-    backref: aggregated_somatic_mutations
+  - name: aliquots
+    backref: submitted_genotyping_arrays
     label: derived_from
-    target_type: project
-    multiplicity: many_to_one
-    required: false 
-  - name: somatic_aggregation_workflows
-    backref: aggregated_somatic_mutations
-    label: data_from
-    target_type: somatic_aggregation_workflow
+    target_type: aliquot
     multiplicity: one_to_one
     required: true
 
@@ -47,7 +41,7 @@ required:
   - data_type
   - data_format
   - experimental_strategy
-  - somatic_aggregation_workflows
+  - platform
 
 uniqueKeys:
   - [ id ]
@@ -59,36 +53,32 @@ properties:
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
-    enum: [ "Simple Nucleotide Variation" ]
+    enum:
+      - Copy Number Variation
 
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - Aggregated Somatic Mutation
+      - Raw Intensities 
 
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
-      - MAF
-      - TSV
+      - CEL 
 
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - ATAC-Seq
-      - Bisulfite-Seq
-      - ChIP-Seq
-      - Low Pass WGS
-      - miRNA-Seq
-      - RNA-Seq
-      - Targeted Sequencing
-      - WGS
-      - WXS
+      - Genotyping Array
 
-  projects:
-    $ref: "_definitions.yaml#/to_one"
-  somatic_aggregation_workflows:
+  platform:
+    term:
+      $ref: "_terms.yaml#/platform"
+    enum:
+      - Affymetrix SNP 6.0 
+
+  aliquots: 
     $ref: "_definitions.yaml#/to_one"

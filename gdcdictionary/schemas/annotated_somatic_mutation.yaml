@@ -8,7 +8,7 @@ category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing the annotated somatic mutations calls from a harmonized aligned reads file.
+  MAF or VCF files that contain the annotated somatic mutations calls.
 additionalProperties: false
 submittable: false
 downloadable: true 
@@ -25,12 +25,21 @@ systemProperties:
   - error_type
 
 links:
-  - name: somatic_annotation_workflows
-    backref: annotated_somatic_mutations
-    label: data_from
-    target_type: somatic_annotation_workflow
-    multiplicity: many_to_one
+  - exclusive: true
     required: true
+    subgroup:
+      - name: somatic_annotation_workflows
+        backref: annotated_somatic_mutations
+        label: data_from
+        target_type: somatic_annotation_workflow
+        multiplicity: many_to_one
+        required: false
+      - name: genomic_profile_harmonization_workflows
+        backref: annotated_somatic_mutations
+        label: data_from
+        target_type: genomic_profile_harmonization_workflow
+        multiplicity: one_to_one
+        required: false
 
 required:
   - submitter_id
@@ -83,4 +92,7 @@ properties:
       - WXS
 
   somatic_annotation_workflows:
+    $ref: "_definitions.yaml#/to_one"
+
+  genomic_profile_harmonization_workflows:
     $ref: "_definitions.yaml#/to_one"

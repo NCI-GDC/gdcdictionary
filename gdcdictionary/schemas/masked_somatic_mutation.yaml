@@ -8,7 +8,7 @@ category: data_file
 project: '*'
 program: '*'
 description: >
-  MAF/TSV files that contain all of the somatic mutations for all of the cases for a project.
+  MAF/TSV files that contain a filtered subset of somatic mutations, which may be open access.
 additionalProperties: false
 submittable: false
 downloadable: true
@@ -30,7 +30,7 @@ links:
     label: derived_from
     target_type: project
     multiplicity: many_to_one
-    required: true
+    required: false 
   - exclusive: true
     required: true
     subgroup:

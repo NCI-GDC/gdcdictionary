@@ -47,6 +47,8 @@ properties:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum:
+      - Arriba
+      - BRASS
       - Fusion Catcher
       - Pizzly
       - STAR-Fusion

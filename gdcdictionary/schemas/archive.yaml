@@ -13,8 +13,8 @@ description: >
   GDC, or obtained by another route. (GDC subclass of NCIt C114463)
 additionalProperties: false
 submittable: false
-downloadable: false
-previous_version_downloadable: false
+downloadable: true 
+previous_version_downloadable: true
 validators: null
 
 systemProperties:

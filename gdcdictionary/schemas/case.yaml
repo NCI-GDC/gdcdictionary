@@ -117,6 +117,7 @@ properties:
       - Trophoblastic neoplasms
       - Unknown
       - Not Reported
+      - Not Applicable
       - Acute Lymphoblastic Leukemia
       - Acute Myeloid Leukemia
       - Adrenocortical Carcinoma
@@ -145,7 +146,6 @@ properties:
       - Mesothelioma
       - Multiple Myeloma
       - Neuroblastoma
-      - Not Applicable
       - Osteosarcoma
       - Ovarian Serous Cystadenocarcinoma
       - Pancreatic Adenocarcinoma
@@ -191,7 +191,6 @@ properties:
       - Mesothelioma
       - Multiple Myeloma
       - Neuroblastoma
-      - Not Applicable
       - Osteosarcoma
       - Ovarian Serous Cystadenocarcinoma
       - Pancreatic Adenocarcinoma

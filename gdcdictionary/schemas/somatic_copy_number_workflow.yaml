@@ -1,15 +1,15 @@
 $schema: "http://json-schema.org/draft-04/schema#"
-
-id: "somatic_mutation_calling_workflow"
-title: Somatic Mutation Calling Workflow
+  
+id: "somatic_copy_number_workflow"
+title: Somatic Copy Number Workflow
 type: object
 namespace: https://gdc.cancer.gov
 category: analysis
 program: '*'
 project: '*'
 description: >
-  Metadata for the somatic mutation calling pipeline used to call variants in the GDC DNA-Seq
-  pipelines.
+  Metadata for the Somatic Copy Number pipeline used to estimate copy number changes from
+  different molecular data sources.
 additionalProperties: false
 submittable: false
 downloadable: false
@@ -24,10 +24,10 @@ systemProperties:
   - state
 
 links:
-  - name: aligned_reads_files
-    backref: somatic_mutation_calling_workflows
+  - name: submitted_genotyping_arrays
+    backref: somatic_copy_number_workflows
     label: performed_on
-    target_type: aligned_reads
+    target_type: submitted_genotyping_array
     multiplicity: many_to_many
     required: true
 
@@ -47,13 +47,8 @@ properties:
     term:
       $ref: "_terms.yaml#/workflow_type"
     enum:
-      - CaVEMan
-      - GATK4 MuTect2
-      - MuSE
-      - MuTect2
-      - Pindel
-      - SomaticSniper
-      - VarScan2
+      - ASCAT2
+      - AscatNGS
 
-  aligned_reads_files:
+  submitted_genotyping_arrays:
     $ref: "_definitions.yaml#/to_many"

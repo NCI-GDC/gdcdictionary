@@ -137,8 +137,11 @@ properties:
       - Illumina NextSeq
       - Ion Torrent PGM
       - Ion Torrent Proton
+      - Ion Torrent S5
       - PacBio RS
       - Other
+      - Unknown
+      - Not Reported
 
   is_paired_end:
     term:
@@ -301,6 +304,7 @@ properties:
       - Nextera Rapid Capture Exome v1.2
       - SeqCap EZ HGSC VCRome v2.1
       - SeqCap EZ Human Exome v2.0
+      - SeqCap EZ Human Exome v3.0
       - SureSelect Human All Exon v3
       - SureSelect Human All Exon v5
       - SureSelect Human All Exon v4

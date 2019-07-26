@@ -76,6 +76,7 @@ properties:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
+      - BEDPE
       - CSV
       - FASTA
       - GVF

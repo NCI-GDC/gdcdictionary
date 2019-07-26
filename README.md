@@ -149,7 +149,7 @@ effects.
 ### Testing
 
 Commits will automagically be run on TravisCI when a Pull Request is opened.
-If you would like to test locally :hey are run via [tox](https://tox.readthedocs.io/en/latest/)
+If you would like to test locally they are run via [tox](https://tox.readthedocs.io/en/latest/)
 
 
 ### Versioning

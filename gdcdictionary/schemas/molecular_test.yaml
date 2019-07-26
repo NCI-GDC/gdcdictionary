@@ -53,6 +53,7 @@ properties:
       $ref: "_terms.yaml#/antigen"
     enum:
       - BCL6
+      - CA-125
       - CA19-9
       - CCND1
       - CD10
@@ -529,6 +530,8 @@ properties:
       - KNL1
       - KNSTRN
       - KRAS
+      - KRT7
+      - KRT20
       - KTN1
       - LARP4B
       - LASP1
@@ -1064,6 +1067,16 @@ properties:
       - Transcript Ablation
       - Transcript Amplification
       - Upstream Gene Variant
+
+  pathogenicity:
+    term:
+      $ref: "_terms.yaml#/pathogenicity"
+    enum:
+      - Benign
+      - Likely Benign
+      - Likely Pathogenic
+      - Pathogenic
+      - Uncertain Significance
 
   ploidy:
     term:
@@ -1821,9 +1834,11 @@ properties:
       - Equivocal
       - High
       - Intermediate
+      - Loss of Expression
       - Low
       - Negative
       - Normal
+      - Overexpressed
       - Positive
       - Test Value Reported
       - Unknown
