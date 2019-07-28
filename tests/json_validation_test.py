@@ -8,7 +8,7 @@ to it
 
 """
 
-from utils import DATA_DIR
+from tests.utils import DATA_DIR
 from jsonschema import validate, ValidationError
 
 import json
@@ -21,11 +21,13 @@ def get_all_paths(subdir):
     for path in sorted(glob.glob(os.path.join(DATA_DIR, subdir, '*.json'))):
         yield path
 
+
 @pytest.mark.parametrize("path", get_all_paths("valid"))
 def test_valid_examples(path, schema):
     with open(path, 'r') as f:
         doc = json.load(f)
         validate(doc, schema[doc["type"]])
+
 
 @pytest.mark.parametrize("path", get_all_paths("invalid"))
 def test_invalid_examples(path, schema):
