@@ -6,7 +6,7 @@ type: object
 program: '*'
 project: '*'
 root: '*'
-category: internal
+category: data
 additionalProperties: false
 submittable: false
 downloadable: false

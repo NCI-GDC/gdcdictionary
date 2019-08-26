@@ -6,7 +6,7 @@ type: object
 namespace: http://gdc.nci.nih.gov
 program: '*'
 project: '*'
-category: internal
+category: data
 description: >
   Internal node to store different data releases.
 additionalProperties: false
