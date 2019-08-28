@@ -1,0 +1,36 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "root"
+title: Root
+type: object
+program: '*'
+project: '*'
+root: '*'
+category: data
+additionalProperties: false
+submittable: false
+downloadable: false
+previous_version_downloadable: false
+validators: null
+
+systemProperties:
+  - id
+
+required:
+  - type
+
+uniqueKeys:
+  - [id]
+
+links: []
+
+constraints: null
+
+properties:
+  type:
+    type: string
+  id:
+    enum:
+      - "root"
+  schema_version:
+    type: string
