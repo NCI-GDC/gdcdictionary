@@ -145,6 +145,7 @@ file_state:
         - processed
         - released
         - error
+        - deleted
 
 qc_metrics_state:
     term:
