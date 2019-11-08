@@ -8,6 +8,7 @@ Examples are at the end.
 
 """
 
+from __future__ import print_function
 
 from jsonschema import validate, ValidationError
 import copy
@@ -78,7 +79,7 @@ def validate_entity(entity, schemata, project=None, name=''):
 
 def validate_schemata(schemata, metaschema):
     # validate schemata
-    print('Validating schemas against metaschema... '),
+    print('Validating schemas against metaschema... ', end=" ")
     for s in schemata.values():
         validate(s, metaschema)
 
@@ -172,7 +173,7 @@ if __name__ == '__main__':
         doc = json.load(f)
         if args.invalid:
             try:
-                print("CHECK if {0} is invalid:".format(f.name)),
+                print("CHECK if {0} is invalid:".format(f.name), end=" ")
                 print(type(doc))
                 if type(doc) == dict:
                     validate_entity(doc, dictionary.schema)
@@ -187,7 +188,7 @@ if __name__ == '__main__':
             else:
                 raise Exception("Expected invalid, but validated.")
         else:
-            print ("CHECK if {0} is valid:".format(f.name)),
+            print("CHECK if {0} is valid:".format(f.name), end=" ")
             if type(doc) == dict:
                 validate_entity(doc, dictionary.schema)
             elif type(doc) == list:
