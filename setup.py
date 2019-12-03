@@ -5,8 +5,10 @@ from setuptools import setup, find_packages
 setup(
     name='gdcdictionary',
     packages=find_packages(),
-    #use_scm_version={'local_scheme': 'dirty-tag'},
-    use_scm_version=True,
+    #use_scm_version={'local_scheme': 'dirty-tag', 'version_scheme':'{next_version}.dev{distance}+{scm letter}{revision hash}.dYYYMMM'},
+    use_scm_version={'local_scheme': 'dirty-tag',},
+    #use_scm_version={'version_scheme':'{next_version}.dev{distance}+{scm letter}{revision hash}.dYYYMMM',},
+    #use_scm_version=True,
     setup_requires=['setuptools_scm'],
     install_requires=[
         'PyYAML==3.11',
