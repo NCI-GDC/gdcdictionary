@@ -1,22 +1,36 @@
 #!groovy
-pipeline {
-    agent { label "slave1" }
 
+pipeline {
+    agent {
+        docker { image 'node:7-alpine' }
+    }
     stages {
-        stage('Python Version') {
+        stage('Test') {
             steps {
-                sh 'python setup.py --version' 
-            }
-        }
-        stage('Build') {
-            steps {
-                sh 'echo build'
-            }
-        }
-        stage('Upload') {
-            steps {
-                sh 'echo upload'
+                sh 'node --version'
             }
         }
     }
 }
+
+//pipeline {
+//    agent { label "slave1" }
+//
+//    stages {
+//        stage('Python Version') {
+//            steps {
+//                sh 'python setup.py --version' 
+//            }
+//        }
+//        stage('Build') {
+//            steps {
+//                sh 'echo build'
+//            }
+//        }
+//        stage('Upload') {
+//            steps {
+//                sh 'echo upload'
+//            }
+//        }
+//    }
+//}
