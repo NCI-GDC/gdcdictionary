@@ -3,9 +3,9 @@ pipeline {
     agent { label "slave1" }
 
     stages {
-        stage('Test') {
+        stage('Python Version') {
             steps {
-                sh 'pwd && ls' 
+                sh 'python setup.py --version' 
             }
         }
         stage('Build') {
