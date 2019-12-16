@@ -13,5 +13,10 @@ pipeline {
                 sh 'echo build'
             }
         }
+        stage('Upload') {
+            steps {
+                sh 'echo upload'
+            }
+        }
     }
 }
