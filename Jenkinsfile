@@ -2,12 +2,20 @@
 
 pipeline {
     agent {
-        docker { image 'node:7-alpine' }
+        docker { image 'python:2.7' }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'node --version'
+                sh 'ls'
+                sh 'ls dist/*'
+            }
+        }
+        stage('Test1') {
+            steps {
+                sh 'python setup.py --version'
+                sh 'python setup.py sdist bdist_wheel'
+                sh 'ls dist/*'
             }
         }
     }
