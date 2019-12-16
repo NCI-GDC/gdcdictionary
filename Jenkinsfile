@@ -8,7 +8,6 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'ls'
-                sh 'ls dist/*'
             }
         }
         stage('Test1') {
