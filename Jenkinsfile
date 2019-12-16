@@ -26,6 +26,7 @@ pipeline {
     stages {
         stage('Python Version') {
             steps {
+                sh 'pip install setuptools_scm' 
                 sh 'python setup.py --version' 
             }
         }
