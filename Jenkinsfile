@@ -30,7 +30,7 @@ pipeline {
             steps {
                 sh """
                 virtualenv -p /usr/bin/python3 .venv
-                source .venv/bin/activate
+                . .venv/bin/activate
                 which python3
                 which python
                 python --version
