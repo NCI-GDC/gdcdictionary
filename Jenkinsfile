@@ -4,7 +4,6 @@ pipeline {
     agent {
         docker {
             image 'python:local'
-            args '-u 1:1'
         }
     }
     stages {
