@@ -30,7 +30,7 @@ pipeline {
             steps {
                 sh """
                 virtualenv -p /usr/bin/python .venv
-                source .venv/bin/activate
+                . .venv/bin/activate
                 which python
                 python --version
                 pip install setuptools-scm more-itertools==5.0.0 tox
