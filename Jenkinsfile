@@ -2,7 +2,10 @@
 
 pipeline {
     agent {
-        docker { image 'python:local' }
+        docker {
+            image 'python:local'
+            args '-u 1:1'
+        }
     }
     stages {
         stage('Test') {
