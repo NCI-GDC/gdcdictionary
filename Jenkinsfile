@@ -1,46 +1,48 @@
 #!groovy
 
+//pipeline {
+//    agent {
+//        docker { image 'python:2.7' }
+//    }
+//    stages {
+//        stage('Test') {
+//            steps {
+//                sh 'ls'
+//            }
+//        }
+//        stage('Test1') {
+//            steps {
+//                sh 'echo $https_proxy' 
+//                sh 'pip install setuptools-scm' 
+//                sh 'python setup.py --version'
+//                sh 'python setup.py sdist bdist_wheel'
+//                sh 'ls dist/*'
+//            }
+//        }
+//    }
+//}
+
 pipeline {
-    agent {
-        docker { image 'python:2.7' }
-    }
+    agent { label "slave1" }
+
     stages {
-        stage('Test') {
+        stage('Python Version') {
             steps {
-                sh 'ls'
-            }
-        }
-        stage('Test1') {
-            steps {
-                sh 'echo $https_proxy' 
                 sh 'pip install setuptools-scm' 
                 sh 'python setup.py --version'
                 sh 'python setup.py sdist bdist_wheel'
                 sh 'ls dist/*'
             }
         }
+        stage('Build') {
+            steps {
+                sh 'echo build'
+            }
+        }
+        stage('Upload') {
+            steps {
+                sh 'echo upload'
+            }
+        }
     }
 }
-
-//pipeline {
-//    agent { label "slave1" }
-//
-//    stages {
-//        stage('Python Version') {
-//            steps {
-//                sh 'pip install setuptools_scm' 
-//                sh 'python setup.py --version' 
-//            }
-//        }
-//        stage('Build') {
-//            steps {
-//                sh 'echo build'
-//            }
-//        }
-//        stage('Upload') {
-//            steps {
-//                sh 'echo upload'
-//            }
-//        }
-//    }
-//}
