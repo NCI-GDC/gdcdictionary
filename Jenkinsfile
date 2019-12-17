@@ -12,6 +12,7 @@ pipeline {
         }
         stage('Test1') {
             steps {
+                sh 'echo $https_proxy' 
                 sh 'pip install setuptools-scm' 
                 sh 'python setup.py --version'
                 sh 'python setup.py sdist bdist_wheel'
