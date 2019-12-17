@@ -28,10 +28,19 @@ pipeline {
     stages {
         stage('Python Version') {
             steps {
+                sh """
+                virtualenv -p /usr/bin/python3 .venv
+                source .venv/bin/activate
+                which python3
+                which python
+                python --version
+                pip install setuptools-scm PyYAML==3.11 jsonschema
+                python setup.py install
+                """
 //                sh 'pip install setuptools-scm' 
 //                sh 'python setup.py --version'
-                sh 'python --version'
-                sh 'which python'
+//                sh 'python --version'
+//                sh 'which python'
 //                sh 'python setup.py sdist bdist_wheel'
 //                sh 'ls dist/*'
             }
@@ -48,3 +57,5 @@ pipeline {
         }
     }
 }
+
+
