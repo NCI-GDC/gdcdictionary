@@ -12,7 +12,7 @@ pipeline {
                 sh """
                 which python
                 python --version
-                pip install setuptools-scm more-itertools==5.0.0 tox
+                pip install --user setuptools-scm more-itertools==5.0.0 tox
                 tox
                 python setup.py --version
                 python setup.py sdist bdist_wheel
