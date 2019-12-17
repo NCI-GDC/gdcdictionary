@@ -29,13 +29,14 @@ pipeline {
         stage('Python Version') {
             steps {
                 sh """
-                virtualenv -p /usr/bin/python3 .venv
-                . .venv/bin/activate
-                which python3
+                virtualenv -p /usr/bin/python .venv
+                source .venv/bin/activate
                 which python
                 python --version
-                pip install setuptools-scm PyYAML==3.11 jsonschema
-                python setup.py install
+                pip install setuptools-scm more-itertools==5.0.0 tox
+                tox
+                python setup.py --version
+                python setup.py sdist bdist_wheel
                 """
 //                sh 'pip install setuptools-scm' 
 //                sh 'python setup.py --version'
