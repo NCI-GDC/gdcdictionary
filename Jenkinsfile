@@ -13,7 +13,8 @@ pipeline {
                 which python
                 python --version
                 pip install --user setuptools-scm more-itertools==5.0.0 tox
-                export http{s,}_proxy="http://cloud-proxy:3128"
+                export http_proxy="http://cloud-proxy:3128"
+                export https_proxy="http://cloud-proxy:3128"
                 tox
                 python setup.py --version
                 python setup.py sdist bdist_wheel
