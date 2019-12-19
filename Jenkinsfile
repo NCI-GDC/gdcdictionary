@@ -1,5 +1,5 @@
 #!groovy
-@Library('shared-lib@develop') _
+@Library('shared-lib') _
 
 evenOrOdd(currentBuild.getNumber())
 
