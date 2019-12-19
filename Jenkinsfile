@@ -7,18 +7,21 @@ pipeline {
             agent {
                 docker {
                     image 'python:local'
+                    args '-v /home/jenkins/pypirc:/etc/pypirc'
                 }
             }
             steps {
                 sh """
                 which python
                 python --version
-                pip install --user setuptools-scm more-itertools==5.0.0 tox
+                pip install --user setuptools-scm more-itertools==5.0.0 tox twine==1.15.0
                 export http_proxy="http://cloud-proxy:3128"
                 export https_proxy="http://cloud-proxy:3128"
                 tox
                 python setup.py --version
+                rm -rf dist/*
                 python setup.py sdist bdist_wheel
+                twine upload -r gdcsnapshots --config-file /etc/pypirc dist/*
                 """
             }
         }
