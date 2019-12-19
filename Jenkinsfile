@@ -10,10 +10,19 @@ pipeline {
                     args '-v /home/jenkins/pypirc:/etc/pypirc'
                 }
             }
+            environment {
+                TWINE_REPOSITORY = credentials('twine_repository')
+                TWINE_USERNAME = credentials('twine_username')
+                TWINE_PASSWORD = credentials('twine_password')
+            }
             steps {
                 sh """
                 which python
                 python --version
+                echo $TWINE_REPOSITORY
+                echo $TWINE_USERNAME
+                echo $TWINE_PASSWORD > passwordfile
+                cat passwordfile
                 pip install --user setuptools-scm more-itertools==5.0.0 tox twine==1.15.0
                 export http_proxy="http://cloud-proxy:3128"
                 export https_proxy="http://cloud-proxy:3128"
