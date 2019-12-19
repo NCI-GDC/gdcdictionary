@@ -11,7 +11,7 @@ pipeline {
                 }
             }
             environment {
-                TWINE_REPOSITORY = credentials('twine_repository')
+                TWINE_REPOSITORY_URL = credentials('twine_repository_url')
                 TWINE_USERNAME = credentials('twine_username')
                 TWINE_PASSWORD = credentials('twine_password')
             }
@@ -30,7 +30,7 @@ pipeline {
                 python setup.py --version
                 rm -rf dist/*
                 python setup.py sdist bdist_wheel
-                twine upload -r gdcsnapshots --config-file /etc/pypirc dist/*
+                twine upload -r gdcsnapshots dist/*
                 """
             }
         }
