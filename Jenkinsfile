@@ -1,7 +1,15 @@
 #!groovy
-@Library('shared-lib') _
 
-evenOrOdd(currentBuild.getNumber())
+library identifier: "jenkins-lib@develop"
+
+evenOrOdd(2)
+//testPipeline 
+
+//@Library('shared-lib') _
+
+
+
+//evenOrOdd(currentBuild.getNumber())
 
 //#!groovy
 //
