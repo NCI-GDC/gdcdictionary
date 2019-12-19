@@ -8,8 +8,8 @@ library identifier: "jenkins-lib@develop"
 //@Library('shared-lib') _
 
 
-
-evenOrOdd(currentBuild.getNumber())
+libPipeline()
+//evenOrOdd(currentBuild.getNumber())
 
 //#!groovy
 //
