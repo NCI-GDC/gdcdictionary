@@ -2,14 +2,14 @@
 
 library identifier: "jenkins-lib@develop"
 
-evenOrOdd(2)
+//evenOrOdd(2)
 //testPipeline 
 
 //@Library('shared-lib') _
 
 
 
-//evenOrOdd(currentBuild.getNumber())
+evenOrOdd(currentBuild.getNumber())
 
 //#!groovy
 //
