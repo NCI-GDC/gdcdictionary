@@ -19,7 +19,7 @@ pipeline {
                 sh """
                 which python
                 python --version
-                echo $TWINE_REPOSITORY
+                echo $TWINE_REPOSITORY_URL
                 echo $TWINE_USERNAME
                 echo $TWINE_PASSWORD > passwordfile
                 cat passwordfile
