@@ -29,6 +29,7 @@ pipeline {
                 script {
                     if (env.BRANCH_NAME == 'feat/setuptools_scp') {
                         sh """
+                        echo $BRANCH_NAME
                         python setup.py --version
                         rm -rf dist/*
                         python setup.py sdist bdist_wheel
