@@ -37,6 +37,9 @@ pipeline {
                         """
                     } else {
                         echo 'I execute elsewhere'
+                        sh """
+                        echo $BRANCH_NAME
+                        """
                     }
                 }
             }
