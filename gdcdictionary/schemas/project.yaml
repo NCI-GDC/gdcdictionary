@@ -62,6 +62,7 @@ properties:
     type: boolean
 
   code:
+    pattern: "^[A-Z0-9]+$"
     description: "Project code" # TOREVIEW
     type: string
 
