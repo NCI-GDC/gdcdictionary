@@ -1,13 +1,11 @@
-import os
-
 from setuptools import setup, find_packages
 
 setup(
     name='gdcdictionary',
-    version="1.18.1",
+    version="2.0.0",
     packages=find_packages(),
     install_requires=[
-        'PyYAML==3.11',
+        'PyYAML',
         'jsonschema',
     ],
     package_data={

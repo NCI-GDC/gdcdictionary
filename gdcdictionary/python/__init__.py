@@ -27,6 +27,7 @@ def visit_directory(path):
     finally:
         os.chdir(cdir)
 
+
 class GDCDictionary(object):
 
     _metaschema_path = 'metaschema.yaml'
@@ -48,6 +49,8 @@ class GDCDictionary(object):
 
         """
 
+        self.metaschema = None
+
         self.root_dir = (root_dir or os.path.join(MOD_DIR, 'schemas'))
         self.metaschema_path = metaschema_path or self._metaschema_path
         self.definitions_paths = definitions_paths or self._definitions_paths
@@ -67,10 +70,9 @@ class GDCDictionary(object):
                     f.read().encode("ascii")
                     f.seek(0)
                 except Exception as e:
-                    print "Error in file: {}".format(name)
+                    self.logger.error("Error in file: {}".format(name))
                     raise e
             return yaml.safe_load(f)
-
 
     def load_schemas_from_dir(self, directory):
         """Returns all yamls and resolvers of those yamls from dir"""
@@ -96,7 +98,7 @@ class GDCDictionary(object):
 
         schemas = {
             schema['id']: self.resolve_schema(schema, deepcopy(schema))
-            for path, schema in yamls.iteritems()
+            for path, schema in yamls.items()
             if path not in self.exclude
         }
         self.schema.update(schemas)
@@ -138,7 +140,7 @@ class GDCDictionary(object):
         """
 
         if isinstance(obj, dict):
-            for key in obj.keys():
+            for key in obj.copy().keys():
                 if key == '$ref':
                     val = obj.pop(key)
                     obj.update(self.resolve_reference(val, root))
