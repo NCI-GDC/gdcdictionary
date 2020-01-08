@@ -1,5 +1,3 @@
-import os
-
 from setuptools import setup, find_packages
 
 setup(
@@ -11,7 +9,7 @@ setup(
     use_scm_version=True,
     setup_requires=['setuptools_scm'],
     install_requires=[
-        'PyYAML==3.11',
+        'PyYAML',
         'jsonschema',
     ],
     package_data={

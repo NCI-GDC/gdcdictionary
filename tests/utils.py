@@ -6,7 +6,6 @@ specific overrrides are not being used in the GDC currently.
 from collections import defaultdict
 import copy
 import os
-import json
 import yaml
 import unittest
 
@@ -14,19 +13,23 @@ from jsonschema import validate
 
 from gdcdictionary import ROOT_DIR, GDCDictionary
 
+
 def load_yaml(path):
     with open(path, 'r') as f:
         return yaml.safe_load(f)
+
 
 DATA_DIR = os.path.join(ROOT_DIR, 'examples')
 project1 = load_yaml(os.path.join(ROOT_DIR, 'schemas/projects/project1.yaml'))
 projects = {'project1': project1}
 
+
 class BaseTest(unittest.TestCase):
 
     def setUp(self):
         self.dictionary = GDCDictionary()
-        self.definitions = load_yaml(os.path.join(ROOT_DIR, 'schemas','_definitions.yaml'))
+        self.definitions = load_yaml(os.path.join(ROOT_DIR, 'schemas', '_definitions.yaml'))
+
 
 def merge_schemas(a, b, path=None):
     """Recursively zip schemas together
@@ -101,7 +104,7 @@ def check_for_cycles(schemata, ignored_types=None):
     # Build a bidirectional map representing the links between schema types.
     forward = defaultdict(set)
     backward = defaultdict(set)
-    for schema_type, schema in schemata.iteritems():
+    for schema_type, schema in schemata.items():
         # Ignore cycles involving types that we know don't hurt anything so we
         # can detect new cycles that might actually hurt.
         if schema_type in ignored_types:
