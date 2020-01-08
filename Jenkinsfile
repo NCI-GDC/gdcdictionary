@@ -38,6 +38,7 @@ pipeline {
                     } else {
                         echo 'I execute elsewhere'
                         sh """
+                        printenv
                         echo $BRANCH_NAME
                         """
                     }
