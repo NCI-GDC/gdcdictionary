@@ -27,7 +27,7 @@ pipeline {
             }
             steps {
                 script {
-                    if (env.CHANGE_BRANCH == 'feat/setuptools_scp') {
+                    if (env.CHANGE_BRANCH == 'master' || env.CHANGE_BRANCH == 'feat/setuptools_scp') {
                         sh """
                         echo $CHANGE_BRANCH
                         python setup.py --version
