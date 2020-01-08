@@ -26,7 +26,6 @@ pipeline {
                 TWINE_PASSWORD = credentials('twine_password')
             }
             steps {
-                names = "lucas Fred Mary".split()
                 script {
                     if (env.CHANGE_BRANCH == 'master' || env.CHANGE_BRANCH == 'feat/setuptools_scp') {
                         sh """
