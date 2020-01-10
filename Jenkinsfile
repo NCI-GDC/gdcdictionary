@@ -10,14 +10,15 @@ pipeline {
     }
     environment {
         branchesToPush = 'master,feat/setuptools_scp'
+        proxy = credentials('proxy')
     }
     stages {
         stage('Test') {
             steps {
                 sh """
                 pip install --user setuptools-scm more-itertools==5.0.0 tox twine==1.15.0
-                export http_proxy="http://cloud-proxy:3128"
-                export https_proxy="http://cloud-proxy:3128"
+                export http_proxy="${proxy}"
+                export https_proxy="${proxy}"
                 tox
                 """
             }
@@ -40,12 +41,13 @@ pipeline {
                             python setup.py sdist bdist_wheel
                             twine upload -r gdcsnapshots dist/*
                             """
-                        } else {
-                            echo 'I execute elsewhere'
-                            sh """
-                            echo $BRANCH_NAME
-                            """
-                        }
+                        } 
+                        //else {
+                        //    echo 'I execute elsewhere'
+                        //    sh """
+                        //    echo $BRANCH_NAME
+                        //    """
+                        //}
                     }
                     //def changeLogSets = currentBuild.changeSets
                     //for (int i = 0; i < changeLogSets.size(); i++) {
