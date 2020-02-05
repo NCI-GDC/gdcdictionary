@@ -1,15 +1,15 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "structural_variant_calling_workflow"
-title: Structural Variant Calling Workflow 
+title: Structural Variant Calling Workflow
 type: object
 namespace: https://gdc.cancer.gov
 category: analysis
-program: '*'
 project: '*'
-description: >
-  Metadata for the structural variant calling pipeline used to call structural variants in the GDC
-  DNA-Seq or RNA-Seq pipelines.
+program: '*'
+description: >-
+  Metadata for the structural variant calling pipeline used to call structural variants
+  in the GDC DNA-Seq or RNA-Seq pipelines.
 additionalProperties: false
 submittable: false
 downloadable: false
@@ -37,15 +37,17 @@ required:
   - workflow_type
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/workflow_properties"
+
+  $ref:
+    - "_definitions.yaml#/workflow_properties"
 
   workflow_type:
-    term:
-      $ref: "_terms.yaml#/workflow_type"
+    $ref:
+      - "_terms.yaml#/workflow_type/common"
     enum:
       - Arriba
       - BRASS

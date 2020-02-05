@@ -5,15 +5,16 @@ title: Follow-Up
 type: object
 namespace: https://gdc.cancer.gov
 category: clinical
-program: '*'
 project: '*'
-description: >
-  A visit by a patient or study participant to a medical professional. A clinical encounter that
-  encompasses planned and unplanned trial interventions, procedures and assessments that may be
-  performed on a subject. A visit has a start and an end, each described with a rule. The process
-  by which information about the health status of an individual is obtained before and after a study
-  has officially closed; an activity that continues something that has already begun or that repeats
-  something that has already been done.
+program: '*'
+description: >-
+  A visit by a patient or study participant to a medical professional. A clinical
+  encounter that encompasses planned and unplanned trial interventions, procedures
+  and assessments that may be performed on a subject. A visit has a start and an end,
+  each described with a rule. The process by which information about the health status
+  of an individual is obtained before and after a study has officially closed; an
+  activity that continues something that has already begun or that repeats something
+  that has already been done.
 additionalProperties: false
 submittable: true
 downloadable: false
@@ -23,9 +24,9 @@ validators: null
 systemProperties:
   - id
   - project_id
-  - state
   - created_datetime
   - updated_datetime
+  - state
 
 links:
   - name: cases
@@ -51,11 +52,13 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  $ref:
+    - "_definitions.yaml#/ubiquitous_properties"
 
   adverse_event:
-    term:
-      $ref: "_terms.yaml#/adverse_event"
+    $ref:
+      - "_terms.yaml#/adverse_event/common"
     enum:
       - Abdominal Distension
       - Abdominal Infection
@@ -849,8 +852,8 @@ properties:
       - Wrist Fracture
 
   barretts_esophagus_goblet_cells_present:
-    term:
-      $ref: "_terms.yaml#/barretts_esophagus_goblet_cells_present"
+    $ref:
+      - "_terms.yaml#/barretts_esophagus_goblet_cells_present/common"
     enum:
       - "Yes"
       - "No"
@@ -858,18 +861,18 @@ properties:
       - Not Reported
 
   bmi:
-    term:
-      $ref: "_terms.yaml#/bmi"
+    $ref:
+      - "_terms.yaml#/bmi/common"
     type: number
 
   cause_of_response:
-    term:
-      $ref: "_terms.yaml#/cause_of_response"
+    $ref:
+      - "_terms.yaml#/cause_of_response/common"
     type: string
 
   comorbidity:
-    term:
-      $ref: "_terms.yaml#/comorbidity"
+    $ref:
+      - "_terms.yaml#/comorbidity/common"
     enum:
       - Acute Renal Failure
       - Adenocarcinoma
@@ -1016,8 +1019,8 @@ properties:
       - Not Reported
 
   comorbidity_method_of_diagnosis:
-    term:
-      $ref: "_terms.yaml#/comorbidity_method_of_diagnosis"
+    $ref:
+      - "_terms.yaml#/comorbidity_method_of_diagnosis/common"
     enum:
       - Histology
       - Pathology
@@ -1026,50 +1029,50 @@ properties:
       - Not Reported
 
   days_to_adverse_event:
-    term:
-      $ref: "_terms.yaml#/days_to_adverse_event"
+    $ref:
+      - "_terms.yaml#/days_to_adverse_event/common"
     type: integer
-    minimum: -32872
     maximum: 32872
+    minimum: -32872
 
   days_to_comorbidity:
-    term:
-      $ref: "_terms.yaml#days_to_comorbidity"
+    $ref:
+      - "_terms.yaml#days_to_comorbidity"
     type: integer
-    minimum: -32872
     maximum: 32872
+    minimum: -32872
 
   days_to_follow_up:
-    term:
-      $ref: "_terms.yaml#/days_to_follow_up"
+    $ref:
+      - "_terms.yaml#/days_to_follow_up/common"
     type: integer
-    minimum: -32872
     maximum: 32872
+    minimum: -32872
 
   days_to_progression:
-    term:
-      $ref: "_terms.yaml#/days_to_progression"
+    $ref:
+      - "_terms.yaml#/days_to_progression/common"
     type: integer
-    minimum: -32872
     maximum: 32872
+    minimum: -32872
 
   days_to_progression_free:
-    term:
-      $ref: "_terms.yaml#/days_to_progression_free"
+    $ref:
+      - "_terms.yaml#/days_to_progression_free/common"
     type: integer
-    minimum: -32872
     maximum: 32872
+    minimum: -32872
 
   days_to_recurrence:
-    term:
-      $ref: "_terms.yaml#/days_to_recurrence"
+    $ref:
+      - "_terms.yaml#/days_to_recurrence/common"
     type: integer
-    minimum: -32872
     maximum: 32872
+    minimum: -32872
 
   diabetes_treatment_type:
-    term:
-      $ref: "_terms.yaml#/diabetes_treatment_type"
+    $ref:
+      - "_terms.yaml#/diabetes_treatment_type/common"
     enum:
       - Alpha-Glucosidase Inhibitor
       - Biguanide
@@ -1084,8 +1087,8 @@ properties:
       - Not Reported
 
   disease_response:
-    term:
-      $ref: "_terms.yaml#/disease_response"
+    $ref:
+      - "_terms.yaml#/disease_response/common"
     enum:
       - AJ-Adjuvant Therapy
       - BED-Biochemical Evidence of Disease
@@ -1122,13 +1125,13 @@ properties:
       - Not Reported
 
   dlco_ref_predictive_percent:
-    term:
-      $ref: "_terms.yaml#/dlco_ref_predictive_percent"
+    $ref:
+      - "_terms.yaml#/dlco_ref_predictive_percent/common"
     type: number
 
   ecog_performance_status:
-    term:
-      $ref: "_terms.yaml#/ecog_performance_status"
+    $ref:
+      - "_terms.yaml#/ecog_performance_status/common"
     enum:
       - "0"
       - "1"
@@ -1140,33 +1143,33 @@ properties:
       - Not Reported
 
   fev1_ref_post_bronch_percent:
-    term:
-      $ref: "_terms.yaml#/fev1_ref_post_bronch_percent"
+    $ref:
+      - "_terms.yaml#/fev1_ref_post_bronch_percent/common"
     type: number
 
   fev1_ref_pre_bronch_percent:
-    term:
-      $ref: "_terms.yaml#/fev1_ref_pre_bronch_percent"
+    $ref:
+      - "_terms.yaml#/fev1_ref_pre_bronch_percent/common"
     type: number
 
   fev1_fvc_pre_bronch_percent:
-    term:
-      $ref: "_terms.yaml#/fev1_fvc_pre_bronch_percent"
+    $ref:
+      - "_terms.yaml#/fev1_fvc_pre_bronch_percent/common"
     type: number
 
   fev1_fvc_post_bronch_percent:
-    term:
-      $ref: "_terms.yaml#/fev1_fvc_post_bronch_percent"
+    $ref:
+      - "_terms.yaml#/fev1_fvc_post_bronch_percent/common"
     type: number
 
   height:
-    term:
-      $ref: "_terms.yaml#/height"
+    $ref:
+      - "_terms.yaml#/height/common"
     type: number
 
   hepatitis_sustained_virological_response:
-    term:
-      $ref: "_terms.yaml#/hepatitis_sustained_virological_response"
+    $ref:
+      - "_terms.yaml#/hepatitis_sustained_virological_response/common"
     enum:
       - "Yes"
       - "No"
@@ -1174,8 +1177,8 @@ properties:
       - Not Reported
 
   hpv_positive_type:
-    term:
-      $ref: "_terms.yaml#/hpv_positive_type"
+    $ref:
+      - "_terms.yaml#/hpv_positive_type/common"
     enum:
       - "16"
       - "18"
@@ -1202,8 +1205,8 @@ properties:
       - Not Reported
 
   karnofsky_performance_status:
-    term:
-      $ref: "_terms.yaml#/karnofsky_performance_status"
+    $ref:
+      - "_terms.yaml#/karnofsky_performance_status/common"
     enum:
       - "0"
       - "10"
@@ -1220,8 +1223,8 @@ properties:
       - Not Reported
 
   menopause_status:
-    term:
-      $ref: "_terms.yaml#/menopause_status"
+    $ref:
+      - "_terms.yaml#/menopause_status/common"
     enum:
       - Premenopausal
       - Perimenopausal
@@ -1230,13 +1233,13 @@ properties:
       - Not Reported
 
   pancreatitis_onset_year:
-    term:
-      $ref: "_terms.yaml#/pancreatitis_onset_year"
+    $ref:
+      - "_terms.yaml#/pancreatitis_onset_year/common"
     type: integer
 
   progression_or_recurrence:
-    term:
-      $ref: "_terms.yaml#/progression_or_recurrence"
+    $ref:
+      - "_terms.yaml#/progression_or_recurrence/common"
     enum:
       - "Yes"
       - "No"
@@ -1244,8 +1247,8 @@ properties:
       - Not Reported
 
   progression_or_recurrence_anatomic_site:
-    term:
-      $ref: "_terms.yaml#/progression_or_recurrence_anatomic_site"
+    $ref:
+      - "_terms.yaml#/progression_or_recurrence_anatomic_site/common"
     enum:
       - Abdomen, NOS
       - Abdominal esophagus
@@ -1581,8 +1584,8 @@ properties:
       - Not Reported
 
   progression_or_recurrence_type:
-    term:
-      $ref: "_terms.yaml#/progression_or_recurrence_type"
+    $ref:
+      - "_terms.yaml#/progression_or_recurrence_type/common"
     enum:
       - Biochemical
       - Distant
@@ -1592,8 +1595,8 @@ properties:
       - Not Reported
 
   reflux_treatment_type:
-    term:
-      $ref: "_terms.yaml#/reflux_treatment_type"
+    $ref:
+      - "_terms.yaml#/reflux_treatment_type/common"
     enum:
       - Antacids
       - H2 Blockers
@@ -1606,8 +1609,8 @@ properties:
       - Unknown
 
   risk_factor:
-    term:
-      $ref: "_terms.yaml#/risk_factor"
+    $ref:
+      - "_terms.yaml#/risk_factor/common"
     enum:
       - Alcohol Consumption
       - Alcoholic Liver Disease
@@ -1704,8 +1707,8 @@ properties:
       - Not Reported
 
   risk_factor_treatment:
-    term:
-      $ref: "_terms.yaml#/risk_factor_treatment"
+    $ref:
+      - "_terms.yaml#/risk_factor_treatment/common"
     enum:
       - "Yes"
       - "No"
@@ -1713,8 +1716,8 @@ properties:
       - Not Reported
 
   viral_hepatitis_serologies:
-    term:
-      $ref: "_terms.yaml#/viral_hepatitis_serologies"
+    $ref:
+      - "_terms.yaml#/viral_hepatitis_serologies/common"
     enum:
       - HBV Core Antibody
       - HBV DNA
@@ -1728,11 +1731,12 @@ properties:
       - Not Reported
 
   weight:
-    term:
-      $ref: "_terms.yaml#/weight"
+    $ref:
+      - "_terms.yaml#/weight/common"
     type: number
 
   cases:
     $ref: "_definitions.yaml#/to_one"
+
   diagnoses:
     $ref: "_definitions.yaml#/to_one"

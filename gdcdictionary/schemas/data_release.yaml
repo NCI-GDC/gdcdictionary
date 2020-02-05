@@ -3,11 +3,11 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "data_release"
 title: Data Release
 type: object
-namespace: http://gdc.nci.nih.gov
-program: '*'
-project: '*'
+namespace: https://gdc.cancer.gov
 category: data
-description: >
+project: '*'
+program: '*'
+description: >-
   Internal node to store different data releases.
 additionalProperties: false
 submittable: false
@@ -38,38 +38,43 @@ uniqueKeys:
   - [id]
 
 properties:
-# Ubiquitous Properties
-  type:
-    enum: [ "data_release" ]
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
 
-  # Node Properties
+  type:
+    enum:
+      - data_release
+
+  id:
+    $ref:
+      - "_definitions.yaml#/uuid"
+
+  created_datetime:
+    $ref:
+      - "_definitions.yaml#/datetime"
+
+  updated_datetime:
+    $ref:
+      - "_definitions.yaml#/datetime"
+
   name:
-    description: >
-      String representing release name.
+    description: String representing release name.
     type: string
 
   major_version:
-    description: >
-      The number identifying the major version.
+    description: The number identifying the major version.
     type: integer
+
   minor_version:
-    description: >
-      The number identifying the minor version.
+    description: The number identifying the minor version.
     type: integer
+
   release_date:
-    $ref: "_definitions.yaml#/datetime"
+    $ref:
+      - "_definitions.yaml#/datetime"
+
   released:
-    description: >
-      Indicates if it is the current release.
+    description: Indicates if it is the current release.
     type: boolean
     default: false
-  # Links
+
   roots:
     $ref: "_definitions.yaml#/to_one"

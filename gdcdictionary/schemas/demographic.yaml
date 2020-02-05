@@ -5,11 +5,11 @@ title: Demographic
 type: object
 namespace: https://gdc.cancer.gov
 category: clinical
-program: '*'
 project: '*'
-description: >
-  Data for the characterization of the patient by means of segementing the population (e.g.,
-  characterization by age, sex, or race).
+program: '*'
+description: >-
+  Data for the characterization of the patient by means of segementing the population
+  (e.g., characterization by age, sex, or race).
 additionalProperties: false
 submittable: true
 downloadable: false
@@ -19,9 +19,9 @@ validators: null
 systemProperties:
   - id
   - project_id
-  - state
   - created_datetime
   - updated_datetime
+  - state
 
 links:
   - name: cases
@@ -38,35 +38,32 @@ required:
   - race
   - vital_status
 
-preferred:
-  - days_to_birth
-  - year_of_death
-
 uniqueKeys:
-  #unclear if want submitter ID for clinical
   - [id]
   - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  $ref:
+    - "_definitions.yaml#/ubiquitous_properties"
 
   age_at_index:
-    term:
-      $ref: "_terms.yaml#/age_at_index"
+    $ref:
+      - "_terms.yaml#/age_at_index/common"
     oneOf:
       - type: integer
-        minimum: 0
         maximum: 32872
+        minimum: 0
       - type: "null"
 
   age_is_obfuscated:
-    term:
-      $ref: "_terms.yaml#/age_is_obfuscated"
+    $ref:
+      - "_terms.yaml#/age_is_obfuscated/common"
     type: boolean
 
   cause_of_death:
-    term:
-      $ref: "_terms.yaml#/cause_of_death"
+    $ref:
+      - "_terms.yaml#/cause_of_death/common"
     enum:
       - Cancer Related
       - Cardiovascular Disorder, NOS
@@ -81,8 +78,8 @@ properties:
       - Unknown
 
   cause_of_death_source:
-    term:
-      $ref: "_terms.yaml#/cause_of_death_source"
+    $ref:
+      - "_terms.yaml#/cause_of_death_source/common"
     enum:
       - Autopsy
       - Death Certificate
@@ -92,22 +89,22 @@ properties:
       - Not Reported
 
   days_to_birth:
-    term:
-      $ref: "_terms.yaml#/days_to_birth"
+    $ref:
+      - "_terms.yaml#/days_to_birth/common"
     type: integer
-    minimum: -32872
     maximum: 0
+    minimum: -32872
 
   days_to_death:
-    term:
-      $ref: "_terms.yaml#/days_to_death"
+    $ref:
+      - "_terms.yaml#/days_to_death/common"
     type: integer
-    minimum: -32872
     maximum: 32872
+    minimum: -32872
 
   ethnicity:
-    term:
-      $ref: "_terms.yaml#/ethnicity"
+    $ref:
+      - "_terms.yaml#/ethnicity/common"
     enum:
       - hispanic or latino
       - not hispanic or latino
@@ -119,44 +116,23 @@ properties:
       - unknown
 
   gender:
-    term:
-      $ref: "_terms.yaml#/gender"
+    $ref:
+      - "_terms.yaml#/gender/common"
     enum:
       - female
       - male
       - unknown
       - unspecified
       - not reported
-    enumDef:
-      - enumeration: female
-        source: NCI Thesaurus
-        term_id: C16576
-        term_version: null
-      - enumeration: male
-        source: NCI Thesaurus
-        term_id: C20197
-        term_version: null
-      - enumeration: unknown
-        source: NCI Thesaurus
-        term_id: C17998
-        term_version: null
-      - enumeration: unspecified
-        source: NCI Thesaurus
-        term_id: C38046
-        term_version: null
-      - enumeration: not reported
-        source: NCI Thesaurus
-        term_id: C43234
-        term_version: null
 
   occupation_duration_years:
-    term:
-      $ref: "_terms.yaml#/occupation_duration_years"
+    $ref:
+      - "_terms.yaml#/occupation_duration_years/common"
     type: integer
 
   premature_at_birth:
-    term:
-      $ref: "_terms.yaml#/premature_at_birth"
+    $ref:
+      - "_terms.yaml#/premature_at_birth/common"
     enum:
       - "Yes"
       - "No"
@@ -164,8 +140,8 @@ properties:
       - Not Reported
 
   race:
-    term:
-      $ref: "_terms.yaml#/race"
+    $ref:
+      - "_terms.yaml#/race/common"
     enum:
       - white
       - american indian or alaska native
@@ -181,8 +157,8 @@ properties:
       - unknown
 
   vital_status:
-    term:
-      $ref: "_terms.yaml#/vital_status"
+    $ref:
+      - "_terms.yaml#/vital_status/common"
     enum:
       - Alive
       - Dead
@@ -190,20 +166,20 @@ properties:
       - Not Reported
 
   weeks_gestation_at_birth:
-    term:
-      $ref: "_terms.yaml#/weeks_gestation_at_birth"
+    $ref:
+      - "_terms.yaml#/weeks_gestation_at_birth/common"
     type: number
 
   year_of_birth:
-    term:
-      $ref: "_terms.yaml#/year_of_birth"
-    type:
-      - integer
-      - "null"
+    $ref:
+      - "_terms.yaml#/year_of_birth/common"
+    oneOf:
+      - type: integer
+      - type: "null"
 
   year_of_death:
-    term:
-      $ref: "_terms.yaml#/year_of_death"
+    $ref:
+      - "_terms.yaml#/year_of_death/common"
     type: integer
 
   cases:

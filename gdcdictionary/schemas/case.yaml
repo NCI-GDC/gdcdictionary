@@ -5,11 +5,11 @@ title: Case
 type: object
 namespace: https://gdc.cancer.gov
 category: administrative
-program: '*'
 project: '*'
-description: >
-  The collection of all data related to a specific subject in the
-  context of a specific project.
+program: '*'
+description: >-
+  The collection of all data related to a specific subject in the context of a specific
+  project.
 additionalProperties: false
 submittable: true
 downloadable: false
@@ -44,20 +44,21 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
-# Case properties
 properties:
-  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  $ref:
+    - "_definitions.yaml#/ubiquitous_properties"
 
   days_to_lost_to_followup:
-    term:
-      $ref: "_terms.yaml#/days_to_lost_to_followup"
+    $ref:
+      - "_terms.yaml#/days_to_lost_to_followup/common"
     type: integer
-    minimum: -32872
     maximum: 32872
+    minimum: -32872
 
   disease_type:
-    term:
-      $ref: "_terms.yaml#/disease_type"
+    $ref:
+      - "_terms.yaml#/disease_type/common"
     enum:
       - Acinar Cell Neoplasms
       - Adenomas and Adenocarcinomas
@@ -209,8 +210,8 @@ properties:
       - Uveal Melanoma
 
   index_date:
-    term:
-      $ref: "_terms.yaml#/index_date"
+    $ref:
+      - "_terms.yaml#/index_date/common"
     enum:
       - Diagnosis
       - First Patient Visit
@@ -220,16 +221,16 @@ properties:
       - Study Enrollment
 
   lost_to_followup:
-    term:
-      $ref: "_terms.yaml#/lost_to_followup"
+    $ref:
+      - "_terms.yaml#/lost_to_followup/common"
     enum:
       - "Yes"
       - "No"
       - Unknown
 
   primary_site:
-    term:
-      $ref: "_terms.yaml#/primary_site"
+    $ref:
+      - "_terms.yaml#/primary_site/common"
     enum:
       - Accessory sinuses
       - Adrenal gland
@@ -344,5 +345,6 @@ properties:
 
   projects:
     $ref: "_definitions.yaml#/to_one"
+
   tissue_source_sites:
     $ref: "_definitions.yaml#/to_one"

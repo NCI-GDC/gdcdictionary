@@ -5,12 +5,12 @@ title: Protein Expression
 type: object
 namespace: https://gdc.cancer.gov
 category: data_file
-program: '*'
 project: '*'
-description: >
-  Data file containing normalized Reverse Phase Protein Array data. 
+program: '*'
+description: >-
+  Data file containing normalized Reverse Phase Protein Array data.
 additionalProperties: false
-submittable: true 
+submittable: true
 downloadable: true
 previous_version_downloadable: true
 validators: null
@@ -20,8 +20,8 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
-  - state
   - file_state
+  - state
   - error_type
 
 links:
@@ -38,7 +38,7 @@ links:
         backref: protein_expressions
         label: derived_from
         target_type: sample
-        multiplicity: one_to_one 
+        multiplicity: one_to_one
         required: false
 
 required:
@@ -47,45 +47,47 @@ required:
   - file_size
   - md5sum
   - data_category
-  - data_type
   - data_format
+  - data_type
   - experimental_strategy
   - platform
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
+
+  $ref:
+    - "_definitions.yaml#/data_file_properties"
 
   data_category:
-    term:
-      $ref: "_terms.yaml#/data_category"
+    $ref:
+      - "_terms.yaml#/data_category/common"
     enum:
       - Proteome Profiling
 
   data_type:
-    term:
-      $ref: "_terms.yaml#/data_type"
+    $ref:
+      - "_terms.yaml#/data_type/common"
     enum:
-      - Protein Expression Quantification 
+      - Protein Expression Quantification
 
   data_format:
-    term:
-      $ref: "_terms.yaml#/data_format"
+    $ref:
+      - "_terms.yaml#/data_format/common"
     enum:
       - TSV
 
   experimental_strategy:
-    term:
-      $ref: "_terms.yaml#/experimental_strategy"
+    $ref:
+      - "_terms.yaml#/experimental_strategy/common"
     enum:
-      - Reverse Phase Protein Array 
+      - Reverse Phase Protein Array
 
   platform:
-    term:
-      $ref: "_terms.yaml#/platform"
+    $ref:
+      - "_terms.yaml#/platform/common"
     enum:
       - RPPA
 

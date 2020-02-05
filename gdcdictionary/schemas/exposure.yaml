@@ -5,9 +5,9 @@ title: Exposure
 type: object
 namespace: https://gdc.cancer.gov
 category: clinical
-program: '*'
 project: '*'
-description: >
+program: '*'
+description: >-
   Clinically relevant patient information not immediately resulting from genetic predispositions.
 additionalProperties: false
 submittable: true
@@ -18,9 +18,9 @@ validators: null
 systemProperties:
   - id
   - project_id
-  - state
   - created_datetime
   - updated_datetime
+  - state
 
 links:
   - name: cases
@@ -33,37 +33,33 @@ links:
 required:
   - submitter_id
 
-preferred:
-  - pack_years_smoked
-  - years_smoked
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
 
 deprecated:
   - bmi
   - height
   - weight
 
-uniqueKeys:
-  #unclear if want submitter ID for clinical
-  - [id]
-  - [project_id, submitter_id]
-
 properties:
-  $ref: "_definitions.yaml#/ubiquitous_properties"
 
+  $ref:
+    - "_definitions.yaml#/ubiquitous_properties"
 
   alcohol_days_per_week:
-    term:
-      $ref: "_terms.yaml#/alcohol_days_per_week"
+    $ref:
+      - "_terms.yaml#/alcohol_days_per_week/common"
     type: number
 
   alcohol_drinks_per_day:
-    term:
-      $ref: "_terms.yaml#/alcohol_drinks_per_day"
+    $ref:
+      - "_terms.yaml#/alcohol_drinks_per_day/common"
     type: number
 
   alcohol_history:
-    term:
-      $ref: "_terms.yaml#/alcohol_history"
+    $ref:
+      - "_terms.yaml#/alcohol_history/common"
     enum:
       - "Yes"
       - "No"
@@ -76,8 +72,8 @@ properties:
       - "yes"
 
   alcohol_intensity:
-    term:
-      $ref: "_terms.yaml#/alcohol_intensity"
+    $ref:
+      - "_terms.yaml#/alcohol_intensity/common"
     enum:
       - Drinker
       - Heavy Drinker
@@ -88,8 +84,8 @@ properties:
       - Not Reported
 
   asbestos_exposure:
-    term:
-      $ref: "_terms.yaml#asbestos_exposure"
+    $ref:
+      - "_terms.yaml#asbestos_exposure"
     enum:
       - "Yes"
       - "No"
@@ -97,44 +93,44 @@ properties:
       - Not Reported
 
   bmi:
-    term:
-      $ref: "_terms.yaml#/bmi"
+    $ref:
+      - "_terms.yaml#/bmi/common"
     type: number
 
   cigarettes_per_day:
-    term:
-      $ref: "_terms.yaml#/cigarettes_per_day"
+    $ref:
+      - "_terms.yaml#/cigarettes_per_day/common"
     type: number
 
   coal_dust_exposure:
-    term:
-      $ref: "_terms.yaml#/coal_dust_exposure"
+    $ref:
+      - "_terms.yaml#/coal_dust_exposure/common"
     enum:
       - "Yes"
       - "No"
       - Unknown
 
   environmental_tobacco_smoke_exposure:
-    term:
-      $ref: "_terms.yaml#/environmental_tobacco_smoke_exposure"
+    $ref:
+      - "_terms.yaml#/environmental_tobacco_smoke_exposure/common"
     enum:
       - "Yes"
       - "No"
       - Unknown
 
   height:
-    term:
-      $ref: "_terms.yaml#/height"
+    $ref:
+      - "_terms.yaml#/height/common"
     type: number
 
   pack_years_smoked:
-    term:
-      $ref: "_terms.yaml#/pack_years_smoked"
+    $ref:
+      - "_terms.yaml#/pack_years_smoked/common"
     type: number
 
   radon_exposure:
-    term:
-      $ref: "_terms.yaml#/radon_exposure"
+    $ref:
+      - "_terms.yaml#/radon_exposure/common"
     enum:
       - "Yes"
       - "No"
@@ -142,24 +138,24 @@ properties:
       - Not Reported
 
   respirable_crystalline_silica_exposure:
-    term:
-      $ref: "_terms.yaml#/respirable_crystalline_silica_exposure"
+    $ref:
+      - "_terms.yaml#/respirable_crystalline_silica_exposure/common"
     enum:
       - "Yes"
       - "No"
       - Unknown
 
   smoking_frequency:
-    term:
-      $ref: "_terms.yaml#/smoking_frequency"
+    $ref:
+      - "_terms.yaml#/smoking_frequency/common"
     enum:
       - Every day
       - Some days
       - Unknown
 
   time_between_waking_and_first_smoke:
-    term:
-      $ref: "_terms.yaml#/time_between_waking_and_first_smoke"
+    $ref:
+      - "_terms.yaml#/time_between_waking_and_first_smoke/common"
     enum:
       - Within 5 Minutes
       - 6-30 Minutes
@@ -168,18 +164,18 @@ properties:
       - Unknown
 
   tobacco_smoking_onset_year:
-    term:
-      $ref: "_terms.yaml#/tobacco_smoking_onset_year"
+    $ref:
+      - "_terms.yaml#/tobacco_smoking_onset_year/common"
     type: integer
 
   tobacco_smoking_quit_year:
-    term:
-      $ref: "_terms.yaml#/tobacco_smoking_quit_year"
+    $ref:
+      - "_terms.yaml#/tobacco_smoking_quit_year/common"
     type: integer
 
   tobacco_smoking_status:
-    term:
-      $ref: "_terms.yaml#/tobacco_smoking_status"
+    $ref:
+      - "_terms.yaml#/tobacco_smoking_status/common"
     enum:
       - "1"
       - "2"
@@ -194,8 +190,8 @@ properties:
       - Not Allowed To Collect
 
   type_of_smoke_exposure:
-    term:
-      $ref: "_terms.yaml#/type_of_smoke_exposure"
+    $ref:
+      - "_terms.yaml#/type_of_smoke_exposure/common"
     enum:
       - Accidental building fire smoke
       - Accidental fire smoke, grass
@@ -248,8 +244,8 @@ properties:
       - Work-related smoke, soldering/welding
 
   type_of_tobacco_used:
-    term:
-      $ref: "_terms.yaml#/type_of_tobacco_used"
+    $ref:
+      - "_terms.yaml#/type_of_tobacco_used/common"
     enum:
       - Cigarettes
       - Cigar
@@ -259,13 +255,13 @@ properties:
       - Smokeless Tobacco
 
   weight:
-    term:
-      $ref: "_terms.yaml#/weight"
+    $ref:
+      - "_terms.yaml#/weight/common"
     type: number
 
   years_smoked:
-    term:
-      $ref: "_terms.yaml#/years_smoked"
+    $ref:
+      - "_terms.yaml#/years_smoked/common"
     type: number
 
   cases:

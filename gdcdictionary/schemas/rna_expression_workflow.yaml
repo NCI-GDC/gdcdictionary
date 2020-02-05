@@ -5,11 +5,11 @@ title: RNA Expression Workflow
 type: object
 namespace: https://gdc.cancer.gov
 category: analysis
-program: '*'
 project: '*'
-description: >
-  Metadata for the RNA expression pipeline used to quantify RNA gene and exon expression from
-  unharmonized or GDC harmonized data.
+program: '*'
+description: >-
+  Metadata for the RNA expression pipeline used to quantify RNA gene and exon expression
+  from unharmonized or GDC harmonized data.
 additionalProperties: false
 submittable: false
 downloadable: false
@@ -52,15 +52,17 @@ required:
   - workflow_type
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/workflow_properties"
+
+  $ref:
+    - "_definitions.yaml#/workflow_properties"
 
   workflow_type:
-    term:
-      $ref: "_terms.yaml#/workflow_type"
+    $ref:
+      - "_terms.yaml#/workflow_type/common"
     enum:
       - Cufflinks
       - DEXSeq
@@ -77,7 +79,9 @@ properties:
 
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
+
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
+
   submitted_unaligned_reads_files:
     $ref: "_definitions.yaml#/to_one"

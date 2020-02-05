@@ -5,11 +5,10 @@ title: File
 type: object
 namespace: https://gdc.cancer.gov
 category: data_file
-program: '*'
 project: '*'
-description: >
-  A set of related records (either written or electronic) kept
-  together. (NCIt C42883)
+program: '*'
+description: >-
+  A set of related records (either written or electronic) kept together. (NCIt C42883)
 additionalProperties: false
 submittable: false
 downloadable: true
@@ -27,7 +26,7 @@ systemProperties:
 
 links:
   - exclusive: false
-    required: false # eg: bai file does not have edge to biospecimen
+    required: false
     subgroup:
       - name: aliquots
         backref: files
@@ -47,8 +46,6 @@ links:
         target_type: case
         multiplicity: many_to_many
         required: false
-        # this is according to the definition in current data model
-        # https://github.com/NCI-GDC/gdcdatamodel/blob/develop/gdcdatamodel/models/edges/data_from.py#L53
       - name: derived_files
         backref: source_files
         label: data_from
@@ -128,7 +125,6 @@ links:
     multiplicity: many_to_one
     required: false
 
-
 required:
   - submitter_id
   - file_name
@@ -140,39 +136,55 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
-# File properties
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
+
+  $ref:
+    - "_definitions.yaml#/data_file_properties"
 
   aliquots:
     $ref: "_definitions.yaml#/to_many"
+
   analytes:
     $ref: "_definitions.yaml#/to_many"
+
   cases:
     $ref: "_definitions.yaml#/to_many"
-  portions:
-    $ref: "_definitions.yaml#/to_many"
-  samples:
-    $ref: "_definitions.yaml#/to_many"
-  slides:
-    $ref: "_definitions.yaml#/to_many"
+
   derived_files:
     $ref: "_definitions.yaml#/to_many"
+
+  portions:
+    $ref: "_definitions.yaml#/to_many"
+
+  samples:
+    $ref: "_definitions.yaml#/to_many"
+
+  slides:
+    $ref: "_definitions.yaml#/to_many"
+
   related_files:
     $ref: "_definitions.yaml#/to_many"
+
   tags:
     $ref: "_definitions.yaml#/to_many"
+
   archives:
     $ref: "_definitions.yaml#/to_one"
+
   data_subtypes:
     $ref: "_definitions.yaml#/to_one"
+
   data_formats:
     $ref: "_definitions.yaml#/to_one"
+
   experimental_strategies:
     $ref: "_definitions.yaml#/to_one"
+
   centers:
     $ref: "_definitions.yaml#/to_one"
+
   platforms:
     $ref: "_definitions.yaml#/to_one"
+
   described_cases:
     $ref: "_definitions.yaml#/to_one"

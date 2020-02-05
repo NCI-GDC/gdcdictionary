@@ -3,11 +3,12 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "read_group"
 title: Read Group
 type: object
-description: "Sequencing reads from one lane of an NGS experiment."
 namespace: https://gdc.cancer.gov
 category: biospecimen
 project: '*'
 program: '*'
+description: >-
+  Sequencing reads from one lane of an NGS experiment.
 additionalProperties: false
 submittable: true
 downloadable: false
@@ -23,11 +24,11 @@ systemProperties:
 
 links:
   - name: aliquots
+    backref: read_groups
     label: derived_from
     target_type: aliquot
     multiplicity: many_to_one
     required: true
-    backref: read_groups
 
 required:
   - submitter_id
@@ -43,6 +44,10 @@ required:
   - read_group_name
   - target_capture_kit
 
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
 deprecated:
   - target_capture_kit_catalog_number
   - target_capture_kit_name
@@ -50,76 +55,74 @@ deprecated:
   - target_capture_kit_vendor
   - target_capture_kit_version
 
-uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
-
 properties:
-  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  $ref:
+    - "_definitions.yaml#/ubiquitous_properties"
 
   adapter_name:
-    term:
-      $ref: "_terms.yaml#/adapter_name"
+    $ref:
+      - "_terms.yaml#/adapter_name/common"
     type: string
 
   adapter_sequence:
-    term:
-      $ref: "_terms.yaml#/adapter_sequence"
+    $ref:
+      - "_terms.yaml#/adapter_sequence/common"
     type: string
 
   base_caller_name:
-    term:
-      $ref: "_terms.yaml#/base_caller_name"
+    $ref:
+      - "_terms.yaml#/base_caller_name/common"
     type: string
 
   base_caller_version:
-    term:
-      $ref: "_terms.yaml#/base_caller_version"
+    $ref:
+      - "_terms.yaml#/base_caller_version/common"
     type: string
 
   days_to_sequencing:
-    term:
-      $ref: "_terms.yaml#/days_to_sequencing"
+    $ref:
+      - "_terms.yaml#/days_to_sequencing/common"
     type: integer
 
   experiment_name:
-    term:
-      $ref: "_terms.yaml#/experiment_name"
+    $ref:
+      - "_terms.yaml#/experiment_name/common"
     type: string
 
   flow_cell_barcode:
-    term:
-      $ref: "_terms.yaml#/flow_cell_barcode"
+    $ref:
+      - "_terms.yaml#/flow_cell_barcode/common"
     type: string
 
   fragment_maximum_length:
-    term:
-      $ref: "_terms.yaml#/fragment_maximum_length"
+    $ref:
+      - "_terms.yaml#/fragment_maximum_length/common"
     type: integer
 
   fragment_mean_length:
-    term:
-      $ref: "_terms.yaml#/fragment_mean_length"
+    $ref:
+      - "_terms.yaml#/fragment_mean_length/common"
     type: number
 
   fragment_minimum_length:
-    term:
-      $ref: "_terms.yaml#/fragment_minimum_length"
+    $ref:
+      - "_terms.yaml#/fragment_minimum_length/common"
     type: integer
 
   fragment_standard_deviation_length:
-    term:
-      $ref: "_terms.yaml#/fragment_standard_deviation_length"
+    $ref:
+      - "_terms.yaml#/fragment_standard_deviation_length/common"
     type: number
 
   includes_spike_ins:
-    term:
-      $ref: "_terms.yaml#/includes_spike_ins"
+    $ref:
+      - "_terms.yaml#/includes_spike_ins/common"
     type: boolean
 
   instrument_model:
-    terms:
-      $ref: "_terms.yaml#/instrument_model"
+    $ref:
+      - "_terms.yaml#/instrument_model/common"
     enum:
       - 454 GS FLX Titanium
       - AB SOLiD 4
@@ -144,45 +147,45 @@ properties:
       - Not Reported
 
   is_paired_end:
-    term:
-      $ref: "_terms.yaml#/is_paired_end"
-    type:
-      - boolean
-      - "null"
+    $ref:
+      - "_terms.yaml#/is_paired_end/common"
+    oneOf:
+      - type: boolean
+      - type: "null"
 
   lane_number:
-    term:
-      $ref: "_terms.yaml#/lane_number"
+    $ref:
+      - "_terms.yaml#/lane_number/common"
     type: integer
 
   library_name:
-    term:
-      $ref: "_terms.yaml#/library_name"
+    $ref:
+      - "_terms.yaml#/library_name/common"
     type: string
 
   library_preparation_kit_name:
-    term:
-      $ref: "_terms.yaml#/library_preparation_kit_name"
+    $ref:
+      - "_terms.yaml#/library_preparation_kit_name/common"
     type: string
 
   library_preparation_kit_vendor:
-    term:
-      $ref: "_terms.yaml#/library_preparation_kit_vendor"
+    $ref:
+      - "_terms.yaml#/library_preparation_kit_vendor/common"
     type: string
 
   library_preparation_kit_catalog_number:
-    term:
-      $ref: "_terms.yaml#/library_preparation_kit_catalog_number"
+    $ref:
+      - "_terms.yaml#/library_preparation_kit_catalog_number/common"
     type: string
 
   library_preparation_kit_version:
-    term:
-      $ref: "_terms.yaml#/library_preparation_kit_version"
+    $ref:
+      - "_terms.yaml#/library_preparation_kit_version/common"
     type: string
 
   library_selection:
-    term:
-      $ref: "_terms.yaml#/library_selection"
+    $ref:
+      - "_terms.yaml#/library_selection/common"
     enum:
       - Hybrid Selection
       - PCR
@@ -194,8 +197,8 @@ properties:
       - Other
 
   library_strand:
-    term:
-      $ref: "_terms.yaml#/library_strand"
+    $ref:
+      - "_terms.yaml#/library_strand/common"
     enum:
       - Unstranded
       - First_Stranded
@@ -203,8 +206,8 @@ properties:
       - Not Applicable
 
   library_strategy:
-    term:
-      $ref: "_terms.yaml#/library_strategy"
+    $ref:
+      - "_terms.yaml#/library_strategy/common"
     enum:
       - ATAC-Seq
       - Bisulfite-Seq
@@ -216,14 +219,14 @@ properties:
       - WXS
 
   multiplex_barcode:
-    term:
-      $ref: "_terms.yaml#/multiplex_barcode"
+    $ref:
+      - "_terms.yaml#/multiplex_barcode/common"
     type: string
     pattern: "^[0-9ACGTURYSWKMBDHVN]+(\\+[0-9ACGTURYSWKMBDHVN]+)?$"
 
   platform:
-    term:
-      $ref: "_terms.yaml#/platform"
+    $ref:
+      - "_terms.yaml#/platform/common"
     enum:
       - Illumina
       - SOLiD
@@ -233,46 +236,47 @@ properties:
       - PacBio
       - Other
 
-  read_group_name:  # it may be good to assign UUID to read group
-    description: "Read Group Name"
+  read_group_name:
+    description: Read Group Name
     type: string
 
   read_length:
-    type:
-     - integer
-     - "null"
+    oneOf:
+      - type: integer
+      - type: "null"
 
-  RIN:
-    term:
-      $ref: "_terms.yaml#/RIN"
+  rin:
+    $ref:
+      - "_terms.yaml#/rin/common"
     type: number
 
   sequencing_center:
-    term:
-      $ref: "_terms.yaml#/sequencing_center"
+    $ref:
+      - "_terms.yaml#/sequencing_center/common"
     type: string
 
   sequencing_date:
-    $ref: "_definitions.yaml#/datetime"
+    $ref:
+      - "_definitions.yaml#/datetime"
 
   size_selection_range:
-    term:
-      $ref: "_terms.yaml#/size_selection_range"
+    $ref:
+      - "_terms.yaml#/size_selection_range/common"
     type: string
 
   spike_ins_concentration:
-    term:
-      $ref: "_terms.yaml#/spike_ins_concentration"
+    $ref:
+      - "_terms.yaml#/spike_ins_concentration/common"
     type: string
 
   spike_ins_fasta:
-    term:
-      $ref: "_terms.yaml#/spike_ins_fasta"
+    $ref:
+      - "_terms.yaml#/spike_ins_fasta/common"
     type: string
 
   target_capture_kit:
-    term:
-      $ref: "_terms.yaml#/target_capture_kit"
+    $ref:
+      - "_terms.yaml#/target_capture_kit/common"
     enum:
       - Custom AmpliSeq Cancer Hotspot GENIE-MDA Augmented Panel v1 - 46 Genes
       - Custom GENIE-DFCI OncoPanel - 275 Genes
@@ -317,33 +321,33 @@ properties:
       - Unknown
 
   target_capture_kit_catalog_number:
-    term:
-      $ref: "_terms.yaml#/target_capture_kit_catalog_number"
+    $ref:
+      - "_terms.yaml#/target_capture_kit_catalog_number/common"
     type: string
 
-  target_capture_kit_name:  # conditionally required for WXS etc
-    term:
-      $ref: "_terms.yaml#/target_capture_kit_name"
+  target_capture_kit_name:
+    $ref:
+      - "_terms.yaml#/target_capture_kit_name/common"
     type: string
 
   target_capture_kit_target_region:
-    term:
-      $ref: "_terms.yaml#/target_capture_kit_target_region"
+    $ref:
+      - "_terms.yaml#/target_capture_kit_target_region/common"
     type: string
 
   target_capture_kit_vendor:
-    term:
-      $ref: "_terms.yaml#/target_capture_kit_vendor"
+    $ref:
+      - "_terms.yaml#/target_capture_kit_vendor/common"
     type: string
 
   target_capture_kit_version:
-    term:
-      $ref: "_terms.yaml#/target_capture_kit_version"
+    $ref:
+      - "_terms.yaml#/target_capture_kit_version/common"
     type: string
 
   to_trim_adapter_sequence:
-    term:
-      $ref: "_terms.yaml#/to_trim_adapter_sequence"
+    $ref:
+      - "_terms.yaml#/to_trim_adapter_sequence/common"
     type: boolean
 
   aliquots:
