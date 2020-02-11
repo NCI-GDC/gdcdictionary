@@ -5,9 +5,10 @@ title: Submitted Unaligned Reads
 type: object
 namespace: https://gdc.cancer.gov
 category: data_file
-program: '*'
 project: '*'
-description: "Data file containing unaligned reads that have not been GDC Harmonized."
+program: '*'
+description: >-
+  Data file containing unaligned reads that have not been GDC Harmonized.
 additionalProperties: false
 submittable: true
 downloadable: false
@@ -19,13 +20,13 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
-  - state
   - file_state
+  - state
   - error_type
 
 links:
   - name: read_groups
-    backref: submitted_unaligned_reads_files # pretty ugly
+    backref: submitted_unaligned_reads_files
     label: data_from
     target_type: read_group
     multiplicity: many_to_one
@@ -37,39 +38,42 @@ required:
   - file_size
   - md5sum
   - data_category
-  - data_type
   - data_format
+  - data_type
   - experimental_strategy
   - read_pair_number
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
+
+  $ref:
+    - "_definitions.yaml#/data_file_properties"
 
   data_category:
-    term:
-      $ref: "_terms.yaml#/data_category"
+    $ref:
+      - "_terms.yaml#/data_category/common"
     enum:
       - Sequencing Reads
 
   data_type:
-    term:
-      $ref: "_terms.yaml#/data_type"
-    enum: [ "Unaligned Reads" ]
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - Unaligned Reads
 
   data_format:
-    term:
-      $ref: "_terms.yaml#/data_format"
+    $ref:
+      - "_terms.yaml#/data_format/common"
     enum:
       - BAM
       - FASTQ
 
   experimental_strategy:
-    term:
-      $ref: "_terms.yaml#/experimental_strategy"
+    $ref:
+      - "_terms.yaml#/experimental_strategy/common"
     enum:
       - ATAC-Seq
       - Bisulfite-Seq
@@ -81,9 +85,9 @@ properties:
       - WGS
       - WXS
 
-  read_pair_number: 
-    term:
-      $ref: "_terms.yaml#/read_pair_number"
+  read_pair_number:
+    $ref:
+      - "_terms.yaml#/read_pair_number/common"
     enum:
       - R1
       - R2

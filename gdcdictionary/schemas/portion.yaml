@@ -5,9 +5,9 @@ title: Portion
 type: object
 namespace: https://gdc.cancer.gov
 category: biospecimen
-program: '*'
 project: '*'
-description: >
+program: '*'
+description: >-
   A physical sub-part of any sample.
 additionalProperties: false
 submittable: true
@@ -18,16 +18,9 @@ validators: null
 systemProperties:
   - id
   - project_id
-  - state
   - created_datetime
   - updated_datetime
-
-required:
-  - submitter_id
-
-uniqueKeys:
-  - [id]
-  - [project_id, submitter_id]
+  - state
 
 links:
   - name: samples
@@ -43,27 +36,40 @@ links:
     multiplicity: many_to_one
     required: false
 
+required:
+  - submitter_id
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
 properties:
-  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  $ref:
+    - "_definitions.yaml#/ubiquitous_properties"
 
   creation_datetime:
-    term:
-      $ref: "_terms.yaml#/creation_datetime"
+    $ref:
+      - "_terms.yaml#/creation_datetime/common"
     type: number
+
   is_ffpe:
-    term:
-      $ref: "_terms.yaml#/is_ffpe"
+    $ref:
+      - "_terms.yaml#/is_ffpe/common"
     type: boolean
+
   portion_number:
-    term:
-      $ref: "_terms.yaml#/portion_number"
+    $ref:
+      - "_terms.yaml#/portion_number/common"
     type: string
+
   weight:
-    term:
-      $ref: "_terms.yaml#/portion_weight"
+    $ref:
+      - "_terms.yaml#/portion_weight/common"
     type: number
 
   samples:
     $ref: "_definitions.yaml#/to_one"
+
   centers:
     $ref: "_definitions.yaml#/to_one"

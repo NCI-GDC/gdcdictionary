@@ -1,13 +1,13 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: pathology_report
+id: "pathology_report"
 title: Pathology Report
 type: object
 namespace: https://gdc.cancer.gov
 category: data_file
 project: '*'
 program: '*'
-description: >
+description: >-
   Data file containing the pathology report.
 additionalProperties: false
 submittable: true
@@ -20,8 +20,8 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
-  - state
   - file_state
+  - state
   - error_type
 
 links:
@@ -36,31 +36,35 @@ required:
   - submitter_id
   - file_name
   - file_size
-  - data_format
   - md5sum
   - data_category
+  - data_format
   - data_type
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
+
+  $ref:
+    - "_definitions.yaml#/data_file_properties"
 
   data_category:
-    term:
-      $ref: "_terms.yaml#/data_category"
-    enum: [ "Clinical" ]
+    $ref:
+      - "_terms.yaml#/data_category/common"
+    enum:
+      - Clinical
 
   data_type:
-    term:
-      $ref: "_terms.yaml#/data_type"
-    enum: [ "Pathology Report" ]
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - Pathology Report
 
   data_format:
-    term:
-      $ref: "_terms.yaml#/data_format"
+    $ref:
+      - "_terms.yaml#/data_format/common"
     enum:
       - PDF
 

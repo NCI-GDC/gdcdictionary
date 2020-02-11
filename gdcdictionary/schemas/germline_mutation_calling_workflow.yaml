@@ -5,11 +5,11 @@ title: Germline Mutation Calling Workflow
 type: object
 namespace: https://gdc.cancer.gov
 category: analysis
-program: '*'
 project: '*'
-description: >
-  Metadata for the germline mutation calling pipeline used to call variants in the GDC DNA-Seq
-  pipelines.
+program: '*'
+description: >-
+  Metadata for the germline mutation calling pipeline used to call variants in the
+  GDC DNA-Seq pipelines.
 additionalProperties: false
 submittable: false
 downloadable: false
@@ -37,16 +37,19 @@ required:
   - workflow_type
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/workflow_properties"
+
+  $ref:
+    - "_definitions.yaml#/workflow_properties"
 
   workflow_type:
-    term:
-      $ref: "_terms.yaml#/workflow_type"
-    enum: [ "HaplotypeCaller" ]
+    $ref:
+      - "_terms.yaml#/workflow_type/common"
+    enum:
+      - HaplotypeCaller
 
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"

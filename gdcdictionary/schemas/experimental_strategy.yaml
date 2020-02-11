@@ -5,9 +5,10 @@ title: Experimental Strategy
 type: object
 namespace: https://gdc.cancer.gov
 category: TBD
-program: '*'
 project: '*'
-description: "Experimental strategy of a legacy file (depreciated)."
+program: '*'
+description: >-
+  Experimental strategy of a legacy file (deprecated).
 additionalProperties: false
 submittable: false
 downloadable: false
@@ -26,13 +27,15 @@ uniqueKeys:
   - [id]
   - [name]
 
-# experimental_strategy properties
 properties:
+
   type:
     type: string
+
   id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
+    $ref:
+      - "_definitions.yaml#/uuid"
+
   name:
-    type: string
     description: name of this record
+    type: string

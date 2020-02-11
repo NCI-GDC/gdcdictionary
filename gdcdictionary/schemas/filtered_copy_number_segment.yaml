@@ -5,14 +5,13 @@ title: Filtered Copy Number Segment
 type: object
 namespace: https://gdc.cancer.gov
 category: data_file
-program: '*'
 project: '*'
-description: >
-  Data file containing copy number information that has been lifted over
-  and filtered.
+program: '*'
+description: >-
+  Data file containing copy number information that has been lifted over and filtered.
 additionalProperties: false
 submittable: false
-downloadable: true 
+downloadable: true
 previous_version_downloadable: true
 validators: null
 
@@ -21,8 +20,8 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
-  - state
   - file_state
+  - state
   - error_type
 
 links:
@@ -37,41 +36,43 @@ required:
   - submitter_id
   - file_name
   - file_size
-  - data_format
   - md5sum
   - data_category
+  - data_format
   - data_type
   - experimental_strategy
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
+
+  $ref:
+    - "_definitions.yaml#/data_file_properties"
 
   data_category:
-    term:
-      $ref: "_terms.yaml#/data_category"
+    $ref:
+      - "_terms.yaml#/data_category/common"
     enum:
       - Copy Number Variation
 
   data_type:
-    term:
-      $ref: "_terms.yaml#/data_type"
+    $ref:
+      - "_terms.yaml#/data_type/common"
     enum:
       - Copy Number Segment
       - Masked Copy Number Segment
 
   data_format:
-    term:
-      $ref: "_terms.yaml#/data_format"
+    $ref:
+      - "_terms.yaml#/data_format/common"
     enum:
       - TXT
 
   experimental_strategy:
-    term:
-      $ref: "_terms.yaml#/experimental_strategy"
+    $ref:
+      - "_terms.yaml#/experimental_strategy/common"
     enum:
       - Genotyping Array
 

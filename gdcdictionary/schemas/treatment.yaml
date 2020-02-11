@@ -5,11 +5,11 @@ title: Treatment
 type: object
 namespace: https://gdc.cancer.gov
 category: clinical
-program: '*'
 project: '*'
-description: >
-  Record of the administration and intention of therapeutic agents provided to a patient to alter
-  the course of a pathologic process.
+program: '*'
+description: >-
+  Record of the administration and intention of therapeutic agents provided to a patient
+  to alter the course of a pathologic process.
 additionalProperties: false
 submittable: true
 downloadable: false
@@ -19,14 +19,14 @@ validators: null
 systemProperties:
   - id
   - project_id
-  - state
   - created_datetime
   - updated_datetime
+  - state
 
 links:
   - name: diagnoses
     backref: treatments
-    label: describes #need better term here
+    label: describes
     target_type: diagnosis
     multiplicity: many_to_one
     required: true
@@ -34,34 +34,35 @@ links:
 required:
   - submitter_id
 
-deprecated:
-  - days_to_treatment
-
 uniqueKeys:
-  #unclear if want submitter ID for clinical
   - [id]
   - [project_id, submitter_id]
 
+deprecated:
+  - days_to_treatment
+
 properties:
-  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  $ref:
+    - "_definitions.yaml#/ubiquitous_properties"
 
   days_to_treatment_end:
-    term:
-      $ref: "_terms.yaml#/days_to_treatment_end"
+    $ref:
+      - "_terms.yaml#/days_to_treatment_end/common"
     type: integer
-    minimum: -32872
     maximum: 32872
+    minimum: -32872
 
   days_to_treatment_start:
-    term:
-      $ref: "_terms.yaml#/days_to_treatment_start"
+    $ref:
+      - "_terms.yaml#/days_to_treatment_start/common"
     type: integer
-    minimum: -32872
     maximum: 32872
+    minimum: -32872
 
   initial_disease_status:
-    term:
-      $ref: "_terms.yaml#/initial_disease_status"
+    $ref:
+      - "_terms.yaml#/initial_disease_status/common"
     enum:
       - Initial Diagnosis
       - Progressive Disease
@@ -71,18 +72,18 @@ properties:
       - Not Reported
 
   regimen_or_line_of_therapy:
-    term:
-      $ref: "_terms.yaml#/regimen_or_line_of_therapy"
+    $ref:
+      - "_terms.yaml#/regimen_or_line_of_therapy/common"
     type: string
 
   therapeutic_agents:
-    term:
-      $ref: "_terms.yaml#/therapeutic_agents"
+    $ref:
+      - "_terms.yaml#/therapeutic_agents/common"
     type: string
 
   treatment_anatomic_site:
-    term:
-      $ref: "_terms.yaml#/treatment_anatomic_site"
+    $ref:
+      - "_terms.yaml#/treatment_anatomic_site/common"
     enum:
       - Abdomen, total
       - Abdominal Wall
@@ -387,8 +388,8 @@ properties:
       - Not Reported
 
   treatment_effect:
-    term:
-      $ref: "_terms.yaml#/treatment_effect"
+    $ref:
+      - "_terms.yaml#/treatment_effect/common"
     enum:
       - Complete Necrosis (No Viable Tumor)
       - Incomplete Necrosis (Viable Tumor Present)
@@ -397,8 +398,8 @@ properties:
       - Not Reported
 
   treatment_intent_type:
-    term:
-      $ref: "_terms.yaml#/treatment_intent_type"
+    $ref:
+      - "_terms.yaml#/treatment_intent_type/common"
     enum:
       - Adjuvant
       - Cancer Control
@@ -410,8 +411,8 @@ properties:
       - Not Reported
 
   treatment_or_therapy:
-    term:
-      $ref: "_terms.yaml#/treatment_or_therapy"
+    $ref:
+      - "_terms.yaml#/treatment_or_therapy/common"
     enum:
       - "yes"
       - "no"
@@ -419,8 +420,8 @@ properties:
       - not reported
 
   treatment_outcome:
-    term:
-      $ref: "_terms.yaml#/treatment_outcome"
+    $ref:
+      - "_terms.yaml#/treatment_outcome/common"
     enum:
       - Complete Response
       - Mixed Response
@@ -437,8 +438,8 @@ properties:
       - Not Reported
 
   treatment_type:
-    term:
-      $ref: "_terms.yaml#/treatment_type"
+    $ref:
+      - "_terms.yaml#/treatment_type/common"
     enum:
       - Ablation, Cryo
       - Ablation, Ethanol Injection

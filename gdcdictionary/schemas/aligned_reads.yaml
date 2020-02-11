@@ -5,9 +5,9 @@ title: Aligned Reads
 type: object
 namespace: https://gdc.cancer.gov
 category: data_file
-program: '*'
 project: '*'
-description: >
+program: '*'
+description: >-
   Data file containing aligned reads that are generated internally by the GDC.
 additionalProperties: false
 submittable: false
@@ -20,8 +20,8 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
-  - state
   - file_state
+  - state
   - error_type
 
 links:
@@ -62,62 +62,66 @@ required:
   - file_size
   - md5sum
   - data_category
-  - data_type
   - data_format
+  - data_type
   - experimental_strategy
   - platform
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
+
+  $ref:
+    - "_definitions.yaml#/data_file_properties"
 
   average_base_quality:
-    term:
-      $ref: "_terms.yaml#/average_base_quality"
+    $ref:
+      - "_terms.yaml#/average_base_quality/common"
     type: number
 
   average_insert_size:
-    term:
-      $ref: "_terms.yaml#/average_insert_size"
+    $ref:
+      - "_terms.yaml#/average_insert_size/common"
     type: integer
 
   average_read_length:
-    term:
-      $ref: "_terms.yaml#/average_read_length"
+    $ref:
+      - "_terms.yaml#/average_read_length/common"
     type: integer
 
   contamination:
-    term:
-      $ref: "_terms.yaml#/contamination"
+    $ref:
+      - "_terms.yaml#/contamination/common"
     type: number
 
   contamination_error:
-    term:
-      $ref: "_terms.yaml#/contamination_error"
+    $ref:
+      - "_terms.yaml#/contamination_error/common"
     type: number
 
   data_category:
-    term:
-      $ref: "_terms.yaml#/data_category"
+    $ref:
+      - "_terms.yaml#/data_category/common"
     enum:
       - Sequencing Reads
 
   data_type:
-    term:
-      $ref: "_terms.yaml#/data_type"
-    enum: [ "Aligned Reads" ]
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - Aligned Reads
 
   data_format:
-    term:
-      $ref: "_terms.yaml#/data_format"
-    enum: [ "BAM" ]
+    $ref:
+      - "_terms.yaml#/data_format/common"
+    enum:
+      - BAM
 
   experimental_strategy:
-    term:
-      $ref: "_terms.yaml#/experimental_strategy"
+    $ref:
+      - "_terms.yaml#/experimental_strategy/common"
     enum:
       - ATAC-Seq
       - Bisulfite-Seq
@@ -131,12 +135,12 @@ properties:
       - WXS
 
   mean_coverage:
-    term:
-      $ref: "_terms.yaml#/mean_coverage"
+    $ref:
+      - "_terms.yaml#/mean_coverage/common"
     type: number
 
   msi_status:
-    description: "MSIsensor determination of either microsatellite stability or instability."
+    description: MSIsensor determination of either microsatellite stability or instability.
     enum:
       - MSI
       - MSS
@@ -146,53 +150,57 @@ properties:
     type: number
 
   pairs_on_diff_chr:
-    term:
-      $ref: "_terms.yaml#/pairs_on_diff_chr"
+    $ref:
+      - "_terms.yaml#/pairs_on_diff_chr/common"
     type: integer
 
   platform:
-    $ref: "read_group.yaml#/properties/platform"
+    $ref:
+      - "read_group.yaml#/properties/platform"
 
   proportion_base_mismatch:
-    term:
-      $ref: "_terms.yaml#/proportion_base_mismatch"
+    $ref:
+      - "_terms.yaml#/proportion_base_mismatch/common"
     type: number
 
-  proportion_coverage_10X:
-    term:
-      $ref: "_terms.yaml#/proportion_coverage_10X"
+  proportion_coverage_10x:
+    $ref:
+      - "_terms.yaml#/proportion_coverage_10x/common"
     type: number
 
-  proportion_coverage_30X:
-    term:
-      $ref: "_terms.yaml#/proportion_coverage_30X"
+  proportion_coverage_30x:
+    $ref:
+      - "_terms.yaml#/proportion_coverage_30x/common"
     type: number
 
   proportion_reads_duplicated:
-    term:
-      $ref: "_terms.yaml#/proportion_reads_duplicated"
+    $ref:
+      - "_terms.yaml#/proportion_reads_duplicated/common"
     type: number
 
   proportion_reads_mapped:
-    term:
-      $ref: "_terms.yaml#/proportion_reads_mapped"
+    $ref:
+      - "_terms.yaml#/proportion_reads_mapped/common"
     type: number
 
   proportion_targets_no_coverage:
-    term:
-      $ref: "_terms.yaml#/proportion_targets_no_coverage"
+    $ref:
+      - "_terms.yaml#/proportion_targets_no_coverage/common"
     type: number
 
   total_reads:
-    term:
-      $ref: "_terms.yaml#/total_reads"
+    $ref:
+      - "_terms.yaml#/total_reads/common"
     type: integer
 
   alignment_cocleaning_workflows:
     $ref: "_definitions.yaml#/to_one"
+
   alignment_workflows:
     $ref: "_definitions.yaml#/to_one"
+
   submitted_unaligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
+
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"

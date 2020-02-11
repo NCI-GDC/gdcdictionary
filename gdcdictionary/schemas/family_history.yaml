@@ -5,9 +5,9 @@ title: Family History
 type: object
 namespace: https://gdc.cancer.gov
 category: clinical
-program: '*'
 project: '*'
-description: >
+program: '*'
+description: >-
   Record of a patient's background regarding cancer events of blood relatives.
 additionalProperties: false
 submittable: true
@@ -18,12 +18,9 @@ validators: null
 systemProperties:
   - id
   - project_id
-  - state
   - created_datetime
   - updated_datetime
-
-required:
-  - submitter_id
+  - state
 
 links:
   - name: cases
@@ -33,17 +30,21 @@ links:
     multiplicity: many_to_one
     required: true
 
+required:
+  - submitter_id
+
 uniqueKeys:
-  #unclear if want submitter ID for clinical
   - [id]
   - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  $ref:
+    - "_definitions.yaml#/ubiquitous_properties"
 
   relationship_type:
-    term:
-      $ref: "_terms.yaml#/relationship_type"
+    $ref:
+      - "_terms.yaml#/relationship_type/common"
     enum:
       - Adopted Daughter
       - Adopted Son
@@ -163,8 +164,8 @@ properties:
       - Not Reported
 
   relationship_gender:
-    term:
-      $ref: "_terms.yaml#/relationship_gender"
+    $ref:
+      - "_terms.yaml#/relationship_gender/common"
     enum:
       - female
       - male
@@ -173,15 +174,15 @@ properties:
       - not reported
 
   relationship_age_at_diagnosis:
-    term:
-      $ref: "_terms.yaml#/relationship_age_at_diagnosis"
+    $ref:
+      - "_terms.yaml#/relationship_age_at_diagnosis/common"
     type: number
-    minimum: 0
     maximum: 90
+    minimum: 0
 
   relationship_primary_diagnosis:
-    term:
-      $ref: "_terms.yaml#/relationship_primary_diagnosis"
+    $ref:
+      - "_terms.yaml#/relationship_primary_diagnosis/common"
     enum:
       - Adrenal Gland Cancer
       - Basal Cell Cancer
@@ -236,8 +237,8 @@ properties:
       - Not Reported
 
   relative_with_cancer_history:
-    term:
-      $ref: "_terms.yaml#/relative_with_cancer_history"
+    $ref:
+      - "_terms.yaml#/relative_with_cancer_history/common"
     enum:
       - "yes"
       - "no"
@@ -245,8 +246,8 @@ properties:
       - not reported
 
   relatives_with_cancer_history_count:
-    term:
-      $ref: "_terms.yaml#/relatives_with_cancer_history_count"
+    $ref:
+      - "_terms.yaml#/relatives_with_cancer_history_count/common"
     type: integer
 
   cases:

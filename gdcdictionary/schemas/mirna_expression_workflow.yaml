@@ -5,11 +5,11 @@ title: miRNA Expression Workflow
 type: object
 namespace: https://gdc.cancer.gov
 category: analysis
-program: '*'
 project: '*'
-description: >
-  Metadata for the miRNA profiling pipeline used to quantify miRNA expression from GDC harmonized
-  data.
+program: '*'
+description: >-
+  Metadata for the miRNA profiling pipeline used to quantify miRNA expression from
+  GDC harmonized data.
 additionalProperties: false
 submittable: false
 downloadable: false
@@ -37,16 +37,19 @@ required:
   - workflow_type
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/workflow_properties"
+
+  $ref:
+    - "_definitions.yaml#/workflow_properties"
 
   workflow_type:
-    term:
-      $ref: "_terms.yaml#/workflow_type"
-    enum: [ "BCGSC miRNA Profiling" ]
+    $ref:
+      - "_terms.yaml#/workflow_type/common"
+    enum:
+      - BCGSC miRNA Profiling
 
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"

@@ -142,13 +142,22 @@ class GDCDictionary(object):
         if isinstance(obj, dict):
             for key in obj.copy().keys():
                 if key == '$ref':
-                    val = obj.pop(key)
-                    obj.update(self.resolve_reference(val, root))
+                    refs = obj.pop(key)
+                    self.resolve_local_refs(refs, obj, root)
             return {k: self.resolve_schema(v, root) for k, v in obj.items()}
         elif isinstance(obj, list):
             return [self.resolve_schema(item, root) for item in obj]
         else:
             return obj
+
+    def resolve_local_refs(self, refs, obj, root):
+        """Converts a string ref to list of refs & resolves the references
+
+        """
+        if not isinstance(refs, list):
+            refs = [refs]
+        for ref in refs:
+            obj.update(self.resolve_reference(ref, root))
 
 
 gdcdictionary = GDCDictionary()

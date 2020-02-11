@@ -7,8 +7,9 @@ namespace: https://gdc.cancer.gov
 category: data_file
 project: '*'
 program: '*'
-description: >
-  MAF/TSV files that contain a filtered subset of somatic mutations, which may be open access.
+description: >-
+  MAF/TSV files that contain a filtered subset of somatic mutations, which may be
+  open access.
 additionalProperties: false
 submittable: false
 downloadable: true
@@ -20,8 +21,8 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
-  - state
   - file_state
+  - state
   - error_type
 
 links:
@@ -30,7 +31,7 @@ links:
     label: derived_from
     target_type: project
     multiplicity: many_to_one
-    required: false 
+    required: false
   - exclusive: true
     required: true
     subgroup:
@@ -53,38 +54,41 @@ required:
   - file_size
   - md5sum
   - data_category
-  - data_type
   - data_format
+  - data_type
   - experimental_strategy
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
+
+  $ref:
+    - "_definitions.yaml#/data_file_properties"
 
   data_category:
-    term:
-      $ref: "_terms.yaml#/data_category"
-    enum: [ "Simple Nucleotide Variation" ]
+    $ref:
+      - "_terms.yaml#/data_category/common"
+    enum:
+      - Simple Nucleotide Variation
 
   data_type:
-    term:
-      $ref: "_terms.yaml#/data_type"
+    $ref:
+      - "_terms.yaml#/data_type/common"
     enum:
       - Masked Somatic Mutation
 
   data_format:
-    term:
-      $ref: "_terms.yaml#/data_format"
+    $ref:
+      - "_terms.yaml#/data_format/common"
     enum:
       - MAF
       - TSV
 
   experimental_strategy:
-    term:
-      $ref: "_terms.yaml#/experimental_strategy"
+    $ref:
+      - "_terms.yaml#/experimental_strategy/common"
     enum:
       - ATAC-Seq
       - Bisulfite-Seq
@@ -98,7 +102,9 @@ properties:
 
   projects:
     $ref: "_definitions.yaml#/to_one"
+
   genomic_profile_harmonization_workflows:
     $ref: "_definitions.yaml#/to_many"
+
   somatic_aggregation_workflows:
     $ref: "_definitions.yaml#/to_one"

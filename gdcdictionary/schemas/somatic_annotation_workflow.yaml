@@ -5,11 +5,11 @@ title: Somatic Annotation Workflow
 type: object
 namespace: https://gdc.cancer.gov
 category: analysis
-program: '*'
 project: '*'
-description: >
-  Metadata for the somatic mutation annotation pipeline used to annotate the mutations called in the
-  GDC DNA-Seq pipelines.
+program: '*'
+description: >-
+  Metadata for the somatic mutation annotation pipeline used to annotate the mutations
+  called in the GDC DNA-Seq pipelines.
 additionalProperties: false
 submittable: false
 downloadable: false
@@ -37,15 +37,17 @@ required:
   - workflow_type
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/workflow_properties"
+
+  $ref:
+    - "_definitions.yaml#/workflow_properties"
 
   workflow_type:
-    term:
-      $ref: "_terms.yaml#/workflow_type"
+    $ref:
+      - "_terms.yaml#/workflow_type/common"
     enum:
       - CaVEMan Annotation
       - FoundationOne Annotation

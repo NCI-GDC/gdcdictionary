@@ -3,24 +3,33 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "molecular_test"
 title: Molecular Test
 type: object
+namespace: https://gdc.cancer.gov
 category: clinical
-namespace: https://gdc.cancer.gov/
-program: '*'
 project: '*'
-description: >
-  Information pertaining to any molecular tests performed on the patient during a clinical event.
+program: '*'
+description: >-
+  Information pertaining to any molecular tests performed on the patient during a
+  clinical event.
 additionalProperties: false
 submittable: true
 downloadable: false
 previous_version_downloadable: false
-validators: []
+validators: null
 
 systemProperties:
   - id
   - project_id
-  - state
   - created_datetime
   - updated_datetime
+  - state
+
+links:
+  - name: follow_ups
+    backref: molecular_tests
+    label: performed_at
+    target_type: follow_up
+    multiplicity: many_to_one
+    required: true
 
 required:
   - submitter_id
@@ -32,25 +41,19 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
-links:
-  - name: follow_ups
-    backref: molecular_tests
-    label: performed_at
-    target_type: follow_up
-    multiplicity: many_to_one
-    required: true
-
 properties:
-  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  $ref:
+    - "_definitions.yaml#/ubiquitous_properties"
 
   aa_change:
-    term:
-      $ref: "_terms.yaml#/aa_change"
+    $ref:
+      - "_terms.yaml#/aa_change/common"
     type: string
 
   antigen:
-    term:
-      $ref: "_terms.yaml#/antigen"
+    $ref:
+      - "_terms.yaml#/antigen/common"
     enum:
       - BCL6
       - CA-125
@@ -84,18 +87,18 @@ properties:
       - Not Reported
 
   blood_test_normal_range_lower:
-    term:
-      $ref: "_terms.yaml#/blood_test_normal_range_lower"
+    $ref:
+      - "_terms.yaml#/blood_test_normal_range_lower/common"
     type: number
 
   blood_test_normal_range_upper:
-    term:
-      $ref: "_terms.yaml#/blood_test_normal_range_upper"
+    $ref:
+      - "_terms.yaml#/blood_test_normal_range_upper/common"
     type: number
 
   biospecimen_type:
-    term:
-      $ref: "_terms.yaml#/biospecimen_type"
+    $ref:
+      - "_terms.yaml#/biospecimen_type/common"
     enum:
       - Blood
       - Bone Marrow
@@ -122,14 +125,14 @@ properties:
       - Not Reported
 
   cell_count:
-    term:
-      $ref: "_terms.yaml#/cell_count"
+    $ref:
+      - "_terms.yaml#/cell_count/common"
     type: integer
     minimum: 0
 
   chromosome:
-    term:
-      $ref: "_terms.yaml#/chromosome"
+    $ref:
+      - "_terms.yaml#/chromosome/common"
     enum:
       - chr1
       - chr2
@@ -161,24 +164,24 @@ properties:
       - Not Reported
 
   copy_number:
-    term:
-      $ref: "_terms.yaml#/copy_number"
+    $ref:
+      - "_terms.yaml#/copy_number/common"
     type: number
 
   cytoband:
-    term:
-      $ref: "_terms.yaml#/cytoband"
+    $ref:
+      - "_terms.yaml#/cytoband/common"
     type: string
 
   exon:
-    term:
-      $ref: "_terms.yaml#/exon"
+    $ref:
+      - "_terms.yaml#/exon/common"
     type: string
     pattern: "^(0|[1-9][0-9]{0,3})[a-z]?$"
 
   gene_symbol:
-    term:
-      $ref: "_terms.yaml#/gene_symbol"
+    $ref:
+      - "_terms.yaml#/gene_symbol/common"
     enum:
       - A1CF
       - ABI1
@@ -891,8 +894,8 @@ properties:
       - Not Applicable
 
   histone_family:
-    term:
-      $ref: "_terms.yaml#/histone_family"
+    $ref:
+      - "_terms.yaml#/histone_family/common"
     enum:
       - H1
       - H2A
@@ -903,8 +906,8 @@ properties:
       - Not Reported
 
   histone_variant:
-    term:
-      $ref: "_terms.yaml#/histone_variant"
+    $ref:
+      - "_terms.yaml#/histone_variant/common"
     enum:
       - CENP-A
       - H2A-Bbd
@@ -927,14 +930,14 @@ properties:
       - Not Reported
 
   intron:
-    term:
-      $ref: "_terms.yaml#/intron"
+    $ref:
+      - "_terms.yaml#/intron/common"
     type: string
     pattern: "^(0|[1-9][0-9]{0,3})[a-z]?$"
 
   laboratory_test:
-    term:
-      $ref: "_terms.yaml#/laboratory_test"
+    $ref:
+      - "_terms.yaml#/laboratory_test/common"
     enum:
       - Absolute Neutrophil
       - Albumin
@@ -979,24 +982,25 @@ properties:
       - Not Reported
 
   loci_abnormal_count:
-    term:
-      $ref: "_terms.yaml#/loci_abnormal_count"
+    $ref:
+      - "_terms.yaml#/loci_abnormal_count/common"
     type: integer
 
   loci_count:
-    term:
-      $ref: "_terms.yaml#/loci_count"
+    $ref:
+      - "_terms.yaml#/loci_count/common"
     type: integer
 
   locus:
-    term:
-      $ref: "_terms.yaml#/locus"
+    $ref:
+      - "_terms.yaml#/locus/common"
     type: string
-    pattern: "^(AC_|NC_|NG_|NT_|NW_|NZ_b|NM_|NR_|XM_c|XR_c|AP_|NP_|YP_c|XP_c|WP_)[0-9]+(\\.(0|[1-9][0-9]{0,3}))?$"
+    pattern: "^(AC_|NC_|NG_|NT_|NW_|NZ_b|NM_|NR_|XM_c|XR_c|AP_|NP_|YP_c|XP_c|WP_)[0-9]+(\\\
+      .(0|[1-9][0-9]{0,3}))?$"
 
   mismatch_repair_mutation:
-    term:
-      $ref: "_terms.yaml#/mismatch_repair_mutation"
+    $ref:
+      - "_terms.yaml#/mismatch_repair_mutation/common"
     enum:
       - "Yes"
       - "No"
@@ -1004,8 +1008,8 @@ properties:
       - Not Reported
 
   molecular_analysis_method:
-    term:
-      $ref: "_terms.yaml#/molecular_analysis_method"
+    $ref:
+      - "_terms.yaml#/molecular_analysis_method/common"
     enum:
       - Comparative Genomic Hybridization
       - Cytogenetics, NOS
@@ -1029,8 +1033,8 @@ properties:
       - Not Reported
 
   molecular_consequence:
-    term:
-      $ref: "_terms.yaml#/molecular_consequence"
+    $ref:
+      - "_terms.yaml#/molecular_consequence/common"
     enum:
       - 3 Prime UTR Variant
       - 5 Prime UTR Variant
@@ -1069,8 +1073,8 @@ properties:
       - Upstream Gene Variant
 
   pathogenicity:
-    term:
-      $ref: "_terms.yaml#/pathogenicity"
+    $ref:
+      - "_terms.yaml#/pathogenicity/common"
     enum:
       - Benign
       - Likely Benign
@@ -1079,8 +1083,8 @@ properties:
       - Uncertain Significance
 
   ploidy:
-    term:
-      $ref: "_terms.yaml#/ploidy"
+    $ref:
+      - "_terms.yaml#/ploidy/common"
     enum:
       - Aneuploid
       - Diploid
@@ -1092,14 +1096,14 @@ properties:
       - Not Reported
 
   second_exon:
-    term:
-      $ref: "_terms.yaml#/second_exon"
+    $ref:
+      - "_terms.yaml#/second_exon/common"
     type: string
     pattern: "^(0|[1-9][0-9]{0,3})[a-z]?$"
 
   second_gene_symbol:
-    term:
-      $ref: "_terms.yaml#/second_gene_symbol"
+    $ref:
+      - "_terms.yaml#/second_gene_symbol/common"
     enum:
       - A1CF
       - ABI1
@@ -1809,13 +1813,13 @@ properties:
       - Not Reported
 
   specialized_molecular_test:
-    term:
-      $ref: "_terms.yaml#/specialized_molecular_test"
+    $ref:
+      - "_terms.yaml#/specialized_molecular_test/common"
     type: string
 
   test_analyte_type:
-    term:
-      $ref: "_terms.yaml#/test_analyte_type"
+    $ref:
+      - "_terms.yaml#/test_analyte_type/common"
     enum:
       - DNA
       - mRNA
@@ -1826,8 +1830,8 @@ properties:
       - Not Reported
 
   test_result:
-    term:
-      $ref: "_terms.yaml#/test_result"
+    $ref:
+      - "_terms.yaml#/test_result/common"
     enum:
       - Abnormal, NOS
       - Copy Number Reported
@@ -1845,32 +1849,32 @@ properties:
       - Not Reported
 
   test_units:
-    term:
-      $ref: "_terms.yaml#/test_units"
+    $ref:
+      - "_terms.yaml#/test_units/common"
     type: string
 
   test_value:
-    term:
-      $ref: "_terms.yaml#/test_value"
+    $ref:
+      - "_terms.yaml#/test_value/common"
     type: number
 
   transcript:
-    term:
-      $ref: "_terms.yaml#/transcript"
+    $ref:
+      - "_terms.yaml#/transcript/common"
     type: string
     pattern: "^ENST[0-9]{11}(\\.(0|[1-9][0-9]*))?$"
 
   variant_origin:
-    term:
-      $ref: "_terms.yaml#/variant_origin"
+    $ref:
+      - "_terms.yaml#/variant_origin/common"
     enum:
       - Germline
       - Somatic
       - Unknown
 
   variant_type:
-    term:
-      $ref: "_terms.yaml#/variant_type"
+    $ref:
+      - "_terms.yaml#/variant_type/common"
     enum:
       - Alleles
       - Amplification
@@ -1898,8 +1902,8 @@ properties:
       - Not Reported
 
   zygosity:
-    term:
-      $ref: "_terms.yaml#/zygosity"
+    $ref:
+      - "_terms.yaml#/zygosity/common"
     enum:
       - Heterozygous
       - Hemizygous

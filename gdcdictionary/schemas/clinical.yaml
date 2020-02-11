@@ -5,11 +5,10 @@ title: Clinical
 type: object
 namespace: https://gdc.cancer.gov
 category: clinical
-program: '*'
 project: '*'
-description: >
-  Data obtained through patient examination or treatment.
-  (GDC synonym for NCIt C15783)
+program: '*'
+description: >-
+  Data obtained through patient examination or treatment. (GDC synonym for NCIt C15783)
 additionalProperties: false
 submittable: false
 downloadable: false
@@ -19,9 +18,9 @@ validators: null
 systemProperties:
   - id
   - project_id
-  - state
   - created_datetime
   - updated_datetime
+  - state
 
 links:
   - name: cases
@@ -39,30 +38,26 @@ required:
 uniqueKeys:
   - [id]
 
-# clinical properties
 properties:
-  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  $ref:
+    - "_definitions.yaml#/ubiquitous_properties"
 
   age_at_diagnosis:
+    description: 'Age in days at which a condition or disease was first diagnosed.
+      CDE: 3225640. TCGA has the age in years with CDE 2006657, this is converted
+      by ceil(age*365.25) to get days.'
     type: number
-    description: >
-      Age in days at which a condition or disease was first diagnosed.
-      CDE: 3225640. TCGA has the age in years with CDE 2006657,
-      this is converted by ceil(age*365.25) to get days.
 
   days_to_death:
+    description: "Time interval from a person's date of death to the date of initial\
+      \ pathologic diagnosis, represented as a calculated number of days. CDE: 3165475."
     type: number
-    description: >
-      Time interval from a person's date of death to the date of initial
-      pathologic diagnosis, represented as a calculated number of days. CDE: 3165475.
 
   gender:
-    title: Gender
-    cde_id: 2200604
-    type: string
-    description: >
-      Text designations that identify gender. Gender is described as the assemblage
-      of properties that distinguish people on the basis of their societal roles. CDE: 2200604
+    description: 'Text designations that identify gender. Gender is described as the
+      assemblage of properties that distinguish people on the basis of their societal
+      roles. CDE: 2200604'
     enum:
       - female
       - male
@@ -70,28 +65,21 @@ properties:
       - unspecified
 
   ethnicity:
-    title: Ethnicity
-    description: >
-      The text for reporting information about ethnicity based on the Office
-      of Management and Budget (OMB) categories. CDE: 2192217.
-    cde_id: 2200604
+    description: 'The text for reporting information about ethnicity based on the
+      Office of Management and Budget (OMB) categories. CDE: 2192217.'
     enum:
       - hispanic or latino
       - not hispanic or latino
 
   icd_10:
+    description: 'The tenth version of the International Classification of Disease
+      (ICD), published by the World Health Organization in 1992. A system of numbered
+      categories for representation of data. CDE: 3226287.'
     type: string
-    description: >
-      The tenth version of the International Classification of Disease (ICD),
-      published by the World Health Organization in 1992. A system of numbered
-      categories for representation of data. CDE: 3226287.
 
   race:
-    title: Race
-    cde_id: 21922199
-    description: >
-      The text for reporting information about race based on the Office of
-      Management and Budget (OMB) categories. CDE: 2192199."
+    description: 'The text for reporting information about race based on the Office
+      of Management and Budget (OMB) categories. CDE: 2192199.'
     enum:
       - not reported
       - white
@@ -102,18 +90,17 @@ properties:
       - other
 
   vital_status:
+    description: 'The survival state of the person registered on the protocol. CDE:
+      5.'
     enum:
       - alive
       - dead
       - lost to follow-up
-    description: >
-      The survival state of the person registered on the protocol. CDE: 5.
 
   year_of_diagnosis:
+    description: "Numeric value to represent the year of an individual's initial pathologic\
+      \ diagnosis of cancer. CDE: 2896960."
     type: number
-    description: >
-      Numeric value to represent the year of an individual's initial pathologic
-      diagnosis of cancer. CDE: 2896960.
 
   cases:
     $ref: "_definitions.yaml#/to_one"

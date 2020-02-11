@@ -5,13 +5,14 @@ title: Publication
 type: object
 namespace: https://gdc.cancer.gov
 category: TBD
-program: '*'
 project: '*'
-description: "Publication for a legacy file (depreciated)."
+program: '*'
+description: >-
+  Publication for a legacy file (deprecated).
 additionalProperties: false
 submittable: false
 downloadable: true
-previous_version_downloadable: true 
+previous_version_downloadable: true
 validators: null
 
 systemProperties:
@@ -38,22 +39,31 @@ uniqueKeys:
   - [pmid]
   - [doi]
 
-# publication properties
 properties:
+
   type:
     type: string
+
   id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
+    $ref:
+      - "_definitions.yaml#/uuid"
+
   pmid:
     type: string
+
   doi:
     type: string
-  files:
-    $ref: "_definitions.yaml#/to_many"
+
   project_id:
     type: string
+
   created_datetime:
-    $ref: "_definitions.yaml#/datetime"
+    $ref:
+      - "_definitions.yaml#/datetime"
+
   updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
+    $ref:
+      - "_definitions.yaml#/datetime"
+
+  files:
+    $ref: "_definitions.yaml#/to_many"

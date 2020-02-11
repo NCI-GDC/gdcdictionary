@@ -5,9 +5,9 @@ title: Structural Variation
 type: object
 namespace: https://gdc.cancer.gov
 category: data_file
-program: '*'
 project: '*'
-description: >
+program: '*'
+description: >-
   Data file containing the structural variation data.
 additionalProperties: false
 submittable: false
@@ -20,8 +20,8 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
-  - state
   - file_state
+  - state
   - error_type
 
 links:
@@ -41,40 +41,42 @@ links:
         multiplicity: many_to_one
         required: false
 
-uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
-
 required:
   - submitter_id
   - file_name
   - file_size
-  - data_format
   - md5sum
   - data_category
+  - data_format
   - data_type
 
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
+
+  $ref:
+    - "_definitions.yaml#/data_file_properties"
 
   data_category:
-    term:
-      $ref: "_terms.yaml#/data_category"
+    $ref:
+      - "_terms.yaml#/data_category/common"
     enum:
       - Somatic Structural Variation
       - Structural Variation
 
   data_type:
-    term:
-      $ref: "_terms.yaml#/data_type"
+    $ref:
+      - "_terms.yaml#/data_type/common"
     enum:
       - Structural Alteration
       - Structural Rearrangement
       - Transcript Fusion
 
   data_format:
-    term:
-      $ref: "_terms.yaml#/data_format"
+    $ref:
+      - "_terms.yaml#/data_format/common"
     enum:
       - BEDPE
       - CSV
@@ -85,8 +87,8 @@ properties:
       - TXT
 
   experimental_strategy:
-    term:
-      $ref: "_terms.yaml#/experimental_strategy"
+    $ref:
+      - "_terms.yaml#/experimental_strategy/common"
     enum:
       - RNA-Seq
       - Targeted Sequencing
@@ -95,5 +97,6 @@ properties:
 
   genomic_profile_harmonization_workflows:
     $ref: "_definitions.yaml#/to_one"
+
   structural_variant_calling_workflows:
     $ref: "_definitions.yaml#/to_one"

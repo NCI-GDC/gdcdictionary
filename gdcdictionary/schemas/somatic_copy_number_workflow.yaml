@@ -1,15 +1,15 @@
 $schema: "http://json-schema.org/draft-04/schema#"
-  
+
 id: "somatic_copy_number_workflow"
 title: Somatic Copy Number Workflow
 type: object
 namespace: https://gdc.cancer.gov
 category: analysis
-program: '*'
 project: '*'
-description: >
-  Metadata for the Somatic Copy Number pipeline used to estimate copy number changes from
-  different molecular data sources.
+program: '*'
+description: >-
+  Metadata for the Somatic Copy Number pipeline used to estimate copy number changes
+  from different molecular data sources.
 additionalProperties: false
 submittable: false
 downloadable: false
@@ -37,15 +37,17 @@ required:
   - workflow_type
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/workflow_properties"
+
+  $ref:
+    - "_definitions.yaml#/workflow_properties"
 
   workflow_type:
-    term:
-      $ref: "_terms.yaml#/workflow_type"
+    $ref:
+      - "_terms.yaml#/workflow_type/common"
     enum:
       - ASCAT2
       - AscatNGS

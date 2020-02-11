@@ -4,10 +4,10 @@ id: "genomic_profile_harmonization_workflow"
 title: Genomic Profile Harmonization Workflow
 type: object
 namespace: https://gdc.cancer.gov
-category: analysis 
-program: '*'
+category: analysis
 project: '*'
-description: >
+program: '*'
+description: >-
   Metadata for the harmonization of genomic profiling reports.
 additionalProperties: false
 submittable: false
@@ -36,17 +36,19 @@ required:
   - workflow_type
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/workflow_properties"
+
+  $ref:
+    - "_definitions.yaml#/workflow_properties"
 
   workflow_type:
-    term:
-      $ref: "_terms.yaml#/workflow_type"
+    $ref:
+      - "_terms.yaml#/workflow_type/common"
     enum:
-      - MuTect2 
+      - MuTect2
       - FM Simple Somatic Mutation
       - FM Copy Number Variation
       - FM Structural Variation

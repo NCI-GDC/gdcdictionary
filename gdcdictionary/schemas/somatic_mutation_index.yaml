@@ -3,14 +3,15 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "somatic_mutation_index"
 title: Somatic Mutation Index
 type: object
-namespace: https://gdc.cancer.gov/ 
+namespace: https://gdc.cancer.gov
 category: index_file
-program: '*'
 project: '*'
-description: "Data file containing the index for a set of aligned reads."
+program: '*'
+description: >-
+  Data file containing the index for a set of aligned reads.
 additionalProperties: false
 submittable: false
-downloadable: true 
+downloadable: true
 previous_version_downloadable: false
 validators: null
 
@@ -19,15 +20,15 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
-  - state
   - file_state
+  - state
   - error_type
 
 links:
   - exclusive: true
     required: true
     subgroup:
-      - name: simple_somatic_mutations 
+      - name: simple_somatic_mutations
         backref: somatic_mutation_indexes
         label: derived_from
         target_type: simple_somatic_mutation
@@ -46,35 +47,38 @@ required:
   - file_size
   - md5sum
   - data_category
-  - data_type
   - data_format
+  - data_type
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
+
+  $ref:
+    - "_definitions.yaml#/data_file_properties"
 
   data_category:
-    term:
-      $ref: "_terms.yaml#/data_category"
+    $ref:
+      - "_terms.yaml#/data_category/common"
     enum:
-      - Simple Nucleotide Variation 
+      - Simple Nucleotide Variation
 
   data_type:
-    term:
-      $ref: "_terms.yaml#/data_type"
+    $ref:
+      - "_terms.yaml#/data_type/common"
     enum:
       - Somatic Mutation Index
 
   data_format:
-    term:
-      $ref: "_terms.yaml#/data_format"
-    enum: 
-      - TBI 
+    $ref:
+      - "_terms.yaml#/data_format/common"
+    enum:
+      - TBI
+
+  simple_somatic_mutations:
+    $ref: "_definitions.yaml#/to_one"
 
   annotated_somatic_mutations:
-    $ref: "_definitions.yaml#/to_one"
-  simple_somatic_mutations:
     $ref: "_definitions.yaml#/to_one"

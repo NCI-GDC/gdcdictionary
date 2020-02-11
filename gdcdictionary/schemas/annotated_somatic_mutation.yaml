@@ -5,13 +5,13 @@ title: Annotated Somatic Mutation
 type: object
 namespace: https://gdc.cancer.gov
 category: data_file
-program: '*'
 project: '*'
-description: >
+program: '*'
+description: >-
   MAF or VCF files that contain the annotated somatic mutations calls.
 additionalProperties: false
 submittable: false
-downloadable: true 
+downloadable: true
 previous_version_downloadable: true
 validators: null
 
@@ -20,8 +20,8 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
-  - state
   - file_state
+  - state
   - error_type
 
 links:
@@ -47,39 +47,42 @@ required:
   - file_size
   - md5sum
   - data_category
-  - data_type
   - data_format
+  - data_type
   - experimental_strategy
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
+
+  $ref:
+    - "_definitions.yaml#/data_file_properties"
 
   data_category:
-    term:
-      $ref: "_terms.yaml#/data_category"
-    enum: [ "Simple Nucleotide Variation" ]
+    $ref:
+      - "_terms.yaml#/data_category/common"
+    enum:
+      - Simple Nucleotide Variation
 
   data_type:
-    term:
-      $ref: "_terms.yaml#/data_type"
+    $ref:
+      - "_terms.yaml#/data_type/common"
     enum:
       - Annotated Somatic Mutation
       - Masked Annotated Somatic Mutation
 
   data_format:
-    term:
-      $ref: "_terms.yaml#/data_format"
+    $ref:
+      - "_terms.yaml#/data_format/common"
     enum:
       - MAF
       - VCF
 
   experimental_strategy:
-    term:
-      $ref: "_terms.yaml#/experimental_strategy"
+    $ref:
+      - "_terms.yaml#/experimental_strategy/common"
     enum:
       - ATAC-Seq
       - Bisulfite-Seq

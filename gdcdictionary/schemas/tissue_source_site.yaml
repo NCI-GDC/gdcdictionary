@@ -5,11 +5,11 @@ title: Tissue Source Site
 type: object
 namespace: https://gdc.cancer.gov
 category: administrative
-program: '*'
 project: '*'
-description: >
-  A clinical site that collects and provides patient samples and clinical metadata for research use.
-  (NCIt C103264)
+program: '*'
+description: >-
+  A clinical site that collects and provides patient samples and clinical metadata
+  for research use. (NCIt C103264)
 additionalProperties: false
 submittable: false
 downloadable: false
@@ -19,30 +19,36 @@ validators: null
 systemProperties:
   - id
 
-
 links: []
+
+
 
 uniqueKeys:
   - [id]
   - [code]
 
-# tissue_source_site properties
 properties:
+
   type:
     type: string
+
   id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-    description: "UUID for the Tissue Source Site" # TOREVIEW
+    $ref:
+      - "_definitions.yaml#/uuid"
+    description: UUID for the Tissue Source Site
+
   name:
+    description: Name of the source site.
     type: string
-    description: "Name of the source site." # TOREVIEW
+
   code:
+    description: TCGA-provided TSS code.
     type: string
-    description: "TCGA-provided TSS code." # TOREVIEW
+
   project:
+    description: Study name of the project.
     type: string
-    description: "Study name of the project." # TOREVIEW
+
   bcr_id:
+    description: TCGA-provided BCR id.
     type: string
-    description: "TCGA-provided BCR id." # TOREVIEW

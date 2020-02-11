@@ -5,10 +5,11 @@ title: Copy Number Liftover Workflow
 type: object
 namespace: https://gdc.cancer.gov
 category: analysis
-program: '*'
 project: '*'
-description: >
-  Metadata for the copy number liftover workflow used to harmonize TCGA copy number data.
+program: '*'
+description: >-
+  Metadata for the copy number liftover workflow used to harmonize TCGA copy number
+  data.
 additionalProperties: false
 submittable: false
 downloadable: false
@@ -36,17 +37,19 @@ required:
   - workflow_type
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/workflow_properties"
+
+  $ref:
+    - "_definitions.yaml#/workflow_properties"
 
   workflow_type:
-    term:
-      $ref: "_terms.yaml#/workflow_type"
+    $ref:
+      - "_terms.yaml#/workflow_type/common"
     enum:
       - DNAcopy
 
   submitted_tangent_copy_numbers:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_one"

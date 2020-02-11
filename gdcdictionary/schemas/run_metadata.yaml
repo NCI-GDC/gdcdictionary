@@ -7,7 +7,7 @@ namespace: https://gdc.cancer.gov
 category: metadata_file
 project: '*'
 program: '*'
-description: >
+description: >-
   Data file containing the run information from the SRA XML.
 additionalProperties: false
 submittable: true
@@ -20,8 +20,8 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
-  - state
   - file_state
+  - state
   - error_type
 
 links:
@@ -34,7 +34,7 @@ links:
         target_type: read_group
         multiplicity: many_to_one
         required: false
-      - name: files # for legacy import
+      - name: files
         backref: run_metadata_files
         label: derived_from
         target_type: file
@@ -47,35 +47,39 @@ required:
   - file_size
   - md5sum
   - data_category
-  - data_type
   - data_format
+  - data_type
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
+
+  $ref:
+    - "_definitions.yaml#/data_file_properties"
 
   data_category:
-    term:
-      $ref: "_terms.yaml#/data_category"
+    $ref:
+      - "_terms.yaml#/data_category/common"
     enum:
       - Sequencing Data
       - Raw Sequencing Data
 
   data_type:
-    term:
-      $ref: "_terms.yaml#/data_type"
-    enum: [ "Run Metadata" ]
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - Run Metadata
 
   data_format:
-    term:
-      $ref: "_terms.yaml#/data_format"
+    $ref:
+      - "_terms.yaml#/data_format/common"
     enum:
       - SRA XML
 
-  files:
-    $ref: "_definitions.yaml#/to_many"
   read_groups:
     $ref: "_definitions.yaml#/to_one"
+
+  files:
+    $ref: "_definitions.yaml#/to_many"
