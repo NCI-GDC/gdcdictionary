@@ -325,7 +325,8 @@ properties:
     - "_definitions.yaml#/ubiquitous_properties"
 
   category:
-    description: Top level characterization of the annotation.
+    description: >-
+      Top level characterization of the annotation.
     enum:
       - Acceptable treatment for TCGA tumor
       - Administrative Compliance
@@ -371,7 +372,8 @@ properties:
       - WGA Failure
 
   classification:
-    description: Top level classification of the annotation.
+    description: >-
+      Top level classification of the annotation.
     enum:
       - Blocking Release
       - CenterNotification
@@ -382,17 +384,18 @@ properties:
       - Redaction
 
   creator:
-    description: Name of the person or entity responsible for the creation of the
-      annotation.
+    description: >-
+      Name of the person or entity responsible for the creation of the annotation.
     type: string
 
   notes:
-    description: Open entry for any further description or characterization of the
-      data.
+    description: >-
+      Open entry for any further description or characterization of the data.
     type: string
 
   status:
-    description: Status of the annotation.
+    description: >-
+      Status of the annotation.
     enum:
       - Approved
       - Rescinded

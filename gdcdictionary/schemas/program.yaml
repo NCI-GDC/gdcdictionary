@@ -38,9 +38,11 @@ properties:
       - "_definitions.yaml#/uuid"
 
   name:
-    description: Full name/title of the program.
+    description: >-
+      Full name/title of the program.
     type: string
 
   dbgap_accession_number:
-    description: The dbgap accession number provided for the program.
+    description: >-
+      The dbgap accession number provided for the program.
     type: string

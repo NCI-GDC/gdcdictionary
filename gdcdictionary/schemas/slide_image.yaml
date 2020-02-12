@@ -73,8 +73,8 @@ properties:
       - TIFF
 
   experimental_strategy:
-    description: Classification of the image type with respect to its experimental
-      use.
+    description: >-
+      Classification of the image type with respect to its experimental use.
     enum:
       - Cell Culture
       - Diagnostic Slide
@@ -85,7 +85,8 @@ properties:
       - "_definitions.yaml#/datetime"
 
   magnification:
-    description: Magnification used to capture the image.
+    description: >-
+      Magnification used to capture the image.
     type: number
 
   slides:

@@ -79,7 +79,8 @@ properties:
       - MAGETAB
 
   revision:
-    description: The revision of this archive in the DCC.
+    description: >-
+      The revision of this archive in the DCC.
     type: number
 
   projects:

@@ -44,7 +44,8 @@ properties:
       - "_definitions.yaml#/uuid"
 
   name:
-    description: name of this data subtype
+    description: >-
+      name of this data subtype
     type: string
 
   data_types:

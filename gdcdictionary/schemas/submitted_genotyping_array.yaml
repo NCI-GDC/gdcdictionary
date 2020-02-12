@@ -8,7 +8,7 @@ category: data_file
 project: '*'
 program: '*'
 description: >-
-  Data file containing raw data from a genotyping array. 
+  Data file containing raw data from a genotyping array.
 additionalProperties: false
 submittable: true
 downloadable: true

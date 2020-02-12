@@ -575,7 +575,8 @@ properties:
     type: string
 
   pathology_report_uuid:
-    description: UUID of the related pathology report.
+    description: >-
+      UUID of the related pathology report.
     type: string
 
   preservation_method:

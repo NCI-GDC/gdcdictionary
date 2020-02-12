@@ -237,7 +237,8 @@ properties:
       - Other
 
   read_group_name:
-    description: Read Group Name
+    description: >-
+      Read Group Name
     type: string
 
   read_length:

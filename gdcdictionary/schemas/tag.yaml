@@ -37,7 +37,8 @@ properties:
       - "_definitions.yaml#/uuid"
 
   name:
-    description: name of this tag
+    description: >-
+      name of this tag
     enum:
       - aliquot
       - allcnv
