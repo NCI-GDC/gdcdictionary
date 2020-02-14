@@ -38,5 +38,6 @@ properties:
       - "_definitions.yaml#/uuid"
 
   name:
-    description: name of this platform
+    description: >-
+      name of this platform
     type: string

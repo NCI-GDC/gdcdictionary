@@ -36,5 +36,6 @@ properties:
       - "_definitions.yaml#/uuid"
 
   name:
-    description: name of this data type
+    description: >-
+      name of this data type
     type: string

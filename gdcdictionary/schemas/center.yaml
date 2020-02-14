@@ -41,24 +41,30 @@ properties:
   id:
     $ref:
       - "_definitions.yaml#/uuid"
-    description: UUID for the center.
+    description: >-
+      UUID for the center.
 
   code:
-    description: Numeric code for the center.
+    description: >-
+      Numeric code for the center.
     type: string
 
   namespace:
-    description: Domain name of the center (e.g. borad.mit.edu).
+    description: >-
+      Domain name of the center (e.g. borad.mit.edu).
     type: string
 
   name:
-    description: Name of the center (e.g. Broad Institute of MIT and Harvard).
+    description: >-
+      Name of the center (e.g. Broad Institute of MIT and Harvard).
     type: string
 
   short_name:
-    description: Shortened name of the center (e.g. BI).
+    description: >-
+      Shortened name of the center (e.g. BI).
     type: string
 
   center_type:
-    description: Type classification of the center (e.g. CGCC).
+    description: >-
+      Type classification of the center (e.g. CGCC).
     type: string

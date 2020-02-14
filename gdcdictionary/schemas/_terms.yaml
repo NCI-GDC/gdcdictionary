@@ -7,8 +7,8 @@ a260_a280_ratio:
       Numeric value that represents the sample ratio of nucleic acid absorbance at
       260 nm and 280 nm, used to determine a measure of DNA purity.
     termDef:
-      term: Nucleic Acid Absorbance at 260 And Absorbance at 280 DNA Purity Ratio
-        Value
+      term: >-
+        Nucleic Acid Absorbance at 260 And Absorbance at 280 DNA Purity Ratio Value
       source: caDSR
       cde_id: 5432595
       cde_version: 1.0
@@ -20,7 +20,8 @@ aa_change:
       Alphanumeric value used to describe the amino acid change for a specific genetic
       variant. Example: R116Q.
     termDef:
-      term: Molecular Laboratory Procedure Amino Acid Change Text
+      term: >-
+        Molecular Laboratory Procedure Amino Acid Change Text
       source: caDSR
       cde_id: 6142508
       cde_version: 1.0
@@ -36,7 +37,8 @@ absolute_neutrophil:
       consists of the segmented (fully mature neutrophils) &#43; the bands (almost
       mature neutrophils).
     termDef:
-      term: Laboratory Procedure Absolute Neutrophil Count Result Unspecified Value
+      term: >-
+        Laboratory Procedure Absolute Neutrophil Count Result Unspecified Value
       source: caDSR
       cde_id: 2597287
       cde_version: 1.0
@@ -70,7 +72,8 @@ adverse_event:
       Text that represents the Common Terminology Criteria for Adverse Events low
       level term name for an adverse event.
     termDef:
-      term: Common Terminology Criteria for Adverse Events Version 4.0 Low Level Term
+      term: >-
+        Common Terminology Criteria for Adverse Events Version 4.0 Low Level Term
         Name
       source: caDSR
       cde_id: 3125302
@@ -82,7 +85,8 @@ age_at_diagnosis:
     description: >-
       Age at the time of diagnosis expressed in number of days since birth.
     termDef:
-      term: Patient Diagnosis Age Day Value
+      term: >-
+        Patient Diagnosis Age Day Value
       source: caDSR
       cde_id: 3225640
       cde_version: 2.0
@@ -94,7 +98,8 @@ age_at_index:
       The patient's age (in years) on the reference or anchor date date used during
       date obfuscation.
     termDef:
-      term: Patient Age at Index
+      term: >-
+        Patient Age at Index
       source: caDSR
       cde_id: 6028530
       cde_version: 1.0
@@ -119,8 +124,9 @@ ajcc_clinical_m:
       Extent of the distant metastasis for the cancer based on evidence obtained from
       clinical assessment parameters determined prior to treatment.
     termDef:
-      term: Neoplasm American Joint Committee on Cancer Clinical Distant Metastasis
-        M Stage
+      term: >-
+        Neoplasm American Joint Committee on Cancer Clinical Distant Metastasis M
+        Stage
       source: caDSR
       cde_id: 3440331
       cde_version: 1.0
@@ -132,8 +138,9 @@ ajcc_clinical_n:
       Extent of the regional lymph node involvement for the cancer based on evidence
       obtained from clinical assessment parameters determined prior to treatment.
     termDef:
-      term: Neoplasm American Joint Committee on Cancer Clinical Regional Lymph Node
-        N Stage
+      term: >-
+        Neoplasm American Joint Committee on Cancer Clinical Regional Lymph Node N
+        Stage
       source: caDSR
       cde_id: 3440330
       cde_version: 1.0
@@ -146,7 +153,8 @@ ajcc_clinical_stage:
       node (N) and metastases (M) and by grouping cases with similar prognosis for
       cancer.
     termDef:
-      term: Neoplasm American Joint Committee on Cancer Clinical Group Stage
+      term: >-
+        Neoplasm American Joint Committee on Cancer Clinical Group Stage
       source: caDSR
       cde_id: 3440332
       cde_version: 1.0
@@ -158,7 +166,8 @@ ajcc_clinical_t:
       Extent of the primary cancer based on evidence obtained from clinical assessment
       parameters determined prior to treatment.
     termDef:
-      term: Neoplasm American Joint Committee on Cancer Clinical Primary Tumor T Stage
+      term: >-
+        Neoplasm American Joint Committee on Cancer Clinical Primary Tumor T Stage
       source: caDSR
       cde_id: 3440328
       cde_version: 1.0
@@ -172,7 +181,8 @@ ajcc_pathologic_m:
       nodes, using criteria established by the American Joint Committee on Cancer
       (AJCC).
     termDef:
-      term: American Joint Committee on Cancer Metastasis Stage Code
+      term: >-
+        American Joint Committee on Cancer Metastasis Stage Code
       source: caDSR
       cde_id: 3045439
       cde_version: 1.0
@@ -185,7 +195,8 @@ ajcc_pathologic_n:
       according to criteria based on multiple editions of the AJCC's Cancer Staging
       Manual.
     termDef:
-      term: Neoplasm Disease Lymph Node Stage American Joint Committee on Cancer Code
+      term: >-
+        Neoplasm Disease Lymph Node Stage American Joint Committee on Cancer Code
       source: caDSR
       cde_id: 3203106
       cde_version: 1.0
@@ -197,7 +208,8 @@ ajcc_pathologic_stage:
       The extent of a cancer, especially whether the disease has spread from the original
       site to other parts of the body based on AJCC staging criteria.
     termDef:
-      term: Neoplasm Disease Stage American Joint Committee on Cancer Code
+      term: >-
+        Neoplasm Disease Stage American Joint Committee on Cancer Code
       source: caDSR
       cde_id: 3203222
       cde_version: 1.0
@@ -210,7 +222,8 @@ ajcc_pathologic_t:
       of the primary tumor (T), using staging criteria from the American Joint Committee
       on Cancer (AJCC).
     termDef:
-      term: American Joint Committee on Cancer Tumor Stage Code
+      term: >-
+        American Joint Committee on Cancer Tumor Stage Code
       source: caDSR
       cde_id: 3045435
       cde_version: 1.0
@@ -224,7 +237,8 @@ ajcc_staging_system_edition:
       the purpose of developing a system of staging for cancer that is acceptable
       to the American medical profession and is compatible with other accepted classifications.
     termDef:
-      term: American Joint Committee on Cancer Publication Version Type
+      term: >-
+        American Joint Committee on Cancer Publication Version Type
       source: caDSR
       cde_id: 2722309
       cde_version: 1.0
@@ -235,7 +249,8 @@ albumin:
     description: >-
       The value of a lab test used to determine the albumin level in the blood.
     termDef:
-      term: Laboratory Procedure Albumin Result Specified Value
+      term: >-
+        Laboratory Procedure Albumin Result Specified Value
       source: caDSR
       cde_id: 58274
       cde_version: 4.0
@@ -247,7 +262,8 @@ alcohol_days_per_week:
       Numeric value used to describe the average number of days each week that a person
       consumes an alcoholic beverage.
     termDef:
-      term: Alcohol Consumption Weekly Days Usage Number
+      term: >-
+        Alcohol Consumption Weekly Days Usage Number
       source: caDSR
       cde_id: 3114013
       cde_version: 1.0
@@ -259,7 +275,8 @@ alcohol_drinks_per_day:
       Numeric value used to describe the average number of alcoholic beverages  a
       person consumes per day.
     termDef:
-      term: Person Daily Alcohol Consumption Count
+      term: >-
+        Person Daily Alcohol Consumption Count
       source: caDSR
       cde_id: 3124961
       cde_version: 1.0
@@ -271,7 +288,8 @@ alcohol_history:
       A response to a question that asks whether the participant has consumed at least
       12 drinks of any kind of alcoholic beverage in their lifetime.
     termDef:
-      term: Alcohol Lifetime History Indicator
+      term: >-
+        Alcohol Lifetime History Indicator
       source: caDSR
       cde_id: 2201918
       cde_version: 1.0
@@ -283,7 +301,8 @@ alcohol_intensity:
       Category to describe the patient's current level of alcohol use as self-reported
       by the patient.
     termDef:
-      term: Person Self-Report Alcoholic Beverage Exposure Category
+      term: >-
+        Person Self-Report Alcoholic Beverage Exposure Category
       source: caDSR
       cde_id: 3457767
       cde_version: 1.0
@@ -295,7 +314,8 @@ aliquot_quantity:
       The quantity in micrograms (ug) of the aliquot(s) derived from the analyte(s)
       shipped for sequencing and characterization.
     termDef:
-      term: Biospecimen Aliquot Quantity
+      term: >-
+        Biospecimen Aliquot Quantity
       source:
       cde_id:
       cde_version:
@@ -307,7 +327,8 @@ aliquot_volume:
       The volume in microliters (ml) of the aliquot(s) derived from the analyte(s)
       shipped for sequencing and characterization.
     termDef:
-      term: Biospecimen Aliquot Volume
+      term: >-
+        Biospecimen Aliquot Volume
       source:
       cde_id:
       cde_version:
@@ -330,7 +351,8 @@ analyte_quantity:
       The quantity in micrograms (ug) of the analyte(s) derived from the analyte(s)
       shipped for sequencing and characterization.
     termDef:
-      term: Biospecimen Analyte Quantity
+      term: >-
+        Biospecimen Analyte Quantity
       source:
       cde_id:
       cde_version:
@@ -341,7 +363,8 @@ analyte_type:
     description: >-
       Text term that represents the kind of molecular specimen analyte.
     termDef:
-      term: Molecular Specimen Type Text Name
+      term: >-
+        Molecular Specimen Type Text Name
       source: caDSR
       cde_id: 2513915
       cde_version: 2.0
@@ -352,7 +375,8 @@ analyte_type_id:
     description: >-
       A single letter code used to identify a type of molecular analyte.
     termDef:
-      term: Molecular Analyte Identification Code
+      term: >-
+        Molecular Analyte Identification Code
       source: caDSR
       cde_id: 5432508
       cde_version: 1.0
@@ -364,7 +388,8 @@ analyte_volume:
       The volume in microliters (ul) of the aliquot(s) derived from the analyte(s)
       shipped for sequencing and characterization.
     termDef:
-      term: Biospecimen Analyte Volume
+      term: >-
+        Biospecimen Analyte Volume
       source:
       cde_id:
       cde_version:
@@ -376,7 +401,8 @@ anaplasia_present:
       Yes/no/unknown/not reported indicator used to describe whether anaplasia was
       present at the time of diagnosis.
     termDef:
-      term: Anaplastic Lesion Present Indicator
+      term: >-
+        Anaplastic Lesion Present Indicator
       source: caDSR
       cde_id: 6059599
       cde_version: 1.0
@@ -389,7 +415,8 @@ anaplasia_present_type:
       of a malignant cellular infiltrate characterized by the presence of large pleomorphic
       cells, necrosis, and high mitotic activity in a tissue sample.
     termDef:
-      term: Anaplastic Lesion Classification Category
+      term: >-
+        Anaplastic Lesion Classification Category
       source: caDSR
       cde_id: 4925534
       cde_version: 1.0
@@ -401,7 +428,8 @@ ann_arbor_b_symptoms:
       Text term to signify whether lymphoma B-symptoms are present as noted in the
       patient's medical record.
     termDef:
-      term: Lymphoma B-Symptoms Medical Record Documented Indicator
+      term: >-
+        Lymphoma B-Symptoms Medical Record Documented Indicator
       source: caDSR
       cde_id: 2902402
       cde_version: 1.0
@@ -413,7 +441,8 @@ ann_arbor_clinical_stage:
       The text term used to describe the clinical classification of lymphoma, as defined
       by the Ann Arbor Lymphoma Staging System.
     termDef:
-      term: Ann Arbor Clinical Stage
+      term: >-
+        Ann Arbor Clinical Stage
       source: caDSR
       cde_id: 5615604
       cde_version: 1.0
@@ -425,7 +454,8 @@ ann_arbor_extranodal_involvement:
       Indicator that identifies whether a patient with malignant lymphoma has lymphomatous
       involvement of an extranodal site.
     termDef:
-      term: Lymphomatous Extranodal Site Involvement Indicator
+      term: >-
+        Lymphomatous Extranodal Site Involvement Indicator
       source: caDSR
       cde_id: 3364582
       cde_version: 1.0
@@ -437,7 +467,8 @@ ann_arbor_pathologic_stage:
       The text term used to describe the pathologic classification of lymphoma, as
       defined by the Ann Arbor Lymphoma Staging System.
     termDef:
-      term: Ann Arbor Pathologic Stage
+      term: >-
+        Ann Arbor Pathologic Stage
       source: caDSR
       cde_id: 5615605
       cde_version: 1.0
@@ -449,7 +480,8 @@ ann_arbor_tumor_stage:
       The classification of the anatomic disease extent of lymphoma (Hodgkin's and
       Non-Hodgkins) based on the Ann Arbor Staging System.
     termDef:
-      term: Ann Arbor Tumor Stage
+      term: >-
+        Ann Arbor Tumor Stage
       source:
       cde_id:
       cde_version:
@@ -460,7 +492,8 @@ antigen:
     description: >-
       The text term used to describe an antigen included in molecular testing.
     termDef:
-      term: Molecular Laboratory Procedure Antigen Name
+      term: >-
+        Molecular Laboratory Procedure Antigen Name
       source: caDSR
       cde_id: 6142523
       cde_version: 1.0
@@ -472,7 +505,8 @@ asbestos_exposure:
       The yes/no/unknown indicator used to describe whether the patient was exposed
       to asbestos.
     termDef:
-      term: Asbestos Exposure Ind-3
+      term: >-
+        Asbestos Exposure Ind-3
       source: caDSR
       cde_id: 1253
       cde_version: 3.0
@@ -517,7 +551,8 @@ barretts_esophagus_goblet_cells_present:
       The yes/no/unknown indicator used to describe whether goblet cells were determined
       to be present in a patient diagnosed with Barrett's esophagus.
     termDef:
-      term: Barrett's Esophagus Diagnosis Goblet Cell Present Indicator
+      term: >-
+        Barrett's Esophagus Diagnosis Goblet Cell Present Indicator
       source: caDSR
       cde_id: 3440216
       cde_version: 1.0
@@ -550,7 +585,8 @@ best_overall_response:
     description: >-
       The best improvement achieved throughout the entire course of protocol treatment.
     termDef:
-      term: Best Response Assessment Type
+      term: >-
+        Best Response Assessment Type
       source: caDSR
       cde_id: 2003324
       cde_version: 4.0
@@ -564,7 +600,8 @@ beta_2_microglobulin:
       of the blood that remains after the removal of the blood cells and the clotting
       proteins.
     termDef:
-      term: Serum Beta-2-Microglobulin Protein Laboratory Procedure Performance Value
+      term: >-
+        Serum Beta-2-Microglobulin Protein Laboratory Procedure Performance Value
       source: caDSR
       cde_id: 2958039
       cde_version: 1.0
@@ -575,7 +612,8 @@ biomarker_name:
     description: >-
       The name of the biomarker being tested for this specimen and set of test results.
     termDef:
-      term: Biomarker Name
+      term: >-
+        Biomarker Name
       source: caDSR
       cde_id: 5473
       cde_version: 11.0
@@ -586,7 +624,8 @@ biomarker_result:
     description: >-
       Text term to define the results of genetic testing.
     termDef:
-      term: Laboratory Procedure Genetic Abnormality Test Result Type
+      term: >-
+        Laboratory Procedure Genetic Abnormality Test Result Type
       source: caDSR
       cde_id: 3234680
       cde_version: 1.0
@@ -597,7 +636,8 @@ biomarker_test_method:
     description: >-
       Text descriptor of a molecular analysis method used for an individual.
     termDef:
-      term: Disease Detection Molecular Analysis Method Type
+      term: >-
+        Disease Detection Molecular Analysis Method Type
       source: caDSR
       cde_id: 3121575
       cde_version: 1.0
@@ -609,7 +649,8 @@ biospecimen_anatomic_site:
       Text term that represents the name of the primary disease site of the submitted
       tumor sample.
     termDef:
-      term: Submitted Tumor Sample Primary Anatomic Site
+      term: >-
+        Submitted Tumor Sample Primary Anatomic Site
       source: caDSR
       cde_id: 4742851
       cde_version: 1.0
@@ -620,7 +661,8 @@ biospecimen_laterality:
     description: >-
       For tumors in paired organs, designates the side on which the specimen was obtained.
     termDef:
-      term: Specimen Laterality
+      term: >-
+        Specimen Laterality
       source: caDSR
       cde_id: 2007875
       cde_version: 1.0
@@ -632,7 +674,8 @@ biospecimen_type:
       The text term used to describe the biological material used for testing, diagnostic,
       treatment or research purposes.
     termDef:
-      term: Biospecimen Type
+      term: >-
+        Biospecimen Type
       source: caBIG
       cde_id:
       cde_version:
@@ -643,7 +686,8 @@ blood_test:
     description: >-
       Text term used to describe a specific blood test.
     termDef:
-      term: Laboratory Procedure Blood Test Name
+      term: >-
+        Laboratory Procedure Blood Test Name
       source: caDSR
       cde_id: 6142767
       cde_version: 1.0
@@ -655,7 +699,8 @@ blood_test_normal_range_lower:
       Numeric value used to describe the lower limit of the normal range used to describe
       a healthy individual at the institution where the test was completed.
     termDef:
-      term: Laboratory Procedure Lower Limit of Normal Value
+      term: >-
+        Laboratory Procedure Lower Limit of Normal Value
       source: caDSR
       cde_id: 6142571
       cde_version: 1.0
@@ -667,7 +712,8 @@ blood_test_normal_range_upper:
       Numeric value used to describe the upper limit of the normal range used to describe
       a healthy individual at the institution where the test was completed.
     termDef:
-      term: Laboratory Procedure Upper Limit of Normal Value
+      term: >-
+        Laboratory Procedure Upper Limit of Normal Value
       source: caDSR
       cde_id: 6142535
       cde_version: 1.0
@@ -679,7 +725,8 @@ bmi:
       A calculated numerical quantity that represents an individual's weight to height
       ratio.
     termDef:
-      term: Body Mass Index Value
+      term: >-
+        Body Mass Index Value
       source: caDSR
       cde_id: 2006410
       cde_version: 3.0
@@ -691,7 +738,8 @@ breslow_thickness:
       The number that describes the distance, in millimeters, between the upper layer
       of the epidermis and the deepest point of tumor penetration.
     termDef:
-      term: Breslow Depth Measurement
+      term: >-
+        Breslow Depth Measurement
       source: caDSR
       cde_id: 64809
       cde_version: 3.0
@@ -703,7 +751,8 @@ bun:
       The laboratory value (units of measure unspecified) for a renal lab test for
       blood urea nitrogen.
     termDef:
-      term: Laboratory Procedure Blood Urea Nitrogen Result Unspecified Value
+      term: >-
+        Laboratory Procedure Blood Urea Nitrogen Result Unspecified Value
       source: caDSR
       cde_id: 58317
       cde_version: 3.0
@@ -715,7 +764,8 @@ burkitt_lymphoma_clinical_variant:
       Burkitt's lymphoma categorization based on clinical features that differ from
       other forms of the same disease.
     termDef:
-      term: Burkitt Lymphoma Clinical Variant Type
+      term: >-
+        Burkitt Lymphoma Clinical Variant Type
       source: caDSR
       cde_id: 3770421
       cde_version: 1.0
@@ -727,7 +777,8 @@ calcium:
       The laboratory value related to the quantity of calcium present in peripheral
       blood serum measured by laboratory test.
     termDef:
-      term: Laboratory Procedure Calcium Electrolytes Outcome Unspecified Value
+      term: >-
+        Laboratory Procedure Calcium Electrolytes Outcome Unspecified Value
       source: caDSR
       cde_id: 2630716
       cde_version: 1.0
@@ -749,7 +800,8 @@ cause_of_death:
     description: >-
       Text term to identify the cause of death for a patient.
     termDef:
-      term: Patient Death Reason
+      term: >-
+        Patient Death Reason
       source: caDSR
       cde_id: 2554674
       cde_version: 3.0
@@ -773,7 +825,8 @@ cause_of_response:
       The text term used to describe the suspected cause or reason for the patient
       disease response.
     termDef:
-      term: Disease Response Reason Text
+      term: >-
+        Disease Response Reason Text
       source: caDSR
       cde_id: 6161025
       cde_version: 1.0
@@ -785,7 +838,8 @@ cea_level:
       The value for carcinoembryonic antigen, a substance that is sometimes found
       in an increased amount in the blood of people with certain cancers.
     termDef:
-      term: Laboratory Procedure Carcinoembryonic Antigen Outcome Value
+      term: >-
+        Laboratory Procedure Carcinoembryonic Antigen Outcome Value
       source: caDSR
       cde_id: 2752
       cde_version: 2.31
@@ -797,7 +851,8 @@ cea_level_preoperative:
       Numeric value of the Carcinoembryonic antigen or CEA at the time before surgery.
       [Manually- curated]
     termDef:
-      term: Preoperative Carcinoembryonic Antigen Result Value
+      term: >-
+        Preoperative Carcinoembryonic Antigen Result Value
       source: caDSR
       cde_id: 2716510
       cde_version: 1.0
@@ -808,7 +863,8 @@ cell_count:
     description: >-
       Numeric value used to describe the number of cells used for molecular testing.
     termDef:
-      term: Molecular Laboratory Procedure Cell Count
+      term: >-
+        Molecular Laboratory Procedure Cell Count
       source: caDSR
       cde_id: 6142528
       cde_version: 1.0
@@ -831,7 +887,8 @@ child_pugh_classification:
       The text term used to describe the classification used in the prognosis of chronic
       liver disease, mainly cirrhosis.
     termDef:
-      term: Child-Pugh Classification Grade
+      term: >-
+        Child-Pugh Classification Grade
       source: caDSR
       cde_id: 2931791
       cde_version: 1.0
@@ -867,7 +924,8 @@ chromosome:
       testing. If a specific genetic variant is being reported, this property can
       be used to capture the chromosome where that variant is located.
     termDef:
-      term: Molecular Laboratory Procedure Chromosome Name
+      term: >-
+        Molecular Laboratory Procedure Chromosome Name
       source: caDSR
       cde_id: 6142404
       cde_version: 1.0
@@ -878,7 +936,8 @@ cigarettes_per_day:
     description: >-
       The average number of cigarettes smoked per day.
     termDef:
-      term: Smoking Use Average Number
+      term: >-
+        Smoking Use Average Number
       source: caDSR
       cde_id: 2001716
       cde_version: 4.0
@@ -891,7 +950,8 @@ circumferential_resection_margin:
       anterior and posterior segments, when submitted as a surgical specimen resulting
       from excision of cancer of the rectum.
     termDef:
-      term: Circumferential Resection Margin Measurement
+      term: >-
+        Circumferential Resection Margin Measurement
       source: caDSR
       cde_id: 6161030
       cde_version: 1.0
@@ -903,7 +963,8 @@ classification_of_tumor:
       Text that describes the kind of disease present in the tumor specimen as related
       to a specific timepoint.
     termDef:
-      term: Tumor Tissue Disease Description Type
+      term: >-
+        Tumor Tissue Disease Description Type
       source: caDSR
       cde_id: 3288124
       cde_version: 1.0
@@ -915,7 +976,8 @@ coal_dust_exposure:
       The yes/no/unknown indicator used to describe whether a patient was exposed
       to fine powder derived by the crushing of coal.
     termDef:
-      term: Person Coal Dust Exposure Indicator
+      term: >-
+        Person Coal Dust Exposure Indicator
       source: caDSR
       cde_id:
       cde_version:
@@ -927,7 +989,8 @@ colon_polyps_history:
       Yes/No indicator to describe if the subject had a previous history of colon
       polyps as noted in the history/physical or previous endoscopic report (s).
     termDef:
-      term: Colon Carcinoma Polyp Occurrence Indicator
+      term: >-
+        Colon Carcinoma Polyp Occurrence Indicator
       source: caDSR
       cde_id: 3107197
       cde_version: 1.0
@@ -940,7 +1003,8 @@ cog_neuroblastoma_risk_group:
       factors per a system developed by Children's Oncology Group (COG). Risk level
       is used to assign treatment intensity.
     termDef:
-      term: Children's Oncology Group Neuroblastoma Risk Group Assignment Category
+      term: >-
+        Children's Oncology Group Neuroblastoma Risk Group Assignment Category
       source: caDSR
       cde_id: 4616452
       cde_version: 1.0
@@ -952,7 +1016,8 @@ cog_rhabdomyosarcoma_risk_group:
       Text term used to describe the classification of rhabdomyosarcoma, as defined
       by the Children's Oncology Group (COG).
     termDef:
-      term: Rhabdomyosarcoma Children's Oncology Group Risk Assessment Category
+      term: >-
+        Rhabdomyosarcoma Children's Oncology Group Risk Assessment Category
       source: caDSR
       cde_id: 6133604
       cde_version: 1.0
@@ -964,7 +1029,8 @@ cog_renal_stage:
       The text term used to describe the staging classification of renal tumors, as
       defined by the Children's Oncology Group (COG).
     termDef:
-      term: SIOP/COG/NWTSG Staging System Wilms Tumor Stage
+      term: >-
+        SIOP/COG/NWTSG Staging System Wilms Tumor Stage
       source: caDSR
       cde_id: 6013641
       cde_version: 1.0
@@ -977,7 +1043,8 @@ cog_liver_stage:
       defined by the Children's Oncology Group (COG). This staging system specifically
       describes the extent of the primary tumor prior to treatment.
     termDef:
-      term: PRETEXT Staging System Primary Childhood Malignant Liver Tumor Stage
+      term: >-
+        PRETEXT Staging System Primary Childhood Malignant Liver Tumor Stage
       source: caDSR
       cde_id: 6013618
       cde_version: 1.0
@@ -989,7 +1056,8 @@ comorbidity:
       The text term used to describe a comorbidity disease, which coexists with the
       patient's malignant disease.
     termDef:
-      term: Index Date To Comorbidity Day Count
+      term: >-
+        Index Date To Comorbidity Day Count
       source: caDSR
       cde_id: 2970715
       cde_version: 1.0
@@ -1001,7 +1069,8 @@ comorbidity_method_of_diagnosis:
       The text term used to describe the method used to diagnose the patient's comorbidity
       disease.
     termDef:
-      term: Comorbidity Disease Diagnosis Method Type
+      term: >-
+        Comorbidity Disease Diagnosis Method Type
       source: caDSR
       cde_id: 6142386
       cde_version: 1.0
@@ -1012,7 +1081,8 @@ composition:
     description: >-
       Text term that represents the cellular composition of the sample.
     termDef:
-      term: Biospecimen Cellular Composition Type
+      term: >-
+        Biospecimen Cellular Composition Type
       source: caDSR
       cde_id: 5432591
       cde_version: 1.0
@@ -1024,7 +1094,8 @@ concentration:
       Numeric value that represents the concentration of an analyte or aliquot extracted
       from the sample or sample portion, measured in milligrams per milliliter.
     termDef:
-      term: Biospecimen Analyte or Aliquot Extracted Concentration Milligram per Milliliter
+      term: >-
+        Biospecimen Analyte or Aliquot Extracted Concentration Milligram per Milliliter
         Value
       source: caDSR
       cde_id: 5432594
@@ -1059,7 +1130,8 @@ copy_number:
       Numeric value used to describe the number of times a section of the genome is
       repeated or copied within an insertion, duplication or deletion variant.
     termDef:
-      term: Molecular Laboratory Procedure Copy Number Count
+      term: >-
+        Molecular Laboratory Procedure Copy Number Count
       source: caDSR
       cde_id: 6142519
       cde_version: 1.0
@@ -1073,7 +1145,8 @@ creatinine:
       muscle tissue, that is excreted by the kidney and whose serum level is used
       to evaluate kidney function.
     termDef:
-      term: Laboratory Procedure Creatinine Result Specified Value
+      term: >-
+        Laboratory Procedure Creatinine Result Specified Value
       source: caDSR
       cde_id: 58318
       cde_version: 3.1
@@ -1084,7 +1157,8 @@ creation_datetime:
     description: >-
       The datetime of portion creation encoded as seconds from epoch.
     termDef:
-      term: Biospecimen Portion Creation Seconds Date/Time
+      term: >-
+        Biospecimen Portion Creation Seconds Date/Time
       source: caDSR
       cde_id: 5432592
       cde_version: 1.0
@@ -1098,7 +1172,8 @@ crp:
       during biological activation and is associated with host defense mechanisms
       and inflammatory responses.
     termDef:
-      term: Laboratory Procedure C-Reactive Protein Result Specified Value
+      term: >-
+        Laboratory Procedure C-Reactive Protein Result Specified Value
       source: caDSR
       cde_id: 2181510
       cde_version: 1.0
@@ -1110,7 +1185,8 @@ current_weight:
       Numeric value that represents the current weight of the sample, measured  in
       milligrams.
     termDef:
-      term: Tissue Sample Current Weight Milligram Value
+      term: >-
+        Tissue Sample Current Weight Milligram Value
       source: caDSR
       cde_id: 5432606
       cde_version: 1.0
@@ -1124,7 +1200,8 @@ cytoband:
       this property can be used to capture the cytoband where the variant is located.
       Format: [chromosome][chromosome arm].[band+sub-bands]. Example: 17p13.1.
     termDef:
-      term: Molecular Laboratory Procedure Cytoband Text
+      term: >-
+        Molecular Laboratory Procedure Cytoband Text
       source: caDSR
       cde_id: 6142405
       cde_version: 1.0
@@ -1191,7 +1268,8 @@ days_to_adverse_event:
       Number of days between the date used for index and the date of the patient's
       adverse event.
     termDef:
-      term: Index Date To Adverse Event Day Count
+      term: >-
+        Index Date To Adverse Event Day Count
       source: caDSR
       cde_id: 6154728
       cde_version: 1.0
@@ -1203,7 +1281,8 @@ days_to_best_overall_response:
       Number of days between the date used for index and the date of the patient was
       thought to have the best overall response to their disease.
     termDef:
-      term: Index Date To Overall Best Response Day Count
+      term: >-
+        Index Date To Overall Best Response Day Count
       source: caDSR
       cde_id: 6154732
       cde_version: 1.0
@@ -1215,7 +1294,8 @@ days_to_birth:
       Number of days between the date used for index and the date from a person's
       date of birth represented as a calculated negative number of days.
     termDef:
-      term: Index Date To Birth Day Count
+      term: >-
+        Index Date To Birth Day Count
       source: caDSR
       cde_id: 6154723
       cde_version: 1.0
@@ -1227,7 +1307,8 @@ days_to_collection:
       Time interval from the date of biospecimen collection to the date of initial
       pathologic diagnosis, represented as a calculated number of days.
     termDef:
-      term: Biospecimen Collection Date Less Initial Pathologic Diagnosis Date Calculated
+      term: >-
+        Biospecimen Collection Date Less Initial Pathologic Diagnosis Date Calculated
         Day Value
       source: caDSR
       cde_id: 3008340
@@ -1240,7 +1321,8 @@ days_to_comorbidity:
       Number of days between the date used for index and the date the patient was
       diagnosed with a comorbidity.
     termDef:
-      term: Index Date To Comorbidity Day Count
+      term: >-
+        Index Date To Comorbidity Day Count
       source: caDSR
       cde_id: 6154729
       cde_version: 1.0
@@ -1252,7 +1334,8 @@ days_to_death:
       Number of days between the date used for index and the date from a person's
       date of death represented as a calculated number of days.
     termDef:
-      term: Index Date to Death Day Count
+      term: >-
+        Index Date to Death Day Count
       source: caDSR
       cde_id: 6154724
       cde_version: 1.0
@@ -1264,7 +1347,8 @@ days_to_diagnosis:
       Number of days between the date used for index and the date the patient was
       diagnosed with the malignant disease.
     termDef:
-      term: Index Date To Disease Diagnosis Day Count
+      term: >-
+        Index Date To Disease Diagnosis Day Count
       source: caDSR
       cde_id: 6154733
       cde_version: 1.0
@@ -1276,7 +1360,8 @@ days_to_follow_up:
       Number of days between the date used for index and the date of the patient's
       last follow-up appointment or contact.
     termDef:
-      term: Index Date To Follow-up Day Count
+      term: >-
+        Index Date To Follow-up Day Count
       source: caDSR
       cde_id: 6154727
       cde_version: 1.0
@@ -1288,7 +1373,8 @@ days_to_hiv_diagnosis:
       Time interval from the date of the initial pathologic diagnosis to the date
       of human immunodeficiency diagnosis, represented as a calculated number of days.
     termDef:
-      term: Human Immunodeficiency Virus Diagnosis Subtract Initial Pathologic Diagnosis
+      term: >-
+        Human Immunodeficiency Virus Diagnosis Subtract Initial Pathologic Diagnosis
         Time Duration Day Calculation Value
       source: caDSR
       cde_id: 4618491
@@ -1301,7 +1387,8 @@ days_to_last_follow_up:
       Time interval from the date of last follow up to the date of initial pathologic
       diagnosis, represented as a calculated number of days.
     termDef:
-      term: Last Communication Contact Less Initial Pathologic Diagnosis Date Calculated
+      term: >-
+        Last Communication Contact Less Initial Pathologic Diagnosis Date Calculated
         Day Value
       source: caDSR
       cde_id: 3008273
@@ -1314,7 +1401,8 @@ days_to_last_known_disease_status:
       Time interval from the date of last follow up to the date of initial pathologic
       diagnosis, represented as a calculated number of days.
     termDef:
-      term: Last Communication Contact Less Initial Pathologic Diagnosis Date Calculated
+      term: >-
+        Last Communication Contact Less Initial Pathologic Diagnosis Date Calculated
         Day Value
       source: caDSR
       cde_id: 3008273
@@ -1327,7 +1415,8 @@ days_to_lost_to_followup:
       The number of days between the date used for index and to the date the patient
       was lost to follow-up.
     termDef:
-      term: Index Date To Lost To Follow-up Day Count
+      term: >-
+        Index Date To Lost To Follow-up Day Count
       source: caDSR
       cde_id: 6154721
       cde_version: 1.0
@@ -1340,8 +1429,8 @@ days_to_new_event:
       and new primary malignacies to the date of initial pathologic diagnosis, represented
       as a calculated number of days.
     termDef:
-      term: New Tumor Event Less Initial Pathologic Diagnosis Date Calculated Day
-        Value
+      term: >-
+        New Tumor Event Less Initial Pathologic Diagnosis Date Calculated Day Value
       source: caDSR
       cde_id: 3392464
       cde_version: 1.0
@@ -1353,7 +1442,8 @@ days_to_progression:
       Number of days between the date used for index and the date the patient's disease
       progressed.
     termDef:
-      term: Index Date To Progression Day Count
+      term: >-
+        Index Date To Progression Day Count
       source: caDSR
       cde_id: 6154730
       cde_version: 1.0
@@ -1365,7 +1455,8 @@ days_to_progression_free:
       Number of days between the date used for index and the date the patient's disease
       was formally confirmed as progression-free.
     termDef:
-      term: Index Date To Progression Free Day Count
+      term: >-
+        Index Date To Progression Free Day Count
       source: caDSR
       cde_id:
       cde_version:
@@ -1377,7 +1468,8 @@ days_to_recurrence:
       Number of days between the date used for index and the date the patient's disease
       recurred.
     termDef:
-      term: Index Date To Recurrence Day Count
+      term: >-
+        Index Date To Recurrence Day Count
       source: caDSR
       cde_id: 6154731
       cde_version: 1.0
@@ -1401,7 +1493,8 @@ days_to_sequencing:
       Number of days between the date used for index and the date the read group was
       sequenced.
     termDef:
-      term: Days to Sequencing
+      term: >-
+        Days to Sequencing
       source:
       cde_id:
       cde_version:
@@ -1412,7 +1505,8 @@ days_to_treatment:
     description: >-
       Number of days from date of initial pathologic diagnosis that treatment began.
     termDef:
-      term: Days to Treatment Start
+      term: >-
+        Days to Treatment Start
       source:
       cde_id:
       cde_version:
@@ -1423,7 +1517,8 @@ days_to_treatment_end:
     description: >-
       Number of days between the date used for index and the date the treatment ended.
     termDef:
-      term: Index Date To Treatment End Day Count
+      term: >-
+        Index Date To Treatment End Day Count
       source: caDSR
       cde_id: 6154725
       cde_version: 1.0
@@ -1434,7 +1529,8 @@ days_to_treatment_start:
     description: >-
       Number of days between the date used for index and the date the treatment started.
     termDef:
-      term: Index Date To Treatment Start Day Count
+      term: >-
+        Index Date To Treatment Start Day Count
       source: caDSR
       cde_id: 6154726
       cde_version: 1.0
@@ -1445,7 +1541,8 @@ diabetes_treatment_type:
     description: >-
       Text term used to describe the types of treatment used to manage diabetes.
     termDef:
-      term: Diabetes Mellitus Treatment Type
+      term: >-
+        Diabetes Mellitus Treatment Type
       source: caDSR
       cde_id: 3587247
       cde_version: 1.0
@@ -1458,7 +1555,8 @@ diagnosis_pathologically_confirmed:
       of frozen or formalin fixed slide(s) completed after the diagnostic pathology
       review of the tumor sample used to extract analyte(s).
     termDef:
-      term: Post-Diagnostic Pathology Review Confirmation
+      term: >-
+        Post-Diagnostic Pathology Review Confirmation
       source:
       cde_id:
       cde_version:
@@ -1469,7 +1567,8 @@ disease_response:
     description: >-
       Code assigned to describe the patient's response or outcome to the disease.
     termDef:
-      term: Disease Response Code
+      term: >-
+        Disease Response Code
       source: caDSR
       cde_id: 5750671
       cde_version: 1.0
@@ -1482,7 +1581,8 @@ disease_type:
       by the World Health Organization's (WHO) International Classification of Diseases
       for Oncology (ICD-O).
     termDef:
-      term: ICD-O Disease Diagnosis Category
+      term: >-
+        ICD-O Disease Diagnosis Category
       source: caDSR
       cde_id: 6161017
       cde_version: 1.0
@@ -1494,7 +1594,8 @@ distance_normal_to_tumor:
       Text term to signify the distance between the tumor tissue and the normal control
       tissue that was procured for matching normal DNA.
     termDef:
-      term: Tumor To Normal Control Tissue DNA Distance Category
+      term: >-
+        Tumor To Normal Control Tissue DNA Distance Category
       source: caDSR
       cde_id: 3088708
       cde_version: 1.0
@@ -1517,7 +1618,8 @@ dlco_ref_predictive_percent:
       The value, as a percentage of predicted lung volume, measuring the amount of
       carbon monoxide detected in a patient's lungs.
     termDef:
-      term: Lung Carbon Monoxide Diffusing Capability Test Assessment Predictive Value
+      term: >-
+        Lung Carbon Monoxide Diffusing Capability Test Assessment Predictive Value
         Percentage Value
       source: caDSR
       cde_id: 2180255
@@ -1530,7 +1632,8 @@ dna_change:
       Alphanumeric value used to describe the dna change for a specific genetic variant.
       Example: c.347C>A.
     termDef:
-      term: Molecular Laboratory Procedure DNA Change Text
+      term: >-
+        Molecular Laboratory Procedure DNA Change Text
       source: caDSR
       cde_id: 6142507
       cde_version: 1.0
@@ -1541,7 +1644,8 @@ ecog_performance_status:
     description: >-
       The ECOG functional performance status of the patient/participant.
     termDef:
-      term: Performance Status Assessment Eastern Cooperative Oncology Group Scale
+      term: >-
+        Performance Status Assessment Eastern Cooperative Oncology Group Scale
       source: caDSR
       cde_id: 88
       cde_version: 5.1
@@ -1552,7 +1656,8 @@ encoding:
     description: >-
       Version of ASCII encoding of quality values found in the file.
     termDef:
-      term: Encoding
+      term: >-
+        Encoding
       source: FastQC
       cde_id:
       cde_version:
@@ -1565,7 +1670,8 @@ enneking_msts_grade:
       using the Enneking staging system approved by the Musculoskeletal Tumor Society
       (MSTS).
     termDef:
-      term: Enneking Musculoskeletal Tumor Society System Surgical Grade
+      term: >-
+        Enneking Musculoskeletal Tumor Society System Surgical Grade
       source: caDSR
       cde_id: 6003955
       cde_version: 2.0
@@ -1578,7 +1684,8 @@ enneking_msts_metastasis:
       sarcoma, using the Enneking staging system approved by the Musculoskeletal Tumor
       Society (MSTS).
     termDef:
-      term: Enneking Musculoskeletal Tumor Society Staging System Metastasis Stage
+      term: >-
+        Enneking Musculoskeletal Tumor Society Staging System Metastasis Stage
       source: caDSR
       cde_id: 6003958
       cde_version: 1.0
@@ -1590,7 +1697,8 @@ enneking_msts_stage:
       Text term used to describe the stage of the musculoskeletal sarcoma, using the
       Enneking staging system approved by the Musculoskeletal Tumor Society (MSTS).
     termDef:
-      term: Enneking Musculoskeletal Tumor Society Staging System Stage
+      term: >-
+        Enneking Musculoskeletal Tumor Society Staging System Stage
       source: caDSR
       cde_id: 6060045
       cde_version: 1.0
@@ -1603,7 +1711,8 @@ enneking_msts_tumor_site:
       using the Enneking staging system approved by the Musculoskeletal Tumor Society
       (MSTS).
     termDef:
-      term: Enneking Musculoskeletal Tumor Society Staging System Tumor Stage
+      term: >-
+        Enneking Musculoskeletal Tumor Society Staging System Tumor Stage
       source: caDSR
       cde_id: 6003957
       cde_version: 1.0
@@ -1616,7 +1725,8 @@ environmental_tobacco_smoke_exposure:
       to smoke that is emitted from burning tobacco, including cigarettes, pipes,
       and cigars. This includes tobacco smoke exhaled by smokers.
     termDef:
-      term: Person Environmental Tobacco Smoke Exposure Indicator
+      term: >-
+        Person Environmental Tobacco Smoke Exposure Indicator
       source: caDSR
       cde_id:
       cde_version:
@@ -1628,7 +1738,8 @@ esophageal_columnar_dysplasia_degree:
       Text term to describe the amount of dysplasia found within the benign esophageal
       columnar mucosa.
     termDef:
-      term: Non-cancerous Esophageal Columnar Mucosa Dysplasia Grade Result
+      term: >-
+        Non-cancerous Esophageal Columnar Mucosa Dysplasia Grade Result
       source: caDSR
       cde_id: 3440917
       cde_version: 1.0
@@ -1640,7 +1751,8 @@ esophageal_columnar_metaplasia_present:
       The yes/no/unknown indicator used to describe whether esophageal columnar metaplasia
       was determined to be present.
     termDef:
-      term: Esophageal Columnar Metaplasia Present Indicator
+      term: >-
+        Esophageal Columnar Metaplasia Present Indicator
       source: caDSR
       cde_id: 3440218
       cde_version: 1.0
@@ -1651,7 +1763,8 @@ estrogen_receptor_percent_positive_ihc:
     description: >-
       Classification to represent ER Positive results expressed as a percentage value.
     termDef:
-      term: ER Level Cell Percentage Category
+      term: >-
+        ER Level Cell Percentage Category
       source: caDSR
       cde_id: 3128341
       cde_version: 1.0
@@ -1662,7 +1775,8 @@ estrogen_receptor_result_ihc:
     description: >-
       Text term to represent the overall result of Estrogen Receptor (ER) testing.
     termDef:
-      term: Breast Carcinoma Estrogen Receptor Status
+      term: >-
+        Breast Carcinoma Estrogen Receptor Status
       source: caDSR
       cde_id: 2957359
       cde_version: 2.0
@@ -1676,7 +1790,8 @@ ethnicity:
       are based on the categories defined by the U.S. Office of Management and Business
       and used by the U.S. Census Bureau.
     termDef:
-      term: Ethnic Group Category Text
+      term: >-
+        Ethnic Group Category Text
       source: caDSR
       cde_id: 2192217
       cde_version: 2.0
@@ -1689,7 +1804,8 @@ exon:
       variant is being reported, this property can be used to capture the exon where
       that variant is located.
     termDef:
-      term: Molecular Laboratory Procedure Exon Identification Number
+      term: >-
+        Molecular Laboratory Procedure Exon Identification Number
       source: caDSR
       cde_id: 6142411
       cde_version: 1.0
@@ -1734,8 +1850,8 @@ fev1_ref_post_bronch_percent:
       The percentage comparison to a normal value reference range of the volume of
       air that a patient can forcibly exhale from the lungs in one second post-bronchodilator.
     termDef:
-      term: Post Bronchodilator Lung Forced Expiratory Volume 1 Test Lab Percentage
-        Value
+      term: >-
+        Post Bronchodilator Lung Forced Expiratory Volume 1 Test Lab Percentage Value
       source: caDSR
       cde_id: 3302948
       cde_version: 1.0
@@ -1747,8 +1863,8 @@ fev1_ref_pre_bronch_percent:
       The percentage comparison to a normal value reference range of the volume of
       air that a patient can forcibly exhale from the lungs in one second pre-bronchodilator.
     termDef:
-      term: Pre Bronchodilator Lung Forced Expiratory Volume 1 Test Lab Percentage
-        Value
+      term: >-
+        Pre Bronchodilator Lung Forced Expiratory Volume 1 Test Lab Percentage Value
       source: caDSR
       cde_id: 3302947
       cde_version: 1.0
@@ -1760,7 +1876,8 @@ fev1_fvc_post_bronch_percent:
       Percentage value to represent result of Forced Expiratory Volume in 1 second
       (FEV1) divided by the Forced Vital Capacity (FVC) post-bronchodilator.
     termDef:
-      term: Post Bronchodilator FEV1/FVC Percent Value
+      term: >-
+        Post Bronchodilator FEV1/FVC Percent Value
       source: caDSR
       cde_id: 3302956
       cde_version: 1.0
@@ -1772,7 +1889,8 @@ fev1_fvc_pre_bronch_percent:
       Percentage value to represent result of Forced Expiratory Volume in 1 second
       (FEV1) divided by the Forced Vital Capacity (FVC) pre-bronchodilator.
     termDef:
-      term: Pre Bronchodilator FEV1/FVC Percent Value
+      term: >-
+        Pre Bronchodilator FEV1/FVC Percent Value
       source: caDSR
       cde_id: 3302955
       cde_version: 1.0
@@ -1786,7 +1904,8 @@ figo_stage:
       described by the International Federation of Gynecology and Obstetrics (FIGO)
       stages.
     termDef:
-      term: Gynecologic Tumor Grouping Cervical Endometrial FIGO 2009 Stage
+      term: >-
+        Gynecologic Tumor Grouping Cervical Endometrial FIGO 2009 Stage
       source: caDSR
       cde_id: 3225684
       cde_version: 1.0
@@ -1831,7 +1950,8 @@ first_symptom_prior_to_diagnosis:
       Text term used to describe the patient's first symptom experienced prior to
       diagnosis and thought to be related to the disease.
     termDef:
-      term: DiseaseFirst Symptom Type
+      term: >-
+        DiseaseFirst Symptom Type
       source: caDSR
       cde_id: 6133605
       cde_version: 1.0
@@ -1898,7 +2018,8 @@ freezing_method:
     description: >-
       Text term that represents the method used for freezing the sample.
     termDef:
-      term: Tissue Sample Freezing Method Type
+      term: >-
+        Tissue Sample Freezing Method Type
       source: caDSR
       cde_id: 5432607
       cde_version: 1.0
@@ -1910,7 +2031,8 @@ gastric_esophageal_junction_involvement:
       The yes/no/unknown/not reported indicator used to describe whether the tumor
       is located across the gastroesophageal junction.
     termDef:
-      term: Esophageal Tumor Across Gastroesophageal Junction Indicator
+      term: >-
+        Esophageal Tumor Across Gastroesophageal Junction Indicator
       source: caDSR
       cde_id: 6059632
       cde_version: 1.0
@@ -1924,7 +2046,8 @@ gender:
       [Explanatory Comment 1: Identification of gender is based upon self-report and
       may come from a form, questionnaire, interview, etc.]
     termDef:
-      term: Person Gender Text Type
+      term: >-
+        Person Gender Text Type
       source: caDSR
       cde_id: 2200604
       cde_version: 3.0
@@ -1936,7 +2059,8 @@ gene_symbol:
       The text term used to describe a gene targeted or included in molecular analysis.
       For rearrangements, this is shold be used to represent the reference gene.
     termDef:
-      term: Molecular Analysis Gene Symbol Code
+      term: >-
+        Molecular Analysis Gene Symbol Code
       source: caDSR
       cde_id: 6142392
       cde_version: 1.0
@@ -1950,7 +2074,8 @@ gleason_grade_group:
       of prostate cancer. Note that this grade describes the entire prostatectomy
       specimen and is not specific to the sample used for sequencing.
     termDef:
-      term: Gleason Score Grading System Group Category
+      term: >-
+        Gleason Score Grading System Group Category
       source: caDSR
       cde_id: 5918370
       cde_version: 1.0
@@ -1961,7 +2086,8 @@ glucose:
     description: >-
       The numeric value for the amount of glucose found in blood serum.
     termDef:
-      term: Laboratory Procedure Glucose Electrolytes Outcome Unspecified Value
+      term: >-
+        Laboratory Procedure Glucose Electrolytes Outcome Unspecified Value
       source: caDSR
       cde_id: 2004319
       cde_version: 4.0
@@ -1973,7 +2099,8 @@ goblet_cells_columnar_mucosa_present:
       The yes/no/unknown indicator used to describe whether goblet cells were determined
       to be present in the esophageal columnar mucosa.
     termDef:
-      term: Esophageal Columnar Mucosa Goblet Cell Present Indicator
+      term: >-
+        Esophageal Columnar Mucosa Goblet Cell Present Indicator
       source: caDSR
       cde_id: 3440219
       cde_version: 1.0
@@ -1985,7 +2112,8 @@ gross_tumor_weight:
       Numeric value used to describe the gross pathologic tumor weight, measured in
       grams.
     termDef:
-      term: Tumor Tissue Weight Number
+      term: >-
+        Tumor Tissue Weight Number
       source: caDSR
       cde_id: 6133606
       cde_version: 1.0
@@ -2007,7 +2135,8 @@ height:
     description: >-
       The height of the patient in centimeters.
     termDef:
-      term: Patient Height Measurement
+      term: >-
+        Patient Height Measurement
       source: caDSR
       cde_id: 649
       cde_version: 4.1
@@ -2021,7 +2150,8 @@ hemoglobin:
       diagnosis, plan treatment, check to see if treatment is working, or monitor
       the disease over time.
     termDef:
-      term: Laboratory Procedure Hemoglobin Result Specified Value
+      term: >-
+        Laboratory Procedure Hemoglobin Result Specified Value
       source: caDSR
       cde_id: 2190
       cde_version: 3.0
@@ -2033,7 +2163,8 @@ hepatitis_sustained_virological_response:
       The yes/no/unknown indicator used to describe whether the patient received treatment
       for a risk factor the patient had at the time of or prior to their diagnosis.
     termDef:
-      term: Viral Hepatitis Sustained Virologic Response Post Treatment Indicator
+      term: >-
+        Viral Hepatitis Sustained Virologic Response Post Treatment Indicator
       source: caDSR
       cde_id: 6423783
       cde_version: 1.0
@@ -2045,7 +2176,8 @@ her2_erbb2_percent_positive_ihc:
       Classification to represent the number of positive HER2/ERBB2 cells in a specimen
       or sample.
     termDef:
-      term: HER2 ERBB Positive Finding Cell Percentage Category
+      term: >-
+        HER2 ERBB Positive Finding Cell Percentage Category
       source: caDSR
       cde_id: 3086980
       cde_version: 1.0
@@ -2057,7 +2189,8 @@ her2_erbb2_result_fish:
       the type of outcome for HER2 as determined by an in situ hybridization (ISH)
       assay.
     termDef:
-      term: Laboratory Procedure HER2/neu in situ Hybridization Outcome Type
+      term: >-
+        Laboratory Procedure HER2/neu in situ Hybridization Outcome Type
       source: caDSR
       cde_id: 2854089
       cde_version: 1.0
@@ -2070,7 +2203,8 @@ her2_erbb2_result_ihc:
       a sample of blood or tissue for HER2 by histochemical localization of immunoreactive
       substances using labeled antibodies as reagents.
     termDef:
-      term: Laboratory Procedure HER2/neu Immunohistochemistry Receptor Status
+      term: >-
+        Laboratory Procedure HER2/neu Immunohistochemistry Receptor Status
       source: caDSR
       cde_id: 2957563
       cde_version: 2.0
@@ -2082,7 +2216,8 @@ histone_family:
       The text term used to describe the family, or classification of a group of basic
       proteins found in chromatin, called histones.
     termDef:
-      term: Molecular Laboratory Procedure Histone Family Category
+      term: >-
+        Molecular Laboratory Procedure Histone Family Category
       source: caDSR
       cde_id: 6142511
       cde_version: 1.0
@@ -2094,7 +2229,8 @@ histone_variant:
       The text term used to describe a specific histone variants, which are proteins
       that substitute for the core canonical histones.
     termDef:
-      term: Molecular Laboratory Procedure Histone Family Variant Type
+      term: >-
+        Molecular Laboratory Procedure Histone Family Variant Type
       source: caDSR
       cde_id: 6142515
       cde_version: 1.0
@@ -2105,8 +2241,9 @@ hiv_positive:
     description: >-
       Text term to signify whether a physician has diagnosed HIV infection in a patient.
     termDef:
-      term: Physician Diagnosed HIV Infection Personal Medical History Yes No Not
-        Applicable Indicator
+      term: >-
+        Physician Diagnosed HIV Infection Personal Medical History Yes No Not Applicable
+        Indicator
       source: caDSR
       cde_id: 4030799
       cde_version: 1.0
@@ -2118,7 +2255,8 @@ hpv_positive_type:
       Text classification to represent the strain or type of human papillomavirus
       identified in an individual.
     termDef:
-      term: Human Papillomavirus Type
+      term: >-
+        Human Papillomavirus Type
       source: caDSR
       cde_id: 2922649
       cde_version: 1.0
@@ -2129,7 +2267,8 @@ hpv_status:
     description: >-
       The findings of the oncogenic HPV.
     termDef:
-      term: Oncogenic Human Papillomavirus Result Type
+      term: >-
+        Oncogenic Human Papillomavirus Result Type
       source: caDSR
       cde_id: 2230033
       cde_version: 1.0
@@ -2141,7 +2280,8 @@ icd_10_code:
       Alphanumeric value used to describe the  disease code from the tenth version
       of the International Classification of Disease (ICD-10).
     termDef:
-      term: International Classification of Disease, Tenth Revision Code
+      term: >-
+        International Classification of Disease, Tenth Revision Code
       source: caDSR
       cde_id: 3226287
       cde_version: 2.0
@@ -2153,7 +2293,8 @@ iga:
       The numeric value, in mg/dL, for the amount of immunoglobulin type A (IgA) found
       in blood serum.
     termDef:
-      term: Laboratory Procedure Serum Immunologic IgA Result Unspecified Value
+      term: >-
+        Laboratory Procedure Serum Immunologic IgA Result Unspecified Value
       source: caDSR
       cde_id: 64580
       cde_version: 3.0
@@ -2165,7 +2306,8 @@ igcccg_stage:
       The text term used to describe the International Germ Cell Cancer Collaborative
       Group (IGCCCG), a grouping used to further classify metastatic testicular tumors.
     termDef:
-      term: IGCCCG Stage Group
+      term: >-
+        IGCCCG Stage Group
       source: caDSR
       cde_id:
       cde_version:
@@ -2177,7 +2319,8 @@ igg:
       The numeric value, in mg/dL, for the amount of immunoglobulin type G (IgG) found
       in blood serum.
     termDef:
-      term: Laboratory Procedure Serum Immunologic IgG Result Unspecified Value
+      term: >-
+        Laboratory Procedure Serum Immunologic IgG Result Unspecified Value
       source: caDSR
       cde_id: 64581
       cde_version: 3.0
@@ -2213,7 +2356,8 @@ igm:
       The numeric value, in mg/dL, for the amount of immunoglobulin type M (IgM) found
       in blood serum.
     termDef:
-      term: Laboratory Procedure Serum Immunologic IgM Result Unspecified Value
+      term: >-
+        Laboratory Procedure Serum Immunologic IgM Result Unspecified Value
       source: caDSR
       cde_id: 64582
       cde_version: 3.0
@@ -2237,7 +2381,8 @@ index_date:
       obfuscation, where a single date is obscurred by creating one or more date ranges
       in relation to this date.
     termDef:
-      term: Index Date Type
+      term: >-
+        Index Date Type
       source: caDSR
       cde_id: 6154722
       cde_version: 1.0
@@ -2249,7 +2394,8 @@ initial_disease_status:
       The text term used to describe the status of the patient's malignancy when the
       treatment began.
     termDef:
-      term: Initial Disease Status Type
+      term: >-
+        Initial Disease Status Type
       source: caBIG
       cde_id:
       cde_version:
@@ -2261,7 +2407,8 @@ initial_weight:
       Numeric value that represents the initial weight of the sample, measured in
       milligrams.
     termDef:
-      term: Tissue Sample Initial Weight Milligram Value
+      term: >-
+        Tissue Sample Initial Weight Milligram Value
       source: caDSR
       cde_id: 5432605
       cde_version: 1.0
@@ -2274,7 +2421,8 @@ inpc_grade:
       within neuroblastoma tumors, as defined by the International Neuroblastoma Pathology
       Classification (INPC).
     termDef:
-      term: International Neuroblastoma Pathology Classification Grade Category
+      term: >-
+        International Neuroblastoma Pathology Classification Grade Category
       source: caDSR
       cde_id: 6133602
       cde_version: 1.0
@@ -2289,7 +2437,8 @@ inpc_histologic_group:
       on age, mitosis-karyorrhexis index (MKI), stromal content and degree of tumor
       cell differentiation.
     termDef:
-      term: International Neuroblastoma Pathology Classification Histology Score Category
+      term: >-
+        International Neuroblastoma Pathology Classification Histology Score Category
       source: caDSR
       cde_id: 4616372
       cde_version: 1.0
@@ -2301,7 +2450,8 @@ inrg_stage:
       The text term used to describe the staging classification of neuroblastic tumors,
       as defined by the International Neuroblastoma Risk Group (INRG).
     termDef:
-      term: Patient International Neuroblastoma Risk Group Classification System Stage
+      term: >-
+        Patient International Neuroblastoma Risk Group Classification System Stage
       source: caDSR
       cde_id: 5777238
       cde_version: 1.0
@@ -2313,7 +2463,8 @@ inss_stage:
       Text term used to describe the staging classification of neuroblastic tumors,
       as defined by the International Neuroblastoma Staging System (INSS).
     termDef:
-      term: International Neuroblastoma Staging System Stage
+      term: >-
+        International Neuroblastoma Staging System Stage
       source: caDSR
       cde_id: 6133603
       cde_version: 1.0
@@ -2324,7 +2475,8 @@ instrument_model:
     description: >-
       Specific model of sequencing instrument used.
     termDef:
-      term: Tissue Sample Intermediate Dimension Millimeter Measurement
+      term: >-
+        Tissue Sample Intermediate Dimension Millimeter Measurement
       source: caDSR
       cde_id: 5432604
       cde_version: 1.0
@@ -2347,7 +2499,8 @@ international_prognostic_index:
       The text term used to describe the International Prognostic Index, which classifies
       the prognosis of patients with aggressive non-Hodgkin's lymphoma.
     termDef:
-      term: Patient International Prognostic Index Risk Category
+      term: >-
+        Patient International Prognostic Index Risk Category
       source: caDSR
       cde_id: 2500234
       cde_version: 1.0
@@ -2360,7 +2513,8 @@ intron:
       variant is being reported, this property can be used to capture the intron where
       that variant is located.
     termDef:
-      term: Molecular Laboratory Procedure Intron Identifier
+      term: >-
+        Molecular Laboratory Procedure Intron Identifier
       source: caDSR
       cde_id: 6514355
       cde_version: 1.0
@@ -2372,7 +2526,8 @@ irs_group:
       Text term used to describe the classification of rhabdomyosarcoma tumors, as
       defined by the Intergroup Rhabdomyosarcoma Study (IRS).
     termDef:
-      term: Intergroup Rhabdomyosarcoma Study Group Stage
+      term: >-
+        Intergroup Rhabdomyosarcoma Study Group Stage
       source: caDSR
       cde_id: 6141658
       cde_version: 1.0
@@ -2384,7 +2539,8 @@ irs_stage:
       The text term used to describe the classification of rhabdomyosarcoma tumors,
       as defined by the Intergroup Rhabdomyosarcoma Study (IRS).
     termDef:
-      term: Rhabdomyosarcoma Diagnosis Assessment Stage
+      term: >-
+        Rhabdomyosarcoma Diagnosis Assessment Stage
       source: caDSR
       cde_id: 5162089
       cde_version: 1.0
@@ -2396,7 +2552,8 @@ is_ffpe:
       Indicator to signify whether or not the tissue sample was fixed in formalin
       and embedded in paraffin (FFPE).
     termDef:
-      term: Specimen Processing Formalin Fixed Paraffin Embedded Tissue Indicator
+      term: >-
+        Specimen Processing Formalin Fixed Paraffin Embedded Tissue Indicator
       source: caDSR
       cde_id: 4170557
       cde_version: 1.0
@@ -2419,7 +2576,8 @@ ishak_fibrosis_score:
       The text term used to describe the classification of the histopathologic degree
       of liver damage.
     termDef:
-      term: Liver Fibrosis Ishak Score Category
+      term: >-
+        Liver Fibrosis Ishak Score Category
       source: caDSR
       cde_id: 3182621
       cde_version: 1.0
@@ -2430,7 +2588,8 @@ iss_stage:
     description: >-
       The multiple myeloma disease stage at diagnosis.
     termDef:
-      term: Multiple Myeloma Disease Stage Diagnosis Status
+      term: >-
+        Multiple Myeloma Disease Stage Diagnosis Status
       source: caDSR
       cde_id: 2465385
       cde_version: 1.0
@@ -2442,7 +2601,8 @@ karnofsky_performance_status:
       Text term used to describe the classification used of the functional capabilities
       of a person.
     termDef:
-      term: Karnofsky Performance Status Score
+      term: >-
+        Karnofsky Performance Status Score
       source: caDSR
       cde_id: 2003853
       cde_version: 4.2
@@ -2454,7 +2614,8 @@ laboratory_test:
       The text term used to describe the medical testing used to diagnose, treat or
       further understand a patient's disease.
     termDef:
-      term: Laboratory Test Type
+      term: >-
+        Laboratory Test Type
       source: caBIG
       cde_id:
       cde_version:
@@ -2478,7 +2639,8 @@ largest_extrapelvic_peritoneal_focus:
       The text term used to describe the diameter of the largest focus originating
       outside of the pelvic peritoneal region.
     termDef:
-      term: Neoplasm Largest External Pelvic Peritoneal Focus Diameter Measurement
+      term: >-
+        Neoplasm Largest External Pelvic Peritoneal Focus Diameter Measurement
       source: caDSR
       cde_id: 6690680
       cde_version: 1.0
@@ -2490,7 +2652,8 @@ last_known_disease_status:
       Text term that describes the last known state or condition of an individual's
       neoplasm.
     termDef:
-      term: Person Last Known Neoplasm Status
+      term: >-
+        Person Last Known Neoplasm Status
       source: caDSR
       cde_id: 5424231
       cde_version: 1.0
@@ -2501,7 +2664,8 @@ laterality:
     description: >-
       For tumors in paired organs, designates the side on which the cancer originates.
     termDef:
-      term: Primary Tumor Laterality
+      term: >-
+        Primary Tumor Laterality
       source: caDSR
       cde_id: 827
       cde_version: 3.0
@@ -2514,8 +2678,9 @@ ldh_level:
       related to the assessment of lactate dehydrogenase in a specimen. Measured in
       U/L.
     termDef:
-      term: Laboratory Procedure Lactate Dehydrogenase Result  Integer::2 Decimal
-        Place Value
+      term: >-
+        Laboratory Procedure Lactate Dehydrogenase Result  Integer::2 Decimal Place
+        Value
       source: caDSR
       cde_id: 2798766
       cde_version: 1.0
@@ -2527,7 +2692,8 @@ ldh_level_at_diagnosis:
       The 2 decimal place numeric laboratory value measured, assigned or computed
       related to the assessment of lactate dehydrogenase in a specimen.
     termDef:
-      term: Laboratory Procedure Lactate Dehydrogenase Result Integer::2 Decimal Place
+      term: >-
+        Laboratory Procedure Lactate Dehydrogenase Result Integer::2 Decimal Place
         Value
       source: caDSR
       cde_id: 2798766
@@ -2541,8 +2707,8 @@ ldh_normal_range_upper:
       to represent accepted standard, non-pathological pattern for lactate dehydrogenase
       (units not specified).
     termDef:
-      term: Laboratory Procedure Lactate Dehydrogenase Result Upper Limit of Normal
-        Value
+      term: >-
+        Laboratory Procedure Lactate Dehydrogenase Result Upper Limit of Normal Value
       source: caDSR
       cde_id: 2597015
       cde_version: 1.0
@@ -2641,7 +2807,8 @@ loci_abnormal_count:
     description: >-
       Numeric value used to describe the number of loci determined to be abnormal.
     termDef:
-      term: Abnormal Locus Testing Count
+      term: >-
+        Abnormal Locus Testing Count
       source: caDSR
       cde_id: 6074182
       cde_version: 1.0
@@ -2652,7 +2819,8 @@ loci_count:
     description: >-
       Numeric value used to describe the number of loci tested.
     termDef:
-      term: Locus Testing Count
+      term: >-
+        Locus Testing Count
       source: caDSR
       cde_id: 6074183
       cde_version: 1.0
@@ -2664,7 +2832,8 @@ locus:
       Alphanumeric value used to describe the locus of a specific genetic variant.
       Example: NM_001126114.
     termDef:
-      term: Molecular Laboratory Procedure Locus Location Text
+      term: >-
+        Molecular Laboratory Procedure Locus Location Text
       source: caDSR
       cde_id: 6142506
       cde_version: 1.0
@@ -2676,7 +2845,8 @@ longest_dimension:
       Numeric value that represents the longest dimension of the sample, measured
       in millimeters.
     termDef:
-      term: Tissue Sample Longest Dimension Millimeter Measurement
+      term: >-
+        Tissue Sample Longest Dimension Millimeter Measurement
       source: caDSR
       cde_id: 5432602
       cde_version: 1.0
@@ -2688,7 +2858,8 @@ lost_to_followup:
       The yes/no/unknown indicator used to describe whether a patient was unable to
       be contacted or seen for follow-up information.
     termDef:
-      term: Patient Lost Follow-up Indicator
+      term: >-
+        Patient Lost Follow-up Indicator
       source: caDSR
       cde_id: 6161018
       cde_version: 1.0
@@ -2700,7 +2871,8 @@ lymph_nodes_positive:
       The number of lymph nodes involved with disease as determined by pathologic
       examination.
     termDef:
-      term: Lymph Node(s) Positive Number
+      term: >-
+        Lymph Node(s) Positive Number
       source: caDSR
       cde_id: 89
       cde_version: 3.0
@@ -2712,7 +2884,8 @@ lymph_nodes_tested:
       The number of lymph nodes tested to determine whether lymph nodes were  involved
       with disease as determined by a pathologic examination.
     termDef:
-      term: Lymph Node Examined Count
+      term: >-
+        Lymph Node Examined Count
       source: caDSR
       cde_id: 3
       cde_version: 3.0
@@ -2724,7 +2897,8 @@ lymphatic_invasion_present:
       A yes/no indicator to ask if small or thin-walled vessel invasion is present,
       indicating lymphatic involvement
     termDef:
-      term: Lymphatic/Small vessel Invasion Ind
+      term: >-
+        Lymphatic/Small vessel Invasion Ind
       source: caDSR
       cde_id: 64171
       cde_version: 3.0
@@ -2738,7 +2912,8 @@ m_protein:
       that involves testing a sample of blood, urine, or other substance from the
       body.
     termDef:
-      term: Laboratory Procedure M Protein Outcome Value
+      term: >-
+        Laboratory Procedure M Protein Outcome Value
       source: caDSR
       cde_id: 64561
       cde_version: 3.0
@@ -2751,7 +2926,8 @@ masaoka_stage:
       that defines prognostic indicators for thymic malignancies and predicts tumor
       recurrence.
     termDef:
-      term: Thymoma Masaoka Stage
+      term: >-
+        Thymoma Masaoka Stage
       source: caDSR
       cde_id: 3952848
       cde_version: 1.0
@@ -2787,7 +2963,8 @@ medulloblastoma_molecular_classification:
       The text term used to describe the classification of medulloblastoma tumors
       based on molecular features.
     termDef:
-      term: Medulloblastoma Genetic Finding Subclass Category
+      term: >-
+        Medulloblastoma Genetic Finding Subclass Category
       source: caDSR
       cde_id: 6002209
       cde_version: 1.0
@@ -2798,7 +2975,8 @@ menopause_status:
     description: >-
       Text term used to describe the patient's menopause status.
     termDef:
-      term: Patient Menopause Status
+      term: >-
+        Patient Menopause Status
       source: caDSR
       cde_id: 2434914
       cde_version: 1.1
@@ -2809,7 +2987,8 @@ metastasis_at_diagnosis:
     description: >-
       The text term used to describe the extent of metastatic disease present at diagnosis.
     termDef:
-      term: Metastatic Disease at Diagnosis Indicator
+      term: >-
+        Metastatic Disease at Diagnosis Indicator
       source: caDSR
       cde_id: 6133614
       cde_version: 1.0
@@ -2821,7 +3000,8 @@ metastasis_at_diagnosis_site:
       Text term to identify an anatomic site in which metastatic disease involvement
       is found.
     termDef:
-      term: Metastatic Disease Anatomic Site Name
+      term: >-
+        Metastatic Disease Anatomic Site Name
       source: caDSR
       cde_id: 3029815
       cde_version: 1.0
@@ -2833,7 +3013,8 @@ method_of_diagnosis:
       Text term used to describe the method used to confirm the patients malignant
       diagnosis.
     termDef:
-      term: Disease Method of Diagnosis Type
+      term: >-
+        Disease Method of Diagnosis Type
       source: caDSR
       cde_id: 6161031
       cde_version: 1.0
@@ -2844,7 +3025,8 @@ method_of_sample_procurement:
     description: >-
       The method used to procure the sample used to extract analyte(s).
     termDef:
-      term: Method of Sample Procurement
+      term: >-
+        Method of Sample Procurement
       source:
       cde_id:
       cde_version:
@@ -2856,7 +3038,8 @@ micropapillary_features:
       The yes/no/unknown indicator used to describe whether micropapillary features
       were determined to be present.
     termDef:
-      term: Tumor Micropapillary Features Present Status
+      term: >-
+        Tumor Micropapillary Features Present Status
       source: caDSR
       cde_id: 6068784
       cde_version: 1.0
@@ -2867,7 +3050,8 @@ microsatellite_instability_abnormal:
     description: >-
       The yes/no indicator to signify the status of a tumor for microsatellite instability.
     termDef:
-      term: Microsatellite Instability Occurrence Indicator
+      term: >-
+        Microsatellite Instability Occurrence Indicator
       source: caDSR
       cde_id: 3123142
       cde_version: 1.0
@@ -2879,7 +3063,8 @@ mismatch_repair_mutation:
       The yes/no/unknown indicator used to describe whether the mutation included
       in molecular testing was known to have an affect on the mismatch repair process.
     termDef:
-      term: Gene Mutation Mismatch Repair Indicator
+      term: >-
+        Gene Mutation Mismatch Repair Indicator
       source: caDSR
       cde_id: 6142534
       cde_version: 1.0
@@ -2905,7 +3090,8 @@ mitosis_karyorrhexis_index:
       Text term that represents the component of the International Neuroblastoma Pathology
       Classification (INPC) for mitosis-karyorrhexis index (MKI).
     termDef:
-      term: International Neuroblastoma Pathology Classification Mitosis Karyorrhexis
+      term: >-
+        International Neuroblastoma Pathology Classification Mitosis Karyorrhexis
         Index Category
       source: caDSR
       cde_id: 4616412
@@ -2917,7 +3103,8 @@ molecular_analysis_method:
     description: >-
       The text term used to describe the method used for molecular analysis.
     termDef:
-      term: Molecular Laboratory Procedure Method Name
+      term: >-
+        Molecular Laboratory Procedure Method Name
       source: caDSR
       cde_id: 6142401
       cde_version: 1.0
@@ -2928,7 +3115,8 @@ molecular_consequence:
     description: >-
       The text term used to describe the molecular consequence of genetic variation.
     termDef:
-      term: Molecular Laboratory Procedure Outcome Consequence Type
+      term: >-
+        Molecular Laboratory Procedure Outcome Consequence Type
       source: caDSR
       cde_id: 6142403
       cde_version: 1.0
@@ -2946,7 +3134,8 @@ morphology:
       by employing various cytochemical and immunocytochemical stains. A system of
       numbered categories for representation of data.
     termDef:
-      term: International Classification of Diseases for Oncology, Third Edition ICD-O-3
+      term: >-
+        International Classification of Diseases for Oncology, Third Edition ICD-O-3
         Histology Code
       source: caDSR
       cde_id: 3226275
@@ -2970,7 +3159,8 @@ new_event_anatomic_site:
     description: >-
       Text term to specify the anatomic location of the return of tumor after treatment.
     termDef:
-      term: New Neoplasm Event Occurrence Anatomic Site
+      term: >-
+        New Neoplasm Event Occurrence Anatomic Site
       source: caDSR
       cde_id: 3108271
       cde_version: 2.0
@@ -2981,7 +3171,8 @@ new_event_type:
     description: >-
       Text term to identify a new tumor event.
     termDef:
-      term: New Neoplasm Event Type
+      term: >-
+        New Neoplasm Event Type
       source: caDSR
       cde_id: 3119721
       cde_version: 1.0
@@ -3005,7 +3196,8 @@ non_nodal_tumor_deposits:
       in the pericolic or perirectal fat or in adjacent mesentery away from the leading
       edge of the tumor.
     termDef:
-      term: Resected Biospecimen NonNodal Tumor Deposits Indicator
+      term: >-
+        Resected Biospecimen NonNodal Tumor Deposits Indicator
       source: caDSR
       cde_id: 3107051
       cde_version: 1.0
@@ -3017,7 +3209,8 @@ normal_tumor_genotype_snp_match:
       Text term that represents whether or not the genotype of the normal tumor matches
       or if the data is not available.
     termDef:
-      term: Normal Tumor Genotype Match Indicator
+      term: >-
+        Normal Tumor Genotype Match Indicator
       source: caDSR
       cde_id: 4588156
       cde_version: 1.0
@@ -3081,7 +3274,8 @@ number_proliferating_cells:
       Numeric value that represents the count of proliferating cells determined during
       pathologic review of the sample slide(s).
     termDef:
-      term: Pathology Review Slide Proliferating Cell Count
+      term: >-
+        Pathology Review Slide Proliferating Cell Count
       source: caDSR
       cde_id: 5432636
       cde_version: 1.0
@@ -3092,7 +3286,8 @@ occupation_duration_years:
     description: >-
       The number of years a patient worked in a specific occupation.
     termDef:
-      term: Person Occupation Years Number
+      term: >-
+        Person Occupation Years Number
       source: caDSR
       cde_id: 2435424
       cde_version: 1.0
@@ -3104,7 +3299,8 @@ oct_embedded:
       Indicator of whether or not the sample was embedded in Optimal Cutting Temperature
       (OCT) compound.
     termDef:
-      term: Tissue Sample Optimal Cutting Temperature Compound Embedding Indicator
+      term: >-
+        Tissue Sample Optimal Cutting Temperature Compound Embedding Indicator
       source: caDSR
       cde_id: 5432538
       cde_version: 1.0
@@ -3115,7 +3311,8 @@ ovarian_specimen_status:
     description: >-
       The text term used to describe the physical condition of the involved ovary.
     termDef:
-      term: Ovarian Specimen Integrity Status
+      term: >-
+        Ovarian Specimen Integrity Status
       source: caDSR
       cde_id: 6690671
       cde_version:
@@ -3127,7 +3324,8 @@ ovarian_surface_involvement:
       The text term that describes whether the surface tissue (outer boundary) of
       the ovary shows evidence of involvement or presence of cancer.
     termDef:
-      term: Ovary Surface Involvement Indicator
+      term: >-
+        Ovary Surface Involvement Indicator
       source: caDSR
       cde_id: 6690674
       cde_version: 1.0
@@ -3151,7 +3349,8 @@ pack_years_smoked:
       Numeric computed value to represent lifetime tobacco exposure defined as number
       of cigarettes smoked per day x number of years smoked divided by 20.
     termDef:
-      term: Person Cigarette Smoking History Pack Year Value
+      term: >-
+        Person Cigarette Smoking History Pack Year Value
       source: caDSR
       cde_id: 2955385
       cde_version: 1.0
@@ -3174,7 +3373,8 @@ pancreatitis_onset_year:
       Numeric value to represent the year that the patient was diagnosed with clinical
       chronic pancreatitis.
     termDef:
-      term: Chronic Pancreatitis Diagnosis Year Number
+      term: >-
+        Chronic Pancreatitis Diagnosis Year Number
       source: caDSR
       cde_id: 3457763
       cde_version: 1.0
@@ -3210,7 +3410,8 @@ percent_eosinophil_infiltration:
       Numeric value to represent the percentage of infiltration by eosinophils in
       a tumor sample or specimen.
     termDef:
-      term: Specimen Eosinophilia Percentage Value
+      term: >-
+        Specimen Eosinophilia Percentage Value
       source: caDSR
       cde_id: 2897700
       cde_version: 2.0
@@ -3221,7 +3422,8 @@ percent_gc_content:
     description: >-
       The overall %GC of all bases in all sequences.
     termDef:
-      term: '%GC'
+      term: >-
+        %GC
       source: FastQC
       cde_id:
       cde_version:
@@ -3233,7 +3435,8 @@ percent_granulocyte_infiltration:
       Numeric value to represent the percentage of infiltration by granulocytes in
       a tumor sample or specimen.
     termDef:
-      term: Specimen Granulocyte Infiltration Percentage Value
+      term: >-
+        Specimen Granulocyte Infiltration Percentage Value
       source: caDSR
       cde_id: 2897705
       cde_version: 2.0
@@ -3247,7 +3450,8 @@ percent_inflam_infiltration:
       by reddness, heat, pain, swelling and loss of function, with the need to heal
       damaged tissue.
     termDef:
-      term: Specimen Inflammation Change Percentage Value
+      term: >-
+        Specimen Inflammation Change Percentage Value
       source: caDSR
       cde_id: 2897695
       cde_version: 1.0
@@ -3259,7 +3463,8 @@ percent_lymphocyte_infiltration:
       Numeric value to represent the percentage of infiltration by lymphocytes in
       a solid tissue normal sample or specimen.
     termDef:
-      term: Specimen Lymphocyte Infiltration Percentage Value
+      term: >-
+        Specimen Lymphocyte Infiltration Percentage Value
       source: caDSR
       cde_id: 2897710
       cde_version: 2.0
@@ -3271,7 +3476,8 @@ percent_monocyte_infiltration:
       Numeric value to represent the percentage of monocyte infiltration in a sample
       or specimen.
     termDef:
-      term: Specimen Monocyte Infiltration Percentage Value
+      term: >-
+        Specimen Monocyte Infiltration Percentage Value
       source: caDSR
       cde_id: 5455535
       cde_version: 1.0
@@ -3283,7 +3489,8 @@ percent_necrosis:
       Numeric value to represent the percentage of cell death in a malignant tumor
       sample or specimen.
     termDef:
-      term: Malignant Neoplasm Necrosis Percentage Value
+      term: >-
+        Malignant Neoplasm Necrosis Percentage Value
       source: caDSR
       cde_id: 2841237
       cde_version: 1.0
@@ -3295,7 +3502,8 @@ percent_neutrophil_infiltration:
       Numeric value to represent the percentage of infiltration by neutrophils in
       a tumor sample or specimen.
     termDef:
-      term: Malignant Neoplasm Neutrophil Infiltration Percentage Cell Value
+      term: >-
+        Malignant Neoplasm Neutrophil Infiltration Percentage Cell Value
       source: caDSR
       cde_id: 2841267
       cde_version: 1.0
@@ -3307,7 +3515,8 @@ percent_normal_cells:
       Numeric value to represent the percentage of normal cell content in a malignant
       tumor sample or specimen.
     termDef:
-      term: Malignant Neoplasm Normal Cell Percentage Value
+      term: >-
+        Malignant Neoplasm Normal Cell Percentage Value
       source: caDSR
       cde_id: 2841233
       cde_version: 1.0
@@ -3320,7 +3529,8 @@ percent_stromal_cells:
       in a malignant tumor sample or specimen but are not malignant such as fibroblasts,
       vascular structures, etc.
     termDef:
-      term: Malignant Neoplasm Stromal Cell Percentage Value
+      term: >-
+        Malignant Neoplasm Stromal Cell Percentage Value
       source: caDSR
       cde_id: 2841241
       cde_version: 1.0
@@ -3332,7 +3542,8 @@ percent_tumor_cells:
       Numeric value that represents the percentage of infiltration by tumor cells
       in a sample.
     termDef:
-      term: Specimen Tumor Cell Percentage Value
+      term: >-
+        Specimen Tumor Cell Percentage Value
       source: caDSR
       cde_id: 5432686
       cde_version: 1.0
@@ -3356,7 +3567,8 @@ percent_tumor_nuclei:
       Numeric value to represent the percentage of tumor nuclei in a malignant neoplasm
       sample or specimen.
     termDef:
-      term: Malignant Neoplasm Neoplasm Nucleus Percentage Cell Value
+      term: >-
+        Malignant Neoplasm Neoplasm Nucleus Percentage Cell Value
       source: caDSR
       cde_id: 2841225
       cde_version: 1.0
@@ -3368,7 +3580,8 @@ perineural_invasion_present:
       a yes/no indicator to ask if perineural invasion or infiltration of tumor or
       cancer is present.
     termDef:
-      term: Tumor Perineural Invasion Ind
+      term: >-
+        Tumor Perineural Invasion Ind
       source: caDSR
       cde_id: 64181
       cde_version: 3.0
@@ -3380,7 +3593,8 @@ peripancreatic_lymph_nodes_positive:
       Enumerated numeric value or range of values used to describe the number of peripancreatic
       lymph nodes determined to be positive.
     termDef:
-      term: Peripancreatic Lymph Node Positive Finding Range
+      term: >-
+        Peripancreatic Lymph Node Positive Finding Range
       source: caDSR
       cde_id: 5983082
       cde_version: 2.0
@@ -3392,7 +3606,8 @@ peripancreatic_lymph_nodes_tested:
       The total number of peripancreatic lymph nodes tested for the presence of pancreatic
       cancer cells.
     termDef:
-      term: Peripancreatic Lymph Node Examined Count
+      term: >-
+        Peripancreatic Lymph Node Examined Count
       source: caDSR
       cde_id: 6050944
       cde_version: 1.0
@@ -3404,7 +3619,8 @@ peritoneal_fluid_cytological_status:
       The text term used to describe the malignant status of the peritoneal fluid
       determined by cytologic testing.
     termDef:
-      term: Peritoneal Ascites Cytological Procedure Status
+      term: >-
+        Peritoneal Ascites Cytological Procedure Status
       source: caDSR
       cde_id: 6690681
       cde_version: 1.0
@@ -3438,7 +3654,8 @@ platelet_count:
     description: >-
       The absolute peripheral platelet count (in 1000/uL).
     termDef:
-      term: Laboratory Procedure Platelet Result Specified Value
+      term: >-
+        Laboratory Procedure Platelet Result Specified Value
       source: caDSR
       cde_id: 58304
       cde_version: 4.0
@@ -3460,7 +3677,8 @@ ploidy:
     description: >-
       Text term used to describe the number of sets of homologous chromosomes.
     termDef:
-      term: Molecular Laboratory Procedure Ploidy Result Type
+      term: >-
+        Molecular Laboratory Procedure Ploidy Result Type
       source: caDSR
       cde_id: 6142527
       cde_version: 1.0
@@ -3472,7 +3690,8 @@ portion_number:
       Numeric value that represents the sequential number assigned to a portion of
       the sample.
     termDef:
-      term: Biospecimen Portion Sequence Number
+      term: >-
+        Biospecimen Portion Sequence Number
       source: caDSR
       cde_id: 5432711
       cde_version: 1.0
@@ -3483,7 +3702,8 @@ portion_weight:
     description: >-
       Numeric value that represents the sample portion weight, measured in milligrams.
     termDef:
-      term: Biospecimen Portion Weight Milligram Value
+      term: >-
+        Biospecimen Portion Weight Milligram Value
       source: caDSR
       cde_id: 5432593
       cde_version: 1.0
@@ -3495,7 +3715,8 @@ premature_at_birth:
       The yes/no/unknown indicator used to describe whether the patient was premature
       (less than 37 weeks gestation) at birth.
     termDef:
-      term: Premature Infant Birth Status Indicator
+      term: >-
+        Premature Infant Birth Status Indicator
       source: caDSR
       cde_id: 6010765
       cde_version: 1.0
@@ -3506,7 +3727,8 @@ preservation_method:
     description: >-
       Text term that represents the method used to preserve the sample.
     termDef:
-      term: Tissue Sample Preservation Method Type
+      term: >-
+        Tissue Sample Preservation Method Type
       source: caDSR
       cde_id: 5432521
       cde_version: 1.0
@@ -3519,7 +3741,8 @@ primary_diagnosis:
       by the World Health Organization's (WHO) International Classification of Diseases
       for Oncology (ICD-O).
     termDef:
-      term: ICD-O Primary Disease Diagnosis Type
+      term: >-
+        ICD-O Primary Disease Diagnosis Type
       source: caDSR
       cde_id: 6161032
       cde_version: 1.0
@@ -3535,7 +3758,8 @@ primary_gleason_grade:
       that this grade describes the entire prostatectomy specimen and is not specific
       to the sample used for sequencing.
     termDef:
-      term: Gleason Primary Score For Prostate Cancer Category
+      term: >-
+        Gleason Primary Score For Prostate Cancer Category
       source: caDSR
       cde_id: 5936800
       cde_version: 1.0
@@ -3550,7 +3774,8 @@ primary_site:
       Reference tissue_or_organ_of_origin on the diagnosis node for more specific
       primary sites of disease.
     termDef:
-      term: ICD-O Primary Anatomic Site Category
+      term: >-
+        ICD-O Primary Anatomic Site Category
       source: caDSR
       cde_id: 6161019
       cde_version: 1.0
@@ -3562,7 +3787,8 @@ prior_malignancy:
       The yes/no/unknown indicator used to describe the patient's history of prior
       cancer diagnosis.
     termDef:
-      term: Prior Cancer Diagnosis Occurrence Description Text
+      term: >-
+        Prior Cancer Diagnosis Occurrence Description Text
       source: caDSR
       cde_id: 3382736
       cde_version: 2.0
@@ -3574,7 +3800,8 @@ prior_treatment:
       A yes/no/unknown/not applicable indicator related to the administration of therapeutic
       agents received before the body specimen was collected.
     termDef:
-      term: Therapeutic Procedure Prior Specimen Collection Administered Yes No Unknown
+      term: >-
+        Therapeutic Procedure Prior Specimen Collection Administered Yes No Unknown
         Not Applicable Indicator
       source: caDSR
       cde_id: 4231463
@@ -3587,7 +3814,8 @@ progesterone_receptor_percent_positive_ihc:
       Classification to represent Progesterone Receptor Positive results expressed
       as a percentage value.
     termDef:
-      term: Progesterone Receptor Level Cell Percentage Category
+      term: >-
+        Progesterone Receptor Level Cell Percentage Category
       source: caDSR
       cde_id: 3128342
       cde_version: 1.0
@@ -3598,7 +3826,8 @@ progesterone_receptor_result_ihc:
     description: >-
       Text term to represent the overall result of Progresterone Receptor (PR) testing.
     termDef:
-      term: Breast Carcinoma Progesterone Receptor Status
+      term: >-
+        Breast Carcinoma Progesterone Receptor Status
       source: caDSR
       cde_id: 2957357
       cde_version: 2.0
@@ -3633,7 +3862,8 @@ progression_or_recurrence:
       Yes/No/Unknown indicator to identify whether a patient has had a new tumor event
       after initial treatment.
     termDef:
-      term: New Neoplasm Event Post Initial Therapy Indicator
+      term: >-
+        New Neoplasm Event Post Initial Therapy Indicator
       source: caDSR
       cde_id: 3121376
       cde_version: 1.0
@@ -3645,7 +3875,8 @@ progression_or_recurrence_anatomic_site:
       The text term used to describe the anatomic site of the progressive or recurrent
       disease.
     termDef:
-      term: Progression or Recurrence Anatomic Site Category
+      term: >-
+        Progression or Recurrence Anatomic Site Category
       source: caDSR
       cde_id: 6161026
       cde_version: 1.0
@@ -3657,7 +3888,8 @@ progression_or_recurrence_type:
       The text term used to describe the type of progressive or recurrent disease
       or relapsed disease.
     termDef:
-      term: Progression or Recurrence Description Type
+      term: >-
+        Progression or Recurrence Description Type
       source: caDSR
       cde_id: 6142385
       cde_version: 1.0
@@ -3752,7 +3984,8 @@ qc_metric_state:
       State classification given by FASTQC for the metric. Metric specific details
       about the states are available on their website.
     termDef:
-      term: QC Metric State
+      term: >-
+        QC Metric State
       source: FastQC
       cde_id:
       cde_version:
@@ -3768,7 +4001,8 @@ race:
       The provided values are based on the categories defined by the U.S. Office of
       Management and Business and used by the U.S. Census Bureau.
     termDef:
-      term: Race Category Text
+      term: >-
+        Race Category Text
       source: caDSR
       cde_id: 2192199
       cde_version: 1.0
@@ -3780,7 +4014,8 @@ radon_exposure:
       The yes/no/unknown indicator used to describe whether the patient was exposed
       to radon.
     termDef:
-      term: Person Lifetime Risk Radon Exposure Indicator
+      term: >-
+        Person Lifetime Risk Radon Exposure Indicator
       source: caDSR
       cde_id: 2816352
       cde_version: 1.0
@@ -3826,7 +4061,8 @@ reflux_treatment:
       The yes/no/unknown indicator used to describe whether the patient received reflux
       treatment.
     termDef:
-      term: Gastroesophageal Reflux Disease Therapeutic Procedure Performed Indicator
+      term: >-
+        Gastroesophageal Reflux Disease Therapeutic Procedure Performed Indicator
       source: caDSR
       cde_id: 6133607
       cde_version: 1.0
@@ -3838,7 +4074,8 @@ reflux_treatment_type:
       Text term used to describe the types of treatment used to manage gastroesophageal
       reflux disease (GERD).
     termDef:
-      term: Gastroesophageal Reflux Disease Treatment Type
+      term: >-
+        Gastroesophageal Reflux Disease Treatment Type
       source: caDSR
       cde_id: 3440206
       cde_version: 1.0
@@ -3849,7 +4086,8 @@ regimen_or_line_of_therapy:
     description: >-
       The text term used to describe the regimen or line of therapy.
     termDef:
-      term: Regimen or Line of Therapy Text
+      term: >-
+        Regimen or Line of Therapy Text
       source: caDSR
       cde_id: 6161024
       cde_version: 1.0
@@ -3860,7 +4098,8 @@ relationship_age_at_diagnosis:
     description: >-
       The age (in years) when the patient's relative was first diagnosed.
     termDef:
-      term: Relative Diagnosis Age Value
+      term: >-
+        Relative Diagnosis Age Value
       source: caDSR
       cde_id: 5300571
       cde_version: 1.0
@@ -3872,7 +4111,8 @@ relationship_gender:
       The text term used to describe the gender of the patient's relative with a history
       of cancer.
     termDef:
-      term: Relative Gender Type
+      term: >-
+        Relative Gender Type
       source: caDSR
       cde_id: 6161021
       cde_version: 1.0
@@ -3884,7 +4124,8 @@ relationship_primary_diagnosis:
       The text term used to describe the malignant diagnosis of the patient's relative
       with a history of cancer.
     termDef:
-      term: Relative Malignant Diagnosis Name
+      term: >-
+        Relative Malignant Diagnosis Name
       source: caDSR
       cde_id: 6161022
       cde_version: 1.0
@@ -3896,7 +4137,8 @@ relationship_type:
       The subgroup that describes the state of connectedness between members of the
       unit of society organized around kinship ties.
     termDef:
-      term: Family Member Relationship Type
+      term: >-
+        Family Member Relationship Type
       source: caDSR
       cde_id: 2690165
       cde_version: 2.0
@@ -3908,7 +4150,8 @@ relative_with_cancer_history:
       The yes/no/unknown indicator used to describe whether any of the patient's relatives
       have a history of cancer.
     termDef:
-      term: Relative Malignant Diagnosis Indicator
+      term: >-
+        Relative Malignant Diagnosis Indicator
       source: caDSR
       cde_id: 6161023
       cde_version: 1.0
@@ -3930,7 +4173,8 @@ residual_disease:
     description: >-
       Text terms to describe the status of a tissue margin following surgical resection.
     termDef:
-      term: Surgical Margin Resection Status
+      term: >-
+        Surgical Margin Resection Status
       source: caDSR
       cde_id: 2608702
       cde_version: 1.0
@@ -3944,7 +4188,8 @@ respirable_crystalline_silica_exposure:
       metal oxide that consists of different forms including quartz, cristobalite,
       tridymite, tripoli, ganister, chert and novaculite.
     termDef:
-      term: Person Respirable Cystalline Silica Exposure Indicator
+      term: >-
+        Person Respirable Cystalline Silica Exposure Indicator
       source: caDSR
       cde_id:
       cde_version:
@@ -3955,7 +4200,8 @@ ribosomal_rna_28s_16s_ratio:
     description: >-
       The 28S/18S ribosomal RNA band ratio used to assess the quality of total RNA.
     termDef:
-      term: 28s/18s Ribosomal RNA Ratio
+      term: >-
+        28s/18s Ribosomal RNA Ratio
       source:
       cde_id:
       cde_version:
@@ -3967,7 +4213,8 @@ rin:
       A numerical assessment of the integrity of RNA based on the entire electrophoretic
       trace of the RNA sample including the presence or absence of degradation products.
     termDef:
-      term: Biospecimen RNA Integrity Number Value
+      term: >-
+        Biospecimen RNA Integrity Number Value
       source: caDSR
       cde_id: 5278775
       cde_version: 1.0
@@ -3979,7 +4226,8 @@ risk_factor:
       The text term used to describe a risk factor the patient had at the time of
       or prior to their diagnosis.
     termDef:
-      term: Risk Factor Description Type
+      term: >-
+        Risk Factor Description Type
       source: caDSR
       cde_id: 6142389
       cde_version: 1.0
@@ -3991,7 +4239,8 @@ risk_factor_treatment:
       The yes/no/unknown indicator used to describe whether the patient received treatment
       for a risk factor the patient had at the time of or prior to their diagnosis.
     termDef:
-      term: Risk Factor Treatment Indicator
+      term: >-
+        Risk Factor Treatment Indicator
       source: caDSR
       cde_id: 6514356
       cde_version: 1.0
@@ -4003,7 +4252,8 @@ rna_change:
       Alphanumeric value used to describe the rna change for a specific genetic variant.
       Example: r.76a>c
     termDef:
-      term: Molecular Laboratory Procedure RNA Change Text
+      term: >-
+        Molecular Laboratory Procedure RNA Change Text
       source: caDSR
       cde_id: 6142509
       cde_version: 1.0
@@ -4014,7 +4264,8 @@ sample_type:
     description: >-
       Text term to describe the source of a biospecimen used for a laboratory test.
     termDef:
-      term: Specimen Type Collection Biospecimen Type
+      term: >-
+        Specimen Type Collection Biospecimen Type
       source: caDSR
       cde_id: 3111302
       cde_version: 2.0
@@ -4039,7 +4290,8 @@ second_exon:
       where that variant is located. This property is typically used for a translocation
       where two different locations are involved in the variation.
     termDef:
-      term: Molecular Laboratory Procedure Exon Identification Number
+      term: >-
+        Molecular Laboratory Procedure Exon Identification Number
       source: caDSR
       cde_id:
       cde_version:
@@ -4051,7 +4303,8 @@ second_gene_symbol:
       The text term used to describe a secondary gene targeted or included in molecular
       analysis. For rearrangements, this is should represent the location of the variant.
     termDef:
-      term: Molecular Analysis Secondary Gene Symbol Code
+      term: >-
+        Molecular Analysis Secondary Gene Symbol Code
       source: caDSR
       cde_id: 6142393
       cde_version: 1.0
@@ -4067,7 +4320,8 @@ secondary_gleason_grade:
       cancer. Note that this grade describes the entire prostatectomy specimen and
       is not specific to the sample used for sequencing.
     termDef:
-      term: Gleason Secondary Score For Prostate Cancer Category
+      term: >-
+        Gleason Secondary Score For Prostate Cancer Category
       source: caDSR
       cde_id: 5936802
       cde_version: 1.0
@@ -4150,7 +4404,8 @@ shortest_dimension:
       Numeric value that represents the shortest dimension of the sample, measured
       in millimeters.
     termDef:
-      term: Tissue Sample Short Dimension Millimeter Measurement
+      term: >-
+        Tissue Sample Short Dimension Millimeter Measurement
       source: caDSR
       cde_id: 5432603
       cde_version: 1.0
@@ -4163,7 +4418,8 @@ site_of_resection_or_biopsy:
       malignant disease, as described by the World Health Organization's (WHO) International
       Classification of Diseases for Oncology (ICD-O).
     termDef:
-      term: ICD-O Origin of Disease Anatomic Site
+      term: >-
+        ICD-O Origin of Disease Anatomic Site
       source: caDSR
       cde_id: 6161034
       cde_version: 1.0
@@ -4185,7 +4441,8 @@ smoking_frequency:
     description: >-
       The text term used to generally decribe how often the patient smokes.
     termDef:
-      term: Person Smoking Frequency
+      term: >-
+        Person Smoking Frequency
       source: caDSR
       cde_id:
       cde_version:
@@ -4197,7 +4454,8 @@ smoking_history:
       Category describing current smoking status and smoking history as self-reported
       by a patient.
     termDef:
-      term: Smoking History
+      term: >-
+        Smoking History
       source: caDSR
       cde_id: 2181650
       cde_version: 1.0
@@ -4209,7 +4467,8 @@ smoking_intensity:
       Numeric computed value to represent lifetime tobacco exposure defined as number
       of cigarettes smoked per day x number of years smoked divided by 20
     termDef:
-      term: Person Cigarette Smoking History Pack Year Value
+      term: >-
+        Person Cigarette Smoking History Pack Year Value
       source: caDSR
       cde_id: 2955385
       cde_version: 1.0
@@ -4232,7 +4491,8 @@ specialized_molecular_test:
       Text term used to describe a specific test that is not covered in the list of
       molecular analysis methods.
     termDef:
-      term: Molecular Laboratory Procedure Specialized Text
+      term: >-
+        Molecular Laboratory Procedure Specialized Text
       source: caDSR
       cde_id: 6142526
       cde_version: 1.0
@@ -4244,8 +4504,8 @@ spectrophotometer_method:
       Name of the method used to determine the concentration of purified nucleic acid
       within a solution.
     termDef:
-      term: Purification Nucleic Acid Solution Concentration Determination Method
-        Type
+      term: >-
+        Purification Nucleic Acid Solution Concentration Determination Method Type
       source: caDSR
       cde_id: 3008378
       cde_version: 1.0
@@ -4289,7 +4549,8 @@ supratentorial_localization:
     description: >-
       Text term to specify the location of the supratentorial tumor.
     termDef:
-      term: Tumor Location Central Nervous System Tissue Type
+      term: >-
+        Tumor Location Central Nervous System Tissue Type
       source: caDSR
       cde_id: 3133891
       cde_version: 1.0
@@ -4302,7 +4563,8 @@ synchronous_malignancy:
       malignant diagnosis at the same time the tumor used for sequencing was diagnosed.
       If both tumors were sequenced, both tumors would have synchronous malignancies.
     termDef:
-      term: Malignant Disease Diagnosis Synchronous Indicator
+      term: >-
+        Malignant Disease Diagnosis Synchronous Indicator
       source: caDSR
       cde_id: 6142390
       cde_version: 1.0
@@ -4380,7 +4642,8 @@ test_analyte_type:
     description: >-
       The text term used to describe the type of analyte used for molecular testing.
     termDef:
-      term: Molecular Laboratory Procedure Analyte Type
+      term: >-
+        Molecular Laboratory Procedure Analyte Type
       source: caDSR
       cde_id: 6142394
       cde_version: 1.0
@@ -4392,7 +4655,8 @@ test_result:
       The text term used to describe the result of the molecular test. If the test
       result was a numeric value see test_value.
     termDef:
-      term: Molecular Laboratory Procedure Outcome
+      term: >-
+        Molecular Laboratory Procedure Outcome
       source: caDSR
       cde_id: 6142397
       cde_version: 1.0
@@ -4404,7 +4668,8 @@ test_units:
       The text term used to describe the units of the test value for a molecular test.
       This property is used in conjunction with test_value.
     termDef:
-      term: Molecular Laboratory Procedure Outcome Unit of Measure
+      term: >-
+        Molecular Laboratory Procedure Outcome Unit of Measure
       source: caDSR
       cde_id: 6142525
       cde_version: 1.0
@@ -4416,7 +4681,8 @@ test_value:
       The text term or numeric value used to describe a sepcific result of a molecular
       test.
     termDef:
-      term: Molecular Laboratory Procedure Outcome Text
+      term: >-
+        Molecular Laboratory Procedure Outcome Text
       source: caDSR
       cde_id: 6142524
       cde_version: 1.0
@@ -4427,7 +4693,8 @@ therapeutic_agents:
     description: >-
       Text identification of the individual agent(s) used as part of a treatment regimen.
     termDef:
-      term: Prior Therapy Regimen Text
+      term: >-
+        Prior Therapy Regimen Text
       source: caDSR
       cde_id: 2975232
       cde_version: 1.0
@@ -4439,7 +4706,8 @@ time_between_clamping_and_freezing:
       Numeric representation of the elapsed time between the surgical clamping of
       blood supply and freezing of the sample, measured in minutes.
     termDef:
-      term: Tissue Sample Clamping and Freezing Elapsed Minute Time
+      term: >-
+        Tissue Sample Clamping and Freezing Elapsed Minute Time
       source: caDSR
       cde_id: 5432611
       cde_version: 1.0
@@ -4451,7 +4719,8 @@ time_between_excision_and_freezing:
       Numeric representation of the elapsed time between the excision and freezing
       of the sample, measured in minutes.
     termDef:
-      term: Tissue Sample Excision and Freezing Elapsed Minute Time
+      term: >-
+        Tissue Sample Excision and Freezing Elapsed Minute Time
       source: caDSR
       cde_id: 5432612
       cde_version: 1.0
@@ -4464,7 +4733,8 @@ time_between_waking_and_first_smoke:
       the time the patient wakes up in the morning to the time they smoke their first
       cigarette.
     termDef:
-      term: Person Smoking Frequency
+      term: >-
+        Person Smoking Frequency
       source: caDSR
       cde_id: 3279220
       cde_version: 1.0
@@ -4477,7 +4747,8 @@ tissue_or_organ_of_origin:
       malignant disease, as described by the World Health Organization's (WHO) International
       Classification of Diseases for Oncology (ICD-O).
     termDef:
-      term: ICD-O Origin of Disease Anatomic Site
+      term: >-
+        ICD-O Origin of Disease Anatomic Site
       source: caDSR
       cde_id: 6161035
       cde_version: 1.0
@@ -4489,7 +4760,8 @@ tissue_type:
       Text term that represents a description of the kind of tissue collected with
       respect to disease status or proximity to tumor tissue.
     termDef:
-      term: Tissue Sample Description Type
+      term: >-
+        Tissue Sample Description Type
       source: caDSR
       cde_id: 5432687
       cde_version: 1.0
@@ -4511,7 +4783,8 @@ tobacco_smoking_onset_year:
     description: >-
       The year in which the participant began smoking.
     termDef:
-      term: Started Smoking Year
+      term: >-
+        Started Smoking Year
       source: caDSR
       cde_id: 2228604
       cde_version: 1.0
@@ -4522,7 +4795,8 @@ tobacco_smoking_quit_year:
     description: >-
       The year in which the participant quit smoking.
     termDef:
-      term: Stopped Smoking Year
+      term: >-
+        Stopped Smoking Year
       source: caDSR
       cde_id: 2228610
       cde_version: 1.0
@@ -4534,7 +4808,8 @@ tobacco_smoking_status:
       Category describing current smoking status and smoking history as self-reported
       by a patient.
     termDef:
-      term: Patient Smoking History Category
+      term: >-
+        Patient Smoking History Category
       source: caDSR
       cde_id: 2181650
       cde_version: 1.0
@@ -4548,7 +4823,8 @@ total_protein:
       plasma, consisting mainly of albumins and globulins and include antibodies and
       blood- clotting proteins.
     termDef:
-      term: Laboratory Procedure Total Serum Protein Outcome Unspecified Value
+      term: >-
+        Laboratory Procedure Total Serum Protein Outcome Unspecified Value
       source: caDSR
       cde_id: 2181536
       cde_version: 1.0
@@ -4570,7 +4846,8 @@ total_sequences:
     description: >-
       A count of the total number of sequences processed.
     termDef:
-      term: Total Sequences
+      term: >-
+        Total Sequences
       source: FastQC
       cde_id:
       cde_version:
@@ -4581,7 +4858,8 @@ transcript:
     description: >-
       Alphanumeric value used to describe the transcript of a specific genetic variant.
     termDef:
-      term: Molecular Laboratory Procedure Transcript Location Text
+      term: >-
+        Molecular Laboratory Procedure Transcript Location Text
       source: caDSR
       cde_id: 6142465
       cde_version: 1.0
@@ -4592,7 +4870,8 @@ treatment_anatomic_site:
     description: >-
       The anatomic site or field targeted by a treatment regimen or single agent therapy.
     termDef:
-      term: Treatment Anatomic Site
+      term: >-
+        Treatment Anatomic Site
       source: caDSR
       cde_id: 5615611
       cde_version: 1.0
@@ -4604,7 +4883,8 @@ treatment_effect:
       The text term used to describe the pathologic effect a treatment(s) had on the
       tumor.
     termDef:
-      term: Treatment Effect Type
+      term: >-
+        Treatment Effect Type
       source: caDSR
       cde_id: 6514354
       cde_version: 1.0
@@ -4616,7 +4896,8 @@ treatment_intent_type:
       Text term to identify the reason for the administration of a treatment regimen.
       [Manually-curated]
     termDef:
-      term: Treatment Regimen Intent Type
+      term: >-
+        Treatment Regimen Intent Type
       source: caDSR
       cde_id: 2793511
       cde_version: 1.0
@@ -4628,7 +4909,8 @@ treatment_or_therapy:
       A yes/no/unknown/not applicable indicator related to the administration of therapeutic
       agents received.
     termDef:
-      term: Therapeutic Procedure Prior Specimen Collection Administered Yes No Unknown
+      term: >-
+        Therapeutic Procedure Prior Specimen Collection Administered Yes No Unknown
         Not Applicable Indicator
       source: caDSR
       cde_id: 4231463
@@ -4641,7 +4923,8 @@ treatment_outcome:
       Text term that describes the patient's final outcome after the treatment was
       administered.
     termDef:
-      term: Treatment Outcome Type
+      term: >-
+        Treatment Outcome Type
       source: caDSR
       cde_id: 5102383
       cde_version: 1.0
@@ -4652,7 +4935,8 @@ treatment_type:
     description: >-
       Text term that describes the kind of treatment administered.
     termDef:
-      term: Treatment Method Type
+      term: >-
+        Treatment Method Type
       source: caDSR
       cde_id: 5102381
       cde_version: 1.0
@@ -4687,7 +4971,8 @@ tumor_confined_to_organ_of_origin:
       to the organ where it originated and did not spread to a proximal or distant
       location within the body.
     termDef:
-      term: Tumor Mass Organ Origin Yes No Unknown Not Applicable Indicator
+      term: >-
+        Tumor Mass Organ Origin Yes No Unknown Not Applicable Indicator
       source: caDSR
       cde_id: 4925494
       cde_version: 1.0
@@ -4699,7 +4984,8 @@ tumor_descriptor:
       Text that describes the kind of disease present in the tumor specimen as related
       to a specific timepoint.
     termDef:
-      term: Tumor Tissue Disease Description Type
+      term: >-
+        Tumor Tissue Disease Description Type
       source: caDSR
       cde_id: 3288124
       cde_version: 1.0
@@ -4711,7 +4997,8 @@ tumor_focality:
       The text term used to describe whether the patient's disease originated in a
       single location or multiple locations.
     termDef:
-      term: Primary Neoplasm Focus Type
+      term: >-
+        Primary Neoplasm Focus Type
       source: caDSR
       cde_id: 3174022
       cde_version: 1.0
@@ -4723,7 +5010,8 @@ tumor_grade:
       Numeric value to express the degree of abnormality of cancer cells, a measure
       of differentiation and aggressiveness.
     termDef:
-      term: Neoplasm Histologic Grade
+      term: >-
+        Neoplasm Histologic Grade
       source: caDSR
       cde_id: 2785839
       cde_version: 2.0
@@ -4735,7 +5023,8 @@ tumor_largest_dimension_diameter:
       Numeric value used to describe the maximum diameter or dimension of the primary
       tumor, measured in centimeters.
     termDef:
-      term: Tumor Largest Dimension Measurement
+      term: >-
+        Tumor Largest Dimension Measurement
       source: caDSR
       cde_id: 64215
       cde_version: 3.0
@@ -4747,7 +5036,8 @@ tumor_regression_grade:
       A numeric value used to measure therapeutic response of the primary tumor and
       predict patient outcomes based on a three-point tumor regression grading system.
     termDef:
-      term: Modified Ryan Scheme for Tumor Regression Score 3 Point Scale
+      term: >-
+        Modified Ryan Scheme for Tumor Regression Score 3 Point Scale
       source: caDSR
       cde_id: 6471217
       cde_version: 1.0
@@ -4762,7 +5052,8 @@ tumor_stage:
       depend on the tumor site, type, and accepted staging system. These items should
       accompany the tumor_stage value as associated metadata.
     termDef:
-      term: Tumor Stage
+      term: >-
+        Tumor Stage
       source: NCIt
       cde_id: C16899
       cde_version:
@@ -4773,7 +5064,8 @@ type_of_smoke_exposure:
     description: >-
       The text term used to describe the patient's specific type of smoke exposure.
     termDef:
-      term: Person Smoke Exposure Type
+      term: >-
+        Person Smoke Exposure Type
       source: caDSR
       cde_id:
       cde_version:
@@ -4784,7 +5076,8 @@ type_of_tobacco_used:
     description: >-
       The text term used to describe the specific type of tobacco used by the patient.
     termDef:
-      term: Person Tobacco Use Type
+      term: >-
+        Person Tobacco Use Type
       source: caDSR
       cde_id:
       cde_version:
@@ -4799,7 +5092,8 @@ uuid:
       itself well to sorting, ordering, and hashing of all sorts, storing in databases,
       simple allocation, and ease of programming in general.
     termDef:
-      term: Universally Unique Identifier
+      term: >-
+        Universally Unique Identifier
       source: NCIt
       cde_id: C54100
       cde_version:
@@ -4810,7 +5104,8 @@ variant_origin:
     description: >-
       The text term used to describe the biological origin of a specific genetic variant.
     termDef:
-      term: Genetic Variation Origin Type
+      term: >-
+        Genetic Variation Origin Type
       source: caDSR
       cde_id:
       cde_version:
@@ -4821,7 +5116,8 @@ variant_type:
     description: >-
       The text term used to describe the type of genetic variation.
     termDef:
-      term: Molecular Laboratory Procedure Genetic Variant Type
+      term: >-
+        Molecular Laboratory Procedure Genetic Variant Type
       source: caDSR
       cde_id: 6142402
       cde_version: 1.0
@@ -4833,7 +5129,8 @@ vascular_invasion_present:
       The yes/no indicator to ask if large vessel or venous invasion was detected
       by surgery or presence in a tumor specimen.
     termDef:
-      term: Tumor Vascular Invasion Ind-3
+      term: >-
+        Tumor Vascular Invasion Ind-3
       source: caDSR
       cde_id: 64358
       cde_version: 3.0
@@ -4844,7 +5141,8 @@ vascular_invasion_type:
     description: >-
       Text term that represents the type of vascular tumor invasion.
     termDef:
-      term: Vascular Tumor Cell Invasion Type
+      term: >-
+        Vascular Tumor Cell Invasion Type
       source: caDSR
       cde_id: 3168001
       cde_version: 1.0
@@ -4856,7 +5154,8 @@ viral_hepatitis_serologies:
       Text term that describes the kind of serological laboratory test used to determine
       the patient's hepatitus status.
     termDef:
-      term: Viral Hepatitis Laboratory Procedure Serology Test Method Type
+      term: >-
+        Viral Hepatitis Laboratory Procedure Serology Test Method Type
       source: caDSR
       cde_id: 4395982
       cde_version: 1.0
@@ -4867,7 +5166,8 @@ vital_status:
     description: >-
       The survival state of the person registered on the protocol.
     termDef:
-      term: Patient Vital Status
+      term: >-
+        Patient Vital Status
       source: caDSR
       cde_id: 5
       cde_version: 5.0
@@ -4878,7 +5178,8 @@ wbc:
     description: >-
       The absolute peripheral white blood cell count (in 1000/uL).
     termDef:
-      term: Laboratory Procedure Leukocyte Result Specified Value
+      term: >-
+        Laboratory Procedure Leukocyte Result Specified Value
       source: caDSR
       cde_id: 58312
       cde_version: 3.0
@@ -4891,7 +5192,8 @@ weeks_gestation_at_birth:
       date of the biological mother's last menstrual period and ending with the birth
       of the patient.
     termDef:
-      term: Pregnancy Week Number Count
+      term: >-
+        Pregnancy Week Number Count
       source: caDSR
       cde_id: 2737369
       cde_version: 1.0
@@ -4902,7 +5204,8 @@ weight:
     description: >-
       The weight of the patient measured in kilograms.
     termDef:
-      term: Patient Weight Measurement
+      term: >-
+        Patient Weight Measurement
       source: caDSR
       cde_id: 651
       cde_version: 4.0
@@ -4914,7 +5217,8 @@ well_number:
       Numeric value that represents the the well location within a plate for the analyte
       or aliquot from the sample.
     termDef:
-      term: Biospecimen Analyte or Aliquot Plate Well Number
+      term: >-
+        Biospecimen Analyte or Aliquot Plate Well Number
       source: caDSR
       cde_id: 5432613
       cde_version: 1.0
@@ -4931,7 +5235,8 @@ weiss_assessment_score:
       than 75% tumor cells), diffuse architecture (greater than 33% of tumor), necrosis,
       venous invasion, sinusoidal invasion, and capsular invasion.
     termDef:
-      term: Weiss System Category Assessment Total Score
+      term: >-
+        Weiss System Category Assessment Total Score
       source: caDSR
       cde_id: 3648744
       cde_version: 1.0
@@ -4943,7 +5248,8 @@ wilms_tumor_histologic_subtype:
       The text term used to describe the classification of Wilms tumors distinguishing
       between favorable and unfavorable histologic groups.
     termDef:
-      term: Disease Histology Confirmation Favorable Status
+      term: >-
+        Disease Histology Confirmation Favorable Status
       source: caDSR
       cde_id: 4358735
       cde_version: 1.0
@@ -4965,7 +5271,8 @@ year_of_birth:
     description: >-
       Numeric value to represent the calendar year in which an individual was born.
     termDef:
-      term: Year Birth Date Number
+      term: >-
+        Year Birth Date Number
       source: caDSR
       cde_id: 2896954
       cde_version: 1.0
@@ -4977,7 +5284,8 @@ year_of_diagnosis:
       Numeric value to represent the year of an individual's initial pathologic diagnosis
       of cancer.
     termDef:
-      term: Year of initial pathologic diagnosis
+      term: >-
+        Year of initial pathologic diagnosis
       source: caDSR
       cde_id: 2896960
       cde_version: 1.0
@@ -4988,7 +5296,8 @@ year_of_death:
     description: >-
       Numeric value to represent the year of the death of an individual.
     termDef:
-      term: Year Death Number
+      term: >-
+        Year Death Number
       source: caDSR
       cde_id: 2897030
       cde_version: 1.0
@@ -5000,7 +5309,8 @@ years_smoked:
       Numeric value (or unknown) to represent the number of years a person has been
       smoking.
     termDef:
-      term: Person Smoking Duration Year Count
+      term: >-
+        Person Smoking Duration Year Count
       source: caDSR
       cde_id: 3137957
       cde_version: 1.0
@@ -5011,7 +5321,8 @@ zygosity:
     description: >-
       The text term used to describe the zygosity of a specific genetic variant.
     termDef:
-      term: Molecular Laboratory Procedure Genetic Zygosity Type
+      term: >-
+        Molecular Laboratory Procedure Genetic Zygosity Type
       source: caDSR
       cde_id: 6142510
       cde_version: 1.0

@@ -50,52 +50,63 @@ properties:
   id:
     $ref:
       - "_definitions.yaml#/uuid"
-    description: UUID for the project
+    description: >-
+      UUID for the project
 
   awg_review:
-    description: Indicates that the project is an AWG project.
+    description: >-
+      Indicates that the project is an AWG project.
     type: boolean
     default: false
 
   code:
-    description: Project code
+    description: >-
+      Project code
     type: string
 
   dbgap_accession_number:
-    description: The dbgap accession number for the project.
+    description: >-
+      The dbgap accession number for the project.
     type: string
 
   disease_type:
-    description: Full name for the project
+    description: >-
+      Full name for the project
     type: string
 
   intended_release_date:
     $ref:
       - "_definitions.yaml#/datetime"
-    description: "Tracks a Project's intended release date."
+    description: >-
+      Tracks a Project's intended release date.
 
   in_review:
-    description: Indicates that the project is under review by the submitter. Upload
-      and data modification is disabled.
+    description: >-
+      Indicates that the project is under review by the submitter. Upload and data
+      modification is disabled.
     type: boolean
     default: false
 
   is_legacy:
-    description: Indicates whether a project will appear in the Legacy Archive.
+    description: >-
+      Indicates whether a project will appear in the Legacy Archive.
     type: boolean
     default: false
 
   name:
-    description: Display name for the project
+    description: >-
+      Display name for the project
     type: string
 
   primary_site:
-    description: Primary site for the project
+    description: >-
+      Primary site for the project
     type: string
 
   state:
-    description: The possible states a project can be in.  All but `open` are equivalent
-      to some type of locked state.
+    description: >-
+      The possible states a project can be in.  All but `open` are equivalent to some
+      type of locked state.
     default: open
     enum:
       - open
@@ -107,29 +118,34 @@ properties:
       - legacy
 
   release_requested:
-    description: User requests that the GDC release the project. Release can only
-      be requested if the project is releasable.
+    description: >-
+      User requests that the GDC release the project. Release can only be requested
+      if the project is releasable.
     type: boolean
     default: false
 
   released:
-    description: To release a project is to tell the GDC to include all submitted
-      entities in the next GDC index.
+    description: >-
+      To release a project is to tell the GDC to include all submitted entities in
+      the next GDC index.
     type: boolean
     default: false
 
   releasable:
-    description: A project can only be released by the user when `releasable` is true.
+    description: >-
+      A project can only be released by the user when `releasable` is true.
     type: boolean
     default: false
 
   request_submission:
-    description: Indicates that the user has requested submission to the GDC for harmonization.
+    description: >-
+      Indicates that the user has requested submission to the GDC for harmonization.
     type: boolean
     default: false
 
   submission_enabled:
-    description: Indicates if submission to a project is allowed.
+    description: >-
+      Indicates if submission to a project is allowed.
     type: boolean
     default: true
 

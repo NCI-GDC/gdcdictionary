@@ -56,15 +56,18 @@ properties:
       - "_definitions.yaml#/datetime"
 
   name:
-    description: String representing release name.
+    description: >-
+      String representing release name.
     type: string
 
   major_version:
-    description: The number identifying the major version.
+    description: >-
+      The number identifying the major version.
     type: integer
 
   minor_version:
-    description: The number identifying the minor version.
+    description: >-
+      The number identifying the minor version.
     type: integer
 
   release_date:
@@ -72,7 +75,8 @@ properties:
       - "_definitions.yaml#/datetime"
 
   released:
-    description: Indicates if it is the current release.
+    description: >-
+      Indicates if it is the current release.
     type: boolean
     default: false
 
