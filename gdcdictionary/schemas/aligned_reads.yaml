@@ -133,6 +133,7 @@ properties:
       - Validation
       - WGS
       - WXS
+      - scRNA-Seq
 
   mean_coverage:
     $ref:
@@ -194,6 +195,16 @@ properties:
     $ref:
       - "_terms.yaml#/total_reads/common"
     type: integer
+
+  tumor_ploidy:
+    $ref:
+      - "_terms.yaml#/tumor_ploidy/common"
+    type: number
+
+  tumor_purity:
+    $ref:
+      - "_terms.yaml#/tumor_purity/common"
+    type: number
 
   alignment_cocleaning_workflows:
     $ref: "_definitions.yaml#/to_one"
