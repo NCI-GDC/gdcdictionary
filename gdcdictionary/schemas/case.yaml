@@ -208,6 +208,28 @@ properties:
       - Uterine Carcinosarcoma
       - Uterine Corpus Endometrial Carcinoma
       - Uveal Melanoma
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Mesothelioma:
+        $ref:
+          - "_terms.yaml#/mesothelioma/common"
+      Multiple Myeloma:
+        $ref:
+          - "_terms.yaml#/multiple_myeloma/common"
+      Neuroblastoma:
+        $ref:
+          - "_terms.yaml#/neuroblastoma/common"
+      Osteosarcoma:
+        $ref:
+          - "_terms.yaml#/osteosarcoma/common"
+      Sarcoma:
+        $ref:
+          - "_terms.yaml#/sarcoma/common"
 
   index_date:
     $ref:
@@ -219,6 +241,7 @@ properties:
       - Initial Genomic Sequencing
       - Sample Procurement
       - Study Enrollment
+      - Recurrence
 
   lost_to_followup:
     $ref:
@@ -227,6 +250,16 @@ properties:
       - "Yes"
       - "No"
       - Unknown
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
 
   primary_site:
     $ref:
@@ -342,6 +375,27 @@ properties:
       - Soft Tissue
       - Thyroid
       - Uterus
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  consent_type:
+    $ref:
+      - "_terms.yaml#/consent_type/common"
+    enum:
+      - Informed Consent
+      - Consent by Death
+      - Consent Exemption
+      - Consent Waiver
+
+  days_to_consent:
+    $ref:
+      - "_terms.yaml#/days_to_consent/common"
+    type: integer
 
   projects:
     $ref: "_definitions.yaml#/to_one"
