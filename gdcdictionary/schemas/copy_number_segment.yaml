@@ -94,6 +94,8 @@ properties:
     enum:
       - Genotyping Array
       - Targeted Sequencing
+      - WGS
+      - WXS
 
   platform:
     $ref:
