@@ -40,6 +40,12 @@ links:
         target_type: annotated_somatic_mutation
         multiplicity: one_to_one
         required: false
+      - name: structural_variations
+        backref: somatic_mutation_indexes
+        label: derived_from
+        target_type: structural_variation
+        multiplicity: one_to_one
+        required: false
 
 required:
   - submitter_id
@@ -64,6 +70,7 @@ properties:
       - "_terms.yaml#/data_category/common"
     enum:
       - Simple Nucleotide Variation
+      - Somatic Structural Variation
 
   data_type:
     $ref:
@@ -81,4 +88,7 @@ properties:
     $ref: "_definitions.yaml#/to_one"
 
   annotated_somatic_mutations:
+    $ref: "_definitions.yaml#/to_one"
+
+  structural_variations:
     $ref: "_definitions.yaml#/to_one"
