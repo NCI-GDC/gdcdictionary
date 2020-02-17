@@ -118,6 +118,64 @@ properties:
       - "_terms.yaml#/section_location/common"
     type: string
 
+  percent_sarcomatoid_features:
+    $ref:
+      - "_terms.yaml#/percent_sarcomatoid_features/common"
+    type: number
+
+  percent_rhabdoid_features:
+    $ref:
+      - "_terms.yaml#/percent_rhabdoid_features/common"
+    type: number
+
+  prostatic_chips_total_count:
+    $ref:
+      - "_terms.yaml#/prostatic_chips_total_count/common"
+    type: number
+
+  prostatic_chips_positive_count:
+    $ref:
+      - "_terms.yaml#/prostatic_chips_positive_count/common"
+    type: number
+
+  prostatic_involvement_percent:
+    $ref:
+      - "_terms.yaml#/prostatic_involvement_percent/common"
+    type: number
+
+  bone_marrow_malignant_cells:
+    $ref:
+      - "_terms.yaml#/bone_marrow_malignant_cells/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  percent_follicular_component:
+    $ref:
+      - "_terms.yaml#/percent_follicular_component/common"
+    type: number
+
+  tissue_microarray_coordinates:
+    $ref:
+      - "_terms.yaml#/tissue_microarray_coordinates/common"
+    type: string
+    pattern: "^[a-zA-Z]\\d{1,3}(,[a-zA-Z]\\d{1,3})*$"
+
   portions:
     $ref: "_definitions.yaml#/to_many"
 
