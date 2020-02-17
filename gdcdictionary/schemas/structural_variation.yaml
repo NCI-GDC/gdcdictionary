@@ -85,6 +85,7 @@ properties:
       - JSON
       - TSV
       - TXT
+      - VCF
 
   experimental_strategy:
     $ref:
