@@ -81,6 +81,7 @@ properties:
       - Low Pass WGS
       - miRNA-Seq
       - RNA-Seq
+      - scRNA-Seq
       - Targeted Sequencing
       - WGS
       - WXS
@@ -89,9 +90,10 @@ properties:
     $ref:
       - "_terms.yaml#/read_pair_number/common"
     enum:
+      - I1
+      - Not Applicable
       - R1
       - R2
-      - Not Applicable
 
   read_groups:
     $ref: "_definitions.yaml#/to_one"
