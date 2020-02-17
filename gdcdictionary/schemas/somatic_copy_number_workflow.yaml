@@ -24,12 +24,21 @@ systemProperties:
   - state
 
 links:
-  - name: submitted_genotyping_arrays
-    backref: somatic_copy_number_workflows
-    label: performed_on
-    target_type: submitted_genotyping_array
-    multiplicity: many_to_many
+  - exclusive: true
     required: true
+    subgroup:
+      - name: submitted_genotyping_arrays
+        backref: somatic_copy_number_workflows
+        label: performed_on
+        target_type: submitted_genotyping_arrays
+        multiplicity: many_to_many
+        required: true
+      - name: aligned_reads_files
+        backref: somatic_copy_number_workflows
+        label: performed_on
+        target_type: aligned_reads
+        multiplicity: many_to_many
+        required: false
 
 required:
   - submitter_id
@@ -53,4 +62,7 @@ properties:
       - AscatNGS
 
   submitted_genotyping_arrays:
+    $ref: "_definitions.yaml#/to_many"
+
+  aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
