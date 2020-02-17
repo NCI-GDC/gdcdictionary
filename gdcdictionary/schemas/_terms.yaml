@@ -5584,7 +5584,7 @@ marijuana_use_per_week:
       cde_version:
       term_url:
 
-yes:
+"yes":
   common:
     description: >-
       The affirmative response to a question.
@@ -5598,7 +5598,7 @@ yes:
       term_id: C49488
       term_version: 19.12e
 
-no:
+"no":
   common:
     description: >-
       The non-affirmative response to a question.
