@@ -5,8 +5,8 @@ title: Alignment Workflow
 type: object
 namespace: https://gdc.cancer.gov
 category: analysis
-program: '*'
 project: '*'
+program: '*'
 description: >-
   Metadata for the alignment pipeline used to align reads in the GDC harmonization
   pipelines.
@@ -62,13 +62,16 @@ properties:
     enum:
       - BWA
       - BWA with BQSR
+      - BWA with Mark Duplicates and BQSR
       - BWA-aln
       - BWA-mem
-      - BWA with Mark Duplicates and BQSR
+      - CellRanger - 10x Chromium
+      - STAR - Smart-Seq2
       - STAR 2-Pass
       - STAR 2-Pass Chimeric
       - STAR 2-Pass Genome
       - STAR 2-Pass Transcriptome
+      - zUMIs - Smart-Seq2
 
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
