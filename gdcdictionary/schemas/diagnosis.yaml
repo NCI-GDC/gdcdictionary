@@ -83,6 +83,16 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
 
   ajcc_clinical_n:
     $ref:
@@ -117,6 +127,16 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
 
   ajcc_clinical_stage:
     $ref:
@@ -164,6 +184,16 @@ properties:
       - Stage IB Cervix
       - Stage II Cervix
       - Stage IIA Cervix
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
 
   ajcc_clinical_t:
     $ref:
@@ -208,6 +238,16 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
 
   ajcc_pathologic_m:
     $ref:
@@ -226,6 +266,16 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
 
   ajcc_pathologic_n:
     $ref:
@@ -260,6 +310,16 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
 
   ajcc_pathologic_stage:
     $ref:
@@ -298,6 +358,13 @@ properties:
       - Stage X
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   ajcc_pathologic_t:
     $ref:
@@ -342,6 +409,16 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
 
   ajcc_staging_system_edition:
     $ref:
@@ -357,6 +434,13 @@ properties:
       - 8th
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   anaplasia_present:
     $ref:
@@ -366,6 +450,19 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   anaplasia_present_type:
     $ref:
@@ -379,6 +476,13 @@ properties:
       - Sclerosis
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   ann_arbor_b_symptoms:
     $ref:
@@ -391,6 +495,22 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
 
   ann_arbor_clinical_stage:
     $ref:
@@ -402,6 +522,13 @@ properties:
       - Stage IV
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   ann_arbor_extranodal_involvement:
     $ref:
@@ -414,6 +541,22 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
 
   ann_arbor_pathologic_stage:
     $ref:
@@ -425,6 +568,13 @@ properties:
       - Stage IV
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   best_overall_response:
     $ref:
@@ -476,6 +626,16 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
 
   child_pugh_classification:
     $ref:
@@ -494,6 +654,13 @@ properties:
       - C12
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   circumferential_resection_margin:
     $ref:
@@ -504,13 +671,27 @@ properties:
     $ref:
       - "_terms.yaml#/classification_of_tumor/common"
     enum:
-      - primary
       - metastasis
-      - recurrence
       - other
+      - Premalignant
+      - primary
+      - recurrence
       - Unknown
       - not reported
       - Not Allowed To Collect
+    enumDef:
+      other:
+        $ref:
+          - "_terms.yaml#/other/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      not reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
 
   cog_neuroblastoma_risk_group:
     $ref:
@@ -521,6 +702,13 @@ properties:
       - Low Risk
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   cog_rhabdomyosarcoma_risk_group:
     $ref:
@@ -531,6 +719,13 @@ properties:
       - Low Risk
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   cog_renal_stage:
     $ref:
@@ -542,6 +737,13 @@ properties:
       - Stage IV
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   cog_liver_stage:
     $ref:
@@ -553,6 +755,13 @@ properties:
       - Stage IV
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   days_to_best_overall_response:
     $ref:
@@ -603,6 +812,13 @@ properties:
       - Low Grade (G1)
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   enneking_msts_metastasis:
     $ref:
@@ -612,6 +828,13 @@ properties:
       - Regional or Distant Metastasis (M1)
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   enneking_msts_stage:
     $ref:
@@ -624,6 +847,13 @@ properties:
       - Stage III
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   enneking_msts_tumor_site:
     $ref:
@@ -633,6 +863,13 @@ properties:
       - Intracompartmental (T1)
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   esophageal_columnar_dysplasia_degree:
     $ref:
@@ -644,6 +881,13 @@ properties:
       - Negative/ No Dysplasia
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   esophageal_columnar_metaplasia_present:
     $ref:
@@ -653,6 +897,19 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   figo_stage:
     $ref:
@@ -667,6 +924,9 @@ properties:
       - Stage IB1
       - Stage IB2
       - Stage IC
+      - Stage IC1
+      - Stage IC2
+      - Stage IC3
       - Stage II
       - Stage IIA
       - Stage IIA1
@@ -675,6 +935,10 @@ properties:
       - Stage IIC
       - Stage III
       - Stage IIIA
+      - Stage IIIA1
+      - Stage IIIA2
+      - Stage IIIAi
+      - Stage IIIAii
       - Stage IIIB
       - Stage IIIC
       - Stage IIIC1
@@ -687,6 +951,24 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
+
+  figo_staging_edition_year:
+    $ref:
+      - "_terms.yaml#/figo_staging_edition_year/common"
+    enum:
+      - "1988"
+      - "1995"
+      - "2009"
 
   first_symptom_prior_to_diagnosis:
     $ref:
@@ -700,6 +982,13 @@ properties:
       - Visual Changes
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   gastric_esophageal_junction_involvement:
     $ref:
@@ -709,6 +998,19 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   gleason_grade_group:
     $ref:
@@ -719,6 +1021,23 @@ properties:
       - Group 3
       - Group 4
       - Group 5
+      - Not Reported
+    enumDef:
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  gleason_grade_tertiary:
+    $ref:
+      - "_terms.yaml#/gleason_grade_tertiary/common"
+    enum:
+      - Pattern 4
+      - Pattern 5
+
+  gleason_patterns_percent:
+    $ref:
+      - "_terms.yaml#/gleason_patterns_percent/common"
+    type: integer
 
   goblet_cells_columnar_mucosa_present:
     $ref:
@@ -728,6 +1047,24 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  greatest_tumor_dimension:
+    $ref:
+      - "_terms.yaml#/greatest_tumor_dimension/common"
+    type: integer
 
   gross_tumor_weight:
     $ref:
@@ -743,6 +1080,13 @@ properties:
       - Poor Prognosis
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   icd_10_code:
     $ref:
@@ -759,6 +1103,13 @@ properties:
       - Undifferentiated
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   inpc_histologic_group:
     $ref:
@@ -768,6 +1119,13 @@ properties:
       - Unfavorable
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   inrg_stage:
     $ref:
@@ -779,6 +1137,13 @@ properties:
       - Ms
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   inss_stage:
     $ref:
@@ -792,6 +1157,13 @@ properties:
       - Stage 4S
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   international_prognostic_index:
     $ref:
@@ -819,6 +1191,13 @@ properties:
       - Group IV
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   irs_stage:
     $ref:
@@ -830,6 +1209,13 @@ properties:
       - "4"
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   ishak_fibrosis_score:
     $ref:
@@ -842,6 +1228,13 @@ properties:
       - 6 - Established Cirrhosis
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   iss_stage:
     $ref:
@@ -852,6 +1245,13 @@ properties:
       - III
       - Not Reported
       - Unknown
+    enumDef:
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
 
   largest_extrapelvic_peritoneal_focus:
     $ref:
@@ -862,6 +1262,13 @@ properties:
       - Microscopic
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   last_known_disease_status:
     $ref:
@@ -875,6 +1282,13 @@ properties:
       - With tumor
       - not reported
       - Not Allowed To Collect
+    enumDef:
+      not reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
 
   laterality:
     $ref:
@@ -887,6 +1301,13 @@ properties:
       - Unilateral
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   lymph_nodes_positive:
     $ref:
@@ -906,6 +1327,71 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  lymph_node_involved_site:
+    $ref:
+      - "_terms.yaml#/lymph_node_involved_site/common"
+    enum:
+      - Axillary
+      - Cervical
+      - Epitrochlear
+      - Femoral
+      - Hilar
+      - Iliac-common
+      - Iliac-external
+      - Iliac, NOS
+      - Inguinal
+      - Mediastinal
+      - Mesenteric
+      - None
+      - Occipital
+      - Paraaortic
+      - Parotid
+      - Popliteal
+      - Retroperitoneal
+      - Splenic
+      - Submandibular
+      - Supraclavicular
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  margin_distance:
+    $ref:
+      - "_terms.yaml#/margin_distance/common"
+    type: number
+
+  margins_involved_site:
+    $ref:
+      - "_terms.yaml#/margins_involved_site/common"
+    enum:
+      - Gerota Fascia
+      - Parenchyma
+      - Perinephric Fat
+      - Renal
+      - Renal Capsule
+      - Renal Sinus
+      - Renal Vein
+      - Ureter
 
   masaoka_stage:
     $ref:
@@ -928,6 +1414,13 @@ properties:
       - WNT-Activated
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   metastasis_at_diagnosis:
     $ref:
@@ -939,6 +1432,13 @@ properties:
       - Regional Metastasis
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   metastasis_at_diagnosis_site:
     $ref:
@@ -950,8 +1450,8 @@ properties:
       - Bone
       - Bone Marrow
       - Brain
-      - Cerebrospinal Fluid
       - Central Nervous System
+      - Cerebrospinal Fluid
       - Colon
       - Distant Nodes
       - Distant Organ
@@ -965,6 +1465,7 @@ properties:
       - Mediastinum
       - Omentum
       - Ovary
+      - Pancreas
       - Pelvis
       - Peritoneal Cavity
       - Peritoneum
@@ -976,6 +1477,13 @@ properties:
       - Spinal Cord
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   method_of_diagnosis:
     $ref:
@@ -1010,6 +1518,22 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+    enumDef:
+      Autopsy:
+        $ref:
+          - "_terms.yaml#/autopsy/common"
+      Other:
+        $ref:
+          - "_terms.yaml#/other/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
 
   micropapillary_features:
     $ref:
@@ -1019,6 +1543,13 @@ properties:
       - Present
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   mitotic_count:
     $ref:
@@ -1034,6 +1565,13 @@ properties:
       - Low
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   morphology:
     $ref:
@@ -1064,6 +1602,7 @@ properties:
       - 8014/3
       - 8015/3
       - 8020/3
+      - 8020/6
       - 8021/3
       - 8022/3
       - 8023/3
@@ -1077,6 +1616,7 @@ properties:
       - 8040/1
       - 8041/3
       - 8041/34
+      - 8041/6
       - 8042/3
       - 8043/3
       - 8044/3
@@ -1269,8 +1809,10 @@ properties:
       - 8300/3
       - 8310/0
       - 8310/3
+      - 8310/6
       - 8311/1
       - 8311/3
+      - 8311/6
       - 8312/3
       - 8313/0
       - 8313/1
@@ -1366,6 +1908,7 @@ properties:
       - 8441/0
       - 8441/2
       - 8441/3
+      - 8441/6
       - 8442/1
       - 8443/0
       - 8444/1
@@ -1400,6 +1943,7 @@ properties:
       - 8480/6
       - 8481/3
       - 8482/3
+      - 8482/6
       - 8490/3
       - 8490/6
       - 8500/2
@@ -1580,6 +2124,7 @@ properties:
       - 8804/3
       - 8805/3
       - 8806/3
+      - 8806/6
       - 8810/0
       - 8810/1
       - 8810/3
@@ -2166,6 +2711,13 @@ properties:
       - 9992/3
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   non_nodal_regional_disease:
     $ref:
@@ -2176,6 +2728,13 @@ properties:
       - Present
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   non_nodal_tumor_deposits:
     $ref:
@@ -2185,6 +2744,19 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   ovarian_specimen_status:
     $ref:
@@ -2195,6 +2767,13 @@ properties:
       - Ovarian Capsule Fragmented
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   ovarian_surface_involvement:
     $ref:
@@ -2205,6 +2784,20 @@ properties:
       - Indeterminate
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  papillary_renal_cell_type:
+    $ref:
+      - "_terms.yaml#/papillary_renal_cell_type/common"
+    enum:
+      - Type 1
+      - Type 2
 
   percent_tumor_invasion:
     $ref:
@@ -2219,6 +2812,19 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   peripancreatic_lymph_nodes_positive:
     $ref:
@@ -2229,6 +2835,13 @@ properties:
       - 4 or More
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   peripancreatic_lymph_nodes_tested:
     $ref:
@@ -2245,6 +2858,35 @@ properties:
       - Unsatisfactory
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  pregnant_at_diagnosis:
+    $ref:
+      - "_terms.yaml#/pregnant_at_diagnosis/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   primary_diagnosis:
     $ref:
@@ -3110,14 +3752,14 @@ properties:
       - Fibroid uterus
       - Fibrolipoma
       - Fibroliposarcoma
-      - Fibromatosis-like metaplastic carcinoma
       - Fibroma, NOS
+      - Fibromatosis-like metaplastic carcinoma
       - Fibromyoma
       - Fibromyxolipoma
       - Fibromyxoma
       - Fibromyxosarcoma
-      - Fibrosarcomatous dermatofibrosarcoma protuberans
       - Fibrosarcoma, NOS
+      - Fibrosarcomatous dermatofibrosarcoma protuberans
       - Fibrous astrocytoma
       - Fibrous histiocytoma of tendon sheath
       - Fibrous histiocytoma, NOS
@@ -3185,9 +3827,9 @@ properties:
       - Gemistocytic astrocytoma
       - Gemistocytoma
       - Genital rhabdomyoma
-      - Germ cell tumors with associated hematological malignancy
       - Germ cell tumor, nonseminomatous
       - Germ cell tumor, NOS
+      - Germ cell tumors with associated hematological malignancy
       - Germinoma
       - Ghost cell odontogenic carcinoma
       - Giant cell and spindle cell carcinoma
@@ -3301,17 +3943,17 @@ properties:
       - Hepatoma, benign
       - Hepatoma, malignant
       - Hepatoma, NOS
-      - Hepatosplenic T-cell lymphoma
       - Hepatosplenic gamma-delta cell lymphoma
+      - Hepatosplenic T-cell lymphoma
       - Hereditary leiomyomatosis & RCC-associated renal cell carcinoma
       - Hibernoma
       - Hidradenocarcinoma
       - Hidradenoma papilliferum
       - Hidradenoma, NOS
       - Hidrocystoma
+      - High grade surface osteosarcoma
       - High-grade neuroendocrine carcinoma
       - High-grade serous carcinoma
-      - High grade surface osteosarcoma
       - Hilar cell tumor
       - Hilus cell tumor
       - Histiocyte-rich large B-cell lymphoma
@@ -3433,10 +4075,10 @@ properties:
       - Intraductal papillary adenocarcinoma with invasion
       - Intraductal papillary adenocarcinoma, NOS
       - Intraductal papillary carcinoma
-      - Intraductal papillary mucinous neoplasm with an associated invasive carcinoma
-      - Intraductal papillary mucinous neoplasm with high grade dysplasia
       - Intraductal papillary mucinous neoplasm (IPMN) with an associated invasive
         carcinoma
+      - Intraductal papillary mucinous neoplasm with an associated invasive carcinoma
+      - Intraductal papillary mucinous neoplasm with high grade dysplasia
       - Intraductal papillary neoplasm with associated invasive carcinoma
       - Intraductal papillary neoplasm with high grade dysplasia
       - Intraductal papillary neoplasm with high grade intraepithelial neoplasia
@@ -4068,6 +4710,14 @@ properties:
       - Nodular hidradenoma, malignant
       - Nodular melanoma
       - Non-Hodgkin lymphoma, NOS
+      - Non-invasive EFVPTC
+      - Non-invasive encapsulated follicular variant of papillary thyroid carcinoma
+        (non-invasive EFVPTC)
+      - Non-invasive follicular thyroid neoplasm with papillary-like nuclear features
+        (NIFTP)
+      - Non-invasive FTP
+      - Non-invasive low grade serous carcinoma
+      - Non-invasive mammary carcinoma
       - Non-lymphocytic leukemia, NOS
       - Non-small cell carcinoma
       - Nonchromaffin paraganglioma, malignant
@@ -4084,17 +4734,8 @@ properties:
       - Noninvasive pancreatobiliary papillary neoplasm with low grade dysplasia
       - Noninvasive pancreatobiliary papillary neoplasm with low grade intraepithelial
         neoplasia
-      - Non-invasive EFVPTC
-      - Non-invasive encapsulated follicular variant of papillary thyroid carcinoma
-        (non-invasive EFVPTC)
-      - Non-invasive follicular thyroid neoplasm with papillary-like nuclear features
-        (NIFTP)
-      - Non-invasive FTP
-      - Non-invasive low grade serous carcinoma
-      - Non-invasive mammary carcinoma
       - Nonlipid reticuloendotheliosis
       - Nonpigmented nevus
-      - Not Reported
       - NUT carcinoma
       - NUT midline carcinoma
       - Oat cell carcinoma
@@ -4811,9 +5452,9 @@ properties:
       - Tubular androblastoma, NOS
       - Tubular carcinoid
       - Tubular carcinoma
+      - Tubulo-papillary adenoma
       - Tubulocystic renal cell carcinoma
       - Tubulolobular carcinoma
-      - Tubulo-papillary adenoma
       - Tubulopapillary adenocarcinoma
       - Tubulovillous adenoma, NOS
       - Tumor cells, benign
@@ -4830,20 +5471,19 @@ properties:
       - Tumorlet, NOS
       - Turban tumor
       - Typical carcinoid
-      - Undifferentiated epithelioid sarcoma
-      - Undifferentiated high-grade pleomorphic sarcoma
-      - Undifferentiated pleomorphic sarcoma
-      - Undifferentiated round cell sarcoma
-      - Undifferentiated spindle cell sarcoma
-      - Undifferentiated uterine sarcoma
       - Unclassified tumor, benign
       - Unclassified tumor, borderline malignancy
       - Unclassified tumor, malignant
       - Unclassified tumor, malignant, uncertain whether primary or metastatic
       - Unclassified tumor, uncertain whether benign or malignant
+      - Undifferentiated epithelioid sarcoma
+      - Undifferentiated high-grade pleomorphic sarcoma
       - Undifferentiated leukaemia
+      - Undifferentiated pleomorphic sarcoma
+      - Undifferentiated round cell sarcoma
       - Undifferentiated sarcoma
-      - Unknown
+      - Undifferentiated spindle cell sarcoma
+      - Undifferentiated uterine sarcoma
       - Urachal carcinoma
       - Urothelial carcinoma in situ
       - Urothelial carcinoma with divergent differentiation
@@ -4886,6 +5526,33 @@ properties:
       - Wolffian duct tumor
       - Xanthofibroma
       - Yolk sac tumor
+      - Unknown
+      - Not Reported
+    enumDef:
+      Cancer:
+        $ref:
+          - "_terms.yaml#/cancer/common"
+      Ewing sarcoma:
+        $ref:
+          - "_terms.yaml#/ewing_sarcoma/common"
+      Glioblastoma:
+        $ref:
+          - "_terms.yaml#/glioblastoma/common"
+      Kaposi sarcoma:
+        $ref:
+          - "_terms.yaml#/kaposi_sarcoma/common"
+      Multiple myeloma:
+        $ref:
+          - "_terms.yaml#/multiple_myeloma/common"
+      Wilms tumor:
+        $ref:
+          - "_terms.yaml#/wilms_tumor/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   primary_gleason_grade:
     $ref:
@@ -4906,6 +5573,22 @@ properties:
       - unknown
       - not reported
       - Not Allowed To Collect
+    enumDef:
+      "yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "no":
+        $ref:
+          - "_terms.yaml#/no/common"
+      unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      not reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
 
   prior_treatment:
     $ref:
@@ -4916,6 +5599,22 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
 
   progression_or_recurrence:
     $ref:
@@ -4926,6 +5625,22 @@ properties:
       - unknown
       - not reported
       - Not Allowed To Collect
+    enumDef:
+      "yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "no":
+        $ref:
+          - "_terms.yaml#/no/common"
+      unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      not reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
 
   residual_disease:
     $ref:
@@ -4937,6 +5652,13 @@ properties:
       - RX
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   secondary_gleason_grade:
     $ref:
@@ -4972,6 +5694,7 @@ properties:
       - Autonomic nervous system, NOS
       - Axillary tail of breast
       - Base of tongue, NOS
+      - Biliary tract, NOS
       - Bladder neck
       - Bladder, NOS
       - Blood
@@ -4998,8 +5721,10 @@ properties:
       - Cerebrum
       - Cervical esophagus
       - Cervix uteri
+      - Cheek mucosa
       - Choroid
       - Ciliary body
+      - Clitoris
       - Cloacogenic zone
       - Colon, NOS
       - Commissure of lip
@@ -5127,6 +5852,7 @@ properties:
       - Other specified parts of pancreas
       - Ovary
       - Overlapping lesion of accessory sinuses
+      - Overlapping lesion of biliary tract
       - Overlapping lesion of bladder
       - Overlapping lesion of bones, joints and articular cartilage
       - Overlapping lesion of bones, joints and articular cartilage of limbs
@@ -5278,12 +6004,15 @@ properties:
       - Vestibule of mouth
       - Vulva, NOS
       - Waldeyer ring
-      - Biliary tract, NOS
-      - Cheek mucosa
-      - Clitoris
-      - Overlapping lesion of biliary tract
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   supratentorial_localization:
     $ref:
@@ -5295,6 +6024,13 @@ properties:
       - White Matter
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   synchronous_malignancy:
     $ref:
@@ -5304,6 +6040,19 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   tissue_or_organ_of_origin:
     $ref:
@@ -5329,6 +6078,7 @@ properties:
       - Autonomic nervous system, NOS
       - Axillary tail of breast
       - Base of tongue, NOS
+      - Biliary tract, NOS
       - Bladder neck
       - Bladder, NOS
       - Blood
@@ -5355,8 +6105,10 @@ properties:
       - Cerebrum
       - Cervical esophagus
       - Cervix uteri
+      - Cheek mucosa
       - Choroid
       - Ciliary body
+      - Clitoris
       - Cloacogenic zone
       - Colon, NOS
       - Commissure of lip
@@ -5429,6 +6181,7 @@ properties:
       - Labium minus
       - Lacrimal gland
       - Laryngeal cartilage
+      - Laryngeal Commissure
       - Larynx, NOS
       - Lateral floor of mouth
       - Lateral wall of bladder
@@ -5484,6 +6237,7 @@ properties:
       - Other specified parts of pancreas
       - Ovary
       - Overlapping lesion of accessory sinuses
+      - Overlapping lesion of biliary tract
       - Overlapping lesion of bladder
       - Overlapping lesion of bones, joints and articular cartilage
       - Overlapping lesion of bones, joints and articular cartilage of limbs
@@ -5635,12 +6389,31 @@ properties:
       - Vestibule of mouth
       - Vulva, NOS
       - Waldeyer ring
-      - Biliary tract, NOS
-      - Cheek mucosa
-      - Clitoris
-      - Overlapping lesion of biliary tract
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  transglottic_extension:
+    $ref:
+      - "_terms.yaml#/transglottic_extension/common"
+    enum:
+      - Absent
+      - Present
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   tumor_confined_to_organ_of_origin:
     $ref:
@@ -5650,6 +6423,24 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  tumor_depth:
+    $ref:
+      - "_terms.yaml#/tumor_depth/common"
+    type: number
 
   tumor_focality:
     $ref:
@@ -5659,6 +6450,13 @@ properties:
       - Unifocal
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   tumor_grade:
     $ref:
@@ -5671,12 +6469,23 @@ properties:
       - GX
       - GB
       - High Grade
+      - Intermediate Grade
       - Low Grade
       - Unknown
       - Not Reported
       - not reported
     deprecated_enum:
       - not reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      not reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   tumor_largest_dimension_diameter:
     $ref:
@@ -5693,6 +6502,13 @@ properties:
       - "3"
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   tumor_stage:
     $ref:
@@ -5708,6 +6524,22 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
 
   vascular_invasion_type:
     $ref:
@@ -5720,6 +6552,13 @@ properties:
       - No Vascular Invasion
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   weiss_assessment_score:
     $ref:
@@ -5744,6 +6583,13 @@ properties:
       - Unfavorable
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   year_of_diagnosis:
     $ref:
