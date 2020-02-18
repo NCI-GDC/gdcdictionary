@@ -64,11 +64,13 @@ properties:
     $ref:
       - "_terms.yaml#/workflow_type/common"
     enum:
+      - CellRanger - 10x Filtered Counts
+      - CellRanger - 10x Raw Counts
       - Cufflinks
       - DEXSeq
+      - HTSeq - Counts
       - HTSeq - FPKM
       - HTSeq - FPKM-UQ
-      - HTSeq - Counts
       - Kallisto - HDF5
       - Kallisto - Quantification
       - RNA-SeQC - Counts
@@ -76,6 +78,8 @@ properties:
       - RSEM - Quantification
       - STAR - Counts
       - STAR - FPKM
+      - STAR - Smart-Seq2 Counts
+      - zUMIs - Smart-Seq2 Counts
 
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
