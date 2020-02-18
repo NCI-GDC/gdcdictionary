@@ -29,7 +29,7 @@ links:
     backref: slide_images
     label: data_from
     target_type: slide
-    multiplicity: one_to_one
+    multiplicity: one_to_many
     required: true
 
 required:
@@ -63,6 +63,7 @@ properties:
     enum:
       - Cell Culture Image
       - Slide Image
+      - Tissue Microarray Image
 
   data_format:
     $ref:
@@ -89,5 +90,12 @@ properties:
       Magnification used to capture the image.
     type: number
 
+  stain_type:
+    $ref:
+      - "_terms.yaml#/stain_type/common"
+    enum:
+      - Haemotoxylin and Eosin (H&E)
+      - Immunohistochemistry (IHC)
+
   slides:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_many"
