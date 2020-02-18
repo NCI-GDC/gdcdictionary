@@ -73,15 +73,16 @@ properties:
     $ref:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
-      - WGS
-      - WXS
-      - Low Pass WGS
-      - RNA-Seq
-      - miRNA-Seq
-      - Targeted Sequencing
+      - ATAC-Seq
       - Bisulfite-Seq
       - ChIP-Seq
-      - ATAC-Seq
+      - Low Pass WGS
+      - miRNA-Seq
+      - RNA-Seq
+      - scRNA-Seq
+      - Targeted Sequencing
+      - WGS
+      - WXS
 
   read_groups:
     $ref: "_definitions.yaml#/to_many"
