@@ -61,17 +61,17 @@ properties:
     $ref:
       - "_terms.yaml#/data_type/common"
     enum:
-      - miRNA Expression Quantification
       - Isoform Expression Quantification
+      - miRNA Expression Quantification
       - Supplementary Files
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - TXT
-      - TSV
       - CSV
+      - TSV
+      - TXT
 
   experimental_strategy:
     $ref:

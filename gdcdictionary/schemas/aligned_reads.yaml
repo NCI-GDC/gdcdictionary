@@ -127,13 +127,13 @@ properties:
       - Bisulfite-Seq
       - ChIP-Seq
       - Low Pass WGS
-      - RNA-Seq
       - miRNA-Seq
+      - RNA-Seq
+      - scRNA-Seq
       - Targeted Sequencing
       - Validation
       - WGS
       - WXS
-      - scRNA-Seq
 
   mean_coverage:
     $ref:
@@ -191,11 +191,6 @@ properties:
       - "_terms.yaml#/proportion_targets_no_coverage/common"
     type: number
 
-  total_reads:
-    $ref:
-      - "_terms.yaml#/total_reads/common"
-    type: integer
-
   tumor_ploidy:
     $ref:
       - "_terms.yaml#/tumor_ploidy/common"
@@ -205,6 +200,11 @@ properties:
     $ref:
       - "_terms.yaml#/tumor_purity/common"
     type: number
+
+  total_reads:
+    $ref:
+      - "_terms.yaml#/total_reads/common"
+    type: integer
 
   alignment_cocleaning_workflows:
     $ref: "_definitions.yaml#/to_one"

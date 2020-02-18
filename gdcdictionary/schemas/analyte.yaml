@@ -118,6 +118,22 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
 
   ribosomal_rna_28s_16s_ratio:
     $ref:
