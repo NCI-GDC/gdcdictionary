@@ -27,7 +27,7 @@ links:
   - name: aligned_reads_files
     backref: expression_analysis_workflows
     label: performed_on
-    target_type: aligned_reads_file
+    target_type: aligned_reads
     multiplicity: many_to_one
     required: true
 
