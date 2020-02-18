@@ -49,6 +49,20 @@ properties:
   $ref:
     - "_definitions.yaml#/ubiquitous_properties"
 
+  consent_type:
+    $ref:
+      - "_terms.yaml#/consent_type/common"
+    enum:
+      - Consent by Death
+      - Consent Exemption
+      - Consent Waiver
+      - Informed Consent
+
+  days_to_consent:
+    $ref:
+      - "_terms.yaml#/days_to_consent/common"
+    type: integer
+
   days_to_lost_to_followup:
     $ref:
       - "_terms.yaml#/days_to_lost_to_followup/common"
@@ -239,9 +253,9 @@ properties:
       - First Patient Visit
       - First Treatment
       - Initial Genomic Sequencing
+      - Recurrence
       - Sample Procurement
       - Study Enrollment
-      - Recurrence
 
   lost_to_followup:
     $ref:
@@ -382,20 +396,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms.yaml#/not_reported/common"
-
-  consent_type:
-    $ref:
-      - "_terms.yaml#/consent_type/common"
-    enum:
-      - Informed Consent
-      - Consent by Death
-      - Consent Exemption
-      - Consent Waiver
-
-  days_to_consent:
-    $ref:
-      - "_terms.yaml#/days_to_consent/common"
-    type: integer
 
   projects:
     $ref: "_definitions.yaml#/to_one"

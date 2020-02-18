@@ -116,3 +116,7 @@ properties:
       - Unpaired_LogR
       - v1
       - v2
+    enumDef:
+      exon:
+        $ref:
+          - "_terms.yaml#/exon/common"

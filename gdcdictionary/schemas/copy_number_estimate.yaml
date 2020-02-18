@@ -86,8 +86,8 @@ properties:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - TXT
       - TSV
+      - TXT
 
   experimental_strategy:
     $ref:

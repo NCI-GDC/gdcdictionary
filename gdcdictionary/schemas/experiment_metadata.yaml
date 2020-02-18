@@ -63,9 +63,9 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
+      - Raw Sequencing Data
       - Sequencing Data
       - Sequencing Reads
-      - Raw Sequencing Data
 
   data_type:
     $ref:

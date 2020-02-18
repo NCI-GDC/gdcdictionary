@@ -57,19 +57,19 @@ properties:
     enum:
       - Transcriptome Profiling
 
-  data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
-    enum:
-      - Differential Gene Expression
-      - Single Cell Analysis
-
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
       - HDF5
       - TSV
+
+  data_type:
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - Differential Gene Expression
+      - Single Cell Analysis
 
   experimental_strategy:
     $ref:
