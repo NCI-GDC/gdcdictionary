@@ -125,26 +125,36 @@ properties:
       - "_terms.yaml#/instrument_model/common"
     enum:
       - 454 GS FLX Titanium
-      - AB SOLiD 4
       - AB SOLiD 2
       - AB SOLiD 3
+      - AB SOLiD 4
       - Complete Genomics
-      - Illumina HiSeq X Ten
-      - Illumina HiSeq X Five
       - Illumina Genome Analyzer II
       - Illumina Genome Analyzer IIx
       - Illumina HiSeq 2000
       - Illumina HiSeq 2500
       - Illumina HiSeq 4000
+      - Illumina HiSeq X Five
+      - Illumina HiSeq X Ten
       - Illumina MiSeq
       - Illumina NextSeq
       - Ion Torrent PGM
       - Ion Torrent Proton
       - Ion Torrent S5
-      - PacBio RS
       - Other
+      - PacBio RS
       - Unknown
       - Not Reported
+    enumDef:
+      Other:
+        $ref:
+          - "_terms.yaml#/other/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   is_paired_end:
     $ref:
@@ -187,14 +197,18 @@ properties:
     $ref:
       - "_terms.yaml#/library_selection/common"
     enum:
-      - Hybrid Selection
-      - PCR
       - Affinity Enrichment
+      - Hybrid Selection
+      - miRNA Size Fractionation
+      - Other
+      - PCR
       - Poly-T Enrichment
       - Random
       - rRNA Depletion
-      - miRNA Size Fractionation
-      - Other
+    enumDef:
+      Other:
+        $ref:
+          - "_terms.yaml#/other/common"
 
   library_strand:
     $ref:
@@ -214,6 +228,7 @@ properties:
       - ChIP-Seq
       - miRNA-Seq
       - RNA-Seq
+      - scRNA-Seq
       - Targeted Sequencing
       - WGS
       - WXS
@@ -224,17 +239,26 @@ properties:
     type: string
     pattern: "^[0-9ACGTURYSWKMBDHVN]+(\\+[0-9ACGTURYSWKMBDHVN]+)?$"
 
+  number_expect_cells:
+    $ref:
+      - "_terms.yaml#/number_expect_cells/common"
+    type: integer
+
   platform:
     $ref:
       - "_terms.yaml#/platform/common"
     enum:
-      - Illumina
-      - SOLiD
-      - LS454
-      - Ion Torrent
       - Complete Genomics
-      - PacBio
+      - Illumina
+      - Ion Torrent
+      - LS454
       - Other
+      - PacBio
+      - SOLiD
+    enumDef:
+      Other:
+        $ref:
+          - "_terms.yaml#/other/common"
 
   read_group_name:
     description: >-
@@ -264,6 +288,14 @@ properties:
     $ref:
       - "_terms.yaml#/size_selection_range/common"
     type: string
+
+  single_cell_library:
+    $ref:
+      - "_terms.yaml#/single_cell_library/common"
+    enum:
+      - Chromium 3' Gene Expression v2 Library
+      - Chromium 3' Gene Expression v3 Library
+      - Smart-Seq2
 
   spike_ins_concentration:
     $ref:
@@ -298,28 +330,37 @@ properties:
       - Custom SeqCap EZ TARGET-OS Panel - 7.0 Mb
       - Custom Solid Tumor GENIE-VICC Panel - 34 Genes
       - Custom SureSelect CGCI-BLGSP Panel - 4.6 Mb
+      - Custom SureSelect CGCI-HTMCP-CC KMT2D And Hotspot Panel - 37.0 Kb
       - Custom SureSelect CGCI-HTMCP-CC Panel - 19.7 Mb
       - Custom SureSelect GENIE-UHN Panel - 555 Genes
       - Custom SureSelect Human All Exon v1.1 Plus 3 Boosters
       - Custom SureSelect TARGET-AML_NBL_WT Panel - 2.8 Mb
+      - Custom Twist Broad Exome v1.0 - 35.0 Mb
+      - Custom Twist Broad PanCancer Panel - 396 Genes
       - Foundation Medicine T5a Panel - 322 Genes
       - Foundation Medicine T7 Panel - 429 Genes
       - Ion AmpliSeq Cancer Hotspot Panel v2
       - Ion AmpliSeq Comprehensive Cancer Panel
+      - Nextera DNA Exome
       - Nextera Rapid Capture Exome v1.2
+      - Not Applicable
       - SeqCap EZ HGSC VCRome v2.1
       - SeqCap EZ Human Exome v2.0
       - SeqCap EZ Human Exome v3.0
       - SureSelect Human All Exon v3
-      - SureSelect Human All Exon v5
       - SureSelect Human All Exon v4
+      - SureSelect Human All Exon v5
       - SureSelect Human All Exon v5 + UTR
       - TruSeq Amplicon Cancer Panel
       - TruSeq Exome Enrichment - 62 Mb
+      - TruSeq RNA Exome
       - TruSight Myeloid Sequencing Panel
       - xGen Exome Research Panel v1.0
-      - Not Applicable
       - Unknown
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
 
   target_capture_kit_catalog_number:
     $ref:
