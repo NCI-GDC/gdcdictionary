@@ -72,6 +72,7 @@ properties:
     enum:
       - CSV
       - HDF5
+      - MEX
       - TSV
       - TXT
 
@@ -80,6 +81,7 @@ properties:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
       - RNA-Seq
+      - scRNA-Seq
       - Total RNA-Seq
 
   rna_expression_workflows:
