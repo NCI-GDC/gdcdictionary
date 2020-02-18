@@ -85,6 +85,13 @@ properties:
       - Squamous Cell Carcinoma Antigen (SCCA)
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   blood_test_normal_range_lower:
     $ref:
@@ -110,6 +117,7 @@ properties:
       - Embryonic Tissue
       - Feces
       - Granulocyte
+      - Involved Tissue, NOS
       - Muscle Tissue
       - Nerve Tissue
       - Peritoneal Fluid
@@ -120,9 +128,17 @@ properties:
       - Skin
       - Soft Tissue
       - Tissue, NOS
+      - Uninvolved Tissue, NOS
       - Urine
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   cell_count:
     $ref:
@@ -162,11 +178,25 @@ properties:
       - chrY
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   copy_number:
     $ref:
       - "_terms.yaml#/copy_number/common"
     type: number
+
+  clonality:
+    $ref:
+      - "_terms.yaml#/clonality/common"
+    enum:
+      - Clonal
+      - Non-clonal
 
   cytoband:
     $ref:
@@ -493,7 +523,9 @@ properties:
       - IDH1
       - IDH2
       - IGH
+      - IGH
       - IGK
+      - IGKC
       - IGL
       - IKBKB
       - IKZF1
@@ -533,8 +565,8 @@ properties:
       - KNL1
       - KNSTRN
       - KRAS
-      - KRT7
       - KRT20
+      - KRT7
       - KTN1
       - LARP4B
       - LASP1
@@ -557,6 +589,7 @@ properties:
       - MALAT1
       - MALT1
       - MAML2
+      - MAML3
       - MAP2K1
       - MAP2K2
       - MAP2K4
@@ -573,6 +606,7 @@ properties:
       - MEN1
       - MET
       - MGMT
+      - MIB1
       - MITF
       - MKL1
       - MLF1
@@ -627,6 +661,7 @@ properties:
       - NIN
       - NKX2-1
       - NONO
+      - Not Applicable
       - NOTCH1
       - NOTCH2
       - NPM1
@@ -891,7 +926,13 @@ properties:
       - ZRSR2
       - Unknown
       - Not Reported
-      - Not Applicable
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   histone_family:
     $ref:
@@ -904,6 +945,13 @@ properties:
       - H4
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   histone_variant:
     $ref:
@@ -928,6 +976,13 @@ properties:
       - mH2A.2
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   intron:
     $ref:
@@ -942,31 +997,36 @@ properties:
       - Absolute Neutrophil
       - Albumin
       - Alpha Fetoprotein
-      - Neutrophil Bands
+      - B-cell genotyping
       - Basophil
       - Beta 2 Microglobulin
-      - Myeloblasts
-      - Lymphoblasts
       - Blood Urea Nitrogen
+      - C-Reactive Protein
       - Calcium
       - Cellularity
+      - Circulating Tumor Cells
       - Creatinine
-      - C-Reactive Protein
       - Eosinophil
+      - Epstein-Barr Virus
       - Glucose
       - Hematocrit
       - Hemoglobin
+      - HPV-E6/E7
       - Human Chorionic Gonadotropin
+      - Human Papillomavirus
       - Immunoglobulin A
       - Immunoglobulin G
       - Immunoglobulin M
       - Lactate Dehydrogenase
       - Leukocytes
       - Luteinizing Hormone
+      - Lymphoblasts
       - Lymphocytes
       - M Protein
       - Metamyelocytes
+      - Myeloblasts
       - Myelocytes
+      - Neutrophil Bands
       - Platelets
       - Prolymphocytes
       - Promonocytes
@@ -980,6 +1040,28 @@ properties:
       - Total Protein
       - Unknown
       - Not Reported
+    enumDef:
+      Albumin:
+        $ref:
+          - "_terms.yaml#/albumin/common"
+      Calcium:
+        $ref:
+          - "_terms.yaml#/calcium/common"
+      Creatinine:
+        $ref:
+          - "_terms.yaml#/creatinine/common"
+      Glucose:
+        $ref:
+          - "_terms.yaml#/glucose/common"
+      Hemoglobin:
+        $ref:
+          - "_terms.yaml#/hemoglobin/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   loci_abnormal_count:
     $ref:
@@ -1006,6 +1088,19 @@ properties:
       - "No"
       - Unknown
       - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   molecular_analysis_method:
     $ref:
@@ -1016,12 +1111,14 @@ properties:
       - FISH
       - Flow Cytometry
       - IHC
+      - Immunofluorescence
       - ISH
       - Karyotype
       - Microarray
       - Microsatellite Analysis
       - Nuclear Staining
       - Other
+      - PCR
       - RNA Sequencing
       - RT-PCR
       - Sequencing, NOS
@@ -1031,6 +1128,16 @@ properties:
       - WXS
       - Unknown
       - Not Reported
+    enumDef:
+      Other:
+        $ref:
+          - "_terms.yaml#/other/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   molecular_consequence:
     $ref:
@@ -1053,6 +1160,7 @@ properties:
       - NMD Transcript Variant
       - Non-coding Transcript Exon Variant
       - Non-coding Transcript Variant
+      - Nonsense
       - Protein Altering Variant
       - Regulatory Region Ablation
       - Regulatory Region Amplification
@@ -1094,6 +1202,13 @@ properties:
       - Tetraploid
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   second_exon:
     $ref:
@@ -1477,6 +1592,7 @@ properties:
       - MALAT1
       - MALT1
       - MAML2
+      - MAML3
       - MAP2K1
       - MAP2K2
       - MAP2K4
@@ -1811,6 +1927,13 @@ properties:
       - ZRSR2
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   specialized_molecular_test:
     $ref:
@@ -1822,12 +1945,19 @@ properties:
       - "_terms.yaml#/test_analyte_type/common"
     enum:
       - DNA
-      - mRNA
       - miRNA
+      - mRNA
       - Protein
       - Total RNA
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   test_result:
     $ref:
@@ -1847,6 +1977,13 @@ properties:
       - Test Value Reported
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   test_units:
     $ref:
@@ -1871,6 +2008,10 @@ properties:
       - Germline
       - Somatic
       - Unknown
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
 
   variant_type:
     $ref:
@@ -1900,17 +2041,34 @@ properties:
       - Translocation
       - Unknown
       - Not Reported
+    enumDef:
+      Other:
+        $ref:
+          - "_terms.yaml#/other/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   zygosity:
     $ref:
       - "_terms.yaml#/zygosity/common"
     enum:
-      - Heterozygous
       - Hemizygous
+      - Heterozygous
       - Homozygous
       - Nullizygous
       - Unknown
       - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   follow_ups:
     $ref: "_definitions.yaml#/to_one"
