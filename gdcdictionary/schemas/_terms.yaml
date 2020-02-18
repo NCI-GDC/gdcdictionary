@@ -882,6 +882,19 @@ channel:
       cde_version:
       term_url:
 
+chemo_concurrent_to_radiation:
+  common:
+    description: >-
+      The text term used to describe whether the patient was receiving chemotherapy
+      concurrent to radiation.
+    termDef:
+      term: >-
+        Chemotherapy Given Concurrent to Radiation
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
 child_pugh_classification:
   common:
     description: >-
@@ -3269,6 +3282,19 @@ no_matched_normal_wxs:
       cde_version:
       term_url:
 
+number_of_cycles:
+  common:
+    description: >-
+      The numeric value used to describe the number of cycles of a specific treatment
+      or regimen the patient received.
+    termDef:
+      term: >-
+        Treatment Number of Cycles Count
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
 number_proliferating_cells:
   common:
     description: >-
@@ -4051,6 +4077,18 @@ read_pair_number:
       reads for paired-end sequencing.
     termDef:
       term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+reason_treatment_ended:
+  common:
+    description: >-
+      The text term used to describe the reason a specific treatment or regimen ended.
+    termDef:
+      term: >-
+        Treatment Ended Reason
       source:
       cde_id:
       cde_version:
@@ -4878,6 +4916,43 @@ treatment_anatomic_site:
       cde_version: 1.0
       term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5615611&version=1.0"
 
+treatment_arm:
+  common:
+    description: >-
+      Text term used to describe the treatment arm assigned to a patient at the time
+      eligibility is determined.
+    termDef:
+      term: >-
+        Protocol Treatment Arm Text
+      source: caDSR
+      cde_id: 7068995
+      cde_version: 1.0
+      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=7068995&version=1.0"
+
+treatment_dose:
+  common:
+    description: >-
+      The numeric value used to describe the dose of an agent the patient received.
+    termDef:
+      term: >-
+        Agent Dose
+      source: caDSR
+      cde_id: 2182728
+      cde_version: 3.0
+      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2182728&version=3.0"
+
+treatment_dose_units:
+  common:
+    description: >-
+      The text term used to describe the dose units of an agent the patient received.
+    termDef:
+      term: >-
+        Agent Dose Units
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
 treatment_effect:
   common:
     description: >-
@@ -4890,6 +4965,31 @@ treatment_effect:
       cde_id: 6514354
       cde_version: 1.0
       term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6514354&version=1.0"
+
+treatment_effect_indicator:
+  common:
+    description: >-
+      The text term used to indicate whether the treatment had an effect on the patient.
+    termDef:
+      term: >-
+        Treatment Effect Indicator
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+treatment_frequency:
+  common:
+    description: >-
+      The text term used to describe the frequency the patient received an agent or
+      regimen.
+    termDef:
+      term: >-
+        Treatment Frequency
+      source:
+      cde_id:
+      cde_version:
+      term_url:
 
 treatment_intent_type:
   common:
@@ -5485,7 +5585,7 @@ pregnant_at_diagnosis:
   common:
     description: >-
       The text term used to indicate whether the patient was pregnant at the time
-      the were diagnosed.
+      they were diagnosed.
     termDef:
       term: >-
         Pregnant at Diagnosis Indicator
@@ -5803,7 +5903,7 @@ after_60_minutes:
       term_id: C164127
       term_version: 19.12e
 
-'1':
+"1":
   exposure:
     tobacco_smoking_status:
       description: >-
@@ -5819,7 +5919,7 @@ after_60_minutes:
         term_id: C65108
         term_version: 19.12e
 
-'2':
+"2":
   exposure:
     tobacco_smoking_status:
       description: >-
@@ -5836,7 +5936,7 @@ after_60_minutes:
         term_id: C67147
         term_version: 19.12e
 
-'3':
+"3":
   exposure:
     tobacco_smoking_status:
       description: >-
@@ -5851,7 +5951,7 @@ after_60_minutes:
         term_id: C156828
         term_version: 19.12e
 
-'4':
+"4":
   exposure:
     tobacco_smoking_status:
       description: >-
@@ -5866,7 +5966,7 @@ after_60_minutes:
         term_id: C156829
         term_version: 19.12e
 
-'5':
+"5":
   exposure:
     tobacco_smoking_status:
       description: >-
@@ -5881,7 +5981,7 @@ after_60_minutes:
         term_id: C156830
         term_version: 19.12e
 
-'7':
+"7":
   exposure:
     tobacco_smoking_status:
       description: >-
@@ -6751,7 +6851,7 @@ six_weeks_or_more:
       term_url:
       term_version: 19.12e
 
-'6':
+"6":
   exposure:
     tobacco_smoking_status:
       description: >-
