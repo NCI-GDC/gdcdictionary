@@ -24,10 +24,10 @@ systemProperties:
   - state
 
 links:
-  - name: aligned_reads_files
+  - name: gene_expressions
     backref: expression_analysis_workflows
     label: performed_on
-    target_type: aligned_reads
+    target_type: gene_expression
     multiplicity: many_to_one
     required: true
 
@@ -52,5 +52,5 @@ properties:
       - Seurat - 10x Chromium
       - Seurat - Smart-Seq2
 
-  aligned_reads_files:
+  gene_expressions:
     $ref: "_definitions.yaml#/to_one"
