@@ -1,0 +1,14 @@
+{
+  "type": "secondary_expression_analysis",
+  "submitter_id": "secondary_expression_analysis_test",
+  "file_name": "file_name_secondary_analysis_test.tsv",
+  "file_size": 28165335141,
+  "md5sum": "772b51c2b65b2512426e304bc6f7cab7",
+  "data_category": "Transcriptome Profiling",
+  "data_format": "TSV",
+  "data_type": "Differential Gene Expression",
+  "experimental_strategy": "scRNA-SEQ_neg",
+  "expression_analysis_workflows": {
+    "submitter_id": "expression_analysis_test200"
+  }
+}
