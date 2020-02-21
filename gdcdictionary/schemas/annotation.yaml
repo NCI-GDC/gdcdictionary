@@ -226,6 +226,12 @@ links:
         target_type: sample
         multiplicity: many_to_many
         required: false
+      - name: secondary_expression_analyses
+        backref: annotations
+        label: annotates
+        target_type: secondary_expression_analysis
+        multiplicity: many_to_many
+        required: false
       - name: simple_germline_variations
         backref: annotations
         label: annotates
@@ -505,6 +511,9 @@ properties:
     $ref: "_definitions.yaml#/to_many"
 
   samples:
+    $ref: "_definitions.yaml#/to_many"
+
+  secondary_expression_analyses:
     $ref: "_definitions.yaml#/to_many"
 
   simple_germline_variations:
