@@ -30,7 +30,7 @@ links:
       - name: submitted_genotyping_arrays
         backref: somatic_copy_number_workflows
         label: performed_on
-        target_type: submitted_genotyping_array
+        target_type: submitted_genotyping_arrays
         multiplicity: many_to_many
         required: false
       - name: aligned_reads_files
