@@ -49,6 +49,7 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 deprecated:
+  - RIN
   - target_capture_kit_catalog_number
   - target_capture_kit_name
   - target_capture_kit_target_region
@@ -269,6 +270,11 @@ properties:
     oneOf:
       - type: integer
       - type: "null"
+
+  RIN:
+    $ref:
+      - "_terms.yaml#/rin/common"
+    type: number
 
   rin:
     $ref:
