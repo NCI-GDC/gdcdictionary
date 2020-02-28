@@ -270,9 +270,9 @@ properties:
       - type: integer
       - type: "null"
 
-  rin:
+  RIN:
     $ref:
-      - "_terms.yaml#/rin/common"
+      - "_terms.yaml#/RIN/common"
     type: number
 
   sequencing_center:

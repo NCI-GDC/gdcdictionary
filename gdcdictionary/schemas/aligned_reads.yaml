@@ -166,14 +166,14 @@ properties:
       - "_terms.yaml#/proportion_base_mismatch/common"
     type: number
 
-  proportion_coverage_10x:
+  proportion_coverage_10X:
     $ref:
-      - "_terms.yaml#/proportion_coverage_10x/common"
+      - "_terms.yaml#/proportion_coverage_10X/common"
     type: number
 
-  proportion_coverage_30x:
+  proportion_coverage_30X:
     $ref:
-      - "_terms.yaml#/proportion_coverage_30x/common"
+      - "_terms.yaml#/proportion_coverage_30X/common"
     type: number
 
   proportion_reads_duplicated:

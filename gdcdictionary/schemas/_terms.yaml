@@ -3945,7 +3945,7 @@ proportion_base_mismatch:
       cde_version:
       term_url:
 
-proportion_coverage_10x:
+proportion_coverage_10X:
   common:
     description: >-
       Proportion of all reference bases for whole genome sequencing, or targeted bases
@@ -3958,7 +3958,7 @@ proportion_coverage_10x:
       cde_version:
       term_url:
 
-proportion_coverage_30x:
+proportion_coverage_30X:
   common:
     description: >-
       Proportion of all reference bases for whole genome sequencing, or targeted bases
@@ -4246,7 +4246,7 @@ ribosomal_rna_28s_16s_ratio:
       cde_version:
       term_url:
 
-rin:
+RIN:
   common:
     description: >-
       A numerical assessment of the integrity of RNA based on the entire electrophoretic
