@@ -71,6 +71,10 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
+deprecated:
+  - proportion_coverage_10X
+  - proportion_coverage_30X
+
 properties:
 
   $ref:
@@ -166,9 +170,19 @@ properties:
       - "_terms.yaml#/proportion_base_mismatch/common"
     type: number
 
+  proportion_coverage_10X:
+    $ref:
+      - "_terms.yaml#/proportion_coverage_10x/common"
+    type: number
+
   proportion_coverage_10x:
     $ref:
       - "_terms.yaml#/proportion_coverage_10x/common"
+    type: number
+
+  proportion_coverage_30X:
+    $ref:
+      - "_terms.yaml#/proportion_coverage_30x/common"
     type: number
 
   proportion_coverage_30x:
