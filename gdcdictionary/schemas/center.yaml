@@ -3,15 +3,18 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "center"
 title: Center
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: administrative
-program: '*'
 project: '*'
-description: >
-  A Professional Organization or Group which has or is able to submit data to the GDC that are valid
-  with respect to GDC prescribed or defined data formats. (GDC subclass of NCIt C19711)
+program: '*'
+description: >-
+  A Professional Organization or Group which has or is able to submit data to the
+  GDC that are valid with respect to GDC prescribed or defined data formats. (GDC
+  subclass of NCIt C19711)
 additionalProperties: false
 submittable: false
+downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -30,26 +33,38 @@ uniqueKeys:
   - [id]
   - [code]
 
-# center properties
 properties:
+
   type:
     type: string
+
   id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-    description: "UUID for the center." # TOREVIEW
+    $ref:
+      - "_definitions.yaml#/uuid"
+    description: >-
+      UUID for the center.
+
   code:
+    description: >-
+      Numeric code for the center.
     type: string
-    description: "Numeric code for the center." # TOREVIEW
+
   namespace:
+    description: >-
+      Domain name of the center (e.g. borad.mit.edu).
     type: string
-    description: "Domain name of the center (e.g. borad.mit.edu)." # TOREVIEW
+
   name:
+    description: >-
+      Name of the center (e.g. Broad Institute of MIT and Harvard).
     type: string
-    description: "Name of the center (e.g. Broad Institute of MIT and Harvard)." # TOREVIEW
+
   short_name:
+    description: >-
+      Shortened name of the center (e.g. BI).
     type: string
-    description: "Shortened name of the center (e.g. BI)." # TOREVIEW
+
   center_type:
+    description: >-
+      Type classification of the center (e.g. CGCC).
     type: string
-    description: "Type classification of the center (e.g. CGCC)." # TOREVIEW

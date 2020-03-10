@@ -1,0 +1,98 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "protein_expression"
+title: Protein Expression
+type: object
+namespace: https://gdc.cancer.gov
+category: data_file
+project: '*'
+program: '*'
+description: >-
+  Data file containing normalized Reverse Phase Protein Array data.
+additionalProperties: false
+submittable: true
+downloadable: true
+previous_version_downloadable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - file_state
+  - state
+  - error_type
+
+links:
+  - exclusive: true
+    required: true
+    subgroup:
+      - name: portions
+        backref: protein_expressions
+        label: derived_from
+        target_type: portion
+        multiplicity: one_to_one
+        required: false
+      - name: samples
+        backref: protein_expressions
+        label: derived_from
+        target_type: sample
+        multiplicity: one_to_one
+        required: false
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - md5sum
+  - data_category
+  - data_format
+  - data_type
+  - experimental_strategy
+  - platform
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+
+  $ref:
+    - "_definitions.yaml#/data_file_properties"
+
+  data_category:
+    $ref:
+      - "_terms.yaml#/data_category/common"
+    enum:
+      - Proteome Profiling
+
+  data_type:
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - Protein Expression Quantification
+
+  data_format:
+    $ref:
+      - "_terms.yaml#/data_format/common"
+    enum:
+      - TSV
+
+  experimental_strategy:
+    $ref:
+      - "_terms.yaml#/experimental_strategy/common"
+    enum:
+      - Reverse Phase Protein Array
+
+  platform:
+    $ref:
+      - "_terms.yaml#/platform/common"
+    enum:
+      - RPPA
+
+  portions:
+    $ref: "_definitions.yaml#/to_one"
+
+  samples:
+    $ref: "_definitions.yaml#/to_one"

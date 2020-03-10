@@ -3,13 +3,16 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "tag"
 title: Tag
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: TBD
-program: '*'
 project: '*'
-description: "Any comment or other information about an entity"
+program: '*'
+description: >-
+  Any comment or other information about an entity (deprecated).
 additionalProperties: false
 submittable: false
+downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -21,19 +24,21 @@ required:
   - name
 
 uniqueKeys:
-
   - [id]
   - [name]
 
-# tag properties
 properties:
+
   type:
     type: string
+
   id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
+    $ref:
+      - "_definitions.yaml#/uuid"
+
   name:
-    description: name of this tag
+    description: >-
+      name of this tag
     enum:
       - aliquot
       - allcnv
@@ -81,12 +86,12 @@ properties:
       - normalized
       - nte
       - omf
-      - OptionAnalysisPipeline2 # for legacy data
-      - original # for legacy data
+      - OptionAnalysisPipeline2
+      - original
       - Paired_LogR
       - pairedcn
       - patient
-      - PilotAnalysisPipeline2 # for legacy data
+      - PilotAnalysisPipeline2
       - portion
       - protocol
       - QA
@@ -111,3 +116,7 @@ properties:
       - Unpaired_LogR
       - v1
       - v2
+    enumDef:
+      exon:
+        $ref:
+          - "_terms.yaml#/exon/common"

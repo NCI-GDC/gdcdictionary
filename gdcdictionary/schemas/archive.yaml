@@ -3,16 +3,18 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "archive"
 title: Archive
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: data_file
-program: '*'
 project: '*'
-description: >
-  A group of files containing program or project related data ingested by the
-  GDC. Archives may be submitted directly to GDC by a center, assembled by the
-  GDC, or obtained by another route. (GDC subclass of NCIt C114463)
+program: '*'
+description: >-
+  A group of files containing program or project related data ingested by the GDC.
+  Archives may be submitted directly to GDC by a center, assembled by the GDC, or
+  obtained by another route. (GDC subclass of NCIt C114463)
 additionalProperties: false
 submittable: false
+downloadable: true
+previous_version_downloadable: true
 validators: null
 
 systemProperties:
@@ -31,8 +33,6 @@ links:
     target_type: project
     multiplicity: many_to_one
     required: true
-    # according to association defined in current data model
-    # https://github.com/NCI-GDC/gdcdatamodel/blob/develop/gdcdatamodel/models/edges/related_to.py#L18
   - name: related_to_files
     backref: related_archives
     label: related_to
@@ -42,45 +42,49 @@ links:
 
 required:
   - submitter_id
-  - revision
-  - projects
   - file_name
   - file_size
   - md5sum
   - state
+  - revision
+  - projects
 
 uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
-# archive properties
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "archive" ]
+
+  $ref:
+    - "_definitions.yaml#/data_file_properties"
+
   data_category:
-    term:
-      $ref: "_terms.yaml#/data_category"
-    enum: [ "Archive" ]
+    $ref:
+      - "_terms.yaml#/data_category/common"
+    enum:
+      - Archive
+
   data_type:
-    term:
-      $ref: "_terms.yaml#/data_type"
-    enum: [ "TCGA DCC Archive", "TARGET DCC Archive" ]
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - TCGA DCC Archive
+      - TARGET DCC Archive
+
   data_format:
-    term:
-      $ref: "_terms.yaml#/data_format"
-    enum: [ "TARGZ", "MAGETAB" ]
+    $ref:
+      - "_terms.yaml#/data_format/common"
+    enum:
+      - TARGZ
+      - MAGETAB
+
   revision:
+    description: >-
+      The revision of this archive in the DCC.
     type: number
-    description: The revision of this archive in the DCC.
 
   projects:
     $ref: "_definitions.yaml#/to_one"
+
   related_to_files:
     $ref: "_definitions.yaml#/to_many"
-  project_id:
-    type: string
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

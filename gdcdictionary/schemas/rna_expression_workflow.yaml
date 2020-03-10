@@ -3,15 +3,17 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "rna_expression_workflow"
 title: RNA Expression Workflow
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: analysis
-program: '*'
 project: '*'
-description: >
-  Metadata for the RNA expression pipeline used to quantify RNA gene and exon expression from
-  unharmonized or GDC harmonized data.
+program: '*'
+description: >-
+  Metadata for the RNA expression pipeline used to quantify RNA gene and exon expression
+  from unharmonized or GDC harmonized data.
 additionalProperties: false
 submittable: false
+downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -29,19 +31,19 @@ links:
         backref: rna_expression_workflows
         label: performed_on
         target_type: aligned_reads
-        multiplicity: one_to_one
+        multiplicity: many_to_one
         required: false
       - name: submitted_aligned_reads_files
         backref: rna_expression_workflows
         label: performed_on
         target_type: submitted_aligned_reads
-        multiplicity: one_to_one
+        multiplicity: many_to_one
         required: false
       - name: submitted_unaligned_reads_files
         backref: rna_expression_workflows
         label: performed_on
         target_type: submitted_unaligned_reads
-        multiplicity: one_to_one #to one?
+        multiplicity: many_to_one
         required: false
 
 required:
@@ -50,26 +52,40 @@ required:
   - workflow_type
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/workflow_properties"
-  type:
-    enum: [ "rna_expression_workflow" ]
+
+  $ref:
+    - "_definitions.yaml#/workflow_properties"
+
   workflow_type:
-    term:
-      $ref: "_terms.yaml#/workflow_type"
+    $ref:
+      - "_terms.yaml#/workflow_type/common"
     enum:
+      - CellRanger - 10x Filtered Counts
+      - CellRanger - 10x Raw Counts
+      - Cufflinks
       - DEXSeq
+      - HTSeq - Counts
       - HTSeq - FPKM
       - HTSeq - FPKM-UQ
-      - HTSeq - Counts
-      - Cufflinks
-      - Kallisto
+      - Kallisto - HDF5
+      - Kallisto - Quantification
+      - RNA-SeQC - Counts
+      - RNA-SeQC - FPKM
+      - RSEM - Quantification
+      - STAR - Counts
+      - STAR - FPKM
+      - STAR - Smart-Seq2 Counts
+      - zUMIs - Smart-Seq2 Counts
+
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
+
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
+
   submitted_unaligned_reads_files:
     $ref: "_definitions.yaml#/to_one"

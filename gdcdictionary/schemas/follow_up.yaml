@@ -3,27 +3,30 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "follow_up"
 title: Follow-Up
 type: object
-namespace: http://gdc.nci.nih.gov
-category: clinical 
-program: '*'
+namespace: https://gdc.cancer.gov
+category: clinical
 project: '*'
-description: >
-  A visit by a patient or study participant to a medical professional. A clinical encounter that
-  encompasses planned and unplanned trial interventions, procedures and assessments that may be
-  performed on a subject. A visit has a start and an end, each described with a rule. The process
-  by which information about the health status of an individual is obtained before and after a study
-  has officially closed; an activity that continues something that has already begun or that repeats
-  something that has already been done.
+program: '*'
+description: >-
+  A visit by a patient or study participant to a medical professional. A clinical
+  encounter that encompasses planned and unplanned trial interventions, procedures
+  and assessments that may be performed on a subject. A visit has a start and an end,
+  each described with a rule. The process by which information about the health status
+  of an individual is obtained before and after a study has officially closed; an
+  activity that continues something that has already begun or that repeats something
+  that has already been done.
 additionalProperties: false
 submittable: true
+downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
   - id
   - project_id
-  - state
   - created_datetime
   - updated_datetime
+  - state
 
 links:
   - name: cases
@@ -32,6 +35,12 @@ links:
     target_type: case
     multiplicity: many_to_one
     required: true
+  - name: diagnoses
+    backref: follow_ups
+    label: describes
+    target_type: diagnosis
+    multiplicity: many_to_one
+    required: false
 
 required:
   - submitter_id
@@ -43,35 +52,13 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 properties:
-  # Ubiquitous Properties
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  submitter_id:
-    type:
-      - string
-    description: >
-      A project-specific identifier for a node. This property is the calling card/nickname/alias for
-      a unit of submission. It can be used in place of the UUID for identifying or recalling a node.
-  state:
-    $ref: "_definitions.yaml#/state"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
 
-  # Node properties
-  absolute_neutrophil:
-    term:
-      $ref: "_terms.yaml#/absolute_neutrophil"
-    type: number
+  $ref:
+    - "_definitions.yaml#/ubiquitous_properties"
+
   adverse_event:
-    term:
-      $ref: "_terms.yaml#/adverse_event"
+    $ref:
+      - "_terms.yaml#/adverse_event/common"
     enum:
       - Abdominal Distension
       - Abdominal Infection
@@ -863,37 +850,112 @@ properties:
       - Wound Dehiscence
       - Wound Infection
       - Wrist Fracture
-  albumin:
-    term:
-      $ref: "_terms.yaml#/albumin"
+
+  adverse_event_grade:
+    $ref:
+      - "_terms.yaml#/adverse_event_grade/common"
+    enum:
+      - Grade 1
+      - Grade 2
+      - Grade 3
+      - Grade 4
+      - Grade 5
+
+  aids_risk_factors:
+    $ref:
+      - "_terms.yaml#/aids_risk_factors/common"
+    enum:
+      - Candidiasis
+      - Coccidioidomycosis
+      - Cryptococcosis
+      - Cytomegalovirus
+      - Encephalopathy
+      - Herpes Simplex Virus
+      - Histoplasmosis
+      - Isosporiasis
+      - Mycobacterium avium Complex
+      - Mycobacterium tuberculosis
+      - Mycobacterium, NOS
+      - Nocardiosis
+      - Pneumocystis Pneumonia
+      - Pneumonia, NOS
+      - Progressive Multifocal Leukoencephalopathy
+      - Salmonella Septicemia
+      - Toxoplasmosis
+      - Wasting Syndrome
+
+  barretts_esophagus_goblet_cells_present:
+    $ref:
+      - "_terms.yaml#/barretts_esophagus_goblet_cells_present/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  body_surface_area:
+    $ref:
+      - "_terms.yaml#/body_surface_area/common"
     type: number
-  beta_2_microglobulin:
-    term:
-      $ref: "_terms.yaml#/beta_2_microglobulin"
-    type: number
+
   bmi:
-    term:
-      $ref: "_terms.yaml#/bmi"
+    $ref:
+      - "_terms.yaml#/bmi/common"
     type: number
-  bun:
-    term:
-      $ref: "_terms.yaml#/bun"
-    type: number
-  calcium:
-    term:
-      $ref: "_terms.yaml#/calcium"
-    type: number
+
   cause_of_response:
-    term:
-      $ref: "_terms.yaml#/cause_of_response"
+    $ref:
+      - "_terms.yaml#/cause_of_response/common"
     type: string
+
+  cd4_count:
+    $ref:
+      - "_terms.yaml#/cd4_count/common"
+    type: number
+
+  cdc_hiv_risk_factors:
+    $ref:
+      - "_terms.yaml#/cdc_hiv_risk_factors/common"
+    enum:
+      - Hemophiliac
+      - Heterosexual Contact
+      - Homosexual Contact
+      - Intravenous Drug User
+      - None
+      - Transfusion Recipient
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
   comorbidity:
-    term:
-      $ref: "_terms.yaml#/comorbidity"
+    $ref:
+      - "_terms.yaml#/comorbidity/common"
     enum:
       - Acute Renal Failure
+      - Adenocarcinoma
+      - Adenomatous Polyposis Coli
       - Adrenocortical Insufficiency
       - Allergies
+      - Alpha-1 Antitrypsin
       - Anemia
       - Anxiety
       - Arrhythmia
@@ -901,61 +963,97 @@ properties:
       - Asthma
       - Atrial Fibrillation
       - Avascular Necrosis
+      - Barrett's Esophagus
       - Basal Cell Carcinoma
+      - Beckwith-Wiedemann
+      - Behcet's Disease
+      - Biliary Disorder
       - Blood Clots
       - Bone Fracture(s)
       - Bronchitis
       - Calcium Channel Blockers
       - Cancer
       - Cataracts
+      - Celiac Disease
       - Cerebrovascular Disease
+      - Cholelithiasis
       - Chronic Renal Failure
+      - Cirrhosis, Unknown Etiology
+      - Colon Polyps
+      - Common Variable Immunodeficiency
       - Congestive Heart Failure (CHF)
       - Connective Tissue Disorder
       - COPD
       - Coronary Artery Disease
+      - Crohn's Disease
       - Cryptogenic Organizing Pneumonia
       - Deep Vein Thrombosis / Thromboembolism
+      - Denys-Drash Syndrome
       - Depression
       - Diabetes
+      - Diabetes, Type II
       - Diabetic Neuropathy
       - Diet Controlled Diabetes
+      - Diverticulitis
       - DVT/PE
       - Dyslipidemia
+      - Eczema
       - Epilepsy
+      - Epstein-Barr Virus
+      - Familial Adenomatous Polyposis
+      - Fanconi Anemia
+      - Fibrosis
       - Gastroesophageal Reflux Disease
       - GERD
       - Glaucoma
-      - Gout
+      - Glycogen Storage Disease
       - Gonadal Dysfunction
+      - Gorlin Syndrome
+      - Gout
+      - H. pylori Infection
+      - Hashimoto's Thyroiditis
       - Headache
       - Heart Disease
+      - Hemihypertrophy
       - Hemorrhagic Cystitis
       - Hepatitis
+      - Hepatitis A Infection
       - Hepatitis B Infection
       - Hepatitis C Infection
+      - Hepatitis, Chronic
+      - Hereditary Non-polyposis Colon Cancer
+      - Herpes
+      - High Grade Liver Dysplastic Nodule
       - HIV / AIDS
+      - Human Papillomavirus Infection
       - HUS/TTP
-      - Hypercholesterolemia
       - Hypercalcemia
+      - Hypercholesterolemia
       - Hyperglycemia
       - Hyperlipidemia
       - Hypertension
+      - Hypospadias
       - Hypothyroidism
       - Inflammatory Bowel Disease
       - Insulin Controlled Diabetes
       - Interstitial Pneumontis or ARDS
+      - Intraductal Papillary Mucinous Neoplasm
       - Iron Overload
       - Ischemic Heart Disease
       - ITP
       - Joint Replacement
       - Kidney Disease
+      - Li-Fraumeni Syndrome
       - Liver Cirrhosis (Liver Disease)
       - Liver Toxicity (Non-Infectious)
+      - Low Grade Liver Dysplastic Nodule
       - Lupus
+      - Lynch Syndrome
       - MAI
+      - Myasthenia Gravis
       - Myocardial Infarction
-      - None
+      - Neuroendocrine Tumor
+      - Nonalcoholic Steatohepatitis
       - Obesity
       - Organ transplant (site)
       - Osteoarthritis
@@ -964,60 +1062,149 @@ properties:
       - Other Cancer Within 5 Years
       - Other Nonmalignant Systemic Disease
       - Other Pulmonary Complications
-      - Pancreatitis
       - Pain (Various)
+      - Pancreatitis
       - Peptic Ulcer (Ulcer)
       - Peripheral Neuropathy
       - Peripheral Vascular Disease
+      - Peutz-Jeghers Disease
       - Pregnancy in Patient or Partner
+      - Primary Sclerosing Cholangitis
       - Psoriasis
       - Pulmonary Fibrosis
       - Pulmonary Hemorrhage
-      - Renal Failure (Requiring Dialysis)
       - Renal Dialysis
+      - Renal Failure (Requiring Dialysis)
       - Renal Insufficiency
+      - Rheumatoid Arthritis
       - Rheumatologic Disease
+      - Rubinstein-Taybi Syndrome
       - Sarcoidosis
       - Seizure
       - Sleep apnea
       - Smoking
+      - Steatosis
       - Stroke
       - Transient Ischemic Attack
       - Tuberculosis
+      - Turcot Syndrome
+      - Tyrosinemia
       - Ulcerative Colitis
-  creatinine:
-    term:
-      $ref: "_terms.yaml#/creatinine"
-    type: number
-  crp:
-    term:
-      $ref: "_terms.yaml#/crp"
-    type: number
+      - Wagr Syndrome
+      - Unknown
+      - Not Reported
+    enumDef:
+      Cancer:
+        $ref:
+          - "_terms.yaml#/cancer/common"
+      Other:
+        $ref:
+          - "_terms.yaml#/other/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  comorbidity_method_of_diagnosis:
+    $ref:
+      - "_terms.yaml#/comorbidity_method_of_diagnosis/common"
+    enum:
+      - Histology
+      - Pathology
+      - Radiology
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
   days_to_adverse_event:
-    term:
-      $ref: "_terms.yaml#/days_to_adverse_event"
+    $ref:
+      - "_terms.yaml#/days_to_adverse_event/common"
     type: integer
+    maximum: 32872
+    minimum: -32872
+
   days_to_comorbidity:
-    term:
-      $ref: "_terms.yaml#days_to_comorbidity"
+    $ref:
+      - "_terms.yaml#days_to_comorbidity"
     type: integer
+    maximum: 32872
+    minimum: -32872
+
   days_to_follow_up:
-    term:
-      $ref: "_terms.yaml#/days_to_follow_up"
+    $ref:
+      - "_terms.yaml#/days_to_follow_up/common"
+    oneOf:
+      - type: integer
+        maximum: 32872
+        minimum: -32872
+      - type: "null"
+
+  days_to_imaging:
+    $ref:
+      - "_terms.yaml#/days_to_imaging/common"
     type: integer
+
   days_to_progression:
-    term:
-      $ref: "_terms.yaml#/days_to_progression"
+    $ref:
+      - "_terms.yaml#/days_to_progression/common"
     type: integer
+    maximum: 32872
+    minimum: -32872
+
+  days_to_progression_free:
+    $ref:
+      - "_terms.yaml#/days_to_progression_free/common"
+    type: integer
+    maximum: 32872
+    minimum: -32872
+
   days_to_recurrence:
-    term:
-      $ref: "_terms.yaml#/days_to_recurrence"
+    $ref:
+      - "_terms.yaml#/days_to_recurrence/common"
     type: integer
+    maximum: 32872
+    minimum: -32872
+
+  diabetes_treatment_type:
+    $ref:
+      - "_terms.yaml#/diabetes_treatment_type/common"
+    enum:
+      - Alpha-Glucosidase Inhibitor
+      - Biguanide
+      - Diet
+      - Injected Insulin
+      - Insulin
+      - Oral Hypoglycemic
+      - Other
+      - Sulfonylurea
+      - Thiazolidinedione
+      - Unknown
+      - Not Reported
+    enumDef:
+      Other:
+        $ref:
+          - "_terms.yaml#/other/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
   disease_response:
-    term:
-      $ref: "_terms.yaml#/disease_response"
+    $ref:
+      - "_terms.yaml#/disease_response/common"
     enum:
       - AJ-Adjuvant Therapy
+      - BED-Biochemical Evidence of Disease
       - CPD-Clinical Progression
       - CR-Complete Response
       - CRU-Complete Response Unconfirmed
@@ -1032,6 +1219,8 @@ properties:
       - PA-Palliative Therapy
       - PB-Palliative Benefit
       - PD-Progressive Disease
+      - PDM-Persistent Distant Metastasis
+      - PLD-Persistent Locoregional Disease
       - PPD-Pseudoprogression
       - PR-Partial Response
       - PSR-Pseudoresponse
@@ -1042,10 +1231,27 @@ properties:
       - SD-Stable Disease
       - SPD-Surgical Progression
       - TE-Too Early
+      - TF-Tumor Free
       - VGPR-Very Good Partial Response
+      - WT-With Tumor
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  dlco_ref_predictive_percent:
+    $ref:
+      - "_terms.yaml#/dlco_ref_predictive_percent/common"
+    type: number
+
   ecog_performance_status:
-    term:
-      $ref: "_terms.yaml#/ecog_performance_status"
+    $ref:
+      - "_terms.yaml#/ecog_performance_status/common"
     enum:
       - "0"
       - "1"
@@ -1053,79 +1259,914 @@ properties:
       - "3"
       - "4"
       - "5"
-  glucose:
-    term:
-      $ref: "_terms.yaml#/glucose"
-    type: number
-  height:
-    term:
-      $ref: "_terms.yaml#/height"
-    type: number
-  hemoglobin:
-    term:
-      $ref: "_terms.yaml#/hemoglobin"
-    type: number
-  hiv_positive:
-    term:
-      $ref: "_terms.yaml#/hiv_positive"
-    enum:
-      - "Yes"
-      - "No"
-      - Not Reported
-      - Unknown
-  iga:
-    term:
-      $ref: "_terms.yaml#/iga"
-    type: number
-  igg:
-    term:
-      $ref: "_terms.yaml#/igg"
-    type: number
-  igl_kappa:
-    term:
-      $ref: "_terms.yaml#/igl_kappa"
-    type: number
-  igl_lambda:
-    term:
-      $ref: "_terms.yaml#/igl_lambda"
-    type: number
-  igm:
-    term:
-      $ref: "_terms.yaml#/igm"
-    type: number
-  ldh_level:
-    term:
-      $ref: "_terms.yaml#/ldh_level"
-    type: number
-  m_protein:
-    term:
-      $ref: "_terms.yaml#/m_protein"
-    type: number
-  platelet_count:
-    term:
-      $ref: "_terms.yaml#/platelet_count"
-    type: number
-  progression_or_recurrence:
-    term:
-      $ref: "_terms.yaml#/progression_or_recurrence"
-    enum:
-      - "Yes"
-      - "No"
       - Unknown
       - Not Reported
-  total_protein:
-    term:
-      $ref: "_terms.yaml#/total_protein"
-    type: number
-  wbc:
-    term:
-      $ref: "_terms.yaml#/wbc"
-    type: number
-  weight:
-    term:
-      $ref: "_terms.yaml#/weight"
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  evidence_of_recurrence_type:
+    $ref:
+      - "_terms.yaml#/evidence_of_recurrence_type/common"
+    enum:
+      - Biopsy with Histologic Confirmation
+      - Convincing Image Source
+      - Positive Biomarker(s)
+
+  fev1_ref_post_bronch_percent:
+    $ref:
+      - "_terms.yaml#/fev1_ref_post_bronch_percent/common"
     type: number
 
-  # Links
+  fev1_ref_pre_bronch_percent:
+    $ref:
+      - "_terms.yaml#/fev1_ref_pre_bronch_percent/common"
+    type: number
+
+  fev1_fvc_pre_bronch_percent:
+    $ref:
+      - "_terms.yaml#/fev1_fvc_pre_bronch_percent/common"
+    type: number
+
+  fev1_fvc_post_bronch_percent:
+    $ref:
+      - "_terms.yaml#/fev1_fvc_post_bronch_percent/common"
+    type: number
+
+  haart_treatment_indicator:
+    $ref:
+      - "_terms.yaml#/haart_treatment_indicator/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  height:
+    $ref:
+      - "_terms.yaml#/height/common"
+    type: number
+
+  hepatitis_sustained_virological_response:
+    $ref:
+      - "_terms.yaml#/hepatitis_sustained_virological_response/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  hiv_viral_load:
+    $ref:
+      - "_terms.yaml#/hiv_viral_load/common"
+    type: number
+
+  hormonal_contraceptive_use:
+    $ref:
+      - "_terms.yaml#/hormonal_contraceptive_use/common"
+    enum:
+      - Current User
+      - Former User
+      - Never Used
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  hpv_positive_type:
+    $ref:
+      - "_terms.yaml#/hpv_positive_type/common"
+    enum:
+      - "16"
+      - "18"
+      - "26"
+      - "31"
+      - "33"
+      - "35"
+      - "39"
+      - "45"
+      - "51"
+      - "52"
+      - "53"
+      - "56"
+      - "58"
+      - "59"
+      - "63"
+      - "66"
+      - "68"
+      - "70"
+      - "73"
+      - "82"
+      - Other
+      - Unknown
+      - Not Reported
+    enumDef:
+      Other:
+        $ref:
+          - "_terms.yaml#/other/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  hysterectomy_margins_involved:
+    $ref:
+      - "_terms.yaml#/hysterectomy_margins_involved/common"
+    enum:
+      - Bladder
+      - Macroscopic Parametrium
+      - Microscopic Parametrium
+      - None
+      - Vagina
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  hysterectomy_type:
+    $ref:
+      - "_terms.yaml#/hysterectomy_type/common"
+    enum:
+      - Hysterectomy, NOS
+      - Not performed
+      - Radical Hysterectomy
+      - Simple Hysterectomy
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  imaging_result:
+    $ref:
+      - "_terms.yaml#/imaging_result/common"
+    enum:
+      - Positive
+      - Indeterminate
+      - Negative
+      - Not Performed
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  imaging_type:
+    $ref:
+      - "_terms.yaml#/imaging_type/common"
+    enum:
+      - 99mTc Bone Scintigraphy
+      - CT Scan
+      - MRI
+      - PET
+
+  immunosuppressive_treatment_type:
+    $ref:
+      - "_terms.yaml#/immunosuppressive_treatment_type/common"
+    enum:
+      - Anti-TNF Therapy
+      - Azathioprine
+      - Cyclophosphamide
+      - Methotrexate
+      - None
+      - Other
+      - Unknown
+      - Not Reported
+    enumDef:
+      Other:
+        $ref:
+          - "_terms.yaml#/other/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  karnofsky_performance_status:
+    $ref:
+      - "_terms.yaml#/karnofsky_performance_status/common"
+    enum:
+      - "0"
+      - "10"
+      - "20"
+      - "30"
+      - "40"
+      - "50"
+      - "60"
+      - "70"
+      - "80"
+      - "90"
+      - "100"
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  menopause_status:
+    $ref:
+      - "_terms.yaml#/menopause_status/common"
+    enum:
+      - Premenopausal
+      - Perimenopausal
+      - Postmenopausal
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  nadir_cd4_count:
+    $ref:
+      - "_terms.yaml#/nadir_cd4_count/common"
+    type: number
+
+  pancreatitis_onset_year:
+    $ref:
+      - "_terms.yaml#/pancreatitis_onset_year/common"
+    type: integer
+
+  pregnancy_outcome:
+    $ref:
+      - "_terms.yaml#/pregnancy_outcome/common"
+    enum:
+      - Ectopic Pregnancy
+      - Induced Abortion
+      - Live Birth
+      - Miscarriage
+      - Stillbirth
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  progression_or_recurrence:
+    $ref:
+      - "_terms.yaml#/progression_or_recurrence/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  progression_or_recurrence_anatomic_site:
+    $ref:
+      - "_terms.yaml#/progression_or_recurrence_anatomic_site/common"
+    enum:
+      - Abdomen, NOS
+      - Abdominal esophagus
+      - Accessory sinus, NOS
+      - Acoustic nerve
+      - Adrenal gland, NOS
+      - Ampulla of Vater
+      - Anal canal
+      - Anterior 2/3 of tongue, NOS
+      - Anterior floor of mouth
+      - Anterior mediastinum
+      - Anterior surface of epiglottis
+      - Anterior wall of bladder
+      - Anterior wall of nasopharynx
+      - Anus, NOS
+      - Aortic body and other paraganglia
+      - Appendix
+      - Ascending colon
+      - Autonomic nervous system, NOS
+      - Axillary tail of breast
+      - Base of tongue, NOS
+      - Biliary tract, NOS
+      - Bladder neck
+      - Bladder, NOS
+      - Blood
+      - Body of pancreas
+      - Body of penis
+      - Body of stomach
+      - Bone marrow
+      - Bone of limb, NOS
+      - Bone, NOS
+      - Bones of skull and face and associated joints
+      - Border of tongue
+      - Brain stem
+      - Brain, NOS
+      - Branchial cleft
+      - Breast, NOS
+      - Broad ligament
+      - Cardia, NOS
+      - Carotid body
+      - Cauda equina
+      - Cecum
+      - Central portion of breast
+      - Cerebellum, NOS
+      - Cerebral meninges
+      - Cerebrum
+      - Cervical esophagus
+      - Cervix uteri
+      - Cheek mucosa
+      - Choroid
+      - Ciliary body
+      - Clitoris
+      - Cloacogenic zone
+      - Colon, NOS
+      - Commissure of lip
+      - Conjunctiva
+      - Connective, subcutaneous and other soft tissues of abdomen
+      - Connective, subcutaneous and other soft tissues of head, face, and neck
+      - Connective, subcutaneous and other soft tissues of lower limb and hip
+      - Connective, subcutaneous and other soft tissues of pelvis
+      - Connective, subcutaneous and other soft tissues of thorax
+      - Connective, subcutaneous and other soft tissues of trunk, NOS
+      - Connective, subcutaneous and other soft tissues of upper limb and shoulder
+      - Connective, subcutaneous and other soft tissues, NOS
+      - Cornea, NOS
+      - Corpus uteri
+      - Cortex of adrenal gland
+      - Cranial nerve, NOS
+      - Craniopharyngeal duct
+      - Descended testis
+      - Descending colon
+      - Dome of bladder
+      - Dorsal surface of tongue, NOS
+      - Duodenum
+      - Endocervix
+      - Endocrine gland, NOS
+      - Endometrium
+      - Epididymis
+      - Esophagus, NOS
+      - Ethmoid sinus
+      - Exocervix
+      - External ear
+      - External lip, NOS
+      - External lower lip
+      - External upper lip
+      - Extrahepatic bile duct
+      - Eye, NOS
+      - Eyelid
+      - Fallopian tube
+      - Female genital tract, NOS
+      - Floor of mouth, NOS
+      - Frontal lobe
+      - Frontal sinus
+      - Fundus of stomach
+      - Fundus uteri
+      - Gallbladder
+      - Gastric antrum
+      - Gastrointestinal tract, NOS
+      - Glans penis
+      - Glottis
+      - Greater curvature of stomach, NOS
+      - Gum, NOS
+      - Hard palate
+      - Head of pancreas
+      - Head, face or neck, NOS
+      - Heart
+      - Hematopoietic system, NOS
+      - Hepatic flexure of colon
+      - Hypopharyngeal aspect of aryepiglottic fold
+      - Hypopharynx, NOS
+      - Ileum
+      - Ill-defined sites within respiratory system
+      - Intestinal tract, NOS
+      - Intra-abdominal lymph nodes
+      - Intrahepatic bile duct
+      - Intrathoracic lymph nodes
+      - Islets of Langerhans
+      - Isthmus uteri
+      - Jejunum
+      - Kidney, NOS
+      - Labium majus
+      - Labium minus
+      - Lacrimal gland
+      - Laryngeal cartilage
+      - Larynx, NOS
+      - Lateral floor of mouth
+      - Lateral wall of bladder
+      - Lateral wall of nasopharynx
+      - Lateral wall of oropharynx
+      - Lesser curvature of stomach, NOS
+      - Lingual tonsil
+      - Lip, NOS
+      - Liver
+      - Long bones of lower limb and associated joints
+      - Long bones of upper limb, scapula and associated joints
+      - Lower gum
+      - Lower limb, NOS
+      - Lower lobe, lung
+      - Lower third of esophagus
+      - Lower-inner quadrant of breast
+      - Lower-outer quadrant of breast
+      - Lung, NOS
+      - Lymph node, NOS
+      - Lymph nodes of axilla or arm
+      - Lymph nodes of head, face and neck
+      - Lymph nodes of inguinal region or leg
+      - Lymph nodes of multiple regions
+      - Main bronchus
+      - Major salivary gland, NOS
+      - Male genital organs, NOS
+      - Mandible
+      - Maxillary sinus
+      - Meckel diverticulum
+      - Mediastinum, NOS
+      - Medulla of adrenal gland
+      - Meninges, NOS
+      - Middle ear
+      - Middle lobe, lung
+      - Middle third of esophagus
+      - Mouth, NOS
+      - Mucosa of lip, NOS
+      - Mucosa of lower lip
+      - Mucosa of upper lip
+      - Myometrium
+      - Nasal cavity
+      - Nasopharynx, NOS
+      - Nervous system, NOS
+      - Nipple
+      - Occipital lobe
+      - Olfactory nerve
+      - Optic nerve
+      - Orbit, NOS
+      - Oropharynx, NOS
+      - Other ill-defined sites
+      - Other specified parts of female genital organs
+      - Other specified parts of male genital organs
+      - Other specified parts of pancreas
+      - Ovary
+      - Overlapping lesion of accessory sinuses
+      - Overlapping lesion of biliary tract
+      - Overlapping lesion of bladder
+      - Overlapping lesion of bones, joints and articular cartilage
+      - Overlapping lesion of bones, joints and articular cartilage of limbs
+      - Overlapping lesion of brain
+      - Overlapping lesion of brain and central nervous system
+      - Overlapping lesion of breast
+      - Overlapping lesion of cervix uteri
+      - Overlapping lesion of colon
+      - Overlapping lesion of connective, subcutaneous and other soft tissues
+      - Overlapping lesion of corpus uteri
+      - Overlapping lesion of digestive system
+      - Overlapping lesion of endocrine glands and related structures
+      - Overlapping lesion of esophagus
+      - Overlapping lesion of eye and adnexa
+      - Overlapping lesion of female genital organs
+      - Overlapping lesion of floor of mouth
+      - Overlapping lesion of heart, mediastinum and pleura
+      - Overlapping lesion of hypopharynx
+      - Overlapping lesion of ill-defined sites
+      - Overlapping lesion of larynx
+      - Overlapping lesion of lip
+      - Overlapping lesion of lip, oral cavity and pharynx
+      - Overlapping lesion of lung
+      - Overlapping lesion of major salivary glands
+      - Overlapping lesion of male genital organs
+      - Overlapping lesion of nasopharynx
+      - Overlapping lesion of other and unspecified parts of mouth
+      - Overlapping lesion of palate
+      - Overlapping lesion of pancreas
+      - Overlapping lesion of penis
+      - Overlapping lesion of peripheral nerves and autonomic nervous system
+      - Overlapping lesion of rectum, anus and anal canal
+      - Overlapping lesion of respiratory system and intrathoracic organs
+      - Overlapping lesion of retroperitoneum and peritoneum
+      - Overlapping lesion of skin
+      - Overlapping lesion of small intestine
+      - Overlapping lesion of stomach
+      - Overlapping lesion of tongue
+      - Overlapping lesion of tonsil
+      - Overlapping lesion of urinary organs
+      - Overlapping lesion of vulva
+      - Overlapping lesions of oropharynx
+      - Palate, NOS
+      - Pancreas, NOS
+      - Pancreatic duct
+      - Parametrium
+      - Parathyroid gland
+      - Paraurethral gland
+      - Parietal lobe
+      - Parotid gland
+      - Pelvic bones, sacrum, coccyx and associated joints
+      - Pelvic lymph nodes
+      - Pelvis, NOS
+      - Penis, NOS
+      - Peripheral nerves and autonomic nervous system of abdomen
+      - Peripheral nerves and autonomic nervous system of head, face, and neck
+      - Peripheral nerves and autonomic nervous system of lower limb and hip
+      - Peripheral nerves and autonomic nervous system of pelvis
+      - Peripheral nerves and autonomic nervous system of thorax
+      - Peripheral nerves and autonomic nervous system of trunk, NOS
+      - Peripheral nerves and autonomic nervous system of upper limb and shoulder
+      - Peritoneum, NOS
+      - Pharynx, NOS
+      - Pineal gland
+      - Pituitary gland
+      - Placenta
+      - Pleura, NOS
+      - Postcricoid region
+      - Posterior mediastinum
+      - Posterior wall of bladder
+      - Posterior wall of hypopharynx
+      - Posterior wall of nasopharynx
+      - Posterior wall of oropharynx
+      - Prepuce
+      - Prostate gland
+      - Pylorus
+      - Pyriform sinus
+      - Rectosigmoid junction
+      - Rectum, NOS
+      - Renal pelvis
+      - Reticuloendothelial system, NOS
+      - Retina
+      - Retromolar area
+      - Retroperitoneum
+      - Rib, sternum, clavicle and associated joints
+      - Round ligament
+      - Scrotum, NOS
+      - Short bones of lower limb and associated joints
+      - Short bones of upper limb and associated joints
+      - Sigmoid colon
+      - Skin of lip, NOS
+      - Skin of lower limb and hip
+      - Skin of other and unspecified parts of face
+      - Skin of scalp and neck
+      - Skin of trunk
+      - Skin of upper limb and shoulder
+      - Skin, NOS
+      - Small intestine, NOS
+      - Soft palate, NOS
+      - Specified parts of peritoneum
+      - Spermatic cord
+      - Sphenoid sinus
+      - Spinal cord
+      - Spinal meninges
+      - Spleen
+      - Splenic flexure of colon
+      - Stomach, NOS
+      - Subglottis
+      - Sublingual gland
+      - Submandibular gland
+      - Superior wall of nasopharynx
+      - Supraglottis
+      - Tail of pancreas
+      - Temporal lobe
+      - Testis, NOS
+      - Thoracic esophagus
+      - Thorax, NOS
+      - Thymus
+      - Thyroid gland
+      - Tongue, NOS
+      - Tonsil, NOS
+      - Tonsillar fossa
+      - Tonsillar pillar
+      - Trachea
+      - Transverse colon
+      - Trigone of bladder
+      - Undescended testis
+      - Unknown primary site
+      - Upper gum
+      - Upper limb, NOS
+      - Upper lobe, lung
+      - Upper respiratory tract, NOS
+      - Upper third of esophagus
+      - Upper-inner quadrant of breast
+      - Upper-outer quadrant of breast
+      - Urachus
+      - Ureter
+      - Ureteric orifice
+      - Urethra
+      - Urinary system, NOS
+      - Uterine adnexa
+      - Uterus, NOS
+      - Uvula
+      - Vagina, NOS
+      - Vallecula
+      - Ventral surface of tongue, NOS
+      - Ventricle, NOS
+      - Vertebral column
+      - Vestibule of mouth
+      - Vulva, NOS
+      - Waldeyer ring
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  progression_or_recurrence_type:
+    $ref:
+      - "_terms.yaml#/progression_or_recurrence_type/common"
+    enum:
+      - Biochemical
+      - Distant
+      - Local
+      - Regional
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  recist_targeted_regions_number:
+    $ref:
+      - "_terms.yaml#/recist_targeted_regions_number/common"
+    type: integer
+
+  recist_targeted_regions_sum:
+    $ref:
+      - "_terms.yaml#/recist_targeted_regions_sum/common"
+    type: number
+
+  reflux_treatment_type:
+    $ref:
+      - "_terms.yaml#/reflux_treatment_type/common"
+    enum:
+      - Antacids
+      - H2 Blockers
+      - Medically Treated
+      - No Treatment
+      - Not Applicable
+      - Proton Pump Inhibitors
+      - Surgically Treated
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  risk_factor:
+    $ref:
+      - "_terms.yaml#/risk_factor/common"
+    enum:
+      - Adenosis (Atypical Adenomatous Hyperplasia)
+      - Alcohol Consumption
+      - Alcoholic Liver Disease
+      - Allergy, Animal, NOS
+      - Allergy, Ant
+      - Allergy, Bee
+      - Allergy, Cat
+      - Allergy, Dairy or Lactose
+      - Allergy, Dog
+      - Allergy, Eggs
+      - Allergy, Food, NOS
+      - Allergy, Fruit
+      - Allergy, Meat
+      - Allergy, Mold or Dust
+      - Allergy, Nuts
+      - Allergy, Processed Foods
+      - Allergy, Seafood
+      - Allergy, Wasp
+      - Alpha-1 Antitrypsin Deficiency
+      - Autoimmune Atrophic Chronic Gastritis
+      - Barrett's Esophagus
+      - Beckwith-Wiedemann
+      - Behcet's Disease
+      - Benign Prostatic Hyperplasia
+      - BRCA Family History
+      - Cancer
+      - Cholelithiasis
+      - Chronic Hepatitis
+      - Cirrhosis
+      - Colon Polyps
+      - Colonization, Bacterial
+      - Colonization, Fungal
+      - Common variable immune deficiency (CVID)
+      - Cyst(s)
+      - Denys-Drash Syndrome
+      - Diabetes, NOS
+      - Diabetes, Type I
+      - Diabetes, Type II
+      - Diet
+      - Diverticulitis
+      - Eczema
+      - Endometriosis
+      - Endosalpingiosis
+      - Epithelial Dysplasia
+      - Epithelial Hyperplasia
+      - Epstein-Barr Virus
+      - Familial Adenomatous Polyposis
+      - Fanconi Anemia
+      - Fibrosis
+      - Gastric Polyp(s)
+      - Gilbert's Syndrome
+      - Glomerular Disease
+      - Gorlin Syndrome
+      - Hashimoto's Thyroiditis
+      - Hay Fever
+      - Headache
+      - Helicobacter Pylori-Associated Gastritis
+      - Hematologic Disorder, NOS
+      - Hemihypertrophy
+      - Hemochromatosis
+      - Hepatic Encephalopathy
+      - Hepatitis B Infection
+      - Hepatitis C Infection
+      - Hepatitis, NOS
+      - Hereditary Prostate Cancer
+      - High Grade Dysplasia
+      - High-grade Prostatic Intraepithelial Neoplasia (PIN)
+      - HIV
+      - Human Papillomavirus Infection
+      - Hypospadias
+      - Inflammation
+      - Inflammation, Hyperkeratosis
+      - Intestinal Metaplasia
+      - Iron Overload
+      - Li-Fraumeni Syndrome
+      - Low Grade Dysplasia
+      - Lymphocytic Thyroiditis
+      - Lynch Syndrome
+      - Myasthenia Gravis
+      - Nodular Prostatic Hyperplasia
+      - Nonalcoholic Fatty Liver Disease
+      - Nonalcoholic Steatohepatitis
+      - Obesity
+      - Oral Contraceptives
+      - Pancreatitis
+      - Parasitic Disease of Biliary Tract
+      - Primary Sclerosing Cholangitis
+      - Recurrent Pyogenic Cholangitis
+      - Reflux Disease
+      - Rheumatoid Arthritis
+      - Rubinstein-Taybi Syndrome
+      - Sarcoidosis
+      - Seizure
+      - Sensory Changes
+      - Serous tubal intraepithelial carcinoma (STIC)
+      - Sialadenitis
+      - Squamous Metaplasia
+      - Steatosis
+      - Tattoo
+      - Thyroid Nodular Hyperplasia
+      - Tobacco, NOS
+      - Tobacco, Smokeless
+      - Tobacco, Smoking
+      - Tubulointerstitial Disease
+      - Tumor-associated Lymphoid Proliferation
+      - Turcot Syndrome
+      - Undescended Testis
+      - Vascular Disease
+      - Vision Changes
+      - Wagr Syndrome
+      - Unknown
+      - Not Reported
+    enumDef:
+      Cancer:
+        $ref:
+          - "_terms.yaml#/cancer/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  risk_factor_treatment:
+    $ref:
+      - "_terms.yaml#/risk_factor_treatment/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  scan_tracer_used:
+    $ref:
+      - "_terms.yaml#/scan_tracer_used/common"
+    enum:
+      - Acetate
+      - Axumin
+      - Choline
+      - PSMA
+      - Sodium Fluoride
+
+  viral_hepatitis_serologies:
+    $ref:
+      - "_terms.yaml#/viral_hepatitis_serologies/common"
+    enum:
+      - HBV Core Antibody
+      - HBV DNA
+      - HBV Genotype
+      - HBV Surface Antibody
+      - HCV Genotype
+      - Hepatitis B Surface Antigen
+      - Hepatitis C Antibody
+      - Hepatitis C Virus RNA
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  weight:
+    $ref:
+      - "_terms.yaml#/weight/common"
+    type: number
+
   cases:
-    $ref: "_definitions.yaml#/to_one" 
+    $ref: "_definitions.yaml#/to_one"
+
+  diagnoses:
+    $ref: "_definitions.yaml#/to_one"

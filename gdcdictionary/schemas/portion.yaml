@@ -3,30 +3,24 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "portion"
 title: Portion
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: biospecimen
-program: '*'
 project: '*'
-description: >
+program: '*'
+description: >-
   A physical sub-part of any sample.
 additionalProperties: false
 submittable: true
+downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
   - id
   - project_id
-  - state
   - created_datetime
   - updated_datetime
-
-required:
-  - submitter_id
-  - samples
-
-uniqueKeys:
-  - [id]
-  - [project_id, submitter_id]
+  - state
 
 links:
   - name: samples
@@ -42,47 +36,40 @@ links:
     multiplicity: many_to_one
     required: false
 
+required:
+  - submitter_id
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-    description: "The UUID for the portion" # TOREVIEW
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
-    description: >
-      The legacy barcode used before prior to the use UUIDs, varies by
-      project. For TCGA this is bcrportionbarcode.
-  weight:
-    term:
-      $ref: "_terms.yaml#/portion_weight"
-    type: number
-  is_ffpe:
-    term:
-      $ref: "_terms.yaml#/is_ffpe"
-    type: boolean
+
+  $ref:
+    - "_definitions.yaml#/ubiquitous_properties"
+
   creation_datetime:
-    term:
-      $ref: "_terms.yaml#/creation_datetime"
+    $ref:
+      - "_terms.yaml#/creation_datetime/common"
     type: number
+
+  is_ffpe:
+    $ref:
+      - "_terms.yaml#/is_ffpe/common"
+    type: boolean
+
   portion_number:
-    term:
-      $ref: "_terms.yaml#/portion_number"
+    $ref:
+      - "_terms.yaml#/portion_number/common"
     type: string
+
+  weight:
+    $ref:
+      - "_terms.yaml#/portion_weight/common"
+    type: number
 
   samples:
     $ref: "_definitions.yaml#/to_one"
+
   centers:
     $ref: "_definitions.yaml#/to_one"
-
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

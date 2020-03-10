@@ -3,13 +3,16 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "data_type"
 title: Data Type
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: TBD
-program: '*'
 project: '*'
-description: "Data type of a legacy file (depreciated)."
+program: '*'
+description: >-
+  Data type of a legacy file (deprecated).
 additionalProperties: false
 submittable: false
+downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -23,13 +26,16 @@ required:
 uniqueKeys:
   - [id]
 
-# data_type properties
 properties:
+
   type:
     type: string
+
   id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
+    $ref:
+      - "_definitions.yaml#/uuid"
+
   name:
+    description: >-
+      name of this data type
     type: string
-    description: name of this data type

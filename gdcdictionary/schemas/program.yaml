@@ -3,17 +3,22 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "program"
 title: Program
 type: object
+namespace: https://gdc.cancer.gov
 category: administrative
-program: '*'
 project: '*'
-description: >
+program: '*'
+description: >-
   A broad framework of goals to be achieved. (NCIt C52647)
 additionalProperties: false
 submittable: false
+downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
   - id
+
+links: []
 
 required:
   - name
@@ -23,19 +28,21 @@ uniqueKeys:
   - [id]
   - [name]
 
-links: []
-
-# Program is the root entity and so it is the only entity
-# without a project or parents.
 properties:
+
   type:
     type: string
+
   id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
+    $ref:
+      - "_definitions.yaml#/uuid"
+
   name:
+    description: >-
+      Full name/title of the program.
     type: string
-    description: "Full name/title of the program."
+
   dbgap_accession_number:
+    description: >-
+      The dbgap accession number provided for the program.
     type: string
-    description: "The dbgap accession number provided for the program."

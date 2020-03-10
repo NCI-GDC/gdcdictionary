@@ -3,14 +3,16 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "slide_image"
 title: Slide Image
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: data_file
-program: '*'
 project: '*'
-description: >
+program: '*'
+description: >-
   Data file containing image of a slide.
 additionalProperties: false
 submittable: true
+downloadable: true
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -18,8 +20,8 @@ systemProperties:
   - project_id
   - created_datetime
   - updated_datetime
-  - state
   - file_state
+  - state
   - error_type
 
 links:
@@ -27,7 +29,7 @@ links:
     backref: slide_images
     label: data_from
     target_type: slide
-    multiplicity: one_to_one
+    multiplicity: one_to_many
     required: true
 
 required:
@@ -36,36 +38,64 @@ required:
   - file_size
   - md5sum
   - data_category
-  - data_type
   - data_format
+  - data_type
   - experimental_strategy
-  - slides
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/data_file_properties"
-  type:
-    enum: [ "slide_image" ]
+
+  $ref:
+    - "_definitions.yaml#/data_file_properties"
+
   data_category:
-    term:
-      $ref: "_terms.yaml#/data_category"
-    enum: [ "Biospecimen" ]
+    $ref:
+      - "_terms.yaml#/data_category/common"
+    enum:
+      - Biospecimen
+
   data_type:
-    term:
-      $ref: "_terms.yaml#/data_type"
-    enum: [ "Slide Image" ]
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - Cell Culture Image
+      - Slide Image
+      - Tissue Microarray Image
+
   data_format:
-    term:
-      $ref: "_terms.yaml#/data_format"
+    $ref:
+      - "_terms.yaml#/data_format/common"
     enum:
+      - JPEG
       - SVS
+      - TIFF
+
   experimental_strategy:
-    description: "Classification of the slide type with respect to its experimental use."
+    description: >-
+      Classification of the image type with respect to its experimental use.
     enum:
+      - Cell Culture
       - Diagnostic Slide
       - Tissue Slide
+
+  imaging_date:
+    $ref:
+      - "_definitions.yaml#/datetime"
+
+  magnification:
+    description: >-
+      Magnification used to capture the image.
+    type: number
+
+  stain_type:
+    $ref:
+      - "_terms.yaml#/stain_type/common"
+    enum:
+      - Haemotoxylin and Eosin (H&E)
+      - Immunohistochemistry (IHC)
+
   slides:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_many"

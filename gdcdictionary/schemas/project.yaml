@@ -3,14 +3,17 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "project"
 title: Project
 type: object
-program: '*'
-project: '*'
+namespace: https://gdc.cancer.gov
 category: administrative
-description: >
-  Any specifically defined piece of work that is undertaken or attempted to meet a single
-  requirement. (NCIt C47885)
+project: '*'
+program: '*'
+description: >-
+  Any specifically defined piece of work that is undertaken or attempted to meet a
+  single requirement. (NCIt C47885)
 additionalProperties: false
 submittable: false
+downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -20,19 +23,6 @@ systemProperties:
   - releasable
   - intended_release_date
 
-required:
-  - code
-  - name
-  - disease_type
-  - state
-  - primary_site
-  - programs
-  - dbgap_accession_number
-
-uniqueKeys:
-  - [id]
-  - [code]
-
 links:
   - name: programs
     backref: projects
@@ -41,97 +31,123 @@ links:
     multiplicity: many_to_one
     required: true
 
-constraints: null
+required:
+  - code
+  - name
+  - state
+  - programs
+  - dbgap_accession_number
 
-# project properties
-# code, disease_type and primary_site are in the current data model for project
-# and likely shouldn't be
+uniqueKeys:
+  - [id]
+  - [code]
+
 properties:
+
   type:
     type: string
+
   id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-    description: "UUID for the project" # TOREVIEW
-  name:
-    type: string
-    description: "Display name for the project" # TOREVIEW
-  dbgap_accession_number:
-    type: string
-    description: "The dbgap accession number for the project." # TOREVIEW
-  primary_site:
-    type: string
-    description: "Primary site for the project" # TOREVIEW
+    $ref:
+      - "_definitions.yaml#/uuid"
+    description: >-
+      UUID for the project
+
+  awg_review:
+    description: >-
+      Indicates that the project is an AWG project.
+    type: boolean
+    default: false
+
   code:
+    description: >-
+      Project code
     type: string
-    description: "Project code" # TOREVIEW
+
+  dbgap_accession_number:
+    description: >-
+      The dbgap accession number for the project.
+    type: string
+
   disease_type:
+    description: >-
+      Full name for the project
     type: string
-    description: "Full name for the project" # TOREVIEW
-  programs:
-    $ref: "_definitions.yaml#/to_one"
-    description: >
-      Indicates that the project is logically part of the indicated project.
-
-  state:
-    description: |
-      The possible states a project can be in.  All but `open` are
-      equivalent to some type of locked state.
-    default: open
-    enum:
-        # open: the only state users can perform 'upload' actions
-        # possible actions in `open`:
-        #   - upload (no state change)
-        #   - review -> review
-        #   - release (project.released -> true)
-        - open
-
-        # locked: admin has locked project for review
-        # possible actions in `locked`:
-        #   - open -> open
-        #   - submit -> submitted
-        #   - release (project.released -> true)
-        - review
-
-        # submitted: An admin has submitted project, it is locked against
-        #            upload.
-        # possible actions in `submitted`:
-        #   - process -> processing
-        #   - release (project.released -> true)
-        - submitted
-
-        # processing: The system is processing data in the project and
-        #             is locked against upload and submission
-        #   - (system transition to open)
-        #   - release (project.released -> true)
-        - processing
-
-
-        # closed: The closed state is introduced to replace the
-        #         ``legacy`` state and means that no further action
-        #         can be taken on the project
-        #   - (system transition to open)
-        #   - release (project.released -> true)
-        - closed
-
-        # DEPRECATED(2016-03-01): synonymous with closed. included for
-        #                         backwards compatibility
-        - legacy
-
-  released:
-    description: |
-      To release a project is to tell the GDC to include all submitted
-      entities in the next GDC index.
-    default: false
-    type: boolean
-
-  releasable:
-    description: |
-      A project can only be released by the user when `releasable` is true.
-    default: false
-    type: boolean
 
   intended_release_date:
-    description: Tracks a Project's intended release date.
+    $ref:
+      - "_definitions.yaml#/datetime"
+    description: >-
+      Tracks a Project's intended release date.
+
+  in_review:
+    description: >-
+      Indicates that the project is under review by the submitter. Upload and data
+      modification is disabled.
+    type: boolean
+    default: false
+
+  is_legacy:
+    description: >-
+      Indicates whether a project will appear in the Legacy Archive.
+    type: boolean
+    default: false
+
+  name:
+    description: >-
+      Display name for the project
     type: string
-    format: date-time
+
+  primary_site:
+    description: >-
+      Primary site for the project
+    type: string
+
+  state:
+    description: >-
+      The possible states a project can be in.  All but `open` are equivalent to some
+      type of locked state.
+    default: open
+    enum:
+      - open
+      - review
+      - submitted
+      - processing
+      - processed
+      - closed
+      - legacy
+
+  release_requested:
+    description: >-
+      User requests that the GDC release the project. Release can only be requested
+      if the project is releasable.
+    type: boolean
+    default: false
+
+  released:
+    description: >-
+      To release a project is to tell the GDC to include all submitted entities in
+      the next GDC index.
+    type: boolean
+    default: false
+
+  releasable:
+    description: >-
+      A project can only be released by the user when `releasable` is true.
+    type: boolean
+    default: false
+
+  request_submission:
+    description: >-
+      Indicates that the user has requested submission to the GDC for harmonization.
+    type: boolean
+    default: false
+
+  submission_enabled:
+    description: >-
+      Indicates if submission to a project is allowed.
+    type: boolean
+    default: true
+
+  programs:
+    $ref: "_definitions.yaml#/to_one"

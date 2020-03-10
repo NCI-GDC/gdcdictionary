@@ -1,0 +1,56 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "expression_analysis_workflow"
+title: Expression Analysis Workflow
+type: object
+namespace: https://gdc.cancer.gov
+category: analysis
+project: '*'
+program: '*'
+description: >-
+  Metadata for the expression analysis workflow used to generate additional analysis
+  on top of the gene expression data.
+additionalProperties: false
+submittable: false
+downloadable: false
+previous_version_downloadable: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: gene_expressions
+    backref: expression_analysis_workflows
+    label: performed_on
+    target_type: gene_expression
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - workflow_link
+  - workflow_type
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+
+  $ref:
+    - "_definitions.yaml#/workflow_properties"
+
+  workflow_type:
+    $ref:
+      - "_terms.yaml#/workflow_type/common"
+    enum:
+      - Seurat - 10x Chromium
+      - Seurat - Smart-Seq2
+
+  gene_expressions:
+    $ref: "_definitions.yaml#/to_one"

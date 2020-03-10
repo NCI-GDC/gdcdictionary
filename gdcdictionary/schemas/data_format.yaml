@@ -3,13 +3,16 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "data_format"
 title: Data Format
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: TBD
-program: '*'
 project: '*'
-description: "Data format of a legacy file (depreciated)."
+program: '*'
+description: >-
+  Data format of a legacy file (deprecated).
 additionalProperties: false
 submittable: false
+downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -24,13 +27,16 @@ uniqueKeys:
   - [id]
   - [name]
 
-# data_format properties
 properties:
+
   type:
     type: string
+
   id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
+    $ref:
+      - "_definitions.yaml#/uuid"
+
   name:
+    description: >-
+      name of this data format
     type: string
-    description: name of this data format

@@ -3,15 +3,17 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "platform"
 title: Platform
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: TBD
-program: '*'
 project: '*'
-description: >
-  Any distinct technology (laboratory or computational) from which data
-  may be obtained as files. (GDC)
+program: '*'
+description: >-
+  Any distinct technology (laboratory or computational) from which data may be obtained
+  as files. (GDC) (deprecated).
 additionalProperties: false
 submittable: false
+downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -26,13 +28,16 @@ uniqueKeys:
   - [id]
   - [name]
 
-# platform properties
 properties:
+
   type:
     type: string
+
   id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
+    $ref:
+      - "_definitions.yaml#/uuid"
+
   name:
+    description: >-
+      name of this platform
     type: string
-    description: name of this platform

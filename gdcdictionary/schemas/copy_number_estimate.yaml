@@ -1,0 +1,116 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "copy_number_estimate"
+title: Copy Number Estimate
+type: object
+namespace: https://gdc.cancer.gov
+category: data_file
+project: '*'
+program: '*'
+description: >-
+  Data file containing copy number variation information generated internally by the
+  GDC.
+additionalProperties: false
+submittable: false
+downloadable: true
+previous_version_downloadable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - file_state
+  - state
+  - error_type
+
+links:
+  - exclusive: true
+    required: true
+    subgroup:
+      - name: copy_number_variation_workflows
+        backref: copy_number_estimates
+        label: derived_from
+        target_type: copy_number_variation_workflow
+        multiplicity: one_to_one
+        required: false
+      - name: genomic_profile_harmonization_workflows
+        backref: copy_number_estimates
+        label: derived_from
+        target_type: genomic_profile_harmonization_workflow
+        multiplicity: one_to_one
+        required: false
+      - name: somatic_copy_number_workflows
+        backref: copy_number_estimates
+        label: derived_from
+        target_type: somatic_copy_number_workflow
+        multiplicity: one_to_one
+        required: false
+
+required:
+  - submitter_id
+  - file_name
+  - file_size
+  - md5sum
+  - data_category
+  - data_format
+  - data_type
+  - experimental_strategy
+  - platform
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+
+  $ref:
+    - "_definitions.yaml#/data_file_properties"
+
+  data_category:
+    $ref:
+      - "_terms.yaml#/data_category/common"
+    enum:
+      - Copy Number Variation
+
+  data_type:
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - Gene Level Copy Number
+      - Gene Level Copy Number Scores
+      - Cohort Level Copy Number Scores
+
+  data_format:
+    $ref:
+      - "_terms.yaml#/data_format/common"
+    enum:
+      - TSV
+      - TXT
+
+  experimental_strategy:
+    $ref:
+      - "_terms.yaml#/experimental_strategy/common"
+    enum:
+      - Genotyping Array
+      - Targeted Sequencing
+      - WGS
+      - WXS
+
+  platform:
+    $ref:
+      - "_terms.yaml#/platform/common"
+    enum:
+      - Affymetrix SNP 6.0
+      - Illumina
+      - Ion Torrent
+
+  copy_number_variation_workflows:
+    $ref: "_definitions.yaml#/to_one"
+
+  genomic_profile_harmonization_workflows:
+    $ref: "_definitions.yaml#/to_one"
+
+  somatic_copy_number_workflows:
+    $ref: "_definitions.yaml#/to_one"

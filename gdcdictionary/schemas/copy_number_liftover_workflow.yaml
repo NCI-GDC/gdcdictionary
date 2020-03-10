@@ -3,14 +3,17 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "copy_number_liftover_workflow"
 title: Copy Number Liftover Workflow
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: analysis
-program: '*'
 project: '*'
-description: >
-  Metadata for the copy number liftover workflow used to harmonize TCGA copy number data.
+program: '*'
+description: >-
+  Metadata for the copy number liftover workflow used to harmonize TCGA copy number
+  data.
 additionalProperties: false
 submittable: false
+downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -32,20 +35,21 @@ required:
   - submitter_id
   - workflow_link
   - workflow_type
-  - submitted_tangent_copy_numbers
 
 uniqueKeys:
-  - [ id ]
-  - [ project_id, submitter_id ]
+  - [id]
+  - [project_id, submitter_id]
 
 properties:
-  $ref: "_definitions.yaml#/workflow_properties"
-  type:
-    enum: [ "copy_number_liftover_workflow" ]
+
+  $ref:
+    - "_definitions.yaml#/workflow_properties"
+
   workflow_type:
-    term:
-      $ref: "_terms.yaml#/workflow_type"
+    $ref:
+      - "_terms.yaml#/workflow_type/common"
     enum:
       - DNAcopy
+
   submitted_tangent_copy_numbers:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_one"

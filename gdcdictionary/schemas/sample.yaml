@@ -3,42 +3,35 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "sample"
 title: Sample
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: biospecimen
-program: '*'
 project: '*'
-description: >
-  Any material sample taken from a biological entity for testing, diagnostic, propagation, treatment
-  or research purposes, including a sample obtained from a living organism or taken from the
-  biological object after halting of all its life functions. Biospecimen can contain one or more
-  components including but not limited to cellular molecules, cells, tissues, organs, body fluids,
-  embryos, and body excretory products.
+program: '*'
+description: >-
+  Any material sample taken from a biological entity for testing, diagnostic, propagation,
+  treatment or research purposes, including a sample obtained from a living organism
+  or taken from the biological object after halting of all its life functions. Biospecimen
+  can contain one or more components including but not limited to cellular molecules,
+  cells, tissues, organs, body fluids, embryos, and body excretory products.
 additionalProperties: false
 submittable: true
+downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
   - id
   - project_id
-  - state
   - created_datetime
   - updated_datetime
-
-required:
-  - submitter_id
-  - sample_type
-  - cases
-
-uniqueKeys:
-  - [id]
-  - [project_id, submitter_id]
+  - state
 
 links:
   - name: cases
     backref: samples
     label: derived_from
     target_type: case
-    multiplicity: many_to_one #not sure
+    multiplicity: many_to_one
     required: true
   - name: tissue_source_sites
     backref: samples
@@ -52,28 +45,30 @@ links:
     target_type: diagnosis
     multiplicity: many_to_one
     required: false
+  - name: parent_samples
+    backref: child_samples
+    label: derived_from
+    target_type: sample
+    multiplicity: many_to_one
+    required: false
 
-# Sample properties
-# Currently there are many TCGA-specific fields in the DB, this is an attempt
-# to minimize the core fields
+required:
+  - submitter_id
+  - sample_type
+  - tissue_type
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
-    description: >
-      The legacy barcode used before prior to the use UUIDs, varies by project.
-      For TCGA this is bcrsamplebarcode.
+
+  $ref:
+    - "_definitions.yaml#/ubiquitous_properties"
+
   biospecimen_anatomic_site:
-    term:
-      $ref: "_terms.yaml#/biospecimen_anatomic_site"
+    $ref:
+      - "_terms.yaml#/biospecimen_anatomic_site/common"
     enum:
       - Abdomen
       - Abdominal Wall
@@ -157,6 +152,9 @@ properties:
       - Endocrine Gland
       - Epididymis
       - Epidural Space
+      - Esophageal; Distal
+      - Esophageal; Mid
+      - Esophageal; Proximal
       - Esophagogastric Junction
       - Esophagus
       - Esophagus - Mucosa Only
@@ -181,15 +179,17 @@ properties:
       - Ganglia
       - Gastroesophageal Junction
       - Gastrointestinal Tract
+      - Glottis
       - Groin
       - Gum
       - Hand
       - Hard Palate
-      - Head & Neck
       - Head - Face Or Neck, Nos
+      - Head & Neck
       - Heart
       - Hepatic
       - Hepatic Duct
+      - Hepatic Flexure
       - Hepatic Vein
       - Hip
       - Hippocampus
@@ -258,6 +258,7 @@ properties:
       - Neck
       - Nerve
       - Nerve(s) Cranial
+      - Not Allowed To Collect
       - Occipital Cortex
       - Ocular Orbits
       - Omentum
@@ -268,6 +269,7 @@ properties:
       - Ovary
       - Palate
       - Pancreas
+      - Paranasal Sinuses
       - Paraspinal Ganglion
       - Parathyroid
       - Parotid Gland
@@ -321,6 +323,10 @@ properties:
       - Stomach
       - Stomach - Mucosa Only
       - Subcutaneous Tissue
+      - Subglottis
+      - Sublingual Gland
+      - Submandibular Gland
+      - Supraglottis
       - Synovium
       - Temporal Cortex
       - Tendon
@@ -355,96 +361,216 @@ properties:
       - Wrist
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-  composition:
-    term:
-      $ref: "_terms.yaml#/composition"
+    enumDef:
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
+      Other:
+        $ref:
+          - "_terms.yaml#/other/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  biospecimen_laterality:
+    $ref:
+      - "_terms.yaml#/biospecimen_laterality/common"
     enum:
-      - Buccal Cells
-      - Buffy Coat
+      - Bilateral
+      - Left
+      - Right
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  catalog_reference:
+    $ref:
+      - "_terms.yaml#/catalog_reference/common"
+    type: string
+
+  composition:
+    $ref:
+      - "_terms.yaml#/composition/common"
+    enum:
+      - 2D Classical Conditionally Reprogrammed Cells
+      - 2D Modified Conditionally Reprogrammed Cells
+      - 3D Air-Liquid Interface Organoid
+      - 3D Neurosphere
+      - 3D Organoid
+      - Adherent Cell Line
       - Bone Marrow Components
       - Bone Marrow Components NOS
-      - Control Analyte
+      - Buccal Cells
+      - Buffy Coat
       - Cell
+      - Control Analyte
       - Derived Cell Line
       - EBV Immortalized
       - Fibroblasts from Bone Marrow Normal
       - Granulocytes
       - Human Original Cells
+      - Liquid Suspension Cell Line
       - Lymphocytes
       - Mononuclear Cells from Bone Marrow Normal
+      - Not Allowed To Collect
       - Peripheral Blood Components NOS
-      - Pleural Effusion
-      - Plasma
       - Peripheral Whole Blood
-      - Serum
+      - Plasma
+      - Pleural Effusion
       - Saliva
-      - Sputum
+      - Serum
       - Solid Tissue
+      - Sorted Cells
+      - Sputum
       - Whole Bone Marrow
       - Unknown
       - Not Reported
+    deprecated_enum:
       - Not Allowed To Collect
+    enumDef:
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
   current_weight:
-    term:
-      $ref: "_terms.yaml#/current_weight"
+    $ref:
+      - "_terms.yaml#/current_weight/common"
     type: number
+
   days_to_collection:
-    term:
-      $ref: "_terms.yaml#/days_to_collection"
+    $ref:
+      - "_terms.yaml#/days_to_collection/common"
     type: integer
+    maximum: 32872
+    minimum: -32872
+
   days_to_sample_procurement:
-    term:
-      $ref: "_terms.yaml#/days_to_sample_procurement"
+    $ref:
+      - "_terms.yaml#/days_to_sample_procurement/common"
     type: integer
+    maximum: 32872
+    minimum: -32872
+
   diagnosis_pathologically_confirmed:
-    term:
-      ref: "_terms.yaml#/diagnosis_pathologically_confirmed"
+    $ref:
+      - "_terms.yaml#/diagnosis_pathologically_confirmed/common"
     enum:
+      - Not Allowed To Collect
       - "Yes"
       - "No"
       - Unknown
       - Not Reported
+    deprecated_enum:
       - Not Allowed To Collect
+    enumDef:
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  distance_normal_to_tumor:
+    $ref:
+      - "_terms.yaml#/distance_normal_to_tumor/common"
+    enum:
+      - Adjacent (< or = 2cm)
+      - Distal (>2cm)
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  distributor_reference:
+    $ref:
+      - "_terms.yaml#/distributor_reference/common"
+    type: string
+
   freezing_method:
-    term:
-      $ref: "_terms.yaml#/freezing_method"
+    $ref:
+      - "_terms.yaml#/freezing_method/common"
     type: string
+
+  growth_rate:
+    $ref:
+      - "_terms.yaml#/growth_rate/common"
+    type: integer
+    minimum: 0
+
   initial_weight:
-    term:
-      $ref: "_terms.yaml#/initial_weight"
+    $ref:
+      - "_terms.yaml#/initial_weight/common"
     type: number
+
   intermediate_dimension:
-    terms:
-      $ref: "_terms.yaml#/intermediate_dimension"
-    type: string
+    $ref:
+      - "_terms.yaml#/intermediate_dimension/common"
+    type: number
+
   is_ffpe:
-    term:
-      $ref: "_terms.yaml#/is_ffpe"
+    $ref:
+      - "_terms.yaml#/is_ffpe/common"
     type: boolean
+
   longest_dimension:
-    terms:
-      $ref: "_terms.yaml#/longest_dimension"
-    type: string
+    $ref:
+      - "_terms.yaml#/longest_dimension/common"
+    type: number
+
   method_of_sample_procurement:
-    term:
-      $ref: "_terms.yaml#/method_of_sample_procurement"
+    $ref:
+      - "_terms.yaml#/method_of_sample_procurement/common"
     enum:
       - Abdomino-perineal Resection of Rectum
       - Anterior Resection of Rectum
+      - Ascites Drainage
       - Aspirate
+      - Autopsy
       - Biopsy
       - Blood Draw
       - Bone Marrow Aspirate
+      - Buccal Mucosal Resection
       - Core Biopsy
       - Cystectomy
+      - Deep Parotidectomy
       - Endo Rectal Tumor Resection
+      - Endolaryngeal Excision
       - Endoscopic Biopsy
       - Endoscopic Mucosal Resection (EMR)
       - Enucleation
       - Excisional Biopsy
       - Fine Needle Aspiration
       - Full Hysterectomy
+      - Glossectomy
       - Gross Total Resection
       - Hand Assisted Laparoscopic Radical Nephrectomy
       - Hysterectomy NOS
@@ -455,12 +581,22 @@ properties:
       - Laparoscopic Radical Nephrectomy
       - Laparoscopic Radical Prostatectomy with Robotics
       - Laparoscopic Radical Prostatectomy without Robotics
+      - Laryngopharyngectomy
       - Left Hemicolectomy
+      - Liquid Biopsy
       - Lobectomy
       - Local Resection (Exoresection; wall resection)
       - Lumpectomy
+      - Lymph Node Dissection
+      - Lymphadenectomy
+      - Mandibulectomy
+      - Maxillectomy
+      - Metastasectomy
       - Modified Radical Mastectomy
       - Needle Biopsy
+      - Not Allowed To Collect
+      - Omentectomy
+      - Oophorectomy
       - Open Craniotomy
       - Open Partial Nephrectomy
       - Open Radical Nephrectomy
@@ -468,52 +604,126 @@ properties:
       - Orchiectomy
       - Other
       - Other Surgical Resection
+      - Palatectomy
       - Pan-Procto Colectomy
+      - Pancreatectomy
+      - Paracentesis
+      - Parotidectomy, NOS
+      - Partial Hepatectomy
+      - Partial Laryngectomy
+      - Partial Maxillectomy
+      - Partial Nephrectomy
+      - Peritoneal Lavage
       - Pneumonectomy
+      - Punch Biopsy
+      - Radical Hysterectomy
+      - Radical Maxillectomy
+      - Radical Nephrectomy
+      - Radical Prostatectomy
       - Right Hemicolectomy
+      - Salpingectomy
+      - Salpingo-oophorectomy
       - Sigmoid Colectomy
+      - Simple Hysterectomy
       - Simple Mastectomy
+      - Subtotal Prostatectomy
       - Subtotal Resection
+      - Superficial Parotidectomy
+      - Supracervical Hysterectomy
+      - Supracricoid Laryngectomy
+      - Supraglottic Laryngectomy
       - Surgical Resection
+      - Thoracentesis
       - Thoracoscopic Biopsy
+      - Tonsillectomy
       - Total Colectomy
+      - Total Hepatectomy
+      - Total Laryngectomy
       - Total Mastectomy
+      - Total Nephrectomy
+      - Transoral Laser Excision
       - Transplant
       - Transurethral resection (TURBT)
+      - Transurethral Resection (TURP)
       - Transverse Colectomy
+      - Tumor Debulking
       - Tumor Resection
+      - Vertical Hemilaryngectomy
       - Wedge Resection
+      - Whipple Procedure
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
+    enumDef:
+      Autopsy:
+        $ref:
+          - "_terms.yaml#/autopsy/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
+      Other:
+        $ref:
+          - "_terms.yaml#/other/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
   oct_embedded:
-    term:
-      $ref: "_terms.yaml#/oct_embedded"
+    $ref:
+      - "_terms.yaml#/oct_embedded/common"
     type: string
+
   pathology_report_uuid:
+    description: >-
+      UUID of the related pathology report.
     type: string
-    description: "UUID of the related pathology report." # are we still doing this? seems like the links handle this now
+
   preservation_method:
-    term:
-      $ref: "_terms.yaml#/preservation_method"
+    $ref:
+      - "_terms.yaml#/preservation_method/common"
     enum:
       - Cryopreserved
       - FFPE
       - Fresh
+      - Frozen
+      - Not Allowed To Collect
       - OCT
       - Snap Frozen
-      - Frozen
       - Unknown
       - Not Reported
+    deprecated_enum:
       - Not Allowed To Collect
+    enumDef:
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  passage_count:
+    $ref:
+      - "_terms.yaml#/passage_count/common"
+    type: integer
+    minimum: 0
+
   sample_type:
-    term:
-      $ref: "_terms.yaml#/sample_type"
+    $ref:
+      - "_terms.yaml#/sample_type/common"
     enum:
-      - Additional Metastatic
       - Additional - New Primary
+      - Additional Metastatic
+      - Benign Neoplasms
+      - Blood Derived Cancer - Bone Marrow
       - Blood Derived Cancer - Bone Marrow, Post-treatment
+      - Blood Derived Cancer - Peripheral Blood
       - Blood Derived Cancer - Peripheral Blood, Post-treatment
+      - Blood Derived Liquid Biopsy
       - Blood Derived Normal
       - Bone Marrow Normal
       - Buccal Cell Normal
@@ -522,23 +732,28 @@ properties:
       - Control Analyte
       - DNA
       - EBV Immortalized Normal
+      - Expanded Next Generation Cancer Model
       - FFPE Recurrent
       - FFPE Scrolls
       - Fibroblasts from Bone Marrow Normal
       - GenomePlex (Rubicon) Amplified DNA
       - Granulocytes
       - Human Tumor Original Cells
+      - In Situ Neoplasms
       - Lymphoid Normal
       - Metastatic
       - Mononuclear Cells from Bone Marrow Normal
-      - Primary Blood Derived Cancer - Peripheral Blood
-      - Recurrent Blood Derived Cancer - Peripheral Blood
+      - Neoplasms of Uncertain and Unknown Behavior
+      - Next Generation Cancer Model
+      - Not Allowed To Collect
       - Pleural Effusion
+      - Post neo-adjuvant therapy
       - Primary Blood Derived Cancer - Bone Marrow
+      - Primary Blood Derived Cancer - Peripheral Blood
       - Primary Tumor
       - Primary Xenograft Tissue
-      - Post neo-adjuvant therapy
       - Recurrent Blood Derived Cancer - Bone Marrow
+      - Recurrent Blood Derived Cancer - Peripheral Blood
       - Recurrent Tumor
       - Repli-G (Qiagen) DNA
       - Repli-G X (Qiagen) DNA
@@ -546,97 +761,144 @@ properties:
       - Slides
       - Solid Tissue Normal
       - Total RNA
-      - Tumor Adjacent Normal – Post Neo-adjuvant Therapy
       - Tumor
+      - Tumor Adjacent Normal - Post Neo-adjuvant Therapy
       - Xenograft Tissue
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
+    enumDef:
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
   sample_type_id:
-    term:
-      $ref: "_terms.yaml#/sample_type_id"
+    $ref:
+      - "_terms.yaml#/sample_type_id/common"
     enum:
-      - '01'
-      - '02'
-      - '03'
-      - '04'
-      - '05'
-      - '06'
-      - '07'
-      - '08'
-      - '09'
-      - '10'
-      - '11'
-      - '12'
-      - '13'
-      - '14'
-      - '15'
-      - '16'
-      - '17'
-      - '18'
-      - '20'
-      - '40'
-      - '41'
-      - '42'
-      - '50'
-      - '60'
-      - '61'
-      - '99'
+      - "01"
+      - "02"
+      - "03"
+      - "04"
+      - "05"
+      - "06"
+      - "07"
+      - "08"
+      - "09"
+      - "10"
+      - "11"
+      - "12"
+      - "13"
+      - "14"
+      - "15"
+      - "16"
+      - "17"
+      - "18"
+      - "20"
+      - "30"
+      - "31"
+      - "32"
+      - "40"
+      - "41"
+      - "42"
+      - "50"
+      - "60"
+      - "61"
+      - "85"
+      - "86"
+      - "99"
+
   shortest_dimension:
-    term:
-      $ref: "_terms.yaml#/shortest_dimension"
-    type: string
+    $ref:
+      - "_terms.yaml#/shortest_dimension/common"
+    type: number
+
   time_between_clamping_and_freezing:
-    term:
-      $ref: "_terms.yaml#/time_between_clamping_and_freezing"
-    type: string
+    $ref:
+      - "_terms.yaml#/time_between_clamping_and_freezing/common"
+    type: number
+
   time_between_excision_and_freezing:
-    term:
-      $ref: "_terms.yaml#/time_between_excision_and_freezing"
-    type: string
+    $ref:
+      - "_terms.yaml#/time_between_excision_and_freezing/common"
+    type: number
+
+  tissue_collection_type:
+    $ref:
+      - "_terms.yaml#/tissue_collection_type/common"
+    enum:
+      - Prospective
+      - Retrospective
+
   tissue_type:
-    term:
-      $ref: "_terms.yaml#/tissue_type"
+    $ref:
+      - "_terms.yaml#/tissue_type/common"
     enum:
       - Tumor
       - Normal
       - Abnormal
       - Peritumoral
+      - Not Allowed To Collect
       - Unknown
       - Not Reported
+    deprecated_enum:
       - Not Allowed To Collect
+    enumDef:
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
   tumor_code:
-    term:
-      $ref: "_terms.yaml#/tumor_code"
+    $ref:
+      - "_terms.yaml#/tumor_code/common"
     enum:
-      - Non cancerous tissue
-      - Diffuse Large B-Cell Lymphoma (DLBCL)
-      - Lung Cancer (all types)
-      - Cervical Cancer (all types)
-      - Anal Cancer (all types)
       - Acute Leukemia of Ambiguous Lineage (ALAL)
       - Acute lymphoblastic leukemia (ALL)
       - Acute myeloid leukemia (AML)
-      - Induction Failure AML (AML-IF)
-      - Neuroblastoma (NBL)
-      - Osteosarcoma (OS)
-      - Ewing sarcoma
-      - Wilms tumor (WT)
+      - Anal Cancer (all types)
+      - Cervical Cancer (all types)
       - Clear cell sarcoma of the kidney (CCSK)
-      - Rhabdoid tumor (kidney) (RT)
       - CNS, ependymoma
       - CNS, glioblastoma (GBM)
-      - CNS, rhabdoid tumor
       - CNS, low grade glioma (LGG)
       - CNS, medulloblastoma
       - CNS, other
+      - CNS, rhabdoid tumor
+      - Diffuse Large B-Cell Lymphoma (DLBCL)
+      - Ewing sarcoma
+      - Induction Failure AML (AML-IF)
+      - Lung Cancer (all types)
+      - Neuroblastoma (NBL)
       - NHL, anaplastic large cell lymphoma
       - NHL, Burkitt lymphoma (BL)
+      - Non cancerous tissue
+      - Osteosarcoma (OS)
+      - Rhabdoid tumor (kidney) (RT)
       - Rhabdomyosarcoma
       - Soft tissue sarcoma, non-rhabdomyosarcoma
+      - Wilms tumor (WT)
+    enumDef:
+      Ewing sarcoma:
+        $ref:
+          - "_terms.yaml#/ewing_sarcoma/common"
+      Rhabdomyosarcoma:
+        $ref:
+          - "_terms.yaml#/rhabdomyosarcoma/common"
+
   tumor_code_id:
-    term:
-      $ref: "_terms.yaml#/tumor_code_id"
+    $ref:
+      - "_terms.yaml#/tumor_code_id/common"
     enum:
       - "00"
       - "01"
@@ -663,33 +925,42 @@ properties:
       - "71"
       - "80"
       - "81"
+
   tumor_descriptor:
-    term:
-      $ref: "_terms.yaml#/tumor_descriptor"
+    $ref:
+      - "_terms.yaml#/tumor_descriptor/common"
     enum:
       - Metastatic
+      - NOS
+      - Not Allowed To Collect
       - Not Applicable
+      - Premalignant
       - Primary
       - Recurrence
       - Xenograft
-      - NOS
       - Unknown
       - Not Reported
+    deprecated_enum:
       - Not Allowed To Collect
-    description: "A description of the tumor from which the sample was derived." # TOREVIEW
+    enumDef:
+      Not Allowed To Collect:
+        $ref:
+          - "_terms.yaml#/not_allowed_to_collect/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
   cases:
-    #should this be to_one
     $ref: "_definitions.yaml#/to_one"
-    description: >
-      Indicates that the sample is physically derived from the subject
-      of the linked to case via some process/protocol
+
   tissue_source_sites:
     $ref: "_definitions.yaml#/to_one"
+
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    type: string
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
+
+  parent_samples:
+    $ref: "_definitions.yaml#/to_one"

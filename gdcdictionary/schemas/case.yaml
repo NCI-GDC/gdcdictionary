@@ -3,15 +3,17 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "case"
 title: Case
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://gdc.cancer.gov
 category: administrative
-program: '*'
 project: '*'
-description: >
-  The collection of all data related to a specific subject in the
-  context of a specific project.
+program: '*'
+description: >-
+  The collection of all data related to a specific subject in the context of a specific
+  project.
 additionalProperties: false
 submittable: true
+downloadable: false
+previous_version_downloadable: false
 validators: null
 
 systemProperties:
@@ -37,57 +39,366 @@ links:
 
 required:
   - submitter_id
-  - projects
 
 uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
-# Case properties
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
-  days_to_lost_to_followup:
-    term:
-      $ref: "_terms.yaml#/days_to_lost_to_followup"
+
+  $ref:
+    - "_definitions.yaml#/ubiquitous_properties"
+
+  consent_type:
+    $ref:
+      - "_terms.yaml#/consent_type/common"
+    enum:
+      - Consent by Death
+      - Consent Exemption
+      - Consent Waiver
+      - Informed Consent
+
+  days_to_consent:
+    $ref:
+      - "_terms.yaml#/days_to_consent/common"
     type: integer
+
+  days_to_lost_to_followup:
+    $ref:
+      - "_terms.yaml#/days_to_lost_to_followup/common"
+    type: integer
+    maximum: 32872
+    minimum: -32872
+
   disease_type:
-    term:
-      $ref: "_terms.yaml#/disease_type"
-    type: string
+    $ref:
+      - "_terms.yaml#/disease_type/common"
+    enum:
+      - Acinar Cell Neoplasms
+      - Adenomas and Adenocarcinomas
+      - Adnexal and Skin Appendage Neoplasms
+      - Basal Cell Neoplasms
+      - Blood Vessel Tumors
+      - Chronic Myeloproliferative Disorders
+      - Complex Epithelial Neoplasms
+      - Complex Mixed and Stromal Neoplasms
+      - Cystic, Mucinous and Serous Neoplasms
+      - Ductal and Lobular Neoplasms
+      - Epithelial Neoplasms, NOS
+      - Fibroepithelial Neoplasms
+      - Fibromatous Neoplasms
+      - Germ Cell Neoplasms
+      - Giant Cell Tumors
+      - Gliomas
+      - Granular Cell Tumors and Alveolar Soft Part Sarcomas
+      - Hodgkin Lymphoma
+      - Immunoproliferative Diseases
+      - Leukemias, NOS
+      - Lipomatous Neoplasms
+      - Lymphatic Vessel Tumors
+      - Lymphoid Leukemias
+      - Malignant Lymphomas, NOS or Diffuse
+      - Mast Cell Tumors
+      - Mature B-Cell Lymphomas
+      - Mature T- and NK-Cell Lymphomas
+      - Meningiomas
+      - Mesonephromas
+      - Mesothelial Neoplasms
+      - Miscellaneous Bone Tumors
+      - Miscellaneous Tumors
+      - Mucoepidermoid Neoplasms
+      - Myelodysplastic Syndromes
+      - Myeloid Leukemias
+      - Myomatous Neoplasms
+      - Myxomatous Neoplasms
+      - Neoplasms, NOS
+      - Neoplasms of Histiocytes and Accessory Lymphoid Cells
+      - Nerve Sheath Tumors
+      - Neuroepitheliomatous Neoplasms
+      - Nevi and Melanomas
+      - Odontogenic Tumors
+      - Osseous and Chondromatous Neoplasms
+      - Other Hematologic Disorders
+      - Other Leukemias
+      - Paragangliomas and Glomus Tumors
+      - Plasma Cell Tumors
+      - Precursor Cell Lymphoblastic Lymphoma
+      - Soft Tissue Tumors and Sarcomas, NOS
+      - Specialized Gonadal Neoplasms
+      - Squamous Cell Neoplasms
+      - Synovial-like Neoplasms
+      - Thymic Epithelial Neoplasms
+      - Transitional Cell Papillomas and Carcinomas
+      - Trophoblastic neoplasms
+      - Unknown
+      - Not Reported
+      - Not Applicable
+      - Acute Lymphoblastic Leukemia
+      - Acute Myeloid Leukemia
+      - Adrenocortical Carcinoma
+      - Bladder Urothelial Carcinoma
+      - Brain Lower Grade Glioma
+      - Breast Invasive Carcinoma
+      - Burkitt Lymphoma
+      - Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma
+      - Cholangiocarcinoma
+      - Chronic Lymphocytic Leukemia
+      - Clear Cell Sarcoma of the Kidney
+      - Colon Adenocarcinoma
+      - Esophageal Carcinoma
+      - Glioblastoma Multiforme
+      - Head and Neck Squamous Cell Carcinoma
+      - High-Risk Wilms Tumor
+      - HIV+ Tumor Molecular Characterization Project - Cervical Cancer
+      - HIV+ Tumor Molecular Characterization Project - Lung Cancer
+      - Kidney Chromophobe
+      - Kidney Renal Clear Cell Carcinoma
+      - Kidney Renal Papillary Cell Carcinoma
+      - Liver Hepatocellular Carcinoma
+      - Lung Adenocarcinoma
+      - Lung Squamous Cell Carcinoma
+      - Lymphoid Neoplasm Diffuse Large B-cell Lymphoma
+      - Mesothelioma
+      - Multiple Myeloma
+      - Neuroblastoma
+      - Osteosarcoma
+      - Ovarian Serous Cystadenocarcinoma
+      - Pancreatic Adenocarcinoma
+      - Pheochromocytoma and Paraganglioma
+      - Prostate Adenocarcinoma
+      - Rectum Adenocarcinoma
+      - Rhabdoid Tumor
+      - Sarcoma
+      - Skin Cutaneous Melanoma
+      - Stomach Adenocarcinoma
+      - Testicular Germ Cell Tumors
+      - Thymoma
+      - Thyroid Carcinoma
+      - Uterine Carcinosarcoma
+      - Uterine Corpus Endometrial Carcinoma
+      - Uveal Melanoma
+    deprecated_enum:
+      - Acute Lymphoblastic Leukemia
+      - Acute Myeloid Leukemia
+      - Adrenocortical Carcinoma
+      - Bladder Urothelial Carcinoma
+      - Brain Lower Grade Glioma
+      - Breast Invasive Carcinoma
+      - Burkitt Lymphoma
+      - Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma
+      - Cholangiocarcinoma
+      - Chronic Lymphocytic Leukemia
+      - Clear Cell Sarcoma of the Kidney
+      - Colon Adenocarcinoma
+      - Esophageal Carcinoma
+      - Glioblastoma Multiforme
+      - Head and Neck Squamous Cell Carcinoma
+      - High-Risk Wilms Tumor
+      - HIV+ Tumor Molecular Characterization Project - Cervical Cancer
+      - HIV+ Tumor Molecular Characterization Project - Lung Cancer
+      - Kidney Chromophobe
+      - Kidney Renal Clear Cell Carcinoma
+      - Kidney Renal Papillary Cell Carcinoma
+      - Liver Hepatocellular Carcinoma
+      - Lung Adenocarcinoma
+      - Lung Squamous Cell Carcinoma
+      - Lymphoid Neoplasm Diffuse Large B-cell Lymphoma
+      - Mesothelioma
+      - Multiple Myeloma
+      - Neuroblastoma
+      - Osteosarcoma
+      - Ovarian Serous Cystadenocarcinoma
+      - Pancreatic Adenocarcinoma
+      - Pheochromocytoma and Paraganglioma
+      - Prostate Adenocarcinoma
+      - Rectum Adenocarcinoma
+      - Rhabdoid Tumor
+      - Sarcoma
+      - Skin Cutaneous Melanoma
+      - Stomach Adenocarcinoma
+      - Testicular Germ Cell Tumors
+      - Thymoma
+      - Thyroid Carcinoma
+      - Uterine Carcinosarcoma
+      - Uterine Corpus Endometrial Carcinoma
+      - Uveal Melanoma
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+      Mesothelioma:
+        $ref:
+          - "_terms.yaml#/mesothelioma/common"
+      Multiple Myeloma:
+        $ref:
+          - "_terms.yaml#/multiple_myeloma/common"
+      Neuroblastoma:
+        $ref:
+          - "_terms.yaml#/neuroblastoma/common"
+      Osteosarcoma:
+        $ref:
+          - "_terms.yaml#/osteosarcoma/common"
+      Sarcoma:
+        $ref:
+          - "_terms.yaml#/sarcoma/common"
+
   index_date:
-    term:
-      $ref: "_terms.yaml#/index_date"
+    $ref:
+      - "_terms.yaml#/index_date/common"
     enum:
       - Diagnosis
       - First Patient Visit
+      - First Treatment
+      - Initial Genomic Sequencing
+      - Recurrence
+      - Sample Procurement
       - Study Enrollment
+
   lost_to_followup:
-    term:
-      $ref: "_terms.yaml#/lost_to_followup"
+    $ref:
+      - "_terms.yaml#/lost_to_followup/common"
     enum:
       - "Yes"
       - "No"
+      - Unknown
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+
   primary_site:
-    term:
-      $ref: "_terms.yaml#/primary_site"
-    type: string
+    $ref:
+      - "_terms.yaml#/primary_site/common"
+    enum:
+      - Accessory sinuses
+      - Adrenal gland
+      - Anus and anal canal
+      - Base of tongue
+      - Bladder
+      - Bones, joints and articular cartilage of limbs
+      - Bones, joints and articular cartilage of other and unspecified sites
+      - Brain
+      - Breast
+      - Bronchus and lung
+      - Cervix uteri
+      - Colon
+      - Connective, subcutaneous and other soft tissues
+      - Corpus uteri
+      - Esophagus
+      - Eye and adnexa
+      - Floor of mouth
+      - Gallbladder
+      - Gum
+      - Heart, mediastinum, and pleura
+      - Hematopoietic and reticuloendothelial systems
+      - Hypopharynx
+      - Kidney
+      - Larynx
+      - Lip
+      - Liver and intrahepatic bile ducts
+      - Lymph nodes
+      - Meninges
+      - Nasal cavity and middle ear
+      - Nasopharynx
+      - Oropharynx
+      - Other and ill-defined digestive organs
+      - Other and ill-defined sites
+      - Other and ill-defined sites in lip, oral cavity and pharynx
+      - Other and ill-defined sites within respiratory system and intrathoracic organs
+      - Other and unspecified female genital organs
+      - Other and unspecified major salivary glands
+      - Other and unspecified male genital organs
+      - Other and unspecified parts of biliary tract
+      - Other and unspecified parts of mouth
+      - Other and unspecified parts of tongue
+      - Other and unspecified urinary organs
+      - Other endocrine glands and related structures
+      - Ovary
+      - Palate
+      - Pancreas
+      - Parotid gland
+      - Penis
+      - Peripheral nerves and autonomic nervous system
+      - Placenta
+      - Prostate gland
+      - Pyriform sinus
+      - Rectosigmoid junction
+      - Rectum
+      - Renal pelvis
+      - Retroperitoneum and peritoneum
+      - Skin
+      - Small intestine
+      - Spinal cord, cranial nerves, and other parts of central nervous system
+      - Stomach
+      - Testis
+      - Thymus
+      - Thyroid gland
+      - Tonsil
+      - Trachea
+      - Ureter
+      - Uterus, NOS
+      - Vagina
+      - Vulva
+      - Unknown
+      - Not Reported
+      - Adrenal Gland
+      - Bile Duct
+      - Blood
+      - Bone
+      - Bone Marrow
+      - Cervix
+      - Colorectal
+      - Eye
+      - Head and Neck
+      - Liver
+      - Lung
+      - Lymph Nodes
+      - Nervous System
+      - Not Applicable
+      - Pleura
+      - Prostate
+      - Soft Tissue
+      - Thyroid
+      - Uterus
+    deprecated_enum:
+      - Adrenal Gland
+      - Bile Duct
+      - Blood
+      - Bone
+      - Bone Marrow
+      - Cervix
+      - Colorectal
+      - Eye
+      - Head and Neck
+      - Liver
+      - Lung
+      - Lymph Nodes
+      - Nervous System
+      - Not Applicable
+      - Pleura
+      - Prostate
+      - Soft Tissue
+      - Thyroid
+      - Uterus
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
   projects:
     $ref: "_definitions.yaml#/to_one"
+
   tissue_source_sites:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"

@@ -1,0 +1,40 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "root"
+title: Root
+type: object
+namespace: https://gdc.cancer.gov
+category: data
+project: '*'
+program: '*'
+description: >-
+  This is the GDC root node.
+additionalProperties: false
+submittable: false
+downloadable: false
+previous_version_downloadable: false
+validators: null
+root: '*'
+
+systemProperties:
+  - id
+
+links: []
+
+required:
+  - type
+
+uniqueKeys:
+  - [id]
+
+properties:
+
+  type:
+    type: string
+
+  id:
+    enum:
+      - "root"
+
+  schema_version:
+    type: string

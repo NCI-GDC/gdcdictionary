@@ -1,0 +1,58 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "copy_number_variation_workflow"
+title: Copy Number Variation Workflow
+type: object
+namespace: https://gdc.cancer.gov
+category: analysis
+project: '*'
+program: '*'
+description: >-
+  Metadata for the Copy Number Variation pipeline used to estimate copy number changes
+  from different molecular data sources.
+additionalProperties: false
+submittable: false
+downloadable: false
+previous_version_downloadable: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: copy_number_segments
+    backref: copy_number_variation_workflows
+    label: performed_on
+    target_type: copy_number_segment
+    multiplicity: many_to_many
+    required: true
+
+required:
+  - submitter_id
+  - workflow_link
+  - workflow_type
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+
+  $ref:
+    - "_definitions.yaml#/workflow_properties"
+
+  workflow_type:
+    $ref:
+      - "_terms.yaml#/workflow_type/common"
+    enum:
+      - GISTIC - Copy Number Score
+      - GISTIC - Arm Level Copy Number
+      - GISTIC - Focal Deletion
+      - GISTIC - Focal Amplification
+
+  copy_number_segments:
+    $ref: "_definitions.yaml#/to_many"

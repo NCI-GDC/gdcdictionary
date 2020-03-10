@@ -2,10 +2,11 @@
     "type": "family_history",
     "submitter_id": "family_history_of_patient_X",
     "relative_with_cancer_history": "yes",
-    "relationship_type": "cousin",
+    "relationship_type": "Cousin",
     "relationship_gender": "unspecified",
-    "relationship_age_at_diagnosis": 12345,
-    "relationship_primary_diagnosis": "cancer",
+    "relationship_age_at_diagnosis": 12,
+    "relationship_primary_diagnosis": "Cancer",
+    "relatives_with_cancer_history_count":4,
     "cases": {
         "submitter_id": "patient_z"
     }
