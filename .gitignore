@@ -30,6 +30,7 @@ var/
 pip-log.txt
 pip-delete-this-directory.txt
 .python-version
+_version.py
 
 # Unit test / coverage reports
 htmlcov/
@@ -40,6 +41,15 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *,cover
+test-reports/
+
+# Jenkins 
+.local/
+.eggs/
+.ssh/
+*/_version.py
+wait-for-it.sh
+
 
 # Translations
 *.mo
