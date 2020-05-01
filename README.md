@@ -1,3 +1,6 @@
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commitlogoColor=white)](https://github.com/pre-commit/pre-commit)
+
+---
 # GDC Data Dictionary
 
 The Genomic Data Commons’ (GDC) data dictionary provides the first
@@ -164,6 +167,31 @@ line in setup.py file to `MAJOR.MINOR.PATCH` accordingly:
    - e.g. 1.2.4 -> 1.3.0
 3. PATCH: version when you make backwards-compatible bug fixes: **Cosmetic Corrections**
    - e.g. 1.2.4 -> 1.2.5
+
+
+    
+## Setup pre-commit hook to check for secrets
+
+We use [pre-commit](https://pre-commit.com/) to setup pre-commit hooks for this repo.
+We use [detect-secrets](https://github.com/Yelp/detect-secrets) to search for secrets being committed into the repo. 
+
+To install the pre-commit hook, run
+```
+pre-commit install
+```
+
+To update the .secrets.baseline file run
+```
+detect-secrets scan --update .secrets.baseline
+git add .secrets.baseline
+```
+
+`.secrets.baseline` contains all the string that were caught by detect-secrets but are not stored in plain text. Audit the baseline to view the secrets . 
+
+```
+detect-secrets audit .secrets.baseline
+```
+
 
 ## Contributing
 
