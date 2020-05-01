@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/NCI-GDC/gdcdictionary.svg?branch=master)](https://travis-ci.com/NCI-GDC/gdcdictionary)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commitlogoColor=white)](https://github.com/pre-commit/pre-commit)
 
 ---
@@ -9,6 +10,19 @@ GDC. JSON schemas define all the individual entities (nodes) in the
 GDC data model. Moreover, these schemas define all of the
 relationships (links) between the nodes. Finally, the schemas define
 the valid key-value pairs that can be used to describe the nodes.
+
+- [GDC Data Dictionary](#gdc-data-dictionary)
+  - [GDC Data Dictionary Structure](#gdc-data-dictionary-structure)
+  - [Node Properties and Examples](#node-properties-and-examples)
+  - [Dictionary Changes](#dictionary-changes)
+    - [Breaking Changes](#breaking-changes)
+    - [Entity Relation Additions](#entity-relation-additions)
+    - [Schema Additions](#schema-additions)
+    - [Cosmetic Corrections](#cosmetic-corrections)
+    - [Testing](#testing)
+    - [Versioning](#versioning)
+  - [Setup pre-commit hook to check for secrets](#setup-pre-commit-hook-to-check-for-secrets)
+  - [Contributing](#contributing)
 
 ## GDC Data Dictionary Structure
 
