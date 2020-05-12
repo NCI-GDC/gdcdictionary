@@ -197,7 +197,6 @@ pre-commit install
 To update the .secrets.baseline file run
 ```
 detect-secrets scan --update .secrets.baseline
-git add .secrets.baseline
 ```
 
 `.secrets.baseline` contains all the string that were caught by detect-secrets but are not stored in plain text. Audit the baseline to view the secrets . 
