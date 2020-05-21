@@ -1,8 +1,8 @@
 id: _definitions
 
-UUID:
+uuid:
     term:
-        $ref: "_terms.yaml#/UUID"
+        $ref: "_terms.yaml#/uuid"
     type: string
     pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
 
@@ -10,7 +10,7 @@ parent_uuids:
     type: array
     minItems: 1
     items:
-        $ref: "#/UUID"
+        $ref: "#/uuid"
     uniqueItems: true
 
 foreign_key_project:
@@ -18,11 +18,11 @@ foreign_key_project:
     # Allow true here because we can have other unique keys defined on
     # a target type
     additionalProperties: true
-    # Can either use 'id' which are Gen3 IDs (UUID) or 'code'
+    # Can either use 'id' which are Gen3 IDs (uuid) or 'code'
     # which is the user defined ID for project
     properties:
         id:
-            $ref: "#/UUID"
+            $ref: "#/uuid"
         code:
             type: string
 
@@ -48,11 +48,11 @@ foreign_key:
     # Allow true here because we can have other unique keys defined on
     # a target type
     additionalProperties: True
-    # Can either use 'id' which are GDC IDs (UUID) or 'submitter_id'
+    # Can either use 'id' which are GDC IDs (uuid) or 'submitter_id'
     # which are user defined IDs ("submitter IDs in the backend")
     properties:
         id:
-            $ref: "#/UUID"
+            $ref: "#/uuid"
         submitter_id:
             type: string
 
@@ -88,7 +88,7 @@ file_name:
 
 file_size:
     type: integer
-    term: 
+    term:
         $ref: "_terms.yaml#/file_size"
 
 file_format:
@@ -135,7 +135,7 @@ data_file_error_type:
 
 state:
     term:
-        $ref: "_terms.yaml#/state" 
+        $ref: "_terms.yaml#/state"
     default: validated
     downloadable:
         - uploaded
@@ -166,7 +166,7 @@ state:
 
 file_state:
     term:
-        $ref: "_terms.yaml#/file_state" 
+        $ref: "_terms.yaml#/file_state"
     default: registered
     enum:
         - registered
@@ -195,7 +195,7 @@ project_id:
 
 data_file_properties:
   id:
-    $ref: "#/UUID"
+    $ref: "#/uuid"
     systemAlias: node_id
   submitter_id:
     type:
@@ -211,7 +211,7 @@ data_file_properties:
   file_size:
     $ref: "#/file_size"
   md5sum:
-    $ref: "#/md5sum" 
+    $ref: "#/md5sum"
   file_state:
     $ref: "#/file_state"
   object_id:
@@ -222,7 +222,7 @@ data_file_properties:
     $ref: "#/data_file_error_type"
   state_comment:
     type: string
-    description: > 
+    description: >
       Optional comment about why the file is in the
       current state, mainly for invalid state.
   project_id:
@@ -234,7 +234,7 @@ data_file_properties:
 
 workflow_properties:
   id:
-    $ref: "#/UUID"
+    $ref: "#/uuid"
     systemAlias: node_id
   submitter_id:
     type:
@@ -264,14 +264,14 @@ ubiquitous_properties:
   type:
     type: string
   id:
-    $ref: "#/UUID"
+    $ref: "#/uuid"
     systemAlias: node_id
   submitter_id:
     type:
       - string
     description: >
       A project-specific identifier for a node. This property is the calling card/nickname/alias for
-      a unit of submission. It can be used in place of the UUID for identifying or recalling a node.
+      a unit of submission. It can be used in place of the uuid for identifying or recalling a node.
   state:
     $ref: "#/state"
   project_id:
