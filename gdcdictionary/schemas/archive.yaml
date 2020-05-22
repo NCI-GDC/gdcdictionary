@@ -70,6 +70,7 @@ properties:
     enum:
       - TCGA DCC Archive
       - TARGET DCC Archive
+      - CellRanger Archive
 
   data_format:
     $ref:
