@@ -129,9 +129,28 @@ properties:
         $ref:
           - "_terms.yaml#/not_reported/common"
 
+  alcohol_type:
+    enum:
+      - Beer
+      - Liquor
+      - Other
+      - Wine
+      - Unknown
+      - Not Reported
+    enumDef:
+      Other:
+        $ref:
+          - "_terms.yaml#/other/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
   asbestos_exposure:
     $ref:
-      - "_terms.yaml#asbestos_exposure"
+      - "_terms.yaml#/asbestos_exposure/common"
     enum:
       - "Yes"
       - "No"
@@ -220,7 +239,9 @@ properties:
       - "_terms.yaml#/exposure_type/common"
     enum:
       - Marijuana
+      - Smoke
       - Tobacco
+      - Wood Dust
     enumDef:
       Marijuana:
         $ref:
@@ -305,6 +326,9 @@ properties:
       Not Reported:
         $ref:
           - "_terms.yaml#/not_reported/common"
+
+  smokeless_tobacco_quit_age:
+    type: integer
 
   smoking_frequency:
     $ref:
@@ -450,6 +474,7 @@ properties:
       - Smokehouse smoke
       - Tobacco smoke, cigar
       - Tobacco smoke, cigarettes
+      - Tobacco smoke, NOS
       - Tobacco smoke, pipe
       - Volcanic smoke
       - Waste burning smoke
