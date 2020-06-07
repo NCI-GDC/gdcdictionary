@@ -812,6 +812,7 @@ properties:
       - Algenpantucel-L
       - Alisertib
       - Alitretinoin
+      - ALK Inhibitor
       - ALK Inhibitor ASP3026
       - ALK Inhibitor PLB 1003
       - ALK Inhibitor RO5424802
@@ -1792,6 +1793,7 @@ properties:
       - CDK2/4/6/FLT3 Inhibitor FN-1501
       - CDK2/5/9 Inhibitor CYC065
       - CDK4 Inhibitor P1446A-05
+      - CDK4/6 inhibitor
       - CDK4/6 Inhibitor BPI-16350
       - CDK4/6 Inhibitor FCN-437
       - CDK4/6 Inhibitor G1T38
@@ -2275,6 +2277,7 @@ properties:
       - Essiac
       - Esterified Estrogens
       - Estradiol mustard
+      - Estradiol mustard
       - Estradiol Valerate
       - Estramustine
       - Estramustine Phosphate Sodium
@@ -2650,6 +2653,7 @@ properties:
       - Ifabotuzumab
       - Ifetroban
       - Ifosfamide
+      - IGF-1R Inhibitor
       - IGF-1R Inhibitor PL225B
       - IGF-1R/IR Inhibitor KW-2450
       - IGF-methotrexate Conjugate
@@ -2780,6 +2784,7 @@ properties:
       - Itacitinib
       - Itacitinib Adipate
       - ITK Inhibitor CPI-818
+      - Itraconazole
       - Itraconazole Dispersion In Polymer Matrix
       - Ivosidenib
       - Ixabepilone
@@ -3334,7 +3339,6 @@ properties:
       - Noscapine
       - Noscapine Hydrochloride
       - Not Otherwise Specified
-      - Not Reported
       - Notch Signaling Inhibitor PF-06650808
       - Notch Signaling Pathway Inhibitor MK0752
       - NTRK/ROS1 Inhibitor DS-6051b
@@ -3526,6 +3530,7 @@ properties:
       - PCNU
       - PD-0332991
       - PD-1 Directed Probody CX-188
+      - PD-1 inhibitor
       - PD-L1 Inhibitor INCB086550
       - PD-L1/PD-L2/VISTA Antagonist CA-170
       - PDK1 Inhibitor AR-12
@@ -3758,6 +3763,7 @@ properties:
       - Procarbazine
       - Procarbazine Hydrochloride
       - Procaspase Activating Compound-1 VO-100
+      - Progestational IUD
       - Prohibitin-Targeting Peptide 1
       - Prostaglandin E2 EP4 Receptor Inhibitor E7046
       - Prostate Cancer Vaccine ONY-P1
@@ -4322,6 +4328,8 @@ properties:
       - Tiomolibdate Diammonium
       - Tipapkinogene Sovacivec
       - Tipifarnib
+      - Tipiracil
+      - Tipiracil Hydrochloride
       - Tirabrutinib
       - Tiragolumab
       - Tirapazamine
@@ -4468,7 +4476,6 @@ properties:
       - Ulocuplumab
       - Umbralisib
       - Uncaria tomentosa Extract
-      - Unknown
       - Upamostat
       - Uproleselan
       - Uprosertib
@@ -4633,6 +4640,7 @@ properties:
       - Zinc Finger Nuclease ZFN-758
       - Zinostatin
       - Zinostatin Stimalamer
+      - Zirconium Zr 89 Panitumumab
       - Ziv-Aflibercept
       - Zolbetuximab
       - Zoledronic Acid
@@ -4641,6 +4649,8 @@ properties:
       - Zorubicin
       - Zorubicin Hydrochloride
       - Zuclomiphene Citrate
+      - Unknown
+      - Not Reported
     deprecated_enum:
       - 5-Fluorouracil (5-FU)
       - 5-Fluorouracil (5-FU) ; Leucovorin ; Oxaliplatin (Eloxatin)
@@ -4691,7 +4701,6 @@ properties:
       - 'FOLFIRI: 5-FU, Irinotecan, Leucovorin'
       - Folfirinox/ mFolfirinox
       - FOLFOX
-      - Folic Acid
       - Fulvestrant (Faslodex)
       - GDC-0449 (Vismodegib)
       - Gemcitabine (Gemzar)
@@ -4741,12 +4750,12 @@ properties:
       - XL184 (Cabozantinib s-malate)
       - Zoledronic acid (zolendronate, Zometa)
     enumDef:
-      Not Reported:
-        $ref:
-          - "_terms.yaml#/not_reported/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
