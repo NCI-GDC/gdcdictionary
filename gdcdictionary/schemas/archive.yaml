@@ -84,7 +84,7 @@ properties:
     type: number
 
   projects:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one_project"
 
   related_to_files:
     $ref: "_definitions.yaml#/to_many"

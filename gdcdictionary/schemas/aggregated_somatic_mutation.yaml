@@ -93,7 +93,7 @@ properties:
       - WXS
 
   projects:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one_project"
 
   somatic_aggregation_workflows:
     $ref: "_definitions.yaml#/to_one"
