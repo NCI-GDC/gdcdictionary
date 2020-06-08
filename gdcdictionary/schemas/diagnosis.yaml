@@ -12130,7 +12130,7 @@ properties:
           - "_terms.yaml#/ewing_sarcoma/common"
       Ewing tumor:
         $ref:
-          - "_terms.yaml#/ewing_tumor/common"
+          - "_terms.yaml#/ewing_sarcoma/common"
       Extra-abdominal desmoid:
         $ref:
           - "_terms.yaml#/extraabdominal_desmoid/common"
@@ -18090,35 +18090,7 @@ properties:
 
   sites_of_involvement:
     type: array
-    items:
-      enum:
-        - Abdominal Peritoneum
-        - Cervix
-        - Fallopian Tube, Left
-        - Fallopian Tube, NOS
-        - Fallopian Tube, Right
-        - Kidney, Lower Pole
-        - Kidney, Middle
-        - Kidney, Upper Pole
-        - Omentum
-        - Other
-        - Ovary, Left
-        - Ovary, NOS
-        - Ovary, Right
-        - Pelvic Peritoneum
-        - Uterus
-        - Unknown
-        - Not Reported
-    enumDef:
-      Abdominal Peritoneum:
-        $ref:
-          - "_terms.yaml#/abdominal_peritoneum/common"
-      Omentum:
-        $ref:
-          - "_terms.yaml#/omentum/common"
-      Not Reported:
-        $ref:
-          - "_terms.yaml#/not_reported/common"
+    items: enum
 
   supratentorial_localization:
     $ref:
