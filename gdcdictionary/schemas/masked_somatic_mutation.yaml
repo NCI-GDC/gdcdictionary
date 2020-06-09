@@ -101,7 +101,7 @@ properties:
       - WXS
 
   projects:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one_project"
 
   genomic_profile_harmonization_workflows:
     $ref: "_definitions.yaml#/to_many"
