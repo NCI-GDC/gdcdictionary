@@ -1793,7 +1793,7 @@ properties:
       - CDK2/4/6/FLT3 Inhibitor FN-1501
       - CDK2/5/9 Inhibitor CYC065
       - CDK4 Inhibitor P1446A-05
-      - CDK4/6 inhibitor
+      - CDK4/6 Inhibitor
       - CDK4/6 Inhibitor BPI-16350
       - CDK4/6 Inhibitor FCN-437
       - CDK4/6 Inhibitor G1T38
@@ -2276,7 +2276,6 @@ properties:
       - Esperamicin A1
       - Essiac
       - Esterified Estrogens
-      - Estradiol mustard
       - Estradiol mustard
       - Estradiol Valerate
       - Estramustine
@@ -3530,7 +3529,7 @@ properties:
       - PCNU
       - PD-0332991
       - PD-1 Directed Probody CX-188
-      - PD-1 inhibitor
+      - PD-1 Inhibitor
       - PD-L1 Inhibitor INCB086550
       - PD-L1/PD-L2/VISTA Antagonist CA-170
       - PDK1 Inhibitor AR-12
