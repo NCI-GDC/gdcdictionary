@@ -82,6 +82,7 @@ properties:
       - HLA-DR
       - Mesothelin
       - NSE
+      - Prostate-Specific Antigen (PSA)
       - Squamous Cell Carcinoma Antigen (SCCA)
       - Unknown
       - Not Reported
@@ -92,16 +93,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms.yaml#/not_reported/common"
-
-  blood_test_normal_range_lower:
-    $ref:
-      - "_terms.yaml#/blood_test_normal_range_lower/common"
-    type: number
-
-  blood_test_normal_range_upper:
-    $ref:
-      - "_terms.yaml#/blood_test_normal_range_upper/common"
-    type: number
 
   biospecimen_type:
     $ref:
@@ -139,6 +130,19 @@ properties:
       Not Reported:
         $ref:
           - "_terms.yaml#/not_reported/common"
+
+  biospecimen_volume:
+    type: number
+
+  blood_test_normal_range_lower:
+    $ref:
+      - "_terms.yaml#/blood_test_normal_range_lower/common"
+    type: number
+
+  blood_test_normal_range_upper:
+    $ref:
+      - "_terms.yaml#/blood_test_normal_range_upper/common"
+    type: number
 
   cell_count:
     $ref:
@@ -512,6 +516,7 @@ properties:
       - HOXA11
       - HOXA13
       - HOXA9
+      - HOXB1
       - HOXC11
       - HOXC13
       - HOXD11
@@ -522,7 +527,6 @@ properties:
       - ID3
       - IDH1
       - IDH2
-      - IGH
       - IGH
       - IGK
       - IGKC
@@ -994,6 +998,7 @@ properties:
     $ref:
       - "_terms.yaml#/laboratory_test/common"
     enum:
+      - 5-Hydroxyindoleacetic Acid
       - Absolute Neutrophil
       - Albumin
       - Alpha Fetoprotein
@@ -1004,10 +1009,13 @@ properties:
       - C-Reactive Protein
       - Calcium
       - Cellularity
+      - Chromogranin A
+      - Chromogranin B
       - Circulating Tumor Cells
       - Creatinine
       - Eosinophil
       - Epstein-Barr Virus
+      - Gamma-Enolase
       - Glucose
       - Hematocrit
       - Hemoglobin
@@ -1101,6 +1109,14 @@ properties:
       Not Reported:
         $ref:
           - "_terms.yaml#/not_reported/common"
+
+  mitotic_count:
+    $ref:
+      - "_terms.yaml#/mitotic_count/common"
+    type: number
+
+  mitotic_total_area:
+    type: number
 
   molecular_analysis_method:
     $ref:
@@ -1519,6 +1535,7 @@ properties:
       - HOXA11
       - HOXA13
       - HOXA9
+      - HOXB1
       - HOXC11
       - HOXC13
       - HOXD11
