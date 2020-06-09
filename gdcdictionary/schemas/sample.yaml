@@ -61,6 +61,10 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
+deprecated:
+  - is_ffpe
+  - oct_embeded
+
 properties:
 
   $ref:
@@ -742,6 +746,7 @@ properties:
       - In Situ Neoplasms
       - Lymphoid Normal
       - Metastatic
+      - Mixed Adherent Suspension
       - Mononuclear Cells from Bone Marrow Normal
       - Neoplasms of Uncertain and Unknown Behavior
       - Next Generation Cancer Model
@@ -758,6 +763,7 @@ properties:
       - Repli-G (Qiagen) DNA
       - Repli-G X (Qiagen) DNA
       - RNA
+      - Saliva
       - Slides
       - Solid Tissue Normal
       - Total RNA
