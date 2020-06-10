@@ -1,14 +1,5 @@
 version: "3.3"
 services:
-  postgres:
-    image: postgres:9.4
-    logging:
-      driver: none
-    environment: 
-      POSTGRES_HOST_AUTH_METHOD: trust
-    volumes: 
-      - ./psql-users.sh:/docker-entrypoint-initdb.d/psql-users.sh
-
   app:
     image: quay.io/ncigdc/jenkins-agent:multipython
     environment:
@@ -18,7 +9,4 @@ services:
     volumes:
     - .:/home/jenkins
     - $SSH_AUTH_SOCK:$SSH_AUTH_SOCK
-    command: bash -c "./wait-for-it.sh localhost:5432 -t 120 &&  pip install tox -q --user && tox --recreate"
-    network_mode: "service:postgres"
-    depends_on: 
-      - postgres
+    command: bash -c "tox --recreate"
