@@ -81,6 +81,19 @@ properties:
       - "_terms.yaml#/base_caller_version/common"
     type: string
 
+  chipseq_target:
+    $ref:
+      - "_terms.yaml#/chipseq_target/common"
+    enum:
+      - H3K4me1
+      - H3K4me3
+      - H3K9me3
+      - H3K27me3
+      - H3K36me3
+      - H3K27ac
+      - Input Control
+      - Unknown
+
   days_to_sequencing:
     $ref:
       - "_terms.yaml#/days_to_sequencing/common"
