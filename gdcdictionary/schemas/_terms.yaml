@@ -38194,6 +38194,19 @@ chief_cell_adenoma:
       term_id: C4154
       term_version: 20.05a
 
+chipseq_target:
+  common:
+    description: >-
+      Antibody target of the ChIP-Seq assay
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+      term_id:
+      term_version:
+
 chloroma:
   common:
     description: >-
