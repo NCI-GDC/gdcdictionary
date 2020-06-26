@@ -11,7 +11,7 @@ description: >-
   Data file containing channel data from a methylation array.
 additionalProperties: false
 submittable: true
-downloadable: false
+downloadable: true
 previous_version_downloadable: true
 validators: null
 
