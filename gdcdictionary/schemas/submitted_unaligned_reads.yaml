@@ -90,7 +90,6 @@ properties:
     $ref:
       - "_terms.yaml#/read_pair_number/common"
     enum:
-      - I1
       - Not Applicable
       - R1
       - R2

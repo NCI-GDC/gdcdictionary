@@ -13,13 +13,43 @@ parent_uuids:
     $ref: "#/uuid"
   uniqueItems: true
 
+foreign_key_project:
+  type: object
+  # Allow true here because we can have other unique keys defined on
+  # a target type
+  additionalProperties: True
+  # Can either use 'id' which are GDC IDs (uuid) or 'submitter_id'
+  # which are user defined IDs ("submitter IDs in the backend")
+  properties:
+    id:
+      $ref: "#/uuid"
+    submitter_id:
+      type: string
+
+to_one_project:
+  anyOf:
+    - type: array
+      items:
+        $ref: "#/foreign_key_project"
+        minItems: 1
+        maxItems: 1
+    - $ref: "#/foreign_key_project"
+
+to_many_project:
+  anyOf:
+    - type: array
+      items:
+        $ref: "#/foreign_key_project"
+        minItems: 1
+    - $ref: "#/foreign_key_project"
+
 foreign_key:
   type: object
   # Allow true here because we can have other unique keys defined on
   # a target type
   additionalProperties: True
-  #Can either use 'id' which are GDC IDs (uuid) or 'submitter_id'
-  #which are user defined IDs ("submitter IDs in the backend")
+  # Can either use 'id' which are GDC IDs (uuid) or 'submitter_id'
+  # which are user defined IDs ("submitter IDs in the backend")
   properties:
     id:
       $ref: "#/uuid"

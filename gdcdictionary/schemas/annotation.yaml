@@ -100,6 +100,12 @@ links:
         target_type: clinical_supplement
         multiplicity: many_to_many
         required: false
+      - name: copy_number_estimates
+        backref: annotations
+        label: annotates
+        target_type: copy_number_estimate
+        multiplicity: many_to_many
+        required: false
       - name: copy_number_segments
         backref: annotations
         label: annotates
@@ -448,6 +454,9 @@ properties:
     $ref: "_definitions.yaml#/to_many"
 
   clinical_supplements:
+    $ref: "_definitions.yaml#/to_many"
+
+  copy_number_estimates:
     $ref: "_definitions.yaml#/to_many"
 
   copy_number_segments:

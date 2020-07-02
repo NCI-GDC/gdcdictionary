@@ -398,7 +398,7 @@ properties:
           - "_terms.yaml#/not_reported/common"
 
   projects:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one_project"
 
   tissue_source_sites:
     $ref: "_definitions.yaml#/to_one"

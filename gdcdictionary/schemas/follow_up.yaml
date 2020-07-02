@@ -868,6 +868,7 @@ properties:
       - Candidiasis
       - Coccidioidomycosis
       - Cryptococcosis
+      - Cryptosporidiosis, Chronic Intestinal
       - Cytomegalovirus
       - Encephalopathy
       - Herpes Simplex Virus
@@ -961,8 +962,11 @@ properties:
       - Arrhythmia
       - Arthritis
       - Asthma
+      - Ataxia-telangiectasia
       - Atrial Fibrillation
+      - Autoimmune Lymphoproliferative Syndrome (ALPS)
       - Avascular Necrosis
+      - Bacteroides fragilis
       - Barrett's Esophagus
       - Basal Cell Carcinoma
       - Beckwith-Wiedemann
@@ -976,8 +980,10 @@ properties:
       - Cataracts
       - Celiac Disease
       - Cerebrovascular Disease
+      - Chlamydia
       - Cholelithiasis
       - Chronic Renal Failure
+      - Chronic Systemic Steroid Use
       - Cirrhosis, Unknown Etiology
       - Colon Polyps
       - Common Variable Immunodeficiency
@@ -987,6 +993,8 @@ properties:
       - Coronary Artery Disease
       - Crohn's Disease
       - Cryptogenic Organizing Pneumonia
+      - Cryptococcal Meningitis
+      - Cytomegalovirus (CMV)
       - Deep Vein Thrombosis / Thromboembolism
       - Denys-Drash Syndrome
       - Depression
@@ -1048,9 +1056,13 @@ properties:
       - Liver Toxicity (Non-Infectious)
       - Low Grade Liver Dysplastic Nodule
       - Lupus
+      - Lymphocytic Meningitis
       - Lynch Syndrome
       - MAI
+      - Malaria
+      - Metabolic Syndrome
       - Myasthenia Gravis
+      - Mycobacterium avium Complex
       - Myocardial Infarction
       - Neuroendocrine Tumor
       - Nonalcoholic Steatohepatitis
@@ -1068,6 +1080,8 @@ properties:
       - Peripheral Neuropathy
       - Peripheral Vascular Disease
       - Peutz-Jeghers Disease
+      - Pneumocystis Pneumonia
+      - Polycystic Ovarian Syndrome (PCOS)
       - Pregnancy in Patient or Partner
       - Primary Sclerosing Cholangitis
       - Psoriasis
@@ -1081,11 +1095,16 @@ properties:
       - Rubinstein-Taybi Syndrome
       - Sarcoidosis
       - Seizure
+      - Shingles
+      - Sjogren's Syndrome
       - Sleep apnea
       - Smoking
+      - Staphylococcus aureus
       - Steatosis
       - Stroke
+      - Syphilis
       - Transient Ischemic Attack
+      - Treponema pallidum
       - Tuberculosis
       - Turcot Syndrome
       - Tyrosinemia
@@ -1275,6 +1294,7 @@ properties:
     enum:
       - Biopsy with Histologic Confirmation
       - Convincing Image Source
+      - Physical Examination
       - Positive Biomarker(s)
 
   fev1_ref_post_bronch_percent:
@@ -1351,6 +1371,20 @@ properties:
       - "_terms.yaml#/hiv_viral_load/common"
     type: number
 
+  hormonal_contraceptive_type:
+    enum:
+      - Progestin
+      - Progestin and Estrogen
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
   hormonal_contraceptive_use:
     $ref:
       - "_terms.yaml#/hormonal_contraceptive_use/common"
@@ -1358,6 +1392,21 @@ properties:
       - Current User
       - Former User
       - Never Used
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  hormone_replacement_therapy_type:
+    enum:
+      - Estrogen only
+      - Progesterone and Estrogen
+      - Progesterone only
       - Unknown
       - Not Reported
     enumDef:
@@ -1554,6 +1603,20 @@ properties:
       - Live Birth
       - Miscarriage
       - Stillbirth
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  procedures_performed:
+    enum:
+      - Colonoscopy
+      - Endoscopy
       - Unknown
       - Not Reported
     enumDef:
@@ -2002,21 +2065,31 @@ properties:
       - Allergy, Seafood
       - Allergy, Wasp
       - Alpha-1 Antitrypsin Deficiency
+      - Ataxia-telangiectasia
       - Autoimmune Atrophic Chronic Gastritis
+      - Autoimmune Lymphoproliferative Syndrome (ALPS)
+      - Bacteroides fragilis
+      - BAP1 Tumor Predisposition Syndrome
       - Barrett's Esophagus
       - Beckwith-Wiedemann
       - Behcet's Disease
       - Benign Prostatic Hyperplasia
+      - Birt-Hogg-Dube Syndrome
       - BRCA Family History
       - Cancer
+      - Chlamydia
       - Cholelithiasis
       - Chronic Hepatitis
+      - Chronic Systemic Steroid Use
       - Cirrhosis
       - Colon Polyps
       - Colonization, Bacterial
       - Colonization, Fungal
       - Common variable immune deficiency (CVID)
+      - Cowden Syndrome
+      - Cryptococcal Meningitis
       - Cyst(s)
+      - Cytomegalovirus (CMV)
       - Denys-Drash Syndrome
       - Diabetes, NOS
       - Diabetes, Type I
@@ -2047,7 +2120,13 @@ properties:
       - Hepatitis B Infection
       - Hepatitis C Infection
       - Hepatitis, NOS
+      - Hereditary Breast Cancer
+      - Hereditary Kidney Oncocytoma
+      - Hereditary Leiomyomatosis and Renal Cell Carcinoma
+      - Hereditary Ovarian Cancer
+      - Hereditary Papillary Renal Cell Carcinoma
       - Hereditary Prostate Cancer
+      - Hereditary Renal Cell Carcinoma
       - High Grade Dysplasia
       - High-grade Prostatic Intraepithelial Neoplasia (PIN)
       - HIV
@@ -2059,9 +2138,13 @@ properties:
       - Iron Overload
       - Li-Fraumeni Syndrome
       - Low Grade Dysplasia
+      - Lymphocytic Meningitis
       - Lymphocytic Thyroiditis
       - Lynch Syndrome
+      - Malaria
+      - Metabolic Syndrome
       - Myasthenia Gravis
+      - Mycobacterium avium Complex
       - Nodular Prostatic Hyperplasia
       - Nonalcoholic Fatty Liver Disease
       - Nonalcoholic Steatohepatitis
@@ -2069,6 +2152,8 @@ properties:
       - Oral Contraceptives
       - Pancreatitis
       - Parasitic Disease of Biliary Tract
+      - Pneumocystis Pneumonia
+      - Polycystic Ovarian Syndrome (PCOS)
       - Primary Sclerosing Cholangitis
       - Recurrent Pyogenic Cholangitis
       - Reflux Disease
@@ -2078,20 +2163,29 @@ properties:
       - Seizure
       - Sensory Changes
       - Serous tubal intraepithelial carcinoma (STIC)
+      - Shingles
       - Sialadenitis
+      - Sjogren's Syndrome
       - Squamous Metaplasia
+      - Staphylococcus aureus
       - Steatosis
+      - Succinate Dehydrogenase-Deficient Renal Cell Carcinoma
+      - Syphilis
       - Tattoo
       - Thyroid Nodular Hyperplasia
       - Tobacco, NOS
       - Tobacco, Smokeless
       - Tobacco, Smoking
+      - Treponema pallidum
+      - Tuberculosis
+      - Tuberous Sclerosis
       - Tubulointerstitial Disease
       - Tumor-associated Lymphoid Proliferation
       - Turcot Syndrome
       - Undescended Testis
       - Vascular Disease
       - Vision Changes
+      - Von Hippel-Lindau Syndrome
       - Wagr Syndrome
       - Unknown
       - Not Reported
