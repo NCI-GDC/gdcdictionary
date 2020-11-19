@@ -11,6 +11,7 @@ setup(
     install_requires=[
         'PyYAML',
         'jsonschema',
+        "pyrsistent>=0.16.1,<1",
     ],
     package_data={
         "gdcdictionary": [
