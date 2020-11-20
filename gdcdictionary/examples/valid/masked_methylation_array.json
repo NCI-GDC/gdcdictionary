@@ -9,8 +9,8 @@
     "experimental_strategy":"Methylation Array",
     "data_format":"IDAT",
     "platform":"Illumina Human Methylation 450",
-    "channel":"Green"
+    "channel":"Green",
     "methylation_array_harmonization_workflows": {
-    	"submitter_id": "methylation_array_harmonization_workflow1"
-  	}
+        "submitter_id": "methylation_array_harmonization_workflow1"
+        }
 }
