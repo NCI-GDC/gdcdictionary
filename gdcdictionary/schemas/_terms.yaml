@@ -66159,7 +66159,7 @@ present:
         term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36113"
         term_id: C36113
         term_version: 20.05a
-    diagnosis:
+    transglottic_extension:
       description: >-
         Extension of a laryngeal tumor beyond the glottic opening into the ventricles
         and vocal cords.
