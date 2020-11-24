@@ -66172,6 +66172,19 @@ present:
         term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C160996"
         term_id: C160996
         term_version: 20.05a
+  common:
+    description: >-
+      Being or existing in a specified place or at the specified time.
+    termDef:
+      term: >-
+        Present
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25626"
+      term_id: C25626
+      term_version: 20.05a
+  pathology_detail:
     non_nodal_regional_disease:
       description: >-
         A finding of abnormality following an examination or observation confirming
@@ -66185,18 +66198,6 @@ present:
         term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C38758"
         term_id: C38758
         term_version: 20.10d
-  common:
-    description: >-
-      Being or existing in a specified place or at the specified time.
-    termDef:
-      term: >-
-        Present
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25626"
-      term_id: C25626
-      term_version: 20.05a
 
 primary:
   common:
@@ -85577,7 +85578,7 @@ cd80fc_fusion_protein_alpn202:
       1 (PD-1; cluster of differentiation 279; CD279), and leads to PD-L1-dependent
       CD28 binding and co-stimulation in the local tumor microenvironment (TME). This
       reverses T-cell inactivation caused by PD-1/PD-L1 signaling, leads to the co-stimulation
-      of T-cell responses including the activation of naïve and memory T-cells in
+      of T-cell responses including the activation of naive and memory T-cells in
       the TME and enhances the cytotoxic T-lymphocyte (CTL)-mediated anti-tumor immune
       response against PD-L1-expressing tumor cells. In addition, ALPN-202 targets
       and binds to CTL-associated antigen 4 (CTLA4; CTLA-4) expressed on T-cells.
@@ -85611,7 +85612,7 @@ cd80fc_fusion_protein_fpt155:
       Upon administration of CD80-Fc fusion protein FPT155, the CD80 moiety targets
       and binds to CD28, which in the presence of antigenic T-cell receptor (TCR)
       signaling, leads to the co-stimulation of T-cell responses including the activation
-      of naïve and memory T-cells. This leads to a cytotoxic T-lymphocyte (CTL)-mediated
+      of naive and memory T-cells. This leads to a cytotoxic T-lymphocyte (CTL)-mediated
       immune response against cancer cells, thereby killing cancer cells. FPT155 also
       targets and binds to CTL-associated antigen 4 (CTLA4; CTLA-4), preventing the
       binding of CTLA-4 to endogenous CD80, thereby enabling CD80-CD28 engagement,
@@ -93444,17 +93445,6 @@ inactivated_oncolytic_virus_particle_gen0101:
       cde_version:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C170893"
       term_id: C170893
-      term_version: 20.10d
-
-incomplete_terminal_codon_variant:
-  common:
-    description:
-    termDef:
-      term: 0
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=0"
       term_version: 20.10d
 
 indatuximab_ravtansine:
