@@ -940,6 +940,9 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      None:
+        $ref:
+          - "_terms.yaml#/none/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -1467,6 +1470,9 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      None:
+        $ref:
+          - "_terms.yaml#/none/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -1532,6 +1538,9 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      None:
+        $ref:
+          - "_terms.yaml#/none/common"
       Other:
         $ref:
           - "_terms.yaml#/other/common"
