@@ -431,9 +431,36 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      Bone Marrow:
+        $ref:
+          - "_terms.yaml#/bone_marrow/common"
+      Buccal Mucosa:
+        $ref:
+          - "_terms.yaml#/buccal_mucosa/common"
+      Cerebrospinal Fluid:
+        $ref:
+          - "_terms.yaml#/cerebrospinal_fluid/common"
+      Connective Tissue:
+        $ref:
+          - "_terms.yaml#/connective_tissue/common"
+      Epitrochlear:
+        $ref:
+          - "_terms.yaml#/epitrochlear/common"
+      Frontal Lobe:
+        $ref:
+          - "_terms.yaml#/frontal_lobe/common"
+      Hilar:
+        $ref:
+          - "_terms.yaml#/hilar/common"
+      Neck:
+        $ref:
+          - "_terms.yaml#/neck/common"
       Other:
         $ref:
           - "_terms.yaml#/other/common"
+      Soft Tissue:
+        $ref:
+          - "_terms.yaml#/soft_tissue/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -460,6 +487,11 @@ properties:
     enum:
       - cGy
       - Gy
+      - mg
+    enumDef:
+      mg:
+        $ref:
+          - "_terms.yaml#/mg/common"
 
   treatment_effect:
     $ref:
@@ -634,9 +666,12 @@ properties:
       - Radiation, Combination
       - Radiation, Cyberknife
       - Radiation, External Beam
+      - Radiation, Hypofractionated
       - Radiation, Implants
       - Radiation, Intensity-Modulated Radiotherapy
       - Radiation, Internal
+      - Radiation, Mixed Photon Beam
+      - Radiation, Photon Beam
       - Radiation, Proton Beam
       - Radiation, Radioisotope
       - Radiation, Stereotactic/Gamma Knife/SRS
@@ -667,6 +702,12 @@ properties:
       Other:
         $ref:
           - "_terms.yaml#/other/common"
+      Radiation, Hypofractionated:
+        $ref:
+          - "_terms.yaml#/radiation_hypofractionated/common"
+      Radiation, Photon Beam:
+        $ref:
+          - "_terms.yaml#/radiation_photon_beam/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -701,16 +742,12 @@ properties:
       - 2,6-Dimethoxyquinone
       - 2'-F-ara-deoxyuridine
       - 3'-C-ethynylcytidine
+      - 3'-dA Phosphoramidate NUC-7738
       - 4-Nitroestrone 3-Methyl Ether
       - 4-Thio-2-deoxycytidine
       - 4'-Iodo-4'-Deoxydoxorubicin
       - 5-Aza-4'-thio-2'-deoxycytidine
       - 5-Fluoro-2-Deoxycytidine
-      - 5-Fluorouracil (5-FU)
-      - 5-Fluorouracil (5-FU) ; Leucovorin ; Oxaliplatin (Eloxatin)
-      - 5-Fluorouracil (5-FU) with the vitamin-like drug leucovorin (also called folinic
-        acid) or levo-leucovorin
-      - 5-Fluorouracil (5-FU), Leucovorin, Oxaliplatin (Eloxatin)
       - 6-Phosphofructo-2-kinase/fructose-2,6-bisphosphatases Isoform 3 Inhibitor
         ACT-PFK-158
       - 7-Cyanoquinocarcinol
@@ -719,6 +756,7 @@ properties:
       - 8-Azaguanine
       - 9-Ethyl 6-Mercaptopurine
       - 9H-Purine-6Thio-98D
+      - A2A Receptor Antagonist EOS100850
       - Abagovomab
       - Abarelix
       - Abemaciclib
@@ -728,8 +766,6 @@ properties:
       - Abiraterone
       - Abiraterone Acetate
       - Abituzumab
-      - Abraxane/Avastin
-      - AC>paclitaxel
       - Acai Berry Juice
       - Acalabrutinib
       - Acalisib
@@ -758,6 +794,7 @@ properties:
       - Adavosertib
       - Adecatumumab
       - Adenosine A2A Receptor Antagonist AZD4635
+      - Adenosine A2A Receptor Antagonist CS3005
       - Adenosine A2A Receptor Antagonist NIR178
       - Adenosine A2A Receptor Antagonist/Phosphodiesterase 10A PBF-999
       - Adenosine A2A/A2B Receptor Antagonist AB928
@@ -772,6 +809,9 @@ properties:
         Plus Activator Ligand INXN-1001
       - Adenoviral Tumor-specific Neoantigen Priming Vaccine GAd-209-FSP
       - Adenoviral Tumor-specific Neoantigen Priming Vaccine GRT-C901
+      - Adenovirus 5/F35-Human Guanylyl Cyclase C-PADRE
+      - Adenovirus Serotype 26-expressing HPV16 Vaccine JNJ-63682918
+      - Adenovirus Serotype 26-expressing HPV18 Vaccine JNJ-63682931
       - Adenovirus-expressing TLR5/TLR5 Agonist Nanoformulation M-VM3
       - Adenovirus-mediated Human Interleukin-12 INXN-2001 Plus Activator Ligand INXN-1001
       - Aderbasib
@@ -782,7 +822,6 @@ properties:
       - Aerosolized Aldesleukin
       - Aerosolized Liposomal Rubitecan
       - Afatinib
-      - Afatinib (BIBW 2992)
       - Afatinib Dimaleate
       - Afimoxifene
       - Afuresertib
@@ -816,17 +855,32 @@ properties:
       - ALK Inhibitor ASP3026
       - ALK Inhibitor PLB 1003
       - ALK Inhibitor RO5424802
+      - ALK Inhibitor TAE684
       - ALK Inhibitor WX-0593
       - ALK-2 Inhibitor TP-0184
       - ALK-FAK Inhibitor CEP-37440
       - ALK/c-Met Inhibitor  TQ-B3139
       - ALK/FAK/Pyk2 Inhibitor CT-707
+      - ALK/ROS1/Met Inhibitor TQ-B3101
       - ALK/TRK Inhibitor TSR-011
       - Alkotinib
       - Allodepleted T Cell Immunotherapeutic ATIR101
+      - Allogeneic Anti-BCMA CAR-transduced T-cells ALLO-715
+      - Allogeneic Anti-BCMA-CAR T-cells PBCAR269A
+      - Allogeneic Anti-BCMA/CS1 Bispecific CAR-T Cells
+      - Allogeneic Anti-CD19 CAR T-cells ALLO-501A
+      - Allogeneic Anti-CD19 Universal CAR-T Cells CTA101
       - Allogeneic Anti-CD19-CAR T-cells PBCAR0191
+      - Allogeneic Anti-CD20 CAR T-cells LUCAR-20S
+      - Allogeneic Anti-CD20-CAR T-cells PBCAR20A
+      - Allogeneic CD22-specific Universal CAR-expressing T-lymphocytes UCART22
       - Allogeneic CD3- CD19- CD57+ NKG2C+ NK Cells FATE-NK100
+      - Allogeneic CD56-positive CD3-negative Natural Killer Cells CYNK-001
+      - Allogeneic CD8+ Leukemia-associated Antigens Specific T Cells NEXI-001
       - Allogeneic Cellular Vaccine 1650-G
+      - Allogeneic CRISPR-Cas9 Engineered Anti-BCMA T Cells CTX120
+      - Allogeneic CRISPR-Cas9 Engineered Anti-CD70 CAR-T Cells CTX130
+      - Allogeneic CS1-specific Universal CAR-expressing T-lymphocytes UCARTCS1A
       - Allogeneic GM-CSF-secreting Breast Cancer Vaccine SV-BR-1-GM
       - Allogeneic GM-CSF-secreting Lethally Irradiated Prostate Cancer Vaccine
       - Allogeneic GM-CSF-secreting Lethally Irradiated Whole Melanoma Cell Vaccine
@@ -839,17 +893,25 @@ properties:
       - Allogeneic Melanoma Vaccine AGI-101H
       - Allogeneic Natural Killer Cell Line MG4101
       - Allogeneic Natural Killer Cell Line NK-92
+      - Allogeneic Plasmacytoid Dendritic Cells Expressing Lung Tumor Antigens PDC*lung01
       - Allogeneic Renal Cell Carcinoma Vaccine MGN1601
+      - Allogeneic Third-party Suicide Gene-transduced Anti-HLA-DPB1*0401 CD4+ T-cells
+        CTL 19
+      - Allosteric ErbB Inhibitor BDTX-189
       - Allovectin-7
       - Almurtide
+      - Alobresib
+      - Alofanib
       - Alpelisib
       - Alpha Galactosylceramide
       - Alpha V Beta 1 Inhibitor ATN-161
+      - Alpha V Beta 8 Antagonist PF-06940434
       - alpha-Folate Receptor-targeting Thymidylate Synthase Inhibitor ONX-0801
       - Alpha-Gal AGI-134
       - Alpha-lactalbumin-derived Synthetic Peptide-lipid Complex Alpha1H
       - Alpha-Thioguanine Deoxyriboside
       - Alpha-tocopheryloxyacetic Acid
+      - Alsevalimab
       - Altiratinib
       - Altretamine
       - Alvespimycin
@@ -870,6 +932,7 @@ properties:
       - Aminoflavone Prodrug AFP464
       - Aminopterin
       - Aminopterin Sodium
+      - Amivantamab
       - Amolimogene Bepiplasmid
       - Amonafide L-Malate
       - Amrubicin
@@ -883,10 +946,10 @@ properties:
       - Amuvatinib Hydrochloride
       - Anakinra
       - Anastrozole
-      - Anastrozole (Arimidex)
       - Anaxirone
       - Ancitabine
       - Ancitabine Hydrochloride
+      - Andecaliximab
       - Androgen Antagonist APC-100
       - Androgen Receptor Antagonist BAY 1161116
       - Androgen Receptor Antagonist SHR3680
@@ -895,8 +958,11 @@ properties:
       - Androgen Receptor Antisense Oligonucleotide AZD5312
       - Androgen Receptor Antisense Oligonucleotide EZN-4176
       - Androgen Receptor Degrader ARV-110
+      - Androgen Receptor Degrader CC-94676
       - Androgen Receptor Downregulator AZD3514
+      - Androgen Receptor Inhibitor EPI-7386
       - Androgen Receptor Ligand-binding Domain-encoding Plasmid DNA Vaccine MVI-118
+      - Androgen Receptor/Glucocorticoid Receptor  Antagonist CB-03-10
       - Andrographolide
       - Androstane Steroid HE3235
       - Anetumab Ravtansine
@@ -905,6 +971,7 @@ properties:
       - Angiogenesis Inhibitor JI-101
       - Angiogenesis/Heparanase Inhibitor PG545
       - Angiopoietin-2-specific Fusion Protein PF-04856884
+      - Anhydrous Enol-oxaloacetate
       - Anhydrovinblastine
       - Aniline Mustard
       - Anlotinib Hydrochloride
@@ -915,7 +982,9 @@ properties:
       - Anthramycin
       - Anthrapyrazole
       - Anti c-KIT Antibody-drug Conjugate LOP628
+      - Anti-5T4 Antibody-drug Conjugate ASN004
       - Anti-5T4 Antibody-Drug Conjugate PF-06263507
+      - Anti-5T4 Antibody-drug Conjugate SYD1875
       - Anti-A33 Monoclonal Antibody KRN330
       - Anti-A5B1 Integrin Monoclonal Antibody PF-04605412
       - Anti-ACTR/4-1BB/CD3zeta-Viral Vector-transduced Autologous T-Lymphocytes ACTR087
@@ -931,27 +1000,36 @@ properties:
       - Anti-AXL Fusion Protein AVB-S6-500
       - Anti-AXL/PBD Antibody-drug Conjugate ADCT-601
       - Anti-B7-H3 Antibody DS-5573a
+      - Anti-B7-H3/DXd Antibody-drug Conjugate DS-7300a
       - Anti-B7-H4 Monoclonal Antibody FPA150
       - Anti-B7H3 Antibody-drug Conjugate MGC018
       - Anti-BCMA Antibody SEA-BCMA
       - Anti-BCMA Antibody-drug Conjugate AMG 224
+      - Anti-BCMA Antibody-drug Conjugate CC-99712
       - Anti-BCMA Antibody-drug Conjugate GSK2857916
+      - Anti-BCMA SparX Protein Plus BCMA-directed Anti-TAAG ARC T-cells CART-ddBCMA
+      - Anti-BCMA/Anti-CD3 Bispecific Antibody REGN5459
       - Anti-BCMA/CD3 BiTE Antibody AMG 420
       - Anti-BCMA/CD3 BiTE Antibody AMG 701
       - Anti-BCMA/CD3 BiTE Antibody REGN5458
       - Anti-BCMA/PBD ADC MEDI2228
+      - Anti-BTLA Monoclonal Antibody TAB004
+      - Anti-BTN3A Agonistic Monoclonal Antibody ICT01
       - Anti-c-fms Monoclonal Antibody AMG 820
       - Anti-c-KIT Monoclonal Antibody CDX 0158
       - Anti-c-Met Antibody-drug Conjugate HTI-1066
       - Anti-c-Met Antibody-drug Conjugate TR1801
       - Anti-c-Met Monoclonal Antibody ABT-700
       - Anti-c-Met Monoclonal Antibody ARGX-111
+      - Anti-c-Met Monoclonal Antibody HLX55
       - Anti-c-MET Monoclonal Antibody LY2875358
       - Anti-C-met Monoclonal Antibody SAIT301
       - Anti-C4.4a Antibody-Drug Conjugate BAY1129980
       - Anti-C5aR Monoclonal Antibody IPH5401
       - Anti-CA19-9 Monoclonal Antibody 5B1
       - Anti-CA6-DM4 Immunoconjugate SAR566658
+      - Anti-CCR7 Antibody-drug Conjugate JBH492
+      - Anti-CD117 Monoclonal Antibody JSP191
       - Anti-CD122 Humanized Monoclonal Antibody Mik-Beta-1
       - Anti-CD123 ADC IMGN632
       - Anti-CD123 Monoclonal Antibody CSL360
@@ -962,19 +1040,27 @@ properties:
       - Anti-CD123/CD3 Bispecific Antibody JNJ-63709178
       - Anti-CD123/CD3 BiTE Antibody SAR440234
       - Anti-CD137 Agonistic Monoclonal Antibody ADG106
+      - Anti-CD137 Agonistic Monoclonal Antibody AGEN2373
+      - Anti-CD137 Agonistic Monoclonal Antibody ATOR-1017
       - Anti-CD137 Agonistic Monoclonal Antibody CTX-471
+      - Anti-CD137 Agonistic Monoclonal Antibody LVGN6051
       - Anti-CD157 Monoclonal Antibody MEN1112
       - Anti-CD166 Probody-drug Conjugate CX-2009
       - Anti-CD19 Antibody-drug Conjugate SGN-CD19B
+      - Anti-CD19 Antibody-T-cell Receptor-expressing T-cells ET019003
+      - Anti-CD19 iCAR NK Cells
       - Anti-CD19 Monoclonal Antibody DI-B4
       - Anti-CD19 Monoclonal Antibody MDX-1342
       - Anti-CD19 Monoclonal Antibody MEDI-551
       - Anti-CD19 Monoclonal Antibody XmAb5574
       - Anti-CD19-DM4 Immunoconjugate SAR3419
       - Anti-CD19/Anti-CD22 Bispecific Immunotoxin DT2219ARL
+      - Anti-CD19/CD22 CAR NK Cells
       - Anti-CD19/CD3 BiTE Antibody AMG 562
       - Anti-CD19/CD3 Tetravalent Antibody AFM11
       - Anti-CD20 Monoclonal Antibody B001
+      - Anti-CD20 Monoclonal Antibody BAT4306F
+      - Anti-CD20 Monoclonal Antibody MIL62
       - Anti-CD20 Monoclonal Antibody PRO131921
       - Anti-CD20 Monoclonal Antibody SCT400
       - Anti-CD20 Monoclonal Antibody TL011
@@ -983,21 +1069,29 @@ properties:
       - Anti-CD20/Anti-CD3 Bispecific IgM Antibody IGM2323
       - Anti-CD20/CD3 Monoclonal Antibody REGN1979
       - Anti-CD20/CD3 Monoclonal Antibody XmAb13676
+      - Anti-CD205 Antibody-drug Conjugate OBT076
       - Anti-CD22 ADC TRPH-222
       - Anti-CD22 Monoclonal Antibody-MMAE Conjugate DCDT2980S
+      - Anti-CD228/MMAE Antibody-drug Conjugate SGN-CD228A
+      - Anti-CD25 Monoclonal Antibody RO7296682
       - Anti-CD25-PBD Antibody-drug Conjugate ADCT-301
       - Anti-CD26 Monoclonal Antibody YS110
+      - Anti-CD27 Agonistic Monoclonal Antibody MK-5890
       - Anti-CD27L Antibody-Drug Conjugate AMG 172
       - Anti-CD3 Immunotoxin A-dmDT390-bisFv(UCHT1)
+      - Anti-CD3/Anti-5T4 Bispecific Antibody GEN1044
       - Anti-CD3/Anti-BCMA Bispecific Monoclonal Antibody JNJ-64007957
       - Anti-CD3/Anti-BCMA Bispecific Monoclonal Antibody PF-06863135
       - Anti-CD3/Anti-CD20 Trifunctional Bispecific Monoclonal Antibody FBTA05
       - Anti-CD3/Anti-GPRC5D Bispecific Monoclonal Antibody JNJ-64407564
+      - Anti-CD3/Anti-GUCY2C Bispecific Antibody PF-07062119
       - Anti-CD3/CD20 Bispecific Antibody GEN3013
       - Anti-CD3/CD38 Bispecific Monoclonal Antibody AMG 424
+      - Anti-CD3/CD7-Ricin Toxin A Immunotoxin
       - Anti-CD30 Monoclonal Antibody MDX-1401
       - Anti-CD30 Monoclonal Antibody XmAb2513
       - Anti-CD30/CD16A Monoclonal Antibody AFM13
+      - Anti-CD30/DM1 Antibody-drug Conjugate F0002
       - Anti-CD32B Monoclonal Antibody BI-1206
       - Anti-CD33 Antibody-drug Conjugate IMGN779
       - Anti-CD33 Antigen/CD3 Receptor Bispecific Monoclonal Antibody AMV564
@@ -1009,29 +1103,38 @@ properties:
       - Anti-CD33/CD3 BiTE Antibody AMG 673
       - Anti-CD352 Antibody-drug Conjugate SGN-CD352A
       - Anti-CD37 Antibody-Drug Conjugate IMGN529
+      - Anti-CD37 Bispecific Monoclonal Antibody GEN3009
       - Anti-CD37 MMAE Antibody-drug Conjugate AGS67E
       - Anti-CD37 Monoclonal Antibody BI 836826
+      - Anti-CD38 Antibody-drug Conjugate STI-6129
       - Anti-CD38 Monoclonal Antibody MOR03087
+      - Anti-CD38 Monoclonal Antibody SAR442085
       - Anti-CD38 Monoclonal Antibody TAK-079
       - Anti-CD38-targeted IgG4-attenuated IFNa TAK-573
+      - Anti-CD38/CD28xCD3 Tri-specific Monoclonal Antibody SAR442257
       - Anti-CD38/CD3 Bispecific Monoclonal Antibody GBR 1342
+      - Anti-CD39 Monoclonal Antibody SRF617
       - Anti-CD39 Monoclonal Antibody TTX-030
       - Anti-CD40 Agonist Monoclonal Antibody ABBV-927
       - Anti-CD40 Agonist Monoclonal Antibody CDX-1140
       - Anti-CD40 Monoclonal Antibody Chi Lob 7/4
       - Anti-CD40 Monoclonal Antibody SEA-CD40
+      - Anti-CD40/Anti-4-1BB Bispecific Agonist Monoclonal Antibody GEN1042
       - Anti-CD40/Anti-TAA Bispecific Monoclonal Antibody ABBV-428
       - Anti-CD40L Fc-Fusion Protein BMS-986004
       - Anti-CD44 Monoclonal Antibody RO5429083
       - Anti-CD45 Monoclonal Antibody AHN-12
       - Anti-CD46 Antibody-drug Conjugate FOR46
+      - Anti-CD47 ADC SGN-CD47M
       - Anti-CD47 Monoclonal Antibody AO-176
       - Anti-CD47 Monoclonal Antibody CC-90002
       - Anti-CD47 Monoclonal Antibody Hu5F9-G4
       - Anti-CD47 Monoclonal Antibody IBI188
+      - Anti-CD47 Monoclonal Antibody IMC-002
       - Anti-CD47 Monoclonal Antibody SHR-1603
       - Anti-CD47 Monoclonal Antibody SRF231
       - Anti-CD47 Monoclonal Antibody TJC4
+      - Anti-CD47/CD19 Bispecific Monoclonal Antibody TG-1801
       - Anti-CD48/MMAE Antibody-drug Conjugate SGN-CD48A
       - Anti-CD52 Monoclonal Antibody ALLO-647
       - Anti-CD70 Antibody-Drug Conjugate MDX-1203
@@ -1053,6 +1156,8 @@ properties:
       - Anti-CEACAM5 Antibody-Drug Conjugate SAR408701
       - Anti-CEACAM6 AFAIKL2 Antibody Fragment/Jack Bean Urease Immunoconjugate L-DOS47
       - Anti-CEACAM6 Antibody BAY1834942
+      - Anti-claudin18.2 Monoclonal Antibody AB011
+      - Anti-Claudin18.2 Monoclonal Antibody TST001
       - Anti-CLDN6 Monoclonal Antibody ASP1650
       - Anti-CLEC12A/CD3 Bispecific Antibody MCLA117
       - Anti-CLEVER-1 Monoclonal Antibody FP-1305
@@ -1060,13 +1165,19 @@ properties:
       - Anti-CSF1R Monoclonal Antibody IMC-CS4
       - Anti-CSF1R Monoclonal Antibody SNDX-6352
       - Anti-CTGF Monoclonal Antibody FG-3019
+      - Anti-CTLA-4 Monoclonal Antibody ADG116
       - Anti-CTLA-4 Monoclonal Antibody ADU-1604
       - Anti-CTLA-4 Monoclonal Antibody AGEN1181
       - Anti-CTLA-4 Monoclonal Antibody BCD-145
+      - Anti-CTLA-4 Monoclonal Antibody HBM4003
       - Anti-CTLA-4 Monoclonal Antibody MK-1308
+      - Anti-CTLA-4 Monoclonal Antibody ONC-392
       - Anti-CTLA-4 Monoclonal Antibody REGN4659
+      - Anti-CTLA-4 Probody BMS-986288
+      - Anti-CTLA-4/Anti-PD-1 Monoclonal Antibody Combination BCD-217
       - Anti-CTLA-4/LAG-3 Bispecific Antibody XmAb22841
       - Anti-CTLA-4/OX40 Bispecific Antibody ATOR-1015
+      - Anti-CTLA4 Antibody Fc Fusion Protein KN044
       - Anti-CTLA4 Monoclonal Antibody BMS-986218
       - Anti-CXCR4 Monoclonal Antibody PF-06747143
       - Anti-Denatured Collagen Monoclonal Antibody TRC093
@@ -1090,6 +1201,7 @@ properties:
       - Anti-EGFR TAP Antibody-drug Conjugate IMGN289
       - Anti-EGFR/c-Met Bispecific Antibody EMB-01
       - Anti-EGFR/c-Met Bispecific Antibody JNJ-61186372
+      - Anti-EGFR/CD16A Bispecific Antibody AFM24
       - Anti-EGFR/DM1 Antibody-drug Conjugate AVID100
       - Anti-EGFR/HER2/HER3 Monoclonal Antibody Mixture Sym013
       - Anti-EGFR/PBD Antibody-drug Conjugate ABBV-321
@@ -1120,8 +1232,10 @@ properties:
       - Anti-FLT3 Monoclonal Antibody IMC-EB10
       - Anti-FLT3/CD3 BiTE Antibody AMG 427
       - Anti-Folate Receptor-alpha Antibody Drug Conjugate STRO-002
+      - Anti-FRA/Eribulin Antibody-drug Conjugate MORAb-202
       - Anti-fucosyl-GM1 Monoclonal Antibody BMS-986012
       - Anti-Ganglioside GM2 Monoclonal Antibody BIW-8962
+      - Anti-GARP Monoclonal Antibody ABBV-151
       - Anti-GCC Antibody-Drug Conjugate MLN0264
       - Anti-GCC Antibody-Drug Conjugate TAK-164
       - Anti-GD2 hu3F8/Anti-CD3 huOKT3 Bispecific Antibody
@@ -1134,9 +1248,12 @@ properties:
       - Anti-GITR Monoclonal Antibody GWN 323
       - Anti-GITR Monoclonal Antibody MK-4166
       - Anti-Globo H Monoclonal Antibody OBI-888
+      - Anti-Globo H/MMAE Antibody-drug Conjugate OBI 999
       - Anti-Glypican 3/CD3 Bispecific Antibody ERY974
       - Anti-GnRH Vaccine PEP223
       - Anti-gpA33/CD3 Monoclonal Antibody MGD007
+      - Anti-GPR20/DXd Antibody-drug Conjugate DS-6157a
+      - Anti-gremlin-1 Monoclonal Antibody UCB6114
       - Anti-GRP78 Monoclonal Antibody PAT-SM6
       - Anti-HA Epitope Monoclonal Antibody MEDI8852
       - Anti-HB-EGF Monoclonal Antibody KHK2866
@@ -1144,21 +1261,29 @@ properties:
       - Anti-hepcidin Monoclonal Antibody LY2787106
       - Anti-HER-2 Bispecific Antibody KN026
       - Anti-HER2 ADC DS-8201a
+      - Anti-HER2 Antibody Conjugated Natural Killer Cells ACE1702
       - Anti-HER2 Antibody-drug Conjugate A166
       - Anti-HER2 Antibody-drug Conjugate ARX788
+      - Anti-HER2 Antibody-drug Conjugate BAT8001
+      - Anti-HER2 Antibody-drug Conjugate DP303c
       - Anti-HER2 Antibody-drug Conjugate MEDI4276
       - Anti-HER2 Antibody-drug Conjugate RC48
       - Anti-HER2 Bi-specific Monoclonal Antibody ZW25
       - Anti-HER2 Bispecific Antibody-drug Conjugate ZW49
       - Anti-HER2 Immune Stimulator-antibody Conjugate NJH395
+      - Anti-HER2 Monoclonal Antibody B002
       - Anti-HER2 Monoclonal Antibody CT-P6
+      - Anti-HER2 Monoclonal Antibody HLX22
       - Anti-HER2 Monoclonal Antibody/Anti-CD137Anticalin Bispecific Fusion Protein
         PRS-343
+      - Anti-HER2-DM1 ADC B003
+      - Anti-HER2-DM1 Antibody-drug Conjugate GQ1001
       - Anti-HER2-vc0101 ADC PF-06804103
       - Anti-HER2/Anti-CD3 Bispecific Monoclonal Antibody BTRC 4017A
       - Anti-HER2/Anti-CD3 Bispecific Monoclonal Antibody GBR 1302
       - Anti-HER2/Anti-HER3 Bispecific Monoclonal Antibody MCLA-128
       - Anti-HER2/Auristatin Payload Antibody-drug Conjugate XMT-1522
+      - Anti-HER2/MMAE Antibody-drug Conjugate MRG002
       - Anti-HER2/PBD-MA Antibody-drug Conjugate DHES0815A
       - Anti-HER3 Antibody-drug Conjugate U3 1402
       - Anti-HER3 Monoclonal Antibody GSK2849330
@@ -1166,6 +1291,7 @@ properties:
       - Anti-HIF-1alpha LNA Antisense Oligonucleotide EZN-2968
       - Anti-HIV-1 Lentiviral Vector-expressing sh5/C46 Cal-1
       - Anti-HLA-DR Monoclonal Antibody IMMU-114
+      - Anti-HLA-G Antibody TTX-080
       - Anti-human GITR Monoclonal Antibody AMG 228
       - Anti-human GITR Monoclonal Antibody TRX518
       - Anti-ICAM-1 Monoclonal Antibody BI-505
@@ -1178,12 +1304,16 @@ properties:
       - Anti-IL-1 alpha Monoclonal Antibody MABp1
       - Anti-IL-13 Humanized Monoclonal Antibody TNX-650
       - Anti-IL-15 Monoclonal Antibody AMG 714
+      - Anti-IL-8 Monoclonal Antibody BMS-986253
       - Anti-IL-8 Monoclonal Antibody HuMax-IL8
       - Anti-ILDR2 Monoclonal Antibody BAY 1905254
       - Anti-ILT4 Monoclonal Antibody MK-4830
+      - Anti-integrin Beta-6/MMAE Antibody-drug Conjugate SGN-B6A
       - Anti-Integrin Monoclonal Antibody-DM4 Immunoconjugate IMGN388
+      - Anti-IRF4 Antisense Oligonucleotide ION251
       - Anti-KIR Monoclonal Antibody IPH 2101
       - Anti-KSP/Anti-VEGF siRNAs ALN-VSP02
+      - Anti-LAG-3 Monoclonal Antibody IBI-110
       - Anti-LAG-3 Monoclonal Antibody INCAGN02385
       - Anti-LAG-3 Monoclonal Antibody LAG525
       - Anti-LAG-3 Monoclonal Antibody REGN3767
@@ -1192,8 +1322,11 @@ properties:
       - Anti-LAG3 Monoclonal Antibody MK-4280
       - Anti-LAG3 Monoclonal Antibody TSR-033
       - Anti-LAMP1 Antibody-drug Conjugate SAR428926
+      - Anti-latent TGF-beta 1 Monoclonal Antibody SRK-181
+      - Anti-Lewis B/Lewis Y Monoclonal Antibody GNX102
       - Anti-LGR5 Monoclonal Antibody BNC101
       - Anti-LIF Monoclonal Antibody MSC-1
+      - Anti-LILRB4 Monoclonal Antibody IO-202
       - Anti-LIV-1 Monoclonal Antibody-MMAE Conjugate SGN-LIV1A
       - Anti-Ly6E Antibody-Drug Conjugate RG 7841
       - Anti-MAGE-A4 T-cell Receptor/Anti-CD3 scFv Fusion Protein IMC-C103C
@@ -1201,29 +1334,38 @@ properties:
       - Anti-mesothelin Antibody-drug Conjugate BMS-986148
       - Anti-mesothelin-Pseudomonas Exotoxin 24 Cytolytic Fusion Protein LMB-100
       - Anti-mesothelin/MMAE Antibody-Drug Conjugate DMOT4039A
+      - Anti-mesothelin/MMAE Antibody-drug Conjugate RC88
       - Anti-Met Monoclonal Antibody Mixture Sym015
       - Anti-Met/EGFR Monoclonal Antibody LY3164530
       - Anti-MMP-9 Monoclonal Antibody GS-5745
       - Anti-MUC1 Monoclonal Antibody BTH1704
+      - Anti-MUC16/CD3 Bispecific Antibody REGN4018
       - Anti-MUC16/CD3 BiTE Antibody REGN4018
       - Anti-MUC16/MMAE Antibody-Drug Conjugate DMUC4064A
+      - Anti-MUC17/CD3 BiTE Antibody AMG 199
       - Anti-Myeloma Monoclonal Antibody-DM4 Immunoconjugate BT-062
       - Anti-myostatin Monoclonal Antibody LY2495655
+      - Anti-NaPi2b Antibody-drug Conjugate XMT-1592
       - Anti-NaPi2b Monoclonal Antibody XMT-1535
       - Anti-nectin-4 Monoclonal Antibody-Drug Conjugate AGS-22M6E
       - Anti-Neuropilin-1 Monoclonal Antibody MNRP1685A
       - Anti-nf-P2X7 Antibody Ointment BIL-010t
+      - Anti-NRP1 Antibody ASP1948
       - Anti-Nucleolin Aptamer AS1411
       - Anti-NY-ESO-1 Immunotherapeutic GSK-2241658A
       - Anti-NY-ESO1/LAGE-1A TCR/scFv Anti-CD3 IMCnyeso
       - Anti-OFA Immunotherapeutic BB-MPI-03
       - Anti-OX40 Agonist Monoclonal Antibody ABBV-368
+      - Anti-OX40 Agonist Monoclonal Antibody BGB-A445
       - Anti-OX40 Agonist Monoclonal Antibody PF-04518600
       - Anti-OX40 Antibody BMS 986178
+      - Anti-OX40 Hexavalent Agonist Antibody INBRX-106
       - Anti-OX40 Monoclonal Antibody GSK3174998
       - Anti-OX40 Monoclonal Antibody IBI101
+      - Anti-PD-1 Antibody-interleukin-21 Mutein Fusion Protein AMG 256
       - Anti-PD-1 Checkpoint Inhibitor PF-06801591
       - Anti-PD-1 Fusion Protein AMP-224
+      - Anti-PD-1 Monoclonal Antibody 609A
       - Anti-PD-1 Monoclonal Antibody AK105
       - Anti-PD-1 Monoclonal Antibody AMG 404
       - Anti-PD-1 Monoclonal Antibody BAT1306
@@ -1238,13 +1380,20 @@ properties:
       - Anti-PD-1 Monoclonal Antibody LZM009
       - Anti-PD-1 Monoclonal Antibody MEDI0680
       - Anti-PD-1 Monoclonal Antibody MGA012
+      - Anti-PD-1 Monoclonal Antibody SCT-I10A
       - Anti-PD-1 Monoclonal Antibody Sym021
       - Anti-PD-1 Monoclonal Antibody TSR-042
       - Anti-PD-1/Anti-CTLA4 DART Protein MGD019
+      - Anti-PD-1/Anti-HER2 Bispecific Antibody IBI315
+      - Anti-PD-1/Anti-LAG-3 Bispecific Antibody RO7247669
       - Anti-PD-1/Anti-LAG-3 DART Protein MGD013
+      - Anti-PD-1/Anti-PD-L1 Bispecific Antibody IBI318
       - Anti-PD-1/Anti-PD-L1 Bispecific Antibody LY3434172
+      - Anti-PD-1/CD47 Infusion Protein HX009
       - Anti-PD-1/CTLA-4 Bispecific Antibody AK104
+      - Anti-PD-1/CTLA-4 Bispecific Antibody MEDI5752
       - Anti-PD-1/TIM-3 Bispecific Antibody RO7121661
+      - Anti-PD-1/VEGF Bispecific Antibody AK112
       - Anti-PD-L1 Monoclonal Antibody A167
       - Anti-PD-L1 Monoclonal Antibody BCD-135
       - Anti-PD-L1 Monoclonal Antibody BGB-A333
@@ -1254,14 +1403,18 @@ properties:
       - Anti-PD-L1 Monoclonal Antibody FAZ053
       - Anti-PD-L1 Monoclonal Antibody GR1405
       - Anti-PD-L1 Monoclonal Antibody HLX20
+      - Anti-PD-L1 Monoclonal Antibody IMC-001
       - Anti-PD-L1 Monoclonal Antibody LY3300054
       - Anti-PD-L1 Monoclonal Antibody MDX-1105
       - Anti-PD-L1 Monoclonal Antibody MSB2311
+      - Anti-PD-L1 Monoclonal Antibody RC98
       - Anti-PD-L1 Monoclonal Antibody SHR-1316
       - Anti-PD-L1 Monoclonal Antibody TG-1501
       - Anti-PD-L1 Monoclonal Antibody ZKAB001
       - Anti-PD-L1/4-1BB Bispecific Antibody INBRX-105
+      - Anti-PD-L1/Anti-4-1BB Bispecific Monoclonal Antibody GEN1046
       - Anti-PD-L1/CD137 Bispecific Antibody MCLA-145
+      - Anti-PD-L1/IL-15 Fusion Protein KD033
       - Anti-PD-L1/TIM-3 Bispecific Antibody LY3415244
       - Anti-PD1 Monoclonal Antibody AGEN2034
       - Anti-PD1/CTLA4 Bispecific Antibody XmAb20717
@@ -1270,6 +1423,7 @@ properties:
       - Anti-PLGF Monoclonal Antibody TB-403
       - Anti-PR1/HLA-A2 Monoclonal Antibody Hu8F4
       - Anti-PRAME Immunotherapeutic GSK2302032A
+      - Anti-PRAME T-cell Receptor/Anti-CD3 scFv Fusion Protein IMC-F106C
       - Anti-PRL-3 Monoclonal Antibody PRL3-zumab
       - Anti-prolactin Receptor Antibody LFA102
       - Anti-PSCA Monoclonal Antibody AGS-1C4D4
@@ -1277,12 +1431,17 @@ properties:
       - Anti-PSMA Monoclonal Antibody MLN591-DM1 Immunoconjugate MLN2704
       - Anti-PSMA Monoclonal Antibody-MMAE Conjugate
       - Anti-PSMA/CD28 Bispecific Antibody REGN5678
+      - Anti-PSMA/CD3 Bispecific Antibody CCW702
       - Anti-PSMA/CD3 Bispecific Antibody JNJ-63898081
       - Anti-PSMA/CD3 Monoclonal Antibody MOR209/ES414
       - Anti-PSMA/PBD ADC MEDI3726
       - Anti-PTK7/Auristatin-0101 Antibody-drug Conjugate PF-06647020
       - Anti-PVRIG Monoclonal Antibody COM701
+      - Anti-RANKL Monoclonal Antibody GB-223
+      - Anti-RANKL Monoclonal Antibody JMT103
+      - Anti-Ribonucleoprotein Antibody ATRC-101
       - Anti-ROR1 ADC VLS-101
+      - Anti-ROR1/PNU-159682 Derivative Antibody-drug Conjugate NBE-002
       - Anti-S15 Monoclonal Antibody NC318
       - Anti-sCLU Monoclonal Antibody AB-16B5
       - Anti-SIRPa Monoclonal Antibody CC-95251
@@ -1293,8 +1452,11 @@ properties:
       - Anti-TGF-beta Monoclonal Antibody SAR-439459
       - Anti-TGF-beta RII Monoclonal Antibody IMC-TR1
       - Anti-TIGIT Monoclonal Antibody AB154
+      - Anti-TIGIT Monoclonal Antibody BGB-A1217
       - Anti-TIGIT Monoclonal Antibody BMS-986207
+      - Anti-TIGIT Monoclonal Antibody COM902
       - Anti-TIGIT Monoclonal Antibody OMP-313M32
+      - Anti-TIGIT Monoclonal Antibody SGN-TGT
       - Anti-TIM-3 Antibody BMS-986258
       - Anti-TIM-3 Monoclonal Antibody BGB-A425
       - Anti-TIM-3 Monoclonal Antibody INCAGN02390
@@ -1302,7 +1464,11 @@ properties:
       - Anti-TIM-3 Monoclonal Antibody Sym023
       - Anti-TIM-3 Monoclonal Antibody TSR-022
       - Anti-TIM3 Monoclonal Antibody LY3321367
+      - Anti-TIM3 Monoclonal Antibody SHR-1702
       - Anti-Tissue Factor Monoclonal Antibody MORAb-066
+      - Anti-TRAILR2/CDH17 Tetravalent Bispecific Antibody BI 905711
+      - Anti-TROP2 Antibody-drug Conjugate BAT8003
+      - Anti-TROP2 Antibody-drug Conjugate SKB264
       - Anti-TROP2/DXd Antibody-drug Conjugate DS-1062a
       - Anti-TWEAK Monoclonal Antibody RG7212
       - Anti-VEGF Anticalin PRS-050-PEG40
@@ -1311,6 +1477,7 @@ properties:
       - Anti-VEGF/TGF-beta 1 Fusion Protein HB-002T
       - Anti-VEGFC Monoclonal Antibody VGX-100
       - Anti-VEGFR2 Monoclonal Antibody HLX06
+      - Anti-VEGFR2 Monoclonal Antibody MSB0254
       - Anti-VEGFR3 Monoclonal Antibody IMC-3C5
       - Anti-VISTA Monoclonal Antibody JNJ 61610588
       - Antiangiogenic Drug Combination TL-118
@@ -1340,6 +1507,7 @@ properties:
       - Antineoplaston A10
       - Antineoplaston AS2-1
       - Antisense Oligonucleotide GTI-2040
+      - Antisense Oligonucleotide QR-313
       - Antitumor B Key Active Component-alpha
       - Antrodia cinnamomea Supplement
       - Antroquinonol Capsule
@@ -1358,6 +1526,8 @@ properties:
       - Apoptosis Inducer GCS-100
       - Apoptosis Inducer MPC-2130
       - Apricoxib
+      - Aprinocarsen
+      - Aprutumab
       - Aprutumab Ixadotin
       - AR Antagonist BMS-641988
       - Arabinoxylan Compound MGN3
@@ -1376,11 +1546,13 @@ properties:
       - Artesunate
       - Arugula Seed Powder
       - Aryl Hydrocarbon Receptor Antagonist BAY2416964
+      - Aryl Hydrocarbon Receptor Inhibitor IK-175
       - Asaley
       - Asciminib
       - Ascrinvacumab
       - Ashwagandha Root Powder Extract
       - ASP4132
+      - Aspacytarabine
       - Asparaginase
       - Asparaginase Erwinia chrysanthemi
       - Astatine At 211 Anti-CD38 Monoclonal Antibody OKT10-B10
@@ -1388,6 +1560,7 @@ properties:
       - Astuprotimut-R
       - Asulacrine
       - Asulacrine Isethionate
+      - Asunercept
       - At 211 Monoclonal Antibody 81C6
       - Atamestane
       - Atezolizumab
@@ -1399,12 +1572,17 @@ properties:
       - ATM Kinase Inhibitor AZD1390
       - Atorvastatin Calcium
       - Atorvastatin Sodium
+      - ATR Inhibitor RP-3500
       - ATR Kinase Inhibitor BAY1895344
+      - ATR Kinase Inhibitor M1774
       - ATR Kinase Inhibitor M6620
       - ATR Kinase Inhibitor VX-803
       - Atrasentan Hydrochloride
       - Attenuated Listeria monocytogenes CRS-100
       - Attenuated Live Listeria Encoding HPV 16 E7 Vaccine ADXS11-001
+      - Attenuated Measles Virus Encoding SCD Transgene TMV-018
+      - Atuveciclib
+      - Audencel
       - Auranofin
       - Aurora A Kinase Inhibitor LY3295668
       - Aurora A Kinase Inhibitor LY3295668 Erbumine
@@ -1422,39 +1600,66 @@ properties:
       - Aurora Kinase Inhibitor TTP607
       - Aurora Kinase/VEGFR2 Inhibitor CYC116
       - Autologous ACTR-CD16-CD28-expressing T-lymphocytes ACTR707
+      - Autologous AFP Specific T Cell Receptor Transduced T Cells C-TCR055
+      - Autologous Anti-BCMA CAR T-cells PHE885
       - Autologous Anti-BCMA CAR-transduced T-cells KITE-585
+      - Autologous Anti-BCMA CD8+ CAR T-cells Descartes-11
       - Autologous Anti-BCMA-CAR Expressing Stem Memory T-cells P-BCMA-101
       - Autologous Anti-BCMA-CAR-4-1BB-CD3zeta-expressing CD4+/CD8+ T-lymphocytes
         JCARH125
       - Autologous Anti-BCMA-CAR-4-1BB-CD3zeta-expressing Memory T-lymphocytes bb21217
+      - Autologous Anti-BCMA-CAR-4-1BB-CD3zeta-expressing T-cells C-CAR088
       - Autologous Anti-BCMA-CAR-4-1BB-CD3zeta-expressing T-cells CT053
       - Autologous Anti-BCMA-CAR-expressing CD4+/CD8+ T-lymphocytes FCARH143
+      - Autologous Anti-CD123 CAR-T Cells
+      - Autologous Anti-CD19 CAR T-cells 19(T2)28z1xx
       - Autologous Anti-CD19 CAR T-cells IM19
       - Autologous Anti-CD19 CAR TCR-zeta/4-1BB-transduced T-lymphocytes huCART19
+      - Autologous Anti-CD19 CAR-4-1BB-CD3zeta-expressing T-cells CNCT19
       - Autologous Anti-CD19 CAR-CD28 T-cells ET019002
       - Autologous Anti-CD19 CAR-CD3zeta-4-1BB-expressing T-cells PZ01
       - Autologous Anti-CD19 CAR-expressing T-lymphocytes CLIC-1901
+      - Autologous Anti-CD19 Chimeric Antigen Receptor T-cells AUTO1
       - Autologous Anti-CD19 Chimeric Antigen Receptor T-cells SJCAR19
       - Autologous Anti-CD19 T-cell Receptor T cells ET190L1
+      - Autologous Anti-CD19 TAC-T cells TAC01-CD19
+      - Autologous Anti-CD19/CD20 Bispecific Nanobody-based CAR-T cells
       - Autologous Anti-CD19/CD22 CAR T-cells AUTO3
       - Autologous Anti-CD19CAR-4-1BB-CD3zeta-EGFRt-expressing CD4+/CD8+ Central Memory
         T-lymphocytes JCAR014
+      - Autologous Anti-CD19CAR-HER2t/CD22CAR-EGFRt-expressing T-cells
+      - Autologous Anti-CD20 CAR Transduced CD4/CD8 Enriched T-cells MB-CART20.1
       - Autologous Anti-CD22 CAR-4-1BB-TCRz-transduced T-lymphocytes CART22-65s
+      - Autologous Anti-EGFR CAR-transduced CXCR 5-modified T-lymphocytes
+      - Autologous Anti-FLT3 CAR T Cells AMG 553
       - Autologous Anti-HLA-A*02/AFP TCRm-expressing T-cells ET140202
       - Autologous Anti-HLA-A*0201/AFP CAR T-cells ET1402L1
+      - Autologous Anti-ICAM-1-CAR-CD28-4-1BB-CD3zeta-expressing T-cells AIC100
+      - Autologous Anti-kappa Light Chain CAR-CD28-expressing T-lymphocytes
       - Autologous Anti-NY-ESO-1/LAGE-1 TCR-transduced c259 T Lymphocytes GSK3377794
+      - Autologous Anti-PD-1 Antibody-activated Tumor-infiltrating Lymphocytes
+      - Autologous Anti-PSMA CAR-T Cells P-PSMA-101
       - Autologous AXL-targeted CAR T-cells CCT301-38
       - Autologous B-cell/Monocyte-presenting HER2/neu Antigen Vaccine BVAC-B
+      - Autologous BCMA-targeted CAR T Cells CC-98633
       - Autologous BCMA-targeted CAR T Cells LCAR-B4822M
       - Autologous Bi-epitope BCMA-targeted CAR T-cells JNJ-68284528
+      - Autologous Bispecific BCMA/CD19-targeted CAR-T Cells GC012F
+      - Autologous Bispecific CD19/CD22-targeted CAR-T Cells GC022
       - Autologous Bone Marrow-derived CD34/CXCR4-positive Stem Cells AMR-001
       - Autologous CAR-mbIL15-Safety Switch T-cells PRGN-3005
       - Autologous CAR-mbIL15-Safety Switch T-cells PRGN-3006
       - Autologous CD123-4SCAR-expressing T-cells 4SCAR123
+      - Autologous CD19 CAR-expressing CD4+/CD8+ T-cells MB-CART19.1
+      - Autologous CD19-targeted CAR T Cells CC-97540
       - Autologous CD19-targeted CAR T Cells JWCAR029
+      - Autologous CD19-targeted CAR-T Cells GC007F
+      - Autologous CD19/PD-1 Bispecific CAR-T Cells
       - Autologous CD20-4SCAR-expressing T-cells 4SCAR20
       - Autologous CD22-4SCAR-expressing T-cells 4SCAR22
       - Autologous CD38-4SCAR-expressing T-cells 4SCAR38
+      - Autologous Clonal Neoantigen T Cells ATL001
+      - Autologous CRISPR-edited Anti-CD19 CAR T Cells XYF19
       - Autologous Deep IL-15 Primed T-cells TRQ15-01
       - Autologous Dendritic Cell Vaccine ACT2001
       - Autologous Dendritic Cell-based Immunotherapeutic AV0113
@@ -1471,35 +1676,54 @@ properties:
         T-cells FH-MCVA2TCR
       - Autologous Mesenchymal Stem Cells Apceth_101
       - Autologous Mesothelin-specific Human mRNA CAR-transfected PBMCs MCY-M11
+      - Autologous Monocyte-derived Lysate-pulsed Dendritic Cell Vaccine PV-001-DC
+      - Autologous Multi-lineage Potential Cells
+      - Autologous Nectin-4/FAP-targeted CAR-T Cells
+      - Autologous NKG2D CAR T-cells CYAD-02
       - Autologous NKG2D CAR-CD3zeta-DAP10-expressing T-Lymphocytes CYAD-01
+      - Autologous Pancreatic Adenocarcinoma Lysate and mRNA-loaded Dendritic Cell
+        Vaccine
+      - Autologous Peripheral Blood Lymphocytes from Ibrutinib-treated Chronic Lymphocytic
+        Leukemia Patients IOV-2001
       - Autologous Prostate Cancer Antigen-expressing Dendritic Cell Vaccine BPX-101
       - Autologous Prostate Stem Cell Antigen-specific CAR T Cells BPX-601
+      - Autologous Rapamycin-resistant Th1/Tc1 Cells RAPA-201
       - Autologous ROR2-targeted CAR T-cells CCT301-59
       - Autologous TAAs-loaded Autologous Dendritic Cells AV-GBM-1
       - Autologous TCR-engineered T-cells IMA201
       - Autologous TCR-engineered T-cells IMA202
       - Autologous TCR-engineered T-cells IMA203
+      - Autologous TCRm-expressing T-cells ET140203
+      - Autologous Tetravalent Dendritic Cell Vaccine MIDRIX4-LUNG
       - Autologous Tumor Infiltrating Lymphocytes LN-144
       - Autologous Tumor Infiltrating Lymphocytes LN-145
+      - Autologous Tumor Infiltrating Lymphocytes LN-145-S1
       - Autologous Tumor Infiltrating Lymphocytes MDA-TIL
+      - Autologous Universal CAR-expressing T-lymphocytes UniCAR02-T
       - Avadomide
       - Avadomide Hydrochloride
       - Avapritinib
-      - Avastin/Xeloda
+      - Avdoralimab
       - Avelumab
+      - Aviscumine
       - Avitinib Maleate
+      - Axalimogene Filolisbac
+      - Axatilimab
       - Axicabtagene Ciloleucel
       - Axitinib
       - AXL Inhibitor DS-1205c
+      - AXL Inhibitor SLC-391
       - AXL Receptor Tyrosine Kinase/cMET Inhibitor BPI-9016M
+      - AXL/ FLT3/VEGFR2 Inhibitor KC1036
       - Axl/Mer Inhibitor INCB081776
+      - Axl/Mer Inhibitor PF-07265807
       - Azacitidine
       - Azapicyl
       - Azaribine
       - Azaserine
       - Azathioprine
-      - AZD2171 (cediranib)
       - Azimexon
+      - Azintuxizumab Vedotin
       - Aziridinylbenzoquinone RH1
       - Azotomycin
       - Azurin:50-77 Cell Penetrating Peptide p28
@@ -1509,6 +1733,7 @@ properties:
       - Bactobolin
       - Bafetinib
       - Balixafortide
+      - Balstilimab
       - Baltaleucel-T
       - Banoxantrone
       - Barasertib
@@ -1520,26 +1745,33 @@ properties:
       - Batimastat
       - Bavituximab
       - Bazedoxifene
+      - Bazlitoran
       - BC-819 Plasmid/Polyethylenimine Complex
       - BCG Solution
       - BCG Tokyo-172 Strain Solution
       - BCG Vaccine
       - Bcl-2 Inhibitor APG 2575
       - Bcl-2 Inhibitor BCL201
+      - Bcl-2 Inhibitor BGB-11417
+      - Bcl-2 Inhibitor LP-108
       - Bcl-2 Inhibitor S65487
       - Bcl-Xs Adenovirus Vaccine
       - BCMA x CD3 T-cell Engaging Antibody CC-93269
-      - BCNU
+      - BCMA-CD19 Compound CAR T Cells
+      - BCMA/CD3e Tri-specific T-cell Activating Construct HPN217
       - Bcr-Abl Kinase Inhibitor K0706
       - Bcr-Abl Kinase Inhibitor PF-114
       - BCR-ABL/KIT/AKT/ERK Inhibitor HQP1351
       - Beauvericin
       - Becatecarin
       - Belagenpumatucel-L
+      - Belantamab Mafodotin
+      - Belapectin
       - Belimumab
       - Belinostat
-      - Belinostat (PXD-101)
       - Belotecan Hydrochloride
+      - Belvarafenib
+      - Belzutifan
       - Bemarituzumab
       - Bemcentinib
       - Bempegaldesleukin
@@ -1551,7 +1783,9 @@ properties:
       - Benzoylphenylurea
       - Berberine Chloride
       - Bermekimab
+      - Bersanlimab
       - Berubicin Hydrochloride
+      - Berzosertib
       - BET Bromodomain Inhibitor ZEN-3694
       - BET Inhibitor ABBV-744
       - BET Inhibitor BAY1238097
@@ -1573,16 +1807,15 @@ properties:
       - Beta-Glucan MM-10-001
       - Beta-lapachone Prodrug ARQ 761
       - Beta-Thioguanine Deoxyriboside
+      - Betaglucin Gel
       - Betulinic Acid
       - Bevacizumab
-      - Bevacizumab (Avastin)
-      - Bevacizumab (rhuMAb VEGF)
       - Bexarotene
+      - Bexmarilimab
       - BF-200 Gel Formulation
       - BH3 Mimetic ABT-737
       - Bi-functional Alkylating Agent VAL-083
       - Bicalutamide
-      - Bicalutamide (Casodex)
       - Bimiralisib
       - Binetrakin
       - Binimetinib
@@ -1595,10 +1828,15 @@ properties:
       - Bisnafide
       - Bisnafide Dimesylate
       - Bispecific Antibody 2B1
+      - Bispecific Antibody AGEN1223
+      - Bispecific Antibody AMG 509
+      - Bispecific Antibody GS-1423
       - Bispecific Antibody MDX-H210
       - Bispecific Antibody MDX447
       - Bisthianostat
+      - BiTE Antibody AMG 910
       - Bivalent BRD4 Inhibitor AZD5153
+      - Bizalimogene Ralaplasmid
       - Bizelesin
       - BL22 Immunotoxin
       - Black Cohosh
@@ -1614,8 +1852,8 @@ properties:
       - BMS-188797
       - BMS-214662
       - BMS-275183
-      - BMS-936558 (Nivolumab, MDX-1106)
       - Boanmycin Hydrochloride
+      - Bomedemstat
       - Boronophenylalanine-Fructose Complex
       - Bortezomib
       - Bosutinib
@@ -1629,7 +1867,9 @@ properties:
       - Brachyury-expressing Yeast Vaccine GI-6301
       - BRAF Inhibitor
       - BRAF Inhibitor ARQ 736
+      - BRAF Inhibitor BGB-3245
       - BRAF Inhibitor PLX8394
+      - BRAF(V600E) Kinase Inhibitor ABM-1310
       - BRAF(V600E) Kinase Inhibitor RO5212054
       - BRAF/EGFR Inhibitor BGB-283
       - BRAFV600/PI3K Inhibitor ASN003
@@ -1670,6 +1910,7 @@ properties:
       - BTK Inhibitor ARQ 531
       - BTK Inhibitor CT-1530
       - BTK Inhibitor DTRMWXHS-12
+      - BTK Inhibitor HZ-A-018
       - BTK Inhibitor ICP-022
       - BTK Inhibitor LOXO-305
       - BTK Inhibitor M7583
@@ -1688,9 +1929,11 @@ properties:
       - Buthionine Sulfoximine
       - BXQ-350 Nanovesicle Formulation
       - c-Kit Inhibitor PLX9486
+      - c-Met Inhibitor ABN401
       - c-Met Inhibitor AL2846
       - c-Met Inhibitor AMG 208
       - c-Met Inhibitor AMG 337
+      - c-Met Inhibitor GST-HG161
       - c-Met Inhibitor HS-10241
       - c-Met Inhibitor JNJ-38877605
       - c-Met Inhibitor MK2461
@@ -1699,9 +1942,9 @@ properties:
       - C-myb Antisense Oligonucleotide G4460
       - c-raf Antisense Oligonucleotide ISIS 5132
       - C-VISA BikDD:Liposome
+      - C/EBP Beta Antagonist ST101
       - CAB-ROR2-ADC BA3021
       - Cabazitaxel
-      - Cabazitaxel (Jevtana)
       - Cabiralizumab
       - Cabozantinib
       - Cabozantinib S-malate
@@ -1711,10 +1954,12 @@ properties:
       - CAIX Inhibitor SLC-0111
       - Calaspargase Pegol-mknl
       - Calcitriol
+      - Calcium Release-activated Channel Inhibitor CM4620
       - Calcium Release-activated Channels Inhibitor RP4010
       - Calcium Saccharate
       - Calculus bovis/Moschus/Olibanum/Myrrha Capsule
       - Calicheamicin Gamma 1I
+      - Camidanlumab Tesirine
       - Camptothecin
       - Camptothecin Analogue TLC388
       - Camptothecin Glycoconjugate BAY 38-3441
@@ -1732,7 +1977,6 @@ properties:
       - Cantrixil
       - Cantuzumab Ravtansine
       - Capecitabine
-      - Capecitabine (Xeloda)
       - Capecitabine Rapidly Disintegrating Tablet
       - Capivasertib
       - Capmatinib
@@ -1742,12 +1986,8 @@ properties:
       - Carbendazim
       - Carbetimer
       - Carbogen
+      - Carbon C 14-pamiparib
       - Carboplatin
-      - Carboplatin, etoposide, dexamethason
-      - Carboplatin, paclitaxel, nivolumab
-      - Carboplatin, paclitaxel, vinorelbine, nivolumab
-      - Carboplatin,Cyclophosphamide,Doxorubicin (Adriamycin),Etoposide (VP-16)
-      - Carboplatin/Abraxane
       - Carboquone
       - Carboxyamidotriazole
       - Carboxyamidotriazole Orotate
@@ -1757,7 +1997,6 @@ properties:
       - Carlumab
       - Carmofur
       - Carmustine
-      - Carmustine (BCNU)
       - Carmustine Implant
       - Carmustine in Ethanol
       - Carmustine Sustained-Release Implant Wafer
@@ -1768,6 +2007,7 @@ properties:
       - Carzinophilin
       - Cathelicidin LL-37
       - Cationic Liposome-Encapsulated Paclitaxel
+      - Cationic Peptide Cream Cypep-1
       - Catumaxomab
       - CBP/beta-catenin Antagonist PRI-724
       - CBP/beta-catenin Modulator E7386
@@ -1775,11 +2015,21 @@ properties:
       - CCR2 Antagonist PF-04136309
       - CCR2/CCR5 Antagonist BMS-813160
       - CCR4 Inhibitor FLX475
+      - CD11b Agonist GB1275
+      - CD123-CD33 Compound CAR T Cells
+      - CD123-specific Targeting Module TM123
+      - CD20-CD19 Compound CAR T Cells
+      - CD28/ICOS Antagonist ALPN-101
       - CD4-specific Telomerase Peptide Vaccine UCPVax
       - CD40 Agonist Monoclonal Antibody CP-870,893
       - CD40 Agonistic Monoclonal Antibody APX005M
       - CD44 Targeted Agent SPL-108
+      - CD44v6-specific CAR T-cells
       - CD47 Antagonist ALX148
+      - CD73 Inhibitor AB680
+      - CD73 Inhibitor LY3475070
+      - CD80-Fc Fusion Protein ALPN-202
+      - CD80-Fc Fusion Protein FPT155
       - CDC7 Inhibitor TAK-931
       - CDC7 Kinase Inhibitor BMS-863233
       - CDC7 Kinase Inhibitor LY3143921 Hydrate
@@ -1790,21 +2040,28 @@ properties:
       - CDK/JAK2/FLT3 Inhibitor TG02 Citrate
       - CDK1 Inhibitor BEY1107
       - CDK1/2/4 Inhibitor AG-024322
+      - CDK2 Inhibitor PF-07104091
       - CDK2/4/6/FLT3 Inhibitor FN-1501
       - CDK2/5/9 Inhibitor CYC065
       - CDK4 Inhibitor P1446A-05
       - CDK4/6 Inhibitor
       - CDK4/6 Inhibitor BPI-16350
+      - CDK4/6 Inhibitor CS3002
       - CDK4/6 Inhibitor FCN-437
       - CDK4/6 Inhibitor G1T38
+      - CDK4/6 Inhibitor HS-10342
       - CDK4/6 Inhibitor SHR6390
+      - CDK4/6 Inhibitor TQB3616
       - CDK7 Inhibitor CT7001
       - CDK7 Inhibitor SY-1365
+      - CDK7 Inhibitor SY-5609
+      - CDK8/19 Inhibitor SEL 120
       - CDK9 Inhibitor AZD4573
       - CEA-MUC-1-TRICOM Vaccine CV301
       - CEA-targeting Agent RG6123
       - CEBPA-targeting saRNA MTL-CEBPA Liposome
       - Cedazuridine
+      - Cedazuridine/Azacitidine Combination Agent ASTX030
       - Cedazuridine/Decitabine Combination Agent ASTX727
       - Cedefingol
       - Cediranib
@@ -1821,6 +2078,7 @@ properties:
       - Ceramide Nanoliposome
       - Cerdulatinib
       - Cereblon E3 Ubiquitin Ligase Modulating Agent CC-92480
+      - Cereblon E3 Ubiquitin Ligase Modulating Agent CC-99282
       - Cereblon Modulator CC-90009
       - Cergutuzumab Amunaleukin
       - Ceritinib
@@ -1828,13 +2086,14 @@ properties:
       - cEt KRAS Antisense Oligonucleotide AZD4785
       - Cetrelimab
       - Cetuximab
-      - Cetuximab (Erbitux)
+      - Cetuximab Sarotalocan
       - Cetuximab-IR700 Conjugate RM-1929
       - Cetuximab-loaded Ethylcellulose Polymeric Nanoparticles Decorated with Octreotide
         (SY)
       - Cevipabulin
       - Cevipabulin Fumarate
       - Cevipabulin Succinate
+      - Cevostamab
       - cFMS Tyrosine Kinase Inhibitor ARRY-382
       - Chaparrin
       - Chaparrinone
@@ -1854,6 +2113,7 @@ properties:
       - Chloroquine
       - Chloroquinoxaline Sulfonamide
       - Chlorotoxin
+      - Chlorotoxin (EQ)-CD28-CD3zeta-CD19t-expressing CAR T-lymphocytes
       - Chlorozotocin
       - Choline Kinase Alpha Inhibitor TCD-717
       - CHP-NY-ESO-1 Peptide Vaccine IMF-001
@@ -1865,23 +2125,24 @@ properties:
       - Cidan Herbal Capsule
       - Ciforadenant
       - Cilengitide
+      - Ciltacabtagene Autoleucel
       - Cimetidine
       - Cinacalcet Hydrochloride
       - Cinobufagin
       - Cinobufotalin
+      - Cinrebafusp Alfa
+      - Cintirorgon
       - Cintredekin Besudotox
       - Cirmtuzumab
       - cis-Urocanic Acid
       - Cisplatin
-      - Cisplatin and 5-Fluorouracil
       - Cisplatin Liposomal
       - Cisplatin-E Therapeutic Implant
-      - Cisplatin, etoposide
-      - Cisplatin, etoposide, carboplatin, taxol, nivolumab); surgery
       - Cisplatin/Vinblastine/Cell Penetration Enhancer Formulation INT230-6
       - Citarinostat
       - Citatuzumab Bogatox
       - Cixutumumab
+      - CK1alpha/CDK7/CDK9 Inhibitor BTX-A51
       - CK2-targeting Synthetic Peptide CIGB-300
       - CL 246738
       - Cladribine
@@ -1900,17 +2161,21 @@ properties:
       - Clomiphene Citrate
       - Clostridium Novyi-NT Spores
       - Cobimetinib
+      - Cobolimab
       - Cobomarsen
       - Codrituzumab
       - Coenzyme Q10
+      - Cofetuzumab Pelidotin
       - Colchicine-Site Binding Agent ABT-751
       - Cold Contaminant-free Iobenguane I-131
       - Colloidal Gold-Bound Tumor Necrosis Factor
       - Colorectal Cancer Peptide Vaccine PolyPEPI1018
       - Colorectal Tumor-Associated Peptides Vaccine IMA910
+      - Coltuximab Ravtansine
       - Combretastatin
       - Combretastatin A-1
       - Combretastatin A1 Diphosphate
+      - Commensal Bacterial Strain Formulation VE800
       - Compound Kushen Injection
       - Conatumumab
       - Conbercept
@@ -1919,15 +2184,19 @@ properties:
       - Copanlisib
       - Copanlisib Hydrochloride
       - Copper Cu 64-ATSM
+      - Copper Cu 67 Tyr3-octreotate
       - Copper Gluconate
+      - Cord Blood Derived CAR T-Cells
       - Cord Blood-derived Expanded Natural Killer Cells PNK-007
       - Cordycepin
       - Cordycepin Triphosphate
       - Coriolus Versicolor Extract
       - Corticorelin Acetate
       - Cortisone Acetate
+      - Cosibelimab
       - Cositecan
       - Coxsackievirus A21
+      - Coxsackievirus V937
       - CpG Oligodeoxynucleotide GNKG168
       - Crenolanib
       - Crenolanib Besylate
@@ -1937,6 +2206,7 @@ properties:
       - Cryptophycin 52
       - Crystalline Genistein Formulation AXP107-11
       - CSF-1R Inhibitor BLZ945
+      - CSF1R Inhibitor ABSK021
       - CSF1R Inhibitor DCC-3014
       - CSF1R Inhibitor PLX73086
       - CT2584 HMS
@@ -1952,6 +2222,7 @@ properties:
       - CXCR4 Antagonist USL311
       - CXCR4 Inhibitor Q-122
       - CXCR4 Peptide Antagonist LY2510924
+      - CXCR4/E-selectin Antagonist GMI-1359
       - Cyclin-dependent Kinase 8/19 Inhibitor BCD 115
       - Cyclin-dependent Kinase Inhibitor PF-06873600
       - Cyclodextrin-Based Polymer-Camptothecin CRLX101
@@ -1959,15 +2230,15 @@ properties:
       - Cycloleucine
       - Cyclopentenyl Cytosine
       - Cyclophosphamide
-      - Cyclophosphamide (Cytoxan)
       - Cyclophosphamide Anhydrous
-      - Cyclophosphamide,Vincristine; irinotecan; temozolomide (VIT)
       - Cyclosporine
       - CYL-02 Plasmid DNA
       - CYP11A1 inhibitor ODM-208
+      - CYP11A1 Inhibitor ODM-209
       - CYP17 Inhibitor CFG920
       - CYP17 Lyase Inhibitor ASN001
       - CYP17/Androgen Receptor Inhibitor ODM 204
+      - CYP17/CYP11B2 Inhibitor LAE001
       - Cyproterone
       - Cyproterone Acetate
       - Cytarabine
@@ -1977,7 +2248,6 @@ properties:
       - Cytochlor
       - Cytokine-based Biologic Agent IRX-2
       - D-methionine Formulation MRX-1024
-      - DA-EPOCH-R
       - DAB389 Epidermal Growth Factor
       - Dabrafenib
       - Dabrafenib Mesylate
@@ -1998,6 +2268,7 @@ properties:
       - Danvatirsen
       - Daporinad
       - Daratumumab
+      - Daratumumab and Hyaluronidase-fihj
       - Daratumumab/rHuPH20
       - Darinaparsin
       - Darleukin
@@ -2007,10 +2278,9 @@ properties:
       - Daunorubicin
       - Daunorubicin Citrate
       - Daunorubicin Hydrochloride
-      - DD4A | chemotherapy vincristine, actinomycin, doxorubicin, cyclophosphamide,
-        and etoposide
       - DEC-205/NY-ESO-1 Fusion Protein CDX-1401
       - Decitabine
+      - Decitabine and Cedazuridine
       - Defactinib
       - Defactinib Hydrochloride
       - Deferoxamine
@@ -2018,13 +2288,16 @@ properties:
       - Degarelix
       - Degarelix Acetate
       - Delanzomib
+      - Delolimogene Mupadenorepvec
       - Demcizumab
       - Demecolcine
       - Demplatin Pegraglumer
+      - Dendrimer-conjugated Bcl-2/Bcl-XL Inhibitor AZD0466
       - Dendritic Cell Vaccine
       - Dendritic Cell-Autologous Lung Tumor Vaccine
       - Dendritic Cell-targeting Lentiviral Vector ID-LV305
       - Denenicokin
+      - Dengue Virus Adjuvant PV-001-DV
       - Denibulin
       - Denibulin Hydrochloride
       - Denileukin Diftitox
@@ -2073,6 +2346,7 @@ properties:
       - Dihydroorotate Dehydrogenase Inhibitor AG-636
       - Dihydroorotate Dehydrogenase Inhibitor BAY2402234
       - Diindolylmethane
+      - Dilpacimab
       - Dimethylmyleran
       - Dinaciclib
       - Dinutuximab
@@ -2091,10 +2365,12 @@ properties:
       - DNA Plasmid-encoding Interleukin-12/HPV DNA Plasmids Therapeutic Vaccine MEDI0457
       - DNA Vaccine VB10.16
       - DNA-dependent Protein Kinase Inhibitor VX-984
+      - DNA-PK inhibitor AZD7648
+      - DNA-PK/PI3K-delta Inhibitor BR101801
       - DNA-PK/TOR Kinase Inhibitor CC-115
+      - DNMT1 Inhibitor NTX-301
       - DNMT1 Mixed-Backbone Antisense Oligonucleotide MG 98
       - Docetaxel
-      - Docetaxel (Taxotere)
       - Docetaxel Anhydrous
       - Docetaxel Emulsion ANX-514
       - Docetaxel Formulation CKD-810
@@ -2104,11 +2380,13 @@ properties:
       - Docetaxel-loaded Nanopharmaceutical CRLX301
       - Docetaxel-PNP
       - Docetaxel/Ritonavir
+      - Dociparstat sodium
       - Dolastatin 10
       - Dolastatin 15
       - Domatinostat
       - Donafenib
       - Dopamine-Somatostatin Chimeric Molecule BIM-23A760
+      - Dostarlimab
       - Double-armed TMZ-CD40L/4-1BBL Oncolytic Ad5/35 Adenovirus LOAd703
       - Dovitinib
       - Dovitinib Lactate
@@ -2116,16 +2394,13 @@ properties:
       - Doxercalciferol
       - Doxifluridine
       - Doxorubicin
-      - Doxorubicin (Adriamycin)
-      - Doxorubicin (Adriamycin),Etoposide (VP-16),Vincristine,Vincristine; actinomycin-D;
-        cyclophosphamide (VAC)
       - Doxorubicin Hydrochloride
       - Doxorubicin Prodrug L-377,202
+      - Doxorubicin Prodrug/Prodrug-activating Biomaterial SQ3370
       - Doxorubicin-Eluting Beads
       - Doxorubicin-HPMA Conjugate
       - Doxorubicin-loaded EGFR-targeting Nanocells
       - Doxorubicin-Magnetic Targeted Carrier Complex
-      - Doxorubicin, liposome encapsulated (Liposome Company)
       - DPT/BCG/Measles/Serratia/Pneumococcus Vaccine
       - DPT/Typhoid/Staphylococcus aureus/Paratyphoid A/Paratyphoid B Vaccine
       - DPX-E7 HPV Vaccine
@@ -2133,6 +2408,7 @@ properties:
       - DR5-targeting Tetrameric Nanobody Agonist TAS266
       - Dromostanolone Propionate
       - Drozitumab
+      - DTRMWXHS-12/Everolimus/Pomalidomide Combination Agent DTRM-555
       - Dual IGF-1R/InsR Inhibitor BMS-754807
       - Dual Variable Domain Immunoglobulin ABT-165
       - Dual-affinity B7-H3/CD3-targeted Protein MGD009
@@ -2149,12 +2425,13 @@ properties:
       - Dynemicin
       - Dynemicin A
       - E2F1 Pathway Activator ARQ 171
-      - E7389 (Eribulin; Halichondrin B Analog)
       - EBNA-1 inhibitor VK-2019
       - Echinomycin
       - Ecromeximab
       - Edatrexate
       - Edelfosine
+      - Edicotinib
+      - Edodekin alfa
       - Edotecarin
       - Edrecolomab
       - EED Inhibitor MAK683
@@ -2164,6 +2441,7 @@ properties:
       - Eflornithine
       - Eflornithine Hydrochloride
       - Eftilagimod Alpha
+      - Eftozanermin Alfa
       - Eg5 Kinesin-Related Motor Protein Inhibitor 4SC-205
       - Eg5 Kinesin-Related Motor Protein Inhibitor ARQ 621
       - EGb761
@@ -2173,17 +2451,23 @@ properties:
       - EGFR Inhibitor BIBX 1382
       - EGFR Inhibitor DBPR112
       - EGFR Inhibitor PD-168393
+      - EGFR Inhibitor TY-9591
+      - EGFR Mutant-selective  Inhibitor TQB3804
       - EGFR Mutant-specific Inhibitor BPI-7711
       - EGFR Mutant-specific Inhibitor CK-101
       - EGFR Mutant-specific Inhibitor D-0316
       - EGFR Mutant-specific Inhibitor ZN-e4
       - EGFR T790M Antagonist BPI-15086
       - EGFR T790M Inhibitor HS-10296
+      - EGFR/EGFRvIII Inhibitor WSD0922-FU
       - EGFR/FLT3/Abl Inhibitor SKLB1028
       - EGFR/HER1/HER2 Inhibitor PKI166
       - EGFR/HER2 Inhibitor AP32788
       - EGFR/HER2 Inhibitor AV-412
+      - EGFR/HER2 Inhibitor DZD9008
       - EGFR/HER2 Kinase Inhibitor TAK-285
+      - EGFR/TGFb Fusion Monoclonal Antibody BCA101
+      - EGFR/VEGFR/RET Inhibitor HA121-28
       - Eicosapentaenoic Acid
       - eIF4E Antisense Oligonucleotide ISIS 183750
       - Elacestrant
@@ -2204,22 +2488,28 @@ properties:
       - Eltanexor
       - Emactuzumab
       - Emapalumab
-      - EMD 121974 (Cilengitide)
       - Emepepimut-S
+      - Emibetuzumab
       - Emitefur
       - Emofolin Sodium
       - Empesertib
       - Enadenotucirev
       - Enadenotucirev-expressing Anti-CD40 Agonistic Monoclonal Antibody NG-350A
+      - Enadenotucirev-expressing FAP/CD3 Bispecific FAP-TAc NG-641
       - Enasidenib
       - Enasidenib Mesylate
       - Enavatuzumab
+      - Encapsulated Rapamycin
+      - Encelimab
       - Enclomiphene
       - Enclomiphene Citrate
       - Encorafenib
+      - Endothelin B Receptor Blocker ENB 003
       - Endothelin Receptor Type A Antagonist YM598
       - Enfortumab Vedotin
       - Engineered Human Umbilical Vein Endothelial Cells AB-205
+      - Engineered Red Blood Cells Co-expressing 4-1BBL and IL-15TP RTX-240
+      - Engineered Toxin Body Targeting CD38 TAK-169
       - Engineered Toxin Body Targeting HER2 MT-5111
       - Eniluracil/5-FU Combination Tablet
       - Enloplatin
@@ -2239,12 +2529,15 @@ properties:
       - Enzalutamide
       - Enzastaurin
       - Enzastaurin Hydrochloride
+      - EP2/EP4 Antagonist TPST-1495
+      - EP4 Antagonist INV-1120
       - EP4 Antagonist ONO-4578
       - Epacadostat
+      - Epcoritamab
+      - EphA2-targeting Bicycle Toxin Conjugate BT5528
       - Epipodophyllotoxin Analog GL331
       - Epipropidine
       - Epirubicin
-      - Epirubicin (Ellence)
       - Epirubicin Hydrochloride
       - Epitinib Succinate
       - Epitiostanol
@@ -2265,6 +2558,8 @@ properties:
       - ERK Inhibitor LTT462
       - ERK Inhibitor MK-8353
       - ERK1/2 Inhibitor ASN007
+      - ERK1/2 Inhibitor HH2710
+      - ERK1/2 Inhibitor JSI-1187
       - ERK1/2 Inhibitor KO-947
       - ERK1/2 Inhibitor LY3214996
       - Erlotinib
@@ -2276,7 +2571,6 @@ properties:
       - Esperamicin A1
       - Essiac
       - Esterified Estrogens
-      - Estradiol mustard
       - Estradiol Valerate
       - Estramustine
       - Estramustine Phosphate Sodium
@@ -2292,28 +2586,31 @@ properties:
       - Ethyleneimine
       - Ethylnitrosourea
       - Etidronate-Cytarabine Conjugate MBC-11
+      - Etigilimab
       - Etirinotecan Pegol
       - Etoglucid
       - Etoposide
-      - Etoposide (VP-16)
       - Etoposide Phosphate
       - Etoposide Toniribate
       - Etoprine
       - Etoricoxib
       - Ets-family Transcription Factor Inhibitor TK216
       - Everolimus
-      - Everolimus (RAD-001)
       - Everolimus Tablets for Oral Suspension
       - Evofosfamide
       - Ex Vivo-expanded Autologous T Cells IMA101
       - Exatecan Mesylate
       - Exatecan Mesylate Anhydrous
       - Exemestane
-      - Exemestane (Aromasin)
+      - Exicorilant
       - Exisulind
       - Extended Release Flucytosine
+      - Extended Release Metformin Hydrochloride
       - Extended-release Onapristone
+      - Ezabenlimab
       - EZH1/2 Inhibitor DS-3201
+      - EZH1/2 Inhibitor HH2853
+      - EZH2 inhibitor CPI-0209
       - EZH2 Inhibitor CPI-1205
       - EZH2 Inhibitor PF-06821497
       - EZH2 Inhibitor SHR2554
@@ -2321,43 +2618,58 @@ properties:
       - FACT Complex-targeting Curaxin CBL0137
       - Factor VII-targeting Immunoconjugate Protein ICON-1
       - Factor VIIa Inhibitor PCI-27483
+      - Fadraciclib
       - Fadrozole Hydrochloride
       - FAK Inhibitor GSK2256098
       - FAK Inhibitor PF-00562271
       - FAK Inhibitor VS-4718
+      - FAK/ALK/ROS1 Inhibitor APG-2449
       - Falimarev
       - Famitinib
+      - FAP/4-1BB-targeting DARPin MP0310
+      - FAP/4-1BB-targeting Fusion Protein RO7122290
       - Farletuzumab
       - Farnesyltransferase/Geranylgeranyltransferase Inhibitor L-778,123
+      - Fas Ligand-treated Allogeneic Mobilized Peripheral Blood Cells
       - Fas Receptor Agonist APO010
       - Fascin Inhibitor NP-G2-044
       - FASN Inhibitor TVB-2640
+      - Favezelimab
       - Fazarabine
+      - Fc-engineered Anti-CD40 Agonist Antibody 2141-V11
       - Febuxostat
       - Fedratinib
       - Fedratinib Hydrochloride
+      - Feladilimab
+      - Felzartamab
       - Fenebrutinib
       - Fenretinide
       - Fenretinide Lipid Matrix
+      - Fenretinide Phospholipid Suspension ST-001
       - FGF Receptor Antagonist HGS1036
       - FGF/FGFR Pathway Inhibitor E7090
       - FGFR Inhibitor ASP5878
       - FGFR Inhibitor AZD4547
+      - FGFR Inhibitor CPL304110
       - FGFR Inhibitor Debio 1347
       - FGFR Inhibitor TAS-120
+      - FGFR/CSF-1R Inhibitor 3D185
       - FGFR/VEGFR/PDGFR/FLT3/SRC Inhibitor XL999
       - FGFR1/2/3 Inhibitor HMPL-453
+      - FGFR2 Inhibitor RLY-4008
       - FGFR4 Antagonist INCB062079
       - FGFR4 Inhibitor BLU 9931
       - FGFR4 Inhibitor FGF401
       - FGFR4 Inhibitor H3B-6527
       - FGFR4 Inhibitor ICP-105
+      - Fianlimab
       - Fibromun
       - Ficlatuzumab
       - Figitumumab
       - Filanesib
       - Filgotinib
       - Filgrastim
+      - Fimaporfin A
       - Fimepinostat
       - Firtecan Pegol
       - Fisogatinib
@@ -2367,15 +2679,20 @@ properties:
       - FLT3 Inhibitor FF-10101 Succinate
       - FLT3 Inhibitor HM43239
       - FLT3 Inhibitor SKI-G-801
+      - Flt3 Ligand/Anti-CTLA-4 Antibody/IL-12 Engineered Oncolytic Vaccinia Virus
+        RIVAL-01
       - FLT3 Tyrosine Kinase Inhibitor TTT-3002
       - FLT3/ABL/Aurora Kinase Inhibitor KW-2449
       - FLT3/CDK4/6 Inhibitor FLX925
+      - FLT3/FGFR Dual Kinase Inhibitor MAX-40279
       - FLT3/KIT Kinase Inhibitor AKN-028
+      - FLT3/KIT/CSF1R Inhibitor NMS-03592088
       - Flt3/MerTK Inhibitor MRX-2843
       - Fludarabine
       - Fludarabine Phosphate
       - Flumatinib
       - Flumatinib Mesylate
+      - Fluorine F 18 Ara-G
       - Fluorodopan
       - Fluorouracil
       - Fluorouracil Implant
@@ -2392,18 +2709,18 @@ properties:
       - Folate Receptor-Targeted Vinca Alkaloid EC0489
       - Folate Receptor-Targeted Vinca Alkaloid/Mitomycin C EC0225
       - Folate-FITC
-      - 'FOLFIRI: 5-FU, Irinotecan, Leucovorin'
-      - Folfirinox/ mFolfirinox
-      - FOLFOX
       - Folic Acid
       - Folitixorin
       - Foretinib
+      - Foritinib Succinate
       - Formestane
       - Forodesine Hydrochloride
       - Fosaprepitant
       - Fosbretabulin
       - Fosbretabulin Disodium
       - Fosbretabulin Tromethamine
+      - Fosgemcitabine Palabenamide
+      - Fosifloxuridine Nafalbenamide
       - Foslinanib
       - Foslinanib Disodium
       - Fosquidone
@@ -2415,11 +2732,12 @@ properties:
       - Fresolimumab
       - Fruquintinib
       - Fulvestrant
-      - Fulvestrant (Faslodex)
       - Fumagillin-Derived Polymer Conjugate XMT-1107
       - Fursultiamine
+      - Futibatinib
       - Futuximab
       - Futuximab/Modotuximab Mixture
+      - G Protein-coupled Estrogen Receptor Agonist LNS8801
       - G-Quadruplex Stabilizer BMVC
       - Galamustine
       - Galarubicin
@@ -2427,6 +2745,7 @@ properties:
       - Galectin-1 Inhibitor OTX008
       - Galeterone
       - Galiximab
+      - Gallium-based Bone Resorption Inhibitor AP-002
       - Galocitabine
       - Galunisertib
       - Gamboge Resin Extract TSB-9-W1
@@ -2444,14 +2763,12 @@ properties:
       - Gastrin/cholecystokinin Type B Receptor Inhibitor Z-360
       - Gataparsen Sodium
       - Gatipotuzumab
-      - GDC-0449 (Vismodegib)
+      - GBM Antigens and Alloantigens Immunotherapeutic Vaccine
       - Gedatolisib
       - Gefitinib
       - Geldanamycin
       - Gelonin
       - Gemcitabine
-      - Gemcitabine (Gemzar)
-      - Gemcitabine abraxane (nab-paclitaxel)
       - Gemcitabine Elaidate
       - Gemcitabine Hydrochloride
       - Gemcitabine Hydrochloride Emulsion
@@ -2459,15 +2776,18 @@ properties:
       - Gemcitabine-Phosphoramidate Hydrochloride NUC-1031
       - Gemcitabine-Releasing Intravesical System
       - Gemtuzumab Ozogamicin
+      - Genetically Modified Interleukin-12 Transgene-encoding Bifidobacterium longum
       - Genistein
       - Gentuximab
       - Geranylgeranyltransferase I Inhibitor
       - GI-4000 Vaccine
+      - Giloralimab
       - Gilteritinib
       - Gilteritinib Fumarate
       - Gimatecan
       - Gimeracil
       - Ginsenoside Rg3 Capsule
+      - Giredestrant
       - Girentuximab
       - Girodazole
       - GITR Agonist MEDI1873
@@ -2483,12 +2803,15 @@ properties:
       - Glioma Lysate Vaccine GBM6-AD
       - Glioma-associated Peptide-loaded Dendritic Cell Vaccine SL-701
       - Globo H-DT Vaccine OBI-833
+      - Glofitamab
       - Glucarpidase
       - Glucocorticoid Receptor Antagonist ORIC-101
       - Glufosfamide
       - Glumetinib
       - Glutaminase Inhibitor CB-839
       - Glutaminase Inhibitor CB-839 Hydrochloride
+      - Glutaminase Inhibitor IPN60090
+      - Glutamine Antagonist DRP-104
       - Glutathione Pegylated Liposomal Doxorubicin Hydrochloride Formulation 2B3-101
       - Glyco-engineered Anti-CD20 Monoclonal Antibody CHO H01
       - Glycooptimized Trastuzumab-GEX
@@ -2545,7 +2868,10 @@ properties:
       - HER-2-positive B-cell Peptide Antigen P467-DT-CRM197/Montanide Vaccine IMU-131
       - HER2 ECD+TM Virus-like Replicon Particles Vaccine AVX901
       - HER2 Inhibitor CP-724,714
+      - HER2 Inhibitor DZD1516
       - HER2 Inhibitor TAS0728
+      - HER2 Tri-specific Natural Killer Cell Engager DF1001
+      - HER2-directed TLR8 Agonist SBT6050
       - HER2-targeted DARPin MP0274
       - HER2-targeted Liposomal Doxorubicin Hydrochloride MM-302
       - HER2-targeting Antibody Fc Fragment FS102
@@ -2558,7 +2884,7 @@ properties:
       - HIF-1alpha Inhibitor PX-478
       - HIF-2alpha Inhibitor PT2385
       - HIF-2alpha Inhibitor PT2977
-      - High-dose methotrexate; doxorubicin; cisplatin (MAP)
+      - HIF2a RNAi ARO-HIF2
       - Histone-Lysine N-Methyltransferase EZH2 Inhibitor GSK2816126
       - Histrelin Acetate
       - HLA-A*0201 Restricted TERT(572Y)/TERT(572) Peptides Vaccine Vx-001
@@ -2569,15 +2895,18 @@ properties:
       - Holmium Ho 166 Poly(L-Lactic Acid) Microspheres
       - Hormone Therapy
       - HPPH
+      - HPV 16 E6/E7-encoding Arenavirus Vaccine HB-202
       - HPV 16 E7 Antigen-expressing Lactobacillis casei Vaccine BLS-ILB-E710c
       - HPV DNA Plasmids Therapeutic Vaccine VGX-3100
       - HPV E6/E7 DNA Vaccine GX-188E
+      - HPV E6/E7-encoding Arenavirus Vaccine HB-201
       - HPV Types 16/18 E6/E7-Adenoviral Transduced Autologous Lymphocytes/alpha-Galactosylceramide
         Vaccine BVAC-C
       - HPV-16 E6 Peptides Vaccine/Candida albicans Extract
       - HPV-6-targeting Immunotherapeutic Vaccine INO-3106
       - HPV16 E7-specific HLA-A*02:01-restricted IgG1-Fc Fusion Protein CUE-101
       - HPV16 L2/E6/E7 Fusion Protein Vaccine TA-CIN
+      - HPV6/11-targeted DNA Plasmid Vaccine INO-3107
       - Hsp90 Antagonist KW-2478
       - Hsp90 Inhibitor AB-010
       - Hsp90 Inhibitor BIIB021
@@ -2589,7 +2918,9 @@ properties:
       - Hsp90 Inhibitor PU-H71
       - Hsp90 Inhibitor SNX-5422 Mesylate
       - Hsp90 Inhibitor SNX-5542 Mesylate
+      - Hsp90 Inhibitor TQB3474
       - Hsp90 Inhibitor XL888
+      - Hsp90-targeted Photosensitizer HS-201
       - HSP90-targeted SN-38 Conjugate PEN-866
       - HSP90alpha/beta Inhibitor TAS-116
       - hTERT Multipeptide/Montanide ISA-51 VG/Imiquimod Vaccine GX 301
@@ -2606,6 +2937,7 @@ properties:
       - Human Monoclonal Antibody 216
       - Human Monoclonal Antibody B11-hCG Beta Fusion Protein CDX-1307
       - Human Papillomavirus 16 E7 Peptide/Padre 965.10
+      - Hyaluronidase-zzxf/Pertuzumab/Trastuzumab
       - Hycanthone
       - Hydralazine Hydrochloride
       - Hydrocortisone Sodium Succinate
@@ -2620,6 +2952,8 @@ properties:
       - I 131 Monoclonal Antibody CC49
       - I 131 Monoclonal Antibody F19
       - I 131 Monoclonal Antibody Lym-1
+      - Iadademstat
+      - Ianalumab
       - IAP Inhibitor APG-1387
       - IAP Inhibitor AT-406
       - IAP Inhibitor HGS1029
@@ -2637,18 +2971,23 @@ properties:
       - Idasanutlin
       - Idecabtagene Vicleucel
       - Idelalisib
+      - Idetrexed
+      - IDH1 Mutant Inhibitor LY3410738
       - IDH1(R132) Inhibitor IDH305
       - IDH1R132H-Specific Peptide Vaccine PEPIDH1M
       - Idiotype-Pulsed Autologous Dendritic Cell Vaccine APC8020
       - IDO Peptide Vaccine IO102
       - IDO-1 Inhibitor LY3381916
       - IDO/TDO Inhibitor HTI-1090
+      - IDO/TDO Inhibitor LY-01013
       - IDO1 Inhibitor KHK2455
       - IDO1 Inhibitor MK-7162
       - IDO1 Inhibitor PF-06840003
       - IDO1/TDO2 Inhibitor DN1406131
+      - IDO1/TDO2 Inhibitor M4112
       - Idronoxil
       - Idronoxil Suppository NOX66
+      - Ieramilimab
       - Ifabotuzumab
       - Ifetroban
       - Ifosfamide
@@ -2659,20 +2998,25 @@ properties:
       - IL-10 Immunomodulator MK-1966
       - IL-12-expressing HSV-1 NSC 733972
       - IL-12-expressing Mesenchymal Stem Cell Vaccine GX-051
+      - IL-12sc, IL-15sushi, IFNa and GM-CSF mRNA-based Immunotherapeutic Agent SAR441000
       - IL-2 Recombinant Fusion Protein ALT-801
       - IL-2/9/15 Gamma Chain Receptor Inhibitor BNZ-1
       - IL4-Pseudomonas Exotoxin Fusion Protein MDNA55
+      - Ilginatinib
       - Ilixadencel
       - Iloprost
       - Ilorasertib
       - Imalumab
+      - Imaradenant
       - Imatinib
       - Imatinib Mesylate
       - Imetelstat
       - Imetelstat Sodium
       - Imexon
+      - Imgatuzumab
       - Imidazole Mustard
       - Imidazole-Pyrazole
+      - Imifoplatin
       - Imipramine Blue
       - Imiquimod
       - Immediate-release Onapristone
@@ -2690,16 +3034,21 @@ properties:
       - Immunotherapy Regimen MKC-1106-MT
       - Immunotoxin CMD-193
       - IMT-1012 Immunotherapeutic Vaccine
+      - Inactivated Oncolytic Virus Particle GEN0101
       - Inalimarev
       - Incyclinide
+      - Indatuximab Ravtansine
       - Indibulin
       - Indicine-N-Oxide
       - Indisulam
+      - Individualized MVA-based Vaccine TG4050
       - Indocyanine Green-labeled Polymeric Micelles ONM-100
       - Indole-3-Carbinol
       - Indomethacin
       - Indoximod
       - Indoximod Prodrug NLG802
+      - Indusatumab Vedotin
+      - Inebilizumab
       - Inecalcitol
       - Infigratinib
       - Infigratinib Mesylate
@@ -2707,6 +3056,7 @@ properties:
       - Ingenol Mebutate
       - Ingenol Mebutate Gel
       - Iniparib
+      - iNKT Cell Agonist ABX196
       - Innate Immunostimulator rBBX-01
       - INO-1001
       - Inodiftagene Vixteplasmid
@@ -2726,6 +3076,12 @@ properties:
       - Interferon Gamma-1b
       - Interferon-gamma-expressing Adenovirus Vaccine ASN-002
       - Interleukin Therapy
+      - Interleukin-12-Fc Fusion Protein DF6002
+      - Interleukin-15 Agonist Fusion Protein SHR1501
+      - Interleukin-15 Fusion Protein BJ-001
+      - Interleukin-15/Interleukin-15 Receptor Alpha Complex-Fc Fusion Protein XmAb24306
+      - Interleukin-15/Interleukin-15 Receptor Alpha Sushi+ Domain Fusion Protein
+        SO-C101
       - Interleukin-2 Liposome
       - Intermediate-affinity Interleukin-2 Receptor Agonist ALKS 4230
       - Intetumumab
@@ -2737,8 +3093,10 @@ properties:
       - Iodine I 124 Monoclonal Antibody M5A
       - Iodine I 125-Anti-EGFR-425 Monoclonal Antibody
       - Iodine I 131 Anti-Fibronectin Antibody Fragment L19-SIP
+      - Iodine I 131 Apamistamab
       - Iodine I 131 Derlotuximab Biotin
       - Iodine I 131 Ethiodized Oil
+      - Iodine I 131 IPA
       - Iodine I 131 MIP-1095
       - Iodine I 131 Monoclonal Antibody 81C6
       - Iodine I 131 Monoclonal Antibody BC8
@@ -2757,21 +3115,24 @@ properties:
       - Ipafricept
       - Ipatasertib
       - Ipilimumab
-      - Ipilimumab (BMS-734016; MDX-010 Transfectoma-derived)
       - Ipomeanol
       - Iproplatin
       - iPSC-derived CD16-expressing Natural Killer Cells FT516
+      - iPSC-derived CD16/IL-15RF-expressing Anti-CD19 CAR-NK Cells FT596
       - iPSC-derived Natural Killer Cells FT500
       - IRAK4 Inhibitor CA-4948
       - Iratumumab
       - Iridium Ir 192
       - Irinotecan
-      - Irinotecan (CPT-11, Camptosar)
       - Irinotecan Hydrochloride
+      - Irinotecan Sucrosofate
       - Irinotecan-Eluting Beads
       - Irinotecan/P-glycoprotein Inhibitor HM30181AK Combination Tablet
       - Irofulven
+      - Iroplact
       - Irosustat
+      - Irradiated Allogeneic Human Lung Cancer Cells Expressing OX40L-Ig Vaccine
+        HS-130
       - Isatuximab
       - Iso-fludelone
       - Isobrucein B
@@ -2780,16 +3141,19 @@ properties:
       - Ispinesib
       - Ispinesib Mesylate
       - ISS 1018 CpG Oligodeoxynucleotide
+      - Istiratumab
       - Itacitinib
       - Itacitinib Adipate
       - ITK Inhibitor CPI-818
       - Itraconazole
       - Itraconazole Dispersion In Polymer Matrix
+      - Ivaltinostat
       - Ivosidenib
+      - Ivuxolimab
       - Ixabepilone
-      - Ixabepilone (BMS 247550, Ixempra)
       - Ixazomib
       - Ixazomib Citrate
+      - JAK Inhibitor
       - JAK Inhibitor INCB047986
       - JAK1 Inhibitor AZD4205
       - JAK1 Inhibitor INCB052793
@@ -2800,11 +3164,15 @@ properties:
       - Jin Fu Kang
       - JNK Inhibitor CC-401
       - Kanglaite
+      - Kanitinib
       - Ketoconazole
       - Ketotrexate
+      - KRAS G12C Inhibitor GDC-6036
+      - KRAS G12C Inhibitor LY3499446
       - KRAS G12C Inhibitor MRTX849
       - KRAS Mutant-targeting AMG 510
       - KRAS-MAPK Signaling Pathway Inhibitor JAB-3312
+      - KRASG12C Inhibitor JNJ-74699157
       - KRN5500
       - KSP Inhibitor AZD4877
       - KSP Inhibitor SB-743921
@@ -2814,16 +3182,21 @@ properties:
       - Labetuzumab Govitecan
       - Lactoferrin-derived Lytic Peptide LTX-315
       - Lacutamab
+      - Ladiratuzumab Vedotin
       - Ladirubicin
       - Laetrile
+      - LAIR-2 Fusion Protein NC410
+      - Landogrozumab
       - Laniquidar
       - Lanreotide Acetate
       - Lapachone
       - Lapatinib
       - Lapatinib Ditosylate
+      - Laprituximab Emtansine
       - Lapuleucel-T
       - Laromustine
       - Larotaxel
+      - Larotinib Mesylate
       - Larotrectinib
       - Larotrectinib Sulfate
       - Lavendustin A
@@ -2837,9 +3210,11 @@ properties:
       - Lenvatinib
       - Lenvatinib Mesylate
       - Lenzilumab
+      - Lerociclib
       - Lestaurtinib
+      - Letetresgene Autoleucel
+      - Letolizumab
       - Letrozole
-      - Letrozole (Femara)
       - Leucovorin
       - Leucovorin Calcium
       - Leuprolide
@@ -2857,12 +3232,16 @@ properties:
       - Licartin
       - Licorice
       - Lifastuzumab Vedotin
+      - Lifileucel
+      - Lifirafenib
       - Light-activated AU-011
       - Light-Emitting Oncolytic Vaccinia Virus GL-ONC1
+      - Lilotomab
       - Limonene, (+)-
       - Limonene, (+/-)-
       - Linifanib
       - Linoleyl Carbonate-Paclitaxel
+      - Linperlisib
       - Linrodostat
       - Linsitinib
       - Lintuzumab
@@ -2871,15 +3250,15 @@ properties:
       - Lipid Encapsulated Anti-PLK1 siRNA TKM-PLK1
       - Lipid Nanoparticle Encapsulated mRNAs Encoding Human IL-12A/IL-12B MEDI-1191
       - Lipid Nanoparticle Encapsulated OX40L mRNA-2416
+      - Lipid Nanoparticle Encapsulating Glutathione S-transferase P siRNA NBF-006
       - Lipid Nanoparticle Encapsulating mRNAs Encoding Human OX40L/IL-23/IL-36gamma
         mRNA-2752
+      - Liposomal Bcl-2 Antisense Oligonucleotide  BP1002
       - Liposomal c-raf Antisense Oligonucleotide
       - Liposomal Curcumin
       - Liposomal Cytarabine
       - Liposomal Daunorubicin Citrate
       - Liposomal Docetaxel
-      - Liposomal doxorubicin
-      - Liposomal Doxorubicin (Doxil)
       - Liposomal Eribulin Mesylate
       - Liposomal HPV-16 E6/E7 Multipeptide Vaccine PDS0101
       - Liposomal Irinotecan
@@ -2897,6 +3276,7 @@ properties:
       - Liposome-encapsulated miR-34 Mimic MRX34
       - Liposome-encapsulated OSI-7904
       - Liposome-encapsulated RB94 Plasmid DNA Gene Therapy Agent SGT-94
+      - Liposome-encapsulated TAAs mRNA Vaccine W_ova1
       - Lirilumab
       - Lisavanbulin
       - Lisocabtagene Maraleucel
@@ -2916,7 +3296,10 @@ properties:
         Vaccine ADXS31-164
       - LMP-2:340-349 Peptide Vaccine
       - LMP-2:419-427 Peptide Vaccine
+      - LMP2-specific T Cell Receptor-transduced Autologous T-lymphocytes
+      - LMP7 Inhibitor M3258
       - Lobaplatin
+      - Lodapolimab
       - Lometrexol
       - Lometrexol Sodium
       - Lomustine
@@ -2933,17 +3316,21 @@ properties:
       - Losoxantrone Hydrochloride
       - Lovastatin
       - LOXL2 Inhibitor PAT-1251
+      - LRP5 Antagonist BI 905681
       - LRP5/6 Antagonist BI 905677
       - LSD1 Inhibitor CC-90011
       - LSD1 Inhibitor GSK2879552
       - LSD1 Inhibitor IMG-7289
       - LSD1 Inhibitor RO7051790
+      - LSD1 Inhibitor SYHA1807
       - Lucanthone
       - Lucatumumab
       - Lucitanib
       - Luminespib
       - Luminespib Mesylate
+      - Lumretuzumab
       - Lung-targeted Immunomodulator QBKPN
+      - Lupartumab Amadotin
       - Lurbinectedin
       - Lurtotecan
       - Lurtotecan Liposome
@@ -2958,6 +3345,7 @@ properties:
       - Lutetium Lu 177 PP-F11N
       - Lutetium Lu 177 Satoreotide Tetraxetan
       - Lutetium Lu 177-DOTA-EB-TATE
+      - Lutetium Lu 177-DTPA-omburtamab
       - Lutetium Lu 177-Edotreotide
       - Lutetium Lu 177-NeoB
       - Lutetium Lu 177-PSMA-617
@@ -2970,17 +3358,22 @@ properties:
       - Lyophilized Black Raspberry Saliva Substitute
       - Lysine-specific Demethylase 1 Inhibitor INCB059872
       - Lyso-Thermosensitive Liposome Doxorubicin
+      - Maackia amurensis Seed Lectin
       - Macimorelin
       - Macitentan
+      - Macrocycle-bridged STING Agonist E7766
       - Maekmoondong-tang
       - Mafosfamide
       - MAGE-10.A2
+      - MAGE-A1-specific T Cell Receptor-transduced Autologous T-cells
       - MAGE-A3 Multipeptide Vaccine GL-0817
       - MAGE-A3 Peptide Vaccine
       - MAGE-A3-specific Immunotherapeutic GSK 2132231A
       - MAGE-A4-specific TCR Gene-transduced Autologous T Lymphocytes TBI-1201
       - Magnesium Valproate
+      - Magrolimab
       - MALT1 Inhibitor JNJ-67856633
+      - Manelimab
       - Mannosulfan
       - Mannosylerythritol Lipid
       - Mapatumumab
@@ -2998,6 +3391,7 @@ properties:
       - Mavelertinib
       - Mavorixafor
       - Maytansine
+      - MCL-1 Inhibitor ABBV-467
       - MCL-1 Inhibitor AMG 176
       - MCL-1 inhibitor AMG 397
       - Mcl-1 Inhibitor AZD5991
@@ -3006,11 +3400,11 @@ properties:
       - MDM2 Antagonist RO5045337
       - MDM2 Antagonist RO6839921
       - MDM2 Inhibitor AMG-232
+      - MDM2 Inhibitor AMGMDS3
       - MDM2 Inhibitor BI 907828
       - MDM2 Inhibitor KRT-232
       - MDM2/MDMX Inhibitor ALRN-6924
       - MDR Modulator CBT-1
-      - MDV3100 (Enzalutamide)
       - Mechlorethamine
       - Mechlorethamine Hydrochloride
       - Mechlorethamine Hydrochloride Gel
@@ -3018,12 +3412,13 @@ properties:
       - Medroxyprogesterone
       - Medroxyprogesterone Acetate
       - Megestrol Acetate
-      - Megestrol acetate (Megace)
       - MEK 1/2 Inhibitor AS703988/MSC2015103B
+      - MEK 1/2 Inhibitor FCN-159
       - MEK Inhibitor AZD8330
       - MEK Inhibitor CI-1040
       - MEK inhibitor CS3006
       - MEK Inhibitor GDC-0623
+      - MEK Inhibitor HL-085
       - MEK Inhibitor PD0325901
       - MEK Inhibitor RO4987655
       - MEK Inhibitor SHR 7390
@@ -3041,6 +3436,7 @@ properties:
       - Melphalan Hydrochloride/Sulfobutyl Ether Beta-Cyclodextrin Complex
       - Membrane-Disrupting Peptide EP-100
       - Menatetrenone
+      - Menin-MLL Interaction Inhibitor SNDX-5613
       - Menogaril
       - Merbarone
       - Mercaptopurine
@@ -3055,9 +3451,11 @@ properties:
       - MET Tyrosine Kinase Inhibitor PF-04217903
       - MET Tyrosine Kinase Inhibitor SAR125844
       - MET Tyrosine Kinase Inhibitor SGX523
+      - MET x MET Bispecific Antibody REGN5093
       - Metamelfalan
       - MetAP2 Inhibitor APL-1202
       - MetAP2 Inhibitor SDX-7320
+      - Metarrestin
       - Metatinib Tromethamine
       - Metformin
       - Metformin Hydrochloride
@@ -3072,8 +3470,8 @@ properties:
       - Methoxsalen
       - Methoxyamine
       - Methoxyamine Hydrochloride
-      - Methoxyamine hydrochloride (TRC102)
       - Methyl-5-Aminolevulinate Hydrochloride Cream
+      - Methylcantharidimide
       - Methylmercaptopurine Riboside
       - Methylprednisolone
       - Methylprednisolone Acetate
@@ -3081,16 +3479,21 @@ properties:
       - Methylselenocysteine
       - Methyltestosterone
       - Metoprine
+      - Mevociclib
+      - Mezagitamab
       - Mibefradil
       - Mibefradil Dihydrochloride
       - Micellar Nanoparticle-encapsulated Epirubicin
       - Micro Needle Array-Doxorubicin
+      - Microbiome GEN-001
+      - Microbiome-derived Peptide Vaccine EO2401
       - Microparticle-encapsulated CYP1B1-encoding DNA Vaccine ZYC300
       - Microtubule Inhibitor SCB01A
       - Midostaurin
       - Mifamurtide
       - Mifepristone
       - Milademetan Tosylate
+      - Milataxel
       - Milatuzumab
       - Milatuzumab-Doxorubicin Antibody-Drug Conjugate IMMU-110
       - Milciclib Maleate
@@ -3098,9 +3501,14 @@ properties:
       - Miltefosine
       - Minretumomab
       - Mipsagargin
+      - Miptenalimab
       - Mirabegron
+      - Miransertib
+      - Mirdametinib
       - Mirvetuximab Soravtansine
+      - Mirzotamab Clezutoclax
       - Misonidazole
+      - Mitazalimab
       - Mitindomide
       - Mitobronitol
       - Mitochondrial Oxidative Phosphorylation Inhibitor ATR-101
@@ -3124,13 +3532,15 @@ properties:
       - Mivobulin
       - Mivobulin Isethionate
       - Mixed Bacteria Vaccine
-      - MK-2206
       - MK0731
       - MKC-1
       - MKNK1 Inhibitor BAY 1143269
       - MMP Inhibitor S-3304
       - MNK1/2 Inhibitor ETC-1907206
+      - Mobocertinib
       - Mocetinostat
+      - Modakafusp Alfa
+      - Modified Vaccinia Ankara-vectored HPV16/18 Vaccine JNJ-65195208
       - Modified Vitamin D Binding Protein Macrophage Activator EF-022
       - Modotuximab
       - MOF Compound RiMO-301
@@ -3194,6 +3604,7 @@ properties:
       - Motesanib Diphosphate
       - Motexafin Gadolinium
       - Motexafin Lutetium
+      - Motixafortide
       - Motolimod
       - MOv-gamma Chimeric Receptor Gene
       - Moxetumomab Pasudotox
@@ -3217,11 +3628,13 @@ properties:
       - mTORC 1/2 Inhibitor LXI-15029
       - mTORC1/2 Kinase Inhibitor BI 860585
       - mTORC1/mTORC2/DHFR Inhibitor ABTL0812
+      - MUC-1/WT1 Peptide-primed Autologous Dendritic Cells
       - MUC1-targeted Peptide GO-203-2C
       - Mucoadhesive Paclitaxel Formulation
       - Multi-AGC Kinase Inhibitor AT13148
       - Multi-epitope Anti-folate Receptor Peptide Vaccine TPIV 200
       - Multi-epitope HER2 Peptide Vaccine H2NVAC
+      - Multi-epitope HER2 Peptide Vaccine TPIV100
       - Multi-glioblastoma-peptide-targeting Autologous Dendritic Cell Vaccine ICT-107
       - Multi-kinase Inhibitor TPX-0022
       - Multi-kinase Inhibitor XL092
@@ -3236,10 +3649,13 @@ properties:
       - Multitargeted Tyrosine Kinase Inhibitor JNJ-26483327
       - Muparfostat
       - Mureletecan
+      - Murizatoclax
+      - Muscadine Grape Extract
       - Mutant IDH1 Inhibitor DS-1001
       - Mutant p53 Activator COTI-2
       - Mutant-selective EGFR Inhibitor PF-06459988
       - MVA Tumor-specific Neoantigen Boosting Vaccine MVA-209-FSP
+      - MVA-BN Smallpox Vaccine
       - MVA-FCU1 TG4023
       - MVX-1-loaded Macrocapsule/autologous Tumor Cell Vaccine MVX-ONCO-1
       - MYC-targeting siRNA DCR-MYC
@@ -3247,6 +3663,7 @@ properties:
       - Mycobacterium w
       - Mycophenolic Acid
       - N-(5-tert-butyl-3-isoxazolyl)-N-(4-(4-pyridinyl)oxyphenyl) Urea
+      - N-dihydrogalactochitosan
       - N-Methylformamide
       - N,N-Dibenzyl Daunomycin
       - NA17-A Antigen
@@ -3254,6 +3671,7 @@ properties:
       - Nab-paclitaxel
       - Nab-paclitaxel/Rituximab-coated Nanoparticle AR160
       - Nadofaragene Firadenovec
+      - Nagrestipen
       - Namirotene
       - Namodenoson
       - NAMPT Inhibitor OT-82
@@ -3272,11 +3690,13 @@ properties:
       - Naphthalimide Analogue UNBS5162
       - Naptumomab Estafenatox
       - Naquotinib
+      - Naratuximab Emtansine
       - Narnatumab
       - Natalizumab
       - Natural IFN-alpha OPC-18
       - Natural Killer Cells ZRx101
       - Navarixin
+      - Navicixizumab
       - Navitoclax
       - Navoximod
       - Navy Bean Powder
@@ -3329,9 +3749,9 @@ properties:
       - NLRP3 Agonist BMS-986299
       - Nocodazole
       - Nogalamycin
+      - Nogapendekin Alfa
       - Nolatrexed Dihydrochloride
       - Non-Small Cell Lung Cancer mRNA-Derived Vaccine CV9201
-      - None
       - Norgestrel
       - North American Ginseng Extract AFX-2
       - Nortopixantrone
@@ -3345,6 +3765,8 @@ properties:
       - Nucleoside Analog DFP-10917
       - Nucleotide Analog Prodrug NUC-3373
       - Nucleotide Analogue GS 9219
+      - Numidargistat
+      - Nurulimab
       - Nutlin-3a
       - Nutraceutical TBL-12
       - NY-ESO-1 Plasmid DNA Cancer Vaccine pPJV7611
@@ -3361,45 +3783,60 @@ properties:
       - Octreotide
       - Octreotide Acetate
       - Octreotide Pamoate
+      - Odronextamab
       - Ofatumumab
+      - Ofranergene Obadenovec
       - Oglufanide Disodium
       - Olaparib
       - Olaptesed Pegol
       - Olaratumab
       - Oleandrin
       - Oleclumab
+      - Oligo-fucoidan
       - Oligonucleotide SPC2996
+      - Olinvacimab
       - Olivomycin
       - Olmutinib
       - Oltipraz
       - Olutasidenib
+      - Olvimulogene Nanivacirepvec
       - Omacetaxine Mepesuccinate
       - Ombrabulin
       - Omipalisib
       - Onalespib
       - Onalespib Lactate
       - Onartuzumab
+      - Onatasertib
       - Oncolytic Adenovirus Ad5-DNX-2401
+      - Oncolytic Adenovirus ORCA-010
+      - Oncolytic Herpes Simplex Virus-1 ONCR-177
       - Oncolytic HSV-1 C134
+      - Oncolytic HSV-1 Expressing IL-12 and Anti-PD-1 Antibody T3011
       - Oncolytic HSV-1 G207
       - Oncolytic HSV-1 NV1020
       - Oncolytic HSV-1 rQNestin34.5v.2
       - Oncolytic HSV-1 rRp450
       - Oncolytic HSV1716
+      - Oncolytic Measles Virus Encoding Helicobacter pylori Neutrophil-activating
+        Protein
       - Oncolytic Newcastle Disease Virus MEDI5395
       - Oncolytic Newcastle Disease Virus MTH-68H
       - Oncolytic Newcastle Disease Virus Strain PV701
       - Oncolytic Virus ASP9801
       - Oncolytic Virus RP1
       - Ondansetron Hydrochloride
+      - Ontorpacept
       - Ontuxizumab
       - Onvansertib
+      - Onvatilimab
       - Opaganib
       - OPCs/Green Tea/Spirullina/Curcumin/Antrodia Camphorate/Fermented Soymilk Extract
         Capsule
       - Opioid Growth Factor
+      - Opolimogene Capmilisbac
       - Oportuzumab Monatox
       - Oprozomib
+      - Opucolimab
       - Oral Aminolevulinic Acid Hydrochloride
       - Oral Azacitidine
       - Oral Cancer Vaccine V3-OVA
@@ -3417,10 +3854,11 @@ properties:
       - Orantinib
       - Oraxol
       - Oregovomab
+      - Orelabrutinib
       - Ormaplatin
       - Ortataxel
       - Orteronel
-      - OSI-774 (erlotinib; Tarceva)
+      - Orvacabtagene Autoleucel
       - Osilodrostat
       - Osimertinib
       - Other
@@ -3431,8 +3869,7 @@ properties:
       - Ovine Submaxillary Mucin
       - OX40L-expressing Oncolytic Adenovirus DNX-2440
       - Oxaliplatin
-      - OXALIplatin (Eloxatin)
-      - Oxaliplatin (Eloxatin) and 5-Fluorouracil (5-FU)
+      - Oxaliplatin Eluting Beads
       - Oxaliplatin-Encapsulated Transferrin-Conjugated N-glutaryl Phosphatidylethanolamine
         Liposome
       - Oxcarbazepine
@@ -3456,18 +3893,19 @@ properties:
       - p70S6K Inhibitor LY2584702
       - p70S6K/Akt Inhibitor MSC2363318A
       - p97 Inhibitor CB-5083
+      - p97 Inhibitor CB-5339
+      - p97 Inhibitor CB-5339 Tosylate
       - Paclitaxel
-      - Paclitaxel (Taxol)
       - Paclitaxel Ceribate
       - Paclitaxel Injection Concentrate for Nanodispersion
       - Paclitaxel Liposome
       - Paclitaxel Poliglumex
       - Paclitaxel Polymeric Micelle Formulation NANT-008
       - Paclitaxel PPE Microspheres
-      - Paclitaxel protein-bound particles (albumin-bound)
       - Paclitaxel Trevatide
       - Paclitaxel Vitamin E-Based Emulsion
       - Paclitaxel-Loaded Polymeric Micelle
+      - Pacmilimab
       - Pacritinib
       - Padeliporfin
       - Padoporfin
@@ -3482,6 +3920,7 @@ properties:
       - Pamidronate Disodium
       - Pamidronic Acid
       - Pamiparib
+      - Pamrevlumab
       - pan FGFR Inhibitor PRN1371
       - Pan HER/VEGFR2 Receptor Tyrosine Kinase Inhibitor BMS-690514
       - Pan-AKT Inhibitor ARQ751
@@ -3490,7 +3929,9 @@ properties:
       - Pan-FLT3/Pan-BTK Multi-kinase Inhibitor CG-806
       - pan-HER Kinase Inhibitor AC480
       - Pan-IDH Mutant Inhibitor AG-881
+      - Pan-KRAS Inhibitor BI 1701963
       - Pan-Mutant-IDH1 Inhibitor Bay-1436032
+      - Pan-mutation-selective EGFR Inhibitor CLN-081
       - pan-PI3K Inhibitor CLR457
       - pan-PI3K/mTOR Inhibitor SF1126
       - Pan-PIM Inhibitor INCB053914
@@ -3501,36 +3942,48 @@ properties:
       - pan-RAF Kinase Inhibitor CCT3833
       - pan-RAF Kinase Inhibitor TAK-580
       - Pan-RAR Agonist/AP-1 Inhibitor LGD 1550
+      - Pan-TRK Inhibitor NOV1601
       - Pan-TRK Inhibitor ONO-7579
       - Pan-VEGFR/TIE2 Tyrosine Kinase Inhibitor CEP-11981
       - Pancratistatin
       - Panitumumab
       - Panobinostat
       - Panobinostat Nanoparticle Formulation MTX110
+      - Panulisib
       - Paricalcitol
+      - PARP 1/2 Inhibitor IMP4297
       - PARP 1/2 Inhibitor NOV1401
       - PARP Inhibitor AZD2461
       - PARP Inhibitor CEP-9722
       - PARP Inhibitor E7016
+      - PARP Inhibitor NMS-03305293
       - PARP-1/2 Inhibitor ABT-767
       - PARP/Tankyrase Inhibitor 2X-121
+      - PARP/Tankyrase Inhibitor 2X-121
+      - PARP7 Inhibitor RBN-2397
+      - Parsaclisib
+      - Parsaclisib Hydrochloride
       - Parsatuzumab
+      - Partially Engineered T-regulatory Cell Donor Graft TRGFT-201
       - Parvovirus H-1
       - Pasireotide
       - Pasotuxizumab
       - Patidegib
       - Patidegib Topical Gel
       - Patritumab
+      - Patritumab Deruxtecan
       - Patupilone
+      - Paxalisib
       - Pazopanib
       - Pazopanib Hydrochloride
       - pbi-shRNA STMN1 Lipoplex
       - PBN Derivative OKN-007
       - PCNU
-      - PD-0332991
       - PD-1 Directed Probody CX-188
       - PD-1 Inhibitor
+      - PD-L1 Inhibitor GS-4224
       - PD-L1 Inhibitor INCB086550
+      - PD-L1/4-1BB/HSA Trispecific Fusion Protein NM21-1480
       - PD-L1/PD-L2/VISTA Antagonist CA-170
       - PDK1 Inhibitor AR-12
       - pDNA-encoding Emm55 Autologous Cancer Cell Vaccine IFx-Hu2.0
@@ -3546,6 +3999,7 @@ properties:
       - Peginterferon Alfa-2a
       - Peginterferon Alfa-2b
       - Pegvisomant
+      - Pegvorhyaluronidase Alfa
       - Pegylated Deoxycytidine Analogue DFP-14927
       - Pegylated Interferon Alfa
       - Pegylated Liposomal Belotecan
@@ -3559,15 +4013,15 @@ properties:
       - Pegylated Recombinant Human Hyaluronidase PH20
       - Pegylated Recombinant Interleukin-2 THOR-707
       - Pegylated Recombinant L-asparaginase Erwinia chrysanthemi
+      - Pegylated SN-38 Conjugate PLX038
       - Pegzilarginase
+      - Pelabresib
       - Pelareorep
       - Peldesine
       - Pelitinib
       - Pelitrexol
       - Pembrolizumab
-      - Pembrolizumab (Keytruda)
       - Pemetrexed
-      - Pemetrexed (Alimta; LY231514)
       - Pemetrexed Disodium
       - Pemigatinib
       - Pemlimogene Merolisbac
@@ -3583,6 +4037,7 @@ properties:
       - Pepinemab
       - Peplomycin
       - Peplomycin Sulfate
+      - Peposertib
       - Peptichemio
       - Peptide 946 Melanoma Vaccine
       - Peptide 946-Tetanus Peptide Conjugate Melanoma Vaccine
@@ -3592,7 +4047,10 @@ properties:
       - Perifosine
       - Perillyl Alcohol
       - Personalized ALL-specific Multi-HLA-binding Peptide Vaccine
+      - Personalized and Adjusted Neoantigen Peptide Vaccine PANDA-VAC
       - Personalized Cancer Vaccine RO7198457
+      - Personalized Neoantigen DNA Vaccine GNOS-PV01
+      - Personalized Neoantigen DNA Vaccine GNOS-PVO2
       - Personalized Neoantigen Peptide Vaccine iNeo-Vac-P01
       - Personalized Neoepitope Yeast Vaccine YE-NEO-001
       - Personalized Peptide Cancer Vaccine NEO-PV-01
@@ -3601,7 +4059,6 @@ properties:
       - Pexastimogene Devacirepvec
       - Pexidartinib
       - Pexmetinib
-      - PF-03084014
       - PGG Beta-Glucan
       - PGLA/PEG Copolymer-Based Paclitaxel
       - PH20 Hyaluronidase-expressing Adenovirus VCN-01
@@ -3619,6 +4076,7 @@ properties:
       - Phosphoramide Mustard
       - Phosphorodiamidate Morpholino Oligomer AVI-4126
       - Phosphorus P-32
+      - Photodynamic Compound TLD-1433
       - Photosensitizer LUZ 11
       - Phytochlorin Sodium-Polyvinylpyrrolidone Complex
       - PI3K Alpha/Beta Inhibitor BAY1082439
@@ -3668,6 +4126,9 @@ properties:
       - PIM Kinase Inhibitor TP-3654
       - PIM/FLT3 Kinase Inhibitor SEL24
       - Pimasertib
+      - Pimitespib
+      - Pimurutamab
+      - Pinatuzumab Vedotin
       - Pingyangmycin
       - Pinometostat
       - Pioglitazone
@@ -3687,12 +4148,15 @@ properties:
       - Piroxantrone Hydrochloride
       - Pixantrone
       - Pixantrone Dimaleate
+      - Pixatimod
       - PKA Regulatory Subunit RIalpha Mixed-Backbone Antisense Oligonucleotide GEM
         231
       - PKC-alpha Antisense Oligodeoxynucleotide ISIS 3521
       - PKC-beta Inhibitor MS-553
       - Placebo
       - Pladienolide Derivative E7107
+      - Plamotamab
+      - Plasmid DNA Vaccine pING-hHER3FL
       - Platinum
       - Platinum Acetylacetonate-Titanium Dioxide Nanoparticles
       - Platinum Compound
@@ -3705,6 +4169,9 @@ properties:
       - PLK1 Inhibitor TAK-960
       - Plocabulin
       - Plozalizumab
+      - pNGVL4a-CRT-E6E7L2 DNA Vaccine
+      - pNGVL4a-Sig/E7(detox)/HSP70 DNA and HPV16 L2/E6/E7 Fusion Protein TA-CIN Vaccine
+        PVX-2
       - Pol I Inhibitor CX5461
       - Polatuzumab Vedotin
       - Polidocanol
@@ -3722,6 +4189,7 @@ properties:
       - Polyandrol
       - Polyethylene Glycol Recombinant Endostatin
       - Polyethyleneglycol-7-ethyl-10-hydroxycamptothecin DFP-13318
+      - Polymer-conjugated IL-15 Receptor Agonist NKTR-255
       - Polymer-encapsulated Luteolin Nanoparticle
       - Polymeric Camptothecin Prodrug XMT-1001
       - Polypodium leucotomos Extract
@@ -3738,12 +4206,16 @@ properties:
       - Porcupine Inhibitor ETC-1922159
       - Porcupine Inhibitor RXC004
       - Porcupine Inhibitor WNT974
+      - Porcupine Inhibitor XNW7201
       - Porfimer Sodium
       - Porfiromycin
       - Poziotinib
+      - PPAR Alpha Antagonist TPST-1120
       - PR1 Leukemia Peptide Vaccine
       - Pracinostat
       - Pralatrexate
+      - Pralsetinib
+      - Praluzatamab Ravtansine
       - PRAME-targeting T-cell Receptor/Inducible Caspase 9 BPX-701
       - Pravastatin Sodium
       - Prednimustine
@@ -3758,12 +4230,15 @@ properties:
       - Prinomastat
       - PRMT1 Inhibitor GSK3368715
       - PRMT5 Inhibitor JNJ-64619178
+      - PRMT5 Inhibitor PRT811
       - Proapoptotic Sulindac Analog CP-461
       - Procarbazine
       - Procarbazine Hydrochloride
       - Procaspase Activating Compound-1 VO-100
       - Progestational IUD
       - Prohibitin-Targeting Peptide 1
+      - Prolgolimab
+      - Prostaglandin E2 EP4 Receptor Inhibitor AN0025
       - Prostaglandin E2 EP4 Receptor Inhibitor E7046
       - Prostate Cancer Vaccine ONY-P1
       - Prostate Health Cocktail Dietary Supplement
@@ -3775,8 +4250,8 @@ properties:
       - Protein Kinase C Inhibitor IDE196
       - Protein Phosphatase 2A Inhibitor LB-100
       - Protein Stabilized Liposomal Docetaxel Nanoparticles
+      - Protein Tyrosine Kinase 2 Inhibitor IN10018
       - Proxalutamide
-      - PS-341 (bortezomib; Velcade)
       - PSA/IL-2/GM-CSF Vaccine
       - PSA/PSMA DNA Plasmid INO-5150
       - Pseudoisocytidine
@@ -3799,6 +4274,7 @@ properties:
       - Pyrotinib Dimaleate
       - Pyroxamide
       - Pyruvate Kinase Inhibitor TLN-232
+      - Pyruvate Kinase M2 Isoform Activator TP-1454
       - Qilisheng Immunoregulatory Oral Solution
       - Quadrivalent Human Papillomavirus (types 6, 11, 16, 18) Recombinant Vaccine
       - Quarfloxin
@@ -3807,10 +4283,12 @@ properties:
       - Quisinostat
       - Quizartinib
       - R-(-)-Gossypol Acetic Acid
-      - R-CHOP
       - Rabusertib
+      - Racemetyrosine/Methoxsalen/Phenytoin/Sirolimus SM-88
       - Racotumomab
       - RAD51 Inhibitor CYT-0851
+      - Radgocitabine
+      - Radgocitabine Hydrochloride
       - Radioactive Iodine
       - Radiolabeled CC49
       - Radium Ra 223 Dichloride
@@ -3820,14 +4298,13 @@ properties:
       - Raf Kinase Inhibitor HM95573
       - RAF Kinase Inhibitor L-779450
       - RAF Kinase Inhibitor XL281
+      - Ragifilimab
       - Ralaniten Acetate
       - Ralimetinib Mesylate
       - Raloxifene
       - Raloxifene Hydrochloride
       - Raltitrexed
       - Ramucirumab
-      - Ramucirumab (Cyramza)
-      - Ramucirumab (IMC-1121B)
       - Ranibizumab
       - Ranimustine
       - Ranolazine
@@ -3845,8 +4322,10 @@ properties:
       - Receptor Tyrosine Kinase Inhibitor R1530
       - Recombinant Adenovirus-p53 SCH-58500
       - Recombinant Anti-WT1 Immunotherapeutic GSK2302024A
+      - Recombinant Bacterial Minicells VAX014
       - Recombinant Bispecific Single-Chain Antibody rM28
       - Recombinant CD40-Ligand
+      - Recombinant Erwinia asparaginase JZP-458
       - Recombinant Erythropoietin
       - Recombinant Fas Ligand
       - Recombinant Fractalkine
@@ -3858,9 +4337,12 @@ properties:
       - Recombinant Human EGF-rP64K/Montanide ISA 51 Vaccine
       - Recombinant Human Endostatin
       - Recombinant Human Hsp110-gp100 Chaperone Complex Vaccine
+      - Recombinant Human Papillomavirus 11-valent Vaccine
       - Recombinant Human Papillomavirus Bivalent Vaccine
       - Recombinant Human Papillomavirus Nonavalent Vaccine
       - Recombinant Human Plasminogen Kringle 5 Domain ABT 828
+      - Recombinant Human TRAIL-Trimer Fusion Protein SCB-313
+      - Recombinant Humanized Anti-HER-2 Bispecific Monoclonal Antibody MBS301
       - Recombinant Interferon
       - Recombinant Interferon Alfa
       - Recombinant Interferon Alfa-1b
@@ -3895,9 +4377,9 @@ properties:
       - Recombinant Tyrosinase-Related Protein-2
       - Recombinant Vesicular Stomatitis Virus-expressing Human Interferon Beta and
         Sodium-Iodide Symporter
+      - Redaporfin
       - Refametinib
       - Regorafenib
-      - Regorafenib (Stivarga)
       - Relacorilant
       - Relatlimab
       - Relugolix
@@ -3913,16 +4395,20 @@ properties:
       - Resveratrol Formulation SRT501
       - RET Inhibitor DS-5010
       - RET Mutation/Fusion Inhibitor BLU-667
+      - RET/SRC Inhibitor TPX-0046
       - Retaspimycin
       - Retaspimycin Hydrochloride
       - Retelliptine
+      - Retifanlimab
       - Retinoic Acid Agent Ro 16-9100
       - Retinoid 9cUAB30
       - Retinol
       - Retinyl Acetate
       - Retinyl Palmitate
       - Retrovector Encoding Mutant Anti-Cyclin G1
+      - Revdofilimab
       - Rexinoid NRX 194204
+      - Rezivertinib
       - RFT5-dgA Immunotoxin IMTOX25
       - Rhenium Re 188 BMEDA-labeled Liposomes
       - Rhenium Re-186 Hydroxyethylidene Diphosphonate
@@ -3945,6 +4431,7 @@ properties:
       - Rilimogene Glafolivec
       - Rilotumumab
       - Rindopepimut
+      - Ripertamab
       - RIPK1 Inhibitor GSK3145095
       - Ripretinib
       - Risperidone Formulation in Rumenic Acid
@@ -3957,36 +4444,49 @@ properties:
       - Rivoceranib Mesylate
       - RNR Inhibitor COH29
       - Robatumumab
+      - Roblitinib
+      - ROBO1-targeted BiCAR-NKT Cells
+      - Rocakinogene Sifuplasmid
       - Rocapuldencel-T
       - Rociletinib
       - Rodorubicin
+      - Roducitabine
       - Rofecoxib
       - Roflumilast
       - Rogaratinib
       - Rogletimide
+      - Rolinsatamab Talirine
       - Romidepsin
+      - Roneparstat
       - Roniciclib
+      - Ropeginterferon Alfa-2B
       - Ropidoxuridine
+      - Ropocamptide
       - Roquinimex
       - RORgamma Agonist LYC-55716
       - Rosabulin
       - Rose Bengal Solution PV-10
       - Rosiglitazone Maleate
       - Rosmantuzumab
+      - Rosopatamab
       - Rosuvastatin
       - Rovalpituzumab Tesirine
+      - RSK1-4 Inhibitor PMD-026
       - Rubitecan
       - Rucaparib
       - Rucaparib Camsylate
       - Rucaparib Phosphate
       - Ruthenium Ru-106
+      - Ruthenium-based Small Molecule Therapeutic BOLD-100
       - Ruthenium-based Transferrin Targeting Agent NKP-1339
       - Ruxolitinib
       - Ruxolitinib Phosphate
+      - Ruxotemitide
       - S-Adenosylmethionine
       - S-equol
       - S1P Receptor Agonist KRP203
       - Sabarubicin
+      - Sabatolimab
       - Sacituzumab Govitecan
       - Sacubitril/Valsartan
       - Safingol
@@ -3997,6 +4497,8 @@ properties:
       - Samalizumab
       - Samarium Sm 153-DOTMP
       - Samotolisib
+      - Samrotamab Vedotin
+      - Samuraciclib
       - Sapacitabine
       - Sapanisertib
       - Sapitinib
@@ -4005,10 +4507,12 @@ properties:
       - SarCNU
       - Sardomozide
       - Sargramostim
+      - Sasanlimab
       - Satraplatin
       - Savolitinib
       - SBIL-2
       - Scopoletin
+      - SDF-1 Receptor Antagonist PTX-9908
       - Seclidemstat
       - Sedoxantrone Trihydrochloride
       - Selatinib Ditosilate
@@ -4017,6 +4521,8 @@ properties:
       - Selective Estrogen Receptor Degrader AZD9496
       - Selective Estrogen Receptor Degrader AZD9833
       - Selective Estrogen Receptor Degrader LSZ102
+      - Selective Estrogen Receptor Degrader LX-039
+      - Selective Estrogen Receptor Degrader LY3484356
       - Selective Estrogen Receptor Degrader SRN-927
       - Selective Estrogen Receptor Modulator CC-8490
       - Selective Estrogen Receptor Modulator TAS-108
@@ -4037,26 +4543,31 @@ properties:
       - Seocalcitol
       - Sepantronium Bromide
       - Serabelisib
+      - Serclutamab Talirine
       - SERD D-0502
       - SERD G1T48
       - SERD GDC-9545
       - SERD SAR439859
       - SERD SHR9549
+      - SERD ZN-c5
       - Serdemetan
       - Sergiolide
       - Seribantumab
       - Serine/Threonine Kinase Inhibitor CBP501
       - Serine/Threonine Kinase Inhibitor XL418
+      - Serplulimab
       - Sevacizumab
       - Seviteronel
       - Shared Anti-Idiotype-AB-S006
       - Shared Anti-Idiotype-AB-S024A
       - Shark Cartilage
       - Shark Cartilage Extract AE-941
+      - Shenqi Fuzheng Injection SQ001
       - Sho-Saiko-To
       - Short Chain Fatty Acid HQK-1004
       - SHP-1 Agonist SC-43
       - SHP2 Inhibitor JAB-3068
+      - SHP2 Inhibitor RLY-1971
       - SHP2 Inhibitor RMC-4630
       - SHP2 Inhibitor TNO155
       - Shu Yu Wan Formula
@@ -4071,14 +4582,20 @@ properties:
       - Siltuximab
       - Simalikalactone D
       - Simeprevir
+      - Simlukafusp Alfa
+      - Simmitinib
       - Simotaxel
       - Simtuzumab
+      - Simurosertib
       - Sintilimab
       - Siplizumab
       - Sipuleucel-T
+      - Siremadlin
       - siRNA-transfected Peripheral Blood Mononuclear Cells APN401
       - Sirolimus
+      - SIRPa-4-1BBL Fusion Protein DSP107
       - SIRPa-Fc Fusion Protein TTI-621
+      - SIRPa-Fc-CD40L Fusion Protein SL-172154
       - SIRPa-IgG4-Fc Fusion Protein TTI-622
       - Sitimagene Ceradenovec
       - Sitravatinib
@@ -4114,14 +4631,15 @@ properties:
       - Sonidegib
       - Sonolisib
       - Sorafenib
-      - Sorafenib (BAY 43-9006; Nexavar)
-      - Sorafenib (Nexavar)
       - Sorafenib Tosylate
       - Sorghum bicolor Supplement
+      - Sotigalimab
+      - Sotorasib
       - Sotrastaurin
       - Sotrastaurin Acetate
       - Soy Isoflavones
       - Soy Protein Isolate
+      - Spanlecortemlocel
       - Sparfosate Sodium
       - Sparfosic Acid
       - Spartalizumab
@@ -4141,6 +4659,7 @@ properties:
       - Src Kinase Inhibitor M475271
       - Src/Abl Kinase Inhibitor AZD0424
       - Src/tubulin Inhibitor KX02
+      - SRPK1/ABCG2 Inhibitor SCO-101
       - ssRNA-based Immunomodulator CV8102
       - SSTR2-targeting Protein/DM1 Conjugate PEN-221
       - St. John's Wort
@@ -4154,13 +4673,19 @@ properties:
       - STAT3 Inhibitor TTI-101
       - STAT3 Inhibitor WP1066
       - Staurosporine
-      - STI571 (imatinib, Gleevec)
+      - STING Agonist BMS-986301
+      - STING Agonist GSK3745417
+      - STING Agonist IMSA101
       - STING Agonist MK-1454
+      - STING Agonist SB 11285
+      - STING Agonist TAK-676
       - STING-activating Cyclic Dinucleotide Agonist MIW815
+      - STING-expressing E. coli SYNB1891
       - Streptonigrin
       - Streptozocin
       - Strontium Chloride Sr-89
       - Submicron Particle Paclitaxel Sterile Suspension
+      - Sugemalimab
       - Sulfatinib
       - Sulforaphane
       - Sulindac
@@ -4168,10 +4693,10 @@ properties:
       - Sumoylation Inhibitor TAK-981
       - Sunitinib
       - Sunitinib Malate
-      - Sunitinib malate (SU011248 L-malate; Sutent)
       - Super Enhancer Inhibitor GZ17-6.02
       - Superagonist Interleukin-15:Interleukin-15 Receptor alphaSu/Fc Fusion Complex
         ALT-803
+      - Superoxide Dismutase Mimetic GC4711
       - Suramin
       - Suramin Sodium
       - Survivin Antigen
@@ -4193,10 +4718,12 @@ properties:
       - Synthetic Long E6 Peptide-Toll-like Receptor Ligand Conjugate Vaccine ISA201
       - Synthetic Long E6/E7 Peptides Vaccine HPV-01
       - Synthetic Long HPV16 E6/E7 Peptides Vaccine ISA101b
+      - Synthetic Plumbagin PCUR-101
       - T900607
       - Tabalumab
       - Tabelecleucel
       - Tacedinaline
+      - Tafasitamab
       - Tagraxofusp-erzs
       - Talabostat
       - Talabostat Mesylate
@@ -4206,6 +4733,7 @@ properties:
       - Talampanel
       - Talaporfin Sodium
       - Talazoparib
+      - Taletrectinib
       - Talimogene Laherparepvec
       - Tallimustine
       - Talmapimod
@@ -4216,15 +4744,18 @@ properties:
       - Tamibarotene
       - Taminadenant
       - Tamoxifen
-      - Tamoxifen (Nolvadex)
       - Tamoxifen Citrate
+      - Tamrintamab Pamozirine
       - Tandutinib
       - Tanespimycin
       - Tanibirumab
+      - Tankyrase Inhibitor STP1002
       - Tanomastat
+      - Tapotoclax
       - Tarenflurbil
       - Tarextumab
       - Tariquidar
+      - Tasadenoturev
       - Taselisib
       - Tasidotin
       - Tasisulam
@@ -4238,11 +4769,13 @@ properties:
       - Tavolimab
       - Taxane Analogue TPI 287
       - Taxane Compound
-      - Taxol (Old NSC)
       - Taxol Analogue SID 530
       - Tazarotene
       - Tazemetostat
+      - Tebentafusp
+      - Teclistamab
       - Tecogalan Sodium
+      - Tefinostat
       - Tegafur
       - Tegafur-gimeracil-oteracil Potassium
       - Tegafur-Gimeracil-Oteracil Potassium-Leucovorin Calcium Oral Formulation
@@ -4250,9 +4783,12 @@ properties:
       - Tegavivint
       - Teglarinad
       - Teglarinad Chloride
+      - Telaglenastat
+      - Telaglenastat Hydrochloride
       - Telapristone
       - Telapristone Acetate
       - Telatinib Mesylate
+      - Telisotuzumab
       - Telisotuzumab Vedotin
       - Telomerase Inhibitor FJ5002
       - Telomerase-specific Type 5 Adenovirus OBP-301
@@ -4263,10 +4799,10 @@ properties:
       - Temoporfin
       - Temozolomide
       - Temsirolimus
-      - Temsirolimus (CCI-779)
       - Tenalisib
       - Tenifatecan
       - Teniposide
+      - Tepoditamab
       - Tepotinib
       - Teprotumumab
       - Terameprocol
@@ -4287,6 +4823,9 @@ properties:
       - Tezacitabine
       - Tezacitabine Anhydrous
       - TGF-beta Receptor 1 Inhibitor PF-06952229
+      - TGF-beta Receptor 1 Kinase Inhibitor SH3051
+      - TGF-beta Receptor 1 Kinase Inhibitor YL-13027
+      - TGFa-PE38 Immunotoxin
       - TGFa-PE38 Immunotoxin
       - TGFbeta Inhibitor LY3200882
       - TGFbeta Receptor Ectodomain-IgG Fc Fusion Protein AVID200
@@ -4296,6 +4835,7 @@ properties:
       - Theramide
       - Therapeutic Angiotensin-(1-7)
       - Therapeutic Breast/Ovarian/Prostate Peptide Cancer Vaccine DPX-0907
+      - Therapeutic Cancer Vaccine ATP128
       - Therapeutic Estradiol
       - Therapeutic Hydrocortisone
       - Therapeutic Liver Cancer Peptide Vaccine IMA970A
@@ -4309,7 +4849,11 @@ properties:
       - Thioureidobutyronitrile
       - THL-P
       - Thorium Th 227 Anetumab
+      - Thorium Th 227 Anetumab Corixetan
+      - Thorium Th 227 Anti-HER2 Monoclonal Antibody BAY2701439
+      - Thorium Th 227 Anti-PSMA Monoclonal Antibody BAY 2315497
       - Threonine Tyrosine Kinase Inhibitor CFI-402257
+      - Thymidylate Synthase Inhibitor CX1106
       - Thymidylate Synthase Inhibitor DFP-11207
       - Thymopentin
       - Thyroid Extract
@@ -4317,13 +4861,16 @@ properties:
       - Tidutamab
       - Tigapotide
       - Tigatuzumab
+      - TIGIT Inhibitor M6223
       - TIGIT-targeting Agent MK-7684
       - Tilarginine
+      - Tilogotamab
       - Tilsotolimod Sodium
       - Timonacic
       - Tin Ethyl Etiopurpurin
       - Tinostamustine
       - Tinzaparin Sodium
+      - Tiomolibdate Choline
       - Tiomolibdate Diammonium
       - Tipapkinogene Sovacivec
       - Tipifarnib
@@ -4332,6 +4879,7 @@ properties:
       - Tirabrutinib
       - Tiragolumab
       - Tirapazamine
+      - Tirbanibulin
       - Tisagenlecleucel
       - Tislelizumab
       - Tisotumab Vedotin
@@ -4343,13 +4891,17 @@ properties:
       - TLR Agonist CADI-05
       - TLR-Directed Cationic Lipid-DNA Complex JVRS-100
       - TLR7 Agonist 852A
+      - TLR7 agonist BNT411
+      - TLR7 Agonist LHC165
       - TLR7/8/9 Antagonist IMO-8400
       - TLR8 Agonist DN1508052
       - TLR9 Agonist AST-008
+      - TM4SF1-CAR/EpCAM-CAR-expressing Autologous T Cells
       - Tocilizumab
       - Tocladesine
       - Tocotrienol
       - Tocotrienol-rich Fraction
+      - Tolebrutinib
       - Toll-like Receptor 7 Agonist DSP-0509
       - Tolnidamine
       - Tomaralimab
@@ -4372,6 +4924,7 @@ properties:
       - Topotecan
       - Topotecan Hydrochloride
       - Topotecan Hydrochloride Liposomes
+      - Topotecan Sustained-release Episcleral Plaque
       - Topsalysin
       - TORC1/2 Kinase Inhibitor DS-3078a
       - Toremifene
@@ -4394,13 +4947,16 @@ properties:
       - Transferrin Receptor-Targeted Anti-RRM2 siRNA CALAA-01
       - Transferrin Receptor-Targeted Liposomal p53 cDNA
       - Transferrin-CRM107
+      - Transferrin-CRM107
       - Tranylcypromine Sulfate
       - Trapoxin
       - Trastuzumab
-      - Trastuzumab (Herceptin)
       - Trastuzumab Conjugate BI-CON-02
+      - Trastuzumab Deruxtecan
       - Trastuzumab Duocarmazine
       - Trastuzumab Emtansine
+      - Trastuzumab Monomethyl Auristatin F
+      - Trastuzumab-TLR 7/8 Agonist BDC-1001
       - Trastuzumab/Hyaluronidase-oysk
       - Trastuzumab/Tesirine Antibody-drug Conjugate ADCT-502
       - Trebananib
@@ -4434,13 +4990,16 @@ properties:
       - Triptolide Analog
       - Triptorelin
       - Triptorelin Pamoate
+      - Tris-acryl Gelatin Microspheres
       - Tritylcysteine
       - TRK Inhibitor AZD6918
+      - TRK Inhibitor TQB3558
       - TrkA Inhibitor VMD-928
       - Trodusquemine
       - Trofosfamide
       - Troglitazone
       - Tropomyosin Receptor Kinase Inhibitor AZD7451
+      - Troriluzole
       - Troxacitabine
       - Troxacitabine Nucleotide Prodrug MIV-818
       - TRPM8 Agonist D-3263
@@ -4465,6 +5024,7 @@ properties:
       - Tyrosine Kinase Inhibitor
       - Tyrosine Kinase Inhibitor OSI-930
       - Tyrosine Kinase Inhibitor SU5402
+      - Tyrosine Kinase Inhibitor TL-895
       - Tyrosine Kinase Inhibitor XL228
       - UAE Inhibitor TAK-243
       - Ubenimex
@@ -4476,14 +5036,18 @@ properties:
       - Umbralisib
       - Uncaria tomentosa Extract
       - Upamostat
+      - Upifitamab
       - Uproleselan
       - Uprosertib
+      - Urabrelimab
       - Uracil Ointment
       - Urelumab
       - Uroacitides
       - Urokinase-Derived Peptide A6
+      - Ursolic Acid
       - USP14/UCHL5 Inhibitor VLX1570
       - Utomilumab
+      - Uzansertib
       - V930 Vaccine
       - Vaccine-Sensitized Draining Lymph Node Cells
       - Vaccinium myrtillus/Macleaya cordata/Echinacea angustifolia Extract Granules
@@ -4491,6 +5055,8 @@ properties:
       - Vadacabtagene Leraleucel
       - Vadastuximab Talirine
       - Vadimezan
+      - Valecobulin
+      - Valemetostat
       - Valproic Acid
       - Valrubicin
       - Valspodar
@@ -4527,24 +5093,20 @@ properties:
       - Verpasep Caltespen
       - Verubulin
       - Verubulin Hydrochloride
+      - Vesencumab
       - Vesigenurtucel-L
       - VGEF Mixed-Backbone Antisense Oligonucleotide GEM 220
       - VGEFR/c-kit/PDGFR Tyrosine Kinase Inhibitor XL820
       - Viagenpumatucel-L
+      - Vibecotamab
+      - Vibostolimab
       - Vilaprisan
       - Vinblastine
       - Vinblastine Sulfate
-      - Vincristin; Dactinomycin; Cyclophosphamide (VAC)
       - Vincristine
       - Vincristine Liposomal
       - Vincristine Sulfate
       - Vincristine Sulfate Liposome
-      - Vincristine, actinomycin-D, cyclophosphamide (VAC); Vincristine, irinotecan,
-        temozolomide (VIT); Etoposide; Ifosfamide
-      - Vincristine, doxorubicin, cyclophosphamide, ifosfamide, etoposide (VDC/IE)
-      - Vincristine; actinomycin-D; cyclophosphamide; vincristine; irinotecan (VAC/VI)
-      - Vincristine; doxorubicin; cyclophosphamide; ifosfamide; etoposide (VDC/IE)
-      - Vincristine; irinotecan; temozolomide (VIT)
       - Vindesine
       - Vinepidine
       - Vinflunine
@@ -4570,12 +5132,17 @@ properties:
       - Volociximab
       - Vonlerolizumab
       - Vopratelimab
+      - Vorasidenib
       - Vorinostat
       - Vorolanib
       - Vorsetzumab Mafodotin
       - Vosaroxin
+      - Vosilasarm
       - Voxtalisib
+      - Vulinacimab
       - Warfarin Sodium
+      - Wee1 Inhibitor ZN-c3
+      - Wee1 Kinase Inhibitor Debio 0123
       - White Carrot
       - Wnt Signaling Inhibitor SM04755
       - Wnt Signaling Pathway Inhibitor SM08502
@@ -4590,10 +5157,12 @@ properties:
       - XBP1-US/XBP1-SP/CD138/CS1 Multipeptide Vaccine PVX-410
       - Xeloda
       - Xentuzumab
+      - Xevinapant
       - Xiaoai Jiedu Decoction
       - XIAP Antisense Oligonucleotide AEG35156
       - XIAP/cIAP1 Antagonist ASTX660
-      - XL184 (Cabozantinib s-malate)
+      - Xiliertinib
+      - Xisomab 3G3
       - XPO1 Inhibitor SL-801
       - Y 90 Monoclonal Antibody CC49
       - Y 90 Monoclonal Antibody HMFG1
@@ -4618,6 +5187,7 @@ properties:
       - Yttrium Y 90 Monoclonal Antibody Hu3S193
       - Yttrium Y 90 Monoclonal Antibody MN-14
       - Yttrium Y 90 Resin Microspheres
+      - Yttrium Y 90 Tabituximab Barzuxetan
       - Yttrium Y 90-DOTA-Biotin
       - Yttrium Y 90-DOTA-di-HSG Peptide IMP-288
       - Yttrium Y 90-Edotreotide
@@ -4631,9 +5201,12 @@ properties:
       - Zalcitabine
       - Zalifrelimab
       - Zalutumumab
+      - Zandelisib
+      - Zanidatamab
       - Zanolimumab
       - Zanubrutinib
       - Zebularine
+      - Zelavespib
       - Zibotentan
       - Zinc Finger Nuclease ZFN-603
       - Zinc Finger Nuclease ZFN-758
@@ -4643,112 +5216,1882 @@ properties:
       - Ziv-Aflibercept
       - Zolbetuximab
       - Zoledronic Acid
-      - Zoledronic acid (zolendronate, Zometa)
       - Zoptarelin Doxorubicin
+      - Zorifertinib
       - Zorubicin
       - Zorubicin Hydrochloride
+      - Zotatifin
+      - Zotiraciclib Citrate
       - Zuclomiphene Citrate
       - Unknown
       - Not Reported
-    deprecated_enum:
-      - 5-Fluorouracil (5-FU)
-      - 5-Fluorouracil (5-FU) ; Leucovorin ; Oxaliplatin (Eloxatin)
-      - 5-Fluorouracil (5-FU) with the vitamin-like drug leucovorin (also called folinic
-        acid) or levo-leucovorin
-      - 5-Fluorouracil (5-FU), Leucovorin, Oxaliplatin (Eloxatin)
-      - Abraxane/Avastin
-      - AC>paclitaxel
-      - Afatinib (BIBW 2992)
-      - Anastrozole (Arimidex)
-      - Avastin/Xeloda
-      - AZD2171 (cediranib)
-      - BCNU
-      - Belinostat (PXD-101)
-      - Bevacizumab (Avastin)
-      - Bevacizumab (rhuMAb VEGF)
-      - Bicalutamide (Casodex)
-      - BMS-936558 (Nivolumab, MDX-1106)
-      - Cabazitaxel (Jevtana)
-      - Capecitabine (Xeloda)
-      - Carboplatin, etoposide, dexamethason
-      - Carboplatin, paclitaxel, nivolumab
-      - Carboplatin, paclitaxel, vinorelbine, nivolumab
-      - Carboplatin,Cyclophosphamide,Doxorubicin (Adriamycin),Etoposide (VP-16)
-      - Carboplatin/Abraxane
-      - Carmustine (BCNU)
-      - Cetuximab (Erbitux)
-      - Cisplatin and 5-Fluorouracil
-      - Cisplatin, etoposide
-      - Cisplatin, etoposide, carboplatin, taxol, nivolumab); surgery
-      - Cyclophosphamide (Cytoxan)
-      - Cyclophosphamide,Vincristine; irinotecan; temozolomide (VIT)
-      - DA-EPOCH-R
-      - DD4A | chemotherapy vincristine, actinomycin, doxorubicin, cyclophosphamide,
-        and etoposide
-      - Docetaxel (Taxotere)
-      - Doxorubicin (Adriamycin)
-      - Doxorubicin (Adriamycin),Etoposide (VP-16),Vincristine,Vincristine; actinomycin-D;
-        cyclophosphamide (VAC)
-      - Doxorubicin, liposome encapsulated (Liposome Company)
-      - E7389 (Eribulin; Halichondrin B Analog)
-      - EMD 121974 (Cilengitide)
-      - Epirubicin (Ellence)
-      - Estradiol mustard
-      - Etoposide (VP-16)
-      - Everolimus (RAD-001)
-      - Exemestane (Aromasin)
-      - 'FOLFIRI: 5-FU, Irinotecan, Leucovorin'
-      - Folfirinox/ mFolfirinox
-      - FOLFOX
-      - Fulvestrant (Faslodex)
-      - GDC-0449 (Vismodegib)
-      - Gemcitabine (Gemzar)
-      - Gemcitabine abraxane (nab-paclitaxel)
-      - High-dose methotrexate; doxorubicin; cisplatin (MAP)
-      - Ipilimumab (BMS-734016; MDX-010 Transfectoma-derived)
-      - Irinotecan (CPT-11, Camptosar)
-      - Ixabepilone (BMS 247550, Ixempra)
-      - Letrozole (Femara)
-      - Liposomal doxorubicin
-      - Liposomal Doxorubicin (Doxil)
-      - MDV3100 (Enzalutamide)
-      - Megestrol acetate (Megace)
-      - Methoxyamine hydrochloride (TRC102)
-      - MK-2206
-      - None
-      - OSI-774 (erlotinib; Tarceva)
-      - Other
-      - OXALIplatin (Eloxatin)
-      - Oxaliplatin (Eloxatin) and 5-Fluorouracil (5-FU)
-      - Paclitaxel (Taxol)
-      - Paclitaxel protein-bound particles (albumin-bound)
-      - PD-0332991
-      - Pembrolizumab (Keytruda)
-      - Pemetrexed (Alimta; LY231514)
-      - PF-03084014
-      - PS-341 (bortezomib; Velcade)
-      - R-CHOP
-      - Ramucirumab (Cyramza)
-      - Ramucirumab (IMC-1121B)
-      - Regorafenib (Stivarga)
-      - Sorafenib (BAY 43-9006; Nexavar)
-      - Sorafenib (Nexavar)
-      - STI571 (imatinib, Gleevec)
-      - Sunitinib malate (SU011248 L-malate; Sutent)
-      - Tamoxifen (Nolvadex)
-      - Taxol (Old NSC)
-      - Temsirolimus (CCI-779)
-      - Trastuzumab (Herceptin)
-      - Vincristin; Dactinomycin; Cyclophosphamide (VAC)
-      - Vincristine, actinomycin-D, cyclophosphamide (VAC); Vincristine, irinotecan,
-        temozolomide (VIT); Etoposide; Ifosfamide
-      - Vincristine, doxorubicin, cyclophosphamide, ifosfamide, etoposide (VDC/IE)
-      - Vincristine; actinomycin-D; cyclophosphamide; vincristine; irinotecan (VAC/VI)
-      - Vincristine; doxorubicin; cyclophosphamide; ifosfamide; etoposide (VDC/IE)
-      - Vincristine; irinotecan; temozolomide (VIT)
-      - XL184 (Cabozantinib s-malate)
-      - Zoledronic acid (zolendronate, Zometa)
     enumDef:
+      3'-dA Phosphoramidate NUC-7738:
+        $ref:
+          - "_terms.yaml#/3da_phosphoramidate_nuc7738/common"
+      A2A Receptor Antagonist EOS100850:
+        $ref:
+          - "_terms.yaml#/a2a_receptor_antagonist_eos100850/common"
+      Adenosine A2A Receptor Antagonist CS3005:
+        $ref:
+          - "_terms.yaml#/adenosine_a2a_receptor_antagonist_cs3005/common"
+      Adenovirus 5/F35-Human Guanylyl Cyclase C-PADRE:
+        $ref:
+          - "_terms.yaml#/adenovirus_5f35human_guanylyl_cyclase_cpadre/common"
+      Adenovirus Serotype 26-expressing HPV16 Vaccine JNJ-63682918:
+        $ref:
+          - "_terms.yaml#/adenovirus_serotype_26expressing_hpv16_vaccine_jnj63682918/common"
+      Adenovirus Serotype 26-expressing HPV18 Vaccine JNJ-63682931:
+        $ref:
+          - "_terms.yaml#/adenovirus_serotype_26expressing_hpv18_vaccine_jnj63682931/common"
+      ALK Inhibitor TAE684:
+        $ref:
+          - "_terms.yaml#/alk_inhibitor_tae684/common"
+      ALK/ROS1/Met Inhibitor TQ-B3101:
+        $ref:
+          - "_terms.yaml#/alkros1met_inhibitor_tqb3101/common"
+      Allogeneic Anti-BCMA CAR-transduced T-cells ALLO-715:
+        $ref:
+          - "_terms.yaml#/allogeneic_antibcma_cartransduced_tcells_allo715/common"
+      Allogeneic Anti-BCMA-CAR T-cells PBCAR269A:
+        $ref:
+          - "_terms.yaml#/allogeneic_antibcmacar_tcells_pbcar269a/common"
+      Allogeneic Anti-BCMA/CS1 Bispecific CAR-T Cells:
+        $ref:
+          - "_terms.yaml#/allogeneic_antibcmacs1_bispecific_cart_cells/common"
+      Allogeneic Anti-CD19 CAR T-cells ALLO-501A:
+        $ref:
+          - "_terms.yaml#/allogeneic_anticd19_car_tcells_allo501a/common"
+      Allogeneic Anti-CD19 Universal CAR-T Cells CTA101:
+        $ref:
+          - "_terms.yaml#/allogeneic_anticd19_universal_cart_cells_cta101/common"
+      Allogeneic Anti-CD20 CAR T-cells LUCAR-20S:
+        $ref:
+          - "_terms.yaml#/allogeneic_anticd20_car_tcells_lucar20s/common"
+      Allogeneic Anti-CD20-CAR T-cells PBCAR20A:
+        $ref:
+          - "_terms.yaml#/allogeneic_anticd20car_tcells_pbcar20a/common"
+      Allogeneic CD22-specific Universal CAR-expressing T-lymphocytes UCART22:
+        $ref:
+          - "_terms.yaml#/allogeneic_cd22specific_universal_carexpressing_tlymphocytes_ucart22/common"
+      Allogeneic CD56-positive CD3-negative Natural Killer Cells CYNK-001:
+        $ref:
+          - "_terms.yaml#/allogeneic_cd56positive_cd3negative_natural_killer_cells_cynk001/common"
+      Allogeneic CD8+ Leukemia-associated Antigens Specific T Cells NEXI-001:
+        $ref:
+          - "_terms.yaml#/allogeneic_cd8_leukemiaassociated_antigens_specific_t_cells_nexi001/common"
+      Allogeneic CRISPR-Cas9 Engineered Anti-BCMA T Cells CTX120:
+        $ref:
+          - "_terms.yaml#/allogeneic_crisprcas9_engineered_antibcma_t_cells_ctx120/common"
+      Allogeneic CRISPR-Cas9 Engineered Anti-CD70 CAR-T Cells CTX130:
+        $ref:
+          - "_terms.yaml#/allogeneic_crisprcas9_engineered_anticd70_cart_cells_ctx130/common"
+      Allogeneic CS1-specific Universal CAR-expressing T-lymphocytes UCARTCS1A:
+        $ref:
+          - "_terms.yaml#/allogeneic_cs1specific_universal_carexpressing_tlymphocytes_ucartcs1a/common"
+      Allogeneic Plasmacytoid Dendritic Cells Expressing Lung Tumor Antigens PDC*lung01:
+        $ref:
+          - "_terms.yaml#/allogeneic_plasmacytoid_dendritic_cells_expressing_lung_tumor_antigens_pdclung01/common"
+      Allogeneic Third-party Suicide Gene-transduced Anti-HLA-DPB1*0401 CD4+ T-cells CTL 19:
+        $ref:
+          - "_terms.yaml#/allogeneic_thirdparty_suicide_genetransduced_antihladpb10401_cd4_tcells_ctl_19/common"
+      Allosteric ErbB Inhibitor BDTX-189:
+        $ref:
+          - "_terms.yaml#/allosteric_erbb_inhibitor_bdtx189/common"
+      Alobresib:
+        $ref:
+          - "_terms.yaml#/alobresib/common"
+      Alofanib:
+        $ref:
+          - "_terms.yaml#/alofanib/common"
+      Alpha V Beta 8 Antagonist PF-06940434:
+        $ref:
+          - "_terms.yaml#/alpha_v_beta_8_antagonist_pf06940434/common"
+      Alsevalimab:
+        $ref:
+          - "_terms.yaml#/alsevalimab/common"
+      Amivantamab:
+        $ref:
+          - "_terms.yaml#/amivantamab/common"
+      Andecaliximab:
+        $ref:
+          - "_terms.yaml#/andecaliximab/common"
+      Androgen Receptor Degrader CC-94676:
+        $ref:
+          - "_terms.yaml#/androgen_receptor_degrader_cc94676/common"
+      Androgen Receptor Inhibitor EPI-7386:
+        $ref:
+          - "_terms.yaml#/androgen_receptor_inhibitor_epi7386/common"
+      Androgen Receptor/Glucocorticoid Receptor  Antagonist CB-03-10:
+        $ref:
+          - "_terms.yaml#/androgen_receptorglucocorticoid_receptor__antagonist_cb0310/common"
+      Anhydrous Enol-oxaloacetate:
+        $ref:
+          - "_terms.yaml#/anhydrous_enoloxaloacetate/common"
+      Anti-5T4 Antibody-drug Conjugate ASN004:
+        $ref:
+          - "_terms.yaml#/anti5t4_antibodydrug_conjugate_asn004/common"
+      Anti-5T4 Antibody-drug Conjugate SYD1875:
+        $ref:
+          - "_terms.yaml#/anti5t4_antibodydrug_conjugate_syd1875/common"
+      Anti-B7-H3/DXd Antibody-drug Conjugate DS-7300a:
+        $ref:
+          - "_terms.yaml#/antib7h3dxd_antibodydrug_conjugate_ds7300a/common"
+      Anti-BCMA Antibody-drug Conjugate CC-99712:
+        $ref:
+          - "_terms.yaml#/antibcma_antibodydrug_conjugate_cc99712/common"
+      Anti-BCMA SparX Protein Plus BCMA-directed Anti-TAAG ARC T-cells CART-ddBCMA:
+        $ref:
+          - "_terms.yaml#/antibcma_sparx_protein_plus_bcmadirected_antitaag_arc_tcells_cartddbcma/common"
+      Anti-BCMA/Anti-CD3 Bispecific Antibody REGN5459:
+        $ref:
+          - "_terms.yaml#/antibcmaanticd3_bispecific_antibody_regn5459/common"
+      Anti-BTLA Monoclonal Antibody TAB004:
+        $ref:
+          - "_terms.yaml#/antibtla_monoclonal_antibody_tab004/common"
+      Anti-BTN3A Agonistic Monoclonal Antibody ICT01:
+        $ref:
+          - "_terms.yaml#/antibtn3a_agonistic_monoclonal_antibody_ict01/common"
+      Anti-c-Met Monoclonal Antibody HLX55:
+        $ref:
+          - "_terms.yaml#/anticmet_monoclonal_antibody_hlx55/common"
+      Anti-CCR7 Antibody-drug Conjugate JBH492:
+        $ref:
+          - "_terms.yaml#/anticcr7_antibodydrug_conjugate_jbh492/common"
+      Anti-CD117 Monoclonal Antibody JSP191:
+        $ref:
+          - "_terms.yaml#/anticd117_monoclonal_antibody_jsp191/common"
+      Anti-CD137 Agonistic Monoclonal Antibody AGEN2373:
+        $ref:
+          - "_terms.yaml#/anticd137_agonistic_monoclonal_antibody_agen2373/common"
+      Anti-CD137 Agonistic Monoclonal Antibody ATOR-1017:
+        $ref:
+          - "_terms.yaml#/anticd137_agonistic_monoclonal_antibody_ator1017/common"
+      Anti-CD137 Agonistic Monoclonal Antibody LVGN6051:
+        $ref:
+          - "_terms.yaml#/anticd137_agonistic_monoclonal_antibody_lvgn6051/common"
+      Anti-CD19 Antibody-T-cell Receptor-expressing T-cells ET019003:
+        $ref:
+          - "_terms.yaml#/anticd19_antibodytcell_receptorexpressing_tcells_et019003/common"
+      Anti-CD19 iCAR NK Cells:
+        $ref:
+          - "_terms.yaml#/anticd19_icar_nk_cells/common"
+      Anti-CD19/CD22 CAR NK Cells:
+        $ref:
+          - "_terms.yaml#/anticd19cd22_car_nk_cells/common"
+      Anti-CD20 Monoclonal Antibody BAT4306F:
+        $ref:
+          - "_terms.yaml#/anticd20_monoclonal_antibody_bat4306f/common"
+      Anti-CD20 Monoclonal Antibody MIL62:
+        $ref:
+          - "_terms.yaml#/anticd20_monoclonal_antibody_mil62/common"
+      Anti-CD205 Antibody-drug Conjugate OBT076:
+        $ref:
+          - "_terms.yaml#/anticd205_antibodydrug_conjugate_obt076/common"
+      Anti-CD228/MMAE Antibody-drug Conjugate SGN-CD228A:
+        $ref:
+          - "_terms.yaml#/anticd228mmae_antibodydrug_conjugate_sgncd228a/common"
+      Anti-CD25 Monoclonal Antibody RO7296682:
+        $ref:
+          - "_terms.yaml#/anticd25_monoclonal_antibody_ro7296682/common"
+      Anti-CD27 Agonistic Monoclonal Antibody MK-5890:
+        $ref:
+          - "_terms.yaml#/anticd27_agonistic_monoclonal_antibody_mk5890/common"
+      Anti-CD3/Anti-5T4 Bispecific Antibody GEN1044:
+        $ref:
+          - "_terms.yaml#/anticd3anti5t4_bispecific_antibody_gen1044/common"
+      Anti-CD3/Anti-GUCY2C Bispecific Antibody PF-07062119:
+        $ref:
+          - "_terms.yaml#/anticd3antigucy2c_bispecific_antibody_pf07062119/common"
+      Anti-CD3/CD7-Ricin Toxin A Immunotoxin:
+        $ref:
+          - "_terms.yaml#/anticd3cd7ricin_toxin_a_immunotoxin/common"
+      Anti-CD30/DM1 Antibody-drug Conjugate F0002:
+        $ref:
+          - "_terms.yaml#/anticd30dm1_antibodydrug_conjugate_f0002/common"
+      Anti-CD37 Bispecific Monoclonal Antibody GEN3009:
+        $ref:
+          - "_terms.yaml#/anticd37_bispecific_monoclonal_antibody_gen3009/common"
+      Anti-CD38 Antibody-drug Conjugate STI-6129:
+        $ref:
+          - "_terms.yaml#/anticd38_antibodydrug_conjugate_sti6129/common"
+      Anti-CD38 Monoclonal Antibody SAR442085:
+        $ref:
+          - "_terms.yaml#/anticd38_monoclonal_antibody_sar442085/common"
+      Anti-CD38/CD28xCD3 Tri-specific Monoclonal Antibody SAR442257:
+        $ref:
+          - "_terms.yaml#/anticd38cd28xcd3_trispecific_monoclonal_antibody_sar442257/common"
+      Anti-CD39 Monoclonal Antibody SRF617:
+        $ref:
+          - "_terms.yaml#/anticd39_monoclonal_antibody_srf617/common"
+      Anti-CD40/Anti-4-1BB Bispecific Agonist Monoclonal Antibody GEN1042:
+        $ref:
+          - "_terms.yaml#/anticd40anti41bb_bispecific_agonist_monoclonal_antibody_gen1042/common"
+      Anti-CD47 ADC SGN-CD47M:
+        $ref:
+          - "_terms.yaml#/anticd47_adc_sgncd47m/common"
+      Anti-CD47 Monoclonal Antibody IMC-002:
+        $ref:
+          - "_terms.yaml#/anticd47_monoclonal_antibody_imc002/common"
+      Anti-CD47/CD19 Bispecific Monoclonal Antibody TG-1801:
+        $ref:
+          - "_terms.yaml#/anticd47cd19_bispecific_monoclonal_antibody_tg1801/common"
+      Anti-claudin18.2 Monoclonal Antibody AB011:
+        $ref:
+          - "_terms.yaml#/anticlaudin182_monoclonal_antibody_ab011/common"
+      Anti-Claudin18.2 Monoclonal Antibody TST001:
+        $ref:
+          - "_terms.yaml#/anticlaudin182_monoclonal_antibody_tst001/common"
+      Anti-CTLA-4 Monoclonal Antibody ADG116:
+        $ref:
+          - "_terms.yaml#/antictla4_monoclonal_antibody_adg116/common"
+      Anti-CTLA-4 Monoclonal Antibody HBM4003:
+        $ref:
+          - "_terms.yaml#/antictla4_monoclonal_antibody_hbm4003/common"
+      Anti-CTLA-4 Monoclonal Antibody ONC-392:
+        $ref:
+          - "_terms.yaml#/antictla4_monoclonal_antibody_onc392/common"
+      Anti-CTLA-4 Probody BMS-986288:
+        $ref:
+          - "_terms.yaml#/antictla4_probody_bms986288/common"
+      Anti-CTLA-4/Anti-PD-1 Monoclonal Antibody Combination BCD-217:
+        $ref:
+          - "_terms.yaml#/antictla4antipd1_monoclonal_antibody_combination_bcd217/common"
+      Anti-CTLA4 Antibody Fc Fusion Protein KN044:
+        $ref:
+          - "_terms.yaml#/antictla4_antibody_fc_fusion_protein_kn044/common"
+      Anti-EGFR/CD16A Bispecific Antibody AFM24:
+        $ref:
+          - "_terms.yaml#/antiegfrcd16a_bispecific_antibody_afm24/common"
+      Anti-FRA/Eribulin Antibody-drug Conjugate MORAb-202:
+        $ref:
+          - "_terms.yaml#/antifraeribulin_antibodydrug_conjugate_morab202/common"
+      Anti-GARP Monoclonal Antibody ABBV-151:
+        $ref:
+          - "_terms.yaml#/antigarp_monoclonal_antibody_abbv151/common"
+      Anti-Globo H/MMAE Antibody-drug Conjugate OBI 999:
+        $ref:
+          - "_terms.yaml#/antiglobo_hmmae_antibodydrug_conjugate_obi_999/common"
+      Anti-GPR20/DXd Antibody-drug Conjugate DS-6157a:
+        $ref:
+          - "_terms.yaml#/antigpr20dxd_antibodydrug_conjugate_ds6157a/common"
+      Anti-gremlin-1 Monoclonal Antibody UCB6114:
+        $ref:
+          - "_terms.yaml#/antigremlin1_monoclonal_antibody_ucb6114/common"
+      Anti-HER2 Antibody Conjugated Natural Killer Cells ACE1702:
+        $ref:
+          - "_terms.yaml#/antiher2_antibody_conjugated_natural_killer_cells_ace1702/common"
+      Anti-HER2 Antibody-drug Conjugate BAT8001:
+        $ref:
+          - "_terms.yaml#/antiher2_antibodydrug_conjugate_bat8001/common"
+      Anti-HER2 Antibody-drug Conjugate DP303c:
+        $ref:
+          - "_terms.yaml#/antiher2_antibodydrug_conjugate_dp303c/common"
+      Anti-HER2 Monoclonal Antibody B002:
+        $ref:
+          - "_terms.yaml#/antiher2_monoclonal_antibody_b002/common"
+      Anti-HER2 Monoclonal Antibody HLX22:
+        $ref:
+          - "_terms.yaml#/antiher2_monoclonal_antibody_hlx22/common"
+      Anti-HER2-DM1 ADC B003:
+        $ref:
+          - "_terms.yaml#/antiher2dm1_adc_b003/common"
+      Anti-HER2-DM1 Antibody-drug Conjugate GQ1001:
+        $ref:
+          - "_terms.yaml#/antiher2dm1_antibodydrug_conjugate_gq1001/common"
+      Anti-HER2/MMAE Antibody-drug Conjugate MRG002:
+        $ref:
+          - "_terms.yaml#/antiher2mmae_antibodydrug_conjugate_mrg002/common"
+      Anti-HLA-G Antibody TTX-080:
+        $ref:
+          - "_terms.yaml#/antihlag_antibody_ttx080/common"
+      Anti-IL-8 Monoclonal Antibody BMS-986253:
+        $ref:
+          - "_terms.yaml#/antiil8_monoclonal_antibody_bms986253/common"
+      Anti-integrin Beta-6/MMAE Antibody-drug Conjugate SGN-B6A:
+        $ref:
+          - "_terms.yaml#/antiintegrin_beta6mmae_antibodydrug_conjugate_sgnb6a/common"
+      Anti-IRF4 Antisense Oligonucleotide ION251:
+        $ref:
+          - "_terms.yaml#/antiirf4_antisense_oligonucleotide_ion251/common"
+      Anti-LAG-3 Monoclonal Antibody IBI-110:
+        $ref:
+          - "_terms.yaml#/antilag3_monoclonal_antibody_ibi110/common"
+      Anti-latent TGF-beta 1 Monoclonal Antibody SRK-181:
+        $ref:
+          - "_terms.yaml#/antilatent_tgfbeta_1_monoclonal_antibody_srk181/common"
+      Anti-Lewis B/Lewis Y Monoclonal Antibody GNX102:
+        $ref:
+          - "_terms.yaml#/antilewis_blewis_y_monoclonal_antibody_gnx102/common"
+      Anti-LILRB4 Monoclonal Antibody IO-202:
+        $ref:
+          - "_terms.yaml#/antililrb4_monoclonal_antibody_io202/common"
+      Anti-mesothelin/MMAE Antibody-drug Conjugate RC88:
+        $ref:
+          - "_terms.yaml#/antimesothelinmmae_antibodydrug_conjugate_rc88/common"
+      Anti-MUC16/CD3 Bispecific Antibody REGN4018:
+        $ref:
+          - "_terms.yaml#/antimuc16cd3_bispecific_antibody_regn4018/common"
+      Anti-MUC17/CD3 BiTE Antibody AMG 199:
+        $ref:
+          - "_terms.yaml#/antimuc17cd3_bite_antibody_amg_199/common"
+      Anti-NaPi2b Antibody-drug Conjugate XMT-1592:
+        $ref:
+          - "_terms.yaml#/antinapi2b_antibodydrug_conjugate_xmt1592/common"
+      Anti-NRP1 Antibody ASP1948:
+        $ref:
+          - "_terms.yaml#/antinrp1_antibody_asp1948/common"
+      Anti-OX40 Agonist Monoclonal Antibody BGB-A445:
+        $ref:
+          - "_terms.yaml#/antiox40_agonist_monoclonal_antibody_bgba445/common"
+      Anti-OX40 Hexavalent Agonist Antibody INBRX-106:
+        $ref:
+          - "_terms.yaml#/antiox40_hexavalent_agonist_antibody_inbrx106/common"
+      Anti-PD-1 Antibody-interleukin-21 Mutein Fusion Protein AMG 256:
+        $ref:
+          - "_terms.yaml#/antipd1_antibodyinterleukin21_mutein_fusion_protein_amg_256/common"
+      Anti-PD-1 Monoclonal Antibody 609A:
+        $ref:
+          - "_terms.yaml#/antipd1_monoclonal_antibody_609a/common"
+      Anti-PD-1 Monoclonal Antibody SCT-I10A:
+        $ref:
+          - "_terms.yaml#/antipd1_monoclonal_antibody_scti10a/common"
+      Anti-PD-1/Anti-HER2 Bispecific Antibody IBI315:
+        $ref:
+          - "_terms.yaml#/antipd1antiher2_bispecific_antibody_ibi315/common"
+      Anti-PD-1/Anti-LAG-3 Bispecific Antibody RO7247669:
+        $ref:
+          - "_terms.yaml#/antipd1antilag3_bispecific_antibody_ro7247669/common"
+      Anti-PD-1/Anti-PD-L1 Bispecific Antibody IBI318:
+        $ref:
+          - "_terms.yaml#/antipd1antipdl1_bispecific_antibody_ibi318/common"
+      Anti-PD-1/CD47 Infusion Protein HX009:
+        $ref:
+          - "_terms.yaml#/antipd1cd47_infusion_protein_hx009/common"
+      Anti-PD-1/CTLA-4 Bispecific Antibody MEDI5752:
+        $ref:
+          - "_terms.yaml#/antipd1ctla4_bispecific_antibody_medi5752/common"
+      Anti-PD-1/VEGF Bispecific Antibody AK112:
+        $ref:
+          - "_terms.yaml#/antipd1vegf_bispecific_antibody_ak112/common"
+      Anti-PD-L1 Monoclonal Antibody IMC-001:
+        $ref:
+          - "_terms.yaml#/antipdl1_monoclonal_antibody_imc001/common"
+      Anti-PD-L1 Monoclonal Antibody RC98:
+        $ref:
+          - "_terms.yaml#/antipdl1_monoclonal_antibody_rc98/common"
+      Anti-PD-L1/Anti-4-1BB Bispecific Monoclonal Antibody GEN1046:
+        $ref:
+          - "_terms.yaml#/antipdl1anti41bb_bispecific_monoclonal_antibody_gen1046/common"
+      Anti-PD-L1/IL-15 Fusion Protein KD033:
+        $ref:
+          - "_terms.yaml#/antipdl1il15_fusion_protein_kd033/common"
+      Anti-PRAME T-cell Receptor/Anti-CD3 scFv Fusion Protein IMC-F106C:
+        $ref:
+          - "_terms.yaml#/antiprame_tcell_receptoranticd3_scfv_fusion_protein_imcf106c/common"
+      Anti-PSMA/CD3 Bispecific Antibody CCW702:
+        $ref:
+          - "_terms.yaml#/antipsmacd3_bispecific_antibody_ccw702/common"
+      Anti-RANKL Monoclonal Antibody GB-223:
+        $ref:
+          - "_terms.yaml#/antirankl_monoclonal_antibody_gb223/common"
+      Anti-RANKL Monoclonal Antibody JMT103:
+        $ref:
+          - "_terms.yaml#/antirankl_monoclonal_antibody_jmt103/common"
+      Anti-Ribonucleoprotein Antibody ATRC-101:
+        $ref:
+          - "_terms.yaml#/antiribonucleoprotein_antibody_atrc101/common"
+      Anti-ROR1/PNU-159682 Derivative Antibody-drug Conjugate NBE-002:
+        $ref:
+          - "_terms.yaml#/antiror1pnu159682_derivative_antibodydrug_conjugate_nbe002/common"
+      Anti-TIGIT Monoclonal Antibody BGB-A1217:
+        $ref:
+          - "_terms.yaml#/antitigit_monoclonal_antibody_bgba1217/common"
+      Anti-TIGIT Monoclonal Antibody COM902:
+        $ref:
+          - "_terms.yaml#/antitigit_monoclonal_antibody_com902/common"
+      Anti-TIGIT Monoclonal Antibody SGN-TGT:
+        $ref:
+          - "_terms.yaml#/antitigit_monoclonal_antibody_sgntgt/common"
+      Anti-TIM3 Monoclonal Antibody SHR-1702:
+        $ref:
+          - "_terms.yaml#/antitim3_monoclonal_antibody_shr1702/common"
+      Anti-TRAILR2/CDH17 Tetravalent Bispecific Antibody BI 905711:
+        $ref:
+          - "_terms.yaml#/antitrailr2cdh17_tetravalent_bispecific_antibody_bi_905711/common"
+      Anti-TROP2 Antibody-drug Conjugate BAT8003:
+        $ref:
+          - "_terms.yaml#/antitrop2_antibodydrug_conjugate_bat8003/common"
+      Anti-TROP2 Antibody-drug Conjugate SKB264:
+        $ref:
+          - "_terms.yaml#/antitrop2_antibodydrug_conjugate_skb264/common"
+      Anti-VEGFR2 Monoclonal Antibody MSB0254:
+        $ref:
+          - "_terms.yaml#/antivegfr2_monoclonal_antibody_msb0254/common"
+      Antisense Oligonucleotide QR-313:
+        $ref:
+          - "_terms.yaml#/antisense_oligonucleotide_qr313/common"
+      Aprinocarsen:
+        $ref:
+          - "_terms.yaml#/aprinocarsen/common"
+      Aprutumab:
+        $ref:
+          - "_terms.yaml#/aprutumab/common"
+      Aryl Hydrocarbon Receptor Inhibitor IK-175:
+        $ref:
+          - "_terms.yaml#/aryl_hydrocarbon_receptor_inhibitor_ik175/common"
+      Aspacytarabine:
+        $ref:
+          - "_terms.yaml#/aspacytarabine/common"
+      Asunercept:
+        $ref:
+          - "_terms.yaml#/asunercept/common"
+      ATR Inhibitor RP-3500:
+        $ref:
+          - "_terms.yaml#/atr_inhibitor_rp3500/common"
+      ATR Kinase Inhibitor M1774:
+        $ref:
+          - "_terms.yaml#/atr_kinase_inhibitor_m1774/common"
+      Attenuated Measles Virus Encoding SCD Transgene TMV-018:
+        $ref:
+          - "_terms.yaml#/attenuated_measles_virus_encoding_scd_transgene_tmv018/common"
+      Atuveciclib:
+        $ref:
+          - "_terms.yaml#/atuveciclib/common"
+      Audencel:
+        $ref:
+          - "_terms.yaml#/audencel/common"
+      Autologous AFP Specific T Cell Receptor Transduced T Cells C-TCR055:
+        $ref:
+          - "_terms.yaml#/autologous_afp_specific_t_cell_receptor_transduced_t_cells_ctcr055/common"
+      Autologous Anti-BCMA CAR T-cells PHE885:
+        $ref:
+          - "_terms.yaml#/autologous_antibcma_car_tcells_phe885/common"
+      Autologous Anti-BCMA CD8+ CAR T-cells Descartes-11:
+        $ref:
+          - "_terms.yaml#/autologous_antibcma_cd8_car_tcells_descartes11/common"
+      Autologous Anti-BCMA-CAR-4-1BB-CD3zeta-expressing T-cells C-CAR088:
+        $ref:
+          - "_terms.yaml#/autologous_antibcmacar41bbcd3zetaexpressing_tcells_ccar088/common"
+      Autologous Anti-CD123 CAR-T Cells:
+        $ref:
+          - "_terms.yaml#/autologous_anticd123_cart_cells/common"
+      Autologous Anti-CD19 CAR T-cells 19(T2)28z1xx:
+        $ref:
+          - "_terms.yaml#/autologous_anticd19_car_tcells_19t228z1xx/common"
+      Autologous Anti-CD19 CAR-4-1BB-CD3zeta-expressing T-cells CNCT19:
+        $ref:
+          - "_terms.yaml#/autologous_anticd19_car41bbcd3zetaexpressing_tcells_cnct19/common"
+      Autologous Anti-CD19 Chimeric Antigen Receptor T-cells AUTO1:
+        $ref:
+          - "_terms.yaml#/autologous_anticd19_chimeric_antigen_receptor_tcells_auto1/common"
+      Autologous Anti-CD19 TAC-T cells TAC01-CD19:
+        $ref:
+          - "_terms.yaml#/autologous_anticd19_tact_cells_tac01cd19/common"
+      Autologous Anti-CD19/CD20 Bispecific Nanobody-based CAR-T cells:
+        $ref:
+          - "_terms.yaml#/autologous_anticd19cd20_bispecific_nanobodybased_cart_cells/common"
+      Autologous Anti-CD19CAR-HER2t/CD22CAR-EGFRt-expressing T-cells:
+        $ref:
+          - "_terms.yaml#/autologous_anticd19carher2tcd22caregfrtexpressing_tcells/common"
+      Autologous Anti-CD20 CAR Transduced CD4/CD8 Enriched T-cells MB-CART20.1:
+        $ref:
+          - "_terms.yaml#/autologous_anticd20_car_transduced_cd4cd8_enriched_tcells_mbcart201/common"
+      Autologous Anti-EGFR CAR-transduced CXCR 5-modified T-lymphocytes:
+        $ref:
+          - "_terms.yaml#/autologous_antiegfr_cartransduced_cxcr_5modified_tlymphocytes/common"
+      Autologous Anti-FLT3 CAR T Cells AMG 553:
+        $ref:
+          - "_terms.yaml#/autologous_antiflt3_car_t_cells_amg_553/common"
+      Autologous Anti-ICAM-1-CAR-CD28-4-1BB-CD3zeta-expressing T-cells AIC100:
+        $ref:
+          - "_terms.yaml#/autologous_antiicam1carcd2841bbcd3zetaexpressing_tcells_aic100/common"
+      Autologous Anti-kappa Light Chain CAR-CD28-expressing T-lymphocytes:
+        $ref:
+          - "_terms.yaml#/autologous_antikappa_light_chain_carcd28expressing_tlymphocytes/common"
+      Autologous Anti-PD-1 Antibody-activated Tumor-infiltrating Lymphocytes:
+        $ref:
+          - "_terms.yaml#/autologous_antipd1_antibodyactivated_tumorinfiltrating_lymphocytes/common"
+      Autologous Anti-PSMA CAR-T Cells P-PSMA-101:
+        $ref:
+          - "_terms.yaml#/autologous_antipsma_cart_cells_ppsma101/common"
+      Autologous BCMA-targeted CAR T Cells CC-98633:
+        $ref:
+          - "_terms.yaml#/autologous_bcmatargeted_car_t_cells_cc98633/common"
+      Autologous Bispecific BCMA/CD19-targeted CAR-T Cells GC012F:
+        $ref:
+          - "_terms.yaml#/autologous_bispecific_bcmacd19targeted_cart_cells_gc012f/common"
+      Autologous Bispecific CD19/CD22-targeted CAR-T Cells GC022:
+        $ref:
+          - "_terms.yaml#/autologous_bispecific_cd19cd22targeted_cart_cells_gc022/common"
+      Autologous CD19 CAR-expressing CD4+/CD8+ T-cells MB-CART19.1:
+        $ref:
+          - "_terms.yaml#/autologous_cd19_carexpressing_cd4cd8_tcells_mbcart191/common"
+      Autologous CD19-targeted CAR T Cells CC-97540:
+        $ref:
+          - "_terms.yaml#/autologous_cd19targeted_car_t_cells_cc97540/common"
+      Autologous CD19-targeted CAR-T Cells GC007F:
+        $ref:
+          - "_terms.yaml#/autologous_cd19targeted_cart_cells_gc007f/common"
+      Autologous CD19/PD-1 Bispecific CAR-T Cells:
+        $ref:
+          - "_terms.yaml#/autologous_cd19pd1_bispecific_cart_cells/common"
+      Autologous Clonal Neoantigen T Cells ATL001:
+        $ref:
+          - "_terms.yaml#/autologous_clonal_neoantigen_t_cells_atl001/common"
+      Autologous CRISPR-edited Anti-CD19 CAR T Cells XYF19:
+        $ref:
+          - "_terms.yaml#/autologous_crispredited_anticd19_car_t_cells_xyf19/common"
+      Autologous Monocyte-derived Lysate-pulsed Dendritic Cell Vaccine PV-001-DC:
+        $ref:
+          - "_terms.yaml#/autologous_monocytederived_lysatepulsed_dendritic_cell_vaccine_pv001dc/common"
+      Autologous Multi-lineage Potential Cells:
+        $ref:
+          - "_terms.yaml#/autologous_multilineage_potential_cells/common"
+      Autologous Nectin-4/FAP-targeted CAR-T Cells:
+        $ref:
+          - "_terms.yaml#/autologous_nectin4faptargeted_cart_cells/common"
+      Autologous NKG2D CAR T-cells CYAD-02:
+        $ref:
+          - "_terms.yaml#/autologous_nkg2d_car_tcells_cyad02/common"
+      Autologous Pancreatic Adenocarcinoma Lysate and mRNA-loaded Dendritic Cell Vaccine:
+        $ref:
+          - "_terms.yaml#/autologous_pancreatic_adenocarcinoma_lysate_and_mrnaloaded_dendritic_cell_vaccine/common"
+      Autologous Peripheral Blood Lymphocytes from Ibrutinib-treated Chronic Lymphocytic Leukemia Patients IOV-2001:
+        $ref:
+          - "_terms.yaml#/autologous_peripheral_blood_lymphocytes_from_ibrutinibtreated_chronic_lymphocytic_leukemia_patients_iov2001/common"
+      Autologous Rapamycin-resistant Th1/Tc1 Cells RAPA-201:
+        $ref:
+          - "_terms.yaml#/autologous_rapamycinresistant_th1tc1_cells_rapa201/common"
+      Autologous TCRm-expressing T-cells ET140203:
+        $ref:
+          - "_terms.yaml#/autologous_tcrmexpressing_tcells_et140203/common"
+      Autologous Tetravalent Dendritic Cell Vaccine MIDRIX4-LUNG:
+        $ref:
+          - "_terms.yaml#/autologous_tetravalent_dendritic_cell_vaccine_midrix4lung/common"
+      Autologous Tumor Infiltrating Lymphocytes LN-145-S1:
+        $ref:
+          - "_terms.yaml#/autologous_tumor_infiltrating_lymphocytes_ln145s1/common"
+      Autologous Universal CAR-expressing T-lymphocytes UniCAR02-T:
+        $ref:
+          - "_terms.yaml#/autologous_universal_carexpressing_tlymphocytes_unicar02t/common"
+      Avdoralimab:
+        $ref:
+          - "_terms.yaml#/avdoralimab/common"
+      Aviscumine:
+        $ref:
+          - "_terms.yaml#/aviscumine/common"
+      Axalimogene Filolisbac:
+        $ref:
+          - "_terms.yaml#/axalimogene_filolisbac/common"
+      Axatilimab:
+        $ref:
+          - "_terms.yaml#/axatilimab/common"
+      AXL Inhibitor SLC-391:
+        $ref:
+          - "_terms.yaml#/axl_inhibitor_slc391/common"
+      AXL/ FLT3/VEGFR2 Inhibitor KC1036:
+        $ref:
+          - "_terms.yaml#/axl_flt3vegfr2_inhibitor_kc1036/common"
+      Axl/Mer Inhibitor PF-07265807:
+        $ref:
+          - "_terms.yaml#/axlmer_inhibitor_pf07265807/common"
+      Azintuxizumab Vedotin:
+        $ref:
+          - "_terms.yaml#/azintuxizumab_vedotin/common"
+      Balstilimab:
+        $ref:
+          - "_terms.yaml#/balstilimab/common"
+      Bazlitoran:
+        $ref:
+          - "_terms.yaml#/bazlitoran/common"
+      Bcl-2 Inhibitor BGB-11417:
+        $ref:
+          - "_terms.yaml#/bcl2_inhibitor_bgb11417/common"
+      Bcl-2 Inhibitor LP-108:
+        $ref:
+          - "_terms.yaml#/bcl2_inhibitor_lp108/common"
+      BCMA-CD19 Compound CAR T Cells:
+        $ref:
+          - "_terms.yaml#/bcmacd19_compound_car_t_cells/common"
+      BCMA/CD3e Tri-specific T-cell Activating Construct HPN217:
+        $ref:
+          - "_terms.yaml#/bcmacd3e_trispecific_tcell_activating_construct_hpn217/common"
+      Belantamab Mafodotin:
+        $ref:
+          - "_terms.yaml#/belantamab_mafodotin/common"
+      Belapectin:
+        $ref:
+          - "_terms.yaml#/belapectin/common"
+      Belvarafenib:
+        $ref:
+          - "_terms.yaml#/belvarafenib/common"
+      Belzutifan:
+        $ref:
+          - "_terms.yaml#/belzutifan/common"
+      Bersanlimab:
+        $ref:
+          - "_terms.yaml#/bersanlimab/common"
+      Berzosertib:
+        $ref:
+          - "_terms.yaml#/berzosertib/common"
+      Betaglucin Gel:
+        $ref:
+          - "_terms.yaml#/betaglucin_gel/common"
+      Bexmarilimab:
+        $ref:
+          - "_terms.yaml#/bexmarilimab/common"
+      Bispecific Antibody AGEN1223:
+        $ref:
+          - "_terms.yaml#/bispecific_antibody_agen1223/common"
+      Bispecific Antibody AMG 509:
+        $ref:
+          - "_terms.yaml#/bispecific_antibody_amg_509/common"
+      Bispecific Antibody GS-1423:
+        $ref:
+          - "_terms.yaml#/bispecific_antibody_gs1423/common"
+      BiTE Antibody AMG 910:
+        $ref:
+          - "_terms.yaml#/bite_antibody_amg_910/common"
+      Bizalimogene Ralaplasmid:
+        $ref:
+          - "_terms.yaml#/bizalimogene_ralaplasmid/common"
+      Bomedemstat:
+        $ref:
+          - "_terms.yaml#/bomedemstat/common"
+      BRAF Inhibitor BGB-3245:
+        $ref:
+          - "_terms.yaml#/braf_inhibitor_bgb3245/common"
+      BRAF(V600E) Kinase Inhibitor ABM-1310:
+        $ref:
+          - "_terms.yaml#/brafv600e_kinase_inhibitor_abm1310/common"
+      BTK Inhibitor HZ-A-018:
+        $ref:
+          - "_terms.yaml#/btk_inhibitor_hza018/common"
+      c-Met Inhibitor ABN401:
+        $ref:
+          - "_terms.yaml#/cmet_inhibitor_abn401/common"
+      c-Met Inhibitor GST-HG161:
+        $ref:
+          - "_terms.yaml#/cmet_inhibitor_gsthg161/common"
+      C/EBP Beta Antagonist ST101:
+        $ref:
+          - "_terms.yaml#/cebp_beta_antagonist_st101/common"
+      Calcium Release-activated Channel Inhibitor CM4620:
+        $ref:
+          - "_terms.yaml#/calcium_releaseactivated_channel_inhibitor_cm4620/common"
+      Camidanlumab Tesirine:
+        $ref:
+          - "_terms.yaml#/camidanlumab_tesirine/common"
+      Carbon C 14-pamiparib:
+        $ref:
+          - "_terms.yaml#/carbon_c_14pamiparib/common"
+      Cationic Peptide Cream Cypep-1:
+        $ref:
+          - "_terms.yaml#/cationic_peptide_cream_cypep1/common"
+      CD11b Agonist GB1275:
+        $ref:
+          - "_terms.yaml#/cd11b_agonist_gb1275/common"
+      CD123-CD33 Compound CAR T Cells:
+        $ref:
+          - "_terms.yaml#/cd123cd33_compound_car_t_cells/common"
+      CD123-specific Targeting Module TM123:
+        $ref:
+          - "_terms.yaml#/cd123specific_targeting_module_tm123/common"
+      CD20-CD19 Compound CAR T Cells:
+        $ref:
+          - "_terms.yaml#/cd20cd19_compound_car_t_cells/common"
+      CD28/ICOS Antagonist ALPN-101:
+        $ref:
+          - "_terms.yaml#/cd28icos_antagonist_alpn101/common"
+      CD44v6-specific CAR T-cells:
+        $ref:
+          - "_terms.yaml#/cd44v6specific_car_tcells/common"
+      CD73 Inhibitor AB680:
+        $ref:
+          - "_terms.yaml#/cd73_inhibitor_ab680/common"
+      CD73 Inhibitor LY3475070:
+        $ref:
+          - "_terms.yaml#/cd73_inhibitor_ly3475070/common"
+      CD80-Fc Fusion Protein ALPN-202:
+        $ref:
+          - "_terms.yaml#/cd80fc_fusion_protein_alpn202/common"
+      CD80-Fc Fusion Protein FPT155:
+        $ref:
+          - "_terms.yaml#/cd80fc_fusion_protein_fpt155/common"
+      CDK2 Inhibitor PF-07104091:
+        $ref:
+          - "_terms.yaml#/cdk2_inhibitor_pf07104091/common"
+      CDK4/6 Inhibitor CS3002:
+        $ref:
+          - "_terms.yaml#/cdk46_inhibitor_cs3002/common"
+      CDK4/6 Inhibitor HS-10342:
+        $ref:
+          - "_terms.yaml#/cdk46_inhibitor_hs10342/common"
+      CDK4/6 Inhibitor TQB3616:
+        $ref:
+          - "_terms.yaml#/cdk46_inhibitor_tqb3616/common"
+      CDK7 Inhibitor SY-5609:
+        $ref:
+          - "_terms.yaml#/cdk7_inhibitor_sy5609/common"
+      CDK8/19 Inhibitor SEL 120:
+        $ref:
+          - "_terms.yaml#/cdk819_inhibitor_sel_120/common"
+      Cedazuridine/Azacitidine Combination Agent ASTX030:
+        $ref:
+          - "_terms.yaml#/cedazuridineazacitidine_combination_agent_astx030/common"
+      Cereblon E3 Ubiquitin Ligase Modulating Agent CC-99282:
+        $ref:
+          - "_terms.yaml#/cereblon_e3_ubiquitin_ligase_modulating_agent_cc99282/common"
+      Cetuximab Sarotalocan:
+        $ref:
+          - "_terms.yaml#/cetuximab_sarotalocan/common"
+      Cevostamab:
+        $ref:
+          - "_terms.yaml#/cevostamab/common"
+      Chlorotoxin (EQ)-CD28-CD3zeta-CD19t-expressing CAR T-lymphocytes:
+        $ref:
+          - "_terms.yaml#/chlorotoxin_eqcd28cd3zetacd19texpressing_car_tlymphocytes/common"
+      Ciltacabtagene Autoleucel:
+        $ref:
+          - "_terms.yaml#/ciltacabtagene_autoleucel/common"
+      Cinrebafusp Alfa:
+        $ref:
+          - "_terms.yaml#/cinrebafusp_alfa/common"
+      Cintirorgon:
+        $ref:
+          - "_terms.yaml#/cintirorgon/common"
+      CK1alpha/CDK7/CDK9 Inhibitor BTX-A51:
+        $ref:
+          - "_terms.yaml#/ck1alphacdk7cdk9_inhibitor_btxa51/common"
+      Cobolimab:
+        $ref:
+          - "_terms.yaml#/cobolimab/common"
+      Cofetuzumab Pelidotin:
+        $ref:
+          - "_terms.yaml#/cofetuzumab_pelidotin/common"
+      Coltuximab Ravtansine:
+        $ref:
+          - "_terms.yaml#/coltuximab_ravtansine/common"
+      Commensal Bacterial Strain Formulation VE800:
+        $ref:
+          - "_terms.yaml#/commensal_bacterial_strain_formulation_ve800/common"
+      Copper Cu 67 Tyr3-octreotate:
+        $ref:
+          - "_terms.yaml#/copper_cu_67_tyr3octreotate/common"
+      Cord Blood Derived CAR T-Cells:
+        $ref:
+          - "_terms.yaml#/cord_blood_derived_car_tcells/common"
+      Cosibelimab:
+        $ref:
+          - "_terms.yaml#/cosibelimab/common"
+      Coxsackievirus V937:
+        $ref:
+          - "_terms.yaml#/coxsackievirus_v937/common"
+      CSF1R Inhibitor ABSK021:
+        $ref:
+          - "_terms.yaml#/csf1r_inhibitor_absk021/common"
+      CXCR4/E-selectin Antagonist GMI-1359:
+        $ref:
+          - "_terms.yaml#/cxcr4eselectin_antagonist_gmi1359/common"
+      CYP11A1 Inhibitor ODM-209:
+        $ref:
+          - "_terms.yaml#/cyp11a1_inhibitor_odm209/common"
+      CYP17/CYP11B2 Inhibitor LAE001:
+        $ref:
+          - "_terms.yaml#/cyp17cyp11b2_inhibitor_lae001/common"
+      Daratumumab and Hyaluronidase-fihj:
+        $ref:
+          - "_terms.yaml#/daratumumab_and_hyaluronidasefihj/common"
+      Decitabine and Cedazuridine:
+        $ref:
+          - "_terms.yaml#/decitabine_and_cedazuridine/common"
+      Delolimogene Mupadenorepvec:
+        $ref:
+          - "_terms.yaml#/delolimogene_mupadenorepvec/common"
+      Dendrimer-conjugated Bcl-2/Bcl-XL Inhibitor AZD0466:
+        $ref:
+          - "_terms.yaml#/dendrimerconjugated_bcl2bclxl_inhibitor_azd0466/common"
+      Dengue Virus Adjuvant PV-001-DV:
+        $ref:
+          - "_terms.yaml#/dengue_virus_adjuvant_pv001dv/common"
+      Dilpacimab:
+        $ref:
+          - "_terms.yaml#/dilpacimab/common"
+      DNA-PK inhibitor AZD7648:
+        $ref:
+          - "_terms.yaml#/dnapk_inhibitor_azd7648/common"
+      DNA-PK/PI3K-delta Inhibitor BR101801:
+        $ref:
+          - "_terms.yaml#/dnapkpi3kdelta_inhibitor_br101801/common"
+      DNMT1 Inhibitor NTX-301:
+        $ref:
+          - "_terms.yaml#/dnmt1_inhibitor_ntx301/common"
+      Dociparstat sodium:
+        $ref:
+          - "_terms.yaml#/dociparstat_sodium/common"
+      Dostarlimab:
+        $ref:
+          - "_terms.yaml#/dostarlimab/common"
+      Doxorubicin Prodrug/Prodrug-activating Biomaterial SQ3370:
+        $ref:
+          - "_terms.yaml#/doxorubicin_prodrugprodrugactivating_biomaterial_sq3370/common"
+      DTRMWXHS-12/Everolimus/Pomalidomide Combination Agent DTRM-555:
+        $ref:
+          - "_terms.yaml#/dtrmwxhs12everolimuspomalidomide_combination_agent_dtrm555/common"
+      Edicotinib:
+        $ref:
+          - "_terms.yaml#/edicotinib/common"
+      Edodekin alfa:
+        $ref:
+          - "_terms.yaml#/edodekin_alfa/common"
+      Eftozanermin Alfa:
+        $ref:
+          - "_terms.yaml#/eftozanermin_alfa/common"
+      EGFR Inhibitor TY-9591:
+        $ref:
+          - "_terms.yaml#/egfr_inhibitor_ty9591/common"
+      EGFR Mutant-selective  Inhibitor TQB3804:
+        $ref:
+          - "_terms.yaml#/egfr_mutantselective__inhibitor_tqb3804/common"
+      EGFR/EGFRvIII Inhibitor WSD0922-FU:
+        $ref:
+          - "_terms.yaml#/egfregfrviii_inhibitor_wsd0922fu/common"
+      EGFR/HER2 Inhibitor DZD9008:
+        $ref:
+          - "_terms.yaml#/egfrher2_inhibitor_dzd9008/common"
+      EGFR/TGFb Fusion Monoclonal Antibody BCA101:
+        $ref:
+          - "_terms.yaml#/egfrtgfb_fusion_monoclonal_antibody_bca101/common"
+      EGFR/VEGFR/RET Inhibitor HA121-28:
+        $ref:
+          - "_terms.yaml#/egfrvegfrret_inhibitor_ha12128/common"
+      Emibetuzumab:
+        $ref:
+          - "_terms.yaml#/emibetuzumab/common"
+      Enadenotucirev-expressing FAP/CD3 Bispecific FAP-TAc NG-641:
+        $ref:
+          - "_terms.yaml#/enadenotucirevexpressing_fapcd3_bispecific_faptac_ng641/common"
+      Encapsulated Rapamycin:
+        $ref:
+          - "_terms.yaml#/encapsulated_rapamycin/common"
+      Encelimab:
+        $ref:
+          - "_terms.yaml#/encelimab/common"
+      Endothelin B Receptor Blocker ENB 003:
+        $ref:
+          - "_terms.yaml#/endothelin_b_receptor_blocker_enb_003/common"
+      Engineered Red Blood Cells Co-expressing 4-1BBL and IL-15TP RTX-240:
+        $ref:
+          - "_terms.yaml#/engineered_red_blood_cells_coexpressing_41bbl_and_il15tp_rtx240/common"
+      Engineered Toxin Body Targeting CD38 TAK-169:
+        $ref:
+          - "_terms.yaml#/engineered_toxin_body_targeting_cd38_tak169/common"
+      EP2/EP4 Antagonist TPST-1495:
+        $ref:
+          - "_terms.yaml#/ep2ep4_antagonist_tpst1495/common"
+      EP4 Antagonist INV-1120:
+        $ref:
+          - "_terms.yaml#/ep4_antagonist_inv1120/common"
+      Epcoritamab:
+        $ref:
+          - "_terms.yaml#/epcoritamab/common"
+      EphA2-targeting Bicycle Toxin Conjugate BT5528:
+        $ref:
+          - "_terms.yaml#/epha2targeting_bicycle_toxin_conjugate_bt5528/common"
+      ERK1/2 Inhibitor HH2710:
+        $ref:
+          - "_terms.yaml#/erk12_inhibitor_hh2710/common"
+      ERK1/2 Inhibitor JSI-1187:
+        $ref:
+          - "_terms.yaml#/erk12_inhibitor_jsi1187/common"
+      Etigilimab:
+        $ref:
+          - "_terms.yaml#/etigilimab/common"
+      Exicorilant:
+        $ref:
+          - "_terms.yaml#/exicorilant/common"
+      Extended Release Metformin Hydrochloride:
+        $ref:
+          - "_terms.yaml#/extended_release_metformin_hydrochloride/common"
+      Ezabenlimab:
+        $ref:
+          - "_terms.yaml#/ezabenlimab/common"
+      EZH1/2 Inhibitor HH2853:
+        $ref:
+          - "_terms.yaml#/ezh12_inhibitor_hh2853/common"
+      EZH2 inhibitor CPI-0209:
+        $ref:
+          - "_terms.yaml#/ezh2_inhibitor_cpi0209/common"
+      Fadraciclib:
+        $ref:
+          - "_terms.yaml#/fadraciclib/common"
+      FAK/ALK/ROS1 Inhibitor APG-2449:
+        $ref:
+          - "_terms.yaml#/fakalkros1_inhibitor_apg2449/common"
+      FAP/4-1BB-targeting DARPin MP0310:
+        $ref:
+          - "_terms.yaml#/fap41bbtargeting_darpin_mp0310/common"
+      FAP/4-1BB-targeting Fusion Protein RO7122290:
+        $ref:
+          - "_terms.yaml#/fap41bbtargeting_fusion_protein_ro7122290/common"
+      Fas Ligand-treated Allogeneic Mobilized Peripheral Blood Cells:
+        $ref:
+          - "_terms.yaml#/fas_ligandtreated_allogeneic_mobilized_peripheral_blood_cells/common"
+      Favezelimab:
+        $ref:
+          - "_terms.yaml#/favezelimab/common"
+      Fc-engineered Anti-CD40 Agonist Antibody 2141-V11:
+        $ref:
+          - "_terms.yaml#/fcengineered_anticd40_agonist_antibody_2141v11/common"
+      Feladilimab:
+        $ref:
+          - "_terms.yaml#/feladilimab/common"
+      Felzartamab:
+        $ref:
+          - "_terms.yaml#/felzartamab/common"
+      Fenretinide Phospholipid Suspension ST-001:
+        $ref:
+          - "_terms.yaml#/fenretinide_phospholipid_suspension_st001/common"
+      FGFR Inhibitor CPL304110:
+        $ref:
+          - "_terms.yaml#/fgfr_inhibitor_cpl304110/common"
+      FGFR/CSF-1R Inhibitor 3D185:
+        $ref:
+          - "_terms.yaml#/fgfrcsf1r_inhibitor_3d185/common"
+      FGFR2 Inhibitor RLY-4008:
+        $ref:
+          - "_terms.yaml#/fgfr2_inhibitor_rly4008/common"
+      Fianlimab:
+        $ref:
+          - "_terms.yaml#/fianlimab/common"
+      Fimaporfin A:
+        $ref:
+          - "_terms.yaml#/fimaporfin_a/common"
+      Flt3 Ligand/Anti-CTLA-4 Antibody/IL-12 Engineered Oncolytic Vaccinia Virus RIVAL-01:
+        $ref:
+          - "_terms.yaml#/flt3_ligandantictla4_antibodyil12_engineered_oncolytic_vaccinia_virus_rival01/common"
+      FLT3/FGFR Dual Kinase Inhibitor MAX-40279:
+        $ref:
+          - "_terms.yaml#/flt3fgfr_dual_kinase_inhibitor_max40279/common"
+      FLT3/KIT/CSF1R Inhibitor NMS-03592088:
+        $ref:
+          - "_terms.yaml#/flt3kitcsf1r_inhibitor_nms03592088/common"
+      Fluorine F 18 Ara-G:
+        $ref:
+          - "_terms.yaml#/fluorine_f_18_arag/common"
+      Foritinib Succinate:
+        $ref:
+          - "_terms.yaml#/foritinib_succinate/common"
+      Fosgemcitabine Palabenamide:
+        $ref:
+          - "_terms.yaml#/fosgemcitabine_palabenamide/common"
+      Fosifloxuridine Nafalbenamide:
+        $ref:
+          - "_terms.yaml#/fosifloxuridine_nafalbenamide/common"
+      Futibatinib:
+        $ref:
+          - "_terms.yaml#/futibatinib/common"
+      G Protein-coupled Estrogen Receptor Agonist LNS8801:
+        $ref:
+          - "_terms.yaml#/g_proteincoupled_estrogen_receptor_agonist_lns8801/common"
+      Gallium-based Bone Resorption Inhibitor AP-002:
+        $ref:
+          - "_terms.yaml#/galliumbased_bone_resorption_inhibitor_ap002/common"
+      GBM Antigens and Alloantigens Immunotherapeutic Vaccine:
+        $ref:
+          - "_terms.yaml#/gbm_antigens_and_alloantigens_immunotherapeutic_vaccine/common"
+      Genetically Modified Interleukin-12 Transgene-encoding Bifidobacterium longum:
+        $ref:
+          - "_terms.yaml#/genetically_modified_interleukin12_transgeneencoding_bifidobacterium_longum/common"
+      Giloralimab:
+        $ref:
+          - "_terms.yaml#/giloralimab/common"
+      Giredestrant:
+        $ref:
+          - "_terms.yaml#/giredestrant/common"
+      Glofitamab:
+        $ref:
+          - "_terms.yaml#/glofitamab/common"
+      Glutaminase Inhibitor IPN60090:
+        $ref:
+          - "_terms.yaml#/glutaminase_inhibitor_ipn60090/common"
+      Glutamine Antagonist DRP-104:
+        $ref:
+          - "_terms.yaml#/glutamine_antagonist_drp104/common"
+      HER2 Inhibitor DZD1516:
+        $ref:
+          - "_terms.yaml#/her2_inhibitor_dzd1516/common"
+      HER2 Tri-specific Natural Killer Cell Engager DF1001:
+        $ref:
+          - "_terms.yaml#/her2_trispecific_natural_killer_cell_engager_df1001/common"
+      HER2-directed TLR8 Agonist SBT6050:
+        $ref:
+          - "_terms.yaml#/her2directed_tlr8_agonist_sbt6050/common"
+      HIF2a RNAi ARO-HIF2:
+        $ref:
+          - "_terms.yaml#/hif2a_rnai_arohif2/common"
+      HPV 16 E6/E7-encoding Arenavirus Vaccine HB-202:
+        $ref:
+          - "_terms.yaml#/hpv_16_e6e7encoding_arenavirus_vaccine_hb202/common"
+      HPV E6/E7-encoding Arenavirus Vaccine HB-201:
+        $ref:
+          - "_terms.yaml#/hpv_e6e7encoding_arenavirus_vaccine_hb201/common"
+      HPV6/11-targeted DNA Plasmid Vaccine INO-3107:
+        $ref:
+          - "_terms.yaml#/hpv611targeted_dna_plasmid_vaccine_ino3107/common"
+      Hsp90 Inhibitor TQB3474:
+        $ref:
+          - "_terms.yaml#/hsp90_inhibitor_tqb3474/common"
+      Hsp90-targeted Photosensitizer HS-201:
+        $ref:
+          - "_terms.yaml#/hsp90targeted_photosensitizer_hs201/common"
+      Hyaluronidase-zzxf/Pertuzumab/Trastuzumab:
+        $ref:
+          - "_terms.yaml#/hyaluronidasezzxfpertuzumabtrastuzumab/common"
+      Iadademstat:
+        $ref:
+          - "_terms.yaml#/iadademstat/common"
+      Ianalumab:
+        $ref:
+          - "_terms.yaml#/ianalumab/common"
+      Idetrexed:
+        $ref:
+          - "_terms.yaml#/idetrexed/common"
+      IDH1 Mutant Inhibitor LY3410738:
+        $ref:
+          - "_terms.yaml#/idh1_mutant_inhibitor_ly3410738/common"
+      IDO/TDO Inhibitor LY-01013:
+        $ref:
+          - "_terms.yaml#/idotdo_inhibitor_ly01013/common"
+      IDO1/TDO2 Inhibitor M4112:
+        $ref:
+          - "_terms.yaml#/ido1tdo2_inhibitor_m4112/common"
+      Ieramilimab:
+        $ref:
+          - "_terms.yaml#/ieramilimab/common"
+      IL-12sc, IL-15sushi, IFNa and GM-CSF mRNA-based Immunotherapeutic Agent SAR441000:
+        $ref:
+          - "_terms.yaml#/il12sc_il15sushi_ifna_and_gmcsf_mrnabased_immunotherapeutic_agent_sar441000/common"
+      Ilginatinib:
+        $ref:
+          - "_terms.yaml#/ilginatinib/common"
+      Imaradenant:
+        $ref:
+          - "_terms.yaml#/imaradenant/common"
+      Imgatuzumab:
+        $ref:
+          - "_terms.yaml#/imgatuzumab/common"
+      Imifoplatin:
+        $ref:
+          - "_terms.yaml#/imifoplatin/common"
+      Inactivated Oncolytic Virus Particle GEN0101:
+        $ref:
+          - "_terms.yaml#/inactivated_oncolytic_virus_particle_gen0101/common"
+      Indatuximab Ravtansine:
+        $ref:
+          - "_terms.yaml#/indatuximab_ravtansine/common"
+      Individualized MVA-based Vaccine TG4050:
+        $ref:
+          - "_terms.yaml#/individualized_mvabased_vaccine_tg4050/common"
+      Indusatumab Vedotin:
+        $ref:
+          - "_terms.yaml#/indusatumab_vedotin/common"
+      Inebilizumab:
+        $ref:
+          - "_terms.yaml#/inebilizumab/common"
+      iNKT Cell Agonist ABX196:
+        $ref:
+          - "_terms.yaml#/inkt_cell_agonist_abx196/common"
+      Interleukin-12-Fc Fusion Protein DF6002:
+        $ref:
+          - "_terms.yaml#/interleukin12fc_fusion_protein_df6002/common"
+      Interleukin-15 Agonist Fusion Protein SHR1501:
+        $ref:
+          - "_terms.yaml#/interleukin15_agonist_fusion_protein_shr1501/common"
+      Interleukin-15 Fusion Protein BJ-001:
+        $ref:
+          - "_terms.yaml#/interleukin15_fusion_protein_bj001/common"
+      Interleukin-15/Interleukin-15 Receptor Alpha Complex-Fc Fusion Protein XmAb24306:
+        $ref:
+          - "_terms.yaml#/interleukin15interleukin15_receptor_alpha_complexfc_fusion_protein_xmab24306/common"
+      Interleukin-15/Interleukin-15 Receptor Alpha Sushi+ Domain Fusion Protein SO-C101:
+        $ref:
+          - "_terms.yaml#/interleukin15interleukin15_receptor_alpha_sushi_domain_fusion_protein_soc101/common"
+      Iodine I 131 Apamistamab:
+        $ref:
+          - "_terms.yaml#/iodine_i_131_apamistamab/common"
+      Iodine I 131 IPA:
+        $ref:
+          - "_terms.yaml#/iodine_i_131_ipa/common"
+      iPSC-derived CD16/IL-15RF-expressing Anti-CD19 CAR-NK Cells FT596:
+        $ref:
+          - "_terms.yaml#/ipscderived_cd16il15rfexpressing_anticd19_carnk_cells_ft596/common"
+      Irinotecan Sucrosofate:
+        $ref:
+          - "_terms.yaml#/irinotecan_sucrosofate/common"
+      Iroplact:
+        $ref:
+          - "_terms.yaml#/iroplact/common"
+      Irradiated Allogeneic Human Lung Cancer Cells Expressing OX40L-Ig Vaccine HS-130:
+        $ref:
+          - "_terms.yaml#/irradiated_allogeneic_human_lung_cancer_cells_expressing_ox40lig_vaccine_hs130/common"
+      Istiratumab:
+        $ref:
+          - "_terms.yaml#/istiratumab/common"
+      Ivaltinostat:
+        $ref:
+          - "_terms.yaml#/ivaltinostat/common"
+      Ivuxolimab:
+        $ref:
+          - "_terms.yaml#/ivuxolimab/common"
+      JAK Inhibitor:
+        $ref:
+          - "_terms.yaml#/jak_inhibitor/common"
+      Kanitinib:
+        $ref:
+          - "_terms.yaml#/kanitinib/common"
+      KRAS G12C Inhibitor GDC-6036:
+        $ref:
+          - "_terms.yaml#/kras_g12c_inhibitor_gdc6036/common"
+      KRAS G12C Inhibitor LY3499446:
+        $ref:
+          - "_terms.yaml#/kras_g12c_inhibitor_ly3499446/common"
+      KRASG12C Inhibitor JNJ-74699157:
+        $ref:
+          - "_terms.yaml#/krasg12c_inhibitor_jnj74699157/common"
+      Ladiratuzumab Vedotin:
+        $ref:
+          - "_terms.yaml#/ladiratuzumab_vedotin/common"
+      LAIR-2 Fusion Protein NC410:
+        $ref:
+          - "_terms.yaml#/lair2_fusion_protein_nc410/common"
+      Landogrozumab:
+        $ref:
+          - "_terms.yaml#/landogrozumab/common"
+      Laprituximab Emtansine:
+        $ref:
+          - "_terms.yaml#/laprituximab_emtansine/common"
+      Larotinib Mesylate:
+        $ref:
+          - "_terms.yaml#/larotinib_mesylate/common"
+      Lerociclib:
+        $ref:
+          - "_terms.yaml#/lerociclib/common"
+      Letetresgene Autoleucel:
+        $ref:
+          - "_terms.yaml#/letetresgene_autoleucel/common"
+      Letolizumab:
+        $ref:
+          - "_terms.yaml#/letolizumab/common"
+      Lifileucel:
+        $ref:
+          - "_terms.yaml#/lifileucel/common"
+      Lifirafenib:
+        $ref:
+          - "_terms.yaml#/lifirafenib/common"
+      Lilotomab:
+        $ref:
+          - "_terms.yaml#/lilotomab/common"
+      Linperlisib:
+        $ref:
+          - "_terms.yaml#/linperlisib/common"
+      Lipid Nanoparticle Encapsulating Glutathione S-transferase P siRNA NBF-006:
+        $ref:
+          - "_terms.yaml#/lipid_nanoparticle_encapsulating_glutathione_stransferase_p_sirna_nbf006/common"
+      Liposomal Bcl-2 Antisense Oligonucleotide  BP1002:
+        $ref:
+          - "_terms.yaml#/liposomal_bcl2_antisense_oligonucleotide__bp1002/common"
+      Liposome-encapsulated TAAs mRNA Vaccine W_ova1:
+        $ref:
+          - "_terms.yaml#/liposomeencapsulated_taas_mrna_vaccine_w_ova1/common"
+      LMP2-specific T Cell Receptor-transduced Autologous T-lymphocytes:
+        $ref:
+          - "_terms.yaml#/lmp2specific_t_cell_receptortransduced_autologous_tlymphocytes/common"
+      LMP7 Inhibitor M3258:
+        $ref:
+          - "_terms.yaml#/lmp7_inhibitor_m3258/common"
+      Lodapolimab:
+        $ref:
+          - "_terms.yaml#/lodapolimab/common"
+      LRP5 Antagonist BI 905681:
+        $ref:
+          - "_terms.yaml#/lrp5_antagonist_bi_905681/common"
+      LSD1 Inhibitor SYHA1807:
+        $ref:
+          - "_terms.yaml#/lsd1_inhibitor_syha1807/common"
+      Lumretuzumab:
+        $ref:
+          - "_terms.yaml#/lumretuzumab/common"
+      Lupartumab Amadotin:
+        $ref:
+          - "_terms.yaml#/lupartumab_amadotin/common"
+      Lutetium Lu 177-DTPA-omburtamab:
+        $ref:
+          - "_terms.yaml#/lutetium_lu_177dtpaomburtamab/common"
+      Maackia amurensis Seed Lectin:
+        $ref:
+          - "_terms.yaml#/maackia_amurensis_seed_lectin/common"
+      Macrocycle-bridged STING Agonist E7766:
+        $ref:
+          - "_terms.yaml#/macrocyclebridged_sting_agonist_e7766/common"
+      MAGE-A1-specific T Cell Receptor-transduced Autologous T-cells:
+        $ref:
+          - "_terms.yaml#/magea1specific_t_cell_receptortransduced_autologous_tcells/common"
+      Magrolimab:
+        $ref:
+          - "_terms.yaml#/magrolimab/common"
+      Manelimab:
+        $ref:
+          - "_terms.yaml#/manelimab/common"
+      MCL-1 Inhibitor ABBV-467:
+        $ref:
+          - "_terms.yaml#/mcl1_inhibitor_abbv467/common"
+      MDM2 Inhibitor AMGMDS3:
+        $ref:
+          - "_terms.yaml#/mdm2_inhibitor_amgmds3/common"
+      MEK 1/2 Inhibitor FCN-159:
+        $ref:
+          - "_terms.yaml#/mek_12_inhibitor_fcn159/common"
+      MEK Inhibitor HL-085:
+        $ref:
+          - "_terms.yaml#/mek_inhibitor_hl085/common"
+      Menin-MLL Interaction Inhibitor SNDX-5613:
+        $ref:
+          - "_terms.yaml#/meninmll_interaction_inhibitor_sndx5613/common"
+      MET x MET Bispecific Antibody REGN5093:
+        $ref:
+          - "_terms.yaml#/met_x_met_bispecific_antibody_regn5093/common"
+      Metarrestin:
+        $ref:
+          - "_terms.yaml#/metarrestin/common"
+      Methylcantharidimide:
+        $ref:
+          - "_terms.yaml#/methylcantharidimide/common"
+      Mevociclib:
+        $ref:
+          - "_terms.yaml#/mevociclib/common"
+      Mezagitamab:
+        $ref:
+          - "_terms.yaml#/mezagitamab/common"
+      Microbiome GEN-001:
+        $ref:
+          - "_terms.yaml#/microbiome_gen001/common"
+      Microbiome-derived Peptide Vaccine EO2401:
+        $ref:
+          - "_terms.yaml#/microbiomederived_peptide_vaccine_eo2401/common"
+      Milataxel:
+        $ref:
+          - "_terms.yaml#/milataxel/common"
+      Miptenalimab:
+        $ref:
+          - "_terms.yaml#/miptenalimab/common"
+      Miransertib:
+        $ref:
+          - "_terms.yaml#/miransertib/common"
+      Mirdametinib:
+        $ref:
+          - "_terms.yaml#/mirdametinib/common"
+      Mirzotamab Clezutoclax:
+        $ref:
+          - "_terms.yaml#/mirzotamab_clezutoclax/common"
+      Mitazalimab:
+        $ref:
+          - "_terms.yaml#/mitazalimab/common"
+      Mobocertinib:
+        $ref:
+          - "_terms.yaml#/mobocertinib/common"
+      Modakafusp Alfa:
+        $ref:
+          - "_terms.yaml#/modakafusp_alfa/common"
+      Modified Vaccinia Ankara-vectored HPV16/18 Vaccine JNJ-65195208:
+        $ref:
+          - "_terms.yaml#/modified_vaccinia_ankaravectored_hpv1618_vaccine_jnj65195208/common"
+      Motixafortide:
+        $ref:
+          - "_terms.yaml#/motixafortide/common"
+      MUC-1/WT1 Peptide-primed Autologous Dendritic Cells:
+        $ref:
+          - "_terms.yaml#/muc1wt1_peptideprimed_autologous_dendritic_cells/common"
+      Multi-epitope HER2 Peptide Vaccine TPIV100:
+        $ref:
+          - "_terms.yaml#/multiepitope_her2_peptide_vaccine_tpiv100/common"
+      Murizatoclax:
+        $ref:
+          - "_terms.yaml#/murizatoclax/common"
+      Muscadine Grape Extract:
+        $ref:
+          - "_terms.yaml#/muscadine_grape_extract/common"
+      MVA-BN Smallpox Vaccine:
+        $ref:
+          - "_terms.yaml#/mvabn_smallpox_vaccine/common"
+      N-dihydrogalactochitosan:
+        $ref:
+          - "_terms.yaml#/ndihydrogalactochitosan/common"
+      Nagrestipen:
+        $ref:
+          - "_terms.yaml#/nagrestipen/common"
+      Naratuximab Emtansine:
+        $ref:
+          - "_terms.yaml#/naratuximab_emtansine/common"
+      Navicixizumab:
+        $ref:
+          - "_terms.yaml#/navicixizumab/common"
+      Nogapendekin Alfa:
+        $ref:
+          - "_terms.yaml#/nogapendekin_alfa/common"
+      Numidargistat:
+        $ref:
+          - "_terms.yaml#/numidargistat/common"
+      Nurulimab:
+        $ref:
+          - "_terms.yaml#/nurulimab/common"
+      Odronextamab:
+        $ref:
+          - "_terms.yaml#/odronextamab/common"
+      Ofranergene Obadenovec:
+        $ref:
+          - "_terms.yaml#/ofranergene_obadenovec/common"
+      Oligo-fucoidan:
+        $ref:
+          - "_terms.yaml#/oligofucoidan/common"
+      Olinvacimab:
+        $ref:
+          - "_terms.yaml#/olinvacimab/common"
+      Olvimulogene Nanivacirepvec:
+        $ref:
+          - "_terms.yaml#/olvimulogene_nanivacirepvec/common"
+      Onatasertib:
+        $ref:
+          - "_terms.yaml#/onatasertib/common"
+      Oncolytic Adenovirus ORCA-010:
+        $ref:
+          - "_terms.yaml#/oncolytic_adenovirus_orca010/common"
+      Oncolytic Herpes Simplex Virus-1 ONCR-177:
+        $ref:
+          - "_terms.yaml#/oncolytic_herpes_simplex_virus1_oncr177/common"
+      Oncolytic HSV-1 Expressing IL-12 and Anti-PD-1 Antibody T3011:
+        $ref:
+          - "_terms.yaml#/oncolytic_hsv1_expressing_il12_and_antipd1_antibody_t3011/common"
+      Oncolytic Measles Virus Encoding Helicobacter pylori Neutrophil-activating Protein:
+        $ref:
+          - "_terms.yaml#/oncolytic_measles_virus_encoding_helicobacter_pylori_neutrophilactivating_protein/common"
+      Ontorpacept:
+        $ref:
+          - "_terms.yaml#/ontorpacept/common"
+      Onvatilimab:
+        $ref:
+          - "_terms.yaml#/onvatilimab/common"
+      Opolimogene Capmilisbac:
+        $ref:
+          - "_terms.yaml#/opolimogene_capmilisbac/common"
+      Opucolimab:
+        $ref:
+          - "_terms.yaml#/opucolimab/common"
+      Orelabrutinib:
+        $ref:
+          - "_terms.yaml#/orelabrutinib/common"
+      Orvacabtagene Autoleucel:
+        $ref:
+          - "_terms.yaml#/orvacabtagene_autoleucel/common"
+      Oxaliplatin Eluting Beads:
+        $ref:
+          - "_terms.yaml#/oxaliplatin_eluting_beads/common"
+      p97 Inhibitor CB-5339:
+        $ref:
+          - "_terms.yaml#/p97_inhibitor_cb5339/common"
+      p97 Inhibitor CB-5339 Tosylate:
+        $ref:
+          - "_terms.yaml#/p97_inhibitor_cb5339_tosylate/common"
+      Pacmilimab:
+        $ref:
+          - "_terms.yaml#/pacmilimab/common"
+      Pamrevlumab:
+        $ref:
+          - "_terms.yaml#/pamrevlumab/common"
+      Pan-KRAS Inhibitor BI 1701963:
+        $ref:
+          - "_terms.yaml#/pankras_inhibitor_bi_1701963/common"
+      Pan-mutation-selective EGFR Inhibitor CLN-081:
+        $ref:
+          - "_terms.yaml#/panmutationselective_egfr_inhibitor_cln081/common"
+      Pan-TRK Inhibitor NOV1601:
+        $ref:
+          - "_terms.yaml#/pantrk_inhibitor_nov1601/common"
+      Panulisib:
+        $ref:
+          - "_terms.yaml#/panulisib/common"
+      PARP 1/2 Inhibitor IMP4297:
+        $ref:
+          - "_terms.yaml#/parp_12_inhibitor_imp4297/common"
+      PARP Inhibitor NMS-03305293:
+        $ref:
+          - "_terms.yaml#/parp_inhibitor_nms03305293/common"
+      PARP/Tankyrase Inhibitor 2X-121:
+        $ref:
+          - "_terms.yaml#/parptankyrase_inhibitor_2x121/common"
+      PARP7 Inhibitor RBN-2397:
+        $ref:
+          - "_terms.yaml#/parp7_inhibitor_rbn2397/common"
+      Parsaclisib:
+        $ref:
+          - "_terms.yaml#/parsaclisib/common"
+      Parsaclisib Hydrochloride:
+        $ref:
+          - "_terms.yaml#/parsaclisib_hydrochloride/common"
+      Partially Engineered T-regulatory Cell Donor Graft TRGFT-201:
+        $ref:
+          - "_terms.yaml#/partially_engineered_tregulatory_cell_donor_graft_trgft201/common"
+      Patritumab Deruxtecan:
+        $ref:
+          - "_terms.yaml#/patritumab_deruxtecan/common"
+      Paxalisib:
+        $ref:
+          - "_terms.yaml#/paxalisib/common"
+      PD-L1 Inhibitor GS-4224:
+        $ref:
+          - "_terms.yaml#/pdl1_inhibitor_gs4224/common"
+      PD-L1/4-1BB/HSA Trispecific Fusion Protein NM21-1480:
+        $ref:
+          - "_terms.yaml#/pdl141bbhsa_trispecific_fusion_protein_nm211480/common"
+      Pegvorhyaluronidase Alfa:
+        $ref:
+          - "_terms.yaml#/pegvorhyaluronidase_alfa/common"
+      Pegylated SN-38 Conjugate PLX038:
+        $ref:
+          - "_terms.yaml#/pegylated_sn38_conjugate_plx038/common"
+      Pelabresib:
+        $ref:
+          - "_terms.yaml#/pelabresib/common"
+      Peposertib:
+        $ref:
+          - "_terms.yaml#/peposertib/common"
+      Personalized and Adjusted Neoantigen Peptide Vaccine PANDA-VAC:
+        $ref:
+          - "_terms.yaml#/personalized_and_adjusted_neoantigen_peptide_vaccine_pandavac/common"
+      Personalized Neoantigen DNA Vaccine GNOS-PV01:
+        $ref:
+          - "_terms.yaml#/personalized_neoantigen_dna_vaccine_gnospv01/common"
+      Personalized Neoantigen DNA Vaccine GNOS-PVO2:
+        $ref:
+          - "_terms.yaml#/personalized_neoantigen_dna_vaccine_gnospvo2/common"
+      Photodynamic Compound TLD-1433:
+        $ref:
+          - "_terms.yaml#/photodynamic_compound_tld1433/common"
+      Pimitespib:
+        $ref:
+          - "_terms.yaml#/pimitespib/common"
+      Pimurutamab:
+        $ref:
+          - "_terms.yaml#/pimurutamab/common"
+      Pinatuzumab Vedotin:
+        $ref:
+          - "_terms.yaml#/pinatuzumab_vedotin/common"
+      Pixatimod:
+        $ref:
+          - "_terms.yaml#/pixatimod/common"
+      Plamotamab:
+        $ref:
+          - "_terms.yaml#/plamotamab/common"
+      Plasmid DNA Vaccine pING-hHER3FL:
+        $ref:
+          - "_terms.yaml#/plasmid_dna_vaccine_pinghher3fl/common"
+      pNGVL4a-CRT-E6E7L2 DNA Vaccine:
+        $ref:
+          - "_terms.yaml#/pngvl4acrte6e7l2_dna_vaccine/common"
+      pNGVL4a-Sig/E7(detox)/HSP70 DNA and HPV16 L2/E6/E7 Fusion Protein TA-CIN Vaccine PVX-2:
+        $ref:
+          - "_terms.yaml#/pngvl4asige7detoxhsp70_dna_and_hpv16_l2e6e7_fusion_protein_tacin_vaccine_pvx2/common"
+      Polymer-conjugated IL-15 Receptor Agonist NKTR-255:
+        $ref:
+          - "_terms.yaml#/polymerconjugated_il15_receptor_agonist_nktr255/common"
+      Porcupine Inhibitor XNW7201:
+        $ref:
+          - "_terms.yaml#/porcupine_inhibitor_xnw7201/common"
+      PPAR Alpha Antagonist TPST-1120:
+        $ref:
+          - "_terms.yaml#/ppar_alpha_antagonist_tpst1120/common"
+      Pralsetinib:
+        $ref:
+          - "_terms.yaml#/pralsetinib/common"
+      Praluzatamab Ravtansine:
+        $ref:
+          - "_terms.yaml#/praluzatamab_ravtansine/common"
+      PRMT5 Inhibitor PRT811:
+        $ref:
+          - "_terms.yaml#/prmt5_inhibitor_prt811/common"
+      Prolgolimab:
+        $ref:
+          - "_terms.yaml#/prolgolimab/common"
+      Prostaglandin E2 EP4 Receptor Inhibitor AN0025:
+        $ref:
+          - "_terms.yaml#/prostaglandin_e2_ep4_receptor_inhibitor_an0025/common"
+      Protein Tyrosine Kinase 2 Inhibitor IN10018:
+        $ref:
+          - "_terms.yaml#/protein_tyrosine_kinase_2_inhibitor_in10018/common"
+      Pyruvate Kinase M2 Isoform Activator TP-1454:
+        $ref:
+          - "_terms.yaml#/pyruvate_kinase_m2_isoform_activator_tp1454/common"
+      Racemetyrosine/Methoxsalen/Phenytoin/Sirolimus SM-88:
+        $ref:
+          - "_terms.yaml#/racemetyrosinemethoxsalenphenytoinsirolimus_sm88/common"
+      Radgocitabine:
+        $ref:
+          - "_terms.yaml#/radgocitabine/common"
+      Radgocitabine Hydrochloride:
+        $ref:
+          - "_terms.yaml#/radgocitabine_hydrochloride/common"
+      Ragifilimab:
+        $ref:
+          - "_terms.yaml#/ragifilimab/common"
+      Recombinant Bacterial Minicells VAX014:
+        $ref:
+          - "_terms.yaml#/recombinant_bacterial_minicells_vax014/common"
+      Recombinant Erwinia asparaginase JZP-458:
+        $ref:
+          - "_terms.yaml#/recombinant_erwinia_asparaginase_jzp458/common"
+      Recombinant Human Papillomavirus 11-valent Vaccine:
+        $ref:
+          - "_terms.yaml#/recombinant_human_papillomavirus_11valent_vaccine/common"
+      Recombinant Human TRAIL-Trimer Fusion Protein SCB-313:
+        $ref:
+          - "_terms.yaml#/recombinant_human_trailtrimer_fusion_protein_scb313/common"
+      Recombinant Humanized Anti-HER-2 Bispecific Monoclonal Antibody MBS301:
+        $ref:
+          - "_terms.yaml#/recombinant_humanized_antiher2_bispecific_monoclonal_antibody_mbs301/common"
+      Redaporfin:
+        $ref:
+          - "_terms.yaml#/redaporfin/common"
+      RET/SRC Inhibitor TPX-0046:
+        $ref:
+          - "_terms.yaml#/retsrc_inhibitor_tpx0046/common"
+      Retifanlimab:
+        $ref:
+          - "_terms.yaml#/retifanlimab/common"
+      Revdofilimab:
+        $ref:
+          - "_terms.yaml#/revdofilimab/common"
+      Rezivertinib:
+        $ref:
+          - "_terms.yaml#/rezivertinib/common"
+      Ripertamab:
+        $ref:
+          - "_terms.yaml#/ripertamab/common"
+      Roblitinib:
+        $ref:
+          - "_terms.yaml#/roblitinib/common"
+      ROBO1-targeted BiCAR-NKT Cells:
+        $ref:
+          - "_terms.yaml#/robo1targeted_bicarnkt_cells/common"
+      Rocakinogene Sifuplasmid:
+        $ref:
+          - "_terms.yaml#/rocakinogene_sifuplasmid/common"
+      Roducitabine:
+        $ref:
+          - "_terms.yaml#/roducitabine/common"
+      Rolinsatamab Talirine:
+        $ref:
+          - "_terms.yaml#/rolinsatamab_talirine/common"
+      Roneparstat:
+        $ref:
+          - "_terms.yaml#/roneparstat/common"
+      Ropeginterferon Alfa-2B:
+        $ref:
+          - "_terms.yaml#/ropeginterferon_alfa2b/common"
+      Ropocamptide:
+        $ref:
+          - "_terms.yaml#/ropocamptide/common"
+      Rosopatamab:
+        $ref:
+          - "_terms.yaml#/rosopatamab/common"
+      RSK1-4 Inhibitor PMD-026:
+        $ref:
+          - "_terms.yaml#/rsk14_inhibitor_pmd026/common"
+      Ruthenium-based Small Molecule Therapeutic BOLD-100:
+        $ref:
+          - "_terms.yaml#/rutheniumbased_small_molecule_therapeutic_bold100/common"
+      Ruxotemitide:
+        $ref:
+          - "_terms.yaml#/ruxotemitide/common"
+      Sabatolimab:
+        $ref:
+          - "_terms.yaml#/sabatolimab/common"
+      Samrotamab Vedotin:
+        $ref:
+          - "_terms.yaml#/samrotamab_vedotin/common"
+      Samuraciclib:
+        $ref:
+          - "_terms.yaml#/samuraciclib/common"
+      Sasanlimab:
+        $ref:
+          - "_terms.yaml#/sasanlimab/common"
+      SDF-1 Receptor Antagonist PTX-9908:
+        $ref:
+          - "_terms.yaml#/sdf1_receptor_antagonist_ptx9908/common"
+      Selective Estrogen Receptor Degrader LX-039:
+        $ref:
+          - "_terms.yaml#/selective_estrogen_receptor_degrader_lx039/common"
+      Selective Estrogen Receptor Degrader LY3484356:
+        $ref:
+          - "_terms.yaml#/selective_estrogen_receptor_degrader_ly3484356/common"
+      Serclutamab Talirine:
+        $ref:
+          - "_terms.yaml#/serclutamab_talirine/common"
+      SERD ZN-c5:
+        $ref:
+          - "_terms.yaml#/serd_znc5/common"
+      Serplulimab:
+        $ref:
+          - "_terms.yaml#/serplulimab/common"
+      Shenqi Fuzheng Injection SQ001:
+        $ref:
+          - "_terms.yaml#/shenqi_fuzheng_injection_sq001/common"
+      SHP2 Inhibitor RLY-1971:
+        $ref:
+          - "_terms.yaml#/shp2_inhibitor_rly1971/common"
+      Simlukafusp Alfa:
+        $ref:
+          - "_terms.yaml#/simlukafusp_alfa/common"
+      Simmitinib:
+        $ref:
+          - "_terms.yaml#/simmitinib/common"
+      Simurosertib:
+        $ref:
+          - "_terms.yaml#/simurosertib/common"
+      Siremadlin:
+        $ref:
+          - "_terms.yaml#/siremadlin/common"
+      SIRPa-4-1BBL Fusion Protein DSP107:
+        $ref:
+          - "_terms.yaml#/sirpa41bbl_fusion_protein_dsp107/common"
+      SIRPa-Fc-CD40L Fusion Protein SL-172154:
+        $ref:
+          - "_terms.yaml#/sirpafccd40l_fusion_protein_sl172154/common"
+      Sotigalimab:
+        $ref:
+          - "_terms.yaml#/sotigalimab/common"
+      Sotorasib:
+        $ref:
+          - "_terms.yaml#/sotorasib/common"
+      Spanlecortemlocel:
+        $ref:
+          - "_terms.yaml#/spanlecortemlocel/common"
+      SRPK1/ABCG2 Inhibitor SCO-101:
+        $ref:
+          - "_terms.yaml#/srpk1abcg2_inhibitor_sco101/common"
+      STING Agonist BMS-986301:
+        $ref:
+          - "_terms.yaml#/sting_agonist_bms986301/common"
+      STING Agonist GSK3745417:
+        $ref:
+          - "_terms.yaml#/sting_agonist_gsk3745417/common"
+      STING Agonist IMSA101:
+        $ref:
+          - "_terms.yaml#/sting_agonist_imsa101/common"
+      STING Agonist SB 11285:
+        $ref:
+          - "_terms.yaml#/sting_agonist_sb_11285/common"
+      STING Agonist TAK-676:
+        $ref:
+          - "_terms.yaml#/sting_agonist_tak676/common"
+      STING-expressing E. coli SYNB1891:
+        $ref:
+          - "_terms.yaml#/stingexpressing_e_coli_synb1891/common"
+      Sugemalimab:
+        $ref:
+          - "_terms.yaml#/sugemalimab/common"
+      Superoxide Dismutase Mimetic GC4711:
+        $ref:
+          - "_terms.yaml#/superoxide_dismutase_mimetic_gc4711/common"
+      Synthetic Plumbagin PCUR-101:
+        $ref:
+          - "_terms.yaml#/synthetic_plumbagin_pcur101/common"
+      Tafasitamab:
+        $ref:
+          - "_terms.yaml#/tafasitamab/common"
+      Taletrectinib:
+        $ref:
+          - "_terms.yaml#/taletrectinib/common"
+      Tamrintamab Pamozirine:
+        $ref:
+          - "_terms.yaml#/tamrintamab_pamozirine/common"
+      Tankyrase Inhibitor STP1002:
+        $ref:
+          - "_terms.yaml#/tankyrase_inhibitor_stp1002/common"
+      Tapotoclax:
+        $ref:
+          - "_terms.yaml#/tapotoclax/common"
+      Tasadenoturev:
+        $ref:
+          - "_terms.yaml#/tasadenoturev/common"
+      Tebentafusp:
+        $ref:
+          - "_terms.yaml#/tebentafusp/common"
+      Teclistamab:
+        $ref:
+          - "_terms.yaml#/teclistamab/common"
+      Tefinostat:
+        $ref:
+          - "_terms.yaml#/tefinostat/common"
+      Telaglenastat:
+        $ref:
+          - "_terms.yaml#/telaglenastat/common"
+      Telaglenastat Hydrochloride:
+        $ref:
+          - "_terms.yaml#/telaglenastat_hydrochloride/common"
+      Telisotuzumab:
+        $ref:
+          - "_terms.yaml#/telisotuzumab/common"
+      Tepoditamab:
+        $ref:
+          - "_terms.yaml#/tepoditamab/common"
+      TGF-beta Receptor 1 Kinase Inhibitor SH3051:
+        $ref:
+          - "_terms.yaml#/tgfbeta_receptor_1_kinase_inhibitor_sh3051/common"
+      TGF-beta Receptor 1 Kinase Inhibitor YL-13027:
+        $ref:
+          - "_terms.yaml#/tgfbeta_receptor_1_kinase_inhibitor_yl13027/common"
+      TGFa-PE38 Immunotoxin:
+        $ref:
+          - "_terms.yaml#/tgfape38_immunotoxin/common"
+      Therapeutic Cancer Vaccine ATP128:
+        $ref:
+          - "_terms.yaml#/therapeutic_cancer_vaccine_atp128/common"
+      Thorium Th 227 Anetumab Corixetan:
+        $ref:
+          - "_terms.yaml#/thorium_th_227_anetumab_corixetan/common"
+      Thorium Th 227 Anti-HER2 Monoclonal Antibody BAY2701439:
+        $ref:
+          - "_terms.yaml#/thorium_th_227_antiher2_monoclonal_antibody_bay2701439/common"
+      Thorium Th 227 Anti-PSMA Monoclonal Antibody BAY 2315497:
+        $ref:
+          - "_terms.yaml#/thorium_th_227_antipsma_monoclonal_antibody_bay_2315497/common"
+      Thymidylate Synthase Inhibitor CX1106:
+        $ref:
+          - "_terms.yaml#/thymidylate_synthase_inhibitor_cx1106/common"
+      TIGIT Inhibitor M6223:
+        $ref:
+          - "_terms.yaml#/tigit_inhibitor_m6223/common"
+      Tilogotamab:
+        $ref:
+          - "_terms.yaml#/tilogotamab/common"
+      Tiomolibdate Choline:
+        $ref:
+          - "_terms.yaml#/tiomolibdate_choline/common"
+      Tirbanibulin:
+        $ref:
+          - "_terms.yaml#/tirbanibulin/common"
+      TLR7 agonist BNT411:
+        $ref:
+          - "_terms.yaml#/tlr7_agonist_bnt411/common"
+      TLR7 Agonist LHC165:
+        $ref:
+          - "_terms.yaml#/tlr7_agonist_lhc165/common"
+      TM4SF1-CAR/EpCAM-CAR-expressing Autologous T Cells:
+        $ref:
+          - "_terms.yaml#/tm4sf1carepcamcarexpressing_autologous_t_cells/common"
+      Tolebrutinib:
+        $ref:
+          - "_terms.yaml#/tolebrutinib/common"
+      Topotecan Sustained-release Episcleral Plaque:
+        $ref:
+          - "_terms.yaml#/topotecan_sustainedrelease_episcleral_plaque/common"
+      Transferrin-CRM107:
+        $ref:
+          - "_terms.yaml#/transferrincrm107/common"
+      Trastuzumab Deruxtecan:
+        $ref:
+          - "_terms.yaml#/trastuzumab_deruxtecan/common"
+      Trastuzumab Monomethyl Auristatin F:
+        $ref:
+          - "_terms.yaml#/trastuzumab_monomethyl_auristatin_f/common"
+      Trastuzumab-TLR 7/8 Agonist BDC-1001:
+        $ref:
+          - "_terms.yaml#/trastuzumabtlr_78_agonist_bdc1001/common"
+      Tris-acryl Gelatin Microspheres:
+        $ref:
+          - "_terms.yaml#/trisacryl_gelatin_microspheres/common"
+      TRK Inhibitor TQB3558:
+        $ref:
+          - "_terms.yaml#/trk_inhibitor_tqb3558/common"
+      Troriluzole:
+        $ref:
+          - "_terms.yaml#/troriluzole/common"
+      Tyrosine Kinase Inhibitor TL-895:
+        $ref:
+          - "_terms.yaml#/tyrosine_kinase_inhibitor_tl895/common"
+      Upifitamab:
+        $ref:
+          - "_terms.yaml#/upifitamab/common"
+      Urabrelimab:
+        $ref:
+          - "_terms.yaml#/urabrelimab/common"
+      Ursolic Acid:
+        $ref:
+          - "_terms.yaml#/ursolic_acid/common"
+      Uzansertib:
+        $ref:
+          - "_terms.yaml#/uzansertib/common"
+      Valecobulin:
+        $ref:
+          - "_terms.yaml#/valecobulin/common"
+      Valemetostat:
+        $ref:
+          - "_terms.yaml#/valemetostat/common"
+      Vesencumab:
+        $ref:
+          - "_terms.yaml#/vesencumab/common"
+      Vibecotamab:
+        $ref:
+          - "_terms.yaml#/vibecotamab/common"
+      Vibostolimab:
+        $ref:
+          - "_terms.yaml#/vibostolimab/common"
+      Vorasidenib:
+        $ref:
+          - "_terms.yaml#/vorasidenib/common"
+      Vosilasarm:
+        $ref:
+          - "_terms.yaml#/vosilasarm/common"
+      Vulinacimab:
+        $ref:
+          - "_terms.yaml#/vulinacimab/common"
+      Wee1 Inhibitor ZN-c3:
+        $ref:
+          - "_terms.yaml#/wee1_inhibitor_znc3/common"
+      Wee1 Kinase Inhibitor Debio 0123:
+        $ref:
+          - "_terms.yaml#/wee1_kinase_inhibitor_debio_0123/common"
+      Xevinapant:
+        $ref:
+          - "_terms.yaml#/xevinapant/common"
+      Xiliertinib:
+        $ref:
+          - "_terms.yaml#/xiliertinib/common"
+      Xisomab 3G3:
+        $ref:
+          - "_terms.yaml#/xisomab_3g3/common"
+      Yttrium Y 90 Tabituximab Barzuxetan:
+        $ref:
+          - "_terms.yaml#/yttrium_y_90_tabituximab_barzuxetan/common"
+      Zandelisib:
+        $ref:
+          - "_terms.yaml#/zandelisib/common"
+      Zanidatamab:
+        $ref:
+          - "_terms.yaml#/zanidatamab/common"
+      Zelavespib:
+        $ref:
+          - "_terms.yaml#/zelavespib/common"
+      Zorifertinib:
+        $ref:
+          - "_terms.yaml#/zorifertinib/common"
+      Zotatifin:
+        $ref:
+          - "_terms.yaml#/zotatifin/common"
+      Zotiraciclib Citrate:
+        $ref:
+          - "_terms.yaml#/zotiraciclib_citrate/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
