@@ -4299,6 +4299,17 @@ rna_change:
       cde_version: 1.0
       term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142509&version=1.0"
 
+sample_ordinal:
+  common:
+    description: >-
+      A number describing the samples place in an ordered sequence.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
 sample_type:
   common:
     description: >-
@@ -107451,3 +107462,121 @@ zrsr2:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C101120"
       term_id: C101120
       term_version: 20.10d
+
+experimental_protocol_type:
+  common:
+    description:
+      The type of experiment used to extract the analyte.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+rna_integrity_number:
+  common:
+    description: 
+      A numerical assessment of the integrity of RNA based on the entire electrophoretic 
+      trace of the RNA sample, including the presence or absence of degradation products.
+    termDef:
+      term: >-
+        RNA Integrity Number
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C63637"
+      term_id: C63637
+      term_version: 20.10d
+
+ann_arbor_b_symptoms_described:
+  common:
+    description:
+      Text descibing the specific lymphoma B-symptoms present.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url: 
+
+necrosis_present:
+  common:
+    description: >-
+      Indicator describing whether the presence of necrosis was confirmed.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url: 
+
+sarcomatoid_percent:
+  common:
+    description: >-
+      Numeric value that represents the percentage of sarcomatoid features found in
+      a specific tissue sample.
+    termDef:
+      term: >-
+        Specimen Sarcomatoid Features Percentage Value
+      source: caDSR
+      cde_id: 2429786
+      cde_version: 1.0
+      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2429786&version=1.0"
+
+rhabdoid_percent:
+  common:
+    description: >-
+      Numeric value that represents the percentage of rhabdoid features found in a
+      specific tissue sample.
+    termDef:
+      term: >-
+        Specimen Rhabdoid Features Percentage Value
+      source: caDSR
+      cde_id: 6790120
+      cde_version: 1.0
+      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6790120&version=1.0"
+
+rhabdoid_present:
+  common:
+    description: >-
+      Indicator describing whether rhabdoid features were present.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url: 
+
+sarcomatoid_present:
+  common:
+    description: >-
+      Indicator describing whether sarcomatoid features were present.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url: 
+
+chipseq_antibody:
+  common:
+    description: >-
+      The antibody used in the ChIP-Seq assay.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url: 
+
+fragmentation_enzyme:
+  common:
+    description: >-
+      The restriction enzyme used for nucleotide fragmentation.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url: 
