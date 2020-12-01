@@ -343,9 +343,9 @@ properties:
 
   lymph_node_involvement:
     enum:
-      - Positive
-      - Negative
       - Indeterminant
+      - Negative
+      - Positive
       - Unknown
       - Not Reported
     enumDef:
