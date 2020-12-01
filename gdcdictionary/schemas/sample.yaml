@@ -366,12 +366,33 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      Bone Marrow:
+        $ref:
+          - "_terms.yaml#/bone_marrow/common"
+      Buccal Mucosa:
+        $ref:
+          - "_terms.yaml#/buccal_mucosa/common"
+      Cerebrospinal Fluid:
+        $ref:
+          - "_terms.yaml#/cerebrospinal_fluid/common"
+      Connective Tissue:
+        $ref:
+          - "_terms.yaml#/connective_tissue/common"
+      Frontal Lobe:
+        $ref:
+          - "_terms.yaml#/frontal_lobe/common"
+      Neck:
+        $ref:
+          - "_terms.yaml#/neck/common"
       Not Allowed To Collect:
         $ref:
           - "_terms.yaml#/not_allowed_to_collect/common"
       Other:
         $ref:
           - "_terms.yaml#/other/common"
+      Soft Tissue:
+        $ref:
+          - "_terms.yaml#/soft_tissue/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -424,6 +445,7 @@ properties:
       - Human Original Cells
       - Liquid Suspension Cell Line
       - Lymphocytes
+      - Mixed Adherent Suspension
       - Mononuclear Cells from Bone Marrow Normal
       - Not Allowed To Collect
       - Peripheral Blood Components NOS
@@ -441,9 +463,24 @@ properties:
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
+      Buffy Coat:
+        $ref:
+          - "_terms.yaml#/buffy_coat/common"
+      Lymphocytes:
+        $ref:
+          - "_terms.yaml#/lymphocytes/common"
       Not Allowed To Collect:
         $ref:
           - "_terms.yaml#/not_allowed_to_collect/common"
+      Plasma:
+        $ref:
+          - "_terms.yaml#/plasma/common"
+      Saliva:
+        $ref:
+          - "_terms.yaml#/saliva/common"
+      Serum:
+        $ref:
+          - "_terms.yaml#/serum/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -661,6 +698,9 @@ properties:
       Autopsy:
         $ref:
           - "_terms.yaml#/autopsy/common"
+      Indeterminant:
+        $ref:
+          - "_terms.yaml#/indeterminant/common"
       Not Allowed To Collect:
         $ref:
           - "_terms.yaml#/not_allowed_to_collect/common"
@@ -715,6 +755,11 @@ properties:
       - "_terms.yaml#/passage_count/common"
     type: integer
     minimum: 0
+
+  sample_ordinal:
+    $ref:
+      - "_terms.yaml#/sample_ordinal/common"
+    type: integer
 
   sample_type:
     $ref:
@@ -773,9 +818,18 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      DNA:
+        $ref:
+          - "_terms.yaml#/dna/common"
       Not Allowed To Collect:
         $ref:
           - "_terms.yaml#/not_allowed_to_collect/common"
+      Saliva:
+        $ref:
+          - "_terms.yaml#/saliva/common"
+      Total RNA:
+        $ref:
+          - "_terms.yaml#/total_rna/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -855,6 +909,9 @@ properties:
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
+      Normal:
+        $ref:
+          - "_terms.yaml#/normal/common"
       Not Allowed To Collect:
         $ref:
           - "_terms.yaml#/not_allowed_to_collect/common"
@@ -952,6 +1009,9 @@ properties:
       Not Allowed To Collect:
         $ref:
           - "_terms.yaml#/not_allowed_to_collect/common"
+      Not Applicable:
+        $ref:
+          - "_terms.yaml#/not_applicable/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
