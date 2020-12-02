@@ -170,11 +170,6 @@ properties:
         $ref:
           - "_terms.yaml#/not_reported/common"
 
-  bmi:
-    $ref:
-      - "_terms.yaml#/bmi/common"
-    type: number
-
   cigarettes_per_day:
     $ref:
       - "_terms.yaml#/cigarettes_per_day/common"
@@ -249,11 +244,6 @@ properties:
       Tobacco:
         $ref:
           - "_terms.yaml#/tobacco/common"
-
-  height:
-    $ref:
-      - "_terms.yaml#/height/common"
-    type: number
 
   marijuana_use_per_week:
     $ref:
@@ -669,11 +659,6 @@ properties:
       Smokeless Tobacco:
         $ref:
           - "_terms.yaml#/smokeless_tobacco/common"
-
-  weight:
-    $ref:
-      - "_terms.yaml#/weight/common"
-    type: number
 
   years_smoked:
     $ref:
