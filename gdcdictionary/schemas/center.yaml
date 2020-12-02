@@ -51,7 +51,7 @@ properties:
 
   namespace:
     description: >-
-      Domain name of the center (e.g. borad.mit.edu).
+      Domain name of the center (e.g. broad.mit.edu).
     type: string
 
   name:
