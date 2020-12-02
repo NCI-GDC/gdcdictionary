@@ -78,13 +78,26 @@ properties:
       - ATAC-Seq
       - Bisulfite-Seq
       - ChIP-Seq
+      - HiChIP
       - Low Pass WGS
+      - m6A RNA Methylation
       - miRNA-Seq
       - RNA-Seq
+      - scATAC-Seq
       - scRNA-Seq
       - Targeted Sequencing
       - WGS
       - WXS
+    enumDef:
+      Targeted Sequencing:
+        $ref:
+          - "_terms.yaml#/targeted_sequencing/common"
+      WGS:
+        $ref:
+          - "_terms.yaml#/wgs/common"
+      WXS:
+        $ref:
+          - "_terms.yaml#/wxs/common"
 
   read_pair_number:
     $ref:
@@ -93,6 +106,11 @@ properties:
       - Not Applicable
       - R1
       - R2
+      - R3
+    enumDef:
+      Not Applicable:
+        $ref:
+          - "_terms.yaml#/not_applicable/common"
 
   read_groups:
     $ref: "_definitions.yaml#/to_one"
