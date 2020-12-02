@@ -66209,6 +66209,33 @@ present:
         term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C38758"
         term_id: C38758
         term_version: 20.10d
+    anaplasia_present_type:
+      description: >-
+        A morphologic finding indicating the presence of a malignant cellular infiltrate
+        characterized by the presence of large pleomorphic cells, necrosis, and high
+        mitotic activity in a tissue sample.
+      termDef:
+        term: >-
+          Anaplastic Lesion
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36113"
+        term_id: C36113
+        term_version: 20.05a
+    transglottic_extension:
+      description: >-
+        Extension of a laryngeal tumor beyond the glottic opening into the ventricles
+        and vocal cords.
+      termDef:
+        term: >-
+          Transglottic Extension of Laryngeal Tumor
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C160996"
+        term_id: C160996
+        term_version: 20.05a
 
 primary:
   common:
