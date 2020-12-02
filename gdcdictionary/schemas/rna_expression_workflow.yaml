@@ -78,8 +78,8 @@ properties:
       - RSEM - Quantification
       - STAR - Counts
       - STAR - FPKM
-      - STAR - Smart-Seq2 Gene Counts
-      - STAR - Smart-Seq2 GeneFull Counts
+      - STAR - Smart-Seq2 Raw Counts
+      - STAR - Smart-Seq2 Filtered Counts
       - zUMIs - Smart-Seq2 Counts
 
   aligned_reads_files:
