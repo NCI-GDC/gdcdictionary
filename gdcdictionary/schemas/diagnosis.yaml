@@ -7033,6 +7033,36 @@ properties:
         $ref:
           - "_terms.yaml#/type_2/common"
 
+  peritoneal_fluid_cytological_status:
+    $ref:
+      - "_terms.yaml#/peritoneal_fluid_cytological_status/common"
+    enum:
+      - Atypical
+      - Malignant
+      - Non-Malignant
+      - Unsatisfactory
+      - Unknown
+      - Not Reported
+    enumDef:
+      Atypical:
+        $ref:
+          - "_terms.yaml#/atypical/common"
+      Malignant:
+        $ref:
+          - "_terms.yaml#/malignant/common"
+      Non-Malignant:
+        $ref:
+          - "_terms.yaml#/nonmalignant/common"
+      Unsatisfactory:
+        $ref:
+          - "_terms.yaml#/unsatisfactory/common"
+      Unknown:
+        $ref:
+          - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
   pregnant_at_diagnosis:
     $ref:
       - "_terms.yaml#/pregnant_at_diagnosis/common"
