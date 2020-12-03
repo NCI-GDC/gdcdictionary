@@ -62,7 +62,6 @@
     "tumor_confined_to_organ_of_origin":"Unknown",
     "tumor_focality":"Multifocal",
     "tumor_grade": "GX",
-    "tumor_largest_dimension_diameter":2.5,
     "tumor_regression_grade":"2",
     "weiss_assessment_score":"3",
     "wilms_tumor_histologic_subtype":"Favorable",
