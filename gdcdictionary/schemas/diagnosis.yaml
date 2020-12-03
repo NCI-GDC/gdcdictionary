@@ -241,6 +241,7 @@ properties:
       - Stage IA
       - Stage IA1
       - Stage IA2
+      - Stage IA3
       - Stage IB
       - Stage IB Cervix
       - Stage IB1
@@ -551,6 +552,7 @@ properties:
       - M1a
       - M1b
       - M1c
+      - M1d
       - M2
       - MX
       - cM0 (i+)
@@ -1077,9 +1079,6 @@ properties:
       Focal:
         $ref:
           - "_terms.yaml#/focal/common"
-      Present:
-        $ref:
-          - "_terms.yaml#/present/diagnosis/anaplasia_present_type"
       Sclerosis:
         $ref:
           - "_terms.yaml#/sclerosis/common"
@@ -1117,6 +1116,15 @@ properties:
       Not Allowed To Collect:
         $ref:
           - "_terms.yaml#/not_allowed_to_collect/common"
+
+  ann_arbor_b_symptoms_described:
+    $ref:
+      - "_terms.yaml#/ann_arbor_b_symptoms_described/common"
+    enum:
+      - Fever
+      - Night Sweats
+      - Other
+      - Weight Loss
 
   ann_arbor_clinical_stage:
     $ref:
@@ -2521,6 +2529,66 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      Axillary:
+        $ref:
+          - "_terms.yaml#/axillary/common"
+      Cervical:
+        $ref:
+          - "_terms.yaml#/cervical/common"
+      Epitrochlear:
+        $ref:
+          - "_terms.yaml#/epitrochlear/common"
+      Femoral:
+        $ref:
+          - "_terms.yaml#/femoral/common"
+      Hilar:
+        $ref:
+          - "_terms.yaml#/hilar/common"
+      Iliac-common:
+        $ref:
+          - "_terms.yaml#/iliaccommon/common"
+      Iliac-external:
+        $ref:
+          - "_terms.yaml#/iliacexternal/common"
+      Iliac, NOS:
+        $ref:
+          - "_terms.yaml#/iliac_nos/common"
+      Inguinal:
+        $ref:
+          - "_terms.yaml#/inguinal/common"
+      Mediastinal:
+        $ref:
+          - "_terms.yaml#/mediastinal/common"
+      Mesenteric:
+        $ref:
+          - "_terms.yaml#/mesenteric/common"
+      None:
+        $ref:
+          - "_terms.yaml#/none/common"
+      Occipital:
+        $ref:
+          - "_terms.yaml#/occipital/common"
+      Paraaortic:
+        $ref:
+          - "_terms.yaml#/paraaortic/common"
+      Parotid:
+        $ref:
+          - "_terms.yaml#/parotid/common"
+      Popliteal:
+        $ref:
+          - "_terms.yaml#/popliteal/common"
+      Retroperitoneal:
+        $ref:
+          - "_terms.yaml#/retroperitoneal/common"
+      Splenic:
+        $ref:
+          - "_terms.yaml#/splenic/common"
+      Submandibular:
+        $ref:
+          - "_terms.yaml#/submandibular/common"
+      Supraclavicular:
+        $ref:
+          - "_terms.yaml#/supraclavicular/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -2653,7 +2721,9 @@ properties:
       - Distant Nodes
       - Distant Organ
       - Esophagus
+      - Gastrointestinal Tract
       - Groin
+      - Heart
       - Kidney
       - Liver
       - Lung
@@ -2661,6 +2731,7 @@ properties:
       - Lymph Node, Inguinal
       - Lymph Node, NOS
       - Mediastinum
+      - Neck
       - Omentum
       - Ovary
       - Pancreas
@@ -2668,11 +2739,16 @@ properties:
       - Peritoneal Cavity
       - Peritoneum
       - Pleura
+      - Retroperitoneum
       - Scalp
       - Skin
       - Small Intestine
       - Soft Tissue
       - Spinal Cord
+      - Urethra
+      - Uterine Adnexa
+      - Vertebral Canal
+      - Vulva, NOS
       - Unknown
       - Not Reported
     enumDef:
@@ -2727,6 +2803,9 @@ properties:
       Mediastinum:
         $ref:
           - "_terms.yaml#/mediastinum/common"
+      Neck:
+        $ref:
+          - "_terms.yaml#/neck/common"
       Omentum:
         $ref:
           - "_terms.yaml#/omentum/common"
@@ -2763,6 +2842,15 @@ properties:
       Spinal Cord:
         $ref:
           - "_terms.yaml#/spinal_cord/common"
+      Uterine Adnexa:
+        $ref:
+          - "_terms.yaml#/uterine_adnexa/common"
+      Vertebral Canal:
+        $ref:
+          - "_terms.yaml#/vertebral_canal/common"
+      Vulva, NOS:
+        $ref:
+          - "_terms.yaml#/vulva_nos/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -3141,6 +3229,7 @@ properties:
       - 8247/3
       - 8248/1
       - 8249/3
+      - 8249/6
       - 8250/1
       - 8250/2
       - 8250/3
@@ -3489,6 +3578,7 @@ properties:
       - 8790/0
       - 8800/0
       - 8800/3
+      - 8800/6
       - 8800/9
       - 8801/3
       - 8801/6
@@ -7260,6 +7350,12 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      1-3:
+        $ref:
+          - "_terms.yaml#/13/common"
+      4 or More:
+        $ref:
+          - "_terms.yaml#/4_or_more/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -12110,7 +12206,7 @@ properties:
           - "_terms.yaml#/ewing_sarcoma/common"
       Ewing tumor:
         $ref:
-          - "_terms.yaml#/ewing_sarcoma/common"
+          - "_terms.yaml#/ewing_tumor/common"
       Extra-abdominal desmoid:
         $ref:
           - "_terms.yaml#/extraabdominal_desmoid/common"
@@ -18093,6 +18189,12 @@ properties:
       Abdominal Peritoneum:
         $ref:
           - "_terms.yaml#/abdominal_peritoneum/common"
+      Kidney, Lower Pole:
+        $ref:
+          - "_terms.yaml#/kidney_lower_pole/common"
+      Kidney, Upper Pole:
+        $ref:
+          - "_terms.yaml#/kidney_upper_pole/common"
       Omentum:
         $ref:
           - "_terms.yaml#/omentum/common"
@@ -18106,7 +18208,11 @@ properties:
     enum:
       - Cerebral Cortex
       - Deep Gray (e.g. Basal Ganglia, Thalamus)
+      - Frontal lobe
+      - Occipital lobe
+      - Parietal lobe
       - Spinal Cord
+      - Temporal lobe
       - White Matter
       - Unknown
       - Not Reported
@@ -18117,9 +18223,21 @@ properties:
       Deep Gray (e.g. Basal Ganglia, Thalamus):
         $ref:
           - "_terms.yaml#/deep_gray_eg_basal_ganglia_thalamus/common"
+      Frontal lobe:
+        $ref:
+          - "_terms.yaml#/frontal_lobe/common"
+      Occipital lobe:
+        $ref:
+          - "_terms.yaml#/occipital_lobe/common"
+      Parietal lobe:
+        $ref:
+          - "_terms.yaml#/parietal_lobe/common"
       Spinal Cord:
         $ref:
           - "_terms.yaml#/spinal_cord/common"
+      Temporal lobe:
+        $ref:
+          - "_terms.yaml#/temporal_lobe/common"
       White Matter:
         $ref:
           - "_terms.yaml#/white_matter/common"
@@ -19265,9 +19383,6 @@ properties:
       Absent:
         $ref:
           - "_terms.yaml#/absent/diagnosis/transglottic_extension"
-      Present:
-        $ref:
-          - "_terms.yaml#/present/diagnosis/transglottic_extension"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -19414,11 +19529,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms.yaml#/not_reported/common"
-
-  tumor_stage:
-    $ref:
-      - "_terms.yaml#/tumor_stage/common"
-    type: string
 
   vascular_invasion_present:
     $ref:
