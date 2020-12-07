@@ -166,6 +166,12 @@ links:
         target_type: gene_expression
         multiplicity: many_to_many
         required: false
+      - name: masked_methylation_arrays
+        backref: annotations
+        label: annotates
+        target_type: masked_methylation_array
+        multiplicity: many_to_many
+        required: false
       - name: masked_somatic_mutations
         backref: annotations
         label: annotates
@@ -182,6 +188,12 @@ links:
         backref: annotations
         label: annotates
         target_type: mirna_expression
+        multiplicity: many_to_many
+        required: false
+      - name: pathology_details
+        backref: annotations
+        label: annotates
+        target_type: pathology_detail
         multiplicity: many_to_many
         required: false
       - name: pathology_reports
