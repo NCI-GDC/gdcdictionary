@@ -190,6 +190,12 @@ links:
         target_type: mirna_expression
         multiplicity: many_to_many
         required: false
+      - name: molecular_tests
+        backref: annotations
+        label: annotates
+        target_type: molecular_test
+        multiplicity: many_to_many
+        required: false
       - name: pathology_details
         backref: annotations
         label: annotates
