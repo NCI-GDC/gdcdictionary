@@ -166,6 +166,12 @@ links:
         target_type: gene_expression
         multiplicity: many_to_many
         required: false
+      - name: masked_methylation_arrays
+        backref: annotations
+        label: annotates
+        target_type: masked_methylation_array
+        multiplicity: many_to_many
+        required: false
       - name: masked_somatic_mutations
         backref: annotations
         label: annotates
@@ -182,6 +188,18 @@ links:
         backref: annotations
         label: annotates
         target_type: mirna_expression
+        multiplicity: many_to_many
+        required: false
+      - name: molecular_tests
+        backref: annotations
+        label: annotates
+        target_type: molecular_test
+        multiplicity: many_to_many
+        required: false
+      - name: pathology_details
+        backref: annotations
+        label: annotates
+        target_type: pathology_detail
         multiplicity: many_to_many
         required: false
       - name: pathology_reports
@@ -489,6 +507,9 @@ properties:
   gene_expressions:
     $ref: "_definitions.yaml#/to_many"
 
+  masked_methylation_arrays:
+    $ref: "_definitions.yaml#/to_many"
+
   masked_somatic_mutations:
     $ref: "_definitions.yaml#/to_many"
 
@@ -496,6 +517,12 @@ properties:
     $ref: "_definitions.yaml#/to_many"
 
   mirna_expressions:
+    $ref: "_definitions.yaml#/to_many"
+
+  molecular_tests:
+    $ref: "_definitions.yaml#/to_many"
+
+  pathology_details:
     $ref: "_definitions.yaml#/to_many"
 
   pathology_reports:
