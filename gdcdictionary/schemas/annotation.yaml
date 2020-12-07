@@ -507,6 +507,9 @@ properties:
   gene_expressions:
     $ref: "_definitions.yaml#/to_many"
 
+  masked_methylation_arrays:
+    $ref: "_definitions.yaml#/to_many"
+
   masked_somatic_mutations:
     $ref: "_definitions.yaml#/to_many"
 
@@ -514,6 +517,12 @@ properties:
     $ref: "_definitions.yaml#/to_many"
 
   mirna_expressions:
+    $ref: "_definitions.yaml#/to_many"
+
+  molecular_tests:
+    $ref: "_definitions.yaml#/to_many"
+
+  pathology_details:
     $ref: "_definitions.yaml#/to_many"
 
   pathology_reports:
