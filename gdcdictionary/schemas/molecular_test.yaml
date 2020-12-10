@@ -30,6 +30,12 @@ links:
     target_type: follow_up
     multiplicity: many_to_one
     required: true
+  - name: slides
+    backref: molecular_tests
+    label: related_to
+    target_type: slide
+    multiplicity: many_to_one
+    required: false
 
 required:
   - submitter_id
