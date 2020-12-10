@@ -7105,3 +7105,5 @@ properties:
 
   follow_ups:
     $ref: "_definitions.yaml#/to_one"
+  molecular_tests:
+    $ref: "_definitions.yaml#/to_one"
