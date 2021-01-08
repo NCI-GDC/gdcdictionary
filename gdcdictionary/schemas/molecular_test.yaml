@@ -30,6 +30,12 @@ links:
     target_type: follow_up
     multiplicity: many_to_one
     required: true
+  - name: slides
+    backref: molecular_tests
+    label: related_to
+    target_type: slide
+    multiplicity: many_to_one
+    required: false
 
 required:
   - submitter_id
@@ -80,6 +86,7 @@ properties:
       - CD79A
       - CEA
       - HLA-DR
+      - Ki67
       - Mesothelin
       - NSE
       - Prostate-Specific Antigen (PSA)
@@ -87,6 +94,93 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      BCL6:
+        $ref:
+          - "_terms.yaml#/bcl6/common"
+      CA-125:
+        $ref:
+          - "_terms.yaml#/ca125/common"
+      CA19-9:
+        $ref:
+          - "_terms.yaml#/ca199/common"
+      CCND1:
+        $ref:
+          - "_terms.yaml#/ccnd1/common"
+      CD10:
+        $ref:
+          - "_terms.yaml#/cd10/common"
+      CD117:
+        $ref:
+          - "_terms.yaml#/cd117/common"
+      CD138:
+        $ref:
+          - "_terms.yaml#/cd138/common"
+      CD14:
+        $ref:
+          - "_terms.yaml#/cd14/common"
+      CD15:
+        $ref:
+          - "_terms.yaml#/cd15/common"
+      CD19:
+        $ref:
+          - "_terms.yaml#/cd19/common"
+      CD20:
+        $ref:
+          - "_terms.yaml#/cd20/common"
+      CD22:
+        $ref:
+          - "_terms.yaml#/cd22/common"
+      CD23:
+        $ref:
+          - "_terms.yaml#/cd23/common"
+      CD25:
+        $ref:
+          - "_terms.yaml#/cd25/common"
+      CD3:
+        $ref:
+          - "_terms.yaml#/cd3/common"
+      CD30:
+        $ref:
+          - "_terms.yaml#/cd30/common"
+      CD33:
+        $ref:
+          - "_terms.yaml#/cd33/common"
+      CD34:
+        $ref:
+          - "_terms.yaml#/cd34/common"
+      CD45:
+        $ref:
+          - "_terms.yaml#/cd45/common"
+      CD5:
+        $ref:
+          - "_terms.yaml#/cd5/common"
+      CD56:
+        $ref:
+          - "_terms.yaml#/cd56/common"
+      CD7:
+        $ref:
+          - "_terms.yaml#/cd7/common"
+      CD79A:
+        $ref:
+          - "_terms.yaml#/cd79a/common"
+      CEA:
+        $ref:
+          - "_terms.yaml#/cea/common"
+      HLA-DR:
+        $ref:
+          - "_terms.yaml#/hladr/common"
+      Mesothelin:
+        $ref:
+          - "_terms.yaml#/mesothelin/common"
+      NSE:
+        $ref:
+          - "_terms.yaml#/nse/common"
+      Prostate-Specific Antigen (PSA):
+        $ref:
+          - "_terms.yaml#/prostatespecific_antigen_psa/common"
+      Squamous Cell Carcinoma Antigen (SCCA):
+        $ref:
+          - "_terms.yaml#/squamous_cell_carcinoma_antigen_scca/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -124,6 +218,63 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      Bone Marrow:
+        $ref:
+          - "_terms.yaml#/bone_marrow/common"
+      Buccal Mucosa:
+        $ref:
+          - "_terms.yaml#/buccal_mucosa/common"
+      Buffy Coat:
+        $ref:
+          - "_terms.yaml#/buffy_coat/common"
+      Cerebrospinal Fluid:
+        $ref:
+          - "_terms.yaml#/cerebrospinal_fluid/common"
+      Connective Tissue:
+        $ref:
+          - "_terms.yaml#/connective_tissue/common"
+      Embryonic Fluid:
+        $ref:
+          - "_terms.yaml#/embryonic_fluid/common"
+      Embryonic Tissue:
+        $ref:
+          - "_terms.yaml#/embryonic_tissue/common"
+      Feces:
+        $ref:
+          - "_terms.yaml#/feces/common"
+      Granulocyte:
+        $ref:
+          - "_terms.yaml#/granulocyte/common"
+      Muscle Tissue:
+        $ref:
+          - "_terms.yaml#/muscle_tissue/common"
+      Nerve Tissue:
+        $ref:
+          - "_terms.yaml#/nerve_tissue/common"
+      Peritoneal Fluid:
+        $ref:
+          - "_terms.yaml#/peritoneal_fluid/common"
+      Plasma:
+        $ref:
+          - "_terms.yaml#/plasma/common"
+      Pleural Fluid:
+        $ref:
+          - "_terms.yaml#/pleural_fluid/common"
+      Saliva:
+        $ref:
+          - "_terms.yaml#/saliva/common"
+      Serum:
+        $ref:
+          - "_terms.yaml#/serum/common"
+      Soft Tissue:
+        $ref:
+          - "_terms.yaml#/soft_tissue/common"
+      Tissue, NOS:
+        $ref:
+          - "_terms.yaml#/tissue_nos/common"
+      Urine:
+        $ref:
+          - "_terms.yaml#/urine/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -183,6 +334,84 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      chr1:
+        $ref:
+          - "_terms.yaml#/chr1/common"
+      chr2:
+        $ref:
+          - "_terms.yaml#/chr2/common"
+      chr3:
+        $ref:
+          - "_terms.yaml#/chr3/common"
+      chr4:
+        $ref:
+          - "_terms.yaml#/chr4/common"
+      chr5:
+        $ref:
+          - "_terms.yaml#/chr5/common"
+      chr6:
+        $ref:
+          - "_terms.yaml#/chr6/common"
+      chr7:
+        $ref:
+          - "_terms.yaml#/chr7/common"
+      chr8:
+        $ref:
+          - "_terms.yaml#/chr8/common"
+      chr9:
+        $ref:
+          - "_terms.yaml#/chr9/common"
+      chr10:
+        $ref:
+          - "_terms.yaml#/chr10/common"
+      chr11:
+        $ref:
+          - "_terms.yaml#/chr11/common"
+      chr12:
+        $ref:
+          - "_terms.yaml#/chr12/common"
+      chr13:
+        $ref:
+          - "_terms.yaml#/chr13/common"
+      chr14:
+        $ref:
+          - "_terms.yaml#/chr14/common"
+      chr15:
+        $ref:
+          - "_terms.yaml#/chr15/common"
+      chr16:
+        $ref:
+          - "_terms.yaml#/chr16/common"
+      chr17:
+        $ref:
+          - "_terms.yaml#/chr17/common"
+      chr18:
+        $ref:
+          - "_terms.yaml#/chr18/common"
+      chr19:
+        $ref:
+          - "_terms.yaml#/chr19/common"
+      chr20:
+        $ref:
+          - "_terms.yaml#/chr20/common"
+      chr21:
+        $ref:
+          - "_terms.yaml#/chr21/common"
+      chr22:
+        $ref:
+          - "_terms.yaml#/chr22/common"
+      chr23:
+        $ref:
+          - "_terms.yaml#/chr23/common"
+      chrM:
+        $ref:
+          - "_terms.yaml#/chrm/common"
+      chrX:
+        $ref:
+          - "_terms.yaml#/chrx/common"
+      chrY:
+        $ref:
+          - "_terms.yaml#/chry/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -201,6 +430,13 @@ properties:
     enum:
       - Clonal
       - Non-clonal
+    enumDef:
+      Clonal:
+        $ref:
+          - "_terms.yaml#/clonal/common"
+      Non-clonal:
+        $ref:
+          - "_terms.yaml#/nonclonal/common"
 
   cytoband:
     $ref:
@@ -339,6 +575,7 @@ properties:
       - CHD2
       - CHD4
       - CHEK2
+      - CHGA
       - CHIC2
       - CHST11
       - CIC
@@ -849,6 +1086,7 @@ properties:
       - SUFU
       - SUZ12
       - SYK
+      - SYP
       - TAF15
       - TAL1
       - TAL2
@@ -931,6 +1169,2145 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      A1CF:
+        $ref:
+          - "_terms.yaml#/a1cf/common"
+      ABI1:
+        $ref:
+          - "_terms.yaml#/abi1/common"
+      ABL1:
+        $ref:
+          - "_terms.yaml#/abl1/common"
+      ABL2:
+        $ref:
+          - "_terms.yaml#/abl2/common"
+      ACKR3:
+        $ref:
+          - "_terms.yaml#/ackr3/common"
+      ACSL3:
+        $ref:
+          - "_terms.yaml#/acsl3/common"
+      ACSL6:
+        $ref:
+          - "_terms.yaml#/acsl6/common"
+      ACVR1:
+        $ref:
+          - "_terms.yaml#/acvr1/common"
+      ACVR2A:
+        $ref:
+          - "_terms.yaml#/acvr2a/common"
+      AFF1:
+        $ref:
+          - "_terms.yaml#/aff1/common"
+      AFF3:
+        $ref:
+          - "_terms.yaml#/aff3/common"
+      AFF4:
+        $ref:
+          - "_terms.yaml#/aff4/common"
+      AKAP9:
+        $ref:
+          - "_terms.yaml#/akap9/common"
+      AKT1:
+        $ref:
+          - "_terms.yaml#/akt1/common"
+      AKT2:
+        $ref:
+          - "_terms.yaml#/akt2/common"
+      AKT3:
+        $ref:
+          - "_terms.yaml#/akt3/common"
+      ALDH2:
+        $ref:
+          - "_terms.yaml#/aldh2/common"
+      ALK:
+        $ref:
+          - "_terms.yaml#/alk/common"
+      AMER1:
+        $ref:
+          - "_terms.yaml#/amer1/common"
+      ANK1:
+        $ref:
+          - "_terms.yaml#/ank1/common"
+      APC:
+        $ref:
+          - "_terms.yaml#/apc/common"
+      APOBEC3B:
+        $ref:
+          - "_terms.yaml#/apobec3b/common"
+      AR:
+        $ref:
+          - "_terms.yaml#/ar/common"
+      ARAF:
+        $ref:
+          - "_terms.yaml#/araf/common"
+      ARHGAP26:
+        $ref:
+          - "_terms.yaml#/arhgap26/common"
+      ARHGAP5:
+        $ref:
+          - "_terms.yaml#/arhgap5/common"
+      ARHGEF12:
+        $ref:
+          - "_terms.yaml#/arhgef12/common"
+      ARID1A:
+        $ref:
+          - "_terms.yaml#/arid1a/common"
+      ARID1B:
+        $ref:
+          - "_terms.yaml#/arid1b/common"
+      ARID2:
+        $ref:
+          - "_terms.yaml#/arid2/common"
+      ARNT:
+        $ref:
+          - "_terms.yaml#/arnt/common"
+      ASPSCR1:
+        $ref:
+          - "_terms.yaml#/aspscr1/common"
+      ASXL1:
+        $ref:
+          - "_terms.yaml#/asxl1/common"
+      ASXL2:
+        $ref:
+          - "_terms.yaml#/asxl2/common"
+      ATF1:
+        $ref:
+          - "_terms.yaml#/atf1/common"
+      ATIC:
+        $ref:
+          - "_terms.yaml#/atic/common"
+      ATM:
+        $ref:
+          - "_terms.yaml#/atm/common"
+      ATP1A1:
+        $ref:
+          - "_terms.yaml#/atp1a1/common"
+      ATP2B3:
+        $ref:
+          - "_terms.yaml#/atp2b3/common"
+      ATR:
+        $ref:
+          - "_terms.yaml#/atr/common"
+      ATRX:
+        $ref:
+          - "_terms.yaml#/atrx/common"
+      AXIN1:
+        $ref:
+          - "_terms.yaml#/axin1/common"
+      AXIN2:
+        $ref:
+          - "_terms.yaml#/axin2/common"
+      B2M:
+        $ref:
+          - "_terms.yaml#/b2m/common"
+      BAP1:
+        $ref:
+          - "_terms.yaml#/bap1/common"
+      BARD1:
+        $ref:
+          - "_terms.yaml#/bard1/common"
+      BCL10:
+        $ref:
+          - "_terms.yaml#/bcl10/common"
+      BCL11A:
+        $ref:
+          - "_terms.yaml#/bcl11a/common"
+      BCL11B:
+        $ref:
+          - "_terms.yaml#/bcl11b/common"
+      BCL2:
+        $ref:
+          - "_terms.yaml#/bcl2/common"
+      BCL2L12:
+        $ref:
+          - "_terms.yaml#/bcl2l12/common"
+      BCL3:
+        $ref:
+          - "_terms.yaml#/bcl3/common"
+      BCL6:
+        $ref:
+          - "_terms.yaml#/bcl6/common"
+      BCL7A:
+        $ref:
+          - "_terms.yaml#/bcl7a/common"
+      BCL9:
+        $ref:
+          - "_terms.yaml#/bcl9/common"
+      BCL9L:
+        $ref:
+          - "_terms.yaml#/bcl9l/common"
+      BCLAF1:
+        $ref:
+          - "_terms.yaml#/bclaf1/common"
+      BCOR:
+        $ref:
+          - "_terms.yaml#/bcor/common"
+      BCORL1:
+        $ref:
+          - "_terms.yaml#/bcorl1/common"
+      BCR:
+        $ref:
+          - "_terms.yaml#/bcr/common"
+      BIRC3:
+        $ref:
+          - "_terms.yaml#/birc3/common"
+      BIRC6:
+        $ref:
+          - "_terms.yaml#/birc6/common"
+      BLM:
+        $ref:
+          - "_terms.yaml#/blm/common"
+      BMP5:
+        $ref:
+          - "_terms.yaml#/bmp5/common"
+      BMPR1A:
+        $ref:
+          - "_terms.yaml#/bmpr1a/common"
+      BRAF:
+        $ref:
+          - "_terms.yaml#/braf/common"
+      BRCA1:
+        $ref:
+          - "_terms.yaml#/brca1/common"
+      BRCA2:
+        $ref:
+          - "_terms.yaml#/brca2/common"
+      BRD3:
+        $ref:
+          - "_terms.yaml#/brd3/common"
+      BRD4:
+        $ref:
+          - "_terms.yaml#/brd4/common"
+      BRIP1:
+        $ref:
+          - "_terms.yaml#/brip1/common"
+      BTG1:
+        $ref:
+          - "_terms.yaml#/btg1/common"
+      BTK:
+        $ref:
+          - "_terms.yaml#/btk/common"
+      BUB1B:
+        $ref:
+          - "_terms.yaml#/bub1b/common"
+      C15orf65:
+        $ref:
+          - "_terms.yaml#/c15orf65/common"
+      CACNA1D:
+        $ref:
+          - "_terms.yaml#/cacna1d/common"
+      CALR:
+        $ref:
+          - "_terms.yaml#/calr/common"
+      CAMTA1:
+        $ref:
+          - "_terms.yaml#/camta1/common"
+      CANT1:
+        $ref:
+          - "_terms.yaml#/cant1/common"
+      CARD11:
+        $ref:
+          - "_terms.yaml#/card11/common"
+      CARS:
+        $ref:
+          - "_terms.yaml#/cars/common"
+      CASP8:
+        $ref:
+          - "_terms.yaml#/casp8/common"
+      CBFA2T3:
+        $ref:
+          - "_terms.yaml#/cbfa2t3/common"
+      CBFB:
+        $ref:
+          - "_terms.yaml#/cbfb/common"
+      CBL:
+        $ref:
+          - "_terms.yaml#/cbl/common"
+      CBLB:
+        $ref:
+          - "_terms.yaml#/cblb/common"
+      CBLC:
+        $ref:
+          - "_terms.yaml#/cblc/common"
+      CCDC6:
+        $ref:
+          - "_terms.yaml#/ccdc6/common"
+      CCNB1IP1:
+        $ref:
+          - "_terms.yaml#/ccnb1ip1/common"
+      CCNC:
+        $ref:
+          - "_terms.yaml#/ccnc/common"
+      CCND1:
+        $ref:
+          - "_terms.yaml#/ccnd1/common"
+      CCND2:
+        $ref:
+          - "_terms.yaml#/ccnd2/common"
+      CCND3:
+        $ref:
+          - "_terms.yaml#/ccnd3/common"
+      CCNE1:
+        $ref:
+          - "_terms.yaml#/ccne1/common"
+      CCR4:
+        $ref:
+          - "_terms.yaml#/ccr4/common"
+      CCR7:
+        $ref:
+          - "_terms.yaml#/ccr7/common"
+      CD209:
+        $ref:
+          - "_terms.yaml#/cd209/common"
+      CD274:
+        $ref:
+          - "_terms.yaml#/cd274/common"
+      CD28:
+        $ref:
+          - "_terms.yaml#/cd28/common"
+      CD74:
+        $ref:
+          - "_terms.yaml#/cd74/common"
+      CD79A:
+        $ref:
+          - "_terms.yaml#/cd79a/common"
+      CD79B:
+        $ref:
+          - "_terms.yaml#/cd79b/common"
+      CD99:
+        $ref:
+          - "_terms.yaml#/cd99/common"
+      CDC73:
+        $ref:
+          - "_terms.yaml#/cdc73/common"
+      CDH1:
+        $ref:
+          - "_terms.yaml#/cdh1/common"
+      CDH10:
+        $ref:
+          - "_terms.yaml#/cdh10/common"
+      CDH11:
+        $ref:
+          - "_terms.yaml#/cdh11/common"
+      CDH17:
+        $ref:
+          - "_terms.yaml#/cdh17/common"
+      CDK12:
+        $ref:
+          - "_terms.yaml#/cdk12/common"
+      CDK4:
+        $ref:
+          - "_terms.yaml#/cdk4/common"
+      CDK6:
+        $ref:
+          - "_terms.yaml#/cdk6/common"
+      CDKN1A:
+        $ref:
+          - "_terms.yaml#/cdkn1a/common"
+      CDKN1B:
+        $ref:
+          - "_terms.yaml#/cdkn1b/common"
+      CDKN2A:
+        $ref:
+          - "_terms.yaml#/cdkn2a/common"
+      CDKN2C:
+        $ref:
+          - "_terms.yaml#/cdkn2c/common"
+      CDX2:
+        $ref:
+          - "_terms.yaml#/cdx2/common"
+      CEBPA:
+        $ref:
+          - "_terms.yaml#/cebpa/common"
+      CEP89:
+        $ref:
+          - "_terms.yaml#/cep89/common"
+      CHCHD7:
+        $ref:
+          - "_terms.yaml#/chchd7/common"
+      CHD2:
+        $ref:
+          - "_terms.yaml#/chd2/common"
+      CHD4:
+        $ref:
+          - "_terms.yaml#/chd4/common"
+      CHEK2:
+        $ref:
+          - "_terms.yaml#/chek2/common"
+      CHGA:
+        $ref:
+          - "_terms.yaml#/chga/common"
+      CHIC2:
+        $ref:
+          - "_terms.yaml#/chic2/common"
+      CHST11:
+        $ref:
+          - "_terms.yaml#/chst11/common"
+      CIC:
+        $ref:
+          - "_terms.yaml#/cic/common"
+      CIITA:
+        $ref:
+          - "_terms.yaml#/ciita/common"
+      CLIP1:
+        $ref:
+          - "_terms.yaml#/clip1/common"
+      CLP1:
+        $ref:
+          - "_terms.yaml#/clp1/common"
+      CLTC:
+        $ref:
+          - "_terms.yaml#/cltc/common"
+      CLTCL1:
+        $ref:
+          - "_terms.yaml#/cltcl1/common"
+      CNBD1:
+        $ref:
+          - "_terms.yaml#/cnbd1/common"
+      CNBP:
+        $ref:
+          - "_terms.yaml#/cnbp/common"
+      CNOT3:
+        $ref:
+          - "_terms.yaml#/cnot3/common"
+      CNTNAP2:
+        $ref:
+          - "_terms.yaml#/cntnap2/common"
+      CNTRL:
+        $ref:
+          - "_terms.yaml#/cntrl/common"
+      COL1A1:
+        $ref:
+          - "_terms.yaml#/col1a1/common"
+      COL2A1:
+        $ref:
+          - "_terms.yaml#/col2a1/common"
+      COL3A1:
+        $ref:
+          - "_terms.yaml#/col3a1/common"
+      COX6C:
+        $ref:
+          - "_terms.yaml#/cox6c/common"
+      CREB1:
+        $ref:
+          - "_terms.yaml#/creb1/common"
+      CREB3L1:
+        $ref:
+          - "_terms.yaml#/creb3l1/common"
+      CREB3L2:
+        $ref:
+          - "_terms.yaml#/creb3l2/common"
+      CREBBP:
+        $ref:
+          - "_terms.yaml#/crebbp/common"
+      CRLF2:
+        $ref:
+          - "_terms.yaml#/crlf2/common"
+      CRNKL1:
+        $ref:
+          - "_terms.yaml#/crnkl1/common"
+      CRTC1:
+        $ref:
+          - "_terms.yaml#/crtc1/common"
+      CRTC3:
+        $ref:
+          - "_terms.yaml#/crtc3/common"
+      CSF1R:
+        $ref:
+          - "_terms.yaml#/csf1r/common"
+      CSF3R:
+        $ref:
+          - "_terms.yaml#/csf3r/common"
+      CSMD3:
+        $ref:
+          - "_terms.yaml#/csmd3/common"
+      CTCF:
+        $ref:
+          - "_terms.yaml#/ctcf/common"
+      CTNNA2:
+        $ref:
+          - "_terms.yaml#/ctnna2/common"
+      CTNNB1:
+        $ref:
+          - "_terms.yaml#/ctnnb1/common"
+      CTNND1:
+        $ref:
+          - "_terms.yaml#/ctnnd1/common"
+      CTNND2:
+        $ref:
+          - "_terms.yaml#/ctnnd2/common"
+      CUL3:
+        $ref:
+          - "_terms.yaml#/cul3/common"
+      CUX1:
+        $ref:
+          - "_terms.yaml#/cux1/common"
+      CXCR4:
+        $ref:
+          - "_terms.yaml#/cxcr4/common"
+      CYLD:
+        $ref:
+          - "_terms.yaml#/cyld/common"
+      CYP2C8:
+        $ref:
+          - "_terms.yaml#/cyp2c8/common"
+      CYSLTR2:
+        $ref:
+          - "_terms.yaml#/cysltr2/common"
+      DAXX:
+        $ref:
+          - "_terms.yaml#/daxx/common"
+      DCAF12L2:
+        $ref:
+          - "_terms.yaml#/dcaf12l2/common"
+      DCC:
+        $ref:
+          - "_terms.yaml#/dcc/common"
+      DCTN1:
+        $ref:
+          - "_terms.yaml#/dctn1/common"
+      DDB2:
+        $ref:
+          - "_terms.yaml#/ddb2/common"
+      DDIT3:
+        $ref:
+          - "_terms.yaml#/ddit3/common"
+      DDR2:
+        $ref:
+          - "_terms.yaml#/ddr2/common"
+      DDX10:
+        $ref:
+          - "_terms.yaml#/ddx10/common"
+      DDX3X:
+        $ref:
+          - "_terms.yaml#/ddx3x/common"
+      DDX5:
+        $ref:
+          - "_terms.yaml#/ddx5/common"
+      DDX6:
+        $ref:
+          - "_terms.yaml#/ddx6/common"
+      DEK:
+        $ref:
+          - "_terms.yaml#/dek/common"
+      DGCR8:
+        $ref:
+          - "_terms.yaml#/dgcr8/common"
+      DICER1:
+        $ref:
+          - "_terms.yaml#/dicer1/common"
+      DNAJB1:
+        $ref:
+          - "_terms.yaml#/dnajb1/common"
+      DNM2:
+        $ref:
+          - "_terms.yaml#/dnm2/common"
+      DNMT3A:
+        $ref:
+          - "_terms.yaml#/dnmt3a/common"
+      DROSHA:
+        $ref:
+          - "_terms.yaml#/drosha/common"
+      DUX4L1:
+        $ref:
+          - "_terms.yaml#/dux4l1/common"
+      EBF1:
+        $ref:
+          - "_terms.yaml#/ebf1/common"
+      ECT2L:
+        $ref:
+          - "_terms.yaml#/ect2l/common"
+      EED:
+        $ref:
+          - "_terms.yaml#/eed/common"
+      EGFR:
+        $ref:
+          - "_terms.yaml#/egfr/common"
+      EIF1AX:
+        $ref:
+          - "_terms.yaml#/eif1ax/common"
+      EIF3E:
+        $ref:
+          - "_terms.yaml#/eif3e/common"
+      EIF4A2:
+        $ref:
+          - "_terms.yaml#/eif4a2/common"
+      ELF3:
+        $ref:
+          - "_terms.yaml#/elf3/common"
+      ELF4:
+        $ref:
+          - "_terms.yaml#/elf4/common"
+      ELK4:
+        $ref:
+          - "_terms.yaml#/elk4/common"
+      ELL:
+        $ref:
+          - "_terms.yaml#/ell/common"
+      ELN:
+        $ref:
+          - "_terms.yaml#/eln/common"
+      EML4:
+        $ref:
+          - "_terms.yaml#/eml4/common"
+      EP300:
+        $ref:
+          - "_terms.yaml#/ep300/common"
+      EPAS1:
+        $ref:
+          - "_terms.yaml#/epas1/common"
+      EPHA3:
+        $ref:
+          - "_terms.yaml#/epha3/common"
+      EPHA7:
+        $ref:
+          - "_terms.yaml#/epha7/common"
+      EPS15:
+        $ref:
+          - "_terms.yaml#/eps15/common"
+      ERBB2:
+        $ref:
+          - "_terms.yaml#/erbb2/common"
+      ERBB3:
+        $ref:
+          - "_terms.yaml#/erbb3/common"
+      ERBB4:
+        $ref:
+          - "_terms.yaml#/erbb4/common"
+      ERC1:
+        $ref:
+          - "_terms.yaml#/erc1/common"
+      ERCC2:
+        $ref:
+          - "_terms.yaml#/ercc2/common"
+      ERCC3:
+        $ref:
+          - "_terms.yaml#/ercc3/common"
+      ERCC4:
+        $ref:
+          - "_terms.yaml#/ercc4/common"
+      ERCC5:
+        $ref:
+          - "_terms.yaml#/ercc5/common"
+      ERG:
+        $ref:
+          - "_terms.yaml#/erg/common"
+      ESR1:
+        $ref:
+          - "_terms.yaml#/esr1/common"
+      ETNK1:
+        $ref:
+          - "_terms.yaml#/etnk1/common"
+      ETV1:
+        $ref:
+          - "_terms.yaml#/etv1/common"
+      ETV4:
+        $ref:
+          - "_terms.yaml#/etv4/common"
+      ETV5:
+        $ref:
+          - "_terms.yaml#/etv5/common"
+      ETV6:
+        $ref:
+          - "_terms.yaml#/etv6/common"
+      EWSR1:
+        $ref:
+          - "_terms.yaml#/ewsr1/common"
+      EXT1:
+        $ref:
+          - "_terms.yaml#/ext1/common"
+      EXT2:
+        $ref:
+          - "_terms.yaml#/ext2/common"
+      EZH2:
+        $ref:
+          - "_terms.yaml#/ezh2/common"
+      EZR:
+        $ref:
+          - "_terms.yaml#/ezr/common"
+      FAM131B:
+        $ref:
+          - "_terms.yaml#/fam131b/common"
+      FAM135B:
+        $ref:
+          - "_terms.yaml#/fam135b/common"
+      FAM46C:
+        $ref:
+          - "_terms.yaml#/fam46c/common"
+      FAM47C:
+        $ref:
+          - "_terms.yaml#/fam47c/common"
+      FANCA:
+        $ref:
+          - "_terms.yaml#/fanca/common"
+      FANCC:
+        $ref:
+          - "_terms.yaml#/fancc/common"
+      FANCD2:
+        $ref:
+          - "_terms.yaml#/fancd2/common"
+      FANCE:
+        $ref:
+          - "_terms.yaml#/fance/common"
+      FANCF:
+        $ref:
+          - "_terms.yaml#/fancf/common"
+      FANCG:
+        $ref:
+          - "_terms.yaml#/fancg/common"
+      FAS:
+        $ref:
+          - "_terms.yaml#/fas/common"
+      FAT1:
+        $ref:
+          - "_terms.yaml#/fat1/common"
+      FAT3:
+        $ref:
+          - "_terms.yaml#/fat3/common"
+      FAT4:
+        $ref:
+          - "_terms.yaml#/fat4/common"
+      FBLN2:
+        $ref:
+          - "_terms.yaml#/fbln2/common"
+      FBXO11:
+        $ref:
+          - "_terms.yaml#/fbxo11/common"
+      FBXW7:
+        $ref:
+          - "_terms.yaml#/fbxw7/common"
+      FCGR2B:
+        $ref:
+          - "_terms.yaml#/fcgr2b/common"
+      FCRL4:
+        $ref:
+          - "_terms.yaml#/fcrl4/common"
+      FEN1:
+        $ref:
+          - "_terms.yaml#/fen1/common"
+      FES:
+        $ref:
+          - "_terms.yaml#/fes/common"
+      FEV:
+        $ref:
+          - "_terms.yaml#/fev/common"
+      FGFR1:
+        $ref:
+          - "_terms.yaml#/fgfr1/common"
+      FGFR1OP:
+        $ref:
+          - "_terms.yaml#/fgfr1op/common"
+      FGFR2:
+        $ref:
+          - "_terms.yaml#/fgfr2/common"
+      FGFR3:
+        $ref:
+          - "_terms.yaml#/fgfr3/common"
+      FGFR4:
+        $ref:
+          - "_terms.yaml#/fgfr4/common"
+      FH:
+        $ref:
+          - "_terms.yaml#/fh/common"
+      FHIT:
+        $ref:
+          - "_terms.yaml#/fhit/common"
+      FIP1L1:
+        $ref:
+          - "_terms.yaml#/fip1l1/common"
+      FKBP9:
+        $ref:
+          - "_terms.yaml#/fkbp9/common"
+      FLCN:
+        $ref:
+          - "_terms.yaml#/flcn/common"
+      FLI1:
+        $ref:
+          - "_terms.yaml#/fli1/common"
+      FLNA:
+        $ref:
+          - "_terms.yaml#/flna/common"
+      FLT3:
+        $ref:
+          - "_terms.yaml#/flt3/common"
+      FLT4:
+        $ref:
+          - "_terms.yaml#/flt4/common"
+      FNBP1:
+        $ref:
+          - "_terms.yaml#/fnbp1/common"
+      FOXA1:
+        $ref:
+          - "_terms.yaml#/foxa1/common"
+      FOXL2:
+        $ref:
+          - "_terms.yaml#/foxl2/common"
+      FOXO1:
+        $ref:
+          - "_terms.yaml#/foxo1/common"
+      FOXO3:
+        $ref:
+          - "_terms.yaml#/foxo3/common"
+      FOXO4:
+        $ref:
+          - "_terms.yaml#/foxo4/common"
+      FOXP1:
+        $ref:
+          - "_terms.yaml#/foxp1/common"
+      FOXR1:
+        $ref:
+          - "_terms.yaml#/foxr1/common"
+      FSTL3:
+        $ref:
+          - "_terms.yaml#/fstl3/common"
+      FUBP1:
+        $ref:
+          - "_terms.yaml#/fubp1/common"
+      FUS:
+        $ref:
+          - "_terms.yaml#/fus/common"
+      GAS7:
+        $ref:
+          - "_terms.yaml#/gas7/common"
+      GATA1:
+        $ref:
+          - "_terms.yaml#/gata1/common"
+      GATA2:
+        $ref:
+          - "_terms.yaml#/gata2/common"
+      GATA3:
+        $ref:
+          - "_terms.yaml#/gata3/common"
+      GLI1:
+        $ref:
+          - "_terms.yaml#/gli1/common"
+      GMPS:
+        $ref:
+          - "_terms.yaml#/gmps/common"
+      GNA11:
+        $ref:
+          - "_terms.yaml#/gna11/common"
+      GNAQ:
+        $ref:
+          - "_terms.yaml#/gnaq/common"
+      GNAS:
+        $ref:
+          - "_terms.yaml#/gnas/common"
+      GOLGA5:
+        $ref:
+          - "_terms.yaml#/golga5/common"
+      GOPC:
+        $ref:
+          - "_terms.yaml#/gopc/common"
+      GPC3:
+        $ref:
+          - "_terms.yaml#/gpc3/common"
+      GPHN:
+        $ref:
+          - "_terms.yaml#/gphn/common"
+      GRIN2A:
+        $ref:
+          - "_terms.yaml#/grin2a/common"
+      GRM3:
+        $ref:
+          - "_terms.yaml#/grm3/common"
+      H3F3A:
+        $ref:
+          - "_terms.yaml#/h3f3a/common"
+      H3F3B:
+        $ref:
+          - "_terms.yaml#/h3f3b/common"
+      HERPUD1:
+        $ref:
+          - "_terms.yaml#/herpud1/common"
+      HEY1:
+        $ref:
+          - "_terms.yaml#/hey1/common"
+      HIF1A:
+        $ref:
+          - "_terms.yaml#/hif1a/common"
+      HIP1:
+        $ref:
+          - "_terms.yaml#/hip1/common"
+      HIST1H3B:
+        $ref:
+          - "_terms.yaml#/hist1h3b/common"
+      HIST1H4I:
+        $ref:
+          - "_terms.yaml#/hist1h4i/common"
+      HLA-A:
+        $ref:
+          - "_terms.yaml#/hlaa/common"
+      HLF:
+        $ref:
+          - "_terms.yaml#/hlf/common"
+      HMGA1:
+        $ref:
+          - "_terms.yaml#/hmga1/common"
+      HMGA2:
+        $ref:
+          - "_terms.yaml#/hmga2/common"
+      HMGN2P46:
+        $ref:
+          - "_terms.yaml#/hmgn2p46/common"
+      HNF1A:
+        $ref:
+          - "_terms.yaml#/hnf1a/common"
+      HNRNPA2B1:
+        $ref:
+          - "_terms.yaml#/hnrnpa2b1/common"
+      HOOK3:
+        $ref:
+          - "_terms.yaml#/hook3/common"
+      HOXA11:
+        $ref:
+          - "_terms.yaml#/hoxa11/common"
+      HOXA13:
+        $ref:
+          - "_terms.yaml#/hoxa13/common"
+      HOXA9:
+        $ref:
+          - "_terms.yaml#/hoxa9/common"
+      HOXB1:
+        $ref:
+          - "_terms.yaml#/hoxb1/common"
+      HOXC11:
+        $ref:
+          - "_terms.yaml#/hoxc11/common"
+      HOXC13:
+        $ref:
+          - "_terms.yaml#/hoxc13/common"
+      HOXD11:
+        $ref:
+          - "_terms.yaml#/hoxd11/common"
+      HOXD13:
+        $ref:
+          - "_terms.yaml#/hoxd13/common"
+      HRAS:
+        $ref:
+          - "_terms.yaml#/hras/common"
+      HSP90AA1:
+        $ref:
+          - "_terms.yaml#/hsp90aa1/common"
+      HSP90AB1:
+        $ref:
+          - "_terms.yaml#/hsp90ab1/common"
+      ID3:
+        $ref:
+          - "_terms.yaml#/id3/common"
+      IDH1:
+        $ref:
+          - "_terms.yaml#/idh1/common"
+      IDH2:
+        $ref:
+          - "_terms.yaml#/idh2/common"
+      IGH:
+        $ref:
+          - "_terms.yaml#/igh/common"
+      IGK:
+        $ref:
+          - "_terms.yaml#/igk/common"
+      IGKC:
+        $ref:
+          - "_terms.yaml#/igkc/common"
+      IGL:
+        $ref:
+          - "_terms.yaml#/igl/common"
+      IKBKB:
+        $ref:
+          - "_terms.yaml#/ikbkb/common"
+      IKZF1:
+        $ref:
+          - "_terms.yaml#/ikzf1/common"
+      IL2:
+        $ref:
+          - "_terms.yaml#/il2/common"
+      IL21R:
+        $ref:
+          - "_terms.yaml#/il21r/common"
+      IL6ST:
+        $ref:
+          - "_terms.yaml#/il6st/common"
+      IL7R:
+        $ref:
+          - "_terms.yaml#/il7r/common"
+      IRF4:
+        $ref:
+          - "_terms.yaml#/irf4/common"
+      IRS4:
+        $ref:
+          - "_terms.yaml#/irs4/common"
+      ISX:
+        $ref:
+          - "_terms.yaml#/isx/common"
+      ITGAV:
+        $ref:
+          - "_terms.yaml#/itgav/common"
+      ITK:
+        $ref:
+          - "_terms.yaml#/itk/common"
+      JAK1:
+        $ref:
+          - "_terms.yaml#/jak1/common"
+      JAK2:
+        $ref:
+          - "_terms.yaml#/jak2/common"
+      JAK3:
+        $ref:
+          - "_terms.yaml#/jak3/common"
+      JAZF1:
+        $ref:
+          - "_terms.yaml#/jazf1/common"
+      JUN:
+        $ref:
+          - "_terms.yaml#/jun/common"
+      KAT6A:
+        $ref:
+          - "_terms.yaml#/kat6a/common"
+      KAT6B:
+        $ref:
+          - "_terms.yaml#/kat6b/common"
+      KAT7:
+        $ref:
+          - "_terms.yaml#/kat7/common"
+      KCNJ5:
+        $ref:
+          - "_terms.yaml#/kcnj5/common"
+      KDM5A:
+        $ref:
+          - "_terms.yaml#/kdm5a/common"
+      KDM5C:
+        $ref:
+          - "_terms.yaml#/kdm5c/common"
+      KDM6A:
+        $ref:
+          - "_terms.yaml#/kdm6a/common"
+      KDR:
+        $ref:
+          - "_terms.yaml#/kdr/common"
+      KDSR:
+        $ref:
+          - "_terms.yaml#/kdsr/common"
+      KEAP1:
+        $ref:
+          - "_terms.yaml#/keap1/common"
+      KIAA1549:
+        $ref:
+          - "_terms.yaml#/kiaa1549/common"
+      KIF5B:
+        $ref:
+          - "_terms.yaml#/kif5b/common"
+      KIT:
+        $ref:
+          - "_terms.yaml#/kit/common"
+      KLF4:
+        $ref:
+          - "_terms.yaml#/klf4/common"
+      KLF6:
+        $ref:
+          - "_terms.yaml#/klf6/common"
+      KLK2:
+        $ref:
+          - "_terms.yaml#/klk2/common"
+      KMT2A:
+        $ref:
+          - "_terms.yaml#/kmt2a/common"
+      KMT2C:
+        $ref:
+          - "_terms.yaml#/kmt2c/common"
+      KMT2D:
+        $ref:
+          - "_terms.yaml#/kmt2d/common"
+      KNL1:
+        $ref:
+          - "_terms.yaml#/knl1/common"
+      KNSTRN:
+        $ref:
+          - "_terms.yaml#/knstrn/common"
+      KRAS:
+        $ref:
+          - "_terms.yaml#/kras/common"
+      KRT20:
+        $ref:
+          - "_terms.yaml#/krt20/common"
+      KRT7:
+        $ref:
+          - "_terms.yaml#/krt7/common"
+      KTN1:
+        $ref:
+          - "_terms.yaml#/ktn1/common"
+      LARP4B:
+        $ref:
+          - "_terms.yaml#/larp4b/common"
+      LASP1:
+        $ref:
+          - "_terms.yaml#/lasp1/common"
+      LCK:
+        $ref:
+          - "_terms.yaml#/lck/common"
+      LCP1:
+        $ref:
+          - "_terms.yaml#/lcp1/common"
+      LEF1:
+        $ref:
+          - "_terms.yaml#/lef1/common"
+      LHFP:
+        $ref:
+          - "_terms.yaml#/lhfp/common"
+      LIFR:
+        $ref:
+          - "_terms.yaml#/lifr/common"
+      LMNA:
+        $ref:
+          - "_terms.yaml#/lmna/common"
+      LMO1:
+        $ref:
+          - "_terms.yaml#/lmo1/common"
+      LMO2:
+        $ref:
+          - "_terms.yaml#/lmo2/common"
+      LPP:
+        $ref:
+          - "_terms.yaml#/lpp/common"
+      LRIG3:
+        $ref:
+          - "_terms.yaml#/lrig3/common"
+      LRP1B:
+        $ref:
+          - "_terms.yaml#/lrp1b/common"
+      LSM14A:
+        $ref:
+          - "_terms.yaml#/lsm14a/common"
+      LYL1:
+        $ref:
+          - "_terms.yaml#/lyl1/common"
+      LZTR1:
+        $ref:
+          - "_terms.yaml#/lztr1/common"
+      MAF:
+        $ref:
+          - "_terms.yaml#/maf/molecular_test/gene_symbol"
+      MAFB:
+        $ref:
+          - "_terms.yaml#/mafb/common"
+      MALAT1:
+        $ref:
+          - "_terms.yaml#/malat1/common"
+      MALT1:
+        $ref:
+          - "_terms.yaml#/malt1/common"
+      MAML2:
+        $ref:
+          - "_terms.yaml#/maml2/common"
+      MAML3:
+        $ref:
+          - "_terms.yaml#/maml3/common"
+      MAP2K1:
+        $ref:
+          - "_terms.yaml#/map2k1/common"
+      MAP2K2:
+        $ref:
+          - "_terms.yaml#/map2k2/common"
+      MAP2K4:
+        $ref:
+          - "_terms.yaml#/map2k4/common"
+      MAP3K1:
+        $ref:
+          - "_terms.yaml#/map3k1/common"
+      MAP3K13:
+        $ref:
+          - "_terms.yaml#/map3k13/common"
+      MAPK1:
+        $ref:
+          - "_terms.yaml#/mapk1/common"
+      MAX:
+        $ref:
+          - "_terms.yaml#/max/common"
+      MB21D2:
+        $ref:
+          - "_terms.yaml#/mb21d2/common"
+      MDM2:
+        $ref:
+          - "_terms.yaml#/mdm2/common"
+      MDM4:
+        $ref:
+          - "_terms.yaml#/mdm4/common"
+      MDS2:
+        $ref:
+          - "_terms.yaml#/mds2/common"
+      MECOM:
+        $ref:
+          - "_terms.yaml#/mecom/common"
+      MED12:
+        $ref:
+          - "_terms.yaml#/med12/common"
+      MEN1:
+        $ref:
+          - "_terms.yaml#/men1/common"
+      MET:
+        $ref:
+          - "_terms.yaml#/met/common"
+      MGMT:
+        $ref:
+          - "_terms.yaml#/mgmt/common"
+      MIB1:
+        $ref:
+          - "_terms.yaml#/mib1/common"
+      MITF:
+        $ref:
+          - "_terms.yaml#/mitf/common"
+      MKL1:
+        $ref:
+          - "_terms.yaml#/mkl1/common"
+      MLF1:
+        $ref:
+          - "_terms.yaml#/mlf1/common"
+      MLH1:
+        $ref:
+          - "_terms.yaml#/mlh1/common"
+      MLH2:
+        $ref:
+          - "_terms.yaml#/mlh2/common"
+      MLLT1:
+        $ref:
+          - "_terms.yaml#/mllt1/common"
+      MLLT10:
+        $ref:
+          - "_terms.yaml#/mllt10/common"
+      MLLT11:
+        $ref:
+          - "_terms.yaml#/mllt11/common"
+      MLLT3:
+        $ref:
+          - "_terms.yaml#/mllt3/common"
+      MLLT4:
+        $ref:
+          - "_terms.yaml#/mllt4/common"
+      MLLT6:
+        $ref:
+          - "_terms.yaml#/mllt6/common"
+      MN1:
+        $ref:
+          - "_terms.yaml#/mn1/common"
+      MNX1:
+        $ref:
+          - "_terms.yaml#/mnx1/common"
+      MPL:
+        $ref:
+          - "_terms.yaml#/mpl/common"
+      MSH2:
+        $ref:
+          - "_terms.yaml#/msh2/common"
+      MSH6:
+        $ref:
+          - "_terms.yaml#/msh6/common"
+      MSI2:
+        $ref:
+          - "_terms.yaml#/msi2/common"
+      MSN:
+        $ref:
+          - "_terms.yaml#/msn/common"
+      MTCP1:
+        $ref:
+          - "_terms.yaml#/mtcp1/common"
+      MTOR:
+        $ref:
+          - "_terms.yaml#/mtor/common"
+      MUC1:
+        $ref:
+          - "_terms.yaml#/muc1/common"
+      MUC16:
+        $ref:
+          - "_terms.yaml#/muc16/common"
+      MUC4:
+        $ref:
+          - "_terms.yaml#/muc4/common"
+      MUTYH:
+        $ref:
+          - "_terms.yaml#/mutyh/common"
+      MYB:
+        $ref:
+          - "_terms.yaml#/myb/common"
+      MYC:
+        $ref:
+          - "_terms.yaml#/myc/common"
+      MYCL:
+        $ref:
+          - "_terms.yaml#/mycl/common"
+      MYCN:
+        $ref:
+          - "_terms.yaml#/mycn/common"
+      MYD88:
+        $ref:
+          - "_terms.yaml#/myd88/common"
+      MYH11:
+        $ref:
+          - "_terms.yaml#/myh11/common"
+      MYH9:
+        $ref:
+          - "_terms.yaml#/myh9/common"
+      MYO5A:
+        $ref:
+          - "_terms.yaml#/myo5a/common"
+      MYOD1:
+        $ref:
+          - "_terms.yaml#/myod1/common"
+      NAB2:
+        $ref:
+          - "_terms.yaml#/nab2/common"
+      NACA:
+        $ref:
+          - "_terms.yaml#/naca/common"
+      NBEA:
+        $ref:
+          - "_terms.yaml#/nbea/common"
+      NBN:
+        $ref:
+          - "_terms.yaml#/nbn/common"
+      NCKIPSD:
+        $ref:
+          - "_terms.yaml#/nckipsd/common"
+      NCOA1:
+        $ref:
+          - "_terms.yaml#/ncoa1/common"
+      NCOA2:
+        $ref:
+          - "_terms.yaml#/ncoa2/common"
+      NCOA4:
+        $ref:
+          - "_terms.yaml#/ncoa4/common"
+      NCOR1:
+        $ref:
+          - "_terms.yaml#/ncor1/common"
+      NCOR2:
+        $ref:
+          - "_terms.yaml#/ncor2/common"
+      NDRG1:
+        $ref:
+          - "_terms.yaml#/ndrg1/common"
+      NF1:
+        $ref:
+          - "_terms.yaml#/nf1/common"
+      NF2:
+        $ref:
+          - "_terms.yaml#/nf2/common"
+      NFATC2:
+        $ref:
+          - "_terms.yaml#/nfatc2/common"
+      NFE2L2:
+        $ref:
+          - "_terms.yaml#/nfe2l2/common"
+      NFIB:
+        $ref:
+          - "_terms.yaml#/nfib/common"
+      NFKB2:
+        $ref:
+          - "_terms.yaml#/nfkb2/common"
+      NFKBIE:
+        $ref:
+          - "_terms.yaml#/nfkbie/common"
+      NIN:
+        $ref:
+          - "_terms.yaml#/nin/common"
+      NKX2-1:
+        $ref:
+          - "_terms.yaml#/nkx21/common"
+      NONO:
+        $ref:
+          - "_terms.yaml#/nono/common"
+      Not Applicable:
+        $ref:
+          - "_terms.yaml#/not_applicable/common"
+      NOTCH1:
+        $ref:
+          - "_terms.yaml#/notch1/common"
+      NOTCH2:
+        $ref:
+          - "_terms.yaml#/notch2/common"
+      NPM1:
+        $ref:
+          - "_terms.yaml#/npm1/common"
+      NR4A3:
+        $ref:
+          - "_terms.yaml#/nr4a3/common"
+      NRAS:
+        $ref:
+          - "_terms.yaml#/nras/common"
+      NRG1:
+        $ref:
+          - "_terms.yaml#/nrg1/common"
+      NSD1:
+        $ref:
+          - "_terms.yaml#/nsd1/common"
+      NSD2:
+        $ref:
+          - "_terms.yaml#/nsd2/common"
+      NSD3:
+        $ref:
+          - "_terms.yaml#/nsd3/common"
+      NT5C2:
+        $ref:
+          - "_terms.yaml#/nt5c2/common"
+      NTHL1:
+        $ref:
+          - "_terms.yaml#/nthl1/common"
+      NTRK1:
+        $ref:
+          - "_terms.yaml#/ntrk1/common"
+      NTRK3:
+        $ref:
+          - "_terms.yaml#/ntrk3/common"
+      NUMA1:
+        $ref:
+          - "_terms.yaml#/numa1/common"
+      NUP214:
+        $ref:
+          - "_terms.yaml#/nup214/common"
+      NUP98:
+        $ref:
+          - "_terms.yaml#/nup98/common"
+      NUTM1:
+        $ref:
+          - "_terms.yaml#/nutm1/common"
+      NUTM2A:
+        $ref:
+          - "_terms.yaml#/nutm2a/common"
+      NUTM2B:
+        $ref:
+          - "_terms.yaml#/nutm2b/common"
+      OLIG2:
+        $ref:
+          - "_terms.yaml#/olig2/common"
+      OMD:
+        $ref:
+          - "_terms.yaml#/omd/common"
+      P2RY8:
+        $ref:
+          - "_terms.yaml#/p2ry8/common"
+      PABPC1:
+        $ref:
+          - "_terms.yaml#/pabpc1/common"
+      PAFAH1B2:
+        $ref:
+          - "_terms.yaml#/pafah1b2/common"
+      PALB2:
+        $ref:
+          - "_terms.yaml#/palb2/common"
+      PATZ1:
+        $ref:
+          - "_terms.yaml#/patz1/common"
+      PAX3:
+        $ref:
+          - "_terms.yaml#/pax3/common"
+      PAX5:
+        $ref:
+          - "_terms.yaml#/pax5/common"
+      PAX7:
+        $ref:
+          - "_terms.yaml#/pax7/common"
+      PAX8:
+        $ref:
+          - "_terms.yaml#/pax8/common"
+      PBRM1:
+        $ref:
+          - "_terms.yaml#/pbrm1/common"
+      PBX1:
+        $ref:
+          - "_terms.yaml#/pbx1/common"
+      PCBP1:
+        $ref:
+          - "_terms.yaml#/pcbp1/common"
+      PCM1:
+        $ref:
+          - "_terms.yaml#/pcm1/common"
+      PDCD1LG2:
+        $ref:
+          - "_terms.yaml#/pdcd1lg2/common"
+      PDE4DIP:
+        $ref:
+          - "_terms.yaml#/pde4dip/common"
+      PDGFB:
+        $ref:
+          - "_terms.yaml#/pdgfb/common"
+      PDGFRA:
+        $ref:
+          - "_terms.yaml#/pdgfra/common"
+      PDGFRB:
+        $ref:
+          - "_terms.yaml#/pdgfrb/common"
+      PER1:
+        $ref:
+          - "_terms.yaml#/per1/common"
+      PGR:
+        $ref:
+          - "_terms.yaml#/pgr/common"
+      PHF6:
+        $ref:
+          - "_terms.yaml#/phf6/common"
+      PHOX2B:
+        $ref:
+          - "_terms.yaml#/phox2b/common"
+      PICALM:
+        $ref:
+          - "_terms.yaml#/picalm/common"
+      PIK3CA:
+        $ref:
+          - "_terms.yaml#/pik3ca/common"
+      PIK3CB:
+        $ref:
+          - "_terms.yaml#/pik3cb/common"
+      PIK3R1:
+        $ref:
+          - "_terms.yaml#/pik3r1/common"
+      PIM1:
+        $ref:
+          - "_terms.yaml#/pim1/common"
+      PLAG1:
+        $ref:
+          - "_terms.yaml#/plag1/common"
+      PLCG1:
+        $ref:
+          - "_terms.yaml#/plcg1/common"
+      PML:
+        $ref:
+          - "_terms.yaml#/pml/common"
+      PMS1:
+        $ref:
+          - "_terms.yaml#/pms1/common"
+      PMS2:
+        $ref:
+          - "_terms.yaml#/pms2/common"
+      POLD1:
+        $ref:
+          - "_terms.yaml#/pold1/common"
+      POLE:
+        $ref:
+          - "_terms.yaml#/pole/common"
+      POLG:
+        $ref:
+          - "_terms.yaml#/polg/common"
+      POLQ:
+        $ref:
+          - "_terms.yaml#/polq/common"
+      POT1:
+        $ref:
+          - "_terms.yaml#/pot1/common"
+      POU2AF1:
+        $ref:
+          - "_terms.yaml#/pou2af1/common"
+      POU5F1:
+        $ref:
+          - "_terms.yaml#/pou5f1/common"
+      PPARG:
+        $ref:
+          - "_terms.yaml#/pparg/common"
+      PPFIBP1:
+        $ref:
+          - "_terms.yaml#/ppfibp1/common"
+      PPM1D:
+        $ref:
+          - "_terms.yaml#/ppm1d/common"
+      PPP2R1A:
+        $ref:
+          - "_terms.yaml#/ppp2r1a/common"
+      PPP6C:
+        $ref:
+          - "_terms.yaml#/ppp6c/common"
+      PRCC:
+        $ref:
+          - "_terms.yaml#/prcc/common"
+      PRDM1:
+        $ref:
+          - "_terms.yaml#/prdm1/common"
+      PRDM16:
+        $ref:
+          - "_terms.yaml#/prdm16/common"
+      PRDM2:
+        $ref:
+          - "_terms.yaml#/prdm2/common"
+      PREX2:
+        $ref:
+          - "_terms.yaml#/prex2/common"
+      PRF1:
+        $ref:
+          - "_terms.yaml#/prf1/common"
+      PRKACA:
+        $ref:
+          - "_terms.yaml#/prkaca/common"
+      PRKAR1A:
+        $ref:
+          - "_terms.yaml#/prkar1a/common"
+      PRKCB:
+        $ref:
+          - "_terms.yaml#/prkcb/common"
+      PRPF40B:
+        $ref:
+          - "_terms.yaml#/prpf40b/common"
+      PRRX1:
+        $ref:
+          - "_terms.yaml#/prrx1/common"
+      PSIP1:
+        $ref:
+          - "_terms.yaml#/psip1/common"
+      PTCH1:
+        $ref:
+          - "_terms.yaml#/ptch1/common"
+      PTEN:
+        $ref:
+          - "_terms.yaml#/pten/common"
+      PTK6:
+        $ref:
+          - "_terms.yaml#/ptk6/common"
+      PTPN11:
+        $ref:
+          - "_terms.yaml#/ptpn11/common"
+      PTPN13:
+        $ref:
+          - "_terms.yaml#/ptpn13/common"
+      PTPN6:
+        $ref:
+          - "_terms.yaml#/ptpn6/common"
+      PTPRB:
+        $ref:
+          - "_terms.yaml#/ptprb/common"
+      PTPRC:
+        $ref:
+          - "_terms.yaml#/ptprc/common"
+      PTPRK:
+        $ref:
+          - "_terms.yaml#/ptprk/common"
+      PTPRT:
+        $ref:
+          - "_terms.yaml#/ptprt/common"
+      PWWP2A:
+        $ref:
+          - "_terms.yaml#/pwwp2a/common"
+      QKI:
+        $ref:
+          - "_terms.yaml#/qki/common"
+      RABEP1:
+        $ref:
+          - "_terms.yaml#/rabep1/common"
+      RAC1:
+        $ref:
+          - "_terms.yaml#/rac1/common"
+      RAD21:
+        $ref:
+          - "_terms.yaml#/rad21/common"
+      RAD51B:
+        $ref:
+          - "_terms.yaml#/rad51b/common"
+      RAF1:
+        $ref:
+          - "_terms.yaml#/raf1/common"
+      RALGDS:
+        $ref:
+          - "_terms.yaml#/ralgds/common"
+      RANBP2:
+        $ref:
+          - "_terms.yaml#/ranbp2/common"
+      RAP1GDS1:
+        $ref:
+          - "_terms.yaml#/rap1gds1/common"
+      RARA:
+        $ref:
+          - "_terms.yaml#/rara/common"
+      RB1:
+        $ref:
+          - "_terms.yaml#/rb1/common"
+      RBM10:
+        $ref:
+          - "_terms.yaml#/rbm10/common"
+      RBM15:
+        $ref:
+          - "_terms.yaml#/rbm15/common"
+      RECQL4:
+        $ref:
+          - "_terms.yaml#/recql4/common"
+      REL:
+        $ref:
+          - "_terms.yaml#/rel/common"
+      RET:
+        $ref:
+          - "_terms.yaml#/ret/common"
+      RGPD3:
+        $ref:
+          - "_terms.yaml#/rgpd3/common"
+      RGS7:
+        $ref:
+          - "_terms.yaml#/rgs7/common"
+      RHOA:
+        $ref:
+          - "_terms.yaml#/rhoa/common"
+      RHOH:
+        $ref:
+          - "_terms.yaml#/rhoh/common"
+      RMI2:
+        $ref:
+          - "_terms.yaml#/rmi2/common"
+      RNF213:
+        $ref:
+          - "_terms.yaml#/rnf213/common"
+      RNF43:
+        $ref:
+          - "_terms.yaml#/rnf43/common"
+      ROBO2:
+        $ref:
+          - "_terms.yaml#/robo2/common"
+      ROS1:
+        $ref:
+          - "_terms.yaml#/ros1/common"
+      RPL10:
+        $ref:
+          - "_terms.yaml#/rpl10/common"
+      RPL22:
+        $ref:
+          - "_terms.yaml#/rpl22/common"
+      RPL5:
+        $ref:
+          - "_terms.yaml#/rpl5/common"
+      RPN1:
+        $ref:
+          - "_terms.yaml#/rpn1/common"
+      RSPO2:
+        $ref:
+          - "_terms.yaml#/rspo2/common"
+      RSPO3:
+        $ref:
+          - "_terms.yaml#/rspo3/common"
+      RUNX1:
+        $ref:
+          - "_terms.yaml#/runx1/common"
+      RUNX1T1:
+        $ref:
+          - "_terms.yaml#/runx1t1/common"
+      S100A7:
+        $ref:
+          - "_terms.yaml#/s100a7/common"
+      SALL4:
+        $ref:
+          - "_terms.yaml#/sall4/common"
+      SBDS:
+        $ref:
+          - "_terms.yaml#/sbds/common"
+      SDC4:
+        $ref:
+          - "_terms.yaml#/sdc4/common"
+      SDHA:
+        $ref:
+          - "_terms.yaml#/sdha/common"
+      SDHAF2:
+        $ref:
+          - "_terms.yaml#/sdhaf2/common"
+      SDHB:
+        $ref:
+          - "_terms.yaml#/sdhb/common"
+      SDHC:
+        $ref:
+          - "_terms.yaml#/sdhc/common"
+      SDHD:
+        $ref:
+          - "_terms.yaml#/sdhd/common"
+      SEPT5:
+        $ref:
+          - "_terms.yaml#/sept5/common"
+      SEPT6:
+        $ref:
+          - "_terms.yaml#/sept6/common"
+      SEPT9:
+        $ref:
+          - "_terms.yaml#/sept9/common"
+      SET:
+        $ref:
+          - "_terms.yaml#/set/common"
+      SETBP1:
+        $ref:
+          - "_terms.yaml#/setbp1/common"
+      SETD2:
+        $ref:
+          - "_terms.yaml#/setd2/common"
+      SF3B1:
+        $ref:
+          - "_terms.yaml#/sf3b1/common"
+      SFPQ:
+        $ref:
+          - "_terms.yaml#/sfpq/common"
+      SFRP4:
+        $ref:
+          - "_terms.yaml#/sfrp4/common"
+      SGK1:
+        $ref:
+          - "_terms.yaml#/sgk1/common"
+      SH2B3:
+        $ref:
+          - "_terms.yaml#/sh2b3/common"
+      SH3GL1:
+        $ref:
+          - "_terms.yaml#/sh3gl1/common"
+      SHTN1:
+        $ref:
+          - "_terms.yaml#/shtn1/common"
+      SIRPA:
+        $ref:
+          - "_terms.yaml#/sirpa/common"
+      SKI:
+        $ref:
+          - "_terms.yaml#/ski/common"
+      SLC34A2:
+        $ref:
+          - "_terms.yaml#/slc34a2/common"
+      SLC45A3:
+        $ref:
+          - "_terms.yaml#/slc45a3/common"
+      SMAD2:
+        $ref:
+          - "_terms.yaml#/smad2/common"
+      SMAD3:
+        $ref:
+          - "_terms.yaml#/smad3/common"
+      SMAD4:
+        $ref:
+          - "_terms.yaml#/smad4/common"
+      SMARCA4:
+        $ref:
+          - "_terms.yaml#/smarca4/common"
+      SMARCB1:
+        $ref:
+          - "_terms.yaml#/smarcb1/common"
+      SMARCD1:
+        $ref:
+          - "_terms.yaml#/smarcd1/common"
+      SMARCE1:
+        $ref:
+          - "_terms.yaml#/smarce1/common"
+      SMC1A:
+        $ref:
+          - "_terms.yaml#/smc1a/common"
+      SMO:
+        $ref:
+          - "_terms.yaml#/smo/common"
+      SND1:
+        $ref:
+          - "_terms.yaml#/snd1/common"
+      SNX29:
+        $ref:
+          - "_terms.yaml#/snx29/common"
+      SOCS1:
+        $ref:
+          - "_terms.yaml#/socs1/common"
+      SOX2:
+        $ref:
+          - "_terms.yaml#/sox2/common"
+      SPECC1:
+        $ref:
+          - "_terms.yaml#/specc1/common"
+      SPEN:
+        $ref:
+          - "_terms.yaml#/spen/common"
+      SPOP:
+        $ref:
+          - "_terms.yaml#/spop/common"
+      SRC:
+        $ref:
+          - "_terms.yaml#/src/common"
+      SRGAP3:
+        $ref:
+          - "_terms.yaml#/srgap3/common"
+      SRSF2:
+        $ref:
+          - "_terms.yaml#/srsf2/common"
+      SRSF3:
+        $ref:
+          - "_terms.yaml#/srsf3/common"
+      SS18:
+        $ref:
+          - "_terms.yaml#/ss18/common"
+      SS18L1:
+        $ref:
+          - "_terms.yaml#/ss18l1/common"
+      SSX1:
+        $ref:
+          - "_terms.yaml#/ssx1/common"
+      SSX2:
+        $ref:
+          - "_terms.yaml#/ssx2/common"
+      SSX4:
+        $ref:
+          - "_terms.yaml#/ssx4/common"
+      STAG1:
+        $ref:
+          - "_terms.yaml#/stag1/common"
+      STAG2:
+        $ref:
+          - "_terms.yaml#/stag2/common"
+      STAT3:
+        $ref:
+          - "_terms.yaml#/stat3/common"
+      STAT5B:
+        $ref:
+          - "_terms.yaml#/stat5b/common"
+      STAT6:
+        $ref:
+          - "_terms.yaml#/stat6/common"
+      STIL:
+        $ref:
+          - "_terms.yaml#/stil/common"
+      STK11:
+        $ref:
+          - "_terms.yaml#/stk11/common"
+      STRN:
+        $ref:
+          - "_terms.yaml#/strn/common"
+      SUFU:
+        $ref:
+          - "_terms.yaml#/sufu/common"
+      SUZ12:
+        $ref:
+          - "_terms.yaml#/suz12/common"
+      SYK:
+        $ref:
+          - "_terms.yaml#/syk/common"
+      SYP:
+        $ref:
+          - "_terms.yaml#/syp/common"
+      TAF15:
+        $ref:
+          - "_terms.yaml#/taf15/common"
+      TAL1:
+        $ref:
+          - "_terms.yaml#/tal1/common"
+      TAL2:
+        $ref:
+          - "_terms.yaml#/tal2/common"
+      TBL1XR1:
+        $ref:
+          - "_terms.yaml#/tbl1xr1/common"
+      TBX3:
+        $ref:
+          - "_terms.yaml#/tbx3/common"
+      TCEA1:
+        $ref:
+          - "_terms.yaml#/tcea1/common"
+      TCF12:
+        $ref:
+          - "_terms.yaml#/tcf12/common"
+      TCF3:
+        $ref:
+          - "_terms.yaml#/tcf3/common"
+      TCF7L2:
+        $ref:
+          - "_terms.yaml#/tcf7l2/common"
+      TCL1A:
+        $ref:
+          - "_terms.yaml#/tcl1a/common"
+      TEC:
+        $ref:
+          - "_terms.yaml#/tec/common"
+      TERT:
+        $ref:
+          - "_terms.yaml#/tert/common"
+      TET1:
+        $ref:
+          - "_terms.yaml#/tet1/common"
+      TET2:
+        $ref:
+          - "_terms.yaml#/tet2/common"
+      TFE3:
+        $ref:
+          - "_terms.yaml#/tfe3/common"
+      TFEB:
+        $ref:
+          - "_terms.yaml#/tfeb/common"
+      TFG:
+        $ref:
+          - "_terms.yaml#/tfg/common"
+      TFPT:
+        $ref:
+          - "_terms.yaml#/tfpt/common"
+      TFRC:
+        $ref:
+          - "_terms.yaml#/tfrc/common"
+      TGFBR2:
+        $ref:
+          - "_terms.yaml#/tgfbr2/common"
+      THRAP3:
+        $ref:
+          - "_terms.yaml#/thrap3/common"
+      TLX1:
+        $ref:
+          - "_terms.yaml#/tlx1/common"
+      TLX3:
+        $ref:
+          - "_terms.yaml#/tlx3/common"
+      TMEM127:
+        $ref:
+          - "_terms.yaml#/tmem127/common"
+      TMPRSS2:
+        $ref:
+          - "_terms.yaml#/tmprss2/common"
+      TNC:
+        $ref:
+          - "_terms.yaml#/tnc/common"
+      TNFAIP3:
+        $ref:
+          - "_terms.yaml#/tnfaip3/common"
+      TNFRSF14:
+        $ref:
+          - "_terms.yaml#/tnfrsf14/common"
+      TNFRSF17:
+        $ref:
+          - "_terms.yaml#/tnfrsf17/common"
+      TOP1:
+        $ref:
+          - "_terms.yaml#/top1/common"
+      TP53:
+        $ref:
+          - "_terms.yaml#/tp53/common"
+      TP63:
+        $ref:
+          - "_terms.yaml#/tp63/common"
+      TPM3:
+        $ref:
+          - "_terms.yaml#/tpm3/common"
+      TPM4:
+        $ref:
+          - "_terms.yaml#/tpm4/common"
+      TPR:
+        $ref:
+          - "_terms.yaml#/tpr/common"
+      TRA:
+        $ref:
+          - "_terms.yaml#/tra/common"
+      TRAF7:
+        $ref:
+          - "_terms.yaml#/traf7/common"
+      TRB:
+        $ref:
+          - "_terms.yaml#/trb/common"
+      TRD:
+        $ref:
+          - "_terms.yaml#/trd/common"
+      TRIM24:
+        $ref:
+          - "_terms.yaml#/trim24/common"
+      TRIM27:
+        $ref:
+          - "_terms.yaml#/trim27/common"
+      TRIM33:
+        $ref:
+          - "_terms.yaml#/trim33/common"
+      TRIP11:
+        $ref:
+          - "_terms.yaml#/trip11/common"
+      TRRAP:
+        $ref:
+          - "_terms.yaml#/trrap/common"
+      TSC1:
+        $ref:
+          - "_terms.yaml#/tsc1/common"
+      TSC2:
+        $ref:
+          - "_terms.yaml#/tsc2/common"
+      TSHR:
+        $ref:
+          - "_terms.yaml#/tshr/common"
+      U2AF1:
+        $ref:
+          - "_terms.yaml#/u2af1/common"
+      UBR5:
+        $ref:
+          - "_terms.yaml#/ubr5/common"
+      USP6:
+        $ref:
+          - "_terms.yaml#/usp6/common"
+      USP8:
+        $ref:
+          - "_terms.yaml#/usp8/common"
+      VAV1:
+        $ref:
+          - "_terms.yaml#/vav1/common"
+      VHL:
+        $ref:
+          - "_terms.yaml#/vhl/common"
+      VTI1A:
+        $ref:
+          - "_terms.yaml#/vti1a/common"
+      WAS:
+        $ref:
+          - "_terms.yaml#/was/common"
+      WDCP:
+        $ref:
+          - "_terms.yaml#/wdcp/common"
+      WIF1:
+        $ref:
+          - "_terms.yaml#/wif1/common"
+      WNK2:
+        $ref:
+          - "_terms.yaml#/wnk2/common"
+      WRN:
+        $ref:
+          - "_terms.yaml#/wrn/common"
+      WT1:
+        $ref:
+          - "_terms.yaml#/wt1/common"
+      WWTR1:
+        $ref:
+          - "_terms.yaml#/wwtr1/common"
+      XPA:
+        $ref:
+          - "_terms.yaml#/xpa/common"
+      XPC:
+        $ref:
+          - "_terms.yaml#/xpc/common"
+      XPO1:
+        $ref:
+          - "_terms.yaml#/xpo1/common"
+      YWHAE:
+        $ref:
+          - "_terms.yaml#/ywhae/common"
+      ZBTB16:
+        $ref:
+          - "_terms.yaml#/zbtb16/common"
+      ZCCHC8:
+        $ref:
+          - "_terms.yaml#/zcchc8/common"
+      ZEB1:
+        $ref:
+          - "_terms.yaml#/zeb1/common"
+      ZFHX3:
+        $ref:
+          - "_terms.yaml#/zfhx3/common"
+      ZMYM3:
+        $ref:
+          - "_terms.yaml#/zmym3/common"
+      ZNF198:
+        $ref:
+          - "_terms.yaml#/znf198/common"
+      ZNF331:
+        $ref:
+          - "_terms.yaml#/znf331/common"
+      ZNF384:
+        $ref:
+          - "_terms.yaml#/znf384/common"
+      ZNF429:
+        $ref:
+          - "_terms.yaml#/znf429/common"
+      ZNF444:
+        $ref:
+          - "_terms.yaml#/znf444/common"
+      ZNF479:
+        $ref:
+          - "_terms.yaml#/znf479/common"
+      ZNF521:
+        $ref:
+          - "_terms.yaml#/znf521/common"
+      ZNRF3:
+        $ref:
+          - "_terms.yaml#/znrf3/common"
+      ZRSR2:
+        $ref:
+          - "_terms.yaml#/zrsr2/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -950,6 +3327,21 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      H1:
+        $ref:
+          - "_terms.yaml#/h1/common"
+      H2A:
+        $ref:
+          - "_terms.yaml#/h2a/common"
+      H2B:
+        $ref:
+          - "_terms.yaml#/h2b/common"
+      H3:
+        $ref:
+          - "_terms.yaml#/h3/common"
+      H4:
+        $ref:
+          - "_terms.yaml#/h4/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -981,6 +3373,57 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      CENP-A:
+        $ref:
+          - "_terms.yaml#/cenpa/common"
+      H2A-Bbd:
+        $ref:
+          - "_terms.yaml#/h2abbd/common"
+      H2A.X:
+        $ref:
+          - "_terms.yaml#/h2ax/common"
+      H2A.Z:
+        $ref:
+          - "_terms.yaml#/h2az/common"
+      H2A.Z.1:
+        $ref:
+          - "_terms.yaml#/h2az1/common"
+      H2A.Z.2:
+        $ref:
+          - "_terms.yaml#/h2az2/common"
+      H2A.Z.2.2:
+        $ref:
+          - "_terms.yaml#/h2az22/common"
+      H3.1:
+        $ref:
+          - "_terms.yaml#/h31/common"
+      H3.2:
+        $ref:
+          - "_terms.yaml#/h32/common"
+      H3.3:
+        $ref:
+          - "_terms.yaml#/h33/common"
+      H3.5:
+        $ref:
+          - "_terms.yaml#/h35/common"
+      H3.X:
+        $ref:
+          - "_terms.yaml#/h3x/common"
+      H3.Y:
+        $ref:
+          - "_terms.yaml#/h3y/common"
+      H3t (H3.4):
+        $ref:
+          - "_terms.yaml#/h3t_h34/common"
+      mH2A:
+        $ref:
+          - "_terms.yaml#/mh2a/common"
+      mH2A.1:
+        $ref:
+          - "_terms.yaml#/mh2a1/common"
+      mH2A.2:
+        $ref:
+          - "_terms.yaml#/mh2a2/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -1049,21 +3492,150 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      5-Hydroxyindoleacetic Acid:
+        $ref:
+          - "_terms.yaml#/5hydroxyindoleacetic_acid/common"
+      Absolute Neutrophil:
+        $ref:
+          - "_terms.yaml#/absolute_neutrophil/common"
       Albumin:
         $ref:
           - "_terms.yaml#/albumin/common"
+      Alpha Fetoprotein:
+        $ref:
+          - "_terms.yaml#/alpha_fetoprotein/common"
+      B-cell genotyping:
+        $ref:
+          - "_terms.yaml#/bcell_genotyping/common"
+      Basophil:
+        $ref:
+          - "_terms.yaml#/basophil/common"
+      Beta 2 Microglobulin:
+        $ref:
+          - "_terms.yaml#/beta_2_microglobulin/common"
+      Blood Urea Nitrogen:
+        $ref:
+          - "_terms.yaml#/blood_urea_nitrogen/common"
+      C-Reactive Protein:
+        $ref:
+          - "_terms.yaml#/creactive_protein/common"
       Calcium:
         $ref:
           - "_terms.yaml#/calcium/common"
+      Cellularity:
+        $ref:
+          - "_terms.yaml#/cellularity/common"
+      Chromogranin A:
+        $ref:
+          - "_terms.yaml#/chromogranin_a/common"
+      Chromogranin B:
+        $ref:
+          - "_terms.yaml#/chromogranin_b/common"
+      Circulating Tumor Cells:
+        $ref:
+          - "_terms.yaml#/circulating_tumor_cells/common"
       Creatinine:
         $ref:
           - "_terms.yaml#/creatinine/common"
+      Eosinophil:
+        $ref:
+          - "_terms.yaml#/eosinophil/common"
+      Epstein-Barr Virus:
+        $ref:
+          - "_terms.yaml#/epsteinbarr_virus/common"
+      Gamma-Enolase:
+        $ref:
+          - "_terms.yaml#/gammaenolase/common"
       Glucose:
         $ref:
           - "_terms.yaml#/glucose/common"
+      Hematocrit:
+        $ref:
+          - "_terms.yaml#/hematocrit/common"
       Hemoglobin:
         $ref:
           - "_terms.yaml#/hemoglobin/common"
+      HPV-E6/E7:
+        $ref:
+          - "_terms.yaml#/hpve6e7/common"
+      Human Chorionic Gonadotropin:
+        $ref:
+          - "_terms.yaml#/human_chorionic_gonadotropin/common"
+      Human Papillomavirus:
+        $ref:
+          - "_terms.yaml#/human_papillomavirus/common"
+      Immunoglobulin A:
+        $ref:
+          - "_terms.yaml#/immunoglobulin_a/common"
+      Immunoglobulin G:
+        $ref:
+          - "_terms.yaml#/immunoglobulin_g/common"
+      Immunoglobulin M:
+        $ref:
+          - "_terms.yaml#/immunoglobulin_m/common"
+      Lactate Dehydrogenase:
+        $ref:
+          - "_terms.yaml#/lactate_dehydrogenase/common"
+      Leukocytes:
+        $ref:
+          - "_terms.yaml#/leukocytes/common"
+      Luteinizing Hormone:
+        $ref:
+          - "_terms.yaml#/luteinizing_hormone/common"
+      Lymphoblasts:
+        $ref:
+          - "_terms.yaml#/lymphoblasts/common"
+      Lymphocytes:
+        $ref:
+          - "_terms.yaml#/lymphocytes/common"
+      M Protein:
+        $ref:
+          - "_terms.yaml#/m_protein/common"
+      Metamyelocytes:
+        $ref:
+          - "_terms.yaml#/metamyelocytes/common"
+      Myeloblasts:
+        $ref:
+          - "_terms.yaml#/myeloblasts/common"
+      Myelocytes:
+        $ref:
+          - "_terms.yaml#/myelocytes/common"
+      Neutrophil Bands:
+        $ref:
+          - "_terms.yaml#/neutrophil_bands/common"
+      Platelets:
+        $ref:
+          - "_terms.yaml#/platelets/common"
+      Prolymphocytes:
+        $ref:
+          - "_terms.yaml#/prolymphocytes/common"
+      Promonocytes:
+        $ref:
+          - "_terms.yaml#/promonocytes/common"
+      Promyelocytes:
+        $ref:
+          - "_terms.yaml#/promyelocytes/common"
+      Segmented Neutrophil:
+        $ref:
+          - "_terms.yaml#/segmented_neutrophil/common"
+      Serum Free Immunoglobulin Light Chain, Kappa:
+        $ref:
+          - "_terms.yaml#/serum_free_immunoglobulin_light_chain_kappa/common"
+      Serum Free Immunoglobulin Light Chain, Lambda:
+        $ref:
+          - "_terms.yaml#/serum_free_immunoglobulin_light_chain_lambda/common"
+      Serum Free Immunoglobulin Light Chain, NOS:
+        $ref:
+          - "_terms.yaml#/serum_free_immunoglobulin_light_chain_nos/common"
+      Testosterone:
+        $ref:
+          - "_terms.yaml#/testosterone/common"
+      Total Bilirubin:
+        $ref:
+          - "_terms.yaml#/total_bilirubin/common"
+      Total Protein:
+        $ref:
+          - "_terms.yaml#/total_protein/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -1145,9 +3717,66 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      Comparative Genomic Hybridization:
+        $ref:
+          - "_terms.yaml#/comparative_genomic_hybridization/common"
+      Cytogenetics, NOS:
+        $ref:
+          - "_terms.yaml#/cytogenetics_nos/common"
+      FISH:
+        $ref:
+          - "_terms.yaml#/fish/common"
+      Flow Cytometry:
+        $ref:
+          - "_terms.yaml#/flow_cytometry/common"
+      IHC:
+        $ref:
+          - "_terms.yaml#/ihc/common"
+      Immunofluorescence:
+        $ref:
+          - "_terms.yaml#/immunofluorescence/common"
+      ISH:
+        $ref:
+          - "_terms.yaml#/ish/common"
+      Karyotype:
+        $ref:
+          - "_terms.yaml#/karyotype/common"
+      Microarray:
+        $ref:
+          - "_terms.yaml#/microarray/common"
+      Microsatellite Analysis:
+        $ref:
+          - "_terms.yaml#/microsatellite_analysis/common"
+      Nuclear Staining:
+        $ref:
+          - "_terms.yaml#/nuclear_staining/common"
       Other:
         $ref:
           - "_terms.yaml#/other/common"
+      PCR:
+        $ref:
+          - "_terms.yaml#/pcr/common"
+      RNA Sequencing:
+        $ref:
+          - "_terms.yaml#/rna_sequencing/common"
+      RT-PCR:
+        $ref:
+          - "_terms.yaml#/rtpcr/common"
+      Sequencing, NOS:
+        $ref:
+          - "_terms.yaml#/sequencing_nos/common"
+      Southern Blotting:
+        $ref:
+          - "_terms.yaml#/southern_blotting/common"
+      Targeted Sequencing:
+        $ref:
+          - "_terms.yaml#/targeted_sequencing/common"
+      WGS:
+        $ref:
+          - "_terms.yaml#/wgs/common"
+      WXS:
+        $ref:
+          - "_terms.yaml#/wxs/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -1163,6 +3792,7 @@ properties:
       - 5 Prime UTR Variant
       - Coding Sequence Variant
       - Downstream Gene Variant
+      - Exon Variant
       - Feature Elongation
       - Feature Truncation
       - Frameshift Variant
@@ -1195,6 +3825,112 @@ properties:
       - Transcript Ablation
       - Transcript Amplification
       - Upstream Gene Variant
+    enumDef:
+      3 Prime UTR Variant:
+        $ref:
+          - "_terms.yaml#/3_prime_utr_variant/common"
+      5 Prime UTR Variant:
+        $ref:
+          - "_terms.yaml#/5_prime_utr_variant/common"
+      Coding Sequence Variant:
+        $ref:
+          - "_terms.yaml#/coding_sequence_variant/common"
+      Downstream Gene Variant:
+        $ref:
+          - "_terms.yaml#/downstream_gene_variant/common"
+      Feature Elongation:
+        $ref:
+          - "_terms.yaml#/feature_elongation/common"
+      Feature Truncation:
+        $ref:
+          - "_terms.yaml#/feature_truncation/common"
+      Frameshift Variant:
+        $ref:
+          - "_terms.yaml#/frameshift_variant/common"
+      Inframe Deletion:
+        $ref:
+          - "_terms.yaml#/inframe_deletion/common"
+      Inframe Insertion:
+        $ref:
+          - "_terms.yaml#/inframe_insertion/common"
+      Intergenic Variant:
+        $ref:
+          - "_terms.yaml#/intergenic_variant/common"
+      Intron Variant:
+        $ref:
+          - "_terms.yaml#/intron_variant/common"
+      Mature miRNA Variant:
+        $ref:
+          - "_terms.yaml#/mature_mirna_variant/common"
+      Missense Variant:
+        $ref:
+          - "_terms.yaml#/missense_variant/common"
+      NMD Transcript Variant:
+        $ref:
+          - "_terms.yaml#/nmd_transcript_variant/common"
+      Non-coding Transcript Exon Variant:
+        $ref:
+          - "_terms.yaml#/noncoding_transcript_exon_variant/common"
+      Non-coding Transcript Variant:
+        $ref:
+          - "_terms.yaml#/noncoding_transcript_variant/common"
+      Nonsense:
+        $ref:
+          - "_terms.yaml#/nonsense/common"
+      Protein Altering Variant:
+        $ref:
+          - "_terms.yaml#/protein_altering_variant/common"
+      Regulatory Region Ablation:
+        $ref:
+          - "_terms.yaml#/regulatory_region_ablation/common"
+      Regulatory Region Amplification:
+        $ref:
+          - "_terms.yaml#/regulatory_region_amplification/common"
+      Regulatory Region Variant:
+        $ref:
+          - "_terms.yaml#/regulatory_region_variant/common"
+      Splice Acceptor Variant:
+        $ref:
+          - "_terms.yaml#/splice_acceptor_variant/common"
+      Splice Donor Variant:
+        $ref:
+          - "_terms.yaml#/splice_donor_variant/common"
+      Splice Region Variant:
+        $ref:
+          - "_terms.yaml#/splice_region_variant/common"
+      Start Lost:
+        $ref:
+          - "_terms.yaml#/start_lost/common"
+      Stop Gain:
+        $ref:
+          - "_terms.yaml#/stop_gain/common"
+      Stop Lost:
+        $ref:
+          - "_terms.yaml#/stop_lost/common"
+      Stop Retained Variant:
+        $ref:
+          - "_terms.yaml#/stop_retained_variant/common"
+      Synonymous Variant:
+        $ref:
+          - "_terms.yaml#/synonymous_variant/common"
+      TF Binding Site Variant:
+        $ref:
+          - "_terms.yaml#/tf_binding_site_variant/common"
+      TFBS Ablation:
+        $ref:
+          - "_terms.yaml#/tfbs_ablation/common"
+      TFBS Amplification:
+        $ref:
+          - "_terms.yaml#/tfbs_amplification/common"
+      Transcript Ablation:
+        $ref:
+          - "_terms.yaml#/transcript_ablation/common"
+      Transcript Amplification:
+        $ref:
+          - "_terms.yaml#/transcript_amplification/common"
+      Upstream Gene Variant:
+        $ref:
+          - "_terms.yaml#/upstream_gene_variant/common"
 
   pathogenicity:
     $ref:
@@ -1205,6 +3941,22 @@ properties:
       - Likely Pathogenic
       - Pathogenic
       - Uncertain Significance
+    enumDef:
+      Benign:
+        $ref:
+          - "_terms.yaml#/benign/common"
+      Likely Benign:
+        $ref:
+          - "_terms.yaml#/likely_benign/common"
+      Likely Pathogenic:
+        $ref:
+          - "_terms.yaml#/likely_pathogenic/common"
+      Pathogenic:
+        $ref:
+          - "_terms.yaml#/pathogenic/common"
+      Uncertain Significance:
+        $ref:
+          - "_terms.yaml#/uncertain_significance/common"
 
   ploidy:
     $ref:
@@ -1219,6 +3971,24 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      Aneuploid:
+        $ref:
+          - "_terms.yaml#/aneuploid/common"
+      Diploid:
+        $ref:
+          - "_terms.yaml#/diploid/common"
+      Hyperdiploid:
+        $ref:
+          - "_terms.yaml#/hyperdiploid/common"
+      Hypodiploid:
+        $ref:
+          - "_terms.yaml#/hypodiploid/common"
+      Near Diploid:
+        $ref:
+          - "_terms.yaml#/near_diploid/common"
+      Tetraploid:
+        $ref:
+          - "_terms.yaml#/tetraploid/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -1358,6 +4128,7 @@ properties:
       - CHD2
       - CHD4
       - CHEK2
+      - CHGA
       - CHIC2
       - CHST11
       - CIC
@@ -1863,6 +4634,7 @@ properties:
       - SUFU
       - SUZ12
       - SYK
+      - SYP
       - TAF15
       - TAL1
       - TAL2
@@ -1945,6 +4717,2130 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      A1CF:
+        $ref:
+          - "_terms.yaml#/a1cf/common"
+      ABI1:
+        $ref:
+          - "_terms.yaml#/abi1/common"
+      ABL1:
+        $ref:
+          - "_terms.yaml#/abl1/common"
+      ABL2:
+        $ref:
+          - "_terms.yaml#/abl2/common"
+      ACKR3:
+        $ref:
+          - "_terms.yaml#/ackr3/common"
+      ACSL3:
+        $ref:
+          - "_terms.yaml#/acsl3/common"
+      ACSL6:
+        $ref:
+          - "_terms.yaml#/acsl6/common"
+      ACVR1:
+        $ref:
+          - "_terms.yaml#/acvr1/common"
+      ACVR2A:
+        $ref:
+          - "_terms.yaml#/acvr2a/common"
+      AFF1:
+        $ref:
+          - "_terms.yaml#/aff1/common"
+      AFF3:
+        $ref:
+          - "_terms.yaml#/aff3/common"
+      AFF4:
+        $ref:
+          - "_terms.yaml#/aff4/common"
+      AKAP9:
+        $ref:
+          - "_terms.yaml#/akap9/common"
+      AKT1:
+        $ref:
+          - "_terms.yaml#/akt1/common"
+      AKT2:
+        $ref:
+          - "_terms.yaml#/akt2/common"
+      AKT3:
+        $ref:
+          - "_terms.yaml#/akt3/common"
+      ALDH2:
+        $ref:
+          - "_terms.yaml#/aldh2/common"
+      ALK:
+        $ref:
+          - "_terms.yaml#/alk/common"
+      AMER1:
+        $ref:
+          - "_terms.yaml#/amer1/common"
+      ANK1:
+        $ref:
+          - "_terms.yaml#/ank1/common"
+      APC:
+        $ref:
+          - "_terms.yaml#/apc/common"
+      APOBEC3B:
+        $ref:
+          - "_terms.yaml#/apobec3b/common"
+      AR:
+        $ref:
+          - "_terms.yaml#/ar/common"
+      ARAF:
+        $ref:
+          - "_terms.yaml#/araf/common"
+      ARHGAP26:
+        $ref:
+          - "_terms.yaml#/arhgap26/common"
+      ARHGAP5:
+        $ref:
+          - "_terms.yaml#/arhgap5/common"
+      ARHGEF12:
+        $ref:
+          - "_terms.yaml#/arhgef12/common"
+      ARID1A:
+        $ref:
+          - "_terms.yaml#/arid1a/common"
+      ARID1B:
+        $ref:
+          - "_terms.yaml#/arid1b/common"
+      ARID2:
+        $ref:
+          - "_terms.yaml#/arid2/common"
+      ARNT:
+        $ref:
+          - "_terms.yaml#/arnt/common"
+      ASPSCR1:
+        $ref:
+          - "_terms.yaml#/aspscr1/common"
+      ASXL1:
+        $ref:
+          - "_terms.yaml#/asxl1/common"
+      ASXL2:
+        $ref:
+          - "_terms.yaml#/asxl2/common"
+      ATF1:
+        $ref:
+          - "_terms.yaml#/atf1/common"
+      ATIC:
+        $ref:
+          - "_terms.yaml#/atic/common"
+      ATM:
+        $ref:
+          - "_terms.yaml#/atm/common"
+      ATP1A1:
+        $ref:
+          - "_terms.yaml#/atp1a1/common"
+      ATP2B3:
+        $ref:
+          - "_terms.yaml#/atp2b3/common"
+      ATR:
+        $ref:
+          - "_terms.yaml#/atr/common"
+      ATRX:
+        $ref:
+          - "_terms.yaml#/atrx/common"
+      AXIN1:
+        $ref:
+          - "_terms.yaml#/axin1/common"
+      AXIN2:
+        $ref:
+          - "_terms.yaml#/axin2/common"
+      B2M:
+        $ref:
+          - "_terms.yaml#/b2m/common"
+      BAP1:
+        $ref:
+          - "_terms.yaml#/bap1/common"
+      BARD1:
+        $ref:
+          - "_terms.yaml#/bard1/common"
+      BCL10:
+        $ref:
+          - "_terms.yaml#/bcl10/common"
+      BCL11A:
+        $ref:
+          - "_terms.yaml#/bcl11a/common"
+      BCL11B:
+        $ref:
+          - "_terms.yaml#/bcl11b/common"
+      BCL2:
+        $ref:
+          - "_terms.yaml#/bcl2/common"
+      BCL2L12:
+        $ref:
+          - "_terms.yaml#/bcl2l12/common"
+      BCL3:
+        $ref:
+          - "_terms.yaml#/bcl3/common"
+      BCL6:
+        $ref:
+          - "_terms.yaml#/bcl6/common"
+      BCL7A:
+        $ref:
+          - "_terms.yaml#/bcl7a/common"
+      BCL9:
+        $ref:
+          - "_terms.yaml#/bcl9/common"
+      BCL9L:
+        $ref:
+          - "_terms.yaml#/bcl9l/common"
+      BCLAF1:
+        $ref:
+          - "_terms.yaml#/bclaf1/common"
+      BCOR:
+        $ref:
+          - "_terms.yaml#/bcor/common"
+      BCORL1:
+        $ref:
+          - "_terms.yaml#/bcorl1/common"
+      BCR:
+        $ref:
+          - "_terms.yaml#/bcr/common"
+      BIRC3:
+        $ref:
+          - "_terms.yaml#/birc3/common"
+      BIRC6:
+        $ref:
+          - "_terms.yaml#/birc6/common"
+      BLM:
+        $ref:
+          - "_terms.yaml#/blm/common"
+      BMP5:
+        $ref:
+          - "_terms.yaml#/bmp5/common"
+      BMPR1A:
+        $ref:
+          - "_terms.yaml#/bmpr1a/common"
+      BRAF:
+        $ref:
+          - "_terms.yaml#/braf/common"
+      BRCA1:
+        $ref:
+          - "_terms.yaml#/brca1/common"
+      BRCA2:
+        $ref:
+          - "_terms.yaml#/brca2/common"
+      BRD3:
+        $ref:
+          - "_terms.yaml#/brd3/common"
+      BRD4:
+        $ref:
+          - "_terms.yaml#/brd4/common"
+      BRIP1:
+        $ref:
+          - "_terms.yaml#/brip1/common"
+      BTG1:
+        $ref:
+          - "_terms.yaml#/btg1/common"
+      BTK:
+        $ref:
+          - "_terms.yaml#/btk/common"
+      BUB1B:
+        $ref:
+          - "_terms.yaml#/bub1b/common"
+      C15orf65:
+        $ref:
+          - "_terms.yaml#/c15orf65/common"
+      CACNA1D:
+        $ref:
+          - "_terms.yaml#/cacna1d/common"
+      CALR:
+        $ref:
+          - "_terms.yaml#/calr/common"
+      CAMTA1:
+        $ref:
+          - "_terms.yaml#/camta1/common"
+      CANT1:
+        $ref:
+          - "_terms.yaml#/cant1/common"
+      CARD11:
+        $ref:
+          - "_terms.yaml#/card11/common"
+      CARS:
+        $ref:
+          - "_terms.yaml#/cars/common"
+      CASP8:
+        $ref:
+          - "_terms.yaml#/casp8/common"
+      CBFA2T3:
+        $ref:
+          - "_terms.yaml#/cbfa2t3/common"
+      CBFB:
+        $ref:
+          - "_terms.yaml#/cbfb/common"
+      CBL:
+        $ref:
+          - "_terms.yaml#/cbl/common"
+      CBLB:
+        $ref:
+          - "_terms.yaml#/cblb/common"
+      CBLC:
+        $ref:
+          - "_terms.yaml#/cblc/common"
+      CCDC6:
+        $ref:
+          - "_terms.yaml#/ccdc6/common"
+      CCNB1IP1:
+        $ref:
+          - "_terms.yaml#/ccnb1ip1/common"
+      CCNC:
+        $ref:
+          - "_terms.yaml#/ccnc/common"
+      CCND1:
+        $ref:
+          - "_terms.yaml#/ccnd1/common"
+      CCND2:
+        $ref:
+          - "_terms.yaml#/ccnd2/common"
+      CCND3:
+        $ref:
+          - "_terms.yaml#/ccnd3/common"
+      CCNE1:
+        $ref:
+          - "_terms.yaml#/ccne1/common"
+      CCR4:
+        $ref:
+          - "_terms.yaml#/ccr4/common"
+      CCR7:
+        $ref:
+          - "_terms.yaml#/ccr7/common"
+      CD209:
+        $ref:
+          - "_terms.yaml#/cd209/common"
+      CD274:
+        $ref:
+          - "_terms.yaml#/cd274/common"
+      CD28:
+        $ref:
+          - "_terms.yaml#/cd28/common"
+      CD74:
+        $ref:
+          - "_terms.yaml#/cd74/common"
+      CD79A:
+        $ref:
+          - "_terms.yaml#/cd79a/common"
+      CD79B:
+        $ref:
+          - "_terms.yaml#/cd79b/common"
+      CD99:
+        $ref:
+          - "_terms.yaml#/cd99/common"
+      CDC73:
+        $ref:
+          - "_terms.yaml#/cdc73/common"
+      CDH1:
+        $ref:
+          - "_terms.yaml#/cdh1/common"
+      CDH10:
+        $ref:
+          - "_terms.yaml#/cdh10/common"
+      CDH11:
+        $ref:
+          - "_terms.yaml#/cdh11/common"
+      CDH17:
+        $ref:
+          - "_terms.yaml#/cdh17/common"
+      CDK12:
+        $ref:
+          - "_terms.yaml#/cdk12/common"
+      CDK4:
+        $ref:
+          - "_terms.yaml#/cdk4/common"
+      CDK6:
+        $ref:
+          - "_terms.yaml#/cdk6/common"
+      CDKN1A:
+        $ref:
+          - "_terms.yaml#/cdkn1a/common"
+      CDKN1B:
+        $ref:
+          - "_terms.yaml#/cdkn1b/common"
+      CDKN2A:
+        $ref:
+          - "_terms.yaml#/cdkn2a/common"
+      CDKN2C:
+        $ref:
+          - "_terms.yaml#/cdkn2c/common"
+      CDX2:
+        $ref:
+          - "_terms.yaml#/cdx2/common"
+      CEBPA:
+        $ref:
+          - "_terms.yaml#/cebpa/common"
+      CEP89:
+        $ref:
+          - "_terms.yaml#/cep89/common"
+      CHCHD7:
+        $ref:
+          - "_terms.yaml#/chchd7/common"
+      CHD2:
+        $ref:
+          - "_terms.yaml#/chd2/common"
+      CHD4:
+        $ref:
+          - "_terms.yaml#/chd4/common"
+      CHEK2:
+        $ref:
+          - "_terms.yaml#/chek2/common"
+      CHGA:
+        $ref:
+          - "_terms.yaml#/chga/common"
+      CHIC2:
+        $ref:
+          - "_terms.yaml#/chic2/common"
+      CHST11:
+        $ref:
+          - "_terms.yaml#/chst11/common"
+      CIC:
+        $ref:
+          - "_terms.yaml#/cic/common"
+      CIITA:
+        $ref:
+          - "_terms.yaml#/ciita/common"
+      CLIP1:
+        $ref:
+          - "_terms.yaml#/clip1/common"
+      CLP1:
+        $ref:
+          - "_terms.yaml#/clp1/common"
+      CLTC:
+        $ref:
+          - "_terms.yaml#/cltc/common"
+      CLTCL1:
+        $ref:
+          - "_terms.yaml#/cltcl1/common"
+      CNBD1:
+        $ref:
+          - "_terms.yaml#/cnbd1/common"
+      CNBP:
+        $ref:
+          - "_terms.yaml#/cnbp/common"
+      CNOT3:
+        $ref:
+          - "_terms.yaml#/cnot3/common"
+      CNTNAP2:
+        $ref:
+          - "_terms.yaml#/cntnap2/common"
+      CNTRL:
+        $ref:
+          - "_terms.yaml#/cntrl/common"
+      COL1A1:
+        $ref:
+          - "_terms.yaml#/col1a1/common"
+      COL2A1:
+        $ref:
+          - "_terms.yaml#/col2a1/common"
+      COL3A1:
+        $ref:
+          - "_terms.yaml#/col3a1/common"
+      COX6C:
+        $ref:
+          - "_terms.yaml#/cox6c/common"
+      CREB1:
+        $ref:
+          - "_terms.yaml#/creb1/common"
+      CREB3L1:
+        $ref:
+          - "_terms.yaml#/creb3l1/common"
+      CREB3L2:
+        $ref:
+          - "_terms.yaml#/creb3l2/common"
+      CREBBP:
+        $ref:
+          - "_terms.yaml#/crebbp/common"
+      CRLF2:
+        $ref:
+          - "_terms.yaml#/crlf2/common"
+      CRNKL1:
+        $ref:
+          - "_terms.yaml#/crnkl1/common"
+      CRTC1:
+        $ref:
+          - "_terms.yaml#/crtc1/common"
+      CRTC3:
+        $ref:
+          - "_terms.yaml#/crtc3/common"
+      CSF1R:
+        $ref:
+          - "_terms.yaml#/csf1r/common"
+      CSF3R:
+        $ref:
+          - "_terms.yaml#/csf3r/common"
+      CSMD3:
+        $ref:
+          - "_terms.yaml#/csmd3/common"
+      CTCF:
+        $ref:
+          - "_terms.yaml#/ctcf/common"
+      CTNNA2:
+        $ref:
+          - "_terms.yaml#/ctnna2/common"
+      CTNNB1:
+        $ref:
+          - "_terms.yaml#/ctnnb1/common"
+      CTNND1:
+        $ref:
+          - "_terms.yaml#/ctnnd1/common"
+      CTNND2:
+        $ref:
+          - "_terms.yaml#/ctnnd2/common"
+      CUL3:
+        $ref:
+          - "_terms.yaml#/cul3/common"
+      CUX1:
+        $ref:
+          - "_terms.yaml#/cux1/common"
+      CXCR4:
+        $ref:
+          - "_terms.yaml#/cxcr4/common"
+      CYLD:
+        $ref:
+          - "_terms.yaml#/cyld/common"
+      CYP2C8:
+        $ref:
+          - "_terms.yaml#/cyp2c8/common"
+      CYSLTR2:
+        $ref:
+          - "_terms.yaml#/cysltr2/common"
+      DAXX:
+        $ref:
+          - "_terms.yaml#/daxx/common"
+      DCAF12L2:
+        $ref:
+          - "_terms.yaml#/dcaf12l2/common"
+      DCC:
+        $ref:
+          - "_terms.yaml#/dcc/common"
+      DCTN1:
+        $ref:
+          - "_terms.yaml#/dctn1/common"
+      DDB2:
+        $ref:
+          - "_terms.yaml#/ddb2/common"
+      DDIT3:
+        $ref:
+          - "_terms.yaml#/ddit3/common"
+      DDR2:
+        $ref:
+          - "_terms.yaml#/ddr2/common"
+      DDX10:
+        $ref:
+          - "_terms.yaml#/ddx10/common"
+      DDX3X:
+        $ref:
+          - "_terms.yaml#/ddx3x/common"
+      DDX5:
+        $ref:
+          - "_terms.yaml#/ddx5/common"
+      DDX6:
+        $ref:
+          - "_terms.yaml#/ddx6/common"
+      DEK:
+        $ref:
+          - "_terms.yaml#/dek/common"
+      DGCR8:
+        $ref:
+          - "_terms.yaml#/dgcr8/common"
+      DICER1:
+        $ref:
+          - "_terms.yaml#/dicer1/common"
+      DNAJB1:
+        $ref:
+          - "_terms.yaml#/dnajb1/common"
+      DNM2:
+        $ref:
+          - "_terms.yaml#/dnm2/common"
+      DNMT3A:
+        $ref:
+          - "_terms.yaml#/dnmt3a/common"
+      DROSHA:
+        $ref:
+          - "_terms.yaml#/drosha/common"
+      DUX4L1:
+        $ref:
+          - "_terms.yaml#/dux4l1/common"
+      EBF1:
+        $ref:
+          - "_terms.yaml#/ebf1/common"
+      ECT2L:
+        $ref:
+          - "_terms.yaml#/ect2l/common"
+      EED:
+        $ref:
+          - "_terms.yaml#/eed/common"
+      EGFR:
+        $ref:
+          - "_terms.yaml#/egfr/common"
+      EIF1AX:
+        $ref:
+          - "_terms.yaml#/eif1ax/common"
+      EIF3E:
+        $ref:
+          - "_terms.yaml#/eif3e/common"
+      EIF4A2:
+        $ref:
+          - "_terms.yaml#/eif4a2/common"
+      ELF3:
+        $ref:
+          - "_terms.yaml#/elf3/common"
+      ELF4:
+        $ref:
+          - "_terms.yaml#/elf4/common"
+      ELK4:
+        $ref:
+          - "_terms.yaml#/elk4/common"
+      ELL:
+        $ref:
+          - "_terms.yaml#/ell/common"
+      ELN:
+        $ref:
+          - "_terms.yaml#/eln/common"
+      EML4:
+        $ref:
+          - "_terms.yaml#/eml4/common"
+      EP300:
+        $ref:
+          - "_terms.yaml#/ep300/common"
+      EPAS1:
+        $ref:
+          - "_terms.yaml#/epas1/common"
+      EPHA3:
+        $ref:
+          - "_terms.yaml#/epha3/common"
+      EPHA7:
+        $ref:
+          - "_terms.yaml#/epha7/common"
+      EPS15:
+        $ref:
+          - "_terms.yaml#/eps15/common"
+      ERBB2:
+        $ref:
+          - "_terms.yaml#/erbb2/common"
+      ERBB3:
+        $ref:
+          - "_terms.yaml#/erbb3/common"
+      ERBB4:
+        $ref:
+          - "_terms.yaml#/erbb4/common"
+      ERC1:
+        $ref:
+          - "_terms.yaml#/erc1/common"
+      ERCC2:
+        $ref:
+          - "_terms.yaml#/ercc2/common"
+      ERCC3:
+        $ref:
+          - "_terms.yaml#/ercc3/common"
+      ERCC4:
+        $ref:
+          - "_terms.yaml#/ercc4/common"
+      ERCC5:
+        $ref:
+          - "_terms.yaml#/ercc5/common"
+      ERG:
+        $ref:
+          - "_terms.yaml#/erg/common"
+      ESR1:
+        $ref:
+          - "_terms.yaml#/esr1/common"
+      ETNK1:
+        $ref:
+          - "_terms.yaml#/etnk1/common"
+      ETV1:
+        $ref:
+          - "_terms.yaml#/etv1/common"
+      ETV4:
+        $ref:
+          - "_terms.yaml#/etv4/common"
+      ETV5:
+        $ref:
+          - "_terms.yaml#/etv5/common"
+      ETV6:
+        $ref:
+          - "_terms.yaml#/etv6/common"
+      EWSR1:
+        $ref:
+          - "_terms.yaml#/ewsr1/common"
+      EXT1:
+        $ref:
+          - "_terms.yaml#/ext1/common"
+      EXT2:
+        $ref:
+          - "_terms.yaml#/ext2/common"
+      EZH2:
+        $ref:
+          - "_terms.yaml#/ezh2/common"
+      EZR:
+        $ref:
+          - "_terms.yaml#/ezr/common"
+      FAM131B:
+        $ref:
+          - "_terms.yaml#/fam131b/common"
+      FAM135B:
+        $ref:
+          - "_terms.yaml#/fam135b/common"
+      FAM46C:
+        $ref:
+          - "_terms.yaml#/fam46c/common"
+      FAM47C:
+        $ref:
+          - "_terms.yaml#/fam47c/common"
+      FANCA:
+        $ref:
+          - "_terms.yaml#/fanca/common"
+      FANCC:
+        $ref:
+          - "_terms.yaml#/fancc/common"
+      FANCD2:
+        $ref:
+          - "_terms.yaml#/fancd2/common"
+      FANCE:
+        $ref:
+          - "_terms.yaml#/fance/common"
+      FANCF:
+        $ref:
+          - "_terms.yaml#/fancf/common"
+      FANCG:
+        $ref:
+          - "_terms.yaml#/fancg/common"
+      FAS:
+        $ref:
+          - "_terms.yaml#/fas/common"
+      FAT1:
+        $ref:
+          - "_terms.yaml#/fat1/common"
+      FAT3:
+        $ref:
+          - "_terms.yaml#/fat3/common"
+      FAT4:
+        $ref:
+          - "_terms.yaml#/fat4/common"
+      FBLN2:
+        $ref:
+          - "_terms.yaml#/fbln2/common"
+      FBXO11:
+        $ref:
+          - "_terms.yaml#/fbxo11/common"
+      FBXW7:
+        $ref:
+          - "_terms.yaml#/fbxw7/common"
+      FCGR2B:
+        $ref:
+          - "_terms.yaml#/fcgr2b/common"
+      FCRL4:
+        $ref:
+          - "_terms.yaml#/fcrl4/common"
+      FEN1:
+        $ref:
+          - "_terms.yaml#/fen1/common"
+      FES:
+        $ref:
+          - "_terms.yaml#/fes/common"
+      FEV:
+        $ref:
+          - "_terms.yaml#/fev/common"
+      FGFR1:
+        $ref:
+          - "_terms.yaml#/fgfr1/common"
+      FGFR1OP:
+        $ref:
+          - "_terms.yaml#/fgfr1op/common"
+      FGFR2:
+        $ref:
+          - "_terms.yaml#/fgfr2/common"
+      FGFR3:
+        $ref:
+          - "_terms.yaml#/fgfr3/common"
+      FGFR4:
+        $ref:
+          - "_terms.yaml#/fgfr4/common"
+      FH:
+        $ref:
+          - "_terms.yaml#/fh/common"
+      FHIT:
+        $ref:
+          - "_terms.yaml#/fhit/common"
+      FIP1L1:
+        $ref:
+          - "_terms.yaml#/fip1l1/common"
+      FKBP9:
+        $ref:
+          - "_terms.yaml#/fkbp9/common"
+      FLCN:
+        $ref:
+          - "_terms.yaml#/flcn/common"
+      FLI1:
+        $ref:
+          - "_terms.yaml#/fli1/common"
+      FLNA:
+        $ref:
+          - "_terms.yaml#/flna/common"
+      FLT3:
+        $ref:
+          - "_terms.yaml#/flt3/common"
+      FLT4:
+        $ref:
+          - "_terms.yaml#/flt4/common"
+      FNBP1:
+        $ref:
+          - "_terms.yaml#/fnbp1/common"
+      FOXA1:
+        $ref:
+          - "_terms.yaml#/foxa1/common"
+      FOXL2:
+        $ref:
+          - "_terms.yaml#/foxl2/common"
+      FOXO1:
+        $ref:
+          - "_terms.yaml#/foxo1/common"
+      FOXO3:
+        $ref:
+          - "_terms.yaml#/foxo3/common"
+      FOXO4:
+        $ref:
+          - "_terms.yaml#/foxo4/common"
+      FOXP1:
+        $ref:
+          - "_terms.yaml#/foxp1/common"
+      FOXR1:
+        $ref:
+          - "_terms.yaml#/foxr1/common"
+      FSTL3:
+        $ref:
+          - "_terms.yaml#/fstl3/common"
+      FUBP1:
+        $ref:
+          - "_terms.yaml#/fubp1/common"
+      FUS:
+        $ref:
+          - "_terms.yaml#/fus/common"
+      GAS7:
+        $ref:
+          - "_terms.yaml#/gas7/common"
+      GATA1:
+        $ref:
+          - "_terms.yaml#/gata1/common"
+      GATA2:
+        $ref:
+          - "_terms.yaml#/gata2/common"
+      GATA3:
+        $ref:
+          - "_terms.yaml#/gata3/common"
+      GLI1:
+        $ref:
+          - "_terms.yaml#/gli1/common"
+      GMPS:
+        $ref:
+          - "_terms.yaml#/gmps/common"
+      GNA11:
+        $ref:
+          - "_terms.yaml#/gna11/common"
+      GNAQ:
+        $ref:
+          - "_terms.yaml#/gnaq/common"
+      GNAS:
+        $ref:
+          - "_terms.yaml#/gnas/common"
+      GOLGA5:
+        $ref:
+          - "_terms.yaml#/golga5/common"
+      GOPC:
+        $ref:
+          - "_terms.yaml#/gopc/common"
+      GPC3:
+        $ref:
+          - "_terms.yaml#/gpc3/common"
+      GPHN:
+        $ref:
+          - "_terms.yaml#/gphn/common"
+      GRIN2A:
+        $ref:
+          - "_terms.yaml#/grin2a/common"
+      GRM3:
+        $ref:
+          - "_terms.yaml#/grm3/common"
+      H3F3A:
+        $ref:
+          - "_terms.yaml#/h3f3a/common"
+      H3F3B:
+        $ref:
+          - "_terms.yaml#/h3f3b/common"
+      HERPUD1:
+        $ref:
+          - "_terms.yaml#/herpud1/common"
+      HEY1:
+        $ref:
+          - "_terms.yaml#/hey1/common"
+      HIF1A:
+        $ref:
+          - "_terms.yaml#/hif1a/common"
+      HIP1:
+        $ref:
+          - "_terms.yaml#/hip1/common"
+      HIST1H3B:
+        $ref:
+          - "_terms.yaml#/hist1h3b/common"
+      HIST1H4I:
+        $ref:
+          - "_terms.yaml#/hist1h4i/common"
+      HLA-A:
+        $ref:
+          - "_terms.yaml#/hlaa/common"
+      HLF:
+        $ref:
+          - "_terms.yaml#/hlf/common"
+      HMGA1:
+        $ref:
+          - "_terms.yaml#/hmga1/common"
+      HMGA2:
+        $ref:
+          - "_terms.yaml#/hmga2/common"
+      HMGN2P46:
+        $ref:
+          - "_terms.yaml#/hmgn2p46/common"
+      HNF1A:
+        $ref:
+          - "_terms.yaml#/hnf1a/common"
+      HNRNPA2B1:
+        $ref:
+          - "_terms.yaml#/hnrnpa2b1/common"
+      HOOK3:
+        $ref:
+          - "_terms.yaml#/hook3/common"
+      HOXA11:
+        $ref:
+          - "_terms.yaml#/hoxa11/common"
+      HOXA13:
+        $ref:
+          - "_terms.yaml#/hoxa13/common"
+      HOXA9:
+        $ref:
+          - "_terms.yaml#/hoxa9/common"
+      HOXB1:
+        $ref:
+          - "_terms.yaml#/hoxb1/common"
+      HOXC11:
+        $ref:
+          - "_terms.yaml#/hoxc11/common"
+      HOXC13:
+        $ref:
+          - "_terms.yaml#/hoxc13/common"
+      HOXD11:
+        $ref:
+          - "_terms.yaml#/hoxd11/common"
+      HOXD13:
+        $ref:
+          - "_terms.yaml#/hoxd13/common"
+      HRAS:
+        $ref:
+          - "_terms.yaml#/hras/common"
+      HSP90AA1:
+        $ref:
+          - "_terms.yaml#/hsp90aa1/common"
+      HSP90AB1:
+        $ref:
+          - "_terms.yaml#/hsp90ab1/common"
+      ID3:
+        $ref:
+          - "_terms.yaml#/id3/common"
+      IDH1:
+        $ref:
+          - "_terms.yaml#/idh1/common"
+      IDH2:
+        $ref:
+          - "_terms.yaml#/idh2/common"
+      IGH:
+        $ref:
+          - "_terms.yaml#/igh/common"
+      IGK:
+        $ref:
+          - "_terms.yaml#/igk/common"
+      IGL:
+        $ref:
+          - "_terms.yaml#/igl/common"
+      IKBKB:
+        $ref:
+          - "_terms.yaml#/ikbkb/common"
+      IKZF1:
+        $ref:
+          - "_terms.yaml#/ikzf1/common"
+      IL2:
+        $ref:
+          - "_terms.yaml#/il2/common"
+      IL21R:
+        $ref:
+          - "_terms.yaml#/il21r/common"
+      IL6ST:
+        $ref:
+          - "_terms.yaml#/il6st/common"
+      IL7R:
+        $ref:
+          - "_terms.yaml#/il7r/common"
+      IRF4:
+        $ref:
+          - "_terms.yaml#/irf4/common"
+      IRS4:
+        $ref:
+          - "_terms.yaml#/irs4/common"
+      ISX:
+        $ref:
+          - "_terms.yaml#/isx/common"
+      ITGAV:
+        $ref:
+          - "_terms.yaml#/itgav/common"
+      ITK:
+        $ref:
+          - "_terms.yaml#/itk/common"
+      JAK1:
+        $ref:
+          - "_terms.yaml#/jak1/common"
+      JAK2:
+        $ref:
+          - "_terms.yaml#/jak2/common"
+      JAK3:
+        $ref:
+          - "_terms.yaml#/jak3/common"
+      JAZF1:
+        $ref:
+          - "_terms.yaml#/jazf1/common"
+      JUN:
+        $ref:
+          - "_terms.yaml#/jun/common"
+      KAT6A:
+        $ref:
+          - "_terms.yaml#/kat6a/common"
+      KAT6B:
+        $ref:
+          - "_terms.yaml#/kat6b/common"
+      KAT7:
+        $ref:
+          - "_terms.yaml#/kat7/common"
+      KCNJ5:
+        $ref:
+          - "_terms.yaml#/kcnj5/common"
+      KDM5A:
+        $ref:
+          - "_terms.yaml#/kdm5a/common"
+      KDM5C:
+        $ref:
+          - "_terms.yaml#/kdm5c/common"
+      KDM6A:
+        $ref:
+          - "_terms.yaml#/kdm6a/common"
+      KDR:
+        $ref:
+          - "_terms.yaml#/kdr/common"
+      KDSR:
+        $ref:
+          - "_terms.yaml#/kdsr/common"
+      KEAP1:
+        $ref:
+          - "_terms.yaml#/keap1/common"
+      KIAA1549:
+        $ref:
+          - "_terms.yaml#/kiaa1549/common"
+      KIF5B:
+        $ref:
+          - "_terms.yaml#/kif5b/common"
+      KIT:
+        $ref:
+          - "_terms.yaml#/kit/common"
+      KLF4:
+        $ref:
+          - "_terms.yaml#/klf4/common"
+      KLF6:
+        $ref:
+          - "_terms.yaml#/klf6/common"
+      KLK2:
+        $ref:
+          - "_terms.yaml#/klk2/common"
+      KMT2A:
+        $ref:
+          - "_terms.yaml#/kmt2a/common"
+      KMT2C:
+        $ref:
+          - "_terms.yaml#/kmt2c/common"
+      KMT2D:
+        $ref:
+          - "_terms.yaml#/kmt2d/common"
+      KNL1:
+        $ref:
+          - "_terms.yaml#/knl1/common"
+      KNSTRN:
+        $ref:
+          - "_terms.yaml#/knstrn/common"
+      KRAS:
+        $ref:
+          - "_terms.yaml#/kras/common"
+      KTN1:
+        $ref:
+          - "_terms.yaml#/ktn1/common"
+      LARP4B:
+        $ref:
+          - "_terms.yaml#/larp4b/common"
+      LASP1:
+        $ref:
+          - "_terms.yaml#/lasp1/common"
+      LCK:
+        $ref:
+          - "_terms.yaml#/lck/common"
+      LCP1:
+        $ref:
+          - "_terms.yaml#/lcp1/common"
+      LEF1:
+        $ref:
+          - "_terms.yaml#/lef1/common"
+      LHFP:
+        $ref:
+          - "_terms.yaml#/lhfp/common"
+      LIFR:
+        $ref:
+          - "_terms.yaml#/lifr/common"
+      LMNA:
+        $ref:
+          - "_terms.yaml#/lmna/common"
+      LMO1:
+        $ref:
+          - "_terms.yaml#/lmo1/common"
+      LMO2:
+        $ref:
+          - "_terms.yaml#/lmo2/common"
+      LPP:
+        $ref:
+          - "_terms.yaml#/lpp/common"
+      LRIG3:
+        $ref:
+          - "_terms.yaml#/lrig3/common"
+      LRP1B:
+        $ref:
+          - "_terms.yaml#/lrp1b/common"
+      LSM14A:
+        $ref:
+          - "_terms.yaml#/lsm14a/common"
+      LYL1:
+        $ref:
+          - "_terms.yaml#/lyl1/common"
+      LZTR1:
+        $ref:
+          - "_terms.yaml#/lztr1/common"
+      MAF:
+        $ref:
+          - "_terms.yaml#/maf/molecular_test/second_gene_symbol"
+      MAFB:
+        $ref:
+          - "_terms.yaml#/mafb/common"
+      MALAT1:
+        $ref:
+          - "_terms.yaml#/malat1/common"
+      MALT1:
+        $ref:
+          - "_terms.yaml#/malt1/common"
+      MAML2:
+        $ref:
+          - "_terms.yaml#/maml2/common"
+      MAML3:
+        $ref:
+          - "_terms.yaml#/maml3/common"
+      MAP2K1:
+        $ref:
+          - "_terms.yaml#/map2k1/common"
+      MAP2K2:
+        $ref:
+          - "_terms.yaml#/map2k2/common"
+      MAP2K4:
+        $ref:
+          - "_terms.yaml#/map2k4/common"
+      MAP3K1:
+        $ref:
+          - "_terms.yaml#/map3k1/common"
+      MAP3K13:
+        $ref:
+          - "_terms.yaml#/map3k13/common"
+      MAPK1:
+        $ref:
+          - "_terms.yaml#/mapk1/common"
+      MAX:
+        $ref:
+          - "_terms.yaml#/max/common"
+      MB21D2:
+        $ref:
+          - "_terms.yaml#/mb21d2/common"
+      MDM2:
+        $ref:
+          - "_terms.yaml#/mdm2/common"
+      MDM4:
+        $ref:
+          - "_terms.yaml#/mdm4/common"
+      MDS2:
+        $ref:
+          - "_terms.yaml#/mds2/common"
+      MECOM:
+        $ref:
+          - "_terms.yaml#/mecom/common"
+      MED12:
+        $ref:
+          - "_terms.yaml#/med12/common"
+      MEN1:
+        $ref:
+          - "_terms.yaml#/men1/common"
+      MET:
+        $ref:
+          - "_terms.yaml#/met/common"
+      MGMT:
+        $ref:
+          - "_terms.yaml#/mgmt/common"
+      MITF:
+        $ref:
+          - "_terms.yaml#/mitf/common"
+      MKL1:
+        $ref:
+          - "_terms.yaml#/mkl1/common"
+      MLF1:
+        $ref:
+          - "_terms.yaml#/mlf1/common"
+      MLH1:
+        $ref:
+          - "_terms.yaml#/mlh1/common"
+      MLH2:
+        $ref:
+          - "_terms.yaml#/mlh2/common"
+      MLLT1:
+        $ref:
+          - "_terms.yaml#/mllt1/common"
+      MLLT10:
+        $ref:
+          - "_terms.yaml#/mllt10/common"
+      MLLT11:
+        $ref:
+          - "_terms.yaml#/mllt11/common"
+      MLLT3:
+        $ref:
+          - "_terms.yaml#/mllt3/common"
+      MLLT4:
+        $ref:
+          - "_terms.yaml#/mllt4/common"
+      MLLT6:
+        $ref:
+          - "_terms.yaml#/mllt6/common"
+      MN1:
+        $ref:
+          - "_terms.yaml#/mn1/common"
+      MNX1:
+        $ref:
+          - "_terms.yaml#/mnx1/common"
+      MPL:
+        $ref:
+          - "_terms.yaml#/mpl/common"
+      MSH2:
+        $ref:
+          - "_terms.yaml#/msh2/common"
+      MSH6:
+        $ref:
+          - "_terms.yaml#/msh6/common"
+      MSI2:
+        $ref:
+          - "_terms.yaml#/msi2/common"
+      MSN:
+        $ref:
+          - "_terms.yaml#/msn/common"
+      MTCP1:
+        $ref:
+          - "_terms.yaml#/mtcp1/common"
+      MTOR:
+        $ref:
+          - "_terms.yaml#/mtor/common"
+      MUC1:
+        $ref:
+          - "_terms.yaml#/muc1/common"
+      MUC16:
+        $ref:
+          - "_terms.yaml#/muc16/common"
+      MUC4:
+        $ref:
+          - "_terms.yaml#/muc4/common"
+      MUTYH:
+        $ref:
+          - "_terms.yaml#/mutyh/common"
+      MYB:
+        $ref:
+          - "_terms.yaml#/myb/common"
+      MYC:
+        $ref:
+          - "_terms.yaml#/myc/common"
+      MYCL:
+        $ref:
+          - "_terms.yaml#/mycl/common"
+      MYCN:
+        $ref:
+          - "_terms.yaml#/mycn/common"
+      MYD88:
+        $ref:
+          - "_terms.yaml#/myd88/common"
+      MYH11:
+        $ref:
+          - "_terms.yaml#/myh11/common"
+      MYH9:
+        $ref:
+          - "_terms.yaml#/myh9/common"
+      MYO5A:
+        $ref:
+          - "_terms.yaml#/myo5a/common"
+      MYOD1:
+        $ref:
+          - "_terms.yaml#/myod1/common"
+      NAB2:
+        $ref:
+          - "_terms.yaml#/nab2/common"
+      NACA:
+        $ref:
+          - "_terms.yaml#/naca/common"
+      NBEA:
+        $ref:
+          - "_terms.yaml#/nbea/common"
+      NBN:
+        $ref:
+          - "_terms.yaml#/nbn/common"
+      NCKIPSD:
+        $ref:
+          - "_terms.yaml#/nckipsd/common"
+      NCOA1:
+        $ref:
+          - "_terms.yaml#/ncoa1/common"
+      NCOA2:
+        $ref:
+          - "_terms.yaml#/ncoa2/common"
+      NCOA4:
+        $ref:
+          - "_terms.yaml#/ncoa4/common"
+      NCOR1:
+        $ref:
+          - "_terms.yaml#/ncor1/common"
+      NCOR2:
+        $ref:
+          - "_terms.yaml#/ncor2/common"
+      NDRG1:
+        $ref:
+          - "_terms.yaml#/ndrg1/common"
+      NF1:
+        $ref:
+          - "_terms.yaml#/nf1/common"
+      NF2:
+        $ref:
+          - "_terms.yaml#/nf2/common"
+      NFATC2:
+        $ref:
+          - "_terms.yaml#/nfatc2/common"
+      NFE2L2:
+        $ref:
+          - "_terms.yaml#/nfe2l2/common"
+      NFIB:
+        $ref:
+          - "_terms.yaml#/nfib/common"
+      NFKB2:
+        $ref:
+          - "_terms.yaml#/nfkb2/common"
+      NFKBIE:
+        $ref:
+          - "_terms.yaml#/nfkbie/common"
+      NIN:
+        $ref:
+          - "_terms.yaml#/nin/common"
+      NKX2-1:
+        $ref:
+          - "_terms.yaml#/nkx21/common"
+      NONO:
+        $ref:
+          - "_terms.yaml#/nono/common"
+      NOTCH1:
+        $ref:
+          - "_terms.yaml#/notch1/common"
+      NOTCH2:
+        $ref:
+          - "_terms.yaml#/notch2/common"
+      NPM1:
+        $ref:
+          - "_terms.yaml#/npm1/common"
+      NR4A3:
+        $ref:
+          - "_terms.yaml#/nr4a3/common"
+      NRAS:
+        $ref:
+          - "_terms.yaml#/nras/common"
+      NRG1:
+        $ref:
+          - "_terms.yaml#/nrg1/common"
+      NSD1:
+        $ref:
+          - "_terms.yaml#/nsd1/common"
+      NSD2:
+        $ref:
+          - "_terms.yaml#/nsd2/common"
+      NSD3:
+        $ref:
+          - "_terms.yaml#/nsd3/common"
+      NT5C2:
+        $ref:
+          - "_terms.yaml#/nt5c2/common"
+      NTHL1:
+        $ref:
+          - "_terms.yaml#/nthl1/common"
+      NTRK1:
+        $ref:
+          - "_terms.yaml#/ntrk1/common"
+      NTRK3:
+        $ref:
+          - "_terms.yaml#/ntrk3/common"
+      NUMA1:
+        $ref:
+          - "_terms.yaml#/numa1/common"
+      NUP214:
+        $ref:
+          - "_terms.yaml#/nup214/common"
+      NUP98:
+        $ref:
+          - "_terms.yaml#/nup98/common"
+      NUTM1:
+        $ref:
+          - "_terms.yaml#/nutm1/common"
+      NUTM2A:
+        $ref:
+          - "_terms.yaml#/nutm2a/common"
+      NUTM2B:
+        $ref:
+          - "_terms.yaml#/nutm2b/common"
+      OLIG2:
+        $ref:
+          - "_terms.yaml#/olig2/common"
+      OMD:
+        $ref:
+          - "_terms.yaml#/omd/common"
+      P2RY8:
+        $ref:
+          - "_terms.yaml#/p2ry8/common"
+      PABPC1:
+        $ref:
+          - "_terms.yaml#/pabpc1/common"
+      PAFAH1B2:
+        $ref:
+          - "_terms.yaml#/pafah1b2/common"
+      PALB2:
+        $ref:
+          - "_terms.yaml#/palb2/common"
+      PATZ1:
+        $ref:
+          - "_terms.yaml#/patz1/common"
+      PAX3:
+        $ref:
+          - "_terms.yaml#/pax3/common"
+      PAX5:
+        $ref:
+          - "_terms.yaml#/pax5/common"
+      PAX7:
+        $ref:
+          - "_terms.yaml#/pax7/common"
+      PAX8:
+        $ref:
+          - "_terms.yaml#/pax8/common"
+      PBRM1:
+        $ref:
+          - "_terms.yaml#/pbrm1/common"
+      PBX1:
+        $ref:
+          - "_terms.yaml#/pbx1/common"
+      PCBP1:
+        $ref:
+          - "_terms.yaml#/pcbp1/common"
+      PCM1:
+        $ref:
+          - "_terms.yaml#/pcm1/common"
+      PDCD1LG2:
+        $ref:
+          - "_terms.yaml#/pdcd1lg2/common"
+      PDE4DIP:
+        $ref:
+          - "_terms.yaml#/pde4dip/common"
+      PDGFB:
+        $ref:
+          - "_terms.yaml#/pdgfb/common"
+      PDGFRA:
+        $ref:
+          - "_terms.yaml#/pdgfra/common"
+      PDGFRB:
+        $ref:
+          - "_terms.yaml#/pdgfrb/common"
+      PER1:
+        $ref:
+          - "_terms.yaml#/per1/common"
+      PGR:
+        $ref:
+          - "_terms.yaml#/pgr/common"
+      PHF6:
+        $ref:
+          - "_terms.yaml#/phf6/common"
+      PHOX2B:
+        $ref:
+          - "_terms.yaml#/phox2b/common"
+      PICALM:
+        $ref:
+          - "_terms.yaml#/picalm/common"
+      PIK3CA:
+        $ref:
+          - "_terms.yaml#/pik3ca/common"
+      PIK3CB:
+        $ref:
+          - "_terms.yaml#/pik3cb/common"
+      PIK3R1:
+        $ref:
+          - "_terms.yaml#/pik3r1/common"
+      PIM1:
+        $ref:
+          - "_terms.yaml#/pim1/common"
+      PLAG1:
+        $ref:
+          - "_terms.yaml#/plag1/common"
+      PLCG1:
+        $ref:
+          - "_terms.yaml#/plcg1/common"
+      PML:
+        $ref:
+          - "_terms.yaml#/pml/common"
+      PMS1:
+        $ref:
+          - "_terms.yaml#/pms1/common"
+      PMS2:
+        $ref:
+          - "_terms.yaml#/pms2/common"
+      POLD1:
+        $ref:
+          - "_terms.yaml#/pold1/common"
+      POLE:
+        $ref:
+          - "_terms.yaml#/pole/common"
+      POLG:
+        $ref:
+          - "_terms.yaml#/polg/common"
+      POLQ:
+        $ref:
+          - "_terms.yaml#/polq/common"
+      POT1:
+        $ref:
+          - "_terms.yaml#/pot1/common"
+      POU2AF1:
+        $ref:
+          - "_terms.yaml#/pou2af1/common"
+      POU5F1:
+        $ref:
+          - "_terms.yaml#/pou5f1/common"
+      PPARG:
+        $ref:
+          - "_terms.yaml#/pparg/common"
+      PPFIBP1:
+        $ref:
+          - "_terms.yaml#/ppfibp1/common"
+      PPM1D:
+        $ref:
+          - "_terms.yaml#/ppm1d/common"
+      PPP2R1A:
+        $ref:
+          - "_terms.yaml#/ppp2r1a/common"
+      PPP6C:
+        $ref:
+          - "_terms.yaml#/ppp6c/common"
+      PRCC:
+        $ref:
+          - "_terms.yaml#/prcc/common"
+      PRDM1:
+        $ref:
+          - "_terms.yaml#/prdm1/common"
+      PRDM16:
+        $ref:
+          - "_terms.yaml#/prdm16/common"
+      PRDM2:
+        $ref:
+          - "_terms.yaml#/prdm2/common"
+      PREX2:
+        $ref:
+          - "_terms.yaml#/prex2/common"
+      PRF1:
+        $ref:
+          - "_terms.yaml#/prf1/common"
+      PRKACA:
+        $ref:
+          - "_terms.yaml#/prkaca/common"
+      PRKAR1A:
+        $ref:
+          - "_terms.yaml#/prkar1a/common"
+      PRKCB:
+        $ref:
+          - "_terms.yaml#/prkcb/common"
+      PRPF40B:
+        $ref:
+          - "_terms.yaml#/prpf40b/common"
+      PRRX1:
+        $ref:
+          - "_terms.yaml#/prrx1/common"
+      PSIP1:
+        $ref:
+          - "_terms.yaml#/psip1/common"
+      PTCH1:
+        $ref:
+          - "_terms.yaml#/ptch1/common"
+      PTEN:
+        $ref:
+          - "_terms.yaml#/pten/common"
+      PTK6:
+        $ref:
+          - "_terms.yaml#/ptk6/common"
+      PTPN11:
+        $ref:
+          - "_terms.yaml#/ptpn11/common"
+      PTPN13:
+        $ref:
+          - "_terms.yaml#/ptpn13/common"
+      PTPN6:
+        $ref:
+          - "_terms.yaml#/ptpn6/common"
+      PTPRB:
+        $ref:
+          - "_terms.yaml#/ptprb/common"
+      PTPRC:
+        $ref:
+          - "_terms.yaml#/ptprc/common"
+      PTPRK:
+        $ref:
+          - "_terms.yaml#/ptprk/common"
+      PTPRT:
+        $ref:
+          - "_terms.yaml#/ptprt/common"
+      PWWP2A:
+        $ref:
+          - "_terms.yaml#/pwwp2a/common"
+      QKI:
+        $ref:
+          - "_terms.yaml#/qki/common"
+      RABEP1:
+        $ref:
+          - "_terms.yaml#/rabep1/common"
+      RAC1:
+        $ref:
+          - "_terms.yaml#/rac1/common"
+      RAD21:
+        $ref:
+          - "_terms.yaml#/rad21/common"
+      RAD51B:
+        $ref:
+          - "_terms.yaml#/rad51b/common"
+      RAF1:
+        $ref:
+          - "_terms.yaml#/raf1/common"
+      RALGDS:
+        $ref:
+          - "_terms.yaml#/ralgds/common"
+      RANBP2:
+        $ref:
+          - "_terms.yaml#/ranbp2/common"
+      RAP1GDS1:
+        $ref:
+          - "_terms.yaml#/rap1gds1/common"
+      RARA:
+        $ref:
+          - "_terms.yaml#/rara/common"
+      RB1:
+        $ref:
+          - "_terms.yaml#/rb1/common"
+      RBM10:
+        $ref:
+          - "_terms.yaml#/rbm10/common"
+      RBM15:
+        $ref:
+          - "_terms.yaml#/rbm15/common"
+      RECQL4:
+        $ref:
+          - "_terms.yaml#/recql4/common"
+      REL:
+        $ref:
+          - "_terms.yaml#/rel/common"
+      RET:
+        $ref:
+          - "_terms.yaml#/ret/common"
+      RGPD3:
+        $ref:
+          - "_terms.yaml#/rgpd3/common"
+      RGS7:
+        $ref:
+          - "_terms.yaml#/rgs7/common"
+      RHOA:
+        $ref:
+          - "_terms.yaml#/rhoa/common"
+      RHOH:
+        $ref:
+          - "_terms.yaml#/rhoh/common"
+      RMI2:
+        $ref:
+          - "_terms.yaml#/rmi2/common"
+      RNF213:
+        $ref:
+          - "_terms.yaml#/rnf213/common"
+      RNF43:
+        $ref:
+          - "_terms.yaml#/rnf43/common"
+      ROBO2:
+        $ref:
+          - "_terms.yaml#/robo2/common"
+      ROS1:
+        $ref:
+          - "_terms.yaml#/ros1/common"
+      RPL10:
+        $ref:
+          - "_terms.yaml#/rpl10/common"
+      RPL22:
+        $ref:
+          - "_terms.yaml#/rpl22/common"
+      RPL5:
+        $ref:
+          - "_terms.yaml#/rpl5/common"
+      RPN1:
+        $ref:
+          - "_terms.yaml#/rpn1/common"
+      RSPO2:
+        $ref:
+          - "_terms.yaml#/rspo2/common"
+      RSPO3:
+        $ref:
+          - "_terms.yaml#/rspo3/common"
+      RUNX1:
+        $ref:
+          - "_terms.yaml#/runx1/common"
+      RUNX1T1:
+        $ref:
+          - "_terms.yaml#/runx1t1/common"
+      S100A7:
+        $ref:
+          - "_terms.yaml#/s100a7/common"
+      SALL4:
+        $ref:
+          - "_terms.yaml#/sall4/common"
+      SBDS:
+        $ref:
+          - "_terms.yaml#/sbds/common"
+      SDC4:
+        $ref:
+          - "_terms.yaml#/sdc4/common"
+      SDHA:
+        $ref:
+          - "_terms.yaml#/sdha/common"
+      SDHAF2:
+        $ref:
+          - "_terms.yaml#/sdhaf2/common"
+      SDHB:
+        $ref:
+          - "_terms.yaml#/sdhb/common"
+      SDHC:
+        $ref:
+          - "_terms.yaml#/sdhc/common"
+      SDHD:
+        $ref:
+          - "_terms.yaml#/sdhd/common"
+      SEPT5:
+        $ref:
+          - "_terms.yaml#/sept5/common"
+      SEPT6:
+        $ref:
+          - "_terms.yaml#/sept6/common"
+      SEPT9:
+        $ref:
+          - "_terms.yaml#/sept9/common"
+      SET:
+        $ref:
+          - "_terms.yaml#/set/common"
+      SETBP1:
+        $ref:
+          - "_terms.yaml#/setbp1/common"
+      SETD2:
+        $ref:
+          - "_terms.yaml#/setd2/common"
+      SF3B1:
+        $ref:
+          - "_terms.yaml#/sf3b1/common"
+      SFPQ:
+        $ref:
+          - "_terms.yaml#/sfpq/common"
+      SFRP4:
+        $ref:
+          - "_terms.yaml#/sfrp4/common"
+      SGK1:
+        $ref:
+          - "_terms.yaml#/sgk1/common"
+      SH2B3:
+        $ref:
+          - "_terms.yaml#/sh2b3/common"
+      SH3GL1:
+        $ref:
+          - "_terms.yaml#/sh3gl1/common"
+      SHTN1:
+        $ref:
+          - "_terms.yaml#/shtn1/common"
+      SIRPA:
+        $ref:
+          - "_terms.yaml#/sirpa/common"
+      SKI:
+        $ref:
+          - "_terms.yaml#/ski/common"
+      SLC34A2:
+        $ref:
+          - "_terms.yaml#/slc34a2/common"
+      SLC45A3:
+        $ref:
+          - "_terms.yaml#/slc45a3/common"
+      SMAD2:
+        $ref:
+          - "_terms.yaml#/smad2/common"
+      SMAD3:
+        $ref:
+          - "_terms.yaml#/smad3/common"
+      SMAD4:
+        $ref:
+          - "_terms.yaml#/smad4/common"
+      SMARCA4:
+        $ref:
+          - "_terms.yaml#/smarca4/common"
+      SMARCB1:
+        $ref:
+          - "_terms.yaml#/smarcb1/common"
+      SMARCD1:
+        $ref:
+          - "_terms.yaml#/smarcd1/common"
+      SMARCE1:
+        $ref:
+          - "_terms.yaml#/smarce1/common"
+      SMC1A:
+        $ref:
+          - "_terms.yaml#/smc1a/common"
+      SMO:
+        $ref:
+          - "_terms.yaml#/smo/common"
+      SND1:
+        $ref:
+          - "_terms.yaml#/snd1/common"
+      SNX29:
+        $ref:
+          - "_terms.yaml#/snx29/common"
+      SOCS1:
+        $ref:
+          - "_terms.yaml#/socs1/common"
+      SOX2:
+        $ref:
+          - "_terms.yaml#/sox2/common"
+      SPECC1:
+        $ref:
+          - "_terms.yaml#/specc1/common"
+      SPEN:
+        $ref:
+          - "_terms.yaml#/spen/common"
+      SPOP:
+        $ref:
+          - "_terms.yaml#/spop/common"
+      SRC:
+        $ref:
+          - "_terms.yaml#/src/common"
+      SRGAP3:
+        $ref:
+          - "_terms.yaml#/srgap3/common"
+      SRSF2:
+        $ref:
+          - "_terms.yaml#/srsf2/common"
+      SRSF3:
+        $ref:
+          - "_terms.yaml#/srsf3/common"
+      SS18:
+        $ref:
+          - "_terms.yaml#/ss18/common"
+      SS18L1:
+        $ref:
+          - "_terms.yaml#/ss18l1/common"
+      SSX1:
+        $ref:
+          - "_terms.yaml#/ssx1/common"
+      SSX2:
+        $ref:
+          - "_terms.yaml#/ssx2/common"
+      SSX4:
+        $ref:
+          - "_terms.yaml#/ssx4/common"
+      STAG1:
+        $ref:
+          - "_terms.yaml#/stag1/common"
+      STAG2:
+        $ref:
+          - "_terms.yaml#/stag2/common"
+      STAT3:
+        $ref:
+          - "_terms.yaml#/stat3/common"
+      STAT5B:
+        $ref:
+          - "_terms.yaml#/stat5b/common"
+      STAT6:
+        $ref:
+          - "_terms.yaml#/stat6/common"
+      STIL:
+        $ref:
+          - "_terms.yaml#/stil/common"
+      STK11:
+        $ref:
+          - "_terms.yaml#/stk11/common"
+      STRN:
+        $ref:
+          - "_terms.yaml#/strn/common"
+      SUFU:
+        $ref:
+          - "_terms.yaml#/sufu/common"
+      SUZ12:
+        $ref:
+          - "_terms.yaml#/suz12/common"
+      SYK:
+        $ref:
+          - "_terms.yaml#/syk/common"
+      SYP:
+        $ref:
+          - "_terms.yaml#/syp/common"
+      TAF15:
+        $ref:
+          - "_terms.yaml#/taf15/common"
+      TAL1:
+        $ref:
+          - "_terms.yaml#/tal1/common"
+      TAL2:
+        $ref:
+          - "_terms.yaml#/tal2/common"
+      TBL1XR1:
+        $ref:
+          - "_terms.yaml#/tbl1xr1/common"
+      TBX3:
+        $ref:
+          - "_terms.yaml#/tbx3/common"
+      TCEA1:
+        $ref:
+          - "_terms.yaml#/tcea1/common"
+      TCF12:
+        $ref:
+          - "_terms.yaml#/tcf12/common"
+      TCF3:
+        $ref:
+          - "_terms.yaml#/tcf3/common"
+      TCF7L2:
+        $ref:
+          - "_terms.yaml#/tcf7l2/common"
+      TCL1A:
+        $ref:
+          - "_terms.yaml#/tcl1a/common"
+      TEC:
+        $ref:
+          - "_terms.yaml#/tec/common"
+      TERT:
+        $ref:
+          - "_terms.yaml#/tert/common"
+      TET1:
+        $ref:
+          - "_terms.yaml#/tet1/common"
+      TET2:
+        $ref:
+          - "_terms.yaml#/tet2/common"
+      TFE3:
+        $ref:
+          - "_terms.yaml#/tfe3/common"
+      TFEB:
+        $ref:
+          - "_terms.yaml#/tfeb/common"
+      TFG:
+        $ref:
+          - "_terms.yaml#/tfg/common"
+      TFPT:
+        $ref:
+          - "_terms.yaml#/tfpt/common"
+      TFRC:
+        $ref:
+          - "_terms.yaml#/tfrc/common"
+      TGFBR2:
+        $ref:
+          - "_terms.yaml#/tgfbr2/common"
+      THRAP3:
+        $ref:
+          - "_terms.yaml#/thrap3/common"
+      TLX1:
+        $ref:
+          - "_terms.yaml#/tlx1/common"
+      TLX3:
+        $ref:
+          - "_terms.yaml#/tlx3/common"
+      TMEM127:
+        $ref:
+          - "_terms.yaml#/tmem127/common"
+      TMPRSS2:
+        $ref:
+          - "_terms.yaml#/tmprss2/common"
+      TNC:
+        $ref:
+          - "_terms.yaml#/tnc/common"
+      TNFAIP3:
+        $ref:
+          - "_terms.yaml#/tnfaip3/common"
+      TNFRSF14:
+        $ref:
+          - "_terms.yaml#/tnfrsf14/common"
+      TNFRSF17:
+        $ref:
+          - "_terms.yaml#/tnfrsf17/common"
+      TOP1:
+        $ref:
+          - "_terms.yaml#/top1/common"
+      TP53:
+        $ref:
+          - "_terms.yaml#/tp53/common"
+      TP63:
+        $ref:
+          - "_terms.yaml#/tp63/common"
+      TPM3:
+        $ref:
+          - "_terms.yaml#/tpm3/common"
+      TPM4:
+        $ref:
+          - "_terms.yaml#/tpm4/common"
+      TPR:
+        $ref:
+          - "_terms.yaml#/tpr/common"
+      TRA:
+        $ref:
+          - "_terms.yaml#/tra/common"
+      TRAF7:
+        $ref:
+          - "_terms.yaml#/traf7/common"
+      TRB:
+        $ref:
+          - "_terms.yaml#/trb/common"
+      TRD:
+        $ref:
+          - "_terms.yaml#/trd/common"
+      TRIM24:
+        $ref:
+          - "_terms.yaml#/trim24/common"
+      TRIM27:
+        $ref:
+          - "_terms.yaml#/trim27/common"
+      TRIM33:
+        $ref:
+          - "_terms.yaml#/trim33/common"
+      TRIP11:
+        $ref:
+          - "_terms.yaml#/trip11/common"
+      TRRAP:
+        $ref:
+          - "_terms.yaml#/trrap/common"
+      TSC1:
+        $ref:
+          - "_terms.yaml#/tsc1/common"
+      TSC2:
+        $ref:
+          - "_terms.yaml#/tsc2/common"
+      TSHR:
+        $ref:
+          - "_terms.yaml#/tshr/common"
+      U2AF1:
+        $ref:
+          - "_terms.yaml#/u2af1/common"
+      UBR5:
+        $ref:
+          - "_terms.yaml#/ubr5/common"
+      USP6:
+        $ref:
+          - "_terms.yaml#/usp6/common"
+      USP8:
+        $ref:
+          - "_terms.yaml#/usp8/common"
+      VAV1:
+        $ref:
+          - "_terms.yaml#/vav1/common"
+      VHL:
+        $ref:
+          - "_terms.yaml#/vhl/common"
+      VTI1A:
+        $ref:
+          - "_terms.yaml#/vti1a/common"
+      WAS:
+        $ref:
+          - "_terms.yaml#/was/common"
+      WDCP:
+        $ref:
+          - "_terms.yaml#/wdcp/common"
+      WIF1:
+        $ref:
+          - "_terms.yaml#/wif1/common"
+      WNK2:
+        $ref:
+          - "_terms.yaml#/wnk2/common"
+      WRN:
+        $ref:
+          - "_terms.yaml#/wrn/common"
+      WT1:
+        $ref:
+          - "_terms.yaml#/wt1/common"
+      WWTR1:
+        $ref:
+          - "_terms.yaml#/wwtr1/common"
+      XPA:
+        $ref:
+          - "_terms.yaml#/xpa/common"
+      XPC:
+        $ref:
+          - "_terms.yaml#/xpc/common"
+      XPO1:
+        $ref:
+          - "_terms.yaml#/xpo1/common"
+      YWHAE:
+        $ref:
+          - "_terms.yaml#/ywhae/common"
+      ZBTB16:
+        $ref:
+          - "_terms.yaml#/zbtb16/common"
+      ZCCHC8:
+        $ref:
+          - "_terms.yaml#/zcchc8/common"
+      ZEB1:
+        $ref:
+          - "_terms.yaml#/zeb1/common"
+      ZFHX3:
+        $ref:
+          - "_terms.yaml#/zfhx3/common"
+      ZMYM3:
+        $ref:
+          - "_terms.yaml#/zmym3/common"
+      ZNF198:
+        $ref:
+          - "_terms.yaml#/znf198/common"
+      ZNF331:
+        $ref:
+          - "_terms.yaml#/znf331/common"
+      ZNF384:
+        $ref:
+          - "_terms.yaml#/znf384/common"
+      ZNF429:
+        $ref:
+          - "_terms.yaml#/znf429/common"
+      ZNF444:
+        $ref:
+          - "_terms.yaml#/znf444/common"
+      ZNF479:
+        $ref:
+          - "_terms.yaml#/znf479/common"
+      ZNF521:
+        $ref:
+          - "_terms.yaml#/znf521/common"
+      ZNRF3:
+        $ref:
+          - "_terms.yaml#/znrf3/common"
+      ZRSR2:
+        $ref:
+          - "_terms.yaml#/zrsr2/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -1969,6 +6865,21 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      DNA:
+        $ref:
+          - "_terms.yaml#/dna/common"
+      miRNA:
+        $ref:
+          - "_terms.yaml#/mirna/common"
+      mRNA:
+        $ref:
+          - "_terms.yaml#/mrna/common"
+      Protein:
+        $ref:
+          - "_terms.yaml#/protein/common"
+      Total RNA:
+        $ref:
+          - "_terms.yaml#/total_rna/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -1995,6 +6906,30 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      Abnormal, NOS:
+        $ref:
+          - "_terms.yaml#/abnormal_nos/common"
+      Copy Number Reported:
+        $ref:
+          - "_terms.yaml#/copy_number_reported/common"
+      Loss of Expression:
+        $ref:
+          - "_terms.yaml#/loss_of_expression/common"
+      Negative:
+        $ref:
+          - "_terms.yaml#/negative/common"
+      Normal:
+        $ref:
+          - "_terms.yaml#/normal/common"
+      Overexpressed:
+        $ref:
+          - "_terms.yaml#/overexpressed/common"
+      Positive:
+        $ref:
+          - "_terms.yaml#/positive/common"
+      Test Value Reported:
+        $ref:
+          - "_terms.yaml#/test_value_reported/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -2026,6 +6961,12 @@ properties:
       - Somatic
       - Unknown
     enumDef:
+      Germline:
+        $ref:
+          - "_terms.yaml#/germline/common"
+      Somatic:
+        $ref:
+          - "_terms.yaml#/somatic/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -2059,9 +7000,72 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      Alleles:
+        $ref:
+          - "_terms.yaml#/alleles/common"
+      Amplification:
+        $ref:
+          - "_terms.yaml#/amplification/common"
+      Chrimerism:
+        $ref:
+          - "_terms.yaml#/chrimerism/common"
+      Conversion:
+        $ref:
+          - "_terms.yaml#/conversion/common"
+      Deletion:
+        $ref:
+          - "_terms.yaml#/deletion/common"
+      Deletion-Insertion:
+        $ref:
+          - "_terms.yaml#/deletioninsertion/common"
+      Duplication:
+        $ref:
+          - "_terms.yaml#/duplication/common"
+      Extension:
+        $ref:
+          - "_terms.yaml#/extension/common"
+      Gain:
+        $ref:
+          - "_terms.yaml#/gain/common"
+      Hypermethylation:
+        $ref:
+          - "_terms.yaml#/hypermethylation/common"
+      Insertion:
+        $ref:
+          - "_terms.yaml#/insertion/common"
+      Inversion:
+        $ref:
+          - "_terms.yaml#/inversion/common"
+      Loss:
+        $ref:
+          - "_terms.yaml#/loss/common"
+      Methylation:
+        $ref:
+          - "_terms.yaml#/methylation/common"
+      Mosaicism:
+        $ref:
+          - "_terms.yaml#/mosaicism/common"
       Other:
         $ref:
           - "_terms.yaml#/other/common"
+      Partial Methylation:
+        $ref:
+          - "_terms.yaml#/partial_methylation/common"
+      Rearrangement:
+        $ref:
+          - "_terms.yaml#/rearrangement/common"
+      Repeated Sequences:
+        $ref:
+          - "_terms.yaml#/repeated_sequences/common"
+      Splice:
+        $ref:
+          - "_terms.yaml#/splice/common"
+      Substitution:
+        $ref:
+          - "_terms.yaml#/substitution/common"
+      Translocation:
+        $ref:
+          - "_terms.yaml#/translocation/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -2080,6 +7084,18 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      Hemizygous:
+        $ref:
+          - "_terms.yaml#/hemizygous/common"
+      Heterozygous:
+        $ref:
+          - "_terms.yaml#/heterozygous/common"
+      Homozygous:
+        $ref:
+          - "_terms.yaml#/homozygous/common"
+      Nullizygous:
+        $ref:
+          - "_terms.yaml#/nullizygous/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -2088,4 +7104,6 @@ properties:
           - "_terms.yaml#/not_reported/common"
 
   follow_ups:
+    $ref: "_definitions.yaml#/to_one"
+  slides:
     $ref: "_definitions.yaml#/to_one"

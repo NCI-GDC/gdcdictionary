@@ -940,6 +940,9 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      None:
+        $ref:
+          - "_terms.yaml#/none/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -951,6 +954,7 @@ properties:
     $ref:
       - "_terms.yaml#/comorbidity/common"
     enum:
+      - Abnormal Glucose Level
       - Acute Renal Failure
       - Adenocarcinoma
       - Adenomatous Polyposis Coli
@@ -982,9 +986,11 @@ properties:
       - Cerebrovascular Disease
       - Chlamydia
       - Cholelithiasis
+      - Chronic Fatigue Syndrome
       - Chronic Renal Failure
       - Chronic Systemic Steroid Use
       - Cirrhosis, Unknown Etiology
+      - Clonal Hematopoiesis
       - Colon Polyps
       - Common Variable Immunodeficiency
       - Congestive Heart Failure (CHF)
@@ -1010,7 +1016,9 @@ properties:
       - Epstein-Barr Virus
       - Familial Adenomatous Polyposis
       - Fanconi Anemia
+      - Fibromyalgia
       - Fibrosis
+      - Gastritis
       - Gastroesophageal Reflux Disease
       - GERD
       - Glaucoma
@@ -1116,6 +1124,9 @@ properties:
       Cancer:
         $ref:
           - "_terms.yaml#/cancer/common"
+      Epstein-Barr Virus:
+        $ref:
+          - "_terms.yaml#/epsteinbarr_virus/common"
       Other:
         $ref:
           - "_terms.yaml#/other/common"
@@ -1467,6 +1478,9 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      None:
+        $ref:
+          - "_terms.yaml#/none/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -1503,6 +1517,12 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      Positive:
+        $ref:
+          - "_terms.yaml#/positive/common"
+      Negative:
+        $ref:
+          - "_terms.yaml#/negative/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -1532,6 +1552,9 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      None:
+        $ref:
+          - "_terms.yaml#/none/common"
       Other:
         $ref:
           - "_terms.yaml#/other/common"
@@ -1986,6 +2009,27 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      Bone marrow:
+        $ref:
+          - "_terms.yaml#/bone_marrow/common"
+      Frontal lobe:
+        $ref:
+          - "_terms.yaml#/frontal_lobe/common"
+      Occipital lobe:
+        $ref:
+          - "_terms.yaml#/occipital_lobe/common"
+      Parietal lobe:
+        $ref:
+          - "_terms.yaml#/parietal_lobe/common"
+      Temporal lobe:
+        $ref:
+          - "_terms.yaml#/temporal_lobe/common"
+      Uterine adnexa:
+        $ref:
+          - "_terms.yaml#/uterine_adnexa/common"
+      Vulva, NOS:
+        $ref:
+          - "_terms.yaml#/vulva_nos/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -2035,6 +2079,9 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      Not Applicable:
+        $ref:
+          - "_terms.yaml#/not_applicable/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -2046,6 +2093,7 @@ properties:
     $ref:
       - "_terms.yaml#/risk_factor/common"
     enum:
+      - Abnormal Glucose Level
       - Adenosis (Atypical Adenomatous Hyperplasia)
       - Alcohol Consumption
       - Alcoholic Liver Disease
@@ -2080,6 +2128,7 @@ properties:
       - Chlamydia
       - Cholelithiasis
       - Chronic Hepatitis
+      - Chronic Kidney Disease
       - Chronic Systemic Steroid Use
       - Cirrhosis
       - Colon Polyps
@@ -2102,10 +2151,12 @@ properties:
       - Epithelial Dysplasia
       - Epithelial Hyperplasia
       - Epstein-Barr Virus
+      - Escherichia coli
       - Familial Adenomatous Polyposis
       - Fanconi Anemia
       - Fibrosis
       - Gastric Polyp(s)
+      - Gastritis
       - Gilbert's Syndrome
       - Glomerular Disease
       - Gorlin Syndrome
@@ -2166,6 +2217,7 @@ properties:
       - Shingles
       - Sialadenitis
       - Sjogren's Syndrome
+      - Skin Rash
       - Squamous Metaplasia
       - Staphylococcus aureus
       - Steatosis
@@ -2193,6 +2245,9 @@ properties:
       Cancer:
         $ref:
           - "_terms.yaml#/cancer/common"
+      Epstein-Barr Virus:
+        $ref:
+          - "_terms.yaml#/epsteinbarr_virus/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"

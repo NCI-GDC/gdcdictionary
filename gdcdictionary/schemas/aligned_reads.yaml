@@ -130,14 +130,26 @@ properties:
       - ATAC-Seq
       - Bisulfite-Seq
       - ChIP-Seq
+      - HiChIP
       - Low Pass WGS
       - miRNA-Seq
       - RNA-Seq
+      - scATAC-Seq
       - scRNA-Seq
       - Targeted Sequencing
       - Validation
       - WGS
       - WXS
+    enumDef:
+      Targeted Sequencing:
+        $ref:
+          - "_terms.yaml#/targeted_sequencing/common"
+      WGS:
+        $ref:
+          - "_terms.yaml#/wgs/common"
+      WXS:
+        $ref:
+          - "_terms.yaml#/wxs/common"
 
   mean_coverage:
     $ref:
@@ -170,19 +182,9 @@ properties:
       - "_terms.yaml#/proportion_base_mismatch/common"
     type: number
 
-  proportion_coverage_10X:
-    $ref:
-      - "_terms.yaml#/proportion_coverage_10x/common"
-    type: number
-
   proportion_coverage_10x:
     $ref:
       - "_terms.yaml#/proportion_coverage_10x/common"
-    type: number
-
-  proportion_coverage_30X:
-    $ref:
-      - "_terms.yaml#/proportion_coverage_30x/common"
     type: number
 
   proportion_coverage_30x:

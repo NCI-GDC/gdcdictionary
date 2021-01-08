@@ -84,6 +84,13 @@ properties:
       - Repli-G X (Qiagen) DNA
       - RNA
       - Total RNA
+    enumDef:
+      DNA:
+        $ref:
+          - "_terms.yaml#/dna/common"
+      Total RNA:
+        $ref:
+          - "_terms.yaml#/total_rna/common"
 
   analyte_type_id:
     $ref:
@@ -109,6 +116,27 @@ properties:
     $ref:
       - "_terms.yaml#/concentration/common"
     type: number
+
+  experimental_protocol_type:
+    $ref:
+      - "_terms.yaml#/experimental_protocol_type/common"
+    enum:
+      - aDNA Preparation Type
+      - Allprep FFPE DNA
+      - Allprep RNA Extraction
+      - Chemical Lysis DNA Extraction
+      - Genomplex
+      - HighPure miRNA (Allprep DNA) FFPE RNA
+      - mirVana (Allprep DNA) RNA
+      - nRNA - Melanoma Protocol
+      - Pre-extracted DNA received by TSS
+      - Repli-G
+      - Repli-G X
+      - Total RNA
+    enumDef:
+      Total RNA:
+        $ref:
+          - "_terms.yaml#/total_rna/common"
 
   normal_tumor_genotype_snp_match:
     $ref:
@@ -139,6 +167,11 @@ properties:
   ribosomal_rna_28s_16s_ratio:
     $ref:
       - "_terms.yaml#/ribosomal_rna_28s_16s_ratio/common"
+    type: number
+
+  rna_integrity_number:
+    $ref:
+      - "_terms.yaml#/rna_integrity_number/common"
     type: number
 
   spectrophotometer_method:

@@ -81,6 +81,16 @@ properties:
       - "_terms.yaml#/base_caller_version/common"
     type: string
 
+  chipseq_antibody:
+    enum:
+      - abcam ab4729 anti-H3K27ac
+      - Unknown
+      - Not Applicable
+    enumDef:
+      Not Applicable:
+        $ref:
+          - "_terms.yaml#/not_applicable/common"
+
   chipseq_target:
     $ref:
       - "_terms.yaml#/chipseq_target/common"
@@ -128,6 +138,16 @@ properties:
     $ref:
       - "_terms.yaml#/fragment_standard_deviation_length/common"
     type: number
+
+  fragmentation_enzyme:
+    enum:
+      - MboI
+      - Unknown
+      - Not Applicable
+    enumDef:
+      Not Applicable:
+        $ref:
+          - "_terms.yaml#/not_applicable/common"
 
   includes_spike_ins:
     $ref:
@@ -223,6 +243,9 @@ properties:
       Other:
         $ref:
           - "_terms.yaml#/other/common"
+      PCR:
+        $ref:
+          - "_terms.yaml#/pcr/common"
 
   library_strand:
     $ref:
@@ -232,6 +255,10 @@ properties:
       - First_Stranded
       - Second_Stranded
       - Not Applicable
+    enumDef:
+      Not Applicable:
+        $ref:
+          - "_terms.yaml#/not_applicable/common"
 
   library_strategy:
     $ref:
@@ -240,18 +267,31 @@ properties:
       - ATAC-Seq
       - Bisulfite-Seq
       - ChIP-Seq
+      - HiChIP
+      - m6A RNA Methylation
       - miRNA-Seq
       - RNA-Seq
+      - scATAC-Seq
       - scRNA-Seq
       - Targeted Sequencing
       - WGS
       - WXS
+    enumDef:
+      Targeted Sequencing:
+        $ref:
+          - "_terms.yaml#/targeted_sequencing/common"
+      WGS:
+        $ref:
+          - "_terms.yaml#/wgs/common"
+      WXS:
+        $ref:
+          - "_terms.yaml#/wxs/common"
 
   multiplex_barcode:
     $ref:
       - "_terms.yaml#/multiplex_barcode/common"
     type: string
-    pattern: "^[0-9ACGTURYSWKMBDHVN]+(\\+[0-9ACGTURYSWKMBDHVN]+)?$"
+    pattern: "^[0-9ACGTURYSWKMBDHVN]+([\\+\\-][0-9ACGTURYSWKMBDHVN]+){,2}$"
 
   number_expect_cells:
     $ref:
@@ -283,11 +323,6 @@ properties:
     oneOf:
       - type: integer
       - type: "null"
-
-  RIN:
-    $ref:
-      - "_terms.yaml#/rin/common"
-    type: number
 
   rin:
     $ref:
@@ -377,6 +412,9 @@ properties:
       - xGen Exome Research Panel v1.0
       - Unknown
     enumDef:
+      Not Applicable:
+        $ref:
+          - "_terms.yaml#/not_applicable/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"

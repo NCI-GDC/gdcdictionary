@@ -4,11 +4,9 @@
     "alcohol_history": "Yes",
     "alcohol_intensity": "Drinker",
     "asbestos_exposure": "Yes",
-    "bmi": -1.0,
     "cigarettes_per_day": -1.0,
     "coal_dust_exposure":"Unknown",
     "environmental_tobacco_smoke_exposure":"No",
-    "height": -1.0,
     "radon_exposure":"Unknown",
     "respirable_crystalline_silica_exposure":"Yes",
     "smoking_frequency":"Some days",
@@ -18,7 +16,6 @@
     "tobacco_smoking_status":"1",
     "type_of_smoke_exposure":"Volcanic smoke",
     "type_of_tobacco_used":"Pipe",
-    "weight": -1.0,
     "years_smoked": 44,
     "cases": {
         "submitter_id": "BLGSP-71-06-00019"
