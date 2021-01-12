@@ -23,7 +23,7 @@ class SchemaTest(BaseTest):
             for child in root.keys():
                 self.traverse_schema_with_conditional(root[child], conditional_func, test_func)
 
-    def test_enum_is_string(self):
+    def test_enum(self):
 
         def trigger(root):
             if isinstance(root, dict) and 'enum' in root.keys():
@@ -33,8 +33,11 @@ class SchemaTest(BaseTest):
         def test_enum(root):
             children = root['enum']
             assert isinstance(children, list), "Enums children wasn't a list"
+
             for child in children:
                 assert isinstance(child, str), "Offending enum found:" + str(child)
+
+            assert len(set(children)) == len(children), "Duplicate in Enums: {}".format(root['description'])
 
         self.traverse_schema_with_conditional(self.dictionary.schema, trigger, test_enum)
 
