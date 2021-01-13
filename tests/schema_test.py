@@ -154,3 +154,29 @@ class SchemaTest(BaseTest):
 
         with self.assertRaisesRegexp(AssertionError, 'cycle detected'):
             check_for_cycles(schemata)
+
+    def test_links_to_annotation(self):
+        special_node = [
+            'annotation', 'clinical', 'experimental_strategy', 'metaschema',
+            'platform', 'program', 'project', 'publication', 'root', 'tag'
+        ]
+
+        def _is_excluded_node(node_name):
+            if node_name.endswith('_workflow') or node_name.startswith('data_'):
+                return True
+            if node_name in special_node:
+                return True
+            return False
+
+        schemas = self.dictionary.schema
+        nodes_set = set(schemas.keys())
+        linked_to_annotation = [link['target_type'] for link in schemas["annotation"]["links"][0]["subgroup"]]
+        linked_node_set = set(linked_to_annotation)
+        # sanity check
+        assert len(linked_to_annotation) == len(linked_node_set)
+        assert len(linked_node_set - nodes_set) == 0
+        # check excluded nodes
+        excluded_nodes = nodes_set - linked_node_set
+        extra_nodes = [node for node in excluded_nodes if not _is_excluded_node(node)]
+        assert len(extra_nodes) == 0, \
+            "nodes not linking with annotation: \n{}".format('\n'.join(extra_nodes))
