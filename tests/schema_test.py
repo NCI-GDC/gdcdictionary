@@ -6,40 +6,60 @@ have more tests later that need to validate new errors found within the
 schema.
 
 """
+import collections
+import unittest
 
 from .utils import BaseTest, check_for_cycles, validate_schemata
 
 
 class SchemaTest(BaseTest):
 
-    def traverse_schema_with_conditional(self, root, conditional_func, test_func):
-        if conditional_func(root):
-            test_func(root)
-
-        if isinstance(root, list):
-            for child in root:
-                self.traverse_schema_with_conditional(child, conditional_func, test_func)
-        elif isinstance(root, dict):
-            for child in root.keys():
-                self.traverse_schema_with_conditional(root[child], conditional_func, test_func)
-
+    @unittest.expectedFailure
     def test_enum(self):
+        stack = collections.deque()
+        res = collections.defaultdict(list)
 
-        def trigger(root):
+        def _get_path_str(path_stack):
+            return '->'.join(path_stack)
+
+        def bfs_with_enum_test(root, test_func, path):
             if isinstance(root, dict) and 'enum' in root.keys():
-                return True
-            return False
+                test_func(root, path)
 
-        def test_enum(root):
-            children = root['enum']
-            assert isinstance(children, list), "Enums children wasn't a list"
+            if isinstance(root, list):
+                for child in root:
+                    bfs_with_enum_test(child, test_func, path)
+            elif isinstance(root, dict):
+                for child in root.keys():
+                    path.append(child)
+                    bfs_with_enum_test(root[child], test_func, path)
+                    path.pop()
 
-            for child in children:
-                assert isinstance(child, str), "Offending enum found:" + str(child)
+        def check_enum(property_name, current_path):
+            enum_list = property_name['enum']
+            if not isinstance(enum_list, list):
+                res["property enums is not a list"].append(_get_path_str(current_path))
 
-            assert len(set(children)) == len(children), "Duplicate in Enums: {}".format(root['description'])
+            for item in enum_list:
+                if not isinstance(item, str):
+                    res["enum item is not a string"].append("{}: {}".format(_get_path_str(current_path), item))
 
-        self.traverse_schema_with_conditional(self.dictionary.schema, trigger, test_enum)
+            if len(set(enum_list)) < len(enum_list):
+                res["duplicates in enum"].append(_get_path_str(current_path))
+                duplicates = [item for item, count in collections.Counter(enum_list).items() if count > 1]
+                for item in duplicates:
+                    res["duplicates in enum"].append("\t{}".format(item))
+
+        def generate_error_message_for_enum(res_dict):
+            message_lines = ["Errors in enum checks:"]
+            for error_name, lines in res_dict.items():
+                message_lines.append(error_name)
+                for line in lines:
+                    message_lines.append("\t{}".format(line))
+            return "\n".join(message_lines)
+
+        bfs_with_enum_test(self.dictionary.schema, check_enum, stack)
+        assert len(res) == 0, generate_error_message_for_enum(res)
 
     def test_schemas(self):
         validate_schemata(self.dictionary.schema, self.dictionary.metaschema)
