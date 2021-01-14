@@ -156,10 +156,10 @@ class SchemaTest(BaseTest):
             check_for_cycles(schemata)
 
     def test_links_to_annotation(self):
-        special_node = [
+        special_node = {
             'annotation', 'clinical', 'experimental_strategy', 'metaschema',
             'platform', 'program', 'project', 'publication', 'root', 'tag'
-        ]
+        }
 
         def _is_excluded_node(node_name):
             if node_name.endswith('_workflow') or node_name.startswith('data_'):
