@@ -15,42 +15,28 @@ from .utils import BaseTest, check_for_cycles, validate_schemata
 class SchemaTest(BaseTest):
 
     @unittest.expectedFailure
-    def test_enum(self):
-        stack = collections.deque()
-        res = collections.defaultdict(list)
+    def test_properties_enum(self):
+        """Check the enums of node properties"""
+        # The enums in _definitions.yaml, _terms.yaml and metaschema.yaml are not checked
 
-        def _get_path_str(path_stack):
-            return '->'.join(path_stack)
+        def check_enum(enums):
+            check_result = collections.defaultdict(list)
+            for path, enum_list in enums.items():
+                if not isinstance(enum_list, list):
+                    check_result["enum not a list"].append(path)
 
-        def bfs_with_enum_test(root, test_func, path):
-            if isinstance(root, dict) and 'enum' in root.keys():
-                test_func(root, path)
+                for item in enum_list:
+                    if not isinstance(item, str):
+                        check_result["enum item is not a string"].append("{}: {}".format(path, item))
 
-            if isinstance(root, list):
-                for child in root:
-                    bfs_with_enum_test(child, test_func, path)
-            elif isinstance(root, dict):
-                for child in root.keys():
-                    path.append(child)
-                    bfs_with_enum_test(root[child], test_func, path)
-                    path.pop()
+                if len(set(enum_list)) < len(enum_list):
+                    check_result["duplicates in enum"].append(path)
+                    duplicates = [item for item, count in collections.Counter(enum_list).items() if count > 1]
+                    for item in duplicates:
+                        check_result["duplicates in enum"].append("\t{}".format(item))
+            return check_result
 
-        def check_enum(property_name, current_path):
-            enum_list = property_name['enum']
-            if not isinstance(enum_list, list):
-                res["property enums is not a list"].append(_get_path_str(current_path))
-
-            for item in enum_list:
-                if not isinstance(item, str):
-                    res["enum item is not a string"].append("{}: {}".format(_get_path_str(current_path), item))
-
-            if len(set(enum_list)) < len(enum_list):
-                res["duplicates in enum"].append(_get_path_str(current_path))
-                duplicates = [item for item, count in collections.Counter(enum_list).items() if count > 1]
-                for item in duplicates:
-                    res["duplicates in enum"].append("\t{}".format(item))
-
-        def generate_error_message_for_enum(res_dict):
+        def _generate_error_message_for_enum(res_dict):
             message_lines = ["Errors in enum checks:"]
             for error_name, lines in res_dict.items():
                 message_lines.append(error_name)
@@ -58,8 +44,15 @@ class SchemaTest(BaseTest):
                     message_lines.append("\t{}".format(line))
             return "\n".join(message_lines)
 
-        bfs_with_enum_test(self.dictionary.schema, check_enum, stack)
-        assert len(res) == 0, generate_error_message_for_enum(res)
+        enum_dict = {}
+        for node_name, node_schema in self.dictionary.schema.items():
+            for prop_name, prop_schema in node_schema["properties"].items():
+                if "enum" in prop_schema:
+                    path_str = '{}->{}'.format(node_name, prop_name)
+                    enum_dict[path_str] = prop_schema["enum"]
+
+        res = check_enum(enum_dict)
+        assert len(res) == 0, _generate_error_message_for_enum(res)
 
     def test_schemas(self):
         validate_schemata(self.dictionary.schema, self.dictionary.metaschema)
