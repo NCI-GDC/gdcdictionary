@@ -13,6 +13,15 @@ from .utils import BaseTest, check_for_cycles, validate_schemata
 
 
 def _check_enum(enums):
+    """Check the collected enums
+
+    Args:
+        enums (dict of str: list[str]): mapping from the path to the enum to the enum object
+
+    Returns:
+        dict: mapping from the violations and the corresponding path (and item name if necessary)
+
+    """
     check_result = collections.defaultdict(list)
     for path, enum_list in enums.items():
         if not isinstance(enum_list, list):
@@ -31,6 +40,15 @@ def _check_enum(enums):
 
 
 def _generate_error_message_for_enum(res_dict):
+    """Generate error message string for enum checks
+
+    Args:
+        res_dict (dict of string: string): mapping from the violation to the list of enum path
+
+    Returns:
+         str: the formatted error message
+
+    """
     message_lines = ["Errors in enum checks:"]
     for error_name, lines in res_dict.items():
         message_lines.append(error_name)
