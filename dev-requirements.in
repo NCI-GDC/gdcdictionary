@@ -1,0 +1,6 @@
+-c requirements.txt
+
+pytest>=4.6.3,<6.3
+pytest-cov>=2.7.1,<2.12
+pre-commit>=1.21.0,<2.12
+cfgv~=2.0.1

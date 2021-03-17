@@ -9,8 +9,9 @@ setup(
     },
     setup_requires=['setuptools_scm'],
     install_requires=[
-        'PyYAML',
-        'jsonschema',
+        'PyYAML>=5.1.2,<5.5',
+        'jsonschema>=3.0.2,<3.3',
+        'pyrsistent>=0.16.1,<0.18'
     ],
     package_data={
         "gdcdictionary": [
