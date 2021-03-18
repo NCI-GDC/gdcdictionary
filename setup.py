@@ -7,7 +7,7 @@ setup(
         'local_scheme': 'dirty-tag',
         'write_to': 'gdcdictionary/_version.py',
     },
-    setup_requires=['setuptools_scm'],
+    setup_requires=['setuptools_scm<6'],
     install_requires=[
         'PyYAML',
         'jsonschema',
