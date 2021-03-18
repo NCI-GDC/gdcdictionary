@@ -13,6 +13,11 @@ setup(
         'jsonschema>=3.0.2,<3.3',
         'pyrsistent>=0.16.1,<0.18'
     ],
+    extras_require={
+        'python_version == "2.7"': [
+            "functools32~=3.2",
+        ]
+    },
     package_data={
         "gdcdictionary": [
             "schemas/*.yaml",
