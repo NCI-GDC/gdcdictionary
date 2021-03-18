@@ -34,9 +34,9 @@ filelock==3.0.12
     # via virtualenv
 funcsigs==1.0.2
     # via pytest
-functools32==3.2.3.post2
+functools32==3.2.3.post2; python_version <= '3'
     # via jsonschema
-futures==3.3.0
+futures==3.3.0; python_version <= '3'
     # via pre-commit
 identify==1.6.2
     # via pre-commit
