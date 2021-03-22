@@ -11,7 +11,7 @@ setup(
     install_requires=[
         'PyYAML>=5.1.2,<5.5',
         'jsonschema>=3.0.2,<3.3',
-        'pyrsistent~=0.16.1'
+        'pyrsistent~=0.16.1'        # pin to version 0.16 for py27
     ],
     package_data={
         "gdcdictionary": [

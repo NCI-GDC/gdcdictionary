@@ -37,8 +37,10 @@ importlib-resources==3.2.1
     #   virtualenv
 jsonschema==3.2.0
     # via gdcdictionary (setup.py)
-more-itertools==8.7.0
-    # via pytest
+more-itertools==5.0.0
+    # via
+    #   -r dev-requirements.in
+    #   pytest
 nodeenv==1.5.0
     # via pre-commit
 packaging==20.9
@@ -72,6 +74,7 @@ six==1.15.0
     # via
     #   cfgv
     #   jsonschema
+    #   more-itertools
     #   pathlib2
     #   pre-commit
     #   pyrsistent
