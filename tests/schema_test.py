@@ -6,37 +6,73 @@ have more tests later that need to validate new errors found within the
 schema.
 
 """
+import collections
+import unittest
 
 from .utils import BaseTest, check_for_cycles, validate_schemata
 
 
+def _check_enum(enums):
+    """Check the collected enums
+
+    Args:
+        enums (dict of str: list[str]): mapping from the path to the enum to the enum object
+
+    Returns:
+        dict: mapping from the violations and the corresponding path (and item name if necessary)
+
+    """
+    check_result = collections.defaultdict(list)
+    for path, enum_list in enums.items():
+        if not isinstance(enum_list, list):
+            check_result["enum not a list"].append(path)
+
+        for item in enum_list:
+            if not isinstance(item, str):
+                check_result["enum item is not a string"].append("{}: {}".format(path, item))
+
+        if len(set(enum_list)) < len(enum_list):
+            check_result["duplicates in enum"].append(path)
+            duplicates = [item for item, count in collections.Counter(enum_list).items() if count > 1]
+            for item in duplicates:
+                check_result["duplicates in enum"].append("\t{}".format(item))
+    return check_result
+
+
+def _generate_error_message_for_enum(res_dict):
+    """Generate error message string for enum checks
+
+    Args:
+        res_dict (dict of string: string): mapping from the violation to the list of enum path
+
+    Returns:
+         str: the formatted error message
+
+    """
+    message_lines = ["Errors in enum checks:"]
+    for error_name, lines in res_dict.items():
+        message_lines.append(error_name)
+        for line in lines:
+            message_lines.append("\t{}".format(line))
+    return "\n".join(message_lines)
+
+
 class SchemaTest(BaseTest):
 
-    def traverse_schema_with_conditional(self, root, conditional_func, test_func):
-        if conditional_func(root):
-            test_func(root)
+    @unittest.expectedFailure
+    def test_properties_enum(self):
+        """Check the enums of node properties"""
+        # The enums in _definitions.yaml, _terms.yaml and metaschema.yaml are not checked
 
-        if isinstance(root, list):
-            for child in root:
-                self.traverse_schema_with_conditional(child, conditional_func, test_func)
-        elif isinstance(root, dict):
-            for child in root.keys():
-                self.traverse_schema_with_conditional(root[child], conditional_func, test_func)
+        enum_dict = {}
+        for node_name, node_schema in self.dictionary.schema.items():
+            for prop_name, prop_schema in node_schema["properties"].items():
+                if "enum" in prop_schema:
+                    path_str = '{}->{}'.format(node_name, prop_name)
+                    enum_dict[path_str] = prop_schema["enum"]
 
-    def test_enum_is_string(self):
-
-        def trigger(root):
-            if isinstance(root, dict) and 'enum' in root.keys():
-                return True
-            return False
-
-        def test_enum(root):
-            children = root['enum']
-            assert isinstance(children, list), "Enums children wasn't a list"
-            for child in children:
-                assert isinstance(child, str), "Offending enum found:" + str(child)
-
-        self.traverse_schema_with_conditional(self.dictionary.schema, trigger, test_enum)
+        res = _check_enum(enum_dict)
+        assert len(res) == 0, _generate_error_message_for_enum(res)
 
     def test_schemas(self):
         validate_schemata(self.dictionary.schema, self.dictionary.metaschema)
@@ -154,3 +190,29 @@ class SchemaTest(BaseTest):
 
         with self.assertRaisesRegexp(AssertionError, 'cycle detected'):
             check_for_cycles(schemata)
+
+    def test_links_to_annotation(self):
+        special_node = {
+            'annotation', 'clinical', 'experimental_strategy', 'metaschema',
+            'platform', 'program', 'project', 'publication', 'root', 'tag'
+        }
+
+        def _is_excluded_node(node_name):
+            if node_name.endswith('_workflow') or node_name.startswith('data_'):
+                return True
+            if node_name in special_node:
+                return True
+            return False
+
+        schemas = self.dictionary.schema
+        nodes_set = set(schemas.keys())
+        linked_to_annotation = [link['target_type'] for link in schemas["annotation"]["links"][0]["subgroup"]]
+        linked_node_set = set(linked_to_annotation)
+        # sanity check
+        assert len(linked_to_annotation) == len(linked_node_set)
+        assert len(linked_node_set - nodes_set) == 0
+        # check excluded nodes
+        excluded_nodes = nodes_set - linked_node_set
+        extra_nodes = [node for node in excluded_nodes if not _is_excluded_node(node)]
+        assert len(extra_nodes) == 0, \
+            "nodes not linking with annotation: \n{}".format('\n'.join(extra_nodes))

@@ -66,6 +66,7 @@ target/
 
 #venv
 .venv/
+venv*/
 
 #DS_store
 .DS_store
@@ -88,5 +89,6 @@ admin_auth
 # vim
 *.swp
 
-# vscode
+# IDEs
 .vscode/
+.idea/
