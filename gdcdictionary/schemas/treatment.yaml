@@ -104,6 +104,7 @@ properties:
     $ref:
       - "_terms.yaml#/number_of_cycles/common"
     type: integer
+    minimum: 0
 
   reason_treatment_ended:
     $ref:
@@ -124,6 +125,13 @@ properties:
     $ref:
       - "_terms.yaml#/regimen_or_line_of_therapy/common"
     type: string
+
+  route_of_administration:
+    enum:
+      - Intrathecal
+      - Intravenous
+      - Oral
+      - Not Reported
 
   treatment_anatomic_site:
     $ref:
@@ -473,6 +481,7 @@ properties:
       - "_terms.yaml#/treatment_arm/common"
     enum:
       - A081105
+      - A081801
       - E4512
       - EA5142
 
@@ -480,6 +489,7 @@ properties:
     $ref:
       - "_terms.yaml#/treatment_dose/common"
     type: integer
+    minimum: 0
 
   treatment_dose_units:
     $ref:
@@ -3069,6 +3079,7 @@ properties:
       - Integrin alpha-2 Inhibitor E7820
       - Integrin Receptor Antagonist GLPG0187
       - Interferon
+      - Interferon Alfa-2B
       - Interferon Alfa-N1
       - Interferon Alfa-N3
       - Interferon Alfacon-1
@@ -3222,6 +3233,7 @@ properties:
       - Leuprolide Mesylate Injectable Suspension
       - Leurubicin
       - Levetiracetam
+      - Levoleucovorin Calcium
       - Levothyroxine
       - Levothyroxine Sodium
       - Lexatumumab
@@ -3508,6 +3520,7 @@ properties:
       - Mirvetuximab Soravtansine
       - Mirzotamab Clezutoclax
       - Misonidazole
+      - Mistletoe Extract
       - Mitazalimab
       - Mitindomide
       - Mitobronitol
@@ -3958,7 +3971,6 @@ properties:
       - PARP Inhibitor E7016
       - PARP Inhibitor NMS-03305293
       - PARP-1/2 Inhibitor ABT-767
-      - PARP/Tankyrase Inhibitor 2X-121
       - PARP/Tankyrase Inhibitor 2X-121
       - PARP7 Inhibitor RBN-2397
       - Parsaclisib
@@ -4826,7 +4838,6 @@ properties:
       - TGF-beta Receptor 1 Kinase Inhibitor SH3051
       - TGF-beta Receptor 1 Kinase Inhibitor YL-13027
       - TGFa-PE38 Immunotoxin
-      - TGFa-PE38 Immunotoxin
       - TGFbeta Inhibitor LY3200882
       - TGFbeta Receptor Ectodomain-IgG Fc Fusion Protein AVID200
       - Thalicarpine
@@ -4946,7 +4957,6 @@ properties:
       - Transdermal 4-Hydroxytestosterone
       - Transferrin Receptor-Targeted Anti-RRM2 siRNA CALAA-01
       - Transferrin Receptor-Targeted Liposomal p53 cDNA
-      - Transferrin-CRM107
       - Transferrin-CRM107
       - Tranylcypromine Sulfate
       - Trapoxin
