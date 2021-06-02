@@ -6995,7 +6995,7 @@ properties:
       - umol/L
       - x10^3 cells/mcL
       - x10^9 cells/L
-      - Not Report
+      - Not Reported
       - Unknown
       - count x10^9 cells/L
     deprecated_enum:
