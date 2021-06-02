@@ -46,7 +46,9 @@ properties:
   additional_pathology_findings:
     $ref:
       - "_terms.yaml#/additional_pathology_findings/common"
-    type: string
+    enum:
+      - Pleurodesis, Talc
+      - Pleurodesis, NOS
 
   anaplasia_present:
     $ref:
@@ -119,11 +121,13 @@ properties:
     $ref:
       - "_terms.yaml#/breslow_thickness/common"
     type: number
+    minimum: 0
 
   circumferential_resection_margin:
     $ref:
       - "_terms.yaml#/circumferential_resection_margin/common"
     type: number
+    minimum: 0
 
   columnar_mucosa_present:
     enum:
@@ -141,6 +145,24 @@ properties:
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  consistent_pathology_review:
+    $ref:
+      - "_terms.yaml#/consistent_pathology_review/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
       Not Reported:
         $ref:
           - "_terms.yaml#/not_reported/common"
@@ -166,15 +188,15 @@ properties:
       Low Grade:
         $ref:
           - "_terms.yaml#/low_grade/pathology_detail/dysplasia_degree"
-      No Dysplasia:
-        $ref:
-          - "_terms.yaml#/no_dysplasia/common"
       Mild:
         $ref:
           - "_terms.yaml#/mild/common"
       Moderate:
         $ref:
           - "_terms.yaml#/moderate/common"
+      No Dysplasia:
+        $ref:
+          - "_terms.yaml#/no_dysplasia/common"
       Severe:
         $ref:
           - "_terms.yaml#/severe/common"
@@ -218,11 +240,13 @@ properties:
     $ref:
       - "_terms.yaml#/greatest_tumor_dimension/common"
     type: number
+    minimum: 0
 
   gross_tumor_weight:
     $ref:
       - "_terms.yaml#/gross_tumor_weight/common"
     type: number
+    minimum: 0
 
   largest_extrapelvic_peritoneal_focus:
     $ref:
@@ -349,15 +373,15 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
-      Positive:
-        $ref:
-          - "_terms.yaml#/positive/common"
-      Negative:
-        $ref:
-          - "_terms.yaml#/negative/common"
       Indeterminant:
         $ref:
           - "_terms.yaml#/indeterminant/common"
+      Negative:
+        $ref:
+          - "_terms.yaml#/negative/common"
+      Positive:
+        $ref:
+          - "_terms.yaml#/positive/common"
       Unknown:
         $ref:
           - "_terms.yaml#/unknown/common"
@@ -367,11 +391,13 @@ properties:
 
   lymph_nodes_positive:
     type: integer
+    minimum: 0
 
   lymph_nodes_tested:
     $ref:
       - "_terms.yaml#/lymph_nodes_tested/common"
     type: integer
+    minimum: 0
 
   lymphatic_invasion_present:
     $ref:
@@ -473,6 +499,8 @@ properties:
     $ref:
       - "_terms.yaml#/necrosis_percent/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   necrosis_present:
     enum:
@@ -530,11 +558,14 @@ properties:
     $ref:
       - "_terms.yaml#/number_proliferating_cells/common"
     type: integer
+    minimum: 0
 
   percent_tumor_invasion:
     $ref:
       - "_terms.yaml#/percent_tumor_invasion/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   perineural_invasion_present:
     $ref:
@@ -588,24 +619,40 @@ properties:
     $ref:
       - "_terms.yaml#/peripancreatic_lymph_nodes_tested/common"
     type: integer
+    minimum: 0
 
   prostatic_chips_positive_count:
     $ref:
       - "_terms.yaml#/prostatic_chips_positive_count/common"
     type: number
+    minimum: 0
 
   prostatic_chips_total_count:
     $ref:
       - "_terms.yaml#/prostatic_chips_total_count/common"
     type: number
+    minimum: 0
 
   prostatic_involvement_percent:
     $ref:
       - "_terms.yaml#/prostatic_involvement_percent/common"
     type: number
+    maximum: 100
+    minimum: 0
+
+  residual_tumor:
+    $ref:
+      - "_terms.yaml#/residual_tumor/common"
+    enum:
+      - RX
+      - R0
+      - R1
+      - R2
 
   rhabdoid_percent:
     type: number
+    maximum: 100
+    minimum: 0
 
   rhabdoid_present:
     enum:
@@ -619,6 +666,8 @@ properties:
 
   sarcomatoid_percent:
     type: number
+    maximum: 100
+    minimum: 0
 
   sarcomatoid_present:
     enum:
@@ -629,6 +678,12 @@ properties:
       Not Reported:
         $ref:
           - "_terms.yaml#/not_reported/common"
+
+  size_extraocular_nodule:
+    $ref:
+      - "_terms.yaml#/size_extraocular_nodule/common"
+    type: number
+    minimum: 0
 
   transglottic_extension:
     $ref:
@@ -653,6 +708,13 @@ properties:
     $ref:
       - "_terms.yaml#/tumor_largest_dimension_diameter/common"
     type: number
+    minimum: 0
+
+  tumor_thickness:
+    $ref:
+      - "_terms.yaml#/tumor_thickness/common"
+    type: number
+    minimum: 0
 
   vascular_invasion_present:
     $ref:
