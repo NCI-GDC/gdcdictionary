@@ -492,6 +492,7 @@ properties:
     $ref:
       - "_terms.yaml#/current_weight/common"
     type: number
+    minimum: 0
 
   days_to_collection:
     $ref:
@@ -571,11 +572,13 @@ properties:
     $ref:
       - "_terms.yaml#/initial_weight/common"
     type: number
+    minimum: 0
 
   intermediate_dimension:
     $ref:
       - "_terms.yaml#/intermediate_dimension/common"
     type: number
+    minimum: 0
 
   is_ffpe:
     $ref:
@@ -586,6 +589,7 @@ properties:
     $ref:
       - "_terms.yaml#/longest_dimension/common"
     type: number
+    minimum: 0
 
   method_of_sample_procurement:
     $ref:
@@ -760,6 +764,7 @@ properties:
     $ref:
       - "_terms.yaml#/sample_ordinal/common"
     type: integer
+    minimum: 1
 
   sample_type:
     $ref:
@@ -795,6 +800,7 @@ properties:
       - Mononuclear Cells from Bone Marrow Normal
       - Neoplasms of Uncertain and Unknown Behavior
       - Next Generation Cancer Model
+      - Next Generation Cancer Model Expanded Under Non-conforming Conditions
       - Not Allowed To Collect
       - Pleural Effusion
       - Post neo-adjuvant therapy
@@ -871,22 +877,26 @@ properties:
       - "61"
       - "85"
       - "86"
+      - "87"
       - "99"
 
   shortest_dimension:
     $ref:
       - "_terms.yaml#/shortest_dimension/common"
     type: number
+    minimum: 0
 
   time_between_clamping_and_freezing:
     $ref:
       - "_terms.yaml#/time_between_clamping_and_freezing/common"
     type: number
+    minimum: 0
 
   time_between_excision_and_freezing:
     $ref:
       - "_terms.yaml#/time_between_excision_and_freezing/common"
     type: number
+    minimum: 0
 
   tissue_collection_type:
     $ref:
