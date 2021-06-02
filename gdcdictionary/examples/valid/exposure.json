@@ -4,7 +4,7 @@
     "alcohol_history": "Yes",
     "alcohol_intensity": "Drinker",
     "asbestos_exposure": "Yes",
-    "cigarettes_per_day": -1.0,
+    "cigarettes_per_day": 1.0,
     "coal_dust_exposure":"Unknown",
     "environmental_tobacco_smoke_exposure":"No",
     "radon_exposure":"Unknown",
