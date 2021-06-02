@@ -52,7 +52,7 @@ properties:
       - "_terms.yaml#/age_at_index/common"
     oneOf:
       - type: integer
-        maximum: 32872
+        maximum: 89
         minimum: 0
       - type: "null"
 
@@ -1151,6 +1151,8 @@ properties:
     $ref:
       - "_terms.yaml#/occupation_duration_years/common"
     type: integer
+    maximum: 89
+    minimum: 0
 
   premature_at_birth:
     $ref:
@@ -1248,18 +1250,21 @@ properties:
     $ref:
       - "_terms.yaml#/weeks_gestation_at_birth/common"
     type: number
+    minimum: 0
 
   year_of_birth:
     $ref:
       - "_terms.yaml#/year_of_birth/common"
     oneOf:
       - type: integer
+        minimum: 1900
       - type: "null"
 
   year_of_death:
     $ref:
       - "_terms.yaml#/year_of_death/common"
     type: integer
+    minimum: 1900
 
   cases:
     $ref: "_definitions.yaml#/to_one"
