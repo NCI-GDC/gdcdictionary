@@ -36,6 +36,12 @@ links:
     target_type: slide
     multiplicity: many_to_one
     required: false
+  - name: diagnoses
+    backref: molecular_tests
+    label: related_to
+    target_type: diagnosis
+    multiplicity: many_to_one
+    required: false
 
 required:
   - submitter_id
@@ -85,8 +91,11 @@ properties:
       - CD7
       - CD79A
       - CEA
+      - FMC-7
       - HLA-DR
+      - Kappa, Surface
       - Ki67
+      - Lambda, Surface
       - Mesothelin
       - NSE
       - Prostate-Specific Antigen (PSA)
@@ -284,6 +293,7 @@ properties:
 
   biospecimen_volume:
     type: number
+    minimum: 0
 
   blood_test_normal_range_lower:
     $ref:
@@ -423,6 +433,7 @@ properties:
     $ref:
       - "_terms.yaml#/copy_number/common"
     type: number
+    minimum: 0
 
   clonality:
     $ref:
@@ -442,6 +453,13 @@ properties:
     $ref:
       - "_terms.yaml#/cytoband/common"
     type: string
+
+  days_to_test:
+    $ref:
+      - "_terms.yaml#/days_to_test/common"
+    type: integer
+    maximum: 32872
+    minimum: -32872
 
   exon:
     $ref:
@@ -475,6 +493,7 @@ properties:
       - ANK1
       - APC
       - APOBEC3B
+      - AQP1
       - AR
       - ARAF
       - ARHGAP26
@@ -529,6 +548,7 @@ properties:
       - BUB1B
       - C15orf65
       - CACNA1D
+      - CALB2
       - CALR
       - CAMTA1
       - CANT1
@@ -632,6 +652,7 @@ properties:
       - DNAJB1
       - DNM2
       - DNMT3A
+      - DNTT
       - DROSHA
       - DUX4L1
       - EBF1
@@ -649,6 +670,7 @@ properties:
       - EML4
       - EP300
       - EPAS1
+      - EPCAM
       - EPHA3
       - EPHA7
       - EPS15
@@ -723,6 +745,7 @@ properties:
       - GATA1
       - GATA2
       - GATA3
+      - GCET1
       - GLI1
       - GMPS
       - GNA11
@@ -942,6 +965,7 @@ properties:
       - PDGFB
       - PDGFRA
       - PDGFRB
+      - PDPN
       - PER1
       - PGR
       - PHF6
@@ -982,6 +1006,7 @@ properties:
       - PSIP1
       - PTCH1
       - PTEN
+      - PTGS2
       - PTK6
       - PTPN11
       - PTPN13
@@ -3448,15 +3473,21 @@ properties:
       - B-cell genotyping
       - Basophil
       - Beta 2 Microglobulin
+      - BG8
       - Blood Urea Nitrogen
       - C-Reactive Protein
       - Calcium
       - Cellularity
       - Chromogranin A
       - Chromogranin B
+      - Circulating Endothelial Cells
       - Circulating Tumor Cells
       - Creatinine
+      - Cytokeratin 5
+      - Cytokeratin 6
+      - Dopamine-Secreting
       - Eosinophil
+      - Epinephrine-Secreting
       - Epstein-Barr Virus
       - Gamma-Enolase
       - Glucose
@@ -3475,9 +3506,14 @@ properties:
       - Lymphocytes
       - M Protein
       - Metamyelocytes
+      - Metanephrine-Secreting
+      - Methoxytyramine-Secreting
+      - Microsatellite Instability
       - Myeloblasts
       - Myelocytes
       - Neutrophil Bands
+      - Norepinephrine-Secreting
+      - Normetanephrine-Secreting
       - Platelets
       - Prolymphocytes
       - Promonocytes
@@ -3486,6 +3522,8 @@ properties:
       - Serum Free Immunoglobulin Light Chain, Kappa
       - Serum Free Immunoglobulin Light Chain, Lambda
       - Serum Free Immunoglobulin Light Chain, NOS
+      - Serum Mesothelin
+      - TAG-72
       - Testosterone
       - Total Bilirubin
       - Total Protein
@@ -3647,11 +3685,13 @@ properties:
     $ref:
       - "_terms.yaml#/loci_abnormal_count/common"
     type: integer
+    minimum: 0
 
   loci_count:
     $ref:
       - "_terms.yaml#/loci_count/common"
     type: integer
+    minimum: 0
 
   locus:
     $ref:
@@ -3686,9 +3726,11 @@ properties:
     $ref:
       - "_terms.yaml#/mitotic_count/common"
     type: number
+    minimum: 0
 
   mitotic_total_area:
     type: number
+    minimum: 0
 
   molecular_analysis_method:
     $ref:
@@ -6940,7 +6982,26 @@ properties:
   test_units:
     $ref:
       - "_terms.yaml#/test_units/common"
-    type: string
+    enum:
+      - g/dL
+      - g/L
+      - mcg/mL
+      - mg/dL
+      - mg/L
+      - mmol/L
+      - mU/mol Hb
+      - U/g Hb
+      - U/mL
+      - U/L
+      - ukat/L
+      - umol/L
+      - x10^3 cells/mcL
+      - x10^9 cells/L
+      - Not Reported
+      - Unknown
+      - count x10^9 cells/L
+    deprecated_enum:
+      - count x10^9 cells/L
 
   test_value:
     $ref:
@@ -7105,5 +7166,9 @@ properties:
 
   follow_ups:
     $ref: "_definitions.yaml#/to_one"
+
   slides:
+    $ref: "_definitions.yaml#/to_one"
+
+  diagnoses:
     $ref: "_definitions.yaml#/to_one"
