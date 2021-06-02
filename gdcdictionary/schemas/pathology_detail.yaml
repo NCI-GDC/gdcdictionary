@@ -46,6 +46,9 @@ properties:
   additional_pathology_findings:
     $ref:
       - "_terms.yaml#/additional_pathology_findings/common"
+    enum:
+      - Pleurodesis, Talc
+      - Pleurodesis, NOS
 
   anaplasia_present:
     $ref:
