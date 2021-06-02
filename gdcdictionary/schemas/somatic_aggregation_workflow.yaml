@@ -24,7 +24,7 @@ systemProperties:
   - state
 
 links:
-  - exclusive: false
+  - exclusive: true
     required: true
     subgroup:
       - name: annotated_somatic_mutations
@@ -32,7 +32,7 @@ links:
         label: performed_on
         target_type: annotated_somatic_mutation
         multiplicity: one_to_many
-        required: true
+        required: false
       - name: simple_somatic_mutations
         backref: somatic_aggregation_workflows
         label: performed_on
