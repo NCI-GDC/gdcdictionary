@@ -108,6 +108,7 @@ properties:
     $ref:
       - "_terms.yaml#/days_to_sequencing/common"
     type: integer
+    minimum: -32872
 
   experiment_name:
     $ref:
@@ -123,21 +124,25 @@ properties:
     $ref:
       - "_terms.yaml#/fragment_maximum_length/common"
     type: integer
+    minimum: 0
 
   fragment_mean_length:
     $ref:
       - "_terms.yaml#/fragment_mean_length/common"
     type: number
+    minimum: 0
 
   fragment_minimum_length:
     $ref:
       - "_terms.yaml#/fragment_minimum_length/common"
     type: integer
+    minimum: 0
 
   fragment_standard_deviation_length:
     $ref:
       - "_terms.yaml#/fragment_standard_deviation_length/common"
     type: number
+    minimum: 0
 
   fragmentation_enzyme:
     enum:
@@ -172,6 +177,7 @@ properties:
       - Illumina HiSeq X Ten
       - Illumina MiSeq
       - Illumina NextSeq
+      - Illumina NovaSeq 6000
       - Ion Torrent PGM
       - Ion Torrent Proton
       - Ion Torrent S5
@@ -201,6 +207,7 @@ properties:
     $ref:
       - "_terms.yaml#/lane_number/common"
     type: integer
+    minimum: 1
 
   library_name:
     $ref:
@@ -297,6 +304,7 @@ properties:
     $ref:
       - "_terms.yaml#/number_expect_cells/common"
     type: integer
+    minimum: 0
 
   platform:
     $ref:
@@ -322,12 +330,15 @@ properties:
   read_length:
     oneOf:
       - type: integer
+        minimum: 0
       - type: "null"
 
   rin:
     $ref:
       - "_terms.yaml#/rin/common"
     type: number
+    maximum: 10
+    minimum: 1
 
   sequencing_center:
     $ref:
@@ -349,6 +360,7 @@ properties:
     enum:
       - Chromium 3' Gene Expression v2 Library
       - Chromium 3' Gene Expression v3 Library
+      - Chromium scATAC v1 Library
       - Smart-Seq2
 
   spike_ins_concentration:
@@ -409,6 +421,7 @@ properties:
       - TruSeq Exome Enrichment - 62 Mb
       - TruSeq RNA Exome
       - TruSight Myeloid Sequencing Panel
+      - Twist Human Comprehensive Exome
       - xGen Exome Research Panel v1.0
       - Unknown
     enumDef:
