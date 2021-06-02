@@ -29,7 +29,7 @@ links:
     backref: slide_images
     label: data_from
     target_type: slide
-    multiplicity: one_to_many
+    multiplicity: many_to_many
     required: true
 
 required:
@@ -70,6 +70,7 @@ properties:
       - "_terms.yaml#/data_format/common"
     enum:
       - JPEG
+      - JPEG 2000
       - SVS
       - TIFF
 
