@@ -24,12 +24,21 @@ systemProperties:
   - state
 
 links:
-  - name: aligned_reads_files
-    backref: germline_mutation_calling_workflows
-    label: performed_on
-    target_type: aligned_reads
-    multiplicity: one_to_many
+  - exclusive: true
     required: true
+    subgroup:
+      - name: aligned_reads_files
+        backref: germline_mutation_calling_workflows
+        label: performed_on
+        target_type: aligned_reads
+        multiplicity: one_to_many
+        required: false
+      - name: submitted_genotyping_arrays
+        backref: germline_mutation_calling_workflows
+        label: performed_on
+        target_type: submitted_genotyping_array
+        multiplicity: many_to_one
+        required: false
 
 required:
   - submitter_id
@@ -49,7 +58,11 @@ properties:
     $ref:
       - "_terms.yaml#/workflow_type/common"
     enum:
+      - Birdseed
       - HaplotypeCaller
 
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
+
+  submitted_genotyping_arrays:
+    $ref: "_definitions.yaml#/to_one"
