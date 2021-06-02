@@ -458,6 +458,8 @@ properties:
     $ref:
       - "_terms.yaml#/days_to_test/common"
     type: integer
+    maximum: 32872
+    minimum: -32872
 
   exon:
     $ref:
@@ -6984,7 +6986,7 @@ properties:
       - g/dL
       - g/L
       - mcg/mL
-      - mg/dl
+      - mg/dL
       - mg/L
       - mmol/L
       - mU/mol Hb
