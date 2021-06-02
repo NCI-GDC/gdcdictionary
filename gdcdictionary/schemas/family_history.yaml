@@ -546,7 +546,7 @@ properties:
     $ref:
       - "_terms.yaml#/relationship_age_at_diagnosis/common"
     type: number
-    maximum: 90
+    maximum: 89
     minimum: 0
 
   relationship_primary_diagnosis:
@@ -789,6 +789,7 @@ properties:
     $ref:
       - "_terms.yaml#/relatives_with_cancer_history_count/common"
     type: integer
+    minimum: 0
 
   cases:
     $ref: "_definitions.yaml#/to_one"
