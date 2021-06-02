@@ -911,11 +911,13 @@ properties:
     $ref:
       - "_terms.yaml#/body_surface_area/common"
     type: number
+    minimum: 0
 
   bmi:
     $ref:
       - "_terms.yaml#/bmi/common"
     type: number
+    minimum: 0
 
   cause_of_response:
     $ref:
@@ -926,6 +928,7 @@ properties:
     $ref:
       - "_terms.yaml#/cd4_count/common"
     type: number
+    minimum: 0
 
   cdc_hiv_risk_factors:
     $ref:
@@ -1003,6 +1006,7 @@ properties:
       - Cytomegalovirus (CMV)
       - Deep Vein Thrombosis / Thromboembolism
       - Denys-Drash Syndrome
+      - Dermatomyosis
       - Depression
       - Diabetes
       - Diabetes, Type II
@@ -1039,6 +1043,7 @@ properties:
       - Hepatitis, Chronic
       - Hereditary Non-polyposis Colon Cancer
       - Herpes
+      - Herpes Zoster
       - High Grade Liver Dysplastic Nodule
       - HIV / AIDS
       - Human Papillomavirus Infection
@@ -1117,6 +1122,7 @@ properties:
       - Turcot Syndrome
       - Tyrosinemia
       - Ulcerative Colitis
+      - Varicella Zoster Virus
       - Wagr Syndrome
       - Unknown
       - Not Reported
@@ -1181,6 +1187,8 @@ properties:
     $ref:
       - "_terms.yaml#/days_to_imaging/common"
     type: integer
+    maximum: 32872
+    minimum: -32872
 
   days_to_progression:
     $ref:
@@ -1278,6 +1286,8 @@ properties:
     $ref:
       - "_terms.yaml#/dlco_ref_predictive_percent/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   ecog_performance_status:
     $ref:
@@ -1308,25 +1318,47 @@ properties:
       - Physical Examination
       - Positive Biomarker(s)
 
+  eye_color:
+    $ref:
+      - "_terms.yaml#/eye_color/common"
+    enum:
+      - Amber
+      - Blue
+      - Brown
+      - Gray
+      - Green
+      - Hazel
+      - Red & Violet
+      - Other
+      - Not Reported
+
   fev1_ref_post_bronch_percent:
     $ref:
       - "_terms.yaml#/fev1_ref_post_bronch_percent/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   fev1_ref_pre_bronch_percent:
     $ref:
       - "_terms.yaml#/fev1_ref_pre_bronch_percent/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   fev1_fvc_pre_bronch_percent:
     $ref:
       - "_terms.yaml#/fev1_fvc_pre_bronch_percent/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   fev1_fvc_post_bronch_percent:
     $ref:
       - "_terms.yaml#/fev1_fvc_post_bronch_percent/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   haart_treatment_indicator:
     $ref:
@@ -1354,6 +1386,7 @@ properties:
     $ref:
       - "_terms.yaml#/height/common"
     type: number
+    minimum: 0
 
   hepatitis_sustained_virological_response:
     $ref:
@@ -1377,10 +1410,35 @@ properties:
         $ref:
           - "_terms.yaml#/not_reported/common"
 
+  history_of_tumor:
+    $ref:
+      - "_terms.yaml#/history_of_tumor/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  history_of_tumor_type:
+    $ref:
+      - "_terms.yaml#/history_of_tumor_type/common"
+    enum:
+      - Phenochromocytoma or Paraganglioma
+
   hiv_viral_load:
     $ref:
       - "_terms.yaml#/hiv_viral_load/common"
     type: number
+    minimum: 0
 
   hormonal_contraceptive_type:
     enum:
@@ -1611,11 +1669,13 @@ properties:
     $ref:
       - "_terms.yaml#/nadir_cd4_count/common"
     type: number
+    minimum: 0
 
   pancreatitis_onset_year:
     $ref:
       - "_terms.yaml#/pancreatitis_onset_year/common"
     type: integer
+    minimum: 1900
 
   pregnancy_outcome:
     $ref:
@@ -2059,11 +2119,13 @@ properties:
     $ref:
       - "_terms.yaml#/recist_targeted_regions_number/common"
     type: integer
+    minimum: 0
 
   recist_targeted_regions_sum:
     $ref:
       - "_terms.yaml#/recist_targeted_regions_sum/common"
     type: number
+    minimum: 0
 
   reflux_treatment_type:
     $ref:
@@ -2140,6 +2202,7 @@ properties:
       - Cyst(s)
       - Cytomegalovirus (CMV)
       - Denys-Drash Syndrome
+      - Dermatomyosis
       - Diabetes, NOS
       - Diabetes, Type I
       - Diabetes, Type II
@@ -2178,6 +2241,7 @@ properties:
       - Hereditary Papillary Renal Cell Carcinoma
       - Hereditary Prostate Cancer
       - Hereditary Renal Cell Carcinoma
+      - Herpes Zoster
       - High Grade Dysplasia
       - High-grade Prostatic Intraepithelial Neoplasia (PIN)
       - HIV
@@ -2235,6 +2299,7 @@ properties:
       - Tumor-associated Lymphoid Proliferation
       - Turcot Syndrome
       - Undescended Testis
+      - Varicella Zoster Virus
       - Vascular Disease
       - Vision Changes
       - Von Hippel-Lindau Syndrome
@@ -2287,6 +2352,88 @@ properties:
       - PSMA
       - Sodium Fluoride
 
+  undescended_testis_corrected:
+    $ref:
+      - "_terms.yaml#/undescended_testis_corrected/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  undescended_testis_corrected_age:
+    $ref:
+      - "_terms.yaml#/undescended_testis_corrected_age/common"
+    type: integer
+    minimum: 0
+
+  undescended_testis_corrected_laterality:
+    $ref:
+      - "_terms.yaml#/undescended_testis_corrected_laterality/common"
+    enum:
+      - Left
+      - Right
+      - Bilateral
+      - Not Reported
+    enumDef:
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  undescended_testis_corrected_method:
+    $ref:
+      - "_terms.yaml#/undescended_testis_corrected_method/common"
+    enum:
+      - Spontaneous Descent
+      - Orchiopexy
+      - Hormones
+      - Testis Removed
+      - Not Reported
+    enumDef:
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  undescended_testis_history:
+    $ref:
+      - "_terms.yaml#/undescended_testis_history/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
+  undescended_testis_history_laterality:
+    $ref:
+      - "_terms.yaml#/undescended_testis_history_laterality/common"
+    enum:
+      - Left
+      - Right
+      - Bilateral
+      - Not Reported
+    enumDef:
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
+
   viral_hepatitis_serologies:
     $ref:
       - "_terms.yaml#/viral_hepatitis_serologies/common"
@@ -2313,6 +2460,7 @@ properties:
     $ref:
       - "_terms.yaml#/weight/common"
     type: number
+    minimum: 0
 
   cases:
     $ref: "_definitions.yaml#/to_one"
