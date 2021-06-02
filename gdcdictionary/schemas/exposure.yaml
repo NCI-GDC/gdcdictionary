@@ -239,6 +239,7 @@ properties:
     $ref:
       - "_terms.yaml#/exposure_duration_years/common"
     type: integer
+    minimum: 0
 
   exposure_type:
     $ref:
