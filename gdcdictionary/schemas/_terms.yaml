@@ -107464,7 +107464,7 @@ zrsr2:
 
 experimental_protocol_type:
   common:
-    description:
+    description: >-
       The type of experiment used to extract the analyte.
     termDef:
       term:
@@ -107475,8 +107475,8 @@ experimental_protocol_type:
 
 rna_integrity_number:
   common:
-    description: 
-      A numerical assessment of the integrity of RNA based on the entire electrophoretic 
+    description: >-
+      A numerical assessment of the integrity of RNA based on the entire electrophoretic
       trace of the RNA sample, including the presence or absence of degradation products.
     termDef:
       term: >-
@@ -107490,14 +107490,14 @@ rna_integrity_number:
 
 ann_arbor_b_symptoms_described:
   common:
-    description:
+    description: >-
       Text descibing the specific lymphoma B-symptoms present.
     termDef:
       term:
       source:
       cde_id:
       cde_version:
-      term_url: 
+      term_url:
 
 necrosis_present:
   common:
@@ -107508,7 +107508,7 @@ necrosis_present:
       source:
       cde_id:
       cde_version:
-      term_url: 
+      term_url:
 
 sarcomatoid_percent:
   common:
@@ -107545,7 +107545,7 @@ rhabdoid_present:
       source:
       cde_id:
       cde_version:
-      term_url: 
+      term_url:
 
 sarcomatoid_present:
   common:
@@ -107556,7 +107556,7 @@ sarcomatoid_present:
       source:
       cde_id:
       cde_version:
-      term_url: 
+      term_url:
 
 chipseq_antibody:
   common:
@@ -107567,7 +107567,7 @@ chipseq_antibody:
       source:
       cde_id:
       cde_version:
-      term_url: 
+      term_url:
 
 fragmentation_enzyme:
   common:
@@ -107578,4 +107578,250 @@ fragmentation_enzyme:
       source:
       cde_id:
       cde_version:
-      term_url: 
+      term_url:
+
+adrenal_hormone:
+  common:
+    description: >-
+      Indicates the presence of the adrenal hormone. The adrenal hormone is made from
+      cholesterol and protein produced by the adrenal glands and regulate electrolyte
+      balance, blood pressure, inflammation, blood sugar balance, and immune system
+      control.
+    termDef:
+      term: >-
+        Adrenal Hormone
+      source: NCIt
+      cde_id: C2264
+      cde_version: 21.04d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C2264"
+
+primary_disease:
+  common:
+    description: >-
+      Indicates whether the specific diagnosis represents the disease that was the
+      primary focus of the study.
+    termDef:
+      term: >-
+        Primary Disease
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+exposure_duration_years:
+  common:
+    description: >-
+      The period of time from start to finish of exposure, in years.
+    termDef:
+      term: >-
+        Exposure Duration
+      source: NCIt
+      cde_id: C83280
+      cde_version: 21.04d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83280"
+
+parent_with_radiation_exposure:
+  common:
+    description: >-
+      Indicates whether the patient's parent(s) were exposed to radiation
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+route_of_administration:
+  common:
+    description: >-
+      ​The pathway by which a substance is administered in order to reach the site
+      of action in the body.
+    termDef:
+      term: >-
+        ​Route of Administration
+      source: NCIt
+      cde_id: C38114​
+      cde_version: 21.04d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C38114"
+
+days_to_test:
+  common:
+    description: >-
+      Number of days between the date used for index and the date of the laboratory
+      test.
+    termDef:
+      term: >-
+        Index Date to Laboratory Test
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+eye_color:
+  common:
+    description: >-
+      The color of the iris of the eye
+    termDef:
+      term: >-
+        Eye Color
+      source: NCIt
+      cde_id: C157437
+      cde_version: 21.04d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C157437"
+
+history_of_tumor:
+  common:
+    description: >-
+      Indicates whether patient has a history of tumors.
+    termDef:
+      term: >-
+        History of Tumor
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+history_of_tumor_type:
+  common:
+    description: >-
+      Describes the type of the patient's prior diagnosed tumor.
+    termDef:
+      term: >-
+        Type of Prior Tumor
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+undescended_testis_history:
+  common:
+    description: >-
+      The persistent failure of one or both testes to descend into the scrotum.
+    termDef:
+      term: >-
+        Undescended Testes
+      source: NCIt
+      cde_id: C12326
+      cde_version: 21.04d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C12326"
+
+undescended_testis_history_laterality:
+  common:
+    description: >-
+      Describes the lateral location of the patient's undescended testis.
+    termDef:
+      term: >-
+        Undescended Testes Laterality
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+undescended_testis_corrected:
+  common:
+    description: >-
+      Indicates whether the patient's undescended testis was corrected.
+    termDef:
+      term: >-
+        Undescended Testes Corrected
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+undescended_testis_corrected_age:
+  common:
+    description: >-
+      The patient's age when their undescended tesis was corrected.
+    termDef:
+      term: >-
+        Undescended Testes Corrected Age
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+undescended_testis_corrected_method:
+  common:
+    description: >-
+      Describes the method used to correct the patient's undescended testis.
+    termDef:
+      term: >-
+        Undescended Testes Corrected Method
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+undescended_testis_corrected_laterality:
+  common:
+    description: >-
+      Descrives the lateral location of the patient's undescended testis correction.
+    termDef:
+      term: >-
+        Undescended Testes Corrected Laterality
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+consistent_pathology_review:
+  common:
+    description: >-
+      Indicates whether a recent review of tissue is consistent with a prior pathology
+      review.
+    termDef:
+      term: >-
+        Consistent Pathology Review
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+residual_tumor:
+  common:
+    description: >-
+      Tumor cells that remain in the body following cancer treatment.
+    termDef:
+      term: >-
+        Residual Disease
+      source: NCIt
+      cde_id: C4809
+      cde_version: 21.04d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4809"
+
+tumor_thickness:
+  common:
+    description: >-
+      A measurement of the thickness of a sectioned slice (of tissue or mineral or
+      other substance).
+    termDef:
+      term: >-
+        Section Thickness
+      source: NCIt
+      cde_id: C176286
+      cde_version: 21.04d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C176286"
+
+size_extraocular_nodule:
+  common:
+    description: >-
+      The size of the nodule that is outside the eye.
+    termDef:
+      term: >-
+        Extraocular Nodule Size
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+proc_internal:
+  common:
+    description: >-
+      Internal data processing flag
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
