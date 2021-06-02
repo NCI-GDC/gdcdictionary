@@ -131,7 +131,6 @@ properties:
       - Bisulfite-Seq
       - ChIP-Seq
       - HiChIP
-      - Low Pass WGS
       - miRNA-Seq
       - RNA-Seq
       - scATAC-Seq
