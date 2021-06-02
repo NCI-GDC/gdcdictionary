@@ -51,16 +51,21 @@ properties:
     $ref:
       - "_terms.yaml#/age_at_onset/common"
     type: integer
+    maximum: 89
+    minimum: 0
 
   alcohol_days_per_week:
     $ref:
       - "_terms.yaml#/alcohol_days_per_week/common"
     type: number
+    maximum: 7
+    minimum: 0
 
   alcohol_drinks_per_day:
     $ref:
       - "_terms.yaml#/alcohol_drinks_per_day/common"
     type: number
+    minimum: 0
 
   alcohol_history:
     $ref:
@@ -174,6 +179,7 @@ properties:
     $ref:
       - "_terms.yaml#/cigarettes_per_day/common"
     type: number
+    minimum: 0
 
   coal_dust_exposure:
     $ref:
@@ -229,11 +235,18 @@ properties:
         $ref:
           - "_terms.yaml#/not_reported/common"
 
+  exposure_duration_years:
+    $ref:
+      - "_terms.yaml#/exposure_duration_years/common"
+    type: integer
+    minimum: 0
+
   exposure_type:
     $ref:
       - "_terms.yaml#/exposure_type/common"
     enum:
       - Marijuana
+      - Radiation
       - Smoke
       - Tobacco
       - Wood Dust
@@ -249,11 +262,31 @@ properties:
     $ref:
       - "_terms.yaml#/marijuana_use_per_week/common"
     type: number
+    minimum: 0
 
   pack_years_smoked:
     $ref:
       - "_terms.yaml#/pack_years_smoked/common"
     type: number
+    minimum: 0
+
+  parent_with_radiation_exposure:
+    $ref:
+      - "_terms.yaml#/parent_with_radiation_exposure/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   radon_exposure:
     $ref:
@@ -319,6 +352,8 @@ properties:
 
   smokeless_tobacco_quit_age:
     type: integer
+    maximum: 89
+    minimum: 0
 
   smoking_frequency:
     $ref:
@@ -368,11 +403,15 @@ properties:
     $ref:
       - "_terms.yaml#/tobacco_smoking_onset_year/common"
     type: integer
+    maximum: 2050
+    minimum: 1900
 
   tobacco_smoking_quit_year:
     $ref:
       - "_terms.yaml#/tobacco_smoking_quit_year/common"
     type: integer
+    maximum: 2050
+    minimum: 1900
 
   tobacco_smoking_status:
     $ref:
@@ -426,6 +465,7 @@ properties:
     $ref:
       - "_terms.yaml#/tobacco_use_per_day/common"
     type: number
+    minimum: 0
 
   type_of_smoke_exposure:
     $ref:
@@ -664,6 +704,8 @@ properties:
     $ref:
       - "_terms.yaml#/years_smoked/common"
     type: number
+    maximum: 89
+    minimum: 0
 
   cases:
     $ref: "_definitions.yaml#/to_one"
