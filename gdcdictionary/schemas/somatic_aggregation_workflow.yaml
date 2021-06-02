@@ -24,12 +24,21 @@ systemProperties:
   - state
 
 links:
-  - name: annotated_somatic_mutations
-    backref: somatic_aggregation_workflows
-    label: performed_on
-    target_type: annotated_somatic_mutation
-    multiplicity: one_to_many
+  - exclusive: true
     required: true
+    subgroup:
+      - name: annotated_somatic_mutations
+        backref: somatic_aggregation_workflows
+        label: performed_on
+        target_type: annotated_somatic_mutation
+        multiplicity: one_to_many
+        required: false
+      - name: simple_somatic_mutations
+        backref: somatic_aggregation_workflows
+        label: performed_on
+        target_type: simple_somatic_mutation
+        multiplicity: one_to_many
+        required: false
 
 required:
   - submitter_id
@@ -50,6 +59,7 @@ properties:
       - "_terms.yaml#/workflow_type/common"
     enum:
       - Aliquot Ensemble Somatic Variant Merging and Masking
+      - CaVEMan Variant Aggregation and Masking
       - FoundationOne Variant Aggregation and Masking
       - GENIE Variant Aggregation and Masking
       - MuSE Variant Aggregation and Masking
@@ -59,4 +69,7 @@ properties:
       - VarScan2 Variant Aggregation and Masking
 
   annotated_somatic_mutations:
+    $ref: "_definitions.yaml#/to_many"
+
+  simple_somatic_mutations:
     $ref: "_definitions.yaml#/to_many"
