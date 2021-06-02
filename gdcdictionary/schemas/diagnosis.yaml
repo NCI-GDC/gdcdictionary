@@ -35,10 +35,11 @@ links:
 required:
   - submitter_id
   - age_at_diagnosis
-  - primary_diagnosis
   - morphology
-  - tissue_or_organ_of_origin
+  - primary_diagnosis
+  - primary_disease
   - site_of_resection_or_biopsy
+  - tissue_or_organ_of_origin
 
 uniqueKeys:
   - [id]
@@ -53,6 +54,24 @@ properties:
 
   $ref:
     - "_definitions.yaml#/ubiquitous_properties"
+
+  adrenal_hormone:
+    $ref:
+      - "_terms.yaml#/adrenal_hormone/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms.yaml#/no/common"
+      Not Reported:
+        $ref:
+          - "_terms.yaml#/not_reported/common"
 
   age_at_diagnosis:
     $ref:
@@ -731,6 +750,8 @@ properties:
       - Stage IIC
       - Stage III
       - Stage IIIA
+      - Stage IIIA1
+      - Stage IIIA2
       - Stage IIIB
       - Stage IIIC
       - Stage IIIC1
@@ -1978,6 +1999,8 @@ properties:
     $ref:
       - "_terms.yaml#/gleason_patterns_percent/common"
     type: integer
+    maximum: 100
+    minimum: 0
 
   goblet_cells_columnar_mucosa_present:
     $ref:
@@ -2368,6 +2391,7 @@ properties:
     $ref:
       - "_terms.yaml#/margin_distance/common"
     type: number
+    minimum: 0
 
   margins_involved_site:
     $ref:
@@ -2480,9 +2504,11 @@ properties:
       - Abdomen
       - Adrenal Gland
       - Ascites
+      - Bladder
       - Bone
       - Bone Marrow
       - Brain
+      - Bronchus
       - Central Nervous System
       - Cerebrospinal Fluid
       - Colon
@@ -2491,6 +2517,7 @@ properties:
       - Esophagus
       - Gastrointestinal Tract
       - Groin
+      - Head, Face or Neck, NOS
       - Heart
       - Kidney
       - Liver
@@ -2498,6 +2525,8 @@ properties:
       - Lymph Node, Axillary
       - Lymph Node, Inguinal
       - Lymph Node, NOS
+      - Lymph Node, Regional
+      - Lymph Node, Subcarinal
       - Mediastinum
       - Neck
       - Omentum
@@ -2642,6 +2671,7 @@ properties:
       - Dilation and Curettage Procedure
       - Enucleation
       - Excisional Biopsy
+      - Exoresection
       - Fine Needle Aspiration
       - Imaging
       - Incisional Biopsy
@@ -2768,6 +2798,7 @@ properties:
     $ref:
       - "_terms.yaml#/mitotic_count/common"
     type: integer
+    minimum: 0
 
   mitosis_karyorrhexis_index:
     $ref:
@@ -2994,6 +3025,7 @@ properties:
       - 8245/1
       - 8245/3
       - 8246/3
+      - 8246/6
       - 8247/3
       - 8248/1
       - 8249/3
@@ -3093,6 +3125,7 @@ properties:
       - 8380/1
       - 8380/2
       - 8380/3
+      - 8380/6
       - 8381/0
       - 8381/1
       - 8381/3
@@ -3152,6 +3185,7 @@ properties:
       - 8460/3
       - 8461/0
       - 8461/3
+      - 8461/6
       - 8462/1
       - 8463/1
       - 8470/0
@@ -3204,6 +3238,7 @@ properties:
       - 8522/1
       - 8522/2
       - 8522/3
+      - 8522/6
       - 8523/3
       - 8524/3
       - 8525/3
@@ -7084,6 +7119,11 @@ properties:
       Not Reported:
         $ref:
           - "_terms.yaml#/not_reported/common"
+
+  primary_disease:
+    $ref:
+      - "_terms.yaml#/primary_disease/common"
+    type: boolean
 
   primary_diagnosis:
     $ref:
@@ -17841,6 +17881,7 @@ properties:
         - Kidney, Lower Pole
         - Kidney, Middle
         - Kidney, Upper Pole
+        - Mesothelium
         - Omentum
         - Other
         - Ovary, Left
@@ -19252,6 +19293,8 @@ properties:
       - "_terms.yaml#/year_of_diagnosis/common"
     oneOf:
       - type: integer
+        maximum: 2050
+        minimum: 1900
       - type: "null"
 
   cases:
