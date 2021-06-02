@@ -55,6 +55,7 @@ properties:
       - MuTect2
       - Pindel
       - SomaticSniper
+      - Strelka2 RNA
       - VarScan2
 
   aligned_reads_files:
