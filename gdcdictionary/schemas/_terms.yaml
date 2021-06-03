@@ -3175,6 +3175,18 @@ portion_number:
       cde_version: 1.0
       term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432711&version=1.0"
 
+portion_weight:
+  common:
+    description: >-
+      Numeric value that represents the sample portion weight, measured in milligrams.
+    termDef:
+      term: >-
+        Biospecimen Portion Weight Milligram Value
+      source: caDSR
+      cde_id: 5432593
+      cde_version: 1.0
+      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432593&version=1.0"
+
 premature_at_birth:
   common:
     description: >-

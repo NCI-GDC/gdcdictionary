@@ -115,18 +115,6 @@ m_protein:
       term_id: C92291
       term_version: 20.10d
 
-portion_weight:
-  common:
-    description: >-
-      Numeric value that represents the sample portion weight, measured in milligrams.
-    termDef:
-      term: >-
-        Biospecimen Portion Weight Milligram Value
-      source: caDSR
-      cde_id: 5432593
-      cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432593&version=1.0"
-
 total_protein:
   common:
     description: >-
