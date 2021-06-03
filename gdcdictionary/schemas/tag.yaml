@@ -119,4 +119,4 @@ properties:
     enumDef:
       exon:
         $ref:
-          - "_terms.yaml#/exon/common"
+          - "_terms_enum.yaml#/exon/common"

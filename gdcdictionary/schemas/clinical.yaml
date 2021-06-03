@@ -69,16 +69,16 @@ properties:
     enumDef:
       female:
         $ref:
-          - "_terms.yaml#/female/common"
+          - "_terms_enum.yaml#/female/common"
       male:
         $ref:
-          - "_terms.yaml#/male/common"
+          - "_terms_enum.yaml#/male/common"
       unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       unspecified:
         $ref:
-          - "_terms.yaml#/unspecified/common"
+          - "_terms_enum.yaml#/unspecified/common"
 
   ethnicity:
     description: >-
@@ -90,10 +90,10 @@ properties:
     enumDef:
       hispanic or latino:
         $ref:
-          - "_terms.yaml#/hispanic_or_latino/common"
+          - "_terms_enum.yaml#/hispanic_or_latino/common"
       not hispanic or latino:
         $ref:
-          - "_terms.yaml#/not_hispanic_or_latino/common"
+          - "_terms_enum.yaml#/not_hispanic_or_latino/common"
 
   icd_10:
     description: >-
@@ -117,22 +117,22 @@ properties:
     enumDef:
       not reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
       american indian or alaska native:
         $ref:
-          - "_terms.yaml#/american_indian_or_alaska_native/common"
+          - "_terms_enum.yaml#/american_indian_or_alaska_native/common"
       black or african american:
         $ref:
-          - "_terms.yaml#/black_or_african_american/common"
+          - "_terms_enum.yaml#/black_or_african_american/common"
       asian:
         $ref:
-          - "_terms.yaml#/asian/common"
+          - "_terms_enum.yaml#/asian/common"
       native hawaiian or other pacific islander:
         $ref:
-          - "_terms.yaml#/native_hawaiian_or_other_pacific_islander/common"
+          - "_terms_enum.yaml#/native_hawaiian_or_other_pacific_islander/common"
       other:
         $ref:
-          - "_terms.yaml#/other/common"
+          - "_terms_enum.yaml#/other/common"
 
   vital_status:
     description: >-
@@ -144,10 +144,10 @@ properties:
     enumDef:
       alive:
         $ref:
-          - "_terms.yaml#/alive/common"
+          - "_terms_enum.yaml#/alive/common"
       dead:
         $ref:
-          - "_terms.yaml#/dead/common"
+          - "_terms_enum.yaml#/dead/common"
 
   year_of_diagnosis:
     description: >-

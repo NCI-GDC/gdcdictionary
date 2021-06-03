@@ -89,7 +89,7 @@ properties:
     enumDef:
       Not Applicable:
         $ref:
-          - "_terms.yaml#/not_applicable/common"
+          - "_terms_enum.yaml#/not_applicable/common"
 
   chipseq_target:
     $ref:
@@ -152,7 +152,7 @@ properties:
     enumDef:
       Not Applicable:
         $ref:
-          - "_terms.yaml#/not_applicable/common"
+          - "_terms_enum.yaml#/not_applicable/common"
 
   includes_spike_ins:
     $ref:
@@ -188,13 +188,13 @@ properties:
     enumDef:
       Other:
         $ref:
-          - "_terms.yaml#/other/common"
+          - "_terms_enum.yaml#/other/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   is_paired_end:
     $ref:
@@ -249,10 +249,10 @@ properties:
     enumDef:
       Other:
         $ref:
-          - "_terms.yaml#/other/common"
+          - "_terms_enum.yaml#/other/common"
       PCR:
         $ref:
-          - "_terms.yaml#/pcr/common"
+          - "_terms_enum.yaml#/pcr/common"
 
   library_strand:
     $ref:
@@ -265,7 +265,7 @@ properties:
     enumDef:
       Not Applicable:
         $ref:
-          - "_terms.yaml#/not_applicable/common"
+          - "_terms_enum.yaml#/not_applicable/common"
 
   library_strategy:
     $ref:
@@ -286,13 +286,13 @@ properties:
     enumDef:
       Targeted Sequencing:
         $ref:
-          - "_terms.yaml#/targeted_sequencing/common"
+          - "_terms_enum.yaml#/targeted_sequencing/common"
       WGS:
         $ref:
-          - "_terms.yaml#/wgs/common"
+          - "_terms_enum.yaml#/wgs/common"
       WXS:
         $ref:
-          - "_terms.yaml#/wxs/common"
+          - "_terms_enum.yaml#/wxs/common"
 
   multiplex_barcode:
     $ref:
@@ -320,7 +320,7 @@ properties:
     enumDef:
       Other:
         $ref:
-          - "_terms.yaml#/other/common"
+          - "_terms_enum.yaml#/other/common"
 
   read_group_name:
     description: >-
@@ -427,10 +427,10 @@ properties:
     enumDef:
       Not Applicable:
         $ref:
-          - "_terms.yaml#/not_applicable/common"
+          - "_terms_enum.yaml#/not_applicable/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
 
   target_capture_kit_catalog_number:
     $ref:
