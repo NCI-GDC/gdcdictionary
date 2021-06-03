@@ -90,10 +90,10 @@ properties:
     enumDef:
       DNA:
         $ref:
-          - "_terms.yaml#/dna/common"
+          - "_terms_enum.yaml#/dna/common"
       Total RNA:
         $ref:
-          - "_terms.yaml#/total_rna/common"
+          - "_terms_enum.yaml#/total_rna/common"
 
   analyte_type_id:
     $ref:
@@ -141,7 +141,7 @@ properties:
     enumDef:
       Total RNA:
         $ref:
-          - "_terms.yaml#/total_rna/common"
+          - "_terms_enum.yaml#/total_rna/common"
 
   normal_tumor_genotype_snp_match:
     $ref:
@@ -155,19 +155,19 @@ properties:
     enumDef:
       "Yes":
         $ref:
-          - "_terms.yaml#/yes/common"
+          - "_terms_enum.yaml#/yes/common"
       "No":
         $ref:
-          - "_terms.yaml#/no/common"
+          - "_terms_enum.yaml#/no/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
       Not Allowed To Collect:
         $ref:
-          - "_terms.yaml#/not_allowed_to_collect/common"
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   ribosomal_rna_28s_16s_ratio:
     $ref:
