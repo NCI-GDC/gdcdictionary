@@ -34,6 +34,7 @@ class GDCDictionary(object):
     _definitions_paths = [
         '_definitions.yaml',
         '_terms.yaml',
+        '_terms_enum.yaml',
     ]
 
     logger = logging.getLogger("GDCDictionary")
