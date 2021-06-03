@@ -2951,7 +2951,7 @@ percent_lymphocyte_infiltration:
   common:
     description: >-
       Numeric value to represent the percentage of infiltration by lymphocytes in
-      a solid tissue normal sample or specimen.
+      a solid tissue sample or specimen.
     termDef:
       term: >-
         Specimen Lymphocyte Infiltration Percentage Value
