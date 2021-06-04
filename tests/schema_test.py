@@ -59,7 +59,6 @@ def _generate_error_message_for_enum(res_dict):
 
 class SchemaTest(BaseTest):
 
-    #@unittest.expectedFailure
     def test_properties_enum(self):
         """Check the enums of node properties"""
         # The enums in _definitions.yaml, _terms.yaml and metaschema.yaml are not checked
@@ -90,7 +89,7 @@ class SchemaTest(BaseTest):
         If the acyclicality check passes like this, either the algorithm is
         missing something or we're ignoring types that we shouldn't.
         """
-        with self.assertRaisesRegexp(AssertionError, 'cycle detected'):
+        with self.assertRaisesRegex(AssertionError, 'cycle detected'):
             check_for_cycles(self.dictionary.schema)
 
     def test_check_for_cycles_positive(self):

@@ -65,7 +65,7 @@ class GDCDictionary(object):
         """Return contents of yaml file as dict"""
         # For DAT-1064 Bomb out hard if unicode is in a schema file
         # But allow unicode through the terms and definitions
-        with open(name, 'r') as f:
+        with open(name, 'r', encoding="utf-8") as f:
             if name not in self.exclude:
                 try:
                     f.read().encode("ascii")
