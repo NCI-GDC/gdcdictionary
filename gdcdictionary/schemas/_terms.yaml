@@ -5682,13 +5682,13 @@ parent_with_radiation_exposure:
 route_of_administration:
   common:
     description: >-
-      ​The pathway by which a substance is administered in order to reach the site
+      The pathway by which a substance is administered in order to reach the site
       of action in the body.
     termDef:
       term: >-
-        ​Route of Administration
+        Route of Administration
       source: NCIt
-      cde_id: C38114​
+      cde_id: C38114
       cde_version: 21.04d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C38114"
 
@@ -5744,7 +5744,7 @@ history_of_tumor_type:
 undescended_testis_history:
   common:
     description: >-
-      The persistent failure of one or both testes to descend into the scrotum.
+      The persistent failure of one or both testis to descend into the scrotum.
     termDef:
       term: >-
         Undescended Testes
@@ -5759,7 +5759,7 @@ undescended_testis_history_laterality:
       Describes the lateral location of the patient's undescended testis.
     termDef:
       term: >-
-        Undescended Testes Laterality
+        Undescended Testis Laterality
       source:
       cde_id:
       cde_version:
@@ -5771,7 +5771,7 @@ undescended_testis_corrected:
       Indicates whether the patient's undescended testis was corrected.
     termDef:
       term: >-
-        Undescended Testes Corrected
+        Undescended Testis Corrected
       source:
       cde_id:
       cde_version:
@@ -5780,10 +5780,10 @@ undescended_testis_corrected:
 undescended_testis_corrected_age:
   common:
     description: >-
-      The patient's age when their undescended tesis was corrected.
+      The patient's age when their undescended testis was corrected.
     termDef:
       term: >-
-        Undescended Testes Corrected Age
+        Undescended Testis Corrected Age
       source:
       cde_id:
       cde_version:
@@ -5795,7 +5795,7 @@ undescended_testis_corrected_method:
       Describes the method used to correct the patient's undescended testis.
     termDef:
       term: >-
-        Undescended Testes Corrected Method
+        Undescended Testis Corrected Method
       source:
       cde_id:
       cde_version:
@@ -5807,7 +5807,7 @@ undescended_testis_corrected_laterality:
       Descrives the lateral location of the patient's undescended testis correction.
     termDef:
       term: >-
-        Undescended Testes Corrected Laterality
+        Undescended Testis Corrected Laterality
       source:
       cde_id:
       cde_version:
@@ -5854,7 +5854,7 @@ tumor_thickness:
 size_extraocular_nodule:
   common:
     description: >-
-      The size of the nodule that is outside the eye.
+      The size of the nodule that is outside the eye.
     termDef:
       term: >-
         Extraocular Nodule Size
