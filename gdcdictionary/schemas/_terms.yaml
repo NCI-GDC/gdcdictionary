@@ -5682,13 +5682,13 @@ parent_with_radiation_exposure:
 route_of_administration:
   common:
     description: >-
-      ​The pathway by which a substance is administered in order to reach the site
+      The pathway by which a substance is administered in order to reach the site
       of action in the body.
     termDef:
       term: >-
-        ​Route of Administration
+        Route of Administration
       source: NCIt
-      cde_id: C38114​
+      cde_id: C38114
       cde_version: 21.04d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C38114"
 
