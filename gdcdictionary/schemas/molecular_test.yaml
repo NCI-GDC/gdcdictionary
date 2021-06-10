@@ -24,24 +24,28 @@ systemProperties:
   - state
 
 links:
-  - name: follow_ups
-    backref: molecular_tests
-    label: performed_at
-    target_type: follow_up
-    multiplicity: many_to_one
+
+  - exclusive: false
     required: true
-  - name: slides
-    backref: molecular_tests
-    label: related_to
-    target_type: slide
-    multiplicity: many_to_one
-    required: false
-  - name: diagnoses
-    backref: molecular_tests
-    label: related_to
-    target_type: diagnosis
-    multiplicity: many_to_one
-    required: false
+    subgroup:
+      - name: follow_ups
+        backref: molecular_tests
+        label: performed_at
+        target_type: follow_up
+        multiplicity: many_to_one
+        required: falsei
+      - name: slides
+        backref: molecular_tests
+        label: related_to
+        target_type: slide
+        multiplicity: many_to_one
+        required: false
+      - name: diagnoses
+        backref: molecular_tests
+        label: related_to
+        target_type: diagnosis
+        multiplicity: many_to_one
+        required: false
 
 required:
   - submitter_id
