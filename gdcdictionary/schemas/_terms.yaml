@@ -5873,3 +5873,221 @@ proc_internal:
       cde_id:
       cde_version:
       term_url:
+
+eln_risk_classification:
+  common:
+    description: >-
+      A recommended risk stratification system used to provide prognostic information
+      in AML patients undergoing chemotherapy as well as allogeneic hematopoietic
+      stem cell transplantation.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+satellite_nodule_present:
+  common:
+    description: >-
+      Indicator noting whether a nodule or tumor is located within a small distance
+      (e.g. 2cm) of the primary tumor.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+sites_of_involvement:
+  common:
+    description: >-
+      The anatomic sites of disease involvement in addition to the primary anatomic
+      site.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+who_cns_grade:
+  common:
+    description: >-
+      The WHO (World Health Organization) grading classification of CNS tumors, which
+      is based on histological characteristics such as cellularity, mitotic activity,
+      pleomorphism, necrosis, and endothelial proliferation (neoangiogenesis).
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+who_nte_grade:
+  common:
+    description: >-
+      The WHO (World Health Organization) grading classification of Neuroendocrine
+      Tumors.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+alcohol_type:
+  common:
+    description: >-
+      A specific type of alcohol.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+smokeless_tobacco_quit_age:
+  common:
+    description: >-
+      The age the subject quit smoking tobacco.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+hormonal_contraceptive_type:
+  common:
+    description: >-
+      The specific type of hormonal contraceptives used by the subject.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+hormone_replacement_therapy_type:
+  common:
+    description: >-
+      The specific type of hormone replacement therapy received by the patient.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+procedures_performed:
+  common:
+    description: >-
+      The type of procedures performed on the patient.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+biospecimen_volume:
+  common:
+    description: >-
+      The volume of the biospecimen.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+mitotic_total_area:
+  common:
+    description: >-
+      The total area reviewed when calculating the mitotic index ratio.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+columnar_mucosa_present:
+  common:
+    description: >-
+      Indicator noting whether columnar mucosa was present within the tissue.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+dysplasia_degree:
+  common:
+    description: >-
+      The degree to which dysplasia was involved.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+dysplasia_type:
+  common:
+    description: >-
+      The type of dysplasia involved.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+lymph_node_involvement:
+  common:
+    description: >-
+      Indicator noting whether lymph nodes were involved.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+margin_status:
+  common:
+    description: >-
+      The determination of the presence of actual or potential neoplastic tissue which
+      has been left outside the boundary of a resected specimen within the patient.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+metaplasia_present:
+  common:
+    description: >-
+      Indicator noting whether metaplasia was present.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+morphologic_architectural_pattern:
+  common:
+    description: >-
+      A specific morphologic or pathologic architectural pattern was discovered within
+      the sample studied.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:

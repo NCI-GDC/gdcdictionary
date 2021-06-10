@@ -59,6 +59,8 @@ properties:
       - alignment_workflow
 
   workflow_type:
+    $ref:
+      - "_terms.yaml#/workflow_type/common"
     enum:
       - BWA
       - BWA with BQSR

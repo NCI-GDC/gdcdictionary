@@ -127,6 +127,8 @@ properties:
     type: string
 
   route_of_administration:
+    $ref:
+      - "_terms.yaml#/route_of_administration/common"
     enum:
       - Intrathecal
       - Intravenous
