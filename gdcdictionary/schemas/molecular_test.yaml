@@ -33,7 +33,7 @@ links:
         label: performed_at
         target_type: follow_up
         multiplicity: many_to_one
-        required: falsei
+        required: false
       - name: slides
         backref: molecular_tests
         label: related_to
