@@ -5950,7 +5950,7 @@ alcohol_type:
 smokeless_tobacco_quit_age:
   common:
     description: >-
-      The age the subject quite smoking tobacco.
+      The age the subject quit smoking tobacco.
     termDef:
       term:
       source:
