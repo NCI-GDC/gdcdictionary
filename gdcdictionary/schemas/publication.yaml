@@ -55,6 +55,8 @@ properties:
     type: string
 
   project_id:
+    $ref:
+      - "_terms.yaml#/project_id/common"
     type: string
 
   created_datetime:

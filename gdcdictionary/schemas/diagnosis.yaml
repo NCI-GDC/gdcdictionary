@@ -1570,6 +1570,8 @@ properties:
       - type: "null"
 
   eln_risk_classification:
+    $ref:
+      - "_terms.yaml#/eln_risk_classification/common"
     enum:
       - Adverse
       - Favorable
@@ -16722,6 +16724,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   satellite_nodule_present:
+    $ref:
+      - "_terms.yaml#/satellite_nodule_present/common"
     enum:
       - Absent
       - Indeterminate
@@ -17870,6 +17874,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   sites_of_involvement:
+    $ref:
+      - "_terms.yaml#/sites_of_involvement/common"
     type: array
     items:
       enum:
@@ -18103,7 +18109,7 @@ properties:
       - Labium minus
       - Lacrimal gland
       - Laryngeal cartilage
-      - Laryngeal Commissure
+      - Laryngeal commissure
       - Larynx, NOS
       - Lateral floor of mouth
       - Lateral wall of bladder
@@ -19228,6 +19234,8 @@ properties:
       - "9"
 
   who_cns_grade:
+    $ref:
+      - "_terms.yaml#/who_cns_grade/common"
     enum:
       - Grade I
       - Grade II
@@ -19242,6 +19250,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   who_nte_grade:
+    $ref:
+      - "_terms.yaml#/who_nte_grade/common"
     enum:
       - G1
       - G2

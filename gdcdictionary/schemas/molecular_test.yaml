@@ -292,6 +292,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   biospecimen_volume:
+    $ref:
+      - "_terms.yaml#/biospecimen_volume/common"
     type: number
     minimum: 0
 
@@ -3729,6 +3731,8 @@ properties:
     minimum: 0
 
   mitotic_total_area:
+    $ref:
+      - "_terms.yaml#/mitotic_total_area/common"
     type: number
     minimum: 0
 

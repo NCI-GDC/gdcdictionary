@@ -130,6 +130,8 @@ properties:
     minimum: 0
 
   columnar_mucosa_present:
+    $ref:
+      - "_terms.yaml#/columnar_mucosa_present/common"
     enum:
       - "Yes"
       - "No"
@@ -168,6 +170,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   dysplasia_degree:
+    $ref:
+      - "_terms.yaml#/dysplasia_degree/common"
     enum:
       - High Grade
       - Indefinite
@@ -208,6 +212,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   dysplasia_type:
+    $ref:
+      - "_terms.yaml#/dysplasia_type/common"
     enum:
       - Epithelial
       - Esophageal Columnar Dysplasia
@@ -366,6 +372,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   lymph_node_involvement:
+    $ref:
+      - "_terms.yaml#/lymph_node_involvement/common"
     enum:
       - Indeterminant
       - Negative
@@ -390,6 +398,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   lymph_nodes_positive:
+    $ref:
+      - "_terms.yaml#/lymph_nodes_positive/common"
     type: integer
     minimum: 0
 
@@ -422,6 +432,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   margin_status:
+    $ref:
+      - "_terms.yaml#/margin_status/common"
     enum:
       - Involved
       - Uninvolved
@@ -446,6 +458,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   metaplasia_present:
+    $ref:
+      - "_terms.yaml#/metaplasia_present/common"
     enum:
       - "Yes"
       - "No"
@@ -466,6 +480,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   morphologic_architectural_pattern:
+    $ref:
+      - "_terms.yaml#/morphologic_architectural_pattern/common"
     enum:
       - Cohesive
       - Cribiform
@@ -503,6 +519,8 @@ properties:
     minimum: 0
 
   necrosis_present:
+    $ref:
+      - "_terms.yaml#/necrosis_present/common"
     enum:
       - "Yes"
       - "No"
@@ -650,11 +668,15 @@ properties:
       - R2
 
   rhabdoid_percent:
+    $ref:
+      - "_terms.yaml#/rhabdoid_percent/common"
     type: number
     maximum: 100
     minimum: 0
 
   rhabdoid_present:
+    $ref:
+      - "_terms.yaml#/rhabdoid_present/common"
     enum:
       - "Yes"
       - "No"
@@ -665,11 +687,15 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   sarcomatoid_percent:
+    $ref:
+      - "_terms.yaml#/sarcomatoid_percent/common"
     type: number
     maximum: 100
     minimum: 0
 
   sarcomatoid_present:
+    $ref:
+      - "_terms.yaml#/sarcomatoid_present/common"
     enum:
       - "Yes"
       - "No"

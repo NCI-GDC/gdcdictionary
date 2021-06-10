@@ -135,6 +135,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   alcohol_type:
+    $ref:
+      - "_terms.yaml#/alcohol_type/common"
     enum:
       - Beer
       - Liquor
@@ -351,6 +353,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   smokeless_tobacco_quit_age:
+    $ref:
+      - "_terms.yaml#/smokeless_tobacco_quit_age/common"
     type: integer
     maximum: 89
     minimum: 0
