@@ -82,6 +82,8 @@ properties:
     type: string
 
   chipseq_antibody:
+    $ref:
+      - "_terms.yaml#/chipseq_antibody/common"
     enum:
       - abcam ab4729 anti-H3K27ac
       - Unknown
@@ -89,7 +91,7 @@ properties:
     enumDef:
       Not Applicable:
         $ref:
-          - "_terms.yaml#/not_applicable/common"
+          - "_terms_enum.yaml#/not_applicable/common"
 
   chipseq_target:
     $ref:
@@ -108,6 +110,7 @@ properties:
     $ref:
       - "_terms.yaml#/days_to_sequencing/common"
     type: integer
+    minimum: -32872
 
   experiment_name:
     $ref:
@@ -123,23 +126,29 @@ properties:
     $ref:
       - "_terms.yaml#/fragment_maximum_length/common"
     type: integer
+    minimum: 0
 
   fragment_mean_length:
     $ref:
       - "_terms.yaml#/fragment_mean_length/common"
     type: number
+    minimum: 0
 
   fragment_minimum_length:
     $ref:
       - "_terms.yaml#/fragment_minimum_length/common"
     type: integer
+    minimum: 0
 
   fragment_standard_deviation_length:
     $ref:
       - "_terms.yaml#/fragment_standard_deviation_length/common"
     type: number
+    minimum: 0
 
   fragmentation_enzyme:
+    $ref:
+      - "_terms.yaml#/fragmentation_enzyme/common"
     enum:
       - MboI
       - Unknown
@@ -147,7 +156,7 @@ properties:
     enumDef:
       Not Applicable:
         $ref:
-          - "_terms.yaml#/not_applicable/common"
+          - "_terms_enum.yaml#/not_applicable/common"
 
   includes_spike_ins:
     $ref:
@@ -172,6 +181,7 @@ properties:
       - Illumina HiSeq X Ten
       - Illumina MiSeq
       - Illumina NextSeq
+      - Illumina NovaSeq 6000
       - Ion Torrent PGM
       - Ion Torrent Proton
       - Ion Torrent S5
@@ -182,13 +192,13 @@ properties:
     enumDef:
       Other:
         $ref:
-          - "_terms.yaml#/other/common"
+          - "_terms_enum.yaml#/other/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   is_paired_end:
     $ref:
@@ -201,6 +211,7 @@ properties:
     $ref:
       - "_terms.yaml#/lane_number/common"
     type: integer
+    minimum: 1
 
   library_name:
     $ref:
@@ -242,10 +253,10 @@ properties:
     enumDef:
       Other:
         $ref:
-          - "_terms.yaml#/other/common"
+          - "_terms_enum.yaml#/other/common"
       PCR:
         $ref:
-          - "_terms.yaml#/pcr/common"
+          - "_terms_enum.yaml#/pcr/common"
 
   library_strand:
     $ref:
@@ -258,7 +269,7 @@ properties:
     enumDef:
       Not Applicable:
         $ref:
-          - "_terms.yaml#/not_applicable/common"
+          - "_terms_enum.yaml#/not_applicable/common"
 
   library_strategy:
     $ref:
@@ -279,13 +290,13 @@ properties:
     enumDef:
       Targeted Sequencing:
         $ref:
-          - "_terms.yaml#/targeted_sequencing/common"
+          - "_terms_enum.yaml#/targeted_sequencing/common"
       WGS:
         $ref:
-          - "_terms.yaml#/wgs/common"
+          - "_terms_enum.yaml#/wgs/common"
       WXS:
         $ref:
-          - "_terms.yaml#/wxs/common"
+          - "_terms_enum.yaml#/wxs/common"
 
   multiplex_barcode:
     $ref:
@@ -297,6 +308,7 @@ properties:
     $ref:
       - "_terms.yaml#/number_expect_cells/common"
     type: integer
+    minimum: 0
 
   platform:
     $ref:
@@ -312,7 +324,7 @@ properties:
     enumDef:
       Other:
         $ref:
-          - "_terms.yaml#/other/common"
+          - "_terms_enum.yaml#/other/common"
 
   read_group_name:
     description: >-
@@ -320,14 +332,19 @@ properties:
     type: string
 
   read_length:
+    $ref:
+      - "_terms.yaml#/read_length/common"
     oneOf:
       - type: integer
+        minimum: 0
       - type: "null"
 
   rin:
     $ref:
       - "_terms.yaml#/rin/common"
     type: number
+    maximum: 10
+    minimum: 1
 
   sequencing_center:
     $ref:
@@ -349,6 +366,7 @@ properties:
     enum:
       - Chromium 3' Gene Expression v2 Library
       - Chromium 3' Gene Expression v3 Library
+      - Chromium scATAC v1 Library
       - Smart-Seq2
 
   spike_ins_concentration:
@@ -409,15 +427,16 @@ properties:
       - TruSeq Exome Enrichment - 62 Mb
       - TruSeq RNA Exome
       - TruSight Myeloid Sequencing Panel
+      - Twist Human Comprehensive Exome
       - xGen Exome Research Panel v1.0
       - Unknown
     enumDef:
       Not Applicable:
         $ref:
-          - "_terms.yaml#/not_applicable/common"
+          - "_terms_enum.yaml#/not_applicable/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
 
   target_capture_kit_catalog_number:
     $ref:

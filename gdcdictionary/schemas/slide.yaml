@@ -64,106 +64,139 @@ properties:
     enumDef:
       "Yes":
         $ref:
-          - "_terms.yaml#/yes/common"
+          - "_terms_enum.yaml#/yes/common"
       "No":
         $ref:
-          - "_terms.yaml#/no/common"
+          - "_terms_enum.yaml#/no/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   number_proliferating_cells:
     $ref:
       - "_terms.yaml#/number_proliferating_cells/common"
     type: integer
+    minimum: 0
 
   percent_follicular_component:
     $ref:
       - "_terms.yaml#/percent_follicular_component/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   percent_rhabdoid_features:
     $ref:
       - "_terms.yaml#/percent_rhabdoid_features/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   percent_sarcomatoid_features:
     $ref:
       - "_terms.yaml#/percent_sarcomatoid_features/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   percent_tumor_cells:
     $ref:
       - "_terms.yaml#/percent_tumor_cells/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   percent_tumor_nuclei:
     $ref:
       - "_terms.yaml#/percent_tumor_nuclei/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   percent_normal_cells:
     $ref:
       - "_terms.yaml#/percent_normal_cells/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   percent_necrosis:
     $ref:
       - "_terms.yaml#/percent_necrosis/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   percent_stromal_cells:
     $ref:
       - "_terms.yaml#/percent_stromal_cells/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   percent_inflam_infiltration:
     $ref:
       - "_terms.yaml#/percent_inflam_infiltration/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   percent_lymphocyte_infiltration:
     $ref:
       - "_terms.yaml#/percent_lymphocyte_infiltration/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   percent_monocyte_infiltration:
     $ref:
       - "_terms.yaml#/percent_monocyte_infiltration/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   percent_granulocyte_infiltration:
     $ref:
       - "_terms.yaml#/percent_granulocyte_infiltration/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   percent_neutrophil_infiltration:
     $ref:
       - "_terms.yaml#/percent_neutrophil_infiltration/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   percent_eosinophil_infiltration:
     $ref:
       - "_terms.yaml#/percent_eosinophil_infiltration/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   prostatic_chips_positive_count:
     $ref:
       - "_terms.yaml#/prostatic_chips_positive_count/common"
     type: number
+    minimum: 0
 
   prostatic_chips_total_count:
     $ref:
       - "_terms.yaml#/prostatic_chips_total_count/common"
     type: number
+    minimum: 0
 
   prostatic_involvement_percent:
     $ref:
       - "_terms.yaml#/prostatic_involvement_percent/common"
     type: number
+    maximum: 100
+    minimum: 0
 
   section_location:
     $ref:

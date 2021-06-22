@@ -62,16 +62,19 @@ properties:
     $ref:
       - "_terms.yaml#/aliquot_quantity/common"
     type: number
+    minimum: 0
 
   aliquot_volume:
     $ref:
       - "_terms.yaml#/aliquot_volume/common"
     type: number
+    minimum: 0
 
   amount:
     $ref:
       - "_terms.yaml#/amount/common"
     type: number
+    minimum: 0
 
   analyte_type:
     $ref:
@@ -85,6 +88,7 @@ properties:
     $ref:
       - "_terms.yaml#/concentration/common"
     type: number
+    minimum: 0
 
   no_matched_normal_low_pass_wgs:
     $ref:

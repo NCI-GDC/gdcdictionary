@@ -59,7 +59,7 @@ def _generate_error_message_for_enum(res_dict):
 
 class SchemaTest(BaseTest):
 
-    @unittest.expectedFailure
+    #@unittest.expectedFailure
     def test_properties_enum(self):
         """Check the enums of node properties"""
         # The enums in _definitions.yaml, _terms.yaml and metaschema.yaml are not checked

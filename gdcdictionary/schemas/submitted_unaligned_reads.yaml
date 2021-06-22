@@ -79,7 +79,6 @@ properties:
       - Bisulfite-Seq
       - ChIP-Seq
       - HiChIP
-      - Low Pass WGS
       - m6A RNA Methylation
       - miRNA-Seq
       - RNA-Seq
@@ -91,13 +90,13 @@ properties:
     enumDef:
       Targeted Sequencing:
         $ref:
-          - "_terms.yaml#/targeted_sequencing/common"
+          - "_terms_enum.yaml#/targeted_sequencing/common"
       WGS:
         $ref:
-          - "_terms.yaml#/wgs/common"
+          - "_terms_enum.yaml#/wgs/common"
       WXS:
         $ref:
-          - "_terms.yaml#/wxs/common"
+          - "_terms_enum.yaml#/wxs/common"
 
   read_pair_number:
     $ref:
@@ -110,7 +109,7 @@ properties:
     enumDef:
       Not Applicable:
         $ref:
-          - "_terms.yaml#/not_applicable/common"
+          - "_terms_enum.yaml#/not_applicable/common"
 
   read_groups:
     $ref: "_definitions.yaml#/to_one"

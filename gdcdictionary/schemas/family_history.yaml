@@ -166,355 +166,355 @@ properties:
     enumDef:
       Adopted Brother:
         $ref:
-          - "_terms.yaml#/adopted_brother/common"
+          - "_terms_enum.yaml#/adopted_brother/common"
       Adopted Daughter:
         $ref:
-          - "_terms.yaml#/adopted_daughter/common"
+          - "_terms_enum.yaml#/adopted_daughter/common"
       Adopted Sister:
         $ref:
-          - "_terms.yaml#/adopted_sister/common"
+          - "_terms_enum.yaml#/adopted_sister/common"
       Adopted Son:
         $ref:
-          - "_terms.yaml#/adopted_son/common"
+          - "_terms_enum.yaml#/adopted_son/common"
       Adoptive Father:
         $ref:
-          - "_terms.yaml#/adoptive_father/common"
+          - "_terms_enum.yaml#/adoptive_father/common"
       Adoptive Mother:
         $ref:
-          - "_terms.yaml#/adoptive_mother/common"
+          - "_terms_enum.yaml#/adoptive_mother/common"
       Aunt:
         $ref:
-          - "_terms.yaml#/aunt/common"
+          - "_terms_enum.yaml#/aunt/common"
       Brother:
         $ref:
-          - "_terms.yaml#/brother/common"
+          - "_terms_enum.yaml#/brother/common"
       Brother-in-law:
         $ref:
-          - "_terms.yaml#/brotherinlaw/common"
+          - "_terms_enum.yaml#/brotherinlaw/common"
       Child:
         $ref:
-          - "_terms.yaml#/child/common"
+          - "_terms_enum.yaml#/child/common"
       Cousin:
         $ref:
-          - "_terms.yaml#/cousin/common"
+          - "_terms_enum.yaml#/cousin/common"
       Daughter:
         $ref:
-          - "_terms.yaml#/daughter/common"
+          - "_terms_enum.yaml#/daughter/common"
       Daughter-in-law:
         $ref:
-          - "_terms.yaml#/daughterinlaw/common"
+          - "_terms_enum.yaml#/daughterinlaw/common"
       Domestic Partner:
         $ref:
-          - "_terms.yaml#/domestic_partner/common"
+          - "_terms_enum.yaml#/domestic_partner/common"
       Father:
         $ref:
-          - "_terms.yaml#/father/common"
+          - "_terms_enum.yaml#/father/common"
       Father-in-law:
         $ref:
-          - "_terms.yaml#/fatherinlaw/common"
+          - "_terms_enum.yaml#/fatherinlaw/common"
       Female Cousin:
         $ref:
-          - "_terms.yaml#/female_cousin/common"
+          - "_terms_enum.yaml#/female_cousin/common"
       Female Sibling of Adopted Child:
         $ref:
-          - "_terms.yaml#/female_sibling_of_adopted_child/common"
+          - "_terms_enum.yaml#/female_sibling_of_adopted_child/common"
       First Cousin:
         $ref:
-          - "_terms.yaml#/first_cousin/common"
+          - "_terms_enum.yaml#/first_cousin/common"
       First Cousin Once Removed:
         $ref:
-          - "_terms.yaml#/first_cousin_once_removed/common"
+          - "_terms_enum.yaml#/first_cousin_once_removed/common"
       Foster Brother:
         $ref:
-          - "_terms.yaml#/foster_brother/common"
+          - "_terms_enum.yaml#/foster_brother/common"
       Foster Daughter:
         $ref:
-          - "_terms.yaml#/foster_daughter/common"
+          - "_terms_enum.yaml#/foster_daughter/common"
       Foster Father:
         $ref:
-          - "_terms.yaml#/foster_father/common"
+          - "_terms_enum.yaml#/foster_father/common"
       Foster Mother:
         $ref:
-          - "_terms.yaml#/foster_mother/common"
+          - "_terms_enum.yaml#/foster_mother/common"
       Foster Sister:
         $ref:
-          - "_terms.yaml#/foster_sister/common"
+          - "_terms_enum.yaml#/foster_sister/common"
       Foster Son:
         $ref:
-          - "_terms.yaml#/foster_son/common"
+          - "_terms_enum.yaml#/foster_son/common"
       Fraternal Twin Brother:
         $ref:
-          - "_terms.yaml#/fraternal_twin_brother/common"
+          - "_terms_enum.yaml#/fraternal_twin_brother/common"
       Fraternal Twin Sibling:
         $ref:
-          - "_terms.yaml#/fraternal_twin_sibling/common"
+          - "_terms_enum.yaml#/fraternal_twin_sibling/common"
       Fraternal Twin Sister:
         $ref:
-          - "_terms.yaml#/fraternal_twin_sister/common"
+          - "_terms_enum.yaml#/fraternal_twin_sister/common"
       Full Brother:
         $ref:
-          - "_terms.yaml#/full_brother/common"
+          - "_terms_enum.yaml#/full_brother/common"
       Full Sister:
         $ref:
-          - "_terms.yaml#/full_sister/common"
+          - "_terms_enum.yaml#/full_sister/common"
       Grand Nephew:
         $ref:
-          - "_terms.yaml#/grand_nephew/common"
+          - "_terms_enum.yaml#/grand_nephew/common"
       Grand Niece:
         $ref:
-          - "_terms.yaml#/grand_niece/common"
+          - "_terms_enum.yaml#/grand_niece/common"
       Grandchild:
         $ref:
-          - "_terms.yaml#/grandchild/common"
+          - "_terms_enum.yaml#/grandchild/common"
       Granddaughter:
         $ref:
-          - "_terms.yaml#/granddaughter/common"
+          - "_terms_enum.yaml#/granddaughter/common"
       Grandfather:
         $ref:
-          - "_terms.yaml#/grandfather/common"
+          - "_terms_enum.yaml#/grandfather/common"
       Grandmother:
         $ref:
-          - "_terms.yaml#/grandmother/common"
+          - "_terms_enum.yaml#/grandmother/common"
       Grandparent:
         $ref:
-          - "_terms.yaml#/grandparent/common"
+          - "_terms_enum.yaml#/grandparent/common"
       Grandson:
         $ref:
-          - "_terms.yaml#/grandson/common"
+          - "_terms_enum.yaml#/grandson/common"
       Great Grandchild:
         $ref:
-          - "_terms.yaml#/great_grandchild/common"
+          - "_terms_enum.yaml#/great_grandchild/common"
       Half Brother:
         $ref:
-          - "_terms.yaml#/half_brother/common"
+          - "_terms_enum.yaml#/half_brother/common"
       Half Sibling:
         $ref:
-          - "_terms.yaml#/half_sibling/common"
+          - "_terms_enum.yaml#/half_sibling/common"
       Half Sister:
         $ref:
-          - "_terms.yaml#/half_sister/common"
+          - "_terms_enum.yaml#/half_sister/common"
       Husband:
         $ref:
-          - "_terms.yaml#/husband/common"
+          - "_terms_enum.yaml#/husband/common"
       Identical Twin Brother:
         $ref:
-          - "_terms.yaml#/identical_twin_brother/common"
+          - "_terms_enum.yaml#/identical_twin_brother/common"
       Identical Twin Sibling:
         $ref:
-          - "_terms.yaml#/identical_twin_sibling/common"
+          - "_terms_enum.yaml#/identical_twin_sibling/common"
       Identical Twin Sister:
         $ref:
-          - "_terms.yaml#/identical_twin_sister/common"
+          - "_terms_enum.yaml#/identical_twin_sister/common"
       Legal Guardian:
         $ref:
-          - "_terms.yaml#/legal_guardian/common"
+          - "_terms_enum.yaml#/legal_guardian/common"
       Male Cousin:
         $ref:
-          - "_terms.yaml#/male_cousin/common"
+          - "_terms_enum.yaml#/male_cousin/common"
       Male Sibling of Adopted Child:
         $ref:
-          - "_terms.yaml#/male_sibling_of_adopted_child/common"
+          - "_terms_enum.yaml#/male_sibling_of_adopted_child/common"
       Maternal Aunt:
         $ref:
-          - "_terms.yaml#/maternal_aunt/common"
+          - "_terms_enum.yaml#/maternal_aunt/common"
       Maternal First Cousin:
         $ref:
-          - "_terms.yaml#/maternal_first_cousin/common"
+          - "_terms_enum.yaml#/maternal_first_cousin/common"
       Maternal First Cousin Once Removed:
         $ref:
-          - "_terms.yaml#/maternal_first_cousin_once_removed/common"
+          - "_terms_enum.yaml#/maternal_first_cousin_once_removed/common"
       Maternal Grandfather:
         $ref:
-          - "_terms.yaml#/maternal_grandfather/common"
+          - "_terms_enum.yaml#/maternal_grandfather/common"
       Maternal Grandmother:
         $ref:
-          - "_terms.yaml#/maternal_grandmother/common"
+          - "_terms_enum.yaml#/maternal_grandmother/common"
       Maternal Grandparent:
         $ref:
-          - "_terms.yaml#/maternal_grandparent/common"
+          - "_terms_enum.yaml#/maternal_grandparent/common"
       Maternal Great Aunt:
         $ref:
-          - "_terms.yaml#/maternal_great_aunt/common"
+          - "_terms_enum.yaml#/maternal_great_aunt/common"
       Maternal Great Grandparent:
         $ref:
-          - "_terms.yaml#/maternal_great_grandparent/common"
+          - "_terms_enum.yaml#/maternal_great_grandparent/common"
       Maternal Great Uncle:
         $ref:
-          - "_terms.yaml#/maternal_great_uncle/common"
+          - "_terms_enum.yaml#/maternal_great_uncle/common"
       Maternal Half Brother:
         $ref:
-          - "_terms.yaml#/maternal_half_brother/common"
+          - "_terms_enum.yaml#/maternal_half_brother/common"
       Maternal Half Sibling:
         $ref:
-          - "_terms.yaml#/maternal_half_sibling/common"
+          - "_terms_enum.yaml#/maternal_half_sibling/common"
       Maternal Half Sister:
         $ref:
-          - "_terms.yaml#/maternal_half_sister/common"
+          - "_terms_enum.yaml#/maternal_half_sister/common"
       Maternal Uncle:
         $ref:
-          - "_terms.yaml#/maternal_uncle/common"
+          - "_terms_enum.yaml#/maternal_uncle/common"
       Mother:
         $ref:
-          - "_terms.yaml#/mother/common"
+          - "_terms_enum.yaml#/mother/common"
       Mother-in-law:
         $ref:
-          - "_terms.yaml#/motherinlaw/common"
+          - "_terms_enum.yaml#/motherinlaw/common"
       Natural Brother:
         $ref:
-          - "_terms.yaml#/natural_brother/common"
+          - "_terms_enum.yaml#/natural_brother/common"
       Natural Child:
         $ref:
-          - "_terms.yaml#/natural_child/common"
+          - "_terms_enum.yaml#/natural_child/common"
       Natural Daughter:
         $ref:
-          - "_terms.yaml#/natural_daughter/common"
+          - "_terms_enum.yaml#/natural_daughter/common"
       Natural Father:
         $ref:
-          - "_terms.yaml#/natural_father/common"
+          - "_terms_enum.yaml#/natural_father/common"
       Natural Grandchild:
         $ref:
-          - "_terms.yaml#/natural_grandchild/common"
+          - "_terms_enum.yaml#/natural_grandchild/common"
       Natural Grandfather:
         $ref:
-          - "_terms.yaml#/natural_grandfather/common"
+          - "_terms_enum.yaml#/natural_grandfather/common"
       Natural Grandmother:
         $ref:
-          - "_terms.yaml#/natural_grandmother/common"
+          - "_terms_enum.yaml#/natural_grandmother/common"
       Natural Grandparent:
         $ref:
-          - "_terms.yaml#/natural_grandparent/common"
+          - "_terms_enum.yaml#/natural_grandparent/common"
       Natural Mother:
         $ref:
-          - "_terms.yaml#/natural_mother/common"
+          - "_terms_enum.yaml#/natural_mother/common"
       Natural Parent:
         $ref:
-          - "_terms.yaml#/natural_parent/common"
+          - "_terms_enum.yaml#/natural_parent/common"
       Natural Sibling:
         $ref:
-          - "_terms.yaml#/natural_sibling/common"
+          - "_terms_enum.yaml#/natural_sibling/common"
       Natural Sister:
         $ref:
-          - "_terms.yaml#/natural_sister/common"
+          - "_terms_enum.yaml#/natural_sister/common"
       Natural Son:
         $ref:
-          - "_terms.yaml#/natural_son/common"
+          - "_terms_enum.yaml#/natural_son/common"
       Nephew:
         $ref:
-          - "_terms.yaml#/nephew/common"
+          - "_terms_enum.yaml#/nephew/common"
       Niece:
         $ref:
-          - "_terms.yaml#/niece/common"
+          - "_terms_enum.yaml#/niece/common"
       Niece Second Degree Relative:
         $ref:
-          - "_terms.yaml#/niece_second_degree_relative/common"
+          - "_terms_enum.yaml#/niece_second_degree_relative/common"
       Other:
         $ref:
-          - "_terms.yaml#/other/common"
+          - "_terms_enum.yaml#/other/common"
       Parent:
         $ref:
-          - "_terms.yaml#/parent/common"
+          - "_terms_enum.yaml#/parent/common"
       Paternal Aunt:
         $ref:
-          - "_terms.yaml#/paternal_aunt/common"
+          - "_terms_enum.yaml#/paternal_aunt/common"
       Paternal First Cousin:
         $ref:
-          - "_terms.yaml#/paternal_first_cousin/common"
+          - "_terms_enum.yaml#/paternal_first_cousin/common"
       Paternal First Cousin Once Removed:
         $ref:
-          - "_terms.yaml#/paternal_first_cousin_once_removed/common"
+          - "_terms_enum.yaml#/paternal_first_cousin_once_removed/common"
       Paternal Grandfather:
         $ref:
-          - "_terms.yaml#/paternal_grandfather/common"
+          - "_terms_enum.yaml#/paternal_grandfather/common"
       Paternal Grandmother:
         $ref:
-          - "_terms.yaml#/paternal_grandmother/common"
+          - "_terms_enum.yaml#/paternal_grandmother/common"
       Paternal Grandparent:
         $ref:
-          - "_terms.yaml#/paternal_grandparent/common"
+          - "_terms_enum.yaml#/paternal_grandparent/common"
       Paternal Great Aunt:
         $ref:
-          - "_terms.yaml#/paternal_great_aunt/common"
+          - "_terms_enum.yaml#/paternal_great_aunt/common"
       Paternal Great Grandparent:
         $ref:
-          - "_terms.yaml#/paternal_great_grandparent/common"
+          - "_terms_enum.yaml#/paternal_great_grandparent/common"
       Paternal Great Uncle:
         $ref:
-          - "_terms.yaml#/paternal_great_uncle/common"
+          - "_terms_enum.yaml#/paternal_great_uncle/common"
       Paternal Half Brother:
         $ref:
-          - "_terms.yaml#/paternal_half_brother/common"
+          - "_terms_enum.yaml#/paternal_half_brother/common"
       Paternal Half Sibling:
         $ref:
-          - "_terms.yaml#/paternal_half_sibling/common"
+          - "_terms_enum.yaml#/paternal_half_sibling/common"
       Paternal Half Sister:
         $ref:
-          - "_terms.yaml#/paternal_half_sister/common"
+          - "_terms_enum.yaml#/paternal_half_sister/common"
       Paternal Uncle:
         $ref:
-          - "_terms.yaml#/paternal_uncle/common"
+          - "_terms_enum.yaml#/paternal_uncle/common"
       Sibling:
         $ref:
-          - "_terms.yaml#/sibling/common"
+          - "_terms_enum.yaml#/sibling/common"
       Sister:
         $ref:
-          - "_terms.yaml#/sister/common"
+          - "_terms_enum.yaml#/sister/common"
       Sister-in-law:
         $ref:
-          - "_terms.yaml#/sisterinlaw/common"
+          - "_terms_enum.yaml#/sisterinlaw/common"
       Son:
         $ref:
-          - "_terms.yaml#/son/common"
+          - "_terms_enum.yaml#/son/common"
       Son-in-law:
         $ref:
-          - "_terms.yaml#/soninlaw/common"
+          - "_terms_enum.yaml#/soninlaw/common"
       Spouse:
         $ref:
-          - "_terms.yaml#/spouse/common"
+          - "_terms_enum.yaml#/spouse/common"
       Step Child:
         $ref:
-          - "_terms.yaml#/step_child/common"
+          - "_terms_enum.yaml#/step_child/common"
       Step Sibling:
         $ref:
-          - "_terms.yaml#/step_sibling/common"
+          - "_terms_enum.yaml#/step_sibling/common"
       Stepbrother:
         $ref:
-          - "_terms.yaml#/stepbrother/common"
+          - "_terms_enum.yaml#/stepbrother/common"
       Stepdaughter:
         $ref:
-          - "_terms.yaml#/stepdaughter/common"
+          - "_terms_enum.yaml#/stepdaughter/common"
       Stepfather:
         $ref:
-          - "_terms.yaml#/stepfather/common"
+          - "_terms_enum.yaml#/stepfather/common"
       Stepmother:
         $ref:
-          - "_terms.yaml#/stepmother/common"
+          - "_terms_enum.yaml#/stepmother/common"
       Stepsister:
         $ref:
-          - "_terms.yaml#/stepsister/common"
+          - "_terms_enum.yaml#/stepsister/common"
       Stepson:
         $ref:
-          - "_terms.yaml#/stepson/common"
+          - "_terms_enum.yaml#/stepson/common"
       Twin Sibling:
         $ref:
-          - "_terms.yaml#/twin_sibling/common"
+          - "_terms_enum.yaml#/twin_sibling/common"
       Uncle:
         $ref:
-          - "_terms.yaml#/uncle/common"
+          - "_terms_enum.yaml#/uncle/common"
       Unrelated:
         $ref:
-          - "_terms.yaml#/unrelated/common"
+          - "_terms_enum.yaml#/unrelated/common"
       Ward:
         $ref:
-          - "_terms.yaml#/ward/common"
+          - "_terms_enum.yaml#/ward/common"
       Wife:
         $ref:
-          - "_terms.yaml#/wife/common"
+          - "_terms_enum.yaml#/wife/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   relationship_gender:
     $ref:
@@ -528,25 +528,25 @@ properties:
     enumDef:
       female:
         $ref:
-          - "_terms.yaml#/female/common"
+          - "_terms_enum.yaml#/female/common"
       male:
         $ref:
-          - "_terms.yaml#/male/common"
+          - "_terms_enum.yaml#/male/common"
       unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       unspecified:
         $ref:
-          - "_terms.yaml#/unspecified/common"
+          - "_terms_enum.yaml#/unspecified/common"
       not reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   relationship_age_at_diagnosis:
     $ref:
       - "_terms.yaml#/relationship_age_at_diagnosis/common"
     type: number
-    maximum: 90
+    maximum: 89
     minimum: 0
 
   relationship_primary_diagnosis:
@@ -608,160 +608,160 @@ properties:
     enumDef:
       Adrenal Gland Cancer:
         $ref:
-          - "_terms.yaml#/adrenal_gland_cancer/common"
+          - "_terms_enum.yaml#/adrenal_gland_cancer/common"
       Basal Cell Cancer:
         $ref:
-          - "_terms.yaml#/basal_cell_cancer/common"
+          - "_terms_enum.yaml#/basal_cell_cancer/common"
       Bile Duct Cancer:
         $ref:
-          - "_terms.yaml#/bile_duct_cancer/common"
+          - "_terms_enum.yaml#/bile_duct_cancer/common"
       Bladder Cancer:
         $ref:
-          - "_terms.yaml#/bladder_cancer/common"
+          - "_terms_enum.yaml#/bladder_cancer/common"
       Blood Cancer:
         $ref:
-          - "_terms.yaml#/blood_cancer/common"
+          - "_terms_enum.yaml#/blood_cancer/common"
       Bone Cancer:
         $ref:
-          - "_terms.yaml#/bone_cancer/common"
+          - "_terms_enum.yaml#/bone_cancer/common"
       Brain Cancer:
         $ref:
-          - "_terms.yaml#/brain_cancer/common"
+          - "_terms_enum.yaml#/brain_cancer/common"
       Breast Cancer:
         $ref:
-          - "_terms.yaml#/breast_cancer/common"
+          - "_terms_enum.yaml#/breast_cancer/common"
       Cancer:
         $ref:
-          - "_terms.yaml#/cancer/common"
+          - "_terms_enum.yaml#/cancer/common"
       Cervical Cancer:
         $ref:
-          - "_terms.yaml#/cervical_cancer/common"
+          - "_terms_enum.yaml#/cervical_cancer/common"
       Chondrosarcoma:
         $ref:
-          - "_terms.yaml#/chondrosarcoma/common"
+          - "_terms_enum.yaml#/chondrosarcoma/common"
       CNS Cancer:
         $ref:
-          - "_terms.yaml#/cns_cancer/common"
+          - "_terms_enum.yaml#/cns_cancer/common"
       Colorectal Cancer:
         $ref:
-          - "_terms.yaml#/colorectal_cancer/common"
+          - "_terms_enum.yaml#/colorectal_cancer/common"
       Esophageal Cancer:
         $ref:
-          - "_terms.yaml#/esophageal_cancer/common"
+          - "_terms_enum.yaml#/esophageal_cancer/common"
       Ewing Sarcoma:
         $ref:
-          - "_terms.yaml#/ewing_sarcoma/common"
+          - "_terms_enum.yaml#/ewing_sarcoma/common"
       Gallbladder Cancer:
         $ref:
-          - "_terms.yaml#/gallbladder_cancer/common"
+          - "_terms_enum.yaml#/gallbladder_cancer/common"
       Gastric Cancer:
         $ref:
-          - "_terms.yaml#/gastric_cancer/common"
+          - "_terms_enum.yaml#/gastric_cancer/common"
       Glioblastoma:
         $ref:
-          - "_terms.yaml#/glioblastoma/common"
+          - "_terms_enum.yaml#/glioblastoma/common"
       Gynecologic Cancer:
         $ref:
-          - "_terms.yaml#/gynecologic_cancer/common"
+          - "_terms_enum.yaml#/gynecologic_cancer/common"
       Head and Neck Cancer:
         $ref:
-          - "_terms.yaml#/head_and_neck_cancer/common"
+          - "_terms_enum.yaml#/head_and_neck_cancer/common"
       Hematologic Cancer:
         $ref:
-          - "_terms.yaml#/hematologic_cancer/common"
+          - "_terms_enum.yaml#/hematologic_cancer/common"
       Kaposi Sarcoma:
         $ref:
-          - "_terms.yaml#/kaposi_sarcoma/common"
+          - "_terms_enum.yaml#/kaposi_sarcoma/common"
       Kidney Cancer:
         $ref:
-          - "_terms.yaml#/kidney_cancer/common"
+          - "_terms_enum.yaml#/kidney_cancer/common"
       Laryngeal Cancer:
         $ref:
-          - "_terms.yaml#/laryngeal_cancer/common"
+          - "_terms_enum.yaml#/laryngeal_cancer/common"
       Leukemia:
         $ref:
-          - "_terms.yaml#/leukemia/common"
+          - "_terms_enum.yaml#/leukemia/common"
       Liver Cancer:
         $ref:
-          - "_terms.yaml#/liver_cancer/common"
+          - "_terms_enum.yaml#/liver_cancer/common"
       Lung Cancer:
         $ref:
-          - "_terms.yaml#/lung_cancer/common"
+          - "_terms_enum.yaml#/lung_cancer/common"
       Lymph Node Cancer:
         $ref:
-          - "_terms.yaml#/lymph_node_cancer/common"
+          - "_terms_enum.yaml#/lymph_node_cancer/common"
       Lymphoma:
         $ref:
-          - "_terms.yaml#/lymphoma/common"
+          - "_terms_enum.yaml#/lymphoma/common"
       Melanoma:
         $ref:
-          - "_terms.yaml#/melanoma/common"
+          - "_terms_enum.yaml#/melanoma/common"
       Mesothelioma:
         $ref:
-          - "_terms.yaml#/mesothelioma/common"
+          - "_terms_enum.yaml#/mesothelioma/common"
       Multiple Myeloma:
         $ref:
-          - "_terms.yaml#/multiple_myeloma/common"
+          - "_terms_enum.yaml#/multiple_myeloma/common"
       Neuroblastoma:
         $ref:
-          - "_terms.yaml#/neuroblastoma/common"
+          - "_terms_enum.yaml#/neuroblastoma/common"
       Osteosarcoma:
         $ref:
-          - "_terms.yaml#/osteosarcoma/common"
+          - "_terms_enum.yaml#/osteosarcoma/common"
       Ovarian Cancer:
         $ref:
-          - "_terms.yaml#/ovarian_cancer/common"
+          - "_terms_enum.yaml#/ovarian_cancer/common"
       Pancreas Cancer:
         $ref:
-          - "_terms.yaml#/pancreas_cancer/common"
+          - "_terms_enum.yaml#/pancreas_cancer/common"
       Pediatric Liver Cancer:
         $ref:
-          - "_terms.yaml#/pediatric_liver_cancer/common"
+          - "_terms_enum.yaml#/pediatric_liver_cancer/common"
       Prostate Cancer:
         $ref:
-          - "_terms.yaml#/prostate_cancer/common"
+          - "_terms_enum.yaml#/prostate_cancer/common"
       Rectal Cancer:
         $ref:
-          - "_terms.yaml#/rectal_cancer/common"
+          - "_terms_enum.yaml#/rectal_cancer/common"
       Rhabdomyosarcoma:
         $ref:
-          - "_terms.yaml#/rhabdomyosarcoma/common"
+          - "_terms_enum.yaml#/rhabdomyosarcoma/common"
       Sarcoma:
         $ref:
-          - "_terms.yaml#/sarcoma/common"
+          - "_terms_enum.yaml#/sarcoma/common"
       Skin Cancer:
         $ref:
-          - "_terms.yaml#/skin_cancer/common"
+          - "_terms_enum.yaml#/skin_cancer/common"
       Spleen Cancer:
         $ref:
-          - "_terms.yaml#/spleen_cancer/common"
+          - "_terms_enum.yaml#/spleen_cancer/common"
       Testicular Cancer:
         $ref:
-          - "_terms.yaml#/testicular_cancer/common"
+          - "_terms_enum.yaml#/testicular_cancer/common"
       Throat Cancer:
         $ref:
-          - "_terms.yaml#/throat_cancer/common"
+          - "_terms_enum.yaml#/throat_cancer/common"
       Thyroid Cancer:
         $ref:
-          - "_terms.yaml#/thyroid_cancer/common"
+          - "_terms_enum.yaml#/thyroid_cancer/common"
       Tongue Cancer:
         $ref:
-          - "_terms.yaml#/tongue_cancer/common"
+          - "_terms_enum.yaml#/tongue_cancer/common"
       Tonsillar Cancer:
         $ref:
-          - "_terms.yaml#/tonsillar_cancer/common"
+          - "_terms_enum.yaml#/tonsillar_cancer/common"
       Uterine Cancer:
         $ref:
-          - "_terms.yaml#/uterine_cancer/common"
+          - "_terms_enum.yaml#/uterine_cancer/common"
       Wilms Tumor:
         $ref:
-          - "_terms.yaml#/wilms_tumor/common"
+          - "_terms_enum.yaml#/wilms_tumor/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   relative_with_cancer_history:
     $ref:
@@ -774,21 +774,22 @@ properties:
     enumDef:
       "yes":
         $ref:
-          - "_terms.yaml#/yes/common"
+          - "_terms_enum.yaml#/yes/common"
       "no":
         $ref:
-          - "_terms.yaml#/no/common"
+          - "_terms_enum.yaml#/no/common"
       unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       not reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   relatives_with_cancer_history_count:
     $ref:
       - "_terms.yaml#/relatives_with_cancer_history_count/common"
     type: integer
+    minimum: 0
 
   cases:
     $ref: "_definitions.yaml#/to_one"

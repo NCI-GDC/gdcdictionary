@@ -52,6 +52,7 @@ properties:
     $ref:
       - "_terms.yaml#/creation_datetime/common"
     type: number
+    minimum: 0
 
   is_ffpe:
     $ref:
@@ -67,6 +68,7 @@ properties:
     $ref:
       - "_terms.yaml#/portion_weight/common"
     type: number
+    minimum: 0
 
   samples:
     $ref: "_definitions.yaml#/to_one"

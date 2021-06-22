@@ -57,16 +57,19 @@ properties:
     $ref:
       - "_terms.yaml#/a260_a280_ratio/common"
     type: number
+    minimum: 0
 
   amount:
     $ref:
       - "_terms.yaml#/amount/common"
     type: number
+    minimum: 0
 
   analyte_quantity:
     $ref:
       - "_terms.yaml#/analyte_quantity/common"
     type: number
+    minimum: 0
 
   analyte_type:
     $ref:
@@ -87,10 +90,10 @@ properties:
     enumDef:
       DNA:
         $ref:
-          - "_terms.yaml#/dna/common"
+          - "_terms_enum.yaml#/dna/common"
       Total RNA:
         $ref:
-          - "_terms.yaml#/total_rna/common"
+          - "_terms_enum.yaml#/total_rna/common"
 
   analyte_type_id:
     $ref:
@@ -111,11 +114,13 @@ properties:
     $ref:
       - "_terms.yaml#/analyte_volume/common"
     type: number
+    minimum: 0
 
   concentration:
     $ref:
       - "_terms.yaml#/concentration/common"
     type: number
+    minimum: 0
 
   experimental_protocol_type:
     $ref:
@@ -136,7 +141,7 @@ properties:
     enumDef:
       Total RNA:
         $ref:
-          - "_terms.yaml#/total_rna/common"
+          - "_terms_enum.yaml#/total_rna/common"
 
   normal_tumor_genotype_snp_match:
     $ref:
@@ -150,29 +155,31 @@ properties:
     enumDef:
       "Yes":
         $ref:
-          - "_terms.yaml#/yes/common"
+          - "_terms_enum.yaml#/yes/common"
       "No":
         $ref:
-          - "_terms.yaml#/no/common"
+          - "_terms_enum.yaml#/no/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
       Not Allowed To Collect:
         $ref:
-          - "_terms.yaml#/not_allowed_to_collect/common"
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   ribosomal_rna_28s_16s_ratio:
     $ref:
       - "_terms.yaml#/ribosomal_rna_28s_16s_ratio/common"
     type: number
+    minimum: 0
 
   rna_integrity_number:
     $ref:
       - "_terms.yaml#/rna_integrity_number/common"
     type: number
+    maximum: 10
 
   spectrophotometer_method:
     $ref:

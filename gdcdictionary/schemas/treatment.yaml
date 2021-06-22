@@ -57,16 +57,16 @@ properties:
     enumDef:
       "Yes":
         $ref:
-          - "_terms.yaml#/yes/common"
+          - "_terms_enum.yaml#/yes/common"
       "No":
         $ref:
-          - "_terms.yaml#/no/common"
+          - "_terms_enum.yaml#/no/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   days_to_treatment_end:
     $ref:
@@ -95,15 +95,16 @@ properties:
     enumDef:
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   number_of_cycles:
     $ref:
       - "_terms.yaml#/number_of_cycles/common"
     type: integer
+    minimum: 0
 
   reason_treatment_ended:
     $ref:
@@ -118,12 +119,21 @@ properties:
     enumDef:
       Other:
         $ref:
-          - "_terms.yaml#/other/common"
+          - "_terms_enum.yaml#/other/common"
 
   regimen_or_line_of_therapy:
     $ref:
       - "_terms.yaml#/regimen_or_line_of_therapy/common"
     type: string
+
+  route_of_administration:
+    $ref:
+      - "_terms.yaml#/route_of_administration/common"
+    enum:
+      - Intrathecal
+      - Intravenous
+      - Oral
+      - Not Reported
 
   treatment_anatomic_site:
     $ref:
@@ -433,46 +443,47 @@ properties:
     enumDef:
       Bone Marrow:
         $ref:
-          - "_terms.yaml#/bone_marrow/common"
+          - "_terms_enum.yaml#/bone_marrow/common"
       Buccal Mucosa:
         $ref:
-          - "_terms.yaml#/buccal_mucosa/common"
+          - "_terms_enum.yaml#/buccal_mucosa/common"
       Cerebrospinal Fluid:
         $ref:
-          - "_terms.yaml#/cerebrospinal_fluid/common"
+          - "_terms_enum.yaml#/cerebrospinal_fluid/common"
       Connective Tissue:
         $ref:
-          - "_terms.yaml#/connective_tissue/common"
+          - "_terms_enum.yaml#/connective_tissue/common"
       Epitrochlear:
         $ref:
-          - "_terms.yaml#/epitrochlear/common"
+          - "_terms_enum.yaml#/epitrochlear/common"
       Frontal Lobe:
         $ref:
-          - "_terms.yaml#/frontal_lobe/common"
+          - "_terms_enum.yaml#/frontal_lobe/common"
       Hilar:
         $ref:
-          - "_terms.yaml#/hilar/common"
+          - "_terms_enum.yaml#/hilar/common"
       Neck:
         $ref:
-          - "_terms.yaml#/neck/common"
+          - "_terms_enum.yaml#/neck/common"
       Other:
         $ref:
-          - "_terms.yaml#/other/common"
+          - "_terms_enum.yaml#/other/common"
       Soft Tissue:
         $ref:
-          - "_terms.yaml#/soft_tissue/common"
+          - "_terms_enum.yaml#/soft_tissue/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   treatment_arm:
     $ref:
       - "_terms.yaml#/treatment_arm/common"
     enum:
       - A081105
+      - A081801
       - E4512
       - EA5142
 
@@ -480,6 +491,7 @@ properties:
     $ref:
       - "_terms.yaml#/treatment_dose/common"
     type: integer
+    minimum: 0
 
   treatment_dose_units:
     $ref:
@@ -491,7 +503,7 @@ properties:
     enumDef:
       mg:
         $ref:
-          - "_terms.yaml#/mg/common"
+          - "_terms_enum.yaml#/mg/common"
 
   treatment_effect:
     $ref:
@@ -506,10 +518,10 @@ properties:
     enumDef:
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   treatment_effect_indicator:
     $ref:
@@ -522,16 +534,16 @@ properties:
     enumDef:
       "Yes":
         $ref:
-          - "_terms.yaml#/yes/common"
+          - "_terms_enum.yaml#/yes/common"
       "No":
         $ref:
-          - "_terms.yaml#/no/common"
+          - "_terms_enum.yaml#/no/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
 
   treatment_frequency:
     $ref:
@@ -551,10 +563,10 @@ properties:
     enumDef:
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   treatment_intent_type:
     $ref:
@@ -573,10 +585,10 @@ properties:
     enumDef:
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   treatment_or_therapy:
     $ref:
@@ -589,16 +601,16 @@ properties:
     enumDef:
       "yes":
         $ref:
-          - "_terms.yaml#/yes/common"
+          - "_terms_enum.yaml#/yes/common"
       "no":
         $ref:
-          - "_terms.yaml#/no/common"
+          - "_terms_enum.yaml#/no/common"
       unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       not reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   treatment_outcome:
     $ref:
@@ -620,10 +632,10 @@ properties:
     enumDef:
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   treatment_type:
     $ref:
@@ -698,22 +710,22 @@ properties:
     enumDef:
       Not Allowed To Collect:
         $ref:
-          - "_terms.yaml#/not_allowed_to_collect/common"
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Other:
         $ref:
-          - "_terms.yaml#/other/common"
+          - "_terms_enum.yaml#/other/common"
       Radiation, Hypofractionated:
         $ref:
-          - "_terms.yaml#/radiation_hypofractionated/common"
+          - "_terms_enum.yaml#/radiation_hypofractionated/common"
       Radiation, Photon Beam:
         $ref:
-          - "_terms.yaml#/radiation_photon_beam/common"
+          - "_terms_enum.yaml#/radiation_photon_beam/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   therapeutic_agents:
     $ref:
@@ -3069,6 +3081,7 @@ properties:
       - Integrin alpha-2 Inhibitor E7820
       - Integrin Receptor Antagonist GLPG0187
       - Interferon
+      - Interferon Alfa-2B
       - Interferon Alfa-N1
       - Interferon Alfa-N3
       - Interferon Alfacon-1
@@ -3222,6 +3235,7 @@ properties:
       - Leuprolide Mesylate Injectable Suspension
       - Leurubicin
       - Levetiracetam
+      - Levoleucovorin Calcium
       - Levothyroxine
       - Levothyroxine Sodium
       - Lexatumumab
@@ -3508,6 +3522,7 @@ properties:
       - Mirvetuximab Soravtansine
       - Mirzotamab Clezutoclax
       - Misonidazole
+      - Mistletoe Extract
       - Mitazalimab
       - Mitindomide
       - Mitobronitol
@@ -3958,7 +3973,6 @@ properties:
       - PARP Inhibitor E7016
       - PARP Inhibitor NMS-03305293
       - PARP-1/2 Inhibitor ABT-767
-      - PARP/Tankyrase Inhibitor 2X-121
       - PARP/Tankyrase Inhibitor 2X-121
       - PARP7 Inhibitor RBN-2397
       - Parsaclisib
@@ -4826,7 +4840,6 @@ properties:
       - TGF-beta Receptor 1 Kinase Inhibitor SH3051
       - TGF-beta Receptor 1 Kinase Inhibitor YL-13027
       - TGFa-PE38 Immunotoxin
-      - TGFa-PE38 Immunotoxin
       - TGFbeta Inhibitor LY3200882
       - TGFbeta Receptor Ectodomain-IgG Fc Fusion Protein AVID200
       - Thalicarpine
@@ -4946,7 +4959,6 @@ properties:
       - Transdermal 4-Hydroxytestosterone
       - Transferrin Receptor-Targeted Anti-RRM2 siRNA CALAA-01
       - Transferrin Receptor-Targeted Liposomal p53 cDNA
-      - Transferrin-CRM107
       - Transferrin-CRM107
       - Tranylcypromine Sulfate
       - Trapoxin
@@ -5228,1876 +5240,1876 @@ properties:
     enumDef:
       3'-dA Phosphoramidate NUC-7738:
         $ref:
-          - "_terms.yaml#/3da_phosphoramidate_nuc7738/common"
+          - "_terms_enum.yaml#/3da_phosphoramidate_nuc7738/common"
       A2A Receptor Antagonist EOS100850:
         $ref:
-          - "_terms.yaml#/a2a_receptor_antagonist_eos100850/common"
+          - "_terms_enum.yaml#/a2a_receptor_antagonist_eos100850/common"
       Adenosine A2A Receptor Antagonist CS3005:
         $ref:
-          - "_terms.yaml#/adenosine_a2a_receptor_antagonist_cs3005/common"
+          - "_terms_enum.yaml#/adenosine_a2a_receptor_antagonist_cs3005/common"
       Adenovirus 5/F35-Human Guanylyl Cyclase C-PADRE:
         $ref:
-          - "_terms.yaml#/adenovirus_5f35human_guanylyl_cyclase_cpadre/common"
+          - "_terms_enum.yaml#/adenovirus_5f35human_guanylyl_cyclase_cpadre/common"
       Adenovirus Serotype 26-expressing HPV16 Vaccine JNJ-63682918:
         $ref:
-          - "_terms.yaml#/adenovirus_serotype_26expressing_hpv16_vaccine_jnj63682918/common"
+          - "_terms_enum.yaml#/adenovirus_serotype_26expressing_hpv16_vaccine_jnj63682918/common"
       Adenovirus Serotype 26-expressing HPV18 Vaccine JNJ-63682931:
         $ref:
-          - "_terms.yaml#/adenovirus_serotype_26expressing_hpv18_vaccine_jnj63682931/common"
+          - "_terms_enum.yaml#/adenovirus_serotype_26expressing_hpv18_vaccine_jnj63682931/common"
       ALK Inhibitor TAE684:
         $ref:
-          - "_terms.yaml#/alk_inhibitor_tae684/common"
+          - "_terms_enum.yaml#/alk_inhibitor_tae684/common"
       ALK/ROS1/Met Inhibitor TQ-B3101:
         $ref:
-          - "_terms.yaml#/alkros1met_inhibitor_tqb3101/common"
+          - "_terms_enum.yaml#/alkros1met_inhibitor_tqb3101/common"
       Allogeneic Anti-BCMA CAR-transduced T-cells ALLO-715:
         $ref:
-          - "_terms.yaml#/allogeneic_antibcma_cartransduced_tcells_allo715/common"
+          - "_terms_enum.yaml#/allogeneic_antibcma_cartransduced_tcells_allo715/common"
       Allogeneic Anti-BCMA-CAR T-cells PBCAR269A:
         $ref:
-          - "_terms.yaml#/allogeneic_antibcmacar_tcells_pbcar269a/common"
+          - "_terms_enum.yaml#/allogeneic_antibcmacar_tcells_pbcar269a/common"
       Allogeneic Anti-BCMA/CS1 Bispecific CAR-T Cells:
         $ref:
-          - "_terms.yaml#/allogeneic_antibcmacs1_bispecific_cart_cells/common"
+          - "_terms_enum.yaml#/allogeneic_antibcmacs1_bispecific_cart_cells/common"
       Allogeneic Anti-CD19 CAR T-cells ALLO-501A:
         $ref:
-          - "_terms.yaml#/allogeneic_anticd19_car_tcells_allo501a/common"
+          - "_terms_enum.yaml#/allogeneic_anticd19_car_tcells_allo501a/common"
       Allogeneic Anti-CD19 Universal CAR-T Cells CTA101:
         $ref:
-          - "_terms.yaml#/allogeneic_anticd19_universal_cart_cells_cta101/common"
+          - "_terms_enum.yaml#/allogeneic_anticd19_universal_cart_cells_cta101/common"
       Allogeneic Anti-CD20 CAR T-cells LUCAR-20S:
         $ref:
-          - "_terms.yaml#/allogeneic_anticd20_car_tcells_lucar20s/common"
+          - "_terms_enum.yaml#/allogeneic_anticd20_car_tcells_lucar20s/common"
       Allogeneic Anti-CD20-CAR T-cells PBCAR20A:
         $ref:
-          - "_terms.yaml#/allogeneic_anticd20car_tcells_pbcar20a/common"
+          - "_terms_enum.yaml#/allogeneic_anticd20car_tcells_pbcar20a/common"
       Allogeneic CD22-specific Universal CAR-expressing T-lymphocytes UCART22:
         $ref:
-          - "_terms.yaml#/allogeneic_cd22specific_universal_carexpressing_tlymphocytes_ucart22/common"
+          - "_terms_enum.yaml#/allogeneic_cd22specific_universal_carexpressing_tlymphocytes_ucart22/common"
       Allogeneic CD56-positive CD3-negative Natural Killer Cells CYNK-001:
         $ref:
-          - "_terms.yaml#/allogeneic_cd56positive_cd3negative_natural_killer_cells_cynk001/common"
+          - "_terms_enum.yaml#/allogeneic_cd56positive_cd3negative_natural_killer_cells_cynk001/common"
       Allogeneic CD8+ Leukemia-associated Antigens Specific T Cells NEXI-001:
         $ref:
-          - "_terms.yaml#/allogeneic_cd8_leukemiaassociated_antigens_specific_t_cells_nexi001/common"
+          - "_terms_enum.yaml#/allogeneic_cd8_leukemiaassociated_antigens_specific_t_cells_nexi001/common"
       Allogeneic CRISPR-Cas9 Engineered Anti-BCMA T Cells CTX120:
         $ref:
-          - "_terms.yaml#/allogeneic_crisprcas9_engineered_antibcma_t_cells_ctx120/common"
+          - "_terms_enum.yaml#/allogeneic_crisprcas9_engineered_antibcma_t_cells_ctx120/common"
       Allogeneic CRISPR-Cas9 Engineered Anti-CD70 CAR-T Cells CTX130:
         $ref:
-          - "_terms.yaml#/allogeneic_crisprcas9_engineered_anticd70_cart_cells_ctx130/common"
+          - "_terms_enum.yaml#/allogeneic_crisprcas9_engineered_anticd70_cart_cells_ctx130/common"
       Allogeneic CS1-specific Universal CAR-expressing T-lymphocytes UCARTCS1A:
         $ref:
-          - "_terms.yaml#/allogeneic_cs1specific_universal_carexpressing_tlymphocytes_ucartcs1a/common"
+          - "_terms_enum.yaml#/allogeneic_cs1specific_universal_carexpressing_tlymphocytes_ucartcs1a/common"
       Allogeneic Plasmacytoid Dendritic Cells Expressing Lung Tumor Antigens PDC*lung01:
         $ref:
-          - "_terms.yaml#/allogeneic_plasmacytoid_dendritic_cells_expressing_lung_tumor_antigens_pdclung01/common"
+          - "_terms_enum.yaml#/allogeneic_plasmacytoid_dendritic_cells_expressing_lung_tumor_antigens_pdclung01/common"
       Allogeneic Third-party Suicide Gene-transduced Anti-HLA-DPB1*0401 CD4+ T-cells CTL 19:
         $ref:
-          - "_terms.yaml#/allogeneic_thirdparty_suicide_genetransduced_antihladpb10401_cd4_tcells_ctl_19/common"
+          - "_terms_enum.yaml#/allogeneic_thirdparty_suicide_genetransduced_antihladpb10401_cd4_tcells_ctl_19/common"
       Allosteric ErbB Inhibitor BDTX-189:
         $ref:
-          - "_terms.yaml#/allosteric_erbb_inhibitor_bdtx189/common"
+          - "_terms_enum.yaml#/allosteric_erbb_inhibitor_bdtx189/common"
       Alobresib:
         $ref:
-          - "_terms.yaml#/alobresib/common"
+          - "_terms_enum.yaml#/alobresib/common"
       Alofanib:
         $ref:
-          - "_terms.yaml#/alofanib/common"
+          - "_terms_enum.yaml#/alofanib/common"
       Alpha V Beta 8 Antagonist PF-06940434:
         $ref:
-          - "_terms.yaml#/alpha_v_beta_8_antagonist_pf06940434/common"
+          - "_terms_enum.yaml#/alpha_v_beta_8_antagonist_pf06940434/common"
       Alsevalimab:
         $ref:
-          - "_terms.yaml#/alsevalimab/common"
+          - "_terms_enum.yaml#/alsevalimab/common"
       Amivantamab:
         $ref:
-          - "_terms.yaml#/amivantamab/common"
+          - "_terms_enum.yaml#/amivantamab/common"
       Andecaliximab:
         $ref:
-          - "_terms.yaml#/andecaliximab/common"
+          - "_terms_enum.yaml#/andecaliximab/common"
       Androgen Receptor Degrader CC-94676:
         $ref:
-          - "_terms.yaml#/androgen_receptor_degrader_cc94676/common"
+          - "_terms_enum.yaml#/androgen_receptor_degrader_cc94676/common"
       Androgen Receptor Inhibitor EPI-7386:
         $ref:
-          - "_terms.yaml#/androgen_receptor_inhibitor_epi7386/common"
+          - "_terms_enum.yaml#/androgen_receptor_inhibitor_epi7386/common"
       Androgen Receptor/Glucocorticoid Receptor  Antagonist CB-03-10:
         $ref:
-          - "_terms.yaml#/androgen_receptorglucocorticoid_receptor__antagonist_cb0310/common"
+          - "_terms_enum.yaml#/androgen_receptorglucocorticoid_receptor__antagonist_cb0310/common"
       Anhydrous Enol-oxaloacetate:
         $ref:
-          - "_terms.yaml#/anhydrous_enoloxaloacetate/common"
+          - "_terms_enum.yaml#/anhydrous_enoloxaloacetate/common"
       Anti-5T4 Antibody-drug Conjugate ASN004:
         $ref:
-          - "_terms.yaml#/anti5t4_antibodydrug_conjugate_asn004/common"
+          - "_terms_enum.yaml#/anti5t4_antibodydrug_conjugate_asn004/common"
       Anti-5T4 Antibody-drug Conjugate SYD1875:
         $ref:
-          - "_terms.yaml#/anti5t4_antibodydrug_conjugate_syd1875/common"
+          - "_terms_enum.yaml#/anti5t4_antibodydrug_conjugate_syd1875/common"
       Anti-B7-H3/DXd Antibody-drug Conjugate DS-7300a:
         $ref:
-          - "_terms.yaml#/antib7h3dxd_antibodydrug_conjugate_ds7300a/common"
+          - "_terms_enum.yaml#/antib7h3dxd_antibodydrug_conjugate_ds7300a/common"
       Anti-BCMA Antibody-drug Conjugate CC-99712:
         $ref:
-          - "_terms.yaml#/antibcma_antibodydrug_conjugate_cc99712/common"
+          - "_terms_enum.yaml#/antibcma_antibodydrug_conjugate_cc99712/common"
       Anti-BCMA SparX Protein Plus BCMA-directed Anti-TAAG ARC T-cells CART-ddBCMA:
         $ref:
-          - "_terms.yaml#/antibcma_sparx_protein_plus_bcmadirected_antitaag_arc_tcells_cartddbcma/common"
+          - "_terms_enum.yaml#/antibcma_sparx_protein_plus_bcmadirected_antitaag_arc_tcells_cartddbcma/common"
       Anti-BCMA/Anti-CD3 Bispecific Antibody REGN5459:
         $ref:
-          - "_terms.yaml#/antibcmaanticd3_bispecific_antibody_regn5459/common"
+          - "_terms_enum.yaml#/antibcmaanticd3_bispecific_antibody_regn5459/common"
       Anti-BTLA Monoclonal Antibody TAB004:
         $ref:
-          - "_terms.yaml#/antibtla_monoclonal_antibody_tab004/common"
+          - "_terms_enum.yaml#/antibtla_monoclonal_antibody_tab004/common"
       Anti-BTN3A Agonistic Monoclonal Antibody ICT01:
         $ref:
-          - "_terms.yaml#/antibtn3a_agonistic_monoclonal_antibody_ict01/common"
+          - "_terms_enum.yaml#/antibtn3a_agonistic_monoclonal_antibody_ict01/common"
       Anti-c-Met Monoclonal Antibody HLX55:
         $ref:
-          - "_terms.yaml#/anticmet_monoclonal_antibody_hlx55/common"
+          - "_terms_enum.yaml#/anticmet_monoclonal_antibody_hlx55/common"
       Anti-CCR7 Antibody-drug Conjugate JBH492:
         $ref:
-          - "_terms.yaml#/anticcr7_antibodydrug_conjugate_jbh492/common"
+          - "_terms_enum.yaml#/anticcr7_antibodydrug_conjugate_jbh492/common"
       Anti-CD117 Monoclonal Antibody JSP191:
         $ref:
-          - "_terms.yaml#/anticd117_monoclonal_antibody_jsp191/common"
+          - "_terms_enum.yaml#/anticd117_monoclonal_antibody_jsp191/common"
       Anti-CD137 Agonistic Monoclonal Antibody AGEN2373:
         $ref:
-          - "_terms.yaml#/anticd137_agonistic_monoclonal_antibody_agen2373/common"
+          - "_terms_enum.yaml#/anticd137_agonistic_monoclonal_antibody_agen2373/common"
       Anti-CD137 Agonistic Monoclonal Antibody ATOR-1017:
         $ref:
-          - "_terms.yaml#/anticd137_agonistic_monoclonal_antibody_ator1017/common"
+          - "_terms_enum.yaml#/anticd137_agonistic_monoclonal_antibody_ator1017/common"
       Anti-CD137 Agonistic Monoclonal Antibody LVGN6051:
         $ref:
-          - "_terms.yaml#/anticd137_agonistic_monoclonal_antibody_lvgn6051/common"
+          - "_terms_enum.yaml#/anticd137_agonistic_monoclonal_antibody_lvgn6051/common"
       Anti-CD19 Antibody-T-cell Receptor-expressing T-cells ET019003:
         $ref:
-          - "_terms.yaml#/anticd19_antibodytcell_receptorexpressing_tcells_et019003/common"
+          - "_terms_enum.yaml#/anticd19_antibodytcell_receptorexpressing_tcells_et019003/common"
       Anti-CD19 iCAR NK Cells:
         $ref:
-          - "_terms.yaml#/anticd19_icar_nk_cells/common"
+          - "_terms_enum.yaml#/anticd19_icar_nk_cells/common"
       Anti-CD19/CD22 CAR NK Cells:
         $ref:
-          - "_terms.yaml#/anticd19cd22_car_nk_cells/common"
+          - "_terms_enum.yaml#/anticd19cd22_car_nk_cells/common"
       Anti-CD20 Monoclonal Antibody BAT4306F:
         $ref:
-          - "_terms.yaml#/anticd20_monoclonal_antibody_bat4306f/common"
+          - "_terms_enum.yaml#/anticd20_monoclonal_antibody_bat4306f/common"
       Anti-CD20 Monoclonal Antibody MIL62:
         $ref:
-          - "_terms.yaml#/anticd20_monoclonal_antibody_mil62/common"
+          - "_terms_enum.yaml#/anticd20_monoclonal_antibody_mil62/common"
       Anti-CD205 Antibody-drug Conjugate OBT076:
         $ref:
-          - "_terms.yaml#/anticd205_antibodydrug_conjugate_obt076/common"
+          - "_terms_enum.yaml#/anticd205_antibodydrug_conjugate_obt076/common"
       Anti-CD228/MMAE Antibody-drug Conjugate SGN-CD228A:
         $ref:
-          - "_terms.yaml#/anticd228mmae_antibodydrug_conjugate_sgncd228a/common"
+          - "_terms_enum.yaml#/anticd228mmae_antibodydrug_conjugate_sgncd228a/common"
       Anti-CD25 Monoclonal Antibody RO7296682:
         $ref:
-          - "_terms.yaml#/anticd25_monoclonal_antibody_ro7296682/common"
+          - "_terms_enum.yaml#/anticd25_monoclonal_antibody_ro7296682/common"
       Anti-CD27 Agonistic Monoclonal Antibody MK-5890:
         $ref:
-          - "_terms.yaml#/anticd27_agonistic_monoclonal_antibody_mk5890/common"
+          - "_terms_enum.yaml#/anticd27_agonistic_monoclonal_antibody_mk5890/common"
       Anti-CD3/Anti-5T4 Bispecific Antibody GEN1044:
         $ref:
-          - "_terms.yaml#/anticd3anti5t4_bispecific_antibody_gen1044/common"
+          - "_terms_enum.yaml#/anticd3anti5t4_bispecific_antibody_gen1044/common"
       Anti-CD3/Anti-GUCY2C Bispecific Antibody PF-07062119:
         $ref:
-          - "_terms.yaml#/anticd3antigucy2c_bispecific_antibody_pf07062119/common"
+          - "_terms_enum.yaml#/anticd3antigucy2c_bispecific_antibody_pf07062119/common"
       Anti-CD3/CD7-Ricin Toxin A Immunotoxin:
         $ref:
-          - "_terms.yaml#/anticd3cd7ricin_toxin_a_immunotoxin/common"
+          - "_terms_enum.yaml#/anticd3cd7ricin_toxin_a_immunotoxin/common"
       Anti-CD30/DM1 Antibody-drug Conjugate F0002:
         $ref:
-          - "_terms.yaml#/anticd30dm1_antibodydrug_conjugate_f0002/common"
+          - "_terms_enum.yaml#/anticd30dm1_antibodydrug_conjugate_f0002/common"
       Anti-CD37 Bispecific Monoclonal Antibody GEN3009:
         $ref:
-          - "_terms.yaml#/anticd37_bispecific_monoclonal_antibody_gen3009/common"
+          - "_terms_enum.yaml#/anticd37_bispecific_monoclonal_antibody_gen3009/common"
       Anti-CD38 Antibody-drug Conjugate STI-6129:
         $ref:
-          - "_terms.yaml#/anticd38_antibodydrug_conjugate_sti6129/common"
+          - "_terms_enum.yaml#/anticd38_antibodydrug_conjugate_sti6129/common"
       Anti-CD38 Monoclonal Antibody SAR442085:
         $ref:
-          - "_terms.yaml#/anticd38_monoclonal_antibody_sar442085/common"
+          - "_terms_enum.yaml#/anticd38_monoclonal_antibody_sar442085/common"
       Anti-CD38/CD28xCD3 Tri-specific Monoclonal Antibody SAR442257:
         $ref:
-          - "_terms.yaml#/anticd38cd28xcd3_trispecific_monoclonal_antibody_sar442257/common"
+          - "_terms_enum.yaml#/anticd38cd28xcd3_trispecific_monoclonal_antibody_sar442257/common"
       Anti-CD39 Monoclonal Antibody SRF617:
         $ref:
-          - "_terms.yaml#/anticd39_monoclonal_antibody_srf617/common"
+          - "_terms_enum.yaml#/anticd39_monoclonal_antibody_srf617/common"
       Anti-CD40/Anti-4-1BB Bispecific Agonist Monoclonal Antibody GEN1042:
         $ref:
-          - "_terms.yaml#/anticd40anti41bb_bispecific_agonist_monoclonal_antibody_gen1042/common"
+          - "_terms_enum.yaml#/anticd40anti41bb_bispecific_agonist_monoclonal_antibody_gen1042/common"
       Anti-CD47 ADC SGN-CD47M:
         $ref:
-          - "_terms.yaml#/anticd47_adc_sgncd47m/common"
+          - "_terms_enum.yaml#/anticd47_adc_sgncd47m/common"
       Anti-CD47 Monoclonal Antibody IMC-002:
         $ref:
-          - "_terms.yaml#/anticd47_monoclonal_antibody_imc002/common"
+          - "_terms_enum.yaml#/anticd47_monoclonal_antibody_imc002/common"
       Anti-CD47/CD19 Bispecific Monoclonal Antibody TG-1801:
         $ref:
-          - "_terms.yaml#/anticd47cd19_bispecific_monoclonal_antibody_tg1801/common"
+          - "_terms_enum.yaml#/anticd47cd19_bispecific_monoclonal_antibody_tg1801/common"
       Anti-claudin18.2 Monoclonal Antibody AB011:
         $ref:
-          - "_terms.yaml#/anticlaudin182_monoclonal_antibody_ab011/common"
+          - "_terms_enum.yaml#/anticlaudin182_monoclonal_antibody_ab011/common"
       Anti-Claudin18.2 Monoclonal Antibody TST001:
         $ref:
-          - "_terms.yaml#/anticlaudin182_monoclonal_antibody_tst001/common"
+          - "_terms_enum.yaml#/anticlaudin182_monoclonal_antibody_tst001/common"
       Anti-CTLA-4 Monoclonal Antibody ADG116:
         $ref:
-          - "_terms.yaml#/antictla4_monoclonal_antibody_adg116/common"
+          - "_terms_enum.yaml#/antictla4_monoclonal_antibody_adg116/common"
       Anti-CTLA-4 Monoclonal Antibody HBM4003:
         $ref:
-          - "_terms.yaml#/antictla4_monoclonal_antibody_hbm4003/common"
+          - "_terms_enum.yaml#/antictla4_monoclonal_antibody_hbm4003/common"
       Anti-CTLA-4 Monoclonal Antibody ONC-392:
         $ref:
-          - "_terms.yaml#/antictla4_monoclonal_antibody_onc392/common"
+          - "_terms_enum.yaml#/antictla4_monoclonal_antibody_onc392/common"
       Anti-CTLA-4 Probody BMS-986288:
         $ref:
-          - "_terms.yaml#/antictla4_probody_bms986288/common"
+          - "_terms_enum.yaml#/antictla4_probody_bms986288/common"
       Anti-CTLA-4/Anti-PD-1 Monoclonal Antibody Combination BCD-217:
         $ref:
-          - "_terms.yaml#/antictla4antipd1_monoclonal_antibody_combination_bcd217/common"
+          - "_terms_enum.yaml#/antictla4antipd1_monoclonal_antibody_combination_bcd217/common"
       Anti-CTLA4 Antibody Fc Fusion Protein KN044:
         $ref:
-          - "_terms.yaml#/antictla4_antibody_fc_fusion_protein_kn044/common"
+          - "_terms_enum.yaml#/antictla4_antibody_fc_fusion_protein_kn044/common"
       Anti-EGFR/CD16A Bispecific Antibody AFM24:
         $ref:
-          - "_terms.yaml#/antiegfrcd16a_bispecific_antibody_afm24/common"
+          - "_terms_enum.yaml#/antiegfrcd16a_bispecific_antibody_afm24/common"
       Anti-FRA/Eribulin Antibody-drug Conjugate MORAb-202:
         $ref:
-          - "_terms.yaml#/antifraeribulin_antibodydrug_conjugate_morab202/common"
+          - "_terms_enum.yaml#/antifraeribulin_antibodydrug_conjugate_morab202/common"
       Anti-GARP Monoclonal Antibody ABBV-151:
         $ref:
-          - "_terms.yaml#/antigarp_monoclonal_antibody_abbv151/common"
+          - "_terms_enum.yaml#/antigarp_monoclonal_antibody_abbv151/common"
       Anti-Globo H/MMAE Antibody-drug Conjugate OBI 999:
         $ref:
-          - "_terms.yaml#/antiglobo_hmmae_antibodydrug_conjugate_obi_999/common"
+          - "_terms_enum.yaml#/antiglobo_hmmae_antibodydrug_conjugate_obi_999/common"
       Anti-GPR20/DXd Antibody-drug Conjugate DS-6157a:
         $ref:
-          - "_terms.yaml#/antigpr20dxd_antibodydrug_conjugate_ds6157a/common"
+          - "_terms_enum.yaml#/antigpr20dxd_antibodydrug_conjugate_ds6157a/common"
       Anti-gremlin-1 Monoclonal Antibody UCB6114:
         $ref:
-          - "_terms.yaml#/antigremlin1_monoclonal_antibody_ucb6114/common"
+          - "_terms_enum.yaml#/antigremlin1_monoclonal_antibody_ucb6114/common"
       Anti-HER2 Antibody Conjugated Natural Killer Cells ACE1702:
         $ref:
-          - "_terms.yaml#/antiher2_antibody_conjugated_natural_killer_cells_ace1702/common"
+          - "_terms_enum.yaml#/antiher2_antibody_conjugated_natural_killer_cells_ace1702/common"
       Anti-HER2 Antibody-drug Conjugate BAT8001:
         $ref:
-          - "_terms.yaml#/antiher2_antibodydrug_conjugate_bat8001/common"
+          - "_terms_enum.yaml#/antiher2_antibodydrug_conjugate_bat8001/common"
       Anti-HER2 Antibody-drug Conjugate DP303c:
         $ref:
-          - "_terms.yaml#/antiher2_antibodydrug_conjugate_dp303c/common"
+          - "_terms_enum.yaml#/antiher2_antibodydrug_conjugate_dp303c/common"
       Anti-HER2 Monoclonal Antibody B002:
         $ref:
-          - "_terms.yaml#/antiher2_monoclonal_antibody_b002/common"
+          - "_terms_enum.yaml#/antiher2_monoclonal_antibody_b002/common"
       Anti-HER2 Monoclonal Antibody HLX22:
         $ref:
-          - "_terms.yaml#/antiher2_monoclonal_antibody_hlx22/common"
+          - "_terms_enum.yaml#/antiher2_monoclonal_antibody_hlx22/common"
       Anti-HER2-DM1 ADC B003:
         $ref:
-          - "_terms.yaml#/antiher2dm1_adc_b003/common"
+          - "_terms_enum.yaml#/antiher2dm1_adc_b003/common"
       Anti-HER2-DM1 Antibody-drug Conjugate GQ1001:
         $ref:
-          - "_terms.yaml#/antiher2dm1_antibodydrug_conjugate_gq1001/common"
+          - "_terms_enum.yaml#/antiher2dm1_antibodydrug_conjugate_gq1001/common"
       Anti-HER2/MMAE Antibody-drug Conjugate MRG002:
         $ref:
-          - "_terms.yaml#/antiher2mmae_antibodydrug_conjugate_mrg002/common"
+          - "_terms_enum.yaml#/antiher2mmae_antibodydrug_conjugate_mrg002/common"
       Anti-HLA-G Antibody TTX-080:
         $ref:
-          - "_terms.yaml#/antihlag_antibody_ttx080/common"
+          - "_terms_enum.yaml#/antihlag_antibody_ttx080/common"
       Anti-IL-8 Monoclonal Antibody BMS-986253:
         $ref:
-          - "_terms.yaml#/antiil8_monoclonal_antibody_bms986253/common"
+          - "_terms_enum.yaml#/antiil8_monoclonal_antibody_bms986253/common"
       Anti-integrin Beta-6/MMAE Antibody-drug Conjugate SGN-B6A:
         $ref:
-          - "_terms.yaml#/antiintegrin_beta6mmae_antibodydrug_conjugate_sgnb6a/common"
+          - "_terms_enum.yaml#/antiintegrin_beta6mmae_antibodydrug_conjugate_sgnb6a/common"
       Anti-IRF4 Antisense Oligonucleotide ION251:
         $ref:
-          - "_terms.yaml#/antiirf4_antisense_oligonucleotide_ion251/common"
+          - "_terms_enum.yaml#/antiirf4_antisense_oligonucleotide_ion251/common"
       Anti-LAG-3 Monoclonal Antibody IBI-110:
         $ref:
-          - "_terms.yaml#/antilag3_monoclonal_antibody_ibi110/common"
+          - "_terms_enum.yaml#/antilag3_monoclonal_antibody_ibi110/common"
       Anti-latent TGF-beta 1 Monoclonal Antibody SRK-181:
         $ref:
-          - "_terms.yaml#/antilatent_tgfbeta_1_monoclonal_antibody_srk181/common"
+          - "_terms_enum.yaml#/antilatent_tgfbeta_1_monoclonal_antibody_srk181/common"
       Anti-Lewis B/Lewis Y Monoclonal Antibody GNX102:
         $ref:
-          - "_terms.yaml#/antilewis_blewis_y_monoclonal_antibody_gnx102/common"
+          - "_terms_enum.yaml#/antilewis_blewis_y_monoclonal_antibody_gnx102/common"
       Anti-LILRB4 Monoclonal Antibody IO-202:
         $ref:
-          - "_terms.yaml#/antililrb4_monoclonal_antibody_io202/common"
+          - "_terms_enum.yaml#/antililrb4_monoclonal_antibody_io202/common"
       Anti-mesothelin/MMAE Antibody-drug Conjugate RC88:
         $ref:
-          - "_terms.yaml#/antimesothelinmmae_antibodydrug_conjugate_rc88/common"
+          - "_terms_enum.yaml#/antimesothelinmmae_antibodydrug_conjugate_rc88/common"
       Anti-MUC16/CD3 Bispecific Antibody REGN4018:
         $ref:
-          - "_terms.yaml#/antimuc16cd3_bispecific_antibody_regn4018/common"
+          - "_terms_enum.yaml#/antimuc16cd3_bispecific_antibody_regn4018/common"
       Anti-MUC17/CD3 BiTE Antibody AMG 199:
         $ref:
-          - "_terms.yaml#/antimuc17cd3_bite_antibody_amg_199/common"
+          - "_terms_enum.yaml#/antimuc17cd3_bite_antibody_amg_199/common"
       Anti-NaPi2b Antibody-drug Conjugate XMT-1592:
         $ref:
-          - "_terms.yaml#/antinapi2b_antibodydrug_conjugate_xmt1592/common"
+          - "_terms_enum.yaml#/antinapi2b_antibodydrug_conjugate_xmt1592/common"
       Anti-NRP1 Antibody ASP1948:
         $ref:
-          - "_terms.yaml#/antinrp1_antibody_asp1948/common"
+          - "_terms_enum.yaml#/antinrp1_antibody_asp1948/common"
       Anti-OX40 Agonist Monoclonal Antibody BGB-A445:
         $ref:
-          - "_terms.yaml#/antiox40_agonist_monoclonal_antibody_bgba445/common"
+          - "_terms_enum.yaml#/antiox40_agonist_monoclonal_antibody_bgba445/common"
       Anti-OX40 Hexavalent Agonist Antibody INBRX-106:
         $ref:
-          - "_terms.yaml#/antiox40_hexavalent_agonist_antibody_inbrx106/common"
+          - "_terms_enum.yaml#/antiox40_hexavalent_agonist_antibody_inbrx106/common"
       Anti-PD-1 Antibody-interleukin-21 Mutein Fusion Protein AMG 256:
         $ref:
-          - "_terms.yaml#/antipd1_antibodyinterleukin21_mutein_fusion_protein_amg_256/common"
+          - "_terms_enum.yaml#/antipd1_antibodyinterleukin21_mutein_fusion_protein_amg_256/common"
       Anti-PD-1 Monoclonal Antibody 609A:
         $ref:
-          - "_terms.yaml#/antipd1_monoclonal_antibody_609a/common"
+          - "_terms_enum.yaml#/antipd1_monoclonal_antibody_609a/common"
       Anti-PD-1 Monoclonal Antibody SCT-I10A:
         $ref:
-          - "_terms.yaml#/antipd1_monoclonal_antibody_scti10a/common"
+          - "_terms_enum.yaml#/antipd1_monoclonal_antibody_scti10a/common"
       Anti-PD-1/Anti-HER2 Bispecific Antibody IBI315:
         $ref:
-          - "_terms.yaml#/antipd1antiher2_bispecific_antibody_ibi315/common"
+          - "_terms_enum.yaml#/antipd1antiher2_bispecific_antibody_ibi315/common"
       Anti-PD-1/Anti-LAG-3 Bispecific Antibody RO7247669:
         $ref:
-          - "_terms.yaml#/antipd1antilag3_bispecific_antibody_ro7247669/common"
+          - "_terms_enum.yaml#/antipd1antilag3_bispecific_antibody_ro7247669/common"
       Anti-PD-1/Anti-PD-L1 Bispecific Antibody IBI318:
         $ref:
-          - "_terms.yaml#/antipd1antipdl1_bispecific_antibody_ibi318/common"
+          - "_terms_enum.yaml#/antipd1antipdl1_bispecific_antibody_ibi318/common"
       Anti-PD-1/CD47 Infusion Protein HX009:
         $ref:
-          - "_terms.yaml#/antipd1cd47_infusion_protein_hx009/common"
+          - "_terms_enum.yaml#/antipd1cd47_infusion_protein_hx009/common"
       Anti-PD-1/CTLA-4 Bispecific Antibody MEDI5752:
         $ref:
-          - "_terms.yaml#/antipd1ctla4_bispecific_antibody_medi5752/common"
+          - "_terms_enum.yaml#/antipd1ctla4_bispecific_antibody_medi5752/common"
       Anti-PD-1/VEGF Bispecific Antibody AK112:
         $ref:
-          - "_terms.yaml#/antipd1vegf_bispecific_antibody_ak112/common"
+          - "_terms_enum.yaml#/antipd1vegf_bispecific_antibody_ak112/common"
       Anti-PD-L1 Monoclonal Antibody IMC-001:
         $ref:
-          - "_terms.yaml#/antipdl1_monoclonal_antibody_imc001/common"
+          - "_terms_enum.yaml#/antipdl1_monoclonal_antibody_imc001/common"
       Anti-PD-L1 Monoclonal Antibody RC98:
         $ref:
-          - "_terms.yaml#/antipdl1_monoclonal_antibody_rc98/common"
+          - "_terms_enum.yaml#/antipdl1_monoclonal_antibody_rc98/common"
       Anti-PD-L1/Anti-4-1BB Bispecific Monoclonal Antibody GEN1046:
         $ref:
-          - "_terms.yaml#/antipdl1anti41bb_bispecific_monoclonal_antibody_gen1046/common"
+          - "_terms_enum.yaml#/antipdl1anti41bb_bispecific_monoclonal_antibody_gen1046/common"
       Anti-PD-L1/IL-15 Fusion Protein KD033:
         $ref:
-          - "_terms.yaml#/antipdl1il15_fusion_protein_kd033/common"
+          - "_terms_enum.yaml#/antipdl1il15_fusion_protein_kd033/common"
       Anti-PRAME T-cell Receptor/Anti-CD3 scFv Fusion Protein IMC-F106C:
         $ref:
-          - "_terms.yaml#/antiprame_tcell_receptoranticd3_scfv_fusion_protein_imcf106c/common"
+          - "_terms_enum.yaml#/antiprame_tcell_receptoranticd3_scfv_fusion_protein_imcf106c/common"
       Anti-PSMA/CD3 Bispecific Antibody CCW702:
         $ref:
-          - "_terms.yaml#/antipsmacd3_bispecific_antibody_ccw702/common"
+          - "_terms_enum.yaml#/antipsmacd3_bispecific_antibody_ccw702/common"
       Anti-RANKL Monoclonal Antibody GB-223:
         $ref:
-          - "_terms.yaml#/antirankl_monoclonal_antibody_gb223/common"
+          - "_terms_enum.yaml#/antirankl_monoclonal_antibody_gb223/common"
       Anti-RANKL Monoclonal Antibody JMT103:
         $ref:
-          - "_terms.yaml#/antirankl_monoclonal_antibody_jmt103/common"
+          - "_terms_enum.yaml#/antirankl_monoclonal_antibody_jmt103/common"
       Anti-Ribonucleoprotein Antibody ATRC-101:
         $ref:
-          - "_terms.yaml#/antiribonucleoprotein_antibody_atrc101/common"
+          - "_terms_enum.yaml#/antiribonucleoprotein_antibody_atrc101/common"
       Anti-ROR1/PNU-159682 Derivative Antibody-drug Conjugate NBE-002:
         $ref:
-          - "_terms.yaml#/antiror1pnu159682_derivative_antibodydrug_conjugate_nbe002/common"
+          - "_terms_enum.yaml#/antiror1pnu159682_derivative_antibodydrug_conjugate_nbe002/common"
       Anti-TIGIT Monoclonal Antibody BGB-A1217:
         $ref:
-          - "_terms.yaml#/antitigit_monoclonal_antibody_bgba1217/common"
+          - "_terms_enum.yaml#/antitigit_monoclonal_antibody_bgba1217/common"
       Anti-TIGIT Monoclonal Antibody COM902:
         $ref:
-          - "_terms.yaml#/antitigit_monoclonal_antibody_com902/common"
+          - "_terms_enum.yaml#/antitigit_monoclonal_antibody_com902/common"
       Anti-TIGIT Monoclonal Antibody SGN-TGT:
         $ref:
-          - "_terms.yaml#/antitigit_monoclonal_antibody_sgntgt/common"
+          - "_terms_enum.yaml#/antitigit_monoclonal_antibody_sgntgt/common"
       Anti-TIM3 Monoclonal Antibody SHR-1702:
         $ref:
-          - "_terms.yaml#/antitim3_monoclonal_antibody_shr1702/common"
+          - "_terms_enum.yaml#/antitim3_monoclonal_antibody_shr1702/common"
       Anti-TRAILR2/CDH17 Tetravalent Bispecific Antibody BI 905711:
         $ref:
-          - "_terms.yaml#/antitrailr2cdh17_tetravalent_bispecific_antibody_bi_905711/common"
+          - "_terms_enum.yaml#/antitrailr2cdh17_tetravalent_bispecific_antibody_bi_905711/common"
       Anti-TROP2 Antibody-drug Conjugate BAT8003:
         $ref:
-          - "_terms.yaml#/antitrop2_antibodydrug_conjugate_bat8003/common"
+          - "_terms_enum.yaml#/antitrop2_antibodydrug_conjugate_bat8003/common"
       Anti-TROP2 Antibody-drug Conjugate SKB264:
         $ref:
-          - "_terms.yaml#/antitrop2_antibodydrug_conjugate_skb264/common"
+          - "_terms_enum.yaml#/antitrop2_antibodydrug_conjugate_skb264/common"
       Anti-VEGFR2 Monoclonal Antibody MSB0254:
         $ref:
-          - "_terms.yaml#/antivegfr2_monoclonal_antibody_msb0254/common"
+          - "_terms_enum.yaml#/antivegfr2_monoclonal_antibody_msb0254/common"
       Antisense Oligonucleotide QR-313:
         $ref:
-          - "_terms.yaml#/antisense_oligonucleotide_qr313/common"
+          - "_terms_enum.yaml#/antisense_oligonucleotide_qr313/common"
       Aprinocarsen:
         $ref:
-          - "_terms.yaml#/aprinocarsen/common"
+          - "_terms_enum.yaml#/aprinocarsen/common"
       Aprutumab:
         $ref:
-          - "_terms.yaml#/aprutumab/common"
+          - "_terms_enum.yaml#/aprutumab/common"
       Aryl Hydrocarbon Receptor Inhibitor IK-175:
         $ref:
-          - "_terms.yaml#/aryl_hydrocarbon_receptor_inhibitor_ik175/common"
+          - "_terms_enum.yaml#/aryl_hydrocarbon_receptor_inhibitor_ik175/common"
       Aspacytarabine:
         $ref:
-          - "_terms.yaml#/aspacytarabine/common"
+          - "_terms_enum.yaml#/aspacytarabine/common"
       Asunercept:
         $ref:
-          - "_terms.yaml#/asunercept/common"
+          - "_terms_enum.yaml#/asunercept/common"
       ATR Inhibitor RP-3500:
         $ref:
-          - "_terms.yaml#/atr_inhibitor_rp3500/common"
+          - "_terms_enum.yaml#/atr_inhibitor_rp3500/common"
       ATR Kinase Inhibitor M1774:
         $ref:
-          - "_terms.yaml#/atr_kinase_inhibitor_m1774/common"
+          - "_terms_enum.yaml#/atr_kinase_inhibitor_m1774/common"
       Attenuated Measles Virus Encoding SCD Transgene TMV-018:
         $ref:
-          - "_terms.yaml#/attenuated_measles_virus_encoding_scd_transgene_tmv018/common"
+          - "_terms_enum.yaml#/attenuated_measles_virus_encoding_scd_transgene_tmv018/common"
       Atuveciclib:
         $ref:
-          - "_terms.yaml#/atuveciclib/common"
+          - "_terms_enum.yaml#/atuveciclib/common"
       Audencel:
         $ref:
-          - "_terms.yaml#/audencel/common"
+          - "_terms_enum.yaml#/audencel/common"
       Autologous AFP Specific T Cell Receptor Transduced T Cells C-TCR055:
         $ref:
-          - "_terms.yaml#/autologous_afp_specific_t_cell_receptor_transduced_t_cells_ctcr055/common"
+          - "_terms_enum.yaml#/autologous_afp_specific_t_cell_receptor_transduced_t_cells_ctcr055/common"
       Autologous Anti-BCMA CAR T-cells PHE885:
         $ref:
-          - "_terms.yaml#/autologous_antibcma_car_tcells_phe885/common"
+          - "_terms_enum.yaml#/autologous_antibcma_car_tcells_phe885/common"
       Autologous Anti-BCMA CD8+ CAR T-cells Descartes-11:
         $ref:
-          - "_terms.yaml#/autologous_antibcma_cd8_car_tcells_descartes11/common"
+          - "_terms_enum.yaml#/autologous_antibcma_cd8_car_tcells_descartes11/common"
       Autologous Anti-BCMA-CAR-4-1BB-CD3zeta-expressing T-cells C-CAR088:
         $ref:
-          - "_terms.yaml#/autologous_antibcmacar41bbcd3zetaexpressing_tcells_ccar088/common"
+          - "_terms_enum.yaml#/autologous_antibcmacar41bbcd3zetaexpressing_tcells_ccar088/common"
       Autologous Anti-CD123 CAR-T Cells:
         $ref:
-          - "_terms.yaml#/autologous_anticd123_cart_cells/common"
+          - "_terms_enum.yaml#/autologous_anticd123_cart_cells/common"
       Autologous Anti-CD19 CAR T-cells 19(T2)28z1xx:
         $ref:
-          - "_terms.yaml#/autologous_anticd19_car_tcells_19t228z1xx/common"
+          - "_terms_enum.yaml#/autologous_anticd19_car_tcells_19t228z1xx/common"
       Autologous Anti-CD19 CAR-4-1BB-CD3zeta-expressing T-cells CNCT19:
         $ref:
-          - "_terms.yaml#/autologous_anticd19_car41bbcd3zetaexpressing_tcells_cnct19/common"
+          - "_terms_enum.yaml#/autologous_anticd19_car41bbcd3zetaexpressing_tcells_cnct19/common"
       Autologous Anti-CD19 Chimeric Antigen Receptor T-cells AUTO1:
         $ref:
-          - "_terms.yaml#/autologous_anticd19_chimeric_antigen_receptor_tcells_auto1/common"
+          - "_terms_enum.yaml#/autologous_anticd19_chimeric_antigen_receptor_tcells_auto1/common"
       Autologous Anti-CD19 TAC-T cells TAC01-CD19:
         $ref:
-          - "_terms.yaml#/autologous_anticd19_tact_cells_tac01cd19/common"
+          - "_terms_enum.yaml#/autologous_anticd19_tact_cells_tac01cd19/common"
       Autologous Anti-CD19/CD20 Bispecific Nanobody-based CAR-T cells:
         $ref:
-          - "_terms.yaml#/autologous_anticd19cd20_bispecific_nanobodybased_cart_cells/common"
+          - "_terms_enum.yaml#/autologous_anticd19cd20_bispecific_nanobodybased_cart_cells/common"
       Autologous Anti-CD19CAR-HER2t/CD22CAR-EGFRt-expressing T-cells:
         $ref:
-          - "_terms.yaml#/autologous_anticd19carher2tcd22caregfrtexpressing_tcells/common"
+          - "_terms_enum.yaml#/autologous_anticd19carher2tcd22caregfrtexpressing_tcells/common"
       Autologous Anti-CD20 CAR Transduced CD4/CD8 Enriched T-cells MB-CART20.1:
         $ref:
-          - "_terms.yaml#/autologous_anticd20_car_transduced_cd4cd8_enriched_tcells_mbcart201/common"
+          - "_terms_enum.yaml#/autologous_anticd20_car_transduced_cd4cd8_enriched_tcells_mbcart201/common"
       Autologous Anti-EGFR CAR-transduced CXCR 5-modified T-lymphocytes:
         $ref:
-          - "_terms.yaml#/autologous_antiegfr_cartransduced_cxcr_5modified_tlymphocytes/common"
+          - "_terms_enum.yaml#/autologous_antiegfr_cartransduced_cxcr_5modified_tlymphocytes/common"
       Autologous Anti-FLT3 CAR T Cells AMG 553:
         $ref:
-          - "_terms.yaml#/autologous_antiflt3_car_t_cells_amg_553/common"
+          - "_terms_enum.yaml#/autologous_antiflt3_car_t_cells_amg_553/common"
       Autologous Anti-ICAM-1-CAR-CD28-4-1BB-CD3zeta-expressing T-cells AIC100:
         $ref:
-          - "_terms.yaml#/autologous_antiicam1carcd2841bbcd3zetaexpressing_tcells_aic100/common"
+          - "_terms_enum.yaml#/autologous_antiicam1carcd2841bbcd3zetaexpressing_tcells_aic100/common"
       Autologous Anti-kappa Light Chain CAR-CD28-expressing T-lymphocytes:
         $ref:
-          - "_terms.yaml#/autologous_antikappa_light_chain_carcd28expressing_tlymphocytes/common"
+          - "_terms_enum.yaml#/autologous_antikappa_light_chain_carcd28expressing_tlymphocytes/common"
       Autologous Anti-PD-1 Antibody-activated Tumor-infiltrating Lymphocytes:
         $ref:
-          - "_terms.yaml#/autologous_antipd1_antibodyactivated_tumorinfiltrating_lymphocytes/common"
+          - "_terms_enum.yaml#/autologous_antipd1_antibodyactivated_tumorinfiltrating_lymphocytes/common"
       Autologous Anti-PSMA CAR-T Cells P-PSMA-101:
         $ref:
-          - "_terms.yaml#/autologous_antipsma_cart_cells_ppsma101/common"
+          - "_terms_enum.yaml#/autologous_antipsma_cart_cells_ppsma101/common"
       Autologous BCMA-targeted CAR T Cells CC-98633:
         $ref:
-          - "_terms.yaml#/autologous_bcmatargeted_car_t_cells_cc98633/common"
+          - "_terms_enum.yaml#/autologous_bcmatargeted_car_t_cells_cc98633/common"
       Autologous Bispecific BCMA/CD19-targeted CAR-T Cells GC012F:
         $ref:
-          - "_terms.yaml#/autologous_bispecific_bcmacd19targeted_cart_cells_gc012f/common"
+          - "_terms_enum.yaml#/autologous_bispecific_bcmacd19targeted_cart_cells_gc012f/common"
       Autologous Bispecific CD19/CD22-targeted CAR-T Cells GC022:
         $ref:
-          - "_terms.yaml#/autologous_bispecific_cd19cd22targeted_cart_cells_gc022/common"
+          - "_terms_enum.yaml#/autologous_bispecific_cd19cd22targeted_cart_cells_gc022/common"
       Autologous CD19 CAR-expressing CD4+/CD8+ T-cells MB-CART19.1:
         $ref:
-          - "_terms.yaml#/autologous_cd19_carexpressing_cd4cd8_tcells_mbcart191/common"
+          - "_terms_enum.yaml#/autologous_cd19_carexpressing_cd4cd8_tcells_mbcart191/common"
       Autologous CD19-targeted CAR T Cells CC-97540:
         $ref:
-          - "_terms.yaml#/autologous_cd19targeted_car_t_cells_cc97540/common"
+          - "_terms_enum.yaml#/autologous_cd19targeted_car_t_cells_cc97540/common"
       Autologous CD19-targeted CAR-T Cells GC007F:
         $ref:
-          - "_terms.yaml#/autologous_cd19targeted_cart_cells_gc007f/common"
+          - "_terms_enum.yaml#/autologous_cd19targeted_cart_cells_gc007f/common"
       Autologous CD19/PD-1 Bispecific CAR-T Cells:
         $ref:
-          - "_terms.yaml#/autologous_cd19pd1_bispecific_cart_cells/common"
+          - "_terms_enum.yaml#/autologous_cd19pd1_bispecific_cart_cells/common"
       Autologous Clonal Neoantigen T Cells ATL001:
         $ref:
-          - "_terms.yaml#/autologous_clonal_neoantigen_t_cells_atl001/common"
+          - "_terms_enum.yaml#/autologous_clonal_neoantigen_t_cells_atl001/common"
       Autologous CRISPR-edited Anti-CD19 CAR T Cells XYF19:
         $ref:
-          - "_terms.yaml#/autologous_crispredited_anticd19_car_t_cells_xyf19/common"
+          - "_terms_enum.yaml#/autologous_crispredited_anticd19_car_t_cells_xyf19/common"
       Autologous Monocyte-derived Lysate-pulsed Dendritic Cell Vaccine PV-001-DC:
         $ref:
-          - "_terms.yaml#/autologous_monocytederived_lysatepulsed_dendritic_cell_vaccine_pv001dc/common"
+          - "_terms_enum.yaml#/autologous_monocytederived_lysatepulsed_dendritic_cell_vaccine_pv001dc/common"
       Autologous Multi-lineage Potential Cells:
         $ref:
-          - "_terms.yaml#/autologous_multilineage_potential_cells/common"
+          - "_terms_enum.yaml#/autologous_multilineage_potential_cells/common"
       Autologous Nectin-4/FAP-targeted CAR-T Cells:
         $ref:
-          - "_terms.yaml#/autologous_nectin4faptargeted_cart_cells/common"
+          - "_terms_enum.yaml#/autologous_nectin4faptargeted_cart_cells/common"
       Autologous NKG2D CAR T-cells CYAD-02:
         $ref:
-          - "_terms.yaml#/autologous_nkg2d_car_tcells_cyad02/common"
+          - "_terms_enum.yaml#/autologous_nkg2d_car_tcells_cyad02/common"
       Autologous Pancreatic Adenocarcinoma Lysate and mRNA-loaded Dendritic Cell Vaccine:
         $ref:
-          - "_terms.yaml#/autologous_pancreatic_adenocarcinoma_lysate_and_mrnaloaded_dendritic_cell_vaccine/common"
+          - "_terms_enum.yaml#/autologous_pancreatic_adenocarcinoma_lysate_and_mrnaloaded_dendritic_cell_vaccine/common"
       Autologous Peripheral Blood Lymphocytes from Ibrutinib-treated Chronic Lymphocytic Leukemia Patients IOV-2001:
         $ref:
-          - "_terms.yaml#/autologous_peripheral_blood_lymphocytes_from_ibrutinibtreated_chronic_lymphocytic_leukemia_patients_iov2001/common"
+          - "_terms_enum.yaml#/autologous_peripheral_blood_lymphocytes_from_ibrutinibtreated_chronic_lymphocytic_leukemia_patients_iov2001/common"
       Autologous Rapamycin-resistant Th1/Tc1 Cells RAPA-201:
         $ref:
-          - "_terms.yaml#/autologous_rapamycinresistant_th1tc1_cells_rapa201/common"
+          - "_terms_enum.yaml#/autologous_rapamycinresistant_th1tc1_cells_rapa201/common"
       Autologous TCRm-expressing T-cells ET140203:
         $ref:
-          - "_terms.yaml#/autologous_tcrmexpressing_tcells_et140203/common"
+          - "_terms_enum.yaml#/autologous_tcrmexpressing_tcells_et140203/common"
       Autologous Tetravalent Dendritic Cell Vaccine MIDRIX4-LUNG:
         $ref:
-          - "_terms.yaml#/autologous_tetravalent_dendritic_cell_vaccine_midrix4lung/common"
+          - "_terms_enum.yaml#/autologous_tetravalent_dendritic_cell_vaccine_midrix4lung/common"
       Autologous Tumor Infiltrating Lymphocytes LN-145-S1:
         $ref:
-          - "_terms.yaml#/autologous_tumor_infiltrating_lymphocytes_ln145s1/common"
+          - "_terms_enum.yaml#/autologous_tumor_infiltrating_lymphocytes_ln145s1/common"
       Autologous Universal CAR-expressing T-lymphocytes UniCAR02-T:
         $ref:
-          - "_terms.yaml#/autologous_universal_carexpressing_tlymphocytes_unicar02t/common"
+          - "_terms_enum.yaml#/autologous_universal_carexpressing_tlymphocytes_unicar02t/common"
       Avdoralimab:
         $ref:
-          - "_terms.yaml#/avdoralimab/common"
+          - "_terms_enum.yaml#/avdoralimab/common"
       Aviscumine:
         $ref:
-          - "_terms.yaml#/aviscumine/common"
+          - "_terms_enum.yaml#/aviscumine/common"
       Axalimogene Filolisbac:
         $ref:
-          - "_terms.yaml#/axalimogene_filolisbac/common"
+          - "_terms_enum.yaml#/axalimogene_filolisbac/common"
       Axatilimab:
         $ref:
-          - "_terms.yaml#/axatilimab/common"
+          - "_terms_enum.yaml#/axatilimab/common"
       AXL Inhibitor SLC-391:
         $ref:
-          - "_terms.yaml#/axl_inhibitor_slc391/common"
+          - "_terms_enum.yaml#/axl_inhibitor_slc391/common"
       AXL/ FLT3/VEGFR2 Inhibitor KC1036:
         $ref:
-          - "_terms.yaml#/axl_flt3vegfr2_inhibitor_kc1036/common"
+          - "_terms_enum.yaml#/axl_flt3vegfr2_inhibitor_kc1036/common"
       Axl/Mer Inhibitor PF-07265807:
         $ref:
-          - "_terms.yaml#/axlmer_inhibitor_pf07265807/common"
+          - "_terms_enum.yaml#/axlmer_inhibitor_pf07265807/common"
       Azintuxizumab Vedotin:
         $ref:
-          - "_terms.yaml#/azintuxizumab_vedotin/common"
+          - "_terms_enum.yaml#/azintuxizumab_vedotin/common"
       Balstilimab:
         $ref:
-          - "_terms.yaml#/balstilimab/common"
+          - "_terms_enum.yaml#/balstilimab/common"
       Bazlitoran:
         $ref:
-          - "_terms.yaml#/bazlitoran/common"
+          - "_terms_enum.yaml#/bazlitoran/common"
       Bcl-2 Inhibitor BGB-11417:
         $ref:
-          - "_terms.yaml#/bcl2_inhibitor_bgb11417/common"
+          - "_terms_enum.yaml#/bcl2_inhibitor_bgb11417/common"
       Bcl-2 Inhibitor LP-108:
         $ref:
-          - "_terms.yaml#/bcl2_inhibitor_lp108/common"
+          - "_terms_enum.yaml#/bcl2_inhibitor_lp108/common"
       BCMA-CD19 Compound CAR T Cells:
         $ref:
-          - "_terms.yaml#/bcmacd19_compound_car_t_cells/common"
+          - "_terms_enum.yaml#/bcmacd19_compound_car_t_cells/common"
       BCMA/CD3e Tri-specific T-cell Activating Construct HPN217:
         $ref:
-          - "_terms.yaml#/bcmacd3e_trispecific_tcell_activating_construct_hpn217/common"
+          - "_terms_enum.yaml#/bcmacd3e_trispecific_tcell_activating_construct_hpn217/common"
       Belantamab Mafodotin:
         $ref:
-          - "_terms.yaml#/belantamab_mafodotin/common"
+          - "_terms_enum.yaml#/belantamab_mafodotin/common"
       Belapectin:
         $ref:
-          - "_terms.yaml#/belapectin/common"
+          - "_terms_enum.yaml#/belapectin/common"
       Belvarafenib:
         $ref:
-          - "_terms.yaml#/belvarafenib/common"
+          - "_terms_enum.yaml#/belvarafenib/common"
       Belzutifan:
         $ref:
-          - "_terms.yaml#/belzutifan/common"
+          - "_terms_enum.yaml#/belzutifan/common"
       Bersanlimab:
         $ref:
-          - "_terms.yaml#/bersanlimab/common"
+          - "_terms_enum.yaml#/bersanlimab/common"
       Berzosertib:
         $ref:
-          - "_terms.yaml#/berzosertib/common"
+          - "_terms_enum.yaml#/berzosertib/common"
       Betaglucin Gel:
         $ref:
-          - "_terms.yaml#/betaglucin_gel/common"
+          - "_terms_enum.yaml#/betaglucin_gel/common"
       Bexmarilimab:
         $ref:
-          - "_terms.yaml#/bexmarilimab/common"
+          - "_terms_enum.yaml#/bexmarilimab/common"
       Bispecific Antibody AGEN1223:
         $ref:
-          - "_terms.yaml#/bispecific_antibody_agen1223/common"
+          - "_terms_enum.yaml#/bispecific_antibody_agen1223/common"
       Bispecific Antibody AMG 509:
         $ref:
-          - "_terms.yaml#/bispecific_antibody_amg_509/common"
+          - "_terms_enum.yaml#/bispecific_antibody_amg_509/common"
       Bispecific Antibody GS-1423:
         $ref:
-          - "_terms.yaml#/bispecific_antibody_gs1423/common"
+          - "_terms_enum.yaml#/bispecific_antibody_gs1423/common"
       BiTE Antibody AMG 910:
         $ref:
-          - "_terms.yaml#/bite_antibody_amg_910/common"
+          - "_terms_enum.yaml#/bite_antibody_amg_910/common"
       Bizalimogene Ralaplasmid:
         $ref:
-          - "_terms.yaml#/bizalimogene_ralaplasmid/common"
+          - "_terms_enum.yaml#/bizalimogene_ralaplasmid/common"
       Bomedemstat:
         $ref:
-          - "_terms.yaml#/bomedemstat/common"
+          - "_terms_enum.yaml#/bomedemstat/common"
       BRAF Inhibitor BGB-3245:
         $ref:
-          - "_terms.yaml#/braf_inhibitor_bgb3245/common"
+          - "_terms_enum.yaml#/braf_inhibitor_bgb3245/common"
       BRAF(V600E) Kinase Inhibitor ABM-1310:
         $ref:
-          - "_terms.yaml#/brafv600e_kinase_inhibitor_abm1310/common"
+          - "_terms_enum.yaml#/brafv600e_kinase_inhibitor_abm1310/common"
       BTK Inhibitor HZ-A-018:
         $ref:
-          - "_terms.yaml#/btk_inhibitor_hza018/common"
+          - "_terms_enum.yaml#/btk_inhibitor_hza018/common"
       c-Met Inhibitor ABN401:
         $ref:
-          - "_terms.yaml#/cmet_inhibitor_abn401/common"
+          - "_terms_enum.yaml#/cmet_inhibitor_abn401/common"
       c-Met Inhibitor GST-HG161:
         $ref:
-          - "_terms.yaml#/cmet_inhibitor_gsthg161/common"
+          - "_terms_enum.yaml#/cmet_inhibitor_gsthg161/common"
       C/EBP Beta Antagonist ST101:
         $ref:
-          - "_terms.yaml#/cebp_beta_antagonist_st101/common"
+          - "_terms_enum.yaml#/cebp_beta_antagonist_st101/common"
       Calcium Release-activated Channel Inhibitor CM4620:
         $ref:
-          - "_terms.yaml#/calcium_releaseactivated_channel_inhibitor_cm4620/common"
+          - "_terms_enum.yaml#/calcium_releaseactivated_channel_inhibitor_cm4620/common"
       Camidanlumab Tesirine:
         $ref:
-          - "_terms.yaml#/camidanlumab_tesirine/common"
+          - "_terms_enum.yaml#/camidanlumab_tesirine/common"
       Carbon C 14-pamiparib:
         $ref:
-          - "_terms.yaml#/carbon_c_14pamiparib/common"
+          - "_terms_enum.yaml#/carbon_c_14pamiparib/common"
       Cationic Peptide Cream Cypep-1:
         $ref:
-          - "_terms.yaml#/cationic_peptide_cream_cypep1/common"
+          - "_terms_enum.yaml#/cationic_peptide_cream_cypep1/common"
       CD11b Agonist GB1275:
         $ref:
-          - "_terms.yaml#/cd11b_agonist_gb1275/common"
+          - "_terms_enum.yaml#/cd11b_agonist_gb1275/common"
       CD123-CD33 Compound CAR T Cells:
         $ref:
-          - "_terms.yaml#/cd123cd33_compound_car_t_cells/common"
+          - "_terms_enum.yaml#/cd123cd33_compound_car_t_cells/common"
       CD123-specific Targeting Module TM123:
         $ref:
-          - "_terms.yaml#/cd123specific_targeting_module_tm123/common"
+          - "_terms_enum.yaml#/cd123specific_targeting_module_tm123/common"
       CD20-CD19 Compound CAR T Cells:
         $ref:
-          - "_terms.yaml#/cd20cd19_compound_car_t_cells/common"
+          - "_terms_enum.yaml#/cd20cd19_compound_car_t_cells/common"
       CD28/ICOS Antagonist ALPN-101:
         $ref:
-          - "_terms.yaml#/cd28icos_antagonist_alpn101/common"
+          - "_terms_enum.yaml#/cd28icos_antagonist_alpn101/common"
       CD44v6-specific CAR T-cells:
         $ref:
-          - "_terms.yaml#/cd44v6specific_car_tcells/common"
+          - "_terms_enum.yaml#/cd44v6specific_car_tcells/common"
       CD73 Inhibitor AB680:
         $ref:
-          - "_terms.yaml#/cd73_inhibitor_ab680/common"
+          - "_terms_enum.yaml#/cd73_inhibitor_ab680/common"
       CD73 Inhibitor LY3475070:
         $ref:
-          - "_terms.yaml#/cd73_inhibitor_ly3475070/common"
+          - "_terms_enum.yaml#/cd73_inhibitor_ly3475070/common"
       CD80-Fc Fusion Protein ALPN-202:
         $ref:
-          - "_terms.yaml#/cd80fc_fusion_protein_alpn202/common"
+          - "_terms_enum.yaml#/cd80fc_fusion_protein_alpn202/common"
       CD80-Fc Fusion Protein FPT155:
         $ref:
-          - "_terms.yaml#/cd80fc_fusion_protein_fpt155/common"
+          - "_terms_enum.yaml#/cd80fc_fusion_protein_fpt155/common"
       CDK2 Inhibitor PF-07104091:
         $ref:
-          - "_terms.yaml#/cdk2_inhibitor_pf07104091/common"
+          - "_terms_enum.yaml#/cdk2_inhibitor_pf07104091/common"
       CDK4/6 Inhibitor CS3002:
         $ref:
-          - "_terms.yaml#/cdk46_inhibitor_cs3002/common"
+          - "_terms_enum.yaml#/cdk46_inhibitor_cs3002/common"
       CDK4/6 Inhibitor HS-10342:
         $ref:
-          - "_terms.yaml#/cdk46_inhibitor_hs10342/common"
+          - "_terms_enum.yaml#/cdk46_inhibitor_hs10342/common"
       CDK4/6 Inhibitor TQB3616:
         $ref:
-          - "_terms.yaml#/cdk46_inhibitor_tqb3616/common"
+          - "_terms_enum.yaml#/cdk46_inhibitor_tqb3616/common"
       CDK7 Inhibitor SY-5609:
         $ref:
-          - "_terms.yaml#/cdk7_inhibitor_sy5609/common"
+          - "_terms_enum.yaml#/cdk7_inhibitor_sy5609/common"
       CDK8/19 Inhibitor SEL 120:
         $ref:
-          - "_terms.yaml#/cdk819_inhibitor_sel_120/common"
+          - "_terms_enum.yaml#/cdk819_inhibitor_sel_120/common"
       Cedazuridine/Azacitidine Combination Agent ASTX030:
         $ref:
-          - "_terms.yaml#/cedazuridineazacitidine_combination_agent_astx030/common"
+          - "_terms_enum.yaml#/cedazuridineazacitidine_combination_agent_astx030/common"
       Cereblon E3 Ubiquitin Ligase Modulating Agent CC-99282:
         $ref:
-          - "_terms.yaml#/cereblon_e3_ubiquitin_ligase_modulating_agent_cc99282/common"
+          - "_terms_enum.yaml#/cereblon_e3_ubiquitin_ligase_modulating_agent_cc99282/common"
       Cetuximab Sarotalocan:
         $ref:
-          - "_terms.yaml#/cetuximab_sarotalocan/common"
+          - "_terms_enum.yaml#/cetuximab_sarotalocan/common"
       Cevostamab:
         $ref:
-          - "_terms.yaml#/cevostamab/common"
+          - "_terms_enum.yaml#/cevostamab/common"
       Chlorotoxin (EQ)-CD28-CD3zeta-CD19t-expressing CAR T-lymphocytes:
         $ref:
-          - "_terms.yaml#/chlorotoxin_eqcd28cd3zetacd19texpressing_car_tlymphocytes/common"
+          - "_terms_enum.yaml#/chlorotoxin_eqcd28cd3zetacd19texpressing_car_tlymphocytes/common"
       Ciltacabtagene Autoleucel:
         $ref:
-          - "_terms.yaml#/ciltacabtagene_autoleucel/common"
+          - "_terms_enum.yaml#/ciltacabtagene_autoleucel/common"
       Cinrebafusp Alfa:
         $ref:
-          - "_terms.yaml#/cinrebafusp_alfa/common"
+          - "_terms_enum.yaml#/cinrebafusp_alfa/common"
       Cintirorgon:
         $ref:
-          - "_terms.yaml#/cintirorgon/common"
+          - "_terms_enum.yaml#/cintirorgon/common"
       CK1alpha/CDK7/CDK9 Inhibitor BTX-A51:
         $ref:
-          - "_terms.yaml#/ck1alphacdk7cdk9_inhibitor_btxa51/common"
+          - "_terms_enum.yaml#/ck1alphacdk7cdk9_inhibitor_btxa51/common"
       Cobolimab:
         $ref:
-          - "_terms.yaml#/cobolimab/common"
+          - "_terms_enum.yaml#/cobolimab/common"
       Cofetuzumab Pelidotin:
         $ref:
-          - "_terms.yaml#/cofetuzumab_pelidotin/common"
+          - "_terms_enum.yaml#/cofetuzumab_pelidotin/common"
       Coltuximab Ravtansine:
         $ref:
-          - "_terms.yaml#/coltuximab_ravtansine/common"
+          - "_terms_enum.yaml#/coltuximab_ravtansine/common"
       Commensal Bacterial Strain Formulation VE800:
         $ref:
-          - "_terms.yaml#/commensal_bacterial_strain_formulation_ve800/common"
+          - "_terms_enum.yaml#/commensal_bacterial_strain_formulation_ve800/common"
       Copper Cu 67 Tyr3-octreotate:
         $ref:
-          - "_terms.yaml#/copper_cu_67_tyr3octreotate/common"
+          - "_terms_enum.yaml#/copper_cu_67_tyr3octreotate/common"
       Cord Blood Derived CAR T-Cells:
         $ref:
-          - "_terms.yaml#/cord_blood_derived_car_tcells/common"
+          - "_terms_enum.yaml#/cord_blood_derived_car_tcells/common"
       Cosibelimab:
         $ref:
-          - "_terms.yaml#/cosibelimab/common"
+          - "_terms_enum.yaml#/cosibelimab/common"
       Coxsackievirus V937:
         $ref:
-          - "_terms.yaml#/coxsackievirus_v937/common"
+          - "_terms_enum.yaml#/coxsackievirus_v937/common"
       CSF1R Inhibitor ABSK021:
         $ref:
-          - "_terms.yaml#/csf1r_inhibitor_absk021/common"
+          - "_terms_enum.yaml#/csf1r_inhibitor_absk021/common"
       CXCR4/E-selectin Antagonist GMI-1359:
         $ref:
-          - "_terms.yaml#/cxcr4eselectin_antagonist_gmi1359/common"
+          - "_terms_enum.yaml#/cxcr4eselectin_antagonist_gmi1359/common"
       CYP11A1 Inhibitor ODM-209:
         $ref:
-          - "_terms.yaml#/cyp11a1_inhibitor_odm209/common"
+          - "_terms_enum.yaml#/cyp11a1_inhibitor_odm209/common"
       CYP17/CYP11B2 Inhibitor LAE001:
         $ref:
-          - "_terms.yaml#/cyp17cyp11b2_inhibitor_lae001/common"
+          - "_terms_enum.yaml#/cyp17cyp11b2_inhibitor_lae001/common"
       Daratumumab and Hyaluronidase-fihj:
         $ref:
-          - "_terms.yaml#/daratumumab_and_hyaluronidasefihj/common"
+          - "_terms_enum.yaml#/daratumumab_and_hyaluronidasefihj/common"
       Decitabine and Cedazuridine:
         $ref:
-          - "_terms.yaml#/decitabine_and_cedazuridine/common"
+          - "_terms_enum.yaml#/decitabine_and_cedazuridine/common"
       Delolimogene Mupadenorepvec:
         $ref:
-          - "_terms.yaml#/delolimogene_mupadenorepvec/common"
+          - "_terms_enum.yaml#/delolimogene_mupadenorepvec/common"
       Dendrimer-conjugated Bcl-2/Bcl-XL Inhibitor AZD0466:
         $ref:
-          - "_terms.yaml#/dendrimerconjugated_bcl2bclxl_inhibitor_azd0466/common"
+          - "_terms_enum.yaml#/dendrimerconjugated_bcl2bclxl_inhibitor_azd0466/common"
       Dengue Virus Adjuvant PV-001-DV:
         $ref:
-          - "_terms.yaml#/dengue_virus_adjuvant_pv001dv/common"
+          - "_terms_enum.yaml#/dengue_virus_adjuvant_pv001dv/common"
       Dilpacimab:
         $ref:
-          - "_terms.yaml#/dilpacimab/common"
+          - "_terms_enum.yaml#/dilpacimab/common"
       DNA-PK inhibitor AZD7648:
         $ref:
-          - "_terms.yaml#/dnapk_inhibitor_azd7648/common"
+          - "_terms_enum.yaml#/dnapk_inhibitor_azd7648/common"
       DNA-PK/PI3K-delta Inhibitor BR101801:
         $ref:
-          - "_terms.yaml#/dnapkpi3kdelta_inhibitor_br101801/common"
+          - "_terms_enum.yaml#/dnapkpi3kdelta_inhibitor_br101801/common"
       DNMT1 Inhibitor NTX-301:
         $ref:
-          - "_terms.yaml#/dnmt1_inhibitor_ntx301/common"
+          - "_terms_enum.yaml#/dnmt1_inhibitor_ntx301/common"
       Dociparstat sodium:
         $ref:
-          - "_terms.yaml#/dociparstat_sodium/common"
+          - "_terms_enum.yaml#/dociparstat_sodium/common"
       Dostarlimab:
         $ref:
-          - "_terms.yaml#/dostarlimab/common"
+          - "_terms_enum.yaml#/dostarlimab/common"
       Doxorubicin Prodrug/Prodrug-activating Biomaterial SQ3370:
         $ref:
-          - "_terms.yaml#/doxorubicin_prodrugprodrugactivating_biomaterial_sq3370/common"
+          - "_terms_enum.yaml#/doxorubicin_prodrugprodrugactivating_biomaterial_sq3370/common"
       DTRMWXHS-12/Everolimus/Pomalidomide Combination Agent DTRM-555:
         $ref:
-          - "_terms.yaml#/dtrmwxhs12everolimuspomalidomide_combination_agent_dtrm555/common"
+          - "_terms_enum.yaml#/dtrmwxhs12everolimuspomalidomide_combination_agent_dtrm555/common"
       Edicotinib:
         $ref:
-          - "_terms.yaml#/edicotinib/common"
+          - "_terms_enum.yaml#/edicotinib/common"
       Edodekin alfa:
         $ref:
-          - "_terms.yaml#/edodekin_alfa/common"
+          - "_terms_enum.yaml#/edodekin_alfa/common"
       Eftozanermin Alfa:
         $ref:
-          - "_terms.yaml#/eftozanermin_alfa/common"
+          - "_terms_enum.yaml#/eftozanermin_alfa/common"
       EGFR Inhibitor TY-9591:
         $ref:
-          - "_terms.yaml#/egfr_inhibitor_ty9591/common"
+          - "_terms_enum.yaml#/egfr_inhibitor_ty9591/common"
       EGFR Mutant-selective  Inhibitor TQB3804:
         $ref:
-          - "_terms.yaml#/egfr_mutantselective__inhibitor_tqb3804/common"
+          - "_terms_enum.yaml#/egfr_mutantselective__inhibitor_tqb3804/common"
       EGFR/EGFRvIII Inhibitor WSD0922-FU:
         $ref:
-          - "_terms.yaml#/egfregfrviii_inhibitor_wsd0922fu/common"
+          - "_terms_enum.yaml#/egfregfrviii_inhibitor_wsd0922fu/common"
       EGFR/HER2 Inhibitor DZD9008:
         $ref:
-          - "_terms.yaml#/egfrher2_inhibitor_dzd9008/common"
+          - "_terms_enum.yaml#/egfrher2_inhibitor_dzd9008/common"
       EGFR/TGFb Fusion Monoclonal Antibody BCA101:
         $ref:
-          - "_terms.yaml#/egfrtgfb_fusion_monoclonal_antibody_bca101/common"
+          - "_terms_enum.yaml#/egfrtgfb_fusion_monoclonal_antibody_bca101/common"
       EGFR/VEGFR/RET Inhibitor HA121-28:
         $ref:
-          - "_terms.yaml#/egfrvegfrret_inhibitor_ha12128/common"
+          - "_terms_enum.yaml#/egfrvegfrret_inhibitor_ha12128/common"
       Emibetuzumab:
         $ref:
-          - "_terms.yaml#/emibetuzumab/common"
+          - "_terms_enum.yaml#/emibetuzumab/common"
       Enadenotucirev-expressing FAP/CD3 Bispecific FAP-TAc NG-641:
         $ref:
-          - "_terms.yaml#/enadenotucirevexpressing_fapcd3_bispecific_faptac_ng641/common"
+          - "_terms_enum.yaml#/enadenotucirevexpressing_fapcd3_bispecific_faptac_ng641/common"
       Encapsulated Rapamycin:
         $ref:
-          - "_terms.yaml#/encapsulated_rapamycin/common"
+          - "_terms_enum.yaml#/encapsulated_rapamycin/common"
       Encelimab:
         $ref:
-          - "_terms.yaml#/encelimab/common"
+          - "_terms_enum.yaml#/encelimab/common"
       Endothelin B Receptor Blocker ENB 003:
         $ref:
-          - "_terms.yaml#/endothelin_b_receptor_blocker_enb_003/common"
+          - "_terms_enum.yaml#/endothelin_b_receptor_blocker_enb_003/common"
       Engineered Red Blood Cells Co-expressing 4-1BBL and IL-15TP RTX-240:
         $ref:
-          - "_terms.yaml#/engineered_red_blood_cells_coexpressing_41bbl_and_il15tp_rtx240/common"
+          - "_terms_enum.yaml#/engineered_red_blood_cells_coexpressing_41bbl_and_il15tp_rtx240/common"
       Engineered Toxin Body Targeting CD38 TAK-169:
         $ref:
-          - "_terms.yaml#/engineered_toxin_body_targeting_cd38_tak169/common"
+          - "_terms_enum.yaml#/engineered_toxin_body_targeting_cd38_tak169/common"
       EP2/EP4 Antagonist TPST-1495:
         $ref:
-          - "_terms.yaml#/ep2ep4_antagonist_tpst1495/common"
+          - "_terms_enum.yaml#/ep2ep4_antagonist_tpst1495/common"
       EP4 Antagonist INV-1120:
         $ref:
-          - "_terms.yaml#/ep4_antagonist_inv1120/common"
+          - "_terms_enum.yaml#/ep4_antagonist_inv1120/common"
       Epcoritamab:
         $ref:
-          - "_terms.yaml#/epcoritamab/common"
+          - "_terms_enum.yaml#/epcoritamab/common"
       EphA2-targeting Bicycle Toxin Conjugate BT5528:
         $ref:
-          - "_terms.yaml#/epha2targeting_bicycle_toxin_conjugate_bt5528/common"
+          - "_terms_enum.yaml#/epha2targeting_bicycle_toxin_conjugate_bt5528/common"
       ERK1/2 Inhibitor HH2710:
         $ref:
-          - "_terms.yaml#/erk12_inhibitor_hh2710/common"
+          - "_terms_enum.yaml#/erk12_inhibitor_hh2710/common"
       ERK1/2 Inhibitor JSI-1187:
         $ref:
-          - "_terms.yaml#/erk12_inhibitor_jsi1187/common"
+          - "_terms_enum.yaml#/erk12_inhibitor_jsi1187/common"
       Etigilimab:
         $ref:
-          - "_terms.yaml#/etigilimab/common"
+          - "_terms_enum.yaml#/etigilimab/common"
       Exicorilant:
         $ref:
-          - "_terms.yaml#/exicorilant/common"
+          - "_terms_enum.yaml#/exicorilant/common"
       Extended Release Metformin Hydrochloride:
         $ref:
-          - "_terms.yaml#/extended_release_metformin_hydrochloride/common"
+          - "_terms_enum.yaml#/extended_release_metformin_hydrochloride/common"
       Ezabenlimab:
         $ref:
-          - "_terms.yaml#/ezabenlimab/common"
+          - "_terms_enum.yaml#/ezabenlimab/common"
       EZH1/2 Inhibitor HH2853:
         $ref:
-          - "_terms.yaml#/ezh12_inhibitor_hh2853/common"
+          - "_terms_enum.yaml#/ezh12_inhibitor_hh2853/common"
       EZH2 inhibitor CPI-0209:
         $ref:
-          - "_terms.yaml#/ezh2_inhibitor_cpi0209/common"
+          - "_terms_enum.yaml#/ezh2_inhibitor_cpi0209/common"
       Fadraciclib:
         $ref:
-          - "_terms.yaml#/fadraciclib/common"
+          - "_terms_enum.yaml#/fadraciclib/common"
       FAK/ALK/ROS1 Inhibitor APG-2449:
         $ref:
-          - "_terms.yaml#/fakalkros1_inhibitor_apg2449/common"
+          - "_terms_enum.yaml#/fakalkros1_inhibitor_apg2449/common"
       FAP/4-1BB-targeting DARPin MP0310:
         $ref:
-          - "_terms.yaml#/fap41bbtargeting_darpin_mp0310/common"
+          - "_terms_enum.yaml#/fap41bbtargeting_darpin_mp0310/common"
       FAP/4-1BB-targeting Fusion Protein RO7122290:
         $ref:
-          - "_terms.yaml#/fap41bbtargeting_fusion_protein_ro7122290/common"
+          - "_terms_enum.yaml#/fap41bbtargeting_fusion_protein_ro7122290/common"
       Fas Ligand-treated Allogeneic Mobilized Peripheral Blood Cells:
         $ref:
-          - "_terms.yaml#/fas_ligandtreated_allogeneic_mobilized_peripheral_blood_cells/common"
+          - "_terms_enum.yaml#/fas_ligandtreated_allogeneic_mobilized_peripheral_blood_cells/common"
       Favezelimab:
         $ref:
-          - "_terms.yaml#/favezelimab/common"
+          - "_terms_enum.yaml#/favezelimab/common"
       Fc-engineered Anti-CD40 Agonist Antibody 2141-V11:
         $ref:
-          - "_terms.yaml#/fcengineered_anticd40_agonist_antibody_2141v11/common"
+          - "_terms_enum.yaml#/fcengineered_anticd40_agonist_antibody_2141v11/common"
       Feladilimab:
         $ref:
-          - "_terms.yaml#/feladilimab/common"
+          - "_terms_enum.yaml#/feladilimab/common"
       Felzartamab:
         $ref:
-          - "_terms.yaml#/felzartamab/common"
+          - "_terms_enum.yaml#/felzartamab/common"
       Fenretinide Phospholipid Suspension ST-001:
         $ref:
-          - "_terms.yaml#/fenretinide_phospholipid_suspension_st001/common"
+          - "_terms_enum.yaml#/fenretinide_phospholipid_suspension_st001/common"
       FGFR Inhibitor CPL304110:
         $ref:
-          - "_terms.yaml#/fgfr_inhibitor_cpl304110/common"
+          - "_terms_enum.yaml#/fgfr_inhibitor_cpl304110/common"
       FGFR/CSF-1R Inhibitor 3D185:
         $ref:
-          - "_terms.yaml#/fgfrcsf1r_inhibitor_3d185/common"
+          - "_terms_enum.yaml#/fgfrcsf1r_inhibitor_3d185/common"
       FGFR2 Inhibitor RLY-4008:
         $ref:
-          - "_terms.yaml#/fgfr2_inhibitor_rly4008/common"
+          - "_terms_enum.yaml#/fgfr2_inhibitor_rly4008/common"
       Fianlimab:
         $ref:
-          - "_terms.yaml#/fianlimab/common"
+          - "_terms_enum.yaml#/fianlimab/common"
       Fimaporfin A:
         $ref:
-          - "_terms.yaml#/fimaporfin_a/common"
+          - "_terms_enum.yaml#/fimaporfin_a/common"
       Flt3 Ligand/Anti-CTLA-4 Antibody/IL-12 Engineered Oncolytic Vaccinia Virus RIVAL-01:
         $ref:
-          - "_terms.yaml#/flt3_ligandantictla4_antibodyil12_engineered_oncolytic_vaccinia_virus_rival01/common"
+          - "_terms_enum.yaml#/flt3_ligandantictla4_antibodyil12_engineered_oncolytic_vaccinia_virus_rival01/common"
       FLT3/FGFR Dual Kinase Inhibitor MAX-40279:
         $ref:
-          - "_terms.yaml#/flt3fgfr_dual_kinase_inhibitor_max40279/common"
+          - "_terms_enum.yaml#/flt3fgfr_dual_kinase_inhibitor_max40279/common"
       FLT3/KIT/CSF1R Inhibitor NMS-03592088:
         $ref:
-          - "_terms.yaml#/flt3kitcsf1r_inhibitor_nms03592088/common"
+          - "_terms_enum.yaml#/flt3kitcsf1r_inhibitor_nms03592088/common"
       Fluorine F 18 Ara-G:
         $ref:
-          - "_terms.yaml#/fluorine_f_18_arag/common"
+          - "_terms_enum.yaml#/fluorine_f_18_arag/common"
       Foritinib Succinate:
         $ref:
-          - "_terms.yaml#/foritinib_succinate/common"
+          - "_terms_enum.yaml#/foritinib_succinate/common"
       Fosgemcitabine Palabenamide:
         $ref:
-          - "_terms.yaml#/fosgemcitabine_palabenamide/common"
+          - "_terms_enum.yaml#/fosgemcitabine_palabenamide/common"
       Fosifloxuridine Nafalbenamide:
         $ref:
-          - "_terms.yaml#/fosifloxuridine_nafalbenamide/common"
+          - "_terms_enum.yaml#/fosifloxuridine_nafalbenamide/common"
       Futibatinib:
         $ref:
-          - "_terms.yaml#/futibatinib/common"
+          - "_terms_enum.yaml#/futibatinib/common"
       G Protein-coupled Estrogen Receptor Agonist LNS8801:
         $ref:
-          - "_terms.yaml#/g_proteincoupled_estrogen_receptor_agonist_lns8801/common"
+          - "_terms_enum.yaml#/g_proteincoupled_estrogen_receptor_agonist_lns8801/common"
       Gallium-based Bone Resorption Inhibitor AP-002:
         $ref:
-          - "_terms.yaml#/galliumbased_bone_resorption_inhibitor_ap002/common"
+          - "_terms_enum.yaml#/galliumbased_bone_resorption_inhibitor_ap002/common"
       GBM Antigens and Alloantigens Immunotherapeutic Vaccine:
         $ref:
-          - "_terms.yaml#/gbm_antigens_and_alloantigens_immunotherapeutic_vaccine/common"
+          - "_terms_enum.yaml#/gbm_antigens_and_alloantigens_immunotherapeutic_vaccine/common"
       Genetically Modified Interleukin-12 Transgene-encoding Bifidobacterium longum:
         $ref:
-          - "_terms.yaml#/genetically_modified_interleukin12_transgeneencoding_bifidobacterium_longum/common"
+          - "_terms_enum.yaml#/genetically_modified_interleukin12_transgeneencoding_bifidobacterium_longum/common"
       Giloralimab:
         $ref:
-          - "_terms.yaml#/giloralimab/common"
+          - "_terms_enum.yaml#/giloralimab/common"
       Giredestrant:
         $ref:
-          - "_terms.yaml#/giredestrant/common"
+          - "_terms_enum.yaml#/giredestrant/common"
       Glofitamab:
         $ref:
-          - "_terms.yaml#/glofitamab/common"
+          - "_terms_enum.yaml#/glofitamab/common"
       Glutaminase Inhibitor IPN60090:
         $ref:
-          - "_terms.yaml#/glutaminase_inhibitor_ipn60090/common"
+          - "_terms_enum.yaml#/glutaminase_inhibitor_ipn60090/common"
       Glutamine Antagonist DRP-104:
         $ref:
-          - "_terms.yaml#/glutamine_antagonist_drp104/common"
+          - "_terms_enum.yaml#/glutamine_antagonist_drp104/common"
       HER2 Inhibitor DZD1516:
         $ref:
-          - "_terms.yaml#/her2_inhibitor_dzd1516/common"
+          - "_terms_enum.yaml#/her2_inhibitor_dzd1516/common"
       HER2 Tri-specific Natural Killer Cell Engager DF1001:
         $ref:
-          - "_terms.yaml#/her2_trispecific_natural_killer_cell_engager_df1001/common"
+          - "_terms_enum.yaml#/her2_trispecific_natural_killer_cell_engager_df1001/common"
       HER2-directed TLR8 Agonist SBT6050:
         $ref:
-          - "_terms.yaml#/her2directed_tlr8_agonist_sbt6050/common"
+          - "_terms_enum.yaml#/her2directed_tlr8_agonist_sbt6050/common"
       HIF2a RNAi ARO-HIF2:
         $ref:
-          - "_terms.yaml#/hif2a_rnai_arohif2/common"
+          - "_terms_enum.yaml#/hif2a_rnai_arohif2/common"
       HPV 16 E6/E7-encoding Arenavirus Vaccine HB-202:
         $ref:
-          - "_terms.yaml#/hpv_16_e6e7encoding_arenavirus_vaccine_hb202/common"
+          - "_terms_enum.yaml#/hpv_16_e6e7encoding_arenavirus_vaccine_hb202/common"
       HPV E6/E7-encoding Arenavirus Vaccine HB-201:
         $ref:
-          - "_terms.yaml#/hpv_e6e7encoding_arenavirus_vaccine_hb201/common"
+          - "_terms_enum.yaml#/hpv_e6e7encoding_arenavirus_vaccine_hb201/common"
       HPV6/11-targeted DNA Plasmid Vaccine INO-3107:
         $ref:
-          - "_terms.yaml#/hpv611targeted_dna_plasmid_vaccine_ino3107/common"
+          - "_terms_enum.yaml#/hpv611targeted_dna_plasmid_vaccine_ino3107/common"
       Hsp90 Inhibitor TQB3474:
         $ref:
-          - "_terms.yaml#/hsp90_inhibitor_tqb3474/common"
+          - "_terms_enum.yaml#/hsp90_inhibitor_tqb3474/common"
       Hsp90-targeted Photosensitizer HS-201:
         $ref:
-          - "_terms.yaml#/hsp90targeted_photosensitizer_hs201/common"
+          - "_terms_enum.yaml#/hsp90targeted_photosensitizer_hs201/common"
       Hyaluronidase-zzxf/Pertuzumab/Trastuzumab:
         $ref:
-          - "_terms.yaml#/hyaluronidasezzxfpertuzumabtrastuzumab/common"
+          - "_terms_enum.yaml#/hyaluronidasezzxfpertuzumabtrastuzumab/common"
       Iadademstat:
         $ref:
-          - "_terms.yaml#/iadademstat/common"
+          - "_terms_enum.yaml#/iadademstat/common"
       Ianalumab:
         $ref:
-          - "_terms.yaml#/ianalumab/common"
+          - "_terms_enum.yaml#/ianalumab/common"
       Idetrexed:
         $ref:
-          - "_terms.yaml#/idetrexed/common"
+          - "_terms_enum.yaml#/idetrexed/common"
       IDH1 Mutant Inhibitor LY3410738:
         $ref:
-          - "_terms.yaml#/idh1_mutant_inhibitor_ly3410738/common"
+          - "_terms_enum.yaml#/idh1_mutant_inhibitor_ly3410738/common"
       IDO/TDO Inhibitor LY-01013:
         $ref:
-          - "_terms.yaml#/idotdo_inhibitor_ly01013/common"
+          - "_terms_enum.yaml#/idotdo_inhibitor_ly01013/common"
       IDO1/TDO2 Inhibitor M4112:
         $ref:
-          - "_terms.yaml#/ido1tdo2_inhibitor_m4112/common"
+          - "_terms_enum.yaml#/ido1tdo2_inhibitor_m4112/common"
       Ieramilimab:
         $ref:
-          - "_terms.yaml#/ieramilimab/common"
+          - "_terms_enum.yaml#/ieramilimab/common"
       IL-12sc, IL-15sushi, IFNa and GM-CSF mRNA-based Immunotherapeutic Agent SAR441000:
         $ref:
-          - "_terms.yaml#/il12sc_il15sushi_ifna_and_gmcsf_mrnabased_immunotherapeutic_agent_sar441000/common"
+          - "_terms_enum.yaml#/il12sc_il15sushi_ifna_and_gmcsf_mrnabased_immunotherapeutic_agent_sar441000/common"
       Ilginatinib:
         $ref:
-          - "_terms.yaml#/ilginatinib/common"
+          - "_terms_enum.yaml#/ilginatinib/common"
       Imaradenant:
         $ref:
-          - "_terms.yaml#/imaradenant/common"
+          - "_terms_enum.yaml#/imaradenant/common"
       Imgatuzumab:
         $ref:
-          - "_terms.yaml#/imgatuzumab/common"
+          - "_terms_enum.yaml#/imgatuzumab/common"
       Imifoplatin:
         $ref:
-          - "_terms.yaml#/imifoplatin/common"
+          - "_terms_enum.yaml#/imifoplatin/common"
       Inactivated Oncolytic Virus Particle GEN0101:
         $ref:
-          - "_terms.yaml#/inactivated_oncolytic_virus_particle_gen0101/common"
+          - "_terms_enum.yaml#/inactivated_oncolytic_virus_particle_gen0101/common"
       Indatuximab Ravtansine:
         $ref:
-          - "_terms.yaml#/indatuximab_ravtansine/common"
+          - "_terms_enum.yaml#/indatuximab_ravtansine/common"
       Individualized MVA-based Vaccine TG4050:
         $ref:
-          - "_terms.yaml#/individualized_mvabased_vaccine_tg4050/common"
+          - "_terms_enum.yaml#/individualized_mvabased_vaccine_tg4050/common"
       Indusatumab Vedotin:
         $ref:
-          - "_terms.yaml#/indusatumab_vedotin/common"
+          - "_terms_enum.yaml#/indusatumab_vedotin/common"
       Inebilizumab:
         $ref:
-          - "_terms.yaml#/inebilizumab/common"
+          - "_terms_enum.yaml#/inebilizumab/common"
       iNKT Cell Agonist ABX196:
         $ref:
-          - "_terms.yaml#/inkt_cell_agonist_abx196/common"
+          - "_terms_enum.yaml#/inkt_cell_agonist_abx196/common"
       Interleukin-12-Fc Fusion Protein DF6002:
         $ref:
-          - "_terms.yaml#/interleukin12fc_fusion_protein_df6002/common"
+          - "_terms_enum.yaml#/interleukin12fc_fusion_protein_df6002/common"
       Interleukin-15 Agonist Fusion Protein SHR1501:
         $ref:
-          - "_terms.yaml#/interleukin15_agonist_fusion_protein_shr1501/common"
+          - "_terms_enum.yaml#/interleukin15_agonist_fusion_protein_shr1501/common"
       Interleukin-15 Fusion Protein BJ-001:
         $ref:
-          - "_terms.yaml#/interleukin15_fusion_protein_bj001/common"
+          - "_terms_enum.yaml#/interleukin15_fusion_protein_bj001/common"
       Interleukin-15/Interleukin-15 Receptor Alpha Complex-Fc Fusion Protein XmAb24306:
         $ref:
-          - "_terms.yaml#/interleukin15interleukin15_receptor_alpha_complexfc_fusion_protein_xmab24306/common"
+          - "_terms_enum.yaml#/interleukin15interleukin15_receptor_alpha_complexfc_fusion_protein_xmab24306/common"
       Interleukin-15/Interleukin-15 Receptor Alpha Sushi+ Domain Fusion Protein SO-C101:
         $ref:
-          - "_terms.yaml#/interleukin15interleukin15_receptor_alpha_sushi_domain_fusion_protein_soc101/common"
+          - "_terms_enum.yaml#/interleukin15interleukin15_receptor_alpha_sushi_domain_fusion_protein_soc101/common"
       Iodine I 131 Apamistamab:
         $ref:
-          - "_terms.yaml#/iodine_i_131_apamistamab/common"
+          - "_terms_enum.yaml#/iodine_i_131_apamistamab/common"
       Iodine I 131 IPA:
         $ref:
-          - "_terms.yaml#/iodine_i_131_ipa/common"
+          - "_terms_enum.yaml#/iodine_i_131_ipa/common"
       iPSC-derived CD16/IL-15RF-expressing Anti-CD19 CAR-NK Cells FT596:
         $ref:
-          - "_terms.yaml#/ipscderived_cd16il15rfexpressing_anticd19_carnk_cells_ft596/common"
+          - "_terms_enum.yaml#/ipscderived_cd16il15rfexpressing_anticd19_carnk_cells_ft596/common"
       Irinotecan Sucrosofate:
         $ref:
-          - "_terms.yaml#/irinotecan_sucrosofate/common"
+          - "_terms_enum.yaml#/irinotecan_sucrosofate/common"
       Iroplact:
         $ref:
-          - "_terms.yaml#/iroplact/common"
+          - "_terms_enum.yaml#/iroplact/common"
       Irradiated Allogeneic Human Lung Cancer Cells Expressing OX40L-Ig Vaccine HS-130:
         $ref:
-          - "_terms.yaml#/irradiated_allogeneic_human_lung_cancer_cells_expressing_ox40lig_vaccine_hs130/common"
+          - "_terms_enum.yaml#/irradiated_allogeneic_human_lung_cancer_cells_expressing_ox40lig_vaccine_hs130/common"
       Istiratumab:
         $ref:
-          - "_terms.yaml#/istiratumab/common"
+          - "_terms_enum.yaml#/istiratumab/common"
       Ivaltinostat:
         $ref:
-          - "_terms.yaml#/ivaltinostat/common"
+          - "_terms_enum.yaml#/ivaltinostat/common"
       Ivuxolimab:
         $ref:
-          - "_terms.yaml#/ivuxolimab/common"
+          - "_terms_enum.yaml#/ivuxolimab/common"
       JAK Inhibitor:
         $ref:
-          - "_terms.yaml#/jak_inhibitor/common"
+          - "_terms_enum.yaml#/jak_inhibitor/common"
       Kanitinib:
         $ref:
-          - "_terms.yaml#/kanitinib/common"
+          - "_terms_enum.yaml#/kanitinib/common"
       KRAS G12C Inhibitor GDC-6036:
         $ref:
-          - "_terms.yaml#/kras_g12c_inhibitor_gdc6036/common"
+          - "_terms_enum.yaml#/kras_g12c_inhibitor_gdc6036/common"
       KRAS G12C Inhibitor LY3499446:
         $ref:
-          - "_terms.yaml#/kras_g12c_inhibitor_ly3499446/common"
+          - "_terms_enum.yaml#/kras_g12c_inhibitor_ly3499446/common"
       KRASG12C Inhibitor JNJ-74699157:
         $ref:
-          - "_terms.yaml#/krasg12c_inhibitor_jnj74699157/common"
+          - "_terms_enum.yaml#/krasg12c_inhibitor_jnj74699157/common"
       Ladiratuzumab Vedotin:
         $ref:
-          - "_terms.yaml#/ladiratuzumab_vedotin/common"
+          - "_terms_enum.yaml#/ladiratuzumab_vedotin/common"
       LAIR-2 Fusion Protein NC410:
         $ref:
-          - "_terms.yaml#/lair2_fusion_protein_nc410/common"
+          - "_terms_enum.yaml#/lair2_fusion_protein_nc410/common"
       Landogrozumab:
         $ref:
-          - "_terms.yaml#/landogrozumab/common"
+          - "_terms_enum.yaml#/landogrozumab/common"
       Laprituximab Emtansine:
         $ref:
-          - "_terms.yaml#/laprituximab_emtansine/common"
+          - "_terms_enum.yaml#/laprituximab_emtansine/common"
       Larotinib Mesylate:
         $ref:
-          - "_terms.yaml#/larotinib_mesylate/common"
+          - "_terms_enum.yaml#/larotinib_mesylate/common"
       Lerociclib:
         $ref:
-          - "_terms.yaml#/lerociclib/common"
+          - "_terms_enum.yaml#/lerociclib/common"
       Letetresgene Autoleucel:
         $ref:
-          - "_terms.yaml#/letetresgene_autoleucel/common"
+          - "_terms_enum.yaml#/letetresgene_autoleucel/common"
       Letolizumab:
         $ref:
-          - "_terms.yaml#/letolizumab/common"
+          - "_terms_enum.yaml#/letolizumab/common"
       Lifileucel:
         $ref:
-          - "_terms.yaml#/lifileucel/common"
+          - "_terms_enum.yaml#/lifileucel/common"
       Lifirafenib:
         $ref:
-          - "_terms.yaml#/lifirafenib/common"
+          - "_terms_enum.yaml#/lifirafenib/common"
       Lilotomab:
         $ref:
-          - "_terms.yaml#/lilotomab/common"
+          - "_terms_enum.yaml#/lilotomab/common"
       Linperlisib:
         $ref:
-          - "_terms.yaml#/linperlisib/common"
+          - "_terms_enum.yaml#/linperlisib/common"
       Lipid Nanoparticle Encapsulating Glutathione S-transferase P siRNA NBF-006:
         $ref:
-          - "_terms.yaml#/lipid_nanoparticle_encapsulating_glutathione_stransferase_p_sirna_nbf006/common"
+          - "_terms_enum.yaml#/lipid_nanoparticle_encapsulating_glutathione_stransferase_p_sirna_nbf006/common"
       Liposomal Bcl-2 Antisense Oligonucleotide  BP1002:
         $ref:
-          - "_terms.yaml#/liposomal_bcl2_antisense_oligonucleotide__bp1002/common"
+          - "_terms_enum.yaml#/liposomal_bcl2_antisense_oligonucleotide__bp1002/common"
       Liposome-encapsulated TAAs mRNA Vaccine W_ova1:
         $ref:
-          - "_terms.yaml#/liposomeencapsulated_taas_mrna_vaccine_w_ova1/common"
+          - "_terms_enum.yaml#/liposomeencapsulated_taas_mrna_vaccine_w_ova1/common"
       LMP2-specific T Cell Receptor-transduced Autologous T-lymphocytes:
         $ref:
-          - "_terms.yaml#/lmp2specific_t_cell_receptortransduced_autologous_tlymphocytes/common"
+          - "_terms_enum.yaml#/lmp2specific_t_cell_receptortransduced_autologous_tlymphocytes/common"
       LMP7 Inhibitor M3258:
         $ref:
-          - "_terms.yaml#/lmp7_inhibitor_m3258/common"
+          - "_terms_enum.yaml#/lmp7_inhibitor_m3258/common"
       Lodapolimab:
         $ref:
-          - "_terms.yaml#/lodapolimab/common"
+          - "_terms_enum.yaml#/lodapolimab/common"
       LRP5 Antagonist BI 905681:
         $ref:
-          - "_terms.yaml#/lrp5_antagonist_bi_905681/common"
+          - "_terms_enum.yaml#/lrp5_antagonist_bi_905681/common"
       LSD1 Inhibitor SYHA1807:
         $ref:
-          - "_terms.yaml#/lsd1_inhibitor_syha1807/common"
+          - "_terms_enum.yaml#/lsd1_inhibitor_syha1807/common"
       Lumretuzumab:
         $ref:
-          - "_terms.yaml#/lumretuzumab/common"
+          - "_terms_enum.yaml#/lumretuzumab/common"
       Lupartumab Amadotin:
         $ref:
-          - "_terms.yaml#/lupartumab_amadotin/common"
+          - "_terms_enum.yaml#/lupartumab_amadotin/common"
       Lutetium Lu 177-DTPA-omburtamab:
         $ref:
-          - "_terms.yaml#/lutetium_lu_177dtpaomburtamab/common"
+          - "_terms_enum.yaml#/lutetium_lu_177dtpaomburtamab/common"
       Maackia amurensis Seed Lectin:
         $ref:
-          - "_terms.yaml#/maackia_amurensis_seed_lectin/common"
+          - "_terms_enum.yaml#/maackia_amurensis_seed_lectin/common"
       Macrocycle-bridged STING Agonist E7766:
         $ref:
-          - "_terms.yaml#/macrocyclebridged_sting_agonist_e7766/common"
+          - "_terms_enum.yaml#/macrocyclebridged_sting_agonist_e7766/common"
       MAGE-A1-specific T Cell Receptor-transduced Autologous T-cells:
         $ref:
-          - "_terms.yaml#/magea1specific_t_cell_receptortransduced_autologous_tcells/common"
+          - "_terms_enum.yaml#/magea1specific_t_cell_receptortransduced_autologous_tcells/common"
       Magrolimab:
         $ref:
-          - "_terms.yaml#/magrolimab/common"
+          - "_terms_enum.yaml#/magrolimab/common"
       Manelimab:
         $ref:
-          - "_terms.yaml#/manelimab/common"
+          - "_terms_enum.yaml#/manelimab/common"
       MCL-1 Inhibitor ABBV-467:
         $ref:
-          - "_terms.yaml#/mcl1_inhibitor_abbv467/common"
+          - "_terms_enum.yaml#/mcl1_inhibitor_abbv467/common"
       MDM2 Inhibitor AMGMDS3:
         $ref:
-          - "_terms.yaml#/mdm2_inhibitor_amgmds3/common"
+          - "_terms_enum.yaml#/mdm2_inhibitor_amgmds3/common"
       MEK 1/2 Inhibitor FCN-159:
         $ref:
-          - "_terms.yaml#/mek_12_inhibitor_fcn159/common"
+          - "_terms_enum.yaml#/mek_12_inhibitor_fcn159/common"
       MEK Inhibitor HL-085:
         $ref:
-          - "_terms.yaml#/mek_inhibitor_hl085/common"
+          - "_terms_enum.yaml#/mek_inhibitor_hl085/common"
       Menin-MLL Interaction Inhibitor SNDX-5613:
         $ref:
-          - "_terms.yaml#/meninmll_interaction_inhibitor_sndx5613/common"
+          - "_terms_enum.yaml#/meninmll_interaction_inhibitor_sndx5613/common"
       MET x MET Bispecific Antibody REGN5093:
         $ref:
-          - "_terms.yaml#/met_x_met_bispecific_antibody_regn5093/common"
+          - "_terms_enum.yaml#/met_x_met_bispecific_antibody_regn5093/common"
       Metarrestin:
         $ref:
-          - "_terms.yaml#/metarrestin/common"
+          - "_terms_enum.yaml#/metarrestin/common"
       Methylcantharidimide:
         $ref:
-          - "_terms.yaml#/methylcantharidimide/common"
+          - "_terms_enum.yaml#/methylcantharidimide/common"
       Mevociclib:
         $ref:
-          - "_terms.yaml#/mevociclib/common"
+          - "_terms_enum.yaml#/mevociclib/common"
       Mezagitamab:
         $ref:
-          - "_terms.yaml#/mezagitamab/common"
+          - "_terms_enum.yaml#/mezagitamab/common"
       Microbiome GEN-001:
         $ref:
-          - "_terms.yaml#/microbiome_gen001/common"
+          - "_terms_enum.yaml#/microbiome_gen001/common"
       Microbiome-derived Peptide Vaccine EO2401:
         $ref:
-          - "_terms.yaml#/microbiomederived_peptide_vaccine_eo2401/common"
+          - "_terms_enum.yaml#/microbiomederived_peptide_vaccine_eo2401/common"
       Milataxel:
         $ref:
-          - "_terms.yaml#/milataxel/common"
+          - "_terms_enum.yaml#/milataxel/common"
       Miptenalimab:
         $ref:
-          - "_terms.yaml#/miptenalimab/common"
+          - "_terms_enum.yaml#/miptenalimab/common"
       Miransertib:
         $ref:
-          - "_terms.yaml#/miransertib/common"
+          - "_terms_enum.yaml#/miransertib/common"
       Mirdametinib:
         $ref:
-          - "_terms.yaml#/mirdametinib/common"
+          - "_terms_enum.yaml#/mirdametinib/common"
       Mirzotamab Clezutoclax:
         $ref:
-          - "_terms.yaml#/mirzotamab_clezutoclax/common"
+          - "_terms_enum.yaml#/mirzotamab_clezutoclax/common"
       Mitazalimab:
         $ref:
-          - "_terms.yaml#/mitazalimab/common"
+          - "_terms_enum.yaml#/mitazalimab/common"
       Mobocertinib:
         $ref:
-          - "_terms.yaml#/mobocertinib/common"
+          - "_terms_enum.yaml#/mobocertinib/common"
       Modakafusp Alfa:
         $ref:
-          - "_terms.yaml#/modakafusp_alfa/common"
+          - "_terms_enum.yaml#/modakafusp_alfa/common"
       Modified Vaccinia Ankara-vectored HPV16/18 Vaccine JNJ-65195208:
         $ref:
-          - "_terms.yaml#/modified_vaccinia_ankaravectored_hpv1618_vaccine_jnj65195208/common"
+          - "_terms_enum.yaml#/modified_vaccinia_ankaravectored_hpv1618_vaccine_jnj65195208/common"
       Motixafortide:
         $ref:
-          - "_terms.yaml#/motixafortide/common"
+          - "_terms_enum.yaml#/motixafortide/common"
       MUC-1/WT1 Peptide-primed Autologous Dendritic Cells:
         $ref:
-          - "_terms.yaml#/muc1wt1_peptideprimed_autologous_dendritic_cells/common"
+          - "_terms_enum.yaml#/muc1wt1_peptideprimed_autologous_dendritic_cells/common"
       Multi-epitope HER2 Peptide Vaccine TPIV100:
         $ref:
-          - "_terms.yaml#/multiepitope_her2_peptide_vaccine_tpiv100/common"
+          - "_terms_enum.yaml#/multiepitope_her2_peptide_vaccine_tpiv100/common"
       Murizatoclax:
         $ref:
-          - "_terms.yaml#/murizatoclax/common"
+          - "_terms_enum.yaml#/murizatoclax/common"
       Muscadine Grape Extract:
         $ref:
-          - "_terms.yaml#/muscadine_grape_extract/common"
+          - "_terms_enum.yaml#/muscadine_grape_extract/common"
       MVA-BN Smallpox Vaccine:
         $ref:
-          - "_terms.yaml#/mvabn_smallpox_vaccine/common"
+          - "_terms_enum.yaml#/mvabn_smallpox_vaccine/common"
       N-dihydrogalactochitosan:
         $ref:
-          - "_terms.yaml#/ndihydrogalactochitosan/common"
+          - "_terms_enum.yaml#/ndihydrogalactochitosan/common"
       Nagrestipen:
         $ref:
-          - "_terms.yaml#/nagrestipen/common"
+          - "_terms_enum.yaml#/nagrestipen/common"
       Naratuximab Emtansine:
         $ref:
-          - "_terms.yaml#/naratuximab_emtansine/common"
+          - "_terms_enum.yaml#/naratuximab_emtansine/common"
       Navicixizumab:
         $ref:
-          - "_terms.yaml#/navicixizumab/common"
+          - "_terms_enum.yaml#/navicixizumab/common"
       Nogapendekin Alfa:
         $ref:
-          - "_terms.yaml#/nogapendekin_alfa/common"
+          - "_terms_enum.yaml#/nogapendekin_alfa/common"
       Numidargistat:
         $ref:
-          - "_terms.yaml#/numidargistat/common"
+          - "_terms_enum.yaml#/numidargistat/common"
       Nurulimab:
         $ref:
-          - "_terms.yaml#/nurulimab/common"
+          - "_terms_enum.yaml#/nurulimab/common"
       Odronextamab:
         $ref:
-          - "_terms.yaml#/odronextamab/common"
+          - "_terms_enum.yaml#/odronextamab/common"
       Ofranergene Obadenovec:
         $ref:
-          - "_terms.yaml#/ofranergene_obadenovec/common"
+          - "_terms_enum.yaml#/ofranergene_obadenovec/common"
       Oligo-fucoidan:
         $ref:
-          - "_terms.yaml#/oligofucoidan/common"
+          - "_terms_enum.yaml#/oligofucoidan/common"
       Olinvacimab:
         $ref:
-          - "_terms.yaml#/olinvacimab/common"
+          - "_terms_enum.yaml#/olinvacimab/common"
       Olvimulogene Nanivacirepvec:
         $ref:
-          - "_terms.yaml#/olvimulogene_nanivacirepvec/common"
+          - "_terms_enum.yaml#/olvimulogene_nanivacirepvec/common"
       Onatasertib:
         $ref:
-          - "_terms.yaml#/onatasertib/common"
+          - "_terms_enum.yaml#/onatasertib/common"
       Oncolytic Adenovirus ORCA-010:
         $ref:
-          - "_terms.yaml#/oncolytic_adenovirus_orca010/common"
+          - "_terms_enum.yaml#/oncolytic_adenovirus_orca010/common"
       Oncolytic Herpes Simplex Virus-1 ONCR-177:
         $ref:
-          - "_terms.yaml#/oncolytic_herpes_simplex_virus1_oncr177/common"
+          - "_terms_enum.yaml#/oncolytic_herpes_simplex_virus1_oncr177/common"
       Oncolytic HSV-1 Expressing IL-12 and Anti-PD-1 Antibody T3011:
         $ref:
-          - "_terms.yaml#/oncolytic_hsv1_expressing_il12_and_antipd1_antibody_t3011/common"
+          - "_terms_enum.yaml#/oncolytic_hsv1_expressing_il12_and_antipd1_antibody_t3011/common"
       Oncolytic Measles Virus Encoding Helicobacter pylori Neutrophil-activating Protein:
         $ref:
-          - "_terms.yaml#/oncolytic_measles_virus_encoding_helicobacter_pylori_neutrophilactivating_protein/common"
+          - "_terms_enum.yaml#/oncolytic_measles_virus_encoding_helicobacter_pylori_neutrophilactivating_protein/common"
       Ontorpacept:
         $ref:
-          - "_terms.yaml#/ontorpacept/common"
+          - "_terms_enum.yaml#/ontorpacept/common"
       Onvatilimab:
         $ref:
-          - "_terms.yaml#/onvatilimab/common"
+          - "_terms_enum.yaml#/onvatilimab/common"
       Opolimogene Capmilisbac:
         $ref:
-          - "_terms.yaml#/opolimogene_capmilisbac/common"
+          - "_terms_enum.yaml#/opolimogene_capmilisbac/common"
       Opucolimab:
         $ref:
-          - "_terms.yaml#/opucolimab/common"
+          - "_terms_enum.yaml#/opucolimab/common"
       Orelabrutinib:
         $ref:
-          - "_terms.yaml#/orelabrutinib/common"
+          - "_terms_enum.yaml#/orelabrutinib/common"
       Orvacabtagene Autoleucel:
         $ref:
-          - "_terms.yaml#/orvacabtagene_autoleucel/common"
+          - "_terms_enum.yaml#/orvacabtagene_autoleucel/common"
       Oxaliplatin Eluting Beads:
         $ref:
-          - "_terms.yaml#/oxaliplatin_eluting_beads/common"
+          - "_terms_enum.yaml#/oxaliplatin_eluting_beads/common"
       p97 Inhibitor CB-5339:
         $ref:
-          - "_terms.yaml#/p97_inhibitor_cb5339/common"
+          - "_terms_enum.yaml#/p97_inhibitor_cb5339/common"
       p97 Inhibitor CB-5339 Tosylate:
         $ref:
-          - "_terms.yaml#/p97_inhibitor_cb5339_tosylate/common"
+          - "_terms_enum.yaml#/p97_inhibitor_cb5339_tosylate/common"
       Pacmilimab:
         $ref:
-          - "_terms.yaml#/pacmilimab/common"
+          - "_terms_enum.yaml#/pacmilimab/common"
       Pamrevlumab:
         $ref:
-          - "_terms.yaml#/pamrevlumab/common"
+          - "_terms_enum.yaml#/pamrevlumab/common"
       Pan-KRAS Inhibitor BI 1701963:
         $ref:
-          - "_terms.yaml#/pankras_inhibitor_bi_1701963/common"
+          - "_terms_enum.yaml#/pankras_inhibitor_bi_1701963/common"
       Pan-mutation-selective EGFR Inhibitor CLN-081:
         $ref:
-          - "_terms.yaml#/panmutationselective_egfr_inhibitor_cln081/common"
+          - "_terms_enum.yaml#/panmutationselective_egfr_inhibitor_cln081/common"
       Pan-TRK Inhibitor NOV1601:
         $ref:
-          - "_terms.yaml#/pantrk_inhibitor_nov1601/common"
+          - "_terms_enum.yaml#/pantrk_inhibitor_nov1601/common"
       Panulisib:
         $ref:
-          - "_terms.yaml#/panulisib/common"
+          - "_terms_enum.yaml#/panulisib/common"
       PARP 1/2 Inhibitor IMP4297:
         $ref:
-          - "_terms.yaml#/parp_12_inhibitor_imp4297/common"
+          - "_terms_enum.yaml#/parp_12_inhibitor_imp4297/common"
       PARP Inhibitor NMS-03305293:
         $ref:
-          - "_terms.yaml#/parp_inhibitor_nms03305293/common"
+          - "_terms_enum.yaml#/parp_inhibitor_nms03305293/common"
       PARP/Tankyrase Inhibitor 2X-121:
         $ref:
-          - "_terms.yaml#/parptankyrase_inhibitor_2x121/common"
+          - "_terms_enum.yaml#/parptankyrase_inhibitor_2x121/common"
       PARP7 Inhibitor RBN-2397:
         $ref:
-          - "_terms.yaml#/parp7_inhibitor_rbn2397/common"
+          - "_terms_enum.yaml#/parp7_inhibitor_rbn2397/common"
       Parsaclisib:
         $ref:
-          - "_terms.yaml#/parsaclisib/common"
+          - "_terms_enum.yaml#/parsaclisib/common"
       Parsaclisib Hydrochloride:
         $ref:
-          - "_terms.yaml#/parsaclisib_hydrochloride/common"
+          - "_terms_enum.yaml#/parsaclisib_hydrochloride/common"
       Partially Engineered T-regulatory Cell Donor Graft TRGFT-201:
         $ref:
-          - "_terms.yaml#/partially_engineered_tregulatory_cell_donor_graft_trgft201/common"
+          - "_terms_enum.yaml#/partially_engineered_tregulatory_cell_donor_graft_trgft201/common"
       Patritumab Deruxtecan:
         $ref:
-          - "_terms.yaml#/patritumab_deruxtecan/common"
+          - "_terms_enum.yaml#/patritumab_deruxtecan/common"
       Paxalisib:
         $ref:
-          - "_terms.yaml#/paxalisib/common"
+          - "_terms_enum.yaml#/paxalisib/common"
       PD-L1 Inhibitor GS-4224:
         $ref:
-          - "_terms.yaml#/pdl1_inhibitor_gs4224/common"
+          - "_terms_enum.yaml#/pdl1_inhibitor_gs4224/common"
       PD-L1/4-1BB/HSA Trispecific Fusion Protein NM21-1480:
         $ref:
-          - "_terms.yaml#/pdl141bbhsa_trispecific_fusion_protein_nm211480/common"
+          - "_terms_enum.yaml#/pdl141bbhsa_trispecific_fusion_protein_nm211480/common"
       Pegvorhyaluronidase Alfa:
         $ref:
-          - "_terms.yaml#/pegvorhyaluronidase_alfa/common"
+          - "_terms_enum.yaml#/pegvorhyaluronidase_alfa/common"
       Pegylated SN-38 Conjugate PLX038:
         $ref:
-          - "_terms.yaml#/pegylated_sn38_conjugate_plx038/common"
+          - "_terms_enum.yaml#/pegylated_sn38_conjugate_plx038/common"
       Pelabresib:
         $ref:
-          - "_terms.yaml#/pelabresib/common"
+          - "_terms_enum.yaml#/pelabresib/common"
       Peposertib:
         $ref:
-          - "_terms.yaml#/peposertib/common"
+          - "_terms_enum.yaml#/peposertib/common"
       Personalized and Adjusted Neoantigen Peptide Vaccine PANDA-VAC:
         $ref:
-          - "_terms.yaml#/personalized_and_adjusted_neoantigen_peptide_vaccine_pandavac/common"
+          - "_terms_enum.yaml#/personalized_and_adjusted_neoantigen_peptide_vaccine_pandavac/common"
       Personalized Neoantigen DNA Vaccine GNOS-PV01:
         $ref:
-          - "_terms.yaml#/personalized_neoantigen_dna_vaccine_gnospv01/common"
+          - "_terms_enum.yaml#/personalized_neoantigen_dna_vaccine_gnospv01/common"
       Personalized Neoantigen DNA Vaccine GNOS-PVO2:
         $ref:
-          - "_terms.yaml#/personalized_neoantigen_dna_vaccine_gnospvo2/common"
+          - "_terms_enum.yaml#/personalized_neoantigen_dna_vaccine_gnospvo2/common"
       Photodynamic Compound TLD-1433:
         $ref:
-          - "_terms.yaml#/photodynamic_compound_tld1433/common"
+          - "_terms_enum.yaml#/photodynamic_compound_tld1433/common"
       Pimitespib:
         $ref:
-          - "_terms.yaml#/pimitespib/common"
+          - "_terms_enum.yaml#/pimitespib/common"
       Pimurutamab:
         $ref:
-          - "_terms.yaml#/pimurutamab/common"
+          - "_terms_enum.yaml#/pimurutamab/common"
       Pinatuzumab Vedotin:
         $ref:
-          - "_terms.yaml#/pinatuzumab_vedotin/common"
+          - "_terms_enum.yaml#/pinatuzumab_vedotin/common"
       Pixatimod:
         $ref:
-          - "_terms.yaml#/pixatimod/common"
+          - "_terms_enum.yaml#/pixatimod/common"
       Plamotamab:
         $ref:
-          - "_terms.yaml#/plamotamab/common"
+          - "_terms_enum.yaml#/plamotamab/common"
       Plasmid DNA Vaccine pING-hHER3FL:
         $ref:
-          - "_terms.yaml#/plasmid_dna_vaccine_pinghher3fl/common"
+          - "_terms_enum.yaml#/plasmid_dna_vaccine_pinghher3fl/common"
       pNGVL4a-CRT-E6E7L2 DNA Vaccine:
         $ref:
-          - "_terms.yaml#/pngvl4acrte6e7l2_dna_vaccine/common"
+          - "_terms_enum.yaml#/pngvl4acrte6e7l2_dna_vaccine/common"
       pNGVL4a-Sig/E7(detox)/HSP70 DNA and HPV16 L2/E6/E7 Fusion Protein TA-CIN Vaccine PVX-2:
         $ref:
-          - "_terms.yaml#/pngvl4asige7detoxhsp70_dna_and_hpv16_l2e6e7_fusion_protein_tacin_vaccine_pvx2/common"
+          - "_terms_enum.yaml#/pngvl4asige7detoxhsp70_dna_and_hpv16_l2e6e7_fusion_protein_tacin_vaccine_pvx2/common"
       Polymer-conjugated IL-15 Receptor Agonist NKTR-255:
         $ref:
-          - "_terms.yaml#/polymerconjugated_il15_receptor_agonist_nktr255/common"
+          - "_terms_enum.yaml#/polymerconjugated_il15_receptor_agonist_nktr255/common"
       Porcupine Inhibitor XNW7201:
         $ref:
-          - "_terms.yaml#/porcupine_inhibitor_xnw7201/common"
+          - "_terms_enum.yaml#/porcupine_inhibitor_xnw7201/common"
       PPAR Alpha Antagonist TPST-1120:
         $ref:
-          - "_terms.yaml#/ppar_alpha_antagonist_tpst1120/common"
+          - "_terms_enum.yaml#/ppar_alpha_antagonist_tpst1120/common"
       Pralsetinib:
         $ref:
-          - "_terms.yaml#/pralsetinib/common"
+          - "_terms_enum.yaml#/pralsetinib/common"
       Praluzatamab Ravtansine:
         $ref:
-          - "_terms.yaml#/praluzatamab_ravtansine/common"
+          - "_terms_enum.yaml#/praluzatamab_ravtansine/common"
       PRMT5 Inhibitor PRT811:
         $ref:
-          - "_terms.yaml#/prmt5_inhibitor_prt811/common"
+          - "_terms_enum.yaml#/prmt5_inhibitor_prt811/common"
       Prolgolimab:
         $ref:
-          - "_terms.yaml#/prolgolimab/common"
+          - "_terms_enum.yaml#/prolgolimab/common"
       Prostaglandin E2 EP4 Receptor Inhibitor AN0025:
         $ref:
-          - "_terms.yaml#/prostaglandin_e2_ep4_receptor_inhibitor_an0025/common"
+          - "_terms_enum.yaml#/prostaglandin_e2_ep4_receptor_inhibitor_an0025/common"
       Protein Tyrosine Kinase 2 Inhibitor IN10018:
         $ref:
-          - "_terms.yaml#/protein_tyrosine_kinase_2_inhibitor_in10018/common"
+          - "_terms_enum.yaml#/protein_tyrosine_kinase_2_inhibitor_in10018/common"
       Pyruvate Kinase M2 Isoform Activator TP-1454:
         $ref:
-          - "_terms.yaml#/pyruvate_kinase_m2_isoform_activator_tp1454/common"
+          - "_terms_enum.yaml#/pyruvate_kinase_m2_isoform_activator_tp1454/common"
       Racemetyrosine/Methoxsalen/Phenytoin/Sirolimus SM-88:
         $ref:
-          - "_terms.yaml#/racemetyrosinemethoxsalenphenytoinsirolimus_sm88/common"
+          - "_terms_enum.yaml#/racemetyrosinemethoxsalenphenytoinsirolimus_sm88/common"
       Radgocitabine:
         $ref:
-          - "_terms.yaml#/radgocitabine/common"
+          - "_terms_enum.yaml#/radgocitabine/common"
       Radgocitabine Hydrochloride:
         $ref:
-          - "_terms.yaml#/radgocitabine_hydrochloride/common"
+          - "_terms_enum.yaml#/radgocitabine_hydrochloride/common"
       Ragifilimab:
         $ref:
-          - "_terms.yaml#/ragifilimab/common"
+          - "_terms_enum.yaml#/ragifilimab/common"
       Recombinant Bacterial Minicells VAX014:
         $ref:
-          - "_terms.yaml#/recombinant_bacterial_minicells_vax014/common"
+          - "_terms_enum.yaml#/recombinant_bacterial_minicells_vax014/common"
       Recombinant Erwinia asparaginase JZP-458:
         $ref:
-          - "_terms.yaml#/recombinant_erwinia_asparaginase_jzp458/common"
+          - "_terms_enum.yaml#/recombinant_erwinia_asparaginase_jzp458/common"
       Recombinant Human Papillomavirus 11-valent Vaccine:
         $ref:
-          - "_terms.yaml#/recombinant_human_papillomavirus_11valent_vaccine/common"
+          - "_terms_enum.yaml#/recombinant_human_papillomavirus_11valent_vaccine/common"
       Recombinant Human TRAIL-Trimer Fusion Protein SCB-313:
         $ref:
-          - "_terms.yaml#/recombinant_human_trailtrimer_fusion_protein_scb313/common"
+          - "_terms_enum.yaml#/recombinant_human_trailtrimer_fusion_protein_scb313/common"
       Recombinant Humanized Anti-HER-2 Bispecific Monoclonal Antibody MBS301:
         $ref:
-          - "_terms.yaml#/recombinant_humanized_antiher2_bispecific_monoclonal_antibody_mbs301/common"
+          - "_terms_enum.yaml#/recombinant_humanized_antiher2_bispecific_monoclonal_antibody_mbs301/common"
       Redaporfin:
         $ref:
-          - "_terms.yaml#/redaporfin/common"
+          - "_terms_enum.yaml#/redaporfin/common"
       RET/SRC Inhibitor TPX-0046:
         $ref:
-          - "_terms.yaml#/retsrc_inhibitor_tpx0046/common"
+          - "_terms_enum.yaml#/retsrc_inhibitor_tpx0046/common"
       Retifanlimab:
         $ref:
-          - "_terms.yaml#/retifanlimab/common"
+          - "_terms_enum.yaml#/retifanlimab/common"
       Revdofilimab:
         $ref:
-          - "_terms.yaml#/revdofilimab/common"
+          - "_terms_enum.yaml#/revdofilimab/common"
       Rezivertinib:
         $ref:
-          - "_terms.yaml#/rezivertinib/common"
+          - "_terms_enum.yaml#/rezivertinib/common"
       Ripertamab:
         $ref:
-          - "_terms.yaml#/ripertamab/common"
+          - "_terms_enum.yaml#/ripertamab/common"
       Roblitinib:
         $ref:
-          - "_terms.yaml#/roblitinib/common"
+          - "_terms_enum.yaml#/roblitinib/common"
       ROBO1-targeted BiCAR-NKT Cells:
         $ref:
-          - "_terms.yaml#/robo1targeted_bicarnkt_cells/common"
+          - "_terms_enum.yaml#/robo1targeted_bicarnkt_cells/common"
       Rocakinogene Sifuplasmid:
         $ref:
-          - "_terms.yaml#/rocakinogene_sifuplasmid/common"
+          - "_terms_enum.yaml#/rocakinogene_sifuplasmid/common"
       Roducitabine:
         $ref:
-          - "_terms.yaml#/roducitabine/common"
+          - "_terms_enum.yaml#/roducitabine/common"
       Rolinsatamab Talirine:
         $ref:
-          - "_terms.yaml#/rolinsatamab_talirine/common"
+          - "_terms_enum.yaml#/rolinsatamab_talirine/common"
       Roneparstat:
         $ref:
-          - "_terms.yaml#/roneparstat/common"
+          - "_terms_enum.yaml#/roneparstat/common"
       Ropeginterferon Alfa-2B:
         $ref:
-          - "_terms.yaml#/ropeginterferon_alfa2b/common"
+          - "_terms_enum.yaml#/ropeginterferon_alfa2b/common"
       Ropocamptide:
         $ref:
-          - "_terms.yaml#/ropocamptide/common"
+          - "_terms_enum.yaml#/ropocamptide/common"
       Rosopatamab:
         $ref:
-          - "_terms.yaml#/rosopatamab/common"
+          - "_terms_enum.yaml#/rosopatamab/common"
       RSK1-4 Inhibitor PMD-026:
         $ref:
-          - "_terms.yaml#/rsk14_inhibitor_pmd026/common"
+          - "_terms_enum.yaml#/rsk14_inhibitor_pmd026/common"
       Ruthenium-based Small Molecule Therapeutic BOLD-100:
         $ref:
-          - "_terms.yaml#/rutheniumbased_small_molecule_therapeutic_bold100/common"
+          - "_terms_enum.yaml#/rutheniumbased_small_molecule_therapeutic_bold100/common"
       Ruxotemitide:
         $ref:
-          - "_terms.yaml#/ruxotemitide/common"
+          - "_terms_enum.yaml#/ruxotemitide/common"
       Sabatolimab:
         $ref:
-          - "_terms.yaml#/sabatolimab/common"
+          - "_terms_enum.yaml#/sabatolimab/common"
       Samrotamab Vedotin:
         $ref:
-          - "_terms.yaml#/samrotamab_vedotin/common"
+          - "_terms_enum.yaml#/samrotamab_vedotin/common"
       Samuraciclib:
         $ref:
-          - "_terms.yaml#/samuraciclib/common"
+          - "_terms_enum.yaml#/samuraciclib/common"
       Sasanlimab:
         $ref:
-          - "_terms.yaml#/sasanlimab/common"
+          - "_terms_enum.yaml#/sasanlimab/common"
       SDF-1 Receptor Antagonist PTX-9908:
         $ref:
-          - "_terms.yaml#/sdf1_receptor_antagonist_ptx9908/common"
+          - "_terms_enum.yaml#/sdf1_receptor_antagonist_ptx9908/common"
       Selective Estrogen Receptor Degrader LX-039:
         $ref:
-          - "_terms.yaml#/selective_estrogen_receptor_degrader_lx039/common"
+          - "_terms_enum.yaml#/selective_estrogen_receptor_degrader_lx039/common"
       Selective Estrogen Receptor Degrader LY3484356:
         $ref:
-          - "_terms.yaml#/selective_estrogen_receptor_degrader_ly3484356/common"
+          - "_terms_enum.yaml#/selective_estrogen_receptor_degrader_ly3484356/common"
       Serclutamab Talirine:
         $ref:
-          - "_terms.yaml#/serclutamab_talirine/common"
+          - "_terms_enum.yaml#/serclutamab_talirine/common"
       SERD ZN-c5:
         $ref:
-          - "_terms.yaml#/serd_znc5/common"
+          - "_terms_enum.yaml#/serd_znc5/common"
       Serplulimab:
         $ref:
-          - "_terms.yaml#/serplulimab/common"
+          - "_terms_enum.yaml#/serplulimab/common"
       Shenqi Fuzheng Injection SQ001:
         $ref:
-          - "_terms.yaml#/shenqi_fuzheng_injection_sq001/common"
+          - "_terms_enum.yaml#/shenqi_fuzheng_injection_sq001/common"
       SHP2 Inhibitor RLY-1971:
         $ref:
-          - "_terms.yaml#/shp2_inhibitor_rly1971/common"
+          - "_terms_enum.yaml#/shp2_inhibitor_rly1971/common"
       Simlukafusp Alfa:
         $ref:
-          - "_terms.yaml#/simlukafusp_alfa/common"
+          - "_terms_enum.yaml#/simlukafusp_alfa/common"
       Simmitinib:
         $ref:
-          - "_terms.yaml#/simmitinib/common"
+          - "_terms_enum.yaml#/simmitinib/common"
       Simurosertib:
         $ref:
-          - "_terms.yaml#/simurosertib/common"
+          - "_terms_enum.yaml#/simurosertib/common"
       Siremadlin:
         $ref:
-          - "_terms.yaml#/siremadlin/common"
+          - "_terms_enum.yaml#/siremadlin/common"
       SIRPa-4-1BBL Fusion Protein DSP107:
         $ref:
-          - "_terms.yaml#/sirpa41bbl_fusion_protein_dsp107/common"
+          - "_terms_enum.yaml#/sirpa41bbl_fusion_protein_dsp107/common"
       SIRPa-Fc-CD40L Fusion Protein SL-172154:
         $ref:
-          - "_terms.yaml#/sirpafccd40l_fusion_protein_sl172154/common"
+          - "_terms_enum.yaml#/sirpafccd40l_fusion_protein_sl172154/common"
       Sotigalimab:
         $ref:
-          - "_terms.yaml#/sotigalimab/common"
+          - "_terms_enum.yaml#/sotigalimab/common"
       Sotorasib:
         $ref:
-          - "_terms.yaml#/sotorasib/common"
+          - "_terms_enum.yaml#/sotorasib/common"
       Spanlecortemlocel:
         $ref:
-          - "_terms.yaml#/spanlecortemlocel/common"
+          - "_terms_enum.yaml#/spanlecortemlocel/common"
       SRPK1/ABCG2 Inhibitor SCO-101:
         $ref:
-          - "_terms.yaml#/srpk1abcg2_inhibitor_sco101/common"
+          - "_terms_enum.yaml#/srpk1abcg2_inhibitor_sco101/common"
       STING Agonist BMS-986301:
         $ref:
-          - "_terms.yaml#/sting_agonist_bms986301/common"
+          - "_terms_enum.yaml#/sting_agonist_bms986301/common"
       STING Agonist GSK3745417:
         $ref:
-          - "_terms.yaml#/sting_agonist_gsk3745417/common"
+          - "_terms_enum.yaml#/sting_agonist_gsk3745417/common"
       STING Agonist IMSA101:
         $ref:
-          - "_terms.yaml#/sting_agonist_imsa101/common"
+          - "_terms_enum.yaml#/sting_agonist_imsa101/common"
       STING Agonist SB 11285:
         $ref:
-          - "_terms.yaml#/sting_agonist_sb_11285/common"
+          - "_terms_enum.yaml#/sting_agonist_sb_11285/common"
       STING Agonist TAK-676:
         $ref:
-          - "_terms.yaml#/sting_agonist_tak676/common"
+          - "_terms_enum.yaml#/sting_agonist_tak676/common"
       STING-expressing E. coli SYNB1891:
         $ref:
-          - "_terms.yaml#/stingexpressing_e_coli_synb1891/common"
+          - "_terms_enum.yaml#/stingexpressing_e_coli_synb1891/common"
       Sugemalimab:
         $ref:
-          - "_terms.yaml#/sugemalimab/common"
+          - "_terms_enum.yaml#/sugemalimab/common"
       Superoxide Dismutase Mimetic GC4711:
         $ref:
-          - "_terms.yaml#/superoxide_dismutase_mimetic_gc4711/common"
+          - "_terms_enum.yaml#/superoxide_dismutase_mimetic_gc4711/common"
       Synthetic Plumbagin PCUR-101:
         $ref:
-          - "_terms.yaml#/synthetic_plumbagin_pcur101/common"
+          - "_terms_enum.yaml#/synthetic_plumbagin_pcur101/common"
       Tafasitamab:
         $ref:
-          - "_terms.yaml#/tafasitamab/common"
+          - "_terms_enum.yaml#/tafasitamab/common"
       Taletrectinib:
         $ref:
-          - "_terms.yaml#/taletrectinib/common"
+          - "_terms_enum.yaml#/taletrectinib/common"
       Tamrintamab Pamozirine:
         $ref:
-          - "_terms.yaml#/tamrintamab_pamozirine/common"
+          - "_terms_enum.yaml#/tamrintamab_pamozirine/common"
       Tankyrase Inhibitor STP1002:
         $ref:
-          - "_terms.yaml#/tankyrase_inhibitor_stp1002/common"
+          - "_terms_enum.yaml#/tankyrase_inhibitor_stp1002/common"
       Tapotoclax:
         $ref:
-          - "_terms.yaml#/tapotoclax/common"
+          - "_terms_enum.yaml#/tapotoclax/common"
       Tasadenoturev:
         $ref:
-          - "_terms.yaml#/tasadenoturev/common"
+          - "_terms_enum.yaml#/tasadenoturev/common"
       Tebentafusp:
         $ref:
-          - "_terms.yaml#/tebentafusp/common"
+          - "_terms_enum.yaml#/tebentafusp/common"
       Teclistamab:
         $ref:
-          - "_terms.yaml#/teclistamab/common"
+          - "_terms_enum.yaml#/teclistamab/common"
       Tefinostat:
         $ref:
-          - "_terms.yaml#/tefinostat/common"
+          - "_terms_enum.yaml#/tefinostat/common"
       Telaglenastat:
         $ref:
-          - "_terms.yaml#/telaglenastat/common"
+          - "_terms_enum.yaml#/telaglenastat/common"
       Telaglenastat Hydrochloride:
         $ref:
-          - "_terms.yaml#/telaglenastat_hydrochloride/common"
+          - "_terms_enum.yaml#/telaglenastat_hydrochloride/common"
       Telisotuzumab:
         $ref:
-          - "_terms.yaml#/telisotuzumab/common"
+          - "_terms_enum.yaml#/telisotuzumab/common"
       Tepoditamab:
         $ref:
-          - "_terms.yaml#/tepoditamab/common"
+          - "_terms_enum.yaml#/tepoditamab/common"
       TGF-beta Receptor 1 Kinase Inhibitor SH3051:
         $ref:
-          - "_terms.yaml#/tgfbeta_receptor_1_kinase_inhibitor_sh3051/common"
+          - "_terms_enum.yaml#/tgfbeta_receptor_1_kinase_inhibitor_sh3051/common"
       TGF-beta Receptor 1 Kinase Inhibitor YL-13027:
         $ref:
-          - "_terms.yaml#/tgfbeta_receptor_1_kinase_inhibitor_yl13027/common"
+          - "_terms_enum.yaml#/tgfbeta_receptor_1_kinase_inhibitor_yl13027/common"
       TGFa-PE38 Immunotoxin:
         $ref:
-          - "_terms.yaml#/tgfape38_immunotoxin/common"
+          - "_terms_enum.yaml#/tgfape38_immunotoxin/common"
       Therapeutic Cancer Vaccine ATP128:
         $ref:
-          - "_terms.yaml#/therapeutic_cancer_vaccine_atp128/common"
+          - "_terms_enum.yaml#/therapeutic_cancer_vaccine_atp128/common"
       Thorium Th 227 Anetumab Corixetan:
         $ref:
-          - "_terms.yaml#/thorium_th_227_anetumab_corixetan/common"
+          - "_terms_enum.yaml#/thorium_th_227_anetumab_corixetan/common"
       Thorium Th 227 Anti-HER2 Monoclonal Antibody BAY2701439:
         $ref:
-          - "_terms.yaml#/thorium_th_227_antiher2_monoclonal_antibody_bay2701439/common"
+          - "_terms_enum.yaml#/thorium_th_227_antiher2_monoclonal_antibody_bay2701439/common"
       Thorium Th 227 Anti-PSMA Monoclonal Antibody BAY 2315497:
         $ref:
-          - "_terms.yaml#/thorium_th_227_antipsma_monoclonal_antibody_bay_2315497/common"
+          - "_terms_enum.yaml#/thorium_th_227_antipsma_monoclonal_antibody_bay_2315497/common"
       Thymidylate Synthase Inhibitor CX1106:
         $ref:
-          - "_terms.yaml#/thymidylate_synthase_inhibitor_cx1106/common"
+          - "_terms_enum.yaml#/thymidylate_synthase_inhibitor_cx1106/common"
       TIGIT Inhibitor M6223:
         $ref:
-          - "_terms.yaml#/tigit_inhibitor_m6223/common"
+          - "_terms_enum.yaml#/tigit_inhibitor_m6223/common"
       Tilogotamab:
         $ref:
-          - "_terms.yaml#/tilogotamab/common"
+          - "_terms_enum.yaml#/tilogotamab/common"
       Tiomolibdate Choline:
         $ref:
-          - "_terms.yaml#/tiomolibdate_choline/common"
+          - "_terms_enum.yaml#/tiomolibdate_choline/common"
       Tirbanibulin:
         $ref:
-          - "_terms.yaml#/tirbanibulin/common"
+          - "_terms_enum.yaml#/tirbanibulin/common"
       TLR7 agonist BNT411:
         $ref:
-          - "_terms.yaml#/tlr7_agonist_bnt411/common"
+          - "_terms_enum.yaml#/tlr7_agonist_bnt411/common"
       TLR7 Agonist LHC165:
         $ref:
-          - "_terms.yaml#/tlr7_agonist_lhc165/common"
+          - "_terms_enum.yaml#/tlr7_agonist_lhc165/common"
       TM4SF1-CAR/EpCAM-CAR-expressing Autologous T Cells:
         $ref:
-          - "_terms.yaml#/tm4sf1carepcamcarexpressing_autologous_t_cells/common"
+          - "_terms_enum.yaml#/tm4sf1carepcamcarexpressing_autologous_t_cells/common"
       Tolebrutinib:
         $ref:
-          - "_terms.yaml#/tolebrutinib/common"
+          - "_terms_enum.yaml#/tolebrutinib/common"
       Topotecan Sustained-release Episcleral Plaque:
         $ref:
-          - "_terms.yaml#/topotecan_sustainedrelease_episcleral_plaque/common"
+          - "_terms_enum.yaml#/topotecan_sustainedrelease_episcleral_plaque/common"
       Transferrin-CRM107:
         $ref:
-          - "_terms.yaml#/transferrincrm107/common"
+          - "_terms_enum.yaml#/transferrincrm107/common"
       Trastuzumab Deruxtecan:
         $ref:
-          - "_terms.yaml#/trastuzumab_deruxtecan/common"
+          - "_terms_enum.yaml#/trastuzumab_deruxtecan/common"
       Trastuzumab Monomethyl Auristatin F:
         $ref:
-          - "_terms.yaml#/trastuzumab_monomethyl_auristatin_f/common"
+          - "_terms_enum.yaml#/trastuzumab_monomethyl_auristatin_f/common"
       Trastuzumab-TLR 7/8 Agonist BDC-1001:
         $ref:
-          - "_terms.yaml#/trastuzumabtlr_78_agonist_bdc1001/common"
+          - "_terms_enum.yaml#/trastuzumabtlr_78_agonist_bdc1001/common"
       Tris-acryl Gelatin Microspheres:
         $ref:
-          - "_terms.yaml#/trisacryl_gelatin_microspheres/common"
+          - "_terms_enum.yaml#/trisacryl_gelatin_microspheres/common"
       TRK Inhibitor TQB3558:
         $ref:
-          - "_terms.yaml#/trk_inhibitor_tqb3558/common"
+          - "_terms_enum.yaml#/trk_inhibitor_tqb3558/common"
       Troriluzole:
         $ref:
-          - "_terms.yaml#/troriluzole/common"
+          - "_terms_enum.yaml#/troriluzole/common"
       Tyrosine Kinase Inhibitor TL-895:
         $ref:
-          - "_terms.yaml#/tyrosine_kinase_inhibitor_tl895/common"
+          - "_terms_enum.yaml#/tyrosine_kinase_inhibitor_tl895/common"
       Upifitamab:
         $ref:
-          - "_terms.yaml#/upifitamab/common"
+          - "_terms_enum.yaml#/upifitamab/common"
       Urabrelimab:
         $ref:
-          - "_terms.yaml#/urabrelimab/common"
+          - "_terms_enum.yaml#/urabrelimab/common"
       Ursolic Acid:
         $ref:
-          - "_terms.yaml#/ursolic_acid/common"
+          - "_terms_enum.yaml#/ursolic_acid/common"
       Uzansertib:
         $ref:
-          - "_terms.yaml#/uzansertib/common"
+          - "_terms_enum.yaml#/uzansertib/common"
       Valecobulin:
         $ref:
-          - "_terms.yaml#/valecobulin/common"
+          - "_terms_enum.yaml#/valecobulin/common"
       Valemetostat:
         $ref:
-          - "_terms.yaml#/valemetostat/common"
+          - "_terms_enum.yaml#/valemetostat/common"
       Vesencumab:
         $ref:
-          - "_terms.yaml#/vesencumab/common"
+          - "_terms_enum.yaml#/vesencumab/common"
       Vibecotamab:
         $ref:
-          - "_terms.yaml#/vibecotamab/common"
+          - "_terms_enum.yaml#/vibecotamab/common"
       Vibostolimab:
         $ref:
-          - "_terms.yaml#/vibostolimab/common"
+          - "_terms_enum.yaml#/vibostolimab/common"
       Vorasidenib:
         $ref:
-          - "_terms.yaml#/vorasidenib/common"
+          - "_terms_enum.yaml#/vorasidenib/common"
       Vosilasarm:
         $ref:
-          - "_terms.yaml#/vosilasarm/common"
+          - "_terms_enum.yaml#/vosilasarm/common"
       Vulinacimab:
         $ref:
-          - "_terms.yaml#/vulinacimab/common"
+          - "_terms_enum.yaml#/vulinacimab/common"
       Wee1 Inhibitor ZN-c3:
         $ref:
-          - "_terms.yaml#/wee1_inhibitor_znc3/common"
+          - "_terms_enum.yaml#/wee1_inhibitor_znc3/common"
       Wee1 Kinase Inhibitor Debio 0123:
         $ref:
-          - "_terms.yaml#/wee1_kinase_inhibitor_debio_0123/common"
+          - "_terms_enum.yaml#/wee1_kinase_inhibitor_debio_0123/common"
       Xevinapant:
         $ref:
-          - "_terms.yaml#/xevinapant/common"
+          - "_terms_enum.yaml#/xevinapant/common"
       Xiliertinib:
         $ref:
-          - "_terms.yaml#/xiliertinib/common"
+          - "_terms_enum.yaml#/xiliertinib/common"
       Xisomab 3G3:
         $ref:
-          - "_terms.yaml#/xisomab_3g3/common"
+          - "_terms_enum.yaml#/xisomab_3g3/common"
       Yttrium Y 90 Tabituximab Barzuxetan:
         $ref:
-          - "_terms.yaml#/yttrium_y_90_tabituximab_barzuxetan/common"
+          - "_terms_enum.yaml#/yttrium_y_90_tabituximab_barzuxetan/common"
       Zandelisib:
         $ref:
-          - "_terms.yaml#/zandelisib/common"
+          - "_terms_enum.yaml#/zandelisib/common"
       Zanidatamab:
         $ref:
-          - "_terms.yaml#/zanidatamab/common"
+          - "_terms_enum.yaml#/zanidatamab/common"
       Zelavespib:
         $ref:
-          - "_terms.yaml#/zelavespib/common"
+          - "_terms_enum.yaml#/zelavespib/common"
       Zorifertinib:
         $ref:
-          - "_terms.yaml#/zorifertinib/common"
+          - "_terms_enum.yaml#/zorifertinib/common"
       Zotatifin:
         $ref:
-          - "_terms.yaml#/zotatifin/common"
+          - "_terms_enum.yaml#/zotatifin/common"
       Zotiraciclib Citrate:
         $ref:
-          - "_terms.yaml#/zotiraciclib_citrate/common"
+          - "_terms_enum.yaml#/zotiraciclib_citrate/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   diagnoses:
     $ref: "_definitions.yaml#/to_one"

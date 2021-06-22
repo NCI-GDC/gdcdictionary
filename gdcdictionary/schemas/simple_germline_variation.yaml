@@ -68,6 +68,7 @@ properties:
       - "_terms.yaml#/data_format/common"
     enum:
       - VCF
+      - TSV
 
   experimental_strategy:
     $ref:
@@ -76,12 +77,17 @@ properties:
       - ATAC-Seq
       - Bisulfite-Seq
       - ChIP-Seq
-      - Low Pass WGS
       - miRNA-Seq
       - RNA-Seq
       - Targeted Sequencing
       - WGS
       - WXS
+
+  platform:
+    $ref:
+      - "_terms.yaml#/platform/common"
+    enum:
+      - Affymetrix SNP 6.0
 
   germline_mutation_calling_workflows:
     $ref: "_definitions.yaml#/to_one"

@@ -368,37 +368,37 @@ properties:
     enumDef:
       Bone Marrow:
         $ref:
-          - "_terms.yaml#/bone_marrow/common"
+          - "_terms_enum.yaml#/bone_marrow/common"
       Buccal Mucosa:
         $ref:
-          - "_terms.yaml#/buccal_mucosa/common"
+          - "_terms_enum.yaml#/buccal_mucosa/common"
       Cerebrospinal Fluid:
         $ref:
-          - "_terms.yaml#/cerebrospinal_fluid/common"
+          - "_terms_enum.yaml#/cerebrospinal_fluid/common"
       Connective Tissue:
         $ref:
-          - "_terms.yaml#/connective_tissue/common"
+          - "_terms_enum.yaml#/connective_tissue/common"
       Frontal Lobe:
         $ref:
-          - "_terms.yaml#/frontal_lobe/common"
+          - "_terms_enum.yaml#/frontal_lobe/common"
       Neck:
         $ref:
-          - "_terms.yaml#/neck/common"
+          - "_terms_enum.yaml#/neck/common"
       Not Allowed To Collect:
         $ref:
-          - "_terms.yaml#/not_allowed_to_collect/common"
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Other:
         $ref:
-          - "_terms.yaml#/other/common"
+          - "_terms_enum.yaml#/other/common"
       Soft Tissue:
         $ref:
-          - "_terms.yaml#/soft_tissue/common"
+          - "_terms_enum.yaml#/soft_tissue/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   biospecimen_laterality:
     $ref:
@@ -412,10 +412,10 @@ properties:
     enumDef:
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   catalog_reference:
     $ref:
@@ -465,33 +465,34 @@ properties:
     enumDef:
       Buffy Coat:
         $ref:
-          - "_terms.yaml#/buffy_coat/common"
+          - "_terms_enum.yaml#/buffy_coat/common"
       Lymphocytes:
         $ref:
-          - "_terms.yaml#/lymphocytes/common"
+          - "_terms_enum.yaml#/lymphocytes/common"
       Not Allowed To Collect:
         $ref:
-          - "_terms.yaml#/not_allowed_to_collect/common"
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Plasma:
         $ref:
-          - "_terms.yaml#/plasma/common"
+          - "_terms_enum.yaml#/plasma/common"
       Saliva:
         $ref:
-          - "_terms.yaml#/saliva/common"
+          - "_terms_enum.yaml#/saliva/common"
       Serum:
         $ref:
-          - "_terms.yaml#/serum/common"
+          - "_terms_enum.yaml#/serum/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   current_weight:
     $ref:
       - "_terms.yaml#/current_weight/common"
     type: number
+    minimum: 0
 
   days_to_collection:
     $ref:
@@ -521,19 +522,19 @@ properties:
     enumDef:
       Not Allowed To Collect:
         $ref:
-          - "_terms.yaml#/not_allowed_to_collect/common"
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       "Yes":
         $ref:
-          - "_terms.yaml#/yes/common"
+          - "_terms_enum.yaml#/yes/common"
       "No":
         $ref:
-          - "_terms.yaml#/no/common"
+          - "_terms_enum.yaml#/no/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   distance_normal_to_tumor:
     $ref:
@@ -546,10 +547,10 @@ properties:
     enumDef:
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   distributor_reference:
     $ref:
@@ -571,11 +572,13 @@ properties:
     $ref:
       - "_terms.yaml#/initial_weight/common"
     type: number
+    minimum: 0
 
   intermediate_dimension:
     $ref:
       - "_terms.yaml#/intermediate_dimension/common"
     type: number
+    minimum: 0
 
   is_ffpe:
     $ref:
@@ -586,6 +589,7 @@ properties:
     $ref:
       - "_terms.yaml#/longest_dimension/common"
     type: number
+    minimum: 0
 
   method_of_sample_procurement:
     $ref:
@@ -697,22 +701,22 @@ properties:
     enumDef:
       Autopsy:
         $ref:
-          - "_terms.yaml#/autopsy/common"
+          - "_terms_enum.yaml#/autopsy/common"
       Indeterminant:
         $ref:
-          - "_terms.yaml#/indeterminant/common"
+          - "_terms_enum.yaml#/indeterminant/common"
       Not Allowed To Collect:
         $ref:
-          - "_terms.yaml#/not_allowed_to_collect/common"
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Other:
         $ref:
-          - "_terms.yaml#/other/common"
+          - "_terms_enum.yaml#/other/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   oct_embedded:
     $ref:
@@ -742,13 +746,13 @@ properties:
     enumDef:
       Not Allowed To Collect:
         $ref:
-          - "_terms.yaml#/not_allowed_to_collect/common"
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   passage_count:
     $ref:
@@ -760,6 +764,7 @@ properties:
     $ref:
       - "_terms.yaml#/sample_ordinal/common"
     type: integer
+    minimum: 1
 
   sample_type:
     $ref:
@@ -795,6 +800,7 @@ properties:
       - Mononuclear Cells from Bone Marrow Normal
       - Neoplasms of Uncertain and Unknown Behavior
       - Next Generation Cancer Model
+      - Next Generation Cancer Model Expanded Under Non-conforming Conditions
       - Not Allowed To Collect
       - Pleural Effusion
       - Post neo-adjuvant therapy
@@ -820,22 +826,22 @@ properties:
     enumDef:
       DNA:
         $ref:
-          - "_terms.yaml#/dna/common"
+          - "_terms_enum.yaml#/dna/common"
       Not Allowed To Collect:
         $ref:
-          - "_terms.yaml#/not_allowed_to_collect/common"
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Saliva:
         $ref:
-          - "_terms.yaml#/saliva/common"
+          - "_terms_enum.yaml#/saliva/common"
       Total RNA:
         $ref:
-          - "_terms.yaml#/total_rna/common"
+          - "_terms_enum.yaml#/total_rna/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   sample_type_id:
     $ref:
@@ -871,22 +877,26 @@ properties:
       - "61"
       - "85"
       - "86"
+      - "87"
       - "99"
 
   shortest_dimension:
     $ref:
       - "_terms.yaml#/shortest_dimension/common"
     type: number
+    minimum: 0
 
   time_between_clamping_and_freezing:
     $ref:
       - "_terms.yaml#/time_between_clamping_and_freezing/common"
     type: number
+    minimum: 0
 
   time_between_excision_and_freezing:
     $ref:
       - "_terms.yaml#/time_between_excision_and_freezing/common"
     type: number
+    minimum: 0
 
   tissue_collection_type:
     $ref:
@@ -911,16 +921,16 @@ properties:
     enumDef:
       Normal:
         $ref:
-          - "_terms.yaml#/normal/common"
+          - "_terms_enum.yaml#/normal/common"
       Not Allowed To Collect:
         $ref:
-          - "_terms.yaml#/not_allowed_to_collect/common"
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   tumor_code:
     $ref:
@@ -954,10 +964,10 @@ properties:
     enumDef:
       Ewing sarcoma:
         $ref:
-          - "_terms.yaml#/ewing_sarcoma/common"
+          - "_terms_enum.yaml#/ewing_sarcoma/common"
       Rhabdomyosarcoma:
         $ref:
-          - "_terms.yaml#/rhabdomyosarcoma/common"
+          - "_terms_enum.yaml#/rhabdomyosarcoma/common"
 
   tumor_code_id:
     $ref:
@@ -1008,16 +1018,16 @@ properties:
     enumDef:
       Not Allowed To Collect:
         $ref:
-          - "_terms.yaml#/not_allowed_to_collect/common"
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Not Applicable:
         $ref:
-          - "_terms.yaml#/not_applicable/common"
+          - "_terms_enum.yaml#/not_applicable/common"
       Unknown:
         $ref:
-          - "_terms.yaml#/unknown/common"
+          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
-          - "_terms.yaml#/not_reported/common"
+          - "_terms_enum.yaml#/not_reported/common"
 
   cases:
     $ref: "_definitions.yaml#/to_one"
