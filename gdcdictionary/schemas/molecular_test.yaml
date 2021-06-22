@@ -24,24 +24,28 @@ systemProperties:
   - state
 
 links:
-  - name: follow_ups
-    backref: molecular_tests
-    label: performed_at
-    target_type: follow_up
-    multiplicity: many_to_one
+
+  - exclusive: false
     required: true
-  - name: slides
-    backref: molecular_tests
-    label: related_to
-    target_type: slide
-    multiplicity: many_to_one
-    required: false
-  - name: diagnoses
-    backref: molecular_tests
-    label: related_to
-    target_type: diagnosis
-    multiplicity: many_to_one
-    required: false
+    subgroup:
+      - name: follow_ups
+        backref: molecular_tests
+        label: performed_at
+        target_type: follow_up
+        multiplicity: many_to_one
+        required: false
+      - name: slides
+        backref: molecular_tests
+        label: related_to
+        target_type: slide
+        multiplicity: many_to_one
+        required: false
+      - name: diagnoses
+        backref: molecular_tests
+        label: related_to
+        target_type: diagnosis
+        multiplicity: many_to_one
+        required: false
 
 required:
   - submitter_id
@@ -292,6 +296,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   biospecimen_volume:
+    $ref:
+      - "_terms.yaml#/biospecimen_volume/common"
     type: number
     minimum: 0
 
@@ -3729,6 +3735,8 @@ properties:
     minimum: 0
 
   mitotic_total_area:
+    $ref:
+      - "_terms.yaml#/mitotic_total_area/common"
     type: number
     minimum: 0
 

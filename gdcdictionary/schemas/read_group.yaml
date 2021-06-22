@@ -82,6 +82,8 @@ properties:
     type: string
 
   chipseq_antibody:
+    $ref:
+      - "_terms.yaml#/chipseq_antibody/common"
     enum:
       - abcam ab4729 anti-H3K27ac
       - Unknown
@@ -145,6 +147,8 @@ properties:
     minimum: 0
 
   fragmentation_enzyme:
+    $ref:
+      - "_terms.yaml#/fragmentation_enzyme/common"
     enum:
       - MboI
       - Unknown
@@ -328,6 +332,8 @@ properties:
     type: string
 
   read_length:
+    $ref:
+      - "_terms.yaml#/read_length/common"
     oneOf:
       - type: integer
         minimum: 0

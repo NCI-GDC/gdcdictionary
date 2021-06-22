@@ -1441,6 +1441,8 @@ properties:
     minimum: 0
 
   hormonal_contraceptive_type:
+    $ref:
+      - "_terms.yaml#/hormonal_contraceptive_type/common"
     enum:
       - Progestin
       - Progestin and Estrogen
@@ -1472,6 +1474,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   hormone_replacement_therapy_type:
+    $ref:
+      - "_terms.yaml#/hormone_replacement_therapy_type/common"
     enum:
       - Estrogen only
       - Progesterone and Estrogen
@@ -1697,6 +1701,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   procedures_performed:
+    $ref:
+      - "_terms.yaml#/procedures_performed/common"
     enum:
       - Colonoscopy
       - Endoscopy
