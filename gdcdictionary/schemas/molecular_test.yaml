@@ -7010,9 +7010,9 @@ properties:
       - x10^9 cells/L
       - Not Reported
       - Unknown
-      - count x10^9 cells/L
+      - count x10^9/L
     deprecated_enum:
-      - count x10^9 cells/L
+      - count x10^9/L
 
   test_value:
     $ref:
