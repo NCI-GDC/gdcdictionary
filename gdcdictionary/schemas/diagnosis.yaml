@@ -37,7 +37,7 @@ required:
   - age_at_diagnosis
   - morphology
   - primary_diagnosis
-  - primary_disease
+  - is_diagnosis_primary_disease
   - site_of_resection_or_biopsy
   - tissue_or_organ_of_origin
 
@@ -49,6 +49,7 @@ deprecated:
   - micropapillary_features
   - mitotic_count
   - papillary_renal_cell_type
+  - primary_disease
 
 properties:
 
@@ -2262,6 +2263,11 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  is_diagnosis_primary_disease:
+    $ref:
+      - "_terms.yaml#/is_diagnosis_primary_disease/common"
+    type: boolean
 
   ishak_fibrosis_score:
     $ref:
