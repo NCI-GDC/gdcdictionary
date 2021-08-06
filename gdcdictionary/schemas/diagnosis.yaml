@@ -1572,7 +1572,7 @@ properties:
 
   diagnosis_is_primary_disease:
     $ref:
-      - "_terms.yaml#/is_diagnosis_primary_disease/common"
+      - "_terms.yaml#/diagnosis_is_primary_disease/common"
     type: boolean
 
   eln_risk_classification:
