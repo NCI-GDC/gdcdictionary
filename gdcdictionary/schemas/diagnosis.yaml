@@ -37,7 +37,7 @@ required:
   - age_at_diagnosis
   - morphology
   - primary_diagnosis
-  - is_diagnosis_primary_disease
+  - diagnosis_is_primary_disease
   - site_of_resection_or_biopsy
   - tissue_or_organ_of_origin
 
@@ -1570,6 +1570,11 @@ properties:
         minimum: -32872
       - type: "null"
 
+  diagnosis_is_primary_disease:
+    $ref:
+      - "_terms.yaml#/is_diagnosis_primary_disease/common"
+    type: boolean
+
   eln_risk_classification:
     $ref:
       - "_terms.yaml#/eln_risk_classification/common"
@@ -2263,11 +2268,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-
-  is_diagnosis_primary_disease:
-    $ref:
-      - "_terms.yaml#/is_diagnosis_primary_disease/common"
-    type: boolean
 
   ishak_fibrosis_score:
     $ref:
