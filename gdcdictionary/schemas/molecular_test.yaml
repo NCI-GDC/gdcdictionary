@@ -6996,8 +6996,11 @@ properties:
       - mcg/mL
       - mg/dL
       - mg/L
+      - mm^2
       - mmol/L
       - mU/mol Hb
+      - ng/mL
+      - percent
       - U/g Hb
       - U/mL
       - U/L
@@ -7007,9 +7010,9 @@ properties:
       - x10^9 cells/L
       - Not Reported
       - Unknown
-      - count x10^9 cells/L
+      - count x10^9/L
     deprecated_enum:
-      - count x10^9 cells/L
+      - count x10^9/L
 
   test_value:
     $ref:
