@@ -5643,6 +5643,20 @@ adrenal_hormone:
       cde_version: 21.04d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C2264"
 
+diagnosis_is_primary_disease:
+  common:
+    description: >-
+      Indicates whether this specific diagnosis represents the disease that was the
+      primary focus of the study. Additionally, this diagnosis is reflected at the 
+      case level, which is captured using the case.disease_type property.
+    termDef:
+      term: >-
+        Is Diagnosis Primary Disease
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
 primary_disease:
   common:
     description: >-

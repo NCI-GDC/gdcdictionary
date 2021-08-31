@@ -37,7 +37,7 @@ required:
   - age_at_diagnosis
   - morphology
   - primary_diagnosis
-  - primary_disease
+  - diagnosis_is_primary_disease
   - site_of_resection_or_biopsy
   - tissue_or_organ_of_origin
 
@@ -49,6 +49,7 @@ deprecated:
   - micropapillary_features
   - mitotic_count
   - papillary_renal_cell_type
+  - primary_disease
 
 properties:
 
@@ -1568,6 +1569,11 @@ properties:
         maximum: 32872
         minimum: -32872
       - type: "null"
+
+  diagnosis_is_primary_disease:
+    $ref:
+      - "_terms.yaml#/diagnosis_is_primary_disease/common"
+    type: boolean
 
   eln_risk_classification:
     $ref:

@@ -47,8 +47,54 @@ properties:
     $ref:
       - "_terms.yaml#/additional_pathology_findings/common"
     enum:
-      - Pleurodesis, Talc
-      - Pleurodesis, NOS
+      - Adenomyosis
+      - Atrophic endometrium
+      - Atypical hyperplasia/Endometrial intraepithelial neoplasia (EIN)
+      - Autoimmune atrophic chronic gastritis
+      - Asbestos bodies
+      - Benign endocervical polyp
+      - Bilateral ovaries with endometriotic cyst and surface adhesions
+      - Carcinoma in situ
+      - Cirrhosis
+      - Clostridioides difficile (c. diff)
+      - Colonization; bacterial
+      - Colonization; fungal
+      - Cyst(s)
+      - Diffuse and early nodular diabetic glomerulosclerosis
+      - Dysplasia; high grade
+      - Dysplasia; low grade
+      - Endometrial polyp
+      - Endometriosis
+      - Endometroid carcinoma with local mucinous differentiation
+      - Endosalpingiosis
+      - Epithelial dysplasia
+      - Epithelial hyperplasia
+      - Gallbladder adenomyomatosis
+      - Glomerular disease
+      - Hyperkeratosis
+      - Inflammation
+      - Intestinal metaplasia
+      - Keratinizing dysplasia; mild
+      - Keratinizing dysplasia; moderate
+      - Keratinizing dysplasia; severe (carcinoma in situ)
+      - Leiomyoma
+      - Leiomyomata w/ degenerative changes
+      - Nonkeratinizing dysplasia; mild
+      - Nonkeratinizing dysplasia; moderate
+      - Nonkeratinizing dysplasia; severe (carcinoma in situ)
+      - Other
+      - PD-L1 CPS (223C LDT) - 20%
+      - Platinum-resistant
+      - Pleural plaque
+      - Pulmonary interstitial fibrosis
+      - Sialadenitis
+      - Sinonasal papilloma
+      - Squamous metaplasia
+      - Squamous papilloma; solitary
+      - Squamous papillomatosis
+      - Tubular (papillary) adenoma(s)
+      - Tumor-associated lymphoid proliferation
+      - Tumor has rough spikey edges
 
   anaplasia_present:
     $ref:

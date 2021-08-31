@@ -66,7 +66,7 @@
     "weiss_assessment_score":"3",
     "wilms_tumor_histologic_subtype":"Favorable",
     "year_of_diagnosis": 2050,
-    "primary_disease":true,
+    "diagnosis_is_primary_disease":true,
     "cases": {
         "submitter_id": "BLGSP-71-06-00019"
     }
