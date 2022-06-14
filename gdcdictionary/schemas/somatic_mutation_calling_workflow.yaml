@@ -7,9 +7,8 @@ namespace: https://gdc.cancer.gov
 category: analysis
 project: '*'
 program: '*'
-description: >-
-  Metadata for the somatic mutation calling pipeline used to call variants in the
-  GDC DNA-Seq pipelines.
+description: Metadata for the somatic mutation calling pipeline used to call variants
+  in the GDC DNA-Seq pipelines.
 additionalProperties: false
 submittable: false
 downloadable: false
@@ -42,15 +41,15 @@ uniqueKeys:
 
 properties:
 
-  $ref:
-    - "_definitions.yaml#/workflow_properties"
+  $ref: "_definitions.yaml#/workflow_properties"
 
   workflow_type:
-    $ref:
-      - "_terms.yaml#/workflow_type/common"
+    term:
+      $ref: "_terms.yaml#/workflow_type/common"
     enum:
       - CaVEMan
       - GATK4 MuTect2
+      - GATK4 MuTect2 Tumor-Only
       - MuSE
       - MuTect2
       - Pindel
