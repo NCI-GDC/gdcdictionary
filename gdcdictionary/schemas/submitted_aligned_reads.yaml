@@ -7,8 +7,7 @@ namespace: https://gdc.cancer.gov
 category: data_file
 project: '*'
 program: '*'
-description: >-
-  Data file containing aligned reads that are used as input to GDC workflows.
+description: Data file containing aligned reads that are used as input to GDC workflows.
 additionalProperties: false
 submittable: true
 downloadable: false
@@ -51,36 +50,35 @@ deprecated:
 
 properties:
 
-  $ref:
-    - "_definitions.yaml#/data_file_properties"
+  $ref: "_definitions.yaml#/data_file_properties"
 
   data_category:
-    $ref:
-      - "_terms.yaml#/data_category/common"
+    term:
+      $ref: "_terms.yaml#/data_category/common"
     enum:
       - Sequencing Reads
 
   data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
+    term:
+      $ref: "_terms.yaml#/data_type/common"
     enum:
       - Aligned Reads
 
   data_format:
-    $ref:
-      - "_terms.yaml#/data_format/common"
+    term:
+      $ref: "_terms.yaml#/data_format/common"
     enum:
       - BAM
 
   experimental_strategy:
-    $ref:
-      - "_terms.yaml#/experimental_strategy/common"
+    term:
+      $ref: "_terms.yaml#/experimental_strategy/common"
     enum:
       - ATAC-Seq
       - Bisulfite-Seq
       - ChIP-Seq
       - HiChIP
-      - m6A RNA Methylation
+      - m6A MeRIP-Seq
       - miRNA-Seq
       - RNA-Seq
       - scATAC-Seq
@@ -90,18 +88,15 @@ properties:
       - WXS
     enumDef:
       Targeted Sequencing:
-        $ref:
-          - "_terms_enum.yaml#/targeted_sequencing/common"
+        $ref: "_terms_enum.yaml#/targeted_sequencing/common"
       WGS:
-        $ref:
-          - "_terms_enum.yaml#/wgs/common"
+        $ref: "_terms_enum.yaml#/wgs/common"
       WXS:
-        $ref:
-          - "_terms_enum.yaml#/wxs/common"
+        $ref: "_terms_enum.yaml#/wxs/common"
 
   proc_internal:
-    $ref:
-      - "_terms.yaml#/proc_internal/common"
+    term:
+      $ref: "_terms.yaml#/proc_internal/common"
     enum:
       - dna-seq skip
 
