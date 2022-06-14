@@ -7,8 +7,7 @@ namespace: https://gdc.cancer.gov
 category: data_file
 project: '*'
 program: '*'
-description: >-
-  Data file containing unaligned reads that have not been GDC Harmonized.
+description: Data file containing unaligned reads that have not been GDC Harmonized.
 additionalProperties: false
 submittable: true
 downloadable: false
@@ -49,37 +48,36 @@ uniqueKeys:
 
 properties:
 
-  $ref:
-    - "_definitions.yaml#/data_file_properties"
+  $ref: "_definitions.yaml#/data_file_properties"
 
   data_category:
-    $ref:
-      - "_terms.yaml#/data_category/common"
+    term:
+      $ref: "_terms.yaml#/data_category/common"
     enum:
       - Sequencing Reads
 
   data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
+    term:
+      $ref: "_terms.yaml#/data_type/common"
     enum:
       - Unaligned Reads
 
   data_format:
-    $ref:
-      - "_terms.yaml#/data_format/common"
+    term:
+      $ref: "_terms.yaml#/data_format/common"
     enum:
       - BAM
       - FASTQ
 
   experimental_strategy:
-    $ref:
-      - "_terms.yaml#/experimental_strategy/common"
+    term:
+      $ref: "_terms.yaml#/experimental_strategy/common"
     enum:
       - ATAC-Seq
       - Bisulfite-Seq
       - ChIP-Seq
       - HiChIP
-      - m6A RNA Methylation
+      - m6A MeRIP-Seq
       - miRNA-Seq
       - RNA-Seq
       - scATAC-Seq
@@ -89,18 +87,15 @@ properties:
       - WXS
     enumDef:
       Targeted Sequencing:
-        $ref:
-          - "_terms_enum.yaml#/targeted_sequencing/common"
+        $ref: "_terms_enum.yaml#/targeted_sequencing/common"
       WGS:
-        $ref:
-          - "_terms_enum.yaml#/wgs/common"
+        $ref: "_terms_enum.yaml#/wgs/common"
       WXS:
-        $ref:
-          - "_terms_enum.yaml#/wxs/common"
+        $ref: "_terms_enum.yaml#/wxs/common"
 
   read_pair_number:
-    $ref:
-      - "_terms.yaml#/read_pair_number/common"
+    term:
+      $ref: "_terms.yaml#/read_pair_number/common"
     enum:
       - Not Applicable
       - R1
@@ -108,8 +103,7 @@ properties:
       - R3
     enumDef:
       Not Applicable:
-        $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
+        $ref: "_terms_enum.yaml#/not_applicable/common"
 
   read_groups:
     $ref: "_definitions.yaml#/to_one"
