@@ -7,9 +7,8 @@ namespace: https://gdc.cancer.gov
 category: biospecimen
 project: '*'
 program: '*'
-description: >-
-  A liquid bulk product produced according to specified lab protocols, from a sample
-  or analyte, intended for further analysis.
+description: A liquid bulk product produced according to specified lab protocols,
+  from a sample or analyte, intended for further analysis.
 additionalProperties: false
 submittable: true
 downloadable: false
@@ -50,30 +49,29 @@ uniqueKeys:
 
 properties:
 
-  $ref:
-    - "_definitions.yaml#/ubiquitous_properties"
+  $ref: "_definitions.yaml#/ubiquitous_properties"
 
   a260_a280_ratio:
-    $ref:
-      - "_terms.yaml#/a260_a280_ratio/common"
+    term:
+      $ref: "_terms.yaml#/a260_a280_ratio/common"
     type: number
     minimum: 0
 
   amount:
-    $ref:
-      - "_terms.yaml#/amount/common"
+    term:
+      $ref: "_terms.yaml#/amount/common"
     type: number
     minimum: 0
 
   analyte_quantity:
-    $ref:
-      - "_terms.yaml#/analyte_quantity/common"
+    term:
+      $ref: "_terms.yaml#/analyte_quantity/common"
     type: number
     minimum: 0
 
   analyte_type:
-    $ref:
-      - "_terms.yaml#/analyte_type/common"
+    term:
+      $ref: "_terms.yaml#/analyte_type/common"
     enum:
       - cfDNA
       - DNA
@@ -81,6 +79,7 @@ properties:
       - FFPE DNA
       - FFPE RNA
       - GenomePlex (Rubicon) Amplified DNA
+      - m6A enriched RNA
       - Nuclei RNA
       - Repli-G (Qiagen) DNA
       - Repli-G Pooled (Qiagen) DNA
@@ -89,15 +88,13 @@ properties:
       - Total RNA
     enumDef:
       DNA:
-        $ref:
-          - "_terms_enum.yaml#/dna/common"
+        $ref: "_terms_enum.yaml#/dna/common"
       Total RNA:
-        $ref:
-          - "_terms_enum.yaml#/total_rna/common"
+        $ref: "_terms_enum.yaml#/total_rna/common"
 
   analyte_type_id:
-    $ref:
-      - "_terms.yaml#/analyte_type_id/common"
+    term:
+      $ref: "_terms.yaml#/analyte_type_id/common"
     enum:
       - D
       - E
@@ -111,20 +108,20 @@ properties:
       - Y
 
   analyte_volume:
-    $ref:
-      - "_terms.yaml#/analyte_volume/common"
+    term:
+      $ref: "_terms.yaml#/analyte_volume/common"
     type: number
     minimum: 0
 
   concentration:
-    $ref:
-      - "_terms.yaml#/concentration/common"
+    term:
+      $ref: "_terms.yaml#/concentration/common"
     type: number
     minimum: 0
 
   experimental_protocol_type:
-    $ref:
-      - "_terms.yaml#/experimental_protocol_type/common"
+    term:
+      $ref: "_terms.yaml#/experimental_protocol_type/common"
     enum:
       - aDNA Preparation Type
       - Allprep FFPE DNA
@@ -140,12 +137,11 @@ properties:
       - Total RNA
     enumDef:
       Total RNA:
-        $ref:
-          - "_terms_enum.yaml#/total_rna/common"
+        $ref: "_terms_enum.yaml#/total_rna/common"
 
   normal_tumor_genotype_snp_match:
-    $ref:
-      - "_terms.yaml#/normal_tumor_genotype_snp_match/common"
+    term:
+      $ref: "_terms.yaml#/normal_tumor_genotype_snp_match/common"
     enum:
       - "Yes"
       - "No"
@@ -154,41 +150,36 @@ properties:
       - Not Allowed To Collect
     enumDef:
       "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
+        $ref: "_terms_enum.yaml#/yes/common"
       "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
+        $ref: "_terms_enum.yaml#/no/common"
       Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
+        $ref: "_terms_enum.yaml#/unknown/common"
       Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
+        $ref: "_terms_enum.yaml#/not_reported/common"
       Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
+        $ref: "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   ribosomal_rna_28s_16s_ratio:
-    $ref:
-      - "_terms.yaml#/ribosomal_rna_28s_16s_ratio/common"
+    term:
+      $ref: "_terms.yaml#/ribosomal_rna_28s_16s_ratio/common"
     type: number
     minimum: 0
 
   rna_integrity_number:
-    $ref:
-      - "_terms.yaml#/rna_integrity_number/common"
+    term:
+      $ref: "_terms.yaml#/rna_integrity_number/common"
     type: number
     maximum: 10
 
   spectrophotometer_method:
-    $ref:
-      - "_terms.yaml#/spectrophotometer_method/common"
+    term:
+      $ref: "_terms.yaml#/spectrophotometer_method/common"
     type: string
 
   well_number:
-    $ref:
-      - "_terms.yaml#/well_number/common"
+    term:
+      $ref: "_terms.yaml#/well_number/common"
     type: string
 
   portions:
