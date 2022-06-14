@@ -7,8 +7,7 @@ namespace: https://gdc.cancer.gov
 category: biospecimen
 project: '*'
 program: '*'
-description: >-
-  Sequencing reads from one lane of an NGS experiment.
+description: Sequencing reads from one lane of an NGS experiment.
 additionalProperties: false
 submittable: true
 downloadable: false
@@ -58,44 +57,42 @@ deprecated:
 
 properties:
 
-  $ref:
-    - "_definitions.yaml#/ubiquitous_properties"
+  $ref: "_definitions.yaml#/ubiquitous_properties"
 
   adapter_name:
-    $ref:
-      - "_terms.yaml#/adapter_name/common"
+    term:
+      $ref: "_terms.yaml#/adapter_name/common"
     type: string
 
   adapter_sequence:
-    $ref:
-      - "_terms.yaml#/adapter_sequence/common"
+    term:
+      $ref: "_terms.yaml#/adapter_sequence/common"
     type: string
 
   base_caller_name:
-    $ref:
-      - "_terms.yaml#/base_caller_name/common"
+    term:
+      $ref: "_terms.yaml#/base_caller_name/common"
     type: string
 
   base_caller_version:
-    $ref:
-      - "_terms.yaml#/base_caller_version/common"
+    term:
+      $ref: "_terms.yaml#/base_caller_version/common"
     type: string
 
   chipseq_antibody:
-    $ref:
-      - "_terms.yaml#/chipseq_antibody/common"
+    term:
+      $ref: "_terms.yaml#/chipseq_antibody/common"
     enum:
       - abcam ab4729 anti-H3K27ac
       - Unknown
       - Not Applicable
     enumDef:
       Not Applicable:
-        $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
+        $ref: "_terms_enum.yaml#/not_applicable/common"
 
   chipseq_target:
-    $ref:
-      - "_terms.yaml#/chipseq_target/common"
+    term:
+      $ref: "_terms.yaml#/chipseq_target/common"
     enum:
       - H3K4me1
       - H3K4me3
@@ -107,65 +104,64 @@ properties:
       - Unknown
 
   days_to_sequencing:
-    $ref:
-      - "_terms.yaml#/days_to_sequencing/common"
+    term:
+      $ref: "_terms.yaml#/days_to_sequencing/common"
     type: integer
     minimum: -32872
 
   experiment_name:
-    $ref:
-      - "_terms.yaml#/experiment_name/common"
+    term:
+      $ref: "_terms.yaml#/experiment_name/common"
     type: string
 
   flow_cell_barcode:
-    $ref:
-      - "_terms.yaml#/flow_cell_barcode/common"
+    term:
+      $ref: "_terms.yaml#/flow_cell_barcode/common"
     type: string
 
   fragment_maximum_length:
-    $ref:
-      - "_terms.yaml#/fragment_maximum_length/common"
+    term:
+      $ref: "_terms.yaml#/fragment_maximum_length/common"
     type: integer
     minimum: 0
 
   fragment_mean_length:
-    $ref:
-      - "_terms.yaml#/fragment_mean_length/common"
+    term:
+      $ref: "_terms.yaml#/fragment_mean_length/common"
     type: number
     minimum: 0
 
   fragment_minimum_length:
-    $ref:
-      - "_terms.yaml#/fragment_minimum_length/common"
+    term:
+      $ref: "_terms.yaml#/fragment_minimum_length/common"
     type: integer
     minimum: 0
 
   fragment_standard_deviation_length:
-    $ref:
-      - "_terms.yaml#/fragment_standard_deviation_length/common"
+    term:
+      $ref: "_terms.yaml#/fragment_standard_deviation_length/common"
     type: number
     minimum: 0
 
   fragmentation_enzyme:
-    $ref:
-      - "_terms.yaml#/fragmentation_enzyme/common"
+    term:
+      $ref: "_terms.yaml#/fragmentation_enzyme/common"
     enum:
       - MboI
       - Unknown
       - Not Applicable
     enumDef:
       Not Applicable:
-        $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
+        $ref: "_terms_enum.yaml#/not_applicable/common"
 
   includes_spike_ins:
-    $ref:
-      - "_terms.yaml#/includes_spike_ins/common"
+    term:
+      $ref: "_terms.yaml#/includes_spike_ins/common"
     type: boolean
 
   instrument_model:
-    $ref:
-      - "_terms.yaml#/instrument_model/common"
+    term:
+      $ref: "_terms.yaml#/instrument_model/common"
     enum:
       - 454 GS FLX Titanium
       - AB SOLiD 2
@@ -191,56 +187,53 @@ properties:
       - Not Reported
     enumDef:
       Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
+        $ref: "_terms_enum.yaml#/other/common"
       Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
+        $ref: "_terms_enum.yaml#/unknown/common"
       Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
+        $ref: "_terms_enum.yaml#/not_reported/common"
 
   is_paired_end:
-    $ref:
-      - "_terms.yaml#/is_paired_end/common"
+    term:
+      $ref: "_terms.yaml#/is_paired_end/common"
     oneOf:
       - type: boolean
       - type: "null"
 
   lane_number:
-    $ref:
-      - "_terms.yaml#/lane_number/common"
+    term:
+      $ref: "_terms.yaml#/lane_number/common"
     type: integer
     minimum: 1
 
   library_name:
-    $ref:
-      - "_terms.yaml#/library_name/common"
+    term:
+      $ref: "_terms.yaml#/library_name/common"
     type: string
 
   library_preparation_kit_name:
-    $ref:
-      - "_terms.yaml#/library_preparation_kit_name/common"
+    term:
+      $ref: "_terms.yaml#/library_preparation_kit_name/common"
     type: string
 
   library_preparation_kit_vendor:
-    $ref:
-      - "_terms.yaml#/library_preparation_kit_vendor/common"
+    term:
+      $ref: "_terms.yaml#/library_preparation_kit_vendor/common"
     type: string
 
   library_preparation_kit_catalog_number:
-    $ref:
-      - "_terms.yaml#/library_preparation_kit_catalog_number/common"
+    term:
+      $ref: "_terms.yaml#/library_preparation_kit_catalog_number/common"
     type: string
 
   library_preparation_kit_version:
-    $ref:
-      - "_terms.yaml#/library_preparation_kit_version/common"
+    term:
+      $ref: "_terms.yaml#/library_preparation_kit_version/common"
     type: string
 
   library_selection:
-    $ref:
-      - "_terms.yaml#/library_selection/common"
+    term:
+      $ref: "_terms.yaml#/library_selection/common"
     enum:
       - Affinity Enrichment
       - Hybrid Selection
@@ -252,15 +245,13 @@ properties:
       - rRNA Depletion
     enumDef:
       Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
+        $ref: "_terms_enum.yaml#/other/common"
       PCR:
-        $ref:
-          - "_terms_enum.yaml#/pcr/common"
+        $ref: "_terms_enum.yaml#/pcr/common"
 
   library_strand:
-    $ref:
-      - "_terms.yaml#/library_strand/common"
+    term:
+      $ref: "_terms.yaml#/library_strand/common"
     enum:
       - Unstranded
       - First_Stranded
@@ -268,18 +259,17 @@ properties:
       - Not Applicable
     enumDef:
       Not Applicable:
-        $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
+        $ref: "_terms_enum.yaml#/not_applicable/common"
 
   library_strategy:
-    $ref:
-      - "_terms.yaml#/library_strategy/common"
+    term:
+      $ref: "_terms.yaml#/library_strategy/common"
     enum:
       - ATAC-Seq
       - Bisulfite-Seq
       - ChIP-Seq
       - HiChIP
-      - m6A RNA Methylation
+      - m6A MeRIP-Seq
       - miRNA-Seq
       - RNA-Seq
       - scATAC-Seq
@@ -289,30 +279,27 @@ properties:
       - WXS
     enumDef:
       Targeted Sequencing:
-        $ref:
-          - "_terms_enum.yaml#/targeted_sequencing/common"
+        $ref: "_terms_enum.yaml#/targeted_sequencing/common"
       WGS:
-        $ref:
-          - "_terms_enum.yaml#/wgs/common"
+        $ref: "_terms_enum.yaml#/wgs/common"
       WXS:
-        $ref:
-          - "_terms_enum.yaml#/wxs/common"
+        $ref: "_terms_enum.yaml#/wxs/common"
 
   multiplex_barcode:
-    $ref:
-      - "_terms.yaml#/multiplex_barcode/common"
+    term:
+      $ref: "_terms.yaml#/multiplex_barcode/common"
     type: string
     pattern: "^[0-9ACGTURYSWKMBDHVN]+([\\+\\-][0-9ACGTURYSWKMBDHVN]+){,2}$"
 
   number_expect_cells:
-    $ref:
-      - "_terms.yaml#/number_expect_cells/common"
+    term:
+      $ref: "_terms.yaml#/number_expect_cells/common"
     type: integer
     minimum: 0
 
   platform:
-    $ref:
-      - "_terms.yaml#/platform/common"
+    term:
+      $ref: "_terms.yaml#/platform/common"
     enum:
       - Complete Genomics
       - Illumina
@@ -323,46 +310,43 @@ properties:
       - SOLiD
     enumDef:
       Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
+        $ref: "_terms_enum.yaml#/other/common"
 
   read_group_name:
-    description: >-
-      Read Group Name
+    description: Read Group Name
     type: string
 
   read_length:
-    $ref:
-      - "_terms.yaml#/read_length/common"
+    term:
+      $ref: "_terms.yaml#/read_length/common"
     oneOf:
       - type: integer
         minimum: 0
       - type: "null"
 
   rin:
-    $ref:
-      - "_terms.yaml#/rin/common"
+    term:
+      $ref: "_terms.yaml#/rin/common"
     type: number
     maximum: 10
     minimum: 1
 
   sequencing_center:
-    $ref:
-      - "_terms.yaml#/sequencing_center/common"
+    term:
+      $ref: "_terms.yaml#/sequencing_center/common"
     type: string
 
   sequencing_date:
-    $ref:
-      - "_definitions.yaml#/datetime"
+    $ref: "_definitions.yaml#/datetime"
 
   size_selection_range:
-    $ref:
-      - "_terms.yaml#/size_selection_range/common"
+    term:
+      $ref: "_terms.yaml#/size_selection_range/common"
     type: string
 
   single_cell_library:
-    $ref:
-      - "_terms.yaml#/single_cell_library/common"
+    term:
+      $ref: "_terms.yaml#/single_cell_library/common"
     enum:
       - Chromium 3' Gene Expression v2 Library
       - Chromium 3' Gene Expression v3 Library
@@ -370,18 +354,18 @@ properties:
       - Smart-Seq2
 
   spike_ins_concentration:
-    $ref:
-      - "_terms.yaml#/spike_ins_concentration/common"
+    term:
+      $ref: "_terms.yaml#/spike_ins_concentration/common"
     type: string
 
   spike_ins_fasta:
-    $ref:
-      - "_terms.yaml#/spike_ins_fasta/common"
+    term:
+      $ref: "_terms.yaml#/spike_ins_fasta/common"
     type: string
 
   target_capture_kit:
-    $ref:
-      - "_terms.yaml#/target_capture_kit/common"
+    term:
+      $ref: "_terms.yaml#/target_capture_kit/common"
     enum:
       - Custom AmpliSeq Cancer Hotspot GENIE-MDA Augmented Panel v1 - 46 Genes
       - Custom GENIE-DFCI OncoPanel - 275 Genes
@@ -397,6 +381,7 @@ properties:
       - Custom Personalis ACEcp VAREPOP-APOLLO Panel v2
       - Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 203 Genes
       - Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 88 Genes
+      - Custom SeqCap EZ BeatAML Panel - 12.5 Mb
       - Custom SeqCap EZ HGSC VCRome v2.1 ER Augmented v1
       - Custom SeqCap EZ HGSC VCRome v2.1 ER Augmented v2
       - Custom SeqCap EZ TARGET-OS Panel - 7.0 Mb
@@ -409,6 +394,7 @@ properties:
       - Custom SureSelect TARGET-AML_NBL_WT Panel - 2.8 Mb
       - Custom Twist Broad Exome v1.0 - 35.0 Mb
       - Custom Twist Broad PanCancer Panel - 396 Genes
+      - Custom Twist MP2PRT-WT Panel - 52 Kb
       - Foundation Medicine T5a Panel - 322 Genes
       - Foundation Medicine T7 Panel - 429 Genes
       - Ion AmpliSeq Cancer Hotspot Panel v2
@@ -432,40 +418,38 @@ properties:
       - Unknown
     enumDef:
       Not Applicable:
-        $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
+        $ref: "_terms_enum.yaml#/not_applicable/common"
       Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
+        $ref: "_terms_enum.yaml#/unknown/common"
 
   target_capture_kit_catalog_number:
-    $ref:
-      - "_terms.yaml#/target_capture_kit_catalog_number/common"
+    term:
+      $ref: "_terms.yaml#/target_capture_kit_catalog_number/common"
     type: string
 
   target_capture_kit_name:
-    $ref:
-      - "_terms.yaml#/target_capture_kit_name/common"
+    term:
+      $ref: "_terms.yaml#/target_capture_kit_name/common"
     type: string
 
   target_capture_kit_target_region:
-    $ref:
-      - "_terms.yaml#/target_capture_kit_target_region/common"
+    term:
+      $ref: "_terms.yaml#/target_capture_kit_target_region/common"
     type: string
 
   target_capture_kit_vendor:
-    $ref:
-      - "_terms.yaml#/target_capture_kit_vendor/common"
+    term:
+      $ref: "_terms.yaml#/target_capture_kit_vendor/common"
     type: string
 
   target_capture_kit_version:
-    $ref:
-      - "_terms.yaml#/target_capture_kit_version/common"
+    term:
+      $ref: "_terms.yaml#/target_capture_kit_version/common"
     type: string
 
   to_trim_adapter_sequence:
-    $ref:
-      - "_terms.yaml#/to_trim_adapter_sequence/common"
+    term:
+      $ref: "_terms.yaml#/to_trim_adapter_sequence/common"
     type: boolean
 
   aliquots:
