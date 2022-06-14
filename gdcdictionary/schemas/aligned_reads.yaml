@@ -7,8 +7,8 @@ namespace: https://gdc.cancer.gov
 category: data_file
 project: '*'
 program: '*'
-description: >-
-  Data file containing aligned reads that are generated internally by the GDC.
+description: Data file containing aligned reads that are generated internally by the
+  GDC.
 additionalProperties: false
 submittable: false
 downloadable: true
@@ -77,60 +77,60 @@ deprecated:
 
 properties:
 
-  $ref:
-    - "_definitions.yaml#/data_file_properties"
+  $ref: "_definitions.yaml#/data_file_properties"
 
   average_base_quality:
-    $ref:
-      - "_terms.yaml#/average_base_quality/common"
+    term:
+      $ref: "_terms.yaml#/average_base_quality/common"
     type: number
 
   average_insert_size:
-    $ref:
-      - "_terms.yaml#/average_insert_size/common"
+    term:
+      $ref: "_terms.yaml#/average_insert_size/common"
     type: integer
 
   average_read_length:
-    $ref:
-      - "_terms.yaml#/average_read_length/common"
+    term:
+      $ref: "_terms.yaml#/average_read_length/common"
     type: integer
 
   contamination:
-    $ref:
-      - "_terms.yaml#/contamination/common"
+    term:
+      $ref: "_terms.yaml#/contamination/common"
     type: number
 
   contamination_error:
-    $ref:
-      - "_terms.yaml#/contamination_error/common"
+    term:
+      $ref: "_terms.yaml#/contamination_error/common"
     type: number
 
   data_category:
-    $ref:
-      - "_terms.yaml#/data_category/common"
+    term:
+      $ref: "_terms.yaml#/data_category/common"
     enum:
       - Sequencing Reads
 
   data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
+    term:
+      $ref: "_terms.yaml#/data_type/common"
     enum:
       - Aligned Reads
 
   data_format:
-    $ref:
-      - "_terms.yaml#/data_format/common"
+    term:
+      $ref: "_terms.yaml#/data_format/common"
     enum:
       - BAM
 
   experimental_strategy:
-    $ref:
-      - "_terms.yaml#/experimental_strategy/common"
+    term:
+      $ref: "_terms.yaml#/experimental_strategy/common"
     enum:
       - ATAC-Seq
       - Bisulfite-Seq
       - ChIP-Seq
       - HiChIP
+      - m6A MeRIP-Seq
       - miRNA-Seq
       - RNA-Seq
       - scATAC-Seq
@@ -141,84 +141,78 @@ properties:
       - WXS
     enumDef:
       Targeted Sequencing:
-        $ref:
-          - "_terms_enum.yaml#/targeted_sequencing/common"
+        $ref: "_terms_enum.yaml#/targeted_sequencing/common"
       WGS:
-        $ref:
-          - "_terms_enum.yaml#/wgs/common"
+        $ref: "_terms_enum.yaml#/wgs/common"
       WXS:
-        $ref:
-          - "_terms_enum.yaml#/wxs/common"
+        $ref: "_terms_enum.yaml#/wxs/common"
 
   mean_coverage:
-    $ref:
-      - "_terms.yaml#/mean_coverage/common"
+    term:
+      $ref: "_terms.yaml#/mean_coverage/common"
     type: number
 
   msi_status:
-    description: >-
-      MSIsensor determination of either microsatellite stability or instability.
+    description: MSIsensor determination of either microsatellite stability or instability.
     enum:
       - MSI
       - MSS
 
   msi_score:
-    description: >-
-      Numeric score denoting the aligned reads file's MSI score from MSIsensor.
+    description: Numeric score denoting the aligned reads file's MSI score from MSIsensor.
     type: number
 
   pairs_on_diff_chr:
-    $ref:
-      - "_terms.yaml#/pairs_on_diff_chr/common"
+    term:
+      $ref: "_terms.yaml#/pairs_on_diff_chr/common"
     type: integer
 
   platform:
-    $ref:
-      - "read_group.yaml#/properties/platform"
+    $ref: "read_group.yaml#/properties/platform"
 
   proportion_base_mismatch:
-    $ref:
-      - "_terms.yaml#/proportion_base_mismatch/common"
+    term:
+      $ref: "_terms.yaml#/proportion_base_mismatch/common"
     type: number
 
   proportion_coverage_10x:
-    $ref:
-      - "_terms.yaml#/proportion_coverage_10x/common"
+    term:
+      $ref: "_terms.yaml#/proportion_coverage_10x/common"
     type: number
 
   proportion_coverage_30x:
-    $ref:
-      - "_terms.yaml#/proportion_coverage_30x/common"
+    term:
+      $ref: "_terms.yaml#/proportion_coverage_30x/common"
     type: number
 
   proportion_reads_duplicated:
-    $ref:
-      - "_terms.yaml#/proportion_reads_duplicated/common"
+    term:
+      $ref: "_terms.yaml#/proportion_reads_duplicated/common"
     type: number
 
   proportion_reads_mapped:
-    $ref:
-      - "_terms.yaml#/proportion_reads_mapped/common"
+    term:
+      $ref: "_terms.yaml#/proportion_reads_mapped/common"
     type: number
 
   proportion_targets_no_coverage:
-    $ref:
-      - "_terms.yaml#/proportion_targets_no_coverage/common"
+    term:
+      $ref: "_terms.yaml#/proportion_targets_no_coverage/common"
     type: number
 
   tumor_ploidy:
-    $ref:
-      - "_terms.yaml#/tumor_ploidy/common"
+    term:
+      $ref: "_terms.yaml#/tumor_ploidy/common"
     type: number
 
   tumor_purity:
-    $ref:
-      - "_terms.yaml#/tumor_purity/common"
+    term:
+      $ref: "_terms.yaml#/tumor_purity/common"
     type: number
 
   total_reads:
-    $ref:
-      - "_terms.yaml#/total_reads/common"
+    term:
+      $ref: "_terms.yaml#/total_reads/common"
     type: integer
 
   alignment_cocleaning_workflows:
