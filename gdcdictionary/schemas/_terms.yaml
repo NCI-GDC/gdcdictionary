@@ -78,7 +78,7 @@ age_at_diagnosis:
 age_at_index:
   common:
     description: >-
-      The patient's age (in years) on the reference or anchor date date used during
+      The patient's age (in years) on the reference or anchor date used during
       date obfuscation.
     termDef:
       term: >-
@@ -1198,8 +1198,8 @@ days_to_last_follow_up:
 days_to_last_known_disease_status:
   common:
     description: >-
-      Time interval from the date of last follow up to the date of initial pathologic
-      diagnosis, represented as a calculated number of days.
+      Time interval from the last time the patient's disease status was known to the
+      date of initial pathologic diagnosis, represented as a calculated number of days.
     termDef:
       term: >-
         Last Communication Contact Less Initial Pathologic Diagnosis Date Calculated
@@ -1399,6 +1399,34 @@ dlco_ref_predictive_percent:
       cde_id: 2180255
       cde_version: 1.0
       term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2180255&version=1.0"
+
+double_expressor_lymphoma:
+  common:
+    description: >-
+      An immunohistochemical finding indicating the presence of double expression
+      of MYC and BCL2 proteins in the neoplastic cells of a tumor sample.
+    termDef:
+      term: >-
+        Neoplastic Cells with Double Expression of MYC and BCL2 Proteins Present
+      source: NCIt
+      cde_id: C138900
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C138900"
+
+double_hit_lymphoma:
+  common:
+    description: >-
+      A rare B-cell non-Hodgkin lymphoma that is characterized by the abnormal
+      rearrangement of two genes, MYC gene and either BCL2 or BCL6 genes. Patients
+      with this type of lymphoma usually respond poorly to standard treatments
+      and have a poor prognosis.
+    termDef:
+      term: >-
+        High Grade B-Cell Lymphoma with MYC and BCL2 or BCL6 Rearrangements
+      source: NCIt
+      cde_id: C125904
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C125904"
 
 ecog_performance_status:
   common:
@@ -2368,15 +2396,17 @@ loci_count:
 locus:
   common:
     description: >-
-      Alphanumeric value used to describe the locus of a specific genetic variant.
-      Example: NM_001126114.
+      The position of a gene or a chromosomal marker on a chromosome; also, a
+      stretch of DNA at a particular place on a particular chromosome. The use
+      of locus is sometimes restricted to mean regions of DNA that are expressed.
+      Example: 17p13.1.
     termDef:
       term: >-
-        Molecular Laboratory Procedure Locus Location Text
-      source: caDSR
-      cde_id: 6142506
-      cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142506&version=1.0"
+        Locus
+      source: NCIt
+      cde_id: C45822
+      cde_version: 22.04d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.04d&ns=ncit&code=C45822&key=1930938629&b=1&n=null"
 
 longest_dimension:
   common:
@@ -2456,6 +2486,18 @@ masaoka_stage:
       cde_id: 3952848
       cde_version: 1.0
       term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3952848&version=1.0"
+
+max_tumor_bulk_site:
+  common:
+    description: >-
+      The site of the tumor where the dimension or diameter is larger than any
+      other part of the tumor.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
 
 md5sum:
   common:
@@ -3612,7 +3654,7 @@ residual_disease:
 respirable_crystalline_silica_exposure:
   common:
     description: >-
-      The yes/no/unknown indicator used to describe whether a patient was exposured
+      The yes/no/unknown indicator used to describe whether a patient was exposed
       to respirable crystalline silica, a widespread, naturally occurring, crystalline
       metal oxide that consists of different forms including quartz, cristobalite,
       tridymite, tripoli, ganister, chert and novaculite.
@@ -3866,7 +3908,7 @@ size_selection_range:
 smoking_frequency:
   common:
     description: >-
-      The text term used to generally decribe how often the patient smokes.
+      The text term used to generally describe how often the patient smokes.
     termDef:
       term: >-
         Person Smoking Frequency
@@ -4511,6 +4553,118 @@ type_of_tobacco_used:
       term: >-
         Person Tobacco Use Type
       source: caDSR
+      cde_id:
+      cde_version:
+      term_url:
+
+uicc_clinical_m:
+  common:
+    description: >-
+      The UICC TNM Classification is an anatomically based system that records the
+      primary and regional nodal extent of the tumor and the absence or presence of
+      metastases. The clinical M category describes the presence or otherwise of
+      distant metastatic spread as determined during a clinical exam.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+uicc_clinical_n:
+  common:
+    description: >-
+      The UICC TNM Classification is an anatomically based system that records the
+      primary and regional nodal extent of the tumor and the absence or presence of
+      metastases.  The clinical N category describes the regional lymph node
+      involvement as determined during a clinical exam.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+uicc_clinical_stage:
+  common:
+    description: >-
+      The UICC TNM Classification is an anatomically based system that records the
+      primary and regional nodal extent of the tumor and the absence or presence of
+      metastases. The clinical stage is based on the T, N, and M categories which
+      are determined during a clinical exam.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+uicc_clinical_t:
+  common:
+    description: >-
+      The UICC TNM Classification is an anatomically based system that records the
+      primary and regional nodal extent of the tumor and the absence or presence of
+      metastases.  The clinical T category describes the primary tumor site and
+      size as determined during a clinical exam.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+uicc_pathologic_m:
+  common:
+    description: >-
+      The UICC TNM Classification is an anatomically based system that records the
+      primary and regional nodal extent of the tumor and the absence or presence of
+      metastases. The pathological M category describes the presence or otherwise
+      of distant metastatic spread as determined during a pathology review.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+uicc_pathologic_n:
+  common:
+    description: >-
+      The UICC TNM Classification is an anatomically based system that records the
+      primary and regional nodal extent of the tumor and the absence or presence of
+      metastases. The pathological N category describes the regional lymph node
+      involvement as determined during a pathology review.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+uicc_pathologic_stage:
+  common:
+    description: >-
+      The UICC TNM Classification is an anatomically based system that records the
+      primary and regional nodal extent of the tumor and the absence or presence of
+      metastases. The pathological stage is based on the T, N, and M categories
+      which are determined during a pathological review.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+uicc_pathologic_t:
+  common:
+    description: >-
+      The UICC TNM Classification is an anatomically based system that records the
+      primary and regional nodal extent of the tumor and the absence or presence of
+      metastases.  The pathological T category describes the primary tumor site and
+      size as determined during a pathology review.
+    termDef:
+      term:
+      source:
       cde_id:
       cde_version:
       term_url:
@@ -5258,7 +5412,7 @@ haart_treatment_indicator:
   common:
     description: >-
       The text term used to indicate whether the patient received Highly Active Antiretroviral
-      Therapy (HARRT).
+      Therapy (HAART).
     termDef:
       term: >-
         HARRT Therapy Indicator
@@ -5647,7 +5801,7 @@ diagnosis_is_primary_disease:
   common:
     description: >-
       Indicates whether this specific diagnosis represents the disease that was the
-      primary focus of the study. Additionally, this diagnosis is reflected at the 
+      primary focus of the study. Additionally, this diagnosis is reflected at the
       case level, which is captured using the case.disease_type property.
     termDef:
       term: >-
@@ -5818,7 +5972,7 @@ undescended_testis_corrected_method:
 undescended_testis_corrected_laterality:
   common:
     description: >-
-      Descrives the lateral location of the patient's undescended testis correction.
+      Describes the lateral location of the patient's undescended testis correction.
     termDef:
       term: >-
         Undescended Testis Corrected Laterality
@@ -5856,7 +6010,7 @@ tumor_thickness:
   common:
     description: >-
       A measurement of the thickness of a sectioned slice (of tissue or mineral or
-      other substance).
+      other substance) in millimeters.
     termDef:
       term: >-
         Section Thickness
