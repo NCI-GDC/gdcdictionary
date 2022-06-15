@@ -279,7 +279,7 @@ properties:
       - Bisulfite-Seq
       - ChIP-Seq
       - HiChIP
-      - m6A RNA Methylation
+      - m6A MeRIP-Seq
       - miRNA-Seq
       - RNA-Seq
       - scATAC-Seq
@@ -397,6 +397,7 @@ properties:
       - Custom Personalis ACEcp VAREPOP-APOLLO Panel v2
       - Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 203 Genes
       - Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 88 Genes
+      - Custom SeqCap EZ BeatAML Panel - 12.5 Mb
       - Custom SeqCap EZ HGSC VCRome v2.1 ER Augmented v1
       - Custom SeqCap EZ HGSC VCRome v2.1 ER Augmented v2
       - Custom SeqCap EZ TARGET-OS Panel - 7.0 Mb
@@ -409,6 +410,7 @@ properties:
       - Custom SureSelect TARGET-AML_NBL_WT Panel - 2.8 Mb
       - Custom Twist Broad Exome v1.0 - 35.0 Mb
       - Custom Twist Broad PanCancer Panel - 396 Genes
+      - Custom Twist MP2PRT-WT Panel - 52 Kb
       - Foundation Medicine T5a Panel - 322 Genes
       - Foundation Medicine T7 Panel - 429 Genes
       - Ion AmpliSeq Cancer Hotspot Panel v2
