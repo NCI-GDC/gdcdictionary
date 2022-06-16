@@ -40,6 +40,7 @@ uniqueKeys:
 
 deprecated:
   - days_to_treatment
+  - treatment_arm
 
 properties:
 
@@ -68,6 +69,29 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  clinical_trial_indicator:
+    $ref:
+      - "_terms.yaml#/clinical_trial_indicator/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms_enum.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms_enum.yaml#/no/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
+
+  course_number:
+    $ref:
+      - "_terms.yaml#/course_number/common"
+    type: number
+
   days_to_treatment_end:
     $ref:
       - "_terms.yaml#/days_to_treatment_end/common"
@@ -81,6 +105,27 @@ properties:
     type: integer
     maximum: 32872
     minimum: -32872
+
+  drug_category:
+    $ref:
+      - "_terms.yaml#/drug_category/common"
+    enum:
+      - Glucocorticoid
+      - Growth factor
+      - PARP inhibitor
+
+  embolic_agent:
+    $ref:
+      - "_terms.yaml#/embolic_agent/common"
+    enum:
+      - Gelfoam
+      - Lipiodol
+      - Plastic Beads
+      - PVA Particles
+      - Spherical Particles
+      - Y-90 Sirsphere
+      - Y-90 Therasphere
+      - Other
 
   initial_disease_status:
     $ref:
@@ -100,11 +145,35 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  lesions_treated_number:
+    $ref:
+      - "_terms.yaml#/lesions_treated_number/common"
+    type: number
+
   number_of_cycles:
     $ref:
       - "_terms.yaml#/number_of_cycles/common"
     type: integer
     minimum: 0
+
+  number_of_fractions:
+    $ref:
+      - "_terms.yaml#/number_of_fractions/common"
+    type: number
+
+  prescribed_dose:
+    $ref:
+      - "_terms.yaml#/prescribed_dose/common"
+    type: number
+
+  protocol_identifier:
+    $ref:
+      - "_terms.yaml#/protocol_identifier/common"
+    enum:
+      - A081105
+      - A081801
+      - E4512
+      - EA5142
 
   reason_treatment_ended:
     $ref:
@@ -130,8 +199,14 @@ properties:
     $ref:
       - "_terms.yaml#/route_of_administration/common"
     enum:
+      - Intrahepatic
+      - Intramuscular
+      - Intraperitoneal
       - Intrathecal
+      - Intratumor
       - Intravenous
+      - Intravesical
+      - Subcutaneous
       - Oral
       - Not Reported
 
@@ -493,13 +568,39 @@ properties:
     type: integer
     minimum: 0
 
+  treatment_dose_max:
+    $ref:
+      - "_terms.yaml#/treatment_dose_max/common"
+    type: number
+
   treatment_dose_units:
     $ref:
       - "_terms.yaml#/treatment_dose_units/common"
     enum:
+      - AUC
       - cGy
+      - g/day
+      - g/m2
       - Gy
+      - IU/kg
+      - IU/mg
+      - mCi
+      - mEq
       - mg
+      - mg/day
+      - mg/dL
+      - mg/kg
+      - mg/kg/day
+      - mg/m2
+      - mg/m2/day
+      - mg/m2/wk
+      - mg/mL
+      - mg/wk
+      - mIU
+      - mL
+      - ug
+      - ug/m2
+      - Wafer
     enumDef:
       mg:
         $ref:
@@ -670,6 +771,7 @@ properties:
       - Not Allowed To Collect
       - Organ Transplantation
       - Other
+      - Peptide Receptor Radionuclide Therapy (PRRT)
       - Pharmaceutical Therapy, NOS
       - Pleurodesis
       - Pleurodesis, Talc
@@ -1987,6 +2089,7 @@ properties:
       - Canertinib Dihydrochloride
       - Canfosfamide
       - Canfosfamide Hydrochloride
+      - Canakinumab
       - Cannabidiol
       - Cantrixil
       - Cantuzumab Ravtansine
@@ -4455,6 +4558,7 @@ properties:
       - Rituximab
       - Rituximab and Hyaluronidase Human
       - Rituximab Conjugate CON-4619
+      - Rivaroxaban
       - Riviciclib
       - Rivoceranib
       - Rivoceranib Mesylate
