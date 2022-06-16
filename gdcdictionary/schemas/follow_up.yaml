@@ -51,6 +51,9 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
+deprecated:
+  - hpv_positive_type
+
 properties:
 
   $ref:
@@ -994,6 +997,7 @@ properties:
       - Chronic Systemic Steroid Use
       - Cirrhosis, Unknown Etiology
       - Clonal Hematopoiesis
+      - CNS Infection
       - Colon Polyps
       - Common Variable Immunodeficiency
       - Congestive Heart Failure (CHF)
@@ -1015,6 +1019,7 @@ properties:
       - Diverticulitis
       - DVT/PE
       - Dyslipidemia
+      - EBV Lymphoproliferation
       - Eczema
       - Epilepsy
       - Epstein-Barr Virus
@@ -1046,6 +1051,7 @@ properties:
       - Herpes Zoster
       - High Grade Liver Dysplastic Nodule
       - HIV / AIDS
+      - Hodgkin Lymphoma
       - Human Papillomavirus Infection
       - HUS/TTP
       - Hypercalcemia
@@ -1069,11 +1075,13 @@ properties:
       - Liver Toxicity (Non-Infectious)
       - Low Grade Liver Dysplastic Nodule
       - Lupus
+      - Lymphamatoid Papulosis
       - Lymphocytic Meningitis
       - Lynch Syndrome
       - MAI
       - Malaria
       - Metabolic Syndrome
+      - Methicillin-Resistant Staphylococcus aureus (MRSA)
       - Myasthenia Gravis
       - Mycobacterium avium Complex
       - Myocardial Infarction
@@ -1112,16 +1120,19 @@ properties:
       - Sjogren's Syndrome
       - Sleep apnea
       - Smoking
+      - Staph Osteomyelitis
       - Staphylococcus aureus
       - Steatosis
       - Stroke
       - Syphilis
+      - Thyroid Disease, Non-Cancer
       - Transient Ischemic Attack
       - Treponema pallidum
       - Tuberculosis
       - Turcot Syndrome
       - Tyrosinemia
       - Ulcerative Colitis
+      - Urinary Tract Infection
       - Varicella Zoster Virus
       - Wagr Syndrome
       - Unknown
@@ -1220,6 +1231,7 @@ properties:
       - Diet
       - Injected Insulin
       - Insulin
+      - Linagliptin
       - Oral Hypoglycemic
       - Other
       - Sulfonylurea
@@ -2162,6 +2174,7 @@ properties:
       - "_terms.yaml#/risk_factor/common"
     enum:
       - Abnormal Glucose Level
+      - Adenomyosis
       - Adenosis (Atypical Adenomatous Hyperplasia)
       - Alcohol Consumption
       - Alcoholic Liver Disease
@@ -2251,6 +2264,8 @@ properties:
       - High Grade Dysplasia
       - High-grade Prostatic Intraepithelial Neoplasia (PIN)
       - HIV
+      - Human Herpesvirus-6 (HHV-6)
+      - Human Herpesvirus-8 (HHV-8)
       - Human Papillomavirus Infection
       - Hypospadias
       - Inflammation
@@ -2380,6 +2395,7 @@ properties:
     $ref:
       - "_terms.yaml#/undescended_testis_corrected_age/common"
     type: integer
+    maximum: 89
     minimum: 0
 
   undescended_testis_corrected_laterality:
