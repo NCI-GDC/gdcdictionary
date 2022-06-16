@@ -83,6 +83,8 @@ properties:
       - Nonkeratinizing dysplasia; moderate
       - Nonkeratinizing dysplasia; severe (carcinoma in situ)
       - Other
+      - Percent follicular component <= 10%
+      - percent follicular component > 10%
       - PD-L1 CPS (223C LDT) - 20%
       - Platinum-resistant
       - Pleural plaque
@@ -782,6 +784,16 @@ properties:
     type: number
     minimum: 0
 
+  tumor_level_prostate:
+    $ref:
+      - "_terms.yaml#/tumor_level_prostate/common"
+    type: array
+    items:
+      enum:
+        - Apex
+        - Middle
+        - Base
+
   tumor_thickness:
     $ref:
       - "_terms.yaml#/tumor_thickness/common"
@@ -831,6 +843,16 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  zone_of_origin_prostate:
+    $ref:
+      - "_terms.yaml#/zone_of_origin_prostate/common"
+    enum:
+      - Peripheral zone
+      - Transition zone
+      - Central zone
+      - Overlapping/multiple zones
+      - Unknown zone
 
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
