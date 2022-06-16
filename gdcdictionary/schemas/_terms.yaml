@@ -244,7 +244,7 @@ alcohol_days_per_week:
 alcohol_drinks_per_day:
   common:
     description: >-
-      Numeric value used to describe the average number of alcoholic beverages  a
+      Numeric value used to describe the average number of alcoholic beverages a
       person consumes per day.
     termDef:
       term: >-
@@ -996,7 +996,7 @@ creation_datetime:
 current_weight:
   common:
     description: >-
-      Numeric value that represents the current weight of the sample, measured  in
+      Numeric value that represents the current weight of the sample, measured in
       milligrams.
     termDef:
       term: >-
@@ -1922,7 +1922,7 @@ hpv_positive_type:
 icd_10_code:
   common:
     description: >-
-      Alphanumeric value used to describe the  disease code from the tenth version
+      Alphanumeric value used to describe the disease code from the tenth version
       of the International Classification of Disease (ICD-10).
     termDef:
       term: >-
@@ -2421,7 +2421,7 @@ lymph_nodes_positive:
 lymph_nodes_tested:
   common:
     description: >-
-      The number of lymph nodes tested to determine whether lymph nodes were  involved
+      The number of lymph nodes tested to determine whether lymph nodes were involved
       with disease as determined by a pathologic examination.
     termDef:
       term: >-
@@ -4609,7 +4609,7 @@ vital_status:
 weeks_gestation_at_birth:
   common:
     description: >-
-      Numeric value used to describe the number of weeks starting  from the approximate
+      Numeric value used to describe the number of weeks starting from the approximate
       date of the biological mother's last menstrual period and ending with the birth
       of the patient.
     termDef:
@@ -4778,7 +4778,7 @@ days_to_consent:
 tumor_depth:
   common:
     description: >-
-      Numeric value that represents the depth of  tumor invasion, measured in millimeters
+      Numeric value that represents the depth of tumor invasion, measured in millimeters
       (mm).
     termDef:
       term: >-
@@ -5244,7 +5244,7 @@ hiv_viral_load:
 aids_risk_factors:
   common:
     description: >-
-      The text term used to describe a risk factor of  the acquired immunodeficiency
+      The text term used to describe a risk factor of the acquired immunodeficiency
       syndrome (AIDS) that the patient either had at time time of the study or experienced
       in the past.
     termDef:
@@ -5648,7 +5648,7 @@ diagnosis_is_primary_disease:
   common:
     description: >-
       Indicates whether this specific diagnosis represents the disease that was the
-      primary focus of the study. Additionally, this diagnosis is reflected at the  case
+      primary focus of the study. Additionally, this diagnosis is reflected at the case
       level, which is captured using the case.disease_type property.
     termDef:
       term: >-
@@ -6321,7 +6321,7 @@ uicc_clinical_n:
     description: >-
       The UICC TNM Classification is an anatomically based system that records the
       primary and regional nodal extent of the tumor and the absence or presence of
-      metastases.  The clinical N category describes the regional lymph node involvement
+      metastases. The clinical N category describes the regional lymph node involvement
       as determined during a clinical exam.
     termDef:
       term:
@@ -6349,7 +6349,7 @@ uicc_clinical_t:
     description: >-
       The UICC TNM Classification is an anatomically based system that records the
       primary and regional nodal extent of the tumor and the absence or presence of
-      metastases.  The clinical T category describes the primary tumor site and size
+      metastases. The clinical T category describes the primary tumor site and size
       as determined during a clinical exam.
     termDef:
       term:
@@ -6377,7 +6377,7 @@ uicc_pathologic_n:
     description: >-
       The UICC TNM Classification is an anatomically based system that records the
       primary and regional nodal extent of the tumor and the absence or presence of
-      metastases.  The pathological N category describes the regional lymph node involvement
+      metastases. The pathological N category describes the regional lymph node involvement
       as determined during a pathology review.
     termDef:
       term:
@@ -6405,7 +6405,7 @@ uicc_pathologic_t:
     description: >-
       The UICC TNM Classification is an anatomically based system that records the
       primary and regional nodal extent of the tumor and the absence or presence of
-      metastases.  The pathological T category describes the primary tumor site and
+      metastases. The pathological T category describes the primary tumor site and
       size as determined during a pathology review.
     termDef:
       term:
