@@ -24,7 +24,6 @@ systemProperties:
   - state
 
 links:
-
   - exclusive: false
     required: true
     subgroup:
@@ -104,6 +103,7 @@ properties:
       - NSE
       - Prostate-Specific Antigen (PSA)
       - Squamous Cell Carcinoma Antigen (SCCA)
+      - TAG-72
       - Unknown
       - Not Reported
     enumDef:
@@ -194,6 +194,9 @@ properties:
       Squamous Cell Carcinoma Antigen (SCCA):
         $ref:
           - "_terms_enum.yaml#/squamous_cell_carcinoma_antigen_scca/common"
+      TAG-72:
+        $ref:
+          - "_terms_enum.yaml#/tag_72/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -1139,6 +1142,7 @@ properties:
       - TFRC
       - TGFBR2
       - THRAP3
+      - TLR2
       - TLX1
       - TLX3
       - TMEM127
@@ -3165,6 +3169,9 @@ properties:
       THRAP3:
         $ref:
           - "_terms_enum.yaml#/thrap3/common"
+      TLR2:
+        $ref:
+          - "_terms_enum.yaml#/tlr2/common"
       TLX1:
         $ref:
           - "_terms_enum.yaml#/tlx1/common"
@@ -3462,6 +3469,72 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  hpv_strain:
+    $ref:
+      - "_terms.yaml#/hpv_strain/common"
+    enum:
+      - HPV16
+      - HPV18
+      - HPV31
+      - HPV33
+      - HPV35
+      - HPV39
+      - HPV45
+      - HPV51
+      - HPV52
+      - HPV56
+      - HPV58
+      - HPV59
+      - HPV66
+      - HPV68
+      - HPV73
+    enumDef:
+      HPV16:
+        $ref:
+          - "_terms_enum.yaml#/HPV16/common"
+      HPV18:
+        $ref:
+          - "_terms_enum.yaml#/HPV18/common"
+      HPV31:
+        $ref:
+          - "_terms_enum.yaml#/HPV31/common"
+      HPV33:
+        $ref:
+          - "_terms_enum.yaml#/HPV33/common"
+      HPV35:
+        $ref:
+          - "_terms_enum.yaml#/HPV35/common"
+      HPV39:
+        $ref:
+          - "_terms_enum.yaml#/HPV39/common"
+      HPV45:
+        $ref:
+          - "_terms_enum.yaml#/HPV45/common"
+      HPV51:
+        $ref:
+          - "_terms_enum.yaml#/HPV51/common"
+      HPV52:
+        $ref:
+          - "_terms_enum.yaml#/HPV52/common"
+      HPV56:
+        $ref:
+          - "_terms_enum.yaml#/HPV56/common"
+      HPV58:
+        $ref:
+          - "_terms_enum.yaml#/HPV58/common"
+      HPV59:
+        $ref:
+          - "_terms_enum.yaml#/HPV59/common"
+      HPV66:
+        $ref:
+          - "_terms_enum.yaml#/HPV66/common"
+      HPV68:
+        $ref:
+          - "_terms_enum.yaml#/HPV68/common"
+      HPV73:
+        $ref:
+          - "_terms_enum.yaml#/HPV73/common"
+
   intron:
     $ref:
       - "_terms.yaml#/intron/common"
@@ -3495,6 +3568,7 @@ properties:
       - Eosinophil
       - Epinephrine-Secreting
       - Epstein-Barr Virus
+      - Erythrocyte Sedimentation Rate
       - Gamma-Enolase
       - Glucose
       - Hematocrit
@@ -3524,6 +3598,7 @@ properties:
       - Prolymphocytes
       - Promonocytes
       - Promyelocytes
+      - Prothrombin Time
       - Segmented Neutrophil
       - Serum Free Immunoglobulin Light Chain, Kappa
       - Serum Free Immunoglobulin Light Chain, Lambda
@@ -3587,6 +3662,9 @@ properties:
       Epstein-Barr Virus:
         $ref:
           - "_terms_enum.yaml#/epsteinbarr_virus/common"
+      Erythrocyte Sedimentation Rate:
+        $ref:
+          - "_terms_enum.yaml#/erythrocyte_sedimentation_rate/common"
       Gamma-Enolase:
         $ref:
           - "_terms_enum.yaml#/gammaenolase/common"
@@ -3659,6 +3737,9 @@ properties:
       Promyelocytes:
         $ref:
           - "_terms_enum.yaml#/promyelocytes/common"
+      Prothrombin Time:
+        $ref:
+          - "_terms_enum.yaml#/prothrombin_time/common"
       Segmented Neutrophil:
         $ref:
           - "_terms_enum.yaml#/segmented_neutrophil/common"
@@ -4706,6 +4787,7 @@ properties:
       - TFRC
       - TGFBR2
       - THRAP3
+      - TLR2
       - TLX1
       - TLX3
       - TMEM127
@@ -6717,6 +6799,9 @@ properties:
       THRAP3:
         $ref:
           - "_terms_enum.yaml#/thrap3/common"
+      TLR2:
+        $ref:
+          - "_terms_enum.yaml#/tlr2/common"          
       TLX1:
         $ref:
           - "_terms_enum.yaml#/tlx1/common"
@@ -6952,6 +7037,7 @@ properties:
       - Normal
       - Overexpressed
       - Positive
+      - Stable
       - Test Value Reported
       - Unknown
       - Not Reported
@@ -6977,6 +7063,9 @@ properties:
       Positive:
         $ref:
           - "_terms_enum.yaml#/positive/common"
+      Stable:
+        $ref:
+          - "_terms_enum.yaml#/stable/common"
       Test Value Reported:
         $ref:
           - "_terms_enum.yaml#/test_value_reported/common"
@@ -6991,9 +7080,13 @@ properties:
     $ref:
       - "_terms.yaml#/test_units/common"
     enum:
+      - cells/mL
+      - count x10^9/L
       - g/dL
       - g/L
+      - mcg/L
       - mcg/mL
+      - mg/24 hr
       - mg/dL
       - mg/L
       - mm^2
@@ -7010,7 +7103,6 @@ properties:
       - x10^9 cells/L
       - Not Reported
       - Unknown
-      - count x10^9/L
     deprecated_enum:
       - count x10^9/L
 
