@@ -997,7 +997,7 @@ properties:
       - Chronic Systemic Steroid Use
       - Cirrhosis, Unknown Etiology
       - Clonal Hematopoiesis
-      - CNS infection
+      - CNS Infection
       - Colon Polyps
       - Common Variable Immunodeficiency
       - Congestive Heart Failure (CHF)
@@ -1019,7 +1019,7 @@ properties:
       - Diverticulitis
       - DVT/PE
       - Dyslipidemia
-      - EBV lymphoproliferation
+      - EBV Lymphoproliferation
       - Eczema
       - Epilepsy
       - Epstein-Barr Virus
@@ -1051,7 +1051,7 @@ properties:
       - Herpes Zoster
       - High Grade Liver Dysplastic Nodule
       - HIV / AIDS
-      - Hodgkin lymphoma
+      - Hodgkin Lymphoma
       - Human Papillomavirus Infection
       - HUS/TTP
       - Hypercalcemia
@@ -1075,13 +1075,13 @@ properties:
       - Liver Toxicity (Non-Infectious)
       - Low Grade Liver Dysplastic Nodule
       - Lupus
-      - Lymphamatoid papulosis
+      - Lymphamatoid Papulosis
       - Lymphocytic Meningitis
       - Lynch Syndrome
       - MAI
       - Malaria
       - Metabolic Syndrome
-      - Methicillin-resistant Staphylococcus aureus (MRSA)
+      - Methicillin-Resistant Staphylococcus aureus (MRSA)
       - Myasthenia Gravis
       - Mycobacterium avium Complex
       - Myocardial Infarction
@@ -1125,14 +1125,14 @@ properties:
       - Steatosis
       - Stroke
       - Syphilis
-      - Thyroid disease, non-cancer
+      - Thyroid Disease, Non-Cancer
       - Transient Ischemic Attack
       - Treponema pallidum
       - Tuberculosis
       - Turcot Syndrome
       - Tyrosinemia
       - Ulcerative Colitis
-      - Urinary tract infection
+      - Urinary Tract Infection
       - Varicella Zoster Virus
       - Wagr Syndrome
       - Unknown
@@ -2264,8 +2264,8 @@ properties:
       - High Grade Dysplasia
       - High-grade Prostatic Intraepithelial Neoplasia (PIN)
       - HIV
-      - Human herpesvirus-6 (HHV-6)
-      - Human herpesvirus-8 (HHV-8)
+      - Human Herpesvirus-6 (HHV-6)
+      - Human Herpesvirus-8 (HHV-8)
       - Human Papillomavirus Infection
       - Hypospadias
       - Inflammation
