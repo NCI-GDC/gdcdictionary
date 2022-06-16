@@ -1198,9 +1198,8 @@ days_to_last_follow_up:
 days_to_last_known_disease_status:
   common:
     description: >-
-      Time interval from the last time the patient's disease status was known to the
-      date of initial pathologic diagnosis, represented as a calculated number of
-      days.
+      Number of days between the date used for index and the date the patient's
+      disease status was known.
     termDef:
       term: >-
         Last Communication Contact Less Initial Pathologic Diagnosis Date Calculated
@@ -2378,7 +2377,7 @@ locus:
       source: NCIt
       cde_id: C45822
       cde_version: 22.04d
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C45822"
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.04d&ns=ncit&code=C45822&key=1930938629&b=1&n=null"
 
 longest_dimension:
   common:
@@ -6133,7 +6132,7 @@ asbestos_exposure_type:
 clinical_trial_indicator:
   common:
     description: >-
-      Indicator used to describe whether the treatment was part  of a clinical trial.
+      Indicator used to describe whether the treatment was part of a clinical trial.
     termDef:
       term:
       source:
@@ -6261,7 +6260,7 @@ number_of_fractions:
 prescribed_dose:
   common:
     description: >-
-      A quantity of an agent perscribed to the study participant.
+      A quantity of an agent prescribed to the study participant.
     termDef:
       term:
       source:
@@ -6418,7 +6417,7 @@ uicc_pathologic_t:
 use_per_day:
   common:
     description: >-
-      The  average number of times the patient used per day.
+      The average number of times the patient used per day.
     termDef:
       term:
       source:
