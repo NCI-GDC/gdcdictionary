@@ -80,7 +80,7 @@ properties:
       - Bisulfite-Seq
       - ChIP-Seq
       - HiChIP
-      - m6A RNA Methylation
+      - m6A MeRIP-Seq
       - miRNA-Seq
       - RNA-Seq
       - scATAC-Seq
