@@ -60,6 +60,8 @@ properties:
     $ref:
       - "_terms.yaml#/age_at_last_exposure/common"
     type: integer
+    maximum: 89
+    minimum: 0
 
   age_at_onset:
     $ref:
