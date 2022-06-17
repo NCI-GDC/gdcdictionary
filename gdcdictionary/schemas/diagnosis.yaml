@@ -2474,9 +2474,9 @@ properties:
     enum:
       - Adrenal
       - Appendix
-      - Ascites/Peritoneum
+      - Ascites/peritoneum
       - Axillary lymph nodes
-      - Bone Marrow
+      - Bone marrow
       - Brain
       - Breast
       - Cervical lymph nodes
@@ -2490,21 +2490,21 @@ properties:
       - Mandible
       - Maxilla
       - Mediastinal lymph nodes
-      - Mediastinal Soft Tissue
+      - Mediastinal soft tissue
       - Mesenteric lymph nodes
       - Neck
-      - No Known Nodal Involvement
+      - No known nodal involvement
       - Oropharynx
       - Other
       - Ovary
       - Pancreas
       - Paraaortic lymph nodes
-      - Parotid Gland
+      - Parotid gland
       - Pericardium
-      - Peri-orbital Soft Tissue
+      - Peri-orbital soft tissue
       - Retroperitoneal lymph nodes
-      - Small Intestine
-      - Soft Tissue (muscle, ligaments, subcutaneous)
+      - Small intestine
+      - Soft tissue (muscle, ligaments, subcutaneous)
       - Splenic lymph nodes
       - Stomach
       - Submandibular lymph nodes
@@ -19368,52 +19368,24 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  uicc_pathologic_t:
+  uicc_clinical_m:
     $ref:
-      - "_terms.yaml#/uicc_pathologic_t/common"
+      - "_terms.yaml#/uicc_clinical_m/common"
     enum:
-      - T0
-      - T1
-      - T1a
-      - T1a1
-      - T1a2
-      - T1b
-      - T1b1
-      - T1b2
-      - T1c
-      - T1c2
-      - T1mi
-      - T2
-      - T2a
-      - T2a1
-      - T2a2
-      - T2b
-      - T2c
-      - T2d
-      - T3
-      - T3a
-      - T3b
-      - T3c
-      - T3d
-      - T4
-      - T4a
-      - T4b
-      - T4c
-      - T4d
-      - T4e
-      - TX
-      - Ta
-      - Tis
-      - Tis (DCIS)
-      - Tis (LCIS)
-      - Tis (Paget's)
+      - M0
+      - M1
+      - M1a
+      - M1b
+      - M1c
+      - MX
+      - cM0 (i+)
       - Unknown
       - Not Reported
       - Not Allowed To Collect
 
-  uicc_pathologic_n:
+  uicc_clinical_n:
     $ref:
-      - "_terms.yaml#/uicc_pathologic_n/common"
+      - "_terms.yaml#/uicc_clinical_n/common"
     enum:
       - N0
       - N0 (i+)
@@ -19430,7 +19402,6 @@ properties:
       - N1c
       - N1mi
       - N2
-      - N2mi
       - N2a
       - N2b
       - N2c
@@ -19443,29 +19414,10 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
-      - Not Allowed To Collect
 
-  uicc_pathologic_m:
+  uicc_clinical_stage:
     $ref:
-      - "_terms.yaml#/uicc_pathologic_m/common"
-    enum:
-      - M0
-      - M1
-      - M1a
-      - M1b
-      - M1c
-      - M1d
-      - M2
-      - MX
-      - cM0 (i+)
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-      - Not Allowed To Collect
-
-  uicc_pathologic_stage:
-    $ref:
-      - "_terms.yaml#/uicc_pathologic_stage/common"
+      - "_terms.yaml#/uicc_clinical_stage/common"
     enum:
       - Stage 0
       - Stage 0a
@@ -19480,21 +19432,19 @@ properties:
       - Stage IB2
       - Stage IC
       - Stage II
-      - Stage IS
       - Stage IIA
       - Stage IIA1
       - Stage IIA2
       - Stage IIB
       - Stage IIC
+      - Stage IIC1
       - Stage III
       - Stage IIIA
-      - Stage IIIA1
-      - Stage IIIA2
       - Stage IIIB
       - Stage IIIC
       - Stage IIIC1
       - Stage IIIC2
-      - Stage IIID
+      - Stage IS
       - Stage IV
       - Stage IVA
       - Stage IVB
@@ -19503,6 +19453,7 @@ properties:
       - Stage X
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
 
   uicc_clinical_t:
     $ref:
@@ -19545,11 +19496,27 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+
+  uicc_pathologic_m:
+    $ref:
+      - "_terms.yaml#/uicc_pathologic_m/common"
+    enum:
+      - M0
+      - M1
+      - M1a
+      - M1b
+      - M1c
+      - M1d
+      - M2
+      - MX
+      - cM0 (i+)
+      - Unknown
+      - Not Reported
       - Not Allowed To Collect
 
-  uicc_clinical_n:
+  uicc_pathologic_n:
     $ref:
-      - "_terms.yaml#/uicc_clinical_n/common"
+      - "_terms.yaml#/uicc_pathologic_n/common"
     enum:
       - N0
       - N0 (i+)
@@ -19566,6 +19533,7 @@ properties:
       - N1c
       - N1mi
       - N2
+      - N2mi
       - N2a
       - N2b
       - N2c
@@ -19577,28 +19545,10 @@ properties:
       - NX
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-      - Not Allowed To Collect
 
-  uicc_clinical_m:
+  uicc_pathologic_stage:
     $ref:
-      - "_terms.yaml#/uicc_clinical_m/common"
-    enum:
-      - M0
-      - M1
-      - M1a
-      - M1b
-      - M1c
-      - MX
-      - cM0 (i+)
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-      - Not Allowed To Collect
-
-  uicc_clinical_stage:
-    $ref:
-      - "_terms.yaml#/uicc_clinical_stage/common"
+      - "_terms.yaml#/uicc_pathologic_stage/common"
     enum:
       - Stage 0
       - Stage 0a
@@ -19609,26 +19559,25 @@ properties:
       - Stage IA2
       - Stage IA3
       - Stage IB
-      - Stage IB Cervix
       - Stage IB1
       - Stage IB2
       - Stage IC
       - Stage II
-      - Stage II Cervix
+      - Stage IS
       - Stage IIA
       - Stage IIA1
       - Stage IIA2
-      - Stage IIA Cervix
       - Stage IIB
       - Stage IIC
-      - Stage IIC1
       - Stage III
       - Stage IIIA
+      - Stage IIIA1
+      - Stage IIIA2
       - Stage IIIB
       - Stage IIIC
       - Stage IIIC1
       - Stage IIIC2
-      - Stage IS
+      - Stage IIID
       - Stage IV
       - Stage IVA
       - Stage IVB
@@ -19637,11 +19586,48 @@ properties:
       - Stage X
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-      - Not Allowed To Collect
-      - Stage IB Cervix
-      - Stage II Cervix
-      - Stage IIA Cervix
+
+  uicc_pathologic_t:
+    $ref:
+      - "_terms.yaml#/uicc_pathologic_t/common"
+    enum:
+      - T0
+      - T1
+      - T1a
+      - T1a1
+      - T1a2
+      - T1b
+      - T1b1
+      - T1b2
+      - T1c
+      - T1c2
+      - T1mi
+      - T2
+      - T2a
+      - T2a1
+      - T2a2
+      - T2b
+      - T2c
+      - T2d
+      - T3
+      - T3a
+      - T3b
+      - T3c
+      - T3d
+      - T4
+      - T4a
+      - T4b
+      - T4c
+      - T4d
+      - T4e
+      - TX
+      - Ta
+      - Tis
+      - Tis (DCIS)
+      - Tis (LCIS)
+      - Tis (Paget's)
+      - Unknown
+      - Not Reported
 
   weiss_assessment_score:
     $ref:
