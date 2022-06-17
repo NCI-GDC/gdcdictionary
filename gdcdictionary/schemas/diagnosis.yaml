@@ -19381,7 +19381,6 @@ properties:
       - cM0 (i+)
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
 
   uicc_clinical_n:
     $ref:
@@ -19413,7 +19412,6 @@ properties:
       - NX
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
 
   uicc_clinical_stage:
     $ref:
@@ -19453,7 +19451,6 @@ properties:
       - Stage X
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
 
   uicc_clinical_t:
     $ref:
@@ -19495,7 +19492,6 @@ properties:
       - Tis (Paget's)
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
 
   uicc_pathologic_m:
     $ref:
@@ -19512,7 +19508,6 @@ properties:
       - cM0 (i+)
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
 
   uicc_pathologic_n:
     $ref:
