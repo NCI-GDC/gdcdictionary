@@ -720,6 +720,7 @@ properties:
     $ref:
       - "_terms.yaml#/use_per_day/common"
     type: number
+    minimum: 0
 
   years_smoked:
     $ref:
