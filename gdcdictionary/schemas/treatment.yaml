@@ -198,17 +198,19 @@ properties:
   route_of_administration:
     $ref:
       - "_terms.yaml#/route_of_administration/common"
-    enum:
-      - Intrahepatic
-      - Intramuscular
-      - Intraperitoneal
-      - Intrathecal
-      - Intratumoral
-      - Intravenous
-      - Intravesical
-      - Subcutaneous
-      - Oral
-      - Not Reported
+    type: array
+    items:
+      enum:
+        - Intrahepatic
+        - Intramuscular
+        - Intraperitoneal
+        - Intrathecal
+        - Intratumoral
+        - Intravenous
+        - Intravesical
+        - Subcutaneous
+        - Oral
+        - Not Reported
 
   treatment_anatomic_site:
     $ref:
