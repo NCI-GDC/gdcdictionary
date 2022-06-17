@@ -149,6 +149,7 @@ properties:
     $ref:
       - "_terms.yaml#/lesions_treated_number/common"
     type: number
+    minimum: 0
 
   number_of_cycles:
     $ref:
@@ -160,11 +161,13 @@ properties:
     $ref:
       - "_terms.yaml#/number_of_fractions/common"
     type: number
+    minimum: 0
 
   prescribed_dose:
     $ref:
       - "_terms.yaml#/prescribed_dose/common"
     type: number
+    minimum: 0
 
   protocol_identifier:
     $ref:
@@ -574,6 +577,7 @@ properties:
     $ref:
       - "_terms.yaml#/treatment_dose_max/common"
     type: number
+    minimum: 0
 
   treatment_dose_units:
     $ref:
