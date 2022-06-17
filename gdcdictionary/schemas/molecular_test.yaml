@@ -194,9 +194,6 @@ properties:
       Squamous Cell Carcinoma Antigen (SCCA):
         $ref:
           - "_terms_enum.yaml#/squamous_cell_carcinoma_antigen_scca/common"
-      TAG-72:
-        $ref:
-          - "_terms_enum.yaml#/tag_72/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -3169,9 +3166,6 @@ properties:
       THRAP3:
         $ref:
           - "_terms_enum.yaml#/thrap3/common"
-      TLR2:
-        $ref:
-          - "_terms_enum.yaml#/tlr2/common"
       TLX1:
         $ref:
           - "_terms_enum.yaml#/tlx1/common"
@@ -3488,52 +3482,6 @@ properties:
       - HPV66
       - HPV68
       - HPV73
-    enumDef:
-      HPV16:
-        $ref:
-          - "_terms_enum.yaml#/HPV16/common"
-      HPV18:
-        $ref:
-          - "_terms_enum.yaml#/HPV18/common"
-      HPV31:
-        $ref:
-          - "_terms_enum.yaml#/HPV31/common"
-      HPV33:
-        $ref:
-          - "_terms_enum.yaml#/HPV33/common"
-      HPV35:
-        $ref:
-          - "_terms_enum.yaml#/HPV35/common"
-      HPV39:
-        $ref:
-          - "_terms_enum.yaml#/HPV39/common"
-      HPV45:
-        $ref:
-          - "_terms_enum.yaml#/HPV45/common"
-      HPV51:
-        $ref:
-          - "_terms_enum.yaml#/HPV51/common"
-      HPV52:
-        $ref:
-          - "_terms_enum.yaml#/HPV52/common"
-      HPV56:
-        $ref:
-          - "_terms_enum.yaml#/HPV56/common"
-      HPV58:
-        $ref:
-          - "_terms_enum.yaml#/HPV58/common"
-      HPV59:
-        $ref:
-          - "_terms_enum.yaml#/HPV59/common"
-      HPV66:
-        $ref:
-          - "_terms_enum.yaml#/HPV66/common"
-      HPV68:
-        $ref:
-          - "_terms_enum.yaml#/HPV68/common"
-      HPV73:
-        $ref:
-          - "_terms_enum.yaml#/HPV73/common"
 
   intron:
     $ref:
@@ -3662,9 +3610,6 @@ properties:
       Epstein-Barr Virus:
         $ref:
           - "_terms_enum.yaml#/epsteinbarr_virus/common"
-      Erythrocyte Sedimentation Rate:
-        $ref:
-          - "_terms_enum.yaml#/erythrocyte_sedimentation_rate/common"
       Gamma-Enolase:
         $ref:
           - "_terms_enum.yaml#/gammaenolase/common"
@@ -3737,9 +3682,6 @@ properties:
       Promyelocytes:
         $ref:
           - "_terms_enum.yaml#/promyelocytes/common"
-      Prothrombin Time:
-        $ref:
-          - "_terms_enum.yaml#/prothrombin_time/common"
       Segmented Neutrophil:
         $ref:
           - "_terms_enum.yaml#/segmented_neutrophil/common"
@@ -6799,9 +6741,6 @@ properties:
       THRAP3:
         $ref:
           - "_terms_enum.yaml#/thrap3/common"
-      TLR2:
-        $ref:
-          - "_terms_enum.yaml#/tlr2/common"          
       TLX1:
         $ref:
           - "_terms_enum.yaml#/tlx1/common"
@@ -7063,9 +7002,6 @@ properties:
       Positive:
         $ref:
           - "_terms_enum.yaml#/positive/common"
-      Stable:
-        $ref:
-          - "_terms_enum.yaml#/stable/common"
       Test Value Reported:
         $ref:
           - "_terms_enum.yaml#/test_value_reported/common"
