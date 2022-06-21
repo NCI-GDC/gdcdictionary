@@ -24,7 +24,6 @@ systemProperties:
   - state
 
 links:
-
   - exclusive: false
     required: true
     subgroup:
@@ -104,6 +103,7 @@ properties:
       - NSE
       - Prostate-Specific Antigen (PSA)
       - Squamous Cell Carcinoma Antigen (SCCA)
+      - TAG-72
       - Unknown
       - Not Reported
     enumDef:
@@ -1139,6 +1139,7 @@ properties:
       - TFRC
       - TGFBR2
       - THRAP3
+      - TLR2
       - TLX1
       - TLX3
       - TMEM127
@@ -3462,6 +3463,26 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  hpv_strain:
+    $ref:
+      - "_terms.yaml#/hpv_strain/common"
+    enum:
+      - HPV16
+      - HPV18
+      - HPV31
+      - HPV33
+      - HPV35
+      - HPV39
+      - HPV45
+      - HPV51
+      - HPV52
+      - HPV56
+      - HPV58
+      - HPV59
+      - HPV66
+      - HPV68
+      - HPV73
+
   intron:
     $ref:
       - "_terms.yaml#/intron/common"
@@ -3495,6 +3516,7 @@ properties:
       - Eosinophil
       - Epinephrine-Secreting
       - Epstein-Barr Virus
+      - Erythrocyte Sedimentation Rate
       - Gamma-Enolase
       - Glucose
       - Hematocrit
@@ -3524,6 +3546,7 @@ properties:
       - Prolymphocytes
       - Promonocytes
       - Promyelocytes
+      - Prothrombin Time
       - Segmented Neutrophil
       - Serum Free Immunoglobulin Light Chain, Kappa
       - Serum Free Immunoglobulin Light Chain, Lambda
@@ -4706,6 +4729,7 @@ properties:
       - TFRC
       - TGFBR2
       - THRAP3
+      - TLR2
       - TLX1
       - TLX3
       - TMEM127
@@ -6952,6 +6976,7 @@ properties:
       - Normal
       - Overexpressed
       - Positive
+      - Stable
       - Test Value Reported
       - Unknown
       - Not Reported
@@ -6991,9 +7016,13 @@ properties:
     $ref:
       - "_terms.yaml#/test_units/common"
     enum:
+      - cells/mL
+      - count x10^9/L
       - g/dL
       - g/L
+      - mcg/L
       - mcg/mL
+      - mg/24 hr
       - mg/dL
       - mg/L
       - mm^2
@@ -7010,7 +7039,6 @@ properties:
       - x10^9 cells/L
       - Not Reported
       - Unknown
-      - count x10^9/L
     deprecated_enum:
       - count x10^9/L
 
