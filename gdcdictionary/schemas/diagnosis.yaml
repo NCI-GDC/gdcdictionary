@@ -629,6 +629,7 @@ properties:
       - N1c
       - N1mi
       - N2
+      - N2mi
       - N2a
       - N2b
       - N2c
@@ -877,6 +878,7 @@ properties:
       - T1b1
       - T1b2
       - T1c
+      - T1c2
       - T1mi
       - T2
       - T2a
@@ -1386,8 +1388,10 @@ properties:
       - other
       - Premalignant
       - primary
+      - Prior primary
       - Progression
       - recurrence
+      - Synchronous primary
       - Unknown
       - not reported
       - Not Allowed To Collect
@@ -1574,6 +1578,22 @@ properties:
     $ref:
       - "_terms.yaml#/diagnosis_is_primary_disease/common"
     type: boolean
+
+  double_expressor_lymphoma:
+    $ref:
+      - "_terms.yaml#/double_expressor_lymphoma/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Not Reported
+
+  double_hit_lymphoma:
+    $ref:
+      - "_terms.yaml#/double_hit_lymphoma/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Not Reported
 
   eln_risk_classification:
     $ref:
@@ -2448,6 +2468,49 @@ properties:
         $ref:
           - "_terms_enum.yaml#/stage_ivb/diagnosis/masaoka_stage"
 
+  max_tumor_bulk_site:
+    $ref:
+      - "_terms.yaml#/max_tumor_bulk_site/common"
+    enum:
+      - Adrenal
+      - Appendix
+      - Ascites/peritoneum
+      - Axillary lymph nodes
+      - Bone marrow
+      - Brain
+      - Breast
+      - Cervical lymph nodes
+      - Colon
+      - Iliac
+      - Iliac-external
+      - Inguinal
+      - Kidney
+      - Liver
+      - Lung
+      - Mandible
+      - Maxilla
+      - Mediastinal lymph nodes
+      - Mediastinal soft tissue
+      - Mesenteric lymph nodes
+      - Neck
+      - No known nodal involvement
+      - Oropharynx
+      - Other
+      - Ovary
+      - Pancreas
+      - Paraaortic lymph nodes
+      - Parotid gland
+      - Pericardium
+      - Peri-orbital soft tissue
+      - Retroperitoneal lymph nodes
+      - Small intestine
+      - Soft tissue (muscle, ligaments, subcutaneous)
+      - Splenic lymph nodes
+      - Stomach
+      - Submandibular lymph nodes
+      - Supraclavicular lymph nodes
+      - Thyroid
+
   medulloblastoma_molecular_classification:
     $ref:
       - "_terms.yaml#/medulloblastoma_molecular_classification/common"
@@ -2549,7 +2612,9 @@ properties:
       - Skin
       - Small Intestine
       - Soft Tissue
+      - Spleen
       - Spinal Cord
+      - Stomach
       - Urethra
       - Uterine Adnexa
       - Vertebral Canal
@@ -3010,6 +3075,7 @@ properties:
       - 8210/3
       - 8211/0
       - 8211/3
+      - 8211/6
       - 8212/0
       - 8213/0
       - 8213/3
@@ -3191,6 +3257,7 @@ properties:
       - 8460/0
       - 8460/2
       - 8460/3
+      - 8460/6
       - 8461/0
       - 8461/3
       - 8461/6
@@ -3241,6 +3308,7 @@ properties:
       - 8519/2
       - 8520/2
       - 8520/3
+      - 8520/6
       - 8521/1
       - 8521/3
       - 8522/1
@@ -3868,6 +3936,7 @@ properties:
       - 9712/3
       - 9714/3
       - 9716/3
+      - 9715/3
       - 9717/3
       - 9718/3
       - 9719/3
@@ -7488,6 +7557,7 @@ properties:
       - Blue nevus, NOS
       - Botryoid sarcoma
       - Bowen disease
+      - Breast implant-associated anaplastic large cell lymphoma
       - Brenner tumor, borderline malignancy
       - Brenner tumor, malignant
       - Brenner tumor, NOS
@@ -8256,6 +8326,7 @@ properties:
       - Immunoproliferative small intestinal disease
       - Indeterminate dendritic cell tumor
       - Indolent systemic mastocytosis
+      - Indolent T-cell lymphoproliferative disorder of gastrointestinal tract
       - Infantile fibrosarcoma
       - Infantile hemangioma
       - Infantile myofibromatosis
@@ -17885,28 +17956,97 @@ properties:
     type: array
     items:
       enum:
+        - Abdomen
         - Abdominal Peritoneum
+        - Adrenal gland, NOS
+        - Adnexa
+        - Anus, NOS
+        - Appendix
+        - Bladder, NOS
+        - Bone, NOS
+        - Bone marrow
+        - Brain, NOS
+        - Breast, NOS
+        - Bronchus
+        - Buccal mucosa
+        - Central nervous system
+        - Cerebrospinal fluid
         - Cervix
+        - Chest wall
+        - Colon, NOS
+        - Diaphragm
+        - Ear
+        - Epididymis
+        - Esophagus
+        - Eye
         - Fallopian Tube, Left
         - Fallopian Tube, NOS
         - Fallopian Tube, Right
+        - Gallbladder
+        - Heart
         - Kidney, Lower Pole
+        - Kidney, NOS
         - Kidney, Middle
         - Kidney, Upper Pole
+        - Larynx, NOS
+        - Leptomeninges
+        - Liver
+        - Lower lobe, lung
+        - Lung, NOS
+        - Lymph node, NOS
+        - Mandible
+        - Maxilla
+        - Mediastinal soft tissue
+        - Mesentery
         - Mesothelium
+        - Middle lobe, lung
+        - Mouth
+        - Nasopharynx
+        - Nasal soft tissue
+        - Neck
+        - Ocular orbits
         - Omentum
+        - Oropharynx
         - Other
         - Ovary, Left
         - Ovary, NOS
         - Ovary, Right
+        - Pancreas
+        - Parotid gland
         - Pelvic Peritoneum
+        - Pelvis
+        - Pericardium
+        - Perineum
+        - Peri-orbital soft tissue
+        - Peripheral blood
+        - Peripheral nervous system
+        - Peritoneum, NOS
+        - Pleura
+        - Prostate
+        - Rectum
+        - Retroperitoneum
+        - Salivary gland
+        - Sigmoid colon
+        - Sinus
+        - Skin
+        - Small intestine
+        - Soft tissue
+        - Spleen
+        - Stomach
+        - Testes
+        - Thyroid
+        - Tongue
+        - Tonsil
+        - Trachea
+        - Transplanted kidney
+        - Transverse colon
+        - Upper lobe, lung
         - Uterus
         - Unknown
+        - Vagina
+        - Vertebrae
         - Not Reported
     enumDef:
-      Abdominal Peritoneum:
-        $ref:
-          - "_terms_enum.yaml#/abdominal_peritoneum/common"
       Kidney, Lower Pole:
         $ref:
           - "_terms_enum.yaml#/kidney_lower_pole/common"
@@ -17916,6 +18056,9 @@ properties:
       Omentum:
         $ref:
           - "_terms_enum.yaml#/omentum/common"
+      Uterus:
+        $ref:
+          - "_terms_enum.yaml#/uterus_nos/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
@@ -19115,6 +19258,7 @@ properties:
     $ref:
       - "_terms.yaml#/tumor_depth/common"
     type: number
+    minimum: 0
 
   tumor_focality:
     $ref:
@@ -19223,6 +19367,262 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  uicc_clinical_m:
+    $ref:
+      - "_terms.yaml#/uicc_clinical_m/common"
+    enum:
+      - M0
+      - M1
+      - M1a
+      - M1b
+      - M1c
+      - MX
+      - cM0 (i+)
+      - Unknown
+      - Not Reported
+
+  uicc_clinical_n:
+    $ref:
+      - "_terms.yaml#/uicc_clinical_n/common"
+    enum:
+      - N0
+      - N0 (i+)
+      - N0 (i-)
+      - N0 (mol+)
+      - N0 (mol-)
+      - N1
+      - N1a
+      - N1b
+      - N1bI
+      - N1bII
+      - N1bIII
+      - N1bIV
+      - N1c
+      - N1mi
+      - N2
+      - N2a
+      - N2b
+      - N2c
+      - N3
+      - N3a
+      - N3b
+      - N3c
+      - N4
+      - NX
+      - Unknown
+      - Not Reported
+
+  uicc_clinical_stage:
+    $ref:
+      - "_terms.yaml#/uicc_clinical_stage/common"
+    enum:
+      - Stage 0
+      - Stage 0a
+      - Stage 0is
+      - Stage I
+      - Stage IA
+      - Stage IA1
+      - Stage IA2
+      - Stage IA3
+      - Stage IB
+      - Stage IB1
+      - Stage IB2
+      - Stage IC
+      - Stage II
+      - Stage IIA
+      - Stage IIA1
+      - Stage IIA2
+      - Stage IIB
+      - Stage IIC
+      - Stage IIC1
+      - Stage III
+      - Stage IIIA
+      - Stage IIIB
+      - Stage IIIC
+      - Stage IIIC1
+      - Stage IIIC2
+      - Stage IS
+      - Stage IV
+      - Stage IVA
+      - Stage IVB
+      - Stage IVC
+      - Stage Tis
+      - Stage X
+      - Unknown
+      - Not Reported
+
+  uicc_clinical_t:
+    $ref:
+      - "_terms.yaml#/uicc_clinical_t/common"
+    enum:
+      - T0
+      - T1
+      - T1a
+      - T1a1
+      - T1a2
+      - T1b
+      - T1b1
+      - T1b2
+      - T1c
+      - T1mi
+      - T2
+      - T2a
+      - T2a1
+      - T2a2
+      - T2b
+      - T2c
+      - T2d
+      - T3
+      - T3a
+      - T3b
+      - T3c
+      - T3d
+      - T4
+      - T4a
+      - T4b
+      - T4c
+      - T4d
+      - T4e
+      - TX
+      - Ta
+      - Tis
+      - Tis (DCIS)
+      - Tis (LCIS)
+      - Tis (Paget's)
+      - Unknown
+      - Not Reported
+
+  uicc_pathologic_m:
+    $ref:
+      - "_terms.yaml#/uicc_pathologic_m/common"
+    enum:
+      - M0
+      - M1
+      - M1a
+      - M1b
+      - M1c
+      - M1d
+      - M2
+      - MX
+      - cM0 (i+)
+      - Unknown
+      - Not Reported
+
+  uicc_pathologic_n:
+    $ref:
+      - "_terms.yaml#/uicc_pathologic_n/common"
+    enum:
+      - N0
+      - N0 (i+)
+      - N0 (i-)
+      - N0 (mol+)
+      - N0 (mol-)
+      - N1
+      - N1a
+      - N1b
+      - N1bI
+      - N1bII
+      - N1bIII
+      - N1bIV
+      - N1c
+      - N1mi
+      - N2
+      - N2mi
+      - N2a
+      - N2b
+      - N2c
+      - N3
+      - N3a
+      - N3b
+      - N3c
+      - N4
+      - NX
+      - Unknown
+      - Not Reported
+
+  uicc_pathologic_stage:
+    $ref:
+      - "_terms.yaml#/uicc_pathologic_stage/common"
+    enum:
+      - Stage 0
+      - Stage 0a
+      - Stage 0is
+      - Stage I
+      - Stage IA
+      - Stage IA1
+      - Stage IA2
+      - Stage IA3
+      - Stage IB
+      - Stage IB1
+      - Stage IB2
+      - Stage IC
+      - Stage II
+      - Stage IS
+      - Stage IIA
+      - Stage IIA1
+      - Stage IIA2
+      - Stage IIB
+      - Stage IIC
+      - Stage III
+      - Stage IIIA
+      - Stage IIIA1
+      - Stage IIIA2
+      - Stage IIIB
+      - Stage IIIC
+      - Stage IIIC1
+      - Stage IIIC2
+      - Stage IIID
+      - Stage IV
+      - Stage IVA
+      - Stage IVB
+      - Stage IVC
+      - Stage Tis
+      - Stage X
+      - Unknown
+      - Not Reported
+
+  uicc_pathologic_t:
+    $ref:
+      - "_terms.yaml#/uicc_pathologic_t/common"
+    enum:
+      - T0
+      - T1
+      - T1a
+      - T1a1
+      - T1a2
+      - T1b
+      - T1b1
+      - T1b2
+      - T1c
+      - T1c2
+      - T1mi
+      - T2
+      - T2a
+      - T2a1
+      - T2a2
+      - T2b
+      - T2c
+      - T2d
+      - T3
+      - T3a
+      - T3b
+      - T3c
+      - T3d
+      - T4
+      - T4a
+      - T4b
+      - T4c
+      - T4d
+      - T4e
+      - TX
+      - Ta
+      - Tis
+      - Tis (DCIS)
+      - Tis (LCIS)
+      - Tis (Paget's)
+      - Unknown
+      - Not Reported
 
   weiss_assessment_score:
     $ref:
