@@ -62,6 +62,8 @@ properties:
     $ref:
       - "_terms.yaml#/days_to_consent/common"
     type: integer
+    maximum: 32872
+    minimum: -32872
 
   days_to_lost_to_followup:
     $ref:

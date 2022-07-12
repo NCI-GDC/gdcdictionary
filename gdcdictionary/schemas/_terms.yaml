@@ -78,8 +78,8 @@ age_at_diagnosis:
 age_at_index:
   common:
     description: >-
-      The patient's age (in years) on the reference or anchor date date used during
-      date obfuscation.
+      The patient's age (in years) on the reference or anchor date used during date
+      obfuscation.
     termDef:
       term: >-
         Patient Age at Index
@@ -244,7 +244,7 @@ alcohol_days_per_week:
 alcohol_drinks_per_day:
   common:
     description: >-
-      Numeric value used to describe the average number of alcoholic beverages  a
+      Numeric value used to describe the average number of alcoholic beverages a
       person consumes per day.
     termDef:
       term: >-
@@ -996,7 +996,7 @@ creation_datetime:
 current_weight:
   common:
     description: >-
-      Numeric value that represents the current weight of the sample, measured  in
+      Numeric value that represents the current weight of the sample, measured in
       milligrams.
     termDef:
       term: >-
@@ -1198,8 +1198,8 @@ days_to_last_follow_up:
 days_to_last_known_disease_status:
   common:
     description: >-
-      Time interval from the date of last follow up to the date of initial pathologic
-      diagnosis, represented as a calculated number of days.
+      Number of days between the date used for index and the date the patient's
+      disease status was known.
     termDef:
       term: >-
         Last Communication Contact Less Initial Pathologic Diagnosis Date Calculated
@@ -1922,7 +1922,7 @@ hpv_positive_type:
 icd_10_code:
   common:
     description: >-
-      Alphanumeric value used to describe the  disease code from the tenth version
+      Alphanumeric value used to describe the disease code from the tenth version
       of the International Classification of Disease (ICD-10).
     termDef:
       term: >-
@@ -2368,15 +2368,16 @@ loci_count:
 locus:
   common:
     description: >-
-      Alphanumeric value used to describe the locus of a specific genetic variant.
-      Example: NM_001126114.
+      The position of a gene or a chromosomal marker on a chromosome; also, a stretch
+      of DNA at a particular place on a particular chromosome. The use of locus is
+      sometimes restricted to mean regions of DNA that are expressed (example: 17p13.1.).
     termDef:
       term: >-
-        Molecular Laboratory Procedure Locus Location Text
-      source: caDSR
-      cde_id: 6142506
-      cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142506&version=1.0"
+        Locus
+      source: NCIt
+      cde_id: C45822
+      cde_version: 22.04d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.04d&ns=ncit&code=C45822&key=1930938629&b=1&n=null"
 
 longest_dimension:
   common:
@@ -2420,7 +2421,7 @@ lymph_nodes_positive:
 lymph_nodes_tested:
   common:
     description: >-
-      The number of lymph nodes tested to determine whether lymph nodes were  involved
+      The number of lymph nodes tested to determine whether lymph nodes were involved
       with disease as determined by a pathologic examination.
     termDef:
       term: >-
@@ -3612,10 +3613,10 @@ residual_disease:
 respirable_crystalline_silica_exposure:
   common:
     description: >-
-      The yes/no/unknown indicator used to describe whether a patient was exposured
+      The yes/no/unknown indicator used to describe whether a patient was exposed
       to respirable crystalline silica, a widespread, naturally occurring, crystalline
       metal oxide that consists of different forms including quartz, cristobalite,
-      tridymite, tripoli, ganister, chert and novaculite.
+      tridymite, tripoli, ganister, chert, and novaculite.
     termDef:
       term: >-
         Person Respirable Cystalline Silica Exposure Indicator
@@ -3866,7 +3867,7 @@ size_selection_range:
 smoking_frequency:
   common:
     description: >-
-      The text term used to generally decribe how often the patient smokes.
+      The text term used to generally describe how often the patient smokes.
     termDef:
       term: >-
         Person Smoking Frequency
@@ -4079,7 +4080,7 @@ test_units:
 test_value:
   common:
     description: >-
-      The text term or numeric value used to describe a sepcific result of a molecular
+      The text term or numeric value used to describe a specific result of a molecular
       test.
     termDef:
       term: >-
@@ -4279,7 +4280,7 @@ treatment_arm:
 treatment_dose:
   common:
     description: >-
-      The numeric value used to describe the dose of an agent the patient received.
+      The numeric value used to describe the total dose of an agent the patient received.
     termDef:
       term: >-
         Agent Dose
@@ -4608,7 +4609,7 @@ vital_status:
 weeks_gestation_at_birth:
   common:
     description: >-
-      Numeric value used to describe the number of weeks starting  from the approximate
+      Numeric value used to describe the number of weeks starting from the approximate
       date of the biological mother's last menstrual period and ending with the birth
       of the patient.
     termDef:
@@ -4777,7 +4778,7 @@ days_to_consent:
 tumor_depth:
   common:
     description: >-
-      Numeric value that represents the depth of  tumor invasion, measured in millimeters
+      Numeric value that represents the depth of tumor invasion, measured in millimeters
       (mm).
     termDef:
       term: >-
@@ -5243,7 +5244,7 @@ hiv_viral_load:
 aids_risk_factors:
   common:
     description: >-
-      The text term used to describe a risk factor of  the acquired immunodeficiency
+      The text term used to describe a risk factor of the acquired immunodeficiency
       syndrome (AIDS) that the patient either had at time time of the study or experienced
       in the past.
     termDef:
@@ -5258,10 +5259,10 @@ haart_treatment_indicator:
   common:
     description: >-
       The text term used to indicate whether the patient received Highly Active Antiretroviral
-      Therapy (HARRT).
+      Therapy (HAART).
     termDef:
       term: >-
-        HARRT Therapy Indicator
+        HAART Therapy Indicator
       source:
       cde_id:
       cde_version:
@@ -5647,8 +5648,8 @@ diagnosis_is_primary_disease:
   common:
     description: >-
       Indicates whether this specific diagnosis represents the disease that was the
-      primary focus of the study. Additionally, this diagnosis is reflected at the 
-      case level, which is captured using the case.disease_type property.
+      primary focus of the study. Additionally, this diagnosis is reflected at the case
+      level, which is captured using the case.disease_type property.
     termDef:
       term: >-
         Is Diagnosis Primary Disease
@@ -5818,7 +5819,7 @@ undescended_testis_corrected_method:
 undescended_testis_corrected_laterality:
   common:
     description: >-
-      Descrives the lateral location of the patient's undescended testis correction.
+      Describes the lateral location of the patient's undescended testis correction.
     termDef:
       term: >-
         Undescended Testis Corrected Laterality
@@ -5856,7 +5857,7 @@ tumor_thickness:
   common:
     description: >-
       A measurement of the thickness of a sectioned slice (of tissue or mineral or
-      other substance).
+      other substance) in millimeters (mm).
     termDef:
       term: >-
         Section Thickness
@@ -6099,6 +6100,335 @@ morphologic_architectural_pattern:
     description: >-
       A specific morphologic or pathologic architectural pattern was discovered within
       the sample studied.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+age_at_last_exposure:
+  common:
+    description: >-
+      The study participant's age at the time they were last exposed.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+asbestos_exposure_type:
+  common:
+    description: >-
+      The type of asbestos exposure the study participant experienced.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+clinical_trial_indicator:
+  common:
+    description: >-
+      Indicator used to describe whether the treatment was part of a clinical trial.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+course_number:
+  common:
+    description: >-
+      The number assigned to a course of therapeutic agent administration, indicating
+      where a particular course of treatment falls within a sequence of treatments.
+    termDef:
+      term:
+      source: NCIt
+      cde_id: C166235
+      cde_version: 22.05e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C166235"
+
+double_expressor_lymphoma:
+  common:
+    description: >-
+      An immunohistochemical finding indicating the presence of double expression
+      of MYC and BCL2 proteins in the neoplastic cells of a tumor sample.
+    termDef:
+      term:
+      source: NCIt
+      cde_id: C138900
+      cde_version: 22.05e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C138900"
+
+double_hit_lymphoma:
+  common:
+    description: >-
+      A rare B-cell non-Hodgkin lymphoma that is characterized by the abnormal rearrangement
+      of two genes, MYC gene and either BCL2 or BCL6 genes. Patients with this type
+      of lymphoma usually respond poorly to standard treatments and have a poor prognosis.
+    termDef:
+      term:
+      source: NCIt
+      cde_id: C125904
+      cde_version: 22.05e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C125904"
+
+drug_category:
+  common:
+    description: >-
+      A broad categorization of the type of drug administered.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+embolic_agent:
+  common:
+    description: >-
+      A substance used to block an artery, thereby eliminating the blood flow to a
+      specific part of an organ. An embolic agent may cause permanent or temporary
+      blockage depending on the nature of the material used.
+    termDef:
+      term:
+      source: NCIt
+      cde_id: C97229
+      cde_version: 22.05e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C97229"
+
+exposure_source:
+  common:
+    description: >-
+      The source or location where the patient was exposed.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+hpv_strain:
+  common:
+    description: >-
+      The specific hpv strain being tested.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+lesions_treated_number:
+  common:
+    description: >-
+      The number of lesions treated.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+max_tumor_bulk_site:
+  common:
+    description: >-
+      The site of the tumor where the dimension or diameter is larger than any other
+      part of the tumor.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+number_of_fractions:
+  common:
+    description: >-
+      The total number of divided radiation doses received.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+prescribed_dose:
+  common:
+    description: >-
+      A quantity of an agent prescribed to the study participant.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+protocol_identifier:
+  common:
+    description: >-
+      A sequence of letters, numbers, or other characters that uniquely identifies
+      a study protocol.
+    termDef:
+      term:
+      source: NCIt
+      cde_id: C132299
+      cde_version: 22.05e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C132299"
+
+treatment_dose_max:
+  common:
+    description: >-
+      A maximum quantity of an agent administered to the study participant.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+tumor_level_prostate:
+  common:
+    description: >-
+      The level(s) of the prostate from which the tumor originated.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+uicc_clinical_m:
+  common:
+    description: >-
+      The UICC TNM Classification is an anatomically based system that records the
+      primary and regional nodal extent of the tumor and the absence or presence of
+      metastases. The clinical M category describes the presence or otherwise of distant
+      metastatic spread as determined during a clinical exam.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+uicc_clinical_n:
+  common:
+    description: >-
+      The UICC TNM Classification is an anatomically based system that records the
+      primary and regional nodal extent of the tumor and the absence or presence of
+      metastases. The clinical N category describes the regional lymph node involvement
+      as determined during a clinical exam.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+uicc_clinical_stage:
+  common:
+    description: >-
+      The UICC TNM Classification is an anatomically based system that records the
+      primary and regional nodal extent of the tumor and the absence or presence of
+      metastases. The clinical stage is based on the T, N, and M categories which
+      are determined during a clinical exam.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+uicc_clinical_t:
+  common:
+    description: >-
+      The UICC TNM Classification is an anatomically based system that records the
+      primary and regional nodal extent of the tumor and the absence or presence of
+      metastases. The clinical T category describes the primary tumor site and size
+      as determined during a clinical exam.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+uicc_pathologic_m:
+  common:
+    description: >-
+      The UICC TNM Classification is an anatomically based system that records the
+      primary and regional nodal extent of the tumor and the absence or presence of
+      metastases. The pathological M category describes the presence or otherwise
+      of distant metastatic spread as determined during a pathology review.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+uicc_pathologic_n:
+  common:
+    description: >-
+      The UICC TNM Classification is an anatomically based system that records the
+      primary and regional nodal extent of the tumor and the absence or presence of
+      metastases. The pathological N category describes the regional lymph node involvement
+      as determined during a pathology review.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+uicc_pathologic_stage:
+  common:
+    description: >-
+      The UICC TNM Classification is an anatomically based system that records the
+      primary and regional nodal extent of the tumor and the absence or presence of
+      metastases. The pathological stage is based on the T, N, and M categories which
+      are determined during a pathological review.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+uicc_pathologic_t:
+  common:
+    description: >-
+      The UICC TNM Classification is an anatomically based system that records the
+      primary and regional nodal extent of the tumor and the absence or presence of
+      metastases. The pathological T category describes the primary tumor site and
+      size as determined during a pathology review.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+use_per_day:
+  common:
+    description: >-
+      The average number of times the patient used per day.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+zone_of_origin_prostate:
+  common:
+    description: >-
+      The location or position of the tumor by zone of the prostate.
     termDef:
       term:
       source:

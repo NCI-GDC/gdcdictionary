@@ -38,14 +38,30 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 deprecated:
-  - bmi
-  - height
-  - weight
+  - smokeless_tobacco_quit_age
+  - asbestos_exposure
+  - radon_exposure
+  - respirable_crystalline_silica_exposure
+  - years_smoked
 
 properties:
 
   $ref:
     - "_definitions.yaml#/ubiquitous_properties"
+
+  asbestos_exposure_type:
+    $ref:
+      - "_terms.yaml#/asbestos_exposure_type/common"
+    enum:
+      - Amosite
+      - Crocidolite
+
+  age_at_last_exposure:
+    $ref:
+      - "_terms.yaml#/age_at_last_exposure/common"
+    type: integer
+    maximum: 89
+    minimum: 0
 
   age_at_onset:
     $ref:
@@ -109,6 +125,7 @@ properties:
       - Lifelong Non-Drinker
       - Non-Drinker
       - Occasional Drinker
+      - Social Drinker
       - Unknown
       - Not Reported
     enumDef:
@@ -241,15 +258,29 @@ properties:
     $ref:
       - "_terms.yaml#/exposure_duration_years/common"
     type: integer
+    maximum: 89
     minimum: 0
+
+  exposure_source:
+    $ref:
+      - "_terms.yaml#/exposure_source/common"
+    enum:
+      - Occupational
+      - Secondary
+      - Unknown
 
   exposure_type:
     $ref:
       - "_terms.yaml#/exposure_type/common"
     enum:
+      - Asbestos
+      - Chemical
       - Marijuana
       - Radiation
       - Smoke
+      - Radon
+      - Respirable Crystalline Silica
+      - Smokeless Tobacco
       - Tobacco
       - Wood Dust
     enumDef:
@@ -259,12 +290,6 @@ properties:
       Tobacco:
         $ref:
           - "_terms_enum.yaml#/tobacco/common"
-
-  marijuana_use_per_week:
-    $ref:
-      - "_terms.yaml#/marijuana_use_per_week/common"
-    type: number
-    minimum: 0
 
   pack_years_smoked:
     $ref:
@@ -351,13 +376,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-
-  smokeless_tobacco_quit_age:
-    $ref:
-      - "_terms.yaml#/smokeless_tobacco_quit_age/common"
-    type: integer
-    maximum: 89
-    minimum: 0
 
   smoking_frequency:
     $ref:
@@ -464,12 +482,6 @@ properties:
       Not Allowed To Collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
-
-  tobacco_use_per_day:
-    $ref:
-      - "_terms.yaml#/tobacco_use_per_day/common"
-    type: number
-    minimum: 0
 
   type_of_smoke_exposure:
     $ref:
@@ -703,6 +715,12 @@ properties:
       Smokeless Tobacco:
         $ref:
           - "_terms_enum.yaml#/smokeless_tobacco/common"
+
+  use_per_day:
+    $ref:
+      - "_terms.yaml#/use_per_day/common"
+    type: number
+    minimum: 0
 
   years_smoked:
     $ref:
