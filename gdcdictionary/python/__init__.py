@@ -73,7 +73,7 @@ class GDCDictionary(object):
                 except Exception as e:
                     self.logger.error("Error in file: {}".format(name))
                     raise e
-            return yaml.safe_load(f)
+            return yaml.load(f, Loader=yaml.CSafeLoader)
 
     def load_schemas_from_dir(self, directory):
         """Returns all yamls and resolvers of those yamls from dir"""
