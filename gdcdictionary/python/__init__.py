@@ -73,12 +73,11 @@ class GDCDictionary(object):
                 except Exception as e:
                     self.logger.error("Error in file: {}".format(name))
                     raise e
-            try:
+            if yaml.__with_libyaml__:
                 return yaml.load(f, Loader=yaml.CSafeLoader)
-            except AttributeError as e:
-                self.logger.warning(e)
-                self.logger.warning("To enable CSafeLoader install libyaml. Falling back to yaml.safe_load()")
-                return yaml.safe_load(f)
+            self.logger.warning(e)
+            self.logger.warning("To enable CSafeLoader install libyaml. Falling back to yaml.safe_load()")
+            return yaml.safe_load(f)
 
     def load_schemas_from_dir(self, directory):
         """Returns all yamls and resolvers of those yamls from dir"""
