@@ -75,8 +75,7 @@ class GDCDictionary(object):
                     raise e
             if yaml.__with_libyaml__:
                 return yaml.load(f, Loader=yaml.CSafeLoader)
-            self.logger.warning(e)
-            self.logger.warning("To enable CSafeLoader install libyaml. Falling back to yaml.safe_load()")
+            self.logger.debug("To enable CSafeLoader install libyaml. Falling back to yaml.safe_load()")
             return yaml.safe_load(f)
 
     def load_schemas_from_dir(self, directory):
