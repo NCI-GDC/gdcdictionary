@@ -63,7 +63,7 @@ pytest==4.6.11
     # via
     #   -r dev-requirements.in
     #   pytest-cov
-pyyaml==5.3.1
+pyyaml==5.4
     # via
     #   aspy.yaml
     #   gdcdictionary (setup.py)
