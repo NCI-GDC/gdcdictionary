@@ -1,0 +1,38 @@
+---
+# To contribute improvements to CI/CD templates, please follow the Development guide at:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Python.gitlab-ci.yml
+include:
+  - project: nci-gdc/gitlab-templates
+    ref: master
+    file:
+      - templates/global/full.yaml
+      - templates/python/full.yaml
+
+
+.python_versions:
+  parallel:
+    matrix:
+      - PY_VERSION: [python27,python36]
+
+tox:
+  stage: test
+  tags:
+    - dind
+  image: docker.osdc.io/ncigdc/${PY_VERSION}-builder:1.4.0
+  services:
+    - name: docker.osdc.io/ncigdc/ci-postgres-13:2.0.1
+      alias: postgres
+    - name: docker.osdc.io/ncigdc/ci-elasticsearch-7:2.0.1
+      alias: elasticsearch
+  script:
+    - !reference [.load_github_key, script]
+    - !reference [.python_venv, script]
+    - pip install tox
+    - tox
+  variables:
+    GDC_ES_HOST: elasticsearch
+    ES_HOST: elasticsearch
+    GDC_DB_HOST: postgres
+    DB_HOST: postgres
