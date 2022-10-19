@@ -14,7 +14,7 @@ include:
 .python_versions:
   parallel:
     matrix:
-      - PY_VERSION: [python27,python36]
+      - REPO_PY_VERSION: [python27,python36]
 
 tox:
   services:
