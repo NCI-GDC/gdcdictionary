@@ -17,20 +17,11 @@ include:
       - PY_VERSION: [python27,python36]
 
 tox:
-  stage: test
-  tags:
-    - dind
-  image: docker.osdc.io/ncigdc/${PY_VERSION}-builder:1.4.0
   services:
     - name: docker.osdc.io/ncigdc/ci-postgres-13:2.0.1
       alias: postgres
     - name: docker.osdc.io/ncigdc/ci-elasticsearch-7:2.0.1
       alias: elasticsearch
-  script:
-    - !reference [.load_github_key, script]
-    - !reference [.python_venv, script]
-    - pip install tox
-    - tox
   variables:
     GDC_ES_HOST: elasticsearch
     ES_HOST: elasticsearch
