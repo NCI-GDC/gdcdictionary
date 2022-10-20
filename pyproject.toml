@@ -7,6 +7,32 @@ name = "gdcdictionary"
 authors = [{name = "NCI-GDC", email = "support@nci-gdc.datacommons.io"}]
 readme = "README.md"
 dynamic = ["version", "description"]
+license = {file = "LICENSE"}
+
+dependencies = [
+    "click"
+]
 
 [project.urls]
 Home = "https://gdc.cancer.gov"
+Source = "https://github.com/NCI-GDC/gdcdictionary"
+
+[tool.setuptools_scm]
+write_to = "gdcdictionary/_version.py"
+local_scheme = "dirty-tag"
+version_scheme = "python-simplified-semver"
+fallback_version = "0"
+
+[tool.flit.module]
+name = "gdcdictionary"
+
+[tool.flit.sdist]
+include = ["gdcdictionary/_version.py"]
+exclude = [
+    ".*",
+    "dev-requirements.*",
+    "Dockerfile",
+    "Jenkinsfile",
+    "*travis.yml",
+    "tox.ini",
+]
