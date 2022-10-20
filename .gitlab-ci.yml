@@ -27,3 +27,22 @@ tox:
     ES_HOST: elasticsearch
     GDC_DB_HOST: postgres
     DB_HOST: postgres
+
+# Only release py36 package
+release:
+  stage: build
+  image: ${BASE_CONTAINER_REGISTRY}/python36-builder:${LEGACY_BASE_CONTAINER_VERSION}
+  cache: !reference [.cache, pull-only]
+  script:
+    - !reference [.load_github_key, script]
+    - !reference [.python_venv, script]
+    - pip install tox
+    - echo "VERSION=$(tox -qq -e version)" >> vars.env
+    - echo "Publishing to $TWINE_REPOSITORY_URL with $TWINE_USERNAME"
+    - tox -e publish
+  variables:
+    TWINE_USERNAME: ${TWINE_USER}
+    TWINE_PASSWORD: ${TWINE_PASSWORD}
+  artifacts:
+    paths:
+      - dist/*.whl
