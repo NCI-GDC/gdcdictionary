@@ -1,0 +1,12 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "gdcdictionary"
+authors = [{name = "NCI-GDC", email = "support@nci-gdc.datacommons.io"}]
+readme = "README.md"
+dynamic = ["version", "description"]
+
+[project.urls]
+Home = "https://gdc.cancer.gov"
