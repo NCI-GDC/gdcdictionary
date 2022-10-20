@@ -5,7 +5,7 @@
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Python.gitlab-ci.yml
 include:
   - project: nci-gdc/gitlab-templates
-    ref: master
+    ref: bugfix/only_build_a_docker_image_if_dockerfile_exists
     file:
       - templates/global/full.yaml
       - templates/python/full.yaml
