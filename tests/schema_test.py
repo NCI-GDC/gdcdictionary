@@ -90,7 +90,7 @@ class SchemaTest(BaseTest):
         If the acyclicality check passes like this, either the algorithm is
         missing something or we're ignoring types that we shouldn't.
         """
-        with self.assertRaisesRegex(AssertionError, 'cycle detected'):
+        with self.assertRaisesRegexp(AssertionError, 'cycle detected'):
             check_for_cycles(self.dictionary.schema)
 
     def test_check_for_cycles_positive(self):
@@ -188,7 +188,7 @@ class SchemaTest(BaseTest):
             'tissue_source_site': {'links': []},
         }
 
-        with self.assertRaisesRegex(AssertionError, 'cycle detected'):
+        with self.assertRaisesRegexp(AssertionError, 'cycle detected'):
             check_for_cycles(schemata)
 
     def test_links_to_annotation(self):
