@@ -480,6 +480,9 @@ properties:
   clinical_supplements:
     $ref: "_definitions.yaml#/to_many"
 
+  copy_number_auxiliary_files:
+    $ref: "_definitions.yaml#/to_many"
+
   copy_number_estimates:
     $ref: "_definitions.yaml#/to_many"
 
