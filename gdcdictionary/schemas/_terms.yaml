@@ -445,6 +445,18 @@ analyte_type:
       cde_version: 2.0
       term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2513915&version=2.0"
 
+analyte_type_id:
+  common:
+    description: >-
+      A single letter code used to identify a type of molecular analyte.
+    termDef:
+      term: >-
+        Molecular Analyte Identification Code
+      source: caDSR
+      cde_id: 5432508
+      cde_version: 1.0
+      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432508&version=1.0"
+
 analyte_volume:
   common:
     description: >-
