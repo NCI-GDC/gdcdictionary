@@ -84,7 +84,7 @@ properties:
       - RNA-Seq
       - scRNA-Seq
       - Total RNA-Seq
-      - m6A MeRIP-Seq
+
 
 
   rna_expression_workflows:
