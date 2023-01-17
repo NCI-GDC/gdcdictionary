@@ -1206,7 +1206,7 @@ columnar_mucosa_present:
       cde_version:
       term_url:
 
-comorbidity:
+comorbidities:
   common:
     description: >-
       The text term used to describe a comorbidity disease, which coexists with the
