@@ -80,10 +80,11 @@ properties:
     $ref:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
+      - m6A MeRIP-Seq
       - RNA-Seq
       - scRNA-Seq
       - Total RNA-Seq
-      - m6A MeRIP-Seq
+
 
   rna_expression_workflows:
     $ref: "_definitions.yaml#/to_one"
