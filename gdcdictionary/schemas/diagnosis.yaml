@@ -18533,9 +18533,6 @@ properties:
       - Waldeyer ring
       - Unknown
       - Not Reported
-      - Lower third of esophagus
-      - Middle third of esophagus
-      - Upper third of esophagus
     enumDef:
       Abdomen, NOS:
         $ref:
