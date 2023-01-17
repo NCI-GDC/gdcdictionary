@@ -24,6 +24,7 @@
     "sample_type": "Blood Derived Normal",
     "sample_type_id": "10",
     "shortest_dimension": 0.5,
+    "specimen_type": "Solid Tissue",
     "time_between_clamping_and_freezing": 30,
     "time_between_excision_and_freezing": 15,
     "tissue_type": "Normal",
