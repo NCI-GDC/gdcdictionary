@@ -7001,7 +7001,9 @@ properties:
       - "_terms.yaml#/test_result/common"
     enum:
       - Abnormal, NOS
+      - Amplified
       - Copy Number Reported
+      - Elevated
       - Equivocal
       - High
       - Intermediate
@@ -7009,15 +7011,13 @@ properties:
       - Low
       - Negative
       - Normal
+      - Not Amplified
       - Overexpressed
       - Positive
       - Stable
       - Test Value Reported
       - Unknown
       - Not Reported
-      - Elevated
-      - Amplified
-      - Not Amplified
     enumDef:
       Abnormal, NOS:
         $ref:
