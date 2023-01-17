@@ -96,6 +96,8 @@ properties:
       - CEA
       - FMC-7
       - HLA-DR
+      - Immunoglobulin, Cytoplasmic
+      - Immunoglobulin, Surface
       - Kappa, Surface
       - Ki67
       - Lambda, Surface
@@ -106,8 +108,6 @@ properties:
       - TAG-72
       - Unknown
       - Not Reported
-      - Immunoglobulin, Surface
-      - Immunoglobulin, Cytoplasmic
     enumDef:
       BCL6:
         $ref:
@@ -476,8 +476,8 @@ properties:
 
   chromosome_arm:
     enum:
-      - q
       - p
+      - q
       - Not Reported
 
   cytoband:
@@ -3526,6 +3526,7 @@ properties:
       - Basophil
       - Beta 2 Microglobulin
       - BG8
+      - Blast Count
       - Blood Urea Nitrogen
       - C-Reactive Protein
       - Calcium
@@ -3562,6 +3563,9 @@ properties:
       - Metanephrine-Secreting
       - Methoxytyramine-Secreting
       - Microsatellite Instability
+      - Metaphase Nucleus Count
+      - Minimal Residual Disease
+      - Monocytes
       - Myeloblasts
       - Myelocytes
       - Neutrophil Bands
@@ -3583,10 +3587,6 @@ properties:
       - Total Protein
       - Unknown
       - Not Reported
-      - Monocytes
-      - Metaphase Nucleus Count
-      - Minimal Residual Disease
-      - Blast Count
     enumDef:
       5-Hydroxyindoleacetic Acid:
         $ref:
@@ -7095,9 +7095,9 @@ properties:
 
   timepoint_category:
     enum:
+      - End of Consolidation Therapy
       - End of Treatment Course 1
       - End of Treatment Course 2
-      - End of Consolidation Therapy
       - Not Reported
 
   transcript:
@@ -7136,13 +7136,17 @@ properties:
       - Deletion-Insertion
       - Duplication
       - Extension
+      - Fusion
       - Gain
+      - Genetic Polymorphism
       - Hypermethylation
       - Insertion
+      - Internal Tandem Duplication
       - Inversion
       - Loss
       - Methylation
       - Mosaicism
+      - Mutation, NOS
       - Other
       - Partial Methylation
       - Rearrangement
@@ -7152,10 +7156,6 @@ properties:
       - Translocation
       - Unknown
       - Not Reported
-      - Fusion
-      - Internal Tandem Duplication
-      - Genetic Polymorphism
-      - Mutation, NOS
     enumDef:
       Alleles:
         $ref:
