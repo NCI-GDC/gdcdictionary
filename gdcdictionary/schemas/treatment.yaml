@@ -665,7 +665,6 @@ properties:
       - Unknown
       - Not Reported
       - Locoregional Site
-      - Distant Site
     enumDef:
       Bone Marrow:
         $ref:
