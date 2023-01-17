@@ -6,6 +6,7 @@ services:
       SSH_AUTH_SOCK: $SSH_AUTH_SOCK
       HTTPS_PROXY: http://cloud-proxy:3128
       HTTP_PROXY: http://cloud-proxy:3128
+      LANG: "en_GB.UTF-8"
     volumes:
     - .:/home/jenkins
     - $SSH_AUTH_SOCK:$SSH_AUTH_SOCK
