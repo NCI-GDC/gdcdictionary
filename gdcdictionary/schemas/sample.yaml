@@ -56,6 +56,8 @@ required:
   - submitter_id
   - sample_type
   - tissue_type
+  - tumor_descriptor
+  - ''
 
 uniqueKeys:
   - [id]
@@ -64,6 +66,8 @@ uniqueKeys:
 deprecated:
   - is_ffpe
   - oct_embeded
+  - composition
+  - sample_type
 
 properties:
 
@@ -886,6 +890,44 @@ properties:
     type: number
     minimum: 0
 
+  specimen_type:
+    enum:
+      - 2D Classical Conditionally Reprogrammed Cells
+      - 2D Modified Conditionally Reprogrammed Cells
+      - 3D Air-Liquid Interface Organoid
+      - 3D Neurosphere
+      - 3D Organoid
+      - Adherent Cell Line
+      - Bone Marrow Components NOS
+      - Buccal Cells
+      - Buffy Coat
+      - Cell
+      - Control Analyte
+      - Derived Cell Line
+      - EBV Immortalized
+      - Granulocytes
+      - Human Original Cells
+      - Liquid Suspension Cell Line
+      - Lymphocytes
+      - Mixed Adherent Suspension
+      - Peripheral Blood Components NOS
+      - Peripheral Whole Blood
+      - Plasma
+      - Pleural Effusion
+      - Saliva
+      - Serum
+      - Solid Tissue
+      - Sorted Cells
+      - Sputum
+      - Whole Bone Marrow
+      - Unknown
+      - Not Reported
+      - Bone Marrow NOS
+      - Peripheral Blood NOS
+      - Mononuclear Cells from Bone Marrow
+      - Fibroblasts from Bone Marrow
+      - Lymphoid
+
   time_between_clamping_and_freezing:
     $ref:
       - "_terms.yaml#/time_between_clamping_and_freezing/common"
@@ -1013,6 +1055,7 @@ properties:
       - Xenograft
       - Unknown
       - Not Reported
+      - New Primary
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
