@@ -43,11 +43,17 @@ deprecated:
   - radon_exposure
   - respirable_crystalline_silica_exposure
   - years_smoked
+  - coal_dust_exposure
 
 properties:
 
   $ref:
     - "_definitions.yaml#/ubiquitous_properties"
+
+  alcohol_frequency:
+    enum:
+      - Daily Drinker
+      - Weekly Drinker
 
   asbestos_exposure_type:
     $ref:
@@ -194,6 +200,35 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  chemical_exposure_type:
+    enum:
+      - Agent Orange
+      - Aluminum
+      - Arsenic
+      - Asbestos
+      - Benzene
+      - Cadmium
+      - Chromium
+      - Chemical Exposure, NOS
+      - Chemical, NOS
+      - Coal Gas, Coal Tar, Coal Tar Pitch, and Derivatives
+      - Coke Oven Emission
+      - Copper
+      - Diesel Exhaust
+      - Disinfectant
+      - Formaldehyde
+      - Methylene Chloride
+      - Occupational Soldering/Welding Smoke Exposure
+      - Oil
+      - Pesticide
+      - Petroleum Hydrocarbon Compound
+      - Resin Fumes
+      - Sodium Borate
+      - Solvent
+      - Tetrachloroethylene
+      - Toluene
+      - Not Reported
+
   cigarettes_per_day:
     $ref:
       - "_terms.yaml#/cigarettes_per_day/common"
@@ -283,6 +318,8 @@ properties:
       - Smokeless Tobacco
       - Tobacco
       - Wood Dust
+      - Coal Dust
+      - Diesel Exhaust
     enumDef:
       Marijuana:
         $ref:
@@ -290,6 +327,146 @@ properties:
       Tobacco:
         $ref:
           - "_terms_enum.yaml#/tobacco/common"
+
+  occupation_duration_years:
+    type: integer
+    maximum: 2050
+    minimum: 1900
+
+  occupation_type:
+    type: array
+    items:
+      enum:
+        - Legislators and Senior Officials
+        - Managing Directors and Chief Executives
+        - Business Services and Administration Managers
+        - Sales, Marketing and Development Managers
+        - Production Managers in Agriculture, Forestry and Fisheries
+        - Manufacturing, Mining, Construction and Distribution Managers
+        - Information and Communications Technology Service managers
+        - Professional Services Managers
+        - Hotel and Restaurant Managers
+        - Retail and Wholesale Trade Managers
+        - Other Services Managers
+        - Physical and Earth Science Professionals
+        - Mathematicians, Actuaries and Statisticians
+        - Life Science Professionals
+        - Engineering Professionals (excluding Electrotechnology)
+        - Electrotechnology Engineers
+        - Architects, Planners, Surveyors and Designers
+        - Medical Doctors
+        - Nursing and Midwifery Professionals
+        - Traditional and Complementary Medicine Professionals
+        - Paramedical Practitioners
+        - Veterinarians
+        - Other Health Professionals
+        - University and Higher Education Teachers
+        - Vocational education teachers
+        - Secondary Education Teachers
+        - Primary School and Early Childhood Teachers
+        - Other Teaching Professionals
+        - Finance Professionals
+        - Administration Professionals
+        - Sales, Marketing and Public Relations Professionals
+        - Software and Applications Developers and Analysts
+        - Database and Network Professionals
+        - Legal Professionals
+        - Librarians, Archivists and Curators
+        - Social and Religious Professionals
+        - Authors, Journalists and Linguists
+        - Creative and Performing Artists
+        - Physical and Engineering Science Technicians
+        - Mining, Manufacturing and Construction Supervisors
+        - Process Control Technicians
+        - Life Science Technicians and Related Associate Professionals
+        - Ship and Aircraft Controllers and Technicians
+        - Medical and Pharmaceutical Technicians
+        - Nursing and Midwifery Associate Professionals
+        - Traditional and Complementary Medicine Associate Professionals
+        - Veterinary Technicians and Assistants
+        - Other Health Associate Professionals
+        - Financial and Mathematical Associate Professionals
+        - Sales and Purchasing Agents and Brokers
+        - Business Services Agents
+        - Administrative and Specialized Secretaries
+        - Government Regulatory  Associate Professionals
+        - Legal, Social and Religious Associate Professionals
+        - Sports and Fitness Workers
+        - Artistic, Cultural and Culinary Associate Professionals
+        - Information and Communications Technology Operations and User Support Technicians
+        - Telecommunications and Broadcasting Technicians
+        - General Office Clerks
+        - Secretaries (general)
+        - Keyboard Operators
+        - Tellers, Money Collectors and Related Clerks
+        - Client Information Workers
+        - Numerical Clerks
+        - Material Recording and Transport Clerks
+        - Other Clerical Support Workers
+        - Travel Attendants, Conductors and Guides
+        - Cooks
+        - Waiters and Bartenders
+        - Hairdressers, Beauticians and Related Workers
+        - Building and Housekeeping Supervisors
+        - Other Personal Services Workers
+        - Street and Market Salespersons
+        - Shop Aalespersons
+        - Cashiers and Ticket Clerks
+        - Other Sales Workers
+        - Child Care Workers and Teachers' Aides
+        - Personal Care Workers in Health Services
+        - Protective Services Workers
+        - Market Gardeners and Crop Growers
+        - Animal Producers
+        - Mixed Crop and Animal Producers
+        - Forestry and Related Workers
+        - Fishery Workers, Hunters and Trappers
+        - Subsistence Crop Farmers
+        - Subsistence Livestock Farmers
+        - Subsistence Mixed Crop and Livestock Farmers
+        - Subsistence Fishers, Hunters, Trappers and Gatherers
+        - Building Frame and Related Trades Workers
+        - Building Finishers and Related Trades Workers
+        - Painters, Building Structure Cleaners and Related Trades Workers
+        - Sheet and Structural Metal Workers, Moulders and Welders, and Related Workers
+        - Blacksmiths, Toolmakers and Related Trades Workers
+        - Machinery Mechanics and Repairers
+        - Handicraft Workers
+        - Printing Trades Workers
+        - Electrical Equipment Installers and Repairers
+        - Electronics and Telecommunications Installers and Repairers
+        - Food Processing and Related Trades Workers
+        - Wood Treaters, Cabinet-makers and Related Trades Workers
+        - Garment and Related Trades Workers
+        - Other Craft and Related Workers
+        - Mining and Mineral Processing Plant Operators
+        - Metal Processing and Finishing Plant Operators
+        - Chemical and Photographic Products Plant and Machine Operators
+        - Rubber, Plastic and Paper Products Machine Operators
+        - Textile, Fur and Leather Products Machine Operators
+        - Food and Related Products Machine Operators
+        - Wood Processing and Papermaking Plant Operators
+        - Other Stationary Plant and Machine Operators
+        - Assemblers
+        - Locomotive Engine Drivers and Related Workers
+        - Car, Van and Motorcycle Drivers
+        - Heavy Truck and Bus Drivers
+        - Mobile Plant Operators
+        - Ships' Deck Crews and Related Workers
+        - Domestic, Hotel and Office Cleaners and Helpers
+        - Vehicle, Window, Laundry and Other Hand Cleaning Workers
+        - Agricultural, Forestry and Fishery Labourers
+        - Mining and Construction Labourers
+        - Manufacturing Labourers
+        - Transport and Storage Labourers
+        - Food Preparation Assistants
+        - Street and Related Service Workers
+        - Street Vendors (excluding Food)
+        - Refuse Workers
+        - Other Elementary Workers
+        - Commissioned Armed Forces Officers
+        - Non-commissioned Armed Forces Officers
+        - Armed Forces Occupations, Other Ranks
 
   pack_years_smoked:
     $ref:
@@ -436,8 +613,6 @@ properties:
     minimum: 1900
 
   tobacco_smoking_status:
-    $ref:
-      - "_terms.yaml#/tobacco_smoking_status/common"
     enum:
       - "1"
       - "2"
