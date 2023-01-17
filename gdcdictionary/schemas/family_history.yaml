@@ -163,6 +163,7 @@ properties:
       - Wife
       - Unknown
       - Not Reported
+      - First Degree Relative, NOS
     enumDef:
       Adopted Brother:
         $ref:
