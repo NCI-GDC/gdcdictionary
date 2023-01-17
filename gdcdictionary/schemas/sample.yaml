@@ -54,10 +54,8 @@ links:
 
 required:
   - submitter_id
-  - sample_type
   - tissue_type
   - tumor_descriptor
-  - ''
 
 uniqueKeys:
   - [id]
