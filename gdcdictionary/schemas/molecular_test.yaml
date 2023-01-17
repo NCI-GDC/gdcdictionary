@@ -106,6 +106,8 @@ properties:
       - TAG-72
       - Unknown
       - Not Reported
+      - Immunoglobulin, Surface
+      - Immunoglobulin, Cytoplasmic
     enumDef:
       BCL6:
         $ref:
@@ -200,6 +202,11 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  aneuploidy:
+    enum:
+      - Monosomy
+      - Trisomy
 
   biospecimen_type:
     $ref:
@@ -454,6 +461,24 @@ properties:
       Non-clonal:
         $ref:
           - "_terms_enum.yaml#/nonclonal/common"
+
+  chromosomal_translocation:
+    enum:
+      - t(6;9)
+      - t(8;21)
+      - t(3;5)(q25;q34)
+      - t(6;11)(q27;q23)
+      - t(9;11)(p22;q23)
+      - t(10;11)(p11.2;q23)
+      - t(11;19)(q23;p13.1)
+      - Unknown
+      - Not Reported
+
+  chromosome_arm:
+    enum:
+      - q
+      - p
+      - Not Reported
 
   cytoband:
     $ref:
@@ -3558,6 +3583,11 @@ properties:
       - Total Protein
       - Unknown
       - Not Reported
+      - Monocytes
+      - Erythrocyte Sedimentation Rate
+      - Metaphase Nucleus Count
+      - Minimal Residual Disease
+      - Blast Count
     enumDef:
       5-Hydroxyindoleacetic Acid:
         $ref:
@@ -4004,6 +4034,12 @@ properties:
       Upstream Gene Variant:
         $ref:
           - "_terms_enum.yaml#/upstream_gene_variant/common"
+
+  mutation_codon:
+    enum:
+      - "12"
+      - "13"
+      - "61"
 
   pathogenicity:
     $ref:
@@ -6980,6 +7016,9 @@ properties:
       - Test Value Reported
       - Unknown
       - Not Reported
+      - Elevated
+      - Amplified
+      - Not Amplified
     enumDef:
       Abnormal, NOS:
         $ref:
@@ -7047,6 +7086,21 @@ properties:
       - "_terms.yaml#/test_value/common"
     type: number
 
+  test_value_range:
+    enum:
+      - 0-25
+      - 26-50
+      - 51-75
+      - 76-100
+      - Not Reported
+
+  timepoint_category:
+    enum:
+      - End of Treatment Course 1
+      - End of Treatment Course 2
+      - End of Consolidation Therapy
+      - Not Reported
+
   transcript:
     $ref:
       - "_terms.yaml#/transcript/common"
@@ -7099,6 +7153,10 @@ properties:
       - Translocation
       - Unknown
       - Not Reported
+      - Fusion
+      - Internal Tandem Duplication
+      - Genetic Polymorphism
+      - Mutation, NOS
     enumDef:
       Alleles:
         $ref:
