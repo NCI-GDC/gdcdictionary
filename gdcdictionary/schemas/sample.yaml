@@ -847,43 +847,6 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  sample_type_id:
-    $ref:
-      - "_terms.yaml#/sample_type_id/common"
-    enum:
-      - "01"
-      - "02"
-      - "03"
-      - "04"
-      - "05"
-      - "06"
-      - "07"
-      - "08"
-      - "09"
-      - "10"
-      - "11"
-      - "12"
-      - "13"
-      - "14"
-      - "15"
-      - "16"
-      - "17"
-      - "18"
-      - "20"
-      - "30"
-      - "31"
-      - "32"
-      - "40"
-      - "41"
-      - "42"
-      - "50"
-      - "60"
-      - "61"
-      - "85"
-      - "86"
-      - "87"
-      - "99"
-
   shortest_dimension:
     $ref:
       - "_terms.yaml#/shortest_dimension/common"
@@ -891,6 +854,8 @@ properties:
     minimum: 0
 
   specimen_type:
+    $ref:
+      - "_terms.yaml#/specimen_type/common"
     enum:
       - 2D Classical Conditionally Reprogrammed Cells
       - 2D Modified Conditionally Reprogrammed Cells
