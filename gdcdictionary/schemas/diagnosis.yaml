@@ -1322,6 +1322,13 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
+  cancer_detection_method:
+    enum:
+      - Symptomatic
+      - Screening
+      - Surveillance
+      - Not Reported
+
   child_pugh_classification:
     $ref:
       - "_terms.yaml#/child_pugh_classification/common"
@@ -1767,6 +1774,18 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  fab_morphology_code:
+    enum:
+      - M0
+      - M1
+      - M2
+      - M3
+      - M4
+      - M5
+      - M6
+      - M7
+      - Not Classified
+
   figo_stage:
     $ref:
       - "_terms.yaml#/figo_stage/common"
@@ -2030,6 +2049,11 @@ properties:
     maximum: 100
     minimum: 0
 
+  gleason_score:
+    type: integer
+    maximum: 10
+    minimum: 0
+
   goblet_cells_columnar_mucosa_present:
     $ref:
       - "_terms.yaml#/goblet_cells_columnar_mucosa_present/common"
@@ -2084,6 +2108,7 @@ properties:
       - Undifferentiated
       - Unknown
       - Not Reported
+      - Undifferentiated or Poorly Differentiated
     enumDef:
       Differentiating:
         $ref:
@@ -7144,6 +7169,26 @@ properties:
       Type 2:
         $ref:
           - "_terms_enum.yaml#/type_2/common"
+
+  pediatric_kidney_staging:
+    enum:
+      - Nephrectomy specimen with tumor confined to the kidney; no distant metastasis
+      - Nephrectomy specimen with tumor confined to the kidney; distant metastasis
+        identified at diagnosis
+      - Nephrectomy specimen with tumor that penetrates the renal capsule or involves
+        the renal sinus with negative margins and negative lymph nodes; no distant
+        metastasis
+      - Nephrectomy specimen with tumor that penetrates the renal capsule or involves
+        the renal sinus with negative margins and negative lymph nodes; distant metastasis
+        identified at diagnosis
+      - Nephrectomy specimen with tumor that is present at the surgical margin of
+        resection or within regional lymph nodes; no distant metastasis
+      - Nephrectomy specimen with tumor that is present at the surgical margin of
+        resection or within regional lymph nodes; distant metastasis identified at
+        diagnosis
+      - Tumor biopsied only at diagnosis; no distant metastasis
+      - Tumor biopsied only at diagnosis; distant metastasis identified at diagnosis
+      - Not Reported
 
   peritoneal_fluid_cytological_status:
     $ref:
@@ -18046,6 +18091,23 @@ properties:
         - Vagina
         - Vertebrae
         - Not Reported
+        - Peripheral Lung
+        - Central Lung
+        - Pelvic lymph node(s)
+        - Peri-aortic lymph node(s)
+        - Thorax, NOS
+        - Parametrium, left
+        - Parametrium, right
+        - Mesentery
+        - Gastrosplenic ligament
+        - Brain,  Cerebrum
+        - Brain, Frontal lobe
+        - Brain, Temporal lobe
+        - Brain, Parietal
+        - Brain, Occipital lobe
+        - Brain, Ventricle, NOS
+        - Brain, Cerebellum, NOS
+        - Brain, Brain stem
     enumDef:
       Kidney, Lower Pole:
         $ref:
@@ -18062,6 +18124,9 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  sites_of_involvement_count:
+    type: integer
 
   supratentorial_localization:
     $ref:
@@ -18468,6 +18533,9 @@ properties:
       - Waldeyer ring
       - Unknown
       - Not Reported
+      - Lower third of esophagus
+      - Middle third of esophagus
+      - Upper third of esophagus
     enumDef:
       Abdomen, NOS:
         $ref:
@@ -19338,6 +19406,12 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  tumor_grade_category:
+    enum:
+      - Three Tier
+      - Four Tier
+      - Not Reported
+
   tumor_regression_grade:
     $ref:
       - "_terms.yaml#/tumor_regression_grade/common"
@@ -19623,6 +19697,34 @@ properties:
       - Tis (Paget's)
       - Unknown
       - Not Reported
+
+  uicc_staging_system_edition:
+    enum:
+      - 1st
+      - 2nd
+      - 3rd
+      - 4th
+      - 5th
+      - 6th
+      - 7th
+      - 8th
+      - Unknown
+      - Not Reported
+
+  weiss_assessment_findings:
+    type: array
+    items:
+      enum:
+        - Nuclear Grade III or IV
+        - Mitotic Rate > 5/50 HPF
+        - Atypical Mitotic Figures
+        - Cytoplasm presence <= to 25%
+        - Diffuse Architecture
+        - Necrosis
+        - Venous Invasion
+        - Sinusoid Invasion
+        - Invasion of Tumor Capsule
+        - Not Reported
 
   weiss_assessment_score:
     $ref:
