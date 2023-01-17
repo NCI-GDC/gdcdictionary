@@ -53,7 +53,9 @@ links:
     required: false
 
 required:
+  - preservation_method
   - submitter_id
+  - specimen_type
   - tissue_type
   - tumor_descriptor
 
