@@ -54,8 +54,8 @@ links:
 
 required:
   - preservation_method
-  - submitter_id
   - specimen_type
+  - submitter_id
   - tissue_type
   - tumor_descriptor
 
@@ -64,9 +64,9 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 deprecated:
+  - composition
   - is_ffpe
   - oct_embeded
-  - composition
   - sample_type
 
 properties:
@@ -864,18 +864,23 @@ properties:
       - 3D Organoid
       - Adherent Cell Line
       - Bone Marrow Components NOS
+      - Bone Marrow NOS
       - Buccal Cells
       - Buffy Coat
       - Cell
       - Control Analyte
       - Derived Cell Line
       - EBV Immortalized
+      - Fibroblasts from Bone Marrow
       - Granulocytes
       - Human Original Cells
       - Liquid Suspension Cell Line
       - Lymphocytes
+      - Lymphoid
       - Mixed Adherent Suspension
+      - Mononuclear Cells from Bone Marrow
       - Peripheral Blood Components NOS
+      - Peripheral Blood NOS
       - Peripheral Whole Blood
       - Plasma
       - Pleural Effusion
@@ -887,11 +892,6 @@ properties:
       - Whole Bone Marrow
       - Unknown
       - Not Reported
-      - Bone Marrow NOS
-      - Peripheral Blood NOS
-      - Mononuclear Cells from Bone Marrow
-      - Fibroblasts from Bone Marrow
-      - Lymphoid
 
   time_between_clamping_and_freezing:
     $ref:
@@ -1011,6 +1011,7 @@ properties:
       - "_terms.yaml#/tumor_descriptor/common"
     enum:
       - Metastatic
+      - New Primary
       - NOS
       - Not Allowed To Collect
       - Not Applicable
@@ -1020,7 +1021,7 @@ properties:
       - Xenograft
       - Unknown
       - Not Reported
-      - New Primary
+
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
