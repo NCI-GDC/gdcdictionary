@@ -337,7 +337,7 @@ alcohol_drinks_per_day:
 alcohol_frequency:
   common:
     description: >-
-      Describes how often the subject drinks alcohol.Ê
+      Describes how often the subject drinks alcohol.
     termDef:
       term: >-
         Alcohol Frequency
@@ -2858,7 +2858,7 @@ imaging_suv:
       The standardized update value (SUV) is the effectively dimensionless measure
       of regional tracer uptake calculated as the activity concentration within a
       2D region of interest (ROI) or 3D volume of interest (VOI) measured on a PET
-      image (nCi1mL) /Ê[injected dose (nCi) / body weight (g)].
+      image (nCi1mL) / [injected dose (nCi) / body weight (g)].
     termDef:
       term: >-
         Standardized Uptake Value
@@ -2873,7 +2873,7 @@ imaging_suv_max:
       The standardized update value (SUV) is the effectively dimensionless measure
       of regional tracer uptake calculated as the activity concentration within a
       2D region of interest (ROI) or 3D volume of interest (VOI) measured on a PET
-      image (nCi1mL) /Ê[injected dose (nCi) / body weight (g)]. Specifically, the
+      image (nCi1mL) / [injected dose (nCi) / body weight (g)]. Specifically, the
       maximum SUV recorded for a patient.
     termDef:
       term: >-
@@ -4402,7 +4402,7 @@ peritoneal_fluid_cytological_status:
 peritoneal_washing_results:
   common:
     description: >-
-      The results fromÊthis minimally invasive procedure that permits sampling of
+      The results from this minimally invasive procedure that permits sampling of
       peritoneal fluid for cytopathologic analysis.
     termDef:
       term: >-
@@ -5570,7 +5570,7 @@ specialized_molecular_test:
 specimen_type:
   common:
     description: >-
-      ÊThe type of a material sample taken from a biological entity for testing, diagnostic,
+      The type of a material sample taken from a biological entity for testing, diagnostic,
       propagation, treatment or research purposes. This includes particular types
       of cellular molecules, cells, tissues, organs, body fluids, embryos, and body
       excretory substances.
@@ -6198,7 +6198,7 @@ treatment_outcome:
 treatment_outcome_duration:
   common:
     description: >-
-      The number of days a patient reached aÊspecific result or effect after treatment.
+      The number of days a patient reached a specific result or effect after treatment.
     termDef:
       term:
       source:
