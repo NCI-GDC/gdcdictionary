@@ -916,6 +916,8 @@ properties:
       - Ablation, Radiosurgical
       - Ancillary Treatment
       - Antiseizure Treatment
+      - Biopsy, Excisional
+      - Biopsy, Incisional
       - Bisphosphonate Therapy
       - Blinded Study, Treatment Unknown
       - Brachytherapy, High Dose
@@ -926,6 +928,7 @@ properties:
       - Chemotherapy
       - Concurrent Chemoradiation
       - Cryoablation
+      - Distal Pancreatectomy
       - Embolization
       - Ethanol Injection Ablation
       - External Beam Radiation
@@ -973,17 +976,13 @@ properties:
       - Steroid Therapy
       - Surgery
       - Surgery, NOS
-      - Targeted Molecular Therapy
-      - Unknown
-      - Not Reported
-      - Whipple
-      - Total Pancreatectomy
-      - Distal Pancreatectomy
       - Surgery, Minimally Invasive
       - Surgery, Open
-      - Surgery, NOS
-      - Biopsy, Incisional
-      - Biopsy, Excisional
+      - Targeted Molecular Therapy
+      - Total Pancreatectomy
+      - Whipple
+      - Unknown
+      - Not Reported
     deprecated_enum:
       - Cryoablation
       - Not Allowed To Collect
