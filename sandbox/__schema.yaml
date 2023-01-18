@@ -3,7 +3,7 @@ schema: # this is the dictionary itself
   namespace: gdc='http://gdc.nci.nih.gov'
   category: dictionary
   title: GDC Data Dictionary
-  description: 
+  description:
   version: 0.0.1
   created_date: 2015-06-16T07:37:39Z
   updated_date: 2015-07-12T21:04:01Z

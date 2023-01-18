@@ -4,7 +4,7 @@ schema:
   category: data_file
   data_type: Unaligned reads  # this is needed when entity category is data_file. This should be a CV term
   title: Aligned sequencing reads
-  description: 
+  description:
   version: 1
   created_date: 2015-06-16T07:37:39Z
   updated_date: 2015-07-12T21:04:01Z
@@ -84,7 +84,7 @@ schema:
   parents:
     - entity: aliquot # file is directly linked to aliquot
       required: true
-      cardinality: 1:1 
+      cardinality: 1:1
       fields:
         - name: project_id
           self_field: project_id

@@ -14,11 +14,11 @@ schema:
   input_data_bundles:  # to be fleshed out more
     -
       bundle_type: unaligned_seq
-      bundle_id: 
+      bundle_id:
   output_data_bundles:  # to be fleshed out more
     -
       bundle_type: aligned_seq
-      bundle_id: 
+      bundle_id:
   system_fields:
     - name: id
     - name: version

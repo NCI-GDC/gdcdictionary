@@ -3,7 +3,7 @@ schema:
   namespace: gdc='http://gdc.nci.nih.gov'
   category: clinical
   title: Diagnosis
-  description: 
+  description:
   version: 1
   created_date: 2015-06-16T07:37:39Z
   updated_date: 2015-07-12T21:04:01Z
@@ -60,7 +60,7 @@ schema:
       constraints:
         required: true
         unique: false
-        validator: icd-10  # customized validator, can be a python function? 
+        validator: icd-10  # customized validator, can be a python function?
     -
       name: age_at_diagnosis
       type: number
@@ -152,7 +152,7 @@ schema:
       name: overall_survival_duration
       title: Overall survival duration
       description: >
-        The length of time from either the date of diagnosis or the start of treatment for a disease, such as cancer, that patients diagnosed with the disease are still alive (regardless of disease status) 
+        The length of time from either the date of diagnosis or the start of treatment for a disease, such as cancer, that patients diagnosed with the disease are still alive (regardless of disease status)
       type: integer
       unit: day
       constraints:
@@ -169,7 +169,7 @@ schema:
     - [ project_id, submitter_diagnosis_id ]
   # relationship to parent entity should be able to specify by using
   # either system-generated keys or submitter's IDs.
-  # Semantically there shouldn't be any difference, it's a matter of 
+  # Semantically there shouldn't be any difference, it's a matter of
   # convenience. However, for clinical related schemas (case & diagnosis) it may
   # make more sense to use submitter's IDs, so that submitter can
   # fully specify and maintain the relationships on their own side.
@@ -181,7 +181,7 @@ schema:
   parents:
     - entity: case
       required: true
-      fields: 
+      fields:
         - name: project_id
           self_field: project_id
         - name: submitter_case_id

@@ -53,7 +53,7 @@ schema:
   parents:
     - entity: sample
       required: true
-      fields: 
+      fields:
         - name: project_id
           self_field: project_id
         - name: submitter_sample_id

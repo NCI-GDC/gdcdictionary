@@ -10,7 +10,7 @@
     "experimental_strategy": "WGS",
     "projects": {
 	"id": "0cb66276-c29b-4811-a704-38502173c0f8"
-    }, 
+    },
     "somatic_aggregation_workflows": {
 	"submitter_id": "MuTect2_run_100"
     }
