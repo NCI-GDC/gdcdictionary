@@ -1,16 +1,16 @@
 {
-    "type": "aliquot",
-    "submitter_id": "BLGSP-71-06-00019-01A-11D",
-    "aliquot_quantity": 0.4,
-    "aliquot_volume": 5,
-    "amount": 10,
-    "source_center": "23",
-    "concentration": 0.07,
-    "selected_normal_wxs": true,
-    "selected_normal_wgs": false,
-    "selected_normal_low_pass_wgs": false,
-    "selected_normal_targeted_sequencing": true,
-    "analytes": {
-        "submitter_id": "BLGSP-71-06-00019-99A-01D"
-    }
+  "type": "aliquot",
+  "submitter_id": "BLGSP-71-06-00019-01A-11D",
+  "aliquot_quantity": 0.4,
+  "aliquot_volume": 5,
+  "amount": 10,
+  "source_center": "23",
+  "concentration": 0.07,
+  "selected_normal_wxs": true,
+  "selected_normal_wgs": false,
+  "selected_normal_low_pass_wgs": false,
+  "selected_normal_targeted_sequencing": true,
+  "analytes": {
+    "submitter_id": "BLGSP-71-06-00019-99A-01D"
+  }
 }
