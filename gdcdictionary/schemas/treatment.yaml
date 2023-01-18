@@ -175,10 +175,6 @@ properties:
     $ref:
       - "_terms.yaml#/protocol_identifier/common"
     enum:
-      - A081105
-      - A081801
-      - E4512
-      - EA5142
       - "901"
       - "911"
       - "914"
@@ -201,6 +197,8 @@ properties:
       - 321P2
       - 321P3
       - 323P
+      - A081105
+      - A081801
       - A3961
       - A3973
       - AADM01P1
@@ -279,6 +277,8 @@ properties:
       - D9902
       - E04
       - E18
+      - E4512
+      - EA5142
       - GBCTTO/99
       - GLATO 2006
       - I03
@@ -347,16 +347,16 @@ properties:
 
   timepoint_category:
     enum:
-      - Prior to Diagnosis
-      - End of Treatment Course
       - End of Consolidation Therapy
+      - End of Treatment Course
       - First Complete Response
       - Preoperative
+      - Prior to Diagnosis
       - Prior to Procurement
       - Prior to Study Registration
       - Progression
-      - Recurrence
       - Postoperative
+      - Recurrence
       - Not Reported
 
   treatment_anatomic_site:
@@ -832,17 +832,17 @@ properties:
       - Adjuvant
       - Androgen Deprivation Therapy (ADT)
       - Cancer Control
+      - Consolidation Therapy
       - Cure
+      - First-Line Therapy
+      - Induction
       - Maintenance Therapy
       - Neoadjuvant
       - Palliative
       - Prevention
+      - Radiation Boost
       - Unknown
       - Not Reported
-      - Induction
-      - Radiation Boost
-      - Consolidation Therapy
-      - First-Line Therapy
     enumDef:
       Unknown:
         $ref:
@@ -881,6 +881,7 @@ properties:
       - Mixed Response
       - No Measurable Disease
       - No Response
+      - Normalization of Tumor Markers
       - Partial Response
       - Persistent Disease
       - Progressive Disease
@@ -890,7 +891,6 @@ properties:
       - Very Good Partial Response
       - Unknown
       - Not Reported
-      - Normalization of Tumor Markers
     enumDef:
       Unknown:
         $ref:
@@ -972,6 +972,7 @@ properties:
       - Stereotactic Radiosurgery
       - Steroid Therapy
       - Surgery
+      - Surgery, NOS
       - Targeted Molecular Therapy
       - Unknown
       - Not Reported
@@ -984,7 +985,9 @@ properties:
       - Biopsy, Incisional
       - Biopsy, Excisional
     deprecated_enum:
+      - Cryoablation
       - Not Allowed To Collect
+      - Surgery
     enumDef:
       Not Allowed To Collect:
         $ref:
@@ -5189,6 +5192,7 @@ properties:
       - TLR7/8/9 Antagonist IMO-8400
       - TLR8 Agonist DN1508052
       - TLR9 Agonist AST-008
+      - TLR9 Agonist SD-101
       - TM4SF1-CAR/EpCAM-CAR-expressing Autologous T Cells
       - Tocilizumab
       - Tocladesine
