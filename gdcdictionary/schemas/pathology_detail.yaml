@@ -352,7 +352,7 @@ properties:
   lymph_node_dissection_site:
     enum:
       - Neck, Left
-      - Neck,Right
+      - Neck, Right
       - Neck, NOS
 
   lymph_node_involved_site:
