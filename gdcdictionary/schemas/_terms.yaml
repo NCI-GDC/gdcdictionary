@@ -5157,7 +5157,7 @@ rin:
       cde_version: 1.0
       term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5278775&version=1.0"
 
-risk_factor:
+risk_factors:
   common:
     description: >-
       The text term used to describe a risk factor the patient had at the time of
