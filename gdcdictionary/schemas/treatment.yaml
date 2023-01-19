@@ -132,13 +132,13 @@ properties:
       - "_terms.yaml#/initial_disease_status/common"
     enum:
       - Initial Diagnosis
+      - Persistent Disease
       - Progressive Disease
       - Recurrent Disease
+      - Refractory Disease
       - Residual Disease
       - Unknown
       - Not Reported
-      - Persistent Disease
-      - Refractory Disease
     enumDef:
       Unknown:
         $ref:
@@ -341,8 +341,8 @@ properties:
         - Intratumoral
         - Intravenous
         - Intravesical
-        - Subcutaneous
         - Oral
+        - Subcutaneous
         - Not Reported
 
   timepoint_category:
@@ -350,12 +350,12 @@ properties:
       - End of Consolidation Therapy
       - End of Treatment Course
       - First Complete Response
+      - Postoperative
       - Preoperative
       - Prior to Diagnosis
       - Prior to Procurement
       - Prior to Study Registration
       - Progression
-      - Postoperative
       - Recurrence
       - Not Reported
 
@@ -510,6 +510,7 @@ properties:
       - Ligament
       - Lip
       - Liver
+      - Locoregional Site
       - Lumbar Spine
       - Lung
       - Lymph Node
@@ -664,7 +665,6 @@ properties:
       - Wrist
       - Unknown
       - Not Reported
-      - Locoregional Site
     enumDef:
       Bone Marrow:
         $ref:
@@ -806,13 +806,13 @@ properties:
     $ref:
       - "_terms.yaml#/treatment_frequency/common"
     enum:
+      - Every 24 Hours
       - Every Hour
+      - Every Other Day
       - Five Times Daily
       - Four Times Daily
       - Three Times Daily
       - Twice Daily
-      - Every 24 Hours
-      - Every Other Day
       - Twice Weekly
       - Once Weekly
       - Unknown
