@@ -1148,8 +1148,6 @@ properties:
   comorbidity:
     $ref:
       - "_terms.yaml#/comorbidities/common"
-    items:
-      enum: []
     enum:
       - Abnormal Glucose Level
       - Acute Renal Failure
