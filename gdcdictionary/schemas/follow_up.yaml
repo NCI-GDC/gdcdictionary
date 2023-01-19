@@ -1146,7 +1146,7 @@ properties:
 
   comorbidity:
     $ref:
-      - "_terms.yaml#/comorbidity/common"
+      - "_terms.yaml#/comorbidities/common"
     items:
       enum: []
     enum:
