@@ -6,7 +6,6 @@
     "bmi":10,
     "cause_of_response":"First Line of Therapy",
     "comorbidities":"COPD",
-    "comorbidity":"COPD",
     "comorbidity_method_of_diagnosis":"Histology",
     "days_to_adverse_event":23,
     "days_to_comorbidity":21,
