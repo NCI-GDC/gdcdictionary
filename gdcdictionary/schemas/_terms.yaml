@@ -4138,6 +4138,17 @@ pathogenicity:
       cde_version:
       term_url:
 
+pediatric_kidney_staging:
+  common:
+    description: >-
+      A modified version of the Children's Oncology Group (COG)  National Wilms Tumor Study Group (NWTS) staging system.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
 percent_eosinophil_infiltration:
   common:
     description: >-
