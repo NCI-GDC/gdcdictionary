@@ -5085,7 +5085,7 @@ residual_tumor_measurement:
     description: >-
         A measurement of the tumor cells that remain in the body following cancer
         treatment.
-      termDef:
+    termDef:
         term:
         source:
         cde_id:
