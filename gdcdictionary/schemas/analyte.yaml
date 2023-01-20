@@ -48,6 +48,9 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
+deprecated:
+  - analyte_type_id
+
 properties:
 
   $ref:
@@ -95,6 +98,21 @@ properties:
       Total RNA:
         $ref:
           - "_terms_enum.yaml#/total_rna/common"
+
+    analyte_type_id:
+     $ref:
+       - "_terms.yaml#/analyte_type_id/common"
+     enum:
+       - D
+       - E
+       - G
+       - H
+       - R
+       - S
+       - T
+       - W
+       - X
+       - Y
 
   analyte_volume:
     $ref:

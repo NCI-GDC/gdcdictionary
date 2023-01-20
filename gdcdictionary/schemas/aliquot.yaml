@@ -53,6 +53,9 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
+deprecated:
+  - analyte_type_id
+
 properties:
 
   $ref:
@@ -79,6 +82,10 @@ properties:
   analyte_type:
     $ref:
       - "analyte.yaml#/properties/analyte_type"
+
+  analyte_type_id:
+    $ref:
+      - "analyte.yaml#/properties/analyte_type_id"
 
   concentration:
     $ref:

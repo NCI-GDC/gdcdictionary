@@ -6,6 +6,7 @@
     "amount": 10.98,
     "analyte_quantity": 10,
     "analyte_type": "DNA",
+    "analyte_type_id": "D",
     "analyte_volume": 0.4,
     "concentration": 0.14,
     "normal_tumor_genotype_snp_match": "Yes",
