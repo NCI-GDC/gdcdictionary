@@ -316,6 +316,7 @@ properties:
     enum:
       - Asbestos
       - Chemical
+      - Coal Dust
       - Marijuana
       - Radiation
       - Smoke
@@ -324,8 +325,6 @@ properties:
       - Smokeless Tobacco
       - Tobacco
       - Wood Dust
-      - Coal Dust
-      - Diesel Exhaust
     enumDef:
       Marijuana:
         $ref:
@@ -336,8 +335,8 @@ properties:
 
   occupation_duration_years:
     type: integer
-    maximum: 2050
-    minimum: 1900
+    maximum: 0
+    minimum: 89
 
   occupation_type:
     $ref:
@@ -621,12 +620,14 @@ properties:
     minimum: 1900
 
   tobacco_smoking_status:
+    $ref:
+      - "_terms.yaml#/tobacco_smoking_status/common"
     enum:
-      - Lifelong Non-Smoker
-      - Current Smoker
-      - Current Reformed Smoker for > 15 yrs
-      - Current Reformed Smoker for < or = 15 yrs
       - Current Reformed Smoker, Duration Not Specified
+      - Current Reformed Smoker for < or = 15 yrs
+      - Current Reformed Smoker for > 15 yrs
+      - Current Smoker
+      - Lifelong Non-Smoker
       - Smoker at Diagnosis
       - Smoking history not documented
       - Unknown
