@@ -1372,12 +1372,14 @@ properties:
 
   days_to_comorbidity:
     $ref:
-      - "_terms.yaml#days_to_comorbidity"
+      - "_terms.yaml#/days_to_comorbidity/common"
     type: integer
     maximum: 32872
     minimum: -32872
 
   days_to_first_event:
+    $ref:
+      - "_terms.yaml#/days_to_first_event/common"
     type: integer
 
   days_to_follow_up:
@@ -1418,6 +1420,8 @@ properties:
     minimum: -32872
 
   days_to_risk_factor:
+    $ref:
+      - "_terms.yaml#/days_to_risk_factor/common"
     type: integer
     maximum: 32872
     minimum: -32872
@@ -1580,6 +1584,8 @@ properties:
     minimum: 0
 
   first_event:
+    $ref:
+      - "_terms.yaml#/first_event/common"
     enum:
       - Censored
       - Death
@@ -1805,6 +1811,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   imaging_anatomic_site:
+    $ref:
+      - "_terms.yaml#/imaging_anatomic_site/common"
     type: array
     items:
       enum:
@@ -1812,14 +1820,16 @@ properties:
         - Pelvis
 
   imaging_findings:
+    $ref:
+      - "_terms.yaml#/imaging_findings/common"
     enum:
       - Carcinomatosis
       - Kidney Involvement
       - Lung Involvement
       - Liver Involvement
       - Normal
-      - Vena Cava Involvement/Thrombus
       - Retroperitoneal Lymph Node Involvement
+      - Vena Cava Involvement/Thrombus
       - Not Reported
 
   imaging_result:
@@ -1847,9 +1857,13 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   imaging_suv:
+    $ref:
+      - "_terms.yaml#/imaging_suv/common"
     type: number
 
   imaging_suv_max:
+    $ref:
+      - "_terms.yaml#/imaging_suv_max/common"
     type: number
 
   imaging_type:
@@ -1942,12 +1956,16 @@ properties:
     minimum: 1900
 
   peritoneal_washing_results:
+    $ref:
+      - "_terms.yaml#/peritoneal_washing_results/common"
     enum:
       - Positive
       - Negative
       - Not Reported
 
   pregnancy_count:
+    $ref:
+      - "_terms.yaml#/pregnancy_count/common"
     type: integer
 
   pregnancy_outcome:
@@ -1958,10 +1976,10 @@ properties:
       - Induced Abortion
       - Live Birth
       - Miscarriage
+      - Spontaneous Abortion
       - Stillbirth
       - Unknown
       - Not Reported
-      - Spontaneous Abortion
     enumDef:
       Unknown:
         $ref:
@@ -2380,10 +2398,10 @@ properties:
       - Biochemical
       - Distant
       - Local
+      - Locoregional
       - Regional
       - Unknown
       - Not Reported
-      - Locoregional
     enumDef:
       Unknown:
         $ref:
@@ -2819,6 +2837,8 @@ risk_factors:
         - "_terms_enum.yaml#/not_reported/common"
 
   risk_factor_method_of_diagnosis:
+    $ref:
+      - "_terms.yaml#/risk_factor_method_of_diagnosis/common"
     enum:
       - Biochemical Assessment
       - Both Clinical and Biochemical Assessments
@@ -2858,6 +2878,8 @@ risk_factors:
       - Sodium Fluoride
 
   timepoint_category:
+    $ref:
+      - "_terms.yaml#/timepoint_category/common"
     enum:
       - Adolescence
       - Adjuvant therapy
@@ -2989,6 +3011,8 @@ risk_factors:
     minimum: 0
 
   year_of_follow_up:
+    $ref:
+      - "_terms.yaml#/year_of_follow_up/common"
     type: integer
     maximum: 2050
     minimum: 1900
