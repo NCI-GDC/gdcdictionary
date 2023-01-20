@@ -1146,8 +1146,6 @@ properties:
         - Not Reported
 
   comorbidity:
-    $ref:
-      - "_terms.yaml#/comorbidities/common"
     enum:
       - Abnormal Glucose Level
       - Acute Renal Failure
@@ -1595,8 +1593,8 @@ properties:
       - Death
       - Death without Remission
       - Event
-      - Induction Failure
       - Induction Death
+      - Induction Failure
       - None
       - Other
       - Progression
