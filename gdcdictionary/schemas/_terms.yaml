@@ -4141,7 +4141,7 @@ pathogenicity:
 pediatric_kidney_staging:
   common:
     description: >-
-      A modified version of the Children's Oncology Group (COG)  National Wilms Tumor Study Group (NWTS) staging system.
+      A modified version of the Children's Oncology Group (COG) National Wilms Tumor Study Group (NWTS) staging system.
     termDef:
       term:
       source:
