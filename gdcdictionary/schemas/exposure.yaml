@@ -43,11 +43,19 @@ deprecated:
   - radon_exposure
   - respirable_crystalline_silica_exposure
   - years_smoked
+  - coal_dust_exposure
 
 properties:
 
   $ref:
     - "_definitions.yaml#/ubiquitous_properties"
+
+  alcohol_frequency:
+    $ref:
+      - "_terms.yaml#/alcohol_frequency/common"
+    enum:
+      - Daily Drinker
+      - Weekly Drinker
 
   asbestos_exposure_type:
     $ref:
@@ -194,6 +202,39 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  chemical_exposure_type:
+    $ref:
+      - "_terms.yaml#/chemical_exposure_type/common"
+    type: array
+    items:
+      enum:
+        - Agent Orange
+        - Aluminum
+        - Arsenic
+        - Asbestos
+        - Benzene
+        - Cadmium
+        - Chromium
+        - Chemical Exposure, NOS
+        - Chemical, NOS
+        - Coal Gas, Coal Tar, Coal Tar Pitch, and Derivatives
+        - Coke Oven Emission
+        - Copper
+        - Diesel Exhaust
+        - Disinfectant
+        - Formaldehyde
+        - Methylene Chloride
+        - Occupational Soldering/Welding Smoke Exposure
+        - Oil
+        - Pesticide
+        - Petroleum Hydrocarbon Compound
+        - Resin Fumes
+        - Sodium Borate
+        - Solvent
+        - Tetrachloroethylene
+        - Toluene
+        - Not Reported
+
   cigarettes_per_day:
     $ref:
       - "_terms.yaml#/cigarettes_per_day/common"
@@ -283,6 +324,8 @@ properties:
       - Smokeless Tobacco
       - Tobacco
       - Wood Dust
+      - Coal Dust
+      - Diesel Exhaust
     enumDef:
       Marijuana:
         $ref:
@@ -290,6 +333,148 @@ properties:
       Tobacco:
         $ref:
           - "_terms_enum.yaml#/tobacco/common"
+
+  occupation_duration_years:
+    type: integer
+    maximum: 2050
+    minimum: 1900
+
+  occupation_type:
+    $ref:
+      - "_terms.yaml#/occupation_type/common"
+    type: array
+    items:
+      enum:
+        - Administration Professionals
+        - Administrative and Specialized Secretaries
+        - Agricultural, Forestry and Fishery Labourers
+        - Animal Producers
+        - Architects, Planners, Surveyors and Designers
+        - Armed Forces Occupations, Other Ranks
+        - Artistic, Cultural and Culinary Associate Professionals
+        - Assemblers
+        - Authors, Journalists and Linguists
+        - Blacksmiths, Toolmakers and Related Trades Workers
+        - Building Finishers and Related Trades Workers
+        - Building Frame and Related Trades Workers
+        - Building and Housekeeping Supervisors
+        - Business Services Agents
+        - Business Services and Administration Managers
+        - Car, Van and Motorcycle Drivers
+        - Cashiers and Ticket Clerks
+        - Chemical and Photographic Products Plant and Machine Operators
+        - Child Care Workers and Teachers' Aides
+        - Client Information Workers
+        - Commissioned Armed Forces Officers
+        - Cooks
+        - Creative and Performing Artists
+        - Database and Network Professionals
+        - Domestic, Hotel and Office Cleaners and Helpers
+        - Electrical Equipment Installers and Repairers
+        - Electronics and Telecommunications Installers and Repairers
+        - Electrotechnology Engineers
+        - Engineering Professionals (excluding Electrotechnology)
+        - Finance Professionals
+        - Financial and Mathematical Associate Professionals
+        - Fishery Workers, Hunters and Trappers
+        - Food Preparation Assistants
+        - Food Processing and Related Trades Workers
+        - Food and Related Products Machine Operators
+        - Forestry and Related Workers
+        - Garment and Related Trades Workers
+        - General Office Clerks
+        - Government Regulatory  Associate Professionals
+        - Hairdressers, Beauticians and Related Workers
+        - Handicraft Workers
+        - Heavy Truck and Bus Drivers
+        - Hotel and Restaurant Managers
+        - Information and Communications Technology Operations and User Support Technicians
+        - Information and Communications Technology Service managers
+        - Keyboard Operators
+        - Legal Professionals
+        - Legal, Social and Religious Associate Professionals
+        - Legislators and Senior Officials
+        - Librarians, Archivists and Curators
+        - Life Science Professionals
+        - Life Science Technicians and Related Associate Professionals
+        - Locomotive Engine Drivers and Related Workers
+        - Machinery Mechanics and Repairers
+        - Managing Directors and Chief Executives
+        - Manufacturing Labourers
+        - Manufacturing, Mining, Construction and Distribution Managers
+        - Market Gardeners and Crop Growers
+        - Material Recording and Transport Clerks
+        - Mathematicians, Actuaries and Statisticians
+        - Medical Doctors
+        - Medical and Pharmaceutical Technicians
+        - Metal Processing and Finishing Plant Operators
+        - Mining and Construction Labourers
+        - Mining and Mineral Processing Plant Operators
+        - Mining, Manufacturing and Construction Supervisors
+        - Mixed Crop and Animal Producers
+        - Mobile Plant Operators
+        - Non-commissioned Armed Forces Officers
+        - Numerical Clerks
+        - Nursing and Midwifery Associate Professionals
+        - Nursing and Midwifery Professionals
+        - Other Clerical Support Workers
+        - Other Craft and Related Workers
+        - Other Elementary Workers
+        - Other Health Associate Professionals
+        - Other Health Professionals
+        - Other Personal Services Workers
+        - Other Sales Workers
+        - Other Services Managers
+        - Other Stationary Plant and Machine Operators
+        - Other Teaching Professionals
+        - Painters, Building Structure Cleaners and Related Trades Workers
+        - Paramedical Practitioners
+        - Personal Care Workers in Health Services
+        - Physical and Earth Science Professionals
+        - Physical and Engineering Science Technicians
+        - Primary School and Early Childhood Teachers
+        - Printing Trades Workers
+        - Process Control Technicians
+        - Production Managers in Agriculture, Forestry and Fisheries
+        - Professional Services Managers
+        - Protective Services Workers
+        - Refuse Workers
+        - Retail and Wholesale Trade Managers
+        - Rubber, Plastic and Paper Products Machine Operators
+        - Sales and Purchasing Agents and Brokers
+        - Sales, Marketing and Development Managers
+        - Sales, Marketing and Public Relations Professionals
+        - Secondary Education Teachers
+        - Secretaries (general)
+        - Sheet and Structural Metal Workers, Moulders and Welders, and Related Workers
+        - Ship and Aircraft Controllers and Technicians
+        - Ships' Deck Crews and Related Workers
+        - Shop Aalespersons
+        - Social and Religious Professionals
+        - Software and Applications Developers and Analysts
+        - Sports and Fitness Workers
+        - Street Vendors (excluding Food)
+        - Street and Market Salespersons
+        - Street and Related Service Workers
+        - Subsistence Crop Farmers
+        - Subsistence Fishers, Hunters, Trappers and Gatherers
+        - Subsistence Livestock Farmers
+        - Subsistence Mixed Crop and Livestock Farmers
+        - Telecommunications and Broadcasting Technicians
+        - Tellers, Money Collectors and Related Clerks
+        - Textile, Fur and Leather Products Machine Operators
+        - Traditional and Complementary Medicine Associate Professionals
+        - Traditional and Complementary Medicine Professionals
+        - Transport and Storage Labourers
+        - Travel Attendants, Conductors and Guides
+        - University and Higher Education Teachers
+        - Vehicle, Window, Laundry and Other Hand Cleaning Workers
+        - Veterinarians
+        - Veterinary Technicians and Assistants
+        - Vocational education teachers
+        - Waiters and Bartenders
+        - Wood Processing and Papermaking Plant Operators
+        - Wood Treaters, Cabinet-makers and Related Trades Workers
 
   pack_years_smoked:
     $ref:
@@ -436,9 +621,16 @@ properties:
     minimum: 1900
 
   tobacco_smoking_status:
-    $ref:
-      - "_terms.yaml#/tobacco_smoking_status/common"
     enum:
+      - Lifelong Non-Smoker
+      - Current Smoker
+      - Current Reformed Smoker for > 15 yrs
+      - Current Reformed Smoker for < or = 15 yrs
+      - Current Reformed Smoker, Duration Not Specified
+      - Smoker at Diagnosis
+      - Smoking history not documented
+      - Unknown
+      - Not Reported
       - "1"
       - "2"
       - "3"
@@ -446,11 +638,16 @@ properties:
       - "5"
       - "6"
       - "7"
-      - Unknown
-      - Not Reported
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
     enumDef:
       "1":
         $ref:
