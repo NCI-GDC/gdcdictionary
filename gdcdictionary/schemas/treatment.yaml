@@ -316,6 +316,8 @@ properties:
           - "_terms_enum.yaml#/other/common"
 
   residual_disease:
+    $ref:
+      - "_terms.yaml#/residual_disease/common"
     enum:
       - R0
       - R1
@@ -346,6 +348,8 @@ properties:
         - Not Reported
 
   timepoint_category:
+    $ref:
+      - "_terms.yaml#/timepoint_category/common"
     enum:
       - End of Consolidation Therapy
       - End of Treatment Course
@@ -758,6 +762,8 @@ properties:
           - "_terms_enum.yaml#/mg/common"
 
   treatment_duration:
+    $ref:
+      - "_terms.yaml#/treatment_duration/common"
     type: integer
     maximum: 32872
     minimum: -32872
@@ -900,6 +906,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   treatment_outcome_duration:
+    $ref:
+      - "_terms.yaml#/treatment_outcome_duration/common"
     type: integer
     maximum: 32872
     minimum: -32872
@@ -7395,9 +7403,13 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   therapeutic_level_achieved:
+    $ref:
+      - "_terms.yaml#/therapeutic_level_achieved/common"
     type: boolean
 
   therapeutic_target_level:
+    $ref:
+      - "_terms.yaml#/therapeutic_target_level/common"
     enum:
       - '>14 mg/L'
 
