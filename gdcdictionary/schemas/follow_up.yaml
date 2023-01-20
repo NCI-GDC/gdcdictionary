@@ -1528,6 +1528,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   evidence_of_progression_type:
+    $ref:
+      - "_terms.yaml#/evidence_of_progression_type/common"
     enum:
       - Convincing Image Source
       - Histologic Confirmation
@@ -1961,8 +1963,8 @@ properties:
     $ref:
       - "_terms.yaml#/peritoneal_washing_results/common"
     enum:
-      - Positive
       - Negative
+      - Positive
       - Not Reported
 
   pregnancy_count:
