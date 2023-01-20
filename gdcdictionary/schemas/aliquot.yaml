@@ -83,6 +83,10 @@ properties:
     $ref:
       - "analyte.yaml#/properties/analyte_type"
 
+  analyte_type_id:
+    $ref:
+      - "analyte.yaml#/properties/analyte_type_id"
+
   concentration:
     $ref:
       - "_terms.yaml#/concentration/common"
