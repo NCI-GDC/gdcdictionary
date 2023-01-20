@@ -1971,6 +1971,7 @@ properties:
     $ref:
       - "_terms.yaml#/pregnancy_count/common"
     type: integer
+    minimum: 0
 
   pregnancy_outcome:
     $ref:
