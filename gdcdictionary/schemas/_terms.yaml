@@ -2057,6 +2057,19 @@ ethnicity:
       cde_version: 2.0
       term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2192217&version=2.0"
 
+evidence_of_progression_type:
+  common:
+    description: >-
+      The text term used to describe the type of evidence used to determine whether
+      the patient's disease progressed.
+    termDef:
+      term: >-
+        Progression Evidence Type
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
 evidence_of_recurrence_type:
   common:
     description: >-
