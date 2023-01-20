@@ -334,139 +334,141 @@ properties:
     minimum: 1900
 
   occupation_type:
+    $ref:
+      - "_terms.yaml#/occupation_type/common"
     type: array
     items:
       enum:
-        - Legislators and Senior Officials
-        - Managing Directors and Chief Executives
-        - Business Services and Administration Managers
-        - Sales, Marketing and Development Managers
-        - Production Managers in Agriculture, Forestry and Fisheries
-        - Manufacturing, Mining, Construction and Distribution Managers
-        - Information and Communications Technology Service managers
-        - Professional Services Managers
-        - Hotel and Restaurant Managers
-        - Retail and Wholesale Trade Managers
-        - Other Services Managers
-        - Physical and Earth Science Professionals
-        - Mathematicians, Actuaries and Statisticians
-        - Life Science Professionals
-        - Engineering Professionals (excluding Electrotechnology)
-        - Electrotechnology Engineers
-        - Architects, Planners, Surveyors and Designers
-        - Medical Doctors
-        - Nursing and Midwifery Professionals
-        - Traditional and Complementary Medicine Professionals
-        - Paramedical Practitioners
-        - Veterinarians
-        - Other Health Professionals
-        - University and Higher Education Teachers
-        - Vocational education teachers
-        - Secondary Education Teachers
-        - Primary School and Early Childhood Teachers
-        - Other Teaching Professionals
-        - Finance Professionals
         - Administration Professionals
-        - Sales, Marketing and Public Relations Professionals
-        - Software and Applications Developers and Analysts
-        - Database and Network Professionals
-        - Legal Professionals
-        - Librarians, Archivists and Curators
-        - Social and Religious Professionals
-        - Authors, Journalists and Linguists
-        - Creative and Performing Artists
-        - Physical and Engineering Science Technicians
-        - Mining, Manufacturing and Construction Supervisors
-        - Process Control Technicians
-        - Life Science Technicians and Related Associate Professionals
-        - Ship and Aircraft Controllers and Technicians
-        - Medical and Pharmaceutical Technicians
-        - Nursing and Midwifery Associate Professionals
-        - Traditional and Complementary Medicine Associate Professionals
-        - Veterinary Technicians and Assistants
-        - Other Health Associate Professionals
-        - Financial and Mathematical Associate Professionals
-        - Sales and Purchasing Agents and Brokers
-        - Business Services Agents
         - Administrative and Specialized Secretaries
-        - Government Regulatory  Associate Professionals
-        - Legal, Social and Religious Associate Professionals
-        - Sports and Fitness Workers
-        - Artistic, Cultural and Culinary Associate Professionals
-        - Information and Communications Technology Operations and User Support Technicians
-        - Telecommunications and Broadcasting Technicians
-        - General Office Clerks
-        - Secretaries (general)
-        - Keyboard Operators
-        - Tellers, Money Collectors and Related Clerks
-        - Client Information Workers
-        - Numerical Clerks
-        - Material Recording and Transport Clerks
-        - Other Clerical Support Workers
-        - Travel Attendants, Conductors and Guides
-        - Cooks
-        - Waiters and Bartenders
-        - Hairdressers, Beauticians and Related Workers
-        - Building and Housekeeping Supervisors
-        - Other Personal Services Workers
-        - Street and Market Salespersons
-        - Shop Aalespersons
-        - Cashiers and Ticket Clerks
-        - Other Sales Workers
-        - Child Care Workers and Teachers' Aides
-        - Personal Care Workers in Health Services
-        - Protective Services Workers
-        - Market Gardeners and Crop Growers
+        - Agricultural, Forestry and Fishery Labourers
         - Animal Producers
-        - Mixed Crop and Animal Producers
-        - Forestry and Related Workers
-        - Fishery Workers, Hunters and Trappers
-        - Subsistence Crop Farmers
-        - Subsistence Livestock Farmers
-        - Subsistence Mixed Crop and Livestock Farmers
-        - Subsistence Fishers, Hunters, Trappers and Gatherers
-        - Building Frame and Related Trades Workers
-        - Building Finishers and Related Trades Workers
-        - Painters, Building Structure Cleaners and Related Trades Workers
-        - Sheet and Structural Metal Workers, Moulders and Welders, and Related Workers
+        - Architects, Planners, Surveyors and Designers
+        - Armed Forces Occupations, Other Ranks
+        - Artistic, Cultural and Culinary Associate Professionals
+        - Assemblers
+        - Authors, Journalists and Linguists
         - Blacksmiths, Toolmakers and Related Trades Workers
-        - Machinery Mechanics and Repairers
-        - Handicraft Workers
-        - Printing Trades Workers
+        - Building Finishers and Related Trades Workers
+        - Building Frame and Related Trades Workers
+        - Building and Housekeeping Supervisors
+        - Business Services Agents
+        - Business Services and Administration Managers
+        - Car, Van and Motorcycle Drivers
+        - Cashiers and Ticket Clerks
+        - Chemical and Photographic Products Plant and Machine Operators
+        - Child Care Workers and Teachers' Aides
+        - Client Information Workers
+        - Commissioned Armed Forces Officers
+        - Cooks
+        - Creative and Performing Artists
+        - Database and Network Professionals
+        - Domestic, Hotel and Office Cleaners and Helpers
         - Electrical Equipment Installers and Repairers
         - Electronics and Telecommunications Installers and Repairers
-        - Food Processing and Related Trades Workers
-        - Wood Treaters, Cabinet-makers and Related Trades Workers
-        - Garment and Related Trades Workers
-        - Other Craft and Related Workers
-        - Mining and Mineral Processing Plant Operators
-        - Metal Processing and Finishing Plant Operators
-        - Chemical and Photographic Products Plant and Machine Operators
-        - Rubber, Plastic and Paper Products Machine Operators
-        - Textile, Fur and Leather Products Machine Operators
-        - Food and Related Products Machine Operators
-        - Wood Processing and Papermaking Plant Operators
-        - Other Stationary Plant and Machine Operators
-        - Assemblers
-        - Locomotive Engine Drivers and Related Workers
-        - Car, Van and Motorcycle Drivers
-        - Heavy Truck and Bus Drivers
-        - Mobile Plant Operators
-        - Ships' Deck Crews and Related Workers
-        - Domestic, Hotel and Office Cleaners and Helpers
-        - Vehicle, Window, Laundry and Other Hand Cleaning Workers
-        - Agricultural, Forestry and Fishery Labourers
-        - Mining and Construction Labourers
-        - Manufacturing Labourers
-        - Transport and Storage Labourers
+        - Electrotechnology Engineers
+        - Engineering Professionals (excluding Electrotechnology)
+        - Finance Professionals
+        - Financial and Mathematical Associate Professionals
+        - Fishery Workers, Hunters and Trappers
         - Food Preparation Assistants
-        - Street and Related Service Workers
-        - Street Vendors (excluding Food)
-        - Refuse Workers
-        - Other Elementary Workers
-        - Commissioned Armed Forces Officers
+        - Food Processing and Related Trades Workers
+        - Food and Related Products Machine Operators
+        - Forestry and Related Workers
+        - Garment and Related Trades Workers
+        - General Office Clerks
+        - Government Regulatory  Associate Professionals
+        - Hairdressers, Beauticians and Related Workers
+        - Handicraft Workers
+        - Heavy Truck and Bus Drivers
+        - Hotel and Restaurant Managers
+        - Information and Communications Technology Operations and User Support Technicians
+        - Information and Communications Technology Service managers
+        - Keyboard Operators
+        - Legal Professionals
+        - Legal, Social and Religious Associate Professionals
+        - Legislators and Senior Officials
+        - Librarians, Archivists and Curators
+        - Life Science Professionals
+        - Life Science Technicians and Related Associate Professionals
+        - Locomotive Engine Drivers and Related Workers
+        - Machinery Mechanics and Repairers
+        - Managing Directors and Chief Executives
+        - Manufacturing Labourers
+        - Manufacturing, Mining, Construction and Distribution Managers
+        - Market Gardeners and Crop Growers
+        - Material Recording and Transport Clerks
+        - Mathematicians, Actuaries and Statisticians
+        - Medical Doctors
+        - Medical and Pharmaceutical Technicians
+        - Metal Processing and Finishing Plant Operators
+        - Mining and Construction Labourers
+        - Mining and Mineral Processing Plant Operators
+        - Mining, Manufacturing and Construction Supervisors
+        - Mixed Crop and Animal Producers
+        - Mobile Plant Operators
         - Non-commissioned Armed Forces Officers
-        - Armed Forces Occupations, Other Ranks
+        - Numerical Clerks
+        - Nursing and Midwifery Associate Professionals
+        - Nursing and Midwifery Professionals
+        - Other Clerical Support Workers
+        - Other Craft and Related Workers
+        - Other Elementary Workers
+        - Other Health Associate Professionals
+        - Other Health Professionals
+        - Other Personal Services Workers
+        - Other Sales Workers
+        - Other Services Managers
+        - Other Stationary Plant and Machine Operators
+        - Other Teaching Professionals
+        - Painters, Building Structure Cleaners and Related Trades Workers
+        - Paramedical Practitioners
+        - Personal Care Workers in Health Services
+        - Physical and Earth Science Professionals
+        - Physical and Engineering Science Technicians
+        - Primary School and Early Childhood Teachers
+        - Printing Trades Workers
+        - Process Control Technicians
+        - Production Managers in Agriculture, Forestry and Fisheries
+        - Professional Services Managers
+        - Protective Services Workers
+        - Refuse Workers
+        - Retail and Wholesale Trade Managers
+        - Rubber, Plastic and Paper Products Machine Operators
+        - Sales and Purchasing Agents and Brokers
+        - Sales, Marketing and Development Managers
+        - Sales, Marketing and Public Relations Professionals
+        - Secondary Education Teachers
+        - Secretaries (general)
+        - Sheet and Structural Metal Workers, Moulders and Welders, and Related Workers
+        - Ship and Aircraft Controllers and Technicians
+        - Ships' Deck Crews and Related Workers
+        - Shop Aalespersons
+        - Social and Religious Professionals
+        - Software and Applications Developers and Analysts
+        - Sports and Fitness Workers
+        - Street Vendors (excluding Food)
+        - Street and Market Salespersons
+        - Street and Related Service Workers
+        - Subsistence Crop Farmers
+        - Subsistence Fishers, Hunters, Trappers and Gatherers
+        - Subsistence Livestock Farmers
+        - Subsistence Mixed Crop and Livestock Farmers
+        - Telecommunications and Broadcasting Technicians
+        - Tellers, Money Collectors and Related Clerks
+        - Textile, Fur and Leather Products Machine Operators
+        - Traditional and Complementary Medicine Associate Professionals
+        - Traditional and Complementary Medicine Professionals
+        - Transport and Storage Labourers
+        - Travel Attendants, Conductors and Guides
+        - University and Higher Education Teachers
+        - Vehicle, Window, Laundry and Other Hand Cleaning Workers
+        - Veterinarians
+        - Veterinary Technicians and Assistants
+        - Vocational education teachers
+        - Waiters and Bartenders
+        - Wood Processing and Papermaking Plant Operators
+        - Wood Treaters, Cabinet-makers and Related Trades Workers
 
   pack_years_smoked:
     $ref:
