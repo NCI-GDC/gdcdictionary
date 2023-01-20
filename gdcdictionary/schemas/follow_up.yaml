@@ -1829,8 +1829,8 @@ properties:
     enum:
       - Carcinomatosis
       - Kidney Involvement
-      - Lung Involvement
       - Liver Involvement
+      - Lung Involvement
       - Normal
       - Retroperitoneal Lymph Node Involvement
       - Vena Cava Involvement/Thrombus
