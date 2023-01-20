@@ -204,6 +204,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   aneuploidy:
+    $ref:
+      - "_terms.yaml#/aneuploidy/common"
     enum:
       - Monosomy
       - Trisomy
@@ -463,6 +465,8 @@ properties:
           - "_terms_enum.yaml#/nonclonal/common"
 
   chromosomal_translocation:
+    $ref:
+      - "_terms.yaml#/chromosomal_translocation/common"
     enum:
       - t(6;9)
       - t(8;21)
@@ -475,6 +479,8 @@ properties:
       - Not Reported
 
   chromosome_arm:
+    $ref:
+      - "_terms.yaml#/chromosome_arm/common"
     enum:
       - p
       - q
@@ -4035,6 +4041,8 @@ properties:
           - "_terms_enum.yaml#/upstream_gene_variant/common"
 
   mutation_codon:
+    $ref:
+      - "_terms.yaml#/mutation_codon/common"
     enum:
       - "12"
       - "13"
@@ -7086,6 +7094,8 @@ properties:
     type: number
 
   test_value_range:
+    $ref:
+      - "_terms.yaml#/test_value_range/common"
     enum:
       - 0-25
       - 26-50
@@ -7094,6 +7104,8 @@ properties:
       - Not Reported
 
   timepoint_category:
+    $ref:
+      - "_terms.yaml#/timepoint_category/common"
     enum:
       - End of Consolidation Therapy
       - End of Treatment Course 1
