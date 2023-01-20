@@ -54,6 +54,8 @@ properties:
       - Asbestos bodies
       - Benign endocervical polyp
       - Bilateral ovaries with endometriotic cyst and surface adhesions
+      - Bone marrow concordant histology
+      - Bone marrow discordant histology
       - Carcinoma in situ
       - Cirrhosis
       - Clostridioides difficile (c. diff)
@@ -97,8 +99,6 @@ properties:
       - Tubular (papillary) adenoma(s)
       - Tumor-associated lymphoid proliferation
       - Tumor has rough spikey edges
-      - Bone marrow discordant histology
-      - Bone marrow concordant histology
 
   anaplasia_present:
     $ref:
@@ -267,12 +267,12 @@ properties:
     enum:
       - Epithelial
       - Esophageal Columnar Dysplasia
+      - Esophageal Mucosa Columnar Dysplasia
       - Keratinizing
       - Nonkeratinizing
       - Other
       - Unknown
       - Not Reported
-      - Esophageal Mucosa Columnar Dysplasia
     enumDef:
       Esophageal Columnar Dysplasia:
         $ref:
@@ -294,18 +294,24 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   extracapsular_extension:
+    $ref:
+      - "_terms.yaml#/extracapsular_extension/common"
     enum:
-      - Focal
       - Extensive
+      - Focal
       - Not Reported
 
   extranodal_extension:
+    $ref:
+      - "_terms.yaml#/extranodal_extension/common"
     enum:
-      - No Extranodal Extension
       - Gross Extension
       - Microscopic Extension
+      - No Extranodal Extension
 
   extrascleral_extension:
+    $ref:
+      - "_terms.yaml#/extrascleral_extension/common"
     type: boolean
 
   greatest_tumor_dimension:
@@ -344,12 +350,16 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   lymph_node_dissection_method:
+    $ref:
+      - "_terms.yaml#/lymph_node_dissection_method/common"
     enum:
       - Functional (Limited) Neck Dissection
       - Modified Radical Neck Dissection
       - Radical Neck Dissection
 
   lymph_node_dissection_site:
+    $ref:
+      - "_terms.yaml#/lymph_node_dissection_site/common"
     enum:
       - Neck, Left
       - Neck, Right
@@ -359,6 +369,7 @@ properties:
     $ref:
       - "_terms.yaml#/lymph_node_involved_site/common"
     enum:
+      - Aortic
       - Axillary
       - Cervical
       - Epitrochlear
@@ -374,6 +385,7 @@ properties:
       - Occipital
       - Paraaortic
       - Parotid
+      - Pelvis, NOS
       - Popliteal
       - Retroperitoneal
       - Splenic
@@ -381,8 +393,6 @@ properties:
       - Supraclavicular
       - Unknown
       - Not Reported
-      - Aortic
-      - Pelvis, NOS
     enumDef:
       Axillary:
         $ref:
@@ -484,6 +494,8 @@ properties:
     minimum: 0
 
   lymph_nodes_removed:
+    $ref:
+      - "_terms.yaml#/lymph_nodes_removed/common
     enum:
       - "No"
       - "Yes"
@@ -672,6 +684,8 @@ properties:
     minimum: 0
 
   percent_tumor_nuclei:
+    $ref:
+      - "_terms.yaml#/percent_tumor_nuclei/common"
     type: number
     maximum: 100
     minimum: 0
@@ -759,11 +773,13 @@ properties:
       - R2
 
   residual_tumor_measurement:
+    $ref:
+      - "_terms.yaml#/residual_tumor_measurement/common"
     enum:
-      - No macroscopic disease
       - 1-10 mm
       - 11-20 mm
       - '>20 mm'
+      - No macroscopic disease
 
   rhabdoid_percent:
     $ref:
