@@ -51,6 +51,8 @@ properties:
     - "_definitions.yaml#/ubiquitous_properties"
 
   alcohol_frequency:
+    $ref:
+      - "_terms.yaml#/alcohol_frequency/common"
     enum:
       - Daily Drinker
       - Weekly Drinker
@@ -201,33 +203,37 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   chemical_exposure_type:
-    enum:
-      - Agent Orange
-      - Aluminum
-      - Arsenic
-      - Asbestos
-      - Benzene
-      - Cadmium
-      - Chromium
-      - Chemical Exposure, NOS
-      - Chemical, NOS
-      - Coal Gas, Coal Tar, Coal Tar Pitch, and Derivatives
-      - Coke Oven Emission
-      - Copper
-      - Diesel Exhaust
-      - Disinfectant
-      - Formaldehyde
-      - Methylene Chloride
-      - Occupational Soldering/Welding Smoke Exposure
-      - Oil
-      - Pesticide
-      - Petroleum Hydrocarbon Compound
-      - Resin Fumes
-      - Sodium Borate
-      - Solvent
-      - Tetrachloroethylene
-      - Toluene
-      - Not Reported
+    $ref:
+      - "_terms.yaml#/chemical_exposure_type/common"
+    type: array
+    items:
+      enum:
+        - Agent Orange
+        - Aluminum
+        - Arsenic
+        - Asbestos
+        - Benzene
+        - Cadmium
+        - Chromium
+        - Chemical Exposure, NOS
+        - Chemical, NOS
+        - Coal Gas, Coal Tar, Coal Tar Pitch, and Derivatives
+        - Coke Oven Emission
+        - Copper
+        - Diesel Exhaust
+        - Disinfectant
+        - Formaldehyde
+        - Methylene Chloride
+        - Occupational Soldering/Welding Smoke Exposure
+        - Oil
+        - Pesticide
+        - Petroleum Hydrocarbon Compound
+        - Resin Fumes
+        - Sodium Borate
+        - Solvent
+        - Tetrachloroethylene
+        - Toluene
+        - Not Reported
 
   cigarettes_per_day:
     $ref:
@@ -616,6 +622,15 @@ properties:
 
   tobacco_smoking_status:
     enum:
+      - Lifelong Non-Smoker
+      - Current Smoker
+      - Current Reformed Smoker for > 15 yrs
+      - Current Reformed Smoker for < or = 15 yrs
+      - Current Reformed Smoker, Duration Not Specified
+      - Smoker at Diagnosis
+      - Smoking history not documented
+      - Unknown
+      - Not Reported
       - "1"
       - "2"
       - "3"
@@ -623,11 +638,16 @@ properties:
       - "5"
       - "6"
       - "7"
-      - Unknown
-      - Not Reported
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
     enumDef:
       "1":
         $ref:
