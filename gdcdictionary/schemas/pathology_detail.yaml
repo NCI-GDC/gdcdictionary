@@ -495,7 +495,7 @@ properties:
 
   lymph_nodes_removed:
     $ref:
-      - "_terms.yaml#/lymph_nodes_removed/common
+      - "_terms.yaml#/lymph_nodes_removed/common"
     enum:
       - "No"
       - "Yes"
