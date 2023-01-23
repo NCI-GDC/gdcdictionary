@@ -1379,7 +1379,7 @@ properties:
 
   days_to_first_event:
     $ref:
-      - "_terms.yaml#days_to_first_event"
+      - "_terms.yaml#days_to_first_event/common"
     type: integer
     maximum: 32872
     minimum: -32872
@@ -2872,7 +2872,7 @@ properties:
       - "_terms.yaml#/timepoint_category/common"
     enum:
       - Adolescence
-      - Adjuvant therapy
+      - Adjuvant Therapy
       - Adulthood
       - Childhood
       - Follow-up
