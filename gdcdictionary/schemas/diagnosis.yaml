@@ -1323,6 +1323,8 @@ properties:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   cancer_detection_method:
+    $ref:
+      - "_terms.yaml#/cancer_detection_method/common"
     enum:
       - Screening
       - Surveillance
@@ -1775,6 +1777,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   fab_morphology_code:
+    $ref:
+      - "_terms.yaml#/fab_morphology_code/common"
     enum:
       - M0
       - M1
@@ -2050,6 +2054,8 @@ properties:
     minimum: 0
 
   gleason_score:
+    $ref:
+      - "_terms.yaml#/gleason_score/common"
     type: integer
     maximum: 10
     minimum: 0
@@ -18119,6 +18125,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   sites_of_involvement_count:
+    $ref:
+      - "_terms.yaml#/sites_of_involvement_count/common"
     type: integer
     minimum: 1
 
@@ -19398,6 +19406,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   tumor_grade_category:
+    $ref:
+      - "_terms.yaml#/tumor_grade_category/common"
     enum:
       - Four Tier
       - Three Tier
@@ -19690,6 +19700,8 @@ properties:
       - Not Reported
 
   uicc_staging_system_edition:
+    $ref:
+      - "_terms.yaml#/uicc_staging_system_edition/common"
     enum:
       - 1st
       - 2nd
@@ -19703,6 +19715,8 @@ properties:
       - Not Reported
 
   weiss_assessment_findings:
+    $ref:
+      - "_terms.yaml#/weiss_assessment_findings/common"
     type: array
     items:
       enum:
