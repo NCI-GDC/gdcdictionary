@@ -100,6 +100,8 @@ properties:
           - "_terms_enum.yaml#/total_rna/common"
 
     analyte_type_id:
+      $ref:
+        - "_terms.yaml#/analyte_type_id/common"
       enum:
         - D
         - E
