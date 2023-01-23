@@ -1206,6 +1206,19 @@ columnar_mucosa_present:
       cde_version:
       term_url:
 
+comorbidities:
+  common:
+    description: >-
+      The text term used to describe a comorbidity disease, which coexists with the
+      patient's malignant disease.
+    termDef:
+      term: >-
+        Index Date To Comorbidity Day Count
+      source: caDSR
+      cde_id: 2970715
+      cde_version: 1.0
+      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2970715&version=1.0"
+
 comorbidity:
   common:
     description: >-
@@ -5182,6 +5195,20 @@ rin:
       term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5278775&version=1.0"
 
 risk_factor:
+  common:
+    description: >-
+      The text term used to describe a risk factor the patient had at the time of
+      or prior to their diagnosis.
+    termDef:
+      term: >-
+        Risk Factor Description Type
+      source: caDSR
+      cde_id: 6142389
+      cde_version: 1.0
+      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142389&version=1.0"
+
+
+risk_factors:
   common:
     description: >-
       The text term used to describe a risk factor the patient had at the time of
