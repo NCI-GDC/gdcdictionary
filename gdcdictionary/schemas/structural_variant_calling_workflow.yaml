@@ -54,6 +54,7 @@ properties:
       - Fusion Catcher
       - Pizzly
       - STAR-Fusion
+      - SvABA
 
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
