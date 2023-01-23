@@ -2646,7 +2646,7 @@ properties:
 
   risk_factors:
     $ref:
-      - "_terms.yaml#/risk_factor/common"
+      - "_terms.yaml#/risk_factors/common"
     items:
       enum:
         - Abnormal Glucose Level
