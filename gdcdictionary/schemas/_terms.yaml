@@ -829,7 +829,7 @@ burkitt_lymphoma_clinical_variant:
       cde_version: 1.0
       term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3770421&version=1.0"
 
-cancer_detection_type:
+cancer_detection_method:
   common:
     description: >-
       The method used to detect disease.
