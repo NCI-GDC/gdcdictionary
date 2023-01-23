@@ -5081,12 +5081,11 @@ residual_tumor:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4809"
 
 residual_tumor_measurement:
-  ?
-  : ?
-    : description: >-
+  common:
+    description: >-
         A measurement of the tumor cells that remain in the body following cancer
         treatment.
-      termDef:
+    termDef:
         term:
         source:
         cde_id:
