@@ -96,6 +96,8 @@ properties:
       - CEA
       - FMC-7
       - HLA-DR
+      - Immunoglobulin, Cytoplasmic
+      - Immunoglobulin, Surface
       - Kappa, Surface
       - Ki67
       - Lambda, Surface
@@ -200,6 +202,13 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  aneuploidy:
+    $ref:
+      - "_terms.yaml#/aneuploidy/common"
+    enum:
+      - Monosomy
+      - Trisomy
 
   biospecimen_type:
     $ref:
@@ -454,6 +463,28 @@ properties:
       Non-clonal:
         $ref:
           - "_terms_enum.yaml#/nonclonal/common"
+
+  chromosomal_translocation:
+    $ref:
+      - "_terms.yaml#/chromosomal_translocation/common"
+    enum:
+      - t(6;9)
+      - t(8;21)
+      - t(3;5)(q25;q34)
+      - t(6;11)(q27;q23)
+      - t(9;11)(p22;q23)
+      - t(10;11)(p11.2;q23)
+      - t(11;19)(q23;p13.1)
+      - Unknown
+      - Not Reported
+
+  chromosome_arm:
+    $ref:
+      - "_terms.yaml#/chromosome_arm/common"
+    enum:
+      - p
+      - q
+      - Not Reported
 
   cytoband:
     $ref:
@@ -3501,6 +3532,7 @@ properties:
       - Basophil
       - Beta 2 Microglobulin
       - BG8
+      - Blast Count
       - Blood Urea Nitrogen
       - C-Reactive Protein
       - Calcium
@@ -3535,8 +3567,11 @@ properties:
       - M Protein
       - Metamyelocytes
       - Metanephrine-Secreting
+      - Metaphase Nucleus Count
       - Methoxytyramine-Secreting
       - Microsatellite Instability
+      - Minimal Residual Disease
+      - Monocytes
       - Myeloblasts
       - Myelocytes
       - Neutrophil Bands
@@ -4004,6 +4039,14 @@ properties:
       Upstream Gene Variant:
         $ref:
           - "_terms_enum.yaml#/upstream_gene_variant/common"
+
+  mutation_codon:
+    $ref:
+      - "_terms.yaml#/mutation_codon/common"
+    enum:
+      - "12"
+      - "13"
+      - "61"
 
   pathogenicity:
     $ref:
@@ -6966,7 +7009,9 @@ properties:
       - "_terms.yaml#/test_result/common"
     enum:
       - Abnormal, NOS
+      - Amplified
       - Copy Number Reported
+      - Elevated
       - Equivocal
       - High
       - Intermediate
@@ -6974,6 +7019,7 @@ properties:
       - Low
       - Negative
       - Normal
+      - Not Amplified
       - Overexpressed
       - Positive
       - Stable
@@ -7047,6 +7093,25 @@ properties:
       - "_terms.yaml#/test_value/common"
     type: number
 
+  test_value_range:
+    $ref:
+      - "_terms.yaml#/test_value_range/common"
+    enum:
+      - 0-25
+      - 26-50
+      - 51-75
+      - 76-100
+      - Not Reported
+
+  timepoint_category:
+    $ref:
+      - "_terms.yaml#/timepoint_category/common"
+    enum:
+      - End of Consolidation Therapy
+      - End of Treatment Course 1
+      - End of Treatment Course 2
+      - Not Reported
+
   transcript:
     $ref:
       - "_terms.yaml#/transcript/common"
@@ -7083,13 +7148,17 @@ properties:
       - Deletion-Insertion
       - Duplication
       - Extension
+      - Fusion
       - Gain
+      - Genetic Polymorphism
       - Hypermethylation
       - Insertion
+      - Internal Tandem Duplication
       - Inversion
       - Loss
       - Methylation
       - Mosaicism
+      - Mutation, NOS
       - Other
       - Partial Methylation
       - Rearrangement
