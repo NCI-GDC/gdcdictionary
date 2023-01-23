@@ -829,7 +829,7 @@ burkitt_lymphoma_clinical_variant:
       cde_version: 1.0
       term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3770421&version=1.0"
 
-cancer_detection_type:
+cancer_detection_method:
   common:
     description: >-
       The method used to detect disease.
@@ -4131,6 +4131,17 @@ pathogenicity:
       The text used to describe a variant's level of involvement in the cause of the
       patient's disease according to the standards outlined by the American College
       of Medical Genetics and Genomics (ACMG).
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+pediatric_kidney_staging:
+  common:
+    description: >-
+      A modified version of the Children's Oncology Group (COG) National Wilms Tumor Study Group (NWTS) staging system.
     termDef:
       term:
       source:
