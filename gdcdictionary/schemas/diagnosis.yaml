@@ -1322,6 +1322,13 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
+  cancer_detection_method:
+    enum:
+      - Screening
+      - Surveillance
+      - Symptomatic
+      - Not Reported
+
   child_pugh_classification:
     $ref:
       - "_terms.yaml#/child_pugh_classification/common"
@@ -1767,6 +1774,18 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  fab_morphology_code:
+    enum:
+      - M0
+      - M1
+      - M2
+      - M3
+      - M4
+      - M5
+      - M6
+      - M7
+      - Not Classified
+
   figo_stage:
     $ref:
       - "_terms.yaml#/figo_stage/common"
@@ -2030,6 +2049,11 @@ properties:
     maximum: 100
     minimum: 0
 
+  gleason_score:
+    type: integer
+    maximum: 10
+    minimum: 0
+
   goblet_cells_columnar_mucosa_present:
     $ref:
       - "_terms.yaml#/goblet_cells_columnar_mucosa_present/common"
@@ -2082,6 +2106,7 @@ properties:
       - Differentiating
       - Poorly Differentiated
       - Undifferentiated
+      - Undifferentiated or Poorly Differentiated
       - Unknown
       - Not Reported
     enumDef:
@@ -7083,9 +7108,9 @@ properties:
     $ref:
       - "_terms.yaml#/ovarian_specimen_status/common"
     enum:
+      - Ovarian Capsule Fragmented
       - Ovarian Capsule Intact
       - Ovarian Capsule Ruptured
-      - Ovarian Capsule Fragmented
       - Unknown
       - Not Reported
     enumDef:
@@ -7110,8 +7135,8 @@ properties:
       - "_terms.yaml#/ovarian_surface_involvement/common"
     enum:
       - Absent
-      - Present
       - Indeterminate
+      - Present
       - Unknown
       - Not Reported
     enumDef:
@@ -7144,6 +7169,20 @@ properties:
       Type 2:
         $ref:
           - "_terms_enum.yaml#/type_2/common"
+
+  pediatric_kidney_staging:
+    $ref:
+      - "_terms.yaml#/pediatric_kidney_staging/common"
+    enum:
+      - Nephrectomy specimen with tumor confined to the kidney; distant metastasis identified at diagnosis
+      - Nephrectomy specimen with tumor confined to the kidney; no distant metastasis
+      - Nephrectomy specimen with tumor that penetrates the renal capsule or involves the renal sinus with negative margins and negative lymph nodes; distant metastasis identified at diagnosis
+      - Nephrectomy specimen with tumor that penetrates the renal capsule or involves the renal sinus with negative margins and negative lymph nodes; no distant metastasis
+      - Nephrectomy specimen with tumor that is present at the surgical margin of resection or within regional lymph nodes; distant metastasis identified at diagnosis
+      - Nephrectomy specimen with tumor that is present at the surgical margin of resection or within regional lymph nodes; no distant metastasis
+      - Tumor biopsied only at diagnosis; distant metastasis identified at diagnosis
+      - Tumor biopsied only at diagnosis; no distant metastasis
+      - Not Reported
 
   peritoneal_fluid_cytological_status:
     $ref:
@@ -17965,10 +18004,19 @@ properties:
         - Bladder, NOS
         - Bone, NOS
         - Bone marrow
+        - Brain, Brain stem
+        - Brain, Cerebellum, NOS
+        - Brain, Cerebrum
+        - Brain, Frontal lobe
         - Brain, NOS
+        - Brain, Occipital lobe
+        - Brain, Parietal
+        - Brain, Temporal lobe
+        - Brain, Ventricle, NOS
         - Breast, NOS
         - Bronchus
         - Buccal mucosa
+        - Central Lung
         - Central nervous system
         - Cerebrospinal fluid
         - Cervix
@@ -17983,6 +18031,7 @@ properties:
         - Fallopian Tube, NOS
         - Fallopian Tube, Right
         - Gallbladder
+        - Gastrosplenic Ligament
         - Heart
         - Kidney, Lower Pole
         - Kidney, NOS
@@ -18012,13 +18061,18 @@ properties:
         - Ovary, NOS
         - Ovary, Right
         - Pancreas
+        - Parametrium, Left
+        - Parametrium, Right
         - Parotid gland
+        - Pelvic Lymph Node(s)
         - Pelvic Peritoneum
         - Pelvis
         - Pericardium
         - Perineum
+        - Peri-aortic Lymph Node(s)
         - Peri-orbital soft tissue
         - Peripheral blood
+        - Peripheral Lung
         - Peripheral nervous system
         - Peritoneum, NOS
         - Pleura
@@ -18034,6 +18088,7 @@ properties:
         - Spleen
         - Stomach
         - Testes
+        - Thorax, NOS
         - Thyroid
         - Tongue
         - Tonsil
@@ -18062,6 +18117,10 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  sites_of_involvement_count:
+    type: integer
+    minimum: 1
 
   supratentorial_localization:
     $ref:
@@ -19338,6 +19397,12 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  tumor_grade_category:
+    enum:
+      - Four Tier
+      - Three Tier
+      - Not Reported
+
   tumor_regression_grade:
     $ref:
       - "_terms.yaml#/tumor_regression_grade/common"
@@ -19623,6 +19688,34 @@ properties:
       - Tis (Paget's)
       - Unknown
       - Not Reported
+
+  uicc_staging_system_edition:
+    enum:
+      - 1st
+      - 2nd
+      - 3rd
+      - 4th
+      - 5th
+      - 6th
+      - 7th
+      - 8th
+      - Unknown
+      - Not Reported
+
+  weiss_assessment_findings:
+    type: array
+    items:
+      enum:
+        - Atypical Mitotic Figures
+        - Cytoplasm presence <= to 25%
+        - Diffuse Architecture
+        - Invasion of Tumor Capsule
+        - Mitotic Rate > 5/50 HPF
+        - Necrosis
+        - Nuclear Grade III or IV
+        - Sinusoid Invasion
+        - Venous Invasion
+        - Not Reported
 
   weiss_assessment_score:
     $ref:
