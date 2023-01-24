@@ -333,9 +333,11 @@ properties:
           - "_terms_enum.yaml#/tobacco/common"
 
   occupation_duration_years:
+    $ref:
+      - "_terms.yaml#/occupation_duration_years/common"
     type: integer
-    maximum: 0
-    minimum: 89
+    maximum: 89
+    minimum: 0
 
   occupation_type:
     $ref:
