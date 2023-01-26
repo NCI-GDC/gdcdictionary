@@ -132,8 +132,10 @@ properties:
       - "_terms.yaml#/initial_disease_status/common"
     enum:
       - Initial Diagnosis
+      - Persistent Disease
       - Progressive Disease
       - Recurrent Disease
+      - Refractory Disease
       - Residual Disease
       - Unknown
       - Not Reported
@@ -173,10 +175,130 @@ properties:
     $ref:
       - "_terms.yaml#/protocol_identifier/common"
     enum:
+      - "901"
+      - "911"
+      - "914"
+      - "925"
+      - "935"
+      - "937"
+      - "3881"
+      - "3891"
+      - "4941"
+      - "8605"
+      - "9047"
+      - "9082"
+      - "9340"
+      - "9341"
+      - "9342"
+      - "9343"
+      - "9464"
+      - "9640"
+      - "9906"
+      - 321P2
+      - 321P3
+      - 323P
       - A081105
       - A081801
+      - A3961
+      - A3973
+      - AADM01P1
+      - AALL0031
+      - AALL0232
+      - AALL0331
+      - AALL03B1
+      - AALL0434
+      - AALL07P4
+      - AALL08P1
+      - AALL1131
+      - AAML00P2
+      - AAML03P1
+      - AAML0531
+      - AAML0631
+      - AAML1031
+      - AB9804
+      - ACCL0331
+      - ACCL0431
+      - ACCL05C1
+      - ACCL0934
+      - ACCL1031
+      - ADVL0018
+      - ADVL0212
+      - ADVL0214
+      - ADVL0215
+      - ADVL0421
+      - ADVL0524
+      - ADVL0525
+      - ADVL06B1
+      - ADVL0714
+      - ADVL0812
+      - ADVL0813
+      - ADVL0821
+      - ADVL0911
+      - ADVL0912
+      - ADVL0918
+      - ADVL0921
+      - ADVL1011
+      - ADVL1111
+      - ADVL1112
+      - ADVL1115
+      - ADVL1213
+      - ADVL1412
+      - AEPI07N1
+      - ALTE03N1
+      - ALTE05N1
+      - ANBL0032
+      - ANBL00B1
+      - ANBL00P1
+      - ANBL00P3
+      - ANBL02P1
+      - ANBL0321
+      - ANBL0322
+      - ANBL0421
+      - ANBL0531
+      - ANBL0532
+      - ANBL0621
+      - ANBL0931
+      - ANBL09P1
+      - ANBL1021
+      - ANBL1221
+      - ANUR1131
+      - AOST0121
+      - AOST0331
+      - AOST06B1
+      - AOST06P1
+      - AREN03B2
+      - B003
+      - B903
+      - B947
+      - B954
+      - B973
+      - BCM
+      - CCG2961
+      - D9902
+      - E04
+      - E18
       - E4512
       - EA5142
+      - GBCTTO/99
+      - GLATO 2006
+      - I03
+      - IHRT
+      - INT-0133
+      - N891
+      - NWTS-4
+      - NWTS-5
+      - OSTEO 2006
+      - Not Reported
+      - P9462
+      - P9641
+      - P9754
+      - P9851
+      - P9906
+      - P9963
+      - R9702
+      - S31
+      - S921
+      - STB
 
   reason_treatment_ended:
     $ref:
@@ -192,6 +314,16 @@ properties:
       Other:
         $ref:
           - "_terms_enum.yaml#/other/common"
+
+  residual_disease:
+    $ref:
+      - "_terms.yaml#/residual_disease/common"
+    enum:
+      - R0
+      - R1
+      - R2
+      - RX
+      - Not Reported
 
   regimen_or_line_of_therapy:
     $ref:
@@ -211,9 +343,25 @@ properties:
         - Intratumoral
         - Intravenous
         - Intravesical
-        - Subcutaneous
         - Oral
+        - Subcutaneous
         - Not Reported
+
+  timepoint_category:
+    $ref:
+      - "_terms.yaml#/timepoint_category/common"
+    enum:
+      - End of Consolidation Therapy
+      - End of Treatment Course
+      - First Complete Response
+      - Postoperative
+      - Preoperative
+      - Prior to Diagnosis
+      - Prior to Procurement
+      - Prior to Study Registration
+      - Progression
+      - Recurrence
+      - Not Reported
 
   treatment_anatomic_site:
     $ref:
@@ -366,6 +514,7 @@ properties:
       - Ligament
       - Lip
       - Liver
+      - Locoregional Site
       - Lumbar Spine
       - Lung
       - Lymph Node
@@ -612,6 +761,13 @@ properties:
         $ref:
           - "_terms_enum.yaml#/mg/common"
 
+  treatment_duration:
+    $ref:
+      - "_terms.yaml#/treatment_duration/common"
+    type: integer
+    maximum: 32872
+    minimum: -32872
+
   treatment_effect:
     $ref:
       - "_terms.yaml#/treatment_effect/common"
@@ -656,13 +812,13 @@ properties:
     $ref:
       - "_terms.yaml#/treatment_frequency/common"
     enum:
+      - Every 24 Hours
       - Every Hour
+      - Every Other Day
       - Five Times Daily
       - Four Times Daily
       - Three Times Daily
       - Twice Daily
-      - Every 24 Hours
-      - Every Other Day
       - Twice Weekly
       - Once Weekly
       - Unknown
@@ -682,11 +838,15 @@ properties:
       - Adjuvant
       - Androgen Deprivation Therapy (ADT)
       - Cancer Control
+      - Consolidation Therapy
       - Cure
+      - First-Line Therapy
+      - Induction
       - Maintenance Therapy
       - Neoadjuvant
       - Palliative
       - Prevention
+      - Radiation Boost
       - Unknown
       - Not Reported
     enumDef:
@@ -727,6 +887,7 @@ properties:
       - Mixed Response
       - No Measurable Disease
       - No Response
+      - Normalization of Tumor Markers
       - Partial Response
       - Persistent Disease
       - Progressive Disease
@@ -744,6 +905,13 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  treatment_outcome_duration:
+    $ref:
+      - "_terms.yaml#/treatment_outcome_duration/common"
+    type: integer
+    maximum: 32872
+    minimum: -32872
+
   treatment_type:
     $ref:
       - "_terms.yaml#/treatment_type/common"
@@ -756,6 +924,8 @@ properties:
       - Ablation, Radiosurgical
       - Ancillary Treatment
       - Antiseizure Treatment
+      - Biopsy, Excisional
+      - Biopsy, Incisional
       - Bisphosphonate Therapy
       - Blinded Study, Treatment Unknown
       - Brachytherapy, High Dose
@@ -766,6 +936,7 @@ properties:
       - Chemotherapy
       - Concurrent Chemoradiation
       - Cryoablation
+      - Distal Pancreatectomy
       - Embolization
       - Ethanol Injection Ablation
       - External Beam Radiation
@@ -812,11 +983,18 @@ properties:
       - Stereotactic Radiosurgery
       - Steroid Therapy
       - Surgery
+      - Surgery, NOS
+      - Surgery, Minimally Invasive
+      - Surgery, Open
       - Targeted Molecular Therapy
+      - Total Pancreatectomy
+      - Whipple
       - Unknown
       - Not Reported
     deprecated_enum:
+      - Cryoablation
       - Not Allowed To Collect
+      - Surgery
     enumDef:
       Not Allowed To Collect:
         $ref:
@@ -5021,6 +5199,7 @@ properties:
       - TLR7/8/9 Antagonist IMO-8400
       - TLR8 Agonist DN1508052
       - TLR9 Agonist AST-008
+      - TLR9 Agonist SD-101
       - TM4SF1-CAR/EpCAM-CAR-expressing Autologous T Cells
       - Tocilizumab
       - Tocladesine
@@ -7222,6 +7401,17 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  therapeutic_level_achieved:
+    $ref:
+      - "_terms.yaml#/therapeutic_level_achieved/common"
+    type: boolean
+
+  therapeutic_target_level:
+    $ref:
+      - "_terms.yaml#/therapeutic_target_level/common"
+    enum:
+      - '>14 mg/L'
 
   diagnoses:
     $ref: "_definitions.yaml#/to_one"

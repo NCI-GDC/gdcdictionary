@@ -829,7 +829,7 @@ burkitt_lymphoma_clinical_variant:
       cde_version: 1.0
       term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3770421&version=1.0"
 
-cancer_detection_type:
+cancer_detection_method:
   common:
     description: >-
       The method used to detect disease.
@@ -1205,6 +1205,19 @@ columnar_mucosa_present:
       cde_id:
       cde_version:
       term_url:
+
+comorbidities:
+  common:
+    description: >-
+      The text term used to describe a comorbidity disease, which coexists with the
+      patient's malignant disease.
+    termDef:
+      term: >-
+        Index Date To Comorbidity Day Count
+      source: caDSR
+      cde_id: 2970715
+      cde_version: 1.0
+      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2970715&version=1.0"
 
 comorbidity:
   common:
@@ -2056,6 +2069,19 @@ ethnicity:
       cde_id: 2192217
       cde_version: 2.0
       term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2192217&version=2.0"
+
+evidence_of_progression_type:
+  common:
+    description: >-
+      The text term used to describe the type of evidence used to determine whether
+      the patient's disease progressed.
+    termDef:
+      term: >-
+        Progression Evidence Type
+      source:
+      cde_id:
+      cde_version:
+      term_url:
 
 evidence_of_recurrence_type:
   common:
@@ -4138,6 +4164,17 @@ pathogenicity:
       cde_version:
       term_url:
 
+pediatric_kidney_staging:
+  common:
+    description: >-
+      A modified version of the Children's Oncology Group (COG) National Wilms Tumor Study Group (NWTS) staging system.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
 percent_eosinophil_infiltration:
   common:
     description: >-
@@ -5081,12 +5118,11 @@ residual_tumor:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4809"
 
 residual_tumor_measurement:
-  ?
-  : ?
-    : description: >-
+  common:
+    description: >-
         A measurement of the tumor cells that remain in the body following cancer
         treatment.
-      termDef:
+    termDef:
         term:
         source:
         cde_id:
@@ -5158,6 +5194,20 @@ rin:
       term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5278775&version=1.0"
 
 risk_factor:
+  common:
+    description: >-
+      The text term used to describe a risk factor the patient had at the time of
+      or prior to their diagnosis.
+    termDef:
+      term: >-
+        Risk Factor Description Type
+      source: caDSR
+      cde_id: 6142389
+      cde_version: 1.0
+      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142389&version=1.0"
+
+
+risk_factors:
   common:
     description: >-
       The text term used to describe a risk factor the patient had at the time of
