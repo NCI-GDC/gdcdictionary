@@ -5,7 +5,9 @@
   "barretts_esophagus_goblet_cells_present": "No",
   "bmi": 10,
   "cause_of_response": "First Line of Therapy",
-  "comorbidity": "COPD",
+  "comorbidities": [
+    "COPD"
+  ],
   "comorbidity_method_of_diagnosis": "Histology",
   "days_to_adverse_event": 23,
   "days_to_comorbidity": 21,
@@ -31,7 +33,9 @@
   "progression_or_recurrence_anatomic_site": "Ampulla of Vater",
   "progression_or_recurrence_type": "Distant",
   "reflux_treatment_type": "Medically Treated",
-  "risk_factor": "Obesity",
+  "risk_factors": [
+    "Obesity"
+  ],
   "risk_factor_treatment": "Yes",
   "viral_hepatitis_serologies": "HBV Surface Antibody",
   "weight": 123,

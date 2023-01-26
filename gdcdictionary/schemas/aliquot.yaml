@@ -53,6 +53,9 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
+deprecated:
+  - analyte_type_id
+
 properties:
 
   $ref:
