@@ -58,8 +58,11 @@ properties:
     $ref:
       - "_terms.yaml#/workflow_type/common"
     enum:
+      - ABSOLUTE LiftOver
+      - ASCAT3
       - ASCAT2
       - AscatNGS
+      - GATK4 CNV
 
   submitted_genotyping_arrays:
     $ref: "_definitions.yaml#/to_many"
