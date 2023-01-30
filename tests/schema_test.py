@@ -216,3 +216,17 @@ class SchemaTest(BaseTest):
         extra_nodes = [node for node in excluded_nodes if not _is_excluded_node(node)]
         assert len(extra_nodes) == 0, \
             "nodes not linking with annotation: \n{}".format('\n'.join(extra_nodes))
+
+    def test_integer_min_less_than_max(self):
+        schema = self.dictionary.schema
+        node_schemas = (v for k, v in schema.items() if not k.startswith("_"))
+
+        for node_schema in node_schemas:
+            properties = node_schema["properties"]
+
+            for prop, values in properties.items():
+                if values.get("type") == "integer":
+                    maximum = values.get("maximum")
+                    minimum = values.get("minimum")
+                    if maximum is not None and minimum is not None:
+                        assert maximum >= minimum, f"Integer maximum should be larger than minimum: {node_schema['id']}.{'properties'}.{prop}"

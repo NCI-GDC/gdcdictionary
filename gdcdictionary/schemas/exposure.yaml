@@ -334,8 +334,8 @@ properties:
 
   occupation_duration_years:
     type: integer
-    maximum: 0
-    minimum: 89
+    minimum: 0
+    maximum: 89
 
   occupation_type:
     $ref:
