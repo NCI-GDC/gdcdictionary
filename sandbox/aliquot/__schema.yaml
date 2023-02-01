@@ -72,7 +72,7 @@ schema:
       projects:
         TCGA-*: # this parent is required by projects start with TCGA-
           required: true
-      fields: 
+      fields:
         - name: project_id
           self_field: project_id
         - name: submitter_analyte_id
@@ -82,7 +82,7 @@ schema:
       projects:
         TARGET-*: # this parent is required by projects start with TARGET-
           required: true
-      fields: 
+      fields:
         - name: project_id
           self_field: project_id
         - name: submitter_sample_id

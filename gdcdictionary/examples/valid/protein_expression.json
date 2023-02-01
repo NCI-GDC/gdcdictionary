@@ -1,15 +1,15 @@
 {
-    "type": "protein_expression",
-    "submitter_id": "rppa_run_X",
-    "file_name": "mirna_quantification.txt",
-    "file_size": 1324134,
-    "md5sum": "d3266f2577584713ea17f94d331f30c4",
-    "data_category": "Proteome Profiling",
-    "data_type": "Protein Expression Quantification",
-    "data_format": "TSV",
-    "experimental_strategy": "Reverse Phase Protein Array",
-    "platform": "RPPA",
-    "samples": {
-	"submitter_id": "samplex"
-    }
+  "type": "protein_expression",
+  "submitter_id": "rppa_run_X",
+  "file_name": "mirna_quantification.txt",
+  "file_size": 1324134,
+  "md5sum": "d3266f2577584713ea17f94d331f30c4",
+  "data_category": "Proteome Profiling",
+  "data_type": "Protein Expression Quantification",
+  "data_format": "TSV",
+  "experimental_strategy": "Reverse Phase Protein Array",
+  "platform": "RPPA",
+  "samples": {
+    "submitter_id": "samplex"
+  }
 }

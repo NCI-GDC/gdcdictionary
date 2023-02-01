@@ -22,7 +22,7 @@ Use the general [git templates](https://github.com/NCI-GDC/git-templates) for NC
 ## Branches
 All new development should happen on a supporting branch rather than directly on develop or master. Supporting branches should formatted as `<type>/##-couple-words` or `<type>/very-short-description`, where <type> denotes a change type as derived from the [AngularJS Git Commit Message Convention](https://gist.github.com/stephenparish/9941e89d80e2bc58a153 "AngularJS Git Commit Message Convention").
 
-To create a supporting branch, type 'git checkout -b branch_name' e.g.: 
+To create a supporting branch, type 'git checkout -b branch_name' e.g.:
 
 ```
 ❯ git checkout -b feat/678-my-feature
@@ -64,7 +64,7 @@ This branch structure is essentially the [git flow](http://nvie.com/posts/a-succ
 Commit messages follow a combination of guidelines set by Angular and Tim Pope.
 
 Examples of valid commits:
- 
+
 ```
 type(scope): one line description (50 char or less)
 ```
@@ -104,7 +104,7 @@ This format is automatically checked by a pre commit git hook.
 
 ## Code Review
 
-All branches should be code reviewed prior to merge back into develop. The process for this is straightforward - submit a pull request to develop, tag the relevant users that you desire review from, and wait for comment. Once your reviewers have signed off on your changes, then you may merge the changes into develop and delete your supporting branch. 
+All branches should be code reviewed prior to merge back into develop. The process for this is straightforward - submit a pull request to develop, tag the relevant users that you desire review from, and wait for comment. Once your reviewers have signed off on your changes, then you may merge the changes into develop and delete your supporting branch.
 
 Any branches containing significant work need to be reviewed and signed-off before they can be considered complete.
 
@@ -155,7 +155,7 @@ Tags should be signed.
 
 ### Generating a PGP Key
 ```
-❯ brew install gpg 
+❯ brew install gpg
 ❯ gpg --gen-key
 ❯ gpg --list-secret-keys | grep "^sec"
 [gpg-key-id]

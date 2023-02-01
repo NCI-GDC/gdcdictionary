@@ -44,7 +44,7 @@ coverage.xml
 test-reports/
 .pytest_cache/
 
-# Jenkins 
+# Jenkins
 .local/
 .eggs/
 .ssh/
@@ -66,6 +66,7 @@ docs/_build/
 target/
 
 #venv
+venv
 .venv/
 venv
 venv*/

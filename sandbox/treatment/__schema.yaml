@@ -3,7 +3,7 @@ schema:
   namespace: gdc='http://gdc.nci.nih.gov'
   category: clinical
   title: Treatment
-  description: 
+  description:
   version: 1
   created_date: 2015-06-16T07:37:39Z
   updated_date: 2015-07-12T21:04:01Z
@@ -71,7 +71,7 @@ schema:
       constraints:
         required: false
         unique: false
-        allowed: 
+        allowed:
           - Not applicable
           - Prevention
           - Cancer control
@@ -94,7 +94,7 @@ schema:
   parents:
     - entity: case
       required: true
-      fields: 
+      fields:
         - name: project_id
           self_field: project_id
         - name: submitter_case_id

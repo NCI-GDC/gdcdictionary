@@ -5,7 +5,7 @@ schema:
   data_type: clinical  # data type categorization
   data_subtype: diagnostic_image  # data type categorization
   title: Diagnostic image
-  description: 
+  description:
   version: 1
   created_date: 2015-06-16T07:37:39Z
   updated_date: 2015-07-12T21:04:01Z
