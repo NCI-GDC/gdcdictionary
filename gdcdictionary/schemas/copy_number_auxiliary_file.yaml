@@ -1,16 +1,16 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "submitted_genotyping_array"
-title: Submitted Genotyping Array
+id: "copy_number_auxiliary_file"
+title: Copy Number Auxiliary File
 type: object
 namespace: https://gdc.cancer.gov
 category: data_file
 project: '*'
 program: '*'
 description: >-
-  Data file containing raw data from a genotyping array.
+  Data file related to the copy number pipeline that contains any outputs not strictly defined in other nodes
 additionalProperties: false
-submittable: true
+submittable: false
 downloadable: true
 previous_version_downloadable: true
 validators: null
@@ -25,11 +25,11 @@ systemProperties:
   - error_type
 
 links:
-  - name: aliquots
-    backref: submitted_genotyping_arrays
+  - name: somatic_copy_number_workflows
+    backref: copy_number_auxiliary_files
     label: derived_from
-    target_type: aliquot
-    multiplicity: many_to_one
+    target_type: somatic_copy_number_workflow
+    multiplicity: one_to_one
     required: true
 
 required:
@@ -62,25 +62,25 @@ properties:
     $ref:
       - "_terms.yaml#/data_type/common"
     enum:
-      - Raw Intensities
+      - Intermediate Analysis Archive
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - CEL
+      - TAR
 
   experimental_strategy:
     $ref:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
-      - Genotyping Array
+      - WGS
 
   platform:
     $ref:
       - "_terms.yaml#/platform/common"
     enum:
-      - Affymetrix SNP 6.0
+      - Illumina
 
-  aliquots:
+  somatic_copy_number_workflows:
     $ref: "_definitions.yaml#/to_one"

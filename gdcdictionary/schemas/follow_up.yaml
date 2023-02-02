@@ -39,7 +39,7 @@ links:
     backref: follow_ups
     label: describes
     target_type: diagnosis
-    multiplicity: many_to_one
+    multiplicity: many_to_one 
     required: false
 
 required:
@@ -53,6 +53,8 @@ uniqueKeys:
 
 deprecated:
   - hpv_positive_type
+  - comorbidity
+  - risk_factor
 
 properties:
 
@@ -956,6 +958,193 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  comorbidities:
+    $ref:
+      - "_terms.yaml#/comorbidities/common"
+    type: array
+    items:
+      enum:
+        - Abnormal Glucose Level
+        - Acute Renal Failure
+        - Adenocarcinoma
+        - Adenomatous Polyposis Coli
+        - Adrenocortical Insufficiency
+        - Allergies
+        - Alpha-1 Antitrypsin
+        - Anemia
+        - Anxiety
+        - Arrhythmia
+        - Arthritis
+        - Asthma
+        - Ataxia-telangiectasia
+        - Atrial Fibrillation
+        - Autoimmune Lymphoproliferative Syndrome (ALPS)
+        - Avascular Necrosis
+        - Bacteroides fragilis
+        - Barrett's Esophagus
+        - Basal Cell Carcinoma
+        - Beckwith-Wiedemann
+        - Behcet's Disease
+        - Biliary Disorder
+        - Blood Clots
+        - Bone Fracture(s)
+        - Bronchitis
+        - Calcium Channel Blockers
+        - Cancer
+        - Cataracts
+        - Celiac Disease
+        - Cerebrovascular Disease
+        - Chlamydia
+        - Chloroma
+        - Cholelithiasis
+        - Chronic Fatigue Syndrome
+        - Chronic Pancreatitis
+        - Chronic Renal Failure
+        - Chronic Systemic Steroid Use
+        - Cirrhosis, Unknown Etiology
+        - Clonal Hematopoiesis
+        - CNS Infection
+        - Colon Polyps
+        - Common Variable Immunodeficiency
+        - Congestive Heart Failure (CHF)
+        - Connective Tissue Disorder
+        - COPD
+        - Coronary Artery Disease
+        - Crohn's Disease
+        - Cryptogenic Organizing Pneumonia
+        - Cryptococcal Meningitis
+        - Cytomegalovirus (CMV)
+        - Deep Vein Thrombosis / Thromboembolism
+        - Denys-Drash Syndrome
+        - Dermatomyosis
+        - Depression
+        - Diabetes
+        - Diabetes, Type II
+        - Diabetic Neuropathy
+        - Diet Controlled Diabetes
+        - Diverticulitis
+        - Down Syndrome
+        - DVT/PE
+        - Dyslipidemia
+        - EBV Lymphoproliferation
+        - Eczema
+        - Epilepsy
+        - Epstein-Barr Virus
+        - Familial Adenomatous Polyposis
+        - Fanconi Anemia
+        - Fibromyalgia
+        - Fibrosis
+        - Gastritis
+        - Gastroesophageal Reflux Disease
+        - GERD
+        - Glaucoma
+        - Glycogen Storage Disease
+        - Gonadal Dysfunction
+        - Gorlin Syndrome
+        - Gout
+        - H. pylori Infection
+        - Hashimoto's Thyroiditis
+        - Headache
+        - Heart Disease
+        - Hemihypertrophy
+        - Hemorrhagic Cystitis
+        - Hepatitis
+        - Hepatitis A Infection
+        - Hepatitis B Infection
+        - Hepatitis C Infection
+        - Hepatitis, Chronic
+        - Hereditary Non-polyposis Colon Cancer
+        - Herpes
+        - Herpes Zoster
+        - High Grade Liver Dysplastic Nodule
+        - HIV / AIDS
+        - Hodgkin Lymphoma
+        - Human Papillomavirus Infection
+        - HUS/TTP
+        - Hypercalcemia
+        - Hypercholesterolemia
+        - Hyperglycemia
+        - Hyperlipidemia
+        - Hypertension
+        - Hypospadias
+        - Hypothyroidism
+        - Inflammatory Bowel Disease
+        - Insulin Controlled Diabetes
+        - Interstitial Pneumontis or ARDS
+        - Intraductal Papillary Mucinous Neoplasm
+        - Iron Overload
+        - Ischemic Heart Disease
+        - ITP
+        - Joint Replacement
+        - Kidney Disease
+        - Li-Fraumeni Syndrome
+        - Liver Cirrhosis (Liver Disease)
+        - Liver Toxicity (Non-Infectious)
+        - Low Grade Liver Dysplastic Nodule
+        - Lupus
+        - Lymphamatoid Papulosis
+        - Lymphocytic Meningitis
+        - Lynch Syndrome
+        - MAI
+        - Malaria
+        - Metabolic Syndrome
+        - Methicillin-Resistant Staphylococcus aureus (MRSA)
+        - Myasthenia Gravis
+        - Mycobacterium avium Complex
+        - Myocardial Infarction
+        - Neuroendocrine Tumor
+        - Nonalcoholic Steatohepatitis
+        - Obesity
+        - Organ transplant (site)
+        - Osteoarthritis
+        - Osteoporosis or Osteopenia
+        - Other
+        - Other Cancer Within 5 Years
+        - Other Nonmalignant Systemic Disease
+        - Other Pulmonary Complications
+        - Pain (Various)
+        - Pancreatitis
+        - Peptic Ulcer (Ulcer)
+        - Peripheral Neuropathy
+        - Peripheral Vascular Disease
+        - Peutz-Jeghers Disease
+        - Pneumocystis Pneumonia
+        - Polycystic Ovarian Syndrome (PCOS)
+        - Pregnancy in Patient or Partner
+        - Primary Sclerosing Cholangitis
+        - Psoriasis
+        - Pulmonary Fibrosis
+        - Pulmonary Hemorrhage
+        - Renal Dialysis
+        - Renal Failure (Requiring Dialysis)
+        - Renal Insufficiency
+        - Rheumatoid Arthritis
+        - Rheumatologic Disease
+        - Rubinstein-Taybi Syndrome
+        - Sarcoidosis
+        - Seizure
+        - Shingles
+        - Sjogren's Syndrome
+        - Sleep apnea
+        - Smoking
+        - Staph Osteomyelitis
+        - Staphylococcus aureus
+        - Steatosis
+        - Stroke
+        - Syphilis
+        - Thyroid Disease, Non-Cancer
+        - Transient Ischemic Attack
+        - Treponema pallidum
+        - Tuberculosis
+        - Turcot Syndrome
+        - Tyrosinemia
+        - Ulcerative Colitis
+        - Urinary Tract Infection
+        - Varicella Zoster Virus
+        - Wagr Syndrome
+        - Unknown
+        - Not Reported
+
   comorbidity:
     $ref:
       - "_terms.yaml#/comorbidity/common"
@@ -991,8 +1180,10 @@ properties:
       - Celiac Disease
       - Cerebrovascular Disease
       - Chlamydia
+      - Chloroma
       - Cholelithiasis
       - Chronic Fatigue Syndrome
+      - Chronic Pancreatitis
       - Chronic Renal Failure
       - Chronic Systemic Steroid Use
       - Cirrhosis, Unknown Etiology
@@ -1017,6 +1208,7 @@ properties:
       - Diabetic Neuropathy
       - Diet Controlled Diabetes
       - Diverticulitis
+      - Down Syndrome
       - DVT/PE
       - Dyslipidemia
       - EBV Lymphoproliferation
@@ -1185,6 +1377,13 @@ properties:
     maximum: 32872
     minimum: -32872
 
+  days_to_first_event:
+    $ref:
+      - "_terms.yaml#days_to_first_event/common"
+    type: integer
+    maximum: 32872
+    minimum: -32872
+
   days_to_follow_up:
     $ref:
       - "_terms.yaml#/days_to_follow_up/common"
@@ -1218,6 +1417,13 @@ properties:
   days_to_recurrence:
     $ref:
       - "_terms.yaml#/days_to_recurrence/common"
+    type: integer
+    maximum: 32872
+    minimum: -32872
+
+  days_to_risk_factor:
+    $ref:
+      - "_terms.yaml#/days_to_risk_factor/common"
     type: integer
     maximum: 32872
     minimum: -32872
@@ -1321,12 +1527,20 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  evidence_of_progression_type:
+    $ref:
+      - "_terms.yaml#/evidence_of_progression_type/common"
+    enum:
+      - Convincing Image Source
+      - Histologic Confirmation
+
   evidence_of_recurrence_type:
     $ref:
       - "_terms.yaml#/evidence_of_recurrence_type/common"
     enum:
       - Biopsy with Histologic Confirmation
       - Convincing Image Source
+      - Histologic Confirmation
       - Physical Examination
       - Positive Biomarker(s)
 
@@ -1371,6 +1585,23 @@ properties:
     type: number
     maximum: 100
     minimum: 0
+
+  first_event:
+    $ref:
+      - "_terms.yaml#/first_event/common"
+    enum:
+      - Censored
+      - Death
+      - Death without Remission
+      - Event
+      - Induction Death
+      - Induction Failure
+      - None
+      - Progression
+      - Other
+      - Relapse
+      - Second Malignant Neoplasm
+      - Not Reported
 
   haart_treatment_indicator:
     $ref:
@@ -1444,6 +1675,8 @@ properties:
     $ref:
       - "_terms.yaml#/history_of_tumor_type/common"
     enum:
+      - Colorectal Cancer
+      - Lower Grade Glioma
       - Phenochromocytoma or Paraganglioma
 
   hiv_viral_load:
@@ -1580,6 +1813,28 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  imaging_anatomic_site:
+    $ref:
+      - "_terms.yaml#/imaging_anatomic_site/common"
+    type: array
+    items:
+      enum:
+        - Abdomen
+        - Pelvis
+
+  imaging_findings:
+    $ref:
+      - "_terms.yaml#/imaging_findings/common"
+    enum:
+      - Carcinomatosis
+      - Kidney Involvement
+      - Lung Involvement
+      - Liver Involvement
+      - Normal
+      - Retroperitoneal Lymph Node Involvement
+      - Vena Cava Involvement/Thrombus
+      - Not Reported
+
   imaging_result:
     $ref:
       - "_terms.yaml#/imaging_result/common"
@@ -1603,6 +1858,16 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  imaging_suv:
+    $ref:
+      - "_terms.yaml#/imaging_suv/common"
+    type: number
+
+  imaging_suv_max:
+    $ref:
+      - "_terms.yaml#/imaging_suv_max/common"
+    type: number
 
   imaging_type:
     $ref:
@@ -1668,9 +1933,9 @@ properties:
     $ref:
       - "_terms.yaml#/menopause_status/common"
     enum:
-      - Premenopausal
       - Perimenopausal
       - Postmenopausal
+      - Premenopausal
       - Unknown
       - Not Reported
     enumDef:
@@ -1693,6 +1958,20 @@ properties:
     type: integer
     minimum: 1900
 
+  peritoneal_washing_results:
+    $ref:
+      - "_terms.yaml#/peritoneal_washing_results/common"
+    enum:
+      - Negative
+      - Positive
+      - Not Reported
+
+  pregnancy_count:
+    $ref:
+      - "_terms.yaml#/pregnancy_count/common"
+    type: integer
+    minimum: 0
+
   pregnancy_outcome:
     $ref:
       - "_terms.yaml#/pregnancy_outcome/common"
@@ -1701,6 +1980,7 @@ properties:
       - Induced Abortion
       - Live Birth
       - Miscarriage
+      - Spontaneous Abortion
       - Stillbirth
       - Unknown
       - Not Reported
@@ -2122,6 +2402,7 @@ properties:
       - Biochemical
       - Distant
       - Local
+      - Locoregional
       - Regional
       - Unknown
       - Not Reported
@@ -2194,6 +2475,10 @@ properties:
       - Allergy, Seafood
       - Allergy, Wasp
       - Alpha-1 Antitrypsin Deficiency
+      - Altered Mental Status
+      - Androgen Excess
+      - Anemia
+      - Asthma
       - Ataxia-telangiectasia
       - Autoimmune Atrophic Chronic Gastritis
       - Autoimmune Lymphoproliferative Syndrome (ALPS)
@@ -2207,15 +2492,18 @@ properties:
       - BRCA Family History
       - Cancer
       - Chlamydia
+      - Chloroma
       - Cholelithiasis
       - Chronic Hepatitis
       - Chronic Kidney Disease
+      - Chronic Pancreatitis
       - Chronic Systemic Steroid Use
       - Cirrhosis
       - Colon Polyps
       - Colonization, Bacterial
       - Colonization, Fungal
       - Common variable immune deficiency (CVID)
+      - Cortisol Excess
       - Cowden Syndrome
       - Cryptococcal Meningitis
       - Cyst(s)
@@ -2227,6 +2515,8 @@ properties:
       - Diabetes, Type II
       - Diet
       - Diverticulitis
+      - Down Syndrome
+      - EBV Lymphoproliferation
       - Eczema
       - Endometriosis
       - Endosalpingiosis
@@ -2234,6 +2524,7 @@ properties:
       - Epithelial Hyperplasia
       - Epstein-Barr Virus
       - Escherichia coli
+      - Estrogen Excess
       - Familial Adenomatous Polyposis
       - Fanconi Anemia
       - Fibrosis
@@ -2242,6 +2533,7 @@ properties:
       - Gilbert's Syndrome
       - Glomerular Disease
       - Gorlin Syndrome
+      - H. pylori Infection
       - Hashimoto's Thyroiditis
       - Hay Fever
       - Headache
@@ -2250,10 +2542,12 @@ properties:
       - Hemihypertrophy
       - Hemochromatosis
       - Hepatic Encephalopathy
+      - Hepatitis A Infection
       - Hepatitis B Infection
       - Hepatitis C Infection
       - Hepatitis, NOS
       - Hereditary Breast Cancer
+      - Hereditary Hemorrhagic Telangiectasia
       - Hereditary Kidney Oncocytoma
       - Hereditary Leiomyomatosis and Renal Cell Carcinoma
       - Hereditary Ovarian Cancer
@@ -2264,26 +2558,34 @@ properties:
       - High Grade Dysplasia
       - High-grade Prostatic Intraepithelial Neoplasia (PIN)
       - HIV
+      - Hodgkin Lymphoma
       - Human Herpesvirus-6 (HHV-6)
       - Human Herpesvirus-8 (HHV-8)
       - Human Papillomavirus Infection
       - Hypospadias
       - Inflammation
       - Inflammation, Hyperkeratosis
+      - Inherited Genetic Syndrome, NOS
       - Intestinal Metaplasia
       - Iron Overload
       - Li-Fraumeni Syndrome
       - Low Grade Dysplasia
+      - Lymphamatoid Papulosis
       - Lymphocytic Meningitis
       - Lymphocytic Thyroiditis
       - Lynch Syndrome
       - Malaria
       - Metabolic Syndrome
+      - Mineralcorticoids Excess
+      - Motor / Movement Change
       - Myasthenia Gravis
       - Mycobacterium avium Complex
+      - Myelodysplastic Syndrome
+      - Neurocystericerosis
       - Nodular Prostatic Hyperplasia
       - Nonalcoholic Fatty Liver Disease
       - Nonalcoholic Steatohepatitis
+      - None
       - Obesity
       - Oral Contraceptives
       - Pancreatitis
@@ -2294,6 +2596,7 @@ properties:
       - Recurrent Pyogenic Cholangitis
       - Reflux Disease
       - Rheumatoid Arthritis
+      - Rubella
       - Rubinstein-Taybi Syndrome
       - Sarcoidosis
       - Seizure
@@ -2341,6 +2644,198 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  risk_factors:
+    $ref:
+      - "_terms.yaml#/risk_factors/common"
+    type: array
+    items:
+      enum:
+        - Abnormal Glucose Level
+        - Adenomyosis
+        - Adenosis (Atypical Adenomatous Hyperplasia)
+        - Alcohol Consumption
+        - Alcoholic Liver Disease
+        - Allergy, Animal, NOS
+        - Allergy, Ant
+        - Allergy, Bee
+        - Allergy, Cat
+        - Allergy, Dairy or Lactose
+        - Allergy, Dog
+        - Allergy, Eggs
+        - Allergy, Food, NOS
+        - Allergy, Fruit
+        - Allergy, Meat
+        - Allergy, Mold or Dust
+        - Allergy, Nuts
+        - Allergy, Processed Foods
+        - Allergy, Seafood
+        - Allergy, Wasp
+        - Alpha-1 Antitrypsin Deficiency
+        - Altered Mental Status
+        - Androgen Excess
+        - Anemia
+        - Asthma
+        - Ataxia-telangiectasia
+        - Autoimmune Atrophic Chronic Gastritis
+        - Autoimmune Lymphoproliferative Syndrome (ALPS)
+        - Bacteroides fragilis
+        - BAP1 Tumor Predisposition Syndrome
+        - Barrett's Esophagus
+        - Beckwith-Wiedemann
+        - Behcet's Disease
+        - Benign Prostatic Hyperplasia
+        - Birt-Hogg-Dube Syndrome
+        - BRCA Family History
+        - Cancer
+        - Chlamydia
+        - Chloroma
+        - Cholelithiasis
+        - Chronic Hepatitis
+        - Chronic Kidney Disease
+        - Chronic Pancreatitis
+        - Chronic Systemic Steroid Use
+        - Cirrhosis
+        - Colon Polyps
+        - Colonization, Bacterial
+        - Colonization, Fungal
+        - Common variable immune deficiency (CVID)
+        - Cortisol Excess
+        - Cowden Syndrome
+        - Cryptococcal Meningitis
+        - Cyst(s)
+        - Cytomegalovirus (CMV)
+        - Denys-Drash Syndrome
+        - Dermatomyosis
+        - Diabetes, NOS
+        - Diabetes, Type I
+        - Diabetes, Type II
+        - Diet
+        - Diverticulitis
+        - Down Syndrome
+        - EBV Lymphoproliferation
+        - Eczema
+        - Endometriosis
+        - Endosalpingiosis
+        - Epithelial Dysplasia
+        - Epithelial Hyperplasia
+        - Epstein-Barr Virus
+        - Escherichia coli
+        - Estrogen Excess
+        - Familial Adenomatous Polyposis
+        - Fanconi Anemia
+        - Fibrosis
+        - Gastric Polyp(s)
+        - Gastritis
+        - Gilbert's Syndrome
+        - Glomerular Disease
+        - Gorlin Syndrome
+        - H. pylori Infection
+        - Hashimoto's Thyroiditis
+        - Hay Fever
+        - Headache
+        - Helicobacter Pylori-Associated Gastritis
+        - Hematologic Disorder, NOS
+        - Hemihypertrophy
+        - Hemochromatosis
+        - Hepatic Encephalopathy
+        - Hepatitis A Infection
+        - Hepatitis B Infection
+        - Hepatitis C Infection
+        - Hepatitis, NOS
+        - Hereditary Breast Cancer
+        - Hereditary Hemorrhagic Telangiectasia
+        - Hereditary Kidney Oncocytoma
+        - Hereditary Leiomyomatosis and Renal Cell Carcinoma
+        - Hereditary Ovarian Cancer
+        - Hereditary Papillary Renal Cell Carcinoma
+        - Hereditary Prostate Cancer
+        - Hereditary Renal Cell Carcinoma
+        - Herpes Zoster
+        - High Grade Dysplasia
+        - High-grade Prostatic Intraepithelial Neoplasia (PIN)
+        - HIV
+        - Hodgkin Lymphoma
+        - Human Herpesvirus-6 (HHV-6)
+        - Human Herpesvirus-8 (HHV-8)
+        - Human Papillomavirus Infection
+        - Hypospadias
+        - Inflammation
+        - Inflammation, Hyperkeratosis
+        - Inherited Genetic Syndrome, NOS
+        - Intestinal Metaplasia
+        - Iron Overload
+        - Li-Fraumeni Syndrome
+        - Low Grade Dysplasia
+        - Lymphamatoid Papulosis
+        - Lymphocytic Meningitis
+        - Lymphocytic Thyroiditis
+        - Lynch Syndrome
+        - Malaria
+        - Metabolic Syndrome
+        - Mineralcorticoids Excess
+        - Motor / Movement Change
+        - Myasthenia Gravis
+        - Mycobacterium avium Complex
+        - Myelodysplastic Syndrome
+        - Neurocystericerosis
+        - Nodular Prostatic Hyperplasia
+        - Nonalcoholic Fatty Liver Disease
+        - Nonalcoholic Steatohepatitis
+        - None
+        - Obesity
+        - Oral Contraceptives
+        - Pancreatitis
+        - Parasitic Disease of Biliary Tract
+        - Pneumocystis Pneumonia
+        - Polycystic Ovarian Syndrome (PCOS)
+        - Primary Sclerosing Cholangitis
+        - Recurrent Pyogenic Cholangitis
+        - Reflux Disease
+        - Rheumatoid Arthritis
+        - Rubella
+        - Rubinstein-Taybi Syndrome
+        - Sarcoidosis
+        - Seizure
+        - Sensory Changes
+        - Serous tubal intraepithelial carcinoma (STIC)
+        - Shingles
+        - Sialadenitis
+        - Sjogren's Syndrome
+        - Skin Rash
+        - Squamous Metaplasia
+        - Staphylococcus aureus
+        - Steatosis
+        - Succinate Dehydrogenase-Deficient Renal Cell Carcinoma
+        - Syphilis
+        - Tattoo
+        - Thyroid Nodular Hyperplasia
+        - Tobacco, NOS
+        - Tobacco, Smokeless
+        - Tobacco, Smoking
+        - Treponema pallidum
+        - Tuberculosis
+        - Tuberous Sclerosis
+        - Tubulointerstitial Disease
+        - Tumor-associated Lymphoid Proliferation
+        - Turcot Syndrome
+        - Undescended Testis
+        - Varicella Zoster Virus
+        - Vascular Disease
+        - Vision Changes
+        - Von Hippel-Lindau Syndrome
+        - Wagr Syndrome
+        - Unknown
+        - Not Reported
+
+  risk_factor_method_of_diagnosis:
+    $ref:
+      - "_terms.yaml#/risk_factor_method_of_diagnosis/common"
+    enum:
+      - Biochemical Assessment
+      - Both Clinical and Biochemical Assessments
+      - Clinical Assessment
+      - Not Reported
+
   risk_factor_treatment:
     $ref:
       - "_terms.yaml#/risk_factor_treatment/common"
@@ -2373,6 +2868,28 @@ properties:
       - PSMA
       - Sodium Fluoride
 
+  timepoint_category:
+    $ref:
+      - "_terms.yaml#/timepoint_category/common"
+    enum:
+      - Adolescence
+      - Adjuvant Therapy
+      - Adulthood
+      - Childhood
+      - Follow-up
+      - Initial Diagnosis
+      - Last Contact
+      - Post Adjuvant Therapy
+      - Post Hormone Therapy
+      - Post Secondary Therapy
+      - Postoperative
+      - Preoperative
+      - Prior to Diagnosis
+      - Prior to Treatment
+      - Recurrence/Progression
+      - Other
+      - Not Reported
+
   undescended_testis_corrected:
     $ref:
       - "_terms.yaml#/undescended_testis_corrected/common"
@@ -2402,9 +2919,9 @@ properties:
     $ref:
       - "_terms.yaml#/undescended_testis_corrected_laterality/common"
     enum:
+      - Bilateral
       - Left
       - Right
-      - Bilateral
       - Not Reported
     enumDef:
       Not Reported:
@@ -2415,9 +2932,9 @@ properties:
     $ref:
       - "_terms.yaml#/undescended_testis_corrected_method/common"
     enum:
-      - Spontaneous Descent
-      - Orchiopexy
       - Hormones
+      - Orchiopexy
+      - Spontaneous Descent
       - Testis Removed
       - Not Reported
     enumDef:
@@ -2447,9 +2964,9 @@ properties:
     $ref:
       - "_terms.yaml#/undescended_testis_history_laterality/common"
     enum:
+      - Bilateral
       - Left
       - Right
-      - Bilateral
       - Not Reported
     enumDef:
       Not Reported:
@@ -2483,6 +3000,13 @@ properties:
       - "_terms.yaml#/weight/common"
     type: number
     minimum: 0
+
+  year_of_follow_up:
+    $ref:
+      - "_terms.yaml#/year_of_follow_up/common"
+    type: integer
+    maximum: 2050
+    minimum: 1900
 
   cases:
     $ref: "_definitions.yaml#/to_one"

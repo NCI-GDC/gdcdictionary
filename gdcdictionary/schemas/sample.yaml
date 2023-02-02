@@ -53,17 +53,22 @@ links:
     required: false
 
 required:
+  - preservation_method
+  - specimen_type
   - submitter_id
-  - sample_type
   - tissue_type
+  - tumor_descriptor
 
 uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
 deprecated:
+  - composition
   - is_ffpe
-  - oct_embeded
+  - oct_embedded
+  - sample_type
+  - sample_type_id
 
 properties:
 
@@ -723,6 +728,12 @@ properties:
       - "_terms.yaml#/oct_embedded/common"
     type: string
 
+  passage_count:
+    $ref:
+      - "_terms.yaml#/passage_count/common"
+    type: integer
+    minimum: 0
+
   pathology_report_uuid:
     description: >-
       UUID of the related pathology report.
@@ -753,12 +764,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-
-  passage_count:
-    $ref:
-      - "_terms.yaml#/passage_count/common"
-    type: integer
-    minimum: 0
 
   sample_ordinal:
     $ref:
@@ -886,6 +891,46 @@ properties:
     type: number
     minimum: 0
 
+  specimen_type:
+    $ref:
+      - "_terms.yaml#/specimen_type/common"
+    enum:
+      - 2D Classical Conditionally Reprogrammed Cells
+      - 2D Modified Conditionally Reprogrammed Cells
+      - 3D Air-Liquid Interface Organoid
+      - 3D Neurosphere
+      - 3D Organoid
+      - Adherent Cell Line
+      - Bone Marrow Components NOS
+      - Bone Marrow NOS
+      - Buccal Cells
+      - Buffy Coat
+      - Cell
+      - Control Analyte
+      - Derived Cell Line
+      - EBV Immortalized
+      - Fibroblasts from Bone Marrow
+      - Granulocytes
+      - Human Original Cells
+      - Liquid Suspension Cell Line
+      - Lymphocytes
+      - Lymphoid
+      - Mixed Adherent Suspension
+      - Mononuclear Cells from Bone Marrow
+      - Peripheral Blood Components NOS
+      - Peripheral Blood NOS
+      - Peripheral Whole Blood
+      - Plasma
+      - Pleural Effusion
+      - Saliva
+      - Serum
+      - Solid Tissue
+      - Sorted Cells
+      - Sputum
+      - Whole Bone Marrow
+      - Unknown
+      - Not Reported
+
   time_between_clamping_and_freezing:
     $ref:
       - "_terms.yaml#/time_between_clamping_and_freezing/common"
@@ -1004,6 +1049,7 @@ properties:
       - "_terms.yaml#/tumor_descriptor/common"
     enum:
       - Metastatic
+      - New Primary
       - NOS
       - Not Allowed To Collect
       - Not Applicable
@@ -1013,6 +1059,7 @@ properties:
       - Xenograft
       - Unknown
       - Not Reported
+
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
