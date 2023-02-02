@@ -333,9 +333,11 @@ properties:
           - "_terms_enum.yaml#/tobacco/common"
 
   occupation_duration_years:
+    $ref:
+      - "_terms.yaml#/occupation_duration_years/common"
     type: integer
-    maximum: 0
-    minimum: 89
+    maximum: 89
+    minimum: 0
 
   occupation_type:
     $ref:
@@ -381,7 +383,7 @@ properties:
         - Forestry and Related Workers
         - Garment and Related Trades Workers
         - General Office Clerks
-        - Government Regulatory  Associate Professionals
+        - Government Regulatory Associate Professionals
         - Hairdressers, Beauticians and Related Workers
         - Handicraft Workers
         - Heavy Truck and Bus Drivers
@@ -447,7 +449,7 @@ properties:
         - Sheet and Structural Metal Workers, Moulders and Welders, and Related Workers
         - Ship and Aircraft Controllers and Technicians
         - Ships' Deck Crews and Related Workers
-        - Shop Aalespersons
+        - Shop Salespersons
         - Social and Religious Professionals
         - Software and Applications Developers and Analysts
         - Sports and Fitness Workers
