@@ -12,6 +12,7 @@ include:
 
 variables:
  BASE_CONTAINER_VERSION: "1.4.0"
+ PRE_COMMIT_DOCKER_IMAGE: docker.osdc.io/ncigdc/python3.8-builder:2.1.0
  DOCKER_BUILDKIT: 1
  PIP_EXTRA_INDEX_URL: https://nexus.osdc.io/repository/pypi-all/simple
  DOCKER_BUILD_OPTS: "--build-arg PIP_EXTRA_INDEX_URL=https://nexus.osdc.io/repository/pypi-all/simple"
