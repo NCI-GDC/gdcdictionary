@@ -36,8 +36,9 @@ update_gdcdatamodel2:
     - pwd
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
     - cd gdcdatamodel2
-    - git checkout "$CI_COMMIT_REF_NAME" || git checkout -b "$$CI_COMMIT_REF_NAME"
-    - sed 's/version = .*/version ="'"$CI_COMMIT_SHA"'"/'
+    - git checkout "$CI_COMMIT_REF_NAME" || git checkout -b "$CI_COMMIT_REF_NAME"
+    - sed 's/version = .*/version ="'"$CI_COMMIT_SHA"'"/' plaster.toml
+    - cat plaster.toml
     - bash plaster
     - git add .
     - git commit -m "$CI_COMMIT_SHA"
