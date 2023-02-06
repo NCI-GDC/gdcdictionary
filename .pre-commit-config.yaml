@@ -11,6 +11,7 @@ repos:
     -   id: check-json
     -   id: check-toml
     -   id: check-yaml
+        exclude: .gitlab-ci.yml
     -   id: end-of-file-fixer
     -   id: fix-encoding-pragma
         args: [--remove]
