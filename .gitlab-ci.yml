@@ -11,7 +11,7 @@ include:
       - templates/python/full.yaml
 
 variables:
- BASE_CONTAINER_VERSION: "2.1.0"
+ BASE_CONTAINER_VERSION: "1.4.0"
  DOCKER_BUILDKIT: 1
  PIP_EXTRA_INDEX_URL: https://nexus.osdc.io/repository/pypi-all/simple
  DOCKER_BUILD_OPTS: "--build-arg PIP_EXTRA_INDEX_URL=https://nexus.osdc.io/repository/pypi-all/simple"
@@ -28,7 +28,7 @@ release:
 .python_versions:
   parallel:
     matrix:
-      - REPO_PY_VERSION: ["python3.6"]
+      - REPO_PY_VERSION: ["python36"]
 
 docker_build:
   rules:
