@@ -37,7 +37,8 @@ update_gdcdatamodel2:
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
     - cd gdcdatamodel2
     - git checkout "$CI_COMMIT_REF_NAME" || git checkout -b "$CI_COMMIT_REF_NAME"
-    - sed 's/version = .*/version ="'"$CI_COMMIT_SHA"'"/' plaster.toml
+    - sed -i 's/version = .*/version ="'"$CI_COMMIT_SHA"'"/' plaster.toml
+    - pip3 install virtualenv
     - cat plaster.toml
     - bash plaster
     - git add .
