@@ -32,6 +32,6 @@ release:
       - REPO_PY_VERSION: ["python36"]
 
 update_gdcdatamodel2:
-  state: build
+  stage: build
   before_script:
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
