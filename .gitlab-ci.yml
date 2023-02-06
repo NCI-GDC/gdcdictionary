@@ -1,0 +1,54 @@
+---
+# To contribute improvements to CI/CD templates, please follow the Development guide at:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Python.gitlab-ci.yml
+include:
+  - project: nci-gdc/gitlab-templates
+    ref: master
+    file:
+      - templates/global/full.yaml
+      - templates/python/full.yaml
+
+variables:
+ BASE_CONTAINER_VERSION: "2.1.0"
+ DOCKER_BUILDKIT: 1
+ PIP_EXTRA_INDEX_URL: https://nexus.osdc.io/repository/pypi-all/simple
+ DOCKER_BUILD_OPTS: "--build-arg PIP_EXTRA_INDEX_URL=https://nexus.osdc.io/repository/pypi-all/simple"
+ DOCKER_PUSH_OPTS: "--all-tags"
+
+tox:
+  image: ${BASE_CONTAINER_REGISTRY}/${REPO_PY_VERSION}-builder:${BASE_CONTAINER_VERSION}
+  before_script:
+    - mkdir -p /usr/share/man/man1
+
+release:
+  image: ${BASE_CONTAINER_REGISTRY}/${REPO_PY_VERSION}-builder:${BASE_CONTAINER_VERSION}
+
+.python_versions:
+  parallel:
+    matrix:
+      - REPO_PY_VERSION: [python3.8]
+
+docker_build:
+  rules:
+    - if: $CI_COMMIT_TAG
+      variables:
+        DOCKER_RELEASE_REGISTRY: "quay.io"
+    - if: $CI_COMMIT_REF_NAME =~ /main/
+      variables:
+        DOCKER_RELEASE_REGISTRY: "quay.io"
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+      variables:
+        DOCKER_RELEASE_REGISTRY: "quay.io"
+    - when: always
+  script:
+    - docker build .
+      --file ./Dockerfile
+      ${DOCKER_BUILD_OPTS}
+      --build-arg http_proxy
+      --build-arg https_proxy
+      --build-arg BASE_CONTAINER_VERSION
+      -t ${DOCKER_RELEASE_REGISTRY}/ncigdc/${CI_PROJECT_NAME}:${VERSION}
+      -t ${DOCKER_RELEASE_REGISTRY}/ncigdc/${CI_PROJECT_NAME}:${CI_COMMIT_SHA}
+    - docker push ${DOCKER_PUSH_OPTS} ${DOCKER_RELEASE_REGISTRY}/ncigdc/${CI_PROJECT_NAME}
