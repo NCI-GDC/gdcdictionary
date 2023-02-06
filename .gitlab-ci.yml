@@ -33,4 +33,12 @@ update_gdcdatamodel2:
   stage: build
   script:
     - !reference [.load_github_key, script]
+    - pwd
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
+    - cd gdcdatamodel2
+    - git checkout "$CI_COMMIT_REF_NAME" || git checkout -b "$$CI_COMMIT_REF_NAME"
+    - sed 's/version = .*/version ="'"$CI_COMMIT_SHA"'"/'
+    - bash plaster
+    - git add .
+    - git commit -m "$CI_COMMIT_SHA"
+    - git push -u origin "$CI_COMMIT_SHA"
