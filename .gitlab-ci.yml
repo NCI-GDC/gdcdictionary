@@ -33,5 +33,5 @@ release:
 
 update_gdcdatamodel2:
   stage: build
-  before_script:
+  script:
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
