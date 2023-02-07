@@ -41,9 +41,10 @@ update_gdcdatamodel2:
     - pip3 install virtualenv pip-tools==6.3.0
     - sed -i 's/version = .*/version ="'"$CI_COMMIT_SHA"'"/' plaster.toml
     - cat plaster.toml
+    - bash plaster
     - sed 's|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@.*#egg=gdcdictionary|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@'"$CI_COMMIT_SHA"'#egg=gdcdictionary|' setup.cfg
     - cat setup.cfg
-    - bash plaster
+    - pip-compile  --extra=dev --output-file=dev-requirements.txt pyproject.toml
     - git add .
     - git commit -m "$CI_COMMIT_SHA"
     - git push -u origin "$CI_COMMIT_SHA"
