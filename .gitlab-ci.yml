@@ -36,10 +36,13 @@ update_gdcdatamodel2:
     - pwd
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
     - cd gdcdatamodel2
+    - git checkout feat/dev-1686-move-plaster-dependency-out  # TODO remove this after merged
     - git checkout "$CI_COMMIT_REF_NAME" || git checkout -b "$CI_COMMIT_REF_NAME"
+    - pip3 install virtualenv pip-tools==6.3.0
     - sed -i 's/version = .*/version ="'"$CI_COMMIT_SHA"'"/' plaster.toml
-    - pip3 install virtualenv
     - cat plaster.toml
+    - sed 's|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@.*|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@|' setup.cfg
+    - cat setup.cfg
     - bash plaster
     - git add .
     - git commit -m "$CI_COMMIT_SHA"
