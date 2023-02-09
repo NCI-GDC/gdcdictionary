@@ -73,7 +73,7 @@ update_datamodels:
     - sed -i 's/is_tag = .*/is_tag = false/' plaster.toml
     - cat plaster.toml
     - bash plaster
-    - delete setup.cfg dev-requirements.txt
+    - rm setup.cfg dev-requirements.txt
   artifacts:
     paths:
       - gdcdatamodel2
