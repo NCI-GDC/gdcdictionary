@@ -28,10 +28,33 @@ tox:
     matrix:
       - REPO_PY_VERSION: ["python36"]
 
+generate_new_dev_reqs_for_gdcdatamodel2:
+  image: docker.osdc.io/ncigdc/python36-builder:1.4.0
+  stage: build
+  script:
+    - !reference [.load_github_key, script]
+    - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
+    - cd gdcdatamodel2
+    - pwd
+    - sed 's|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@.*#egg=gdcdictionary|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@'"$CI_COMMIT_REF_NAME"'#egg=gdcdictionary|' setup.cfg
+    - cat setup.cfg
+    - pip3 --version
+    - pip3 install virtualenv pip-tools==6.3.0
+    - pip-compile  --extra=dev --output-file=dev-requirements.txt pyproject.toml
+  artifacts:
+    paths:
+      - gdcdatamodel2/setup.cfg
+      - gdcdatamodel2/dev-requirements.txt
+    expire_in: 1 week
+
+
 update_gdcdatamodel2:
   image: docker.osdc.io/ncigdc/python3.8-builder:2.1.0
   stage: build
+  dependencies:
+    - generate_new_dev_reqs_for_gdcdatamodel2
   script:
+    - cat gdcdatamodel2/setup.cfg
     - !reference [.load_github_key, script]
     - pwd
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
@@ -42,11 +65,6 @@ update_gdcdatamodel2:
     - sed -i 's/is_tag = .*/is_tag = false/' plaster.toml
     - cat plaster.toml
     - bash plaster
-    - sed 's|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@.*#egg=gdcdictionary|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@'"$CI_COMMIT_REF_NAME"'#egg=gdcdictionary|' setup.cfg
-    - cat setup.cfg
-    - pip3 --version
-    - pip3 install virtualenv pip-tools==6.3.0
-    - pip-compile  --extra=dev --output-file=dev-requirements.txt pyproject.toml
     - git add .
     - git commit -m "$CI_COMMIT_SHA"
     - git push -u origin "$CI_COMMIT_SHA"
