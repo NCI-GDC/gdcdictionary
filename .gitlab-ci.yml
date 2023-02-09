@@ -45,6 +45,8 @@ update_gdcdatamodel2:
     - bash plaster
     - sed 's|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@.*#egg=gdcdictionary|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@'"$CI_COMMIT_REF_NAME"'#egg=gdcdictionary|' setup.cfg
     - cat setup.cfg
+    - pip --version
+    - pip-compile --version
     - pip-compile  --extra=dev --output-file=dev-requirements.txt pyproject.toml
     - git add .
     - git commit -m "$CI_COMMIT_SHA"
