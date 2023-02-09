@@ -47,7 +47,7 @@ update_requirements_for_gdcdatamodel2:
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
     - cd gdcdatamodel2
     - pwd
-    - sed 's|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@.*#egg=gdcdictionary|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@'"$CI_COMMIT_REF_NAME"'#egg=gdcdictionary|' setup.cfg
+    - sed -i 's|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@.*#egg=gdcdictionary|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@'"$CI_COMMIT_REF_NAME"'#egg=gdcdictionary|' setup.cfg
     - cat setup.cfg
     - pip3 --version
     - pip3 install virtualenv pip-tools==6.3.0
@@ -73,7 +73,6 @@ update_datamodels:
     - sed -i 's/is_tag = .*/is_tag = false/' plaster.toml
     - cat plaster.toml
     - bash plaster
-    - rm setup.cfg dev-requirements.txt
   artifacts:
     paths:
       - gdcdatamodel2
