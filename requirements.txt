@@ -4,8 +4,10 @@
 #
 #    pip-compile
 #
-attrs==22.2.0
-    # via jsonschema
+attrs==20.3.0
+    # via
+    #   gdcdictionary (setup.py)
+    #   jsonschema
 importlib-metadata==4.8.3
     # via jsonschema
 jsonschema==3.2.0
