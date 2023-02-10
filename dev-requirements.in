@@ -1,5 +1,3 @@
--c requirements.txt
-
-pytest
+pytest~=4.6.3
 pytest-cov>=2.7.1,<2.12
-pytest-xdist
+pre-commit~=1.21.0
