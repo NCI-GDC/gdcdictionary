@@ -88,7 +88,9 @@ release_datamodels:
     - cat gdcdatamodel2/setup.cfg
     - cat gdcdatamodel2/dev-requirements.txt
     - whoami
-    - pip3 install build ensurepip
+    - apt-get update
+    - apt-get install -y python3-venv
+    - pip3 install build
     - python3 -m build --wheel --sdist
     - git status
   artifacts:
