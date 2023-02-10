@@ -86,9 +86,10 @@ release_datamodels_to_nexus:
   image: docker.osdc.io/ncigdc/python36-builder:1.4.0
   stage: release
   script:
-    - ls -R gdcdatamodel2
-    - cat gdcdatamodel2/setup.cfg
-    - cat gdcdatamodel2/dev-requirements.txt
+    - cd gdcdatamodel2
+    - ls -R .
+    - cat setup.cfg
+    - cat dev-requirements.txt
     - whoami
     - apt-get update
     - apt-get install -y python3-venv
@@ -131,10 +132,10 @@ release_datamodels_to_github:
   stage: release
   script:
     - !reference [.load_github_key, script]
-    - cat gdcdatamodel2/setup.cfg
-    - cat gdcdatamodel2/dev-requirements.txt
-    - whoami
     - cd gdcdatamodel2
+    - cat setup.cfg
+    - cat dev-requirements.txt
+    - whoami
     - git status
     - git add .
     - git commit -m "Use gdcdictionary $CI_COMMIT_REF_NAME $CI_COMMIT_SHA"
