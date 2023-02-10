@@ -75,6 +75,7 @@ update_datamodels:
     - sed -i 's/is_tag = .*/is_tag = false/' plaster.toml
     - cat plaster.toml
     - bash plaster
+    - git status
     - rm setup.cfg dev-requirements.txt
   artifacts:
     paths:
