@@ -140,3 +140,4 @@ release_datamodels_to_github:
     - git add .
     - git commit -m "Use gdcdictionary $CI_COMMIT_REF_NAME $CI_COMMIT_SHA"
     - git push origin "$CI_COMMIT_REF_NAME"
+  allow_failure: true
