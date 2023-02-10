@@ -56,6 +56,7 @@ update_configs_and_reqs_for_gdcdatamodel2:
     - pip3 install virtualenv pip-tools==6.3.0
     - pip-compile -i https://pypi.org/simple --extra=dev --output-file=dev-requirements.txt pyproject.toml
     - sed -i 's/local_scheme = "no-local-version"/local_scheme = "node-and-timestamp"/' pyproject.toml
+    - cat pyproject.toml
   artifacts:
     paths:
       - gdcdatamodel2/setup.cfg
