@@ -48,7 +48,8 @@ update_requirements_for_gdcdatamodel2:
     - !reference [.load_github_key, script]
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
     - cd gdcdatamodel2
-    - pwd
+    - git checkout "$CI_COMMIT_REF_NAME" || git checkout -b "$CI_COMMIT_REF_NAME"
+    - git log -1
     - sed -i 's|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@.*#egg=gdcdictionary|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@'"$CI_COMMIT_REF_NAME"'#egg=gdcdictionary|' setup.cfg
     - cat setup.cfg
     - pip3 --version
@@ -70,7 +71,6 @@ update_datamodels:
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
     - cd gdcdatamodel2
     - git checkout "$CI_COMMIT_REF_NAME" || git checkout -b "$CI_COMMIT_REF_NAME"
-    - git pull
     - git log -1
     - sed -i 's|version = .*|version ="'"$CI_COMMIT_REF_NAME"'"|' plaster.toml
     - sed -i 's/is_tag = .*/is_tag = false/' plaster.toml
