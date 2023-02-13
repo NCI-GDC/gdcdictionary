@@ -55,13 +55,10 @@ update_configs_and_reqs_for_gdcdatamodel2:
     - pip3 --version
     - pip3 install virtualenv pip-tools==6.3.0
     - pip-compile -i https://pypi.org/simple --extra=dev --output-file=dev-requirements.txt pyproject.toml
-    - sed -i 's/local_scheme = "no-local-version"/local_scheme = "node-and-timestamp"/' pyproject.toml
-    - cat pyproject.toml
   artifacts:
     paths:
       - gdcdatamodel2/setup.cfg
       - gdcdatamodel2/dev-requirements.txt
-      - gdcdatamodel2/pyproject.toml
     expire_in: 1 week
 
 
@@ -99,11 +96,14 @@ release_datamodels_to_nexus:
     - apt-get update
     - apt-get install -y python3-venv
     - pip3 install -U setuptools_scm build twine setuptools
+    - cp pyproject.toml /tmp/pyproject.toml
+    - sed -i 's/local_scheme = "no-local-version"/local_scheme = "node-and-timestamp"/' pyproject.toml
+    - cat pyproject.toml
     - python3 -m setuptools_scm
     - python3 -m build
     - twine check dist/*
     - twine upload dist/*
-    - git status
+    - cp /tmp/pyproject.toml pyproject.toml
   variables:
     TWINE_USERNAME: ${TWINE_USER}
     TWINE_PASSWORD: ${TWINE_PASSWORD}
