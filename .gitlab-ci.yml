@@ -96,14 +96,16 @@ release_datamodels_to_nexus:
     - apt-get update
     - apt-get install -y python3-venv
     - pip3 install -U setuptools_scm build twine setuptools
-    - cp pyproject.toml /tmp/pyproject.toml
+    - cp -v pyproject.toml /tmp/pyproject.toml
     - sed -i 's/local_scheme = "no-local-version"/local_scheme = "node-and-timestamp"/' pyproject.toml
     - cat pyproject.toml
     - python3 -m setuptools_scm
     - python3 -m build
     - twine check dist/*
     - twine upload dist/*
-    - cp /tmp/pyproject.toml pyproject.toml
+    - cp -v /tmp/pyproject.toml pyproject.toml
+    - ls -l pyproject.toml
+    - cat pyproject.toml
   variables:
     TWINE_USERNAME: ${TWINE_USER}
     TWINE_PASSWORD: ${TWINE_PASSWORD}
