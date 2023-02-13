@@ -140,9 +140,8 @@ push_datamodels_to_github:
     - cd gdcdatamodel2
     - cat setup.cfg
     - cat dev-requirements.txt
-    - whoami
     - git status
     - git add .
     - git commit -m "Use gdcdictionary $CI_COMMIT_REF_NAME $CI_COMMIT_SHA"
     - git push origin "$CI_COMMIT_REF_NAME"
-  allow_failure: true
+  allow_failure: true   # failure when no changes of models
