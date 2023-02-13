@@ -60,7 +60,7 @@ schema:
   parents:
     - entity: portion
       required: true
-      fields: 
+      fields:
         - name: project_id
           self_field: project_id
         - name: submitter_portion_id

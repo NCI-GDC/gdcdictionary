@@ -66,7 +66,7 @@ uniqueKeys:
 deprecated:
   - composition
   - is_ffpe
-  - oct_embeded
+  - oct_embedded
   - sample_type
   - sample_type_id
 

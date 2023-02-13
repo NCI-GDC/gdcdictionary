@@ -3,8 +3,8 @@ schema:
   namespace: gdc='http://gdc.nci.nih.gov'
   category: data_file
   data_type: SSM_SNV  # this is needed when entity category is data_file
-  title: 
-  description: 
+  title:
+  description:
   version: 1
   created_date: 2015-06-16T07:37:39Z
   updated_date: 2015-07-12T21:04:01Z

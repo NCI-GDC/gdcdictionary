@@ -3,7 +3,7 @@ schema:
   namespace: gdc='http://gdc.nci.nih.gov'
   category: data_bundle  # data_bundle is the entity type that holds metadata for the containing data_files
   title: Aligned sequencing reads
-  description: 
+  description:
   version: 1
   created_date: 2015-06-16T07:37:39Z
   updated_date: 2015-07-12T21:04:01Z
@@ -76,7 +76,7 @@ schema:
     - entity: fastq  # input FASTQ files
       required: true
       cardinality: 1+:1  # multiple input FASTQ files produced one data_bundle
-      fields: 
+      fields:
         - name: id
           self_field: unaligned_seq_id
     - entity: alignment_workflow
