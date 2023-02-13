@@ -218,6 +218,12 @@ class SchemaTest(BaseTest):
             "nodes not linking with annotation: \n{}".format('\n'.join(extra_nodes))
 
     def test_integer_min_less_than_max(self):
+        """Test integer min is less than max
+
+            Given a node schema
+            When a node property is Integer
+            Then the minimum shoould be smaller than the maximum
+        """
         schema = self.dictionary.schema
         node_schemas = (v for k, v in schema.items() if not k.startswith("_"))
 
@@ -225,8 +231,27 @@ class SchemaTest(BaseTest):
             properties = node_schema["properties"]
 
             for prop, values in properties.items():
-                if values.get("type") == "integer":
-                    maximum = values.get("maximum")
-                    minimum = values.get("minimum")
-                    if maximum is not None and minimum is not None:
-                        assert maximum >= minimum, f"Integer maximum should be larger than minimum: {node_schema['id']}.{'properties'}.{prop}"
+                prop_type = values.get("type")
+                maximum = values.get("maximum")
+                minimum = values.get("minimum")
+                if prop_type == "integer" and maximum is not None and minimum is not None:
+                    assert maximum >= minimum, f"Integer maximum should be larger than minimum: {node_schema['id']}.{'properties'}.{prop}"
+
+    def test_no_missing_type_array(self):
+        """Test no missing type array.
+
+            Given a node schema,
+            When a node property has items.
+            Then the property type should be array.
+        """
+        schema = self.dictionary.schema
+        node_schemas = (v for k, v in schema.items() if not k.startswith("_"))
+
+        for node_schema in node_schemas:
+            properties = node_schema["properties"]
+
+            for prop, values in properties.items():
+                prop_type = values.get("type")
+                has_items = values.get("items") is not None
+                if has_items:
+                    assert prop_type == "array", f"{node_schema['id']}.{'properties'} should has type array rather than {prop_type}"
