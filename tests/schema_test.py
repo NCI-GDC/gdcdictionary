@@ -235,14 +235,14 @@ class SchemaTest(BaseTest):
                 maximum = values.get("maximum")
                 minimum = values.get("minimum")
                 if prop_type == "integer" and maximum is not None and minimum is not None:
-                    assert maximum >= minimum, f"Integer maximum should be larger than minimum: {node_schema['id']}.{'properties'}.{prop}"
+                    assert maximum >= minimum, "Integer maximum should be larger than minimum: {}.properties.{}".format(node_schema["id"], prop)
 
     def test_no_missing_type_array(self):
         """Test no missing type array.
 
             Given a node schema,
             When a node property has items.
-            Then the property type should be array.
+            Then the property type should be `array`.
         """
         schema = self.dictionary.schema
         node_schemas = (v for k, v in schema.items() if not k.startswith("_"))
@@ -254,4 +254,4 @@ class SchemaTest(BaseTest):
                 prop_type = values.get("type")
                 has_items = values.get("items") is not None
                 if has_items:
-                    assert prop_type == "array", f"{node_schema['id']}.{'properties'} should has type array rather than {prop_type}"
+                    assert prop_type == "array", "{}.properties.{} should has type array rather than {}".format(node_schema["id"], prop, prop_type)
