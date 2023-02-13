@@ -41,7 +41,7 @@ release:
   rules:
     - when: never
 
-update_configs_and_reqs_for_gdcdatamodel2:
+update_reqs_for_gdcdatamodel2:
   image: docker.osdc.io/ncigdc/python36-builder:1.4.0
   stage: build
   script:
@@ -77,7 +77,7 @@ update_datamodels:
     - cat plaster.toml
     - bash plaster
     - git status
-    - rm setup.cfg dev-requirements.txt pyproject.toml
+    - rm setup.cfg dev-requirements.txt
   artifacts:
     paths:
       - gdcdatamodel2
@@ -104,8 +104,6 @@ release_datamodels_to_nexus:
     - twine check dist/*
     - twine upload dist/*
     - cp -v /tmp/pyproject.toml pyproject.toml
-    - ls -l pyproject.toml
-    - cat pyproject.toml
   variables:
     TWINE_USERNAME: ${TWINE_USER}
     TWINE_PASSWORD: ${TWINE_PASSWORD}
