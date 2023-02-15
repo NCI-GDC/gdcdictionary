@@ -336,8 +336,8 @@ properties:
     $ref:
       - "_terms.yaml#/occupation_duration_years/common"
     type: integer
-    maximum: 89
     minimum: 0
+    maximum: 89
 
   occupation_type:
     $ref:
