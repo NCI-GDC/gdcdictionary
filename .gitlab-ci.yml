@@ -85,7 +85,7 @@ execute_plaster:
     - git checkout "$CI_COMMIT_REF_NAME" || git checkout -b "$CI_COMMIT_REF_NAME"
     - git log -1
     - sed -i 's|version = .*|version ="'"$CI_COMMIT_REF_NAME"'"|' plaster.toml
-    - sed -i 's/is_tag = .*/is_tag = false/' plaster.toml
+    - sed -i 's/is_git_tag = .*/is_git_tag = false/' plaster.toml
     - cat plaster.toml
     - bash plaster
     - git status
