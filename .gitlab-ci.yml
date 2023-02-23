@@ -46,6 +46,15 @@ release:
   rules:
     - when: never
 
+.override_gdcdictionary_version:
+  rules:
+    - if: $GDCDICTIONARY_TARGET_VERSION_OVERRIDE != null
+      variables:
+        GDCDICTIONARY_TARGET_VERSION: $GDCDICTIONARY_TARGET_VERSION_OVERRIDE
+    - when: always
+      variables:
+        GDCDICTIONARY_TARGET_VERSION: $CI_COMMIT_REF_NAME
+
 update_reqs_for_gdcdatamodel2:
   image: docker.osdc.io/ncigdc/python36-builder:1.4.0
   stage: build_gdcdatamodel2
@@ -53,9 +62,10 @@ update_reqs_for_gdcdatamodel2:
     - !reference [.load_github_key, script]
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
     - cd gdcdatamodel2
-    - git checkout "$CI_COMMIT_REF_NAME" || git checkout -b "$CI_COMMIT_REF_NAME"
+    - git checkout feat/dev-1686-move-plaster-dependency-out # TODO: remove this line, testing
+    - git checkout "$GDCDICTIONARY_TARGET_VERSION" || git checkout -b "$GDCDICTIONARY_TARGET_VERSION"
     - git log -1
-    - sed -i 's|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@.*#egg=gdcdictionary|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@'"$CI_COMMIT_REF_NAME"'#egg=gdcdictionary|' setup.cfg
+    - sed -i 's|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@.*#egg=gdcdictionary|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@'"$GDCDICTIONARY_TARGET_VERSION"'#egg=gdcdictionary|' setup.cfg
     - cat setup.cfg
     - pip3 --version
     - pip3 install virtualenv pip-tools==6.3.0
@@ -65,6 +75,9 @@ update_reqs_for_gdcdatamodel2:
       - gdcdatamodel2/setup.cfg
       - gdcdatamodel2/dev-requirements.txt
     expire_in: 1 week
+  rules:
+    - !reference [.override_gdcdictionary_version, rules]
+
 
 
 execute_plaster:
@@ -75,9 +88,9 @@ execute_plaster:
     - pwd
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
     - cd gdcdatamodel2
-    - git checkout "$CI_COMMIT_REF_NAME" || git checkout -b "$CI_COMMIT_REF_NAME"
+    - git checkout "$GDCDICTIONARY_TARGET_VERSION" || git checkout -b "$GDCDICTIONARY_TARGET_VERSION"
     - git log -1
-    - sed -i 's|version = .*|version ="'"$CI_COMMIT_REF_NAME"'"|' plaster.toml
+    - sed -i 's|version = .*|version ="'"$GDCDICTIONARY_TARGET_VERSION"'"|' plaster.toml
     - sed -i 's/is_git_tag = .*/is_git_tag = false/' plaster.toml
     - cat plaster.toml
     - bash plaster
@@ -87,6 +100,8 @@ execute_plaster:
     paths:
       - gdcdatamodel2
     expire_in: 1 week
+  rules:
+    - !reference [.override_gdcdictionary_version, rules]
 
 
 release_datamodels_to_nexus:
@@ -143,6 +158,8 @@ push_datamodels_to_github:
     - cat dev-requirements.txt
     - git status
     - git add .
-    - git commit -m "Use gdcdictionary $CI_COMMIT_REF_NAME $CI_COMMIT_SHA"
-    - git push origin "$CI_COMMIT_REF_NAME"
+    - git commit -m "Use gdcdictionary $GDCDICTIONARY_TARGET_VERSION $CI_COMMIT_SHA"
+    - git push origin "$GDCDICTIONARY_TARGET_VERSION"
   allow_failure: true   # failure when no changes of models
+  rules:
+    - !reference [.override_gdcdictionary_version, rules]
