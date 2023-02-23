@@ -62,7 +62,6 @@ update_reqs_for_gdcdatamodel2:
     - !reference [.load_github_key, script]
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
     - cd gdcdatamodel2
-    - git checkout feat/dev-1686-move-plaster-dependency-out # TODO: remove this line, testing
     - git checkout "$GDCDICTIONARY_TARGET_VERSION" || git checkout -b "$GDCDICTIONARY_TARGET_VERSION"
     - git log -1
     - sed -i 's|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@.*#egg=gdcdictionary|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@'"$GDCDICTIONARY_TARGET_VERSION"'#egg=gdcdictionary|' setup.cfg
