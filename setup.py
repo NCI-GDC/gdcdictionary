@@ -11,7 +11,7 @@ setup(
     install_requires=[
         'PyYAML<7',
         'jsonschema<4',     # for python36
-        'attrs<21',         # for python35
+        'attrs<21',         # for python36
     ],
     package_data={
         "gdcdictionary": [
