@@ -7,7 +7,6 @@ schema.
 
 """
 import collections
-import unittest
 
 from .utils import BaseTest, check_for_cycles, validate_schemata
 
