@@ -11,8 +11,10 @@ attrs==20.3.0
     #   gdcdictionary (pyproject.toml)
     #   jsonschema
     #   pytest
-coverage==5.5
-    # via pytest-cov
+coverage[toml]==5.5
+    # via
+    #   gdcdictionary (pyproject.toml)
+    #   pytest-cov
 importlib-metadata==2.1.1
     # via
     #   jsonschema
@@ -45,6 +47,8 @@ six==1.15.0
     #   jsonschema
     #   more-itertools
     #   pytest
+toml==0.10.2
+    # via coverage
 wcwidth==0.2.5
     # via pytest
 zipp==1.2.0
