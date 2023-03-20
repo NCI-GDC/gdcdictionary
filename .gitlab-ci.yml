@@ -77,6 +77,7 @@ update_reqs_for_gdcdatamodel2:
     expire_in: 1 week
   rules:
     - !reference [.override_gdcdictionary_version, rules]
+  needs: ['tox']
 
 
 
@@ -102,6 +103,7 @@ execute_plaster:
     expire_in: 1 week
   rules:
     - !reference [.override_gdcdictionary_version, rules]
+  needs: ['tox']
 
 
 release_datamodels_to_nexus:
@@ -146,6 +148,7 @@ release_datamodels_to_nexus:
       variables:
         TWINE_REPOSITORY_URL: "https://nexus.osdc.io/repository/pypi-releases/"
     - when: always
+  needs: ['update_reqs_for_gdcdatamodel2', 'execute_plaster']
 
 
 push_datamodels_to_github:
@@ -163,3 +166,4 @@ push_datamodels_to_github:
   allow_failure: true   # failure when no changes of models
   rules:
     - !reference [.override_gdcdictionary_version, rules]
+  needs: ['update_reqs_for_gdcdatamodel2', 'execute_plaster']
