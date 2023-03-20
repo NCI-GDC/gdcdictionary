@@ -27,6 +27,8 @@ variables:
 
 tox:
   image: ${BASE_CONTAINER_REGISTRY}/${REPO_PY_VERSION}-builder:${BASE_CONTAINER_VERSION}
+  variables:
+    LANG: en_US.UTF-8
   before_script:
     - mkdir -p /usr/share/man/man1
 
@@ -76,7 +78,7 @@ update_reqs_for_gdcdatamodel2:
     expire_in: 1 week
   rules:
     - !reference [.override_gdcdictionary_version, rules]
-  needs: ['tox']
+  needs: ['tox: [python36]']
 
 
 
@@ -102,7 +104,7 @@ execute_plaster:
     expire_in: 1 week
   rules:
     - !reference [.override_gdcdictionary_version, rules]
-  needs: ['tox']
+  needs: ['tox: [python36]']
 
 
 release_datamodels_to_nexus:
