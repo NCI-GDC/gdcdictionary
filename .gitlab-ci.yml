@@ -77,6 +77,7 @@ update_reqs_for_gdcdatamodel2:
     expire_in: 1 week
   rules:
     - !reference [.override_gdcdictionary_version, rules]
+  needs: ['tox']
 
 
 
@@ -102,6 +103,7 @@ execute_plaster:
     expire_in: 1 week
   rules:
     - !reference [.override_gdcdictionary_version, rules]
+  needs: ['tox']
 
 
 release_datamodels_to_nexus:
