@@ -5,7 +5,6 @@
 stages:
   - test
   - build
-  - build_gdcdatamodel2
   - release_gdcdatamodel2
 
 include:
@@ -59,7 +58,7 @@ release:
 
 update_reqs_for_gdcdatamodel2:
   image: docker.osdc.io/ncigdc/python36-builder:1.4.0
-  stage: build_gdcdatamodel2
+  stage: build
   script:
     - !reference [.load_github_key, script]
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
@@ -78,13 +77,12 @@ update_reqs_for_gdcdatamodel2:
     expire_in: 1 week
   rules:
     - !reference [.override_gdcdictionary_version, rules]
-  needs: ['tox: [python36]']
 
 
 
 execute_plaster:
   image: docker.osdc.io/ncigdc/python3.8-builder:2.1.0
-  stage: build_gdcdatamodel2
+  stage: build
   script:
     - !reference [.load_github_key, script]
     - pwd
@@ -104,7 +102,6 @@ execute_plaster:
     expire_in: 1 week
   rules:
     - !reference [.override_gdcdictionary_version, rules]
-  needs: ['tox: [python36]']
 
 
 release_datamodels_to_nexus:
