@@ -23,11 +23,12 @@ variables:
   DOCKER_BUILD_OPTS: "--build-arg PIP_EXTRA_INDEX_URL=https://nexus.osdc.io/repository/pypi-all/simple"
   DOCKER_PUSH_OPTS: "--all-tags"
   TWINE_REPOSITORY_URL: "https://nexus.osdc.io/repository/pypi-snapshots/"
-  LANG: en_US.UTF-8
 
 
 tox:
   image: ${BASE_CONTAINER_REGISTRY}/${REPO_PY_VERSION}-builder:${BASE_CONTAINER_VERSION}
+  variables:
+    LANG: en_US.UTF-8
   before_script:
     - mkdir -p /usr/share/man/man1
 
