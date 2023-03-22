@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "tomli>=1.0", "packaging>=20.0", "pyparsing>2,<3", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 98
+include = '\.pyi?$'
+
+[tool.coverage.html]
+title = "gdcdictionary coverage report"
+directory = "docs/htmlcov"
+show_contexts = true
+
+[tool.coverage.run]
+branch = true
+context = "unit tests"
+source = ["gdcdictionary"]
+
+[tool.isort]
+profile = "black"
+known_first_party = ["gdcdictionary"]
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+
+[tool.towncrier]
+package = "gdcdictionary"
+package_dir = "src"
+filename = "changelog.rst"
+directory = "changelog"

@@ -11,7 +11,7 @@ import unittest
 
 from jsonschema import validate
 
-from gdcdictionary import ROOT_DIR, GDCDictionary
+from src.gdcdictionary import ROOT_DIR, GDCDictionary
 
 
 def load_yaml(path):

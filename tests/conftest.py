@@ -4,7 +4,7 @@
 import os
 
 import pytest
-from gdcdictionary import ROOT_DIR, GDCDictionary
+from src.gdcdictionary import ROOT_DIR, GDCDictionary
 from tests.utils import load_yaml
 
 
