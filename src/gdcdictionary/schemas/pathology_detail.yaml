@@ -716,13 +716,13 @@ properties:
     $ref:
       - "_terms.yaml#/peripancreatic_lymph_nodes_positive/common"
     enum:
-      - '0'
+      - "0"
       - 1-3
       - 4 or More
       - Unknown
       - Not Reported
     enumDef:
-      '0':
+      "0":
         $ref:
           - "_terms_enum.yaml#/0/common"
       1-3:

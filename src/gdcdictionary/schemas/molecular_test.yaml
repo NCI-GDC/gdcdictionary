@@ -4044,9 +4044,9 @@ properties:
     $ref:
       - "_terms.yaml#/mutation_codon/common"
     enum:
-      - '12'
-      - '13'
-      - '61'
+      - "12"
+      - "13"
+      - "61"
 
   pathogenicity:
     $ref:

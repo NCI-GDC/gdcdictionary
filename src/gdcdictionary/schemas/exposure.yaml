@@ -633,23 +633,23 @@ properties:
       - Smoking history not documented
       - Unknown
       - Not Reported
-      - '1'
-      - '2'
-      - '3'
-      - '4'
-      - '5'
-      - '6'
-      - '7'
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
-      - '1'
-      - '2'
-      - '3'
-      - '4'
-      - '5'
-      - '6'
-      - '7'
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
     enumDef:
       Unknown:
         $ref:
@@ -657,25 +657,25 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      '1':
+      "1":
         $ref:
           - "_terms_enum.yaml#/1/exposure/tobacco_smoking_status"
-      '2':
+      "2":
         $ref:
           - "_terms_enum.yaml#/2/exposure/tobacco_smoking_status"
-      '3':
+      "3":
         $ref:
           - "_terms_enum.yaml#/3/exposure/tobacco_smoking_status"
-      '4':
+      "4":
         $ref:
           - "_terms_enum.yaml#/4/exposure/tobacco_smoking_status"
-      '5':
+      "5":
         $ref:
           - "_terms_enum.yaml#/5/exposure/tobacco_smoking_status"
-      '6':
+      "6":
         $ref:
           - "_terms_enum.yaml#/6/exposure/tobacco_smoking_status"
-      '7':
+      "7":
         $ref:
           - "_terms_enum.yaml#/7/exposure/tobacco_smoking_status"
       Not Allowed To Collect:
