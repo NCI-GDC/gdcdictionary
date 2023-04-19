@@ -63,20 +63,20 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
-      - Sequencing Data
-      - Raw Sequencing Data
-
-  data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
-    enum:
-      - Run Metadata
+      - "Raw Sequencing Data"
+      - "Sequencing Data"
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - SRA XML
+      - "SRA XML"
+
+  data_type:
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - "Run Metadata"
 
   read_groups:
     $ref: "_definitions.yaml#/to_one"

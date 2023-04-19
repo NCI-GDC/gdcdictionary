@@ -39,26 +39,13 @@ uniqueKeys:
 
 properties:
 
-  type:
-    enum:
-      - data_release
-
-  id:
-    $ref:
-      - "_definitions.yaml#/uuid"
-
   created_datetime:
     $ref:
       - "_definitions.yaml#/datetime"
 
-  updated_datetime:
+  id:
     $ref:
-      - "_definitions.yaml#/datetime"
-
-  name:
-    description: >-
-      String representing release name.
-    type: string
+      - "_definitions.yaml#/uuid"
 
   major_version:
     description: >-
@@ -70,6 +57,11 @@ properties:
       The number identifying the minor version.
     type: integer
 
+  name:
+    description: >-
+      String representing release name.
+    type: string
+
   release_date:
     $ref:
       - "_definitions.yaml#/datetime"
@@ -79,6 +71,14 @@ properties:
       Indicates if it is the current release.
     type: boolean
     default: false
+
+  type:
+    enum:
+      - "data_release"
+
+  updated_datetime:
+    $ref:
+      - "_definitions.yaml#/datetime"
 
   roots:
     $ref: "_definitions.yaml#/to_one"

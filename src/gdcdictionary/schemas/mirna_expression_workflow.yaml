@@ -49,7 +49,7 @@ properties:
     $ref:
       - "_terms.yaml#/workflow_type/common"
     enum:
-      - BCGSC miRNA Profiling
+      - "BCGSC miRNA Profiling"
 
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"

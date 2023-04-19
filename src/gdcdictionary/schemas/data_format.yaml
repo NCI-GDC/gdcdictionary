@@ -29,9 +29,6 @@ uniqueKeys:
 
 properties:
 
-  type:
-    type: string
-
   id:
     $ref:
       - "_definitions.yaml#/uuid"
@@ -39,4 +36,7 @@ properties:
   name:
     description: >-
       name of this data format
+    type: string
+
+  type:
     type: string

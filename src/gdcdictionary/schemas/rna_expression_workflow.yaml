@@ -64,23 +64,23 @@ properties:
     $ref:
       - "_terms.yaml#/workflow_type/common"
     enum:
-      - CellRanger - 10x Filtered Counts
-      - CellRanger - 10x Raw Counts
-      - Cufflinks
-      - DEXSeq
-      - HTSeq - Counts
-      - HTSeq - FPKM
-      - HTSeq - FPKM-UQ
-      - Kallisto - HDF5
-      - Kallisto - Quantification
-      - RNA-SeQC - Counts
-      - RNA-SeQC - FPKM
-      - RSEM - Quantification
-      - STAR - Counts
-      - STAR - FPKM
-      - STAR - Smart-Seq2 Raw Counts
-      - STAR - Smart-Seq2 Filtered Counts
-      - zUMIs - Smart-Seq2 Counts
+      - "CellRanger - 10x Filtered Counts"
+      - "CellRanger - 10x Raw Counts"
+      - "Cufflinks"
+      - "DEXSeq"
+      - "HTSeq - Counts"
+      - "HTSeq - FPKM"
+      - "HTSeq - FPKM-UQ"
+      - "Kallisto - HDF5"
+      - "Kallisto - Quantification"
+      - "RNA-SeQC - Counts"
+      - "RNA-SeQC - FPKM"
+      - "RSEM - Quantification"
+      - "STAR - Counts"
+      - "STAR - FPKM"
+      - "STAR - Smart-Seq2 Filtered Counts"
+      - "STAR - Smart-Seq2 Raw Counts"
+      - "zUMIs - Smart-Seq2 Counts"
 
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"

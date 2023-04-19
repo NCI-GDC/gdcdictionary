@@ -63,38 +63,38 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
-      - Somatic Structural Variation
-      - Structural Variation
-
-  data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
-    enum:
-      - Structural Alteration
-      - Structural Rearrangement
-      - Transcript Fusion
+      - "Somatic Structural Variation"
+      - "Structural Variation"
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - BEDPE
-      - CSV
-      - FASTA
-      - GVF
-      - JSON
-      - TSV
-      - TXT
-      - VCF
+      - "BEDPE"
+      - "CSV"
+      - "FASTA"
+      - "GVF"
+      - "JSON"
+      - "TSV"
+      - "TXT"
+      - "VCF"
+
+  data_type:
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - "Structural Alteration"
+      - "Structural Rearrangement"
+      - "Transcript Fusion"
 
   experimental_strategy:
     $ref:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
-      - RNA-Seq
-      - Targeted Sequencing
-      - WGS
-      - WXS
+      - "RNA-Seq"
+      - "Targeted Sequencing"
+      - "WGS"
+      - "WXS"
 
   genomic_profile_harmonization_workflows:
     $ref: "_definitions.yaml#/to_one"

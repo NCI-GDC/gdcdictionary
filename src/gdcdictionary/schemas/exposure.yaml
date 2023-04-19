@@ -50,20 +50,6 @@ properties:
   $ref:
     - "_definitions.yaml#/ubiquitous_properties"
 
-  alcohol_frequency:
-    $ref:
-      - "_terms.yaml#/alcohol_frequency/common"
-    enum:
-      - Daily Drinker
-      - Weekly Drinker
-
-  asbestos_exposure_type:
-    $ref:
-      - "_terms.yaml#/asbestos_exposure_type/common"
-    enum:
-      - Amosite
-      - Crocidolite
-
   age_at_last_exposure:
     $ref:
       - "_terms.yaml#/age_at_last_exposure/common"
@@ -91,16 +77,23 @@ properties:
     type: number
     minimum: 0
 
+  alcohol_frequency:
+    $ref:
+      - "_terms.yaml#/alcohol_frequency/common"
+    enum:
+      - "Daily Drinker"
+      - "Weekly Drinker"
+
   alcohol_history:
     $ref:
       - "_terms.yaml#/alcohol_history/common"
     enum:
       - "Yes"
       - "No"
-      - Unknown
-      - Not Reported
-      - "no"
       - "yes"
+      - "no"
+      - "Unknown"
+      - "Not Reported"
     deprecated_enum:
       - "no"
       - "yes"
@@ -111,10 +104,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
       "no":
@@ -128,34 +121,34 @@ properties:
     $ref:
       - "_terms.yaml#/alcohol_intensity/common"
     enum:
-      - Drinker
-      - Heavy Drinker
-      - Lifelong Non-Drinker
-      - Non-Drinker
-      - Occasional Drinker
-      - Social Drinker
-      - Unknown
-      - Not Reported
+      - "Drinker"
+      - "Heavy Drinker"
+      - "Lifelong Non-Drinker"
+      - "Non-Drinker"
+      - "Occasional Drinker"
+      - "Social Drinker"
+      - "Unknown"
+      - "Not Reported"
     enumDef:
-      Drinker:
+      "Drinker":
         $ref:
           - "_terms_enum.yaml#/drinker/common"
-      Heavy Drinker:
+      "Heavy Drinker":
         $ref:
           - "_terms_enum.yaml#/heavy_drinker/common"
-      Lifelong Non-Drinker:
+      "Lifelong Non-Drinker":
         $ref:
           - "_terms_enum.yaml#/lifelong_nondrinker/common"
-      Non-Drinker:
+      "Non-Drinker":
         $ref:
           - "_terms_enum.yaml#/nondrinker/common"
-      Occasional Drinker:
+      "Occasional Drinker":
         $ref:
           - "_terms_enum.yaml#/occasional_drinker/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -163,20 +156,20 @@ properties:
     $ref:
       - "_terms.yaml#/alcohol_type/common"
     enum:
-      - Beer
-      - Liquor
-      - Other
-      - Wine
-      - Unknown
-      - Not Reported
+      - "Beer"
+      - "Liquor"
+      - "Other"
+      - "Wine"
+      - "Unknown"
+      - "Not Reported"
     enumDef:
-      Other:
+      "Other":
         $ref:
           - "_terms_enum.yaml#/other/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -186,8 +179,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Unknown
-      - Not Reported
+      - "Unknown"
+      - "Not Reported"
     enumDef:
       "Yes":
         $ref:
@@ -195,12 +188,19 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  asbestos_exposure_type:
+    $ref:
+      - "_terms.yaml#/asbestos_exposure_type/common"
+    enum:
+      - "Amosite"
+      - "Crocidolite"
 
   chemical_exposure_type:
     $ref:
@@ -208,31 +208,31 @@ properties:
     type: array
     items:
       enum:
-        - Agent Orange
-        - Aluminum
-        - Arsenic
-        - Asbestos
-        - Benzene
-        - Cadmium
-        - Chromium
-        - Chemical Exposure, NOS
-        - Coal Gas, Coal Tar, Coal Tar Pitch, and Derivatives
-        - Coke Oven Emission
-        - Copper
-        - Diesel Exhaust
-        - Disinfectant
-        - Formaldehyde
-        - Methylene Chloride
-        - Occupational Soldering/Welding Smoke Exposure
-        - Oil
-        - Pesticide
-        - Petroleum Hydrocarbon Compound
-        - Resin Fumes
-        - Sodium Borate
-        - Solvent
-        - Tetrachloroethylene
-        - Toluene
-        - Not Reported
+        - "Agent Orange"
+        - "Aluminum"
+        - "Arsenic"
+        - "Asbestos"
+        - "Benzene"
+        - "Cadmium"
+        - "Chemical Exposure, NOS"
+        - "Chromium"
+        - "Coal Gas, Coal Tar, Coal Tar Pitch, and Derivatives"
+        - "Coke Oven Emission"
+        - "Copper"
+        - "Diesel Exhaust"
+        - "Disinfectant"
+        - "Formaldehyde"
+        - "Methylene Chloride"
+        - "Occupational Soldering/Welding Smoke Exposure"
+        - "Oil"
+        - "Pesticide"
+        - "Petroleum Hydrocarbon Compound"
+        - "Resin Fumes"
+        - "Sodium Borate"
+        - "Solvent"
+        - "Tetrachloroethylene"
+        - "Toluene"
+        - "Not Reported"
 
   cigarettes_per_day:
     $ref:
@@ -246,7 +246,7 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Unknown
+      - "Unknown"
     enumDef:
       "Yes":
         $ref:
@@ -254,7 +254,7 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
 
@@ -264,7 +264,7 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Unknown
+      - "Unknown"
     enumDef:
       "Yes":
         $ref:
@@ -272,7 +272,7 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
 
@@ -280,17 +280,17 @@ properties:
     $ref:
       - "_terms.yaml#/exposure_duration/common"
     enum:
-      - Six Weeks or More
-      - Unknown
-      - Not Reported
+      - "Six Weeks or More"
+      - "Unknown"
+      - "Not Reported"
     enumDef:
-      Six Weeks or More:
+      "Six Weeks or More":
         $ref:
           - "_terms_enum.yaml#/six_weeks_or_more/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -305,30 +305,30 @@ properties:
     $ref:
       - "_terms.yaml#/exposure_source/common"
     enum:
-      - Occupational
-      - Secondary
-      - Unknown
+      - "Occupational"
+      - "Secondary"
+      - "Unknown"
 
   exposure_type:
     $ref:
       - "_terms.yaml#/exposure_type/common"
     enum:
-      - Asbestos
-      - Chemical
-      - Coal Dust
-      - Marijuana
-      - Radiation
-      - Smoke
-      - Radon
-      - Respirable Crystalline Silica
-      - Smokeless Tobacco
-      - Tobacco
-      - Wood Dust
+      - "Asbestos"
+      - "Chemical"
+      - "Coal Dust"
+      - "Marijuana"
+      - "Radiation"
+      - "Radon"
+      - "Respirable Crystalline Silica"
+      - "Smoke"
+      - "Smokeless Tobacco"
+      - "Tobacco"
+      - "Wood Dust"
     enumDef:
-      Marijuana:
+      "Marijuana":
         $ref:
           - "_terms_enum.yaml#/marijuana/common"
-      Tobacco:
+      "Tobacco":
         $ref:
           - "_terms_enum.yaml#/tobacco/common"
 
@@ -336,8 +336,8 @@ properties:
     $ref:
       - "_terms.yaml#/occupation_duration_years/common"
     type: integer
-    minimum: 0
     maximum: 89
+    minimum: 0
 
   occupation_type:
     $ref:
@@ -345,136 +345,136 @@ properties:
     type: array
     items:
       enum:
-        - Administration Professionals
-        - Administrative and Specialized Secretaries
-        - Agricultural, Forestry and Fishery Labourers
-        - Animal Producers
-        - Architects, Planners, Surveyors and Designers
-        - Armed Forces Occupations, Other Ranks
-        - Artistic, Cultural and Culinary Associate Professionals
-        - Assemblers
-        - Authors, Journalists and Linguists
-        - Blacksmiths, Toolmakers and Related Trades Workers
-        - Building Finishers and Related Trades Workers
-        - Building Frame and Related Trades Workers
-        - Building and Housekeeping Supervisors
-        - Business Services Agents
-        - Business Services and Administration Managers
-        - Car, Van and Motorcycle Drivers
-        - Cashiers and Ticket Clerks
-        - Chemical and Photographic Products Plant and Machine Operators
-        - Child Care Workers and Teachers' Aides
-        - Client Information Workers
-        - Commissioned Armed Forces Officers
-        - Cooks
-        - Creative and Performing Artists
-        - Database and Network Professionals
-        - Domestic, Hotel and Office Cleaners and Helpers
-        - Electrical Equipment Installers and Repairers
-        - Electronics and Telecommunications Installers and Repairers
-        - Electrotechnology Engineers
-        - Engineering Professionals (excluding Electrotechnology)
-        - Finance Professionals
-        - Financial and Mathematical Associate Professionals
-        - Fishery Workers, Hunters and Trappers
-        - Food Preparation Assistants
-        - Food Processing and Related Trades Workers
-        - Food and Related Products Machine Operators
-        - Forestry and Related Workers
-        - Garment and Related Trades Workers
-        - General Office Clerks
-        - Government Regulatory Associate Professionals
-        - Hairdressers, Beauticians and Related Workers
-        - Handicraft Workers
-        - Heavy Truck and Bus Drivers
-        - Hotel and Restaurant Managers
-        - Information and Communications Technology Operations and User Support Technicians
-        - Information and Communications Technology Service managers
-        - Keyboard Operators
-        - Legal Professionals
-        - Legal, Social and Religious Associate Professionals
-        - Legislators and Senior Officials
-        - Librarians, Archivists and Curators
-        - Life Science Professionals
-        - Life Science Technicians and Related Associate Professionals
-        - Locomotive Engine Drivers and Related Workers
-        - Machinery Mechanics and Repairers
-        - Managing Directors and Chief Executives
-        - Manufacturing Labourers
-        - Manufacturing, Mining, Construction and Distribution Managers
-        - Market Gardeners and Crop Growers
-        - Material Recording and Transport Clerks
-        - Mathematicians, Actuaries and Statisticians
-        - Medical Doctors
-        - Medical and Pharmaceutical Technicians
-        - Metal Processing and Finishing Plant Operators
-        - Mining and Construction Labourers
-        - Mining and Mineral Processing Plant Operators
-        - Mining, Manufacturing and Construction Supervisors
-        - Mixed Crop and Animal Producers
-        - Mobile Plant Operators
-        - Non-commissioned Armed Forces Officers
-        - Numerical Clerks
-        - Nursing and Midwifery Associate Professionals
-        - Nursing and Midwifery Professionals
-        - Other Clerical Support Workers
-        - Other Craft and Related Workers
-        - Other Elementary Workers
-        - Other Health Associate Professionals
-        - Other Health Professionals
-        - Other Personal Services Workers
-        - Other Sales Workers
-        - Other Services Managers
-        - Other Stationary Plant and Machine Operators
-        - Other Teaching Professionals
-        - Painters, Building Structure Cleaners and Related Trades Workers
-        - Paramedical Practitioners
-        - Personal Care Workers in Health Services
-        - Physical and Earth Science Professionals
-        - Physical and Engineering Science Technicians
-        - Primary School and Early Childhood Teachers
-        - Printing Trades Workers
-        - Process Control Technicians
-        - Production Managers in Agriculture, Forestry and Fisheries
-        - Professional Services Managers
-        - Protective Services Workers
-        - Refuse Workers
-        - Retail and Wholesale Trade Managers
-        - Rubber, Plastic and Paper Products Machine Operators
-        - Sales and Purchasing Agents and Brokers
-        - Sales, Marketing and Development Managers
-        - Sales, Marketing and Public Relations Professionals
-        - Secondary Education Teachers
-        - Secretaries (general)
-        - Sheet and Structural Metal Workers, Moulders and Welders, and Related Workers
-        - Ship and Aircraft Controllers and Technicians
-        - Ships' Deck Crews and Related Workers
-        - Shop Salespersons
-        - Social and Religious Professionals
-        - Software and Applications Developers and Analysts
-        - Sports and Fitness Workers
-        - Street Vendors (excluding Food)
-        - Street and Market Salespersons
-        - Street and Related Service Workers
-        - Subsistence Crop Farmers
-        - Subsistence Fishers, Hunters, Trappers and Gatherers
-        - Subsistence Livestock Farmers
-        - Subsistence Mixed Crop and Livestock Farmers
-        - Telecommunications and Broadcasting Technicians
-        - Tellers, Money Collectors and Related Clerks
-        - Textile, Fur and Leather Products Machine Operators
-        - Traditional and Complementary Medicine Associate Professionals
-        - Traditional and Complementary Medicine Professionals
-        - Transport and Storage Labourers
-        - Travel Attendants, Conductors and Guides
-        - University and Higher Education Teachers
-        - Vehicle, Window, Laundry and Other Hand Cleaning Workers
-        - Veterinarians
-        - Veterinary Technicians and Assistants
-        - Vocational education teachers
-        - Waiters and Bartenders
-        - Wood Processing and Papermaking Plant Operators
-        - Wood Treaters, Cabinet-makers and Related Trades Workers
+        - "Administration Professionals"
+        - "Administrative and Specialized Secretaries"
+        - "Agricultural, Forestry and Fishery Labourers"
+        - "Animal Producers"
+        - "Architects, Planners, Surveyors and Designers"
+        - "Armed Forces Occupations, Other Ranks"
+        - "Artistic, Cultural and Culinary Associate Professionals"
+        - "Assemblers"
+        - "Authors, Journalists and Linguists"
+        - "Blacksmiths, Toolmakers and Related Trades Workers"
+        - "Building and Housekeeping Supervisors"
+        - "Building Finishers and Related Trades Workers"
+        - "Building Frame and Related Trades Workers"
+        - "Business Services Agents"
+        - "Business Services and Administration Managers"
+        - "Car, Van and Motorcycle Drivers"
+        - "Cashiers and Ticket Clerks"
+        - "Chemical and Photographic Products Plant and Machine Operators"
+        - "Child Care Workers and Teachers' Aides"
+        - "Client Information Workers"
+        - "Commissioned Armed Forces Officers"
+        - "Cooks"
+        - "Creative and Performing Artists"
+        - "Database and Network Professionals"
+        - "Domestic, Hotel and Office Cleaners and Helpers"
+        - "Electrical Equipment Installers and Repairers"
+        - "Electronics and Telecommunications Installers and Repairers"
+        - "Electrotechnology Engineers"
+        - "Engineering Professionals (excluding Electrotechnology)"
+        - "Finance Professionals"
+        - "Financial and Mathematical Associate Professionals"
+        - "Fishery Workers, Hunters and Trappers"
+        - "Food and Related Products Machine Operators"
+        - "Food Preparation Assistants"
+        - "Food Processing and Related Trades Workers"
+        - "Forestry and Related Workers"
+        - "Garment and Related Trades Workers"
+        - "General Office Clerks"
+        - "Government Regulatory Associate Professionals"
+        - "Hairdressers, Beauticians and Related Workers"
+        - "Handicraft Workers"
+        - "Heavy Truck and Bus Drivers"
+        - "Hotel and Restaurant Managers"
+        - "Information and Communications Technology Operations and User Support Technicians"
+        - "Information and Communications Technology Service managers"
+        - "Keyboard Operators"
+        - "Legal Professionals"
+        - "Legal, Social and Religious Associate Professionals"
+        - "Legislators and Senior Officials"
+        - "Librarians, Archivists and Curators"
+        - "Life Science Professionals"
+        - "Life Science Technicians and Related Associate Professionals"
+        - "Locomotive Engine Drivers and Related Workers"
+        - "Machinery Mechanics and Repairers"
+        - "Managing Directors and Chief Executives"
+        - "Manufacturing Labourers"
+        - "Manufacturing, Mining, Construction and Distribution Managers"
+        - "Market Gardeners and Crop Growers"
+        - "Material Recording and Transport Clerks"
+        - "Mathematicians, Actuaries and Statisticians"
+        - "Medical and Pharmaceutical Technicians"
+        - "Medical Doctors"
+        - "Metal Processing and Finishing Plant Operators"
+        - "Mining and Construction Labourers"
+        - "Mining and Mineral Processing Plant Operators"
+        - "Mining, Manufacturing and Construction Supervisors"
+        - "Mixed Crop and Animal Producers"
+        - "Mobile Plant Operators"
+        - "Non-commissioned Armed Forces Officers"
+        - "Numerical Clerks"
+        - "Nursing and Midwifery Associate Professionals"
+        - "Nursing and Midwifery Professionals"
+        - "Other Clerical Support Workers"
+        - "Other Craft and Related Workers"
+        - "Other Elementary Workers"
+        - "Other Health Associate Professionals"
+        - "Other Health Professionals"
+        - "Other Personal Services Workers"
+        - "Other Sales Workers"
+        - "Other Services Managers"
+        - "Other Stationary Plant and Machine Operators"
+        - "Other Teaching Professionals"
+        - "Painters, Building Structure Cleaners and Related Trades Workers"
+        - "Paramedical Practitioners"
+        - "Personal Care Workers in Health Services"
+        - "Physical and Earth Science Professionals"
+        - "Physical and Engineering Science Technicians"
+        - "Primary School and Early Childhood Teachers"
+        - "Printing Trades Workers"
+        - "Process Control Technicians"
+        - "Production Managers in Agriculture, Forestry and Fisheries"
+        - "Professional Services Managers"
+        - "Protective Services Workers"
+        - "Refuse Workers"
+        - "Retail and Wholesale Trade Managers"
+        - "Rubber, Plastic and Paper Products Machine Operators"
+        - "Sales and Purchasing Agents and Brokers"
+        - "Sales, Marketing and Development Managers"
+        - "Sales, Marketing and Public Relations Professionals"
+        - "Secondary Education Teachers"
+        - "Secretaries (general)"
+        - "Sheet and Structural Metal Workers, Moulders and Welders, and Related Workers"
+        - "Ship and Aircraft Controllers and Technicians"
+        - "Ships' Deck Crews and Related Workers"
+        - "Shop Salespersons"
+        - "Social and Religious Professionals"
+        - "Software and Applications Developers and Analysts"
+        - "Sports and Fitness Workers"
+        - "Street and Market Salespersons"
+        - "Street and Related Service Workers"
+        - "Street Vendors (excluding Food)"
+        - "Subsistence Crop Farmers"
+        - "Subsistence Fishers, Hunters, Trappers and Gatherers"
+        - "Subsistence Livestock Farmers"
+        - "Subsistence Mixed Crop and Livestock Farmers"
+        - "Telecommunications and Broadcasting Technicians"
+        - "Tellers, Money Collectors and Related Clerks"
+        - "Textile, Fur and Leather Products Machine Operators"
+        - "Traditional and Complementary Medicine Associate Professionals"
+        - "Traditional and Complementary Medicine Professionals"
+        - "Transport and Storage Labourers"
+        - "Travel Attendants, Conductors and Guides"
+        - "University and Higher Education Teachers"
+        - "Vehicle, Window, Laundry and Other Hand Cleaning Workers"
+        - "Veterinarians"
+        - "Veterinary Technicians and Assistants"
+        - "Vocational education teachers"
+        - "Waiters and Bartenders"
+        - "Wood Processing and Papermaking Plant Operators"
+        - "Wood Treaters, Cabinet-makers and Related Trades Workers"
 
   pack_years_smoked:
     $ref:
@@ -488,7 +488,7 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Not Reported
+      - "Not Reported"
     enumDef:
       "Yes":
         $ref:
@@ -496,7 +496,7 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -506,8 +506,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Unknown
-      - Not Reported
+      - "Unknown"
+      - "Not Reported"
     enumDef:
       "Yes":
         $ref:
@@ -515,10 +515,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -528,7 +528,7 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Unknown
+      - "Unknown"
     enumDef:
       "Yes":
         $ref:
@@ -536,7 +536,7 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
 
@@ -546,8 +546,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Unknown
-      - Not Reported
+      - "Unknown"
+      - "Not Reported"
     enumDef:
       "Yes":
         $ref:
@@ -555,10 +555,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -566,17 +566,17 @@ properties:
     $ref:
       - "_terms.yaml#/smoking_frequency/common"
     enum:
-      - Every day
-      - Some days
-      - Unknown
+      - "Every day"
+      - "Some days"
+      - "Unknown"
     enumDef:
-      Every day:
+      "Every day":
         $ref:
           - "_terms_enum.yaml#/every_day/common"
-      Some days:
+      "Some days":
         $ref:
           - "_terms_enum.yaml#/some_days/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
 
@@ -584,25 +584,25 @@ properties:
     $ref:
       - "_terms.yaml#/time_between_waking_and_first_smoke/common"
     enum:
-      - Within 5 Minutes
-      - 6-30 Minutes
-      - 31-60 Minutes
-      - After 60 Minutes
-      - Unknown
+      - "31-60 Minutes"
+      - "6-30 Minutes"
+      - "After 60 Minutes"
+      - "Within 5 Minutes"
+      - "Unknown"
     enumDef:
-      Within 5 Minutes:
+      "Within 5 Minutes":
         $ref:
           - "_terms_enum.yaml#/within_5_minutes/common"
-      6-30 Minutes:
+      "6-30 Minutes":
         $ref:
           - "_terms_enum.yaml#/630_minutes/common"
-      31-60 Minutes:
+      "31-60 Minutes":
         $ref:
           - "_terms_enum.yaml#/3160_minutes/common"
-      After 60 Minutes:
+      "After 60 Minutes":
         $ref:
           - "_terms_enum.yaml#/after_60_minutes/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
 
@@ -624,15 +624,15 @@ properties:
     $ref:
       - "_terms.yaml#/tobacco_smoking_status/common"
     enum:
-      - Current Reformed Smoker, Duration Not Specified
-      - Current Reformed Smoker for < or = 15 yrs
-      - Current Reformed Smoker for > 15 yrs
-      - Current Smoker
-      - Lifelong Non-Smoker
-      - Smoker at Diagnosis
-      - Smoking history not documented
-      - Unknown
-      - Not Reported
+      - "Current Reformed Smoker, Duration Not Specified"
+      - "Current Reformed Smoker for < or = 15 yrs"
+      - "Current Reformed Smoker for > 15 yrs"
+      - "Current Smoker"
+      - "Lifelong Non-Smoker"
+      - "Smoker at Diagnosis"
+      - "Smoking history not documented"
+      - "Unknown"
+      - "Not Reported"
       - "1"
       - "2"
       - "3"
@@ -640,9 +640,9 @@ properties:
       - "5"
       - "6"
       - "7"
-      - Not Allowed To Collect
+      - "Not Allowed To Collect"
     deprecated_enum:
-      - Not Allowed To Collect
+      - "Not Allowed To Collect"
       - "1"
       - "2"
       - "3"
@@ -651,6 +651,12 @@ properties:
       - "6"
       - "7"
     enumDef:
+      "Unknown":
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
+      "Not Reported":
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
       "1":
         $ref:
           - "_terms_enum.yaml#/1/exposure/tobacco_smoking_status"
@@ -672,13 +678,7 @@ properties:
       "7":
         $ref:
           - "_terms_enum.yaml#/7/exposure/tobacco_smoking_status"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
+      "Not Allowed To Collect":
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
@@ -686,202 +686,202 @@ properties:
     $ref:
       - "_terms.yaml#/type_of_smoke_exposure/common"
     enum:
-      - Accidental building fire smoke
-      - Accidental fire smoke, grass
-      - Accidental fire smoke, NOS
-      - Accidental forest fire smoke
-      - Accidental vehicle fire smoke
-      - Aircraft smoke
-      - Burning tree smoke
-      - Coal smoke, NOS
-      - Cooking-related smoke, NOS
-      - Electrical fire smoke
-      - Electronic cigarette smoke, NOS
-      - Environmental tobacco smoke
-      - Factory smokestack smoke
-      - Field burning smoke
-      - Fire smoke, NOS
-      - Furnace or boiler smoke
-      - Gas burning smoke, propane
-      - Grease fire smoke
-      - Grilling smoke
-      - Hashish smoke
-      - Indoor stove or fireplace smoke, coal burning
-      - Indoor stove or fireplace smoke, NOS
-      - Indoor stove or fireplace smoke, wood burning
-      - Machine smoke
-      - Marijuana smoke
-      - No Smoke Exposure
-      - Oil burning smoke, Kerosene
-      - Oil burning smoke, NOS
-      - Recreational fire smoke
-      - Smoke exposure, NOS
-      - Smokehouse smoke
-      - Tobacco smoke, cigar
-      - Tobacco smoke, cigarettes
-      - Tobacco smoke, NOS
-      - Tobacco smoke, pipe
-      - Volcanic smoke
-      - Waste burning smoke
-      - Wood burning smoke, factory
-      - Wood burning smoke, NOS
-      - Work-related smoke, artificial smoke machines
-      - Work-related smoke, fire fighting
-      - Work-related smoke, foundry
-      - Work-related smoke, generators
-      - Work-related smoke, military
-      - Work-related smoke, NOS
-      - Work-related smoke, paint baking
-      - Work-related smoke, plastics factory
-      - Work-related smoke, plumbing
-      - Work-related smoke, soldering/welding
-      - Unknown
+      - "Accidental building fire smoke"
+      - "Accidental fire smoke, grass"
+      - "Accidental fire smoke, NOS"
+      - "Accidental forest fire smoke"
+      - "Accidental vehicle fire smoke"
+      - "Aircraft smoke"
+      - "Burning tree smoke"
+      - "Coal smoke, NOS"
+      - "Cooking-related smoke, NOS"
+      - "Electrical fire smoke"
+      - "Electronic cigarette smoke, NOS"
+      - "Environmental tobacco smoke"
+      - "Factory smokestack smoke"
+      - "Field burning smoke"
+      - "Fire smoke, NOS"
+      - "Furnace or boiler smoke"
+      - "Gas burning smoke, propane"
+      - "Grease fire smoke"
+      - "Grilling smoke"
+      - "Hashish smoke"
+      - "Indoor stove or fireplace smoke, coal burning"
+      - "Indoor stove or fireplace smoke, NOS"
+      - "Indoor stove or fireplace smoke, wood burning"
+      - "Machine smoke"
+      - "Marijuana smoke"
+      - "No Smoke Exposure"
+      - "Oil burning smoke, Kerosene"
+      - "Oil burning smoke, NOS"
+      - "Recreational fire smoke"
+      - "Smoke exposure, NOS"
+      - "Smokehouse smoke"
+      - "Tobacco smoke, cigar"
+      - "Tobacco smoke, cigarettes"
+      - "Tobacco smoke, NOS"
+      - "Tobacco smoke, pipe"
+      - "Volcanic smoke"
+      - "Waste burning smoke"
+      - "Wood burning smoke, factory"
+      - "Wood burning smoke, NOS"
+      - "Work-related smoke, artificial smoke machines"
+      - "Work-related smoke, fire fighting"
+      - "Work-related smoke, foundry"
+      - "Work-related smoke, generators"
+      - "Work-related smoke, military"
+      - "Work-related smoke, NOS"
+      - "Work-related smoke, paint baking"
+      - "Work-related smoke, plastics factory"
+      - "Work-related smoke, plumbing"
+      - "Work-related smoke, soldering/welding"
+      - "Unknown"
     enumDef:
-      Accidental building fire smoke:
+      "Accidental building fire smoke":
         $ref:
           - "_terms_enum.yaml#/accidental_building_fire_smoke/common"
-      Accidental fire smoke, grass:
+      "Accidental fire smoke, grass":
         $ref:
           - "_terms_enum.yaml#/accidental_fire_smoke_grass/common"
-      Accidental fire smoke, NOS:
+      "Accidental fire smoke, NOS":
         $ref:
           - "_terms_enum.yaml#/accidental_fire_smoke_nos/common"
-      Accidental forest fire smoke:
+      "Accidental forest fire smoke":
         $ref:
           - "_terms_enum.yaml#/accidental_forest_fire_smoke/common"
-      Accidental vehicle fire smoke:
+      "Accidental vehicle fire smoke":
         $ref:
           - "_terms_enum.yaml#/accidental_vehicle_fire_smoke/common"
-      Aircraft smoke:
+      "Aircraft smoke":
         $ref:
           - "_terms_enum.yaml#/aircraft_smoke/common"
-      Burning tree smoke:
+      "Burning tree smoke":
         $ref:
           - "_terms_enum.yaml#/burning_tree_smoke/common"
-      Coal smoke, NOS:
+      "Coal smoke, NOS":
         $ref:
           - "_terms_enum.yaml#/coal_smoke_nos/common"
-      Cooking-related smoke, NOS:
+      "Cooking-related smoke, NOS":
         $ref:
           - "_terms_enum.yaml#/cookingrelated_smoke_nos/common"
-      Electrical fire smoke:
+      "Electrical fire smoke":
         $ref:
           - "_terms_enum.yaml#/electrical_fire_smoke/common"
-      Electronic cigarette smoke, NOS:
+      "Electronic cigarette smoke, NOS":
         $ref:
           - "_terms_enum.yaml#/electronic_cigarette_smoke_nos/common"
-      Environmental tobacco smoke:
+      "Environmental tobacco smoke":
         $ref:
           - "_terms_enum.yaml#/environmental_tobacco_smoke/common"
-      Factory smokestack smoke:
+      "Factory smokestack smoke":
         $ref:
           - "_terms_enum.yaml#/factory_smokestack_smoke/common"
-      Field burning smoke:
+      "Field burning smoke":
         $ref:
           - "_terms_enum.yaml#/field_burning_smoke/common"
-      Fire smoke, NOS:
+      "Fire smoke, NOS":
         $ref:
           - "_terms_enum.yaml#/fire_smoke_nos/common"
-      Furnace or boiler smoke:
+      "Furnace or boiler smoke":
         $ref:
           - "_terms_enum.yaml#/furnace_or_boiler_smoke/common"
-      Gas burning smoke, propane:
+      "Gas burning smoke, propane":
         $ref:
           - "_terms_enum.yaml#/gas_burning_smoke_propane/common"
-      Grease fire smoke:
+      "Grease fire smoke":
         $ref:
           - "_terms_enum.yaml#/grease_fire_smoke/common"
-      Grilling smoke:
+      "Grilling smoke":
         $ref:
           - "_terms_enum.yaml#/grilling_smoke/common"
-      Hashish smoke:
+      "Hashish smoke":
         $ref:
           - "_terms_enum.yaml#/hashish_smoke/common"
-      Indoor stove or fireplace smoke, coal burning:
+      "Indoor stove or fireplace smoke, coal burning":
         $ref:
           - "_terms_enum.yaml#/indoor_stove_or_fireplace_smoke_coal_burning/common"
-      Indoor stove or fireplace smoke, NOS:
+      "Indoor stove or fireplace smoke, NOS":
         $ref:
           - "_terms_enum.yaml#/indoor_stove_or_fireplace_smoke_nos/common"
-      Indoor stove or fireplace smoke, wood burning:
+      "Indoor stove or fireplace smoke, wood burning":
         $ref:
           - "_terms_enum.yaml#/indoor_stove_or_fireplace_smoke_wood_burning/common"
-      Machine smoke:
+      "Machine smoke":
         $ref:
           - "_terms_enum.yaml#/machine_smoke/common"
-      Marijuana smoke:
+      "Marijuana smoke":
         $ref:
           - "_terms_enum.yaml#/marijuana_smoke/common"
-      No Smoke Exposure:
+      "No Smoke Exposure":
         $ref:
           - "_terms_enum.yaml#/no_smoke_exposure/common"
-      Oil burning smoke, Kerosene:
+      "Oil burning smoke, Kerosene":
         $ref:
           - "_terms_enum.yaml#/oil_burning_smoke_kerosene/common"
-      Oil burning smoke, NOS:
+      "Oil burning smoke, NOS":
         $ref:
           - "_terms_enum.yaml#/oil_burning_smoke_nos/common"
-      Recreational fire smoke:
+      "Recreational fire smoke":
         $ref:
           - "_terms_enum.yaml#/recreational_fire_smoke/common"
-      Smoke exposure, NOS:
+      "Smoke exposure, NOS":
         $ref:
           - "_terms_enum.yaml#/smoke_exposure_nos/common"
-      Smokehouse smoke:
+      "Smokehouse smoke":
         $ref:
           - "_terms_enum.yaml#/smokehouse_smoke/common"
-      Tobacco smoke, cigar:
+      "Tobacco smoke, cigar":
         $ref:
           - "_terms_enum.yaml#/tobacco_smoke_cigar/common"
-      Tobacco smoke, cigarettes:
+      "Tobacco smoke, cigarettes":
         $ref:
           - "_terms_enum.yaml#/tobacco_smoke_cigarettes/common"
-      Tobacco smoke, pipe:
+      "Tobacco smoke, pipe":
         $ref:
           - "_terms_enum.yaml#/tobacco_smoke_pipe/common"
-      Volcanic smoke:
+      "Volcanic smoke":
         $ref:
           - "_terms_enum.yaml#/volcanic_smoke/common"
-      Waste burning smoke:
+      "Waste burning smoke":
         $ref:
           - "_terms_enum.yaml#/waste_burning_smoke/common"
-      Wood burning smoke, factory:
+      "Wood burning smoke, factory":
         $ref:
           - "_terms_enum.yaml#/wood_burning_smoke_factory/common"
-      Wood burning smoke, NOS:
+      "Wood burning smoke, NOS":
         $ref:
           - "_terms_enum.yaml#/wood_burning_smoke_nos/common"
-      Work-related smoke, artificial smoke machines:
+      "Work-related smoke, artificial smoke machines":
         $ref:
           - "_terms_enum.yaml#/workrelated_smoke_artificial_smoke_machines/common"
-      Work-related smoke, fire fighting:
+      "Work-related smoke, fire fighting":
         $ref:
           - "_terms_enum.yaml#/workrelated_smoke_fire_fighting/common"
-      Work-related smoke, foundry:
+      "Work-related smoke, foundry":
         $ref:
           - "_terms_enum.yaml#/workrelated_smoke_foundry/common"
-      Work-related smoke, generators:
+      "Work-related smoke, generators":
         $ref:
           - "_terms_enum.yaml#/workrelated_smoke_generators/common"
-      Work-related smoke, military:
+      "Work-related smoke, military":
         $ref:
           - "_terms_enum.yaml#/workrelated_smoke_military/common"
-      Work-related smoke, NOS:
+      "Work-related smoke, NOS":
         $ref:
           - "_terms_enum.yaml#/workrelated_smoke_nos/common"
-      Work-related smoke, paint baking:
+      "Work-related smoke, paint baking":
         $ref:
           - "_terms_enum.yaml#/workrelated_smoke_paint_baking/common"
-      Work-related smoke, plastics factory:
+      "Work-related smoke, plastics factory":
         $ref:
           - "_terms_enum.yaml#/workrelated_smoke_plastics_factory/common"
-      Work-related smoke, plumbing:
+      "Work-related smoke, plumbing":
         $ref:
           - "_terms_enum.yaml#/workrelated_smoke_plumbing/common"
-      Work-related smoke, soldering/welding:
+      "Work-related smoke, soldering/welding":
         $ref:
           - "_terms_enum.yaml#/workrelated_smoke_solderingwelding/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
 
@@ -889,29 +889,29 @@ properties:
     $ref:
       - "_terms.yaml#/type_of_tobacco_used/common"
     enum:
-      - Cigar
-      - Cigarette
-      - Electronic Cigarette
-      - Other
-      - Pipe
-      - Smokeless Tobacco
+      - "Cigar"
+      - "Cigarette"
+      - "Electronic Cigarette"
+      - "Other"
+      - "Pipe"
+      - "Smokeless Tobacco"
     enumDef:
-      Cigar:
+      "Cigar":
         $ref:
           - "_terms_enum.yaml#/cigar/common"
-      Cigarette:
+      "Cigarette":
         $ref:
           - "_terms_enum.yaml#/cigarette/common"
-      Electronic Cigarette:
+      "Electronic Cigarette":
         $ref:
           - "_terms_enum.yaml#/electronic_cigarette/common"
-      Other:
+      "Other":
         $ref:
           - "_terms_enum.yaml#/other/common"
-      Pipe:
+      "Pipe":
         $ref:
           - "_terms_enum.yaml#/pipe/common"
-      Smokeless Tobacco:
+      "Smokeless Tobacco":
         $ref:
           - "_terms_enum.yaml#/smokeless_tobacco/common"
 

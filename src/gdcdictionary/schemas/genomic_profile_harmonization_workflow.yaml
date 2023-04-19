@@ -48,14 +48,14 @@ properties:
     $ref:
       - "_terms.yaml#/workflow_type/common"
     enum:
-      - FM Copy Number Variation
-      - FM Simple Somatic Mutation
-      - FM Structural Variation
-      - GENIE Copy Number Variation
-      - GENIE Simple Somatic Mutation
-      - GENIE Structural Variation
-      - MuTect2
-      - VCF LiftOver
+      - "FM Copy Number Variation"
+      - "FM Simple Somatic Mutation"
+      - "FM Structural Variation"
+      - "GENIE Copy Number Variation"
+      - "GENIE Simple Somatic Mutation"
+      - "GENIE Structural Variation"
+      - "MuTect2"
+      - "VCF LiftOver"
 
   submitted_genomic_profiles:
     $ref: "_definitions.yaml#/to_one"

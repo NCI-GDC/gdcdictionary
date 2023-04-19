@@ -49,7 +49,7 @@ properties:
     $ref:
       - "_terms.yaml#/workflow_type/common"
     enum:
-      - Liftover
+      - "Liftover"
 
   submitted_methylation_beta_values:
     $ref: "_definitions.yaml#/to_one"

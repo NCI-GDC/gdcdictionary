@@ -117,20 +117,9 @@ properties:
     type: boolean
     default: false
 
-  source_center:
+  selected_normal_low_pass_wgs:
     $ref:
-      - "_terms.yaml#/source_center/common"
-    type: string
-
-  selected_normal_wxs:
-    $ref:
-      - "_terms.yaml#/selected_normal_wxs/common"
-    type: boolean
-    default: false
-
-  selected_normal_wgs:
-    $ref:
-      - "_terms.yaml#/selected_normal_wgs/common"
+      - "_terms.yaml#/selected_normal_low_pass_wgs/common"
     type: boolean
     default: false
 
@@ -140,11 +129,22 @@ properties:
     type: boolean
     default: false
 
-  selected_normal_low_pass_wgs:
+  selected_normal_wgs:
     $ref:
-      - "_terms.yaml#/selected_normal_low_pass_wgs/common"
+      - "_terms.yaml#/selected_normal_wgs/common"
     type: boolean
     default: false
+
+  selected_normal_wxs:
+    $ref:
+      - "_terms.yaml#/selected_normal_wxs/common"
+    type: boolean
+    default: false
+
+  source_center:
+    $ref:
+      - "_terms.yaml#/source_center/common"
+    type: string
 
   analytes:
     $ref: "_definitions.yaml#/to_one"

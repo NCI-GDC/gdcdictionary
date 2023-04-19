@@ -27,7 +27,14 @@ uniqueKeys:
 
 properties:
 
-  type:
+  bcr_id:
+    description: >-
+      TCGA-provided BCR id.
+    type: string
+
+  code:
+    description: >-
+      TCGA-provided TSS code.
     type: string
 
   id:
@@ -41,17 +48,10 @@ properties:
       Name of the source site.
     type: string
 
-  code:
-    description: >-
-      TCGA-provided TSS code.
-    type: string
-
   project:
     description: >-
       Study name of the project.
     type: string
 
-  bcr_id:
-    description: >-
-      TCGA-provided BCR id.
+  type:
     type: string

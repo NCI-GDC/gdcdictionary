@@ -109,45 +109,45 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
-      - Sequencing Reads
-
-  data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
-    enum:
-      - Aligned Reads
+      - "Sequencing Reads"
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - BAM
+      - "BAM"
+
+  data_type:
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - "Aligned Reads"
 
   experimental_strategy:
     $ref:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
-      - ATAC-Seq
-      - Bisulfite-Seq
-      - ChIP-Seq
-      - HiChIP
-      - m6A MeRIP-Seq
-      - miRNA-Seq
-      - RNA-Seq
-      - scATAC-Seq
-      - scRNA-Seq
-      - Targeted Sequencing
-      - Validation
-      - WGS
-      - WXS
+      - "ATAC-Seq"
+      - "Bisulfite-Seq"
+      - "ChIP-Seq"
+      - "HiChIP"
+      - "m6A MeRIP-Seq"
+      - "miRNA-Seq"
+      - "RNA-Seq"
+      - "scATAC-Seq"
+      - "scRNA-Seq"
+      - "Targeted Sequencing"
+      - "Validation"
+      - "WGS"
+      - "WXS"
     enumDef:
-      Targeted Sequencing:
+      "Targeted Sequencing":
         $ref:
           - "_terms_enum.yaml#/targeted_sequencing/common"
-      WGS:
+      "WGS":
         $ref:
           - "_terms_enum.yaml#/wgs/common"
-      WXS:
+      "WXS":
         $ref:
           - "_terms_enum.yaml#/wxs/common"
 
@@ -156,17 +156,17 @@ properties:
       - "_terms.yaml#/mean_coverage/common"
     type: number
 
-  msi_status:
-    description: >-
-      MSIsensor determination of either microsatellite stability or instability.
-    enum:
-      - MSI
-      - MSS
-
   msi_score:
     description: >-
       Numeric score denoting the aligned reads file's MSI score from MSIsensor.
     type: number
+
+  msi_status:
+    description: >-
+      MSIsensor determination of either microsatellite stability or instability.
+    enum:
+      - "MSI"
+      - "MSS"
 
   pairs_on_diff_chr:
     $ref:
@@ -207,6 +207,11 @@ properties:
       - "_terms.yaml#/proportion_targets_no_coverage/common"
     type: number
 
+  total_reads:
+    $ref:
+      - "_terms.yaml#/total_reads/common"
+    type: integer
+
   tumor_ploidy:
     $ref:
       - "_terms.yaml#/tumor_ploidy/common"
@@ -216,11 +221,6 @@ properties:
     $ref:
       - "_terms.yaml#/tumor_purity/common"
     type: number
-
-  total_reads:
-    $ref:
-      - "_terms.yaml#/total_reads/common"
-    type: integer
 
   alignment_cocleaning_workflows:
     $ref: "_definitions.yaml#/to_one"

@@ -65,49 +65,49 @@ properties:
     $ref:
       - "_terms.yaml#/cause_of_death/common"
     enum:
-      - Cancer Related
-      - Cardiovascular Disorder, NOS
-      - End-stage Renal Disease
-      - Infection
-      - Not Cancer Related
-      - Renal Disorder, NOS
-      - Spinal Muscular Atrophy
-      - Surgical Complications
-      - Toxicity
-      - Unknown
-      - Not Reported
+      - "Cancer Related"
+      - "Cardiovascular Disorder, NOS"
+      - "End-stage Renal Disease"
+      - "Infection"
+      - "Not Cancer Related"
+      - "Renal Disorder, NOS"
+      - "Spinal Muscular Atrophy"
+      - "Surgical Complications"
+      - "Toxicity"
+      - "Unknown"
+      - "Not Reported"
     enumDef:
-      Cancer Related:
+      "Cancer Related":
         $ref:
           - "_terms_enum.yaml#/cancer_related/common"
-      Cardiovascular Disorder, NOS:
+      "Cardiovascular Disorder, NOS":
         $ref:
           - "_terms_enum.yaml#/cardiovascular_disorder_nos/common"
-      End-stage Renal Disease:
+      "End-stage Renal Disease":
         $ref:
           - "_terms_enum.yaml#/endstage_renal_disease/common"
-      Infection:
+      "Infection":
         $ref:
           - "_terms_enum.yaml#/infection/common"
-      Not Cancer Related:
+      "Not Cancer Related":
         $ref:
           - "_terms_enum.yaml#/not_cancer_related/common"
-      Renal Disorder, NOS:
+      "Renal Disorder, NOS":
         $ref:
           - "_terms_enum.yaml#/renal_disorder_nos/common"
-      Spinal Muscular Atrophy:
+      "Spinal Muscular Atrophy":
         $ref:
           - "_terms_enum.yaml#/spinal_muscular_atrophy/common"
-      Surgical Complications:
+      "Surgical Complications":
         $ref:
           - "_terms_enum.yaml#/surgical_complications/common"
-      Toxicity:
+      "Toxicity":
         $ref:
           - "_terms_enum.yaml#/toxicity/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -115,29 +115,29 @@ properties:
     $ref:
       - "_terms.yaml#/cause_of_death_source/common"
     enum:
-      - Autopsy
-      - Death Certificate
-      - Medical Record
-      - Social Security Death Index
-      - Unknown
-      - Not Reported
+      - "Autopsy"
+      - "Death Certificate"
+      - "Medical Record"
+      - "Social Security Death Index"
+      - "Unknown"
+      - "Not Reported"
     enumDef:
-      Autopsy:
+      "Autopsy":
         $ref:
           - "_terms_enum.yaml#/autopsy/common"
-      Death Certificate:
+      "Death Certificate":
         $ref:
           - "_terms_enum.yaml#/death_certificate/common"
-      Medical Record:
+      "Medical Record":
         $ref:
           - "_terms_enum.yaml#/medical_record/common"
-      Social Security Death Index:
+      "Social Security Death Index":
         $ref:
           - "_terms_enum.yaml#/social_security_death_index/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -145,933 +145,933 @@ properties:
     $ref:
       - "_terms.yaml#/country_of_residence_at_enrollment/common"
     enum:
-      - Afghanistan
-      - Albania
-      - Algeria
-      - Andorra
-      - Angola
-      - Anguilla
-      - Antigua and Barbuda
-      - Argentina
-      - Armenia
-      - Aruba
-      - Australia
-      - Austria
-      - Azerbaijan
-      - Bahamas
-      - Bahrain
-      - Bangladesh
-      - Barbados
-      - Belarus
-      - Belgium
-      - Belize
-      - Benin
-      - Bermuda
-      - Bhutan
-      - Bolivia
-      - Bosnia and Herzegovina
-      - Botswana
-      - Brazil
-      - Brunei
-      - Bulgaria
-      - Burkina Faso
-      - Burundi
-      - Cambodia
-      - Cameroon
-      - Canada
-      - Cape Verde
-      - Cayman Islands
-      - Central African Republic
-      - Chad
-      - Chile
-      - China
-      - Colombia
-      - Comoros
-      - Congo
-      - Cook Islands
-      - Costa Rica
-      - Cote d'Ivoire
-      - Croatia
-      - Cuba
-      - Curacao
-      - Cyprus
-      - Czech Republic (Czechia)
-      - Democratic Republic of the Congo
-      - Denmark
-      - Djibouti
-      - Dominica
-      - Dominican Republic
-      - Ecuador
-      - Egypt
-      - El Salvador
-      - Equatorial Guinea
-      - Eritrea
-      - Estonia
-      - Eswatini
-      - Ethiopia
-      - Falkland Islands (Malvinas)
-      - Faroe Islands
-      - Federated States of Micronesia
-      - Fiji
-      - Finland
-      - France
-      - French Guiana
-      - French Polynesia
-      - Gabon
-      - Gambia
-      - Georgia
-      - Germany
-      - Ghana
-      - Gibraltar
-      - Greece
-      - Greenland
-      - Grenada
-      - Guadeloupe
-      - Guam
-      - Guatemala
-      - Guernsey
-      - Guinea
-      - Guinea-Bissau
-      - Guyana
-      - Haiti
-      - Holy See
-      - Honduras
-      - Hong Kong
-      - Hungary
-      - Iceland
-      - India
-      - Indonesia
-      - Iran
-      - Iraq
-      - Ireland
-      - Isle of Man
-      - Israel
-      - Italy
-      - Jamaica
-      - Japan
-      - Jersey
-      - Jordan
-      - Kazakhstan
-      - Kenya
-      - Kiribati
-      - Kosovo
-      - Kuwait
-      - Kyrgyzstan
-      - Laos
-      - Latvia
-      - Lebanon
-      - Lesotho
-      - Liberia
-      - Libya
-      - Liechtenstein
-      - Lithuania
-      - Luxembourg
-      - Macau
-      - Madagascar
-      - Malawi
-      - Malaysia
-      - Maldives
-      - Mali
-      - Malta
-      - Marshall Islands
-      - Martinique
-      - Mauritania
-      - Mauritius
-      - Mayotte
-      - Mexico
-      - Moldova
-      - Monaco
-      - Mongolia
-      - Montenegro
-      - Montserrat
-      - Morocco
-      - Mozambique
-      - Myanmar
-      - Namibia
-      - Nauru
-      - Nepal
-      - Netherlands
-      - New Caledonia
-      - New Zealand
-      - Nicaragua
-      - Niger
-      - Nigeria
-      - Niue
-      - North Korea
-      - North Macedonia
-      - Northern Mariana Islands
-      - Norway
-      - Oman
-      - Pakistan
-      - Palau
-      - Panama
-      - Papua New Guinea
-      - Paraguay
-      - Peru
-      - Philippines
-      - Poland
-      - Portugal
-      - Puerto Rico
-      - Qatar
-      - Reunion
-      - Romania
-      - Russia
-      - Rwanda
-      - Saint Helena, Ascension and Tristan da Cunha
-      - Saint Kitts and Nevis
-      - Saint Lucia
-      - Saint Pierre and Miquelon
-      - Saint Vincent and the Grenadines
-      - Samoa
-      - San Marino
-      - Sao Tome and Principe
-      - Saudi Arabia
-      - Senegal
-      - Serbia
-      - Seychelles
-      - Sierra Leone
-      - Singapore
-      - Slovakia
-      - Slovenia
-      - Solomon Islands
-      - Somalia
-      - South Africa
-      - South Korea
-      - South Sudan
-      - Spain
-      - Sri Lanka
-      - State of Palestine
-      - Sudan
-      - Suriname
-      - Svalbard & Jan Mayen Islands
-      - Sweden
-      - Switzerland
-      - Syria
-      - Taiwan
-      - Tajikistan
-      - Tanzania
-      - Thailand
-      - Timor-Leste
-      - Togo
-      - Tokelau
-      - Tonga
-      - Trinidad and Tobago
-      - Tunisia
-      - Turkey
-      - Turkmenistan
-      - Tuvalu
-      - Uganda
-      - Ukraine
-      - United Arab Emirates
-      - United Kingdom
-      - United States
-      - Uruguay
-      - Uzbekistan
-      - Vanuatu
-      - Venezuela
-      - Vietnam
-      - Virgin Islands, British
-      - Virgin Islands, U.S.
-      - Wallis and Futuna
-      - Western Sahara
-      - Yemen
-      - Zambia
-      - Zimbabwe
+      - "Afghanistan"
+      - "Albania"
+      - "Algeria"
+      - "Andorra"
+      - "Angola"
+      - "Anguilla"
+      - "Antigua and Barbuda"
+      - "Argentina"
+      - "Armenia"
+      - "Aruba"
+      - "Australia"
+      - "Austria"
+      - "Azerbaijan"
+      - "Bahamas"
+      - "Bahrain"
+      - "Bangladesh"
+      - "Barbados"
+      - "Belarus"
+      - "Belgium"
+      - "Belize"
+      - "Benin"
+      - "Bermuda"
+      - "Bhutan"
+      - "Bolivia"
+      - "Bosnia and Herzegovina"
+      - "Botswana"
+      - "Brazil"
+      - "Brunei"
+      - "Bulgaria"
+      - "Burkina Faso"
+      - "Burundi"
+      - "Cambodia"
+      - "Cameroon"
+      - "Canada"
+      - "Cape Verde"
+      - "Cayman Islands"
+      - "Central African Republic"
+      - "Chad"
+      - "Chile"
+      - "China"
+      - "Colombia"
+      - "Comoros"
+      - "Congo"
+      - "Cook Islands"
+      - "Costa Rica"
+      - "Cote d'Ivoire"
+      - "Croatia"
+      - "Cuba"
+      - "Curacao"
+      - "Cyprus"
+      - "Czech Republic (Czechia)"
+      - "Democratic Republic of the Congo"
+      - "Denmark"
+      - "Djibouti"
+      - "Dominica"
+      - "Dominican Republic"
+      - "Ecuador"
+      - "Egypt"
+      - "El Salvador"
+      - "Equatorial Guinea"
+      - "Eritrea"
+      - "Estonia"
+      - "Eswatini"
+      - "Ethiopia"
+      - "Falkland Islands (Malvinas)"
+      - "Faroe Islands"
+      - "Federated States of Micronesia"
+      - "Fiji"
+      - "Finland"
+      - "France"
+      - "French Guiana"
+      - "French Polynesia"
+      - "Gabon"
+      - "Gambia"
+      - "Georgia"
+      - "Germany"
+      - "Ghana"
+      - "Gibraltar"
+      - "Greece"
+      - "Greenland"
+      - "Grenada"
+      - "Guadeloupe"
+      - "Guam"
+      - "Guatemala"
+      - "Guernsey"
+      - "Guinea"
+      - "Guinea-Bissau"
+      - "Guyana"
+      - "Haiti"
+      - "Holy See"
+      - "Honduras"
+      - "Hong Kong"
+      - "Hungary"
+      - "Iceland"
+      - "India"
+      - "Indonesia"
+      - "Iran"
+      - "Iraq"
+      - "Ireland"
+      - "Isle of Man"
+      - "Israel"
+      - "Italy"
+      - "Jamaica"
+      - "Japan"
+      - "Jersey"
+      - "Jordan"
+      - "Kazakhstan"
+      - "Kenya"
+      - "Kiribati"
+      - "Kosovo"
+      - "Kuwait"
+      - "Kyrgyzstan"
+      - "Laos"
+      - "Latvia"
+      - "Lebanon"
+      - "Lesotho"
+      - "Liberia"
+      - "Libya"
+      - "Liechtenstein"
+      - "Lithuania"
+      - "Luxembourg"
+      - "Macau"
+      - "Madagascar"
+      - "Malawi"
+      - "Malaysia"
+      - "Maldives"
+      - "Mali"
+      - "Malta"
+      - "Marshall Islands"
+      - "Martinique"
+      - "Mauritania"
+      - "Mauritius"
+      - "Mayotte"
+      - "Mexico"
+      - "Moldova"
+      - "Monaco"
+      - "Mongolia"
+      - "Montenegro"
+      - "Montserrat"
+      - "Morocco"
+      - "Mozambique"
+      - "Myanmar"
+      - "Namibia"
+      - "Nauru"
+      - "Nepal"
+      - "Netherlands"
+      - "New Caledonia"
+      - "New Zealand"
+      - "Nicaragua"
+      - "Niger"
+      - "Nigeria"
+      - "Niue"
+      - "North Korea"
+      - "North Macedonia"
+      - "Northern Mariana Islands"
+      - "Norway"
+      - "Oman"
+      - "Pakistan"
+      - "Palau"
+      - "Panama"
+      - "Papua New Guinea"
+      - "Paraguay"
+      - "Peru"
+      - "Philippines"
+      - "Poland"
+      - "Portugal"
+      - "Puerto Rico"
+      - "Qatar"
+      - "Reunion"
+      - "Romania"
+      - "Russia"
+      - "Rwanda"
+      - "Saint Helena, Ascension and Tristan da Cunha"
+      - "Saint Kitts and Nevis"
+      - "Saint Lucia"
+      - "Saint Pierre and Miquelon"
+      - "Saint Vincent and the Grenadines"
+      - "Samoa"
+      - "San Marino"
+      - "Sao Tome and Principe"
+      - "Saudi Arabia"
+      - "Senegal"
+      - "Serbia"
+      - "Seychelles"
+      - "Sierra Leone"
+      - "Singapore"
+      - "Slovakia"
+      - "Slovenia"
+      - "Solomon Islands"
+      - "Somalia"
+      - "South Africa"
+      - "South Korea"
+      - "South Sudan"
+      - "Spain"
+      - "Sri Lanka"
+      - "State of Palestine"
+      - "Sudan"
+      - "Suriname"
+      - "Svalbard & Jan Mayen Islands"
+      - "Sweden"
+      - "Switzerland"
+      - "Syria"
+      - "Taiwan"
+      - "Tajikistan"
+      - "Tanzania"
+      - "Thailand"
+      - "Timor-Leste"
+      - "Togo"
+      - "Tokelau"
+      - "Tonga"
+      - "Trinidad and Tobago"
+      - "Tunisia"
+      - "Turkey"
+      - "Turkmenistan"
+      - "Tuvalu"
+      - "Uganda"
+      - "Ukraine"
+      - "United Arab Emirates"
+      - "United Kingdom"
+      - "United States"
+      - "Uruguay"
+      - "Uzbekistan"
+      - "Vanuatu"
+      - "Venezuela"
+      - "Vietnam"
+      - "Virgin Islands, British"
+      - "Virgin Islands, U.S."
+      - "Wallis and Futuna"
+      - "Western Sahara"
+      - "Yemen"
+      - "Zambia"
+      - "Zimbabwe"
     enumDef:
-      Afghanistan:
+      "Afghanistan":
         $ref:
           - "_terms_enum.yaml#/afghanistan/common"
-      Albania:
+      "Albania":
         $ref:
           - "_terms_enum.yaml#/albania/common"
-      Algeria:
+      "Algeria":
         $ref:
           - "_terms_enum.yaml#/algeria/common"
-      Andorra:
+      "Andorra":
         $ref:
           - "_terms_enum.yaml#/andorra/common"
-      Angola:
+      "Angola":
         $ref:
           - "_terms_enum.yaml#/angola/common"
-      Anguilla:
+      "Anguilla":
         $ref:
           - "_terms_enum.yaml#/anguilla/common"
-      Antigua and Barbuda:
+      "Antigua and Barbuda":
         $ref:
           - "_terms_enum.yaml#/antigua_and_barbuda/common"
-      Argentina:
+      "Argentina":
         $ref:
           - "_terms_enum.yaml#/argentina/common"
-      Armenia:
+      "Armenia":
         $ref:
           - "_terms_enum.yaml#/armenia/common"
-      Aruba:
+      "Aruba":
         $ref:
           - "_terms_enum.yaml#/aruba/common"
-      Australia:
+      "Australia":
         $ref:
           - "_terms_enum.yaml#/australia/common"
-      Austria:
+      "Austria":
         $ref:
           - "_terms_enum.yaml#/austria/common"
-      Azerbaijan:
+      "Azerbaijan":
         $ref:
           - "_terms_enum.yaml#/azerbaijan/common"
-      Bahamas:
+      "Bahamas":
         $ref:
           - "_terms_enum.yaml#/bahamas/common"
-      Bahrain:
+      "Bahrain":
         $ref:
           - "_terms_enum.yaml#/bahrain/common"
-      Bangladesh:
+      "Bangladesh":
         $ref:
           - "_terms_enum.yaml#/bangladesh/common"
-      Barbados:
+      "Barbados":
         $ref:
           - "_terms_enum.yaml#/barbados/common"
-      Belarus:
+      "Belarus":
         $ref:
           - "_terms_enum.yaml#/belarus/common"
-      Belgium:
+      "Belgium":
         $ref:
           - "_terms_enum.yaml#/belgium/common"
-      Belize:
+      "Belize":
         $ref:
           - "_terms_enum.yaml#/belize/common"
-      Benin:
+      "Benin":
         $ref:
           - "_terms_enum.yaml#/benin/common"
-      Bermuda:
+      "Bermuda":
         $ref:
           - "_terms_enum.yaml#/bermuda/common"
-      Bhutan:
+      "Bhutan":
         $ref:
           - "_terms_enum.yaml#/bhutan/common"
-      Bolivia:
+      "Bolivia":
         $ref:
           - "_terms_enum.yaml#/bolivia/common"
-      Bosnia and Herzegovina:
+      "Bosnia and Herzegovina":
         $ref:
           - "_terms_enum.yaml#/bosnia_and_herzegovina/common"
-      Botswana:
+      "Botswana":
         $ref:
           - "_terms_enum.yaml#/botswana/common"
-      Brazil:
+      "Brazil":
         $ref:
           - "_terms_enum.yaml#/brazil/common"
-      Brunei:
+      "Brunei":
         $ref:
           - "_terms_enum.yaml#/brunei/common"
-      Bulgaria:
+      "Bulgaria":
         $ref:
           - "_terms_enum.yaml#/bulgaria/common"
-      Burkina Faso:
+      "Burkina Faso":
         $ref:
           - "_terms_enum.yaml#/burkina_faso/common"
-      Burundi:
+      "Burundi":
         $ref:
           - "_terms_enum.yaml#/burundi/common"
-      Cambodia:
+      "Cambodia":
         $ref:
           - "_terms_enum.yaml#/cambodia/common"
-      Cameroon:
+      "Cameroon":
         $ref:
           - "_terms_enum.yaml#/cameroon/common"
-      Canada:
+      "Canada":
         $ref:
           - "_terms_enum.yaml#/canada/common"
-      Cape Verde:
+      "Cape Verde":
         $ref:
           - "_terms_enum.yaml#/cape_verde/common"
-      Cayman Islands:
+      "Cayman Islands":
         $ref:
           - "_terms_enum.yaml#/cayman_islands/common"
-      Central African Republic:
+      "Central African Republic":
         $ref:
           - "_terms_enum.yaml#/central_african_republic/common"
-      Chad:
+      "Chad":
         $ref:
           - "_terms_enum.yaml#/chad/common"
-      Chile:
+      "Chile":
         $ref:
           - "_terms_enum.yaml#/chile/common"
-      China:
+      "China":
         $ref:
           - "_terms_enum.yaml#/china/common"
-      Colombia:
+      "Colombia":
         $ref:
           - "_terms_enum.yaml#/colombia/common"
-      Comoros:
+      "Comoros":
         $ref:
           - "_terms_enum.yaml#/comoros/common"
-      Congo:
+      "Congo":
         $ref:
           - "_terms_enum.yaml#/congo/common"
-      Cook Islands:
+      "Cook Islands":
         $ref:
           - "_terms_enum.yaml#/cook_islands/common"
-      Costa Rica:
+      "Costa Rica":
         $ref:
           - "_terms_enum.yaml#/costa_rica/common"
-      Cote d'Ivoire:
+      "Cote d'Ivoire":
         $ref:
           - "_terms_enum.yaml#/cote_divoire/common"
-      Croatia:
+      "Croatia":
         $ref:
           - "_terms_enum.yaml#/croatia/common"
-      Cuba:
+      "Cuba":
         $ref:
           - "_terms_enum.yaml#/cuba/common"
-      Curacao:
+      "Curacao":
         $ref:
           - "_terms_enum.yaml#/curacao/common"
-      Cyprus:
+      "Cyprus":
         $ref:
           - "_terms_enum.yaml#/cyprus/common"
-      Czech Republic (Czechia):
+      "Czech Republic (Czechia)":
         $ref:
           - "_terms_enum.yaml#/czech_republic_czechia/common"
-      Democratic Republic of the Congo:
+      "Democratic Republic of the Congo":
         $ref:
           - "_terms_enum.yaml#/democratic_republic_of_the_congo/common"
-      Denmark:
+      "Denmark":
         $ref:
           - "_terms_enum.yaml#/denmark/common"
-      Djibouti:
+      "Djibouti":
         $ref:
           - "_terms_enum.yaml#/djibouti/common"
-      Dominica:
+      "Dominica":
         $ref:
           - "_terms_enum.yaml#/dominica/common"
-      Dominican Republic:
+      "Dominican Republic":
         $ref:
           - "_terms_enum.yaml#/dominican_republic/common"
-      Ecuador:
+      "Ecuador":
         $ref:
           - "_terms_enum.yaml#/ecuador/common"
-      Egypt:
+      "Egypt":
         $ref:
           - "_terms_enum.yaml#/egypt/common"
-      El Salvador:
+      "El Salvador":
         $ref:
           - "_terms_enum.yaml#/el_salvador/common"
-      Equatorial Guinea:
+      "Equatorial Guinea":
         $ref:
           - "_terms_enum.yaml#/equatorial_guinea/common"
-      Eritrea:
+      "Eritrea":
         $ref:
           - "_terms_enum.yaml#/eritrea/common"
-      Estonia:
+      "Estonia":
         $ref:
           - "_terms_enum.yaml#/estonia/common"
-      Eswatini:
+      "Eswatini":
         $ref:
           - "_terms_enum.yaml#/eswatini/common"
-      Ethiopia:
+      "Ethiopia":
         $ref:
           - "_terms_enum.yaml#/ethiopia/common"
-      Falkland Islands (Malvinas):
+      "Falkland Islands (Malvinas)":
         $ref:
           - "_terms_enum.yaml#/falkland_islands_malvinas/common"
-      Faroe Islands:
+      "Faroe Islands":
         $ref:
           - "_terms_enum.yaml#/faroe_islands/common"
-      Federated States of Micronesia:
+      "Federated States of Micronesia":
         $ref:
           - "_terms_enum.yaml#/federated_states_of_micronesia/common"
-      Fiji:
+      "Fiji":
         $ref:
           - "_terms_enum.yaml#/fiji/common"
-      Finland:
+      "Finland":
         $ref:
           - "_terms_enum.yaml#/finland/common"
-      France:
+      "France":
         $ref:
           - "_terms_enum.yaml#/france/common"
-      French Guiana:
+      "French Guiana":
         $ref:
           - "_terms_enum.yaml#/french_guiana/common"
-      French Polynesia:
+      "French Polynesia":
         $ref:
           - "_terms_enum.yaml#/french_polynesia/common"
-      Gabon:
+      "Gabon":
         $ref:
           - "_terms_enum.yaml#/gabon/common"
-      Gambia:
+      "Gambia":
         $ref:
           - "_terms_enum.yaml#/gambia/common"
-      Georgia:
+      "Georgia":
         $ref:
           - "_terms_enum.yaml#/georgia/common"
-      Germany:
+      "Germany":
         $ref:
           - "_terms_enum.yaml#/germany/common"
-      Ghana:
+      "Ghana":
         $ref:
           - "_terms_enum.yaml#/ghana/common"
-      Gibraltar:
+      "Gibraltar":
         $ref:
           - "_terms_enum.yaml#/gibraltar/common"
-      Greece:
+      "Greece":
         $ref:
           - "_terms_enum.yaml#/greece/common"
-      Greenland:
+      "Greenland":
         $ref:
           - "_terms_enum.yaml#/greenland/common"
-      Grenada:
+      "Grenada":
         $ref:
           - "_terms_enum.yaml#/grenada/common"
-      Guadeloupe:
+      "Guadeloupe":
         $ref:
           - "_terms_enum.yaml#/guadeloupe/common"
-      Guam:
+      "Guam":
         $ref:
           - "_terms_enum.yaml#/guam/common"
-      Guatemala:
+      "Guatemala":
         $ref:
           - "_terms_enum.yaml#/guatemala/common"
-      Guernsey:
+      "Guernsey":
         $ref:
           - "_terms_enum.yaml#/guernsey/common"
-      Guinea:
+      "Guinea":
         $ref:
           - "_terms_enum.yaml#/guinea/common"
-      Guinea-Bissau:
+      "Guinea-Bissau":
         $ref:
           - "_terms_enum.yaml#/guineabissau/common"
-      Guyana:
+      "Guyana":
         $ref:
           - "_terms_enum.yaml#/guyana/common"
-      Haiti:
+      "Haiti":
         $ref:
           - "_terms_enum.yaml#/haiti/common"
-      Holy See:
+      "Holy See":
         $ref:
           - "_terms_enum.yaml#/holy_see/common"
-      Honduras:
+      "Honduras":
         $ref:
           - "_terms_enum.yaml#/honduras/common"
-      Hong Kong:
+      "Hong Kong":
         $ref:
           - "_terms_enum.yaml#/hong_kong/common"
-      Hungary:
+      "Hungary":
         $ref:
           - "_terms_enum.yaml#/hungary/common"
-      Iceland:
+      "Iceland":
         $ref:
           - "_terms_enum.yaml#/iceland/common"
-      India:
+      "India":
         $ref:
           - "_terms_enum.yaml#/india/common"
-      Indonesia:
+      "Indonesia":
         $ref:
           - "_terms_enum.yaml#/indonesia/common"
-      Iran:
+      "Iran":
         $ref:
           - "_terms_enum.yaml#/iran/common"
-      Iraq:
+      "Iraq":
         $ref:
           - "_terms_enum.yaml#/iraq/common"
-      Ireland:
+      "Ireland":
         $ref:
           - "_terms_enum.yaml#/ireland/common"
-      Isle of Man:
+      "Isle of Man":
         $ref:
           - "_terms_enum.yaml#/isle_of_man/common"
-      Israel:
+      "Israel":
         $ref:
           - "_terms_enum.yaml#/israel/common"
-      Italy:
+      "Italy":
         $ref:
           - "_terms_enum.yaml#/italy/common"
-      Jamaica:
+      "Jamaica":
         $ref:
           - "_terms_enum.yaml#/jamaica/common"
-      Japan:
+      "Japan":
         $ref:
           - "_terms_enum.yaml#/japan/common"
-      Jersey:
+      "Jersey":
         $ref:
           - "_terms_enum.yaml#/jersey/common"
-      Jordan:
+      "Jordan":
         $ref:
           - "_terms_enum.yaml#/jordan/common"
-      Kazakhstan:
+      "Kazakhstan":
         $ref:
           - "_terms_enum.yaml#/kazakhstan/common"
-      Kenya:
+      "Kenya":
         $ref:
           - "_terms_enum.yaml#/kenya/common"
-      Kiribati:
+      "Kiribati":
         $ref:
           - "_terms_enum.yaml#/kiribati/common"
-      Kosovo:
+      "Kosovo":
         $ref:
           - "_terms_enum.yaml#/kosovo/common"
-      Kuwait:
+      "Kuwait":
         $ref:
           - "_terms_enum.yaml#/kuwait/common"
-      Kyrgyzstan:
+      "Kyrgyzstan":
         $ref:
           - "_terms_enum.yaml#/kyrgyzstan/common"
-      Laos:
+      "Laos":
         $ref:
           - "_terms_enum.yaml#/laos/common"
-      Latvia:
+      "Latvia":
         $ref:
           - "_terms_enum.yaml#/latvia/common"
-      Lebanon:
+      "Lebanon":
         $ref:
           - "_terms_enum.yaml#/lebanon/common"
-      Lesotho:
+      "Lesotho":
         $ref:
           - "_terms_enum.yaml#/lesotho/common"
-      Liberia:
+      "Liberia":
         $ref:
           - "_terms_enum.yaml#/liberia/common"
-      Libya:
+      "Libya":
         $ref:
           - "_terms_enum.yaml#/libya/common"
-      Liechtenstein:
+      "Liechtenstein":
         $ref:
           - "_terms_enum.yaml#/liechtenstein/common"
-      Lithuania:
+      "Lithuania":
         $ref:
           - "_terms_enum.yaml#/lithuania/common"
-      Luxembourg:
+      "Luxembourg":
         $ref:
           - "_terms_enum.yaml#/luxembourg/common"
-      Macau:
+      "Macau":
         $ref:
           - "_terms_enum.yaml#/macau/common"
-      Madagascar:
+      "Madagascar":
         $ref:
           - "_terms_enum.yaml#/madagascar/common"
-      Malawi:
+      "Malawi":
         $ref:
           - "_terms_enum.yaml#/malawi/common"
-      Malaysia:
+      "Malaysia":
         $ref:
           - "_terms_enum.yaml#/malaysia/common"
-      Maldives:
+      "Maldives":
         $ref:
           - "_terms_enum.yaml#/maldives/common"
-      Mali:
+      "Mali":
         $ref:
           - "_terms_enum.yaml#/mali/common"
-      Malta:
+      "Malta":
         $ref:
           - "_terms_enum.yaml#/malta/common"
-      Marshall Islands:
+      "Marshall Islands":
         $ref:
           - "_terms_enum.yaml#/marshall_islands/common"
-      Martinique:
+      "Martinique":
         $ref:
           - "_terms_enum.yaml#/martinique/common"
-      Mauritania:
+      "Mauritania":
         $ref:
           - "_terms_enum.yaml#/mauritania/common"
-      Mauritius:
+      "Mauritius":
         $ref:
           - "_terms_enum.yaml#/mauritius/common"
-      Mayotte:
+      "Mayotte":
         $ref:
           - "_terms_enum.yaml#/mayotte/common"
-      Mexico:
+      "Mexico":
         $ref:
           - "_terms_enum.yaml#/mexico/common"
-      Moldova:
+      "Moldova":
         $ref:
           - "_terms_enum.yaml#/moldova/common"
-      Monaco:
+      "Monaco":
         $ref:
           - "_terms_enum.yaml#/monaco/common"
-      Mongolia:
+      "Mongolia":
         $ref:
           - "_terms_enum.yaml#/mongolia/common"
-      Montenegro:
+      "Montenegro":
         $ref:
           - "_terms_enum.yaml#/montenegro/common"
-      Montserrat:
+      "Montserrat":
         $ref:
           - "_terms_enum.yaml#/montserrat/common"
-      Morocco:
+      "Morocco":
         $ref:
           - "_terms_enum.yaml#/morocco/common"
-      Mozambique:
+      "Mozambique":
         $ref:
           - "_terms_enum.yaml#/mozambique/common"
-      Myanmar:
+      "Myanmar":
         $ref:
           - "_terms_enum.yaml#/myanmar/common"
-      Namibia:
+      "Namibia":
         $ref:
           - "_terms_enum.yaml#/namibia/common"
-      Nauru:
+      "Nauru":
         $ref:
           - "_terms_enum.yaml#/nauru/common"
-      Nepal:
+      "Nepal":
         $ref:
           - "_terms_enum.yaml#/nepal/common"
-      Netherlands:
+      "Netherlands":
         $ref:
           - "_terms_enum.yaml#/netherlands/common"
-      New Caledonia:
+      "New Caledonia":
         $ref:
           - "_terms_enum.yaml#/new_caledonia/common"
-      New Zealand:
+      "New Zealand":
         $ref:
           - "_terms_enum.yaml#/new_zealand/common"
-      Nicaragua:
+      "Nicaragua":
         $ref:
           - "_terms_enum.yaml#/nicaragua/common"
-      Niger:
+      "Niger":
         $ref:
           - "_terms_enum.yaml#/niger/common"
-      Nigeria:
+      "Nigeria":
         $ref:
           - "_terms_enum.yaml#/nigeria/common"
-      Niue:
+      "Niue":
         $ref:
           - "_terms_enum.yaml#/niue/common"
-      North Korea:
+      "North Korea":
         $ref:
           - "_terms_enum.yaml#/north_korea/common"
-      North Macedonia:
+      "North Macedonia":
         $ref:
           - "_terms_enum.yaml#/north_macedonia/common"
-      Northern Mariana Islands:
+      "Northern Mariana Islands":
         $ref:
           - "_terms_enum.yaml#/northern_mariana_islands/common"
-      Norway:
+      "Norway":
         $ref:
           - "_terms_enum.yaml#/norway/common"
-      Oman:
+      "Oman":
         $ref:
           - "_terms_enum.yaml#/oman/common"
-      Pakistan:
+      "Pakistan":
         $ref:
           - "_terms_enum.yaml#/pakistan/common"
-      Palau:
+      "Palau":
         $ref:
           - "_terms_enum.yaml#/palau/common"
-      Panama:
+      "Panama":
         $ref:
           - "_terms_enum.yaml#/panama/common"
-      Papua New Guinea:
+      "Papua New Guinea":
         $ref:
           - "_terms_enum.yaml#/papua_new_guinea/common"
-      Paraguay:
+      "Paraguay":
         $ref:
           - "_terms_enum.yaml#/paraguay/common"
-      Peru:
+      "Peru":
         $ref:
           - "_terms_enum.yaml#/peru/common"
-      Philippines:
+      "Philippines":
         $ref:
           - "_terms_enum.yaml#/philippines/common"
-      Poland:
+      "Poland":
         $ref:
           - "_terms_enum.yaml#/poland/common"
-      Portugal:
+      "Portugal":
         $ref:
           - "_terms_enum.yaml#/portugal/common"
-      Puerto Rico:
+      "Puerto Rico":
         $ref:
           - "_terms_enum.yaml#/puerto_rico/common"
-      Qatar:
+      "Qatar":
         $ref:
           - "_terms_enum.yaml#/qatar/common"
-      Reunion:
+      "Reunion":
         $ref:
           - "_terms_enum.yaml#/reunion/common"
-      Romania:
+      "Romania":
         $ref:
           - "_terms_enum.yaml#/romania/common"
-      Russia:
+      "Russia":
         $ref:
           - "_terms_enum.yaml#/russia/common"
-      Rwanda:
+      "Rwanda":
         $ref:
           - "_terms_enum.yaml#/rwanda/common"
-      Saint Helena, Ascension and Tristan da Cunha:
+      "Saint Helena, Ascension and Tristan da Cunha":
         $ref:
           - "_terms_enum.yaml#/saint_helena_ascension_and_tristan_da_cunha/common"
-      Saint Kitts and Nevis:
+      "Saint Kitts and Nevis":
         $ref:
           - "_terms_enum.yaml#/saint_kitts_and_nevis/common"
-      Saint Lucia:
+      "Saint Lucia":
         $ref:
           - "_terms_enum.yaml#/saint_lucia/common"
-      Saint Pierre and Miquelon:
+      "Saint Pierre and Miquelon":
         $ref:
           - "_terms_enum.yaml#/saint_pierre_and_miquelon/common"
-      Saint Vincent and the Grenadines:
+      "Saint Vincent and the Grenadines":
         $ref:
           - "_terms_enum.yaml#/saint_vincent_and_the_grenadines/common"
-      Samoa:
+      "Samoa":
         $ref:
           - "_terms_enum.yaml#/samoa/common"
-      San Marino:
+      "San Marino":
         $ref:
           - "_terms_enum.yaml#/san_marino/common"
-      Sao Tome and Principe:
+      "Sao Tome and Principe":
         $ref:
           - "_terms_enum.yaml#/sao_tome_and_principe/common"
-      Saudi Arabia:
+      "Saudi Arabia":
         $ref:
           - "_terms_enum.yaml#/saudi_arabia/common"
-      Senegal:
+      "Senegal":
         $ref:
           - "_terms_enum.yaml#/senegal/common"
-      Serbia:
+      "Serbia":
         $ref:
           - "_terms_enum.yaml#/serbia/common"
-      Seychelles:
+      "Seychelles":
         $ref:
           - "_terms_enum.yaml#/seychelles/common"
-      Sierra Leone:
+      "Sierra Leone":
         $ref:
           - "_terms_enum.yaml#/sierra_leone/common"
-      Singapore:
+      "Singapore":
         $ref:
           - "_terms_enum.yaml#/singapore/common"
-      Slovakia:
+      "Slovakia":
         $ref:
           - "_terms_enum.yaml#/slovakia/common"
-      Slovenia:
+      "Slovenia":
         $ref:
           - "_terms_enum.yaml#/slovenia/common"
-      Solomon Islands:
+      "Solomon Islands":
         $ref:
           - "_terms_enum.yaml#/solomon_islands/common"
-      Somalia:
+      "Somalia":
         $ref:
           - "_terms_enum.yaml#/somalia/common"
-      South Africa:
+      "South Africa":
         $ref:
           - "_terms_enum.yaml#/south_africa/common"
-      South Korea:
+      "South Korea":
         $ref:
           - "_terms_enum.yaml#/south_korea/common"
-      South Sudan:
+      "South Sudan":
         $ref:
           - "_terms_enum.yaml#/south_sudan/common"
-      Spain:
+      "Spain":
         $ref:
           - "_terms_enum.yaml#/spain/common"
-      Sri Lanka:
+      "Sri Lanka":
         $ref:
           - "_terms_enum.yaml#/sri_lanka/common"
-      State of Palestine:
+      "State of Palestine":
         $ref:
           - "_terms_enum.yaml#/state_of_palestine/common"
-      Sudan:
+      "Sudan":
         $ref:
           - "_terms_enum.yaml#/sudan/common"
-      Suriname:
+      "Suriname":
         $ref:
           - "_terms_enum.yaml#/suriname/common"
-      Svalbard & Jan Mayen Islands:
+      "Svalbard & Jan Mayen Islands":
         $ref:
           - "_terms_enum.yaml#/svalbard__jan_mayen_islands/common"
-      Sweden:
+      "Sweden":
         $ref:
           - "_terms_enum.yaml#/sweden/common"
-      Switzerland:
+      "Switzerland":
         $ref:
           - "_terms_enum.yaml#/switzerland/common"
-      Syria:
+      "Syria":
         $ref:
           - "_terms_enum.yaml#/syria/common"
-      Taiwan:
+      "Taiwan":
         $ref:
           - "_terms_enum.yaml#/taiwan/common"
-      Tajikistan:
+      "Tajikistan":
         $ref:
           - "_terms_enum.yaml#/tajikistan/common"
-      Tanzania:
+      "Tanzania":
         $ref:
           - "_terms_enum.yaml#/tanzania/common"
-      Thailand:
+      "Thailand":
         $ref:
           - "_terms_enum.yaml#/thailand/common"
-      Timor-Leste:
+      "Timor-Leste":
         $ref:
           - "_terms_enum.yaml#/timorleste/common"
-      Togo:
+      "Togo":
         $ref:
           - "_terms_enum.yaml#/togo/common"
-      Tokelau:
+      "Tokelau":
         $ref:
           - "_terms_enum.yaml#/tokelau/common"
-      Tonga:
+      "Tonga":
         $ref:
           - "_terms_enum.yaml#/tonga/common"
-      Trinidad and Tobago:
+      "Trinidad and Tobago":
         $ref:
           - "_terms_enum.yaml#/trinidad_and_tobago/common"
-      Tunisia:
+      "Tunisia":
         $ref:
           - "_terms_enum.yaml#/tunisia/common"
-      Turkey:
+      "Turkey":
         $ref:
           - "_terms_enum.yaml#/turkey/common"
-      Turkmenistan:
+      "Turkmenistan":
         $ref:
           - "_terms_enum.yaml#/turkmenistan/common"
-      Tuvalu:
+      "Tuvalu":
         $ref:
           - "_terms_enum.yaml#/tuvalu/common"
-      Uganda:
+      "Uganda":
         $ref:
           - "_terms_enum.yaml#/uganda/common"
-      Ukraine:
+      "Ukraine":
         $ref:
           - "_terms_enum.yaml#/ukraine/common"
-      United Arab Emirates:
+      "United Arab Emirates":
         $ref:
           - "_terms_enum.yaml#/united_arab_emirates/common"
-      United Kingdom:
+      "United Kingdom":
         $ref:
           - "_terms_enum.yaml#/united_kingdom/common"
-      United States:
+      "United States":
         $ref:
           - "_terms_enum.yaml#/united_states/common"
-      Uruguay:
+      "Uruguay":
         $ref:
           - "_terms_enum.yaml#/uruguay/common"
-      Uzbekistan:
+      "Uzbekistan":
         $ref:
           - "_terms_enum.yaml#/uzbekistan/common"
-      Vanuatu:
+      "Vanuatu":
         $ref:
           - "_terms_enum.yaml#/vanuatu/common"
-      Venezuela:
+      "Venezuela":
         $ref:
           - "_terms_enum.yaml#/venezuela/common"
-      Vietnam:
+      "Vietnam":
         $ref:
           - "_terms_enum.yaml#/vietnam/common"
-      Virgin Islands, British:
+      "Virgin Islands, British":
         $ref:
           - "_terms_enum.yaml#/virgin_islands_british/common"
-      Virgin Islands, U.S.:
+      "Virgin Islands, U.S.":
         $ref:
           - "_terms_enum.yaml#/virgin_islands_us/common"
-      Wallis and Futuna:
+      "Wallis and Futuna":
         $ref:
           - "_terms_enum.yaml#/wallis_and_futuna/common"
-      Western Sahara:
+      "Western Sahara":
         $ref:
           - "_terms_enum.yaml#/western_sahara/common"
-      Yemen:
+      "Yemen":
         $ref:
           - "_terms_enum.yaml#/yemen/common"
-      Zambia:
+      "Zambia":
         $ref:
           - "_terms_enum.yaml#/zambia/common"
-      Zimbabwe:
+      "Zimbabwe":
         $ref:
           - "_terms_enum.yaml#/zimbabwe/common"
 
@@ -1093,31 +1093,31 @@ properties:
     $ref:
       - "_terms.yaml#/ethnicity/common"
     enum:
-      - hispanic or latino
-      - not hispanic or latino
-      - Unknown
-      - not reported
-      - not allowed to collect
-      - unknown
+      - "hispanic or latino"
+      - "not allowed to collect"
+      - "not hispanic or latino"
+      - "unknown"
+      - "Unknown"
+      - "not reported"
     deprecated_enum:
-      - unknown
+      - "unknown"
     enumDef:
-      hispanic or latino:
+      "hispanic or latino":
         $ref:
           - "_terms_enum.yaml#/hispanic_or_latino/common"
-      not hispanic or latino:
+      "not hispanic or latino":
         $ref:
           - "_terms_enum.yaml#/not_hispanic_or_latino/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      not reported:
+      "not reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      not allowed to collect:
+      "not allowed to collect":
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
-      unknown:
+      "unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
 
@@ -1125,25 +1125,25 @@ properties:
     $ref:
       - "_terms.yaml#/gender/common"
     enum:
-      - female
-      - male
-      - unknown
-      - unspecified
-      - not reported
+      - "female"
+      - "male"
+      - "unspecified"
+      - "unknown"
+      - "not reported"
     enumDef:
-      female:
+      "female":
         $ref:
           - "_terms_enum.yaml#/female/common"
-      male:
+      "male":
         $ref:
           - "_terms_enum.yaml#/male/common"
-      unknown:
+      "unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      unspecified:
+      "unspecified":
         $ref:
           - "_terms_enum.yaml#/unspecified/common"
-      not reported:
+      "not reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1160,8 +1160,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Unknown
-      - Not Reported
+      - "Unknown"
+      - "Not Reported"
     enumDef:
       "Yes":
         $ref:
@@ -1169,10 +1169,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1180,47 +1180,47 @@ properties:
     $ref:
       - "_terms.yaml#/race/common"
     enum:
-      - white
-      - american indian or alaska native
-      - black or african american
-      - asian
-      - native hawaiian or other pacific islander
-      - other
-      - Unknown
-      - not reported
-      - not allowed to collect
-      - unknown
+      - "american indian or alaska native"
+      - "asian"
+      - "black or african american"
+      - "native hawaiian or other pacific islander"
+      - "not allowed to collect"
+      - "other"
+      - "unknown"
+      - "white"
+      - "Unknown"
+      - "not reported"
     deprecated_enum:
-      - unknown
+      - "unknown"
     enumDef:
-      white:
+      "white":
         $ref:
           - "_terms_enum.yaml#/white/demographic/race"
-      american indian or alaska native:
+      "american indian or alaska native":
         $ref:
           - "_terms_enum.yaml#/american_indian_or_alaska_native/common"
-      black or african american:
+      "black or african american":
         $ref:
           - "_terms_enum.yaml#/black_or_african_american/common"
-      asian:
+      "asian":
         $ref:
           - "_terms_enum.yaml#/asian/common"
-      native hawaiian or other pacific islander:
+      "native hawaiian or other pacific islander":
         $ref:
           - "_terms_enum.yaml#/native_hawaiian_or_other_pacific_islander/common"
-      other:
+      "other":
         $ref:
           - "_terms_enum.yaml#/other/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      not reported:
+      "not reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      not allowed to collect:
+      "not allowed to collect":
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
-      unknown:
+      "unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
 
@@ -1228,21 +1228,21 @@ properties:
     $ref:
       - "_terms.yaml#/vital_status/common"
     enum:
-      - Alive
-      - Dead
-      - Unknown
-      - Not Reported
+      - "Alive"
+      - "Dead"
+      - "Unknown"
+      - "Not Reported"
     enumDef:
-      Alive:
+      "Alive":
         $ref:
           - "_terms_enum.yaml#/alive/common"
-      Dead:
+      "Dead":
         $ref:
           - "_terms_enum.yaml#/dead/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 

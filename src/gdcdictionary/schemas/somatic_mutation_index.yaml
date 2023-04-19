@@ -69,20 +69,20 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
-      - Simple Nucleotide Variation
-      - Somatic Structural Variation
-
-  data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
-    enum:
-      - Somatic Mutation Index
+      - "Simple Nucleotide Variation"
+      - "Somatic Structural Variation"
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - TBI
+      - "TBI"
+
+  data_type:
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - "Somatic Mutation Index"
 
   simple_somatic_mutations:
     $ref: "_definitions.yaml#/to_one"

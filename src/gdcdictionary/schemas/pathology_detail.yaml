@@ -47,58 +47,58 @@ properties:
     $ref:
       - "_terms.yaml#/additional_pathology_findings/common"
     enum:
-      - Adenomyosis
-      - Atrophic endometrium
-      - Atypical hyperplasia/Endometrial intraepithelial neoplasia (EIN)
-      - Autoimmune atrophic chronic gastritis
-      - Asbestos bodies
-      - Benign endocervical polyp
-      - Bilateral ovaries with endometriotic cyst and surface adhesions
-      - Bone marrow concordant histology
-      - Bone marrow discordant histology
-      - Carcinoma in situ
-      - Cirrhosis
-      - Clostridioides difficile (c. diff)
-      - Colonization; bacterial
-      - Colonization; fungal
-      - Cyst(s)
-      - Diffuse and early nodular diabetic glomerulosclerosis
-      - Dysplasia; high grade
-      - Dysplasia; low grade
-      - Endometrial polyp
-      - Endometriosis
-      - Endometroid carcinoma with local mucinous differentiation
-      - Endosalpingiosis
-      - Epithelial dysplasia
-      - Epithelial hyperplasia
-      - Gallbladder adenomyomatosis
-      - Glomerular disease
-      - Hyperkeratosis
-      - Inflammation
-      - Intestinal metaplasia
-      - Keratinizing dysplasia; mild
-      - Keratinizing dysplasia; moderate
-      - Keratinizing dysplasia; severe (carcinoma in situ)
-      - Leiomyoma
-      - Leiomyomata w/ degenerative changes
-      - Nonkeratinizing dysplasia; mild
-      - Nonkeratinizing dysplasia; moderate
-      - Nonkeratinizing dysplasia; severe (carcinoma in situ)
-      - Other
-      - Percent follicular component <= 10%
-      - Percent follicular component > 10%
-      - PD-L1 CPS (223C LDT) - 20%
-      - Platinum-resistant
-      - Pleural plaque
-      - Pulmonary interstitial fibrosis
-      - Sialadenitis
-      - Sinonasal papilloma
-      - Squamous metaplasia
-      - Squamous papilloma; solitary
-      - Squamous papillomatosis
-      - Tubular (papillary) adenoma(s)
-      - Tumor-associated lymphoid proliferation
-      - Tumor has rough spikey edges
+      - "Adenomyosis"
+      - "Asbestos bodies"
+      - "Atrophic endometrium"
+      - "Atypical hyperplasia/Endometrial intraepithelial neoplasia (EIN)"
+      - "Autoimmune atrophic chronic gastritis"
+      - "Benign endocervical polyp"
+      - "Bilateral ovaries with endometriotic cyst and surface adhesions"
+      - "Bone marrow concordant histology"
+      - "Bone marrow discordant histology"
+      - "Carcinoma in situ"
+      - "Cirrhosis"
+      - "Clostridioides difficile (c. diff)"
+      - "Colonization; bacterial"
+      - "Colonization; fungal"
+      - "Cyst(s)"
+      - "Diffuse and early nodular diabetic glomerulosclerosis"
+      - "Dysplasia; high grade"
+      - "Dysplasia; low grade"
+      - "Endometrial polyp"
+      - "Endometriosis"
+      - "Endometroid carcinoma with local mucinous differentiation"
+      - "Endosalpingiosis"
+      - "Epithelial dysplasia"
+      - "Epithelial hyperplasia"
+      - "Gallbladder adenomyomatosis"
+      - "Glomerular disease"
+      - "Hyperkeratosis"
+      - "Inflammation"
+      - "Intestinal metaplasia"
+      - "Keratinizing dysplasia; mild"
+      - "Keratinizing dysplasia; moderate"
+      - "Keratinizing dysplasia; severe (carcinoma in situ)"
+      - "Leiomyoma"
+      - "Leiomyomata w/ degenerative changes"
+      - "Nonkeratinizing dysplasia; mild"
+      - "Nonkeratinizing dysplasia; moderate"
+      - "Nonkeratinizing dysplasia; severe (carcinoma in situ)"
+      - "Other"
+      - "PD-L1 CPS (223C LDT) - 20%"
+      - "Percent follicular component <= 10%"
+      - "Percent follicular component > 10%"
+      - "Platinum-resistant"
+      - "Pleural plaque"
+      - "Pulmonary interstitial fibrosis"
+      - "Sialadenitis"
+      - "Sinonasal papilloma"
+      - "Squamous metaplasia"
+      - "Squamous papilloma; solitary"
+      - "Squamous papillomatosis"
+      - "Tubular (papillary) adenoma(s)"
+      - "Tumor has rough spikey edges"
+      - "Tumor-associated lymphoid proliferation"
 
   anaplasia_present:
     $ref:
@@ -106,8 +106,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Unknown
-      - Not Reported
+      - "Unknown"
+      - "Not Reported"
     enumDef:
       "Yes":
         $ref:
@@ -115,10 +115,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -126,22 +126,22 @@ properties:
     $ref:
       - "_terms.yaml#/anaplasia_present_type/common"
     enum:
-      - Absent
-      - Diffuse
-      - Equivocal
-      - Focal
-      - Present
-      - Sclerosis
-      - Unknown
-      - Not Reported
+      - "Absent"
+      - "Diffuse"
+      - "Equivocal"
+      - "Focal"
+      - "Present"
+      - "Sclerosis"
+      - "Unknown"
+      - "Not Reported"
     enumDef:
-      Present:
+      "Present":
         $ref:
           - "_terms_enum.yaml#/present/pathology_detail/anaplasia_present_type"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -151,8 +151,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Unknown
-      - Not Reported
+      - "Unknown"
+      - "Not Reported"
     enumDef:
       "Yes":
         $ref:
@@ -160,10 +160,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -185,8 +185,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Unknown
-      - Not Reported
+      - "Unknown"
+      - "Not Reported"
     enumDef:
       "Yes":
         $ref:
@@ -194,10 +194,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -207,7 +207,7 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Not Reported
+      - "Not Reported"
     enumDef:
       "Yes":
         $ref:
@@ -215,7 +215,7 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -223,41 +223,41 @@ properties:
     $ref:
       - "_terms.yaml#/dysplasia_degree/common"
     enum:
-      - High Grade
-      - Indefinite
-      - Low Grade
-      - Mild
-      - Moderate
-      - No Dysplasia
-      - Severe
-      - Unknown
-      - Not Reported
+      - "High Grade"
+      - "Indefinite"
+      - "Low Grade"
+      - "Mild"
+      - "Moderate"
+      - "No Dysplasia"
+      - "Severe"
+      - "Unknown"
+      - "Not Reported"
     enumDef:
-      High Grade:
+      "High Grade":
         $ref:
           - "_terms_enum.yaml#/high_grade/pathology_detail/dysplasia_degree"
-      Indefinite:
+      "Indefinite":
         $ref:
           - "_terms_enum.yaml#/indefinite/common"
-      Low Grade:
+      "Low Grade":
         $ref:
           - "_terms_enum.yaml#/low_grade/pathology_detail/dysplasia_degree"
-      Mild:
+      "Mild":
         $ref:
           - "_terms_enum.yaml#/mild/common"
-      Moderate:
+      "Moderate":
         $ref:
           - "_terms_enum.yaml#/moderate/common"
-      No Dysplasia:
+      "No Dysplasia":
         $ref:
           - "_terms_enum.yaml#/no_dysplasia/common"
-      Severe:
+      "Severe":
         $ref:
           - "_terms_enum.yaml#/severe/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -265,31 +265,31 @@ properties:
     $ref:
       - "_terms.yaml#/dysplasia_type/common"
     enum:
-      - Epithelial
-      - Esophageal Columnar Dysplasia
-      - Esophageal Mucosa Columnar Dysplasia
-      - Keratinizing
-      - Nonkeratinizing
-      - Other
-      - Unknown
-      - Not Reported
+      - "Epithelial"
+      - "Esophageal Columnar Dysplasia"
+      - "Esophageal Mucosa Columnar Dysplasia"
+      - "Keratinizing"
+      - "Nonkeratinizing"
+      - "Other"
+      - "Unknown"
+      - "Not Reported"
     enumDef:
-      Esophageal Columnar Dysplasia:
+      "Esophageal Columnar Dysplasia":
         $ref:
           - "_terms_enum.yaml#/esophageal_columnar_dysplasia/common"
-      Keratinizing:
+      "Keratinizing":
         $ref:
           - "_terms_enum.yaml#/keratinizing/common"
-      Nonkeratinizing:
+      "Nonkeratinizing":
         $ref:
           - "_terms_enum.yaml#/nonkeratinizing/common"
-      Other:
+      "Other":
         $ref:
           - "_terms_enum.yaml#/other/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -297,17 +297,17 @@ properties:
     $ref:
       - "_terms.yaml#/extracapsular_extension/common"
     enum:
-      - Extensive
-      - Focal
-      - Not Reported
+      - "Extensive"
+      - "Focal"
+      - "Not Reported"
 
   extranodal_extension:
     $ref:
       - "_terms.yaml#/extranodal_extension/common"
     enum:
-      - Gross Extension
-      - Microscopic Extension
-      - No Extranodal Extension
+      - "Gross Extension"
+      - "Microscopic Extension"
+      - "No Extranodal Extension"
 
   extrascleral_extension:
     $ref:
@@ -330,22 +330,22 @@ properties:
     $ref:
       - "_terms.yaml#/largest_extrapelvic_peritoneal_focus/common"
     enum:
-      - Macroscopic (2cm or less)
-      - Macroscopic (greater than 2cm)
-      - Microscopic
-      - Unknown
-      - Not Reported
+      - "Macroscopic (2cm or less)"
+      - "Macroscopic (greater than 2cm)"
+      - "Microscopic"
+      - "Unknown"
+      - "Not Reported"
     enumDef:
-      Macroscopic (2cm or less):
+      "Macroscopic (2cm or less)":
         $ref:
           - "_terms_enum.yaml#/macroscopic_2cm_or_less/common"
-      Macroscopic (greater than 2cm):
+      "Macroscopic (greater than 2cm)":
         $ref:
           - "_terms_enum.yaml#/macroscopic_greater_than_2cm/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -353,111 +353,111 @@ properties:
     $ref:
       - "_terms.yaml#/lymph_node_dissection_method/common"
     enum:
-      - Functional (Limited) Neck Dissection
-      - Modified Radical Neck Dissection
-      - Radical Neck Dissection
+      - "Functional (Limited) Neck Dissection"
+      - "Modified Radical Neck Dissection"
+      - "Radical Neck Dissection"
 
   lymph_node_dissection_site:
     $ref:
       - "_terms.yaml#/lymph_node_dissection_site/common"
     enum:
-      - Neck, Left
-      - Neck, Right
-      - Neck, NOS
+      - "Neck, Left"
+      - "Neck, NOS"
+      - "Neck, Right"
 
   lymph_node_involved_site:
     $ref:
       - "_terms.yaml#/lymph_node_involved_site/common"
     enum:
-      - Aortic
-      - Axillary
-      - Cervical
-      - Epitrochlear
-      - Femoral
-      - Hilar
-      - Iliac-common
-      - Iliac-external
-      - Iliac, NOS
-      - Inguinal
-      - Mediastinal
-      - Mesenteric
-      - None
-      - Occipital
-      - Paraaortic
-      - Parotid
-      - Pelvis, NOS
-      - Popliteal
-      - Retroperitoneal
-      - Splenic
-      - Submandibular
-      - Supraclavicular
-      - Unknown
-      - Not Reported
+      - "Aortic"
+      - "Axillary"
+      - "Cervical"
+      - "Epitrochlear"
+      - "Femoral"
+      - "Hilar"
+      - "Iliac, NOS"
+      - "Iliac-common"
+      - "Iliac-external"
+      - "Inguinal"
+      - "Mediastinal"
+      - "Mesenteric"
+      - "None"
+      - "Occipital"
+      - "Paraaortic"
+      - "Parotid"
+      - "Pelvis, NOS"
+      - "Popliteal"
+      - "Retroperitoneal"
+      - "Splenic"
+      - "Submandibular"
+      - "Supraclavicular"
+      - "Unknown"
+      - "Not Reported"
     enumDef:
-      Axillary:
+      "Axillary":
         $ref:
           - "_terms_enum.yaml#/axillary/common"
-      Cervical:
+      "Cervical":
         $ref:
           - "_terms_enum.yaml#/cervical/common"
-      Epitrochlear:
+      "Epitrochlear":
         $ref:
           - "_terms_enum.yaml#/epitrochlear/common"
-      Femoral:
+      "Femoral":
         $ref:
           - "_terms_enum.yaml#/femoral/common"
-      Hilar:
+      "Hilar":
         $ref:
           - "_terms_enum.yaml#/hilar/common"
-      Iliac-common:
+      "Iliac-common":
         $ref:
           - "_terms_enum.yaml#/iliaccommon/common"
-      Iliac-external:
+      "Iliac-external":
         $ref:
           - "_terms_enum.yaml#/iliacexternal/common"
-      Iliac, NOS:
+      "Iliac, NOS":
         $ref:
           - "_terms_enum.yaml#/iliac_nos/common"
-      Inguinal:
+      "Inguinal":
         $ref:
           - "_terms_enum.yaml#/inguinal/common"
-      Mediastinal:
+      "Mediastinal":
         $ref:
           - "_terms_enum.yaml#/mediastinal/common"
-      Mesenteric:
+      "Mesenteric":
         $ref:
           - "_terms_enum.yaml#/mesenteric/common"
-      None:
+      "None":
         $ref:
           - "_terms_enum.yaml#/none/common"
-      Occipital:
+      "Occipital":
         $ref:
           - "_terms_enum.yaml#/occipital/common"
-      Paraaortic:
+      "Paraaortic":
         $ref:
           - "_terms_enum.yaml#/paraaortic/common"
-      Parotid:
+      "Parotid":
         $ref:
           - "_terms_enum.yaml#/parotid/common"
-      Popliteal:
+      "Popliteal":
         $ref:
           - "_terms_enum.yaml#/popliteal/common"
-      Retroperitoneal:
+      "Retroperitoneal":
         $ref:
           - "_terms_enum.yaml#/retroperitoneal/common"
-      Splenic:
+      "Splenic":
         $ref:
           - "_terms_enum.yaml#/splenic/common"
-      Submandibular:
+      "Submandibular":
         $ref:
           - "_terms_enum.yaml#/submandibular/common"
-      Supraclavicular:
+      "Supraclavicular":
         $ref:
           - "_terms_enum.yaml#/supraclavicular/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -465,25 +465,25 @@ properties:
     $ref:
       - "_terms.yaml#/lymph_node_involvement/common"
     enum:
-      - Indeterminant
-      - Negative
-      - Positive
-      - Unknown
-      - Not Reported
+      - "Indeterminant"
+      - "Negative"
+      - "Positive"
+      - "Unknown"
+      - "Not Reported"
     enumDef:
-      Indeterminant:
+      "Indeterminant":
         $ref:
           - "_terms_enum.yaml#/indeterminant/common"
-      Negative:
+      "Negative":
         $ref:
           - "_terms_enum.yaml#/negative/common"
-      Positive:
+      "Positive":
         $ref:
           - "_terms_enum.yaml#/positive/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -497,9 +497,9 @@ properties:
     $ref:
       - "_terms.yaml#/lymph_nodes_removed/common"
     enum:
-      - "No"
       - "Yes"
-      - Not Reported
+      - "No"
+      - "Not Reported"
 
   lymph_nodes_tested:
     $ref:
@@ -513,8 +513,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Unknown
-      - Not Reported
+      - "Unknown"
+      - "Not Reported"
     enumDef:
       "Yes":
         $ref:
@@ -522,10 +522,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -533,25 +533,25 @@ properties:
     $ref:
       - "_terms.yaml#/margin_status/common"
     enum:
-      - Involved
-      - Uninvolved
-      - Indeterminant
-      - Unknown
-      - Not Reported
+      - "Indeterminant"
+      - "Involved"
+      - "Uninvolved"
+      - "Unknown"
+      - "Not Reported"
     enumDef:
-      Involved:
+      "Involved":
         $ref:
           - "_terms_enum.yaml#/involved/common"
-      Uninvolved:
+      "Uninvolved":
         $ref:
           - "_terms_enum.yaml#/uninvolved/common"
-      Indeterminant:
+      "Indeterminant":
         $ref:
           - "_terms_enum.yaml#/indeterminant/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -561,8 +561,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Unknown
-      - Not Reported
+      - "Unknown"
+      - "Not Reported"
     enumDef:
       "Yes":
         $ref:
@@ -570,10 +570,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -581,31 +581,31 @@ properties:
     $ref:
       - "_terms.yaml#/morphologic_architectural_pattern/common"
     enum:
-      - Cohesive
-      - Cribiform
-      - Micropapillary
-      - Non-cohesive
-      - Papillary Renal Cell
-      - Papillary, NOS
-      - Solid
-      - Tubular
+      - "Cohesive"
+      - "Cribiform"
+      - "Micropapillary"
+      - "Non-cohesive"
+      - "Papillary Renal Cell"
+      - "Papillary, NOS"
+      - "Solid"
+      - "Tubular"
     enumDef:
-      Cribiform:
+      "Cribiform":
         $ref:
           - "_terms_enum.yaml#/cribiform/common"
-      Micropapillary:
+      "Micropapillary":
         $ref:
           - "_terms_enum.yaml#/micropapillary/common"
-      Papillary Renal Cell:
+      "Papillary Renal Cell":
         $ref:
           - "_terms_enum.yaml#/papillary_renal_cell/common"
-      Papillary, NOS:
+      "Papillary, NOS":
         $ref:
           - "_terms_enum.yaml#/papillary_nos/common"
-      Solid:
+      "Solid":
         $ref:
           - "_terms_enum.yaml#/solid/common"
-      Tubular:
+      "Tubular":
         $ref:
           - "_terms_enum.yaml#/tubular/common"
 
@@ -622,9 +622,9 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Not Reported
+      - "Not Reported"
     enumDef:
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -632,19 +632,19 @@ properties:
     $ref:
       - "_terms.yaml#/non_nodal_regional_disease/common"
     enum:
-      - Absent
-      - Indeterminate
-      - Present
-      - Unknown
-      - Not Reported
+      - "Absent"
+      - "Indeterminate"
+      - "Present"
+      - "Unknown"
+      - "Not Reported"
     enumDef:
-      Present:
+      "Present":
         $ref:
           - "_terms_enum.yaml#/present/pathology_detail/non_nodal_regional_disease"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -654,8 +654,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Unknown
-      - Not Reported
+      - "Unknown"
+      - "Not Reported"
     enumDef:
       "Yes":
         $ref:
@@ -663,10 +663,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -696,8 +696,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Unknown
-      - Not Reported
+      - "Unknown"
+      - "Not Reported"
     enumDef:
       "Yes":
         $ref:
@@ -705,10 +705,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -717,24 +717,24 @@ properties:
       - "_terms.yaml#/peripancreatic_lymph_nodes_positive/common"
     enum:
       - "0"
-      - 1-3
-      - 4 or More
-      - Unknown
-      - Not Reported
+      - "1-3"
+      - "4 or More"
+      - "Unknown"
+      - "Not Reported"
     enumDef:
       "0":
         $ref:
           - "_terms_enum.yaml#/0/common"
-      1-3:
+      "1-3":
         $ref:
           - "_terms_enum.yaml#/13/common"
-      4 or More:
+      "4 or More":
         $ref:
           - "_terms_enum.yaml#/4_or_more/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -767,19 +767,19 @@ properties:
     $ref:
       - "_terms.yaml#/residual_tumor/common"
     enum:
-      - RX
-      - R0
-      - R1
-      - R2
+      - "R0"
+      - "R1"
+      - "R2"
+      - "RX"
 
   residual_tumor_measurement:
     $ref:
       - "_terms.yaml#/residual_tumor_measurement/common"
     enum:
-      - 1-10 mm
-      - 11-20 mm
-      - '>20 mm'
-      - No macroscopic disease
+      - "1-10 mm"
+      - "11-20 mm"
+      - ">20 mm"
+      - "No macroscopic disease"
 
   rhabdoid_percent:
     $ref:
@@ -794,9 +794,9 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Not Reported
+      - "Not Reported"
     enumDef:
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -813,9 +813,9 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Not Reported
+      - "Not Reported"
     enumDef:
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -829,18 +829,18 @@ properties:
     $ref:
       - "_terms.yaml#/transglottic_extension/common"
     enum:
-      - Absent
-      - Present
-      - Unknown
-      - Not Reported
+      - "Absent"
+      - "Present"
+      - "Unknown"
+      - "Not Reported"
     enumDef:
-      Present:
+      "Present":
         $ref:
           - "_terms_enum.yaml#/present/pathology_detail/transglottic_extension"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -856,9 +856,9 @@ properties:
     type: array
     items:
       enum:
-        - Apex
-        - Middle
-        - Base
+        - "Apex"
+        - "Base"
+        - "Middle"
 
   tumor_thickness:
     $ref:
@@ -872,8 +872,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Unknown
-      - Not Reported
+      - "Unknown"
+      - "Not Reported"
     enumDef:
       "Yes":
         $ref:
@@ -881,10 +881,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -892,21 +892,21 @@ properties:
     $ref:
       - "_terms.yaml#/vascular_invasion_type/common"
     enum:
-      - Extramural
-      - Intramural
-      - Macro
-      - Micro
-      - No Vascular Invasion
-      - Unknown
-      - Not Reported
+      - "Extramural"
+      - "Intramural"
+      - "Macro"
+      - "Micro"
+      - "No Vascular Invasion"
+      - "Unknown"
+      - "Not Reported"
     enumDef:
-      No Vascular Invasion:
+      "No Vascular Invasion":
         $ref:
           - "_terms_enum.yaml#/no_vascular_invasion/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -914,11 +914,11 @@ properties:
     $ref:
       - "_terms.yaml#/zone_of_origin_prostate/common"
     enum:
-      - Peripheral zone
-      - Transition zone
-      - Central zone
-      - Overlapping/multiple zones
-      - Unknown zone
+      - "Central zone"
+      - "Overlapping/multiple zones"
+      - "Peripheral zone"
+      - "Transition zone"
+      - "Unknown zone"
 
   diagnoses:
     $ref: "_definitions.yaml#/to_one"

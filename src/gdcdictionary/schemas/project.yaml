@@ -44,15 +44,6 @@ uniqueKeys:
 
 properties:
 
-  type:
-    type: string
-
-  id:
-    $ref:
-      - "_definitions.yaml#/uuid"
-    description: >-
-      UUID for the project
-
   awg_review:
     description: >-
       Indicates that the project is an AWG project.
@@ -74,11 +65,11 @@ properties:
       Full name for the project
     type: string
 
-  intended_release_date:
+  id:
     $ref:
-      - "_definitions.yaml#/datetime"
+      - "_definitions.yaml#/uuid"
     description: >-
-      Tracks a Project's intended release date.
+      UUID for the project
 
   in_review:
     description: >-
@@ -86,6 +77,12 @@ properties:
       modification is disabled.
     type: boolean
     default: false
+
+  intended_release_date:
+    $ref:
+      - "_definitions.yaml#/datetime"
+    description: >-
+      Tracks a Project's intended release date.
 
   is_legacy:
     description: >-
@@ -103,19 +100,11 @@ properties:
       Primary site for the project
     type: string
 
-  state:
+  releasable:
     description: >-
-      The possible states a project can be in.  All but `open` are equivalent to some
-      type of locked state.
-    default: open
-    enum:
-      - open
-      - review
-      - submitted
-      - processing
-      - processed
-      - closed
-      - legacy
+      A project can only be released by the user when `releasable` is true.
+    type: boolean
+    default: false
 
   release_requested:
     description: >-
@@ -131,23 +120,34 @@ properties:
     type: boolean
     default: false
 
-  releasable:
-    description: >-
-      A project can only be released by the user when `releasable` is true.
-    type: boolean
-    default: false
-
   request_submission:
     description: >-
       Indicates that the user has requested submission to the GDC for harmonization.
     type: boolean
     default: false
 
+  state:
+    description: >-
+      The possible states a project can be in.  All but `open` are equivalent to some
+      type of locked state.
+    default: open
+    enum:
+      - "closed"
+      - "legacy"
+      - "open"
+      - "processed"
+      - "processing"
+      - "review"
+      - "submitted"
+
   submission_enabled:
     description: >-
       Indicates if submission to a project is allowed.
     type: boolean
     default: true
+
+  type:
+    type: string
 
   programs:
     $ref: "_definitions.yaml#/to_one"

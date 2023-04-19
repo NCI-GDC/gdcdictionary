@@ -59,8 +59,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Unknown
-      - Not Reported
+      - "Unknown"
+      - "Not Reported"
     enumDef:
       "Yes":
         $ref:
@@ -68,10 +68,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -81,6 +81,13 @@ properties:
     type: integer
     minimum: 0
 
+  percent_eosinophil_infiltration:
+    $ref:
+      - "_terms.yaml#/percent_eosinophil_infiltration/common"
+    type: number
+    maximum: 100
+    minimum: 0
+
   percent_follicular_component:
     $ref:
       - "_terms.yaml#/percent_follicular_component/common"
@@ -88,51 +95,9 @@ properties:
     maximum: 100
     minimum: 0
 
-  percent_rhabdoid_features:
+  percent_granulocyte_infiltration:
     $ref:
-      - "_terms.yaml#/percent_rhabdoid_features/common"
-    type: number
-    maximum: 100
-    minimum: 0
-
-  percent_sarcomatoid_features:
-    $ref:
-      - "_terms.yaml#/percent_sarcomatoid_features/common"
-    type: number
-    maximum: 100
-    minimum: 0
-
-  percent_tumor_cells:
-    $ref:
-      - "_terms.yaml#/percent_tumor_cells/common"
-    type: number
-    maximum: 100
-    minimum: 0
-
-  percent_tumor_nuclei:
-    $ref:
-      - "_terms.yaml#/percent_tumor_nuclei/common"
-    type: number
-    maximum: 100
-    minimum: 0
-
-  percent_normal_cells:
-    $ref:
-      - "_terms.yaml#/percent_normal_cells/common"
-    type: number
-    maximum: 100
-    minimum: 0
-
-  percent_necrosis:
-    $ref:
-      - "_terms.yaml#/percent_necrosis/common"
-    type: number
-    maximum: 100
-    minimum: 0
-
-  percent_stromal_cells:
-    $ref:
-      - "_terms.yaml#/percent_stromal_cells/common"
+      - "_terms.yaml#/percent_granulocyte_infiltration/common"
     type: number
     maximum: 100
     minimum: 0
@@ -158,9 +123,9 @@ properties:
     maximum: 100
     minimum: 0
 
-  percent_granulocyte_infiltration:
+  percent_necrosis:
     $ref:
-      - "_terms.yaml#/percent_granulocyte_infiltration/common"
+      - "_terms.yaml#/percent_necrosis/common"
     type: number
     maximum: 100
     minimum: 0
@@ -172,9 +137,44 @@ properties:
     maximum: 100
     minimum: 0
 
-  percent_eosinophil_infiltration:
+  percent_normal_cells:
     $ref:
-      - "_terms.yaml#/percent_eosinophil_infiltration/common"
+      - "_terms.yaml#/percent_normal_cells/common"
+    type: number
+    maximum: 100
+    minimum: 0
+
+  percent_rhabdoid_features:
+    $ref:
+      - "_terms.yaml#/percent_rhabdoid_features/common"
+    type: number
+    maximum: 100
+    minimum: 0
+
+  percent_sarcomatoid_features:
+    $ref:
+      - "_terms.yaml#/percent_sarcomatoid_features/common"
+    type: number
+    maximum: 100
+    minimum: 0
+
+  percent_stromal_cells:
+    $ref:
+      - "_terms.yaml#/percent_stromal_cells/common"
+    type: number
+    maximum: 100
+    minimum: 0
+
+  percent_tumor_cells:
+    $ref:
+      - "_terms.yaml#/percent_tumor_cells/common"
+    type: number
+    maximum: 100
+    minimum: 0
+
+  percent_tumor_nuclei:
+    $ref:
+      - "_terms.yaml#/percent_tumor_nuclei/common"
     type: number
     maximum: 100
     minimum: 0

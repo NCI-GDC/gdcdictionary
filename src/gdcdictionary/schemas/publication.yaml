@@ -41,7 +41,11 @@ uniqueKeys:
 
 properties:
 
-  type:
+  created_datetime:
+    $ref:
+      - "_definitions.yaml#/datetime"
+
+  doi:
     type: string
 
   id:
@@ -51,17 +55,13 @@ properties:
   pmid:
     type: string
 
-  doi:
-    type: string
-
   project_id:
     $ref:
       - "_terms.yaml#/project_id/common"
     type: string
 
-  created_datetime:
-    $ref:
-      - "_definitions.yaml#/datetime"
+  type:
+    type: string
 
   updated_datetime:
     $ref:

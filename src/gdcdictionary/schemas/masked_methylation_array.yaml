@@ -58,8 +58,8 @@ properties:
     $ref:
       - "_terms.yaml#/channel/common"
     enum:
-      - Green
-      - Red
+      - "Green"
+      - "Red"
 
   chip_id:
     $ref:
@@ -75,25 +75,25 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
-      - DNA Methylation
+      - "DNA Methylation"
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - IDAT
+      - "IDAT"
 
   data_type:
     $ref:
       - "_terms.yaml#/data_type/common"
     enum:
-      - Masked Intensities
+      - "Masked Intensities"
 
   experimental_strategy:
     $ref:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
-      - Methylation Array
+      - "Methylation Array"
 
   plate_name:
     $ref:
@@ -109,9 +109,9 @@ properties:
     $ref:
       - "_terms.yaml#/platform/common"
     enum:
-      - Illumina Human Methylation 27
-      - Illumina Human Methylation 450
-      - Illumina Methylation Epic
+      - "Illumina Human Methylation 27"
+      - "Illumina Human Methylation 450"
+      - "Illumina Methylation Epic"
 
   methylation_array_harmonization_workflows:
     $ref: "_definitions.yaml#/to_one"

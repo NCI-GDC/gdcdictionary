@@ -85,11 +85,11 @@ properties:
     $ref:
       - "_terms.yaml#/chipseq_antibody/common"
     enum:
-      - abcam ab4729 anti-H3K27ac
-      - Unknown
-      - Not Applicable
+      - "abcam ab4729 anti-H3K27ac"
+      - "Unknown"
+      - "Not Applicable"
     enumDef:
-      Not Applicable:
+      "Not Applicable":
         $ref:
           - "_terms_enum.yaml#/not_applicable/common"
 
@@ -97,14 +97,14 @@ properties:
     $ref:
       - "_terms.yaml#/chipseq_target/common"
     enum:
-      - H3K4me1
-      - H3K4me3
-      - H3K9me3
-      - H3K27me3
-      - H3K36me3
-      - H3K27ac
-      - Input Control
-      - Unknown
+      - "H3K27ac"
+      - "H3K27me3"
+      - "H3K36me3"
+      - "H3K4me1"
+      - "H3K4me3"
+      - "H3K9me3"
+      - "Input Control"
+      - "Unknown"
 
   days_to_sequencing:
     $ref:
@@ -150,11 +150,11 @@ properties:
     $ref:
       - "_terms.yaml#/fragmentation_enzyme/common"
     enum:
-      - MboI
-      - Unknown
-      - Not Applicable
+      - "MboI"
+      - "Unknown"
+      - "Not Applicable"
     enumDef:
-      Not Applicable:
+      "Not Applicable":
         $ref:
           - "_terms_enum.yaml#/not_applicable/common"
 
@@ -167,36 +167,36 @@ properties:
     $ref:
       - "_terms.yaml#/instrument_model/common"
     enum:
-      - 454 GS FLX Titanium
-      - AB SOLiD 2
-      - AB SOLiD 3
-      - AB SOLiD 4
-      - Complete Genomics
-      - Illumina Genome Analyzer II
-      - Illumina Genome Analyzer IIx
-      - Illumina HiSeq 2000
-      - Illumina HiSeq 2500
-      - Illumina HiSeq 4000
-      - Illumina HiSeq X Five
-      - Illumina HiSeq X Ten
-      - Illumina MiSeq
-      - Illumina NextSeq
-      - Illumina NovaSeq 6000
-      - Ion Torrent PGM
-      - Ion Torrent Proton
-      - Ion Torrent S5
-      - Other
-      - PacBio RS
-      - Unknown
-      - Not Reported
+      - "454 GS FLX Titanium"
+      - "AB SOLiD 2"
+      - "AB SOLiD 3"
+      - "AB SOLiD 4"
+      - "Complete Genomics"
+      - "Illumina Genome Analyzer II"
+      - "Illumina Genome Analyzer IIx"
+      - "Illumina HiSeq 2000"
+      - "Illumina HiSeq 2500"
+      - "Illumina HiSeq 4000"
+      - "Illumina HiSeq X Five"
+      - "Illumina HiSeq X Ten"
+      - "Illumina MiSeq"
+      - "Illumina NextSeq"
+      - "Illumina NovaSeq 6000"
+      - "Ion Torrent PGM"
+      - "Ion Torrent Proton"
+      - "Ion Torrent S5"
+      - "Other"
+      - "PacBio RS"
+      - "Unknown"
+      - "Not Reported"
     enumDef:
-      Other:
+      "Other":
         $ref:
           - "_terms_enum.yaml#/other/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
+      "Not Reported":
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -218,6 +218,11 @@ properties:
       - "_terms.yaml#/library_name/common"
     type: string
 
+  library_preparation_kit_catalog_number:
+    $ref:
+      - "_terms.yaml#/library_preparation_kit_catalog_number/common"
+    type: string
+
   library_preparation_kit_name:
     $ref:
       - "_terms.yaml#/library_preparation_kit_name/common"
@@ -226,11 +231,6 @@ properties:
   library_preparation_kit_vendor:
     $ref:
       - "_terms.yaml#/library_preparation_kit_vendor/common"
-    type: string
-
-  library_preparation_kit_catalog_number:
-    $ref:
-      - "_terms.yaml#/library_preparation_kit_catalog_number/common"
     type: string
 
   library_preparation_kit_version:
@@ -242,19 +242,19 @@ properties:
     $ref:
       - "_terms.yaml#/library_selection/common"
     enum:
-      - Affinity Enrichment
-      - Hybrid Selection
-      - miRNA Size Fractionation
-      - Other
-      - PCR
-      - Poly-T Enrichment
-      - Random
-      - rRNA Depletion
+      - "Affinity Enrichment"
+      - "Hybrid Selection"
+      - "miRNA Size Fractionation"
+      - "Other"
+      - "PCR"
+      - "Poly-T Enrichment"
+      - "Random"
+      - "rRNA Depletion"
     enumDef:
-      Other:
+      "Other":
         $ref:
           - "_terms_enum.yaml#/other/common"
-      PCR:
+      "PCR":
         $ref:
           - "_terms_enum.yaml#/pcr/common"
 
@@ -262,12 +262,12 @@ properties:
     $ref:
       - "_terms.yaml#/library_strand/common"
     enum:
-      - Unstranded
-      - First_Stranded
-      - Second_Stranded
-      - Not Applicable
+      - "First_Stranded"
+      - "Second_Stranded"
+      - "Unstranded"
+      - "Not Applicable"
     enumDef:
-      Not Applicable:
+      "Not Applicable":
         $ref:
           - "_terms_enum.yaml#/not_applicable/common"
 
@@ -275,26 +275,26 @@ properties:
     $ref:
       - "_terms.yaml#/library_strategy/common"
     enum:
-      - ATAC-Seq
-      - Bisulfite-Seq
-      - ChIP-Seq
-      - HiChIP
-      - m6A MeRIP-Seq
-      - miRNA-Seq
-      - RNA-Seq
-      - scATAC-Seq
-      - scRNA-Seq
-      - Targeted Sequencing
-      - WGS
-      - WXS
+      - "ATAC-Seq"
+      - "Bisulfite-Seq"
+      - "ChIP-Seq"
+      - "HiChIP"
+      - "m6A MeRIP-Seq"
+      - "miRNA-Seq"
+      - "RNA-Seq"
+      - "scATAC-Seq"
+      - "scRNA-Seq"
+      - "Targeted Sequencing"
+      - "WGS"
+      - "WXS"
     enumDef:
-      Targeted Sequencing:
+      "Targeted Sequencing":
         $ref:
           - "_terms_enum.yaml#/targeted_sequencing/common"
-      WGS:
+      "WGS":
         $ref:
           - "_terms_enum.yaml#/wgs/common"
-      WXS:
+      "WXS":
         $ref:
           - "_terms_enum.yaml#/wxs/common"
 
@@ -314,15 +314,15 @@ properties:
     $ref:
       - "_terms.yaml#/platform/common"
     enum:
-      - Complete Genomics
-      - Illumina
-      - Ion Torrent
-      - LS454
-      - Other
-      - PacBio
-      - SOLiD
+      - "Complete Genomics"
+      - "Illumina"
+      - "Ion Torrent"
+      - "LS454"
+      - "Other"
+      - "PacBio"
+      - "SOLiD"
     enumDef:
-      Other:
+      "Other":
         $ref:
           - "_terms_enum.yaml#/other/common"
 
@@ -355,19 +355,19 @@ properties:
     $ref:
       - "_definitions.yaml#/datetime"
 
-  size_selection_range:
-    $ref:
-      - "_terms.yaml#/size_selection_range/common"
-    type: string
-
   single_cell_library:
     $ref:
       - "_terms.yaml#/single_cell_library/common"
     enum:
-      - Chromium 3' Gene Expression v2 Library
-      - Chromium 3' Gene Expression v3 Library
-      - Chromium scATAC v1 Library
-      - Smart-Seq2
+      - "Chromium 3' Gene Expression v2 Library"
+      - "Chromium 3' Gene Expression v3 Library"
+      - "Chromium scATAC v1 Library"
+      - "Smart-Seq2"
+
+  size_selection_range:
+    $ref:
+      - "_terms.yaml#/size_selection_range/common"
+    type: string
 
   spike_ins_concentration:
     $ref:
@@ -383,61 +383,61 @@ properties:
     $ref:
       - "_terms.yaml#/target_capture_kit/common"
     enum:
-      - Custom AmpliSeq Cancer Hotspot GENIE-MDA Augmented Panel v1 - 46 Genes
-      - Custom GENIE-DFCI OncoPanel - 275 Genes
-      - Custom GENIE-DFCI Oncopanel - 300 Genes
-      - Custom GENIE-DFCI Oncopanel - 447 Genes
-      - Custom HaloPlex DLBCL Panel - 370 Genes
-      - Custom Ion AmpliSeq Hotspot GENIE-MOSC3 Augmented Panel - 74 Genes
-      - Custom Large Construct Capture TARGET-OS Panel - 8 Genes
-      - Custom MSK IMPACT Panel - 341 Genes
-      - Custom MSK IMPACT Panel - 410 Genes
-      - Custom MSK IMPACT Panel - 468 Genes
-      - Custom Myeloid GENIE-VICC Panel - 37 Genes
-      - Custom Personalis ACEcp VAREPOP-APOLLO Panel v2
-      - Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 203 Genes
-      - Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 88 Genes
-      - Custom SeqCap EZ BeatAML Panel - 12.5 Mb
-      - Custom SeqCap EZ HGSC VCRome v2.1 ER Augmented v1
-      - Custom SeqCap EZ HGSC VCRome v2.1 ER Augmented v2
-      - Custom SeqCap EZ TARGET-OS Panel - 7.0 Mb
-      - Custom Solid Tumor GENIE-VICC Panel - 34 Genes
-      - Custom SureSelect CGCI-BLGSP Panel - 4.6 Mb
-      - Custom SureSelect CGCI-BLGSP Panel - 7.8 Mb
-      - Custom SureSelect CGCI-HTMCP-CC KMT2D And Hotspot Panel - 37.0 Kb
-      - Custom SureSelect CGCI-HTMCP-CC Panel - 19.7 Mb
-      - Custom SureSelect GENIE-UHN Panel - 555 Genes
-      - Custom SureSelect Human All Exon v1.1 Plus 3 Boosters
-      - Custom SureSelect TARGET-AML_NBL_WT Panel - 2.8 Mb
-      - Custom Twist Broad Exome v1.0 - 35.0 Mb
-      - Custom Twist Broad PanCancer Panel - 396 Genes
-      - Custom Twist MP2PRT-WT Panel - 52 Kb
-      - Foundation Medicine T5a Panel - 322 Genes
-      - Foundation Medicine T7 Panel - 429 Genes
-      - Ion AmpliSeq Cancer Hotspot Panel v2
-      - Ion AmpliSeq Comprehensive Cancer Panel
-      - Nextera DNA Exome
-      - Nextera Rapid Capture Exome v1.2
-      - Not Applicable
-      - SeqCap EZ HGSC VCRome v2.1
-      - SeqCap EZ Human Exome v2.0
-      - SeqCap EZ Human Exome v3.0
-      - SureSelect Human All Exon v3
-      - SureSelect Human All Exon v4
-      - SureSelect Human All Exon v5
-      - SureSelect Human All Exon v5 + UTR
-      - TruSeq Amplicon Cancer Panel
-      - TruSeq Exome Enrichment - 62 Mb
-      - TruSeq RNA Exome
-      - TruSight Myeloid Sequencing Panel
-      - Twist Human Comprehensive Exome
-      - xGen Exome Research Panel v1.0
-      - Unknown
+      - "Custom AmpliSeq Cancer Hotspot GENIE-MDA Augmented Panel v1 - 46 Genes"
+      - "Custom GENIE-DFCI OncoPanel - 275 Genes"
+      - "Custom GENIE-DFCI Oncopanel - 300 Genes"
+      - "Custom GENIE-DFCI Oncopanel - 447 Genes"
+      - "Custom HaloPlex DLBCL Panel - 370 Genes"
+      - "Custom Ion AmpliSeq Hotspot GENIE-MOSC3 Augmented Panel - 74 Genes"
+      - "Custom Large Construct Capture TARGET-OS Panel - 8 Genes"
+      - "Custom MSK IMPACT Panel - 341 Genes"
+      - "Custom MSK IMPACT Panel - 410 Genes"
+      - "Custom MSK IMPACT Panel - 468 Genes"
+      - "Custom Myeloid GENIE-VICC Panel - 37 Genes"
+      - "Custom Personalis ACEcp VAREPOP-APOLLO Panel v2"
+      - "Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 203 Genes"
+      - "Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 88 Genes"
+      - "Custom SeqCap EZ BeatAML Panel - 12.5 Mb"
+      - "Custom SeqCap EZ HGSC VCRome v2.1 ER Augmented v1"
+      - "Custom SeqCap EZ HGSC VCRome v2.1 ER Augmented v2"
+      - "Custom SeqCap EZ TARGET-OS Panel - 7.0 Mb"
+      - "Custom Solid Tumor GENIE-VICC Panel - 34 Genes"
+      - "Custom SureSelect CGCI-BLGSP Panel - 4.6 Mb"
+      - "Custom SureSelect CGCI-BLGSP Panel - 7.8 Mb"
+      - "Custom SureSelect CGCI-HTMCP-CC KMT2D And Hotspot Panel - 37.0 Kb"
+      - "Custom SureSelect CGCI-HTMCP-CC Panel - 19.7 Mb"
+      - "Custom SureSelect GENIE-UHN Panel - 555 Genes"
+      - "Custom SureSelect Human All Exon v1.1 Plus 3 Boosters"
+      - "Custom SureSelect TARGET-AML_NBL_WT Panel - 2.8 Mb"
+      - "Custom Twist Broad Exome v1.0 - 35.0 Mb"
+      - "Custom Twist Broad PanCancer Panel - 396 Genes"
+      - "Custom Twist MP2PRT-WT Panel - 52 Kb"
+      - "Foundation Medicine T5a Panel - 322 Genes"
+      - "Foundation Medicine T7 Panel - 429 Genes"
+      - "Ion AmpliSeq Cancer Hotspot Panel v2"
+      - "Ion AmpliSeq Comprehensive Cancer Panel"
+      - "Nextera DNA Exome"
+      - "Nextera Rapid Capture Exome v1.2"
+      - "SeqCap EZ HGSC VCRome v2.1"
+      - "SeqCap EZ Human Exome v2.0"
+      - "SeqCap EZ Human Exome v3.0"
+      - "SureSelect Human All Exon v3"
+      - "SureSelect Human All Exon v4"
+      - "SureSelect Human All Exon v5"
+      - "SureSelect Human All Exon v5 + UTR"
+      - "TruSeq Amplicon Cancer Panel"
+      - "TruSeq Exome Enrichment - 62 Mb"
+      - "TruSeq RNA Exome"
+      - "TruSight Myeloid Sequencing Panel"
+      - "Twist Human Comprehensive Exome"
+      - "xGen Exome Research Panel v1.0"
+      - "Unknown"
+      - "Not Applicable"
     enumDef:
-      Not Applicable:
+      "Not Applicable":
         $ref:
           - "_terms_enum.yaml#/not_applicable/common"
-      Unknown:
+      "Unknown":
         $ref:
           - "_terms_enum.yaml#/unknown/common"
 

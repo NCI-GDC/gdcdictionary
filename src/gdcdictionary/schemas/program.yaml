@@ -30,7 +30,9 @@ uniqueKeys:
 
 properties:
 
-  type:
+  dbgap_accession_number:
+    description: >-
+      The dbgap accession number provided for the program.
     type: string
 
   id:
@@ -42,7 +44,5 @@ properties:
       Full name/title of the program.
     type: string
 
-  dbgap_accession_number:
-    description: >-
-      The dbgap accession number provided for the program.
+  type:
     type: string

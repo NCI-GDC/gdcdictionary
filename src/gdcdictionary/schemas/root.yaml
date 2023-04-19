@@ -29,12 +29,12 @@ uniqueKeys:
 
 properties:
 
-  type:
-    type: string
-
   id:
     enum:
       - "root"
 
   schema_version:
+    type: string
+
+  type:
     type: string

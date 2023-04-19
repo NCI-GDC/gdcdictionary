@@ -55,32 +55,32 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
-      - Biospecimen
-
-  data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
-    enum:
-      - Cell Culture Image
-      - Slide Image
-      - Tissue Microarray Image
+      - "Biospecimen"
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - JPEG
-      - JPEG 2000
-      - SVS
-      - TIFF
+      - "JPEG"
+      - "JPEG 2000"
+      - "SVS"
+      - "TIFF"
+
+  data_type:
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - "Cell Culture Image"
+      - "Slide Image"
+      - "Tissue Microarray Image"
 
   experimental_strategy:
     description: >-
       Classification of the image type with respect to its experimental use.
     enum:
-      - Cell Culture
-      - Diagnostic Slide
-      - Tissue Slide
+      - "Cell Culture"
+      - "Diagnostic Slide"
+      - "Tissue Slide"
 
   imaging_date:
     $ref:
@@ -95,8 +95,8 @@ properties:
     $ref:
       - "_terms.yaml#/stain_type/common"
     enum:
-      - Haemotoxylin and Eosin (H&E)
-      - Immunohistochemistry (IHC)
+      - "Haemotoxylin and Eosin (H&E)"
+      - "Immunohistochemistry (IHC)"
 
   slides:
     $ref: "_definitions.yaml#/to_many"

@@ -72,37 +72,37 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
-      - Copy Number Variation
-
-  data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
-    enum:
-      - Allele-specific Copy Number Segment
-      - Copy Number Segment
-      - Masked Copy Number Segment
+      - "Copy Number Variation"
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - TXT
+      - "TXT"
+
+  data_type:
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - "Allele-specific Copy Number Segment"
+      - "Copy Number Segment"
+      - "Masked Copy Number Segment"
 
   experimental_strategy:
     $ref:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
-      - Genotyping Array
-      - Targeted Sequencing
-      - WGS
-      - WXS
+      - "Genotyping Array"
+      - "Targeted Sequencing"
+      - "WGS"
+      - "WXS"
 
   platform:
     $ref:
       - "_terms.yaml#/platform/common"
     enum:
-      - Affymetrix SNP 6.0
-      - Illumina
+      - "Affymetrix SNP 6.0"
+      - "Illumina"
 
   copy_number_liftover_workflows:
     $ref: "_definitions.yaml#/to_one"

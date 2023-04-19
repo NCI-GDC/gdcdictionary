@@ -35,7 +35,14 @@ uniqueKeys:
 
 properties:
 
-  type:
+  center_type:
+    description: >-
+      Type classification of the center (e.g. CGCC).
+    type: string
+
+  code:
+    description: >-
+      Numeric code for the center.
     type: string
 
   id:
@@ -44,9 +51,9 @@ properties:
     description: >-
       UUID for the center.
 
-  code:
+  name:
     description: >-
-      Numeric code for the center.
+      Name of the center (e.g. Broad Institute of MIT and Harvard).
     type: string
 
   namespace:
@@ -54,17 +61,10 @@ properties:
       Domain name of the center (e.g. broad.mit.edu).
     type: string
 
-  name:
-    description: >-
-      Name of the center (e.g. Broad Institute of MIT and Harvard).
-    type: string
-
   short_name:
     description: >-
       Shortened name of the center (e.g. BI).
     type: string
 
-  center_type:
-    description: >-
-      Type classification of the center (e.g. CGCC).
+  type:
     type: string
