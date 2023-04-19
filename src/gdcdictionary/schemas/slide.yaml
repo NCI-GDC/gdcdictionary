@@ -59,8 +59,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - "Unknown"
-      - "Not Reported"
+      - Unknown
+      - Not Reported
     enumDef:
       "Yes":
         $ref:
@@ -68,10 +68,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 

@@ -63,21 +63,21 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
-      - "Raw Sequencing Data"
-      - "Sequencing Data"
-      - "Sequencing Reads"
+      - Raw Sequencing Data
+      - Sequencing Data
+      - Sequencing Reads
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - "SRA XML"
+      - SRA XML
 
   data_type:
     $ref:
       - "_terms.yaml#/data_type/common"
     enum:
-      - "Experiment Metadata"
+      - Experiment Metadata
 
   read_groups:
     $ref: "_definitions.yaml#/to_one"

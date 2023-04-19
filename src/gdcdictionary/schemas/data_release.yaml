@@ -74,7 +74,7 @@ properties:
 
   type:
     enum:
-      - "data_release"
+      - data_release
 
   updated_datetime:
     $ref:

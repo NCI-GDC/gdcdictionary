@@ -132,13 +132,13 @@ properties:
       type of locked state.
     default: open
     enum:
-      - "closed"
-      - "legacy"
-      - "open"
-      - "processed"
-      - "processing"
-      - "review"
-      - "submitted"
+      - closed
+      - legacy
+      - open
+      - processed
+      - processing
+      - review
+      - submitted
 
   submission_enabled:
     description: >-

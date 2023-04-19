@@ -65,830 +65,830 @@ properties:
     $ref:
       - "_terms.yaml#/adverse_event/common"
     enum:
-      - "Abdominal Distension"
-      - "Abdominal Infection"
-      - "Abdominal Pain"
-      - "Abdominal Soft Tissue Necrosis"
-      - "Abducens Nerve Disorder"
-      - "Accessory Nerve Disorder"
-      - "Acidosis"
-      - "Acoustic Nerve Disorder NOS"
-      - "Activated Partial Thromboplastin Time Prolonged"
-      - "Acute Coronary Syndrome"
-      - "Acute Kidney Injury"
-      - "Adrenal Insufficiency"
-      - "Adult Respiratory Distress Syndrome"
-      - "Agitation"
-      - "Akathisia"
-      - "Alanine Aminotransferase Increased"
-      - "Alcohol Intolerance"
-      - "Alkaline Phosphatase Increased"
-      - "Alkalosis"
-      - "Allergic Reaction"
-      - "Allergic Rhinitis"
-      - "Alopecia"
-      - "Amnesia"
-      - "Anal Fistula"
-      - "Anal Hemorrhage"
-      - "Anal Mucositis"
-      - "Anal Necrosis"
-      - "Anal Pain"
-      - "Anal Stenosis"
-      - "Anal Ulcer"
-      - "Anaphylaxis"
-      - "Anemia"
-      - "Ankle Fracture"
-      - "Anorectal Infection"
-      - "Anorexia"
-      - "Anorgasmia"
-      - "Anxiety"
-      - "Aortic Injury"
-      - "Aortic Valve Disease"
-      - "Aphonia"
-      - "Apnea"
-      - "Appendicitis"
-      - "Appendicitis Perforated"
-      - "Arachnoiditis"
-      - "Arterial Injury"
-      - "Arteritis Infective"
-      - "Arthralgia"
-      - "Arthritis"
-      - "Ascites"
-      - "Aspartate Aminotransferase Increased"
-      - "Aspiration"
-      - "Asystole"
-      - "Ataxia"
-      - "Atelectasis"
-      - "Atrial Fibrillation"
-      - "Atrial Flutter"
-      - "Atrioventricular Block Complete"
-      - "Atrioventricular Block First Degree"
-      - "Autoimmune Disorder"
-      - "Avascular Necrosis"
-      - "Azoospermia"
-      - "Back Pain"
-      - "Bile Duct Stenosis"
-      - "Biliary Anastomotic Leak"
-      - "Biliary Fistula"
-      - "Biliary Tract Infection"
-      - "Bladder Anastomotic Leak"
-      - "Bladder Infection"
-      - "Bladder Perforation"
-      - "Bladder Spasm"
-      - "Bloating"
-      - "Blood and Lymphatic System Disorders - Other"
-      - "Blood Antidiuretic Hormone Abnormal"
-      - "Blood Bilirubin Increased"
-      - "Blood Corticotrophin Decreased"
-      - "Blood Gonadotrophin Abnormal"
-      - "Blood Prolactin Abnormal"
-      - "Blurred Vision"
-      - "Body Odor"
-      - "Bone Infection"
-      - "Bone Marrow Hypocellular"
-      - "Bone Pain"
-      - "Brachial Plexopathy"
-      - "Breast Atrophy"
-      - "Breast Infection"
-      - "Breast Pain"
-      - "Bronchial Fistula"
-      - "Bronchial Infection"
-      - "Bronchial Obstruction"
-      - "Bronchial Stricture"
-      - "Bronchopleural Fistula"
-      - "Bronchopulmonary Hemorrhage"
-      - "Bronchospasm"
-      - "Bruising"
-      - "Bullous Dermatitis"
-      - "Burn"
-      - "Buttock Pain"
-      - "Capillary Leak Syndrome"
-      - "Carbon Monoxide Diffusing Capacity Decreased"
-      - "Cardiac Arrest"
-      - "Cardiac Disorders - Other"
-      - "Cardiac Troponin I Increased"
-      - "Cardiac Troponin T Increased"
-      - "Cataract"
-      - "Catheter Related Infection"
-      - "CD4 Lymphocytes Decreased"
-      - "Cecal Hemorrhage"
-      - "Cecal Infection"
-      - "Central Nervous System Necrosis"
-      - "Cerebrospinal Fluid Leakage"
-      - "Cervicitis Infection"
-      - "Cheilitis"
-      - "Chest Pain - Cardiac"
-      - "Chest Wall Pain"
-      - "Chills"
-      - "Cholecystitis"
-      - "Cholesterol High"
-      - "Chronic Kidney Disease"
-      - "Chylothorax"
-      - "Cognitive Disturbance"
-      - "Colitis"
-      - "Colonic Fistula"
-      - "Colonic Hemorrhage"
-      - "Colonic Obstruction"
-      - "Colonic Perforation"
-      - "Colonic Stenosis"
-      - "Colonic Ulcer"
-      - "Concentration Impairment"
-      - "Conduction Disorder"
-      - "Confusion"
-      - "Congenital, Familial and Genetic Disorders - Other"
-      - "Conjunctivitis"
-      - "Conjunctivitis Infective"
-      - "Constipation"
-      - "Constrictive Pericarditis"
-      - "Corneal Infection"
-      - "Corneal Ulcer"
-      - "Cough"
-      - "CPK Increased"
-      - "Cranial Nerve Infection"
-      - "Creatinine Increased"
-      - "Cushingoid"
-      - "Cystitis Noninfective"
-      - "Cytokine Release Syndrome"
-      - "Death Neonatal"
-      - "Death NOS"
-      - "Dehydration"
-      - "Delayed Orgasm"
-      - "Delayed Puberty"
-      - "Delirium"
-      - "Delusions"
-      - "Dental Caries"
-      - "Depressed Level of Consciousness"
-      - "Depression"
-      - "Dermatitis Radiation"
-      - "Device Related Infection"
-      - "Diarrhea"
-      - "Disseminated Intravascular Coagulation"
-      - "Dizziness"
-      - "Dry Eye"
-      - "Dry Mouth"
-      - "Dry Skin"
-      - "Duodenal Fistula"
-      - "Duodenal Hemorrhage"
-      - "Duodenal Infection"
-      - "Duodenal Obstruction"
-      - "Duodenal Perforation"
-      - "Duodenal Stenosis"
-      - "Duodenal Ulcer"
-      - "Dysarthria"
-      - "Dysesthesia"
-      - "Dysgeusia"
-      - "Dysmenorrhea"
-      - "Dyspareunia"
-      - "Dyspepsia"
-      - "Dysphagia"
-      - "Dysphasia"
-      - "Dyspnea"
-      - "Ear and Labyrinth Disorders - Other"
-      - "Ear Pain"
-      - "Edema Cerebral"
-      - "Edema Face"
-      - "Edema Limbs"
-      - "Edema Trunk"
-      - "Ejaculation Disorder"
-      - "Ejection Fraction Decreased"
-      - "Electrocardiogram QT Corrected Interval Prolonged"
-      - "Encephalitis Infection"
-      - "Encephalomyelitis Infection"
-      - "Encephalopathy"
-      - "Endocarditis Infective"
-      - "Endocrine Disorders - Other"
-      - "Endophthalmitis"
-      - "Enterocolitis"
-      - "Enterocolitis Infectious"
-      - "Enterovesical Fistula"
-      - "Epistaxis"
-      - "Erectile Dysfunction"
-      - "Erythema Multiforme"
-      - "Erythroderma"
-      - "Esophageal Anastomotic Leak"
-      - "Esophageal Fistula"
-      - "Esophageal Hemorrhage"
-      - "Esophageal Infection"
-      - "Esophageal Necrosis"
-      - "Esophageal Obstruction"
-      - "Esophageal Pain"
-      - "Esophageal Perforation"
-      - "Esophageal Stenosis"
-      - "Esophageal Ulcer"
-      - "Esophageal Varices Hemorrhage"
-      - "Esophagitis"
-      - "Euphoria"
-      - "Exostosis"
-      - "External Ear Inflammation"
-      - "External Ear Pain"
-      - "Extraocular Muscle Paresis"
-      - "Extrapyramidal Disorder"
-      - "Eye Disorders - Other"
-      - "Eye Infection"
-      - "Eye Pain"
-      - "Eyelid Function Disorder"
-      - "Facial Muscle Weakness"
-      - "Facial Nerve Disorder"
-      - "Facial Pain"
-      - "Fall"
-      - "Fallopian Tube Anastomotic Leak"
-      - "Fallopian Tube Obstruction"
-      - "Fallopian Tube Perforation"
-      - "Fallopian Tube Stenosis"
-      - "Fat Atrophy"
-      - "Fatigue"
-      - "Febrile Neutropenia"
-      - "Fecal Incontinence"
-      - "Female Genital Tract Fistula"
-      - "Feminization Acquired"
-      - "Fetal Death"
-      - "Fetal Growth Retardation"
-      - "Fever"
-      - "Fibrinogen Decreased"
-      - "Fibrosis Deep Connective Tissue"
-      - "Flank Pain"
-      - "Flashing Lights"
-      - "Flatulence"
-      - "Floaters"
-      - "Flu Like Symptoms"
-      - "Flushing"
-      - "Forced Expiratory Volume Decreased"
-      - "Fracture"
-      - "Gait Disturbance"
-      - "Gallbladder Fistula"
-      - "Gallbladder Infection"
-      - "Gallbladder Necrosis"
-      - "Gallbladder Obstruction"
-      - "Gallbladder Pain"
-      - "Gallbladder Perforation"
-      - "Gastric Anastomotic Leak"
-      - "Gastric Fistula"
-      - "Gastric Hemorrhage"
-      - "Gastric Necrosis"
-      - "Gastric Perforation"
-      - "Gastric Stenosis"
-      - "Gastric Ulcer"
-      - "Gastritis"
-      - "Gastroesophageal Reflux Disease"
-      - "Gastrointestinal Anastomotic Leak"
-      - "Gastrointestinal Disorders - Other"
-      - "Gastrointestinal Fistula"
-      - "Gastrointestinal Pain"
-      - "Gastrointestinal Stoma Necrosis"
-      - "Gastroparesis"
-      - "General Disorders and Administration Site Conditions - Other"
-      - "Generalized Muscle Weakness"
-      - "Genital Edema"
-      - "GGT Increased"
-      - "Gingival Pain"
-      - "Glaucoma"
-      - "Glossopharyngeal Nerve Disorder"
-      - "Glucose Intolerance"
-      - "Growth Accelerated"
-      - "Growth Hormone Abnormal"
-      - "Growth Suppression"
-      - "Gum Infection"
-      - "Gynecomastia"
-      - "Hallucinations"
-      - "Haptoglobin Decreased"
-      - "Head Soft Tissue Necrosis"
-      - "Headache"
-      - "Hearing Impaired"
-      - "Heart Failure"
-      - "Hematoma"
-      - "Hematosalpinx"
-      - "Hematuria"
-      - "Hemoglobin Increased"
-      - "Hemoglobinuria"
-      - "Hemolysis"
-      - "Hemolytic Uremic Syndrome"
-      - "Hemorrhoidal Hemorrhage"
-      - "Hemorrhoids"
-      - "Hepatic Failure"
-      - "Hepatic Hemorrhage"
-      - "Hepatic Infection"
-      - "Hepatic Necrosis"
-      - "Hepatic Pain"
-      - "Hepatitis Viral"
-      - "Hepatobiliary Disorders - Other"
-      - "Hiccups"
-      - "Hip Fracture"
-      - "Hirsutism"
-      - "Hoarseness"
-      - "Hot Flashes"
-      - "Hydrocephalus"
-      - "Hypercalcemia"
-      - "Hyperglycemia"
-      - "Hyperhidrosis"
-      - "Hyperkalemia"
-      - "Hypermagnesemia"
-      - "Hypernatremia"
-      - "Hyperparathyroidism"
-      - "Hypersomnia"
-      - "Hypertension"
-      - "Hyperthyroidism"
-      - "Hypertrichosis"
-      - "Hypertriglyceridemia"
-      - "Hyperuricemia"
-      - "Hypoalbuminemia"
-      - "Hypocalcemia"
-      - "Hypoglossal Nerve Disorder"
-      - "Hypoglycemia"
-      - "Hypohidrosis"
-      - "Hypokalemia"
-      - "Hypomagnesemia"
-      - "Hyponatremia"
-      - "Hypoparathyroidism"
-      - "Hypophosphatemia"
-      - "Hypotension"
-      - "Hypothermia"
-      - "Hypothyroidism"
-      - "Hypoxia"
-      - "Ileal Fistula"
-      - "Ileal Hemorrhage"
-      - "Ileal Obstruction"
-      - "Ileal Perforation"
-      - "Ileal Stenosis"
-      - "Ileal Ulcer"
-      - "Ileus"
-      - "Immune System Disorders - Other"
-      - "Infections and Infestations - Other"
-      - "Infective Myositis"
-      - "Infusion Related Reaction"
-      - "Infusion Site Extravasation"
-      - "Injection Site Reaction"
-      - "Injury to Carotid Artery"
-      - "Injury to Inferior Vena Cava"
-      - "Injury to Jugular Vein"
-      - "Injury to Superior Vena Cava"
-      - "Injury, Poisoning and Procedural Complications - Other"
-      - "INR Increased"
-      - "Insomnia"
-      - "Intestinal Stoma Leak"
-      - "Intestinal Stoma Obstruction"
-      - "Intestinal Stoma Site Bleeding"
-      - "Intra-Abdominal Hemorrhage"
-      - "Intracranial Hemorrhage"
-      - "Intraoperative Arterial Injury"
-      - "Intraoperative Breast Injury"
-      - "Intraoperative Cardiac Injury"
-      - "Intraoperative Ear Injury"
-      - "Intraoperative Endocrine Injury"
-      - "Intraoperative Gastrointestinal Injury"
-      - "Intraoperative Head and Neck Injury"
-      - "Intraoperative Hemorrhage"
-      - "Intraoperative Hepatobiliary Injury"
-      - "Intraoperative Musculoskeletal Injury"
-      - "Intraoperative Neurological Injury"
-      - "Intraoperative Ocular Injury"
-      - "Intraoperative Renal Injury"
-      - "Intraoperative Reproductive Tract Injury"
-      - "Intraoperative Respiratory Injury"
-      - "Intraoperative Skin Injury"
-      - "Intraoperative Splenic Injury"
-      - "Intraoperative Urinary Injury"
-      - "Intraoperative Venous Injury"
-      - "Investigations - Other"
-      - "Iron Overload"
-      - "Irregular Menstruation"
-      - "Irritability"
-      - "Ischemia Cerebrovascular"
-      - "IVth Nerve Disorder"
-      - "Jejunal Fistula"
-      - "Jejunal Hemorrhage"
-      - "Jejunal Obstruction"
-      - "Jejunal Perforation"
-      - "Jejunal Stenosis"
-      - "Jejunal Ulcer"
-      - "Joint Effusion"
-      - "Joint Infection"
-      - "Joint Range of Motion Decreased"
-      - "Joint Range of Motion Decreased Cervical Spine"
-      - "Joint Range of Motion Decreased Lumbar Spine"
-      - "Keratitis"
-      - "Kidney Anastomotic Leak"
-      - "Kidney Infection"
-      - "Kyphosis"
-      - "Lactation Disorder"
-      - "Large Intestinal Anastomotic Leak"
-      - "Laryngeal Edema"
-      - "Laryngeal Fistula"
-      - "Laryngeal Hemorrhage"
-      - "Laryngeal Inflammation"
-      - "Laryngeal Mucositis"
-      - "Laryngeal Obstruction"
-      - "Laryngeal Stenosis"
-      - "Laryngitis"
-      - "Laryngopharyngeal Dysesthesia"
-      - "Laryngospasm"
-      - "Left Ventricular Systolic Dysfunction"
-      - "Lethargy"
-      - "Leukemia Secondary to Oncology Chemotherapy"
-      - "Leukocytosis"
-      - "Leukoencephalopathy"
-      - "Libido Decreased"
-      - "Libido Increased"
-      - "Lip Infection"
-      - "Lip Pain"
-      - "Lipase Increased"
-      - "Lipohypertrophy"
-      - "Localized Edema"
-      - "Lordosis"
-      - "Lower Gastrointestinal Hemorrhage"
-      - "Lung Infection"
-      - "Lymph Gland Infection"
-      - "Lymph Leakage"
-      - "Lymph Node Pain"
-      - "Lymphedema"
-      - "Lymphocele"
-      - "Lymphocyte Count Decreased"
-      - "Lymphocyte Count Increased"
-      - "Malabsorption"
-      - "Malaise"
-      - "Mania"
-      - "Mediastinal Hemorrhage"
-      - "Mediastinal Infection"
-      - "Memory Impairment"
-      - "Meningismus"
-      - "Meningitis"
-      - "Menopause"
-      - "Menorrhagia"
-      - "Metabolism and Nutrition Disorders - Other"
-      - "Middle Ear Inflammation"
-      - "Mitral Valve Disease"
-      - "Mobitz (Type) II Atrioventricular Block"
-      - "Mobitz Type I"
-      - "Movements Involuntary"
-      - "Mucosal Infection"
-      - "Mucositis Oral"
-      - "Multi-Organ Failure"
-      - "Muscle Weakness Left-Sided"
-      - "Muscle Weakness Lower Limb"
-      - "Muscle Weakness Right-Sided"
-      - "Muscle Weakness Trunk"
-      - "Muscle Weakness Upper Limb"
-      - "Musculoskeletal and Connective Tissue Disorders - Other"
-      - "Musculoskeletal Deformity"
-      - "Myalgia"
-      - "Myelitis"
-      - "Myelodysplastic Syndrome"
-      - "Myocardial Infarction"
-      - "Myocarditis"
-      - "Myositis"
-      - "Nail Discoloration"
-      - "Nail Infection"
-      - "Nail Loss"
-      - "Nail Ridging"
-      - "Nasal Congestion"
-      - "Nausea"
-      - "Neck Edema"
-      - "Neck Pain"
-      - "Neck Soft Tissue Necrosis"
-      - "Neoplasms Benign, Malignant and Unspecified (Incl Cysts and Polyps) - Other"
-      - "Nervous System Disorders - Other"
-      - "Neuralgia"
-      - "Neutrophil Count Decreased"
-      - "Night Blindness"
-      - "Nipple Deformity"
-      - "Non-Cardiac Chest Pain"
-      - "Nystagmus"
-      - "Obesity"
-      - "Obstruction Gastric"
-      - "Oculomotor Nerve Disorder"
-      - "Olfactory Nerve Disorder"
-      - "Oligospermia"
-      - "Optic Nerve Disorder"
-      - "Oral Cavity Fistula"
-      - "Oral Dysesthesia"
-      - "Oral Hemorrhage"
-      - "Oral Pain"
-      - "Osteonecrosis of Jaw"
-      - "Osteoporosis"
-      - "Otitis Externa"
-      - "Otitis Media"
-      - "Ovarian Hemorrhage"
-      - "Ovarian Infection"
-      - "Ovarian Rupture"
-      - "Ovulation Pain"
-      - "Pain"
-      - "Pain in Extremity"
-      - "Pain of Skin"
-      - "Palmar-Plantar Erythrodysesthesia Syndrome"
-      - "Palpitations"
-      - "Pancreas Infection"
-      - "Pancreatic Anastomotic Leak"
-      - "Pancreatic Duct Stenosis"
-      - "Pancreatic Enzymes Decreased"
-      - "Pancreatic Fistula"
-      - "Pancreatic Hemorrhage"
-      - "Pancreatic Necrosis"
-      - "Pancreatitis"
-      - "Papilledema"
-      - "Papulopustular Rash"
-      - "Paresthesia"
-      - "Paronychia"
-      - "Paroxysmal Atrial Tachycardia"
-      - "Pelvic Floor Muscle Weakness"
-      - "Pelvic Infection"
-      - "Pelvic Pain"
-      - "Pelvic Soft Tissue Necrosis"
-      - "Penile Infection"
-      - "Penile Pain"
-      - "Perforation Bile Duct"
-      - "Pericardial Effusion"
-      - "Pericardial Tamponade"
-      - "Pericarditis"
-      - "Perineal Pain"
-      - "Periodontal Disease"
-      - "Periorbital Edema"
-      - "Periorbital Infection"
-      - "Peripheral Ischemia"
-      - "Peripheral Motor Neuropathy"
-      - "Peripheral Nerve Infection"
-      - "Peripheral Sensory Neuropathy"
-      - "Peritoneal Infection"
-      - "Peritoneal Necrosis"
-      - "Personality Change"
-      - "Phantom Pain"
-      - "Pharyngeal Anastomotic Leak"
-      - "Pharyngeal Fistula"
-      - "Pharyngeal Hemorrhage"
-      - "Pharyngeal Mucositis"
-      - "Pharyngeal Necrosis"
-      - "Pharyngeal Stenosis"
-      - "Pharyngitis"
-      - "Pharyngolaryngeal Pain"
-      - "Phlebitis"
-      - "Phlebitis Infective"
-      - "Photophobia"
-      - "Photosensitivity"
-      - "Platelet Count Decreased"
-      - "Pleural Effusion"
-      - "Pleural Hemorrhage"
-      - "Pleural Infection"
-      - "Pleuritic Pain"
-      - "Pneumonitis"
-      - "Pneumothorax"
-      - "Portal Hypertension"
-      - "Portal Vein Thrombosis"
-      - "Postnasal Drip"
-      - "Postoperative Hemorrhage"
-      - "Postoperative Thoracic Procedure Complication"
-      - "Precocious Puberty"
-      - "Pregnancy, Puerperium and Perinatal Conditions - Other"
-      - "Premature Delivery"
-      - "Premature Menopause"
-      - "Presyncope"
-      - "Proctitis"
-      - "Productive Cough"
-      - "Prolapse of Intestinal Stoma"
-      - "Prolapse of Urostomy"
-      - "Prostate Infection"
-      - "Prostatic Hemorrhage"
-      - "Prostatic Obstruction"
-      - "Prostatic Pain"
-      - "Proteinuria"
-      - "Pruritus"
-      - "Psychiatric Disorders - Other"
-      - "Psychosis"
-      - "Pulmonary Edema"
-      - "Pulmonary Fibrosis"
-      - "Pulmonary Fistula"
-      - "Pulmonary Hypertension"
-      - "Pulmonary Valve Disease"
-      - "Purpura"
-      - "Pyramidal Tract Syndrome"
-      - "Radiation Recall Reaction (Dermatologic)"
-      - "Radiculitis"
-      - "Rash Acneiform"
-      - "Rash Maculo-Papular"
-      - "Rash Pustular"
-      - "Rectal Anastomotic Leak"
-      - "Rectal Fistula"
-      - "Rectal Hemorrhage"
-      - "Rectal Mucositis"
-      - "Rectal Necrosis"
-      - "Rectal Obstruction"
-      - "Rectal Pain"
-      - "Rectal Perforation"
-      - "Rectal Stenosis"
-      - "Rectal Ulcer"
-      - "Recurrent Laryngeal Nerve Palsy"
-      - "Renal and Urinary Disorders - Other"
-      - "Renal Calculi"
-      - "Renal Colic"
-      - "Renal Hemorrhage"
-      - "Reproductive System and Breast Disorders - Other"
-      - "Respiratory Failure"
-      - "Respiratory, Thoracic and Mediastinal Disorders - Other"
-      - "Restlessness"
-      - "Restrictive Cardiomyopathy"
-      - "Retinal Detachment"
-      - "Retinal Tear"
-      - "Retinal Vascular Disorder"
-      - "Retinoic Acid Syndrome"
-      - "Retinopathy"
-      - "Retroperitoneal Hemorrhage"
-      - "Reversible Posterior Leukoencephalopathy Syndrome"
-      - "Rhinitis Infective"
-      - "Right Ventricular Dysfunction"
-      - "Salivary Duct Inflammation"
-      - "Salivary Gland Fistula"
-      - "Salivary Gland Infection"
-      - "Scalp Pain"
-      - "Scleral Disorder"
-      - "Scoliosis"
-      - "Scrotal Infection"
-      - "Scrotal Pain"
-      - "Seizure"
-      - "Sepsis"
-      - "Seroma"
-      - "Serum Amylase Increased"
-      - "Serum Sickness"
-      - "Sick Sinus Syndrome"
-      - "Sinus Bradycardia"
-      - "Sinus Disorder"
-      - "Sinus Pain"
-      - "Sinus Tachycardia"
-      - "Sinusitis"
-      - "Skin and Subcutaneous Tissue Disorders - Other"
-      - "Skin Atrophy"
-      - "Skin Hyperpigmentation"
-      - "Skin Hypopigmentation"
-      - "Skin Induration"
-      - "Skin Infection"
-      - "Skin Ulceration"
-      - "Sleep Apnea"
-      - "Small Intestinal Anastomotic Leak"
-      - "Small Intestinal Mucositis"
-      - "Small Intestinal Obstruction"
-      - "Small Intestinal Perforation"
-      - "Small Intestinal Stenosis"
-      - "Small Intestine Infection"
-      - "Small Intestine Ulcer"
-      - "Sneezing"
-      - "Social Circumstances - Other"
-      - "Soft Tissue Infection"
-      - "Soft Tissue Necrosis Lower Limb"
-      - "Soft Tissue Necrosis Upper Limb"
-      - "Somnolence"
-      - "Sore Throat"
-      - "Spasticity"
-      - "Spermatic Cord Anastomotic Leak"
-      - "Spermatic Cord Hemorrhage"
-      - "Spermatic Cord Obstruction"
-      - "Spinal Fracture"
-      - "Spleen Disorder"
-      - "Splenic Infection"
-      - "Stenosis of Gastrointestinal Stoma"
-      - "Stevens-Johnson Syndrome"
-      - "Stoma Site Infection"
-      - "Stomach Pain"
-      - "Stomal Ulcer"
-      - "Stridor"
-      - "Stroke"
-      - "Sudden Death NOS"
-      - "Suicidal Ideation"
-      - "Suicide Attempt"
-      - "Superficial Soft Tissue Fibrosis"
-      - "Superficial Thrombophlebitis"
-      - "Superior Vena Cava Syndrome"
-      - "Supraventricular Tachycardia"
-      - "Surgical and Medical Procedures - Other"
-      - "Syncope"
-      - "Telangiectasia"
-      - "Testicular Disorder"
-      - "Testicular Hemorrhage"
-      - "Testicular Pain"
-      - "Thromboembolic Event"
-      - "Thrombotic Thrombocytopenic Purpura"
-      - "Tinnitus"
-      - "Tooth Development Disorder"
-      - "Tooth Discoloration"
-      - "Tooth Infection"
-      - "Toothache"
-      - "Toxic Epidermal Necrolysis"
-      - "Tracheal Fistula"
-      - "Tracheal Hemorrhage"
-      - "Tracheal Mucositis"
-      - "Tracheal Obstruction"
-      - "Tracheal Stenosis"
-      - "Tracheitis"
-      - "Tracheostomy Site Bleeding"
-      - "Transient Ischemic Attacks"
-      - "Treatment Related Secondary Malignancy"
-      - "Tremor"
-      - "Tricuspid Valve Disease"
-      - "Trigeminal Nerve Disorder"
-      - "Trismus"
-      - "Tumor Lysis Syndrome"
-      - "Tumor Pain"
-      - "Typhlitis"
-      - "Unequal Limb Length"
-      - "Unintended Pregnancy"
-      - "Upper Gastrointestinal Hemorrhage"
-      - "Upper Respiratory Infection"
-      - "Ureteric Anastomotic Leak"
-      - "Urethral Anastomotic Leak"
-      - "Urethral Infection"
-      - "Urinary Fistula"
-      - "Urinary Frequency"
-      - "Urinary Incontinence"
-      - "Urinary Retention"
-      - "Urinary Tract Infection"
-      - "Urinary Tract Obstruction"
-      - "Urinary Tract Pain"
-      - "Urinary Urgency"
-      - "Urine Discoloration"
-      - "Urine Output Decreased"
-      - "Urostomy Leak"
-      - "Urostomy Obstruction"
-      - "Urostomy Site Bleeding"
-      - "Urostomy Stenosis"
-      - "Urticaria"
-      - "Uterine Anastomotic Leak"
-      - "Uterine Fistula"
-      - "Uterine Hemorrhage"
-      - "Uterine Infection"
-      - "Uterine Obstruction"
-      - "Uterine Pain"
-      - "Uterine Perforation"
-      - "Uveitis"
-      - "Vaginal Anastomotic Leak"
-      - "Vaginal Discharge"
-      - "Vaginal Dryness"
-      - "Vaginal Fistula"
-      - "Vaginal Hemorrhage"
-      - "Vaginal Infection"
-      - "Vaginal Inflammation"
-      - "Vaginal Obstruction"
-      - "Vaginal Pain"
-      - "Vaginal Perforation"
-      - "Vaginal Stricture"
-      - "Vaginismus"
-      - "Vagus Nerve Disorder"
-      - "Vas Deferens Anastomotic Leak"
-      - "Vascular Access Complication"
-      - "Vascular Disorders - Other"
-      - "Vasculitis"
-      - "Vasovagal Reaction"
-      - "Venous Injury"
-      - "Ventricular Arrhythmia"
-      - "Ventricular Fibrillation"
-      - "Ventricular Tachycardia"
-      - "Vertigo"
-      - "Vestibular Disorder"
-      - "Virilization"
-      - "Visceral Arterial Ischemia"
-      - "Vital Capacity Abnormal"
-      - "Vitreous Hemorrhage"
-      - "Voice Alteration"
-      - "Vomiting"
-      - "Vulval Infection"
-      - "Watering Eyes"
-      - "Weight Gain"
-      - "Weight Loss"
-      - "Wheezing"
-      - "White Blood Cell Decreased"
-      - "Wolff-Parkinson-White Syndrome"
-      - "Wound Complication"
-      - "Wound Dehiscence"
-      - "Wound Infection"
-      - "Wrist Fracture"
+      - Abdominal Distension
+      - Abdominal Infection
+      - Abdominal Pain
+      - Abdominal Soft Tissue Necrosis
+      - Abducens Nerve Disorder
+      - Accessory Nerve Disorder
+      - Acidosis
+      - Acoustic Nerve Disorder NOS
+      - Activated Partial Thromboplastin Time Prolonged
+      - Acute Coronary Syndrome
+      - Acute Kidney Injury
+      - Adrenal Insufficiency
+      - Adult Respiratory Distress Syndrome
+      - Agitation
+      - Akathisia
+      - Alanine Aminotransferase Increased
+      - Alcohol Intolerance
+      - Alkaline Phosphatase Increased
+      - Alkalosis
+      - Allergic Reaction
+      - Allergic Rhinitis
+      - Alopecia
+      - Amnesia
+      - Anal Fistula
+      - Anal Hemorrhage
+      - Anal Mucositis
+      - Anal Necrosis
+      - Anal Pain
+      - Anal Stenosis
+      - Anal Ulcer
+      - Anaphylaxis
+      - Anemia
+      - Ankle Fracture
+      - Anorectal Infection
+      - Anorexia
+      - Anorgasmia
+      - Anxiety
+      - Aortic Injury
+      - Aortic Valve Disease
+      - Aphonia
+      - Apnea
+      - Appendicitis
+      - Appendicitis Perforated
+      - Arachnoiditis
+      - Arterial Injury
+      - Arteritis Infective
+      - Arthralgia
+      - Arthritis
+      - Ascites
+      - Aspartate Aminotransferase Increased
+      - Aspiration
+      - Asystole
+      - Ataxia
+      - Atelectasis
+      - Atrial Fibrillation
+      - Atrial Flutter
+      - Atrioventricular Block Complete
+      - Atrioventricular Block First Degree
+      - Autoimmune Disorder
+      - Avascular Necrosis
+      - Azoospermia
+      - Back Pain
+      - Bile Duct Stenosis
+      - Biliary Anastomotic Leak
+      - Biliary Fistula
+      - Biliary Tract Infection
+      - Bladder Anastomotic Leak
+      - Bladder Infection
+      - Bladder Perforation
+      - Bladder Spasm
+      - Bloating
+      - Blood and Lymphatic System Disorders - Other
+      - Blood Antidiuretic Hormone Abnormal
+      - Blood Bilirubin Increased
+      - Blood Corticotrophin Decreased
+      - Blood Gonadotrophin Abnormal
+      - Blood Prolactin Abnormal
+      - Blurred Vision
+      - Body Odor
+      - Bone Infection
+      - Bone Marrow Hypocellular
+      - Bone Pain
+      - Brachial Plexopathy
+      - Breast Atrophy
+      - Breast Infection
+      - Breast Pain
+      - Bronchial Fistula
+      - Bronchial Infection
+      - Bronchial Obstruction
+      - Bronchial Stricture
+      - Bronchopleural Fistula
+      - Bronchopulmonary Hemorrhage
+      - Bronchospasm
+      - Bruising
+      - Bullous Dermatitis
+      - Burn
+      - Buttock Pain
+      - Capillary Leak Syndrome
+      - Carbon Monoxide Diffusing Capacity Decreased
+      - Cardiac Arrest
+      - Cardiac Disorders - Other
+      - Cardiac Troponin I Increased
+      - Cardiac Troponin T Increased
+      - Cataract
+      - Catheter Related Infection
+      - CD4 Lymphocytes Decreased
+      - Cecal Hemorrhage
+      - Cecal Infection
+      - Central Nervous System Necrosis
+      - Cerebrospinal Fluid Leakage
+      - Cervicitis Infection
+      - Cheilitis
+      - Chest Pain - Cardiac
+      - Chest Wall Pain
+      - Chills
+      - Cholecystitis
+      - Cholesterol High
+      - Chronic Kidney Disease
+      - Chylothorax
+      - Cognitive Disturbance
+      - Colitis
+      - Colonic Fistula
+      - Colonic Hemorrhage
+      - Colonic Obstruction
+      - Colonic Perforation
+      - Colonic Stenosis
+      - Colonic Ulcer
+      - Concentration Impairment
+      - Conduction Disorder
+      - Confusion
+      - Congenital, Familial and Genetic Disorders - Other
+      - Conjunctivitis
+      - Conjunctivitis Infective
+      - Constipation
+      - Constrictive Pericarditis
+      - Corneal Infection
+      - Corneal Ulcer
+      - Cough
+      - CPK Increased
+      - Cranial Nerve Infection
+      - Creatinine Increased
+      - Cushingoid
+      - Cystitis Noninfective
+      - Cytokine Release Syndrome
+      - Death Neonatal
+      - Death NOS
+      - Dehydration
+      - Delayed Orgasm
+      - Delayed Puberty
+      - Delirium
+      - Delusions
+      - Dental Caries
+      - Depressed Level of Consciousness
+      - Depression
+      - Dermatitis Radiation
+      - Device Related Infection
+      - Diarrhea
+      - Disseminated Intravascular Coagulation
+      - Dizziness
+      - Dry Eye
+      - Dry Mouth
+      - Dry Skin
+      - Duodenal Fistula
+      - Duodenal Hemorrhage
+      - Duodenal Infection
+      - Duodenal Obstruction
+      - Duodenal Perforation
+      - Duodenal Stenosis
+      - Duodenal Ulcer
+      - Dysarthria
+      - Dysesthesia
+      - Dysgeusia
+      - Dysmenorrhea
+      - Dyspareunia
+      - Dyspepsia
+      - Dysphagia
+      - Dysphasia
+      - Dyspnea
+      - Ear and Labyrinth Disorders - Other
+      - Ear Pain
+      - Edema Cerebral
+      - Edema Face
+      - Edema Limbs
+      - Edema Trunk
+      - Ejaculation Disorder
+      - Ejection Fraction Decreased
+      - Electrocardiogram QT Corrected Interval Prolonged
+      - Encephalitis Infection
+      - Encephalomyelitis Infection
+      - Encephalopathy
+      - Endocarditis Infective
+      - Endocrine Disorders - Other
+      - Endophthalmitis
+      - Enterocolitis
+      - Enterocolitis Infectious
+      - Enterovesical Fistula
+      - Epistaxis
+      - Erectile Dysfunction
+      - Erythema Multiforme
+      - Erythroderma
+      - Esophageal Anastomotic Leak
+      - Esophageal Fistula
+      - Esophageal Hemorrhage
+      - Esophageal Infection
+      - Esophageal Necrosis
+      - Esophageal Obstruction
+      - Esophageal Pain
+      - Esophageal Perforation
+      - Esophageal Stenosis
+      - Esophageal Ulcer
+      - Esophageal Varices Hemorrhage
+      - Esophagitis
+      - Euphoria
+      - Exostosis
+      - External Ear Inflammation
+      - External Ear Pain
+      - Extraocular Muscle Paresis
+      - Extrapyramidal Disorder
+      - Eye Disorders - Other
+      - Eye Infection
+      - Eye Pain
+      - Eyelid Function Disorder
+      - Facial Muscle Weakness
+      - Facial Nerve Disorder
+      - Facial Pain
+      - Fall
+      - Fallopian Tube Anastomotic Leak
+      - Fallopian Tube Obstruction
+      - Fallopian Tube Perforation
+      - Fallopian Tube Stenosis
+      - Fat Atrophy
+      - Fatigue
+      - Febrile Neutropenia
+      - Fecal Incontinence
+      - Female Genital Tract Fistula
+      - Feminization Acquired
+      - Fetal Death
+      - Fetal Growth Retardation
+      - Fever
+      - Fibrinogen Decreased
+      - Fibrosis Deep Connective Tissue
+      - Flank Pain
+      - Flashing Lights
+      - Flatulence
+      - Floaters
+      - Flu Like Symptoms
+      - Flushing
+      - Forced Expiratory Volume Decreased
+      - Fracture
+      - Gait Disturbance
+      - Gallbladder Fistula
+      - Gallbladder Infection
+      - Gallbladder Necrosis
+      - Gallbladder Obstruction
+      - Gallbladder Pain
+      - Gallbladder Perforation
+      - Gastric Anastomotic Leak
+      - Gastric Fistula
+      - Gastric Hemorrhage
+      - Gastric Necrosis
+      - Gastric Perforation
+      - Gastric Stenosis
+      - Gastric Ulcer
+      - Gastritis
+      - Gastroesophageal Reflux Disease
+      - Gastrointestinal Anastomotic Leak
+      - Gastrointestinal Disorders - Other
+      - Gastrointestinal Fistula
+      - Gastrointestinal Pain
+      - Gastrointestinal Stoma Necrosis
+      - Gastroparesis
+      - General Disorders and Administration Site Conditions - Other
+      - Generalized Muscle Weakness
+      - Genital Edema
+      - GGT Increased
+      - Gingival Pain
+      - Glaucoma
+      - Glossopharyngeal Nerve Disorder
+      - Glucose Intolerance
+      - Growth Accelerated
+      - Growth Hormone Abnormal
+      - Growth Suppression
+      - Gum Infection
+      - Gynecomastia
+      - Hallucinations
+      - Haptoglobin Decreased
+      - Head Soft Tissue Necrosis
+      - Headache
+      - Hearing Impaired
+      - Heart Failure
+      - Hematoma
+      - Hematosalpinx
+      - Hematuria
+      - Hemoglobin Increased
+      - Hemoglobinuria
+      - Hemolysis
+      - Hemolytic Uremic Syndrome
+      - Hemorrhoidal Hemorrhage
+      - Hemorrhoids
+      - Hepatic Failure
+      - Hepatic Hemorrhage
+      - Hepatic Infection
+      - Hepatic Necrosis
+      - Hepatic Pain
+      - Hepatitis Viral
+      - Hepatobiliary Disorders - Other
+      - Hiccups
+      - Hip Fracture
+      - Hirsutism
+      - Hoarseness
+      - Hot Flashes
+      - Hydrocephalus
+      - Hypercalcemia
+      - Hyperglycemia
+      - Hyperhidrosis
+      - Hyperkalemia
+      - Hypermagnesemia
+      - Hypernatremia
+      - Hyperparathyroidism
+      - Hypersomnia
+      - Hypertension
+      - Hyperthyroidism
+      - Hypertrichosis
+      - Hypertriglyceridemia
+      - Hyperuricemia
+      - Hypoalbuminemia
+      - Hypocalcemia
+      - Hypoglossal Nerve Disorder
+      - Hypoglycemia
+      - Hypohidrosis
+      - Hypokalemia
+      - Hypomagnesemia
+      - Hyponatremia
+      - Hypoparathyroidism
+      - Hypophosphatemia
+      - Hypotension
+      - Hypothermia
+      - Hypothyroidism
+      - Hypoxia
+      - Ileal Fistula
+      - Ileal Hemorrhage
+      - Ileal Obstruction
+      - Ileal Perforation
+      - Ileal Stenosis
+      - Ileal Ulcer
+      - Ileus
+      - Immune System Disorders - Other
+      - Infections and Infestations - Other
+      - Infective Myositis
+      - Infusion Related Reaction
+      - Infusion Site Extravasation
+      - Injection Site Reaction
+      - Injury to Carotid Artery
+      - Injury to Inferior Vena Cava
+      - Injury to Jugular Vein
+      - Injury to Superior Vena Cava
+      - Injury, Poisoning and Procedural Complications - Other
+      - INR Increased
+      - Insomnia
+      - Intestinal Stoma Leak
+      - Intestinal Stoma Obstruction
+      - Intestinal Stoma Site Bleeding
+      - Intra-Abdominal Hemorrhage
+      - Intracranial Hemorrhage
+      - Intraoperative Arterial Injury
+      - Intraoperative Breast Injury
+      - Intraoperative Cardiac Injury
+      - Intraoperative Ear Injury
+      - Intraoperative Endocrine Injury
+      - Intraoperative Gastrointestinal Injury
+      - Intraoperative Head and Neck Injury
+      - Intraoperative Hemorrhage
+      - Intraoperative Hepatobiliary Injury
+      - Intraoperative Musculoskeletal Injury
+      - Intraoperative Neurological Injury
+      - Intraoperative Ocular Injury
+      - Intraoperative Renal Injury
+      - Intraoperative Reproductive Tract Injury
+      - Intraoperative Respiratory Injury
+      - Intraoperative Skin Injury
+      - Intraoperative Splenic Injury
+      - Intraoperative Urinary Injury
+      - Intraoperative Venous Injury
+      - Investigations - Other
+      - Iron Overload
+      - Irregular Menstruation
+      - Irritability
+      - Ischemia Cerebrovascular
+      - IVth Nerve Disorder
+      - Jejunal Fistula
+      - Jejunal Hemorrhage
+      - Jejunal Obstruction
+      - Jejunal Perforation
+      - Jejunal Stenosis
+      - Jejunal Ulcer
+      - Joint Effusion
+      - Joint Infection
+      - Joint Range of Motion Decreased
+      - Joint Range of Motion Decreased Cervical Spine
+      - Joint Range of Motion Decreased Lumbar Spine
+      - Keratitis
+      - Kidney Anastomotic Leak
+      - Kidney Infection
+      - Kyphosis
+      - Lactation Disorder
+      - Large Intestinal Anastomotic Leak
+      - Laryngeal Edema
+      - Laryngeal Fistula
+      - Laryngeal Hemorrhage
+      - Laryngeal Inflammation
+      - Laryngeal Mucositis
+      - Laryngeal Obstruction
+      - Laryngeal Stenosis
+      - Laryngitis
+      - Laryngopharyngeal Dysesthesia
+      - Laryngospasm
+      - Left Ventricular Systolic Dysfunction
+      - Lethargy
+      - Leukemia Secondary to Oncology Chemotherapy
+      - Leukocytosis
+      - Leukoencephalopathy
+      - Libido Decreased
+      - Libido Increased
+      - Lip Infection
+      - Lip Pain
+      - Lipase Increased
+      - Lipohypertrophy
+      - Localized Edema
+      - Lordosis
+      - Lower Gastrointestinal Hemorrhage
+      - Lung Infection
+      - Lymph Gland Infection
+      - Lymph Leakage
+      - Lymph Node Pain
+      - Lymphedema
+      - Lymphocele
+      - Lymphocyte Count Decreased
+      - Lymphocyte Count Increased
+      - Malabsorption
+      - Malaise
+      - Mania
+      - Mediastinal Hemorrhage
+      - Mediastinal Infection
+      - Memory Impairment
+      - Meningismus
+      - Meningitis
+      - Menopause
+      - Menorrhagia
+      - Metabolism and Nutrition Disorders - Other
+      - Middle Ear Inflammation
+      - Mitral Valve Disease
+      - Mobitz (Type) II Atrioventricular Block
+      - Mobitz Type I
+      - Movements Involuntary
+      - Mucosal Infection
+      - Mucositis Oral
+      - Multi-Organ Failure
+      - Muscle Weakness Left-Sided
+      - Muscle Weakness Lower Limb
+      - Muscle Weakness Right-Sided
+      - Muscle Weakness Trunk
+      - Muscle Weakness Upper Limb
+      - Musculoskeletal and Connective Tissue Disorders - Other
+      - Musculoskeletal Deformity
+      - Myalgia
+      - Myelitis
+      - Myelodysplastic Syndrome
+      - Myocardial Infarction
+      - Myocarditis
+      - Myositis
+      - Nail Discoloration
+      - Nail Infection
+      - Nail Loss
+      - Nail Ridging
+      - Nasal Congestion
+      - Nausea
+      - Neck Edema
+      - Neck Pain
+      - Neck Soft Tissue Necrosis
+      - Neoplasms Benign, Malignant and Unspecified (Incl Cysts and Polyps) - Other
+      - Nervous System Disorders - Other
+      - Neuralgia
+      - Neutrophil Count Decreased
+      - Night Blindness
+      - Nipple Deformity
+      - Non-Cardiac Chest Pain
+      - Nystagmus
+      - Obesity
+      - Obstruction Gastric
+      - Oculomotor Nerve Disorder
+      - Olfactory Nerve Disorder
+      - Oligospermia
+      - Optic Nerve Disorder
+      - Oral Cavity Fistula
+      - Oral Dysesthesia
+      - Oral Hemorrhage
+      - Oral Pain
+      - Osteonecrosis of Jaw
+      - Osteoporosis
+      - Otitis Externa
+      - Otitis Media
+      - Ovarian Hemorrhage
+      - Ovarian Infection
+      - Ovarian Rupture
+      - Ovulation Pain
+      - Pain
+      - Pain in Extremity
+      - Pain of Skin
+      - Palmar-Plantar Erythrodysesthesia Syndrome
+      - Palpitations
+      - Pancreas Infection
+      - Pancreatic Anastomotic Leak
+      - Pancreatic Duct Stenosis
+      - Pancreatic Enzymes Decreased
+      - Pancreatic Fistula
+      - Pancreatic Hemorrhage
+      - Pancreatic Necrosis
+      - Pancreatitis
+      - Papilledema
+      - Papulopustular Rash
+      - Paresthesia
+      - Paronychia
+      - Paroxysmal Atrial Tachycardia
+      - Pelvic Floor Muscle Weakness
+      - Pelvic Infection
+      - Pelvic Pain
+      - Pelvic Soft Tissue Necrosis
+      - Penile Infection
+      - Penile Pain
+      - Perforation Bile Duct
+      - Pericardial Effusion
+      - Pericardial Tamponade
+      - Pericarditis
+      - Perineal Pain
+      - Periodontal Disease
+      - Periorbital Edema
+      - Periorbital Infection
+      - Peripheral Ischemia
+      - Peripheral Motor Neuropathy
+      - Peripheral Nerve Infection
+      - Peripheral Sensory Neuropathy
+      - Peritoneal Infection
+      - Peritoneal Necrosis
+      - Personality Change
+      - Phantom Pain
+      - Pharyngeal Anastomotic Leak
+      - Pharyngeal Fistula
+      - Pharyngeal Hemorrhage
+      - Pharyngeal Mucositis
+      - Pharyngeal Necrosis
+      - Pharyngeal Stenosis
+      - Pharyngitis
+      - Pharyngolaryngeal Pain
+      - Phlebitis
+      - Phlebitis Infective
+      - Photophobia
+      - Photosensitivity
+      - Platelet Count Decreased
+      - Pleural Effusion
+      - Pleural Hemorrhage
+      - Pleural Infection
+      - Pleuritic Pain
+      - Pneumonitis
+      - Pneumothorax
+      - Portal Hypertension
+      - Portal Vein Thrombosis
+      - Postnasal Drip
+      - Postoperative Hemorrhage
+      - Postoperative Thoracic Procedure Complication
+      - Precocious Puberty
+      - Pregnancy, Puerperium and Perinatal Conditions - Other
+      - Premature Delivery
+      - Premature Menopause
+      - Presyncope
+      - Proctitis
+      - Productive Cough
+      - Prolapse of Intestinal Stoma
+      - Prolapse of Urostomy
+      - Prostate Infection
+      - Prostatic Hemorrhage
+      - Prostatic Obstruction
+      - Prostatic Pain
+      - Proteinuria
+      - Pruritus
+      - Psychiatric Disorders - Other
+      - Psychosis
+      - Pulmonary Edema
+      - Pulmonary Fibrosis
+      - Pulmonary Fistula
+      - Pulmonary Hypertension
+      - Pulmonary Valve Disease
+      - Purpura
+      - Pyramidal Tract Syndrome
+      - Radiation Recall Reaction (Dermatologic)
+      - Radiculitis
+      - Rash Acneiform
+      - Rash Maculo-Papular
+      - Rash Pustular
+      - Rectal Anastomotic Leak
+      - Rectal Fistula
+      - Rectal Hemorrhage
+      - Rectal Mucositis
+      - Rectal Necrosis
+      - Rectal Obstruction
+      - Rectal Pain
+      - Rectal Perforation
+      - Rectal Stenosis
+      - Rectal Ulcer
+      - Recurrent Laryngeal Nerve Palsy
+      - Renal and Urinary Disorders - Other
+      - Renal Calculi
+      - Renal Colic
+      - Renal Hemorrhage
+      - Reproductive System and Breast Disorders - Other
+      - Respiratory Failure
+      - Respiratory, Thoracic and Mediastinal Disorders - Other
+      - Restlessness
+      - Restrictive Cardiomyopathy
+      - Retinal Detachment
+      - Retinal Tear
+      - Retinal Vascular Disorder
+      - Retinoic Acid Syndrome
+      - Retinopathy
+      - Retroperitoneal Hemorrhage
+      - Reversible Posterior Leukoencephalopathy Syndrome
+      - Rhinitis Infective
+      - Right Ventricular Dysfunction
+      - Salivary Duct Inflammation
+      - Salivary Gland Fistula
+      - Salivary Gland Infection
+      - Scalp Pain
+      - Scleral Disorder
+      - Scoliosis
+      - Scrotal Infection
+      - Scrotal Pain
+      - Seizure
+      - Sepsis
+      - Seroma
+      - Serum Amylase Increased
+      - Serum Sickness
+      - Sick Sinus Syndrome
+      - Sinus Bradycardia
+      - Sinus Disorder
+      - Sinus Pain
+      - Sinus Tachycardia
+      - Sinusitis
+      - Skin and Subcutaneous Tissue Disorders - Other
+      - Skin Atrophy
+      - Skin Hyperpigmentation
+      - Skin Hypopigmentation
+      - Skin Induration
+      - Skin Infection
+      - Skin Ulceration
+      - Sleep Apnea
+      - Small Intestinal Anastomotic Leak
+      - Small Intestinal Mucositis
+      - Small Intestinal Obstruction
+      - Small Intestinal Perforation
+      - Small Intestinal Stenosis
+      - Small Intestine Infection
+      - Small Intestine Ulcer
+      - Sneezing
+      - Social Circumstances - Other
+      - Soft Tissue Infection
+      - Soft Tissue Necrosis Lower Limb
+      - Soft Tissue Necrosis Upper Limb
+      - Somnolence
+      - Sore Throat
+      - Spasticity
+      - Spermatic Cord Anastomotic Leak
+      - Spermatic Cord Hemorrhage
+      - Spermatic Cord Obstruction
+      - Spinal Fracture
+      - Spleen Disorder
+      - Splenic Infection
+      - Stenosis of Gastrointestinal Stoma
+      - Stevens-Johnson Syndrome
+      - Stoma Site Infection
+      - Stomach Pain
+      - Stomal Ulcer
+      - Stridor
+      - Stroke
+      - Sudden Death NOS
+      - Suicidal Ideation
+      - Suicide Attempt
+      - Superficial Soft Tissue Fibrosis
+      - Superficial Thrombophlebitis
+      - Superior Vena Cava Syndrome
+      - Supraventricular Tachycardia
+      - Surgical and Medical Procedures - Other
+      - Syncope
+      - Telangiectasia
+      - Testicular Disorder
+      - Testicular Hemorrhage
+      - Testicular Pain
+      - Thromboembolic Event
+      - Thrombotic Thrombocytopenic Purpura
+      - Tinnitus
+      - Tooth Development Disorder
+      - Tooth Discoloration
+      - Tooth Infection
+      - Toothache
+      - Toxic Epidermal Necrolysis
+      - Tracheal Fistula
+      - Tracheal Hemorrhage
+      - Tracheal Mucositis
+      - Tracheal Obstruction
+      - Tracheal Stenosis
+      - Tracheitis
+      - Tracheostomy Site Bleeding
+      - Transient Ischemic Attacks
+      - Treatment Related Secondary Malignancy
+      - Tremor
+      - Tricuspid Valve Disease
+      - Trigeminal Nerve Disorder
+      - Trismus
+      - Tumor Lysis Syndrome
+      - Tumor Pain
+      - Typhlitis
+      - Unequal Limb Length
+      - Unintended Pregnancy
+      - Upper Gastrointestinal Hemorrhage
+      - Upper Respiratory Infection
+      - Ureteric Anastomotic Leak
+      - Urethral Anastomotic Leak
+      - Urethral Infection
+      - Urinary Fistula
+      - Urinary Frequency
+      - Urinary Incontinence
+      - Urinary Retention
+      - Urinary Tract Infection
+      - Urinary Tract Obstruction
+      - Urinary Tract Pain
+      - Urinary Urgency
+      - Urine Discoloration
+      - Urine Output Decreased
+      - Urostomy Leak
+      - Urostomy Obstruction
+      - Urostomy Site Bleeding
+      - Urostomy Stenosis
+      - Urticaria
+      - Uterine Anastomotic Leak
+      - Uterine Fistula
+      - Uterine Hemorrhage
+      - Uterine Infection
+      - Uterine Obstruction
+      - Uterine Pain
+      - Uterine Perforation
+      - Uveitis
+      - Vaginal Anastomotic Leak
+      - Vaginal Discharge
+      - Vaginal Dryness
+      - Vaginal Fistula
+      - Vaginal Hemorrhage
+      - Vaginal Infection
+      - Vaginal Inflammation
+      - Vaginal Obstruction
+      - Vaginal Pain
+      - Vaginal Perforation
+      - Vaginal Stricture
+      - Vaginismus
+      - Vagus Nerve Disorder
+      - Vas Deferens Anastomotic Leak
+      - Vascular Access Complication
+      - Vascular Disorders - Other
+      - Vasculitis
+      - Vasovagal Reaction
+      - Venous Injury
+      - Ventricular Arrhythmia
+      - Ventricular Fibrillation
+      - Ventricular Tachycardia
+      - Vertigo
+      - Vestibular Disorder
+      - Virilization
+      - Visceral Arterial Ischemia
+      - Vital Capacity Abnormal
+      - Vitreous Hemorrhage
+      - Voice Alteration
+      - Vomiting
+      - Vulval Infection
+      - Watering Eyes
+      - Weight Gain
+      - Weight Loss
+      - Wheezing
+      - White Blood Cell Decreased
+      - Wolff-Parkinson-White Syndrome
+      - Wound Complication
+      - Wound Dehiscence
+      - Wound Infection
+      - Wrist Fracture
 
   adverse_event_grade:
     $ref:
       - "_terms.yaml#/adverse_event_grade/common"
     enum:
-      - "Grade 1"
-      - "Grade 2"
-      - "Grade 3"
-      - "Grade 4"
-      - "Grade 5"
+      - Grade 1
+      - Grade 2
+      - Grade 3
+      - Grade 4
+      - Grade 5
 
   aids_risk_factors:
     $ref:
       - "_terms.yaml#/aids_risk_factors/common"
     enum:
-      - "Candidiasis"
-      - "Coccidioidomycosis"
-      - "Cryptococcosis"
-      - "Cryptosporidiosis, Chronic Intestinal"
-      - "Cytomegalovirus"
-      - "Encephalopathy"
-      - "Herpes Simplex Virus"
-      - "Histoplasmosis"
-      - "Isosporiasis"
-      - "Mycobacterium avium Complex"
-      - "Mycobacterium tuberculosis"
-      - "Mycobacterium, NOS"
-      - "Nocardiosis"
-      - "Pneumocystis Pneumonia"
-      - "Pneumonia, NOS"
-      - "Progressive Multifocal Leukoencephalopathy"
-      - "Salmonella Septicemia"
-      - "Toxoplasmosis"
-      - "Wasting Syndrome"
+      - Candidiasis
+      - Coccidioidomycosis
+      - Cryptococcosis
+      - Cryptosporidiosis, Chronic Intestinal
+      - Cytomegalovirus
+      - Encephalopathy
+      - Herpes Simplex Virus
+      - Histoplasmosis
+      - Isosporiasis
+      - Mycobacterium avium Complex
+      - Mycobacterium tuberculosis
+      - Mycobacterium, NOS
+      - Nocardiosis
+      - Pneumocystis Pneumonia
+      - Pneumonia, NOS
+      - Progressive Multifocal Leukoencephalopathy
+      - Salmonella Septicemia
+      - Toxoplasmosis
+      - Wasting Syndrome
 
   barretts_esophagus_goblet_cells_present:
     $ref:
@@ -896,8 +896,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - "Unknown"
-      - "Not Reported"
+      - Unknown
+      - Not Reported
     enumDef:
       "Yes":
         $ref:
@@ -905,10 +905,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -939,22 +939,22 @@ properties:
     $ref:
       - "_terms.yaml#/cdc_hiv_risk_factors/common"
     enum:
-      - "Hemophiliac"
-      - "Heterosexual Contact"
-      - "Homosexual Contact"
-      - "Intravenous Drug User"
-      - "None"
-      - "Transfusion Recipient"
-      - "Unknown"
-      - "Not Reported"
+      - Hemophiliac
+      - Heterosexual Contact
+      - Homosexual Contact
+      - Intravenous Drug User
+      - None
+      - Transfusion Recipient
+      - Unknown
+      - Not Reported
     enumDef:
-      "None":
+      None:
         $ref:
           - "_terms_enum.yaml#/none/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -964,385 +964,385 @@ properties:
     type: array
     items:
       enum:
-        - "Abnormal Glucose Level"
-        - "Acute Renal Failure"
-        - "Adenocarcinoma"
-        - "Adenomatous Polyposis Coli"
-        - "Adrenocortical Insufficiency"
-        - "Allergies"
-        - "Alpha-1 Antitrypsin"
-        - "Anemia"
-        - "Anxiety"
-        - "Arrhythmia"
-        - "Arthritis"
-        - "Asthma"
-        - "Ataxia-telangiectasia"
-        - "Atrial Fibrillation"
-        - "Autoimmune Lymphoproliferative Syndrome (ALPS)"
-        - "Avascular Necrosis"
-        - "Bacteroides fragilis"
-        - "Barrett's Esophagus"
-        - "Basal Cell Carcinoma"
-        - "Beckwith-Wiedemann"
-        - "Behcet's Disease"
-        - "Biliary Disorder"
-        - "Blood Clots"
-        - "Bone Fracture(s)"
-        - "Bronchitis"
-        - "Calcium Channel Blockers"
-        - "Cancer"
-        - "Cataracts"
-        - "Celiac Disease"
-        - "Cerebrovascular Disease"
-        - "Chlamydia"
-        - "Chloroma"
-        - "Cholelithiasis"
-        - "Chronic Fatigue Syndrome"
-        - "Chronic Pancreatitis"
-        - "Chronic Renal Failure"
-        - "Chronic Systemic Steroid Use"
-        - "Cirrhosis, Unknown Etiology"
-        - "Clonal Hematopoiesis"
-        - "CNS Infection"
-        - "Colon Polyps"
-        - "Common Variable Immunodeficiency"
-        - "Congestive Heart Failure (CHF)"
-        - "Connective Tissue Disorder"
-        - "COPD"
-        - "Coronary Artery Disease"
-        - "Crohn's Disease"
-        - "Cryptococcal Meningitis"
-        - "Cryptogenic Organizing Pneumonia"
-        - "Cytomegalovirus (CMV)"
-        - "Deep Vein Thrombosis / Thromboembolism"
-        - "Denys-Drash Syndrome"
-        - "Depression"
-        - "Dermatomyosis"
-        - "Diabetes"
-        - "Diabetes, Type II"
-        - "Diabetic Neuropathy"
-        - "Diet Controlled Diabetes"
-        - "Diverticulitis"
-        - "Down Syndrome"
-        - "DVT/PE"
-        - "Dyslipidemia"
-        - "EBV Lymphoproliferation"
-        - "Eczema"
-        - "Epilepsy"
-        - "Epstein-Barr Virus"
-        - "Familial Adenomatous Polyposis"
-        - "Fanconi Anemia"
-        - "Fibromyalgia"
-        - "Fibrosis"
-        - "Gastritis"
-        - "Gastroesophageal Reflux Disease"
-        - "GERD"
-        - "Glaucoma"
-        - "Glycogen Storage Disease"
-        - "Gonadal Dysfunction"
-        - "Gorlin Syndrome"
-        - "Gout"
-        - "H. pylori Infection"
-        - "Hashimoto's Thyroiditis"
-        - "Headache"
-        - "Heart Disease"
-        - "Hemihypertrophy"
-        - "Hemorrhagic Cystitis"
-        - "Hepatitis"
-        - "Hepatitis A Infection"
-        - "Hepatitis B Infection"
-        - "Hepatitis C Infection"
-        - "Hepatitis, Chronic"
-        - "Hereditary Non-polyposis Colon Cancer"
-        - "Herpes"
-        - "Herpes Zoster"
-        - "High Grade Liver Dysplastic Nodule"
-        - "HIV / AIDS"
-        - "Hodgkin Lymphoma"
-        - "Human Papillomavirus Infection"
-        - "HUS/TTP"
-        - "Hypercalcemia"
-        - "Hypercholesterolemia"
-        - "Hyperglycemia"
-        - "Hyperlipidemia"
-        - "Hypertension"
-        - "Hypospadias"
-        - "Hypothyroidism"
-        - "Inflammatory Bowel Disease"
-        - "Insulin Controlled Diabetes"
-        - "Interstitial Pneumontis or ARDS"
-        - "Intraductal Papillary Mucinous Neoplasm"
-        - "Iron Overload"
-        - "Ischemic Heart Disease"
-        - "ITP"
-        - "Joint Replacement"
-        - "Kidney Disease"
-        - "Li-Fraumeni Syndrome"
-        - "Liver Cirrhosis (Liver Disease)"
-        - "Liver Toxicity (Non-Infectious)"
-        - "Low Grade Liver Dysplastic Nodule"
-        - "Lupus"
-        - "Lymphamatoid Papulosis"
-        - "Lymphocytic Meningitis"
-        - "Lynch Syndrome"
-        - "MAI"
-        - "Malaria"
-        - "Metabolic Syndrome"
-        - "Methicillin-Resistant Staphylococcus aureus (MRSA)"
-        - "Myasthenia Gravis"
-        - "Mycobacterium avium Complex"
-        - "Myocardial Infarction"
-        - "Neuroendocrine Tumor"
-        - "Nonalcoholic Steatohepatitis"
-        - "Obesity"
-        - "Organ transplant (site)"
-        - "Osteoarthritis"
-        - "Osteoporosis or Osteopenia"
-        - "Other"
-        - "Other Cancer Within 5 Years"
-        - "Other Nonmalignant Systemic Disease"
-        - "Other Pulmonary Complications"
-        - "Pain (Various)"
-        - "Pancreatitis"
-        - "Peptic Ulcer (Ulcer)"
-        - "Peripheral Neuropathy"
-        - "Peripheral Vascular Disease"
-        - "Peutz-Jeghers Disease"
-        - "Pneumocystis Pneumonia"
-        - "Polycystic Ovarian Syndrome (PCOS)"
-        - "Pregnancy in Patient or Partner"
-        - "Primary Sclerosing Cholangitis"
-        - "Psoriasis"
-        - "Pulmonary Fibrosis"
-        - "Pulmonary Hemorrhage"
-        - "Renal Dialysis"
-        - "Renal Failure (Requiring Dialysis)"
-        - "Renal Insufficiency"
-        - "Rheumatoid Arthritis"
-        - "Rheumatologic Disease"
-        - "Rubinstein-Taybi Syndrome"
-        - "Sarcoidosis"
-        - "Seizure"
-        - "Shingles"
-        - "Sjogren's Syndrome"
-        - "Sleep apnea"
-        - "Smoking"
-        - "Staph Osteomyelitis"
-        - "Staphylococcus aureus"
-        - "Steatosis"
-        - "Stroke"
-        - "Syphilis"
-        - "Thyroid Disease, Non-Cancer"
-        - "Transient Ischemic Attack"
-        - "Treponema pallidum"
-        - "Tuberculosis"
-        - "Turcot Syndrome"
-        - "Tyrosinemia"
-        - "Ulcerative Colitis"
-        - "Urinary Tract Infection"
-        - "Varicella Zoster Virus"
-        - "Wagr Syndrome"
-        - "Unknown"
-        - "Not Reported"
+        - Abnormal Glucose Level
+        - Acute Renal Failure
+        - Adenocarcinoma
+        - Adenomatous Polyposis Coli
+        - Adrenocortical Insufficiency
+        - Allergies
+        - Alpha-1 Antitrypsin
+        - Anemia
+        - Anxiety
+        - Arrhythmia
+        - Arthritis
+        - Asthma
+        - Ataxia-telangiectasia
+        - Atrial Fibrillation
+        - Autoimmune Lymphoproliferative Syndrome (ALPS)
+        - Avascular Necrosis
+        - Bacteroides fragilis
+        - Barrett's Esophagus
+        - Basal Cell Carcinoma
+        - Beckwith-Wiedemann
+        - Behcet's Disease
+        - Biliary Disorder
+        - Blood Clots
+        - Bone Fracture(s)
+        - Bronchitis
+        - Calcium Channel Blockers
+        - Cancer
+        - Cataracts
+        - Celiac Disease
+        - Cerebrovascular Disease
+        - Chlamydia
+        - Chloroma
+        - Cholelithiasis
+        - Chronic Fatigue Syndrome
+        - Chronic Pancreatitis
+        - Chronic Renal Failure
+        - Chronic Systemic Steroid Use
+        - Cirrhosis, Unknown Etiology
+        - Clonal Hematopoiesis
+        - CNS Infection
+        - Colon Polyps
+        - Common Variable Immunodeficiency
+        - Congestive Heart Failure (CHF)
+        - Connective Tissue Disorder
+        - COPD
+        - Coronary Artery Disease
+        - Crohn's Disease
+        - Cryptococcal Meningitis
+        - Cryptogenic Organizing Pneumonia
+        - Cytomegalovirus (CMV)
+        - Deep Vein Thrombosis / Thromboembolism
+        - Denys-Drash Syndrome
+        - Depression
+        - Dermatomyosis
+        - Diabetes
+        - Diabetes, Type II
+        - Diabetic Neuropathy
+        - Diet Controlled Diabetes
+        - Diverticulitis
+        - Down Syndrome
+        - DVT/PE
+        - Dyslipidemia
+        - EBV Lymphoproliferation
+        - Eczema
+        - Epilepsy
+        - Epstein-Barr Virus
+        - Familial Adenomatous Polyposis
+        - Fanconi Anemia
+        - Fibromyalgia
+        - Fibrosis
+        - Gastritis
+        - Gastroesophageal Reflux Disease
+        - GERD
+        - Glaucoma
+        - Glycogen Storage Disease
+        - Gonadal Dysfunction
+        - Gorlin Syndrome
+        - Gout
+        - H. pylori Infection
+        - Hashimoto's Thyroiditis
+        - Headache
+        - Heart Disease
+        - Hemihypertrophy
+        - Hemorrhagic Cystitis
+        - Hepatitis
+        - Hepatitis A Infection
+        - Hepatitis B Infection
+        - Hepatitis C Infection
+        - Hepatitis, Chronic
+        - Hereditary Non-polyposis Colon Cancer
+        - Herpes
+        - Herpes Zoster
+        - High Grade Liver Dysplastic Nodule
+        - HIV / AIDS
+        - Hodgkin Lymphoma
+        - Human Papillomavirus Infection
+        - HUS/TTP
+        - Hypercalcemia
+        - Hypercholesterolemia
+        - Hyperglycemia
+        - Hyperlipidemia
+        - Hypertension
+        - Hypospadias
+        - Hypothyroidism
+        - Inflammatory Bowel Disease
+        - Insulin Controlled Diabetes
+        - Interstitial Pneumontis or ARDS
+        - Intraductal Papillary Mucinous Neoplasm
+        - Iron Overload
+        - Ischemic Heart Disease
+        - ITP
+        - Joint Replacement
+        - Kidney Disease
+        - Li-Fraumeni Syndrome
+        - Liver Cirrhosis (Liver Disease)
+        - Liver Toxicity (Non-Infectious)
+        - Low Grade Liver Dysplastic Nodule
+        - Lupus
+        - Lymphamatoid Papulosis
+        - Lymphocytic Meningitis
+        - Lynch Syndrome
+        - MAI
+        - Malaria
+        - Metabolic Syndrome
+        - Methicillin-Resistant Staphylococcus aureus (MRSA)
+        - Myasthenia Gravis
+        - Mycobacterium avium Complex
+        - Myocardial Infarction
+        - Neuroendocrine Tumor
+        - Nonalcoholic Steatohepatitis
+        - Obesity
+        - Organ transplant (site)
+        - Osteoarthritis
+        - Osteoporosis or Osteopenia
+        - Other
+        - Other Cancer Within 5 Years
+        - Other Nonmalignant Systemic Disease
+        - Other Pulmonary Complications
+        - Pain (Various)
+        - Pancreatitis
+        - Peptic Ulcer (Ulcer)
+        - Peripheral Neuropathy
+        - Peripheral Vascular Disease
+        - Peutz-Jeghers Disease
+        - Pneumocystis Pneumonia
+        - Polycystic Ovarian Syndrome (PCOS)
+        - Pregnancy in Patient or Partner
+        - Primary Sclerosing Cholangitis
+        - Psoriasis
+        - Pulmonary Fibrosis
+        - Pulmonary Hemorrhage
+        - Renal Dialysis
+        - Renal Failure (Requiring Dialysis)
+        - Renal Insufficiency
+        - Rheumatoid Arthritis
+        - Rheumatologic Disease
+        - Rubinstein-Taybi Syndrome
+        - Sarcoidosis
+        - Seizure
+        - Shingles
+        - Sjogren's Syndrome
+        - Sleep apnea
+        - Smoking
+        - Staph Osteomyelitis
+        - Staphylococcus aureus
+        - Steatosis
+        - Stroke
+        - Syphilis
+        - Thyroid Disease, Non-Cancer
+        - Transient Ischemic Attack
+        - Treponema pallidum
+        - Tuberculosis
+        - Turcot Syndrome
+        - Tyrosinemia
+        - Ulcerative Colitis
+        - Urinary Tract Infection
+        - Varicella Zoster Virus
+        - Wagr Syndrome
+        - Unknown
+        - Not Reported
 
   comorbidity:
     $ref:
       - "_terms.yaml#/comorbidity/common"
     enum:
-      - "Abnormal Glucose Level"
-      - "Acute Renal Failure"
-      - "Adenocarcinoma"
-      - "Adenomatous Polyposis Coli"
-      - "Adrenocortical Insufficiency"
-      - "Allergies"
-      - "Alpha-1 Antitrypsin"
-      - "Anemia"
-      - "Anxiety"
-      - "Arrhythmia"
-      - "Arthritis"
-      - "Asthma"
-      - "Ataxia-telangiectasia"
-      - "Atrial Fibrillation"
-      - "Autoimmune Lymphoproliferative Syndrome (ALPS)"
-      - "Avascular Necrosis"
-      - "Bacteroides fragilis"
-      - "Barrett's Esophagus"
-      - "Basal Cell Carcinoma"
-      - "Beckwith-Wiedemann"
-      - "Behcet's Disease"
-      - "Biliary Disorder"
-      - "Blood Clots"
-      - "Bone Fracture(s)"
-      - "Bronchitis"
-      - "Calcium Channel Blockers"
-      - "Cancer"
-      - "Cataracts"
-      - "Celiac Disease"
-      - "Cerebrovascular Disease"
-      - "Chlamydia"
-      - "Chloroma"
-      - "Cholelithiasis"
-      - "Chronic Fatigue Syndrome"
-      - "Chronic Pancreatitis"
-      - "Chronic Renal Failure"
-      - "Chronic Systemic Steroid Use"
-      - "Cirrhosis, Unknown Etiology"
-      - "Clonal Hematopoiesis"
-      - "CNS Infection"
-      - "Colon Polyps"
-      - "Common Variable Immunodeficiency"
-      - "Congestive Heart Failure (CHF)"
-      - "Connective Tissue Disorder"
-      - "COPD"
-      - "Coronary Artery Disease"
-      - "Crohn's Disease"
-      - "Cryptococcal Meningitis"
-      - "Cryptogenic Organizing Pneumonia"
-      - "Cytomegalovirus (CMV)"
-      - "Deep Vein Thrombosis / Thromboembolism"
-      - "Denys-Drash Syndrome"
-      - "Depression"
-      - "Dermatomyosis"
-      - "Diabetes"
-      - "Diabetes, Type II"
-      - "Diabetic Neuropathy"
-      - "Diet Controlled Diabetes"
-      - "Diverticulitis"
-      - "Down Syndrome"
-      - "DVT/PE"
-      - "Dyslipidemia"
-      - "EBV Lymphoproliferation"
-      - "Eczema"
-      - "Epilepsy"
-      - "Epstein-Barr Virus"
-      - "Familial Adenomatous Polyposis"
-      - "Fanconi Anemia"
-      - "Fibromyalgia"
-      - "Fibrosis"
-      - "Gastritis"
-      - "Gastroesophageal Reflux Disease"
-      - "GERD"
-      - "Glaucoma"
-      - "Glycogen Storage Disease"
-      - "Gonadal Dysfunction"
-      - "Gorlin Syndrome"
-      - "Gout"
-      - "H. pylori Infection"
-      - "Hashimoto's Thyroiditis"
-      - "Headache"
-      - "Heart Disease"
-      - "Hemihypertrophy"
-      - "Hemorrhagic Cystitis"
-      - "Hepatitis"
-      - "Hepatitis A Infection"
-      - "Hepatitis B Infection"
-      - "Hepatitis C Infection"
-      - "Hepatitis, Chronic"
-      - "Hereditary Non-polyposis Colon Cancer"
-      - "Herpes"
-      - "Herpes Zoster"
-      - "High Grade Liver Dysplastic Nodule"
-      - "HIV / AIDS"
-      - "Hodgkin Lymphoma"
-      - "Human Papillomavirus Infection"
-      - "HUS/TTP"
-      - "Hypercalcemia"
-      - "Hypercholesterolemia"
-      - "Hyperglycemia"
-      - "Hyperlipidemia"
-      - "Hypertension"
-      - "Hypospadias"
-      - "Hypothyroidism"
-      - "Inflammatory Bowel Disease"
-      - "Insulin Controlled Diabetes"
-      - "Interstitial Pneumontis or ARDS"
-      - "Intraductal Papillary Mucinous Neoplasm"
-      - "Iron Overload"
-      - "Ischemic Heart Disease"
-      - "ITP"
-      - "Joint Replacement"
-      - "Kidney Disease"
-      - "Li-Fraumeni Syndrome"
-      - "Liver Cirrhosis (Liver Disease)"
-      - "Liver Toxicity (Non-Infectious)"
-      - "Low Grade Liver Dysplastic Nodule"
-      - "Lupus"
-      - "Lymphamatoid Papulosis"
-      - "Lymphocytic Meningitis"
-      - "Lynch Syndrome"
-      - "MAI"
-      - "Malaria"
-      - "Metabolic Syndrome"
-      - "Methicillin-Resistant Staphylococcus aureus (MRSA)"
-      - "Myasthenia Gravis"
-      - "Mycobacterium avium Complex"
-      - "Myocardial Infarction"
-      - "Neuroendocrine Tumor"
-      - "Nonalcoholic Steatohepatitis"
-      - "Obesity"
-      - "Organ transplant (site)"
-      - "Osteoarthritis"
-      - "Osteoporosis or Osteopenia"
-      - "Other"
-      - "Other Cancer Within 5 Years"
-      - "Other Nonmalignant Systemic Disease"
-      - "Other Pulmonary Complications"
-      - "Pain (Various)"
-      - "Pancreatitis"
-      - "Peptic Ulcer (Ulcer)"
-      - "Peripheral Neuropathy"
-      - "Peripheral Vascular Disease"
-      - "Peutz-Jeghers Disease"
-      - "Pneumocystis Pneumonia"
-      - "Polycystic Ovarian Syndrome (PCOS)"
-      - "Pregnancy in Patient or Partner"
-      - "Primary Sclerosing Cholangitis"
-      - "Psoriasis"
-      - "Pulmonary Fibrosis"
-      - "Pulmonary Hemorrhage"
-      - "Renal Dialysis"
-      - "Renal Failure (Requiring Dialysis)"
-      - "Renal Insufficiency"
-      - "Rheumatoid Arthritis"
-      - "Rheumatologic Disease"
-      - "Rubinstein-Taybi Syndrome"
-      - "Sarcoidosis"
-      - "Seizure"
-      - "Shingles"
-      - "Sjogren's Syndrome"
-      - "Sleep apnea"
-      - "Smoking"
-      - "Staph Osteomyelitis"
-      - "Staphylococcus aureus"
-      - "Steatosis"
-      - "Stroke"
-      - "Syphilis"
-      - "Thyroid Disease, Non-Cancer"
-      - "Transient Ischemic Attack"
-      - "Treponema pallidum"
-      - "Tuberculosis"
-      - "Turcot Syndrome"
-      - "Tyrosinemia"
-      - "Ulcerative Colitis"
-      - "Urinary Tract Infection"
-      - "Varicella Zoster Virus"
-      - "Wagr Syndrome"
-      - "Unknown"
-      - "Not Reported"
+      - Abnormal Glucose Level
+      - Acute Renal Failure
+      - Adenocarcinoma
+      - Adenomatous Polyposis Coli
+      - Adrenocortical Insufficiency
+      - Allergies
+      - Alpha-1 Antitrypsin
+      - Anemia
+      - Anxiety
+      - Arrhythmia
+      - Arthritis
+      - Asthma
+      - Ataxia-telangiectasia
+      - Atrial Fibrillation
+      - Autoimmune Lymphoproliferative Syndrome (ALPS)
+      - Avascular Necrosis
+      - Bacteroides fragilis
+      - Barrett's Esophagus
+      - Basal Cell Carcinoma
+      - Beckwith-Wiedemann
+      - Behcet's Disease
+      - Biliary Disorder
+      - Blood Clots
+      - Bone Fracture(s)
+      - Bronchitis
+      - Calcium Channel Blockers
+      - Cancer
+      - Cataracts
+      - Celiac Disease
+      - Cerebrovascular Disease
+      - Chlamydia
+      - Chloroma
+      - Cholelithiasis
+      - Chronic Fatigue Syndrome
+      - Chronic Pancreatitis
+      - Chronic Renal Failure
+      - Chronic Systemic Steroid Use
+      - Cirrhosis, Unknown Etiology
+      - Clonal Hematopoiesis
+      - CNS Infection
+      - Colon Polyps
+      - Common Variable Immunodeficiency
+      - Congestive Heart Failure (CHF)
+      - Connective Tissue Disorder
+      - COPD
+      - Coronary Artery Disease
+      - Crohn's Disease
+      - Cryptococcal Meningitis
+      - Cryptogenic Organizing Pneumonia
+      - Cytomegalovirus (CMV)
+      - Deep Vein Thrombosis / Thromboembolism
+      - Denys-Drash Syndrome
+      - Depression
+      - Dermatomyosis
+      - Diabetes
+      - Diabetes, Type II
+      - Diabetic Neuropathy
+      - Diet Controlled Diabetes
+      - Diverticulitis
+      - Down Syndrome
+      - DVT/PE
+      - Dyslipidemia
+      - EBV Lymphoproliferation
+      - Eczema
+      - Epilepsy
+      - Epstein-Barr Virus
+      - Familial Adenomatous Polyposis
+      - Fanconi Anemia
+      - Fibromyalgia
+      - Fibrosis
+      - Gastritis
+      - Gastroesophageal Reflux Disease
+      - GERD
+      - Glaucoma
+      - Glycogen Storage Disease
+      - Gonadal Dysfunction
+      - Gorlin Syndrome
+      - Gout
+      - H. pylori Infection
+      - Hashimoto's Thyroiditis
+      - Headache
+      - Heart Disease
+      - Hemihypertrophy
+      - Hemorrhagic Cystitis
+      - Hepatitis
+      - Hepatitis A Infection
+      - Hepatitis B Infection
+      - Hepatitis C Infection
+      - Hepatitis, Chronic
+      - Hereditary Non-polyposis Colon Cancer
+      - Herpes
+      - Herpes Zoster
+      - High Grade Liver Dysplastic Nodule
+      - HIV / AIDS
+      - Hodgkin Lymphoma
+      - Human Papillomavirus Infection
+      - HUS/TTP
+      - Hypercalcemia
+      - Hypercholesterolemia
+      - Hyperglycemia
+      - Hyperlipidemia
+      - Hypertension
+      - Hypospadias
+      - Hypothyroidism
+      - Inflammatory Bowel Disease
+      - Insulin Controlled Diabetes
+      - Interstitial Pneumontis or ARDS
+      - Intraductal Papillary Mucinous Neoplasm
+      - Iron Overload
+      - Ischemic Heart Disease
+      - ITP
+      - Joint Replacement
+      - Kidney Disease
+      - Li-Fraumeni Syndrome
+      - Liver Cirrhosis (Liver Disease)
+      - Liver Toxicity (Non-Infectious)
+      - Low Grade Liver Dysplastic Nodule
+      - Lupus
+      - Lymphamatoid Papulosis
+      - Lymphocytic Meningitis
+      - Lynch Syndrome
+      - MAI
+      - Malaria
+      - Metabolic Syndrome
+      - Methicillin-Resistant Staphylococcus aureus (MRSA)
+      - Myasthenia Gravis
+      - Mycobacterium avium Complex
+      - Myocardial Infarction
+      - Neuroendocrine Tumor
+      - Nonalcoholic Steatohepatitis
+      - Obesity
+      - Organ transplant (site)
+      - Osteoarthritis
+      - Osteoporosis or Osteopenia
+      - Other
+      - Other Cancer Within 5 Years
+      - Other Nonmalignant Systemic Disease
+      - Other Pulmonary Complications
+      - Pain (Various)
+      - Pancreatitis
+      - Peptic Ulcer (Ulcer)
+      - Peripheral Neuropathy
+      - Peripheral Vascular Disease
+      - Peutz-Jeghers Disease
+      - Pneumocystis Pneumonia
+      - Polycystic Ovarian Syndrome (PCOS)
+      - Pregnancy in Patient or Partner
+      - Primary Sclerosing Cholangitis
+      - Psoriasis
+      - Pulmonary Fibrosis
+      - Pulmonary Hemorrhage
+      - Renal Dialysis
+      - Renal Failure (Requiring Dialysis)
+      - Renal Insufficiency
+      - Rheumatoid Arthritis
+      - Rheumatologic Disease
+      - Rubinstein-Taybi Syndrome
+      - Sarcoidosis
+      - Seizure
+      - Shingles
+      - Sjogren's Syndrome
+      - Sleep apnea
+      - Smoking
+      - Staph Osteomyelitis
+      - Staphylococcus aureus
+      - Steatosis
+      - Stroke
+      - Syphilis
+      - Thyroid Disease, Non-Cancer
+      - Transient Ischemic Attack
+      - Treponema pallidum
+      - Tuberculosis
+      - Turcot Syndrome
+      - Tyrosinemia
+      - Ulcerative Colitis
+      - Urinary Tract Infection
+      - Varicella Zoster Virus
+      - Wagr Syndrome
+      - Unknown
+      - Not Reported
     enumDef:
-      "Cancer":
+      Cancer:
         $ref:
           - "_terms_enum.yaml#/cancer/common"
-      "Epstein-Barr Virus":
+      Epstein-Barr Virus:
         $ref:
           - "_terms_enum.yaml#/epsteinbarr_virus/common"
-      "Other":
+      Other:
         $ref:
           - "_terms_enum.yaml#/other/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1350,16 +1350,16 @@ properties:
     $ref:
       - "_terms.yaml#/comorbidity_method_of_diagnosis/common"
     enum:
-      - "Histology"
-      - "Pathology"
-      - "Radiology"
-      - "Unknown"
-      - "Not Reported"
+      - Histology
+      - Pathology
+      - Radiology
+      - Unknown
+      - Not Reported
     enumDef:
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1432,26 +1432,26 @@ properties:
     $ref:
       - "_terms.yaml#/diabetes_treatment_type/common"
     enum:
-      - "Alpha-Glucosidase Inhibitor"
-      - "Biguanide"
-      - "Diet"
-      - "Injected Insulin"
-      - "Insulin"
-      - "Linagliptin"
-      - "Oral Hypoglycemic"
-      - "Other"
-      - "Sulfonylurea"
-      - "Thiazolidinedione"
-      - "Unknown"
-      - "Not Reported"
+      - Alpha-Glucosidase Inhibitor
+      - Biguanide
+      - Diet
+      - Injected Insulin
+      - Insulin
+      - Linagliptin
+      - Oral Hypoglycemic
+      - Other
+      - Sulfonylurea
+      - Thiazolidinedione
+      - Unknown
+      - Not Reported
     enumDef:
-      "Other":
+      Other:
         $ref:
           - "_terms_enum.yaml#/other/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1459,44 +1459,44 @@ properties:
     $ref:
       - "_terms.yaml#/disease_response/common"
     enum:
-      - "AJ-Adjuvant Therapy"
-      - "BED-Biochemical Evidence of Disease"
-      - "CPD-Clinical Progression"
-      - "CR-Complete Response"
-      - "CRU-Complete Response Unconfirmed"
-      - "DU-Disease Unchanged"
-      - "IMR-Immunoresponse"
-      - "IPD-Immunoprogression"
-      - "MR-Minimal/Marginal response"
-      - "MX-Mixed Response"
-      - "Non-CR/Non-PD-Non-CR/Non-PD"
-      - "NPB-No Palliative Benefit"
-      - "NR-No Response"
-      - "PA-Palliative Therapy"
-      - "PB-Palliative Benefit"
-      - "PD-Progressive Disease"
-      - "PDM-Persistent Distant Metastasis"
-      - "PLD-Persistent Locoregional Disease"
-      - "PPD-Pseudoprogression"
-      - "PR-Partial Response"
-      - "PSR-Pseudoresponse"
-      - "RD-Responsive Disease"
-      - "RP-Response"
-      - "RPD-Radiographic Progressive Disease"
-      - "sCR-Stringent Complete Response"
-      - "SD-Stable Disease"
-      - "SPD-Surgical Progression"
-      - "TE-Too Early"
-      - "TF-Tumor Free"
-      - "VGPR-Very Good Partial Response"
-      - "WT-With Tumor"
-      - "Unknown"
-      - "Not Reported"
+      - AJ-Adjuvant Therapy
+      - BED-Biochemical Evidence of Disease
+      - CPD-Clinical Progression
+      - CR-Complete Response
+      - CRU-Complete Response Unconfirmed
+      - DU-Disease Unchanged
+      - IMR-Immunoresponse
+      - IPD-Immunoprogression
+      - MR-Minimal/Marginal response
+      - MX-Mixed Response
+      - Non-CR/Non-PD-Non-CR/Non-PD
+      - NPB-No Palliative Benefit
+      - NR-No Response
+      - PA-Palliative Therapy
+      - PB-Palliative Benefit
+      - PD-Progressive Disease
+      - PDM-Persistent Distant Metastasis
+      - PLD-Persistent Locoregional Disease
+      - PPD-Pseudoprogression
+      - PR-Partial Response
+      - PSR-Pseudoresponse
+      - RD-Responsive Disease
+      - RP-Response
+      - RPD-Radiographic Progressive Disease
+      - sCR-Stringent Complete Response
+      - SD-Stable Disease
+      - SPD-Surgical Progression
+      - TE-Too Early
+      - TF-Tumor Free
+      - VGPR-Very Good Partial Response
+      - WT-With Tumor
+      - Unknown
+      - Not Reported
     enumDef:
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1511,19 +1511,19 @@ properties:
     $ref:
       - "_terms.yaml#/ecog_performance_status/common"
     enum:
-      - "0"
-      - "1"
-      - "2"
-      - "3"
-      - "4"
-      - "5"
-      - "Unknown"
-      - "Not Reported"
+      - '0'
+      - '1'
+      - '2'
+      - '3'
+      - '4'
+      - '5'
+      - Unknown
+      - Not Reported
     enumDef:
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1531,32 +1531,32 @@ properties:
     $ref:
       - "_terms.yaml#/evidence_of_progression_type/common"
     enum:
-      - "Convincing Image Source"
-      - "Histologic Confirmation"
+      - Convincing Image Source
+      - Histologic Confirmation
 
   evidence_of_recurrence_type:
     $ref:
       - "_terms.yaml#/evidence_of_recurrence_type/common"
     enum:
-      - "Biopsy with Histologic Confirmation"
-      - "Convincing Image Source"
-      - "Histologic Confirmation"
-      - "Physical Examination"
-      - "Positive Biomarker(s)"
+      - Biopsy with Histologic Confirmation
+      - Convincing Image Source
+      - Histologic Confirmation
+      - Physical Examination
+      - Positive Biomarker(s)
 
   eye_color:
     $ref:
       - "_terms.yaml#/eye_color/common"
     enum:
-      - "Amber"
-      - "Blue"
-      - "Brown"
-      - "Gray"
-      - "Green"
-      - "Hazel"
-      - "Other"
-      - "Red & Violet"
-      - "Not Reported"
+      - Amber
+      - Blue
+      - Brown
+      - Gray
+      - Green
+      - Hazel
+      - Other
+      - Red & Violet
+      - Not Reported
 
   fev1_fvc_post_bronch_percent:
     $ref:
@@ -1590,18 +1590,18 @@ properties:
     $ref:
       - "_terms.yaml#/first_event/common"
     enum:
-      - "Censored"
-      - "Death"
-      - "Death without Remission"
-      - "Event"
-      - "Induction Death"
-      - "Induction Failure"
-      - "None"
-      - "Other"
-      - "Progression"
-      - "Relapse"
-      - "Second Malignant Neoplasm"
-      - "Not Reported"
+      - Censored
+      - Death
+      - Death without Remission
+      - Event
+      - Induction Death
+      - Induction Failure
+      - None
+      - Other
+      - Progression
+      - Relapse
+      - Second Malignant Neoplasm
+      - Not Reported
 
   haart_treatment_indicator:
     $ref:
@@ -1609,8 +1609,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - "Unknown"
-      - "Not Reported"
+      - Unknown
+      - Not Reported
     enumDef:
       "Yes":
         $ref:
@@ -1618,10 +1618,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1637,8 +1637,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - "Unknown"
-      - "Not Reported"
+      - Unknown
+      - Not Reported
     enumDef:
       "Yes":
         $ref:
@@ -1646,10 +1646,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1659,7 +1659,7 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - "Not Reported"
+      - Not Reported
     enumDef:
       "Yes":
         $ref:
@@ -1667,7 +1667,7 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1675,9 +1675,9 @@ properties:
     $ref:
       - "_terms.yaml#/history_of_tumor_type/common"
     enum:
-      - "Colorectal Cancer"
-      - "Lower Grade Glioma"
-      - "Phenochromocytoma or Paraganglioma"
+      - Colorectal Cancer
+      - Lower Grade Glioma
+      - Phenochromocytoma or Paraganglioma
 
   hiv_viral_load:
     $ref:
@@ -1689,15 +1689,15 @@ properties:
     $ref:
       - "_terms.yaml#/hormonal_contraceptive_type/common"
     enum:
-      - "Progestin"
-      - "Progestin and Estrogen"
-      - "Unknown"
-      - "Not Reported"
+      - Progestin
+      - Progestin and Estrogen
+      - Unknown
+      - Not Reported
     enumDef:
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1705,16 +1705,16 @@ properties:
     $ref:
       - "_terms.yaml#/hormonal_contraceptive_use/common"
     enum:
-      - "Current User"
-      - "Former User"
-      - "Never Used"
-      - "Unknown"
-      - "Not Reported"
+      - Current User
+      - Former User
+      - Never Used
+      - Unknown
+      - Not Reported
     enumDef:
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1722,16 +1722,16 @@ properties:
     $ref:
       - "_terms.yaml#/hormone_replacement_therapy_type/common"
     enum:
-      - "Estrogen only"
-      - "Progesterone and Estrogen"
-      - "Progesterone only"
-      - "Unknown"
-      - "Not Reported"
+      - Estrogen only
+      - Progesterone and Estrogen
+      - Progesterone only
+      - Unknown
+      - Not Reported
     enumDef:
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1739,37 +1739,37 @@ properties:
     $ref:
       - "_terms.yaml#/hpv_positive_type/common"
     enum:
-      - "16"
-      - "18"
-      - "26"
-      - "31"
-      - "33"
-      - "35"
-      - "39"
-      - "45"
-      - "51"
-      - "52"
-      - "53"
-      - "56"
-      - "58"
-      - "59"
-      - "63"
-      - "66"
-      - "68"
-      - "70"
-      - "73"
-      - "82"
-      - "Other"
-      - "Unknown"
-      - "Not Reported"
+      - '16'
+      - '18'
+      - '26'
+      - '31'
+      - '33'
+      - '35'
+      - '39'
+      - '45'
+      - '51'
+      - '52'
+      - '53'
+      - '56'
+      - '58'
+      - '59'
+      - '63'
+      - '66'
+      - '68'
+      - '70'
+      - '73'
+      - '82'
+      - Other
+      - Unknown
+      - Not Reported
     enumDef:
-      "Other":
+      Other:
         $ref:
           - "_terms_enum.yaml#/other/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1777,21 +1777,21 @@ properties:
     $ref:
       - "_terms.yaml#/hysterectomy_margins_involved/common"
     enum:
-      - "Bladder"
-      - "Macroscopic Parametrium"
-      - "Microscopic Parametrium"
-      - "None"
-      - "Vagina"
-      - "Unknown"
-      - "Not Reported"
+      - Bladder
+      - Macroscopic Parametrium
+      - Microscopic Parametrium
+      - None
+      - Vagina
+      - Unknown
+      - Not Reported
     enumDef:
-      "None":
+      None:
         $ref:
           - "_terms_enum.yaml#/none/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1799,17 +1799,17 @@ properties:
     $ref:
       - "_terms.yaml#/hysterectomy_type/common"
     enum:
-      - "Hysterectomy, NOS"
-      - "Not performed"
-      - "Radical Hysterectomy"
-      - "Simple Hysterectomy"
-      - "Unknown"
-      - "Not Reported"
+      - Hysterectomy, NOS
+      - Not performed
+      - Radical Hysterectomy
+      - Simple Hysterectomy
+      - Unknown
+      - Not Reported
     enumDef:
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1819,43 +1819,43 @@ properties:
     type: array
     items:
       enum:
-        - "Abdomen"
-        - "Pelvis"
+        - Abdomen
+        - Pelvis
 
   imaging_findings:
     $ref:
       - "_terms.yaml#/imaging_findings/common"
     enum:
-      - "Carcinomatosis"
-      - "Kidney Involvement"
-      - "Liver Involvement"
-      - "Lung Involvement"
-      - "Normal"
-      - "Retroperitoneal Lymph Node Involvement"
-      - "Vena Cava Involvement/Thrombus"
-      - "Not Reported"
+      - Carcinomatosis
+      - Kidney Involvement
+      - Liver Involvement
+      - Lung Involvement
+      - Normal
+      - Retroperitoneal Lymph Node Involvement
+      - Vena Cava Involvement/Thrombus
+      - Not Reported
 
   imaging_result:
     $ref:
       - "_terms.yaml#/imaging_result/common"
     enum:
-      - "Indeterminate"
-      - "Negative"
-      - "Not Performed"
-      - "Positive"
-      - "Unknown"
-      - "Not Reported"
+      - Indeterminate
+      - Negative
+      - Not Performed
+      - Positive
+      - Unknown
+      - Not Reported
     enumDef:
-      "Positive":
+      Positive:
         $ref:
           - "_terms_enum.yaml#/positive/common"
-      "Negative":
+      Negative:
         $ref:
           - "_terms_enum.yaml#/negative/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1873,34 +1873,34 @@ properties:
     $ref:
       - "_terms.yaml#/imaging_type/common"
     enum:
-      - "99mTc Bone Scintigraphy"
-      - "CT Scan"
-      - "MRI"
-      - "PET"
+      - 99mTc Bone Scintigraphy
+      - CT Scan
+      - MRI
+      - PET
 
   immunosuppressive_treatment_type:
     $ref:
       - "_terms.yaml#/immunosuppressive_treatment_type/common"
     enum:
-      - "Anti-TNF Therapy"
-      - "Azathioprine"
-      - "Cyclophosphamide"
-      - "Methotrexate"
-      - "None"
-      - "Other"
-      - "Unknown"
-      - "Not Reported"
+      - Anti-TNF Therapy
+      - Azathioprine
+      - Cyclophosphamide
+      - Methotrexate
+      - None
+      - Other
+      - Unknown
+      - Not Reported
     enumDef:
-      "None":
+      None:
         $ref:
           - "_terms_enum.yaml#/none/common"
-      "Other":
+      Other:
         $ref:
           - "_terms_enum.yaml#/other/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1908,24 +1908,24 @@ properties:
     $ref:
       - "_terms.yaml#/karnofsky_performance_status/common"
     enum:
-      - "0"
-      - "10"
-      - "100"
-      - "20"
-      - "30"
-      - "40"
-      - "50"
-      - "60"
-      - "70"
-      - "80"
-      - "90"
-      - "Unknown"
-      - "Not Reported"
+      - '0'
+      - '10'
+      - '100'
+      - '20'
+      - '30'
+      - '40'
+      - '50'
+      - '60'
+      - '70'
+      - '80'
+      - '90'
+      - Unknown
+      - Not Reported
     enumDef:
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1933,16 +1933,16 @@ properties:
     $ref:
       - "_terms.yaml#/menopause_status/common"
     enum:
-      - "Perimenopausal"
-      - "Postmenopausal"
-      - "Premenopausal"
-      - "Unknown"
-      - "Not Reported"
+      - Perimenopausal
+      - Postmenopausal
+      - Premenopausal
+      - Unknown
+      - Not Reported
     enumDef:
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1962,9 +1962,9 @@ properties:
     $ref:
       - "_terms.yaml#/peritoneal_washing_results/common"
     enum:
-      - "Negative"
-      - "Positive"
-      - "Not Reported"
+      - Negative
+      - Positive
+      - Not Reported
 
   pregnancy_count:
     $ref:
@@ -1976,19 +1976,19 @@ properties:
     $ref:
       - "_terms.yaml#/pregnancy_outcome/common"
     enum:
-      - "Ectopic Pregnancy"
-      - "Induced Abortion"
-      - "Live Birth"
-      - "Miscarriage"
-      - "Spontaneous Abortion"
-      - "Stillbirth"
-      - "Unknown"
-      - "Not Reported"
+      - Ectopic Pregnancy
+      - Induced Abortion
+      - Live Birth
+      - Miscarriage
+      - Spontaneous Abortion
+      - Stillbirth
+      - Unknown
+      - Not Reported
     enumDef:
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -1996,15 +1996,15 @@ properties:
     $ref:
       - "_terms.yaml#/procedures_performed/common"
     enum:
-      - "Colonoscopy"
-      - "Endoscopy"
-      - "Unknown"
-      - "Not Reported"
+      - Colonoscopy
+      - Endoscopy
+      - Unknown
+      - Not Reported
     enumDef:
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -2014,8 +2014,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - "Unknown"
-      - "Not Reported"
+      - Unknown
+      - Not Reported
     enumDef:
       "Yes":
         $ref:
@@ -2023,10 +2023,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -2034,364 +2034,364 @@ properties:
     $ref:
       - "_terms.yaml#/progression_or_recurrence_anatomic_site/common"
     enum:
-      - "Abdomen, NOS"
-      - "Abdominal esophagus"
-      - "Accessory sinus, NOS"
-      - "Acoustic nerve"
-      - "Adrenal gland, NOS"
-      - "Ampulla of Vater"
-      - "Anal canal"
-      - "Anterior 2/3 of tongue, NOS"
-      - "Anterior floor of mouth"
-      - "Anterior mediastinum"
-      - "Anterior surface of epiglottis"
-      - "Anterior wall of bladder"
-      - "Anterior wall of nasopharynx"
-      - "Anus, NOS"
-      - "Aortic body and other paraganglia"
-      - "Appendix"
-      - "Ascending colon"
-      - "Autonomic nervous system, NOS"
-      - "Axillary tail of breast"
-      - "Base of tongue, NOS"
-      - "Biliary tract, NOS"
-      - "Bladder neck"
-      - "Bladder, NOS"
-      - "Blood"
-      - "Body of pancreas"
-      - "Body of penis"
-      - "Body of stomach"
-      - "Bone marrow"
-      - "Bone of limb, NOS"
-      - "Bone, NOS"
-      - "Bones of skull and face and associated joints"
-      - "Border of tongue"
-      - "Brain stem"
-      - "Brain, NOS"
-      - "Branchial cleft"
-      - "Breast, NOS"
-      - "Broad ligament"
-      - "Cardia, NOS"
-      - "Carotid body"
-      - "Cauda equina"
-      - "Cecum"
-      - "Central portion of breast"
-      - "Cerebellum, NOS"
-      - "Cerebral meninges"
-      - "Cerebrum"
-      - "Cervical esophagus"
-      - "Cervix uteri"
-      - "Cheek mucosa"
-      - "Choroid"
-      - "Ciliary body"
-      - "Clitoris"
-      - "Cloacogenic zone"
-      - "Colon, NOS"
-      - "Commissure of lip"
-      - "Conjunctiva"
-      - "Connective, subcutaneous and other soft tissues of abdomen"
-      - "Connective, subcutaneous and other soft tissues of head, face, and neck"
-      - "Connective, subcutaneous and other soft tissues of lower limb and hip"
-      - "Connective, subcutaneous and other soft tissues of pelvis"
-      - "Connective, subcutaneous and other soft tissues of thorax"
-      - "Connective, subcutaneous and other soft tissues of trunk, NOS"
-      - "Connective, subcutaneous and other soft tissues of upper limb and shoulder"
-      - "Connective, subcutaneous and other soft tissues, NOS"
-      - "Cornea, NOS"
-      - "Corpus uteri"
-      - "Cortex of adrenal gland"
-      - "Cranial nerve, NOS"
-      - "Craniopharyngeal duct"
-      - "Descended testis"
-      - "Descending colon"
-      - "Dome of bladder"
-      - "Dorsal surface of tongue, NOS"
-      - "Duodenum"
-      - "Endocervix"
-      - "Endocrine gland, NOS"
-      - "Endometrium"
-      - "Epididymis"
-      - "Esophagus, NOS"
-      - "Ethmoid sinus"
-      - "Exocervix"
-      - "External ear"
-      - "External lip, NOS"
-      - "External lower lip"
-      - "External upper lip"
-      - "Extrahepatic bile duct"
-      - "Eye, NOS"
-      - "Eyelid"
-      - "Fallopian tube"
-      - "Female genital tract, NOS"
-      - "Floor of mouth, NOS"
-      - "Frontal lobe"
-      - "Frontal sinus"
-      - "Fundus of stomach"
-      - "Fundus uteri"
-      - "Gallbladder"
-      - "Gastric antrum"
-      - "Gastrointestinal tract, NOS"
-      - "Glans penis"
-      - "Glottis"
-      - "Greater curvature of stomach, NOS"
-      - "Gum, NOS"
-      - "Hard palate"
-      - "Head of pancreas"
-      - "Head, face or neck, NOS"
-      - "Heart"
-      - "Hematopoietic system, NOS"
-      - "Hepatic flexure of colon"
-      - "Hypopharyngeal aspect of aryepiglottic fold"
-      - "Hypopharynx, NOS"
-      - "Ileum"
-      - "Ill-defined sites within respiratory system"
-      - "Intestinal tract, NOS"
-      - "Intra-abdominal lymph nodes"
-      - "Intrahepatic bile duct"
-      - "Intrathoracic lymph nodes"
-      - "Islets of Langerhans"
-      - "Isthmus uteri"
-      - "Jejunum"
-      - "Kidney, NOS"
-      - "Labium majus"
-      - "Labium minus"
-      - "Lacrimal gland"
-      - "Laryngeal cartilage"
-      - "Larynx, NOS"
-      - "Lateral floor of mouth"
-      - "Lateral wall of bladder"
-      - "Lateral wall of nasopharynx"
-      - "Lateral wall of oropharynx"
-      - "Lesser curvature of stomach, NOS"
-      - "Lingual tonsil"
-      - "Lip, NOS"
-      - "Liver"
-      - "Long bones of lower limb and associated joints"
-      - "Long bones of upper limb, scapula and associated joints"
-      - "Lower gum"
-      - "Lower limb, NOS"
-      - "Lower lobe, lung"
-      - "Lower third of esophagus"
-      - "Lower-inner quadrant of breast"
-      - "Lower-outer quadrant of breast"
-      - "Lung, NOS"
-      - "Lymph node, NOS"
-      - "Lymph nodes of axilla or arm"
-      - "Lymph nodes of head, face and neck"
-      - "Lymph nodes of inguinal region or leg"
-      - "Lymph nodes of multiple regions"
-      - "Main bronchus"
-      - "Major salivary gland, NOS"
-      - "Male genital organs, NOS"
-      - "Mandible"
-      - "Maxillary sinus"
-      - "Meckel diverticulum"
-      - "Mediastinum, NOS"
-      - "Medulla of adrenal gland"
-      - "Meninges, NOS"
-      - "Middle ear"
-      - "Middle lobe, lung"
-      - "Middle third of esophagus"
-      - "Mouth, NOS"
-      - "Mucosa of lip, NOS"
-      - "Mucosa of lower lip"
-      - "Mucosa of upper lip"
-      - "Myometrium"
-      - "Nasal cavity"
-      - "Nasopharynx, NOS"
-      - "Nervous system, NOS"
-      - "Nipple"
-      - "Occipital lobe"
-      - "Olfactory nerve"
-      - "Optic nerve"
-      - "Orbit, NOS"
-      - "Oropharynx, NOS"
-      - "Other ill-defined sites"
-      - "Other specified parts of female genital organs"
-      - "Other specified parts of male genital organs"
-      - "Other specified parts of pancreas"
-      - "Ovary"
-      - "Overlapping lesion of accessory sinuses"
-      - "Overlapping lesion of biliary tract"
-      - "Overlapping lesion of bladder"
-      - "Overlapping lesion of bones, joints and articular cartilage"
-      - "Overlapping lesion of bones, joints and articular cartilage of limbs"
-      - "Overlapping lesion of brain"
-      - "Overlapping lesion of brain and central nervous system"
-      - "Overlapping lesion of breast"
-      - "Overlapping lesion of cervix uteri"
-      - "Overlapping lesion of colon"
-      - "Overlapping lesion of connective, subcutaneous and other soft tissues"
-      - "Overlapping lesion of corpus uteri"
-      - "Overlapping lesion of digestive system"
-      - "Overlapping lesion of endocrine glands and related structures"
-      - "Overlapping lesion of esophagus"
-      - "Overlapping lesion of eye and adnexa"
-      - "Overlapping lesion of female genital organs"
-      - "Overlapping lesion of floor of mouth"
-      - "Overlapping lesion of heart, mediastinum and pleura"
-      - "Overlapping lesion of hypopharynx"
-      - "Overlapping lesion of ill-defined sites"
-      - "Overlapping lesion of larynx"
-      - "Overlapping lesion of lip"
-      - "Overlapping lesion of lip, oral cavity and pharynx"
-      - "Overlapping lesion of lung"
-      - "Overlapping lesion of major salivary glands"
-      - "Overlapping lesion of male genital organs"
-      - "Overlapping lesion of nasopharynx"
-      - "Overlapping lesion of other and unspecified parts of mouth"
-      - "Overlapping lesion of palate"
-      - "Overlapping lesion of pancreas"
-      - "Overlapping lesion of penis"
-      - "Overlapping lesion of peripheral nerves and autonomic nervous system"
-      - "Overlapping lesion of rectum, anus and anal canal"
-      - "Overlapping lesion of respiratory system and intrathoracic organs"
-      - "Overlapping lesion of retroperitoneum and peritoneum"
-      - "Overlapping lesion of skin"
-      - "Overlapping lesion of small intestine"
-      - "Overlapping lesion of stomach"
-      - "Overlapping lesion of tongue"
-      - "Overlapping lesion of tonsil"
-      - "Overlapping lesion of urinary organs"
-      - "Overlapping lesion of vulva"
-      - "Overlapping lesions of oropharynx"
-      - "Palate, NOS"
-      - "Pancreas, NOS"
-      - "Pancreatic duct"
-      - "Parametrium"
-      - "Parathyroid gland"
-      - "Paraurethral gland"
-      - "Parietal lobe"
-      - "Parotid gland"
-      - "Pelvic bones, sacrum, coccyx and associated joints"
-      - "Pelvic lymph nodes"
-      - "Pelvis, NOS"
-      - "Penis, NOS"
-      - "Peripheral nerves and autonomic nervous system of abdomen"
-      - "Peripheral nerves and autonomic nervous system of head, face, and neck"
-      - "Peripheral nerves and autonomic nervous system of lower limb and hip"
-      - "Peripheral nerves and autonomic nervous system of pelvis"
-      - "Peripheral nerves and autonomic nervous system of thorax"
-      - "Peripheral nerves and autonomic nervous system of trunk, NOS"
-      - "Peripheral nerves and autonomic nervous system of upper limb and shoulder"
-      - "Peritoneum, NOS"
-      - "Pharynx, NOS"
-      - "Pineal gland"
-      - "Pituitary gland"
-      - "Placenta"
-      - "Pleura, NOS"
-      - "Postcricoid region"
-      - "Posterior mediastinum"
-      - "Posterior wall of bladder"
-      - "Posterior wall of hypopharynx"
-      - "Posterior wall of nasopharynx"
-      - "Posterior wall of oropharynx"
-      - "Prepuce"
-      - "Prostate gland"
-      - "Pylorus"
-      - "Pyriform sinus"
-      - "Rectosigmoid junction"
-      - "Rectum, NOS"
-      - "Renal pelvis"
-      - "Reticuloendothelial system, NOS"
-      - "Retina"
-      - "Retromolar area"
-      - "Retroperitoneum"
-      - "Rib, sternum, clavicle and associated joints"
-      - "Round ligament"
-      - "Scrotum, NOS"
-      - "Short bones of lower limb and associated joints"
-      - "Short bones of upper limb and associated joints"
-      - "Sigmoid colon"
-      - "Skin of lip, NOS"
-      - "Skin of lower limb and hip"
-      - "Skin of other and unspecified parts of face"
-      - "Skin of scalp and neck"
-      - "Skin of trunk"
-      - "Skin of upper limb and shoulder"
-      - "Skin, NOS"
-      - "Small intestine, NOS"
-      - "Soft palate, NOS"
-      - "Specified parts of peritoneum"
-      - "Spermatic cord"
-      - "Sphenoid sinus"
-      - "Spinal cord"
-      - "Spinal meninges"
-      - "Spleen"
-      - "Splenic flexure of colon"
-      - "Stomach, NOS"
-      - "Subglottis"
-      - "Sublingual gland"
-      - "Submandibular gland"
-      - "Superior wall of nasopharynx"
-      - "Supraglottis"
-      - "Tail of pancreas"
-      - "Temporal lobe"
-      - "Testis, NOS"
-      - "Thoracic esophagus"
-      - "Thorax, NOS"
-      - "Thymus"
-      - "Thyroid gland"
-      - "Tongue, NOS"
-      - "Tonsil, NOS"
-      - "Tonsillar fossa"
-      - "Tonsillar pillar"
-      - "Trachea"
-      - "Transverse colon"
-      - "Trigone of bladder"
-      - "Undescended testis"
-      - "Unknown primary site"
-      - "Upper gum"
-      - "Upper limb, NOS"
-      - "Upper lobe, lung"
-      - "Upper respiratory tract, NOS"
-      - "Upper third of esophagus"
-      - "Upper-inner quadrant of breast"
-      - "Upper-outer quadrant of breast"
-      - "Urachus"
-      - "Ureter"
-      - "Ureteric orifice"
-      - "Urethra"
-      - "Urinary system, NOS"
-      - "Uterine adnexa"
-      - "Uterus, NOS"
-      - "Uvula"
-      - "Vagina, NOS"
-      - "Vallecula"
-      - "Ventral surface of tongue, NOS"
-      - "Ventricle, NOS"
-      - "Vertebral column"
-      - "Vestibule of mouth"
-      - "Vulva, NOS"
-      - "Waldeyer ring"
-      - "Unknown"
-      - "Not Reported"
+      - Abdomen, NOS
+      - Abdominal esophagus
+      - Accessory sinus, NOS
+      - Acoustic nerve
+      - Adrenal gland, NOS
+      - Ampulla of Vater
+      - Anal canal
+      - Anterior 2/3 of tongue, NOS
+      - Anterior floor of mouth
+      - Anterior mediastinum
+      - Anterior surface of epiglottis
+      - Anterior wall of bladder
+      - Anterior wall of nasopharynx
+      - Anus, NOS
+      - Aortic body and other paraganglia
+      - Appendix
+      - Ascending colon
+      - Autonomic nervous system, NOS
+      - Axillary tail of breast
+      - Base of tongue, NOS
+      - Biliary tract, NOS
+      - Bladder neck
+      - Bladder, NOS
+      - Blood
+      - Body of pancreas
+      - Body of penis
+      - Body of stomach
+      - Bone marrow
+      - Bone of limb, NOS
+      - Bone, NOS
+      - Bones of skull and face and associated joints
+      - Border of tongue
+      - Brain stem
+      - Brain, NOS
+      - Branchial cleft
+      - Breast, NOS
+      - Broad ligament
+      - Cardia, NOS
+      - Carotid body
+      - Cauda equina
+      - Cecum
+      - Central portion of breast
+      - Cerebellum, NOS
+      - Cerebral meninges
+      - Cerebrum
+      - Cervical esophagus
+      - Cervix uteri
+      - Cheek mucosa
+      - Choroid
+      - Ciliary body
+      - Clitoris
+      - Cloacogenic zone
+      - Colon, NOS
+      - Commissure of lip
+      - Conjunctiva
+      - Connective, subcutaneous and other soft tissues of abdomen
+      - Connective, subcutaneous and other soft tissues of head, face, and neck
+      - Connective, subcutaneous and other soft tissues of lower limb and hip
+      - Connective, subcutaneous and other soft tissues of pelvis
+      - Connective, subcutaneous and other soft tissues of thorax
+      - Connective, subcutaneous and other soft tissues of trunk, NOS
+      - Connective, subcutaneous and other soft tissues of upper limb and shoulder
+      - Connective, subcutaneous and other soft tissues, NOS
+      - Cornea, NOS
+      - Corpus uteri
+      - Cortex of adrenal gland
+      - Cranial nerve, NOS
+      - Craniopharyngeal duct
+      - Descended testis
+      - Descending colon
+      - Dome of bladder
+      - Dorsal surface of tongue, NOS
+      - Duodenum
+      - Endocervix
+      - Endocrine gland, NOS
+      - Endometrium
+      - Epididymis
+      - Esophagus, NOS
+      - Ethmoid sinus
+      - Exocervix
+      - External ear
+      - External lip, NOS
+      - External lower lip
+      - External upper lip
+      - Extrahepatic bile duct
+      - Eye, NOS
+      - Eyelid
+      - Fallopian tube
+      - Female genital tract, NOS
+      - Floor of mouth, NOS
+      - Frontal lobe
+      - Frontal sinus
+      - Fundus of stomach
+      - Fundus uteri
+      - Gallbladder
+      - Gastric antrum
+      - Gastrointestinal tract, NOS
+      - Glans penis
+      - Glottis
+      - Greater curvature of stomach, NOS
+      - Gum, NOS
+      - Hard palate
+      - Head of pancreas
+      - Head, face or neck, NOS
+      - Heart
+      - Hematopoietic system, NOS
+      - Hepatic flexure of colon
+      - Hypopharyngeal aspect of aryepiglottic fold
+      - Hypopharynx, NOS
+      - Ileum
+      - Ill-defined sites within respiratory system
+      - Intestinal tract, NOS
+      - Intra-abdominal lymph nodes
+      - Intrahepatic bile duct
+      - Intrathoracic lymph nodes
+      - Islets of Langerhans
+      - Isthmus uteri
+      - Jejunum
+      - Kidney, NOS
+      - Labium majus
+      - Labium minus
+      - Lacrimal gland
+      - Laryngeal cartilage
+      - Larynx, NOS
+      - Lateral floor of mouth
+      - Lateral wall of bladder
+      - Lateral wall of nasopharynx
+      - Lateral wall of oropharynx
+      - Lesser curvature of stomach, NOS
+      - Lingual tonsil
+      - Lip, NOS
+      - Liver
+      - Long bones of lower limb and associated joints
+      - Long bones of upper limb, scapula and associated joints
+      - Lower gum
+      - Lower limb, NOS
+      - Lower lobe, lung
+      - Lower third of esophagus
+      - Lower-inner quadrant of breast
+      - Lower-outer quadrant of breast
+      - Lung, NOS
+      - Lymph node, NOS
+      - Lymph nodes of axilla or arm
+      - Lymph nodes of head, face and neck
+      - Lymph nodes of inguinal region or leg
+      - Lymph nodes of multiple regions
+      - Main bronchus
+      - Major salivary gland, NOS
+      - Male genital organs, NOS
+      - Mandible
+      - Maxillary sinus
+      - Meckel diverticulum
+      - Mediastinum, NOS
+      - Medulla of adrenal gland
+      - Meninges, NOS
+      - Middle ear
+      - Middle lobe, lung
+      - Middle third of esophagus
+      - Mouth, NOS
+      - Mucosa of lip, NOS
+      - Mucosa of lower lip
+      - Mucosa of upper lip
+      - Myometrium
+      - Nasal cavity
+      - Nasopharynx, NOS
+      - Nervous system, NOS
+      - Nipple
+      - Occipital lobe
+      - Olfactory nerve
+      - Optic nerve
+      - Orbit, NOS
+      - Oropharynx, NOS
+      - Other ill-defined sites
+      - Other specified parts of female genital organs
+      - Other specified parts of male genital organs
+      - Other specified parts of pancreas
+      - Ovary
+      - Overlapping lesion of accessory sinuses
+      - Overlapping lesion of biliary tract
+      - Overlapping lesion of bladder
+      - Overlapping lesion of bones, joints and articular cartilage
+      - Overlapping lesion of bones, joints and articular cartilage of limbs
+      - Overlapping lesion of brain
+      - Overlapping lesion of brain and central nervous system
+      - Overlapping lesion of breast
+      - Overlapping lesion of cervix uteri
+      - Overlapping lesion of colon
+      - Overlapping lesion of connective, subcutaneous and other soft tissues
+      - Overlapping lesion of corpus uteri
+      - Overlapping lesion of digestive system
+      - Overlapping lesion of endocrine glands and related structures
+      - Overlapping lesion of esophagus
+      - Overlapping lesion of eye and adnexa
+      - Overlapping lesion of female genital organs
+      - Overlapping lesion of floor of mouth
+      - Overlapping lesion of heart, mediastinum and pleura
+      - Overlapping lesion of hypopharynx
+      - Overlapping lesion of ill-defined sites
+      - Overlapping lesion of larynx
+      - Overlapping lesion of lip
+      - Overlapping lesion of lip, oral cavity and pharynx
+      - Overlapping lesion of lung
+      - Overlapping lesion of major salivary glands
+      - Overlapping lesion of male genital organs
+      - Overlapping lesion of nasopharynx
+      - Overlapping lesion of other and unspecified parts of mouth
+      - Overlapping lesion of palate
+      - Overlapping lesion of pancreas
+      - Overlapping lesion of penis
+      - Overlapping lesion of peripheral nerves and autonomic nervous system
+      - Overlapping lesion of rectum, anus and anal canal
+      - Overlapping lesion of respiratory system and intrathoracic organs
+      - Overlapping lesion of retroperitoneum and peritoneum
+      - Overlapping lesion of skin
+      - Overlapping lesion of small intestine
+      - Overlapping lesion of stomach
+      - Overlapping lesion of tongue
+      - Overlapping lesion of tonsil
+      - Overlapping lesion of urinary organs
+      - Overlapping lesion of vulva
+      - Overlapping lesions of oropharynx
+      - Palate, NOS
+      - Pancreas, NOS
+      - Pancreatic duct
+      - Parametrium
+      - Parathyroid gland
+      - Paraurethral gland
+      - Parietal lobe
+      - Parotid gland
+      - Pelvic bones, sacrum, coccyx and associated joints
+      - Pelvic lymph nodes
+      - Pelvis, NOS
+      - Penis, NOS
+      - Peripheral nerves and autonomic nervous system of abdomen
+      - Peripheral nerves and autonomic nervous system of head, face, and neck
+      - Peripheral nerves and autonomic nervous system of lower limb and hip
+      - Peripheral nerves and autonomic nervous system of pelvis
+      - Peripheral nerves and autonomic nervous system of thorax
+      - Peripheral nerves and autonomic nervous system of trunk, NOS
+      - Peripheral nerves and autonomic nervous system of upper limb and shoulder
+      - Peritoneum, NOS
+      - Pharynx, NOS
+      - Pineal gland
+      - Pituitary gland
+      - Placenta
+      - Pleura, NOS
+      - Postcricoid region
+      - Posterior mediastinum
+      - Posterior wall of bladder
+      - Posterior wall of hypopharynx
+      - Posterior wall of nasopharynx
+      - Posterior wall of oropharynx
+      - Prepuce
+      - Prostate gland
+      - Pylorus
+      - Pyriform sinus
+      - Rectosigmoid junction
+      - Rectum, NOS
+      - Renal pelvis
+      - Reticuloendothelial system, NOS
+      - Retina
+      - Retromolar area
+      - Retroperitoneum
+      - Rib, sternum, clavicle and associated joints
+      - Round ligament
+      - Scrotum, NOS
+      - Short bones of lower limb and associated joints
+      - Short bones of upper limb and associated joints
+      - Sigmoid colon
+      - Skin of lip, NOS
+      - Skin of lower limb and hip
+      - Skin of other and unspecified parts of face
+      - Skin of scalp and neck
+      - Skin of trunk
+      - Skin of upper limb and shoulder
+      - Skin, NOS
+      - Small intestine, NOS
+      - Soft palate, NOS
+      - Specified parts of peritoneum
+      - Spermatic cord
+      - Sphenoid sinus
+      - Spinal cord
+      - Spinal meninges
+      - Spleen
+      - Splenic flexure of colon
+      - Stomach, NOS
+      - Subglottis
+      - Sublingual gland
+      - Submandibular gland
+      - Superior wall of nasopharynx
+      - Supraglottis
+      - Tail of pancreas
+      - Temporal lobe
+      - Testis, NOS
+      - Thoracic esophagus
+      - Thorax, NOS
+      - Thymus
+      - Thyroid gland
+      - Tongue, NOS
+      - Tonsil, NOS
+      - Tonsillar fossa
+      - Tonsillar pillar
+      - Trachea
+      - Transverse colon
+      - Trigone of bladder
+      - Undescended testis
+      - Unknown primary site
+      - Upper gum
+      - Upper limb, NOS
+      - Upper lobe, lung
+      - Upper respiratory tract, NOS
+      - Upper third of esophagus
+      - Upper-inner quadrant of breast
+      - Upper-outer quadrant of breast
+      - Urachus
+      - Ureter
+      - Ureteric orifice
+      - Urethra
+      - Urinary system, NOS
+      - Uterine adnexa
+      - Uterus, NOS
+      - Uvula
+      - Vagina, NOS
+      - Vallecula
+      - Ventral surface of tongue, NOS
+      - Ventricle, NOS
+      - Vertebral column
+      - Vestibule of mouth
+      - Vulva, NOS
+      - Waldeyer ring
+      - Unknown
+      - Not Reported
     enumDef:
-      "Bone marrow":
+      Bone marrow:
         $ref:
           - "_terms_enum.yaml#/bone_marrow/common"
-      "Frontal lobe":
+      Frontal lobe:
         $ref:
           - "_terms_enum.yaml#/frontal_lobe/common"
-      "Occipital lobe":
+      Occipital lobe:
         $ref:
           - "_terms_enum.yaml#/occipital_lobe/common"
-      "Parietal lobe":
+      Parietal lobe:
         $ref:
           - "_terms_enum.yaml#/parietal_lobe/common"
-      "Temporal lobe":
+      Temporal lobe:
         $ref:
           - "_terms_enum.yaml#/temporal_lobe/common"
-      "Uterine adnexa":
+      Uterine adnexa:
         $ref:
           - "_terms_enum.yaml#/uterine_adnexa/common"
-      "Vulva, NOS":
+      Vulva, NOS:
         $ref:
           - "_terms_enum.yaml#/vulva_nos/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -2399,18 +2399,18 @@ properties:
     $ref:
       - "_terms.yaml#/progression_or_recurrence_type/common"
     enum:
-      - "Biochemical"
-      - "Distant"
-      - "Local"
-      - "Locoregional"
-      - "Regional"
-      - "Unknown"
-      - "Not Reported"
+      - Biochemical
+      - Distant
+      - Local
+      - Locoregional
+      - Regional
+      - Unknown
+      - Not Reported
     enumDef:
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -2430,23 +2430,23 @@ properties:
     $ref:
       - "_terms.yaml#/reflux_treatment_type/common"
     enum:
-      - "Antacids"
-      - "H2 Blockers"
-      - "Medically Treated"
-      - "No Treatment"
-      - "Proton Pump Inhibitors"
-      - "Surgically Treated"
-      - "Unknown"
-      - "Not Reported"
-      - "Not Applicable"
+      - Antacids
+      - H2 Blockers
+      - Medically Treated
+      - No Treatment
+      - Proton Pump Inhibitors
+      - Surgically Treated
+      - Unknown
+      - Not Reported
+      - Not Applicable
     enumDef:
-      "Not Applicable":
+      Not Applicable:
         $ref:
           - "_terms_enum.yaml#/not_applicable/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -2454,193 +2454,193 @@ properties:
     $ref:
       - "_terms.yaml#/risk_factor/common"
     enum:
-      - "Abnormal Glucose Level"
-      - "Adenomyosis"
-      - "Adenosis (Atypical Adenomatous Hyperplasia)"
-      - "Alcohol Consumption"
-      - "Alcoholic Liver Disease"
-      - "Allergy, Animal, NOS"
-      - "Allergy, Ant"
-      - "Allergy, Bee"
-      - "Allergy, Cat"
-      - "Allergy, Dairy or Lactose"
-      - "Allergy, Dog"
-      - "Allergy, Eggs"
-      - "Allergy, Food, NOS"
-      - "Allergy, Fruit"
-      - "Allergy, Meat"
-      - "Allergy, Mold or Dust"
-      - "Allergy, Nuts"
-      - "Allergy, Processed Foods"
-      - "Allergy, Seafood"
-      - "Allergy, Wasp"
-      - "Alpha-1 Antitrypsin Deficiency"
-      - "Altered Mental Status"
-      - "Androgen Excess"
-      - "Anemia"
-      - "Asthma"
-      - "Ataxia-telangiectasia"
-      - "Autoimmune Atrophic Chronic Gastritis"
-      - "Autoimmune Lymphoproliferative Syndrome (ALPS)"
-      - "Bacteroides fragilis"
-      - "BAP1 Tumor Predisposition Syndrome"
-      - "Barrett's Esophagus"
-      - "Beckwith-Wiedemann"
-      - "Behcet's Disease"
-      - "Benign Prostatic Hyperplasia"
-      - "Birt-Hogg-Dube Syndrome"
-      - "BRCA Family History"
-      - "Cancer"
-      - "Chlamydia"
-      - "Chloroma"
-      - "Cholelithiasis"
-      - "Chronic Hepatitis"
-      - "Chronic Kidney Disease"
-      - "Chronic Pancreatitis"
-      - "Chronic Systemic Steroid Use"
-      - "Cirrhosis"
-      - "Colon Polyps"
-      - "Colonization, Bacterial"
-      - "Colonization, Fungal"
-      - "Common variable immune deficiency (CVID)"
-      - "Cortisol Excess"
-      - "Cowden Syndrome"
-      - "Cryptococcal Meningitis"
-      - "Cyst(s)"
-      - "Cytomegalovirus (CMV)"
-      - "Denys-Drash Syndrome"
-      - "Dermatomyosis"
-      - "Diabetes, NOS"
-      - "Diabetes, Type I"
-      - "Diabetes, Type II"
-      - "Diet"
-      - "Diverticulitis"
-      - "Down Syndrome"
-      - "EBV Lymphoproliferation"
-      - "Eczema"
-      - "Endometriosis"
-      - "Endosalpingiosis"
-      - "Epithelial Dysplasia"
-      - "Epithelial Hyperplasia"
-      - "Epstein-Barr Virus"
-      - "Escherichia coli"
-      - "Estrogen Excess"
-      - "Familial Adenomatous Polyposis"
-      - "Fanconi Anemia"
-      - "Fibrosis"
-      - "Gastric Polyp(s)"
-      - "Gastritis"
-      - "Gilbert's Syndrome"
-      - "Glomerular Disease"
-      - "Gorlin Syndrome"
-      - "H. pylori Infection"
-      - "Hashimoto's Thyroiditis"
-      - "Hay Fever"
-      - "Headache"
-      - "Helicobacter Pylori-Associated Gastritis"
-      - "Hematologic Disorder, NOS"
-      - "Hemihypertrophy"
-      - "Hemochromatosis"
-      - "Hepatic Encephalopathy"
-      - "Hepatitis A Infection"
-      - "Hepatitis B Infection"
-      - "Hepatitis C Infection"
-      - "Hepatitis, NOS"
-      - "Hereditary Breast Cancer"
-      - "Hereditary Hemorrhagic Telangiectasia"
-      - "Hereditary Kidney Oncocytoma"
-      - "Hereditary Leiomyomatosis and Renal Cell Carcinoma"
-      - "Hereditary Ovarian Cancer"
-      - "Hereditary Papillary Renal Cell Carcinoma"
-      - "Hereditary Prostate Cancer"
-      - "Hereditary Renal Cell Carcinoma"
-      - "Herpes Zoster"
-      - "High Grade Dysplasia"
-      - "High-grade Prostatic Intraepithelial Neoplasia (PIN)"
-      - "HIV"
-      - "Hodgkin Lymphoma"
-      - "Human Herpesvirus-6 (HHV-6)"
-      - "Human Herpesvirus-8 (HHV-8)"
-      - "Human Papillomavirus Infection"
-      - "Hypospadias"
-      - "Inflammation"
-      - "Inflammation, Hyperkeratosis"
-      - "Inherited Genetic Syndrome, NOS"
-      - "Intestinal Metaplasia"
-      - "Iron Overload"
-      - "Li-Fraumeni Syndrome"
-      - "Low Grade Dysplasia"
-      - "Lymphamatoid Papulosis"
-      - "Lymphocytic Meningitis"
-      - "Lymphocytic Thyroiditis"
-      - "Lynch Syndrome"
-      - "Malaria"
-      - "Metabolic Syndrome"
-      - "Mineralcorticoids Excess"
-      - "Motor / Movement Change"
-      - "Myasthenia Gravis"
-      - "Mycobacterium avium Complex"
-      - "Myelodysplastic Syndrome"
-      - "Neurocystericerosis"
-      - "Nodular Prostatic Hyperplasia"
-      - "Nonalcoholic Fatty Liver Disease"
-      - "Nonalcoholic Steatohepatitis"
-      - "None"
-      - "Obesity"
-      - "Oral Contraceptives"
-      - "Pancreatitis"
-      - "Parasitic Disease of Biliary Tract"
-      - "Pneumocystis Pneumonia"
-      - "Polycystic Ovarian Syndrome (PCOS)"
-      - "Primary Sclerosing Cholangitis"
-      - "Recurrent Pyogenic Cholangitis"
-      - "Reflux Disease"
-      - "Rheumatoid Arthritis"
-      - "Rubella"
-      - "Rubinstein-Taybi Syndrome"
-      - "Sarcoidosis"
-      - "Seizure"
-      - "Sensory Changes"
-      - "Serous tubal intraepithelial carcinoma (STIC)"
-      - "Shingles"
-      - "Sialadenitis"
-      - "Sjogren's Syndrome"
-      - "Skin Rash"
-      - "Squamous Metaplasia"
-      - "Staphylococcus aureus"
-      - "Steatosis"
-      - "Succinate Dehydrogenase-Deficient Renal Cell Carcinoma"
-      - "Syphilis"
-      - "Tattoo"
-      - "Thyroid Nodular Hyperplasia"
-      - "Tobacco, NOS"
-      - "Tobacco, Smokeless"
-      - "Tobacco, Smoking"
-      - "Treponema pallidum"
-      - "Tuberculosis"
-      - "Tuberous Sclerosis"
-      - "Tubulointerstitial Disease"
-      - "Tumor-associated Lymphoid Proliferation"
-      - "Turcot Syndrome"
-      - "Undescended Testis"
-      - "Varicella Zoster Virus"
-      - "Vascular Disease"
-      - "Vision Changes"
-      - "Von Hippel-Lindau Syndrome"
-      - "Wagr Syndrome"
-      - "Unknown"
-      - "Not Reported"
+      - Abnormal Glucose Level
+      - Adenomyosis
+      - Adenosis (Atypical Adenomatous Hyperplasia)
+      - Alcohol Consumption
+      - Alcoholic Liver Disease
+      - Allergy, Animal, NOS
+      - Allergy, Ant
+      - Allergy, Bee
+      - Allergy, Cat
+      - Allergy, Dairy or Lactose
+      - Allergy, Dog
+      - Allergy, Eggs
+      - Allergy, Food, NOS
+      - Allergy, Fruit
+      - Allergy, Meat
+      - Allergy, Mold or Dust
+      - Allergy, Nuts
+      - Allergy, Processed Foods
+      - Allergy, Seafood
+      - Allergy, Wasp
+      - Alpha-1 Antitrypsin Deficiency
+      - Altered Mental Status
+      - Androgen Excess
+      - Anemia
+      - Asthma
+      - Ataxia-telangiectasia
+      - Autoimmune Atrophic Chronic Gastritis
+      - Autoimmune Lymphoproliferative Syndrome (ALPS)
+      - Bacteroides fragilis
+      - BAP1 Tumor Predisposition Syndrome
+      - Barrett's Esophagus
+      - Beckwith-Wiedemann
+      - Behcet's Disease
+      - Benign Prostatic Hyperplasia
+      - Birt-Hogg-Dube Syndrome
+      - BRCA Family History
+      - Cancer
+      - Chlamydia
+      - Chloroma
+      - Cholelithiasis
+      - Chronic Hepatitis
+      - Chronic Kidney Disease
+      - Chronic Pancreatitis
+      - Chronic Systemic Steroid Use
+      - Cirrhosis
+      - Colon Polyps
+      - Colonization, Bacterial
+      - Colonization, Fungal
+      - Common variable immune deficiency (CVID)
+      - Cortisol Excess
+      - Cowden Syndrome
+      - Cryptococcal Meningitis
+      - Cyst(s)
+      - Cytomegalovirus (CMV)
+      - Denys-Drash Syndrome
+      - Dermatomyosis
+      - Diabetes, NOS
+      - Diabetes, Type I
+      - Diabetes, Type II
+      - Diet
+      - Diverticulitis
+      - Down Syndrome
+      - EBV Lymphoproliferation
+      - Eczema
+      - Endometriosis
+      - Endosalpingiosis
+      - Epithelial Dysplasia
+      - Epithelial Hyperplasia
+      - Epstein-Barr Virus
+      - Escherichia coli
+      - Estrogen Excess
+      - Familial Adenomatous Polyposis
+      - Fanconi Anemia
+      - Fibrosis
+      - Gastric Polyp(s)
+      - Gastritis
+      - Gilbert's Syndrome
+      - Glomerular Disease
+      - Gorlin Syndrome
+      - H. pylori Infection
+      - Hashimoto's Thyroiditis
+      - Hay Fever
+      - Headache
+      - Helicobacter Pylori-Associated Gastritis
+      - Hematologic Disorder, NOS
+      - Hemihypertrophy
+      - Hemochromatosis
+      - Hepatic Encephalopathy
+      - Hepatitis A Infection
+      - Hepatitis B Infection
+      - Hepatitis C Infection
+      - Hepatitis, NOS
+      - Hereditary Breast Cancer
+      - Hereditary Hemorrhagic Telangiectasia
+      - Hereditary Kidney Oncocytoma
+      - Hereditary Leiomyomatosis and Renal Cell Carcinoma
+      - Hereditary Ovarian Cancer
+      - Hereditary Papillary Renal Cell Carcinoma
+      - Hereditary Prostate Cancer
+      - Hereditary Renal Cell Carcinoma
+      - Herpes Zoster
+      - High Grade Dysplasia
+      - High-grade Prostatic Intraepithelial Neoplasia (PIN)
+      - HIV
+      - Hodgkin Lymphoma
+      - Human Herpesvirus-6 (HHV-6)
+      - Human Herpesvirus-8 (HHV-8)
+      - Human Papillomavirus Infection
+      - Hypospadias
+      - Inflammation
+      - Inflammation, Hyperkeratosis
+      - Inherited Genetic Syndrome, NOS
+      - Intestinal Metaplasia
+      - Iron Overload
+      - Li-Fraumeni Syndrome
+      - Low Grade Dysplasia
+      - Lymphamatoid Papulosis
+      - Lymphocytic Meningitis
+      - Lymphocytic Thyroiditis
+      - Lynch Syndrome
+      - Malaria
+      - Metabolic Syndrome
+      - Mineralcorticoids Excess
+      - Motor / Movement Change
+      - Myasthenia Gravis
+      - Mycobacterium avium Complex
+      - Myelodysplastic Syndrome
+      - Neurocystericerosis
+      - Nodular Prostatic Hyperplasia
+      - Nonalcoholic Fatty Liver Disease
+      - Nonalcoholic Steatohepatitis
+      - None
+      - Obesity
+      - Oral Contraceptives
+      - Pancreatitis
+      - Parasitic Disease of Biliary Tract
+      - Pneumocystis Pneumonia
+      - Polycystic Ovarian Syndrome (PCOS)
+      - Primary Sclerosing Cholangitis
+      - Recurrent Pyogenic Cholangitis
+      - Reflux Disease
+      - Rheumatoid Arthritis
+      - Rubella
+      - Rubinstein-Taybi Syndrome
+      - Sarcoidosis
+      - Seizure
+      - Sensory Changes
+      - Serous tubal intraepithelial carcinoma (STIC)
+      - Shingles
+      - Sialadenitis
+      - Sjogren's Syndrome
+      - Skin Rash
+      - Squamous Metaplasia
+      - Staphylococcus aureus
+      - Steatosis
+      - Succinate Dehydrogenase-Deficient Renal Cell Carcinoma
+      - Syphilis
+      - Tattoo
+      - Thyroid Nodular Hyperplasia
+      - Tobacco, NOS
+      - Tobacco, Smokeless
+      - Tobacco, Smoking
+      - Treponema pallidum
+      - Tuberculosis
+      - Tuberous Sclerosis
+      - Tubulointerstitial Disease
+      - Tumor-associated Lymphoid Proliferation
+      - Turcot Syndrome
+      - Undescended Testis
+      - Varicella Zoster Virus
+      - Vascular Disease
+      - Vision Changes
+      - Von Hippel-Lindau Syndrome
+      - Wagr Syndrome
+      - Unknown
+      - Not Reported
     enumDef:
-      "Cancer":
+      Cancer:
         $ref:
           - "_terms_enum.yaml#/cancer/common"
-      "Epstein-Barr Virus":
+      Epstein-Barr Virus:
         $ref:
           - "_terms_enum.yaml#/epsteinbarr_virus/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -2648,10 +2648,10 @@ properties:
     $ref:
       - "_terms.yaml#/risk_factor_method_of_diagnosis/common"
     enum:
-      - "Biochemical Assessment"
-      - "Both Clinical and Biochemical Assessments"
-      - "Clinical Assessment"
-      - "Not Reported"
+      - Biochemical Assessment
+      - Both Clinical and Biochemical Assessments
+      - Clinical Assessment
+      - Not Reported
 
   risk_factor_treatment:
     $ref:
@@ -2659,8 +2659,8 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - "Unknown"
-      - "Not Reported"
+      - Unknown
+      - Not Reported
     enumDef:
       "Yes":
         $ref:
@@ -2668,10 +2668,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -2681,214 +2681,214 @@ properties:
     type: array
     items:
       enum:
-        - "Abnormal Glucose Level"
-        - "Adenomyosis"
-        - "Adenosis (Atypical Adenomatous Hyperplasia)"
-        - "Alcohol Consumption"
-        - "Alcoholic Liver Disease"
-        - "Allergy, Animal, NOS"
-        - "Allergy, Ant"
-        - "Allergy, Bee"
-        - "Allergy, Cat"
-        - "Allergy, Dairy or Lactose"
-        - "Allergy, Dog"
-        - "Allergy, Eggs"
-        - "Allergy, Food, NOS"
-        - "Allergy, Fruit"
-        - "Allergy, Meat"
-        - "Allergy, Mold or Dust"
-        - "Allergy, Nuts"
-        - "Allergy, Processed Foods"
-        - "Allergy, Seafood"
-        - "Allergy, Wasp"
-        - "Alpha-1 Antitrypsin Deficiency"
-        - "Altered Mental Status"
-        - "Androgen Excess"
-        - "Anemia"
-        - "Asthma"
-        - "Ataxia-telangiectasia"
-        - "Autoimmune Atrophic Chronic Gastritis"
-        - "Autoimmune Lymphoproliferative Syndrome (ALPS)"
-        - "Bacteroides fragilis"
-        - "BAP1 Tumor Predisposition Syndrome"
-        - "Barrett's Esophagus"
-        - "Beckwith-Wiedemann"
-        - "Behcet's Disease"
-        - "Benign Prostatic Hyperplasia"
-        - "Birt-Hogg-Dube Syndrome"
-        - "BRCA Family History"
-        - "Cancer"
-        - "Chlamydia"
-        - "Chloroma"
-        - "Cholelithiasis"
-        - "Chronic Hepatitis"
-        - "Chronic Kidney Disease"
-        - "Chronic Pancreatitis"
-        - "Chronic Systemic Steroid Use"
-        - "Cirrhosis"
-        - "Colon Polyps"
-        - "Colonization, Bacterial"
-        - "Colonization, Fungal"
-        - "Common variable immune deficiency (CVID)"
-        - "Cortisol Excess"
-        - "Cowden Syndrome"
-        - "Cryptococcal Meningitis"
-        - "Cyst(s)"
-        - "Cytomegalovirus (CMV)"
-        - "Denys-Drash Syndrome"
-        - "Dermatomyosis"
-        - "Diabetes, NOS"
-        - "Diabetes, Type I"
-        - "Diabetes, Type II"
-        - "Diet"
-        - "Diverticulitis"
-        - "Down Syndrome"
-        - "EBV Lymphoproliferation"
-        - "Eczema"
-        - "Endometriosis"
-        - "Endosalpingiosis"
-        - "Epithelial Dysplasia"
-        - "Epithelial Hyperplasia"
-        - "Epstein-Barr Virus"
-        - "Escherichia coli"
-        - "Estrogen Excess"
-        - "Familial Adenomatous Polyposis"
-        - "Fanconi Anemia"
-        - "Fibrosis"
-        - "Gastric Polyp(s)"
-        - "Gastritis"
-        - "Gilbert's Syndrome"
-        - "Glomerular Disease"
-        - "Gorlin Syndrome"
-        - "H. pylori Infection"
-        - "Hashimoto's Thyroiditis"
-        - "Hay Fever"
-        - "Headache"
-        - "Helicobacter Pylori-Associated Gastritis"
-        - "Hematologic Disorder, NOS"
-        - "Hemihypertrophy"
-        - "Hemochromatosis"
-        - "Hepatic Encephalopathy"
-        - "Hepatitis A Infection"
-        - "Hepatitis B Infection"
-        - "Hepatitis C Infection"
-        - "Hepatitis, NOS"
-        - "Hereditary Breast Cancer"
-        - "Hereditary Hemorrhagic Telangiectasia"
-        - "Hereditary Kidney Oncocytoma"
-        - "Hereditary Leiomyomatosis and Renal Cell Carcinoma"
-        - "Hereditary Ovarian Cancer"
-        - "Hereditary Papillary Renal Cell Carcinoma"
-        - "Hereditary Prostate Cancer"
-        - "Hereditary Renal Cell Carcinoma"
-        - "Herpes Zoster"
-        - "High Grade Dysplasia"
-        - "High-grade Prostatic Intraepithelial Neoplasia (PIN)"
-        - "HIV"
-        - "Hodgkin Lymphoma"
-        - "Human Herpesvirus-6 (HHV-6)"
-        - "Human Herpesvirus-8 (HHV-8)"
-        - "Human Papillomavirus Infection"
-        - "Hypospadias"
-        - "Inflammation"
-        - "Inflammation, Hyperkeratosis"
-        - "Inherited Genetic Syndrome, NOS"
-        - "Intestinal Metaplasia"
-        - "Iron Overload"
-        - "Li-Fraumeni Syndrome"
-        - "Low Grade Dysplasia"
-        - "Lymphamatoid Papulosis"
-        - "Lymphocytic Meningitis"
-        - "Lymphocytic Thyroiditis"
-        - "Lynch Syndrome"
-        - "Malaria"
-        - "Metabolic Syndrome"
-        - "Mineralcorticoids Excess"
-        - "Motor / Movement Change"
-        - "Myasthenia Gravis"
-        - "Mycobacterium avium Complex"
-        - "Myelodysplastic Syndrome"
-        - "Neurocystericerosis"
-        - "Nodular Prostatic Hyperplasia"
-        - "Nonalcoholic Fatty Liver Disease"
-        - "Nonalcoholic Steatohepatitis"
-        - "None"
-        - "Obesity"
-        - "Oral Contraceptives"
-        - "Pancreatitis"
-        - "Parasitic Disease of Biliary Tract"
-        - "Pneumocystis Pneumonia"
-        - "Polycystic Ovarian Syndrome (PCOS)"
-        - "Primary Sclerosing Cholangitis"
-        - "Recurrent Pyogenic Cholangitis"
-        - "Reflux Disease"
-        - "Rheumatoid Arthritis"
-        - "Rubella"
-        - "Rubinstein-Taybi Syndrome"
-        - "Sarcoidosis"
-        - "Seizure"
-        - "Sensory Changes"
-        - "Serous tubal intraepithelial carcinoma (STIC)"
-        - "Shingles"
-        - "Sialadenitis"
-        - "Sjogren's Syndrome"
-        - "Skin Rash"
-        - "Squamous Metaplasia"
-        - "Staphylococcus aureus"
-        - "Steatosis"
-        - "Succinate Dehydrogenase-Deficient Renal Cell Carcinoma"
-        - "Syphilis"
-        - "Tattoo"
-        - "Thyroid Nodular Hyperplasia"
-        - "Tobacco, NOS"
-        - "Tobacco, Smokeless"
-        - "Tobacco, Smoking"
-        - "Treponema pallidum"
-        - "Tuberculosis"
-        - "Tuberous Sclerosis"
-        - "Tubulointerstitial Disease"
-        - "Tumor-associated Lymphoid Proliferation"
-        - "Turcot Syndrome"
-        - "Undescended Testis"
-        - "Varicella Zoster Virus"
-        - "Vascular Disease"
-        - "Vision Changes"
-        - "Von Hippel-Lindau Syndrome"
-        - "Wagr Syndrome"
-        - "Unknown"
-        - "Not Reported"
+        - Abnormal Glucose Level
+        - Adenomyosis
+        - Adenosis (Atypical Adenomatous Hyperplasia)
+        - Alcohol Consumption
+        - Alcoholic Liver Disease
+        - Allergy, Animal, NOS
+        - Allergy, Ant
+        - Allergy, Bee
+        - Allergy, Cat
+        - Allergy, Dairy or Lactose
+        - Allergy, Dog
+        - Allergy, Eggs
+        - Allergy, Food, NOS
+        - Allergy, Fruit
+        - Allergy, Meat
+        - Allergy, Mold or Dust
+        - Allergy, Nuts
+        - Allergy, Processed Foods
+        - Allergy, Seafood
+        - Allergy, Wasp
+        - Alpha-1 Antitrypsin Deficiency
+        - Altered Mental Status
+        - Androgen Excess
+        - Anemia
+        - Asthma
+        - Ataxia-telangiectasia
+        - Autoimmune Atrophic Chronic Gastritis
+        - Autoimmune Lymphoproliferative Syndrome (ALPS)
+        - Bacteroides fragilis
+        - BAP1 Tumor Predisposition Syndrome
+        - Barrett's Esophagus
+        - Beckwith-Wiedemann
+        - Behcet's Disease
+        - Benign Prostatic Hyperplasia
+        - Birt-Hogg-Dube Syndrome
+        - BRCA Family History
+        - Cancer
+        - Chlamydia
+        - Chloroma
+        - Cholelithiasis
+        - Chronic Hepatitis
+        - Chronic Kidney Disease
+        - Chronic Pancreatitis
+        - Chronic Systemic Steroid Use
+        - Cirrhosis
+        - Colon Polyps
+        - Colonization, Bacterial
+        - Colonization, Fungal
+        - Common variable immune deficiency (CVID)
+        - Cortisol Excess
+        - Cowden Syndrome
+        - Cryptococcal Meningitis
+        - Cyst(s)
+        - Cytomegalovirus (CMV)
+        - Denys-Drash Syndrome
+        - Dermatomyosis
+        - Diabetes, NOS
+        - Diabetes, Type I
+        - Diabetes, Type II
+        - Diet
+        - Diverticulitis
+        - Down Syndrome
+        - EBV Lymphoproliferation
+        - Eczema
+        - Endometriosis
+        - Endosalpingiosis
+        - Epithelial Dysplasia
+        - Epithelial Hyperplasia
+        - Epstein-Barr Virus
+        - Escherichia coli
+        - Estrogen Excess
+        - Familial Adenomatous Polyposis
+        - Fanconi Anemia
+        - Fibrosis
+        - Gastric Polyp(s)
+        - Gastritis
+        - Gilbert's Syndrome
+        - Glomerular Disease
+        - Gorlin Syndrome
+        - H. pylori Infection
+        - Hashimoto's Thyroiditis
+        - Hay Fever
+        - Headache
+        - Helicobacter Pylori-Associated Gastritis
+        - Hematologic Disorder, NOS
+        - Hemihypertrophy
+        - Hemochromatosis
+        - Hepatic Encephalopathy
+        - Hepatitis A Infection
+        - Hepatitis B Infection
+        - Hepatitis C Infection
+        - Hepatitis, NOS
+        - Hereditary Breast Cancer
+        - Hereditary Hemorrhagic Telangiectasia
+        - Hereditary Kidney Oncocytoma
+        - Hereditary Leiomyomatosis and Renal Cell Carcinoma
+        - Hereditary Ovarian Cancer
+        - Hereditary Papillary Renal Cell Carcinoma
+        - Hereditary Prostate Cancer
+        - Hereditary Renal Cell Carcinoma
+        - Herpes Zoster
+        - High Grade Dysplasia
+        - High-grade Prostatic Intraepithelial Neoplasia (PIN)
+        - HIV
+        - Hodgkin Lymphoma
+        - Human Herpesvirus-6 (HHV-6)
+        - Human Herpesvirus-8 (HHV-8)
+        - Human Papillomavirus Infection
+        - Hypospadias
+        - Inflammation
+        - Inflammation, Hyperkeratosis
+        - Inherited Genetic Syndrome, NOS
+        - Intestinal Metaplasia
+        - Iron Overload
+        - Li-Fraumeni Syndrome
+        - Low Grade Dysplasia
+        - Lymphamatoid Papulosis
+        - Lymphocytic Meningitis
+        - Lymphocytic Thyroiditis
+        - Lynch Syndrome
+        - Malaria
+        - Metabolic Syndrome
+        - Mineralcorticoids Excess
+        - Motor / Movement Change
+        - Myasthenia Gravis
+        - Mycobacterium avium Complex
+        - Myelodysplastic Syndrome
+        - Neurocystericerosis
+        - Nodular Prostatic Hyperplasia
+        - Nonalcoholic Fatty Liver Disease
+        - Nonalcoholic Steatohepatitis
+        - None
+        - Obesity
+        - Oral Contraceptives
+        - Pancreatitis
+        - Parasitic Disease of Biliary Tract
+        - Pneumocystis Pneumonia
+        - Polycystic Ovarian Syndrome (PCOS)
+        - Primary Sclerosing Cholangitis
+        - Recurrent Pyogenic Cholangitis
+        - Reflux Disease
+        - Rheumatoid Arthritis
+        - Rubella
+        - Rubinstein-Taybi Syndrome
+        - Sarcoidosis
+        - Seizure
+        - Sensory Changes
+        - Serous tubal intraepithelial carcinoma (STIC)
+        - Shingles
+        - Sialadenitis
+        - Sjogren's Syndrome
+        - Skin Rash
+        - Squamous Metaplasia
+        - Staphylococcus aureus
+        - Steatosis
+        - Succinate Dehydrogenase-Deficient Renal Cell Carcinoma
+        - Syphilis
+        - Tattoo
+        - Thyroid Nodular Hyperplasia
+        - Tobacco, NOS
+        - Tobacco, Smokeless
+        - Tobacco, Smoking
+        - Treponema pallidum
+        - Tuberculosis
+        - Tuberous Sclerosis
+        - Tubulointerstitial Disease
+        - Tumor-associated Lymphoid Proliferation
+        - Turcot Syndrome
+        - Undescended Testis
+        - Varicella Zoster Virus
+        - Vascular Disease
+        - Vision Changes
+        - Von Hippel-Lindau Syndrome
+        - Wagr Syndrome
+        - Unknown
+        - Not Reported
 
   scan_tracer_used:
     $ref:
       - "_terms.yaml#/scan_tracer_used/common"
     enum:
-      - "Acetate"
-      - "Axumin"
-      - "Choline"
-      - "PSMA"
-      - "Sodium Fluoride"
+      - Acetate
+      - Axumin
+      - Choline
+      - PSMA
+      - Sodium Fluoride
 
   timepoint_category:
     $ref:
       - "_terms.yaml#/timepoint_category/common"
     enum:
-      - "Adjuvant Therapy"
-      - "Adolescence"
-      - "Adulthood"
-      - "Childhood"
-      - "Follow-up"
-      - "Initial Diagnosis"
-      - "Last Contact"
-      - "Other"
-      - "Post Adjuvant Therapy"
-      - "Post Hormone Therapy"
-      - "Post Secondary Therapy"
-      - "Postoperative"
-      - "Preoperative"
-      - "Prior to Diagnosis"
-      - "Prior to Treatment"
-      - "Recurrence/Progression"
-      - "Not Reported"
+      - Adjuvant Therapy
+      - Adolescence
+      - Adulthood
+      - Childhood
+      - Follow-up
+      - Initial Diagnosis
+      - Last Contact
+      - Other
+      - Post Adjuvant Therapy
+      - Post Hormone Therapy
+      - Post Secondary Therapy
+      - Postoperative
+      - Preoperative
+      - Prior to Diagnosis
+      - Prior to Treatment
+      - Recurrence/Progression
+      - Not Reported
 
   undescended_testis_corrected:
     $ref:
@@ -2896,7 +2896,7 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - "Not Reported"
+      - Not Reported
     enumDef:
       "Yes":
         $ref:
@@ -2904,7 +2904,7 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -2919,12 +2919,12 @@ properties:
     $ref:
       - "_terms.yaml#/undescended_testis_corrected_laterality/common"
     enum:
-      - "Bilateral"
-      - "Left"
-      - "Right"
-      - "Not Reported"
+      - Bilateral
+      - Left
+      - Right
+      - Not Reported
     enumDef:
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -2932,13 +2932,13 @@ properties:
     $ref:
       - "_terms.yaml#/undescended_testis_corrected_method/common"
     enum:
-      - "Hormones"
-      - "Orchiopexy"
-      - "Spontaneous Descent"
-      - "Testis Removed"
-      - "Not Reported"
+      - Hormones
+      - Orchiopexy
+      - Spontaneous Descent
+      - Testis Removed
+      - Not Reported
     enumDef:
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -2948,7 +2948,7 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - "Not Reported"
+      - Not Reported
     enumDef:
       "Yes":
         $ref:
@@ -2956,7 +2956,7 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -2964,12 +2964,12 @@ properties:
     $ref:
       - "_terms.yaml#/undescended_testis_history_laterality/common"
     enum:
-      - "Bilateral"
-      - "Left"
-      - "Right"
-      - "Not Reported"
+      - Bilateral
+      - Left
+      - Right
+      - Not Reported
     enumDef:
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -2977,21 +2977,21 @@ properties:
     $ref:
       - "_terms.yaml#/viral_hepatitis_serologies/common"
     enum:
-      - "HBV Core Antibody"
-      - "HBV DNA"
-      - "HBV Genotype"
-      - "HBV Surface Antibody"
-      - "HCV Genotype"
-      - "Hepatitis B Surface Antigen"
-      - "Hepatitis C Antibody"
-      - "Hepatitis C Virus RNA"
-      - "Unknown"
-      - "Not Reported"
+      - HBV Core Antibody
+      - HBV DNA
+      - HBV Genotype
+      - HBV Surface Antibody
+      - HCV Genotype
+      - Hepatitis B Surface Antigen
+      - Hepatitis C Antibody
+      - Hepatitis C Virus RNA
+      - Unknown
+      - Not Reported
     enumDef:
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 

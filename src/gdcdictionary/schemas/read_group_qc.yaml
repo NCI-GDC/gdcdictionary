@@ -132,7 +132,7 @@ properties:
     $ref:
       - "_terms.yaml#/workflow_type/common"
     enum:
-      - "Read Group Quality Control"
+      - Read Group Quality Control
 
   submitted_aligned_reads_files:
     $ref: "_definitions.yaml#/to_one"

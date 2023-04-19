@@ -61,13 +61,13 @@ properties:
       The text for reporting information about ethnicity based on the Office of Management
       and Budget (OMB) categories. CDE: 2192217.
     enum:
-      - "hispanic or latino"
-      - "not hispanic or latino"
+      - hispanic or latino
+      - not hispanic or latino
     enumDef:
-      "hispanic or latino":
+      hispanic or latino:
         $ref:
           - "_terms_enum.yaml#/hispanic_or_latino/common"
-      "not hispanic or latino":
+      not hispanic or latino:
         $ref:
           - "_terms_enum.yaml#/not_hispanic_or_latino/common"
 
@@ -77,21 +77,21 @@ properties:
       of properties that distinguish people on the basis of their societal roles.
       CDE: 2200604
     enum:
-      - "female"
-      - "male"
-      - "unspecified"
-      - "unknown"
+      - female
+      - male
+      - unspecified
+      - unknown
     enumDef:
-      "female":
+      female:
         $ref:
           - "_terms_enum.yaml#/female/common"
-      "male":
+      male:
         $ref:
           - "_terms_enum.yaml#/male/common"
-      "unknown":
+      unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "unspecified":
+      unspecified:
         $ref:
           - "_terms_enum.yaml#/unspecified/common"
 
@@ -107,30 +107,30 @@ properties:
       The text for reporting information about race based on the Office of Management
       and Budget (OMB) categories. CDE: 2192199.
     enum:
-      - "american indian or alaska native"
-      - "asian"
-      - "black or african american"
-      - "native hawaiian or other pacific islander"
-      - "other"
-      - "white"
-      - "not reported"
+      - american indian or alaska native
+      - asian
+      - black or african american
+      - native hawaiian or other pacific islander
+      - other
+      - white
+      - not reported
     enumDef:
-      "not reported":
+      not reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      "american indian or alaska native":
+      american indian or alaska native:
         $ref:
           - "_terms_enum.yaml#/american_indian_or_alaska_native/common"
-      "black or african american":
+      black or african american:
         $ref:
           - "_terms_enum.yaml#/black_or_african_american/common"
-      "asian":
+      asian:
         $ref:
           - "_terms_enum.yaml#/asian/common"
-      "native hawaiian or other pacific islander":
+      native hawaiian or other pacific islander:
         $ref:
           - "_terms_enum.yaml#/native_hawaiian_or_other_pacific_islander/common"
-      "other":
+      other:
         $ref:
           - "_terms_enum.yaml#/other/common"
 
@@ -138,14 +138,14 @@ properties:
     description: >-
       The survival state of the person registered on the protocol. CDE: 5.
     enum:
-      - "alive"
-      - "dead"
-      - "lost to follow-up"
+      - alive
+      - dead
+      - lost to follow-up
     enumDef:
-      "alive":
+      alive:
         $ref:
           - "_terms_enum.yaml#/alive/common"
-      "dead":
+      dead:
         $ref:
           - "_terms_enum.yaml#/dead/common"
 

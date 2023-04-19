@@ -364,60 +364,60 @@ properties:
     description: >-
       Top level characterization of the annotation.
     enum:
-      - "Acceptable treatment for TCGA tumor"
-      - "Administrative Compliance"
-      - "Alternate sample pipeline"
-      - "Barcode incorrect"
-      - "BCR Notification"
-      - "Biospecimen identity unknown"
-      - "Case submitted is found to be a recurrence after submission"
-      - "Center QC failed"
-      - "Clinical data insufficient"
-      - "Duplicate case"
-      - "Duplicate item"
-      - "General"
-      - "Genotype mismatch"
-      - "History of acceptable prior treatment related to a prior/other malignancy"
-      - "History of unacceptable prior treatment related to a prior/other malignancy"
-      - "Inadvertently shipped"
-      - "Item does not meet study protocol"
-      - "Item flagged DNU"
-      - "Item Flagged Low Quality"
-      - "Item in special subset"
-      - "Item is noncanonical"
-      - "Item may not meet study protocol"
-      - "Molecular analysis outside specification"
-      - "Neoadjuvant therapy"
-      - "New notification type"
-      - "New observation type"
-      - "Normal class but appears diseased"
-      - "Normal tissue origin incorrect"
-      - "Observation"
-      - "Pathology outside specification"
-      - "Permanently missing item or object"
-      - "Prior malignancy"
-      - "Qualification metrics changed"
-      - "Qualified in error"
-      - "Sample compromised"
-      - "Subject identity unknown"
-      - "Subject withdrew consent"
-      - "Synchronous malignancy"
-      - "Tumor class but appears normal"
-      - "Tumor tissue origin incorrect"
-      - "Tumor type incorrect"
-      - "WGA Failure"
+      - Acceptable treatment for TCGA tumor
+      - Administrative Compliance
+      - Alternate sample pipeline
+      - Barcode incorrect
+      - BCR Notification
+      - Biospecimen identity unknown
+      - Case submitted is found to be a recurrence after submission
+      - Center QC failed
+      - Clinical data insufficient
+      - Duplicate case
+      - Duplicate item
+      - General
+      - Genotype mismatch
+      - History of acceptable prior treatment related to a prior/other malignancy
+      - History of unacceptable prior treatment related to a prior/other malignancy
+      - Inadvertently shipped
+      - Item does not meet study protocol
+      - Item flagged DNU
+      - Item Flagged Low Quality
+      - Item in special subset
+      - Item is noncanonical
+      - Item may not meet study protocol
+      - Molecular analysis outside specification
+      - Neoadjuvant therapy
+      - New notification type
+      - New observation type
+      - Normal class but appears diseased
+      - Normal tissue origin incorrect
+      - Observation
+      - Pathology outside specification
+      - Permanently missing item or object
+      - Prior malignancy
+      - Qualification metrics changed
+      - Qualified in error
+      - Sample compromised
+      - Subject identity unknown
+      - Subject withdrew consent
+      - Synchronous malignancy
+      - Tumor class but appears normal
+      - Tumor tissue origin incorrect
+      - Tumor type incorrect
+      - WGA Failure
 
   classification:
     description: >-
       Top level classification of the annotation.
     enum:
-      - "Blocking Release"
-      - "CenterNotification"
-      - "Complete Data Freeze"
-      - "Downstream Data Freeze"
-      - "Notification"
-      - "Observation"
-      - "Redaction"
+      - Blocking Release
+      - CenterNotification
+      - Complete Data Freeze
+      - Downstream Data Freeze
+      - Notification
+      - Observation
+      - Redaction
 
   creator:
     description: >-
@@ -441,8 +441,8 @@ properties:
     description: >-
       Status of the annotation.
     enum:
-      - "Approved"
-      - "Rescinded"
+      - Approved
+      - Rescinded
 
   aggregated_somatic_mutations:
     $ref: "_definitions.yaml#/to_many"

@@ -71,33 +71,33 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
-      - "Simple Nucleotide Variation"
+      - Simple Nucleotide Variation
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - "MAF"
-      - "TSV"
+      - MAF
+      - TSV
 
   data_type:
     $ref:
       - "_terms.yaml#/data_type/common"
     enum:
-      - "Masked Somatic Mutation"
+      - Masked Somatic Mutation
 
   experimental_strategy:
     $ref:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
-      - "ATAC-Seq"
-      - "Bisulfite-Seq"
-      - "ChIP-Seq"
-      - "miRNA-Seq"
-      - "RNA-Seq"
-      - "Targeted Sequencing"
-      - "WGS"
-      - "WXS"
+      - ATAC-Seq
+      - Bisulfite-Seq
+      - ChIP-Seq
+      - miRNA-Seq
+      - RNA-Seq
+      - Targeted Sequencing
+      - WGS
+      - WXS
 
   projects:
     $ref: "_definitions.yaml#/to_one_project"

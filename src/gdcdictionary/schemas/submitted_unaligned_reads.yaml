@@ -56,45 +56,45 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
-      - "Sequencing Reads"
+      - Sequencing Reads
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - "BAM"
-      - "FASTQ"
+      - BAM
+      - FASTQ
 
   data_type:
     $ref:
       - "_terms.yaml#/data_type/common"
     enum:
-      - "Unaligned Reads"
+      - Unaligned Reads
 
   experimental_strategy:
     $ref:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
-      - "ATAC-Seq"
-      - "Bisulfite-Seq"
-      - "ChIP-Seq"
-      - "HiChIP"
-      - "m6A MeRIP-Seq"
-      - "miRNA-Seq"
-      - "RNA-Seq"
-      - "scATAC-Seq"
-      - "scRNA-Seq"
-      - "Targeted Sequencing"
-      - "WGS"
-      - "WXS"
+      - ATAC-Seq
+      - Bisulfite-Seq
+      - ChIP-Seq
+      - HiChIP
+      - m6A MeRIP-Seq
+      - miRNA-Seq
+      - RNA-Seq
+      - scATAC-Seq
+      - scRNA-Seq
+      - Targeted Sequencing
+      - WGS
+      - WXS
     enumDef:
-      "Targeted Sequencing":
+      Targeted Sequencing:
         $ref:
           - "_terms_enum.yaml#/targeted_sequencing/common"
-      "WGS":
+      WGS:
         $ref:
           - "_terms_enum.yaml#/wgs/common"
-      "WXS":
+      WXS:
         $ref:
           - "_terms_enum.yaml#/wxs/common"
 
@@ -102,12 +102,12 @@ properties:
     $ref:
       - "_terms.yaml#/read_pair_number/common"
     enum:
-      - "R1"
-      - "R2"
-      - "R3"
-      - "Not Applicable"
+      - R1
+      - R2
+      - R3
+      - Not Applicable
     enumDef:
-      "Not Applicable":
+      Not Applicable:
         $ref:
           - "_terms_enum.yaml#/not_applicable/common"
 

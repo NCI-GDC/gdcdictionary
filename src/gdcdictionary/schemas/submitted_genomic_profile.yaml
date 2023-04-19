@@ -56,42 +56,42 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
-      - "Combined Nucleotide Variation"
-      - "Genomic Profiling"
+      - Combined Nucleotide Variation
+      - Genomic Profiling
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - "MAF"
-      - "TSV"
-      - "VCF"
-      - "XML"
+      - MAF
+      - TSV
+      - VCF
+      - XML
 
   data_type:
     $ref:
       - "_terms.yaml#/data_type/common"
     enum:
-      - "FoundationOne Report"
-      - "GENIE Report"
-      - "Raw CGI Variant"
+      - FoundationOne Report
+      - GENIE Report
+      - Raw CGI Variant
 
   experimental_strategy:
     $ref:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
-      - "ATAC-Seq"
-      - "Bisulfite-Seq"
-      - "ChIP-Seq"
-      - "miRNA-Seq"
-      - "RNA-Seq"
-      - "Targeted Sequencing"
-      - "WGS"
-      - "WXS"
+      - ATAC-Seq
+      - Bisulfite-Seq
+      - ChIP-Seq
+      - miRNA-Seq
+      - RNA-Seq
+      - Targeted Sequencing
+      - WGS
+      - WXS
 
   type:
     enum:
-      - "submitted_genomic_profile"
+      - submitted_genomic_profile
 
   read_groups:
     $ref: "_definitions.yaml#/to_many"

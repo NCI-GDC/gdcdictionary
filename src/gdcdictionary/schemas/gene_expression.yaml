@@ -55,35 +55,35 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
-      - "Transcriptome Profiling"
+      - Transcriptome Profiling
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - "CSV"
-      - "HDF5"
-      - "MEX"
-      - "TSV"
-      - "TXT"
+      - CSV
+      - HDF5
+      - MEX
+      - TSV
+      - TXT
 
   data_type:
     $ref:
       - "_terms.yaml#/data_type/common"
     enum:
-      - "Exon Expression Quantification"
-      - "Gene Expression Quantification"
-      - "Isoform Expression Quantification"
-      - "Splice Junction Quantification"
+      - Exon Expression Quantification
+      - Gene Expression Quantification
+      - Isoform Expression Quantification
+      - Splice Junction Quantification
 
   experimental_strategy:
     $ref:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
-      - "m6A MeRIP-Seq"
-      - "RNA-Seq"
-      - "scRNA-Seq"
-      - "Total RNA-Seq"
+      - m6A MeRIP-Seq
+      - RNA-Seq
+      - scRNA-Seq
+      - Total RNA-Seq
 
   rna_expression_workflows:
     $ref: "_definitions.yaml#/to_one"

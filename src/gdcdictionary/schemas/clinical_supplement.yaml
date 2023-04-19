@@ -60,25 +60,25 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
-      - "Clinical"
+      - Clinical
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - "BCR Biotab"
-      - "BCR OMF XML"
-      - "BCR XML"
-      - "CDC JSON"
-      - "FoundationOne XML"
-      - "TSV"
-      - "XLSX"
+      - BCR Biotab
+      - BCR OMF XML
+      - BCR XML
+      - CDC JSON
+      - FoundationOne XML
+      - TSV
+      - XLSX
 
   data_type:
     $ref:
       - "_terms.yaml#/data_type/common"
     enum:
-      - "Clinical Supplement"
+      - Clinical Supplement
 
   cases:
     $ref: "_definitions.yaml#/to_many"

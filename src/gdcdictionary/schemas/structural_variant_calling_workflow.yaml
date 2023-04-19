@@ -49,12 +49,12 @@ properties:
     $ref:
       - "_terms.yaml#/workflow_type/common"
     enum:
-      - "Arriba"
-      - "BRASS"
-      - "Fusion Catcher"
-      - "Pizzly"
-      - "STAR-Fusion"
-      - "SvABA"
+      - Arriba
+      - BRASS
+      - Fusion Catcher
+      - Pizzly
+      - STAR-Fusion
+      - SvABA
 
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"

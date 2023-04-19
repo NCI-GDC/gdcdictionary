@@ -55,40 +55,40 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
-      - "Simple Nucleotide Variation"
+      - Simple Nucleotide Variation
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - "TSV"
-      - "VCF"
+      - TSV
+      - VCF
 
   data_type:
     $ref:
       - "_terms.yaml#/data_type/common"
     enum:
-      - "Simple Germline Variation"
+      - Simple Germline Variation
 
   experimental_strategy:
     $ref:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
-      - "ATAC-Seq"
-      - "Bisulfite-Seq"
-      - "ChIP-Seq"
-      - "Genotyping Array"
-      - "miRNA-Seq"
-      - "RNA-Seq"
-      - "Targeted Sequencing"
-      - "WGS"
-      - "WXS"
+      - ATAC-Seq
+      - Bisulfite-Seq
+      - ChIP-Seq
+      - Genotyping Array
+      - miRNA-Seq
+      - RNA-Seq
+      - Targeted Sequencing
+      - WGS
+      - WXS
 
   platform:
     $ref:
       - "_terms.yaml#/platform/common"
     enum:
-      - "Affymetrix SNP 6.0"
+      - Affymetrix SNP 6.0
 
   germline_mutation_calling_workflows:
     $ref: "_definitions.yaml#/to_one"

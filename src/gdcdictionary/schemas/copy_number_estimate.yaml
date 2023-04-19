@@ -72,39 +72,39 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
-      - "Copy Number Variation"
+      - Copy Number Variation
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - "TSV"
-      - "TXT"
+      - TSV
+      - TXT
 
   data_type:
     $ref:
       - "_terms.yaml#/data_type/common"
     enum:
-      - "Cohort Level Copy Number Scores"
-      - "Gene Level Copy Number"
-      - "Gene Level Copy Number Scores"
+      - Cohort Level Copy Number Scores
+      - Gene Level Copy Number
+      - Gene Level Copy Number Scores
 
   experimental_strategy:
     $ref:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
-      - "Genotyping Array"
-      - "Targeted Sequencing"
-      - "WGS"
-      - "WXS"
+      - Genotyping Array
+      - Targeted Sequencing
+      - WGS
+      - WXS
 
   platform:
     $ref:
       - "_terms.yaml#/platform/common"
     enum:
-      - "Affymetrix SNP 6.0"
-      - "Illumina"
-      - "Ion Torrent"
+      - Affymetrix SNP 6.0
+      - Illumina
+      - Ion Torrent
 
   copy_number_variation_workflows:
     $ref: "_definitions.yaml#/to_one"

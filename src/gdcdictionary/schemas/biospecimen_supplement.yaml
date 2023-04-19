@@ -60,27 +60,27 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
-      - "Biospecimen"
+      - Biospecimen
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - "BCR Auxiliary XML"
-      - "BCR Biotab"
-      - "BCR PPS XML"
-      - "BCR SSF XML"
-      - "BCR XML"
-      - "CDC JSON"
-      - "FoundationOne XML"
-      - "TSV"
-      - "XLSX"
+      - BCR Auxiliary XML
+      - BCR Biotab
+      - BCR PPS XML
+      - BCR SSF XML
+      - BCR XML
+      - CDC JSON
+      - FoundationOne XML
+      - TSV
+      - XLSX
 
   data_type:
     $ref:
       - "_terms.yaml#/data_type/common"
     enum:
-      - "Biospecimen Supplement"
+      - Biospecimen Supplement
 
   cases:
     $ref: "_definitions.yaml#/to_many"

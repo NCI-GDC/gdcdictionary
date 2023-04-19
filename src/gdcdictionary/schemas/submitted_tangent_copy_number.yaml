@@ -55,25 +55,25 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
-      - "Copy Number Variation"
+      - Copy Number Variation
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - "TXT"
+      - TXT
 
   data_type:
     $ref:
       - "_terms.yaml#/data_type/common"
     enum:
-      - "Copy Number Estimate"
+      - Copy Number Estimate
 
   experimental_strategy:
     $ref:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
-      - "Genotyping Array"
+      - Genotyping Array
 
   aliquots:
     $ref: "_definitions.yaml#/to_one"

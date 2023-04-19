@@ -79,329 +79,329 @@ properties:
     $ref:
       - "_terms.yaml#/biospecimen_anatomic_site/common"
     enum:
-      - "Abdomen"
-      - "Abdominal Wall"
-      - "Acetabulum"
-      - "Adenoid"
-      - "Adipose"
-      - "Adrenal"
-      - "Alveolar Ridge"
-      - "Amniotic Fluid"
-      - "Ampulla Of Vater"
-      - "Anal Sphincter"
-      - "Ankle"
-      - "Anorectum"
-      - "Antecubital Fossa"
-      - "Antrum"
-      - "Anus"
-      - "Aorta"
-      - "Aortic Body"
-      - "Appendix"
-      - "Aqueous Fluid"
-      - "Arm"
-      - "Artery"
-      - "Ascending Colon"
-      - "Ascending Colon Hepatic Flexure"
-      - "Auditory Canal"
-      - "Autonomic Nervous System"
-      - "Axilla"
-      - "Back"
-      - "Bile Duct"
-      - "Bladder"
-      - "Blood"
-      - "Blood Vessel"
-      - "Bone"
-      - "Bone Marrow"
-      - "Bowel"
-      - "Brain"
-      - "Brain Stem"
-      - "Breast"
-      - "Broad Ligament"
-      - "Bronchiole"
-      - "Bronchus"
-      - "Brow"
-      - "Buccal Cavity"
-      - "Buccal Mucosa"
-      - "Buttock"
-      - "Calf"
-      - "Capillary"
-      - "Cardia"
-      - "Carina"
-      - "Carotid Artery"
-      - "Carotid Body"
-      - "Cartilage"
-      - "Cecum"
-      - "Cell-Line"
-      - "Central Nervous System"
-      - "Cerebellum"
-      - "Cerebral Cortex"
-      - "Cerebrospinal Fluid"
-      - "Cerebrum"
-      - "Cervical Spine"
-      - "Cervix"
-      - "Chest"
-      - "Chest Wall"
-      - "Chin"
-      - "Clavicle"
-      - "Clitoris"
-      - "Colon"
-      - "Colon - Mucosa Only"
-      - "Common Duct"
-      - "Conjunctiva"
-      - "Connective Tissue"
-      - "Dermal"
-      - "Descending Colon"
-      - "Diaphragm"
-      - "Duodenum"
-      - "Ear"
-      - "Ear Canal"
-      - "Ear, Pinna (External)"
-      - "Effusion"
-      - "Elbow"
-      - "Endocrine Gland"
-      - "Epididymis"
-      - "Epidural Space"
-      - "Esophageal; Distal"
-      - "Esophageal; Mid"
-      - "Esophageal; Proximal"
-      - "Esophagogastric Junction"
-      - "Esophagus"
-      - "Esophagus - Mucosa Only"
-      - "Eye"
-      - "Fallopian Tube"
-      - "Femoral Artery"
-      - "Femoral Vein"
-      - "Femur"
-      - "Fibroblasts"
-      - "Fibula"
-      - "Finger"
-      - "Floor Of Mouth"
-      - "Fluid"
-      - "Foot"
-      - "Forearm"
-      - "Forehead"
-      - "Foreskin"
-      - "Frontal Cortex"
-      - "Frontal Lobe"
-      - "Fundus Of Stomach"
-      - "Gallbladder"
-      - "Ganglia"
-      - "Gastroesophageal Junction"
-      - "Gastrointestinal Tract"
-      - "Glottis"
-      - "Groin"
-      - "Gum"
-      - "Hand"
-      - "Hard Palate"
-      - "Head & Neck"
-      - "Head - Face Or Neck, Nos"
-      - "Heart"
-      - "Hepatic"
-      - "Hepatic Duct"
-      - "Hepatic Flexure"
-      - "Hepatic Vein"
-      - "Hip"
-      - "Hippocampus"
-      - "Humerus"
-      - "Hypopharynx"
-      - "Ileum"
-      - "Ilium"
-      - "Index Finger"
-      - "Ischium"
-      - "Islet Cells"
-      - "Jaw"
-      - "Jejunum"
-      - "Joint"
-      - "Kidney"
-      - "Knee"
-      - "Lacrimal Gland"
-      - "Large Bowel"
-      - "Laryngopharynx"
-      - "Larynx"
-      - "Leg"
-      - "Leptomeninges"
-      - "Ligament"
-      - "Lip"
-      - "Liver"
-      - "Lumbar Spine"
-      - "Lung"
-      - "Lymph Node"
-      - "Lymph Node(s) Axilla"
-      - "Lymph Node(s) Cervical"
-      - "Lymph Node(s) Distant"
-      - "Lymph Node(s) Epitrochlear"
-      - "Lymph Node(s) Femoral"
-      - "Lymph Node(s) Hilar"
-      - "Lymph Node(s) Iliac-Common"
-      - "Lymph Node(s) Iliac-External"
-      - "Lymph Node(s) Inguinal"
-      - "Lymph Node(s) Internal Mammary"
-      - "Lymph Node(s) Mammary"
-      - "Lymph Node(s) Mesenteric"
-      - "Lymph Node(s) Occipital"
-      - "Lymph Node(s) Paraaortic"
-      - "Lymph Node(s) Parotid"
-      - "Lymph Node(s) Pelvic"
-      - "Lymph Node(s) Popliteal"
-      - "Lymph Node(s) Regional"
-      - "Lymph Node(s) Retroperitoneal"
-      - "Lymph Node(s) Scalene"
-      - "Lymph Node(s) Splenic"
-      - "Lymph Node(s) Subclavicular"
-      - "Lymph Node(s) Submandibular"
-      - "Lymph Node(s) Supraclavicular"
-      - "Lymph Nodes(s) Mediastinal"
-      - "Mandible"
-      - "Maxilla"
-      - "Mediastinal Soft Tissue"
-      - "Mediastinum"
-      - "Mesentery"
-      - "Mesothelium"
-      - "Middle Finger"
-      - "Mitochondria"
-      - "Muscle"
-      - "Nails"
-      - "Nasal Cavity"
-      - "Nasal Soft Tissue"
-      - "Nasopharynx"
-      - "Neck"
-      - "Nerve"
-      - "Nerve(s) Cranial"
-      - "Not Allowed To Collect"
-      - "Occipital Cortex"
-      - "Ocular Orbits"
-      - "Omentum"
-      - "Oral Cavity"
-      - "Oral Cavity - Mucosa Only"
-      - "Oropharynx"
-      - "Other"
-      - "Ovary"
-      - "Palate"
-      - "Pancreas"
-      - "Paranasal Sinuses"
-      - "Paraspinal Ganglion"
-      - "Parathyroid"
-      - "Parotid Gland"
-      - "Patella"
-      - "Pelvis"
-      - "Penis"
-      - "Pericardium"
-      - "Periorbital Soft Tissue"
-      - "Peritoneal Cavity"
-      - "Peritoneum"
-      - "Pharynx"
-      - "Pineal"
-      - "Pineal Gland"
-      - "Pituitary Gland"
-      - "Placenta"
-      - "Pleura"
-      - "Popliteal Fossa"
-      - "Prostate"
-      - "Pylorus"
-      - "Rectosigmoid Junction"
-      - "Rectum"
-      - "Retina"
-      - "Retro-Orbital Region"
-      - "Retroperitoneum"
-      - "Rib"
-      - "Ring Finger"
-      - "Round Ligament"
-      - "Sacrum"
-      - "Salivary Gland"
-      - "Scalp"
-      - "Scapula"
-      - "Sciatic Nerve"
-      - "Scrotum"
-      - "Seminal Vesicle"
-      - "Shoulder"
-      - "Sigmoid Colon"
-      - "Sinus"
-      - "Sinus(es), Maxillary"
-      - "Skeletal Muscle"
-      - "Skin"
-      - "Skull"
-      - "Small Bowel"
-      - "Small Bowel - Mucosa Only"
-      - "Small Finger"
-      - "Soft Tissue"
-      - "Spinal Column"
-      - "Spinal Cord"
-      - "Spleen"
-      - "Splenic Flexure"
-      - "Sternum"
-      - "Stomach"
-      - "Stomach - Mucosa Only"
-      - "Subcutaneous Tissue"
-      - "Subglottis"
-      - "Sublingual Gland"
-      - "Submandibular Gland"
-      - "Supraglottis"
-      - "Synovium"
-      - "Temporal Cortex"
-      - "Tendon"
-      - "Testis"
-      - "Thigh"
-      - "Thoracic Spine"
-      - "Thorax"
-      - "Throat"
-      - "Thumb"
-      - "Thymus"
-      - "Thyroid"
-      - "Tibia"
-      - "Tongue"
-      - "Tonsil"
-      - "Tonsil (Pharyngeal)"
-      - "Trachea / Major Bronchi"
-      - "Transverse Colon"
-      - "Trunk"
-      - "Umbilical Cord"
-      - "Ureter"
-      - "Urethra"
-      - "Urinary Tract"
-      - "Uterus"
-      - "Uvula"
-      - "Vagina"
-      - "Vas Deferens"
-      - "Vein"
-      - "Venous"
-      - "Vertebra"
-      - "Vulva"
-      - "White Blood Cells"
-      - "Wrist"
-      - "Unknown"
-      - "Not Reported"
+      - Abdomen
+      - Abdominal Wall
+      - Acetabulum
+      - Adenoid
+      - Adipose
+      - Adrenal
+      - Alveolar Ridge
+      - Amniotic Fluid
+      - Ampulla Of Vater
+      - Anal Sphincter
+      - Ankle
+      - Anorectum
+      - Antecubital Fossa
+      - Antrum
+      - Anus
+      - Aorta
+      - Aortic Body
+      - Appendix
+      - Aqueous Fluid
+      - Arm
+      - Artery
+      - Ascending Colon
+      - Ascending Colon Hepatic Flexure
+      - Auditory Canal
+      - Autonomic Nervous System
+      - Axilla
+      - Back
+      - Bile Duct
+      - Bladder
+      - Blood
+      - Blood Vessel
+      - Bone
+      - Bone Marrow
+      - Bowel
+      - Brain
+      - Brain Stem
+      - Breast
+      - Broad Ligament
+      - Bronchiole
+      - Bronchus
+      - Brow
+      - Buccal Cavity
+      - Buccal Mucosa
+      - Buttock
+      - Calf
+      - Capillary
+      - Cardia
+      - Carina
+      - Carotid Artery
+      - Carotid Body
+      - Cartilage
+      - Cecum
+      - Cell-Line
+      - Central Nervous System
+      - Cerebellum
+      - Cerebral Cortex
+      - Cerebrospinal Fluid
+      - Cerebrum
+      - Cervical Spine
+      - Cervix
+      - Chest
+      - Chest Wall
+      - Chin
+      - Clavicle
+      - Clitoris
+      - Colon
+      - Colon - Mucosa Only
+      - Common Duct
+      - Conjunctiva
+      - Connective Tissue
+      - Dermal
+      - Descending Colon
+      - Diaphragm
+      - Duodenum
+      - Ear
+      - Ear Canal
+      - Ear, Pinna (External)
+      - Effusion
+      - Elbow
+      - Endocrine Gland
+      - Epididymis
+      - Epidural Space
+      - Esophageal; Distal
+      - Esophageal; Mid
+      - Esophageal; Proximal
+      - Esophagogastric Junction
+      - Esophagus
+      - Esophagus - Mucosa Only
+      - Eye
+      - Fallopian Tube
+      - Femoral Artery
+      - Femoral Vein
+      - Femur
+      - Fibroblasts
+      - Fibula
+      - Finger
+      - Floor Of Mouth
+      - Fluid
+      - Foot
+      - Forearm
+      - Forehead
+      - Foreskin
+      - Frontal Cortex
+      - Frontal Lobe
+      - Fundus Of Stomach
+      - Gallbladder
+      - Ganglia
+      - Gastroesophageal Junction
+      - Gastrointestinal Tract
+      - Glottis
+      - Groin
+      - Gum
+      - Hand
+      - Hard Palate
+      - Head & Neck
+      - Head - Face Or Neck, Nos
+      - Heart
+      - Hepatic
+      - Hepatic Duct
+      - Hepatic Flexure
+      - Hepatic Vein
+      - Hip
+      - Hippocampus
+      - Humerus
+      - Hypopharynx
+      - Ileum
+      - Ilium
+      - Index Finger
+      - Ischium
+      - Islet Cells
+      - Jaw
+      - Jejunum
+      - Joint
+      - Kidney
+      - Knee
+      - Lacrimal Gland
+      - Large Bowel
+      - Laryngopharynx
+      - Larynx
+      - Leg
+      - Leptomeninges
+      - Ligament
+      - Lip
+      - Liver
+      - Lumbar Spine
+      - Lung
+      - Lymph Node
+      - Lymph Node(s) Axilla
+      - Lymph Node(s) Cervical
+      - Lymph Node(s) Distant
+      - Lymph Node(s) Epitrochlear
+      - Lymph Node(s) Femoral
+      - Lymph Node(s) Hilar
+      - Lymph Node(s) Iliac-Common
+      - Lymph Node(s) Iliac-External
+      - Lymph Node(s) Inguinal
+      - Lymph Node(s) Internal Mammary
+      - Lymph Node(s) Mammary
+      - Lymph Node(s) Mesenteric
+      - Lymph Node(s) Occipital
+      - Lymph Node(s) Paraaortic
+      - Lymph Node(s) Parotid
+      - Lymph Node(s) Pelvic
+      - Lymph Node(s) Popliteal
+      - Lymph Node(s) Regional
+      - Lymph Node(s) Retroperitoneal
+      - Lymph Node(s) Scalene
+      - Lymph Node(s) Splenic
+      - Lymph Node(s) Subclavicular
+      - Lymph Node(s) Submandibular
+      - Lymph Node(s) Supraclavicular
+      - Lymph Nodes(s) Mediastinal
+      - Mandible
+      - Maxilla
+      - Mediastinal Soft Tissue
+      - Mediastinum
+      - Mesentery
+      - Mesothelium
+      - Middle Finger
+      - Mitochondria
+      - Muscle
+      - Nails
+      - Nasal Cavity
+      - Nasal Soft Tissue
+      - Nasopharynx
+      - Neck
+      - Nerve
+      - Nerve(s) Cranial
+      - Not Allowed To Collect
+      - Occipital Cortex
+      - Ocular Orbits
+      - Omentum
+      - Oral Cavity
+      - Oral Cavity - Mucosa Only
+      - Oropharynx
+      - Other
+      - Ovary
+      - Palate
+      - Pancreas
+      - Paranasal Sinuses
+      - Paraspinal Ganglion
+      - Parathyroid
+      - Parotid Gland
+      - Patella
+      - Pelvis
+      - Penis
+      - Pericardium
+      - Periorbital Soft Tissue
+      - Peritoneal Cavity
+      - Peritoneum
+      - Pharynx
+      - Pineal
+      - Pineal Gland
+      - Pituitary Gland
+      - Placenta
+      - Pleura
+      - Popliteal Fossa
+      - Prostate
+      - Pylorus
+      - Rectosigmoid Junction
+      - Rectum
+      - Retina
+      - Retro-Orbital Region
+      - Retroperitoneum
+      - Rib
+      - Ring Finger
+      - Round Ligament
+      - Sacrum
+      - Salivary Gland
+      - Scalp
+      - Scapula
+      - Sciatic Nerve
+      - Scrotum
+      - Seminal Vesicle
+      - Shoulder
+      - Sigmoid Colon
+      - Sinus
+      - Sinus(es), Maxillary
+      - Skeletal Muscle
+      - Skin
+      - Skull
+      - Small Bowel
+      - Small Bowel - Mucosa Only
+      - Small Finger
+      - Soft Tissue
+      - Spinal Column
+      - Spinal Cord
+      - Spleen
+      - Splenic Flexure
+      - Sternum
+      - Stomach
+      - Stomach - Mucosa Only
+      - Subcutaneous Tissue
+      - Subglottis
+      - Sublingual Gland
+      - Submandibular Gland
+      - Supraglottis
+      - Synovium
+      - Temporal Cortex
+      - Tendon
+      - Testis
+      - Thigh
+      - Thoracic Spine
+      - Thorax
+      - Throat
+      - Thumb
+      - Thymus
+      - Thyroid
+      - Tibia
+      - Tongue
+      - Tonsil
+      - Tonsil (Pharyngeal)
+      - Trachea / Major Bronchi
+      - Transverse Colon
+      - Trunk
+      - Umbilical Cord
+      - Ureter
+      - Urethra
+      - Urinary Tract
+      - Uterus
+      - Uvula
+      - Vagina
+      - Vas Deferens
+      - Vein
+      - Venous
+      - Vertebra
+      - Vulva
+      - White Blood Cells
+      - Wrist
+      - Unknown
+      - Not Reported
     enumDef:
-      "Bone Marrow":
+      Bone Marrow:
         $ref:
           - "_terms_enum.yaml#/bone_marrow/common"
-      "Buccal Mucosa":
+      Buccal Mucosa:
         $ref:
           - "_terms_enum.yaml#/buccal_mucosa/common"
-      "Cerebrospinal Fluid":
+      Cerebrospinal Fluid:
         $ref:
           - "_terms_enum.yaml#/cerebrospinal_fluid/common"
-      "Connective Tissue":
+      Connective Tissue:
         $ref:
           - "_terms_enum.yaml#/connective_tissue/common"
-      "Frontal Lobe":
+      Frontal Lobe:
         $ref:
           - "_terms_enum.yaml#/frontal_lobe/common"
-      "Neck":
+      Neck:
         $ref:
           - "_terms_enum.yaml#/neck/common"
-      "Not Allowed To Collect":
+      Not Allowed To Collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
-      "Other":
+      Other:
         $ref:
           - "_terms_enum.yaml#/other/common"
-      "Soft Tissue":
+      Soft Tissue:
         $ref:
           - "_terms_enum.yaml#/soft_tissue/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -409,16 +409,16 @@ properties:
     $ref:
       - "_terms.yaml#/biospecimen_laterality/common"
     enum:
-      - "Bilateral"
-      - "Left"
-      - "Right"
-      - "Unknown"
-      - "Not Reported"
+      - Bilateral
+      - Left
+      - Right
+      - Unknown
+      - Not Reported
     enumDef:
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -431,65 +431,65 @@ properties:
     $ref:
       - "_terms.yaml#/composition/common"
     enum:
-      - "2D Classical Conditionally Reprogrammed Cells"
-      - "2D Modified Conditionally Reprogrammed Cells"
-      - "3D Air-Liquid Interface Organoid"
-      - "3D Neurosphere"
-      - "3D Organoid"
-      - "Adherent Cell Line"
-      - "Bone Marrow Components"
-      - "Bone Marrow Components NOS"
-      - "Buccal Cells"
-      - "Buffy Coat"
-      - "Cell"
-      - "Control Analyte"
-      - "Derived Cell Line"
-      - "EBV Immortalized"
-      - "Fibroblasts from Bone Marrow Normal"
-      - "Granulocytes"
-      - "Human Original Cells"
-      - "Liquid Suspension Cell Line"
-      - "Lymphocytes"
-      - "Mixed Adherent Suspension"
-      - "Mononuclear Cells from Bone Marrow Normal"
-      - "Not Allowed To Collect"
-      - "Peripheral Blood Components NOS"
-      - "Peripheral Whole Blood"
-      - "Plasma"
-      - "Pleural Effusion"
-      - "Saliva"
-      - "Serum"
-      - "Solid Tissue"
-      - "Sorted Cells"
-      - "Sputum"
-      - "Whole Bone Marrow"
-      - "Unknown"
-      - "Not Reported"
+      - 2D Classical Conditionally Reprogrammed Cells
+      - 2D Modified Conditionally Reprogrammed Cells
+      - 3D Air-Liquid Interface Organoid
+      - 3D Neurosphere
+      - 3D Organoid
+      - Adherent Cell Line
+      - Bone Marrow Components
+      - Bone Marrow Components NOS
+      - Buccal Cells
+      - Buffy Coat
+      - Cell
+      - Control Analyte
+      - Derived Cell Line
+      - EBV Immortalized
+      - Fibroblasts from Bone Marrow Normal
+      - Granulocytes
+      - Human Original Cells
+      - Liquid Suspension Cell Line
+      - Lymphocytes
+      - Mixed Adherent Suspension
+      - Mononuclear Cells from Bone Marrow Normal
+      - Not Allowed To Collect
+      - Peripheral Blood Components NOS
+      - Peripheral Whole Blood
+      - Plasma
+      - Pleural Effusion
+      - Saliva
+      - Serum
+      - Solid Tissue
+      - Sorted Cells
+      - Sputum
+      - Whole Bone Marrow
+      - Unknown
+      - Not Reported
     deprecated_enum:
-      - "Not Allowed To Collect"
+      - Not Allowed To Collect
     enumDef:
-      "Buffy Coat":
+      Buffy Coat:
         $ref:
           - "_terms_enum.yaml#/buffy_coat/common"
-      "Lymphocytes":
+      Lymphocytes:
         $ref:
           - "_terms_enum.yaml#/lymphocytes/common"
-      "Not Allowed To Collect":
+      Not Allowed To Collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
-      "Plasma":
+      Plasma:
         $ref:
           - "_terms_enum.yaml#/plasma/common"
-      "Saliva":
+      Saliva:
         $ref:
           - "_terms_enum.yaml#/saliva/common"
-      "Serum":
+      Serum:
         $ref:
           - "_terms_enum.yaml#/serum/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -519,13 +519,13 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - "Not Allowed To Collect"
-      - "Unknown"
-      - "Not Reported"
+      - Not Allowed To Collect
+      - Unknown
+      - Not Reported
     deprecated_enum:
-      - "Not Allowed To Collect"
+      - Not Allowed To Collect
     enumDef:
-      "Not Allowed To Collect":
+      Not Allowed To Collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
       "Yes":
@@ -534,10 +534,10 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -545,15 +545,15 @@ properties:
     $ref:
       - "_terms.yaml#/distance_normal_to_tumor/common"
     enum:
-      - "Adjacent (< or = 2cm)"
-      - "Distal (>2cm)"
-      - "Unknown"
-      - "Not Reported"
+      - Adjacent (< or = 2cm)
+      - Distal (>2cm)
+      - Unknown
+      - Not Reported
     enumDef:
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -600,126 +600,126 @@ properties:
     $ref:
       - "_terms.yaml#/method_of_sample_procurement/common"
     enum:
-      - "Abdomino-perineal Resection of Rectum"
-      - "Anterior Resection of Rectum"
-      - "Ascites Drainage"
-      - "Aspirate"
-      - "Autopsy"
-      - "Biopsy"
-      - "Blood Draw"
-      - "Bone Marrow Aspirate"
-      - "Buccal Mucosal Resection"
-      - "Core Biopsy"
-      - "Cystectomy"
-      - "Deep Parotidectomy"
-      - "Endo Rectal Tumor Resection"
-      - "Endolaryngeal Excision"
-      - "Endoscopic Biopsy"
-      - "Endoscopic Mucosal Resection (EMR)"
-      - "Enucleation"
-      - "Excisional Biopsy"
-      - "Fine Needle Aspiration"
-      - "Full Hysterectomy"
-      - "Glossectomy"
-      - "Gross Total Resection"
-      - "Hand Assisted Laparoscopic Radical Nephrectomy"
-      - "Hysterectomy NOS"
-      - "Incisional Biopsy"
-      - "Indeterminant"
-      - "Laparoscopic Biopsy"
-      - "Laparoscopic Partial Nephrectomy"
-      - "Laparoscopic Radical Nephrectomy"
-      - "Laparoscopic Radical Prostatectomy with Robotics"
-      - "Laparoscopic Radical Prostatectomy without Robotics"
-      - "Laryngopharyngectomy"
-      - "Left Hemicolectomy"
-      - "Liquid Biopsy"
-      - "Lobectomy"
-      - "Local Resection (Exoresection; wall resection)"
-      - "Lumpectomy"
-      - "Lymph Node Dissection"
-      - "Lymphadenectomy"
-      - "Mandibulectomy"
-      - "Maxillectomy"
-      - "Metastasectomy"
-      - "Modified Radical Mastectomy"
-      - "Needle Biopsy"
-      - "Not Allowed To Collect"
-      - "Omentectomy"
-      - "Oophorectomy"
-      - "Open Craniotomy"
-      - "Open Partial Nephrectomy"
-      - "Open Radical Nephrectomy"
-      - "Open Radical Prostatectomy"
-      - "Orchiectomy"
-      - "Other"
-      - "Other Surgical Resection"
-      - "Palatectomy"
-      - "Pan-Procto Colectomy"
-      - "Pancreatectomy"
-      - "Paracentesis"
-      - "Parotidectomy, NOS"
-      - "Partial Hepatectomy"
-      - "Partial Laryngectomy"
-      - "Partial Maxillectomy"
-      - "Partial Nephrectomy"
-      - "Peritoneal Lavage"
-      - "Pneumonectomy"
-      - "Punch Biopsy"
-      - "Radical Hysterectomy"
-      - "Radical Maxillectomy"
-      - "Radical Nephrectomy"
-      - "Radical Prostatectomy"
-      - "Right Hemicolectomy"
-      - "Salpingectomy"
-      - "Salpingo-oophorectomy"
-      - "Sigmoid Colectomy"
-      - "Simple Hysterectomy"
-      - "Simple Mastectomy"
-      - "Subtotal Prostatectomy"
-      - "Subtotal Resection"
-      - "Superficial Parotidectomy"
-      - "Supracervical Hysterectomy"
-      - "Supracricoid Laryngectomy"
-      - "Supraglottic Laryngectomy"
-      - "Surgical Resection"
-      - "Thoracentesis"
-      - "Thoracoscopic Biopsy"
-      - "Tonsillectomy"
-      - "Total Colectomy"
-      - "Total Hepatectomy"
-      - "Total Laryngectomy"
-      - "Total Mastectomy"
-      - "Total Nephrectomy"
-      - "Transoral Laser Excision"
-      - "Transplant"
-      - "Transurethral resection (TURBT)"
-      - "Transurethral Resection (TURP)"
-      - "Transverse Colectomy"
-      - "Tumor Debulking"
-      - "Tumor Resection"
-      - "Vertical Hemilaryngectomy"
-      - "Wedge Resection"
-      - "Whipple Procedure"
-      - "Unknown"
-      - "Not Reported"
+      - Abdomino-perineal Resection of Rectum
+      - Anterior Resection of Rectum
+      - Ascites Drainage
+      - Aspirate
+      - Autopsy
+      - Biopsy
+      - Blood Draw
+      - Bone Marrow Aspirate
+      - Buccal Mucosal Resection
+      - Core Biopsy
+      - Cystectomy
+      - Deep Parotidectomy
+      - Endo Rectal Tumor Resection
+      - Endolaryngeal Excision
+      - Endoscopic Biopsy
+      - Endoscopic Mucosal Resection (EMR)
+      - Enucleation
+      - Excisional Biopsy
+      - Fine Needle Aspiration
+      - Full Hysterectomy
+      - Glossectomy
+      - Gross Total Resection
+      - Hand Assisted Laparoscopic Radical Nephrectomy
+      - Hysterectomy NOS
+      - Incisional Biopsy
+      - Indeterminant
+      - Laparoscopic Biopsy
+      - Laparoscopic Partial Nephrectomy
+      - Laparoscopic Radical Nephrectomy
+      - Laparoscopic Radical Prostatectomy with Robotics
+      - Laparoscopic Radical Prostatectomy without Robotics
+      - Laryngopharyngectomy
+      - Left Hemicolectomy
+      - Liquid Biopsy
+      - Lobectomy
+      - Local Resection (Exoresection; wall resection)
+      - Lumpectomy
+      - Lymph Node Dissection
+      - Lymphadenectomy
+      - Mandibulectomy
+      - Maxillectomy
+      - Metastasectomy
+      - Modified Radical Mastectomy
+      - Needle Biopsy
+      - Not Allowed To Collect
+      - Omentectomy
+      - Oophorectomy
+      - Open Craniotomy
+      - Open Partial Nephrectomy
+      - Open Radical Nephrectomy
+      - Open Radical Prostatectomy
+      - Orchiectomy
+      - Other
+      - Other Surgical Resection
+      - Palatectomy
+      - Pan-Procto Colectomy
+      - Pancreatectomy
+      - Paracentesis
+      - Parotidectomy, NOS
+      - Partial Hepatectomy
+      - Partial Laryngectomy
+      - Partial Maxillectomy
+      - Partial Nephrectomy
+      - Peritoneal Lavage
+      - Pneumonectomy
+      - Punch Biopsy
+      - Radical Hysterectomy
+      - Radical Maxillectomy
+      - Radical Nephrectomy
+      - Radical Prostatectomy
+      - Right Hemicolectomy
+      - Salpingectomy
+      - Salpingo-oophorectomy
+      - Sigmoid Colectomy
+      - Simple Hysterectomy
+      - Simple Mastectomy
+      - Subtotal Prostatectomy
+      - Subtotal Resection
+      - Superficial Parotidectomy
+      - Supracervical Hysterectomy
+      - Supracricoid Laryngectomy
+      - Supraglottic Laryngectomy
+      - Surgical Resection
+      - Thoracentesis
+      - Thoracoscopic Biopsy
+      - Tonsillectomy
+      - Total Colectomy
+      - Total Hepatectomy
+      - Total Laryngectomy
+      - Total Mastectomy
+      - Total Nephrectomy
+      - Transoral Laser Excision
+      - Transplant
+      - Transurethral resection (TURBT)
+      - Transurethral Resection (TURP)
+      - Transverse Colectomy
+      - Tumor Debulking
+      - Tumor Resection
+      - Vertical Hemilaryngectomy
+      - Wedge Resection
+      - Whipple Procedure
+      - Unknown
+      - Not Reported
     enumDef:
-      "Autopsy":
+      Autopsy:
         $ref:
           - "_terms_enum.yaml#/autopsy/common"
-      "Indeterminant":
+      Indeterminant:
         $ref:
           - "_terms_enum.yaml#/indeterminant/common"
-      "Not Allowed To Collect":
+      Not Allowed To Collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
-      "Other":
+      Other:
         $ref:
           - "_terms_enum.yaml#/other/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -743,25 +743,25 @@ properties:
     $ref:
       - "_terms.yaml#/preservation_method/common"
     enum:
-      - "Cryopreserved"
-      - "FFPE"
-      - "Fresh"
-      - "Frozen"
-      - "Not Allowed To Collect"
-      - "OCT"
-      - "Snap Frozen"
-      - "Unknown"
-      - "Not Reported"
+      - Cryopreserved
+      - FFPE
+      - Fresh
+      - Frozen
+      - Not Allowed To Collect
+      - OCT
+      - Snap Frozen
+      - Unknown
+      - Not Reported
     deprecated_enum:
-      - "Not Allowed To Collect"
+      - Not Allowed To Collect
     enumDef:
-      "Not Allowed To Collect":
+      Not Allowed To Collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -775,76 +775,76 @@ properties:
     $ref:
       - "_terms.yaml#/sample_type/common"
     enum:
-      - "Additional - New Primary"
-      - "Additional Metastatic"
-      - "Benign Neoplasms"
-      - "Blood Derived Cancer - Bone Marrow"
-      - "Blood Derived Cancer - Bone Marrow, Post-treatment"
-      - "Blood Derived Cancer - Peripheral Blood"
-      - "Blood Derived Cancer - Peripheral Blood, Post-treatment"
-      - "Blood Derived Liquid Biopsy"
-      - "Blood Derived Normal"
-      - "Bone Marrow Normal"
-      - "Buccal Cell Normal"
-      - "Cell Line Derived Xenograft Tissue"
-      - "Cell Lines"
-      - "Control Analyte"
-      - "DNA"
-      - "EBV Immortalized Normal"
-      - "Expanded Next Generation Cancer Model"
-      - "FFPE Recurrent"
-      - "FFPE Scrolls"
-      - "Fibroblasts from Bone Marrow Normal"
-      - "GenomePlex (Rubicon) Amplified DNA"
-      - "Granulocytes"
-      - "Human Tumor Original Cells"
-      - "In Situ Neoplasms"
-      - "Lymphoid Normal"
-      - "Metastatic"
-      - "Mixed Adherent Suspension"
-      - "Mononuclear Cells from Bone Marrow Normal"
-      - "Neoplasms of Uncertain and Unknown Behavior"
-      - "Next Generation Cancer Model"
-      - "Next Generation Cancer Model Expanded Under Non-conforming Conditions"
-      - "Not Allowed To Collect"
-      - "Pleural Effusion"
-      - "Post neo-adjuvant therapy"
-      - "Primary Blood Derived Cancer - Bone Marrow"
-      - "Primary Blood Derived Cancer - Peripheral Blood"
-      - "Primary Tumor"
-      - "Primary Xenograft Tissue"
-      - "Recurrent Blood Derived Cancer - Bone Marrow"
-      - "Recurrent Blood Derived Cancer - Peripheral Blood"
-      - "Recurrent Tumor"
-      - "Repli-G (Qiagen) DNA"
-      - "Repli-G X (Qiagen) DNA"
-      - "RNA"
-      - "Saliva"
-      - "Slides"
-      - "Solid Tissue Normal"
-      - "Total RNA"
-      - "Tumor"
-      - "Tumor Adjacent Normal - Post Neo-adjuvant Therapy"
-      - "Xenograft Tissue"
-      - "Unknown"
-      - "Not Reported"
+      - Additional - New Primary
+      - Additional Metastatic
+      - Benign Neoplasms
+      - Blood Derived Cancer - Bone Marrow
+      - Blood Derived Cancer - Bone Marrow, Post-treatment
+      - Blood Derived Cancer - Peripheral Blood
+      - Blood Derived Cancer - Peripheral Blood, Post-treatment
+      - Blood Derived Liquid Biopsy
+      - Blood Derived Normal
+      - Bone Marrow Normal
+      - Buccal Cell Normal
+      - Cell Line Derived Xenograft Tissue
+      - Cell Lines
+      - Control Analyte
+      - DNA
+      - EBV Immortalized Normal
+      - Expanded Next Generation Cancer Model
+      - FFPE Recurrent
+      - FFPE Scrolls
+      - Fibroblasts from Bone Marrow Normal
+      - GenomePlex (Rubicon) Amplified DNA
+      - Granulocytes
+      - Human Tumor Original Cells
+      - In Situ Neoplasms
+      - Lymphoid Normal
+      - Metastatic
+      - Mixed Adherent Suspension
+      - Mononuclear Cells from Bone Marrow Normal
+      - Neoplasms of Uncertain and Unknown Behavior
+      - Next Generation Cancer Model
+      - Next Generation Cancer Model Expanded Under Non-conforming Conditions
+      - Not Allowed To Collect
+      - Pleural Effusion
+      - Post neo-adjuvant therapy
+      - Primary Blood Derived Cancer - Bone Marrow
+      - Primary Blood Derived Cancer - Peripheral Blood
+      - Primary Tumor
+      - Primary Xenograft Tissue
+      - Recurrent Blood Derived Cancer - Bone Marrow
+      - Recurrent Blood Derived Cancer - Peripheral Blood
+      - Recurrent Tumor
+      - Repli-G (Qiagen) DNA
+      - Repli-G X (Qiagen) DNA
+      - RNA
+      - Saliva
+      - Slides
+      - Solid Tissue Normal
+      - Total RNA
+      - Tumor
+      - Tumor Adjacent Normal - Post Neo-adjuvant Therapy
+      - Xenograft Tissue
+      - Unknown
+      - Not Reported
     enumDef:
-      "DNA":
+      DNA:
         $ref:
           - "_terms_enum.yaml#/dna/common"
-      "Not Allowed To Collect":
+      Not Allowed To Collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
-      "Saliva":
+      Saliva:
         $ref:
           - "_terms_enum.yaml#/saliva/common"
-      "Total RNA":
+      Total RNA:
         $ref:
           - "_terms_enum.yaml#/total_rna/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -852,38 +852,38 @@ properties:
     $ref:
       - "_terms.yaml#/sample_type_id/common"
     enum:
-      - "01"
-      - "02"
-      - "03"
-      - "04"
-      - "05"
-      - "06"
-      - "07"
-      - "08"
-      - "09"
-      - "10"
-      - "11"
-      - "12"
-      - "13"
-      - "14"
-      - "15"
-      - "16"
-      - "17"
-      - "18"
-      - "20"
-      - "30"
-      - "31"
-      - "32"
-      - "40"
-      - "41"
-      - "42"
-      - "50"
-      - "60"
-      - "61"
-      - "85"
-      - "86"
-      - "87"
-      - "99"
+      - '01'
+      - '02'
+      - '03'
+      - '04'
+      - '05'
+      - '06'
+      - '07'
+      - '08'
+      - '09'
+      - '10'
+      - '11'
+      - '12'
+      - '13'
+      - '14'
+      - '15'
+      - '16'
+      - '17'
+      - '18'
+      - '20'
+      - '30'
+      - '31'
+      - '32'
+      - '40'
+      - '41'
+      - '42'
+      - '50'
+      - '60'
+      - '61'
+      - '85'
+      - '86'
+      - '87'
+      - '99'
 
   shortest_dimension:
     $ref:
@@ -895,41 +895,41 @@ properties:
     $ref:
       - "_terms.yaml#/specimen_type/common"
     enum:
-      - "2D Classical Conditionally Reprogrammed Cells"
-      - "2D Modified Conditionally Reprogrammed Cells"
-      - "3D Air-Liquid Interface Organoid"
-      - "3D Neurosphere"
-      - "3D Organoid"
-      - "Adherent Cell Line"
-      - "Bone Marrow Components NOS"
-      - "Bone Marrow NOS"
-      - "Buccal Cells"
-      - "Buffy Coat"
-      - "Cell"
-      - "Control Analyte"
-      - "Derived Cell Line"
-      - "EBV Immortalized"
-      - "Fibroblasts from Bone Marrow"
-      - "Granulocytes"
-      - "Human Original Cells"
-      - "Liquid Suspension Cell Line"
-      - "Lymphocytes"
-      - "Lymphoid"
-      - "Mixed Adherent Suspension"
-      - "Mononuclear Cells from Bone Marrow"
-      - "Peripheral Blood Components NOS"
-      - "Peripheral Blood NOS"
-      - "Peripheral Whole Blood"
-      - "Plasma"
-      - "Pleural Effusion"
-      - "Saliva"
-      - "Serum"
-      - "Solid Tissue"
-      - "Sorted Cells"
-      - "Sputum"
-      - "Whole Bone Marrow"
-      - "Unknown"
-      - "Not Reported"
+      - 2D Classical Conditionally Reprogrammed Cells
+      - 2D Modified Conditionally Reprogrammed Cells
+      - 3D Air-Liquid Interface Organoid
+      - 3D Neurosphere
+      - 3D Organoid
+      - Adherent Cell Line
+      - Bone Marrow Components NOS
+      - Bone Marrow NOS
+      - Buccal Cells
+      - Buffy Coat
+      - Cell
+      - Control Analyte
+      - Derived Cell Line
+      - EBV Immortalized
+      - Fibroblasts from Bone Marrow
+      - Granulocytes
+      - Human Original Cells
+      - Liquid Suspension Cell Line
+      - Lymphocytes
+      - Lymphoid
+      - Mixed Adherent Suspension
+      - Mononuclear Cells from Bone Marrow
+      - Peripheral Blood Components NOS
+      - Peripheral Blood NOS
+      - Peripheral Whole Blood
+      - Plasma
+      - Pleural Effusion
+      - Saliva
+      - Serum
+      - Solid Tissue
+      - Sorted Cells
+      - Sputum
+      - Whole Bone Marrow
+      - Unknown
+      - Not Reported
 
   time_between_clamping_and_freezing:
     $ref:
@@ -947,33 +947,33 @@ properties:
     $ref:
       - "_terms.yaml#/tissue_collection_type/common"
     enum:
-      - "Prospective"
-      - "Retrospective"
+      - Prospective
+      - Retrospective
 
   tissue_type:
     $ref:
       - "_terms.yaml#/tissue_type/common"
     enum:
-      - "Abnormal"
-      - "Normal"
-      - "Not Allowed To Collect"
-      - "Peritumoral"
-      - "Tumor"
-      - "Unknown"
-      - "Not Reported"
+      - Abnormal
+      - Normal
+      - Not Allowed To Collect
+      - Peritumoral
+      - Tumor
+      - Unknown
+      - Not Reported
     deprecated_enum:
-      - "Not Allowed To Collect"
+      - Not Allowed To Collect
     enumDef:
-      "Normal":
+      Normal:
         $ref:
           - "_terms_enum.yaml#/normal/common"
-      "Not Allowed To Collect":
+      Not Allowed To Collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
@@ -981,36 +981,36 @@ properties:
     $ref:
       - "_terms.yaml#/tumor_code/common"
     enum:
-      - "Acute Leukemia of Ambiguous Lineage (ALAL)"
-      - "Acute lymphoblastic leukemia (ALL)"
-      - "Acute myeloid leukemia (AML)"
-      - "Anal Cancer (all types)"
-      - "Cervical Cancer (all types)"
-      - "Clear cell sarcoma of the kidney (CCSK)"
-      - "CNS, ependymoma"
-      - "CNS, glioblastoma (GBM)"
-      - "CNS, low grade glioma (LGG)"
-      - "CNS, medulloblastoma"
-      - "CNS, other"
-      - "CNS, rhabdoid tumor"
-      - "Diffuse Large B-Cell Lymphoma (DLBCL)"
-      - "Ewing sarcoma"
-      - "Induction Failure AML (AML-IF)"
-      - "Lung Cancer (all types)"
-      - "Neuroblastoma (NBL)"
-      - "NHL, anaplastic large cell lymphoma"
-      - "NHL, Burkitt lymphoma (BL)"
-      - "Non cancerous tissue"
-      - "Osteosarcoma (OS)"
-      - "Rhabdoid tumor (kidney) (RT)"
-      - "Rhabdomyosarcoma"
-      - "Soft tissue sarcoma, non-rhabdomyosarcoma"
-      - "Wilms tumor (WT)"
+      - Acute Leukemia of Ambiguous Lineage (ALAL)
+      - Acute lymphoblastic leukemia (ALL)
+      - Acute myeloid leukemia (AML)
+      - Anal Cancer (all types)
+      - Cervical Cancer (all types)
+      - Clear cell sarcoma of the kidney (CCSK)
+      - CNS, ependymoma
+      - CNS, glioblastoma (GBM)
+      - CNS, low grade glioma (LGG)
+      - CNS, medulloblastoma
+      - CNS, other
+      - CNS, rhabdoid tumor
+      - Diffuse Large B-Cell Lymphoma (DLBCL)
+      - Ewing sarcoma
+      - Induction Failure AML (AML-IF)
+      - Lung Cancer (all types)
+      - Neuroblastoma (NBL)
+      - NHL, anaplastic large cell lymphoma
+      - NHL, Burkitt lymphoma (BL)
+      - Non cancerous tissue
+      - Osteosarcoma (OS)
+      - Rhabdoid tumor (kidney) (RT)
+      - Rhabdomyosarcoma
+      - Soft tissue sarcoma, non-rhabdomyosarcoma
+      - Wilms tumor (WT)
     enumDef:
-      "Ewing sarcoma":
+      Ewing sarcoma:
         $ref:
           - "_terms_enum.yaml#/ewing_sarcoma/common"
-      "Rhabdomyosarcoma":
+      Rhabdomyosarcoma:
         $ref:
           - "_terms_enum.yaml#/rhabdomyosarcoma/common"
 
@@ -1018,60 +1018,60 @@ properties:
     $ref:
       - "_terms.yaml#/tumor_code_id/common"
     enum:
-      - "00"
-      - "01"
-      - "02"
-      - "03"
-      - "04"
-      - "10"
-      - "15"
-      - "20"
-      - "21"
-      - "30"
-      - "40"
-      - "41"
-      - "50"
-      - "51"
-      - "52"
-      - "60"
-      - "61"
-      - "62"
-      - "63"
-      - "64"
-      - "65"
-      - "70"
-      - "71"
-      - "80"
-      - "81"
+      - '00'
+      - '01'
+      - '02'
+      - '03'
+      - '04'
+      - '10'
+      - '15'
+      - '20'
+      - '21'
+      - '30'
+      - '40'
+      - '41'
+      - '50'
+      - '51'
+      - '52'
+      - '60'
+      - '61'
+      - '62'
+      - '63'
+      - '64'
+      - '65'
+      - '70'
+      - '71'
+      - '80'
+      - '81'
 
   tumor_descriptor:
     $ref:
       - "_terms.yaml#/tumor_descriptor/common"
     enum:
-      - "Metastatic"
-      - "New Primary"
-      - "NOS"
-      - "Not Allowed To Collect"
-      - "Premalignant"
-      - "Primary"
-      - "Recurrence"
-      - "Xenograft"
-      - "Unknown"
-      - "Not Reported"
-      - "Not Applicable"
+      - Metastatic
+      - New Primary
+      - NOS
+      - Not Allowed To Collect
+      - Premalignant
+      - Primary
+      - Recurrence
+      - Xenograft
+      - Unknown
+      - Not Reported
+      - Not Applicable
     deprecated_enum:
-      - "Not Allowed To Collect"
+      - Not Allowed To Collect
     enumDef:
-      "Not Allowed To Collect":
+      Not Allowed To Collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
-      "Not Applicable":
+      Not Applicable:
         $ref:
           - "_terms_enum.yaml#/not_applicable/common"
-      "Unknown":
+      Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
-      "Not Reported":
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 

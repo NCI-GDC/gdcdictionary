@@ -56,31 +56,31 @@ properties:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
-      - "Copy Number Variation"
+      - Copy Number Variation
 
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
-      - "CEL"
+      - CEL
 
   data_type:
     $ref:
       - "_terms.yaml#/data_type/common"
     enum:
-      - "Raw Intensities"
+      - Raw Intensities
 
   experimental_strategy:
     $ref:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
-      - "Genotyping Array"
+      - Genotyping Array
 
   platform:
     $ref:
       - "_terms.yaml#/platform/common"
     enum:
-      - "Affymetrix SNP 6.0"
+      - Affymetrix SNP 6.0
 
   aliquots:
     $ref: "_definitions.yaml#/to_one"
