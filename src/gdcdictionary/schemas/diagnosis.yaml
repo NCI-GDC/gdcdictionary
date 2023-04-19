@@ -94,9 +94,9 @@ properties:
       - M1b
       - M1c
       - MX
-      - Not Allowed To Collect
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
@@ -158,10 +158,10 @@ properties:
       - N3b
       - N3c
       - N4
-      - Not Allowed To Collect
       - NX
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
@@ -251,7 +251,6 @@ properties:
     $ref:
       - "_terms.yaml#/ajcc_clinical_stage/common"
     enum:
-      - Not Allowed To Collect
       - Stage 0
       - Stage 0a
       - Stage 0is
@@ -289,6 +288,7 @@ properties:
       - Stage X
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
       - Stage IB Cervix
@@ -408,7 +408,6 @@ properties:
     $ref:
       - "_terms.yaml#/ajcc_clinical_t/common"
     enum:
-      - Not Allowed To Collect
       - T0
       - T1
       - T1a
@@ -445,6 +444,7 @@ properties:
       - TX
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
@@ -573,9 +573,9 @@ properties:
       - M1d
       - M2
       - MX
-      - Not Allowed To Collect
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
@@ -638,10 +638,10 @@ properties:
       - N3b
       - N3c
       - N4
-      - Not Allowed To Collect
       - NX
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
@@ -869,7 +869,6 @@ properties:
     $ref:
       - "_terms.yaml#/ajcc_pathologic_t/common"
     enum:
-      - Not Allowed To Collect
       - T0
       - T1
       - T1a
@@ -907,6 +906,7 @@ properties:
       - TX
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
@@ -1059,9 +1059,9 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Not Allowed To Collect
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
@@ -1126,9 +1126,9 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Not Allowed To Collect
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
@@ -1289,11 +1289,11 @@ properties:
       - Endemic
       - Immunodeficiency-associated, adult
       - Immunodeficiency-associated, pediatric
-      - Not Allowed To Collect
       - Sporadic, adult
       - Sporadic, pediatric
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
@@ -1394,7 +1394,6 @@ properties:
       - "_terms.yaml#/classification_of_tumor/common"
     enum:
       - metastasis
-      - Not Allowed To Collect
       - other
       - Premalignant
       - primary
@@ -1404,6 +1403,7 @@ properties:
       - Synchronous primary
       - Unknown
       - not reported
+      - Not Allowed To Collect
     enumDef:
       metastasis:
         $ref:
@@ -1794,7 +1794,6 @@ properties:
     $ref:
       - "_terms.yaml#/figo_stage/common"
     enum:
-      - Not Allowed To Collect
       - Stage 0
       - Stage I
       - Stage IA
@@ -1828,6 +1827,7 @@ properties:
       - Stage IVB
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
@@ -2387,11 +2387,11 @@ properties:
       - Biochemical evidence of disease without structural correlate
       - Distant met recurrence/progression
       - Loco-regional recurrence/progression
-      - Not Allowed To Collect
       - Tumor free
       - Unknown tumor status
       - With tumor
       - not reported
+      - Not Allowed To Collect
     enumDef:
       Biochemical evidence of disease without structural correlate:
         $ref:
@@ -2781,7 +2781,6 @@ properties:
       - Incisional Biopsy
       - Laparoscopy
       - Laparotomy
-      - Not Allowed To Collect
       - Other
       - Pap Smear
       - Pathologic Review
@@ -2791,6 +2790,7 @@ properties:
       - Ultrasound Guided Biopsy
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
@@ -16751,9 +16751,9 @@ properties:
     enum:
       - "yes"
       - "no"
-      - Not Allowed To Collect
       - unknown
       - not reported
+      - Not Allowed To Collect
     enumDef:
       "yes":
         $ref:
@@ -16777,9 +16777,9 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Not Allowed To Collect
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     enumDef:
       "Yes":
         $ref:
@@ -16803,9 +16803,9 @@ properties:
     enum:
       - "yes"
       - "no"
-      - Not Allowed To Collect
       - unknown
       - not reported
+      - Not Allowed To Collect
     enumDef:
       "yes":
         $ref:

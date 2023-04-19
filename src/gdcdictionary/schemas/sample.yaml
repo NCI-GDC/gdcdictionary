@@ -267,7 +267,6 @@ properties:
       - Neck
       - Nerve
       - Nerve(s) Cranial
-      - Not Allowed To Collect
       - Occipital Cortex
       - Ocular Orbits
       - Omentum
@@ -370,6 +369,7 @@ properties:
       - Wrist
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     enumDef:
       Bone Marrow:
         $ref:
@@ -452,7 +452,6 @@ properties:
       - Lymphocytes
       - Mixed Adherent Suspension
       - Mononuclear Cells from Bone Marrow Normal
-      - Not Allowed To Collect
       - Peripheral Blood Components NOS
       - Peripheral Whole Blood
       - Plasma
@@ -465,6 +464,7 @@ properties:
       - Whole Bone Marrow
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
@@ -519,9 +519,9 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Not Allowed To Collect
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
@@ -644,7 +644,6 @@ properties:
       - Metastasectomy
       - Modified Radical Mastectomy
       - Needle Biopsy
-      - Not Allowed To Collect
       - Omentectomy
       - Oophorectomy
       - Open Craniotomy
@@ -703,6 +702,7 @@ properties:
       - Whipple Procedure
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     enumDef:
       Autopsy:
         $ref:
@@ -747,11 +747,11 @@ properties:
       - FFPE
       - Fresh
       - Frozen
-      - Not Allowed To Collect
       - OCT
       - Snap Frozen
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
@@ -806,7 +806,6 @@ properties:
       - Neoplasms of Uncertain and Unknown Behavior
       - Next Generation Cancer Model
       - Next Generation Cancer Model Expanded Under Non-conforming Conditions
-      - Not Allowed To Collect
       - Pleural Effusion
       - Post neo-adjuvant therapy
       - Primary Blood Derived Cancer - Bone Marrow
@@ -828,6 +827,7 @@ properties:
       - Xenograft Tissue
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     enumDef:
       DNA:
         $ref:
@@ -956,11 +956,11 @@ properties:
     enum:
       - Abnormal
       - Normal
-      - Not Allowed To Collect
       - Peritumoral
       - Tumor
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
@@ -1051,7 +1051,6 @@ properties:
       - Metastatic
       - New Primary
       - NOS
-      - Not Allowed To Collect
       - Premalignant
       - Primary
       - Recurrence
@@ -1059,6 +1058,7 @@ properties:
       - Unknown
       - Not Reported
       - Not Applicable
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:

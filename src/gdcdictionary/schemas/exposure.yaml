@@ -584,10 +584,10 @@ properties:
     $ref:
       - "_terms.yaml#/time_between_waking_and_first_smoke/common"
     enum:
-      - 31-60 Minutes
-      - 6-30 Minutes
-      - After 60 Minutes
       - Within 5 Minutes
+      - 6-30 Minutes
+      - 31-60 Minutes
+      - After 60 Minutes
       - Unknown
     enumDef:
       Within 5 Minutes:

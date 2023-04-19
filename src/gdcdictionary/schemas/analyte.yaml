@@ -153,9 +153,9 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Not Allowed To Collect
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     enumDef:
       "Yes":
         $ref:

@@ -1094,11 +1094,11 @@ properties:
       - "_terms.yaml#/ethnicity/common"
     enum:
       - hispanic or latino
-      - not allowed to collect
       - not hispanic or latino
       - unknown
       - Unknown
       - not reported
+      - not allowed to collect
     deprecated_enum:
       - unknown
     enumDef:
@@ -1184,12 +1184,12 @@ properties:
       - asian
       - black or african american
       - native hawaiian or other pacific islander
-      - not allowed to collect
       - other
       - unknown
       - white
       - Unknown
       - not reported
+      - not allowed to collect
     deprecated_enum:
       - unknown
     enumDef:

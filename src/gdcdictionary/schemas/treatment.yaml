@@ -7343,7 +7343,6 @@ properties:
       - Immunotherapy (Including Vaccines)
       - Internal Radiation
       - Isolated Limb Perfusion (ILP)
-      - Not Allowed To Collect
       - Organ Transplantation
       - Other
       - Peptide Receptor Radionuclide Therapy (PRRT)
@@ -7389,6 +7388,7 @@ properties:
       - Whipple
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Cryoablation
       - Not Allowed To Collect
