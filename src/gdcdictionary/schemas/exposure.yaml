@@ -92,8 +92,6 @@ properties:
       - "No"
       - "yes"
       - "no"
-      - "no"
-      - "yes"
       - Unknown
       - Not Reported
     deprecated_enum:
@@ -635,14 +633,6 @@ properties:
       - Smoking history not documented
       - Unknown
       - Not Reported
-      - "1"
-      - "2"
-      - "3"
-      - "4"
-      - "5"
-      - "6"
-      - "7"
-      - Not Allowed To Collect
       - Not Allowed To Collect
       - "1"
       - "2"
@@ -667,6 +657,9 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       "1":
         $ref:
           - "_terms_enum.yaml#/1/exposure/tobacco_smoking_status"
@@ -688,9 +681,6 @@ properties:
       "7":
         $ref:
           - "_terms_enum.yaml#/7/exposure/tobacco_smoking_status"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   type_of_smoke_exposure:
     $ref:

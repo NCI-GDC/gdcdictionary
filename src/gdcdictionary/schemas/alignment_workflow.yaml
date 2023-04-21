@@ -68,11 +68,11 @@ properties:
       - BWA-aln
       - BWA-mem
       - CellRanger - 10x Chromium
-      - STAR - Smart-Seq2
       - STAR 2-Pass
       - STAR 2-Pass Chimeric
       - STAR 2-Pass Genome
       - STAR 2-Pass Transcriptome
+      - STAR - Smart-Seq2
       - zUMIs - Smart-Seq2
 
   submitted_aligned_reads_files:

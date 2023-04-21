@@ -2096,20 +2096,6 @@ evidence_of_recurrence_type:
       cde_version:
       term_url:
 
-exon:
-  common:
-    description: >-
-      Exon number targeted or included in a molecular analysis. If a specific genetic
-      variant is being reported, this property can be used to capture the exon where
-      that variant is located.
-    termDef:
-      term: >-
-        Molecular Laboratory Procedure Exon Identification Number
-      source: caDSR
-      cde_id: 6142411
-      cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142411&version=1.0"
-
 experiment_name:
   common:
     description: >-
@@ -4167,7 +4153,8 @@ pathogenicity:
 pediatric_kidney_staging:
   common:
     description: >-
-      A modified version of the Children's Oncology Group (COG) National Wilms Tumor Study Group (NWTS) staging system.
+      A modified version of the Children's Oncology Group (COG) National Wilms Tumor
+      Study Group (NWTS) staging system.
     termDef:
       term:
       source:
@@ -5120,14 +5107,13 @@ residual_tumor:
 residual_tumor_measurement:
   common:
     description: >-
-        A measurement of the tumor cells that remain in the body following cancer
-        treatment.
+      A measurement of the tumor cells that remain in the body following cancer treatment.
     termDef:
-        term:
-        source:
-        cde_id:
-        cde_version:
-        term_url:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
 
 respirable_crystalline_silica_exposure:
   common:
@@ -5205,7 +5191,6 @@ risk_factor:
       cde_id: 6142389
       cde_version: 1.0
       term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142389&version=1.0"
-
 
 risk_factors:
   common:

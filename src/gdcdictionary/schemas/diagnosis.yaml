@@ -94,7 +94,6 @@ properties:
       - M1b
       - M1c
       - MX
-      - Not Allowed To Collect
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -159,7 +158,6 @@ properties:
       - N3b
       - N3c
       - N4
-      - Not Allowed To Collect
       - NX
       - Unknown
       - Not Reported
@@ -253,7 +251,6 @@ properties:
     $ref:
       - "_terms.yaml#/ajcc_clinical_stage/common"
     enum:
-      - Not Allowed To Collect
       - Stage 0
       - Stage 0a
       - Stage 0is
@@ -263,19 +260,16 @@ properties:
       - Stage IA2
       - Stage IA3
       - Stage IB
-      - Stage IB Cervix
-      - Stage IB Cervix
       - Stage IB1
       - Stage IB2
+      - Stage IB Cervix
       - Stage IC
       - Stage II
       - Stage II Cervix
-      - Stage II Cervix
       - Stage IIA
-      - Stage IIA Cervix
-      - Stage IIA Cervix
       - Stage IIA1
       - Stage IIA2
+      - Stage IIA Cervix
       - Stage IIB
       - Stage IIC
       - Stage IIC1
@@ -325,9 +319,6 @@ properties:
       Stage IB:
         $ref:
           - "_terms_enum.yaml#/stage_ib/common"
-      Stage IB Cervix:
-        $ref:
-          - "_terms_enum.yaml#/stage_ib_cervix/common"
       Stage IB1:
         $ref:
           - "_terms_enum.yaml#/stage_ib1/common"
@@ -340,9 +331,6 @@ properties:
       Stage II:
         $ref:
           - "_terms_enum.yaml#/stage_ii/common"
-      Stage II Cervix:
-        $ref:
-          - "_terms_enum.yaml#/stage_ii_cervix/common"
       Stage IIA:
         $ref:
           - "_terms_enum.yaml#/stage_iia/common"
@@ -352,9 +340,6 @@ properties:
       Stage IIA2:
         $ref:
           - "_terms_enum.yaml#/stage_iia2/common"
-      Stage IIA Cervix:
-        $ref:
-          - "_terms_enum.yaml#/stage_iia_cervix/common"
       Stage IIB:
         $ref:
           - "_terms_enum.yaml#/stage_iib/common"
@@ -409,12 +394,20 @@ properties:
       Not Allowed To Collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
+      Stage IB Cervix:
+        $ref:
+          - "_terms_enum.yaml#/stage_ib_cervix/common"
+      Stage II Cervix:
+        $ref:
+          - "_terms_enum.yaml#/stage_ii_cervix/common"
+      Stage IIA Cervix:
+        $ref:
+          - "_terms_enum.yaml#/stage_iia_cervix/common"
 
   ajcc_clinical_t:
     $ref:
       - "_terms.yaml#/ajcc_clinical_t/common"
     enum:
-      - Not Allowed To Collect
       - T0
       - T1
       - T1a
@@ -580,7 +573,6 @@ properties:
       - M1d
       - M2
       - MX
-      - Not Allowed To Collect
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -646,7 +638,6 @@ properties:
       - N3b
       - N3c
       - N4
-      - Not Allowed To Collect
       - NX
       - Unknown
       - Not Reported
@@ -878,7 +869,6 @@ properties:
     $ref:
       - "_terms.yaml#/ajcc_pathologic_t/common"
     enum:
-      - Not Allowed To Collect
       - T0
       - T1
       - T1a
@@ -1069,7 +1059,6 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Not Allowed To Collect
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -1137,7 +1126,6 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Not Allowed To Collect
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -1301,7 +1289,6 @@ properties:
       - Endemic
       - Immunodeficiency-associated, adult
       - Immunodeficiency-associated, pediatric
-      - Not Allowed To Collect
       - Sporadic, adult
       - Sporadic, pediatric
       - Unknown
@@ -1807,7 +1794,6 @@ properties:
     $ref:
       - "_terms.yaml#/figo_stage/common"
     enum:
-      - Not Allowed To Collect
       - Stage 0
       - Stage I
       - Stage IA
@@ -2795,7 +2781,6 @@ properties:
       - Incisional Biopsy
       - Laparoscopy
       - Laparotomy
-      - Not Allowed To Collect
       - Other
       - Pap Smear
       - Pathologic Review
@@ -2988,8 +2973,8 @@ properties:
       - 8040/1
       - 8040/3
       - 8041/3
-      - 8041/34
       - 8041/6
+      - 8041/34
       - 8042/3
       - 8043/3
       - 8044/3
@@ -3008,8 +2993,8 @@ properties:
       - 8060/0
       - 8070/2
       - 8070/3
-      - 8070/33
       - 8070/6
+      - 8070/33
       - 8071/2
       - 8071/3
       - 8072/3
@@ -3063,8 +3048,8 @@ properties:
       - 8140/1
       - 8140/2
       - 8140/3
-      - 8140/33
       - 8140/6
+      - 8140/33
       - 8141/3
       - 8142/3
       - 8143/3
@@ -7563,10 +7548,10 @@ properties:
       - B cell lymphoma, NOS
       - B lymphoblastic leukemia/lymphoma with hyperdiploidy
       - B lymphoblastic leukemia/lymphoma with hypodiploidy (Hypodiploid ALL)
-      - B lymphoblastic leukemia/lymphoma with t(12;21)(p13;q22); TEL-AML1 (ETV6-RUNX1)
       - B lymphoblastic leukemia/lymphoma with t(1;19)(q23;p13.3); E2A-PBX1 (TCF3-PBX1)
       - B lymphoblastic leukemia/lymphoma with t(5;14)(q31;q32); IL3-IGH
       - B lymphoblastic leukemia/lymphoma with t(9;22)(q34;q11.2); BCR-ABL1
+      - B lymphoblastic leukemia/lymphoma with t(12;21)(p13;q22); TEL-AML1 (ETV6-RUNX1)
       - B lymphoblastic leukemia/lymphoma with t(v;11q23); MLL rearranged
       - B lymphoblastic leukemia/lymphoma, NOS
       - B-ALL
@@ -9374,11 +9359,11 @@ properties:
       - Preleukemic syndrome
       - Primary amyloidosis
       - Primary cutaneous anaplastic large cell lymphoma
-      - Primary cutaneous CD30+ large T-cell lymphoma
-      - Primary cutaneous CD30+ T-cell lymphoproliferative disorder
       - Primary cutaneous CD4-positive small/medium T-cell lymphoma
       - Primary cutaneous CD8-positive aggressive epidermotropic cytotoxic T-cell
         lymphoma
+      - Primary cutaneous CD30+ large T-cell lymphoma
+      - Primary cutaneous CD30+ T-cell lymphoproliferative disorder
       - Primary cutaneous DLBCL, leg type
       - Primary cutaneous follicle centre lymphoma
       - Primary cutaneous gamma-delta T-cell lymphoma
@@ -19385,7 +19370,6 @@ properties:
       - High Grade
       - Intermediate Grade
       - Low Grade
-      - not reported
       - not reported
       - Unknown
       - Not Reported

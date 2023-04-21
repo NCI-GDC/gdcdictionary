@@ -1910,7 +1910,6 @@ properties:
     enum:
       - "0"
       - "10"
-      - "100"
       - "20"
       - "30"
       - "40"
@@ -1919,6 +1918,7 @@ properties:
       - "70"
       - "80"
       - "90"
+      - "100"
       - Unknown
       - Not Reported
     enumDef:

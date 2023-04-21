@@ -97,12 +97,12 @@ properties:
     $ref:
       - "_terms.yaml#/chipseq_target/common"
     enum:
-      - H3K27ac
-      - H3K27me3
-      - H3K36me3
       - H3K4me1
       - H3K4me3
       - H3K9me3
+      - H3K27ac
+      - H3K27me3
+      - H3K36me3
       - Input Control
       - Unknown
 
@@ -395,8 +395,8 @@ properties:
       - Custom MSK IMPACT Panel - 468 Genes
       - Custom Myeloid GENIE-VICC Panel - 37 Genes
       - Custom Personalis ACEcp VAREPOP-APOLLO Panel v2
-      - Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 203 Genes
       - Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 88 Genes
+      - Custom PGDX SureSelect CancerSelect VAREPOP-APOLLO Panel - 203 Genes
       - Custom SeqCap EZ BeatAML Panel - 12.5 Mb
       - Custom SeqCap EZ HGSC VCRome v2.1 ER Augmented v1
       - Custom SeqCap EZ HGSC VCRome v2.1 ER Augmented v2

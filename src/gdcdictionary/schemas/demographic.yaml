@@ -1096,7 +1096,6 @@ properties:
       - hispanic or latino
       - not hispanic or latino
       - unknown
-      - unknown
       - Unknown
       - not reported
       - not allowed to collect
@@ -1186,7 +1185,6 @@ properties:
       - black or african american
       - native hawaiian or other pacific islander
       - other
-      - unknown
       - unknown
       - white
       - Unknown

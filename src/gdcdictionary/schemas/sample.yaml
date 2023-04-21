@@ -452,7 +452,6 @@ properties:
       - Lymphocytes
       - Mixed Adherent Suspension
       - Mononuclear Cells from Bone Marrow Normal
-      - Not Allowed To Collect
       - Peripheral Blood Components NOS
       - Peripheral Whole Blood
       - Plasma
@@ -475,9 +474,6 @@ properties:
       Lymphocytes:
         $ref:
           - "_terms_enum.yaml#/lymphocytes/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Plasma:
         $ref:
           - "_terms_enum.yaml#/plasma/common"
@@ -493,6 +489,9 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   current_weight:
     $ref:
@@ -520,16 +519,12 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - Not Allowed To Collect
       - Unknown
       - Not Reported
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       "Yes":
         $ref:
           - "_terms_enum.yaml#/yes/common"
@@ -542,6 +537,9 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   distance_normal_to_tumor:
     $ref:
@@ -749,7 +747,6 @@ properties:
       - FFPE
       - Fresh
       - Frozen
-      - Not Allowed To Collect
       - OCT
       - Snap Frozen
       - Unknown
@@ -758,15 +755,15 @@ properties:
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   sample_ordinal:
     $ref:
@@ -959,7 +956,6 @@ properties:
     enum:
       - Abnormal
       - Normal
-      - Not Allowed To Collect
       - Peritumoral
       - Tumor
       - Unknown
@@ -971,15 +967,15 @@ properties:
       Normal:
         $ref:
           - "_terms_enum.yaml#/normal/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   tumor_code:
     $ref:
@@ -1055,7 +1051,6 @@ properties:
       - Metastatic
       - New Primary
       - NOS
-      - Not Allowed To Collect
       - Premalignant
       - Primary
       - Recurrence
@@ -1067,9 +1062,6 @@ properties:
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Not Applicable:
         $ref:
           - "_terms_enum.yaml#/not_applicable/common"
@@ -1079,6 +1071,9 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   cases:
     $ref: "_definitions.yaml#/to_one"

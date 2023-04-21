@@ -1,6 +1,20 @@
 
 id: _terms_enum
 
+exon:
+  common:
+    description: >-
+      Exon number targeted or included in a molecular analysis. If a specific genetic
+      variant is being reported, this property can be used to capture the exon where
+      that variant is located.
+    termDef:
+      term: >-
+        Molecular Laboratory Procedure Exon Identification Number
+      source: caDSR
+      cde_id: 6142411
+      cde_version: 1.0
+      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142411&version=1.0"
+
 "0":
   common:
     description: >-
@@ -44176,20 +44190,6 @@ exocervix:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C12310"
       term_id: C12310
       term_version: 20.05a
-
-exon:
-  common:
-    description: >-
-      Exon number targeted or included in a molecular analysis. If a specific genetic
-      variant is being reported, this property can be used to capture the exon where
-      that variant is located.
-    termDef:
-      term: >-
-        Molecular Laboratory Procedure Exon Identification Number
-      source: caDSR
-      cde_id: 6142411
-      cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142411&version=1.0"
 
 ext1:
   common:
