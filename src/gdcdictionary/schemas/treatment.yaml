@@ -7334,6 +7334,7 @@ properties:
       - Chemotherapy
       - Concurrent Chemoradiation
       - Cryoablation
+      - Cryoablation
       - Distal Pancreatectomy
       - Embolization
       - Ethanol Injection Ablation
@@ -7343,6 +7344,7 @@ properties:
       - Immunotherapy (Including Vaccines)
       - Internal Radiation
       - Isolated Limb Perfusion (ILP)
+      - Not Allowed To Collect
       - Organ Transplantation
       - Other
       - Peptide Receptor Radionuclide Therapy (PRRT)
@@ -7379,6 +7381,7 @@ properties:
       - Stem Cell Treatment
       - Stereotactic Radiosurgery
       - Steroid Therapy
+      - Surgery
       - Surgery
       - Surgery, Minimally Invasive
       - Surgery, NOS

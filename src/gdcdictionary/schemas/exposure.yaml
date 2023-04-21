@@ -92,6 +92,8 @@ properties:
       - "No"
       - "yes"
       - "no"
+      - "no"
+      - "yes"
       - Unknown
       - Not Reported
     deprecated_enum:
@@ -641,6 +643,14 @@ properties:
       - "6"
       - "7"
       - Not Allowed To Collect
+      - Not Allowed To Collect
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
     deprecated_enum:
       - Not Allowed To Collect
       - "1"

@@ -452,6 +452,7 @@ properties:
       - Lymphocytes
       - Mixed Adherent Suspension
       - Mononuclear Cells from Bone Marrow Normal
+      - Not Allowed To Collect
       - Peripheral Blood Components NOS
       - Peripheral Whole Blood
       - Plasma
@@ -519,6 +520,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Not Allowed To Collect
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -747,6 +749,7 @@ properties:
       - FFPE
       - Fresh
       - Frozen
+      - Not Allowed To Collect
       - OCT
       - Snap Frozen
       - Unknown
@@ -956,6 +959,7 @@ properties:
     enum:
       - Abnormal
       - Normal
+      - Not Allowed To Collect
       - Peritumoral
       - Tumor
       - Unknown
@@ -1051,6 +1055,7 @@ properties:
       - Metastatic
       - New Primary
       - NOS
+      - Not Allowed To Collect
       - Premalignant
       - Primary
       - Recurrence

@@ -7064,6 +7064,7 @@ properties:
     enum:
       - cells/mL
       - count x10^9/L
+      - count x10^9/L
       - g/dL
       - g/L
       - mcg/L

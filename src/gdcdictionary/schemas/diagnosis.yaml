@@ -94,6 +94,7 @@ properties:
       - M1b
       - M1c
       - MX
+      - Not Allowed To Collect
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -158,6 +159,7 @@ properties:
       - N3b
       - N3c
       - N4
+      - Not Allowed To Collect
       - NX
       - Unknown
       - Not Reported
@@ -251,6 +253,7 @@ properties:
     $ref:
       - "_terms.yaml#/ajcc_clinical_stage/common"
     enum:
+      - Not Allowed To Collect
       - Stage 0
       - Stage 0a
       - Stage 0is
@@ -261,12 +264,15 @@ properties:
       - Stage IA3
       - Stage IB
       - Stage IB Cervix
+      - Stage IB Cervix
       - Stage IB1
       - Stage IB2
       - Stage IC
       - Stage II
       - Stage II Cervix
+      - Stage II Cervix
       - Stage IIA
+      - Stage IIA Cervix
       - Stage IIA Cervix
       - Stage IIA1
       - Stage IIA2
@@ -408,6 +414,7 @@ properties:
     $ref:
       - "_terms.yaml#/ajcc_clinical_t/common"
     enum:
+      - Not Allowed To Collect
       - T0
       - T1
       - T1a
@@ -573,6 +580,7 @@ properties:
       - M1d
       - M2
       - MX
+      - Not Allowed To Collect
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -638,6 +646,7 @@ properties:
       - N3b
       - N3c
       - N4
+      - Not Allowed To Collect
       - NX
       - Unknown
       - Not Reported
@@ -869,6 +878,7 @@ properties:
     $ref:
       - "_terms.yaml#/ajcc_pathologic_t/common"
     enum:
+      - Not Allowed To Collect
       - T0
       - T1
       - T1a
@@ -1059,6 +1069,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Not Allowed To Collect
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -1126,6 +1137,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Not Allowed To Collect
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -1289,6 +1301,7 @@ properties:
       - Endemic
       - Immunodeficiency-associated, adult
       - Immunodeficiency-associated, pediatric
+      - Not Allowed To Collect
       - Sporadic, adult
       - Sporadic, pediatric
       - Unknown
@@ -1794,6 +1807,7 @@ properties:
     $ref:
       - "_terms.yaml#/figo_stage/common"
     enum:
+      - Not Allowed To Collect
       - Stage 0
       - Stage I
       - Stage IA
@@ -2781,6 +2795,7 @@ properties:
       - Incisional Biopsy
       - Laparoscopy
       - Laparotomy
+      - Not Allowed To Collect
       - Other
       - Pap Smear
       - Pathologic Review
@@ -19370,6 +19385,7 @@ properties:
       - High Grade
       - Intermediate Grade
       - Low Grade
+      - not reported
       - not reported
       - Unknown
       - Not Reported
