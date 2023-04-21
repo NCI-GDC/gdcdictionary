@@ -2096,6 +2096,20 @@ evidence_of_recurrence_type:
       cde_version:
       term_url:
 
+exon:
+  common:
+    description: >-
+      Exon number targeted or included in a molecular analysis. If a specific genetic
+      variant is being reported, this property can be used to capture the exon where
+      that variant is located.
+    termDef:
+      term: >-
+        Molecular Laboratory Procedure Exon Identification Number
+      source: caDSR
+      cde_id: 6142411
+      cde_version: 1.0
+      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142411&version=1.0"
+
 experiment_name:
   common:
     description: >-
