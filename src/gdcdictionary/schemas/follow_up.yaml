@@ -912,15 +912,15 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  body_surface_area:
-    $ref:
-      - "_terms.yaml#/body_surface_area/common"
-    type: number
-    minimum: 0
-
   bmi:
     $ref:
       - "_terms.yaml#/bmi/common"
+    type: number
+    minimum: 0
+
+  body_surface_area:
+    $ref:
+      - "_terms.yaml#/body_surface_area/common"
     type: number
     minimum: 0
 
@@ -1011,13 +1011,13 @@ properties:
         - COPD
         - Coronary Artery Disease
         - Crohn's Disease
-        - Cryptogenic Organizing Pneumonia
         - Cryptococcal Meningitis
+        - Cryptogenic Organizing Pneumonia
         - Cytomegalovirus (CMV)
         - Deep Vein Thrombosis / Thromboembolism
         - Denys-Drash Syndrome
-        - Dermatomyosis
         - Depression
+        - Dermatomyosis
         - Diabetes
         - Diabetes, Type II
         - Diabetic Neuropathy
@@ -1196,13 +1196,13 @@ properties:
       - COPD
       - Coronary Artery Disease
       - Crohn's Disease
-      - Cryptogenic Organizing Pneumonia
       - Cryptococcal Meningitis
+      - Cryptogenic Organizing Pneumonia
       - Cytomegalovirus (CMV)
       - Deep Vein Thrombosis / Thromboembolism
       - Denys-Drash Syndrome
-      - Dermatomyosis
       - Depression
+      - Dermatomyosis
       - Diabetes
       - Diabetes, Type II
       - Diabetic Neuropathy
@@ -1554,9 +1554,23 @@ properties:
       - Gray
       - Green
       - Hazel
-      - Red & Violet
       - Other
+      - Red & Violet
       - Not Reported
+
+  fev1_fvc_post_bronch_percent:
+    $ref:
+      - "_terms.yaml#/fev1_fvc_post_bronch_percent/common"
+    type: number
+    maximum: 100
+    minimum: 0
+
+  fev1_fvc_pre_bronch_percent:
+    $ref:
+      - "_terms.yaml#/fev1_fvc_pre_bronch_percent/common"
+    type: number
+    maximum: 100
+    minimum: 0
 
   fev1_ref_post_bronch_percent:
     $ref:
@@ -1572,20 +1586,6 @@ properties:
     maximum: 100
     minimum: 0
 
-  fev1_fvc_pre_bronch_percent:
-    $ref:
-      - "_terms.yaml#/fev1_fvc_pre_bronch_percent/common"
-    type: number
-    maximum: 100
-    minimum: 0
-
-  fev1_fvc_post_bronch_percent:
-    $ref:
-      - "_terms.yaml#/fev1_fvc_post_bronch_percent/common"
-    type: number
-    maximum: 100
-    minimum: 0
-
   first_event:
     $ref:
       - "_terms.yaml#/first_event/common"
@@ -1597,8 +1597,8 @@ properties:
       - Induction Death
       - Induction Failure
       - None
-      - Progression
       - Other
+      - Progression
       - Relapse
       - Second Malignant Neoplasm
       - Not Reported
@@ -1828,8 +1828,8 @@ properties:
     enum:
       - Carcinomatosis
       - Kidney Involvement
-      - Lung Involvement
       - Liver Involvement
+      - Lung Involvement
       - Normal
       - Retroperitoneal Lymph Node Involvement
       - Vena Cava Involvement/Thrombus
@@ -1839,10 +1839,10 @@ properties:
     $ref:
       - "_terms.yaml#/imaging_result/common"
     enum:
-      - Positive
       - Indeterminate
       - Negative
       - Not Performed
+      - Positive
       - Unknown
       - Not Reported
     enumDef:
@@ -2434,11 +2434,11 @@ properties:
       - H2 Blockers
       - Medically Treated
       - No Treatment
-      - Not Applicable
       - Proton Pump Inhibitors
       - Surgically Treated
       - Unknown
       - Not Reported
+      - Not Applicable
     enumDef:
       Not Applicable:
         $ref:
@@ -2644,6 +2644,37 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  risk_factor_method_of_diagnosis:
+    $ref:
+      - "_terms.yaml#/risk_factor_method_of_diagnosis/common"
+    enum:
+      - Biochemical Assessment
+      - Both Clinical and Biochemical Assessments
+      - Clinical Assessment
+      - Not Reported
+
+  risk_factor_treatment:
+    $ref:
+      - "_terms.yaml#/risk_factor_treatment/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms_enum.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms_enum.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
+
   risk_factors:
     $ref:
       - "_terms.yaml#/risk_factors/common"
@@ -2827,37 +2858,6 @@ properties:
         - Unknown
         - Not Reported
 
-  risk_factor_method_of_diagnosis:
-    $ref:
-      - "_terms.yaml#/risk_factor_method_of_diagnosis/common"
-    enum:
-      - Biochemical Assessment
-      - Both Clinical and Biochemical Assessments
-      - Clinical Assessment
-      - Not Reported
-
-  risk_factor_treatment:
-    $ref:
-      - "_terms.yaml#/risk_factor_treatment/common"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-      - Not Reported
-    enumDef:
-      "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-
   scan_tracer_used:
     $ref:
       - "_terms.yaml#/scan_tracer_used/common"
@@ -2872,13 +2872,14 @@ properties:
     $ref:
       - "_terms.yaml#/timepoint_category/common"
     enum:
-      - Adolescence
       - Adjuvant Therapy
+      - Adolescence
       - Adulthood
       - Childhood
       - Follow-up
       - Initial Diagnosis
       - Last Contact
+      - Other
       - Post Adjuvant Therapy
       - Post Hormone Therapy
       - Post Secondary Therapy
@@ -2887,7 +2888,6 @@ properties:
       - Prior to Diagnosis
       - Prior to Treatment
       - Recurrence/Progression
-      - Other
       - Not Reported
 
   undescended_testis_corrected:

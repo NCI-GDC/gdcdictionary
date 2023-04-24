@@ -66,17 +66,25 @@ properties:
       - "_terms.yaml#/aa_change/common"
     type: string
 
+  aneuploidy:
+    $ref:
+      - "_terms.yaml#/aneuploidy/common"
+    enum:
+      - Monosomy
+      - Trisomy
+
   antigen:
     $ref:
       - "_terms.yaml#/antigen/common"
     enum:
       - BCL6
-      - CA-125
       - CA19-9
+      - CA-125
       - CCND1
+      - CD3
+      - CD5
+      - CD7
       - CD10
-      - CD117
-      - CD138
       - CD14
       - CD15
       - CD19
@@ -84,15 +92,14 @@ properties:
       - CD22
       - CD23
       - CD25
-      - CD3
       - CD30
       - CD33
       - CD34
       - CD45
-      - CD5
       - CD56
-      - CD7
       - CD79A
+      - CD117
+      - CD138
       - CEA
       - FMC-7
       - HLA-DR
@@ -202,13 +209,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-
-  aneuploidy:
-    $ref:
-      - "_terms.yaml#/aneuploidy/common"
-    enum:
-      - Monosomy
-      - Trisomy
 
   biospecimen_type:
     $ref:
@@ -325,6 +325,20 @@ properties:
       - "_terms.yaml#/cell_count/common"
     type: integer
     minimum: 0
+
+  chromosomal_translocation:
+    $ref:
+      - "_terms.yaml#/chromosomal_translocation/common"
+    enum:
+      - t(3;5)(q25;q34)
+      - t(6;9)
+      - t(6;11)(q27;q23)
+      - t(8;21)
+      - t(9;11)(p22;q23)
+      - t(10;11)(p11.2;q23)
+      - t(11;19)(q23;p13.1)
+      - Unknown
+      - Not Reported
 
   chromosome:
     $ref:
@@ -444,11 +458,13 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  copy_number:
+  chromosome_arm:
     $ref:
-      - "_terms.yaml#/copy_number/common"
-    type: number
-    minimum: 0
+      - "_terms.yaml#/chromosome_arm/common"
+    enum:
+      - p
+      - q
+      - Not Reported
 
   clonality:
     $ref:
@@ -464,27 +480,11 @@ properties:
         $ref:
           - "_terms_enum.yaml#/nonclonal/common"
 
-  chromosomal_translocation:
+  copy_number:
     $ref:
-      - "_terms.yaml#/chromosomal_translocation/common"
-    enum:
-      - t(6;9)
-      - t(8;21)
-      - t(3;5)(q25;q34)
-      - t(6;11)(q27;q23)
-      - t(9;11)(p22;q23)
-      - t(10;11)(p11.2;q23)
-      - t(11;19)(q23;p13.1)
-      - Unknown
-      - Not Reported
-
-  chromosome_arm:
-    $ref:
-      - "_terms.yaml#/chromosome_arm/common"
-    enum:
-      - p
-      - q
-      - Not Reported
+      - "_terms.yaml#/copy_number/common"
+    type: number
+    minimum: 0
 
   cytoband:
     $ref:
@@ -533,8 +533,8 @@ properties:
       - AQP1
       - AR
       - ARAF
-      - ARHGAP26
       - ARHGAP5
+      - ARHGAP26
       - ARHGEF12
       - ARID1A
       - ARID1B
@@ -555,9 +555,6 @@ properties:
       - B2M
       - BAP1
       - BARD1
-      - BCL10
-      - BCL11A
-      - BCL11B
       - BCL2
       - BCL2L12
       - BCL3
@@ -565,6 +562,9 @@ properties:
       - BCL7A
       - BCL9
       - BCL9L
+      - BCL10
+      - BCL11A
+      - BCL11B
       - BCLAF1
       - BCOR
       - BCORL1
@@ -606,21 +606,21 @@ properties:
       - CCNE1
       - CCR4
       - CCR7
-      - CD209
-      - CD274
       - CD28
       - CD74
       - CD79A
       - CD79B
       - CD99
+      - CD209
+      - CD274
       - CDC73
       - CDH1
       - CDH10
       - CDH11
       - CDH17
-      - CDK12
       - CDK4
       - CDK6
+      - CDK12
       - CDKN1A
       - CDKN1B
       - CDKN2A
@@ -679,10 +679,10 @@ properties:
       - DDB2
       - DDIT3
       - DDR2
-      - DDX10
       - DDX3X
       - DDX5
       - DDX6
+      - DDX10
       - DEK
       - DGCR8
       - DICER1
@@ -731,10 +731,10 @@ properties:
       - EXT2
       - EZH2
       - EZR
-      - FAM131B
-      - FAM135B
       - FAM46C
       - FAM47C
+      - FAM131B
+      - FAM135B
       - FANCA
       - FANCC
       - FANCD2
@@ -810,9 +810,9 @@ properties:
       - HNF1A
       - HNRNPA2B1
       - HOOK3
+      - HOXA9
       - HOXA11
       - HOXA13
-      - HOXA9
       - HOXB1
       - HOXC11
       - HOXC13
@@ -831,9 +831,9 @@ properties:
       - IKBKB
       - IKZF1
       - IL2
-      - IL21R
       - IL6ST
       - IL7R
+      - IL21R
       - IRF4
       - IRS4
       - ISX
@@ -866,8 +866,8 @@ properties:
       - KNL1
       - KNSTRN
       - KRAS
-      - KRT20
       - KRT7
+      - KRT20
       - KTN1
       - LARP4B
       - LASP1
@@ -914,11 +914,11 @@ properties:
       - MLH1
       - MLH2
       - MLLT1
-      - MLLT10
-      - MLLT11
       - MLLT3
       - MLLT4
       - MLLT6
+      - MLLT10
+      - MLLT11
       - MN1
       - MNX1
       - MPL
@@ -929,16 +929,16 @@ properties:
       - MTCP1
       - MTOR
       - MUC1
-      - MUC16
       - MUC4
+      - MUC16
       - MUTYH
       - MYB
       - MYC
       - MYCL
       - MYCN
       - MYD88
-      - MYH11
       - MYH9
+      - MYH11
       - MYO5A
       - MYOD1
       - NAB2
@@ -962,7 +962,6 @@ properties:
       - NIN
       - NKX2-1
       - NONO
-      - Not Applicable
       - NOTCH1
       - NOTCH2
       - NPM1
@@ -977,8 +976,8 @@ properties:
       - NTRK1
       - NTRK3
       - NUMA1
-      - NUP214
       - NUP98
+      - NUP214
       - NUTM1
       - NUTM2A
       - NUTM2B
@@ -1031,8 +1030,8 @@ properties:
       - PPP6C
       - PRCC
       - PRDM1
-      - PRDM16
       - PRDM2
+      - PRDM16
       - PREX2
       - PRF1
       - PRKACA
@@ -1045,9 +1044,9 @@ properties:
       - PTEN
       - PTGS2
       - PTK6
+      - PTPN6
       - PTPN11
       - PTPN13
-      - PTPN6
       - PTPRB
       - PTPRC
       - PTPRK
@@ -1074,13 +1073,13 @@ properties:
       - RHOA
       - RHOH
       - RMI2
-      - RNF213
       - RNF43
+      - RNF213
       - ROBO2
       - ROS1
+      - RPL5
       - RPL10
       - RPL22
-      - RPL5
       - RPN1
       - RSPO2
       - RSPO3
@@ -1155,9 +1154,9 @@ properties:
       - TBL1XR1
       - TBX3
       - TCEA1
-      - TCF12
       - TCF3
       - TCF7L2
+      - TCF12
       - TCL1A
       - TEC
       - TERT
@@ -1231,6 +1230,7 @@ properties:
       - ZRSR2
       - Unknown
       - Not Reported
+      - Not Applicable
     enumDef:
       A1CF:
         $ref:
@@ -4146,8 +4146,8 @@ properties:
       - APOBEC3B
       - AR
       - ARAF
-      - ARHGAP26
       - ARHGAP5
+      - ARHGAP26
       - ARHGEF12
       - ARID1A
       - ARID1B
@@ -4168,9 +4168,6 @@ properties:
       - B2M
       - BAP1
       - BARD1
-      - BCL10
-      - BCL11A
-      - BCL11B
       - BCL2
       - BCL2L12
       - BCL3
@@ -4178,6 +4175,9 @@ properties:
       - BCL7A
       - BCL9
       - BCL9L
+      - BCL10
+      - BCL11A
+      - BCL11B
       - BCLAF1
       - BCOR
       - BCORL1
@@ -4218,21 +4218,21 @@ properties:
       - CCNE1
       - CCR4
       - CCR7
-      - CD209
-      - CD274
       - CD28
       - CD74
       - CD79A
       - CD79B
       - CD99
+      - CD209
+      - CD274
       - CDC73
       - CDH1
       - CDH10
       - CDH11
       - CDH17
-      - CDK12
       - CDK4
       - CDK6
+      - CDK12
       - CDKN1A
       - CDKN1B
       - CDKN2A
@@ -4291,10 +4291,10 @@ properties:
       - DDB2
       - DDIT3
       - DDR2
-      - DDX10
       - DDX3X
       - DDX5
       - DDX6
+      - DDX10
       - DEK
       - DGCR8
       - DICER1
@@ -4341,10 +4341,10 @@ properties:
       - EXT2
       - EZH2
       - EZR
-      - FAM131B
-      - FAM135B
       - FAM46C
       - FAM47C
+      - FAM131B
+      - FAM135B
       - FANCA
       - FANCC
       - FANCD2
@@ -4419,9 +4419,9 @@ properties:
       - HNF1A
       - HNRNPA2B1
       - HOOK3
+      - HOXA9
       - HOXA11
       - HOXA13
-      - HOXA9
       - HOXB1
       - HOXC11
       - HOXC13
@@ -4439,9 +4439,9 @@ properties:
       - IKBKB
       - IKZF1
       - IL2
-      - IL21R
       - IL6ST
       - IL7R
+      - IL21R
       - IRF4
       - IRS4
       - ISX
@@ -4519,11 +4519,11 @@ properties:
       - MLH1
       - MLH2
       - MLLT1
-      - MLLT10
-      - MLLT11
       - MLLT3
       - MLLT4
       - MLLT6
+      - MLLT10
+      - MLLT11
       - MN1
       - MNX1
       - MPL
@@ -4534,16 +4534,16 @@ properties:
       - MTCP1
       - MTOR
       - MUC1
-      - MUC16
       - MUC4
+      - MUC16
       - MUTYH
       - MYB
       - MYC
       - MYCL
       - MYCN
       - MYD88
-      - MYH11
       - MYH9
+      - MYH11
       - MYO5A
       - MYOD1
       - NAB2
@@ -4581,8 +4581,8 @@ properties:
       - NTRK1
       - NTRK3
       - NUMA1
-      - NUP214
       - NUP98
+      - NUP214
       - NUTM1
       - NUTM2A
       - NUTM2B
@@ -4634,8 +4634,8 @@ properties:
       - PPP6C
       - PRCC
       - PRDM1
-      - PRDM16
       - PRDM2
+      - PRDM16
       - PREX2
       - PRF1
       - PRKACA
@@ -4647,9 +4647,9 @@ properties:
       - PTCH1
       - PTEN
       - PTK6
+      - PTPN6
       - PTPN11
       - PTPN13
-      - PTPN6
       - PTPRB
       - PTPRC
       - PTPRK
@@ -4676,13 +4676,13 @@ properties:
       - RHOA
       - RHOH
       - RMI2
-      - RNF213
       - RNF43
+      - RNF213
       - ROBO2
       - ROS1
+      - RPL5
       - RPL10
       - RPL22
-      - RPL5
       - RPN1
       - RSPO2
       - RSPO3
@@ -4757,9 +4757,9 @@ properties:
       - TBL1XR1
       - TBX3
       - TCEA1
-      - TCF12
       - TCF3
       - TCF7L2
+      - TCF12
       - TCL1A
       - TEC
       - TERT
@@ -7077,14 +7077,14 @@ properties:
       - ng/mL
       - percent
       - U/g Hb
-      - U/mL
       - U/L
+      - U/mL
       - ukat/L
       - umol/L
       - x10^3 cells/mcL
       - x10^9 cells/L
-      - Not Reported
       - Unknown
+      - Not Reported
     deprecated_enum:
       - count x10^9/L
 

@@ -1095,10 +1095,10 @@ properties:
     enum:
       - hispanic or latino
       - not hispanic or latino
+      - unknown
       - Unknown
       - not reported
       - not allowed to collect
-      - unknown
     deprecated_enum:
       - unknown
     enumDef:
@@ -1127,8 +1127,8 @@ properties:
     enum:
       - female
       - male
-      - unknown
       - unspecified
+      - unknown
       - not reported
     enumDef:
       female:
@@ -1180,16 +1180,16 @@ properties:
     $ref:
       - "_terms.yaml#/race/common"
     enum:
-      - white
       - american indian or alaska native
-      - black or african american
       - asian
+      - black or african american
       - native hawaiian or other pacific islander
       - other
+      - unknown
+      - white
       - Unknown
       - not reported
       - not allowed to collect
-      - unknown
     deprecated_enum:
       - unknown
     enumDef:

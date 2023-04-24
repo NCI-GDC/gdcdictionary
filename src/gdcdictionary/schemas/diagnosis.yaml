@@ -87,13 +87,13 @@ properties:
     $ref:
       - "_terms.yaml#/ajcc_clinical_m/common"
     enum:
+      - cM0 (i+)
       - M0
       - M1
       - M1a
       - M1b
       - M1c
       - MX
-      - cM0 (i+)
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -260,9 +260,9 @@ properties:
       - Stage IA2
       - Stage IA3
       - Stage IB
-      - Stage IB Cervix
       - Stage IB1
       - Stage IB2
+      - Stage IB Cervix
       - Stage IC
       - Stage II
       - Stage II Cervix
@@ -319,9 +319,6 @@ properties:
       Stage IB:
         $ref:
           - "_terms_enum.yaml#/stage_ib/common"
-      Stage IB Cervix:
-        $ref:
-          - "_terms_enum.yaml#/stage_ib_cervix/common"
       Stage IB1:
         $ref:
           - "_terms_enum.yaml#/stage_ib1/common"
@@ -334,9 +331,6 @@ properties:
       Stage II:
         $ref:
           - "_terms_enum.yaml#/stage_ii/common"
-      Stage II Cervix:
-        $ref:
-          - "_terms_enum.yaml#/stage_ii_cervix/common"
       Stage IIA:
         $ref:
           - "_terms_enum.yaml#/stage_iia/common"
@@ -346,9 +340,6 @@ properties:
       Stage IIA2:
         $ref:
           - "_terms_enum.yaml#/stage_iia2/common"
-      Stage IIA Cervix:
-        $ref:
-          - "_terms_enum.yaml#/stage_iia_cervix/common"
       Stage IIB:
         $ref:
           - "_terms_enum.yaml#/stage_iib/common"
@@ -403,6 +394,15 @@ properties:
       Not Allowed To Collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
+      Stage IB Cervix:
+        $ref:
+          - "_terms_enum.yaml#/stage_ib_cervix/common"
+      Stage II Cervix:
+        $ref:
+          - "_terms_enum.yaml#/stage_ii_cervix/common"
+      Stage IIA Cervix:
+        $ref:
+          - "_terms_enum.yaml#/stage_iia_cervix/common"
 
   ajcc_clinical_t:
     $ref:
@@ -436,12 +436,12 @@ properties:
       - T4c
       - T4d
       - T4e
-      - TX
       - Ta
       - Tis
       - Tis (DCIS)
       - Tis (LCIS)
       - Tis (Paget's)
+      - TX
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -564,6 +564,7 @@ properties:
     $ref:
       - "_terms.yaml#/ajcc_pathologic_m/common"
     enum:
+      - cM0 (i+)
       - M0
       - M1
       - M1a
@@ -572,7 +573,6 @@ properties:
       - M1d
       - M2
       - MX
-      - cM0 (i+)
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -629,10 +629,10 @@ properties:
       - N1c
       - N1mi
       - N2
-      - N2mi
       - N2a
       - N2b
       - N2c
+      - N2mi
       - N3
       - N3a
       - N3b
@@ -744,7 +744,6 @@ properties:
       - Stage IB2
       - Stage IC
       - Stage II
-      - Stage IS
       - Stage IIA
       - Stage IIA1
       - Stage IIA2
@@ -759,6 +758,7 @@ properties:
       - Stage IIIC1
       - Stage IIIC2
       - Stage IIID
+      - Stage IS
       - Stage IV
       - Stage IVA
       - Stage IVB
@@ -898,12 +898,12 @@ properties:
       - T4c
       - T4d
       - T4e
-      - TX
       - Ta
       - Tis
       - Tis (DCIS)
       - Tis (LCIS)
       - Tis (Paget's)
+      - TX
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -1430,25 +1430,29 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
-  cog_neuroblastoma_risk_group:
+  cog_liver_stage:
     $ref:
-      - "_terms.yaml#/cog_neuroblastoma_risk_group/common"
+      - "_terms.yaml#/cog_liver_stage/common"
     enum:
-      - High Risk
-      - Intermediate Risk
-      - Low Risk
+      - Stage I
+      - Stage II
+      - Stage III
+      - Stage IV
       - Unknown
       - Not Reported
     enumDef:
-      High Risk:
+      Stage I:
         $ref:
-          - "_terms_enum.yaml#/high_risk/common"
-      Intermediate Risk:
+          - "_terms_enum.yaml#/stage_i/common"
+      Stage II:
         $ref:
-          - "_terms_enum.yaml#/intermediate_risk/common"
-      Low Risk:
+          - "_terms_enum.yaml#/stage_ii/common"
+      Stage III:
         $ref:
-          - "_terms_enum.yaml#/low_risk/common"
+          - "_terms_enum.yaml#/stage_iii/common"
+      Stage IV:
+        $ref:
+          - "_terms_enum.yaml#/stage_iv/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -1456,9 +1460,9 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  cog_rhabdomyosarcoma_risk_group:
+  cog_neuroblastoma_risk_group:
     $ref:
-      - "_terms.yaml#/cog_rhabdomyosarcoma_risk_group/common"
+      - "_terms.yaml#/cog_neuroblastoma_risk_group/common"
     enum:
       - High Risk
       - Intermediate Risk
@@ -1512,29 +1516,25 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  cog_liver_stage:
+  cog_rhabdomyosarcoma_risk_group:
     $ref:
-      - "_terms.yaml#/cog_liver_stage/common"
+      - "_terms.yaml#/cog_rhabdomyosarcoma_risk_group/common"
     enum:
-      - Stage I
-      - Stage II
-      - Stage III
-      - Stage IV
+      - High Risk
+      - Intermediate Risk
+      - Low Risk
       - Unknown
       - Not Reported
     enumDef:
-      Stage I:
+      High Risk:
         $ref:
-          - "_terms_enum.yaml#/stage_i/common"
-      Stage II:
+          - "_terms_enum.yaml#/high_risk/common"
+      Intermediate Risk:
         $ref:
-          - "_terms_enum.yaml#/stage_ii/common"
-      Stage III:
+          - "_terms_enum.yaml#/intermediate_risk/common"
+      Low Risk:
         $ref:
-          - "_terms_enum.yaml#/stage_iii/common"
-      Stage IV:
-        $ref:
-          - "_terms_enum.yaml#/stage_iv/common"
+          - "_terms_enum.yaml#/low_risk/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -2082,6 +2082,12 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  icd_10_code:
+    $ref:
+      - "_terms.yaml#/icd_10_code/common"
+    type: string
+    pattern: "^[A-TV-Z][0-9][A-Z0-9](\\.?[A-Z0-9]{1,4})?$"
+
   igcccg_stage:
     $ref:
       - "_terms.yaml#/igcccg_stage/common"
@@ -2098,12 +2104,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-
-  icd_10_code:
-    $ref:
-      - "_terms.yaml#/icd_10_code/common"
-    type: string
-    pattern: "^[A-TV-Z][0-9][A-Z0-9](\\.?[A-Z0-9]{1,4})?$"
 
   inpc_grade:
     $ref:
@@ -2226,10 +2226,10 @@ properties:
     $ref:
       - "_terms.yaml#/international_prognostic_index/common"
     enum:
+      - High Risk
+      - High-Intermediate Risk
       - Low Risk
       - Low-Intermediate Risk
-      - High-Intermediate Risk
-      - High Risk
     enumDef:
       Low Risk:
         $ref:
@@ -2361,8 +2361,8 @@ properties:
       - I
       - II
       - III
-      - Not Reported
       - Unknown
+      - Not Reported
     enumDef:
       I:
         $ref:
@@ -2384,9 +2384,9 @@ properties:
     $ref:
       - "_terms.yaml#/last_known_disease_status/common"
     enum:
+      - Biochemical evidence of disease without structural correlate
       - Distant met recurrence/progression
       - Loco-regional recurrence/progression
-      - Biochemical evidence of disease without structural correlate
       - Tumor free
       - Unknown tumor status
       - With tumor
@@ -2531,8 +2531,8 @@ properties:
       - Pancreas
       - Paraaortic lymph nodes
       - Parotid gland
-      - Pericardium
       - Peri-orbital soft tissue
+      - Pericardium
       - Retroperitoneal lymph nodes
       - Small intestine
       - Soft tissue (muscle, ligaments, subcutaneous)
@@ -2546,8 +2546,8 @@ properties:
     $ref:
       - "_terms.yaml#/medulloblastoma_molecular_classification/common"
     enum:
-      - Not Determined
       - Non-WNT/non-SHH Activated
+      - Not Determined
       - SHH-Activated
       - WNT-Activated
       - Unknown
@@ -2643,8 +2643,8 @@ properties:
       - Skin
       - Small Intestine
       - Soft Tissue
-      - Spleen
       - Spinal Cord
+      - Spleen
       - Stomach
       - Urethra
       - Uterine Adnexa
@@ -2768,8 +2768,8 @@ properties:
       - Blood Draw
       - Bone Marrow Aspirate
       - Core Biopsy
-      - Cytology
       - Cystoscopy
+      - Cytology
       - Debulking
       - Diagnostic Imaging
       - Dilation and Curettage Procedure
@@ -2783,8 +2783,8 @@ properties:
       - Laparotomy
       - Other
       - Pap Smear
-      - Physical Exam
       - Pathologic Review
+      - Physical Exam
       - Surgical Resection
       - Thoracentesis
       - Ultrasound Guided Biopsy
@@ -2898,12 +2898,6 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  mitotic_count:
-    $ref:
-      - "_terms.yaml#/mitotic_count/common"
-    type: integer
-    minimum: 0
-
   mitosis_karyorrhexis_index:
     $ref:
       - "_terms.yaml#/mitosis_karyorrhexis_index/common"
@@ -2929,6 +2923,12 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  mitotic_count:
+    $ref:
+      - "_terms.yaml#/mitotic_count/common"
+    type: integer
+    minimum: 0
 
   morphology:
     $ref:
@@ -2973,8 +2973,8 @@ properties:
       - 8040/1
       - 8040/3
       - 8041/3
-      - 8041/34
       - 8041/6
+      - 8041/34
       - 8042/3
       - 8043/3
       - 8044/3
@@ -2993,8 +2993,8 @@ properties:
       - 8060/0
       - 8070/2
       - 8070/3
-      - 8070/33
       - 8070/6
+      - 8070/33
       - 8071/2
       - 8071/3
       - 8072/3
@@ -3048,8 +3048,8 @@ properties:
       - 8140/1
       - 8140/2
       - 8140/3
-      - 8140/33
       - 8140/6
+      - 8140/33
       - 8141/3
       - 8142/3
       - 8143/3
@@ -3966,8 +3966,8 @@ properties:
       - 9709/3
       - 9712/3
       - 9714/3
-      - 9716/3
       - 9715/3
+      - 9716/3
       - 9717/3
       - 9718/3
       - 9719/3
@@ -7120,15 +7120,15 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      Ovarian Capsule Fragmented:
+        $ref:
+          - "_terms_enum.yaml#/ovarian_capsule_fragmented/common"
       Ovarian Capsule Intact:
         $ref:
           - "_terms_enum.yaml#/ovarian_capsule_intact/common"
       Ovarian Capsule Ruptured:
         $ref:
           - "_terms_enum.yaml#/ovarian_capsule_ruptured/common"
-      Ovarian Capsule Fragmented:
-        $ref:
-          - "_terms_enum.yaml#/ovarian_capsule_fragmented/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -7149,12 +7149,12 @@ properties:
       Absent:
         $ref:
           - "_terms_enum.yaml#/absent/common"
-      Present:
-        $ref:
-          - "_terms_enum.yaml#/present/common"
       Indeterminate:
         $ref:
           - "_terms_enum.yaml#/indeterminate/common"
+      Present:
+        $ref:
+          - "_terms_enum.yaml#/present/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -7180,12 +7180,20 @@ properties:
     $ref:
       - "_terms.yaml#/pediatric_kidney_staging/common"
     enum:
-      - Nephrectomy specimen with tumor confined to the kidney; distant metastasis identified at diagnosis
+      - Nephrectomy specimen with tumor confined to the kidney; distant metastasis
+        identified at diagnosis
       - Nephrectomy specimen with tumor confined to the kidney; no distant metastasis
-      - Nephrectomy specimen with tumor that penetrates the renal capsule or involves the renal sinus with negative margins and negative lymph nodes; distant metastasis identified at diagnosis
-      - Nephrectomy specimen with tumor that penetrates the renal capsule or involves the renal sinus with negative margins and negative lymph nodes; no distant metastasis
-      - Nephrectomy specimen with tumor that is present at the surgical margin of resection or within regional lymph nodes; distant metastasis identified at diagnosis
-      - Nephrectomy specimen with tumor that is present at the surgical margin of resection or within regional lymph nodes; no distant metastasis
+      - Nephrectomy specimen with tumor that is present at the surgical margin of
+        resection or within regional lymph nodes; distant metastasis identified at
+        diagnosis
+      - Nephrectomy specimen with tumor that is present at the surgical margin of
+        resection or within regional lymph nodes; no distant metastasis
+      - Nephrectomy specimen with tumor that penetrates the renal capsule or involves
+        the renal sinus with negative margins and negative lymph nodes; distant metastasis
+        identified at diagnosis
+      - Nephrectomy specimen with tumor that penetrates the renal capsule or involves
+        the renal sinus with negative margins and negative lymph nodes; no distant
+        metastasis
       - Tumor biopsied only at diagnosis; distant metastasis identified at diagnosis
       - Tumor biopsied only at diagnosis; no distant metastasis
       - Not Reported
@@ -7242,11 +7250,6 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  primary_disease:
-    $ref:
-      - "_terms.yaml#/primary_disease/common"
-    type: boolean
-
   primary_diagnosis:
     $ref:
       - "_terms.yaml#/primary_diagnosis/common"
@@ -7283,11 +7286,11 @@ properties:
       - Acute leukemia, Burkitt type
       - Acute leukemia, NOS
       - Acute lymphatic leukemia
-      - Acute lymphoblastic leukemia-lymphoma, NOS
       - Acute lymphoblastic leukemia, L2 type, NOS
       - Acute lymphoblastic leukemia, mature B-cell type
       - Acute lymphoblastic leukemia, NOS
       - Acute lymphoblastic leukemia, precursor cell type
+      - Acute lymphoblastic leukemia-lymphoma, NOS
       - Acute lymphocytic leukemia
       - Acute lymphoid leukemia
       - Acute megakaryoblastic leukaemia
@@ -7546,9 +7549,9 @@ properties:
       - B lymphoblastic leukemia/lymphoma with hyperdiploidy
       - B lymphoblastic leukemia/lymphoma with hypodiploidy (Hypodiploid ALL)
       - B lymphoblastic leukemia/lymphoma with t(1;19)(q23;p13.3); E2A-PBX1 (TCF3-PBX1)
-      - B lymphoblastic leukemia/lymphoma with t(12;21)(p13;q22); TEL-AML1 (ETV6-RUNX1)
       - B lymphoblastic leukemia/lymphoma with t(5;14)(q31;q32); IL3-IGH
       - B lymphoblastic leukemia/lymphoma with t(9;22)(q34;q11.2); BCR-ABL1
+      - B lymphoblastic leukemia/lymphoma with t(12;21)(p13;q22); TEL-AML1 (ETV6-RUNX1)
       - B lymphoblastic leukemia/lymphoma with t(v;11q23); MLL rearranged
       - B lymphoblastic leukemia/lymphoma, NOS
       - B-ALL
@@ -8575,8 +8578,8 @@ properties:
       - Lipoblastomatosis
       - Lipoid cell tumor of ovary
       - Lipoleiomyoma
-      - Lipoma-like liposarcoma
       - Lipoma, NOS
+      - Lipoma-like liposarcoma
       - Lipomatous medulloblastoma
       - Liposarcoma, differentiated
       - Liposarcoma, NOS
@@ -9356,11 +9359,11 @@ properties:
       - Preleukemic syndrome
       - Primary amyloidosis
       - Primary cutaneous anaplastic large cell lymphoma
-      - Primary cutaneous CD30+ large T-cell lymphoma
-      - Primary cutaneous CD30+ T-cell lymphoproliferative disorder
       - Primary cutaneous CD4-positive small/medium T-cell lymphoma
       - Primary cutaneous CD8-positive aggressive epidermotropic cytotoxic T-cell
         lymphoma
+      - Primary cutaneous CD30+ large T-cell lymphoma
+      - Primary cutaneous CD30+ T-cell lymphoproliferative disorder
       - Primary cutaneous DLBCL, leg type
       - Primary cutaneous follicle centre lymphoma
       - Primary cutaneous gamma-delta T-cell lymphoma
@@ -16711,6 +16714,11 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  primary_disease:
+    $ref:
+      - "_terms.yaml#/primary_disease/common"
+    type: boolean
+
   primary_gleason_grade:
     $ref:
       - "_terms.yaml#/primary_gleason_grade/common"
@@ -18003,13 +18011,13 @@ properties:
       enum:
         - Abdomen
         - Abdominal Peritoneum
-        - Adrenal gland, NOS
         - Adnexa
+        - Adrenal gland, NOS
         - Anus, NOS
         - Appendix
         - Bladder, NOS
-        - Bone, NOS
         - Bone marrow
+        - Bone, NOS
         - Brain, Brain stem
         - Brain, Cerebellum, NOS
         - Brain, Cerebrum
@@ -18040,8 +18048,8 @@ properties:
         - Gastrosplenic Ligament
         - Heart
         - Kidney, Lower Pole
-        - Kidney, NOS
         - Kidney, Middle
+        - Kidney, NOS
         - Kidney, Upper Pole
         - Larynx, NOS
         - Leptomeninges
@@ -18056,8 +18064,8 @@ properties:
         - Mesothelium
         - Middle lobe, lung
         - Mouth
-        - Nasopharynx
         - Nasal soft tissue
+        - Nasopharynx
         - Neck
         - Ocular orbits
         - Omentum
@@ -18073,10 +18081,10 @@ properties:
         - Pelvic Lymph Node(s)
         - Pelvic Peritoneum
         - Pelvis
-        - Pericardium
-        - Perineum
         - Peri-aortic Lymph Node(s)
         - Peri-orbital soft tissue
+        - Pericardium
+        - Perineum
         - Peripheral blood
         - Peripheral Lung
         - Peripheral nervous system
@@ -18103,9 +18111,9 @@ properties:
         - Transverse colon
         - Upper lobe, lung
         - Uterus
-        - Unknown
         - Vagina
         - Vertebrae
+        - Unknown
         - Not Reported
     enumDef:
       Kidney, Lower Pole:
@@ -19357,14 +19365,14 @@ properties:
       - G2
       - G3
       - G4
-      - GX
       - GB
+      - GX
       - High Grade
       - Intermediate Grade
       - Low Grade
+      - not reported
       - Unknown
       - Not Reported
-      - not reported
     deprecated_enum:
       - not reported
     enumDef:
@@ -19447,13 +19455,13 @@ properties:
     $ref:
       - "_terms.yaml#/uicc_clinical_m/common"
     enum:
+      - cM0 (i+)
       - M0
       - M1
       - M1a
       - M1b
       - M1c
       - MX
-      - cM0 (i+)
       - Unknown
       - Not Reported
 
@@ -19559,12 +19567,12 @@ properties:
       - T4c
       - T4d
       - T4e
-      - TX
       - Ta
       - Tis
       - Tis (DCIS)
       - Tis (LCIS)
       - Tis (Paget's)
+      - TX
       - Unknown
       - Not Reported
 
@@ -19572,6 +19580,7 @@ properties:
     $ref:
       - "_terms.yaml#/uicc_pathologic_m/common"
     enum:
+      - cM0 (i+)
       - M0
       - M1
       - M1a
@@ -19580,7 +19589,6 @@ properties:
       - M1d
       - M2
       - MX
-      - cM0 (i+)
       - Unknown
       - Not Reported
 
@@ -19603,10 +19611,10 @@ properties:
       - N1c
       - N1mi
       - N2
-      - N2mi
       - N2a
       - N2b
       - N2c
+      - N2mi
       - N3
       - N3a
       - N3b
@@ -19633,7 +19641,6 @@ properties:
       - Stage IB2
       - Stage IC
       - Stage II
-      - Stage IS
       - Stage IIA
       - Stage IIA1
       - Stage IIA2
@@ -19648,6 +19655,7 @@ properties:
       - Stage IIIC1
       - Stage IIIC2
       - Stage IIID
+      - Stage IS
       - Stage IV
       - Stage IVA
       - Stage IVB
@@ -19690,12 +19698,12 @@ properties:
       - T4c
       - T4d
       - T4e
-      - TX
       - Ta
       - Tis
       - Tis (DCIS)
       - Tis (LCIS)
       - Tis (Paget's)
+      - TX
       - Unknown
       - Not Reported
 
