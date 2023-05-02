@@ -512,6 +512,7 @@ properties:
       - ABI1
       - ABL1
       - ABL2
+      - ACACA
       - ACKR3
       - ACSL3
       - ACSL6
@@ -577,9 +578,11 @@ properties:
       - BRAF
       - BRCA1
       - BRCA2
+      - BRD1
       - BRD3
       - BRD4
       - BRIP1
+      - BTBD18
       - BTG1
       - BTK
       - BUB1B
@@ -592,6 +595,7 @@ properties:
       - CARD11
       - CARS
       - CASP8
+      - CBFA2T2
       - CBFA2T3
       - CBFB
       - CBL
@@ -628,6 +632,8 @@ properties:
       - CDX2
       - CEBPA
       - CEP89
+      - CEP164
+      - CEP170B
       - CHCHD7
       - CHD2
       - CHD4
@@ -662,6 +668,7 @@ properties:
       - CSF3R
       - CSMD3
       - CTCF
+      - CTDP1
       - CTNNA2
       - CTNNB1
       - CTNND1
@@ -690,6 +697,7 @@ properties:
       - DNM2
       - DNMT3A
       - DNTT
+      - DOT1L
       - DROSHA
       - DUX4L1
       - EBF1
@@ -775,6 +783,7 @@ properties:
       - FOXO4
       - FOXP1
       - FOXR1
+      - FRYL
       - FSTL3
       - FUBP1
       - FUS
@@ -784,6 +793,7 @@ properties:
       - GATA3
       - GCET1
       - GLI1
+      - GLIS2
       - GMPS
       - GNA11
       - GNAQ
@@ -806,9 +816,11 @@ properties:
       - HLF
       - HMGA1
       - HMGA2
+      - HMGB3
       - HMGN2P46
       - HNF1A
       - HNRNPA2B1
+      - HNRNPH1
       - HOOK3
       - HOXA9
       - HOXA11
@@ -834,6 +846,7 @@ properties:
       - IL6ST
       - IL7R
       - IL21R
+      - INO80D
       - IRF4
       - IRS4
       - ISX
@@ -842,6 +855,7 @@ properties:
       - JAK1
       - JAK2
       - JAK3
+      - JARID2
       - JAZF1
       - JUN
       - KAT6A
@@ -1005,12 +1019,14 @@ properties:
       - PER1
       - PGR
       - PHF6
+      - PHF23
       - PHOX2B
       - PICALM
       - PIK3CA
       - PIK3CB
       - PIK3R1
       - PIM1
+      - PIM3
       - PLAG1
       - PLCG1
       - PML
@@ -1044,6 +1060,7 @@ properties:
       - PTEN
       - PTGS2
       - PTK6
+      - PTP4A1
       - PTPN6
       - PTPN11
       - PTPN13
@@ -1081,6 +1098,7 @@ properties:
       - RPL10
       - RPL22
       - RPN1
+      - RPS15
       - RSPO2
       - RSPO3
       - RUNX1
@@ -1099,6 +1117,7 @@ properties:
       - SEPT9
       - SET
       - SETBP1
+      - SETD1A
       - SETD2
       - SF3B1
       - SFPQ
@@ -1111,6 +1130,7 @@ properties:
       - SKI
       - SLC34A2
       - SLC45A3
+      - SLC66A2 (aka PQLC1)
       - SMAD2
       - SMAD3
       - SMAD4
@@ -1179,6 +1199,7 @@ properties:
       - TNFRSF14
       - TNFRSF17
       - TOP1
+      - TOP2B
       - TP53
       - TP63
       - TPM3
@@ -1197,6 +1218,7 @@ properties:
       - TSC2
       - TSHR
       - U2AF1
+      - UBB
       - UBR5
       - USP6
       - USP8
@@ -1217,6 +1239,7 @@ properties:
       - ZBTB16
       - ZCCHC8
       - ZEB1
+      - ZEB2
       - ZFHX3
       - ZMYM3
       - ZNF198
@@ -3377,6 +3400,54 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      GLIS2:
+        $ref:
+          - "_terms_enum.yaml#/glis2/common"
+      PTP4A1:
+        $ref:
+          - "_terms_enum.yaml#/ptp4a1/common"
+      PIM3:
+        $ref:
+          - "_terms_enum.yaml#/pim3/common"
+      BRD1:
+        $ref:
+          - "_terms_enum.yaml#/brd1/common"
+      DOT1L:
+        $ref:
+          - "_terms_enum.yaml#/dot1l/common"
+      INO80D:
+        $ref:
+          - "_terms_enum.yaml#/ino80d/common"
+      ACACA:
+        $ref:
+          - "_terms_enum.yaml#/acaca/common"
+      BTBD18:
+        $ref:
+          - "_terms_enum.yaml#/btbd18/common"
+      CEP170B:
+        $ref:
+          - "_terms_enum.yaml#/cep170b/common"
+      FRYL:
+        $ref:
+          - "_terms_enum.yaml#/fryl/common"
+      HMGB3:
+        $ref:
+          - "_terms_enum.yaml#/hmgb3/common"
+      TOP2B:
+        $ref:
+          - "_terms_enum.yaml#/top2b/common"
+      PHF23:
+        $ref:
+          - "_terms_enum.yaml#/phf23/common"
+      CBFA2T2:
+        $ref:
+          - "_terms_enum.yaml#/cbfa2t2/common"
+      UBB:
+        $ref:
+          - "_terms_enum.yaml#/ubb/common"
+      ZEB2:
+        $ref:
+          - "_terms_enum.yaml#/zeb2/common"
 
   histone_family:
     $ref:
@@ -4126,6 +4197,7 @@ properties:
       - ABI1
       - ABL1
       - ABL2
+      - ACACA
       - ACKR3
       - ACSL3
       - ACSL6
@@ -4190,9 +4262,11 @@ properties:
       - BRAF
       - BRCA1
       - BRCA2
+      - BRD1
       - BRD3
       - BRD4
       - BRIP1
+      - BTBD18
       - BTG1
       - BTK
       - BUB1B
@@ -4204,6 +4278,7 @@ properties:
       - CARD11
       - CARS
       - CASP8
+      - CBFA2T2
       - CBFA2T3
       - CBFB
       - CBL
@@ -4240,6 +4315,8 @@ properties:
       - CDX2
       - CEBPA
       - CEP89
+      - CEP164
+      - CEP170B
       - CHCHD7
       - CHD2
       - CHD4
@@ -4274,6 +4351,7 @@ properties:
       - CSF3R
       - CSMD3
       - CTCF
+      - CTDP1
       - CTNNA2
       - CTNNB1
       - CTNND1
@@ -4301,6 +4379,7 @@ properties:
       - DNAJB1
       - DNM2
       - DNMT3A
+      - DOT1L
       - DROSHA
       - DUX4L1
       - EBF1
@@ -4385,6 +4464,7 @@ properties:
       - FOXO4
       - FOXP1
       - FOXR1
+      - FRYL
       - FSTL3
       - FUBP1
       - FUS
@@ -4393,6 +4473,7 @@ properties:
       - GATA2
       - GATA3
       - GLI1
+      - GLIS2
       - GMPS
       - GNA11
       - GNAQ
@@ -4415,9 +4496,11 @@ properties:
       - HLF
       - HMGA1
       - HMGA2
+      - HMGB3
       - HMGN2P46
       - HNF1A
       - HNRNPA2B1
+      - HNRNPH1
       - HOOK3
       - HOXA9
       - HOXA11
@@ -4442,6 +4525,7 @@ properties:
       - IL6ST
       - IL7R
       - IL21R
+      - INO80D
       - IRF4
       - IRS4
       - ISX
@@ -4450,6 +4534,7 @@ properties:
       - JAK1
       - JAK2
       - JAK3
+      - JARID2
       - JAZF1
       - JUN
       - KAT6A
@@ -4609,12 +4694,14 @@ properties:
       - PER1
       - PGR
       - PHF6
+      - PHF23
       - PHOX2B
       - PICALM
       - PIK3CA
       - PIK3CB
       - PIK3R1
       - PIM1
+      - PIM3
       - PLAG1
       - PLCG1
       - PML
@@ -4647,6 +4734,7 @@ properties:
       - PTCH1
       - PTEN
       - PTK6
+      - PTP4A1
       - PTPN6
       - PTPN11
       - PTPN13
@@ -4684,6 +4772,7 @@ properties:
       - RPL10
       - RPL22
       - RPN1
+      - RPS15
       - RSPO2
       - RSPO3
       - RUNX1
@@ -4702,6 +4791,7 @@ properties:
       - SEPT9
       - SET
       - SETBP1
+      - SETD1A
       - SETD2
       - SF3B1
       - SFPQ
@@ -4714,6 +4804,7 @@ properties:
       - SKI
       - SLC34A2
       - SLC45A3
+      - SLC66A2 (aka PQLC1)
       - SMAD2
       - SMAD3
       - SMAD4
@@ -4782,6 +4873,7 @@ properties:
       - TNFRSF14
       - TNFRSF17
       - TOP1
+      - TOP2B
       - TP53
       - TP63
       - TPM3
@@ -4800,6 +4892,7 @@ properties:
       - TSC2
       - TSHR
       - U2AF1
+      - UBB
       - UBR5
       - USP6
       - USP8
@@ -4820,6 +4913,7 @@ properties:
       - ZBTB16
       - ZCCHC8
       - ZEB1
+      - ZEB2
       - ZFHX3
       - ZMYM3
       - ZNF198
@@ -6964,11 +7058,66 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      GLIS2:
+        $ref:
+          - "_terms_enum.yaml#/glis2/common"
+      PTP4A1:
+        $ref:
+          - "_terms_enum.yaml#/ptp4a1/common"
+      PIM3:
+        $ref:
+          - "_terms_enum.yaml#/pim3/common"
+      BRD1:
+        $ref:
+          - "_terms_enum.yaml#/brd1/common"
+      DOT1L:
+        $ref:
+          - "_terms_enum.yaml#/dot1l/common"
+      INO80D:
+        $ref:
+          - "_terms_enum.yaml#/ino80d/common"
+      ACACA:
+        $ref:
+          - "_terms_enum.yaml#/acaca/common"
+      BTBD18:
+        $ref:
+          - "_terms_enum.yaml#/btbd18/common"
+      CEP170B:
+        $ref:
+          - "_terms_enum.yaml#/cep170b/common"
+      FRYL:
+        $ref:
+          - "_terms_enum.yaml#/fryl/common"
+      HMGB3:
+        $ref:
+          - "_terms_enum.yaml#/hmgb3/common"
+      TOP2B:
+        $ref:
+          - "_terms_enum.yaml#/top2b/common"
+      PHF23:
+        $ref:
+          - "_terms_enum.yaml#/phf23/common"
+      CBFA2T2:
+        $ref:
+          - "_terms_enum.yaml#/cbfa2t2/common"
+      UBB:
+        $ref:
+          - "_terms_enum.yaml#/ubb/common"
+      ZEB2:
+        $ref:
+          - "_terms_enum.yaml#/zeb2/common"
 
   specialized_molecular_test:
     $ref:
       - "_terms.yaml#/specialized_molecular_test/common"
     type: string
+
+  staining_intensity_scale:
+    description: >-
+      The scale used by the immunohistochemistry staining rating.
+    enum:
+      - 3 Point Scale
+      - 4 Point Scale
 
   test_analyte_type:
     $ref:
@@ -7098,9 +7247,22 @@ properties:
       - "_terms.yaml#/test_value_range/common"
     enum:
       - 0-25
+      - 1–49%
+      - 10–19%
+      - 20–29%
       - 26-50
+      - 30–39%
+      - 40–49%
+      - 50–59%
       - 51-75
+      - 60–69%
+      - 70–79%
       - 76-100
+      - 80–89%
+      - 90–99%
+      - <1%
+      - <10%
+      - '>=50%'
       - Not Reported
 
   timepoint_category:
@@ -7110,7 +7272,12 @@ properties:
       - End of Consolidation Therapy
       - End of Treatment Course 1
       - End of Treatment Course 2
+      - Preoperative
       - Not Reported
+    enumDef:
+      Preoperative:
+        $ref:
+          - "_terms_enum.yaml#/preoperative/common"
 
   transcript:
     $ref:
