@@ -1095,8 +1095,8 @@ properties:
     enum:
       - hispanic or latino
       - not hispanic or latino
-      - unknown
       - Unknown
+      - unknown
       - not reported
       - not allowed to collect
     deprecated_enum:
@@ -1184,10 +1184,10 @@ properties:
       - asian
       - black or african american
       - native hawaiian or other pacific islander
-      - other
-      - unknown
       - white
+      - other
       - Unknown
+      - unknown
       - not reported
       - not allowed to collect
     deprecated_enum:

@@ -84,7 +84,6 @@ properties:
       - Nonkeratinizing dysplasia; mild
       - Nonkeratinizing dysplasia; moderate
       - Nonkeratinizing dysplasia; severe (carcinoma in situ)
-      - Other
       - PD-L1 CPS (223C LDT) - 20%
       - Percent follicular component <= 10%
       - Percent follicular component > 10%
@@ -99,6 +98,7 @@ properties:
       - Tubular (papillary) adenoma(s)
       - Tumor has rough spikey edges
       - Tumor-associated lymphoid proliferation
+      - Other
 
   anaplasia_present:
     $ref:

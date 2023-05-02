@@ -375,7 +375,6 @@ properties:
       - Nephew
       - Niece
       - Niece Second Degree Relative
-      - Other
       - Parent
       - Paternal Aunt
       - Paternal First Cousin
@@ -409,6 +408,7 @@ properties:
       - Unrelated
       - Ward
       - Wife
+      - Other
       - Unknown
       - Not Reported
     enumDef:

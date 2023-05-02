@@ -120,12 +120,12 @@ properties:
     enum:
       - Gelfoam
       - Lipiodol
-      - Other
       - Plastic Beads
       - PVA Particles
       - Spherical Particles
       - Y-90 Sirsphere
       - Y-90 Therasphere
+      - Other
 
   initial_disease_status:
     $ref:
@@ -308,8 +308,8 @@ properties:
       - Course of Therapy Completed
       - Death
       - Disease Progression
-      - Other
       - Withdrawal by Subject
+      - Other
     enumDef:
       Other:
         $ref:
@@ -3497,7 +3497,6 @@ properties:
       - Orvacabtagene Autoleucel
       - Osilodrostat
       - Osimertinib
-      - Other
       - Otlertuzumab
       - Ovapuldencel-T
       - Ovarian Cancer Stem Cell/hTERT/Survivin mRNAs-loaded Autologous Dendritic
@@ -4858,6 +4857,7 @@ properties:
       - Zotatifin
       - Zotiraciclib Citrate
       - Zuclomiphene Citrate
+      - Other
       - Unknown
       - Not Reported
     enumDef:
@@ -6964,7 +6964,6 @@ properties:
       - Oral Cavity
       - Oral Cavity - Mucosa Only
       - Oropharynx
-      - Other
       - Ovary
       - Palate
       - Pancreas
@@ -7065,6 +7064,7 @@ properties:
       - Vulva
       - White Blood Cells
       - Wrist
+      - Other
       - Unknown
       - Not Reported
     enumDef:
@@ -7210,13 +7210,13 @@ properties:
     $ref:
       - "_terms.yaml#/treatment_frequency/common"
     enum:
-      - Every 24 Hours
       - Every Hour
-      - Every Other Day
       - Five Times Daily
       - Four Times Daily
       - Three Times Daily
       - Twice Daily
+      - Every 24 Hours
+      - Every Other Day
       - Twice Weekly
       - Once Weekly
       - Unknown
@@ -7344,7 +7344,6 @@ properties:
       - Internal Radiation
       - Isolated Limb Perfusion (ILP)
       - Organ Transplantation
-      - Other
       - Peptide Receptor Radionuclide Therapy (PRRT)
       - Pharmaceutical Therapy, NOS
       - Pleurodesis
@@ -7386,6 +7385,7 @@ properties:
       - Targeted Molecular Therapy
       - Total Pancreatectomy
       - Whipple
+      - Other
       - Unknown
       - Not Reported
       - Not Allowed To Collect

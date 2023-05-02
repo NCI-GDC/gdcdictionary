@@ -1098,7 +1098,6 @@ properties:
         - Organ transplant (site)
         - Osteoarthritis
         - Osteoporosis or Osteopenia
-        - Other
         - Other Cancer Within 5 Years
         - Other Nonmalignant Systemic Disease
         - Other Pulmonary Complications
@@ -1142,6 +1141,7 @@ properties:
         - Urinary Tract Infection
         - Varicella Zoster Virus
         - Wagr Syndrome
+        - Other
         - Unknown
         - Not Reported
 
@@ -1283,7 +1283,6 @@ properties:
       - Organ transplant (site)
       - Osteoarthritis
       - Osteoporosis or Osteopenia
-      - Other
       - Other Cancer Within 5 Years
       - Other Nonmalignant Systemic Disease
       - Other Pulmonary Complications
@@ -1327,6 +1326,7 @@ properties:
       - Urinary Tract Infection
       - Varicella Zoster Virus
       - Wagr Syndrome
+      - Other
       - Unknown
       - Not Reported
     enumDef:
@@ -1439,9 +1439,9 @@ properties:
       - Insulin
       - Linagliptin
       - Oral Hypoglycemic
-      - Other
       - Sulfonylurea
       - Thiazolidinedione
+      - Other
       - Unknown
       - Not Reported
     enumDef:
@@ -1554,8 +1554,8 @@ properties:
       - Gray
       - Green
       - Hazel
-      - Other
       - Red & Violet
+      - Other
       - Not Reported
 
   fev1_fvc_post_bronch_percent:
@@ -1597,10 +1597,10 @@ properties:
       - Induction Death
       - Induction Failure
       - None
-      - Other
       - Progression
       - Relapse
       - Second Malignant Neoplasm
+      - Other
       - Not Reported
 
   haart_treatment_indicator:
@@ -2879,7 +2879,6 @@ properties:
       - Follow-up
       - Initial Diagnosis
       - Last Contact
-      - Other
       - Post Adjuvant Therapy
       - Post Hormone Therapy
       - Post Secondary Therapy
@@ -2888,6 +2887,7 @@ properties:
       - Prior to Diagnosis
       - Prior to Treatment
       - Recurrence/Progression
+      - Other
       - Not Reported
 
   undescended_testis_corrected:

@@ -3813,7 +3813,6 @@ properties:
       - Microarray
       - Microsatellite Analysis
       - Nuclear Staining
-      - Other
       - PCR
       - RNA Sequencing
       - RT-PCR
@@ -3822,6 +3821,7 @@ properties:
       - Targeted Sequencing
       - WGS
       - WXS
+      - Other
       - Unknown
       - Not Reported
     enumDef:
@@ -7159,13 +7159,13 @@ properties:
       - Methylation
       - Mosaicism
       - Mutation, NOS
-      - Other
       - Partial Methylation
       - Rearrangement
       - Repeated Sequences
       - Splice
       - Substitution
       - Translocation
+      - Other
       - Unknown
       - Not Reported
     enumDef:

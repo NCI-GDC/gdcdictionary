@@ -273,7 +273,6 @@ properties:
       - Oral Cavity
       - Oral Cavity - Mucosa Only
       - Oropharynx
-      - Other
       - Ovary
       - Palate
       - Pancreas
@@ -367,6 +366,7 @@ properties:
       - Vulva
       - White Blood Cells
       - Wrist
+      - Other
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -651,7 +651,6 @@ properties:
       - Open Radical Nephrectomy
       - Open Radical Prostatectomy
       - Orchiectomy
-      - Other
       - Other Surgical Resection
       - Palatectomy
       - Pan-Procto Colectomy
@@ -700,6 +699,7 @@ properties:
       - Vertical Hemilaryngectomy
       - Wedge Resection
       - Whipple Procedure
+      - Other
       - Unknown
       - Not Reported
       - Not Allowed To Collect

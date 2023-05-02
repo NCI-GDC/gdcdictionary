@@ -1087,8 +1087,8 @@ properties:
     enum:
       - Fever
       - Night Sweats
-      - Other
       - Weight Loss
+      - Other
 
   ann_arbor_clinical_stage:
     $ref:
@@ -1394,13 +1394,13 @@ properties:
       - "_terms.yaml#/classification_of_tumor/common"
     enum:
       - metastasis
-      - other
       - Premalignant
       - primary
       - Prior primary
       - Progression
       - recurrence
       - Synchronous primary
+      - other
       - Unknown
       - not reported
       - Not Allowed To Collect
@@ -2526,7 +2526,6 @@ properties:
       - Neck
       - No known nodal involvement
       - Oropharynx
-      - Other
       - Ovary
       - Pancreas
       - Paraaortic lymph nodes
@@ -2541,6 +2540,7 @@ properties:
       - Submandibular lymph nodes
       - Supraclavicular lymph nodes
       - Thyroid
+      - Other
 
   medulloblastoma_molecular_classification:
     $ref:
@@ -2781,13 +2781,13 @@ properties:
       - Incisional Biopsy
       - Laparoscopy
       - Laparotomy
-      - Other
       - Pap Smear
       - Pathologic Review
       - Physical Exam
       - Surgical Resection
       - Thoracentesis
       - Ultrasound Guided Biopsy
+      - Other
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -18070,7 +18070,6 @@ properties:
         - Ocular orbits
         - Omentum
         - Oropharynx
-        - Other
         - Ovary, Left
         - Ovary, NOS
         - Ovary, Right
@@ -18113,6 +18112,7 @@ properties:
         - Uterus
         - Vagina
         - Vertebrae
+        - Other
         - Unknown
         - Not Reported
     enumDef:
@@ -19370,9 +19370,9 @@ properties:
       - High Grade
       - Intermediate Grade
       - Low Grade
-      - not reported
       - Unknown
       - Not Reported
+      - not reported
     deprecated_enum:
       - not reported
     enumDef:
