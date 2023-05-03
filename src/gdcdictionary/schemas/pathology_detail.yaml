@@ -104,18 +104,18 @@ properties:
       - Well Differentiated
       - Other
     enumDef:
-      Well Differentiated:
-        $ref:
-          - "_terms_enum.yaml#/well_differentiated/common"
-      Poorly Differentiated:
-        $ref:
-          - "_terms_enum.yaml#/poorly_differentiated/common"
       Extravascular Matrix Loops:
         $ref:
           - "_terms_enum.yaml#/extravascular_matrix_loops/common"
       Other Complex Extravascular Matrix Patterns:
         $ref:
           - "_terms_enum.yaml#/other_complex_extravascular_matrix_patterns/common"
+      Poorly Differentiated:
+        $ref:
+          - "_terms_enum.yaml#/poorly_differentiated/common"
+      Well Differentiated:
+        $ref:
+          - "_terms_enum.yaml#/well_differentiated/common"
 
   anaplasia_present:
     $ref:
@@ -433,15 +433,15 @@ properties:
       Hilar:
         $ref:
           - "_terms_enum.yaml#/hilar/common"
+      Iliac, NOS:
+        $ref:
+          - "_terms_enum.yaml#/iliac_nos/common"
       Iliac-common:
         $ref:
           - "_terms_enum.yaml#/iliaccommon/common"
       Iliac-external:
         $ref:
           - "_terms_enum.yaml#/iliacexternal/common"
-      Iliac, NOS:
-        $ref:
-          - "_terms_enum.yaml#/iliac_nos/common"
       Inguinal:
         $ref:
           - "_terms_enum.yaml#/inguinal/common"
@@ -563,15 +563,15 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      Indeterminant:
+        $ref:
+          - "_terms_enum.yaml#/indeterminant/common"
       Involved:
         $ref:
           - "_terms_enum.yaml#/involved/common"
       Uninvolved:
         $ref:
           - "_terms_enum.yaml#/uninvolved/common"
-      Indeterminant:
-        $ref:
-          - "_terms_enum.yaml#/indeterminant/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -908,12 +908,12 @@ properties:
       - Superficial
       - Not Reported
     enumDef:
-      Superficial:
-        $ref:
-          - "_terms_enum.yaml#/superficial/common"
       Deep:
         $ref:
           - "_terms_enum.yaml#/deep/common"
+      Superficial:
+        $ref:
+          - "_terms_enum.yaml#/superficial/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
@@ -935,12 +935,12 @@ properties:
       Few:
         $ref:
           - "_terms_enum.yaml#/few/common"
-      Moderate:
-        $ref:
-          - "_terms_enum.yaml#/moderate/common"
       Many:
         $ref:
           - "_terms_enum.yaml#/many/common"
+      Moderate:
+        $ref:
+          - "_terms_enum.yaml#/moderate/common"
 
   tumor_infiltrating_macrophages:
     $ref:
@@ -953,12 +953,12 @@ properties:
       Few:
         $ref:
           - "_terms_enum.yaml#/few/common"
-      Moderate:
-        $ref:
-          - "_terms_enum.yaml#/moderate/common"
       Many:
         $ref:
           - "_terms_enum.yaml#/many/common"
+      Moderate:
+        $ref:
+          - "_terms_enum.yaml#/moderate/common"
 
   tumor_largest_dimension_diameter:
     $ref:
@@ -998,15 +998,15 @@ properties:
       - Mushroom
       - Unknown
     enumDef:
-      Mushroom:
-        $ref:
-          - "_terms_enum.yaml#/mushroom/common"
-      Dome:
-        $ref:
-          - "_terms_enum.yaml#/dome/common"
       Diffuse:
         $ref:
           - "_terms_enum.yaml#/diffuse/common"
+      Dome:
+        $ref:
+          - "_terms_enum.yaml#/dome/common"
+      Mushroom:
+        $ref:
+          - "_terms_enum.yaml#/mushroom/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"

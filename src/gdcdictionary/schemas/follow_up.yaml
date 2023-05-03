@@ -1858,12 +1858,12 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
-      Positive:
-        $ref:
-          - "_terms_enum.yaml#/positive/common"
       Negative:
         $ref:
           - "_terms_enum.yaml#/negative/common"
+      Positive:
+        $ref:
+          - "_terms_enum.yaml#/positive/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -2452,15 +2452,15 @@ properties:
       - Not Reported
       - Not Applicable
     enumDef:
-      Not Applicable:
-        $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Applicable:
+        $ref:
+          - "_terms_enum.yaml#/not_applicable/common"
 
   risk_factor:
     $ref:
