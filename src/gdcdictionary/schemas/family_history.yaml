@@ -65,12 +65,12 @@ properties:
       male:
         $ref:
           - "_terms_enum.yaml#/male/common"
-      unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
       unspecified:
         $ref:
           - "_terms_enum.yaml#/unspecified/common"
+      unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
       not reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
@@ -655,9 +655,6 @@ properties:
       Niece Second Degree Relative:
         $ref:
           - "_terms_enum.yaml#/niece_second_degree_relative/common"
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
       Parent:
         $ref:
           - "_terms_enum.yaml#/parent/common"
@@ -757,6 +754,9 @@ properties:
       Wife:
         $ref:
           - "_terms_enum.yaml#/wife/common"
+      Other:
+        $ref:
+          - "_terms_enum.yaml#/other/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"

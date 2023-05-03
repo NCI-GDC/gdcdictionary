@@ -4906,15 +4906,15 @@ properties:
       Allogeneic Anti-CD20-CAR T-cells PBCAR20A:
         $ref:
           - "_terms_enum.yaml#/allogeneic_anticd20car_tcells_pbcar20a/common"
+      Allogeneic CD8+ Leukemia-associated Antigens Specific T Cells NEXI-001:
+        $ref:
+          - "_terms_enum.yaml#/allogeneic_cd8_leukemiaassociated_antigens_specific_t_cells_nexi001/common"
       Allogeneic CD22-specific Universal CAR-expressing T-lymphocytes UCART22:
         $ref:
           - "_terms_enum.yaml#/allogeneic_cd22specific_universal_carexpressing_tlymphocytes_ucart22/common"
       Allogeneic CD56-positive CD3-negative Natural Killer Cells CYNK-001:
         $ref:
           - "_terms_enum.yaml#/allogeneic_cd56positive_cd3negative_natural_killer_cells_cynk001/common"
-      Allogeneic CD8+ Leukemia-associated Antigens Specific T Cells NEXI-001:
-        $ref:
-          - "_terms_enum.yaml#/allogeneic_cd8_leukemiaassociated_antigens_specific_t_cells_nexi001/common"
       Allogeneic CRISPR-Cas9 Engineered Anti-BCMA T Cells CTX120:
         $ref:
           - "_terms_enum.yaml#/allogeneic_crisprcas9_engineered_antibcma_t_cells_ctx120/common"
@@ -4993,18 +4993,15 @@ properties:
       Anti-CCR7 Antibody-drug Conjugate JBH492:
         $ref:
           - "_terms_enum.yaml#/anticcr7_antibodydrug_conjugate_jbh492/common"
-      Anti-CD117 Monoclonal Antibody JSP191:
+      Anti-CD3/Anti-5T4 Bispecific Antibody GEN1044:
         $ref:
-          - "_terms_enum.yaml#/anticd117_monoclonal_antibody_jsp191/common"
-      Anti-CD137 Agonistic Monoclonal Antibody AGEN2373:
+          - "_terms_enum.yaml#/anticd3anti5t4_bispecific_antibody_gen1044/common"
+      Anti-CD3/Anti-GUCY2C Bispecific Antibody PF-07062119:
         $ref:
-          - "_terms_enum.yaml#/anticd137_agonistic_monoclonal_antibody_agen2373/common"
-      Anti-CD137 Agonistic Monoclonal Antibody ATOR-1017:
+          - "_terms_enum.yaml#/anticd3antigucy2c_bispecific_antibody_pf07062119/common"
+      Anti-CD3/CD7-Ricin Toxin A Immunotoxin:
         $ref:
-          - "_terms_enum.yaml#/anticd137_agonistic_monoclonal_antibody_ator1017/common"
-      Anti-CD137 Agonistic Monoclonal Antibody LVGN6051:
-        $ref:
-          - "_terms_enum.yaml#/anticd137_agonistic_monoclonal_antibody_lvgn6051/common"
+          - "_terms_enum.yaml#/anticd3cd7ricin_toxin_a_immunotoxin/common"
       Anti-CD19 Antibody-T-cell Receptor-expressing T-cells ET019003:
         $ref:
           - "_terms_enum.yaml#/anticd19_antibodytcell_receptorexpressing_tcells_et019003/common"
@@ -5020,27 +5017,12 @@ properties:
       Anti-CD20 Monoclonal Antibody MIL62:
         $ref:
           - "_terms_enum.yaml#/anticd20_monoclonal_antibody_mil62/common"
-      Anti-CD205 Antibody-drug Conjugate OBT076:
-        $ref:
-          - "_terms_enum.yaml#/anticd205_antibodydrug_conjugate_obt076/common"
-      Anti-CD228/MMAE Antibody-drug Conjugate SGN-CD228A:
-        $ref:
-          - "_terms_enum.yaml#/anticd228mmae_antibodydrug_conjugate_sgncd228a/common"
       Anti-CD25 Monoclonal Antibody RO7296682:
         $ref:
           - "_terms_enum.yaml#/anticd25_monoclonal_antibody_ro7296682/common"
       Anti-CD27 Agonistic Monoclonal Antibody MK-5890:
         $ref:
           - "_terms_enum.yaml#/anticd27_agonistic_monoclonal_antibody_mk5890/common"
-      Anti-CD3/Anti-5T4 Bispecific Antibody GEN1044:
-        $ref:
-          - "_terms_enum.yaml#/anticd3anti5t4_bispecific_antibody_gen1044/common"
-      Anti-CD3/Anti-GUCY2C Bispecific Antibody PF-07062119:
-        $ref:
-          - "_terms_enum.yaml#/anticd3antigucy2c_bispecific_antibody_pf07062119/common"
-      Anti-CD3/CD7-Ricin Toxin A Immunotoxin:
-        $ref:
-          - "_terms_enum.yaml#/anticd3cd7ricin_toxin_a_immunotoxin/common"
       Anti-CD30/DM1 Antibody-drug Conjugate F0002:
         $ref:
           - "_terms_enum.yaml#/anticd30dm1_antibodydrug_conjugate_f0002/common"
@@ -5071,12 +5053,33 @@ properties:
       Anti-CD47/CD19 Bispecific Monoclonal Antibody TG-1801:
         $ref:
           - "_terms_enum.yaml#/anticd47cd19_bispecific_monoclonal_antibody_tg1801/common"
+      Anti-CD117 Monoclonal Antibody JSP191:
+        $ref:
+          - "_terms_enum.yaml#/anticd117_monoclonal_antibody_jsp191/common"
+      Anti-CD137 Agonistic Monoclonal Antibody AGEN2373:
+        $ref:
+          - "_terms_enum.yaml#/anticd137_agonistic_monoclonal_antibody_agen2373/common"
+      Anti-CD137 Agonistic Monoclonal Antibody ATOR-1017:
+        $ref:
+          - "_terms_enum.yaml#/anticd137_agonistic_monoclonal_antibody_ator1017/common"
+      Anti-CD137 Agonistic Monoclonal Antibody LVGN6051:
+        $ref:
+          - "_terms_enum.yaml#/anticd137_agonistic_monoclonal_antibody_lvgn6051/common"
+      Anti-CD205 Antibody-drug Conjugate OBT076:
+        $ref:
+          - "_terms_enum.yaml#/anticd205_antibodydrug_conjugate_obt076/common"
+      Anti-CD228/MMAE Antibody-drug Conjugate SGN-CD228A:
+        $ref:
+          - "_terms_enum.yaml#/anticd228mmae_antibodydrug_conjugate_sgncd228a/common"
       Anti-claudin18.2 Monoclonal Antibody AB011:
         $ref:
           - "_terms_enum.yaml#/anticlaudin182_monoclonal_antibody_ab011/common"
       Anti-Claudin18.2 Monoclonal Antibody TST001:
         $ref:
           - "_terms_enum.yaml#/anticlaudin182_monoclonal_antibody_tst001/common"
+      Anti-CTLA4 Antibody Fc Fusion Protein KN044:
+        $ref:
+          - "_terms_enum.yaml#/antictla4_antibody_fc_fusion_protein_kn044/common"
       Anti-CTLA-4 Monoclonal Antibody ADG116:
         $ref:
           - "_terms_enum.yaml#/antictla4_monoclonal_antibody_adg116/common"
@@ -5092,9 +5095,6 @@ properties:
       Anti-CTLA-4/Anti-PD-1 Monoclonal Antibody Combination BCD-217:
         $ref:
           - "_terms_enum.yaml#/antictla4antipd1_monoclonal_antibody_combination_bcd217/common"
-      Anti-CTLA4 Antibody Fc Fusion Protein KN044:
-        $ref:
-          - "_terms_enum.yaml#/antictla4_antibody_fc_fusion_protein_kn044/common"
       Anti-EGFR/CD16A Bispecific Antibody AFM24:
         $ref:
           - "_terms_enum.yaml#/antiegfrcd16a_bispecific_antibody_afm24/common"
@@ -5308,9 +5308,6 @@ properties:
       Autologous Anti-BCMA-CAR-4-1BB-CD3zeta-expressing T-cells C-CAR088:
         $ref:
           - "_terms_enum.yaml#/autologous_antibcmacar41bbcd3zetaexpressing_tcells_ccar088/common"
-      Autologous Anti-CD123 CAR-T Cells:
-        $ref:
-          - "_terms_enum.yaml#/autologous_anticd123_cart_cells/common"
       Autologous Anti-CD19 CAR T-cells 19(T2)28z1xx:
         $ref:
           - "_terms_enum.yaml#/autologous_anticd19_car_tcells_19t228z1xx/common"
@@ -5332,6 +5329,9 @@ properties:
       Autologous Anti-CD20 CAR Transduced CD4/CD8 Enriched T-cells MB-CART20.1:
         $ref:
           - "_terms_enum.yaml#/autologous_anticd20_car_transduced_cd4cd8_enriched_tcells_mbcart201/common"
+      Autologous Anti-CD123 CAR-T Cells:
+        $ref:
+          - "_terms_enum.yaml#/autologous_anticd123_cart_cells/common"
       Autologous Anti-EGFR CAR-transduced CXCR 5-modified T-lymphocytes:
         $ref:
           - "_terms_enum.yaml#/autologous_antiegfr_cartransduced_cxcr_5modified_tlymphocytes/common"
@@ -5527,12 +5527,6 @@ properties:
       CD11b Agonist GB1275:
         $ref:
           - "_terms_enum.yaml#/cd11b_agonist_gb1275/common"
-      CD123-CD33 Compound CAR T Cells:
-        $ref:
-          - "_terms_enum.yaml#/cd123cd33_compound_car_t_cells/common"
-      CD123-specific Targeting Module TM123:
-        $ref:
-          - "_terms_enum.yaml#/cd123specific_targeting_module_tm123/common"
       CD20-CD19 Compound CAR T Cells:
         $ref:
           - "_terms_enum.yaml#/cd20cd19_compound_car_t_cells/common"
@@ -5554,6 +5548,12 @@ properties:
       CD80-Fc Fusion Protein FPT155:
         $ref:
           - "_terms_enum.yaml#/cd80fc_fusion_protein_fpt155/common"
+      CD123-CD33 Compound CAR T Cells:
+        $ref:
+          - "_terms_enum.yaml#/cd123cd33_compound_car_t_cells/common"
+      CD123-specific Targeting Module TM123:
+        $ref:
+          - "_terms_enum.yaml#/cd123specific_targeting_module_tm123/common"
       CDK2 Inhibitor PF-07104091:
         $ref:
           - "_terms_enum.yaml#/cdk2_inhibitor_pf07104091/common"
@@ -5788,15 +5788,15 @@ properties:
       Fenretinide Phospholipid Suspension ST-001:
         $ref:
           - "_terms_enum.yaml#/fenretinide_phospholipid_suspension_st001/common"
+      FGFR2 Inhibitor RLY-4008:
+        $ref:
+          - "_terms_enum.yaml#/fgfr2_inhibitor_rly4008/common"
       FGFR Inhibitor CPL304110:
         $ref:
           - "_terms_enum.yaml#/fgfr_inhibitor_cpl304110/common"
       FGFR/CSF-1R Inhibitor 3D185:
         $ref:
           - "_terms_enum.yaml#/fgfrcsf1r_inhibitor_3d185/common"
-      FGFR2 Inhibitor RLY-4008:
-        $ref:
-          - "_terms_enum.yaml#/fgfr2_inhibitor_rly4008/common"
       Fianlimab:
         $ref:
           - "_terms_enum.yaml#/fianlimab/common"
@@ -5866,15 +5866,15 @@ properties:
       HIF2a RNAi ARO-HIF2:
         $ref:
           - "_terms_enum.yaml#/hif2a_rnai_arohif2/common"
+      HPV6/11-targeted DNA Plasmid Vaccine INO-3107:
+        $ref:
+          - "_terms_enum.yaml#/hpv611targeted_dna_plasmid_vaccine_ino3107/common"
       HPV 16 E6/E7-encoding Arenavirus Vaccine HB-202:
         $ref:
           - "_terms_enum.yaml#/hpv_16_e6e7encoding_arenavirus_vaccine_hb202/common"
       HPV E6/E7-encoding Arenavirus Vaccine HB-201:
         $ref:
           - "_terms_enum.yaml#/hpv_e6e7encoding_arenavirus_vaccine_hb201/common"
-      HPV6/11-targeted DNA Plasmid Vaccine INO-3107:
-        $ref:
-          - "_terms_enum.yaml#/hpv611targeted_dna_plasmid_vaccine_ino3107/common"
       Hsp90 Inhibitor TQB3474:
         $ref:
           - "_terms_enum.yaml#/hsp90_inhibitor_tqb3474/common"
@@ -5896,12 +5896,12 @@ properties:
       IDH1 Mutant Inhibitor LY3410738:
         $ref:
           - "_terms_enum.yaml#/idh1_mutant_inhibitor_ly3410738/common"
-      IDO/TDO Inhibitor LY-01013:
-        $ref:
-          - "_terms_enum.yaml#/idotdo_inhibitor_ly01013/common"
       IDO1/TDO2 Inhibitor M4112:
         $ref:
           - "_terms_enum.yaml#/ido1tdo2_inhibitor_m4112/common"
+      IDO/TDO Inhibitor LY-01013:
+        $ref:
+          - "_terms_enum.yaml#/idotdo_inhibitor_ly01013/common"
       Ieramilimab:
         $ref:
           - "_terms_enum.yaml#/ieramilimab/common"
@@ -6256,6 +6256,9 @@ properties:
       Panulisib:
         $ref:
           - "_terms_enum.yaml#/panulisib/common"
+      PARP7 Inhibitor RBN-2397:
+        $ref:
+          - "_terms_enum.yaml#/parp7_inhibitor_rbn2397/common"
       PARP 1/2 Inhibitor IMP4297:
         $ref:
           - "_terms_enum.yaml#/parp_12_inhibitor_imp4297/common"
@@ -6265,9 +6268,6 @@ properties:
       PARP/Tankyrase Inhibitor 2X-121:
         $ref:
           - "_terms_enum.yaml#/parptankyrase_inhibitor_2x121/common"
-      PARP7 Inhibitor RBN-2397:
-        $ref:
-          - "_terms_enum.yaml#/parp7_inhibitor_rbn2397/common"
       Parsaclisib:
         $ref:
           - "_terms_enum.yaml#/parsaclisib/common"
@@ -7092,12 +7092,12 @@ properties:
       Neck:
         $ref:
           - "_terms_enum.yaml#/neck/common"
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
       Soft Tissue:
         $ref:
           - "_terms_enum.yaml#/soft_tissue/common"
+      Other:
+        $ref:
+          - "_terms_enum.yaml#/other/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -7199,24 +7199,24 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
 
   treatment_frequency:
     $ref:
       - "_terms.yaml#/treatment_frequency/common"
     enum:
+      - Every 24 Hours
       - Every Hour
+      - Every Other Day
       - Five Times Daily
       - Four Times Daily
       - Three Times Daily
       - Twice Daily
-      - Every 24 Hours
-      - Every Other Day
       - Twice Weekly
       - Once Weekly
       - Unknown
@@ -7394,15 +7394,15 @@ properties:
       - Not Allowed To Collect
       - Surgery
     enumDef:
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
       Radiation, Hypofractionated:
         $ref:
           - "_terms_enum.yaml#/radiation_hypofractionated/common"
       Radiation, Photon Beam:
         $ref:
           - "_terms_enum.yaml#/radiation_photon_beam/common"
+      Other:
+        $ref:
+          - "_terms_enum.yaml#/other/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"

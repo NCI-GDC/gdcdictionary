@@ -100,6 +100,9 @@ properties:
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
+      cM0 (i+):
+        $ref:
+          - "_terms_enum.yaml#/cm0_i/common"
       M0:
         $ref:
           - "_terms_enum.yaml#/m0/common"
@@ -118,9 +121,6 @@ properties:
       MX:
         $ref:
           - "_terms_enum.yaml#/mx/common"
-      cM0 (i+):
-        $ref:
-          - "_terms_enum.yaml#/cm0_i/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -325,12 +325,18 @@ properties:
       Stage IB2:
         $ref:
           - "_terms_enum.yaml#/stage_ib2/common"
+      Stage IB Cervix:
+        $ref:
+          - "_terms_enum.yaml#/stage_ib_cervix/common"
       Stage IC:
         $ref:
           - "_terms_enum.yaml#/stage_ic/common"
       Stage II:
         $ref:
           - "_terms_enum.yaml#/stage_ii/common"
+      Stage II Cervix:
+        $ref:
+          - "_terms_enum.yaml#/stage_ii_cervix/common"
       Stage IIA:
         $ref:
           - "_terms_enum.yaml#/stage_iia/common"
@@ -340,6 +346,9 @@ properties:
       Stage IIA2:
         $ref:
           - "_terms_enum.yaml#/stage_iia2/common"
+      Stage IIA Cervix:
+        $ref:
+          - "_terms_enum.yaml#/stage_iia_cervix/common"
       Stage IIB:
         $ref:
           - "_terms_enum.yaml#/stage_iib/common"
@@ -394,15 +403,6 @@ properties:
       Not Allowed To Collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
-      Stage IB Cervix:
-        $ref:
-          - "_terms_enum.yaml#/stage_ib_cervix/common"
-      Stage II Cervix:
-        $ref:
-          - "_terms_enum.yaml#/stage_ii_cervix/common"
-      Stage IIA Cervix:
-        $ref:
-          - "_terms_enum.yaml#/stage_iia_cervix/common"
 
   ajcc_clinical_t:
     $ref:
@@ -532,9 +532,6 @@ properties:
       T4e:
         $ref:
           - "_terms_enum.yaml#/t4e/common"
-      TX:
-        $ref:
-          - "_terms_enum.yaml#/tx/common"
       Ta:
         $ref:
           - "_terms_enum.yaml#/ta/common"
@@ -550,6 +547,9 @@ properties:
       Tis (Paget's):
         $ref:
           - "_terms_enum.yaml#/tis_pagets/common"
+      TX:
+        $ref:
+          - "_terms_enum.yaml#/tx/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -579,6 +579,9 @@ properties:
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
+      cM0 (i+):
+        $ref:
+          - "_terms_enum.yaml#/cm0_i/common"
       M0:
         $ref:
           - "_terms_enum.yaml#/m0/common"
@@ -597,9 +600,6 @@ properties:
       MX:
         $ref:
           - "_terms_enum.yaml#/mx/common"
-      cM0 (i+):
-        $ref:
-          - "_terms_enum.yaml#/cm0_i/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -801,9 +801,6 @@ properties:
       Stage II:
         $ref:
           - "_terms_enum.yaml#/stage_ii/common"
-      Stage IS:
-        $ref:
-          - "_terms_enum.yaml#/stage_is/common"
       Stage IIA:
         $ref:
           - "_terms_enum.yaml#/stage_iia/common"
@@ -840,6 +837,9 @@ properties:
       Stage IIID:
         $ref:
           - "_terms_enum.yaml#/stage_iiid/common"
+      Stage IS:
+        $ref:
+          - "_terms_enum.yaml#/stage_is/common"
       Stage IV:
         $ref:
           - "_terms_enum.yaml#/stage_iv/common"
@@ -994,9 +994,6 @@ properties:
       T4e:
         $ref:
           - "_terms_enum.yaml#/t4e/common"
-      TX:
-        $ref:
-          - "_terms_enum.yaml#/tx/common"
       Ta:
         $ref:
           - "_terms_enum.yaml#/ta/common"
@@ -1012,6 +1009,9 @@ properties:
       Tis (Paget's):
         $ref:
           - "_terms_enum.yaml#/tis_pagets/common"
+      TX:
+        $ref:
+          - "_terms_enum.yaml#/tx/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -1408,9 +1408,6 @@ properties:
       metastasis:
         $ref:
           - "_terms_enum.yaml#/metastasis/common"
-      other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
       Premalignant:
         $ref:
           - "_terms_enum.yaml#/premalignant/common"
@@ -1420,6 +1417,9 @@ properties:
       recurrence:
         $ref:
           - "_terms_enum.yaml#/recurrence/common"
+      other:
+        $ref:
+          - "_terms_enum.yaml#/other/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -2231,18 +2231,18 @@ properties:
       - Low Risk
       - Low-Intermediate Risk
     enumDef:
+      High Risk:
+        $ref:
+          - "_terms_enum.yaml#/high_risk/diagnosis/international_prognostic_index"
+      High-Intermediate Risk:
+        $ref:
+          - "_terms_enum.yaml#/highintermediate_risk/common"
       Low Risk:
         $ref:
           - "_terms_enum.yaml#/low_risk/diagnosis/international_prognostic_index"
       Low-Intermediate Risk:
         $ref:
           - "_terms_enum.yaml#/lowintermediate_risk/common"
-      High-Intermediate Risk:
-        $ref:
-          - "_terms_enum.yaml#/highintermediate_risk/common"
-      High Risk:
-        $ref:
-          - "_terms_enum.yaml#/high_risk/diagnosis/international_prognostic_index"
 
   irs_group:
     $ref:
@@ -2373,12 +2373,12 @@ properties:
       III:
         $ref:
           - "_terms_enum.yaml#/iii/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
 
   last_known_disease_status:
     $ref:
@@ -2553,12 +2553,12 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
-      Not Determined:
-        $ref:
-          - "_terms_enum.yaml#/not_determined/common"
       Non-WNT/non-SHH Activated:
         $ref:
           - "_terms_enum.yaml#/nonwntnonshh_activated/common"
+      Not Determined:
+        $ref:
+          - "_terms_enum.yaml#/not_determined/common"
       SHH-Activated:
         $ref:
           - "_terms_enum.yaml#/shhactivated/common"
@@ -2809,12 +2809,12 @@ properties:
       Core Biopsy:
         $ref:
           - "_terms_enum.yaml#/core_biopsy/common"
-      Cytology:
-        $ref:
-          - "_terms_enum.yaml#/cytology/common"
       Cystoscopy:
         $ref:
           - "_terms_enum.yaml#/cystoscopy/common"
+      Cytology:
+        $ref:
+          - "_terms_enum.yaml#/cytology/common"
       Debulking:
         $ref:
           - "_terms_enum.yaml#/debulking/common"
@@ -2845,18 +2845,15 @@ properties:
       Laparotomy:
         $ref:
           - "_terms_enum.yaml#/laparotomy/common"
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
       Pap Smear:
         $ref:
           - "_terms_enum.yaml#/pap_smear/common"
-      Physical Exam:
-        $ref:
-          - "_terms_enum.yaml#/physical_exam/common"
       Pathologic Review:
         $ref:
           - "_terms_enum.yaml#/pathologic_review/common"
+      Physical Exam:
+        $ref:
+          - "_terms_enum.yaml#/physical_exam/common"
       Surgical Resection:
         $ref:
           - "_terms_enum.yaml#/surgical_resection/common"
@@ -2866,6 +2863,9 @@ properties:
       Ultrasound Guided Biopsy:
         $ref:
           - "_terms_enum.yaml#/ultrasound_guided_biopsy/common"
+      Other:
+        $ref:
+          - "_terms_enum.yaml#/other/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -9983,9 +9983,6 @@ properties:
       Acute lymphatic leukemia:
         $ref:
           - "_terms_enum.yaml#/acute_lymphatic_leukemia/common"
-      Acute lymphoblastic leukemia-lymphoma, NOS:
-        $ref:
-          - "_terms_enum.yaml#/acute_lymphoblastic_leukemialymphoma_nos/common"
       Acute lymphoblastic leukemia, L2 type, NOS:
         $ref:
           - "_terms_enum.yaml#/acute_lymphoblastic_leukemia_l2_type_nos/common"
@@ -9998,6 +9995,9 @@ properties:
       Acute lymphoblastic leukemia, precursor cell type:
         $ref:
           - "_terms_enum.yaml#/acute_lymphoblastic_leukemia_precursor_cell_type/common"
+      Acute lymphoblastic leukemia-lymphoma, NOS:
+        $ref:
+          - "_terms_enum.yaml#/acute_lymphoblastic_leukemialymphoma_nos/common"
       Acute lymphocytic leukemia:
         $ref:
           - "_terms_enum.yaml#/acute_lymphocytic_leukemia/common"
@@ -10688,15 +10688,15 @@ properties:
       B lymphoblastic leukemia/lymphoma with t(1;19)(q23;p13.3); E2A-PBX1 (TCF3-PBX1):
         $ref:
           - "_terms_enum.yaml#/b_lymphoblastic_leukemialymphoma_with_t119q23p133_e2apbx1_tcf3pbx1/common"
-      B lymphoblastic leukemia/lymphoma with t(12;21)(p13;q22); TEL-AML1 (ETV6-RUNX1):
-        $ref:
-          - "_terms_enum.yaml#/b_lymphoblastic_leukemialymphoma_with_t1221p13q22_telaml1_etv6runx1/common"
       B lymphoblastic leukemia/lymphoma with t(5;14)(q31;q32); IL3-IGH:
         $ref:
           - "_terms_enum.yaml#/b_lymphoblastic_leukemialymphoma_with_t514q31q32_il3igh/common"
       B lymphoblastic leukemia/lymphoma with t(9;22)(q34;q11.2); BCR-ABL1:
         $ref:
           - "_terms_enum.yaml#/b_lymphoblastic_leukemialymphoma_with_t922q34q112_bcrabl1/common"
+      B lymphoblastic leukemia/lymphoma with t(12;21)(p13;q22); TEL-AML1 (ETV6-RUNX1):
+        $ref:
+          - "_terms_enum.yaml#/b_lymphoblastic_leukemialymphoma_with_t1221p13q22_telaml1_etv6runx1/common"
       B lymphoblastic leukemia/lymphoma with t(v;11q23); MLL rearranged:
         $ref:
           - "_terms_enum.yaml#/b_lymphoblastic_leukemialymphoma_with_tv11q23_mll_rearranged/common"
@@ -13335,12 +13335,12 @@ properties:
       Lipoleiomyoma:
         $ref:
           - "_terms_enum.yaml#/lipoleiomyoma/common"
-      Lipoma-like liposarcoma:
-        $ref:
-          - "_terms_enum.yaml#/lipomalike_liposarcoma/common"
       Lipoma, NOS:
         $ref:
           - "_terms_enum.yaml#/lipoma_nos/common"
+      Lipoma-like liposarcoma:
+        $ref:
+          - "_terms_enum.yaml#/lipomalike_liposarcoma/common"
       Lipomatous medulloblastoma:
         $ref:
           - "_terms_enum.yaml#/lipomatous_medulloblastoma/common"
@@ -15309,18 +15309,18 @@ properties:
       Primary cutaneous anaplastic large cell lymphoma:
         $ref:
           - "_terms_enum.yaml#/primary_cutaneous_anaplastic_large_cell_lymphoma/common"
-      Primary cutaneous CD30+ large T-cell lymphoma:
-        $ref:
-          - "_terms_enum.yaml#/primary_cutaneous_cd30_large_tcell_lymphoma/common"
-      Primary cutaneous CD30+ T-cell lymphoproliferative disorder:
-        $ref:
-          - "_terms_enum.yaml#/primary_cutaneous_cd30_tcell_lymphoproliferative_disorder/common"
       Primary cutaneous CD4-positive small/medium T-cell lymphoma:
         $ref:
           - "_terms_enum.yaml#/primary_cutaneous_cd4positive_smallmedium_tcell_lymphoma/common"
       Primary cutaneous CD8-positive aggressive epidermotropic cytotoxic T-cell lymphoma:
         $ref:
           - "_terms_enum.yaml#/primary_cutaneous_cd8positive_aggressive_epidermotropic_cytotoxic_tcell_lymphoma/common"
+      Primary cutaneous CD30+ large T-cell lymphoma:
+        $ref:
+          - "_terms_enum.yaml#/primary_cutaneous_cd30_large_tcell_lymphoma/common"
+      Primary cutaneous CD30+ T-cell lymphoproliferative disorder:
+        $ref:
+          - "_terms_enum.yaml#/primary_cutaneous_cd30_tcell_lymphoproliferative_disorder/common"
       Primary cutaneous DLBCL, leg type:
         $ref:
           - "_terms_enum.yaml#/primary_cutaneous_dlbcl_leg_type/common"
@@ -19388,12 +19388,12 @@ properties:
       G4:
         $ref:
           - "_terms_enum.yaml#/g4/common"
-      GX:
-        $ref:
-          - "_terms_enum.yaml#/gx/common"
       GB:
         $ref:
           - "_terms_enum.yaml#/gb/common"
+      GX:
+        $ref:
+          - "_terms_enum.yaml#/gx/common"
       High Grade:
         $ref:
           - "_terms_enum.yaml#/high_grade/common"

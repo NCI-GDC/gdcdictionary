@@ -119,24 +119,27 @@ properties:
       BCL6:
         $ref:
           - "_terms_enum.yaml#/bcl6/common"
-      CA-125:
-        $ref:
-          - "_terms_enum.yaml#/ca125/common"
       CA19-9:
         $ref:
           - "_terms_enum.yaml#/ca199/common"
+      CA-125:
+        $ref:
+          - "_terms_enum.yaml#/ca125/common"
       CCND1:
         $ref:
           - "_terms_enum.yaml#/ccnd1/common"
+      CD3:
+        $ref:
+          - "_terms_enum.yaml#/cd3/common"
+      CD5:
+        $ref:
+          - "_terms_enum.yaml#/cd5/common"
+      CD7:
+        $ref:
+          - "_terms_enum.yaml#/cd7/common"
       CD10:
         $ref:
           - "_terms_enum.yaml#/cd10/common"
-      CD117:
-        $ref:
-          - "_terms_enum.yaml#/cd117/common"
-      CD138:
-        $ref:
-          - "_terms_enum.yaml#/cd138/common"
       CD14:
         $ref:
           - "_terms_enum.yaml#/cd14/common"
@@ -158,9 +161,6 @@ properties:
       CD25:
         $ref:
           - "_terms_enum.yaml#/cd25/common"
-      CD3:
-        $ref:
-          - "_terms_enum.yaml#/cd3/common"
       CD30:
         $ref:
           - "_terms_enum.yaml#/cd30/common"
@@ -173,18 +173,18 @@ properties:
       CD45:
         $ref:
           - "_terms_enum.yaml#/cd45/common"
-      CD5:
-        $ref:
-          - "_terms_enum.yaml#/cd5/common"
       CD56:
         $ref:
           - "_terms_enum.yaml#/cd56/common"
-      CD7:
-        $ref:
-          - "_terms_enum.yaml#/cd7/common"
       CD79A:
         $ref:
           - "_terms_enum.yaml#/cd79a/common"
+      CD117:
+        $ref:
+          - "_terms_enum.yaml#/cd117/common"
+      CD138:
+        $ref:
+          - "_terms_enum.yaml#/cd138/common"
       CEA:
         $ref:
           - "_terms_enum.yaml#/cea/common"
@@ -1304,12 +1304,12 @@ properties:
       ARAF:
         $ref:
           - "_terms_enum.yaml#/araf/common"
-      ARHGAP26:
-        $ref:
-          - "_terms_enum.yaml#/arhgap26/common"
       ARHGAP5:
         $ref:
           - "_terms_enum.yaml#/arhgap5/common"
+      ARHGAP26:
+        $ref:
+          - "_terms_enum.yaml#/arhgap26/common"
       ARHGEF12:
         $ref:
           - "_terms_enum.yaml#/arhgef12/common"
@@ -1370,15 +1370,6 @@ properties:
       BARD1:
         $ref:
           - "_terms_enum.yaml#/bard1/common"
-      BCL10:
-        $ref:
-          - "_terms_enum.yaml#/bcl10/common"
-      BCL11A:
-        $ref:
-          - "_terms_enum.yaml#/bcl11a/common"
-      BCL11B:
-        $ref:
-          - "_terms_enum.yaml#/bcl11b/common"
       BCL2:
         $ref:
           - "_terms_enum.yaml#/bcl2/common"
@@ -1400,6 +1391,15 @@ properties:
       BCL9L:
         $ref:
           - "_terms_enum.yaml#/bcl9l/common"
+      BCL10:
+        $ref:
+          - "_terms_enum.yaml#/bcl10/common"
+      BCL11A:
+        $ref:
+          - "_terms_enum.yaml#/bcl11a/common"
+      BCL11B:
+        $ref:
+          - "_terms_enum.yaml#/bcl11b/common"
       BCLAF1:
         $ref:
           - "_terms_enum.yaml#/bclaf1/common"
@@ -1520,12 +1520,6 @@ properties:
       CCR7:
         $ref:
           - "_terms_enum.yaml#/ccr7/common"
-      CD209:
-        $ref:
-          - "_terms_enum.yaml#/cd209/common"
-      CD274:
-        $ref:
-          - "_terms_enum.yaml#/cd274/common"
       CD28:
         $ref:
           - "_terms_enum.yaml#/cd28/common"
@@ -1541,6 +1535,12 @@ properties:
       CD99:
         $ref:
           - "_terms_enum.yaml#/cd99/common"
+      CD209:
+        $ref:
+          - "_terms_enum.yaml#/cd209/common"
+      CD274:
+        $ref:
+          - "_terms_enum.yaml#/cd274/common"
       CDC73:
         $ref:
           - "_terms_enum.yaml#/cdc73/common"
@@ -1556,15 +1556,15 @@ properties:
       CDH17:
         $ref:
           - "_terms_enum.yaml#/cdh17/common"
-      CDK12:
-        $ref:
-          - "_terms_enum.yaml#/cdk12/common"
       CDK4:
         $ref:
           - "_terms_enum.yaml#/cdk4/common"
       CDK6:
         $ref:
           - "_terms_enum.yaml#/cdk6/common"
+      CDK12:
+        $ref:
+          - "_terms_enum.yaml#/cdk12/common"
       CDKN1A:
         $ref:
           - "_terms_enum.yaml#/cdkn1a/common"
@@ -1739,9 +1739,6 @@ properties:
       DDR2:
         $ref:
           - "_terms_enum.yaml#/ddr2/common"
-      DDX10:
-        $ref:
-          - "_terms_enum.yaml#/ddx10/common"
       DDX3X:
         $ref:
           - "_terms_enum.yaml#/ddx3x/common"
@@ -1751,6 +1748,9 @@ properties:
       DDX6:
         $ref:
           - "_terms_enum.yaml#/ddx6/common"
+      DDX10:
+        $ref:
+          - "_terms_enum.yaml#/ddx10/common"
       DEK:
         $ref:
           - "_terms_enum.yaml#/dek/common"
@@ -1889,18 +1889,18 @@ properties:
       EZR:
         $ref:
           - "_terms_enum.yaml#/ezr/common"
-      FAM131B:
-        $ref:
-          - "_terms_enum.yaml#/fam131b/common"
-      FAM135B:
-        $ref:
-          - "_terms_enum.yaml#/fam135b/common"
       FAM46C:
         $ref:
           - "_terms_enum.yaml#/fam46c/common"
       FAM47C:
         $ref:
           - "_terms_enum.yaml#/fam47c/common"
+      FAM131B:
+        $ref:
+          - "_terms_enum.yaml#/fam131b/common"
+      FAM135B:
+        $ref:
+          - "_terms_enum.yaml#/fam135b/common"
       FANCA:
         $ref:
           - "_terms_enum.yaml#/fanca/common"
@@ -2123,15 +2123,15 @@ properties:
       HOOK3:
         $ref:
           - "_terms_enum.yaml#/hook3/common"
+      HOXA9:
+        $ref:
+          - "_terms_enum.yaml#/hoxa9/common"
       HOXA11:
         $ref:
           - "_terms_enum.yaml#/hoxa11/common"
       HOXA13:
         $ref:
           - "_terms_enum.yaml#/hoxa13/common"
-      HOXA9:
-        $ref:
-          - "_terms_enum.yaml#/hoxa9/common"
       HOXB1:
         $ref:
           - "_terms_enum.yaml#/hoxb1/common"
@@ -2186,15 +2186,15 @@ properties:
       IL2:
         $ref:
           - "_terms_enum.yaml#/il2/common"
-      IL21R:
-        $ref:
-          - "_terms_enum.yaml#/il21r/common"
       IL6ST:
         $ref:
           - "_terms_enum.yaml#/il6st/common"
       IL7R:
         $ref:
           - "_terms_enum.yaml#/il7r/common"
+      IL21R:
+        $ref:
+          - "_terms_enum.yaml#/il21r/common"
       IRF4:
         $ref:
           - "_terms_enum.yaml#/irf4/common"
@@ -2291,12 +2291,12 @@ properties:
       KRAS:
         $ref:
           - "_terms_enum.yaml#/kras/common"
-      KRT20:
-        $ref:
-          - "_terms_enum.yaml#/krt20/common"
       KRT7:
         $ref:
           - "_terms_enum.yaml#/krt7/common"
+      KRT20:
+        $ref:
+          - "_terms_enum.yaml#/krt20/common"
       KTN1:
         $ref:
           - "_terms_enum.yaml#/ktn1/common"
@@ -2435,12 +2435,6 @@ properties:
       MLLT1:
         $ref:
           - "_terms_enum.yaml#/mllt1/common"
-      MLLT10:
-        $ref:
-          - "_terms_enum.yaml#/mllt10/common"
-      MLLT11:
-        $ref:
-          - "_terms_enum.yaml#/mllt11/common"
       MLLT3:
         $ref:
           - "_terms_enum.yaml#/mllt3/common"
@@ -2450,6 +2444,12 @@ properties:
       MLLT6:
         $ref:
           - "_terms_enum.yaml#/mllt6/common"
+      MLLT10:
+        $ref:
+          - "_terms_enum.yaml#/mllt10/common"
+      MLLT11:
+        $ref:
+          - "_terms_enum.yaml#/mllt11/common"
       MN1:
         $ref:
           - "_terms_enum.yaml#/mn1/common"
@@ -2480,12 +2480,12 @@ properties:
       MUC1:
         $ref:
           - "_terms_enum.yaml#/muc1/common"
-      MUC16:
-        $ref:
-          - "_terms_enum.yaml#/muc16/common"
       MUC4:
         $ref:
           - "_terms_enum.yaml#/muc4/common"
+      MUC16:
+        $ref:
+          - "_terms_enum.yaml#/muc16/common"
       MUTYH:
         $ref:
           - "_terms_enum.yaml#/mutyh/common"
@@ -2504,12 +2504,12 @@ properties:
       MYD88:
         $ref:
           - "_terms_enum.yaml#/myd88/common"
-      MYH11:
-        $ref:
-          - "_terms_enum.yaml#/myh11/common"
       MYH9:
         $ref:
           - "_terms_enum.yaml#/myh9/common"
+      MYH11:
+        $ref:
+          - "_terms_enum.yaml#/myh11/common"
       MYO5A:
         $ref:
           - "_terms_enum.yaml#/myo5a/common"
@@ -2579,9 +2579,6 @@ properties:
       NONO:
         $ref:
           - "_terms_enum.yaml#/nono/common"
-      Not Applicable:
-        $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
       NOTCH1:
         $ref:
           - "_terms_enum.yaml#/notch1/common"
@@ -2624,12 +2621,12 @@ properties:
       NUMA1:
         $ref:
           - "_terms_enum.yaml#/numa1/common"
-      NUP214:
-        $ref:
-          - "_terms_enum.yaml#/nup214/common"
       NUP98:
         $ref:
           - "_terms_enum.yaml#/nup98/common"
+      NUP214:
+        $ref:
+          - "_terms_enum.yaml#/nup214/common"
       NUTM1:
         $ref:
           - "_terms_enum.yaml#/nutm1/common"
@@ -2783,12 +2780,12 @@ properties:
       PRDM1:
         $ref:
           - "_terms_enum.yaml#/prdm1/common"
-      PRDM16:
-        $ref:
-          - "_terms_enum.yaml#/prdm16/common"
       PRDM2:
         $ref:
           - "_terms_enum.yaml#/prdm2/common"
+      PRDM16:
+        $ref:
+          - "_terms_enum.yaml#/prdm16/common"
       PREX2:
         $ref:
           - "_terms_enum.yaml#/prex2/common"
@@ -2822,15 +2819,15 @@ properties:
       PTK6:
         $ref:
           - "_terms_enum.yaml#/ptk6/common"
+      PTPN6:
+        $ref:
+          - "_terms_enum.yaml#/ptpn6/common"
       PTPN11:
         $ref:
           - "_terms_enum.yaml#/ptpn11/common"
       PTPN13:
         $ref:
           - "_terms_enum.yaml#/ptpn13/common"
-      PTPN6:
-        $ref:
-          - "_terms_enum.yaml#/ptpn6/common"
       PTPRB:
         $ref:
           - "_terms_enum.yaml#/ptprb/common"
@@ -2909,27 +2906,27 @@ properties:
       RMI2:
         $ref:
           - "_terms_enum.yaml#/rmi2/common"
-      RNF213:
-        $ref:
-          - "_terms_enum.yaml#/rnf213/common"
       RNF43:
         $ref:
           - "_terms_enum.yaml#/rnf43/common"
+      RNF213:
+        $ref:
+          - "_terms_enum.yaml#/rnf213/common"
       ROBO2:
         $ref:
           - "_terms_enum.yaml#/robo2/common"
       ROS1:
         $ref:
           - "_terms_enum.yaml#/ros1/common"
+      RPL5:
+        $ref:
+          - "_terms_enum.yaml#/rpl5/common"
       RPL10:
         $ref:
           - "_terms_enum.yaml#/rpl10/common"
       RPL22:
         $ref:
           - "_terms_enum.yaml#/rpl22/common"
-      RPL5:
-        $ref:
-          - "_terms_enum.yaml#/rpl5/common"
       RPN1:
         $ref:
           - "_terms_enum.yaml#/rpn1/common"
@@ -3152,15 +3149,15 @@ properties:
       TCEA1:
         $ref:
           - "_terms_enum.yaml#/tcea1/common"
-      TCF12:
-        $ref:
-          - "_terms_enum.yaml#/tcf12/common"
       TCF3:
         $ref:
           - "_terms_enum.yaml#/tcf3/common"
       TCF7L2:
         $ref:
           - "_terms_enum.yaml#/tcf7l2/common"
+      TCF12:
+        $ref:
+          - "_terms_enum.yaml#/tcf12/common"
       TCL1A:
         $ref:
           - "_terms_enum.yaml#/tcl1a/common"
@@ -3377,6 +3374,9 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Applicable:
+        $ref:
+          - "_terms_enum.yaml#/not_applicable/common"
 
   histone_family:
     $ref:
@@ -3858,9 +3858,6 @@ properties:
       Nuclear Staining:
         $ref:
           - "_terms_enum.yaml#/nuclear_staining/common"
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
       PCR:
         $ref:
           - "_terms_enum.yaml#/pcr/common"
@@ -3885,6 +3882,9 @@ properties:
       WXS:
         $ref:
           - "_terms_enum.yaml#/wxs/common"
+      Other:
+        $ref:
+          - "_terms_enum.yaml#/other/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -4906,12 +4906,12 @@ properties:
       ARAF:
         $ref:
           - "_terms_enum.yaml#/araf/common"
-      ARHGAP26:
-        $ref:
-          - "_terms_enum.yaml#/arhgap26/common"
       ARHGAP5:
         $ref:
           - "_terms_enum.yaml#/arhgap5/common"
+      ARHGAP26:
+        $ref:
+          - "_terms_enum.yaml#/arhgap26/common"
       ARHGEF12:
         $ref:
           - "_terms_enum.yaml#/arhgef12/common"
@@ -4972,15 +4972,6 @@ properties:
       BARD1:
         $ref:
           - "_terms_enum.yaml#/bard1/common"
-      BCL10:
-        $ref:
-          - "_terms_enum.yaml#/bcl10/common"
-      BCL11A:
-        $ref:
-          - "_terms_enum.yaml#/bcl11a/common"
-      BCL11B:
-        $ref:
-          - "_terms_enum.yaml#/bcl11b/common"
       BCL2:
         $ref:
           - "_terms_enum.yaml#/bcl2/common"
@@ -5002,6 +4993,15 @@ properties:
       BCL9L:
         $ref:
           - "_terms_enum.yaml#/bcl9l/common"
+      BCL10:
+        $ref:
+          - "_terms_enum.yaml#/bcl10/common"
+      BCL11A:
+        $ref:
+          - "_terms_enum.yaml#/bcl11a/common"
+      BCL11B:
+        $ref:
+          - "_terms_enum.yaml#/bcl11b/common"
       BCLAF1:
         $ref:
           - "_terms_enum.yaml#/bclaf1/common"
@@ -5122,12 +5122,6 @@ properties:
       CCR7:
         $ref:
           - "_terms_enum.yaml#/ccr7/common"
-      CD209:
-        $ref:
-          - "_terms_enum.yaml#/cd209/common"
-      CD274:
-        $ref:
-          - "_terms_enum.yaml#/cd274/common"
       CD28:
         $ref:
           - "_terms_enum.yaml#/cd28/common"
@@ -5143,6 +5137,12 @@ properties:
       CD99:
         $ref:
           - "_terms_enum.yaml#/cd99/common"
+      CD209:
+        $ref:
+          - "_terms_enum.yaml#/cd209/common"
+      CD274:
+        $ref:
+          - "_terms_enum.yaml#/cd274/common"
       CDC73:
         $ref:
           - "_terms_enum.yaml#/cdc73/common"
@@ -5158,15 +5158,15 @@ properties:
       CDH17:
         $ref:
           - "_terms_enum.yaml#/cdh17/common"
-      CDK12:
-        $ref:
-          - "_terms_enum.yaml#/cdk12/common"
       CDK4:
         $ref:
           - "_terms_enum.yaml#/cdk4/common"
       CDK6:
         $ref:
           - "_terms_enum.yaml#/cdk6/common"
+      CDK12:
+        $ref:
+          - "_terms_enum.yaml#/cdk12/common"
       CDKN1A:
         $ref:
           - "_terms_enum.yaml#/cdkn1a/common"
@@ -5341,9 +5341,6 @@ properties:
       DDR2:
         $ref:
           - "_terms_enum.yaml#/ddr2/common"
-      DDX10:
-        $ref:
-          - "_terms_enum.yaml#/ddx10/common"
       DDX3X:
         $ref:
           - "_terms_enum.yaml#/ddx3x/common"
@@ -5353,6 +5350,9 @@ properties:
       DDX6:
         $ref:
           - "_terms_enum.yaml#/ddx6/common"
+      DDX10:
+        $ref:
+          - "_terms_enum.yaml#/ddx10/common"
       DEK:
         $ref:
           - "_terms_enum.yaml#/dek/common"
@@ -5491,18 +5491,18 @@ properties:
       EZR:
         $ref:
           - "_terms_enum.yaml#/ezr/common"
-      FAM131B:
-        $ref:
-          - "_terms_enum.yaml#/fam131b/common"
-      FAM135B:
-        $ref:
-          - "_terms_enum.yaml#/fam135b/common"
       FAM46C:
         $ref:
           - "_terms_enum.yaml#/fam46c/common"
       FAM47C:
         $ref:
           - "_terms_enum.yaml#/fam47c/common"
+      FAM131B:
+        $ref:
+          - "_terms_enum.yaml#/fam131b/common"
+      FAM135B:
+        $ref:
+          - "_terms_enum.yaml#/fam135b/common"
       FANCA:
         $ref:
           - "_terms_enum.yaml#/fanca/common"
@@ -5725,15 +5725,15 @@ properties:
       HOOK3:
         $ref:
           - "_terms_enum.yaml#/hook3/common"
+      HOXA9:
+        $ref:
+          - "_terms_enum.yaml#/hoxa9/common"
       HOXA11:
         $ref:
           - "_terms_enum.yaml#/hoxa11/common"
       HOXA13:
         $ref:
           - "_terms_enum.yaml#/hoxa13/common"
-      HOXA9:
-        $ref:
-          - "_terms_enum.yaml#/hoxa9/common"
       HOXB1:
         $ref:
           - "_terms_enum.yaml#/hoxb1/common"
@@ -5785,15 +5785,15 @@ properties:
       IL2:
         $ref:
           - "_terms_enum.yaml#/il2/common"
-      IL21R:
-        $ref:
-          - "_terms_enum.yaml#/il21r/common"
       IL6ST:
         $ref:
           - "_terms_enum.yaml#/il6st/common"
       IL7R:
         $ref:
           - "_terms_enum.yaml#/il7r/common"
+      IL21R:
+        $ref:
+          - "_terms_enum.yaml#/il21r/common"
       IRF4:
         $ref:
           - "_terms_enum.yaml#/irf4/common"
@@ -6025,12 +6025,6 @@ properties:
       MLLT1:
         $ref:
           - "_terms_enum.yaml#/mllt1/common"
-      MLLT10:
-        $ref:
-          - "_terms_enum.yaml#/mllt10/common"
-      MLLT11:
-        $ref:
-          - "_terms_enum.yaml#/mllt11/common"
       MLLT3:
         $ref:
           - "_terms_enum.yaml#/mllt3/common"
@@ -6040,6 +6034,12 @@ properties:
       MLLT6:
         $ref:
           - "_terms_enum.yaml#/mllt6/common"
+      MLLT10:
+        $ref:
+          - "_terms_enum.yaml#/mllt10/common"
+      MLLT11:
+        $ref:
+          - "_terms_enum.yaml#/mllt11/common"
       MN1:
         $ref:
           - "_terms_enum.yaml#/mn1/common"
@@ -6070,12 +6070,12 @@ properties:
       MUC1:
         $ref:
           - "_terms_enum.yaml#/muc1/common"
-      MUC16:
-        $ref:
-          - "_terms_enum.yaml#/muc16/common"
       MUC4:
         $ref:
           - "_terms_enum.yaml#/muc4/common"
+      MUC16:
+        $ref:
+          - "_terms_enum.yaml#/muc16/common"
       MUTYH:
         $ref:
           - "_terms_enum.yaml#/mutyh/common"
@@ -6094,12 +6094,12 @@ properties:
       MYD88:
         $ref:
           - "_terms_enum.yaml#/myd88/common"
-      MYH11:
-        $ref:
-          - "_terms_enum.yaml#/myh11/common"
       MYH9:
         $ref:
           - "_terms_enum.yaml#/myh9/common"
+      MYH11:
+        $ref:
+          - "_terms_enum.yaml#/myh11/common"
       MYO5A:
         $ref:
           - "_terms_enum.yaml#/myo5a/common"
@@ -6211,12 +6211,12 @@ properties:
       NUMA1:
         $ref:
           - "_terms_enum.yaml#/numa1/common"
-      NUP214:
-        $ref:
-          - "_terms_enum.yaml#/nup214/common"
       NUP98:
         $ref:
           - "_terms_enum.yaml#/nup98/common"
+      NUP214:
+        $ref:
+          - "_terms_enum.yaml#/nup214/common"
       NUTM1:
         $ref:
           - "_terms_enum.yaml#/nutm1/common"
@@ -6370,12 +6370,12 @@ properties:
       PRDM1:
         $ref:
           - "_terms_enum.yaml#/prdm1/common"
-      PRDM16:
-        $ref:
-          - "_terms_enum.yaml#/prdm16/common"
       PRDM2:
         $ref:
           - "_terms_enum.yaml#/prdm2/common"
+      PRDM16:
+        $ref:
+          - "_terms_enum.yaml#/prdm16/common"
       PREX2:
         $ref:
           - "_terms_enum.yaml#/prex2/common"
@@ -6409,15 +6409,15 @@ properties:
       PTK6:
         $ref:
           - "_terms_enum.yaml#/ptk6/common"
+      PTPN6:
+        $ref:
+          - "_terms_enum.yaml#/ptpn6/common"
       PTPN11:
         $ref:
           - "_terms_enum.yaml#/ptpn11/common"
       PTPN13:
         $ref:
           - "_terms_enum.yaml#/ptpn13/common"
-      PTPN6:
-        $ref:
-          - "_terms_enum.yaml#/ptpn6/common"
       PTPRB:
         $ref:
           - "_terms_enum.yaml#/ptprb/common"
@@ -6496,27 +6496,27 @@ properties:
       RMI2:
         $ref:
           - "_terms_enum.yaml#/rmi2/common"
-      RNF213:
-        $ref:
-          - "_terms_enum.yaml#/rnf213/common"
       RNF43:
         $ref:
           - "_terms_enum.yaml#/rnf43/common"
+      RNF213:
+        $ref:
+          - "_terms_enum.yaml#/rnf213/common"
       ROBO2:
         $ref:
           - "_terms_enum.yaml#/robo2/common"
       ROS1:
         $ref:
           - "_terms_enum.yaml#/ros1/common"
+      RPL5:
+        $ref:
+          - "_terms_enum.yaml#/rpl5/common"
       RPL10:
         $ref:
           - "_terms_enum.yaml#/rpl10/common"
       RPL22:
         $ref:
           - "_terms_enum.yaml#/rpl22/common"
-      RPL5:
-        $ref:
-          - "_terms_enum.yaml#/rpl5/common"
       RPN1:
         $ref:
           - "_terms_enum.yaml#/rpn1/common"
@@ -6739,15 +6739,15 @@ properties:
       TCEA1:
         $ref:
           - "_terms_enum.yaml#/tcea1/common"
-      TCF12:
-        $ref:
-          - "_terms_enum.yaml#/tcf12/common"
       TCF3:
         $ref:
           - "_terms_enum.yaml#/tcf3/common"
       TCF7L2:
         $ref:
           - "_terms_enum.yaml#/tcf7l2/common"
+      TCF12:
+        $ref:
+          - "_terms_enum.yaml#/tcf12/common"
       TCL1A:
         $ref:
           - "_terms_enum.yaml#/tcl1a/common"
@@ -7214,9 +7214,6 @@ properties:
       Mosaicism:
         $ref:
           - "_terms_enum.yaml#/mosaicism/common"
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
       Partial Methylation:
         $ref:
           - "_terms_enum.yaml#/partial_methylation/common"
@@ -7235,6 +7232,9 @@ properties:
       Translocation:
         $ref:
           - "_terms_enum.yaml#/translocation/common"
+      Other:
+        $ref:
+          - "_terms_enum.yaml#/other/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"

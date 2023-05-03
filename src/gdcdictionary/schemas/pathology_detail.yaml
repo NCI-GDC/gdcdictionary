@@ -409,15 +409,15 @@ properties:
       Hilar:
         $ref:
           - "_terms_enum.yaml#/hilar/common"
+      Iliac, NOS:
+        $ref:
+          - "_terms_enum.yaml#/iliac_nos/common"
       Iliac-common:
         $ref:
           - "_terms_enum.yaml#/iliaccommon/common"
       Iliac-external:
         $ref:
           - "_terms_enum.yaml#/iliacexternal/common"
-      Iliac, NOS:
-        $ref:
-          - "_terms_enum.yaml#/iliac_nos/common"
       Inguinal:
         $ref:
           - "_terms_enum.yaml#/inguinal/common"
@@ -539,15 +539,15 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      Indeterminant:
+        $ref:
+          - "_terms_enum.yaml#/indeterminant/common"
       Involved:
         $ref:
           - "_terms_enum.yaml#/involved/common"
       Uninvolved:
         $ref:
           - "_terms_enum.yaml#/uninvolved/common"
-      Indeterminant:
-        $ref:
-          - "_terms_enum.yaml#/indeterminant/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"

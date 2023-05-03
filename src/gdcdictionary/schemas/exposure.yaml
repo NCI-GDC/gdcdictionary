@@ -104,18 +104,18 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
+      "yes":
+        $ref:
+          - "_terms_enum.yaml#/yes/common"
+      "no":
+        $ref:
+          - "_terms_enum.yaml#/no/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      "no":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      "yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
 
   alcohol_intensity:
     $ref:
@@ -624,13 +624,6 @@ properties:
     $ref:
       - "_terms.yaml#/tobacco_smoking_status/common"
     enum:
-      - "1"
-      - "2"
-      - "3"
-      - "4"
-      - "5"
-      - "6"
-      - "7"
       - Current Reformed Smoker, Duration Not Specified
       - Current Reformed Smoker for < or = 15 yrs
       - Current Reformed Smoker for > 15 yrs
@@ -641,6 +634,13 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
     deprecated_enum:
       - Not Allowed To Collect
       - "1"
@@ -892,9 +892,9 @@ properties:
       - Cigar
       - Cigarette
       - Electronic Cigarette
+      - Other
       - Pipe
       - Smokeless Tobacco
-      - Other
     enumDef:
       Cigar:
         $ref:

@@ -389,21 +389,21 @@ properties:
       Neck:
         $ref:
           - "_terms_enum.yaml#/neck/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
       Soft Tissue:
         $ref:
           - "_terms_enum.yaml#/soft_tissue/common"
+      Other:
+        $ref:
+          - "_terms_enum.yaml#/other/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   biospecimen_laterality:
     $ref:
@@ -710,9 +710,6 @@ properties:
       Indeterminant:
         $ref:
           - "_terms_enum.yaml#/indeterminant/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Other:
         $ref:
           - "_terms_enum.yaml#/other/common"
@@ -722,6 +719,9 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   oct_embedded:
     $ref:
@@ -832,9 +832,6 @@ properties:
       DNA:
         $ref:
           - "_terms_enum.yaml#/dna/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Saliva:
         $ref:
           - "_terms_enum.yaml#/saliva/common"
@@ -847,6 +844,9 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   sample_type_id:
     $ref:
@@ -1062,15 +1062,15 @@ properties:
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
-      Not Applicable:
-        $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Applicable:
+        $ref:
+          - "_terms_enum.yaml#/not_applicable/common"
       Not Allowed To Collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
