@@ -1096,9 +1096,9 @@ properties:
       - hispanic or latino
       - not hispanic or latino
       - Unknown
+      - unknown
       - not reported
       - not allowed to collect
-      - unknown
     deprecated_enum:
       - unknown
     enumDef:
@@ -1111,15 +1111,15 @@ properties:
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
+      unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
       not reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
       not allowed to collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
-      unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
 
   gender:
     $ref:
@@ -1127,8 +1127,8 @@ properties:
     enum:
       - female
       - male
-      - unknown
       - unspecified
+      - unknown
       - not reported
     enumDef:
       female:
@@ -1137,12 +1137,12 @@ properties:
       male:
         $ref:
           - "_terms_enum.yaml#/male/common"
-      unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
       unspecified:
         $ref:
           - "_terms_enum.yaml#/unspecified/common"
+      unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
       not reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
@@ -1180,38 +1180,41 @@ properties:
     $ref:
       - "_terms.yaml#/race/common"
     enum:
-      - white
       - american indian or alaska native
-      - black or african american
       - asian
+      - black or african american
       - native hawaiian or other pacific islander
+      - white
       - other
       - Unknown
+      - unknown
       - not reported
       - not allowed to collect
-      - unknown
     deprecated_enum:
       - unknown
     enumDef:
-      white:
-        $ref:
-          - "_terms_enum.yaml#/white/demographic/race"
       american indian or alaska native:
         $ref:
           - "_terms_enum.yaml#/american_indian_or_alaska_native/common"
-      black or african american:
-        $ref:
-          - "_terms_enum.yaml#/black_or_african_american/common"
       asian:
         $ref:
           - "_terms_enum.yaml#/asian/common"
+      black or african american:
+        $ref:
+          - "_terms_enum.yaml#/black_or_african_american/common"
       native hawaiian or other pacific islander:
         $ref:
           - "_terms_enum.yaml#/native_hawaiian_or_other_pacific_islander/common"
+      white:
+        $ref:
+          - "_terms_enum.yaml#/white/demographic/race"
       other:
         $ref:
           - "_terms_enum.yaml#/other/common"
       Unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
+      unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
       not reported:
@@ -1220,9 +1223,6 @@ properties:
       not allowed to collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
-      unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
 
   vital_status:
     $ref:

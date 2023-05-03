@@ -48,10 +48,10 @@ properties:
       - "_terms.yaml#/additional_pathology_findings/common"
     enum:
       - Adenomyosis
+      - Asbestos bodies
       - Atrophic endometrium
       - Atypical hyperplasia/Endometrial intraepithelial neoplasia (EIN)
       - Autoimmune atrophic chronic gastritis
-      - Asbestos bodies
       - Benign endocervical polyp
       - Bilateral ovaries with endometriotic cyst and surface adhesions
       - Bone marrow concordant histology
@@ -84,10 +84,9 @@ properties:
       - Nonkeratinizing dysplasia; mild
       - Nonkeratinizing dysplasia; moderate
       - Nonkeratinizing dysplasia; severe (carcinoma in situ)
-      - Other
+      - PD-L1 CPS (223C LDT) - 20%
       - Percent follicular component <= 10%
       - Percent follicular component > 10%
-      - PD-L1 CPS (223C LDT) - 20%
       - Platinum-resistant
       - Pleural plaque
       - Pulmonary interstitial fibrosis
@@ -97,8 +96,9 @@ properties:
       - Squamous papilloma; solitary
       - Squamous papillomatosis
       - Tubular (papillary) adenoma(s)
-      - Tumor-associated lymphoid proliferation
       - Tumor has rough spikey edges
+      - Tumor-associated lymphoid proliferation
+      - Other
 
   anaplasia_present:
     $ref:
@@ -362,8 +362,8 @@ properties:
       - "_terms.yaml#/lymph_node_dissection_site/common"
     enum:
       - Neck, Left
-      - Neck, Right
       - Neck, NOS
+      - Neck, Right
 
   lymph_node_involved_site:
     $ref:
@@ -375,9 +375,9 @@ properties:
       - Epitrochlear
       - Femoral
       - Hilar
+      - Iliac, NOS
       - Iliac-common
       - Iliac-external
-      - Iliac, NOS
       - Inguinal
       - Mediastinal
       - Mesenteric
@@ -409,15 +409,15 @@ properties:
       Hilar:
         $ref:
           - "_terms_enum.yaml#/hilar/common"
+      Iliac, NOS:
+        $ref:
+          - "_terms_enum.yaml#/iliac_nos/common"
       Iliac-common:
         $ref:
           - "_terms_enum.yaml#/iliaccommon/common"
       Iliac-external:
         $ref:
           - "_terms_enum.yaml#/iliacexternal/common"
-      Iliac, NOS:
-        $ref:
-          - "_terms_enum.yaml#/iliac_nos/common"
       Inguinal:
         $ref:
           - "_terms_enum.yaml#/inguinal/common"
@@ -497,8 +497,8 @@ properties:
     $ref:
       - "_terms.yaml#/lymph_nodes_removed/common"
     enum:
-      - "No"
       - "Yes"
+      - "No"
       - Not Reported
 
   lymph_nodes_tested:
@@ -533,21 +533,21 @@ properties:
     $ref:
       - "_terms.yaml#/margin_status/common"
     enum:
+      - Indeterminant
       - Involved
       - Uninvolved
-      - Indeterminant
       - Unknown
       - Not Reported
     enumDef:
+      Indeterminant:
+        $ref:
+          - "_terms_enum.yaml#/indeterminant/common"
       Involved:
         $ref:
           - "_terms_enum.yaml#/involved/common"
       Uninvolved:
         $ref:
           - "_terms_enum.yaml#/uninvolved/common"
-      Indeterminant:
-        $ref:
-          - "_terms_enum.yaml#/indeterminant/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -767,10 +767,10 @@ properties:
     $ref:
       - "_terms.yaml#/residual_tumor/common"
     enum:
-      - RX
       - R0
       - R1
       - R2
+      - RX
 
   residual_tumor_measurement:
     $ref:
@@ -857,8 +857,8 @@ properties:
     items:
       enum:
         - Apex
-        - Middle
         - Base
+        - Middle
 
   tumor_thickness:
     $ref:
@@ -914,10 +914,10 @@ properties:
     $ref:
       - "_terms.yaml#/zone_of_origin_prostate/common"
     enum:
-      - Peripheral zone
-      - Transition zone
       - Central zone
       - Overlapping/multiple zones
+      - Peripheral zone
+      - Transition zone
       - Unknown zone
 
   diagnoses:

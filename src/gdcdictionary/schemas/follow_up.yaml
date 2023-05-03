@@ -912,15 +912,15 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  body_surface_area:
-    $ref:
-      - "_terms.yaml#/body_surface_area/common"
-    type: number
-    minimum: 0
-
   bmi:
     $ref:
       - "_terms.yaml#/bmi/common"
+    type: number
+    minimum: 0
+
+  body_surface_area:
+    $ref:
+      - "_terms.yaml#/body_surface_area/common"
     type: number
     minimum: 0
 
@@ -1011,13 +1011,13 @@ properties:
         - COPD
         - Coronary Artery Disease
         - Crohn's Disease
-        - Cryptogenic Organizing Pneumonia
         - Cryptococcal Meningitis
+        - Cryptogenic Organizing Pneumonia
         - Cytomegalovirus (CMV)
         - Deep Vein Thrombosis / Thromboembolism
         - Denys-Drash Syndrome
-        - Dermatomyosis
         - Depression
+        - Dermatomyosis
         - Diabetes
         - Diabetes, Type II
         - Diabetic Neuropathy
@@ -1098,7 +1098,6 @@ properties:
         - Organ transplant (site)
         - Osteoarthritis
         - Osteoporosis or Osteopenia
-        - Other
         - Other Cancer Within 5 Years
         - Other Nonmalignant Systemic Disease
         - Other Pulmonary Complications
@@ -1142,6 +1141,7 @@ properties:
         - Urinary Tract Infection
         - Varicella Zoster Virus
         - Wagr Syndrome
+        - Other
         - Unknown
         - Not Reported
 
@@ -1196,13 +1196,13 @@ properties:
       - COPD
       - Coronary Artery Disease
       - Crohn's Disease
-      - Cryptogenic Organizing Pneumonia
       - Cryptococcal Meningitis
+      - Cryptogenic Organizing Pneumonia
       - Cytomegalovirus (CMV)
       - Deep Vein Thrombosis / Thromboembolism
       - Denys-Drash Syndrome
-      - Dermatomyosis
       - Depression
+      - Dermatomyosis
       - Diabetes
       - Diabetes, Type II
       - Diabetic Neuropathy
@@ -1283,7 +1283,6 @@ properties:
       - Organ transplant (site)
       - Osteoarthritis
       - Osteoporosis or Osteopenia
-      - Other
       - Other Cancer Within 5 Years
       - Other Nonmalignant Systemic Disease
       - Other Pulmonary Complications
@@ -1327,6 +1326,7 @@ properties:
       - Urinary Tract Infection
       - Varicella Zoster Virus
       - Wagr Syndrome
+      - Other
       - Unknown
       - Not Reported
     enumDef:
@@ -1439,9 +1439,9 @@ properties:
       - Insulin
       - Linagliptin
       - Oral Hypoglycemic
-      - Other
       - Sulfonylurea
       - Thiazolidinedione
+      - Other
       - Unknown
       - Not Reported
     enumDef:
@@ -1558,16 +1558,9 @@ properties:
       - Other
       - Not Reported
 
-  fev1_ref_post_bronch_percent:
+  fev1_fvc_post_bronch_percent:
     $ref:
-      - "_terms.yaml#/fev1_ref_post_bronch_percent/common"
-    type: number
-    maximum: 100
-    minimum: 0
-
-  fev1_ref_pre_bronch_percent:
-    $ref:
-      - "_terms.yaml#/fev1_ref_pre_bronch_percent/common"
+      - "_terms.yaml#/fev1_fvc_post_bronch_percent/common"
     type: number
     maximum: 100
     minimum: 0
@@ -1579,9 +1572,16 @@ properties:
     maximum: 100
     minimum: 0
 
-  fev1_fvc_post_bronch_percent:
+  fev1_ref_post_bronch_percent:
     $ref:
-      - "_terms.yaml#/fev1_fvc_post_bronch_percent/common"
+      - "_terms.yaml#/fev1_ref_post_bronch_percent/common"
+    type: number
+    maximum: 100
+    minimum: 0
+
+  fev1_ref_pre_bronch_percent:
+    $ref:
+      - "_terms.yaml#/fev1_ref_pre_bronch_percent/common"
     type: number
     maximum: 100
     minimum: 0
@@ -1598,9 +1598,9 @@ properties:
       - Induction Failure
       - None
       - Progression
-      - Other
       - Relapse
       - Second Malignant Neoplasm
+      - Other
       - Not Reported
 
   haart_treatment_indicator:
@@ -1828,8 +1828,8 @@ properties:
     enum:
       - Carcinomatosis
       - Kidney Involvement
-      - Lung Involvement
       - Liver Involvement
+      - Lung Involvement
       - Normal
       - Retroperitoneal Lymph Node Involvement
       - Vena Cava Involvement/Thrombus
@@ -1839,19 +1839,19 @@ properties:
     $ref:
       - "_terms.yaml#/imaging_result/common"
     enum:
-      - Positive
       - Indeterminate
       - Negative
       - Not Performed
+      - Positive
       - Unknown
       - Not Reported
     enumDef:
-      Positive:
-        $ref:
-          - "_terms_enum.yaml#/positive/common"
       Negative:
         $ref:
           - "_terms_enum.yaml#/negative/common"
+      Positive:
+        $ref:
+          - "_terms_enum.yaml#/positive/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -2434,21 +2434,21 @@ properties:
       - H2 Blockers
       - Medically Treated
       - No Treatment
-      - Not Applicable
       - Proton Pump Inhibitors
       - Surgically Treated
       - Unknown
       - Not Reported
+      - Not Applicable
     enumDef:
-      Not Applicable:
-        $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Applicable:
+        $ref:
+          - "_terms_enum.yaml#/not_applicable/common"
 
   risk_factor:
     $ref:
@@ -2644,6 +2644,37 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  risk_factor_method_of_diagnosis:
+    $ref:
+      - "_terms.yaml#/risk_factor_method_of_diagnosis/common"
+    enum:
+      - Biochemical Assessment
+      - Both Clinical and Biochemical Assessments
+      - Clinical Assessment
+      - Not Reported
+
+  risk_factor_treatment:
+    $ref:
+      - "_terms.yaml#/risk_factor_treatment/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms_enum.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms_enum.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
+
   risk_factors:
     $ref:
       - "_terms.yaml#/risk_factors/common"
@@ -2827,37 +2858,6 @@ properties:
         - Unknown
         - Not Reported
 
-  risk_factor_method_of_diagnosis:
-    $ref:
-      - "_terms.yaml#/risk_factor_method_of_diagnosis/common"
-    enum:
-      - Biochemical Assessment
-      - Both Clinical and Biochemical Assessments
-      - Clinical Assessment
-      - Not Reported
-
-  risk_factor_treatment:
-    $ref:
-      - "_terms.yaml#/risk_factor_treatment/common"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-      - Not Reported
-    enumDef:
-      "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-
   scan_tracer_used:
     $ref:
       - "_terms.yaml#/scan_tracer_used/common"
@@ -2872,8 +2872,8 @@ properties:
     $ref:
       - "_terms.yaml#/timepoint_category/common"
     enum:
-      - Adolescence
       - Adjuvant Therapy
+      - Adolescence
       - Adulthood
       - Childhood
       - Follow-up

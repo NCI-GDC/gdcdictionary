@@ -50,20 +50,6 @@ properties:
   $ref:
     - "_definitions.yaml#/ubiquitous_properties"
 
-  alcohol_frequency:
-    $ref:
-      - "_terms.yaml#/alcohol_frequency/common"
-    enum:
-      - Daily Drinker
-      - Weekly Drinker
-
-  asbestos_exposure_type:
-    $ref:
-      - "_terms.yaml#/asbestos_exposure_type/common"
-    enum:
-      - Amosite
-      - Crocidolite
-
   age_at_last_exposure:
     $ref:
       - "_terms.yaml#/age_at_last_exposure/common"
@@ -91,16 +77,23 @@ properties:
     type: number
     minimum: 0
 
+  alcohol_frequency:
+    $ref:
+      - "_terms.yaml#/alcohol_frequency/common"
+    enum:
+      - Daily Drinker
+      - Weekly Drinker
+
   alcohol_history:
     $ref:
       - "_terms.yaml#/alcohol_history/common"
     enum:
       - "Yes"
       - "No"
+      - "yes"
+      - "no"
       - Unknown
       - Not Reported
-      - "no"
-      - "yes"
     deprecated_enum:
       - "no"
       - "yes"
@@ -111,18 +104,18 @@ properties:
       "No":
         $ref:
           - "_terms_enum.yaml#/no/common"
+      "yes":
+        $ref:
+          - "_terms_enum.yaml#/yes/common"
+      "no":
+        $ref:
+          - "_terms_enum.yaml#/no/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      "no":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      "yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
 
   alcohol_intensity:
     $ref:
@@ -165,8 +158,8 @@ properties:
     enum:
       - Beer
       - Liquor
-      - Other
       - Wine
+      - Other
       - Unknown
       - Not Reported
     enumDef:
@@ -202,6 +195,13 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  asbestos_exposure_type:
+    $ref:
+      - "_terms.yaml#/asbestos_exposure_type/common"
+    enum:
+      - Amosite
+      - Crocidolite
+
   chemical_exposure_type:
     $ref:
       - "_terms.yaml#/chemical_exposure_type/common"
@@ -214,8 +214,8 @@ properties:
         - Asbestos
         - Benzene
         - Cadmium
-        - Chromium
         - Chemical Exposure, NOS
+        - Chromium
         - Coal Gas, Coal Tar, Coal Tar Pitch, and Derivatives
         - Coke Oven Emission
         - Copper
@@ -318,9 +318,9 @@ properties:
       - Coal Dust
       - Marijuana
       - Radiation
-      - Smoke
       - Radon
       - Respirable Crystalline Silica
+      - Smoke
       - Smokeless Tobacco
       - Tobacco
       - Wood Dust
@@ -336,8 +336,8 @@ properties:
     $ref:
       - "_terms.yaml#/occupation_duration_years/common"
     type: integer
-    minimum: 0
     maximum: 89
+    minimum: 0
 
   occupation_type:
     $ref:
@@ -355,9 +355,9 @@ properties:
         - Assemblers
         - Authors, Journalists and Linguists
         - Blacksmiths, Toolmakers and Related Trades Workers
+        - Building and Housekeeping Supervisors
         - Building Finishers and Related Trades Workers
         - Building Frame and Related Trades Workers
-        - Building and Housekeeping Supervisors
         - Business Services Agents
         - Business Services and Administration Managers
         - Car, Van and Motorcycle Drivers
@@ -377,9 +377,9 @@ properties:
         - Finance Professionals
         - Financial and Mathematical Associate Professionals
         - Fishery Workers, Hunters and Trappers
+        - Food and Related Products Machine Operators
         - Food Preparation Assistants
         - Food Processing and Related Trades Workers
-        - Food and Related Products Machine Operators
         - Forestry and Related Workers
         - Garment and Related Trades Workers
         - General Office Clerks
@@ -405,8 +405,8 @@ properties:
         - Market Gardeners and Crop Growers
         - Material Recording and Transport Clerks
         - Mathematicians, Actuaries and Statisticians
-        - Medical Doctors
         - Medical and Pharmaceutical Technicians
+        - Medical Doctors
         - Metal Processing and Finishing Plant Operators
         - Mining and Construction Labourers
         - Mining and Mineral Processing Plant Operators
@@ -453,9 +453,9 @@ properties:
         - Social and Religious Professionals
         - Software and Applications Developers and Analysts
         - Sports and Fitness Workers
-        - Street Vendors (excluding Food)
         - Street and Market Salespersons
         - Street and Related Service Workers
+        - Street Vendors (excluding Food)
         - Subsistence Crop Farmers
         - Subsistence Fishers, Hunters, Trappers and Gatherers
         - Subsistence Livestock Farmers
@@ -624,6 +624,13 @@ properties:
     $ref:
       - "_terms.yaml#/tobacco_smoking_status/common"
     enum:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
       - Current Reformed Smoker, Duration Not Specified
       - Current Reformed Smoker for < or = 15 yrs
       - Current Reformed Smoker for > 15 yrs
@@ -633,13 +640,6 @@ properties:
       - Smoking history not documented
       - Unknown
       - Not Reported
-      - "1"
-      - "2"
-      - "3"
-      - "4"
-      - "5"
-      - "6"
-      - "7"
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
@@ -651,6 +651,15 @@ properties:
       - "6"
       - "7"
     enumDef:
+      Unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       "1":
         $ref:
           - "_terms_enum.yaml#/1/exposure/tobacco_smoking_status"
@@ -672,15 +681,6 @@ properties:
       "7":
         $ref:
           - "_terms_enum.yaml#/7/exposure/tobacco_smoking_status"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   type_of_smoke_exposure:
     $ref:

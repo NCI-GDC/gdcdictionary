@@ -87,19 +87,22 @@ properties:
     $ref:
       - "_terms.yaml#/ajcc_clinical_m/common"
     enum:
+      - cM0 (i+)
       - M0
       - M1
       - M1a
       - M1b
       - M1c
       - MX
-      - cM0 (i+)
       - Unknown
       - Not Reported
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
+      cM0 (i+):
+        $ref:
+          - "_terms_enum.yaml#/cm0_i/common"
       M0:
         $ref:
           - "_terms_enum.yaml#/m0/common"
@@ -118,9 +121,6 @@ properties:
       MX:
         $ref:
           - "_terms_enum.yaml#/mx/common"
-      cM0 (i+):
-        $ref:
-          - "_terms_enum.yaml#/cm0_i/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -260,9 +260,9 @@ properties:
       - Stage IA2
       - Stage IA3
       - Stage IB
-      - Stage IB Cervix
       - Stage IB1
       - Stage IB2
+      - Stage IB Cervix
       - Stage IC
       - Stage II
       - Stage II Cervix
@@ -319,15 +319,15 @@ properties:
       Stage IB:
         $ref:
           - "_terms_enum.yaml#/stage_ib/common"
-      Stage IB Cervix:
-        $ref:
-          - "_terms_enum.yaml#/stage_ib_cervix/common"
       Stage IB1:
         $ref:
           - "_terms_enum.yaml#/stage_ib1/common"
       Stage IB2:
         $ref:
           - "_terms_enum.yaml#/stage_ib2/common"
+      Stage IB Cervix:
+        $ref:
+          - "_terms_enum.yaml#/stage_ib_cervix/common"
       Stage IC:
         $ref:
           - "_terms_enum.yaml#/stage_ic/common"
@@ -436,12 +436,12 @@ properties:
       - T4c
       - T4d
       - T4e
-      - TX
       - Ta
       - Tis
       - Tis (DCIS)
       - Tis (LCIS)
       - Tis (Paget's)
+      - TX
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -532,9 +532,6 @@ properties:
       T4e:
         $ref:
           - "_terms_enum.yaml#/t4e/common"
-      TX:
-        $ref:
-          - "_terms_enum.yaml#/tx/common"
       Ta:
         $ref:
           - "_terms_enum.yaml#/ta/common"
@@ -550,6 +547,9 @@ properties:
       Tis (Paget's):
         $ref:
           - "_terms_enum.yaml#/tis_pagets/common"
+      TX:
+        $ref:
+          - "_terms_enum.yaml#/tx/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -564,6 +564,7 @@ properties:
     $ref:
       - "_terms.yaml#/ajcc_pathologic_m/common"
     enum:
+      - cM0 (i+)
       - M0
       - M1
       - M1a
@@ -572,13 +573,15 @@ properties:
       - M1d
       - M2
       - MX
-      - cM0 (i+)
       - Unknown
       - Not Reported
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
+      cM0 (i+):
+        $ref:
+          - "_terms_enum.yaml#/cm0_i/common"
       M0:
         $ref:
           - "_terms_enum.yaml#/m0/common"
@@ -597,9 +600,6 @@ properties:
       MX:
         $ref:
           - "_terms_enum.yaml#/mx/common"
-      cM0 (i+):
-        $ref:
-          - "_terms_enum.yaml#/cm0_i/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -629,10 +629,10 @@ properties:
       - N1c
       - N1mi
       - N2
-      - N2mi
       - N2a
       - N2b
       - N2c
+      - N2mi
       - N3
       - N3a
       - N3b
@@ -744,7 +744,6 @@ properties:
       - Stage IB2
       - Stage IC
       - Stage II
-      - Stage IS
       - Stage IIA
       - Stage IIA1
       - Stage IIA2
@@ -759,6 +758,7 @@ properties:
       - Stage IIIC1
       - Stage IIIC2
       - Stage IIID
+      - Stage IS
       - Stage IV
       - Stage IVA
       - Stage IVB
@@ -801,9 +801,6 @@ properties:
       Stage II:
         $ref:
           - "_terms_enum.yaml#/stage_ii/common"
-      Stage IS:
-        $ref:
-          - "_terms_enum.yaml#/stage_is/common"
       Stage IIA:
         $ref:
           - "_terms_enum.yaml#/stage_iia/common"
@@ -840,6 +837,9 @@ properties:
       Stage IIID:
         $ref:
           - "_terms_enum.yaml#/stage_iiid/common"
+      Stage IS:
+        $ref:
+          - "_terms_enum.yaml#/stage_is/common"
       Stage IV:
         $ref:
           - "_terms_enum.yaml#/stage_iv/common"
@@ -898,12 +898,12 @@ properties:
       - T4c
       - T4d
       - T4e
-      - TX
       - Ta
       - Tis
       - Tis (DCIS)
       - Tis (LCIS)
       - Tis (Paget's)
+      - TX
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -994,9 +994,6 @@ properties:
       T4e:
         $ref:
           - "_terms_enum.yaml#/t4e/common"
-      TX:
-        $ref:
-          - "_terms_enum.yaml#/tx/common"
       Ta:
         $ref:
           - "_terms_enum.yaml#/ta/common"
@@ -1012,6 +1009,9 @@ properties:
       Tis (Paget's):
         $ref:
           - "_terms_enum.yaml#/tis_pagets/common"
+      TX:
+        $ref:
+          - "_terms_enum.yaml#/tx/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -1087,8 +1087,8 @@ properties:
     enum:
       - Fever
       - Night Sweats
-      - Other
       - Weight Loss
+      - Other
 
   ann_arbor_clinical_stage:
     $ref:
@@ -1394,13 +1394,13 @@ properties:
       - "_terms.yaml#/classification_of_tumor/common"
     enum:
       - metastasis
-      - other
       - Premalignant
       - primary
       - Prior primary
       - Progression
       - recurrence
       - Synchronous primary
+      - other
       - Unknown
       - not reported
       - Not Allowed To Collect
@@ -1408,9 +1408,6 @@ properties:
       metastasis:
         $ref:
           - "_terms_enum.yaml#/metastasis/common"
-      other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
       Premalignant:
         $ref:
           - "_terms_enum.yaml#/premalignant/common"
@@ -1420,6 +1417,9 @@ properties:
       recurrence:
         $ref:
           - "_terms_enum.yaml#/recurrence/common"
+      other:
+        $ref:
+          - "_terms_enum.yaml#/other/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -1430,25 +1430,29 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
-  cog_neuroblastoma_risk_group:
+  cog_liver_stage:
     $ref:
-      - "_terms.yaml#/cog_neuroblastoma_risk_group/common"
+      - "_terms.yaml#/cog_liver_stage/common"
     enum:
-      - High Risk
-      - Intermediate Risk
-      - Low Risk
+      - Stage I
+      - Stage II
+      - Stage III
+      - Stage IV
       - Unknown
       - Not Reported
     enumDef:
-      High Risk:
+      Stage I:
         $ref:
-          - "_terms_enum.yaml#/high_risk/common"
-      Intermediate Risk:
+          - "_terms_enum.yaml#/stage_i/common"
+      Stage II:
         $ref:
-          - "_terms_enum.yaml#/intermediate_risk/common"
-      Low Risk:
+          - "_terms_enum.yaml#/stage_ii/common"
+      Stage III:
         $ref:
-          - "_terms_enum.yaml#/low_risk/common"
+          - "_terms_enum.yaml#/stage_iii/common"
+      Stage IV:
+        $ref:
+          - "_terms_enum.yaml#/stage_iv/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -1456,9 +1460,9 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  cog_rhabdomyosarcoma_risk_group:
+  cog_neuroblastoma_risk_group:
     $ref:
-      - "_terms.yaml#/cog_rhabdomyosarcoma_risk_group/common"
+      - "_terms.yaml#/cog_neuroblastoma_risk_group/common"
     enum:
       - High Risk
       - Intermediate Risk
@@ -1512,29 +1516,25 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  cog_liver_stage:
+  cog_rhabdomyosarcoma_risk_group:
     $ref:
-      - "_terms.yaml#/cog_liver_stage/common"
+      - "_terms.yaml#/cog_rhabdomyosarcoma_risk_group/common"
     enum:
-      - Stage I
-      - Stage II
-      - Stage III
-      - Stage IV
+      - High Risk
+      - Intermediate Risk
+      - Low Risk
       - Unknown
       - Not Reported
     enumDef:
-      Stage I:
+      High Risk:
         $ref:
-          - "_terms_enum.yaml#/stage_i/common"
-      Stage II:
+          - "_terms_enum.yaml#/high_risk/common"
+      Intermediate Risk:
         $ref:
-          - "_terms_enum.yaml#/stage_ii/common"
-      Stage III:
+          - "_terms_enum.yaml#/intermediate_risk/common"
+      Low Risk:
         $ref:
-          - "_terms_enum.yaml#/stage_iii/common"
-      Stage IV:
-        $ref:
-          - "_terms_enum.yaml#/stage_iv/common"
+          - "_terms_enum.yaml#/low_risk/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -2082,6 +2082,12 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  icd_10_code:
+    $ref:
+      - "_terms.yaml#/icd_10_code/common"
+    type: string
+    pattern: "^[A-TV-Z][0-9][A-Z0-9](\\.?[A-Z0-9]{1,4})?$"
+
   igcccg_stage:
     $ref:
       - "_terms.yaml#/igcccg_stage/common"
@@ -2098,12 +2104,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-
-  icd_10_code:
-    $ref:
-      - "_terms.yaml#/icd_10_code/common"
-    type: string
-    pattern: "^[A-TV-Z][0-9][A-Z0-9](\\.?[A-Z0-9]{1,4})?$"
 
   inpc_grade:
     $ref:
@@ -2226,23 +2226,23 @@ properties:
     $ref:
       - "_terms.yaml#/international_prognostic_index/common"
     enum:
+      - High Risk
+      - High-Intermediate Risk
       - Low Risk
       - Low-Intermediate Risk
-      - High-Intermediate Risk
-      - High Risk
     enumDef:
+      High Risk:
+        $ref:
+          - "_terms_enum.yaml#/high_risk/diagnosis/international_prognostic_index"
+      High-Intermediate Risk:
+        $ref:
+          - "_terms_enum.yaml#/highintermediate_risk/common"
       Low Risk:
         $ref:
           - "_terms_enum.yaml#/low_risk/diagnosis/international_prognostic_index"
       Low-Intermediate Risk:
         $ref:
           - "_terms_enum.yaml#/lowintermediate_risk/common"
-      High-Intermediate Risk:
-        $ref:
-          - "_terms_enum.yaml#/highintermediate_risk/common"
-      High Risk:
-        $ref:
-          - "_terms_enum.yaml#/high_risk/diagnosis/international_prognostic_index"
 
   irs_group:
     $ref:
@@ -2361,8 +2361,8 @@ properties:
       - I
       - II
       - III
-      - Not Reported
       - Unknown
+      - Not Reported
     enumDef:
       I:
         $ref:
@@ -2373,20 +2373,20 @@ properties:
       III:
         $ref:
           - "_terms_enum.yaml#/iii/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
 
   last_known_disease_status:
     $ref:
       - "_terms.yaml#/last_known_disease_status/common"
     enum:
+      - Biochemical evidence of disease without structural correlate
       - Distant met recurrence/progression
       - Loco-regional recurrence/progression
-      - Biochemical evidence of disease without structural correlate
       - Tumor free
       - Unknown tumor status
       - With tumor
@@ -2526,13 +2526,12 @@ properties:
       - Neck
       - No known nodal involvement
       - Oropharynx
-      - Other
       - Ovary
       - Pancreas
       - Paraaortic lymph nodes
       - Parotid gland
-      - Pericardium
       - Peri-orbital soft tissue
+      - Pericardium
       - Retroperitoneal lymph nodes
       - Small intestine
       - Soft tissue (muscle, ligaments, subcutaneous)
@@ -2541,24 +2540,25 @@ properties:
       - Submandibular lymph nodes
       - Supraclavicular lymph nodes
       - Thyroid
+      - Other
 
   medulloblastoma_molecular_classification:
     $ref:
       - "_terms.yaml#/medulloblastoma_molecular_classification/common"
     enum:
-      - Not Determined
       - Non-WNT/non-SHH Activated
+      - Not Determined
       - SHH-Activated
       - WNT-Activated
       - Unknown
       - Not Reported
     enumDef:
-      Not Determined:
-        $ref:
-          - "_terms_enum.yaml#/not_determined/common"
       Non-WNT/non-SHH Activated:
         $ref:
           - "_terms_enum.yaml#/nonwntnonshh_activated/common"
+      Not Determined:
+        $ref:
+          - "_terms_enum.yaml#/not_determined/common"
       SHH-Activated:
         $ref:
           - "_terms_enum.yaml#/shhactivated/common"
@@ -2643,8 +2643,8 @@ properties:
       - Skin
       - Small Intestine
       - Soft Tissue
-      - Spleen
       - Spinal Cord
+      - Spleen
       - Stomach
       - Urethra
       - Uterine Adnexa
@@ -2768,8 +2768,8 @@ properties:
       - Blood Draw
       - Bone Marrow Aspirate
       - Core Biopsy
-      - Cytology
       - Cystoscopy
+      - Cytology
       - Debulking
       - Diagnostic Imaging
       - Dilation and Curettage Procedure
@@ -2781,13 +2781,13 @@ properties:
       - Incisional Biopsy
       - Laparoscopy
       - Laparotomy
-      - Other
       - Pap Smear
-      - Physical Exam
       - Pathologic Review
+      - Physical Exam
       - Surgical Resection
       - Thoracentesis
       - Ultrasound Guided Biopsy
+      - Other
       - Unknown
       - Not Reported
       - Not Allowed To Collect
@@ -2809,12 +2809,12 @@ properties:
       Core Biopsy:
         $ref:
           - "_terms_enum.yaml#/core_biopsy/common"
-      Cytology:
-        $ref:
-          - "_terms_enum.yaml#/cytology/common"
       Cystoscopy:
         $ref:
           - "_terms_enum.yaml#/cystoscopy/common"
+      Cytology:
+        $ref:
+          - "_terms_enum.yaml#/cytology/common"
       Debulking:
         $ref:
           - "_terms_enum.yaml#/debulking/common"
@@ -2845,18 +2845,15 @@ properties:
       Laparotomy:
         $ref:
           - "_terms_enum.yaml#/laparotomy/common"
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
       Pap Smear:
         $ref:
           - "_terms_enum.yaml#/pap_smear/common"
-      Physical Exam:
-        $ref:
-          - "_terms_enum.yaml#/physical_exam/common"
       Pathologic Review:
         $ref:
           - "_terms_enum.yaml#/pathologic_review/common"
+      Physical Exam:
+        $ref:
+          - "_terms_enum.yaml#/physical_exam/common"
       Surgical Resection:
         $ref:
           - "_terms_enum.yaml#/surgical_resection/common"
@@ -2866,6 +2863,9 @@ properties:
       Ultrasound Guided Biopsy:
         $ref:
           - "_terms_enum.yaml#/ultrasound_guided_biopsy/common"
+      Other:
+        $ref:
+          - "_terms_enum.yaml#/other/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -2898,12 +2898,6 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  mitotic_count:
-    $ref:
-      - "_terms.yaml#/mitotic_count/common"
-    type: integer
-    minimum: 0
-
   mitosis_karyorrhexis_index:
     $ref:
       - "_terms.yaml#/mitosis_karyorrhexis_index/common"
@@ -2929,6 +2923,12 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  mitotic_count:
+    $ref:
+      - "_terms.yaml#/mitotic_count/common"
+    type: integer
+    minimum: 0
 
   morphology:
     $ref:
@@ -2973,8 +2973,8 @@ properties:
       - 8040/1
       - 8040/3
       - 8041/3
-      - 8041/34
       - 8041/6
+      - 8041/34
       - 8042/3
       - 8043/3
       - 8044/3
@@ -2993,8 +2993,8 @@ properties:
       - 8060/0
       - 8070/2
       - 8070/3
-      - 8070/33
       - 8070/6
+      - 8070/33
       - 8071/2
       - 8071/3
       - 8072/3
@@ -3048,8 +3048,8 @@ properties:
       - 8140/1
       - 8140/2
       - 8140/3
-      - 8140/33
       - 8140/6
+      - 8140/33
       - 8141/3
       - 8142/3
       - 8143/3
@@ -3966,8 +3966,8 @@ properties:
       - 9709/3
       - 9712/3
       - 9714/3
-      - 9716/3
       - 9715/3
+      - 9716/3
       - 9717/3
       - 9718/3
       - 9719/3
@@ -7120,15 +7120,15 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      Ovarian Capsule Fragmented:
+        $ref:
+          - "_terms_enum.yaml#/ovarian_capsule_fragmented/common"
       Ovarian Capsule Intact:
         $ref:
           - "_terms_enum.yaml#/ovarian_capsule_intact/common"
       Ovarian Capsule Ruptured:
         $ref:
           - "_terms_enum.yaml#/ovarian_capsule_ruptured/common"
-      Ovarian Capsule Fragmented:
-        $ref:
-          - "_terms_enum.yaml#/ovarian_capsule_fragmented/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -7149,12 +7149,12 @@ properties:
       Absent:
         $ref:
           - "_terms_enum.yaml#/absent/common"
-      Present:
-        $ref:
-          - "_terms_enum.yaml#/present/common"
       Indeterminate:
         $ref:
           - "_terms_enum.yaml#/indeterminate/common"
+      Present:
+        $ref:
+          - "_terms_enum.yaml#/present/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -7180,12 +7180,20 @@ properties:
     $ref:
       - "_terms.yaml#/pediatric_kidney_staging/common"
     enum:
-      - Nephrectomy specimen with tumor confined to the kidney; distant metastasis identified at diagnosis
+      - Nephrectomy specimen with tumor confined to the kidney; distant metastasis
+        identified at diagnosis
       - Nephrectomy specimen with tumor confined to the kidney; no distant metastasis
-      - Nephrectomy specimen with tumor that penetrates the renal capsule or involves the renal sinus with negative margins and negative lymph nodes; distant metastasis identified at diagnosis
-      - Nephrectomy specimen with tumor that penetrates the renal capsule or involves the renal sinus with negative margins and negative lymph nodes; no distant metastasis
-      - Nephrectomy specimen with tumor that is present at the surgical margin of resection or within regional lymph nodes; distant metastasis identified at diagnosis
-      - Nephrectomy specimen with tumor that is present at the surgical margin of resection or within regional lymph nodes; no distant metastasis
+      - Nephrectomy specimen with tumor that is present at the surgical margin of
+        resection or within regional lymph nodes; distant metastasis identified at
+        diagnosis
+      - Nephrectomy specimen with tumor that is present at the surgical margin of
+        resection or within regional lymph nodes; no distant metastasis
+      - Nephrectomy specimen with tumor that penetrates the renal capsule or involves
+        the renal sinus with negative margins and negative lymph nodes; distant metastasis
+        identified at diagnosis
+      - Nephrectomy specimen with tumor that penetrates the renal capsule or involves
+        the renal sinus with negative margins and negative lymph nodes; no distant
+        metastasis
       - Tumor biopsied only at diagnosis; distant metastasis identified at diagnosis
       - Tumor biopsied only at diagnosis; no distant metastasis
       - Not Reported
@@ -7242,11 +7250,6 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  primary_disease:
-    $ref:
-      - "_terms.yaml#/primary_disease/common"
-    type: boolean
-
   primary_diagnosis:
     $ref:
       - "_terms.yaml#/primary_diagnosis/common"
@@ -7283,11 +7286,11 @@ properties:
       - Acute leukemia, Burkitt type
       - Acute leukemia, NOS
       - Acute lymphatic leukemia
-      - Acute lymphoblastic leukemia-lymphoma, NOS
       - Acute lymphoblastic leukemia, L2 type, NOS
       - Acute lymphoblastic leukemia, mature B-cell type
       - Acute lymphoblastic leukemia, NOS
       - Acute lymphoblastic leukemia, precursor cell type
+      - Acute lymphoblastic leukemia-lymphoma, NOS
       - Acute lymphocytic leukemia
       - Acute lymphoid leukemia
       - Acute megakaryoblastic leukaemia
@@ -7546,9 +7549,9 @@ properties:
       - B lymphoblastic leukemia/lymphoma with hyperdiploidy
       - B lymphoblastic leukemia/lymphoma with hypodiploidy (Hypodiploid ALL)
       - B lymphoblastic leukemia/lymphoma with t(1;19)(q23;p13.3); E2A-PBX1 (TCF3-PBX1)
-      - B lymphoblastic leukemia/lymphoma with t(12;21)(p13;q22); TEL-AML1 (ETV6-RUNX1)
       - B lymphoblastic leukemia/lymphoma with t(5;14)(q31;q32); IL3-IGH
       - B lymphoblastic leukemia/lymphoma with t(9;22)(q34;q11.2); BCR-ABL1
+      - B lymphoblastic leukemia/lymphoma with t(12;21)(p13;q22); TEL-AML1 (ETV6-RUNX1)
       - B lymphoblastic leukemia/lymphoma with t(v;11q23); MLL rearranged
       - B lymphoblastic leukemia/lymphoma, NOS
       - B-ALL
@@ -8575,8 +8578,8 @@ properties:
       - Lipoblastomatosis
       - Lipoid cell tumor of ovary
       - Lipoleiomyoma
-      - Lipoma-like liposarcoma
       - Lipoma, NOS
+      - Lipoma-like liposarcoma
       - Lipomatous medulloblastoma
       - Liposarcoma, differentiated
       - Liposarcoma, NOS
@@ -9356,11 +9359,11 @@ properties:
       - Preleukemic syndrome
       - Primary amyloidosis
       - Primary cutaneous anaplastic large cell lymphoma
-      - Primary cutaneous CD30+ large T-cell lymphoma
-      - Primary cutaneous CD30+ T-cell lymphoproliferative disorder
       - Primary cutaneous CD4-positive small/medium T-cell lymphoma
       - Primary cutaneous CD8-positive aggressive epidermotropic cytotoxic T-cell
         lymphoma
+      - Primary cutaneous CD30+ large T-cell lymphoma
+      - Primary cutaneous CD30+ T-cell lymphoproliferative disorder
       - Primary cutaneous DLBCL, leg type
       - Primary cutaneous follicle centre lymphoma
       - Primary cutaneous gamma-delta T-cell lymphoma
@@ -9980,9 +9983,6 @@ properties:
       Acute lymphatic leukemia:
         $ref:
           - "_terms_enum.yaml#/acute_lymphatic_leukemia/common"
-      Acute lymphoblastic leukemia-lymphoma, NOS:
-        $ref:
-          - "_terms_enum.yaml#/acute_lymphoblastic_leukemialymphoma_nos/common"
       Acute lymphoblastic leukemia, L2 type, NOS:
         $ref:
           - "_terms_enum.yaml#/acute_lymphoblastic_leukemia_l2_type_nos/common"
@@ -9995,6 +9995,9 @@ properties:
       Acute lymphoblastic leukemia, precursor cell type:
         $ref:
           - "_terms_enum.yaml#/acute_lymphoblastic_leukemia_precursor_cell_type/common"
+      Acute lymphoblastic leukemia-lymphoma, NOS:
+        $ref:
+          - "_terms_enum.yaml#/acute_lymphoblastic_leukemialymphoma_nos/common"
       Acute lymphocytic leukemia:
         $ref:
           - "_terms_enum.yaml#/acute_lymphocytic_leukemia/common"
@@ -10685,15 +10688,15 @@ properties:
       B lymphoblastic leukemia/lymphoma with t(1;19)(q23;p13.3); E2A-PBX1 (TCF3-PBX1):
         $ref:
           - "_terms_enum.yaml#/b_lymphoblastic_leukemialymphoma_with_t119q23p133_e2apbx1_tcf3pbx1/common"
-      B lymphoblastic leukemia/lymphoma with t(12;21)(p13;q22); TEL-AML1 (ETV6-RUNX1):
-        $ref:
-          - "_terms_enum.yaml#/b_lymphoblastic_leukemialymphoma_with_t1221p13q22_telaml1_etv6runx1/common"
       B lymphoblastic leukemia/lymphoma with t(5;14)(q31;q32); IL3-IGH:
         $ref:
           - "_terms_enum.yaml#/b_lymphoblastic_leukemialymphoma_with_t514q31q32_il3igh/common"
       B lymphoblastic leukemia/lymphoma with t(9;22)(q34;q11.2); BCR-ABL1:
         $ref:
           - "_terms_enum.yaml#/b_lymphoblastic_leukemialymphoma_with_t922q34q112_bcrabl1/common"
+      B lymphoblastic leukemia/lymphoma with t(12;21)(p13;q22); TEL-AML1 (ETV6-RUNX1):
+        $ref:
+          - "_terms_enum.yaml#/b_lymphoblastic_leukemialymphoma_with_t1221p13q22_telaml1_etv6runx1/common"
       B lymphoblastic leukemia/lymphoma with t(v;11q23); MLL rearranged:
         $ref:
           - "_terms_enum.yaml#/b_lymphoblastic_leukemialymphoma_with_tv11q23_mll_rearranged/common"
@@ -13332,12 +13335,12 @@ properties:
       Lipoleiomyoma:
         $ref:
           - "_terms_enum.yaml#/lipoleiomyoma/common"
-      Lipoma-like liposarcoma:
-        $ref:
-          - "_terms_enum.yaml#/lipomalike_liposarcoma/common"
       Lipoma, NOS:
         $ref:
           - "_terms_enum.yaml#/lipoma_nos/common"
+      Lipoma-like liposarcoma:
+        $ref:
+          - "_terms_enum.yaml#/lipomalike_liposarcoma/common"
       Lipomatous medulloblastoma:
         $ref:
           - "_terms_enum.yaml#/lipomatous_medulloblastoma/common"
@@ -15306,18 +15309,18 @@ properties:
       Primary cutaneous anaplastic large cell lymphoma:
         $ref:
           - "_terms_enum.yaml#/primary_cutaneous_anaplastic_large_cell_lymphoma/common"
-      Primary cutaneous CD30+ large T-cell lymphoma:
-        $ref:
-          - "_terms_enum.yaml#/primary_cutaneous_cd30_large_tcell_lymphoma/common"
-      Primary cutaneous CD30+ T-cell lymphoproliferative disorder:
-        $ref:
-          - "_terms_enum.yaml#/primary_cutaneous_cd30_tcell_lymphoproliferative_disorder/common"
       Primary cutaneous CD4-positive small/medium T-cell lymphoma:
         $ref:
           - "_terms_enum.yaml#/primary_cutaneous_cd4positive_smallmedium_tcell_lymphoma/common"
       Primary cutaneous CD8-positive aggressive epidermotropic cytotoxic T-cell lymphoma:
         $ref:
           - "_terms_enum.yaml#/primary_cutaneous_cd8positive_aggressive_epidermotropic_cytotoxic_tcell_lymphoma/common"
+      Primary cutaneous CD30+ large T-cell lymphoma:
+        $ref:
+          - "_terms_enum.yaml#/primary_cutaneous_cd30_large_tcell_lymphoma/common"
+      Primary cutaneous CD30+ T-cell lymphoproliferative disorder:
+        $ref:
+          - "_terms_enum.yaml#/primary_cutaneous_cd30_tcell_lymphoproliferative_disorder/common"
       Primary cutaneous DLBCL, leg type:
         $ref:
           - "_terms_enum.yaml#/primary_cutaneous_dlbcl_leg_type/common"
@@ -16711,6 +16714,11 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  primary_disease:
+    $ref:
+      - "_terms.yaml#/primary_disease/common"
+    type: boolean
+
   primary_gleason_grade:
     $ref:
       - "_terms.yaml#/primary_gleason_grade/common"
@@ -18003,13 +18011,13 @@ properties:
       enum:
         - Abdomen
         - Abdominal Peritoneum
-        - Adrenal gland, NOS
         - Adnexa
+        - Adrenal gland, NOS
         - Anus, NOS
         - Appendix
         - Bladder, NOS
-        - Bone, NOS
         - Bone marrow
+        - Bone, NOS
         - Brain, Brain stem
         - Brain, Cerebellum, NOS
         - Brain, Cerebrum
@@ -18040,8 +18048,8 @@ properties:
         - Gastrosplenic Ligament
         - Heart
         - Kidney, Lower Pole
-        - Kidney, NOS
         - Kidney, Middle
+        - Kidney, NOS
         - Kidney, Upper Pole
         - Larynx, NOS
         - Leptomeninges
@@ -18056,13 +18064,12 @@ properties:
         - Mesothelium
         - Middle lobe, lung
         - Mouth
-        - Nasopharynx
         - Nasal soft tissue
+        - Nasopharynx
         - Neck
         - Ocular orbits
         - Omentum
         - Oropharynx
-        - Other
         - Ovary, Left
         - Ovary, NOS
         - Ovary, Right
@@ -18073,10 +18080,10 @@ properties:
         - Pelvic Lymph Node(s)
         - Pelvic Peritoneum
         - Pelvis
-        - Pericardium
-        - Perineum
         - Peri-aortic Lymph Node(s)
         - Peri-orbital soft tissue
+        - Pericardium
+        - Perineum
         - Peripheral blood
         - Peripheral Lung
         - Peripheral nervous system
@@ -18103,9 +18110,10 @@ properties:
         - Transverse colon
         - Upper lobe, lung
         - Uterus
-        - Unknown
         - Vagina
         - Vertebrae
+        - Other
+        - Unknown
         - Not Reported
     enumDef:
       Kidney, Lower Pole:
@@ -19357,8 +19365,8 @@ properties:
       - G2
       - G3
       - G4
-      - GX
       - GB
+      - GX
       - High Grade
       - Intermediate Grade
       - Low Grade
@@ -19380,12 +19388,12 @@ properties:
       G4:
         $ref:
           - "_terms_enum.yaml#/g4/common"
-      GX:
-        $ref:
-          - "_terms_enum.yaml#/gx/common"
       GB:
         $ref:
           - "_terms_enum.yaml#/gb/common"
+      GX:
+        $ref:
+          - "_terms_enum.yaml#/gx/common"
       High Grade:
         $ref:
           - "_terms_enum.yaml#/high_grade/common"
@@ -19447,13 +19455,13 @@ properties:
     $ref:
       - "_terms.yaml#/uicc_clinical_m/common"
     enum:
+      - cM0 (i+)
       - M0
       - M1
       - M1a
       - M1b
       - M1c
       - MX
-      - cM0 (i+)
       - Unknown
       - Not Reported
 
@@ -19559,12 +19567,12 @@ properties:
       - T4c
       - T4d
       - T4e
-      - TX
       - Ta
       - Tis
       - Tis (DCIS)
       - Tis (LCIS)
       - Tis (Paget's)
+      - TX
       - Unknown
       - Not Reported
 
@@ -19572,6 +19580,7 @@ properties:
     $ref:
       - "_terms.yaml#/uicc_pathologic_m/common"
     enum:
+      - cM0 (i+)
       - M0
       - M1
       - M1a
@@ -19580,7 +19589,6 @@ properties:
       - M1d
       - M2
       - MX
-      - cM0 (i+)
       - Unknown
       - Not Reported
 
@@ -19603,10 +19611,10 @@ properties:
       - N1c
       - N1mi
       - N2
-      - N2mi
       - N2a
       - N2b
       - N2c
+      - N2mi
       - N3
       - N3a
       - N3b
@@ -19633,7 +19641,6 @@ properties:
       - Stage IB2
       - Stage IC
       - Stage II
-      - Stage IS
       - Stage IIA
       - Stage IIA1
       - Stage IIA2
@@ -19648,6 +19655,7 @@ properties:
       - Stage IIIC1
       - Stage IIIC2
       - Stage IIID
+      - Stage IS
       - Stage IV
       - Stage IVA
       - Stage IVB
@@ -19690,12 +19698,12 @@ properties:
       - T4c
       - T4d
       - T4e
-      - TX
       - Ta
       - Tis
       - Tis (DCIS)
       - Tis (LCIS)
       - Tis (Paget's)
+      - TX
       - Unknown
       - Not Reported
 

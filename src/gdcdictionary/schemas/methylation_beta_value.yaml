@@ -67,17 +67,17 @@ properties:
     enum:
       - DNA Methylation
 
-  data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
-    enum:
-      - Methylation Beta Value
-
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
       - TXT
+
+  data_type:
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - Methylation Beta Value
 
   experimental_strategy:
     $ref:
