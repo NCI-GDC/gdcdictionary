@@ -30,20 +30,6 @@ id: _terms_enum
         term_id: C155941
         term_version: 20.05a
 
-0__no_fibrosis:
-  common:
-    description: >-
-      No evidence of fibrosis.
-    termDef:
-      term: >-
-        Ishak Score 0
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C95150"
-      term_id: C95150
-      term_version: 20.05a
-
 "1":
   exposure:
     tobacco_smoking_status:
@@ -74,35 +60,6 @@ id: _terms_enum
         term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C155942"
         term_id: C155942
         term_version: 20.05a
-
-12__portal_fibrosis:
-  common:
-    description: >-
-      Portal fibrosis is present.
-    termDef:
-      term: >-
-        Ishak Score 1-2
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C157159"
-      term_id: C157159
-      term_version: 20.05a
-
-"13":
-  common:
-    description: >-
-      An indication that cancer cells have been detected in one, two or three lymph
-      nodes.
-    termDef:
-      term: >-
-        One to Three Positive Lymph Nodes
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C172224"
-      term_id: C172224
-      term_version: 20.10d
 
 "2":
   exposure:
@@ -167,85 +124,6 @@ id: _terms_enum
         term_id: C155944
         term_version: 20.05a
 
-3_prime_utr_variant:
-  common:
-    description: >-
-      Any mutation in a gene occurring in the 3' end which contains sequences which
-      may regulate the transcription or translation of the message. 3' UTR mutations
-      are found only outside of open reading frames.
-    termDef:
-      term: >-
-        3' Untranslated Region Mutation
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C63433"
-      term_id: C63433
-      term_version: 20.10d
-
-3160_minutes:
-  common:
-    description: >-
-      An indication that between 31 and 60 minutes passes between waking and smoking
-      the first cigarette of the day.
-    termDef:
-      term: >-
-        Time Between Waking and First Smoke - Between 31 and 60 Minutes
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C164126"
-      term_id: C164126
-      term_version: 19.12e
-
-34__fibrous_septa:
-  common:
-    description: >-
-      Fibrosis extends beyond the portal areas and bridging fibrosis is present.
-    termDef:
-      term: >-
-        Ishak Score 3-4
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C157161"
-      term_id: C157161
-      term_version: 20.05a
-
-3da_phosphoramidate_nuc7738:
-  common:
-    description: >-
-      A phosphoramidate derivative of the monophosphate form of cordycepin (3'-deoxyadenosine;
-      3'-dA), an adenosine derivative first isolated from Cordyceps sinensis, with
-      potential antineoplastic, antioxidant, and anti-inflammatory activities. Upon
-      administration and cellular uptake of NUC-7738 by passive diffusion, cordycepin
-      monophosphate (3'-dAMP) is converted into its active anti-cancer metabolite
-      3'-deoxyadenosine triphosphate (3'-dATP). 3'-dATP functions as a ribonucleoside
-      analogue and competes with ATP during transcription. Therefore, this agent causes
-      RNA synthesis inhibition, inhibits cellular proliferation, and induces apoptosis.
-      Also, 3'-dAMP activates AMP-activated protein kinase (AMPK) and reduces mammalian
-      target of rapamycin (mTOR) signaling. This prevents the hyperphosphorylation
-      of the translation repressor protein 4E-BP1. This results in the induction of
-      tumor cell apoptosis and a decrease in tumor cell proliferation. mTOR, a serine/threonine
-      kinase belonging to the phosphatidylinositol 3-kinase (PI3K)-related kinase
-      (PIKK) family, plays an important role in the PI3K/AKT/mTOR signaling pathway
-      that regulates cell growth and proliferation, and its expression or activity
-      is frequently dysregulated in human cancers. Compared to cordycepin alone, the
-      addition of the phosphoramidate moiety may overcome cancer resistance and allow
-      for greater cytotoxicity as NUC-7738 does not require a nucleoside transporter
-      for cellular uptake, is independent of  enzymatic activation by adenosine kinase
-      (AK) and is not susceptible to enzymatic degradation by adenosine deaminase
-      (ADA). Altogether, this may help overcome cancer resistance to cordycepin.
-    termDef:
-      term: >-
-        3'-dA Phosphoramidate NUC-7738
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C171381"
-      term_id: C171381
-      term_version: 20.10d
-
 "4":
   exposure:
     tobacco_smoking_status:
@@ -261,20 +139,6 @@ id: _terms_enum
         term_id: C156829
         term_version: 19.12e
 
-4_or_more:
-  common:
-    description: >-
-      An indication that cancer cells have been detected in four or more lymph nodes.
-    termDef:
-      term: >-
-        Four or More Positive Lymph Nodes
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C172226"
-      term_id: C172226
-      term_version: 20.10d
-
 "5":
   exposure:
     tobacco_smoking_status:
@@ -289,50 +153,6 @@ id: _terms_enum
         term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C156830"
         term_id: C156830
         term_version: 19.12e
-
-5__nodular_formation_and_incomplete_cirrhosis:
-  common:
-    description: >-
-      Marked bridging fibrosis with formation of occasional hepatic nodules is present.
-    termDef:
-      term: >-
-        Ishak Score 5
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C95155"
-      term_id: C95155
-      term_version: 20.05a
-
-5_prime_utr_variant:
-  common:
-    description: >-
-      Any mutation in a gene occurring in the 5' end which contains sequences which
-      may regulate the transcription or translation of the message. 5' UTR mutations
-      are found only outside of open-reading frames.
-    termDef:
-      term: >-
-        5' Untranslated Region Mutation
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C63432"
-      term_id: C63432
-      term_version: 20.10d
-
-5hydroxyindoleacetic_acid:
-  common:
-    description: >-
-      The determination of the amount of 5-hydroxyindoleacetic acid present in a sample.
-    termDef:
-      term: >-
-        5-Hydroxyindoleacetic Acid Measurement
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C112217"
-      term_id: C112217
-      term_version: 20.10d
 
 "6":
   exposure:
@@ -350,49 +170,6 @@ id: _terms_enum
         term_id: C164079
         term_version: 19.12e
 
-6__established_cirrhosis:
-  common:
-    description: >-
-      Marked fibrosis with cirrhosis is present.
-    termDef:
-      term: >-
-        Ishak Score 6
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C95156"
-      term_id: C95156
-      term_version: 20.05a
-
-630_minutes:
-  common:
-    description: >-
-      An indication that between 6 and 30 minutes passes between waking and smoking
-      the first cigarette of the day.
-    termDef:
-      term: >-
-        Time Between Waking and First Smoke - Between 6 and 30 Minutes
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C164124"
-      term_id: C164124
-      term_version: 19.12e
-
-6th:
-  common:
-    description: >-
-      A cancer stage defined according to the AJCC 6th edition criteria.
-    termDef:
-      term: >-
-        AJCC v6 Stage
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C90529"
-      term_id: C90529
-      term_version: 20.05a
-
 "7":
   exposure:
     tobacco_smoking_status:
@@ -408,19 +185,63 @@ id: _terms_enum
         term_id: C156831
         term_version: 19.12e
 
-7th:
+"13":
   common:
     description: >-
-      A cancer stage defined according to the AJCC 7th edition criteria.
+      An indication that cancer cells have been detected in one, two or three lymph
+      nodes.
     termDef:
       term: >-
-        AJCC v7 Stage
+        One to Three Positive Lymph Nodes
       source: NCIt
       cde_id:
       cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C90530"
-      term_id: C90530
-      term_version: 20.05a
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C172224"
+      term_id: C172224
+      term_version: 20.10d
+
+sept5:
+  common:
+    description: >-
+      This gene plays a role in cell division.
+    termDef:
+      term: >-
+        SEPTIN5 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C97727"
+      term_id: C97727
+      term_version: 20.10d
+
+sept6:
+  common:
+    description: >-
+      This gene is involved in both cytokinesis and the organization of the actin
+      cytoskeleton.
+    termDef:
+      term: >-
+        SEPTIN6 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C97782"
+      term_id: C97782
+      term_version: 20.10d
+
+sept9:
+  common:
+    description: >-
+      This gene plays a role in actin filament dynamics.
+    termDef:
+      term: >-
+        SEPTIN9 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C97897"
+      term_id: C97897
+      term_version: 20.10d
 
 "80000":
   common:
@@ -630,7 +451,16 @@ id: _terms_enum
 "80103":
   common:
     description: >-
-      Generic name for the workflow used to analyze a data set.
+      A malignant tumor arising from epithelial cells. Carcinomas that arise from
+      glandular epithelium are called adenocarcinomas, those that arise from squamous
+      epithelium are called squamous cell carcinomas, and those that arise from transitional
+      epithelium are called transitional cell carcinomas. Morphologically, the malignant
+      epithelial cells may display abnormal mitotic figures, anaplasia, and necrosis.
+      Carcinomas are graded by the degree of cellular differentiation as well, moderately,
+      or poorly differentiated. Carcinomas invade the surrounding tissues and tend
+      to metastasize to other anatomic sites. Lung carcinoma, skin carcinoma, breast
+      carcinoma, colon carcinoma, and prostate carcinoma are the most frequently seen
+      carcinomas.
     termDef:
       term: >-
         Carcinoma
@@ -9903,20 +9733,6 @@ id: _terms_enum
       term_id: C27096
       term_version: 20.05a
 
-8th:
-  common:
-    description: >-
-      A cancer stage defined according to the AJCC 8th edition criteria.
-    termDef:
-      term: >-
-        AJCC v8 Stage
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C132248"
-      term_id: C132248
-      term_version: 20.05a
-
 "90000":
   common:
     description: >-
@@ -17104,6 +16920,242 @@ id: _terms_enum
       term_id: C82594
       term_version: 20.05a
 
+0__no_fibrosis:
+  common:
+    description: >-
+      No evidence of fibrosis.
+    termDef:
+      term: >-
+        Ishak Score 0
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C95150"
+      term_id: C95150
+      term_version: 20.05a
+
+12__portal_fibrosis:
+  common:
+    description: >-
+      Portal fibrosis is present.
+    termDef:
+      term: >-
+        Ishak Score 1-2
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C157159"
+      term_id: C157159
+      term_version: 20.05a
+
+3_prime_utr_variant:
+  common:
+    description: >-
+      Any mutation in a gene occurring in the 3' end which contains sequences which
+      may regulate the transcription or translation of the message. 3' UTR mutations
+      are found only outside of open reading frames.
+    termDef:
+      term: >-
+        3' Untranslated Region Mutation
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C63433"
+      term_id: C63433
+      term_version: 20.10d
+
+3160_minutes:
+  common:
+    description: >-
+      An indication that between 31 and 60 minutes passes between waking and smoking
+      the first cigarette of the day.
+    termDef:
+      term: >-
+        Time Between Waking and First Smoke - Between 31 and 60 Minutes
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C164126"
+      term_id: C164126
+      term_version: 19.12e
+
+34__fibrous_septa:
+  common:
+    description: >-
+      Fibrosis extends beyond the portal areas and bridging fibrosis is present.
+    termDef:
+      term: >-
+        Ishak Score 3-4
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C157161"
+      term_id: C157161
+      term_version: 20.05a
+
+3da_phosphoramidate_nuc7738:
+  common:
+    description: >-
+      A phosphoramidate derivative of the monophosphate form of cordycepin (3'-deoxyadenosine;
+      3'-dA), an adenosine derivative first isolated from Cordyceps sinensis, with
+      potential antineoplastic, antioxidant, and anti-inflammatory activities. Upon
+      administration and cellular uptake of NUC-7738 by passive diffusion, cordycepin
+      monophosphate (3'-dAMP) is converted into its active anti-cancer metabolite
+      3'-deoxyadenosine triphosphate (3'-dATP). 3'-dATP functions as a ribonucleoside
+      analogue and competes with ATP during transcription. Therefore, this agent causes
+      RNA synthesis inhibition, inhibits cellular proliferation, and induces apoptosis.
+      Also, 3'-dAMP activates AMP-activated protein kinase (AMPK) and reduces mammalian
+      target of rapamycin (mTOR) signaling. This prevents the hyperphosphorylation
+      of the translation repressor protein 4E-BP1. This results in the induction of
+      tumor cell apoptosis and a decrease in tumor cell proliferation. mTOR, a serine/threonine
+      kinase belonging to the phosphatidylinositol 3-kinase (PI3K)-related kinase
+      (PIKK) family, plays an important role in the PI3K/AKT/mTOR signaling pathway
+      that regulates cell growth and proliferation, and its expression or activity
+      is frequently dysregulated in human cancers. Compared to cordycepin alone, the
+      addition of the phosphoramidate moiety may overcome cancer resistance and allow
+      for greater cytotoxicity as NUC-7738 does not require a nucleoside transporter
+      for cellular uptake, is independent of  enzymatic activation by adenosine kinase
+      (AK) and is not susceptible to enzymatic degradation by adenosine deaminase
+      (ADA). Altogether, this may help overcome cancer resistance to cordycepin.
+    termDef:
+      term: >-
+        3'-dA Phosphoramidate NUC-7738
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C171381"
+      term_id: C171381
+      term_version: 20.10d
+
+4_or_more:
+  common:
+    description: >-
+      An indication that cancer cells have been detected in four or more lymph nodes.
+    termDef:
+      term: >-
+        Four or More Positive Lymph Nodes
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C172226"
+      term_id: C172226
+      term_version: 20.10d
+
+5__nodular_formation_and_incomplete_cirrhosis:
+  common:
+    description: >-
+      Marked bridging fibrosis with formation of occasional hepatic nodules is present.
+    termDef:
+      term: >-
+        Ishak Score 5
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C95155"
+      term_id: C95155
+      term_version: 20.05a
+
+5_prime_utr_variant:
+  common:
+    description: >-
+      Any mutation in a gene occurring in the 5' end which contains sequences which
+      may regulate the transcription or translation of the message. 5' UTR mutations
+      are found only outside of open-reading frames.
+    termDef:
+      term: >-
+        5' Untranslated Region Mutation
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C63432"
+      term_id: C63432
+      term_version: 20.10d
+
+5hydroxyindoleacetic_acid:
+  common:
+    description: >-
+      The determination of the amount of 5-hydroxyindoleacetic acid present in a sample.
+    termDef:
+      term: >-
+        5-Hydroxyindoleacetic Acid Measurement
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C112217"
+      term_id: C112217
+      term_version: 20.10d
+
+6__established_cirrhosis:
+  common:
+    description: >-
+      Marked fibrosis with cirrhosis is present.
+    termDef:
+      term: >-
+        Ishak Score 6
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C95156"
+      term_id: C95156
+      term_version: 20.05a
+
+630_minutes:
+  common:
+    description: >-
+      An indication that between 6 and 30 minutes passes between waking and smoking
+      the first cigarette of the day.
+    termDef:
+      term: >-
+        Time Between Waking and First Smoke - Between 6 and 30 Minutes
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C164124"
+      term_id: C164124
+      term_version: 19.12e
+
+6th:
+  common:
+    description: >-
+      A cancer stage defined according to the AJCC 6th edition criteria.
+    termDef:
+      term: >-
+        AJCC v6 Stage
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C90529"
+      term_id: C90529
+      term_version: 20.05a
+
+7th:
+  common:
+    description: >-
+      A cancer stage defined according to the AJCC 7th edition criteria.
+    termDef:
+      term: >-
+        AJCC v7 Stage
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C90530"
+      term_id: C90530
+      term_version: 20.05a
+
+8th:
+  common:
+    description: >-
+      A cancer stage defined according to the AJCC 8th edition criteria.
+    termDef:
+      term: >-
+        AJCC v8 Stage
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C132248"
+      term_id: C132248
+      term_version: 20.05a
+
 a:
   common:
     description: >-
@@ -17379,20 +17431,6 @@ absolute_neutrophil:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C63321"
       term_id: C63321
       term_version: 20.10d
-
-acaca:
-  common:
-    description: >-
-      This gene plays a role in the synthesis of long-chain fatty acids.
-    termDef:
-      term: >-
-        ACACA Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C103885"
-      term_id: C103885
-      term_version: 23.03d
 
 accessory_sinus_nos:
   common:
@@ -30178,20 +30216,6 @@ brca2:
       term_id: C18120
       term_version: 20.10d
 
-brd1:
-  common:
-    description: >-
-      This gene is involved in the localization of histone acetyltransferase complexes.
-    termDef:
-      term: >-
-        BRD1 Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C185736"
-      term_id: C185736
-      term_version: 23.03d
-
 brd3:
   common:
     description: >-
@@ -30668,20 +30692,6 @@ brunei:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16367"
       term_id: C16367
       term_version: 19.12e
-
-btbd18:
-  common:
-    description: >-
-      This gene may be involved in protein ubiquitination.
-    termDef:
-      term: >-
-        BTBD18 Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C126629"
-      term_id: C126629
-      term_version: 23.03d
 
 btg1:
   common:
@@ -31991,20 +32001,6 @@ cayman_islands:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16391"
       term_id: C16391
       term_version: 19.12e
-
-cbfa2t2:
-  common:
-    description: >-
-      This gene may be involved in tumor suppression.
-    termDef:
-      term: >-
-        CBFA2T2 Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104928"
-      term_id: C104928
-      term_version: 23.03d
 
 cbfa2t3:
   common:
@@ -33482,21 +33478,6 @@ cenpa:
       term_id: C152974
       term_version: 20.10d
 
-centimeters:
-  common:
-    description: >-
-      A basic unit of length in the former CGS version of metric system, equal to
-      one hundredth of a meter or approximately 0.393 700 787 inch.
-    termDef:
-      term: >-
-        Centimeter
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49668"
-      term_id: C49668
-      term_version: 23.03d
-
 central_african_republic:
   common:
     description: >-
@@ -33625,20 +33606,6 @@ central_primitive_neuroectodermal_tumor_nos:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C5398"
       term_id: C5398
       term_version: 20.05a
-
-cep170b:
-  common:
-    description: >-
-      This gene may be involved in microtubule organization.
-    termDef:
-      term: >-
-        CEP170B Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C126611"
-      term_id: C126611
-      term_version: 23.03d
 
 cep89:
   common:
@@ -36764,21 +36731,6 @@ collecting_duct_carcinoma:
       term_id: C6194
       term_version: 20.05a
 
-college_degree:
-  common:
-    description: >-
-      Completion of education at an institution of higher education created to educate
-      and grant degrees; often a part of a university.
-    termDef:
-      term: >-
-        College Completion
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C159746"
-      term_id: C159746
-      term_version: 23.03d
-
 colloid_adenocarcinoma:
   common:
     description: >-
@@ -37098,21 +37050,6 @@ common_precursor_b_all:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C27797"
       term_id: C27797
       term_version: 20.05a
-
-common_superficial_femoral_vein:
-  common:
-    description: >-
-      A vein that accompanies the common femoral artery and is formed by the confluence
-      of the femoral vein and the deep femoral vein.
-    termDef:
-      term: >-
-        Common Femoral Vein
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C154771"
-      term_id: C154771
-      term_version: 23.03d
 
 comoros:
   common:
@@ -39087,20 +39024,6 @@ dedifferentiated_liposarcoma:
       term_id: C3704
       term_version: 20.05a
 
-deep:
-  common:
-    description: >-
-      Extending relatively far inward.
-    termDef:
-      term: >-
-        Deep
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25240"
-      term_id: C25240
-      term_version: 23.03d
-
 deep_gray_eg_basal_ganglia_thalamus:
   common:
     description: >-
@@ -40115,20 +40038,6 @@ distant_metastasis:
       term_id: C18206
       term_version: 20.05a
 
-divorced:
-  common:
-    description: >-
-      Indicates a person whose marriage has been legally dissolved and has not remarried.
-    termDef:
-      term: >-
-        Divorced
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51776"
-      term_id: C51776
-      term_version: 23.03d
-
 djibouti:
   common:
     description: >-
@@ -40318,20 +40227,6 @@ dociparstat_sodium:
       term_id: C99130
       term_version: 20.10d
 
-dome:
-  common:
-    description: >-
-      A lesion having the shape of a dome.
-    termDef:
-      term: >-
-        Dome-Shaped Lesion
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C54253"
-      term_id: C54253
-      term_version: 23.03d
-
 dome_of_bladder:
   common:
     description: >-
@@ -40361,22 +40256,6 @@ domestic_partner:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C53262"
       term_id: C53262
       term_version: 19.12e
-
-domestic_partnership:
-  common:
-    description: >-
-      Indicates a person who is a member of an unmarried couple, including same sex
-      couples, living together in longstanding relationships, that are registered
-      or unregistered.
-    termDef:
-      term: >-
-        Domestic Partnership
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C53262"
-      term_id: C53262
-      term_version: 23.03d
 
 dominica:
   common:
@@ -40430,20 +40309,6 @@ dostarlimab:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C126799"
       term_id: C126799
       term_version: 20.10d
-
-dot1l:
-  common:
-    description: >-
-      This gene is involved in epigenetic control of gene expression.
-    termDef:
-      term: >-
-        DOT1L Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C73677"
-      term_id: C73677
-      term_version: 23.03d
 
 downstream_gene_variant:
   common:
@@ -40784,21 +40649,6 @@ duplication:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C45582"
       term_id: C45582
       term_version: 20.10d
-
-dust:
-  common:
-    description: >-
-      A fine powdery material such as dry earth or pollen that can be blown about
-      in the air.
-    termDef:
-      term: >-
-        Dust
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C84281"
-      term_id: C84281
-      term_version: 23.03d
 
 dux4l1:
   common:
@@ -44327,21 +44177,6 @@ exocervix:
       term_id: C12310
       term_version: 20.05a
 
-exon:
-  tag:
-    name:
-      description: >-
-        Exon number targeted or included in a molecular analysis. If a specific genetic
-        variant is being reported, this property can be used to capture the exon where
-        that variant is located.
-      termDef:
-        term: >-
-          Molecular Laboratory Procedure Exon Identification Number
-        source: caDSR
-        cde_id: 6142411
-        cde_version: 1.0
-        term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142411%20and%20ver_nr=1.0"
-
 ext1:
   common:
     description: >-
@@ -44642,21 +44477,6 @@ extraosseous_plasmacytoma:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4002"
       term_id: C4002
       term_version: 20.05a
-
-extravascular_matrix_loops:
-  common:
-    description: >-
-      A microscopic finding indicating the presence or absence of extravascular matrix
-      loops in uveal melanoma.
-    termDef:
-      term: >-
-        Extravascular Matrix Loops
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111025"
-      term_id: C111025
-      term_version: 23.03d
 
 extraventricular_neurocytoma:
   common:
@@ -45968,20 +45788,6 @@ fev:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C97482"
       term_id: C97482
       term_version: 20.10d
-
-few:
-  common:
-    description: >-
-      An indefinite but relatively small number.
-    termDef:
-      term: >-
-        Few
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64942\n"
-      term_id: C64942
-      term_version: 23.03d
 
 fgfr_inhibitor_cpl304110:
   common:
@@ -47867,20 +47673,6 @@ frontal_sinus:
       term_id: C12277
       term_version: 20.05a
 
-fryl:
-  common:
-    description: >-
-      This gene is involved in the regulation of cell shape and polarity.
-    termDef:
-      term: >-
-        FRYL Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C126623"
-      term_id: C126623
-      term_version: 23.03d
-
 fstl3:
   common:
     description: >-
@@ -49668,20 +49460,6 @@ gliosarcoma:
       term_id: C3796
       term_version: 20.05a
 
-glis2:
-  common:
-    description: >-
-      This gene is involved in transcriptional regulation and signaling pathway modulation.
-    termDef:
-      term: >-
-        GLIS2 Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C105900"
-      term_id: C105900
-      term_version: 23.03d
-
 glofitamab:
   common:
     description: >-
@@ -50542,22 +50320,6 @@ grease_fire_smoke:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C164085"
       term_id: C164085
       term_version: 19.12e
-
-great_blood_vessel:
-  common:
-    description: >-
-      Any of the major arteries or veins attached to the cardiac atria or ventricles.
-      This includes the aorta, superior and inferior vena cava and the pulmonary arteries
-      and veins.
-    termDef:
-      term: >-
-        Great Blood Vessel
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C102955"
-      term_id: C102955
-      term_version: 23.03d
 
 great_grandchild:
   common:
@@ -52984,20 +52746,6 @@ hmga2:
       term_id: C20577
       term_version: 20.10d
 
-hmgb3:
-  common:
-    description: >-
-      This gene plays a role in development and the regulation of gene transcription.
-    termDef:
-      term: >-
-        HMGB3 Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C20580"
-      term_id: C20580
-      term_version: 23.03d
-
 hmgn2p46:
   common:
     description: >-
@@ -54767,20 +54515,6 @@ iliac_nos:
       term_id: C32761
       term_version: 20.10d
 
-iliac_vein:
-  common:
-    description: >-
-      Any of the three veins including the common, external and internal iliac veins.
-    termDef:
-      term: >-
-        Iliac Vein
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C12734"
-      term_id: C12734
-      term_version: 23.03d
-
 iliaccommon:
   common:
     description: >-
@@ -55357,21 +55091,6 @@ indoor_stove_or_fireplace_smoke_wood_burning:
       term_id: C164089
       term_version: 19.12e
 
-induction:
-  treatment:
-    treatment_intent_type:
-      description: >-
-        The first choice of treatment for a particular type of cancer.
-      termDef:
-        term: >-
-          Induction Therapy
-        source: NCIt
-        cde_id:
-        cde_version:
-        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C158876"
-        term_id: C158876
-        term_version: 23.03d
-
 indusatumab_vedotin:
   common:
     description: >-
@@ -55480,20 +55199,6 @@ infection:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C26726"
       term_id: C26726
       term_version: 19.12e
-
-inferior_vena_cava:
-  common:
-    description: >-
-      A large vein that returns blood from the lower half of the body to the heart.
-    termDef:
-      term: >-
-        Inferior Vena Cava
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C12815"
-      term_id: C12815
-      term_version: 23.03d
 
 infiltrating_and_papillary_adenocarcinoma:
   common:
@@ -55830,20 +55535,6 @@ inkt_cell_agonist_abx196:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C172187"
       term_id: C172187
       term_version: 20.10d
-
-ino80d:
-  common:
-    description: >-
-      This gene plays a role in ATP-dependent chromatin remodeling.
-    termDef:
-      term: >-
-        INO80D Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C125258"
-      term_id: C125258
-      term_version: 23.03d
 
 insertion:
   common:
@@ -57681,22 +57372,6 @@ itk:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C24526"
       term_id: C24526
       term_version: 20.10d
-
-iv:
-  diagnosis:
-    clark_level:
-      description: >-
-        A morphologic finding indicating that the cutaneous melanoma has invaded the
-        reticular dermis.
-      termDef:
-        term: >-
-          Clark Level IV
-        source: NCIt
-        cde_id:
-        cde_version:
-        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94815"
-        term_id: C94815
-        term_version: 23.03d
 
 ivaltinostat:
   common:
@@ -64536,20 +64211,6 @@ mantle_zone_lymphoma:
       term_id: C4337
       term_version: 20.05a
 
-many:
-  common:
-    description: >-
-      An indefinite large quantity that is considered to be greater than several.
-    termDef:
-      term: >-
-        Many
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78728"
-      term_id: C78728
-      term_version: 23.03d
-
 map2k1:
   common:
     description: >-
@@ -64712,22 +64373,6 @@ marijuana_smoke:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C164091"
       term_id: C164091
       term_version: 19.12e
-
-married:
-  common:
-    description: >-
-      Indicates a person currently joined in a legally binding matrimonial union.
-      Classify common law marriage as married. Includes married couples living together
-      and not living together.
-    termDef:
-      term: >-
-        Married
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51773"
-      term_id: C51773
-      term_version: 23.03d
 
 marshall_islands:
   common:
@@ -67381,21 +67026,6 @@ mild:
       term_id: C70666
       term_version: 20.10d
 
-millimeters:
-  common:
-    description: >-
-      A metric unit of length equal to one thousandth of a meter (10E-3 meter) or
-      approximately 0.03937 inch.
-    termDef:
-      term: >-
-        Millimeter
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C28251"
-      term_id: C28251
-      term_version: 23.03d
-
 minimally_invasive_adenocarcinoma_mucinous:
   common:
     description: >-
@@ -69690,20 +69320,6 @@ muscle_tissue:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C12435"
       term_id: C12435
       term_version: 20.10d
-
-mushroom:
-  common:
-    description: >-
-      A lesion having the shape of a mushroom.
-    termDef:
-      term: >-
-        Mushroom-Shaped Lesion
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111029"
-      term_id: C111029
-      term_version: 23.03d
 
 mutyh:
   common:
@@ -72393,20 +72009,6 @@ neutrophil_bands:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64830"
       term_id: C64830
       term_version: 20.10d
-
-never_married:
-  common:
-    description: >-
-      Indicates a person who has never been married or whose marriages have been annulled.
-    termDef:
-      term: >-
-        Never Married
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51774"
-      term_id: C51774
-      term_version: 23.03d
 
 nevus_nos:
   common:
@@ -75365,22 +74967,6 @@ other:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17649"
       term_id: C17649
       term_version: 19.12e
-
-other_complex_extravascular_matrix_patterns:
-  common:
-    description: >-
-      A microscopic finding indicating the presence of patterns formed by malignant
-      cells outside the blood vessel circulation in uveal melanoma. The patterns are
-      detectable using PAS stain without counterstaining with hematoxylin.
-    termDef:
-      term: >-
-        Presence of Extravascular Matrix Patterns
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111024"
-      term_id: C111024
-      term_version: 23.03d
 
 other_illdefined_sites:
   common:
@@ -78951,20 +78537,6 @@ pheochromocytoma_nos:
       term_id: C3326
       term_version: 20.05a
 
-phf23:
-  common:
-    description: >-
-      This gene may be involved in chromatin remodeling.
-    termDef:
-      term: >-
-        PHF23 Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C98035"
-      term_id: C98035
-      term_version: 23.03d
-
 phf6:
   common:
     description: >-
@@ -79489,21 +79061,6 @@ pim1:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C18337"
       term_id: C18337
       term_version: 20.10d
-
-pim3:
-  common:
-    description: >-
-      This gene is involved in serine/threonine kinase activity that inhibits apoptosis,
-      promotes cell survival and regulates protein translation.
-    termDef:
-      term: >-
-        PIM3 Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C178143"
-      term_id: C178143
-      term_version: 23.03d
 
 pimitespib:
   common:
@@ -80513,24 +80070,6 @@ pneumoblastoma:
       term_id: C3732
       term_version: 20.05a
 
-pneumonia_nos:
-  common:
-    description: >-
-      An acute, acute and chronic, or chronic inflammation focally or diffusely affecting
-      the lung parenchyma, due to infections (viruses, fungi, mycoplasma, or bacteria),
-      treatment (e.g. radiation), or exposure (inhalation) to chemicals. Symptoms
-      include cough, shortness of breath, fevers, chills, chest pain, headache, sweating,
-      and weakness.
-    termDef:
-      term: >-
-        Pneumonia
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C3333"
-      term_id: C3333
-      term_version: 23.03d
-
 pngvl4acrte6e7l2_dna_vaccine:
   common:
     description: >-
@@ -80821,20 +80360,20 @@ poorly_cohesive_carcinoma:
       term_id: C4127
       term_version: 20.05a
 
-poorly_differentiated:
+poorly_differentiated_neuroblastoma:
   common:
     description: >-
-      Describes tumor cells that generally have lost most of the appearance of normal
-      cells. They tend to grow and spread.
+      A neuroblastoma in which the differentiating neuroblasts constitute less than
+      five-percent of the tumor cells.
     termDef:
       term: >-
-        Poorly Differentiated
+        Poorly Differentiated Neuroblastoma
       source: NCIt
       cde_id:
       cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C14167"
-      term_id: C14167
-      term_version: 23.03d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C42047"
+      term_id: C42047
+      term_version: 20.05a
 
 popliteal:
   common:
@@ -81508,20 +81047,6 @@ premalignant:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36032"
       term_id: C36032
       term_version: 20.05a
-
-preoperative:
-  common:
-    description: >-
-      Relating to or occurring during the period immediately before a surgical operation.
-    termDef:
-      term: >-
-        Preoperative
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C54732"
-      term_id: C54732
-      term_version: 23.03d
 
 prepreb_all:
   common:
@@ -82670,20 +82195,6 @@ ptld_nos:
       term_id: C4727
       term_version: 20.05a
 
-ptp4a1:
-  common:
-    description: >-
-      This gene is involved in liver cell growth and the cellular response to mitogens.
-    termDef:
-      term: >-
-        PTP4A1 Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C24704"
-      term_id: C24704
-      term_version: 23.03d
-
 ptpn11:
   common:
     description: >-
@@ -83194,20 +82705,6 @@ radiation_photon_beam:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104914"
       term_id: C104914
       term_version: 20.10d
-
-radiologic:
-  common:
-    description: >-
-      Imaging results obtained through a radiology procedure.
-    termDef:
-      term: >-
-        Radiologic Finding
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C35869"
-      term_id: C35869
-      term_version: 23.03d
 
 raeb:
   common:
@@ -84171,20 +83668,6 @@ renal_pelvis:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C12887"
       term_id: C12887
       term_version: 20.05a
-
-renal_vein:
-  common:
-    description: >-
-      The veins which return blood from the kidneys to the vena cava.
-    termDef:
-      term: >-
-        Renal Vein
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C33462"
-      term_id: C33462
-      term_version: 23.03d
 
 reninoma:
   common:
@@ -86606,64 +86089,6 @@ sensory_changes:
       term_id: C157429
       term_version: 20.05a
 
-separated:
-  common:
-    description: >-
-      A person who is separated from their spouse, whether or not there is a legal
-      arrangement.
-    termDef:
-      term: >-
-        Separated
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C156541"
-      term_id: C156541
-      term_version: 23.03d
-
-sept5:
-  common:
-    description: >-
-      This gene plays a role in cell division.
-    termDef:
-      term: >-
-        SEPTIN5 Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C97727"
-      term_id: C97727
-      term_version: 20.10d
-
-sept6:
-  common:
-    description: >-
-      This gene is involved in both cytokinesis and the organization of the actin
-      cytoskeleton.
-    termDef:
-      term: >-
-        SEPTIN6 Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C97782"
-      term_id: C97782
-      term_version: 20.10d
-
-sept9:
-  common:
-    description: >-
-      This gene plays a role in actin filament dynamics.
-    termDef:
-      term: >-
-        SEPTIN9 Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C97897"
-      term_id: C97897
-      term_version: 20.10d
-
 sequencing_nos:
   common:
     description: >-
@@ -88210,23 +87635,6 @@ smad4:
       term_id: C18258
       term_version: 20.10d
 
-small_bowel:
-  common:
-    description: >-
-      The section of the intestines between the pylorus and cecum. The small intestine
-      is approximately 20 feet long and consists of the duodenum, the jejunum, and
-      the ileum. Its main function is to absorb nutrients from food as the food is
-      transported to the large intestine.
-    termDef:
-      term: >-
-        Small Intestine
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C12386"
-      term_id: C12386
-      term_version: 23.03d
-
 small_cell_carcinoma_fusiform_cell:
   common:
     description: >-
@@ -89048,21 +88456,6 @@ somatostatinoma_nos:
       term_id: C3379
       term_version: 20.05a
 
-some_college_or_vocational_school:
-  common:
-    description: >-
-      Indicates that a person has attended college but that they did not receive any
-      degree.
-    termDef:
-      term: >-
-        Some College Completion
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67137"
-      term_id: C67137
-      term_version: 23.03d
-
 some_days:
   common:
     description: >-
@@ -89077,21 +88470,6 @@ some_days:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C131735"
       term_id: C131735
       term_version: 19.12e
-
-some_highschool_or_less:
-  common:
-    description: >-
-      Indicates a person has attended high school but did not complete high school
-      and did not receive a high school diploma.
-    termDef:
-      term: >-
-        Not High School Graduate
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C76123"
-      term_id: C76123
-      term_version: 23.03d
 
 son:
   common:
@@ -93236,20 +92614,6 @@ sugemalimab:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C154550"
       term_id: C154550
       term_version: 20.10d
-
-superficial:
-  common:
-    description: >-
-      Of little substance or significance; involving only a surface.
-    termDef:
-      term: >-
-        Superficial
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25239"
-      term_id: C25239
-      term_version: 23.03d
 
 superficial_spreading_adenocarcinoma:
   common:
@@ -97543,21 +96907,6 @@ top1:
       term_id: C26591
       term_version: 20.10d
 
-top2b:
-  common:
-    description: >-
-      This gene is involved in chromosome recombination, DNA replication and the regulation
-      of DNA topology during transcription.
-    termDef:
-      term: >-
-        TOP2B Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C26593"
-      term_id: C26593
-      term_version: 23.03d
-
 topotecan_sustainedrelease_episcleral_plaque:
   common:
     description: >-
@@ -99128,20 +98477,6 @@ u2af1:
       term_id: C101113
       term_version: 20.10d
 
-ubb:
-  common:
-    description: >-
-      This gene is involved in ubiquitin-dependent proteolysis.
-    termDef:
-      term: >-
-        UBB Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C38431"
-      term_id: C38431
-      term_version: 23.03d
-
 ubr5:
   common:
     description: >-
@@ -100186,22 +99521,6 @@ uzbekistan:
       term_id: C17246
       term_version: 19.12e
 
-v:
-  diagnosis:
-    clark_level:
-      description: >-
-        A morphologic finding indicating that the cutaneous melanoma has invaded the
-        subcutaneous tissue.
-      termDef:
-        term: >-
-          Clark Level V
-        source: NCIt
-        cde_id:
-        cde_version:
-        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94816"
-        term_id: C94816
-        term_version: 23.03d
-
 vagina_nos:
   common:
     description: >-
@@ -101202,22 +100521,6 @@ wee1_kinase_inhibitor_debio_0123:
       term_id: C173426
       term_version: 20.10d
 
-well_differentiated:
-  common:
-    description: >-
-      Describes tumor cells that generally retain the appearance of normal cells and
-      tend to grow and spread at a slower rate than undifferentiated or poorly differentiated
-      tumor cells.
-    termDef:
-      term: >-
-        Well Differentiated
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C14171"
-      term_id: C14171
-      term_version: 23.03d
-
 well_differentiated_liposarcoma_of_superficial_soft_tissue:
   common:
     description: >-
@@ -101318,21 +100621,6 @@ white_matter:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C33892"
       term_id: C33892
       term_version: 20.05a
-
-widowed:
-  common:
-    description: >-
-      Indicates a person who is no longer married because of the death of his/her
-      spouse and has not remarried.
-    termDef:
-      term: >-
-        Widowed
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51775"
-      term_id: C51775
-      term_version: 23.03d
 
 wif1:
   common:
@@ -102044,20 +101332,6 @@ zeb1:
       term_id: C105605
       term_version: 20.10d
 
-zeb2:
-  common:
-    description: >-
-      This gene is involved in regulation of transcription.
-    termDef:
-      term: >-
-        ZEB2 Gene
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C75441"
-      term_id: C75441
-      term_version: 23.03d
-
 zelavespib:
   common:
     description: >-
@@ -102324,3 +101598,753 @@ zrsr2:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C101120"
       term_id: C101120
       term_version: 20.10d
+
+induction:
+  treatment:
+    treatment_intent_type:
+      description: >-
+        The first choice of treatment for a particular type of cancer.
+      termDef:
+        term: >-
+          Induction Therapy
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C158876"
+        term_id: C158876
+        term_version: 23.03d
+
+well_differentiated:
+  common:
+    description: >-
+      Describes tumor cells that generally retain the appearance of normal cells and
+      tend to grow and spread at a slower rate than undifferentiated or poorly differentiated
+      tumor cells.
+    termDef:
+      term: >-
+        Well Differentiated
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C14171"
+      term_id: C14171
+      term_version: 23.03d
+
+poorly_differentiated:
+  common:
+    description: >-
+      Describes tumor cells that generally have lost most of the appearance of normal
+      cells. They tend to grow and spread.
+    termDef:
+      term: >-
+        Poorly Differentiated
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C14167"
+      term_id: C14167
+      term_version: 23.03d
+
+extravascular_matrix_loops:
+  common:
+    description: >-
+      A microscopic finding indicating the presence or absence of extravascular matrix
+      loops in uveal melanoma.
+    termDef:
+      term: >-
+        Extravascular Matrix Loops
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111025"
+      term_id: C111025
+      term_version: 23.03d
+
+other_complex_extravascular_matrix_patterns:
+  common:
+    description: >-
+      A microscopic finding indicating the presence of patterns formed by malignant
+      cells outside the blood vessel circulation in uveal melanoma. The patterns are
+      detectable using PAS stain without counterstaining with hematoxylin.
+    termDef:
+      term: >-
+        Presence of Extravascular Matrix Patterns
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111024"
+      term_id: C111024
+      term_version: 23.03d
+
+common_superficial_femoral_vein:
+  common:
+    description: >-
+      A vein that accompanies the common femoral artery and is formed by the confluence
+      of the femoral vein and the deep femoral vein.
+    termDef:
+      term: >-
+        Common Femoral Vein
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C154771"
+      term_id: C154771
+      term_version: 23.03d
+
+inferior_vena_cava:
+  common:
+    description: >-
+      A large vein that returns blood from the lower half of the body to the heart.
+    termDef:
+      term: >-
+        Inferior Vena Cava
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C12815"
+      term_id: C12815
+      term_version: 23.03d
+
+iliac_vein:
+  common:
+    description: >-
+      Any of the three veins including the common, external and internal iliac veins.
+    termDef:
+      term: >-
+        Iliac Vein
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C12734"
+      term_id: C12734
+      term_version: 23.03d
+
+renal_vein:
+  common:
+    description: >-
+      The veins which return blood from the kidneys to the vena cava.
+    termDef:
+      term: >-
+        Renal Vein
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C33462"
+      term_id: C33462
+      term_version: 23.03d
+
+great_blood_vessel:
+  common:
+    description: >-
+      Any of the major arteries or veins attached to the cardiac atria or ventricles.
+      This includes the aorta, superior and inferior vena cava and the pulmonary arteries
+      and veins.
+    termDef:
+      term: >-
+        Great Blood Vessel
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C102955"
+      term_id: C102955
+      term_version: 23.03d
+
+centimeters:
+  common:
+    description: >-
+      A basic unit of length in the former CGS version of metric system, equal to
+      one hundredth of a meter or approximately 0.393 700 787 inch.
+    termDef:
+      term: >-
+        Centimeter
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49668"
+      term_id: C49668
+      term_version: 23.03d
+
+millimeters:
+  common:
+    description: >-
+      A metric unit of length equal to one thousandth of a meter (10E-3 meter) or
+      approximately 0.03937 inch.
+    termDef:
+      term: >-
+        Millimeter
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C28251"
+      term_id: C28251
+      term_version: 23.03d
+
+iv:
+  diagnosis:
+    clark_level:
+      description: >-
+        A morphologic finding indicating that the cutaneous melanoma has invaded the
+        reticular dermis.
+      termDef:
+        term: >-
+          Clark Level IV
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94815"
+        term_id: C94815
+        term_version: 23.03d
+
+v:
+  diagnosis:
+    clark_level:
+      description: >-
+        A morphologic finding indicating that the cutaneous melanoma has invaded the
+        subcutaneous tissue.
+      termDef:
+        term: >-
+          Clark Level V
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94816"
+        term_id: C94816
+        term_version: 23.03d
+
+few:
+  common:
+    description: >-
+      An indefinite but relatively small number.
+    termDef:
+      term: >-
+        Few
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64942\n"
+      term_id: C64942
+      term_version: 23.03d
+
+many:
+  common:
+    description: >-
+      An indefinite large quantity that is considered to be greater than several.
+    termDef:
+      term: >-
+        Many
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78728"
+      term_id: C78728
+      term_version: 23.03d
+
+glis2:
+  common:
+    description: >-
+      This gene is involved in transcriptional regulation and signaling pathway modulation.
+    termDef:
+      term: >-
+        GLIS2 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C105900"
+      term_id: C105900
+      term_version: 23.03d
+
+ptp4a1:
+  common:
+    description: >-
+      This gene is involved in liver cell growth and the cellular response to mitogens.
+    termDef:
+      term: >-
+        PTP4A1 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C24704"
+      term_id: C24704
+      term_version: 23.03d
+
+pim3:
+  common:
+    description: >-
+      This gene is involved in serine/threonine kinase activity that inhibits apoptosis,
+      promotes cell survival and regulates protein translation.
+    termDef:
+      term: >-
+        PIM3 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C178143"
+      term_id: C178143
+      term_version: 23.03d
+
+brd1:
+  common:
+    description: >-
+      This gene is involved in the localization of histone acetyltransferase complexes.
+    termDef:
+      term: >-
+        BRD1 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C185736"
+      term_id: C185736
+      term_version: 23.03d
+
+dot1l:
+  common:
+    description: >-
+      This gene is involved in epigenetic control of gene expression.
+    termDef:
+      term: >-
+        DOT1L Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C73677"
+      term_id: C73677
+      term_version: 23.03d
+
+ino80d:
+  common:
+    description: >-
+      This gene plays a role in ATP-dependent chromatin remodeling.
+    termDef:
+      term: >-
+        INO80D Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C125258"
+      term_id: C125258
+      term_version: 23.03d
+
+acaca:
+  common:
+    description: >-
+      This gene plays a role in the synthesis of long-chain fatty acids.
+    termDef:
+      term: >-
+        ACACA Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C103885"
+      term_id: C103885
+      term_version: 23.03d
+
+btbd18:
+  common:
+    description: >-
+      This gene may be involved in protein ubiquitination.
+    termDef:
+      term: >-
+        BTBD18 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C126629"
+      term_id: C126629
+      term_version: 23.03d
+
+cep170b:
+  common:
+    description: >-
+      This gene may be involved in microtubule organization.
+    termDef:
+      term: >-
+        CEP170B Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C126611"
+      term_id: C126611
+      term_version: 23.03d
+
+fryl:
+  common:
+    description: >-
+      This gene is involved in the regulation of cell shape and polarity.
+    termDef:
+      term: >-
+        FRYL Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C126623"
+      term_id: C126623
+      term_version: 23.03d
+
+hmgb3:
+  common:
+    description: >-
+      This gene plays a role in development and the regulation of gene transcription.
+    termDef:
+      term: >-
+        HMGB3 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C20580"
+      term_id: C20580
+      term_version: 23.03d
+
+top2b:
+  common:
+    description: >-
+      This gene is involved in chromosome recombination, DNA replication and the regulation
+      of DNA topology during transcription.
+    termDef:
+      term: >-
+        TOP2B Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C26593"
+      term_id: C26593
+      term_version: 23.03d
+
+phf23:
+  common:
+    description: >-
+      This gene may be involved in chromatin remodeling.
+    termDef:
+      term: >-
+        PHF23 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C98035"
+      term_id: C98035
+      term_version: 23.03d
+
+cbfa2t2:
+  common:
+    description: >-
+      This gene may be involved in tumor suppression.
+    termDef:
+      term: >-
+        CBFA2T2 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104928"
+      term_id: C104928
+      term_version: 23.03d
+
+ubb:
+  common:
+    description: >-
+      This gene is involved in ubiquitin-dependent proteolysis.
+    termDef:
+      term: >-
+        UBB Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C38431"
+      term_id: C38431
+      term_version: 23.03d
+
+zeb2:
+  common:
+    description: >-
+      This gene is involved in regulation of transcription.
+    termDef:
+      term: >-
+        ZEB2 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C75441"
+      term_id: C75441
+      term_version: 23.03d
+
+pneumonia_nos:
+  common:
+    description: >-
+      An acute, acute and chronic, or chronic inflammation focally or diffusely affecting
+      the lung parenchyma, due to infections (viruses, fungi, mycoplasma, or bacteria),
+      treatment (e.g. radiation), or exposure (inhalation) to chemicals. Symptoms
+      include cough, shortness of breath, fevers, chills, chest pain, headache, sweating,
+      and weakness.
+    termDef:
+      term: >-
+        Pneumonia
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C3333"
+      term_id: C3333
+      term_version: 23.03d
+
+preoperative:
+  common:
+    description: >-
+      Relating to or occurring during the period immediately before a surgical operation.
+    termDef:
+      term: >-
+        Preoperative
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C54732"
+      term_id: C54732
+      term_version: 23.03d
+
+some_highschool_or_less:
+  common:
+    description: >-
+      Indicates a person has attended high school but did not complete high school
+      and did not receive a high school diploma.
+    termDef:
+      term: >-
+        Not High School Graduate
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C76123"
+      term_id: C76123
+      term_version: 23.03d
+
+some_college_or_vocational_school:
+  common:
+    description: >-
+      Indicates that a person has attended college but that they did not receive any
+      degree.
+    termDef:
+      term: >-
+        Some College Completion
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67137"
+      term_id: C67137
+      term_version: 23.03d
+
+college_degree:
+  common:
+    description: >-
+      Completion of education at an institution of higher education created to educate
+      and grant degrees; often a part of a university.
+    termDef:
+      term: >-
+        College Completion
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C159746"
+      term_id: C159746
+      term_version: 23.03d
+
+widowed:
+  common:
+    description: >-
+      Indicates a person who is no longer married because of the death of his/her
+      spouse and has not remarried.
+    termDef:
+      term: >-
+        Widowed
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51775"
+      term_id: C51775
+      term_version: 23.03d
+
+married:
+  common:
+    description: >-
+      Indicates a person currently joined in a legally binding matrimonial union.
+      Classify common law marriage as married. Includes married couples living together
+      and not living together.
+    termDef:
+      term: >-
+        Married
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51773"
+      term_id: C51773
+      term_version: 23.03d
+
+divorced:
+  common:
+    description: >-
+      Indicates a person whose marriage has been legally dissolved and has not remarried.
+    termDef:
+      term: >-
+        Divorced
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51776"
+      term_id: C51776
+      term_version: 23.03d
+
+never_married:
+  common:
+    description: >-
+      Indicates a person who has never been married or whose marriages have been annulled.
+    termDef:
+      term: >-
+        Never Married
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51774"
+      term_id: C51774
+      term_version: 23.03d
+
+domestic_partnership:
+  common:
+    description: >-
+      Indicates a person who is a member of an unmarried couple, including same sex
+      couples, living together in longstanding relationships, that are registered
+      or unregistered.
+    termDef:
+      term: >-
+        Domestic Partnership
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C53262"
+      term_id: C53262
+      term_version: 23.03d
+
+separated:
+  common:
+    description: >-
+      A person who is separated from their spouse, whether or not there is a legal
+      arrangement.
+    termDef:
+      term: >-
+        Separated
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C156541"
+      term_id: C156541
+      term_version: 23.03d
+
+dust:
+  common:
+    description: >-
+      A fine powdery material such as dry earth or pollen that can be blown about
+      in the air.
+    termDef:
+      term: >-
+        Dust
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C84281"
+      term_id: C84281
+      term_version: 23.03d
+
+radiologic:
+  common:
+    description: >-
+      Imaging results obtained through a radiology procedure.
+    termDef:
+      term: >-
+        Radiologic Finding
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C35869"
+      term_id: C35869
+      term_version: 23.03d
+
+small_bowel:
+  common:
+    description: >-
+      The section of the intestines between the pylorus and cecum. The small intestine
+      is approximately 20 feet long and consists of the duodenum, the jejunum, and
+      the ileum. Its main function is to absorb nutrients from food as the food is
+      transported to the large intestine.
+    termDef:
+      term: >-
+        Small Intestine
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C12386"
+      term_id: C12386
+      term_version: 23.03d
+
+superficial:
+  common:
+    description: >-
+      Of little substance or significance; involving only a surface.
+    termDef:
+      term: >-
+        Superficial
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25239"
+      term_id: C25239
+      term_version: 23.03d
+
+deep:
+  common:
+    description: >-
+      Extending relatively far inward.
+    termDef:
+      term: >-
+        Deep
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25240"
+      term_id: C25240
+      term_version: 23.03d
+
+mushroom:
+  common:
+    description: >-
+      A lesion having the shape of a mushroom.
+    termDef:
+      term: >-
+        Mushroom-Shaped Lesion
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111029"
+      term_id: C111029
+      term_version: 23.03d
+
+dome:
+  common:
+    description: >-
+      A lesion having the shape of a dome.
+    termDef:
+      term: >-
+        Dome-Shaped Lesion
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C54253"
+      term_id: C54253
+      term_version: 23.03d
+
+exon:
+  tag:
+    name:
+      description: >-
+        Exon number targeted or included in a molecular analysis. If a specific genetic
+        variant is being reported, this property can be used to capture the exon where
+        that variant is located.
+      termDef:
+        term: >-
+          Molecular Laboratory Procedure Exon Identification Number
+        source: caDSR
+        cde_id: 6142411
+        cde_version: 1.0
+        term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142411%20and%20ver_nr=1.0"

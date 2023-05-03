@@ -1089,21 +1089,6 @@ circumferential_resection_margin:
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6161030%20and%20ver_nr=1.0"
 
-clark_level:
-  common:
-    description: >-
-      A morphologic finding indicating the cutaneous melanoma depth of invasion into
-      the dermis and subcutaneous tissue.
-    termDef:
-      term: >-
-        Clark Level Finding
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94811"
-      term_id: C94811
-      term_version: 23.03d
-
 classification_of_tumor:
   common:
     description: >-
@@ -1334,17 +1319,6 @@ contamination_error:
       cde_version:
       term_url:
 
-contiguous_organ_invaded:
-  common:
-    description: >-
-      The organ or contiguous site the disease migrated to from the primary site.
-    termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
 copy_number:
   common:
     description: >-
@@ -1357,17 +1331,6 @@ copy_number:
       cde_id: 6142519
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142519%20and%20ver_nr=1.0"
-
-country_of_birth:
-  common:
-    description: >-
-      The name of the country in which the patient is born.
-    termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
 
 country_of_residence_at_enrollment:
   common:
@@ -1825,20 +1788,6 @@ diagnosis_pathologically_confirmed:
       cde_version:
       term_url:
 
-discontiguous_lesion_count:
-  common:
-    description: >-
-      The number of the discontiguous lesions in a new tumor event.
-    termDef:
-      term: >-
-        Number of Discontiguous Lesions (New Tumor Event)
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C158639"
-      term_id: C158639
-      term_version: 23.03d
-
 disease_response:
   common:
     description: >-
@@ -1973,21 +1922,6 @@ ecog_performance_status:
       cde_version: 5.1
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=88%20and%20ver_nr=5.1"
 
-education_level:
-  common:
-    description: >-
-      The years of schooling completed in graded public, private, or parochial schools,
-      and in colleges, universities, or professional schools.
-    termDef:
-      term: >-
-        Education Level
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17953"
-      term_id: C17953
-      term_version: 23.03d
-
 eln_risk_classification:
   common:
     description: >-
@@ -2081,69 +2015,6 @@ enneking_msts_tumor_site:
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6003957%20and%20ver_nr=1.0"
 
-ensat_clinical_m:
-  common:
-    description: >-
-      A clinical finding about one or more characteristics of adrenal cancer, following
-      the rules of the ENSAT staging v7 classification system as they pertain to distant
-      metastases.
-    termDef:
-      term: >-
-        Clinical Distant Metastasis ENSAT Staging Finding v7
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104027"
-      term_id: C104027
-      term_version: 23.03d
-
-ensat_pathologic_n:
-  common:
-    description: >-
-      A pathologic finding about one or more characteristics of adrenal cancer, following
-      the rules of the ENSAT staging v7 classification system as they pertain to staging
-      of the lymph nodes.
-    termDef:
-      term: >-
-        Pathologic Lymph Nodes ENSAT Staging Finding v7
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104023"
-      term_id: C104023
-      term_version: 23.03d
-
-ensat_pathologic_stage:
-  common:
-    description: >-
-      An adrenal cancer stage defined according to the European Network for the Study
-      of Adrenal Tumors (ENSAT) criteria.
-    termDef:
-      term: >-
-        ENSAT Stage
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C141099"
-      term_id: C141099
-      term_version: 23.03d
-
-ensat_pathologic_t:
-  common:
-    description: >-
-      A pathologic finding about one or more characteristics of adrenal cancer, following
-      the rules of the ENSAT staging v7 classification system as they pertain to staging
-      of the primary tumor.
-    termDef:
-      term: >-
-        Pathologic Primary Tumor ENSAT Staging Finding v7
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104018"
-      term_id: C104018
-      term_version: 23.03d
-
 environmental_tobacco_smoke_exposure:
   common:
     description: >-
@@ -2157,19 +2028,6 @@ environmental_tobacco_smoke_exposure:
       cde_id:
       cde_version:
       term_url:
-
-epithelioid_cell_percent:
-  common:
-    description: >-
-      The percent of uveal melanoma characterized by the presence of malignant large
-      epithelioid melanocytes.
-    termDef:
-      term: >-
-        Cell Morphology Percent Uveal Epithelioid Cell Melanoma Integer
-      source: caDSR
-      cde_id: 7292253
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=7292253%20and%20ver_nr=1.0"
 
 esophageal_columnar_dysplasia_degree:
   common:
@@ -2293,17 +2151,6 @@ exposure_duration:
     termDef:
       term: >-
         Patient Exposure Duration
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
-exposure_duration_hrs_per_day:
-  common:
-    description: >-
-      The duration (in hours per day) that a person was exposed.
-    termDef:
-      term:
       source:
       cde_id:
       cde_version:
@@ -2534,18 +2381,6 @@ first_event:
   common:
     description: >-
       Describes the patient's first event after initial treatment.
-    termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
-first_symptom_longest_duration:
-  common:
-    description: >-
-      The length of time the first presenting symptom occurred that related to the
-      diagnosis of the patient with cancer.
     termDef:
       term:
       source:
@@ -3721,20 +3556,6 @@ marijuana_use_per_week:
       cde_version:
       term_url:
 
-marital_status:
-  common:
-    description: >-
-      A demographic parameter indicating a person's current conjugal status.
-    termDef:
-      term: >-
-        Marital Status
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25188"
-      term_id: C25188
-      term_version: 23.03d
-
 masaoka_stage:
   common:
     description: >-
@@ -3785,31 +3606,6 @@ mean_coverage:
       cde_version:
       term_url:
 
-measurement_type:
-  common:
-    description: >-
-      The method used to measure tumor size.
-    termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
-measurement_unit:
-  common:
-    description: >-
-      The type of unit of measure being used to express a length or distance.
-    termDef:
-      term: >-
-        Unit of Length
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C42578"
-      term_id: C42578
-      term_version: 23.03d
-
 medulloblastoma_molecular_classification:
   common:
     description: >-
@@ -3822,17 +3618,6 @@ medulloblastoma_molecular_classification:
       cde_id: 6002209
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6002209%20and%20ver_nr=1.0"
-
-melanoma_known_primary:
-  common:
-    description: >-
-      A melanoma which has metastasized from a known primary anatomic site.
-    termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
 
 menopause_status:
   common:
@@ -5285,31 +5070,6 @@ relationship_type:
       cde_version: 2.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2690165%20and%20ver_nr=2.0"
 
-relative_deceased:
-  common:
-    description: >-
-      The historical fact that a legal or consanguineous family member has died.
-    termDef:
-      term: >-
-        Deceased Family Member
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C81180"
-      term_id: C81180
-      term_version: 23.03d
-
-relative_smoker:
-  common:
-    description: >-
-      Indication that a legal or consanguineous family member was a smoker.
-    termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
 relative_with_cancer_history:
   common:
     description: >-
@@ -5446,6 +5206,19 @@ risk_factor:
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142389%20and%20ver_nr=1.0"
 
+risk_factors:
+  common:
+    description: >-
+      The text term used to describe a risk factor the patient had at the time of
+      or prior to their diagnosis.
+    termDef:
+      term: >-
+        Risk Factor Description Type
+      source: caDSR
+      cde_id: 6142389
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142389%20and%20ver_nr=1.0"
+
 risk_factor_method_of_diagnosis:
   common:
     description: >-
@@ -5471,19 +5244,6 @@ risk_factor_treatment:
       cde_id: 6514356
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6514356%20and%20ver_nr=1.0"
-
-risk_factors:
-  common:
-    description: >-
-      The text term used to describe a risk factor the patient had at the time of
-      or prior to their diagnosis.
-    termDef:
-      term: >-
-        Risk Factor Description Type
-      source: caDSR
-      cde_id: 6142389
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142389%20and%20ver_nr=1.0"
 
 rna_integrity_number:
   common:
@@ -5906,19 +5666,6 @@ spike_ins_fasta:
       cde_version:
       term_url:
 
-spindle_cell_percent:
-  common:
-    description: >-
-      The percent of uveal melanoma arising from the choroid, ciliary body, or the
-      iris and characterized by the presence of of spindle-shaped melanocytes.
-    termDef:
-      term: >-
-        Cell Morphology Percent Uveal Spindle Cell Melanoma Integer
-      source: caDSR
-      cde_id: 7292254
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=7292254%20and%20ver_nr=1.0"
-
 stain_type:
   common:
     description: >-
@@ -5926,17 +5673,6 @@ stain_type:
     termDef:
       term: >-
         Tissue Slide Stain Type
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
-staining_intensity_scale:
-  common:
-    description: >-
-      The scale used by the immunohistochemistry staining rating.
-    termDef:
-      term:
       source:
       cde_id:
       cde_version:
@@ -6531,21 +6267,6 @@ treatment_type:
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5102381%20and%20ver_nr=1.0"
 
-tumor_burden:
-  common:
-    description: >-
-      Refers to the number of cancer cells, the size of a tumor, or the amount of
-      cancer in the body.
-    termDef:
-      term: >-
-        Tumor Burden
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C28384"
-      term_id: C28384
-      term_version: 23.03d
-
 tumor_code:
   common:
     description: >-
@@ -6590,29 +6311,6 @@ tumor_depth:
     termDef:
       term: >-
         Depth of Tumor Measurement
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
-tumor_depth_descriptor:
-  common:
-    description: >-
-      Text term for the degree to which a tumor has penetrated into organ or tissue.
-    termDef:
-      term: >-
-        Tumor Depth Extent Name
-      source: caDSR
-      cde_id: 3808610
-      cde_version: 2.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3808610%20and%20ver_nr=2.0"
-
-tumor_depth_measurement:
-  common:
-    description: >-
-      The numerical measurement of tumor depth.
-    termDef:
-      term:
       source:
       cde_id:
       cde_version:
@@ -6669,35 +6367,6 @@ tumor_grade_category:
       cde_version:
       term_url:
 
-tumor_infiltrating_lymphocytes:
-  common:
-    description: >-
-      Lymphocytes that show specificity for autologous tumor cells and can infiltrate
-      a tumor.
-    termDef:
-      term: >-
-        Tumor Infiltrating Lymphocyte
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C12546"
-      term_id: C12546
-      term_version: 23.03d
-
-tumor_infiltrating_macrophages:
-  common:
-    description: >-
-      Non-neoplastic macrophages that infiltrate a tumor.
-    termDef:
-      term: >-
-        Tumor Infiltrating Macrophages
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111027"
-      term_id: C111027
-      term_version: 23.03d
-
 tumor_largest_dimension_diameter:
   common:
     description: >-
@@ -6711,32 +6380,10 @@ tumor_largest_dimension_diameter:
       cde_version: 3.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=64215%20and%20ver_nr=3.0"
 
-tumor_length_measurement:
-  common:
-    description: >-
-      The numerical measurement of tumor length.
-    termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
 tumor_level_prostate:
   common:
     description: >-
       The level(s) of the prostate from which the tumor originated.
-    termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
-tumor_measurement_method:
-  common:
-    description: >-
-      The method used to measure tumor size.
     termDef:
       term:
       source:
@@ -6783,19 +6430,6 @@ tumor_regression_grade:
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6471217%20and%20ver_nr=1.0"
 
-tumor_shape:
-  common:
-    description: >-
-      Text term to represent the description of the shape of a tumor determined by
-      clinical or pathological techniques.
-    termDef:
-      term: >-
-        Tumor Shape Type
-      source: caDSR
-      cde_id: 3870445
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3870445%20and%20ver_nr=1.0"
-
 tumor_thickness:
   common:
     description: >-
@@ -6808,17 +6442,6 @@ tumor_thickness:
       cde_id: C176286
       cde_version: 21.04d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C176286"
-
-tumor_width_measurement:
-  common:
-    description: >-
-      The numerical measurement of tumor width.
-    termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
 
 type_of_smoke_exposure:
   common:
@@ -6969,20 +6592,6 @@ uicc_staging_system_edition:
       cde_id:
       cde_version:
       term_url:
-
-ulceration_indicator:
-  common:
-    description: >-
-      The formation or development of an ulcer.
-    termDef:
-      term: >-
-        Ulceration
-      source: NCIt
-      cde_id:
-      cde_version:
-      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25757"
-      term_id: C25757
-      term_version: 23.03d
 
 undescended_testis_corrected:
   common:
@@ -7226,17 +6835,6 @@ well_number:
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432613%20and%20ver_nr=1.0"
 
-wgs_coverage:
-  common:
-    description: >-
-      Range of coverage values for WGS aligned reads.
-    termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
 who_cns_grade:
   common:
     description: >-
@@ -7369,3 +6967,405 @@ zygosity:
       cde_id: 6142510
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142510%20and%20ver_nr=1.0"
+
+ensat_pathologic_stage:
+  common:
+    description: >-
+      An adrenal cancer stage defined according to the European Network for the Study
+      of Adrenal Tumors (ENSAT) criteria.
+    termDef:
+      term: >-
+        ENSAT Stage
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C141099"
+      term_id: C141099
+      term_version: 23.03d
+
+ensat_pathologic_t:
+  common:
+    description: >-
+      A pathologic finding about one or more characteristics of adrenal cancer, following
+      the rules of the ENSAT staging v7 classification system as they pertain to staging
+      of the primary tumor.
+    termDef:
+      term: >-
+        Pathologic Primary Tumor ENSAT Staging Finding v7
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104018"
+      term_id: C104018
+      term_version: 23.03d
+
+ensat_pathologic_n:
+  common:
+    description: >-
+      A pathologic finding about one or more characteristics of adrenal cancer, following
+      the rules of the ENSAT staging v7 classification system as they pertain to staging
+      of the lymph nodes.
+    termDef:
+      term: >-
+        Pathologic Lymph Nodes ENSAT Staging Finding v7
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104023"
+      term_id: C104023
+      term_version: 23.03d
+
+ensat_clinical_m:
+  common:
+    description: >-
+      A clinical finding about one or more characteristics of adrenal cancer, following
+      the rules of the ENSAT staging v7 classification system as they pertain to distant
+      metastases.
+    termDef:
+      term: >-
+        Clinical Distant Metastasis ENSAT Staging Finding v7
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104027"
+      term_id: C104027
+      term_version: 23.03d
+
+discontiguous_lesion_count:
+  common:
+    description: >-
+      The number of the discontiguous lesions in a new tumor event.
+    termDef:
+      term: >-
+        Number of Discontiguous Lesions (New Tumor Event)
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C158639"
+      term_id: C158639
+      term_version: 23.03d
+
+tumor_burden:
+  common:
+    description: >-
+      Refers to the number of cancer cells, the size of a tumor, or the amount of
+      cancer in the body.
+    termDef:
+      term: >-
+        Tumor Burden
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C28384"
+      term_id: C28384
+      term_version: 23.03d
+
+measurement_unit:
+  common:
+    description: >-
+      The type of unit of measure being used to express a length or distance.
+    termDef:
+      term: >-
+        Unit of Length
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C42578"
+      term_id: C42578
+      term_version: 23.03d
+
+clark_level:
+  common:
+    description: >-
+      A morphologic finding indicating the cutaneous melanoma depth of invasion into
+      the dermis and subcutaneous tissue.
+    termDef:
+      term: >-
+        Clark Level Finding
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94811"
+      term_id: C94811
+      term_version: 23.03d
+
+ulceration_indicator:
+  common:
+    description: >-
+      The formation or development of an ulcer.
+    termDef:
+      term: >-
+        Ulceration
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25757"
+      term_id: C25757
+      term_version: 23.03d
+
+tumor_infiltrating_lymphocytes:
+  common:
+    description: >-
+      Lymphocytes that show specificity for autologous tumor cells and can infiltrate
+      a tumor.
+    termDef:
+      term: >-
+        Tumor Infiltrating Lymphocyte
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C12546"
+      term_id: C12546
+      term_version: 23.03d
+
+tumor_infiltrating_macrophages:
+  common:
+    description: >-
+      Non-neoplastic macrophages that infiltrate a tumor.
+    termDef:
+      term: >-
+        Tumor Infiltrating Macrophages
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111027"
+      term_id: C111027
+      term_version: 23.03d
+
+education_level:
+  common:
+    description: >-
+      The years of schooling completed in graded public, private, or parochial schools,
+      and in colleges, universities, or professional schools.
+    termDef:
+      term: >-
+        Education Level
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17953"
+      term_id: C17953
+      term_version: 23.03d
+
+marital_status:
+  common:
+    description: >-
+      A demographic parameter indicating a person's current conjugal status.
+    termDef:
+      term: >-
+        Marital Status
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25188"
+      term_id: C25188
+      term_version: 23.03d
+
+relative_deceased:
+  common:
+    description: >-
+      The historical fact that a legal or consanguineous family member has died.
+    termDef:
+      term: >-
+        Deceased Family Member
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C81180"
+      term_id: C81180
+      term_version: 23.03d
+
+staining_intensity_scale:
+  common:
+    description: >-
+      The scale used by the immunohistochemistry staining rating.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+first_symptom_longest_duration:
+  common:
+    description: >-
+      The length of time the first presenting symptom occurred that related to the
+      diagnosis of the patient with cancer.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+measurement_type:
+  common:
+    description: >-
+      The method used to measure tumor size.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+contiguous_organ_invaded:
+  common:
+    description: >-
+      The organ or contiguous site the disease migrated to from the primary site.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+tumor_depth_measurement:
+  common:
+    description: >-
+      The numerical measurement of tumor depth.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+tumor_length_measurement:
+  common:
+    description: >-
+      The numerical measurement of tumor length.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+tumor_width_measurement:
+  common:
+    description: >-
+      The numerical measurement of tumor width.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+tumor_depth_descriptor:
+  common:
+    description: >-
+      Text term for the degree to which a tumor has penetrated into organ or tissue.
+    termDef:
+      term: >-
+        Tumor Depth Extent Name
+      source: caDSR
+      cde_id: 3808610
+      cde_version: 2.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3808610%20and%20ver_nr=2.0"
+
+melanoma_known_primary:
+  common:
+    description: >-
+      A melanoma which has metastasized from a known primary anatomic site.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+spindle_cell_percent:
+  common:
+    description: >-
+      The percent of uveal melanoma arising from the choroid, ciliary body, or the
+      iris and characterized by the presence of of spindle-shaped melanocytes.
+    termDef:
+      term: >-
+        Cell Morphology Percent Uveal Spindle Cell Melanoma Integer
+      source: caDSR
+      cde_id: 7292254
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=7292254%20and%20ver_nr=1.0"
+
+epithelioid_cell_percent:
+  common:
+    description: >-
+      The percent of uveal melanoma characterized by the presence of malignant large
+      epithelioid melanocytes.
+    termDef:
+      term: >-
+        Cell Morphology Percent Uveal Epithelioid Cell Melanoma Integer
+      source: caDSR
+      cde_id: 7292253
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=7292253%20and%20ver_nr=1.0"
+
+tumor_shape:
+  common:
+    description: >-
+      Text term to represent the description of the shape of a tumor determined by
+      clinical or pathological techniques.
+    termDef:
+      term: >-
+        Tumor Shape Type
+      source: caDSR
+      cde_id: 3870445
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3870445%20and%20ver_nr=1.0"
+
+tumor_measurement_method:
+  common:
+    description: >-
+      The method used to measure tumor size.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+relative_smoker:
+  common:
+    description: >-
+      Indication that a legal or consanguineous family member was a smoker.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+exposure_duration_hrs_per_day:
+  common:
+    description: >-
+      The duration (in hours per day) that a person was exposed.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+country_of_birth:
+  common:
+    description: >-
+      The name of the country in which the patient is born.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+wgs_coverage:
+  common:
+    description: >-
+      Range of coverage values for WGS aligned reads.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
