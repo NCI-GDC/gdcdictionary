@@ -40,6 +40,7 @@ uniqueKeys:
 
 deprecated:
   - days_to_treatment
+  - treatment_anatomic_site
   - treatment_arm
 
 properties:
