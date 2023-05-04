@@ -111,6 +111,7 @@ properties:
       - Illumina Human Methylation 27
       - Illumina Human Methylation 450
       - Illumina Methylation Epic
+      - Illumina Methylation Epic v2
 
   aliquots:
     $ref: "_definitions.yaml#/to_one"
