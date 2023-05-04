@@ -908,6 +908,7 @@ properties:
       - Cell
       - Control Analyte
       - Derived Cell Line
+      - Derived Cell Lines and Sorted Cells
       - EBV Immortalized
       - Fibroblasts from Bone Marrow
       - Granulocytes
