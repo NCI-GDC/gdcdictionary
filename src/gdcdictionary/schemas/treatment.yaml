@@ -7562,13 +7562,13 @@ properties:
     $ref:
       - "_terms.yaml#/treatment_frequency/common"
     enum:
-      - Every 24 Hours
       - Every Hour
-      - Every Other Day
       - Five Times Daily
       - Four Times Daily
       - Three Times Daily
       - Twice Daily
+      - Every 24 Hours
+      - Every Other Day
       - Twice Weekly
       - Once Weekly
       - Unknown
