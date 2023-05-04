@@ -112,6 +112,7 @@ properties:
       - Illumina Human Methylation 27
       - Illumina Human Methylation 450
       - Illumina Methylation Epic
+      - Illumina Methylation Epic v2
 
   methylation_array_harmonization_workflows:
     $ref: "_definitions.yaml#/to_one"
