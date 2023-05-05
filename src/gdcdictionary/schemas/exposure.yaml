@@ -298,6 +298,7 @@ properties:
     description: >-
       The duration (in hours per day) that a person was exposed.
     type: number
+    maximum: 24
     minimum: 0
 
   exposure_duration_years:
