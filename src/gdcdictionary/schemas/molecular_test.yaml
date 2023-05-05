@@ -7113,8 +7113,8 @@ properties:
     type: string
 
   staining_intensity_scale:
-    description: >-
-      The scale used by the immunohistochemistry staining rating.
+    $ref:
+      - "_terms.yaml#/staining_intensity_scale/common"
     enum:
       - 3 Point Scale
       - 4 Point Scale
