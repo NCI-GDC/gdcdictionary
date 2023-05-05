@@ -295,8 +295,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   exposure_duration_hrs_per_day:
-    description: >-
-      The duration (in hours per day) that a person was exposed.
+    $ref:
+      - "_terms.yaml#/exposure_duration_hrs_per_day/common"
     type: number
     maximum: 24
     minimum: 0
