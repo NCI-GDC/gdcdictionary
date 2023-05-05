@@ -783,8 +783,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   relative_smoker:
-    description: >-
-      Indication that a legal or consanguineous family member was a smoker.
+    $ref:
+      - "_terms.yaml#/relative_smoker/common"
     enum:
       - "Yes"
       - "No"
