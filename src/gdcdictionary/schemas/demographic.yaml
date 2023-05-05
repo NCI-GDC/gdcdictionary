@@ -142,8 +142,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   country_of_birth:
-    description: >-
-      The name of the country in which the patient is born.
+    $ref:
+      - "_terms.yaml#/country_of_birth/common"
     enum:
       - Afghanistan
       - Albania
