@@ -580,8 +580,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   measurement_type:
-    description: >-
-      The method used to measure tumor size.
+    $ref:
+      - "_terms.yaml#/measurement_type/common"
     enum:
       - Pathologic
       - Radiologic
@@ -919,8 +919,8 @@ properties:
           - "_terms_enum.yaml#/not_reported/common"
 
   tumor_depth_measurement:
-    description: >-
-      The numerical measurement of tumor depth.
+    $ref:
+      - "_terms.yaml#/tumor_depth_measurement/common"
     type: number
     minimum: 0
 
@@ -967,8 +967,8 @@ properties:
     minimum: 0
 
   tumor_length_measurement:
-    description: >-
-      The numerical measurement of tumor length.
+    $ref:
+      - "_terms.yaml#/tumor_length_measurement/common"
     type: number
     minimum: 0
 
@@ -983,8 +983,8 @@ properties:
         - Middle
 
   tumor_measurement_method:
-    description: >-
-      The method used to measure tumor size.
+    $ref:
+      - "_terms.yaml#/tumor_measurement_method/common"
     enum:
       - Echographic
       - Pathologic
@@ -1018,8 +1018,8 @@ properties:
     minimum: 0
 
   tumor_width_measurement:
-    description: >-
-      The numerical measurement of tumor width.
+    $ref:
+      - "_terms.yaml#/tumor_width_measurement/common"
     type: number
     minimum: 0
 
