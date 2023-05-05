@@ -223,8 +223,8 @@ properties:
     type: number
 
   wgs_coverage:
-    description: >-
-      Range of coverage values for WGS aligned reads.
+    $ref:
+      - "_terms.yaml#/wgs_coverage/common"
     enum:
       - 0x–10x
       - 10x–25x
