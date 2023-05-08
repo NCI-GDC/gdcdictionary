@@ -2095,7 +2095,7 @@ properties:
       - 0–30 Days
       - 31–90 Days
       - 91–180 Days
-      - '>181 Days'
+      - '>=181 Days'
 
   first_symptom_prior_to_diagnosis:
     $ref:
