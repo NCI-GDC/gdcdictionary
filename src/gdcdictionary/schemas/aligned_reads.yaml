@@ -222,6 +222,24 @@ properties:
       - "_terms.yaml#/tumor_purity/common"
     type: number
 
+  wgs_coverage:
+    $ref:
+      - "_terms.yaml#/wgs_coverage/common"
+    enum:
+      - 0x–10x
+      - 10x–25x
+      - 25x–150x
+      - 150x+
+      - Unknown
+      - Not Applicable
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
+      Not Applicable:
+        $ref:
+          - "_terms_enum.yaml#/not_applicable/common"
+
   alignment_cocleaning_workflows:
     $ref: "_definitions.yaml#/to_one"
 
