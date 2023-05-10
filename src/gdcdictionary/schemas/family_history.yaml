@@ -764,6 +764,42 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  relative_deceased:
+    $ref:
+      - "_terms.yaml#/relative_deceased/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms_enum.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms_enum.yaml#/no/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
+
+  relative_smoker:
+    $ref:
+      - "_terms.yaml#/relative_smoker/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms_enum.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms_enum.yaml#/no/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
+
   relative_with_cancer_history:
     $ref:
       - "_terms.yaml#/relative_with_cancer_history/common"
