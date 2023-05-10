@@ -744,6 +744,7 @@ properties:
       - "_terms.yaml#/preservation_method/common"
     enum:
       - Cryopreserved
+      - EDTA
       - FFPE
       - Fresh
       - Frozen
