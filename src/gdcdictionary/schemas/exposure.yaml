@@ -294,6 +294,13 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  exposure_duration_hrs_per_day:
+    $ref:
+      - "_terms.yaml#/exposure_duration_hrs_per_day/common"
+    type: number
+    maximum: 24
+    minimum: 0
+
   exposure_duration_years:
     $ref:
       - "_terms.yaml#/exposure_duration_years/common"
@@ -316,6 +323,7 @@ properties:
       - Asbestos
       - Chemical
       - Coal Dust
+      - Dust, NOS
       - Marijuana
       - Radiation
       - Radon
@@ -325,6 +333,9 @@ properties:
       - Tobacco
       - Wood Dust
     enumDef:
+      Dust, NOS:
+        $ref:
+          - "_terms_enum.yaml#/dust/common"
       Marijuana:
         $ref:
           - "_terms_enum.yaml#/marijuana/common"
