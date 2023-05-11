@@ -7362,7 +7362,7 @@ country_of_birth:
 wgs_coverage:
   common:
     description: >-
-      Range of coverage values for WGS aligned reads.
+      Range of coverage values for WGS aligned reads. Each range is non-inclusive to the lower bound.
     termDef:
       term:
       source:
