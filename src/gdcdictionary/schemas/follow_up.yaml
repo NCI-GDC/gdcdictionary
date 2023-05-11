@@ -1108,6 +1108,7 @@ properties:
         - Peripheral Vascular Disease
         - Peutz-Jeghers Disease
         - Pneumocystis Pneumonia
+        - Pneumonia, NOS
         - Polycystic Ovarian Syndrome (PCOS)
         - Pregnancy in Patient or Partner
         - Primary Sclerosing Cholangitis
@@ -1144,6 +1145,10 @@ properties:
         - Other
         - Unknown
         - Not Reported
+    enumDef:
+      Pneumonia, NOS:
+        $ref:
+          - "_terms_enum.yaml#/pneumonia_nos/common"
 
   comorbidity:
     $ref:
@@ -1455,6 +1460,12 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  discontiguous_lesion_count:
+    $ref:
+      - "_terms.yaml#/discontiguous_lesion_count/common"
+    type: integer
+    minimum: 0
+
   disease_response:
     $ref:
       - "_terms.yaml#/disease_response/common"
@@ -1597,6 +1608,7 @@ properties:
       - Induction Death
       - Induction Failure
       - None
+      - Presented with Metastases
       - Progression
       - Relapse
       - Second Malignant Neoplasm
@@ -2818,6 +2830,7 @@ properties:
         - Pancreatitis
         - Parasitic Disease of Biliary Tract
         - Pneumocystis Pneumonia
+        - Pneumonia, NOS
         - Polycystic Ovarian Syndrome (PCOS)
         - Primary Sclerosing Cholangitis
         - Recurrent Pyogenic Cholangitis
@@ -2857,6 +2870,10 @@ properties:
         - Wagr Syndrome
         - Unknown
         - Not Reported
+    enumDef:
+      Pneumonia, NOS:
+        $ref:
+          - "_terms_enum.yaml#/pneumonia_nos/common"
 
   scan_tracer_used:
     $ref:
@@ -2887,6 +2904,7 @@ properties:
       - Prior to Diagnosis
       - Prior to Treatment
       - Recurrence/Progression
+      - Within 3 Months of Surgery
       - Other
       - Not Reported
 
