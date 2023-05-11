@@ -50,6 +50,7 @@ deprecated:
   - mitotic_count
   - papillary_renal_cell_type
   - primary_disease
+  - metastasis_at_diagnosis_site
 
 properties:
 
@@ -1389,6 +1390,36 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  clark_level:
+    $ref:
+      - "_terms.yaml#/clark_level/common"
+    enum:
+      - I
+      - II
+      - III
+      - IV
+      - V
+      - Not Reported
+    enumDef:
+      I:
+        $ref:
+          - "_terms_enum.yaml#/i/diagnosis/clark_level"
+      II:
+        $ref:
+          - "_terms_enum.yaml#/ii/diagnosis/clark_level"
+      III:
+        $ref:
+          - "_terms_enum.yaml#/iii/diagnosis/clark_level"
+      IV:
+        $ref:
+          - "_terms_enum.yaml#/iv/diagnosis/clark_level"
+      V:
+        $ref:
+          - "_terms_enum.yaml#/v/diagnosis/clark_level"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
+
   classification_of_tumor:
     $ref:
       - "_terms.yaml#/classification_of_tumor/common"
@@ -1538,6 +1569,48 @@ properties:
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
+
+  contiguous_organ_invaded:
+    description: >-
+      The organ or contiguous site the disease migrated to from the primary site.
+    enum:
+      - Adrenal
+      - Bladder
+      - Colon
+      - Inferior Vena Cava
+      - Kidney
+      - Liver
+      - Small Bowel
+      - Spleen
+      - Not Reported
+    enumDef:
+      Adrenal:
+        $ref:
+          - "_terms_enum.yaml#/adrenal_gland_nos/common"
+      Bladder:
+        $ref:
+          - "_terms_enum.yaml#/bladder_nos/common"
+      Colon:
+        $ref:
+          - "_terms_enum.yaml#/colon/common"
+      Inferior Vena Cava:
+        $ref:
+          - "_terms_enum.yaml#/inferior_vena_cava/common"
+      Kidney:
+        $ref:
+          - "_terms_enum.yaml#/kidney/common"
+      Liver:
+        $ref:
+          - "_terms_enum.yaml#/liver/common"
+      Small Bowel:
+        $ref:
+          - "_terms_enum.yaml#/small_bowel/common"
+      Spleen:
+        $ref:
+          - "_terms_enum.yaml#/spleen/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
@@ -1723,6 +1796,78 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  ensat_clinical_m:
+    $ref:
+      - "_terms.yaml#/ensat_clinical_m/common"
+    enum:
+      - M0
+      - M1
+    enumDef:
+      M0:
+        $ref:
+          - "_terms_enum.yaml#/m0/diagnosis/ensat_clinical_m"
+      M1:
+        $ref:
+          - "_terms_enum.yaml#/m1/diagnosis/ensat_clinical_m"
+
+  ensat_pathologic_n:
+    $ref:
+      - "_terms.yaml#/ensat_pathologic_n/common"
+    enum:
+      - N0
+      - N1
+    enumDef:
+      N0:
+        $ref:
+          - "_terms_enum.yaml#/n0/diagnosis/ensat_pathologic_n"
+      N1:
+        $ref:
+          - "_terms_enum.yaml#/n1/diagnosis/ensat_pathologic_n"
+
+  ensat_pathologic_stage:
+    $ref:
+      - "_terms.yaml#/ensat_pathologic_stage/common"
+    enum:
+      - Stage I
+      - Stage II
+      - Stage III
+      - Stage IV
+    enumDef:
+      Stage I:
+        $ref:
+          - "_terms_enum.yaml#/stage_i/diagnosis/ensat_pathologic_stage"
+      Stage II:
+        $ref:
+          - "_terms_enum.yaml#/stage_iI/diagnosis/ensat_pathologic_stage"
+      Stage III:
+        $ref:
+          - "_terms_enum.yaml#/stage_iII/diagnosis/ensat_pathologic_stage"
+      Stage IV:
+        $ref:
+          - "_terms_enum.yaml#/stage_iv/diagnosis/ensat_pathologic_stage"
+
+  ensat_pathologic_t:
+    $ref:
+      - "_terms.yaml#/ensat_pathologic_t/common"
+    enum:
+      - T1
+      - T2
+      - T3
+      - T4
+    enumDef:
+      T1:
+        $ref:
+          - "_terms_enum.yaml#/t1/diagnosis/ensat_pathologic_t"
+      T2:
+        $ref:
+          - "_terms_enum.yaml#/t2/diagnosis/ensat_pathologic_t"
+      T3:
+        $ref:
+          - "_terms_enum.yaml#/t3/diagnosis/ensat_pathologic_t"
+      T4:
+        $ref:
+          - "_terms_enum.yaml#/t4/diagnosis/ensat_pathologic_t"
 
   esophageal_columnar_dysplasia_degree:
     $ref:
@@ -1942,6 +2087,16 @@ properties:
       - "1995"
       - "2009"
 
+  first_symptom_longest_duration:
+    description: >-
+      The length of time the first presenting symptom occurred that related to the
+      diagnosis of the patient with cancer.
+    enum:
+      - 0–30 Days
+      - 31–90 Days
+      - 91–180 Days
+      - '>=181 Days'
+
   first_symptom_prior_to_diagnosis:
     $ref:
       - "_terms.yaml#/first_symptom_prior_to_diagnosis/common"
@@ -2121,7 +2276,7 @@ properties:
           - "_terms_enum.yaml#/differentiating/common"
       Poorly Differentiated:
         $ref:
-          - "_terms_enum.yaml#/poorly_differentiated/common"
+          - "_terms_enum.yaml#/poorly_differentiated_neuroblastoma/common"
       Undifferentiated:
         $ref:
           - "_terms_enum.yaml#/undifferentiated/common"
@@ -2542,6 +2697,17 @@ properties:
       - Thyroid
       - Other
 
+  measurement_type:
+    description: >-
+      The method used to measure tumor size.
+    enum:
+      - Pathologic
+      - Radiologic
+    enumDef:
+      Radiologic:
+        $ref:
+          - "_terms_enum.yaml#/radiologic/common"
+
   medulloblastoma_molecular_classification:
     $ref:
       - "_terms.yaml#/medulloblastoma_molecular_classification/common"
@@ -2568,6 +2734,24 @@ properties:
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
+
+  melanoma_known_primary:
+    description: >-
+      A melanoma which has metastasized from a known primary anatomic site.
+    enum:
+      - "Yes"
+      - "No"
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms_enum.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms_enum.yaml#/no/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
@@ -18015,6 +18199,7 @@ properties:
         - Adrenal gland, NOS
         - Anus, NOS
         - Appendix
+        - Ascites
         - Bladder, NOS
         - Bone marrow
         - Bone, NOS
@@ -18036,7 +18221,10 @@ properties:
         - Cervix
         - Chest wall
         - Colon, NOS
+        - Common or Superficial Femoral Vein
         - Diaphragm
+        - Distant Nodes
+        - Distant Organ
         - Ear
         - Epididymis
         - Esophagus
@@ -18045,8 +18233,13 @@ properties:
         - Fallopian Tube, NOS
         - Fallopian Tube, Right
         - Gallbladder
+        - Gastrointestinal Tract
         - Gastrosplenic Ligament
+        - Great Blood Vessel
+        - Groin
+        - Head, Face or Neck, NOS
         - Heart
+        - Inferior Vena Cava
         - Kidney, Lower Pole
         - Kidney, Middle
         - Kidney, NOS
@@ -18056,10 +18249,15 @@ properties:
         - Liver
         - Lower lobe, lung
         - Lung, NOS
+        - Lymph Node, Axillary
+        - Lymph Node, Inguinal
         - Lymph node, NOS
+        - Lymph Node, Regional
+        - Lymph Node, Subcarinal
         - Mandible
         - Maxilla
         - Mediastinal soft tissue
+        - Mediastinum
         - Mesentery
         - Mesothelium
         - Middle lobe, lung
@@ -18079,6 +18277,7 @@ properties:
         - Parotid gland
         - Pelvic Lymph Node(s)
         - Pelvic Peritoneum
+        - Pelvic Vein, Common, External or Iliac
         - Pelvis
         - Peri-aortic Lymph Node(s)
         - Peri-orbital soft tissue
@@ -18087,17 +18286,21 @@ properties:
         - Peripheral blood
         - Peripheral Lung
         - Peripheral nervous system
+        - Peritoneal Cavity
         - Peritoneum, NOS
         - Pleura
         - Prostate
         - Rectum
+        - Renal Vein
         - Retroperitoneum
         - Salivary gland
+        - Scalp
         - Sigmoid colon
         - Sinus
         - Skin
         - Small intestine
         - Soft tissue
+        - Spinal Cord
         - Spleen
         - Stomach
         - Testes
@@ -18109,25 +18312,79 @@ properties:
         - Transplanted kidney
         - Transverse colon
         - Upper lobe, lung
+        - Urethra
         - Uterus
         - Vagina
         - Vertebrae
+        - Vertebral Canal
+        - Vulva, NOS
         - Other
         - Unknown
         - Not Reported
     enumDef:
+      Ascites:
+        $ref:
+          - "_terms_enum.yaml#/ascites/common"
+      Common or Superficial Femoral Vein:
+        $ref:
+          - "_terms_enum.yaml#/common_superficial_femoral_vein/common"
+      Gastrointestinal Tract:
+        $ref:
+          - "_terms_enum.yaml#/gastrointestinal_tract_nos/common"
+      Great Blood Vessel:
+        $ref:
+          - "_terms_enum.yaml#/great_blood_vessel/common"
+      Groin:
+        $ref:
+          - "_terms_enum.yaml#/groin/common"
+      Inferior Vena Cava:
+        $ref:
+          - "_terms_enum.yaml#/inferior_vena_cava/common"
       Kidney, Lower Pole:
         $ref:
           - "_terms_enum.yaml#/kidney_lower_pole/common"
       Kidney, Upper Pole:
         $ref:
           - "_terms_enum.yaml#/kidney_upper_pole/common"
+      Lymph Node, Axillary:
+        $ref:
+          - "_terms_enum.yaml#/lymph_node_axillary/common"
+      Lymph Node, Inguinal:
+        $ref:
+          - "_terms_enum.yaml#/lymph_node_inguinal/common"
+      Mediastinum:
+        $ref:
+          - "_terms_enum.yaml#/mediastinum/common"
       Omentum:
         $ref:
           - "_terms_enum.yaml#/omentum/common"
+      Pelvic Vein, Common, External or Iliac:
+        $ref:
+          - "_terms_enum.yaml#/iliac_vein/common"
+      Peritoneal Cavity:
+        $ref:
+          - "_terms_enum.yaml#/peritoneal_cavity/common"
+      Renal Vein:
+        $ref:
+          - "_terms_enum.yaml#/renal_vein/common"
+      Scalp:
+        $ref:
+          - "_terms_enum.yaml#/scalp/common"
+      Spinal Cord:
+        $ref:
+          - "_terms_enum.yaml#/spinal_cord/common"
+      Urethra:
+        $ref:
+          - "_terms_enum.yaml#/urethra/common"
       Uterus:
         $ref:
           - "_terms_enum.yaml#/uterus_nos/common"
+      Vertebral Canal:
+        $ref:
+          - "_terms_enum.yaml#/vertebral_canal/common"
+      Vulva, NOS:
+        $ref:
+          - "_terms_enum.yaml#/vulva_nos/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
@@ -19307,6 +19564,12 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  tumor_burden:
+    $ref:
+      - "_terms.yaml#/tumor_burden/common"
+    type: number
+    minimum: 0
+
   tumor_confined_to_organ_of_origin:
     $ref:
       - "_terms.yaml#/tumor_confined_to_organ_of_origin/common"
@@ -19721,6 +19984,24 @@ properties:
       - 8th
       - Unknown
       - Not Reported
+
+  ulceration_indicator:
+    $ref:
+      - "_terms.yaml#/ulceration_indicator/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms_enum.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms_enum.yaml#/no/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
 
   weiss_assessment_findings:
     $ref:
