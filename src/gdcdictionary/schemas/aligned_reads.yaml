@@ -226,9 +226,9 @@ properties:
     $ref:
       - "_terms.yaml#/wgs_coverage/common"
     enum:
-      - 0x–10x
-      - 10x–25x
-      - 25x–150x
+      - 0x-10x
+      - 10x-25x
+      - 25x-150x
       - 150x+
       - Unknown
       - Not Applicable
