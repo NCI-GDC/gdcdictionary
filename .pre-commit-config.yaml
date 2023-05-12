@@ -5,3 +5,19 @@ repos:
     -   id: detect-secrets
         args: ['--baseline', '.secrets.baseline']
 
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+    -   id: check-json
+    -   id: check-toml
+    -   id: check-yaml
+        exclude: .gitlab-ci.yml
+    -   id: end-of-file-fixer
+    -   id: fix-encoding-pragma
+        args: [--remove]
+    -   id: no-commit-to-branch
+        args: [--branch, develop, --branch, master, --pattern, release/.*]
+    -   id: pretty-format-json
+        args: [--autofix, --no-sort-keys]
+    -   id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]

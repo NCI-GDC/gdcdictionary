@@ -68,7 +68,7 @@ schema:
   parents:
     - entity: case
       required: true
-      fields: 
+      fields:
         - name: project_id
           self_field: project_id
         - name: submitter_case_id

@@ -1,0 +1,15 @@
+{
+  "type": "submitted_genotyping_array",
+  "submitter_id": "genotyping_array_run_X",
+  "file_name": "array.cel",
+  "file_size": 1324134,
+  "md5sum": "d3266f2577584713ea17f94d331f30c4",
+  "data_category": "Copy Number Variation",
+  "data_type": "Raw Intensities",
+  "data_format": "CEL",
+  "experimental_strategy": "Genotyping Array",
+  "platform": "Affymetrix SNP 6.0",
+  "aliquots": {
+    "submitter_id": "cnv_submission#"
+  }
+}

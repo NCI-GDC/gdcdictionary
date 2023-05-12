@@ -21,6 +21,7 @@ the valid key-value pairs that can be used to describe the nodes.
     - [Cosmetic Corrections](#cosmetic-corrections)
     - [Testing](#testing)
     - [Versioning](#versioning)
+  - [Gdcdatamodel2 auto generation](#Gdcdatamodel2-auto-generation)
   - [Setup pre-commit hook to check for secrets](#setup-pre-commit-hook-to-check-for-secrets)
   - [Contributing](#contributing)
 
@@ -182,12 +183,27 @@ line in setup.py file to `MAJOR.MINOR.PATCH` accordingly:
 3. PATCH: version when you make backwards-compatible bug fixes: **Cosmetic Corrections**
    - e.g. 1.2.4 -> 1.2.5
 
+## Gdcdatamodel2 auto generation
 
-    
+Gdcdatamodel2 should be generated automatically on gitlab for each commit push.
+The generated python artifact should be in
+https://nexus.osdc.io/#browse/browse:pypi-snapshots:gdcdatamodel2
+
+The gitlab pipline also automatically push a new branch to gdcdatamodel2 on github.
+
+If you want, you can also manually run the pipeline to generate a new version.
+1. Go to https://gitlab.datacommons.io/nci-gdc/development/gdcdictionary/-/pipelines/new
+2. Select the branch/tag of gdcdictionary you want to use, default: develop
+3. (optional) the generated version of gdcdatamodel2 should based on the branch/tag you
+selected in previous step. But if you want to generate from a different branch, change
+`GDCDICTIONARY_TARGET_VERSION_OVERRIDE` in the variables.
+4. click `Run Pipeline` button.
+
+
 ## Setup pre-commit hook to check for secrets
 
 We use [pre-commit](https://pre-commit.com/) to setup pre-commit hooks for this repo.
-We use [detect-secrets](https://github.com/Yelp/detect-secrets) to search for secrets being committed into the repo. 
+We use [detect-secrets](https://github.com/Yelp/detect-secrets) to search for secrets being committed into the repo.
 
 To install the pre-commit hook, run
 ```
@@ -199,7 +215,7 @@ To update the .secrets.baseline file run
 detect-secrets scan --update .secrets.baseline
 ```
 
-`.secrets.baseline` contains all the string that were caught by detect-secrets but are not stored in plain text. Audit the baseline to view the secrets . 
+`.secrets.baseline` contains all the string that were caught by detect-secrets but are not stored in plain text. Audit the baseline to view the secrets .
 
 ```
 detect-secrets audit .secrets.baseline

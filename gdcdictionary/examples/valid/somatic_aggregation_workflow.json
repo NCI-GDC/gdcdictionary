@@ -1,9 +1,0 @@
-{
-    "type": "somatic_aggregation_workflow",
-    "submitter_id": "somatic_aggregation_workflow_a",
-    "workflow_link": "github.com/<owner>/<project>/commit/<hash>",
-    "workflow_type": "MuTect2 Variant Aggregation and Masking",
-    "annotated_somatic_mutations": {
-	"submitter_id": "annotated_somatic_output_212"
-    }
-}
