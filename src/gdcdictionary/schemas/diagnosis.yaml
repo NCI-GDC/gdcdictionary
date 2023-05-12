@@ -2092,9 +2092,9 @@ properties:
       The length of time the first presenting symptom occurred that related to the
       diagnosis of the patient with cancer.
     enum:
-      - 0–30 Days
-      - 31–90 Days
-      - 91–180 Days
+      - 0-30 Days
+      - 31-90 Days
+      - 91-180 Days
       - '>=181 Days'
 
   first_symptom_prior_to_diagnosis:
