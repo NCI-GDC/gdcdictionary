@@ -23,6 +23,23 @@ repos:
       - id: trailing-whitespace
         args: [--markdown-linebreak-ext=md]
 
+  - repo: local
+    hooks:
+      - id: replacer
+        # More chars can be added
+        name: Replace unicode dashes with ascii dashes.
+        language: system
+        pass_filenames: false
+        entry: |
+          sh -c "
+          # echo -n '–' | hexdump -C # > e2 80 93
+          LC_ALL=C
+          for f in $(ls src/gdcdictionary/schemas/*.yaml); do
+            # echo 'Converting ' $f
+            sed -i '' 's/\xe2\x80\x93/-/g' $f
+          done
+          "
+
   - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
     rev: 0.2.1
     hooks:
