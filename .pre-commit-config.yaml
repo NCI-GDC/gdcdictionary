@@ -1,23 +1,47 @@
+---
 repos:
--   repo: git@github.com:Yelp/detect-secrets
+  - repo: git@github.com:Yelp/detect-secrets
     rev: v0.13.0
     hooks:
-    -   id: detect-secrets
-        args: ['--baseline', '.secrets.baseline']
+      - id: detect-secrets
+        args: [--baseline, .secrets.baseline]
 
--   repo: https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v2.3.0
     hooks:
-    -   id: check-json
-    -   id: check-toml
-    -   id: check-yaml
+      - id: check-json
+      - id: check-toml
+      - id: check-yaml
         exclude: .gitlab-ci.yml
-    -   id: end-of-file-fixer
-    -   id: fix-encoding-pragma
+      - id: end-of-file-fixer
+      - id: fix-encoding-pragma
         args: [--remove]
-    -   id: no-commit-to-branch
+      - id: no-commit-to-branch
         args: [--branch, develop, --branch, master, --pattern, release/.*]
-    -   id: pretty-format-json
+      - id: pretty-format-json
         args: [--autofix, --no-sort-keys]
-    -   id: trailing-whitespace
+      - id: trailing-whitespace
         args: [--markdown-linebreak-ext=md]
+
+  - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
+    rev: 0.2.1
+    hooks:
+      - id: yamlfmt
+        args: [--mapping, '2', --sequence, '4', --offset, '2', --width, '130']
+        # TODO: Remove stages so it always run. Do it once all yamls are properly formatted.
+        stages: [manual]
+
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.31.0
+    hooks:
+      - id: yamllint
+        name: Lint YAML files
+        args: [--strict]
+        files: ^src/.*\.(yaml|yml)$
+        exclude: |
+          (?x)^(
+            sandbox/.*\.(yaml|yml)|
+            \.yamllint|
+            \.pre-commit-config\.yaml|
+            docker-compose-ci\.yaml
+          )$
