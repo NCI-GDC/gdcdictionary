@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "structural_variation"
+id: structural_variation
 title: Structural Variation
 type: object
 namespace: https://gdc.cancer.gov
@@ -13,7 +14,7 @@ additionalProperties: false
 submittable: false
 downloadable: true
 previous_version_downloadable: true
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -57,18 +58,18 @@ uniqueKeys:
 properties:
 
   $ref:
-    - "_definitions.yaml#/data_file_properties"
+    - _definitions.yaml#/data_file_properties
 
   data_category:
     $ref:
-      - "_terms.yaml#/data_category/common"
+      - _terms.yaml#/data_category/common
     enum:
       - Somatic Structural Variation
       - Structural Variation
 
   data_type:
     $ref:
-      - "_terms.yaml#/data_type/common"
+      - _terms.yaml#/data_type/common
     enum:
       - Structural Alteration
       - Structural Rearrangement
@@ -76,7 +77,7 @@ properties:
 
   data_format:
     $ref:
-      - "_terms.yaml#/data_format/common"
+      - _terms.yaml#/data_format/common
     enum:
       - BEDPE
       - CSV
@@ -89,7 +90,7 @@ properties:
 
   experimental_strategy:
     $ref:
-      - "_terms.yaml#/experimental_strategy/common"
+      - _terms.yaml#/experimental_strategy/common
     enum:
       - RNA-Seq
       - Targeted Sequencing
@@ -97,7 +98,7 @@ properties:
       - WXS
 
   genomic_profile_harmonization_workflows:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one
 
   structural_variant_calling_workflows:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one

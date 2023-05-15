@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "center"
+id: center
 title: Center
 type: object
 namespace: https://gdc.cancer.gov
@@ -15,7 +16,7 @@ additionalProperties: false
 submittable: false
 downloadable: false
 previous_version_downloadable: false
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -40,7 +41,7 @@ properties:
 
   id:
     $ref:
-      - "_definitions.yaml#/uuid"
+      - _definitions.yaml#/uuid
     description: >-
       UUID for the center.
 

@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "case"
+id: case
 title: Case
 type: object
 namespace: https://gdc.cancer.gov
@@ -14,7 +15,7 @@ additionalProperties: false
 submittable: true
 downloadable: false
 previous_version_downloadable: false
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -49,11 +50,11 @@ uniqueKeys:
 properties:
 
   $ref:
-    - "_definitions.yaml#/ubiquitous_properties"
+    - _definitions.yaml#/ubiquitous_properties
 
   consent_type:
     $ref:
-      - "_terms.yaml#/consent_type/common"
+      - _terms.yaml#/consent_type/common
     enum:
       - Consent by Death
       - Consent Exemption
@@ -62,21 +63,21 @@ properties:
 
   days_to_consent:
     $ref:
-      - "_terms.yaml#/days_to_consent/common"
+      - _terms.yaml#/days_to_consent/common
     type: integer
     maximum: 32872
     minimum: -32872
 
   days_to_lost_to_followup:
     $ref:
-      - "_terms.yaml#/days_to_lost_to_followup/common"
+      - _terms.yaml#/days_to_lost_to_followup/common
     type: integer
     maximum: 32872
     minimum: -32872
 
   disease_type:
     $ref:
-      - "_terms.yaml#/disease_type/common"
+      - _terms.yaml#/disease_type/common
     enum:
       - Acinar Cell Neoplasms
       - Adenomas and Adenocarcinomas
@@ -140,17 +141,17 @@ properties:
     enumDef:
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
       Not Reported:
         $ref:
-          - "_terms_enum.yaml#/not_reported/common"
+          - _terms_enum.yaml#/not_reported/common
       Not Applicable:
         $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
+          - _terms_enum.yaml#/not_applicable/common
 
   index_date:
     $ref:
-      - "_terms.yaml#/index_date/common"
+      - _terms.yaml#/index_date/common
     enum:
       - Diagnosis
       - First Patient Visit
@@ -162,25 +163,25 @@ properties:
 
   lost_to_followup:
     $ref:
-      - "_terms.yaml#/lost_to_followup/common"
+      - _terms.yaml#/lost_to_followup/common
     enum:
-      - "Yes"
-      - "No"
+      - Yes
+      - No
       - Unknown
     enumDef:
-      "Yes":
+      Yes:
         $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
+          - _terms_enum.yaml#/yes/common
+      No:
         $ref:
-          - "_terms_enum.yaml#/no/common"
+          - _terms_enum.yaml#/no/common
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
 
   primary_site:
     $ref:
-      - "_terms.yaml#/primary_site/common"
+      - _terms.yaml#/primary_site/common
     enum:
       - Accessory sinuses
       - Adrenal gland
@@ -257,16 +258,16 @@ properties:
     enumDef:
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
       Not Reported:
         $ref:
-          - "_terms_enum.yaml#/not_reported/common"
+          - _terms_enum.yaml#/not_reported/common
       Not Applicable:
         $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
+          - _terms_enum.yaml#/not_applicable/common
 
   projects:
-    $ref: "_definitions.yaml#/to_one_project"
+    $ref: _definitions.yaml#/to_one_project
 
   tissue_source_sites:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one

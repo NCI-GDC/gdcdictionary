@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "clinical_supplement"
+id: clinical_supplement
 title: Clinical Supplement
 type: object
 namespace: https://gdc.cancer.gov
@@ -13,7 +14,7 @@ additionalProperties: false
 submittable: true
 downloadable: true
 previous_version_downloadable: true
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -54,23 +55,23 @@ uniqueKeys:
 properties:
 
   $ref:
-    - "_definitions.yaml#/data_file_properties"
+    - _definitions.yaml#/data_file_properties
 
   data_category:
     $ref:
-      - "_terms.yaml#/data_category/common"
+      - _terms.yaml#/data_category/common
     enum:
       - Clinical
 
   data_type:
     $ref:
-      - "_terms.yaml#/data_type/common"
+      - _terms.yaml#/data_type/common
     enum:
       - Clinical Supplement
 
   data_format:
     $ref:
-      - "_terms.yaml#/data_format/common"
+      - _terms.yaml#/data_format/common
     enum:
       - BCR Biotab
       - BCR OMF XML
@@ -81,7 +82,7 @@ properties:
       - XLSX
 
   cases:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: _definitions.yaml#/to_many
 
   archives:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one

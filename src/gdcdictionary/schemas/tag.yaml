@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "tag"
+id: tag
 title: Tag
 type: object
 namespace: https://gdc.cancer.gov
@@ -13,7 +14,7 @@ additionalProperties: false
 submittable: false
 downloadable: false
 previous_version_downloadable: false
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -34,7 +35,7 @@ properties:
 
   id:
     $ref:
-      - "_definitions.yaml#/uuid"
+      - _definitions.yaml#/uuid
 
   name:
     description: >-
@@ -119,4 +120,4 @@ properties:
     enumDef:
       exon:
         $ref:
-          - "_terms_enum.yaml#/exon/common"
+          - _terms_enum.yaml#/exon/common

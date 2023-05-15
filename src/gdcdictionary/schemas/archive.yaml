@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "archive"
+id: archive
 title: Archive
 type: object
 namespace: https://gdc.cancer.gov
@@ -15,7 +16,7 @@ additionalProperties: false
 submittable: false
 downloadable: true
 previous_version_downloadable: true
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -56,24 +57,24 @@ uniqueKeys:
 properties:
 
   $ref:
-    - "_definitions.yaml#/data_file_properties"
+    - _definitions.yaml#/data_file_properties
 
   data_category:
     $ref:
-      - "_terms.yaml#/data_category/common"
+      - _terms.yaml#/data_category/common
     enum:
       - Archive
 
   data_type:
     $ref:
-      - "_terms.yaml#/data_type/common"
+      - _terms.yaml#/data_type/common
     enum:
       - TCGA DCC Archive
       - TARGET DCC Archive
 
   data_format:
     $ref:
-      - "_terms.yaml#/data_format/common"
+      - _terms.yaml#/data_format/common
     enum:
       - TARGZ
       - MAGETAB
@@ -84,7 +85,7 @@ properties:
     type: number
 
   projects:
-    $ref: "_definitions.yaml#/to_one_project"
+    $ref: _definitions.yaml#/to_one_project
 
   related_to_files:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: _definitions.yaml#/to_many

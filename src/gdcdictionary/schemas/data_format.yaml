@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "data_format"
+id: data_format
 title: Data Format
 type: object
 namespace: https://gdc.cancer.gov
@@ -13,7 +14,7 @@ additionalProperties: false
 submittable: false
 downloadable: false
 previous_version_downloadable: false
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -34,7 +35,7 @@ properties:
 
   id:
     $ref:
-      - "_definitions.yaml#/uuid"
+      - _definitions.yaml#/uuid
 
   name:
     description: >-

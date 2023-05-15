@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "exposure"
+id: exposure
 title: Exposure
 type: object
 namespace: https://gdc.cancer.gov
@@ -13,7 +14,7 @@ additionalProperties: false
 submittable: true
 downloadable: false
 previous_version_downloadable: false
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -48,78 +49,78 @@ deprecated:
 properties:
 
   $ref:
-    - "_definitions.yaml#/ubiquitous_properties"
+    - _definitions.yaml#/ubiquitous_properties
 
   age_at_last_exposure:
     $ref:
-      - "_terms.yaml#/age_at_last_exposure/common"
+      - _terms.yaml#/age_at_last_exposure/common
     type: integer
     maximum: 89
     minimum: 0
 
   age_at_onset:
     $ref:
-      - "_terms.yaml#/age_at_onset/common"
+      - _terms.yaml#/age_at_onset/common
     type: integer
     maximum: 89
     minimum: 0
 
   alcohol_days_per_week:
     $ref:
-      - "_terms.yaml#/alcohol_days_per_week/common"
+      - _terms.yaml#/alcohol_days_per_week/common
     type: number
     maximum: 7
     minimum: 0
 
   alcohol_drinks_per_day:
     $ref:
-      - "_terms.yaml#/alcohol_drinks_per_day/common"
+      - _terms.yaml#/alcohol_drinks_per_day/common
     type: number
     minimum: 0
 
   alcohol_frequency:
     $ref:
-      - "_terms.yaml#/alcohol_frequency/common"
+      - _terms.yaml#/alcohol_frequency/common
     enum:
       - Daily Drinker
       - Weekly Drinker
 
   alcohol_history:
     $ref:
-      - "_terms.yaml#/alcohol_history/common"
+      - _terms.yaml#/alcohol_history/common
     enum:
-      - "Yes"
-      - "No"
-      - "yes"
-      - "no"
+      - Yes
+      - No
+      - yes
+      - no
       - Unknown
       - Not Reported
     deprecated_enum:
-      - "no"
-      - "yes"
+      - no
+      - yes
     enumDef:
-      "Yes":
+      Yes:
         $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
+          - _terms_enum.yaml#/yes/common
+      No:
         $ref:
-          - "_terms_enum.yaml#/no/common"
-      "yes":
+          - _terms_enum.yaml#/no/common
+      yes:
         $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "no":
+          - _terms_enum.yaml#/yes/common
+      no:
         $ref:
-          - "_terms_enum.yaml#/no/common"
+          - _terms_enum.yaml#/no/common
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
       Not Reported:
         $ref:
-          - "_terms_enum.yaml#/not_reported/common"
+          - _terms_enum.yaml#/not_reported/common
 
   alcohol_intensity:
     $ref:
-      - "_terms.yaml#/alcohol_intensity/common"
+      - _terms.yaml#/alcohol_intensity/common
     enum:
       - Drinker
       - Heavy Drinker
@@ -132,29 +133,29 @@ properties:
     enumDef:
       Drinker:
         $ref:
-          - "_terms_enum.yaml#/drinker/common"
+          - _terms_enum.yaml#/drinker/common
       Heavy Drinker:
         $ref:
-          - "_terms_enum.yaml#/heavy_drinker/common"
+          - _terms_enum.yaml#/heavy_drinker/common
       Lifelong Non-Drinker:
         $ref:
-          - "_terms_enum.yaml#/lifelong_nondrinker/common"
+          - _terms_enum.yaml#/lifelong_nondrinker/common
       Non-Drinker:
         $ref:
-          - "_terms_enum.yaml#/nondrinker/common"
+          - _terms_enum.yaml#/nondrinker/common
       Occasional Drinker:
         $ref:
-          - "_terms_enum.yaml#/occasional_drinker/common"
+          - _terms_enum.yaml#/occasional_drinker/common
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
       Not Reported:
         $ref:
-          - "_terms_enum.yaml#/not_reported/common"
+          - _terms_enum.yaml#/not_reported/common
 
   alcohol_type:
     $ref:
-      - "_terms.yaml#/alcohol_type/common"
+      - _terms.yaml#/alcohol_type/common
     enum:
       - Beer
       - Liquor
@@ -165,46 +166,46 @@ properties:
     enumDef:
       Other:
         $ref:
-          - "_terms_enum.yaml#/other/common"
+          - _terms_enum.yaml#/other/common
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
       Not Reported:
         $ref:
-          - "_terms_enum.yaml#/not_reported/common"
+          - _terms_enum.yaml#/not_reported/common
 
   asbestos_exposure:
     $ref:
-      - "_terms.yaml#/asbestos_exposure/common"
+      - _terms.yaml#/asbestos_exposure/common
     enum:
-      - "Yes"
-      - "No"
+      - Yes
+      - No
       - Unknown
       - Not Reported
     enumDef:
-      "Yes":
+      Yes:
         $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
+          - _terms_enum.yaml#/yes/common
+      No:
         $ref:
-          - "_terms_enum.yaml#/no/common"
+          - _terms_enum.yaml#/no/common
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
       Not Reported:
         $ref:
-          - "_terms_enum.yaml#/not_reported/common"
+          - _terms_enum.yaml#/not_reported/common
 
   asbestos_exposure_type:
     $ref:
-      - "_terms.yaml#/asbestos_exposure_type/common"
+      - _terms.yaml#/asbestos_exposure_type/common
     enum:
       - Amosite
       - Crocidolite
 
   chemical_exposure_type:
     $ref:
-      - "_terms.yaml#/chemical_exposure_type/common"
+      - _terms.yaml#/chemical_exposure_type/common
     type: array
     items:
       enum:
@@ -236,49 +237,49 @@ properties:
 
   cigarettes_per_day:
     $ref:
-      - "_terms.yaml#/cigarettes_per_day/common"
+      - _terms.yaml#/cigarettes_per_day/common
     type: number
     minimum: 0
 
   coal_dust_exposure:
     $ref:
-      - "_terms.yaml#/coal_dust_exposure/common"
+      - _terms.yaml#/coal_dust_exposure/common
     enum:
-      - "Yes"
-      - "No"
+      - Yes
+      - No
       - Unknown
     enumDef:
-      "Yes":
+      Yes:
         $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
+          - _terms_enum.yaml#/yes/common
+      No:
         $ref:
-          - "_terms_enum.yaml#/no/common"
+          - _terms_enum.yaml#/no/common
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
 
   environmental_tobacco_smoke_exposure:
     $ref:
-      - "_terms.yaml#/environmental_tobacco_smoke_exposure/common"
+      - _terms.yaml#/environmental_tobacco_smoke_exposure/common
     enum:
-      - "Yes"
-      - "No"
+      - Yes
+      - No
       - Unknown
     enumDef:
-      "Yes":
+      Yes:
         $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
+          - _terms_enum.yaml#/yes/common
+      No:
         $ref:
-          - "_terms_enum.yaml#/no/common"
+          - _terms_enum.yaml#/no/common
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
 
   exposure_duration:
     $ref:
-      - "_terms.yaml#/exposure_duration/common"
+      - _terms.yaml#/exposure_duration/common
     enum:
       - Six Weeks or More
       - Unknown
@@ -286,31 +287,31 @@ properties:
     enumDef:
       Six Weeks or More:
         $ref:
-          - "_terms_enum.yaml#/six_weeks_or_more/common"
+          - _terms_enum.yaml#/six_weeks_or_more/common
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
       Not Reported:
         $ref:
-          - "_terms_enum.yaml#/not_reported/common"
+          - _terms_enum.yaml#/not_reported/common
 
   exposure_duration_hrs_per_day:
     $ref:
-      - "_terms.yaml#/exposure_duration_hrs_per_day/common"
+      - _terms.yaml#/exposure_duration_hrs_per_day/common
     type: number
     maximum: 24
     minimum: 0
 
   exposure_duration_years:
     $ref:
-      - "_terms.yaml#/exposure_duration_years/common"
+      - _terms.yaml#/exposure_duration_years/common
     type: integer
     maximum: 89
     minimum: 0
 
   exposure_source:
     $ref:
-      - "_terms.yaml#/exposure_source/common"
+      - _terms.yaml#/exposure_source/common
     enum:
       - Occupational
       - Secondary
@@ -318,7 +319,7 @@ properties:
 
   exposure_type:
     $ref:
-      - "_terms.yaml#/exposure_type/common"
+      - _terms.yaml#/exposure_type/common
     enum:
       - Asbestos
       - Chemical
@@ -335,24 +336,24 @@ properties:
     enumDef:
       Dust, NOS:
         $ref:
-          - "_terms_enum.yaml#/dust/common"
+          - _terms_enum.yaml#/dust/common
       Marijuana:
         $ref:
-          - "_terms_enum.yaml#/marijuana/common"
+          - _terms_enum.yaml#/marijuana/common
       Tobacco:
         $ref:
-          - "_terms_enum.yaml#/tobacco/common"
+          - _terms_enum.yaml#/tobacco/common
 
   occupation_duration_years:
     $ref:
-      - "_terms.yaml#/occupation_duration_years/common"
+      - _terms.yaml#/occupation_duration_years/common
     type: integer
     maximum: 89
     minimum: 0
 
   occupation_type:
     $ref:
-      - "_terms.yaml#/occupation_type/common"
+      - _terms.yaml#/occupation_type/common
     type: array
     items:
       enum:
@@ -489,93 +490,93 @@ properties:
 
   pack_years_smoked:
     $ref:
-      - "_terms.yaml#/pack_years_smoked/common"
+      - _terms.yaml#/pack_years_smoked/common
     type: number
     minimum: 0
 
   parent_with_radiation_exposure:
     $ref:
-      - "_terms.yaml#/parent_with_radiation_exposure/common"
+      - _terms.yaml#/parent_with_radiation_exposure/common
     enum:
-      - "Yes"
-      - "No"
+      - Yes
+      - No
       - Not Reported
     enumDef:
-      "Yes":
+      Yes:
         $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
+          - _terms_enum.yaml#/yes/common
+      No:
         $ref:
-          - "_terms_enum.yaml#/no/common"
+          - _terms_enum.yaml#/no/common
       Not Reported:
         $ref:
-          - "_terms_enum.yaml#/not_reported/common"
+          - _terms_enum.yaml#/not_reported/common
 
   radon_exposure:
     $ref:
-      - "_terms.yaml#/radon_exposure/common"
+      - _terms.yaml#/radon_exposure/common
     enum:
-      - "Yes"
-      - "No"
+      - Yes
+      - No
       - Unknown
       - Not Reported
     enumDef:
-      "Yes":
+      Yes:
         $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
+          - _terms_enum.yaml#/yes/common
+      No:
         $ref:
-          - "_terms_enum.yaml#/no/common"
+          - _terms_enum.yaml#/no/common
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
       Not Reported:
         $ref:
-          - "_terms_enum.yaml#/not_reported/common"
+          - _terms_enum.yaml#/not_reported/common
 
   respirable_crystalline_silica_exposure:
     $ref:
-      - "_terms.yaml#/respirable_crystalline_silica_exposure/common"
+      - _terms.yaml#/respirable_crystalline_silica_exposure/common
     enum:
-      - "Yes"
-      - "No"
+      - Yes
+      - No
       - Unknown
     enumDef:
-      "Yes":
+      Yes:
         $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
+          - _terms_enum.yaml#/yes/common
+      No:
         $ref:
-          - "_terms_enum.yaml#/no/common"
+          - _terms_enum.yaml#/no/common
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
 
   secondhand_smoke_as_child:
     $ref:
-      - "_terms.yaml#/secondhand_smoke_as_child/common"
+      - _terms.yaml#/secondhand_smoke_as_child/common
     enum:
-      - "Yes"
-      - "No"
+      - Yes
+      - No
       - Unknown
       - Not Reported
     enumDef:
-      "Yes":
+      Yes:
         $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
+          - _terms_enum.yaml#/yes/common
+      No:
         $ref:
-          - "_terms_enum.yaml#/no/common"
+          - _terms_enum.yaml#/no/common
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
       Not Reported:
         $ref:
-          - "_terms_enum.yaml#/not_reported/common"
+          - _terms_enum.yaml#/not_reported/common
 
   smoking_frequency:
     $ref:
-      - "_terms.yaml#/smoking_frequency/common"
+      - _terms.yaml#/smoking_frequency/common
     enum:
       - Every day
       - Some days
@@ -583,17 +584,17 @@ properties:
     enumDef:
       Every day:
         $ref:
-          - "_terms_enum.yaml#/every_day/common"
+          - _terms_enum.yaml#/every_day/common
       Some days:
         $ref:
-          - "_terms_enum.yaml#/some_days/common"
+          - _terms_enum.yaml#/some_days/common
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
 
   time_between_waking_and_first_smoke:
     $ref:
-      - "_terms.yaml#/time_between_waking_and_first_smoke/common"
+      - _terms.yaml#/time_between_waking_and_first_smoke/common
     enum:
       - Within 5 Minutes
       - 6-30 Minutes
@@ -603,45 +604,45 @@ properties:
     enumDef:
       Within 5 Minutes:
         $ref:
-          - "_terms_enum.yaml#/within_5_minutes/common"
+          - _terms_enum.yaml#/within_5_minutes/common
       6-30 Minutes:
         $ref:
-          - "_terms_enum.yaml#/630_minutes/common"
+          - _terms_enum.yaml#/630_minutes/common
       31-60 Minutes:
         $ref:
-          - "_terms_enum.yaml#/3160_minutes/common"
+          - _terms_enum.yaml#/3160_minutes/common
       After 60 Minutes:
         $ref:
-          - "_terms_enum.yaml#/after_60_minutes/common"
+          - _terms_enum.yaml#/after_60_minutes/common
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
 
   tobacco_smoking_onset_year:
     $ref:
-      - "_terms.yaml#/tobacco_smoking_onset_year/common"
+      - _terms.yaml#/tobacco_smoking_onset_year/common
     type: integer
     maximum: 2050
     minimum: 1900
 
   tobacco_smoking_quit_year:
     $ref:
-      - "_terms.yaml#/tobacco_smoking_quit_year/common"
+      - _terms.yaml#/tobacco_smoking_quit_year/common
     type: integer
     maximum: 2050
     minimum: 1900
 
   tobacco_smoking_status:
     $ref:
-      - "_terms.yaml#/tobacco_smoking_status/common"
+      - _terms.yaml#/tobacco_smoking_status/common
     enum:
-      - "1"
-      - "2"
-      - "3"
-      - "4"
-      - "5"
-      - "6"
-      - "7"
+      - '1'
+      - '2'
+      - '3'
+      - '4'
+      - '5'
+      - '6'
+      - '7'
       - Current Reformed Smoker, Duration Not Specified
       - Current Reformed Smoker for < or = 15 yrs
       - Current Reformed Smoker for > 15 yrs
@@ -654,48 +655,48 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
-      - "1"
-      - "2"
-      - "3"
-      - "4"
-      - "5"
-      - "6"
-      - "7"
+      - '1'
+      - '2'
+      - '3'
+      - '4'
+      - '5'
+      - '6'
+      - '7'
     enumDef:
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
       Not Reported:
         $ref:
-          - "_terms_enum.yaml#/not_reported/common"
+          - _terms_enum.yaml#/not_reported/common
       Not Allowed To Collect:
         $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
-      "1":
+          - _terms_enum.yaml#/not_allowed_to_collect/common
+      '1':
         $ref:
-          - "_terms_enum.yaml#/1/exposure/tobacco_smoking_status"
-      "2":
+          - _terms_enum.yaml#/1/exposure/tobacco_smoking_status
+      '2':
         $ref:
-          - "_terms_enum.yaml#/2/exposure/tobacco_smoking_status"
-      "3":
+          - _terms_enum.yaml#/2/exposure/tobacco_smoking_status
+      '3':
         $ref:
-          - "_terms_enum.yaml#/3/exposure/tobacco_smoking_status"
-      "4":
+          - _terms_enum.yaml#/3/exposure/tobacco_smoking_status
+      '4':
         $ref:
-          - "_terms_enum.yaml#/4/exposure/tobacco_smoking_status"
-      "5":
+          - _terms_enum.yaml#/4/exposure/tobacco_smoking_status
+      '5':
         $ref:
-          - "_terms_enum.yaml#/5/exposure/tobacco_smoking_status"
-      "6":
+          - _terms_enum.yaml#/5/exposure/tobacco_smoking_status
+      '6':
         $ref:
-          - "_terms_enum.yaml#/6/exposure/tobacco_smoking_status"
-      "7":
+          - _terms_enum.yaml#/6/exposure/tobacco_smoking_status
+      '7':
         $ref:
-          - "_terms_enum.yaml#/7/exposure/tobacco_smoking_status"
+          - _terms_enum.yaml#/7/exposure/tobacco_smoking_status
 
   type_of_smoke_exposure:
     $ref:
-      - "_terms.yaml#/type_of_smoke_exposure/common"
+      - _terms.yaml#/type_of_smoke_exposure/common
     enum:
       - Accidental building fire smoke
       - Accidental fire smoke, grass
@@ -750,155 +751,155 @@ properties:
     enumDef:
       Accidental building fire smoke:
         $ref:
-          - "_terms_enum.yaml#/accidental_building_fire_smoke/common"
+          - _terms_enum.yaml#/accidental_building_fire_smoke/common
       Accidental fire smoke, grass:
         $ref:
-          - "_terms_enum.yaml#/accidental_fire_smoke_grass/common"
+          - _terms_enum.yaml#/accidental_fire_smoke_grass/common
       Accidental fire smoke, NOS:
         $ref:
-          - "_terms_enum.yaml#/accidental_fire_smoke_nos/common"
+          - _terms_enum.yaml#/accidental_fire_smoke_nos/common
       Accidental forest fire smoke:
         $ref:
-          - "_terms_enum.yaml#/accidental_forest_fire_smoke/common"
+          - _terms_enum.yaml#/accidental_forest_fire_smoke/common
       Accidental vehicle fire smoke:
         $ref:
-          - "_terms_enum.yaml#/accidental_vehicle_fire_smoke/common"
+          - _terms_enum.yaml#/accidental_vehicle_fire_smoke/common
       Aircraft smoke:
         $ref:
-          - "_terms_enum.yaml#/aircraft_smoke/common"
+          - _terms_enum.yaml#/aircraft_smoke/common
       Burning tree smoke:
         $ref:
-          - "_terms_enum.yaml#/burning_tree_smoke/common"
+          - _terms_enum.yaml#/burning_tree_smoke/common
       Coal smoke, NOS:
         $ref:
-          - "_terms_enum.yaml#/coal_smoke_nos/common"
+          - _terms_enum.yaml#/coal_smoke_nos/common
       Cooking-related smoke, NOS:
         $ref:
-          - "_terms_enum.yaml#/cookingrelated_smoke_nos/common"
+          - _terms_enum.yaml#/cookingrelated_smoke_nos/common
       Electrical fire smoke:
         $ref:
-          - "_terms_enum.yaml#/electrical_fire_smoke/common"
+          - _terms_enum.yaml#/electrical_fire_smoke/common
       Electronic cigarette smoke, NOS:
         $ref:
-          - "_terms_enum.yaml#/electronic_cigarette_smoke_nos/common"
+          - _terms_enum.yaml#/electronic_cigarette_smoke_nos/common
       Environmental tobacco smoke:
         $ref:
-          - "_terms_enum.yaml#/environmental_tobacco_smoke/common"
+          - _terms_enum.yaml#/environmental_tobacco_smoke/common
       Factory smokestack smoke:
         $ref:
-          - "_terms_enum.yaml#/factory_smokestack_smoke/common"
+          - _terms_enum.yaml#/factory_smokestack_smoke/common
       Field burning smoke:
         $ref:
-          - "_terms_enum.yaml#/field_burning_smoke/common"
+          - _terms_enum.yaml#/field_burning_smoke/common
       Fire smoke, NOS:
         $ref:
-          - "_terms_enum.yaml#/fire_smoke_nos/common"
+          - _terms_enum.yaml#/fire_smoke_nos/common
       Furnace or boiler smoke:
         $ref:
-          - "_terms_enum.yaml#/furnace_or_boiler_smoke/common"
+          - _terms_enum.yaml#/furnace_or_boiler_smoke/common
       Gas burning smoke, propane:
         $ref:
-          - "_terms_enum.yaml#/gas_burning_smoke_propane/common"
+          - _terms_enum.yaml#/gas_burning_smoke_propane/common
       Grease fire smoke:
         $ref:
-          - "_terms_enum.yaml#/grease_fire_smoke/common"
+          - _terms_enum.yaml#/grease_fire_smoke/common
       Grilling smoke:
         $ref:
-          - "_terms_enum.yaml#/grilling_smoke/common"
+          - _terms_enum.yaml#/grilling_smoke/common
       Hashish smoke:
         $ref:
-          - "_terms_enum.yaml#/hashish_smoke/common"
+          - _terms_enum.yaml#/hashish_smoke/common
       Indoor stove or fireplace smoke, coal burning:
         $ref:
-          - "_terms_enum.yaml#/indoor_stove_or_fireplace_smoke_coal_burning/common"
+          - _terms_enum.yaml#/indoor_stove_or_fireplace_smoke_coal_burning/common
       Indoor stove or fireplace smoke, NOS:
         $ref:
-          - "_terms_enum.yaml#/indoor_stove_or_fireplace_smoke_nos/common"
+          - _terms_enum.yaml#/indoor_stove_or_fireplace_smoke_nos/common
       Indoor stove or fireplace smoke, wood burning:
         $ref:
-          - "_terms_enum.yaml#/indoor_stove_or_fireplace_smoke_wood_burning/common"
+          - _terms_enum.yaml#/indoor_stove_or_fireplace_smoke_wood_burning/common
       Machine smoke:
         $ref:
-          - "_terms_enum.yaml#/machine_smoke/common"
+          - _terms_enum.yaml#/machine_smoke/common
       Marijuana smoke:
         $ref:
-          - "_terms_enum.yaml#/marijuana_smoke/common"
+          - _terms_enum.yaml#/marijuana_smoke/common
       No Smoke Exposure:
         $ref:
-          - "_terms_enum.yaml#/no_smoke_exposure/common"
+          - _terms_enum.yaml#/no_smoke_exposure/common
       Oil burning smoke, Kerosene:
         $ref:
-          - "_terms_enum.yaml#/oil_burning_smoke_kerosene/common"
+          - _terms_enum.yaml#/oil_burning_smoke_kerosene/common
       Oil burning smoke, NOS:
         $ref:
-          - "_terms_enum.yaml#/oil_burning_smoke_nos/common"
+          - _terms_enum.yaml#/oil_burning_smoke_nos/common
       Recreational fire smoke:
         $ref:
-          - "_terms_enum.yaml#/recreational_fire_smoke/common"
+          - _terms_enum.yaml#/recreational_fire_smoke/common
       Smoke exposure, NOS:
         $ref:
-          - "_terms_enum.yaml#/smoke_exposure_nos/common"
+          - _terms_enum.yaml#/smoke_exposure_nos/common
       Smokehouse smoke:
         $ref:
-          - "_terms_enum.yaml#/smokehouse_smoke/common"
+          - _terms_enum.yaml#/smokehouse_smoke/common
       Tobacco smoke, cigar:
         $ref:
-          - "_terms_enum.yaml#/tobacco_smoke_cigar/common"
+          - _terms_enum.yaml#/tobacco_smoke_cigar/common
       Tobacco smoke, cigarettes:
         $ref:
-          - "_terms_enum.yaml#/tobacco_smoke_cigarettes/common"
+          - _terms_enum.yaml#/tobacco_smoke_cigarettes/common
       Tobacco smoke, pipe:
         $ref:
-          - "_terms_enum.yaml#/tobacco_smoke_pipe/common"
+          - _terms_enum.yaml#/tobacco_smoke_pipe/common
       Volcanic smoke:
         $ref:
-          - "_terms_enum.yaml#/volcanic_smoke/common"
+          - _terms_enum.yaml#/volcanic_smoke/common
       Waste burning smoke:
         $ref:
-          - "_terms_enum.yaml#/waste_burning_smoke/common"
+          - _terms_enum.yaml#/waste_burning_smoke/common
       Wood burning smoke, factory:
         $ref:
-          - "_terms_enum.yaml#/wood_burning_smoke_factory/common"
+          - _terms_enum.yaml#/wood_burning_smoke_factory/common
       Wood burning smoke, NOS:
         $ref:
-          - "_terms_enum.yaml#/wood_burning_smoke_nos/common"
+          - _terms_enum.yaml#/wood_burning_smoke_nos/common
       Work-related smoke, artificial smoke machines:
         $ref:
-          - "_terms_enum.yaml#/workrelated_smoke_artificial_smoke_machines/common"
+          - _terms_enum.yaml#/workrelated_smoke_artificial_smoke_machines/common
       Work-related smoke, fire fighting:
         $ref:
-          - "_terms_enum.yaml#/workrelated_smoke_fire_fighting/common"
+          - _terms_enum.yaml#/workrelated_smoke_fire_fighting/common
       Work-related smoke, foundry:
         $ref:
-          - "_terms_enum.yaml#/workrelated_smoke_foundry/common"
+          - _terms_enum.yaml#/workrelated_smoke_foundry/common
       Work-related smoke, generators:
         $ref:
-          - "_terms_enum.yaml#/workrelated_smoke_generators/common"
+          - _terms_enum.yaml#/workrelated_smoke_generators/common
       Work-related smoke, military:
         $ref:
-          - "_terms_enum.yaml#/workrelated_smoke_military/common"
+          - _terms_enum.yaml#/workrelated_smoke_military/common
       Work-related smoke, NOS:
         $ref:
-          - "_terms_enum.yaml#/workrelated_smoke_nos/common"
+          - _terms_enum.yaml#/workrelated_smoke_nos/common
       Work-related smoke, paint baking:
         $ref:
-          - "_terms_enum.yaml#/workrelated_smoke_paint_baking/common"
+          - _terms_enum.yaml#/workrelated_smoke_paint_baking/common
       Work-related smoke, plastics factory:
         $ref:
-          - "_terms_enum.yaml#/workrelated_smoke_plastics_factory/common"
+          - _terms_enum.yaml#/workrelated_smoke_plastics_factory/common
       Work-related smoke, plumbing:
         $ref:
-          - "_terms_enum.yaml#/workrelated_smoke_plumbing/common"
+          - _terms_enum.yaml#/workrelated_smoke_plumbing/common
       Work-related smoke, soldering/welding:
         $ref:
-          - "_terms_enum.yaml#/workrelated_smoke_solderingwelding/common"
+          - _terms_enum.yaml#/workrelated_smoke_solderingwelding/common
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
 
   type_of_tobacco_used:
     $ref:
-      - "_terms.yaml#/type_of_tobacco_used/common"
+      - _terms.yaml#/type_of_tobacco_used/common
     enum:
       - Cigar
       - Cigarette
@@ -909,35 +910,35 @@ properties:
     enumDef:
       Cigar:
         $ref:
-          - "_terms_enum.yaml#/cigar/common"
+          - _terms_enum.yaml#/cigar/common
       Cigarette:
         $ref:
-          - "_terms_enum.yaml#/cigarette/common"
+          - _terms_enum.yaml#/cigarette/common
       Electronic Cigarette:
         $ref:
-          - "_terms_enum.yaml#/electronic_cigarette/common"
+          - _terms_enum.yaml#/electronic_cigarette/common
       Other:
         $ref:
-          - "_terms_enum.yaml#/other/common"
+          - _terms_enum.yaml#/other/common
       Pipe:
         $ref:
-          - "_terms_enum.yaml#/pipe/common"
+          - _terms_enum.yaml#/pipe/common
       Smokeless Tobacco:
         $ref:
-          - "_terms_enum.yaml#/smokeless_tobacco/common"
+          - _terms_enum.yaml#/smokeless_tobacco/common
 
   use_per_day:
     $ref:
-      - "_terms.yaml#/use_per_day/common"
+      - _terms.yaml#/use_per_day/common
     type: number
     minimum: 0
 
   years_smoked:
     $ref:
-      - "_terms.yaml#/years_smoked/common"
+      - _terms.yaml#/years_smoked/common
     type: number
     maximum: 89
     minimum: 0
 
   cases:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one

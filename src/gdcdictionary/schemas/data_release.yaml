@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "data_release"
+id: data_release
 title: Data Release
 type: object
 namespace: https://gdc.cancer.gov
@@ -13,7 +14,7 @@ additionalProperties: false
 submittable: false
 downloadable: false
 previous_version_downloadable: false
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -45,15 +46,15 @@ properties:
 
   id:
     $ref:
-      - "_definitions.yaml#/uuid"
+      - _definitions.yaml#/uuid
 
   created_datetime:
     $ref:
-      - "_definitions.yaml#/datetime"
+      - _definitions.yaml#/datetime
 
   updated_datetime:
     $ref:
-      - "_definitions.yaml#/datetime"
+      - _definitions.yaml#/datetime
 
   name:
     description: >-
@@ -72,7 +73,7 @@ properties:
 
   release_date:
     $ref:
-      - "_definitions.yaml#/datetime"
+      - _definitions.yaml#/datetime
 
   released:
     description: >-
@@ -81,4 +82,4 @@ properties:
     default: false
 
   roots:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one

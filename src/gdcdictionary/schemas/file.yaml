@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "file"
+id: file
 title: File
 type: object
 namespace: https://gdc.cancer.gov
@@ -13,7 +14,7 @@ additionalProperties: false
 submittable: false
 downloadable: true
 previous_version_downloadable: false
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -139,52 +140,52 @@ uniqueKeys:
 properties:
 
   $ref:
-    - "_definitions.yaml#/data_file_properties"
+    - _definitions.yaml#/data_file_properties
 
   aliquots:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: _definitions.yaml#/to_many
 
   analytes:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: _definitions.yaml#/to_many
 
   cases:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: _definitions.yaml#/to_many
 
   derived_files:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: _definitions.yaml#/to_many
 
   portions:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: _definitions.yaml#/to_many
 
   samples:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: _definitions.yaml#/to_many
 
   slides:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: _definitions.yaml#/to_many
 
   related_files:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: _definitions.yaml#/to_many
 
   tags:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: _definitions.yaml#/to_many
 
   archives:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one
 
   data_subtypes:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one
 
   data_formats:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one
 
   experimental_strategies:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one
 
   centers:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one
 
   platforms:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one
 
   described_cases:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one

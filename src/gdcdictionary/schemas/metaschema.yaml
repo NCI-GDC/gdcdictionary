@@ -1,10 +1,11 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "metaschema"
-title: "GDC JSON schema extension"
+id: metaschema
+title: GDC JSON schema extension
 
 allOf:
-  - $ref: "http://json-schema.org/draft-04/schema#"
+  - $ref: http://json-schema.org/draft-04/schema#
 
 #GDC extensions
 required:
@@ -66,10 +67,10 @@ definitions:
       subgroup:
         type: array
         items:
-          $ref: "#/definitions/link"
+          $ref: '#/definitions/link'
 
   validator_def:
-    title: "Define a validator to be used on a property"
+    title: Define a validator to be used on a property
     type: object
     required:
       - property #the property to be applied to
@@ -89,7 +90,8 @@ definitions:
 
 properties:
   category:
-    description: "Generalized role that the node has in the commons data model. *_file nodes are reserved for those nodes that have corresponding files in object story."
+    description: Generalized role that the node has in the commons data model. *_file nodes are reserved for those nodes that have corresponding
+      files in object story.
     type: string
     enum:
       - administrative
@@ -106,7 +108,7 @@ properties:
       - TBD
 
   unique_keys:
-    description: "Properties or list of properties that can be used to identify this node, and only this node, within the commons."
+    description: Properties or list of properties that can be used to identify this node, and only this node, within the commons.
     type: array
     items:
       type: array
@@ -114,36 +116,37 @@ properties:
         type: string
 
   submittable:
-    description: "True/False keyword used to indicate whether this node should be allowed to be user-submitted through normal submission processes."
+    description: True/False keyword used to indicate whether this node should be allowed to be user-submitted through normal submission
+      processes.
     type: boolean
 
   downloadable:
-    description: "Indicates if a file can be downloaded by a user with downloader access."
+    description: Indicates if a file can be downloaded by a user with downloader access.
     type: boolean
 
   previous_version_downloadable:
-    description: "Indicates if the previous version of a file is available for download."
+    description: Indicates if the previous version of a file is available for download.
     type: boolean
 
   validators:
-    description: "Feature under development to allow cross validation among properties. Not intended to be used in its current form."
+    description: Feature under development to allow cross validation among properties. Not intended to be used in its current form.
     type:
       - array
-      - "null"
+      - 'null'
     items:
-      $ref: "#/definitions/validator_def"
+      $ref: '#/definitions/validator_def'
 
   system_properties:
-    description: "Properties that will be automatically filled by the system unless otherwise defined by the user."
+    description: Properties that will be automatically filled by the system unless otherwise defined by the user.
     type: array
 
   program:
     type: string
-    description: "Denotes the programs within the commons for which this schema may be used."
+    description: Denotes the programs within the commons for which this schema may be used.
 
   project:
     type: string
-    description: "Denotes the projects within the commons for which this schema may be used."
+    description: Denotes the projects within the commons for which this schema may be used.
 
   properties:
     type: object
@@ -151,13 +154,13 @@ properties:
     additionalProperties: false
     patternProperties:
       # Enforce that the property names do not start with numbers, etc
-      "^[_a-zA-Z][_a-zA-Z0-9]*$": {}
+      ^[_a-zA-Z][_a-zA-Z0-9]*$: {}
 
   links:
-    title: "Define a link to other GDC entities"
-    description: "Array used to connect two entities within the commons."
+    title: Define a link to other GDC entities
+    description: Array used to connect two entities within the commons.
     type: array
     items:
       oneOf:
-        - $ref: "#/definitions/link"
-        - $ref: "#/definitions/link_subgroup"
+        - $ref: '#/definitions/link'
+        - $ref: '#/definitions/link_subgroup'

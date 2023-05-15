@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "analyte"
+id: analyte
 title: Analyte
 type: object
 namespace: https://gdc.cancer.gov
@@ -14,7 +15,7 @@ additionalProperties: false
 submittable: true
 downloadable: false
 previous_version_downloadable: false
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -54,29 +55,29 @@ deprecated:
 properties:
 
   $ref:
-    - "_definitions.yaml#/ubiquitous_properties"
+    - _definitions.yaml#/ubiquitous_properties
 
   a260_a280_ratio:
     $ref:
-      - "_terms.yaml#/a260_a280_ratio/common"
+      - _terms.yaml#/a260_a280_ratio/common
     type: number
     minimum: 0
 
   amount:
     $ref:
-      - "_terms.yaml#/amount/common"
+      - _terms.yaml#/amount/common
     type: number
     minimum: 0
 
   analyte_quantity:
     $ref:
-      - "_terms.yaml#/analyte_quantity/common"
+      - _terms.yaml#/analyte_quantity/common
     type: number
     minimum: 0
 
   analyte_type:
     $ref:
-      - "_terms.yaml#/analyte_type/common"
+      - _terms.yaml#/analyte_type/common
     enum:
       - cfDNA
       - DNA
@@ -94,14 +95,14 @@ properties:
     enumDef:
       DNA:
         $ref:
-          - "_terms_enum.yaml#/dna/common"
+          - _terms_enum.yaml#/dna/common
       Total RNA:
         $ref:
-          - "_terms_enum.yaml#/total_rna/common"
+          - _terms_enum.yaml#/total_rna/common
 
   analyte_type_id:
     $ref:
-      - "_terms.yaml#/analyte_type_id/common"
+      - _terms.yaml#/analyte_type_id/common
     enum:
       - D
       - E
@@ -116,19 +117,19 @@ properties:
 
   analyte_volume:
     $ref:
-      - "_terms.yaml#/analyte_volume/common"
+      - _terms.yaml#/analyte_volume/common
     type: number
     minimum: 0
 
   concentration:
     $ref:
-      - "_terms.yaml#/concentration/common"
+      - _terms.yaml#/concentration/common
     type: number
     minimum: 0
 
   experimental_protocol_type:
     $ref:
-      - "_terms.yaml#/experimental_protocol_type/common"
+      - _terms.yaml#/experimental_protocol_type/common
     enum:
       - aDNA Preparation Type
       - Allprep FFPE DNA
@@ -145,58 +146,58 @@ properties:
     enumDef:
       Total RNA:
         $ref:
-          - "_terms_enum.yaml#/total_rna/common"
+          - _terms_enum.yaml#/total_rna/common
 
   normal_tumor_genotype_snp_match:
     $ref:
-      - "_terms.yaml#/normal_tumor_genotype_snp_match/common"
+      - _terms.yaml#/normal_tumor_genotype_snp_match/common
     enum:
-      - "Yes"
-      - "No"
+      - Yes
+      - No
       - Unknown
       - Not Reported
       - Not Allowed To Collect
     enumDef:
-      "Yes":
+      Yes:
         $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
+          - _terms_enum.yaml#/yes/common
+      No:
         $ref:
-          - "_terms_enum.yaml#/no/common"
+          - _terms_enum.yaml#/no/common
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
       Not Reported:
         $ref:
-          - "_terms_enum.yaml#/not_reported/common"
+          - _terms_enum.yaml#/not_reported/common
       Not Allowed To Collect:
         $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
+          - _terms_enum.yaml#/not_allowed_to_collect/common
 
   ribosomal_rna_28s_16s_ratio:
     $ref:
-      - "_terms.yaml#/ribosomal_rna_28s_16s_ratio/common"
+      - _terms.yaml#/ribosomal_rna_28s_16s_ratio/common
     type: number
     minimum: 0
 
   rna_integrity_number:
     $ref:
-      - "_terms.yaml#/rna_integrity_number/common"
+      - _terms.yaml#/rna_integrity_number/common
     type: number
     maximum: 10
 
   spectrophotometer_method:
     $ref:
-      - "_terms.yaml#/spectrophotometer_method/common"
+      - _terms.yaml#/spectrophotometer_method/common
     type: string
 
   well_number:
     $ref:
-      - "_terms.yaml#/well_number/common"
+      - _terms.yaml#/well_number/common
     type: string
 
   portions:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one
 
   samples:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one

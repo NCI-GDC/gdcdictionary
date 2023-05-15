@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "aliquot"
+id: aliquot
 title: Aliquot
 type: object
 namespace: https://gdc.cancer.gov
@@ -14,7 +15,7 @@ additionalProperties: false
 submittable: true
 downloadable: false
 previous_version_downloadable: false
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -59,98 +60,98 @@ deprecated:
 properties:
 
   $ref:
-    - "_definitions.yaml#/ubiquitous_properties"
+    - _definitions.yaml#/ubiquitous_properties
 
   aliquot_quantity:
     $ref:
-      - "_terms.yaml#/aliquot_quantity/common"
+      - _terms.yaml#/aliquot_quantity/common
     type: number
     minimum: 0
 
   aliquot_volume:
     $ref:
-      - "_terms.yaml#/aliquot_volume/common"
+      - _terms.yaml#/aliquot_volume/common
     type: number
     minimum: 0
 
   amount:
     $ref:
-      - "_terms.yaml#/amount/common"
+      - _terms.yaml#/amount/common
     type: number
     minimum: 0
 
   analyte_type:
     $ref:
-      - "analyte.yaml#/properties/analyte_type"
+      - analyte.yaml#/properties/analyte_type
 
   analyte_type_id:
     $ref:
-      - "analyte.yaml#/properties/analyte_type_id"
+      - analyte.yaml#/properties/analyte_type_id
 
   concentration:
     $ref:
-      - "_terms.yaml#/concentration/common"
+      - _terms.yaml#/concentration/common
     type: number
     minimum: 0
 
   no_matched_normal_low_pass_wgs:
     $ref:
-      - "_terms.yaml#/no_matched_normal_low_pass_wgs/common"
+      - _terms.yaml#/no_matched_normal_low_pass_wgs/common
     type: boolean
     default: false
 
   no_matched_normal_targeted_sequencing:
     $ref:
-      - "_terms.yaml#/no_matched_normal_targeted_sequencing/common"
+      - _terms.yaml#/no_matched_normal_targeted_sequencing/common
     type: boolean
     default: false
 
   no_matched_normal_wgs:
     $ref:
-      - "_terms.yaml#/no_matched_normal_wgs/common"
+      - _terms.yaml#/no_matched_normal_wgs/common
     type: boolean
     default: false
 
   no_matched_normal_wxs:
     $ref:
-      - "_terms.yaml#/no_matched_normal_wxs/common"
+      - _terms.yaml#/no_matched_normal_wxs/common
     type: boolean
     default: false
 
   source_center:
     $ref:
-      - "_terms.yaml#/source_center/common"
+      - _terms.yaml#/source_center/common
     type: string
 
   selected_normal_wxs:
     $ref:
-      - "_terms.yaml#/selected_normal_wxs/common"
+      - _terms.yaml#/selected_normal_wxs/common
     type: boolean
     default: false
 
   selected_normal_wgs:
     $ref:
-      - "_terms.yaml#/selected_normal_wgs/common"
+      - _terms.yaml#/selected_normal_wgs/common
     type: boolean
     default: false
 
   selected_normal_targeted_sequencing:
     $ref:
-      - "_terms.yaml#/selected_normal_targeted_sequencing/common"
+      - _terms.yaml#/selected_normal_targeted_sequencing/common
     type: boolean
     default: false
 
   selected_normal_low_pass_wgs:
     $ref:
-      - "_terms.yaml#/selected_normal_low_pass_wgs/common"
+      - _terms.yaml#/selected_normal_low_pass_wgs/common
     type: boolean
     default: false
 
   analytes:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one
 
   samples:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: _definitions.yaml#/to_many
 
   centers:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one

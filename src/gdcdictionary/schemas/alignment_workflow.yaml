@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "alignment_workflow"
+id: alignment_workflow
 title: Alignment Workflow
 type: object
 namespace: https://gdc.cancer.gov
@@ -14,7 +15,7 @@ additionalProperties: false
 submittable: false
 downloadable: false
 previous_version_downloadable: false
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -52,7 +53,7 @@ uniqueKeys:
 properties:
 
   $ref:
-    - "_definitions.yaml#/workflow_properties"
+    - _definitions.yaml#/workflow_properties
 
   type:
     enum:
@@ -60,7 +61,7 @@ properties:
 
   workflow_type:
     $ref:
-      - "_terms.yaml#/workflow_type/common"
+      - _terms.yaml#/workflow_type/common
     enum:
       - BWA
       - BWA with BQSR
@@ -76,7 +77,7 @@ properties:
       - zUMIs - Smart-Seq2
 
   submitted_aligned_reads_files:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: _definitions.yaml#/to_many
 
   submitted_unaligned_reads_files:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: _definitions.yaml#/to_many

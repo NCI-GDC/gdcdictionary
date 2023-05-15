@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "filtered_copy_number_segment"
+id: filtered_copy_number_segment
 title: Filtered Copy Number Segment
 type: object
 namespace: https://gdc.cancer.gov
@@ -13,7 +14,7 @@ additionalProperties: false
 submittable: false
 downloadable: true
 previous_version_downloadable: true
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -49,32 +50,32 @@ uniqueKeys:
 properties:
 
   $ref:
-    - "_definitions.yaml#/data_file_properties"
+    - _definitions.yaml#/data_file_properties
 
   data_category:
     $ref:
-      - "_terms.yaml#/data_category/common"
+      - _terms.yaml#/data_category/common
     enum:
       - Copy Number Variation
 
   data_type:
     $ref:
-      - "_terms.yaml#/data_type/common"
+      - _terms.yaml#/data_type/common
     enum:
       - Copy Number Segment
       - Masked Copy Number Segment
 
   data_format:
     $ref:
-      - "_terms.yaml#/data_format/common"
+      - _terms.yaml#/data_format/common
     enum:
       - TXT
 
   experimental_strategy:
     $ref:
-      - "_terms.yaml#/experimental_strategy/common"
+      - _terms.yaml#/experimental_strategy/common
     enum:
       - Genotyping Array
 
   copy_number_liftover_workflows:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one

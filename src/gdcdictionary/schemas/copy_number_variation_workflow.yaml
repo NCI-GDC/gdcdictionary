@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "copy_number_variation_workflow"
+id: copy_number_variation_workflow
 title: Copy Number Variation Workflow
 type: object
 namespace: https://gdc.cancer.gov
@@ -14,7 +15,7 @@ additionalProperties: false
 submittable: false
 downloadable: false
 previous_version_downloadable: false
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -43,11 +44,11 @@ uniqueKeys:
 properties:
 
   $ref:
-    - "_definitions.yaml#/workflow_properties"
+    - _definitions.yaml#/workflow_properties
 
   workflow_type:
     $ref:
-      - "_terms.yaml#/workflow_type/common"
+      - _terms.yaml#/workflow_type/common
     enum:
       - GISTIC - Copy Number Score
       - GISTIC - Arm Level Copy Number
@@ -55,4 +56,4 @@ properties:
       - GISTIC - Focal Amplification
 
   copy_number_segments:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: _definitions.yaml#/to_many

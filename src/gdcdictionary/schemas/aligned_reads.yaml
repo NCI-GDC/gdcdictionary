@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "aligned_reads"
+id: aligned_reads
 title: Aligned Reads
 type: object
 namespace: https://gdc.cancer.gov
@@ -13,7 +14,7 @@ additionalProperties: false
 submittable: false
 downloadable: true
 previous_version_downloadable: false
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -78,54 +79,54 @@ deprecated:
 properties:
 
   $ref:
-    - "_definitions.yaml#/data_file_properties"
+    - _definitions.yaml#/data_file_properties
 
   average_base_quality:
     $ref:
-      - "_terms.yaml#/average_base_quality/common"
+      - _terms.yaml#/average_base_quality/common
     type: number
 
   average_insert_size:
     $ref:
-      - "_terms.yaml#/average_insert_size/common"
+      - _terms.yaml#/average_insert_size/common
     type: integer
 
   average_read_length:
     $ref:
-      - "_terms.yaml#/average_read_length/common"
+      - _terms.yaml#/average_read_length/common
     type: integer
 
   contamination:
     $ref:
-      - "_terms.yaml#/contamination/common"
+      - _terms.yaml#/contamination/common
     type: number
 
   contamination_error:
     $ref:
-      - "_terms.yaml#/contamination_error/common"
+      - _terms.yaml#/contamination_error/common
     type: number
 
   data_category:
     $ref:
-      - "_terms.yaml#/data_category/common"
+      - _terms.yaml#/data_category/common
     enum:
       - Sequencing Reads
 
   data_format:
     $ref:
-      - "_terms.yaml#/data_format/common"
+      - _terms.yaml#/data_format/common
     enum:
       - BAM
 
   data_type:
     $ref:
-      - "_terms.yaml#/data_type/common"
+      - _terms.yaml#/data_type/common
     enum:
       - Aligned Reads
 
   experimental_strategy:
     $ref:
-      - "_terms.yaml#/experimental_strategy/common"
+      - _terms.yaml#/experimental_strategy/common
     enum:
       - ATAC-Seq
       - Bisulfite-Seq
@@ -143,17 +144,17 @@ properties:
     enumDef:
       Targeted Sequencing:
         $ref:
-          - "_terms_enum.yaml#/targeted_sequencing/common"
+          - _terms_enum.yaml#/targeted_sequencing/common
       WGS:
         $ref:
-          - "_terms_enum.yaml#/wgs/common"
+          - _terms_enum.yaml#/wgs/common
       WXS:
         $ref:
-          - "_terms_enum.yaml#/wxs/common"
+          - _terms_enum.yaml#/wxs/common
 
   mean_coverage:
     $ref:
-      - "_terms.yaml#/mean_coverage/common"
+      - _terms.yaml#/mean_coverage/common
     type: number
 
   msi_score:
@@ -170,61 +171,61 @@ properties:
 
   pairs_on_diff_chr:
     $ref:
-      - "_terms.yaml#/pairs_on_diff_chr/common"
+      - _terms.yaml#/pairs_on_diff_chr/common
     type: integer
 
   platform:
     $ref:
-      - "read_group.yaml#/properties/platform"
+      - read_group.yaml#/properties/platform
 
   proportion_base_mismatch:
     $ref:
-      - "_terms.yaml#/proportion_base_mismatch/common"
+      - _terms.yaml#/proportion_base_mismatch/common
     type: number
 
   proportion_coverage_10x:
     $ref:
-      - "_terms.yaml#/proportion_coverage_10x/common"
+      - _terms.yaml#/proportion_coverage_10x/common
     type: number
 
   proportion_coverage_30x:
     $ref:
-      - "_terms.yaml#/proportion_coverage_30x/common"
+      - _terms.yaml#/proportion_coverage_30x/common
     type: number
 
   proportion_reads_duplicated:
     $ref:
-      - "_terms.yaml#/proportion_reads_duplicated/common"
+      - _terms.yaml#/proportion_reads_duplicated/common
     type: number
 
   proportion_reads_mapped:
     $ref:
-      - "_terms.yaml#/proportion_reads_mapped/common"
+      - _terms.yaml#/proportion_reads_mapped/common
     type: number
 
   proportion_targets_no_coverage:
     $ref:
-      - "_terms.yaml#/proportion_targets_no_coverage/common"
+      - _terms.yaml#/proportion_targets_no_coverage/common
     type: number
 
   total_reads:
     $ref:
-      - "_terms.yaml#/total_reads/common"
+      - _terms.yaml#/total_reads/common
     type: integer
 
   tumor_ploidy:
     $ref:
-      - "_terms.yaml#/tumor_ploidy/common"
+      - _terms.yaml#/tumor_ploidy/common
     type: number
 
   tumor_purity:
     $ref:
-      - "_terms.yaml#/tumor_purity/common"
+      - _terms.yaml#/tumor_purity/common
     type: number
 
   wgs_coverage:
     $ref:
-      - "_terms.yaml#/wgs_coverage/common"
+      - _terms.yaml#/wgs_coverage/common
     enum:
       - 0x–10x
       - 10x–25x
@@ -235,19 +236,19 @@ properties:
     enumDef:
       Unknown:
         $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - _terms_enum.yaml#/unknown/common
       Not Applicable:
         $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
+          - _terms_enum.yaml#/not_applicable/common
 
   alignment_cocleaning_workflows:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one
 
   alignment_workflows:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one
 
   submitted_unaligned_reads_files:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: _definitions.yaml#/to_many
 
   submitted_aligned_reads_files:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one

@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "aligned_reads_index"
+id: aligned_reads_index
 title: Aligned Reads Index
 type: object
 namespace: https://gdc.cancer.gov
@@ -13,7 +14,7 @@ additionalProperties: false
 submittable: false
 downloadable: true
 previous_version_downloadable: false
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -57,11 +58,11 @@ uniqueKeys:
 properties:
 
   $ref:
-    - "_definitions.yaml#/data_file_properties"
+    - _definitions.yaml#/data_file_properties
 
   data_category:
     $ref:
-      - "_terms.yaml#/data_category/common"
+      - _terms.yaml#/data_category/common
     enum:
       - Sequencing Data
       - Sequencing Reads
@@ -69,18 +70,18 @@ properties:
 
   data_type:
     $ref:
-      - "_terms.yaml#/data_type/common"
+      - _terms.yaml#/data_type/common
     enum:
       - Aligned Reads Index
 
   data_format:
     $ref:
-      - "_terms.yaml#/data_format/common"
+      - _terms.yaml#/data_format/common
     enum:
       - BAI
 
   submitted_aligned_reads_files:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one
 
   aligned_reads_files:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one

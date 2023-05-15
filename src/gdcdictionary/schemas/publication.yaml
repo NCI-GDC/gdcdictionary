@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "publication"
+id: publication
 title: Publication
 type: object
 namespace: https://gdc.cancer.gov
@@ -13,7 +14,7 @@ additionalProperties: false
 submittable: false
 downloadable: true
 previous_version_downloadable: true
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -46,7 +47,7 @@ properties:
 
   id:
     $ref:
-      - "_definitions.yaml#/uuid"
+      - _definitions.yaml#/uuid
 
   pmid:
     type: string
@@ -56,16 +57,16 @@ properties:
 
   project_id:
     $ref:
-      - "_terms.yaml#/project_id/common"
+      - _terms.yaml#/project_id/common
     type: string
 
   created_datetime:
     $ref:
-      - "_definitions.yaml#/datetime"
+      - _definitions.yaml#/datetime
 
   updated_datetime:
     $ref:
-      - "_definitions.yaml#/datetime"
+      - _definitions.yaml#/datetime
 
   files:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: _definitions.yaml#/to_many

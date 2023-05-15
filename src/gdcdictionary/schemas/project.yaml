@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "project"
+id: project
 title: Project
 type: object
 namespace: https://gdc.cancer.gov
@@ -14,7 +15,7 @@ additionalProperties: false
 submittable: false
 downloadable: false
 previous_version_downloadable: false
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -49,7 +50,7 @@ properties:
 
   id:
     $ref:
-      - "_definitions.yaml#/uuid"
+      - _definitions.yaml#/uuid
     description: >-
       UUID for the project
 
@@ -76,7 +77,7 @@ properties:
 
   intended_release_date:
     $ref:
-      - "_definitions.yaml#/datetime"
+      - _definitions.yaml#/datetime
     description: >-
       Tracks a Project's intended release date.
 
@@ -150,4 +151,4 @@ properties:
     default: true
 
   programs:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one

@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "genomic_profile_harmonization_workflow"
+id: genomic_profile_harmonization_workflow
 title: Genomic Profile Harmonization Workflow
 type: object
 namespace: https://gdc.cancer.gov
@@ -13,7 +14,7 @@ additionalProperties: false
 submittable: false
 downloadable: false
 previous_version_downloadable: false
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -42,11 +43,11 @@ uniqueKeys:
 properties:
 
   $ref:
-    - "_definitions.yaml#/workflow_properties"
+    - _definitions.yaml#/workflow_properties
 
   workflow_type:
     $ref:
-      - "_terms.yaml#/workflow_type/common"
+      - _terms.yaml#/workflow_type/common
     enum:
       - FM Copy Number Variation
       - FM Simple Somatic Mutation
@@ -58,4 +59,4 @@ properties:
       - VCF LiftOver
 
   submitted_genomic_profiles:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one

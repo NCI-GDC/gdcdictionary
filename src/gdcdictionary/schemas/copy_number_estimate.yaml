@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "copy_number_estimate"
+id: copy_number_estimate
 title: Copy Number Estimate
 type: object
 namespace: https://gdc.cancer.gov
@@ -14,7 +15,7 @@ additionalProperties: false
 submittable: false
 downloadable: true
 previous_version_downloadable: true
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -66,17 +67,17 @@ uniqueKeys:
 properties:
 
   $ref:
-    - "_definitions.yaml#/data_file_properties"
+    - _definitions.yaml#/data_file_properties
 
   data_category:
     $ref:
-      - "_terms.yaml#/data_category/common"
+      - _terms.yaml#/data_category/common
     enum:
       - Copy Number Variation
 
   data_type:
     $ref:
-      - "_terms.yaml#/data_type/common"
+      - _terms.yaml#/data_type/common
     enum:
       - Gene Level Copy Number
       - Gene Level Copy Number Scores
@@ -84,14 +85,14 @@ properties:
 
   data_format:
     $ref:
-      - "_terms.yaml#/data_format/common"
+      - _terms.yaml#/data_format/common
     enum:
       - TSV
       - TXT
 
   experimental_strategy:
     $ref:
-      - "_terms.yaml#/experimental_strategy/common"
+      - _terms.yaml#/experimental_strategy/common
     enum:
       - Genotyping Array
       - Targeted Sequencing
@@ -100,17 +101,17 @@ properties:
 
   platform:
     $ref:
-      - "_terms.yaml#/platform/common"
+      - _terms.yaml#/platform/common
     enum:
       - Affymetrix SNP 6.0
       - Illumina
       - Ion Torrent
 
   copy_number_variation_workflows:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one
 
   genomic_profile_harmonization_workflows:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one
 
   somatic_copy_number_workflows:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one

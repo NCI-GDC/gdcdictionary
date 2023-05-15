@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "masked_somatic_mutation"
+id: masked_somatic_mutation
 title: Masked Somatic Mutation
 type: object
 namespace: https://gdc.cancer.gov
@@ -14,7 +15,7 @@ additionalProperties: false
 submittable: false
 downloadable: true
 previous_version_downloadable: true
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -65,30 +66,30 @@ uniqueKeys:
 properties:
 
   $ref:
-    - "_definitions.yaml#/data_file_properties"
+    - _definitions.yaml#/data_file_properties
 
   data_category:
     $ref:
-      - "_terms.yaml#/data_category/common"
+      - _terms.yaml#/data_category/common
     enum:
       - Simple Nucleotide Variation
 
   data_type:
     $ref:
-      - "_terms.yaml#/data_type/common"
+      - _terms.yaml#/data_type/common
     enum:
       - Masked Somatic Mutation
 
   data_format:
     $ref:
-      - "_terms.yaml#/data_format/common"
+      - _terms.yaml#/data_format/common
     enum:
       - MAF
       - TSV
 
   experimental_strategy:
     $ref:
-      - "_terms.yaml#/experimental_strategy/common"
+      - _terms.yaml#/experimental_strategy/common
     enum:
       - ATAC-Seq
       - Bisulfite-Seq
@@ -100,10 +101,10 @@ properties:
       - WXS
 
   projects:
-    $ref: "_definitions.yaml#/to_one_project"
+    $ref: _definitions.yaml#/to_one_project
 
   genomic_profile_harmonization_workflows:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: _definitions.yaml#/to_many
 
   somatic_aggregation_workflows:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one

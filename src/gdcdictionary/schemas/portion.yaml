@@ -1,6 +1,7 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+---
+$schema: http://json-schema.org/draft-04/schema#
 
-id: "portion"
+id: portion
 title: Portion
 type: object
 namespace: https://gdc.cancer.gov
@@ -13,7 +14,7 @@ additionalProperties: false
 submittable: true
 downloadable: false
 previous_version_downloadable: false
-validators: null
+validators:
 
 systemProperties:
   - id
@@ -46,32 +47,32 @@ uniqueKeys:
 properties:
 
   $ref:
-    - "_definitions.yaml#/ubiquitous_properties"
+    - _definitions.yaml#/ubiquitous_properties
 
   creation_datetime:
     $ref:
-      - "_terms.yaml#/creation_datetime/common"
+      - _terms.yaml#/creation_datetime/common
     type: number
     minimum: 0
 
   is_ffpe:
     $ref:
-      - "_terms.yaml#/is_ffpe/common"
+      - _terms.yaml#/is_ffpe/common
     type: boolean
 
   portion_number:
     $ref:
-      - "_terms.yaml#/portion_number/common"
+      - _terms.yaml#/portion_number/common
     type: string
 
   weight:
     $ref:
-      - "_terms.yaml#/portion_weight/common"
+      - _terms.yaml#/portion_weight/common
     type: number
     minimum: 0
 
   samples:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one
 
   centers:
-    $ref: "_definitions.yaml#/to_one"
+    $ref: _definitions.yaml#/to_one
