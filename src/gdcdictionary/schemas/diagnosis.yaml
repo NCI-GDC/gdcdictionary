@@ -1839,10 +1839,10 @@ properties:
           - "_terms_enum.yaml#/stage_i/diagnosis/ensat_pathologic_stage"
       Stage II:
         $ref:
-          - "_terms_enum.yaml#/stage_iI/diagnosis/ensat_pathologic_stage"
+          - "_terms_enum.yaml#/stage_ii/diagnosis/ensat_pathologic_stage"
       Stage III:
         $ref:
-          - "_terms_enum.yaml#/stage_iII/diagnosis/ensat_pathologic_stage"
+          - "_terms_enum.yaml#/stage_iii/diagnosis/ensat_pathologic_stage"
       Stage IV:
         $ref:
           - "_terms_enum.yaml#/stage_iv/diagnosis/ensat_pathologic_stage"
