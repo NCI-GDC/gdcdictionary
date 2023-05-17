@@ -2660,8 +2660,8 @@ height:
 hepatitis_sustained_virological_response:
   common:
     description: >-
-      The yes/no/unknown indicator used to describe whether the patient received treatment
-      for a risk factor the patient had at the time of or prior to their diagnosis.
+      An indication as to whether sustained virological response was obtained in responses
+      to viral hepatitis treatment.
     termDef:
       term: >-
         Viral Hepatitis Sustained Virologic Response Post Treatment Indicator
@@ -6745,7 +6745,7 @@ viral_hepatitis_serologies:
   common:
     description: >-
       Text term that describes the kind of serological laboratory test used to determine
-      the patient's hepatitus status.
+      the patient's hepatitis status.
     termDef:
       term: >-
         Viral Hepatitis Laboratory Procedure Serology Test Method Type
@@ -6825,7 +6825,7 @@ weiss_assessment_score:
 well_number:
   common:
     description: >-
-      Numeric value that represents the the well location within a plate for the analyte
+      Numeric value that represents the well location within a plate for the analyte
       or aliquot from the sample.
     termDef:
       term: >-
@@ -7280,7 +7280,7 @@ spindle_cell_percent:
   common:
     description: >-
       The percent of uveal melanoma arising from the choroid, ciliary body, or the
-      iris and characterized by the presence of of spindle-shaped melanocytes.
+      iris and characterized by the presence of spindle-shaped melanocytes.
     termDef:
       term: >-
         Cell Morphology Percent Uveal Spindle Cell Melanoma Integer
@@ -7362,7 +7362,7 @@ country_of_birth:
 wgs_coverage:
   common:
     description: >-
-      Range of coverage values for WGS aligned reads.
+      Range of coverage values for WGS aligned reads. Each range is non-inclusive to the lower bound.
     termDef:
       term:
       source:
