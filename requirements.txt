@@ -4,7 +4,7 @@
 #
 #    pip-compile pyproject.toml
 #
-attrs==20.3.0
+attrs==22.2.0
     # via
     #   gdcdictionary (pyproject.toml)
     #   jsonschema
@@ -14,7 +14,7 @@ jsonschema==3.2.0
     # via gdcdictionary (pyproject.toml)
 pyrsistent==0.18.0
     # via jsonschema
-pyyaml==5.4.1
+pyyaml==6.0
     # via gdcdictionary (pyproject.toml)
 six==1.16.0
     # via jsonschema

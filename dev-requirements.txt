@@ -4,37 +4,35 @@
 #
 #    pip-compile --extra=dev --output-file=dev-requirements.txt pyproject.toml
 #
-atomicwrites==1.4.0
-    # via pytest
-attrs==20.3.0
+attrs==22.2.0
     # via
     #   gdcdictionary (pyproject.toml)
     #   jsonschema
     #   pytest
-coverage[toml]==5.5
+coverage[toml]==6.2
     # via
     #   gdcdictionary (pyproject.toml)
     #   pytest-cov
-importlib-metadata==2.1.1
+importlib-metadata==4.8.3
     # via
     #   jsonschema
     #   pluggy
     #   pytest
+iniconfig==1.1.1
+    # via pytest
 jsonschema==3.2.0
     # via gdcdictionary (pyproject.toml)
-more-itertools==5.0.0
+packaging==21.3
     # via pytest
-packaging==20.9
+pluggy==1.0.0
     # via pytest
-pluggy==0.13.1
+py==1.11.0
     # via pytest
-py==1.10.0
-    # via pytest
-pyparsing==2.4.7
+pyparsing==3.0.9
     # via packaging
 pyrsistent==0.18.0
     # via jsonschema
-pytest==4.6.11
+pytest==7.0.1
     # via
     #   gdcdictionary (pyproject.toml)
     #   pytest-cov
@@ -42,16 +40,15 @@ pytest-cov==2.11.1
     # via gdcdictionary (pyproject.toml)
 pyyaml==6.0
     # via gdcdictionary (pyproject.toml)
-six==1.15.0
+six==1.16.0
+    # via jsonschema
+tomli==1.2.3
     # via
-    #   jsonschema
-    #   more-itertools
+    #   coverage
     #   pytest
-toml==0.10.2
-    # via coverage
-wcwidth==0.2.5
-    # via pytest
-zipp==1.2.0
+typing-extensions==4.1.1
+    # via importlib-metadata
+zipp==3.6.0
     # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
