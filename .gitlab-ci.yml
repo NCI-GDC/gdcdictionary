@@ -22,15 +22,10 @@ variables:
   TWINE_REPOSITORY_URL: "https://nexus.osdc.io/repository/pypi-snapshots/"
 
 
-tox:
-  image: ${BASE_CONTAINER_REGISTRY}/${REPO_PY_VERSION}-builder:${BASE_CONTAINER_VERSION}
-  before_script:
-    - mkdir -p /usr/share/man/man1
-
 .python_versions:
   parallel:
     matrix:
-      - REPO_PY_VERSION: ["python36"]
+      - REPO_PY_VERSION: ["python36", "python37", "python38", "python39"]
 
 docker_build:
   allow_failure: true
