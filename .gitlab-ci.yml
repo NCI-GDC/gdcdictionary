@@ -12,14 +12,12 @@ include:
       - templates/global/full.yaml
       - templates/python/full.yaml
 
-.python_versions:
-  parallel:
-    matrix:
-      - REPO_PY_VERSION: ["python3.7", "python3.8", "python3.9"]
-
 tox:
   stage: test
   image: ${BASE_CONTAINER_REGISTRY}/${REPO_PY_VERSION}-builder:${BASE_CONTAINER_VERSION}
+  parallel:
+    matrix:
+      - REPO_PY_VERSION: ["python3.7", "python3.8", "python3.9"]
   script:
     - pip install tox
     - tox
