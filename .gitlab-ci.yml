@@ -7,36 +7,29 @@ stages:
 
 include:
   - project: nci-gdc/gitlab-templates
-    ref: master
+    ref: 0.2.0
     file:
       - templates/global/full.yaml
       - templates/python/full.yaml
 
-variables:
-  BASE_CONTAINER_VERSION: "1.4.0"
-  PRE_COMMIT_DOCKER_IMAGE: docker.osdc.io/ncigdc/python3.7-builder:2.2.0
-  DOCKER_BUILDKIT: 1
-  PIP_EXTRA_INDEX_URL: https://nexus.osdc.io/repository/pypi-all/simple
-  DOCKER_BUILD_OPTS: "--build-arg PIP_EXTRA_INDEX_URL=https://nexus.osdc.io/repository/pypi-all/simple"
-  DOCKER_PUSH_OPTS: "--all-tags"
-  TWINE_REPOSITORY_URL: "https://nexus.osdc.io/repository/pypi-snapshots/"
-
-
 .python_versions:
   parallel:
     matrix:
-      - REPO_PY_VERSION: ["python36", "python37", "python38", "python39"]
+      - REPO_PY_VERSION: ["python3.7", "python3.8", "python3.9"]
 
-docker_build:
-  allow_failure: true
-  rules:
-    - when: never
+tox:
+  stage: test
+  image: ${BASE_CONTAINER_REGISTRY}/${REPO_PY_VERSION}-builder:${BASE_CONTAINER_VERSION}
+  script:
+    - pip install tox
+    - tox
 
-release:
-  image: docker.osdc.io/ncigdc/python36-builder:1.4.0
-  allow_failure: true
-  rules:
-    - when: never
+tox legacy:
+  stage: test
+  image: ${BASE_CONTAINER_REGISTRY}/python36-builder:${LEGACY_BASE_CONTAINER_VERSION}
+  script:
+    - pip install tox
+    - tox -e py36
 
 .override_gdcdictionary_version:
   rules:
