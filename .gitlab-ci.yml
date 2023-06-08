@@ -4,6 +4,8 @@
 
 stages:
   - test
+  - build
+  - release_gdcdatamodel2
 
 include:
   - project: nci-gdc/gitlab-templates
