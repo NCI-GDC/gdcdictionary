@@ -130,7 +130,9 @@ release_datamodels_to_nexus:
       variables:
         TWINE_REPOSITORY_URL: "https://nexus.osdc.io/repository/pypi-releases/"
     - when: always
-  needs: ['update_reqs_for_gdcdatamodel2', 'execute_plaster']
+  dependencies:
+    - update_reqs_for_gdcdatamodel2
+    - execute_plaster
 
 push_datamodels_to_github:
   image: docker.osdc.io/ncigdc/python36-builder:1.4.0
@@ -147,4 +149,6 @@ push_datamodels_to_github:
   allow_failure: true   # failure when no changes of models
   rules:
     - !reference [.override_gdcdictionary_version, rules]
-  needs: ['update_reqs_for_gdcdatamodel2', 'execute_plaster']
+  dependencies:
+    - update_reqs_for_gdcdatamodel2
+    - execute_plaster
