@@ -112,24 +112,8 @@ release_datamodels_to_nexus:
       - dist/*.whl
     reports:
       dotenv: vars.env
-  rules: # Override globally-defined RELEASE_REGISTRY
-    - if: $CI_COMMIT_TAG
-      when: always
-      variables:
-        TWINE_REPOSITORY_URL: "https://nexus.osdc.io/repository/pypi-releases/"
-    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
-      when: always
-      variables:
-        TWINE_REPOSITORY_URL: "https://nexus.osdc.io/repository/pypi-releases/"
-    - if: $CI_COMMIT_REF_NAME =~ /master/
-      when: always
-      variables:
-        TWINE_REPOSITORY_URL: "https://nexus.osdc.io/repository/pypi-releases/"
-    - if: $CI_COMMIT_REF_NAME =~ /main/
-      when: always
-      variables:
-        TWINE_REPOSITORY_URL: "https://nexus.osdc.io/repository/pypi-releases/"
-    - when: always
+  rules:
+    - !reference [.override_gdcdictionary_version, rules]
   dependencies:
     - update_reqs_for_gdcdatamodel2
     - execute_plaster
