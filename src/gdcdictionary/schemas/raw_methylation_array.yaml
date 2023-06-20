@@ -53,38 +53,6 @@ properties:
   $ref:
     - "_definitions.yaml#/data_file_properties"
 
-  data_category:
-    $ref:
-      - "_terms.yaml#/data_category/common"
-    enum:
-      - DNA Methylation
-
-  data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
-    enum:
-      - Raw Intensities
-
-  data_format:
-    $ref:
-      - "_terms.yaml#/data_format/common"
-    enum:
-      - IDAT
-
-  experimental_strategy:
-    $ref:
-      - "_terms.yaml#/experimental_strategy/common"
-    enum:
-      - Methylation Array
-
-  platform:
-    $ref:
-      - "_terms.yaml#/platform/common"
-    enum:
-      - Illumina Human Methylation 27
-      - Illumina Human Methylation 450
-      - Illumina Methylation Epic
-
   channel:
     $ref:
       - "_terms.yaml#/channel/common"
@@ -102,6 +70,30 @@ properties:
       - "_terms.yaml#/chip_position/common"
     type: string
 
+  data_category:
+    $ref:
+      - "_terms.yaml#/data_category/common"
+    enum:
+      - DNA Methylation
+
+  data_format:
+    $ref:
+      - "_terms.yaml#/data_format/common"
+    enum:
+      - IDAT
+
+  data_type:
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - Raw Intensities
+
+  experimental_strategy:
+    $ref:
+      - "_terms.yaml#/experimental_strategy/common"
+    enum:
+      - Methylation Array
+
   plate_name:
     $ref:
       - "_terms.yaml#/plate_name/common"
@@ -111,6 +103,15 @@ properties:
     $ref:
       - "_terms.yaml#/plate_well/common"
     type: string
+
+  platform:
+    $ref:
+      - "_terms.yaml#/platform/common"
+    enum:
+      - Illumina Human Methylation 27
+      - Illumina Human Methylation 450
+      - Illumina Methylation Epic
+      - Illumina Methylation Epic v2
 
   aliquots:
     $ref: "_definitions.yaml#/to_one"

@@ -12,7 +12,7 @@ a260_a280_ratio:
       source: caDSR
       cde_id: 5432595
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432595&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432595%20and%20ver_nr=1.0"
 
 aa_change:
   common:
@@ -25,7 +25,7 @@ aa_change:
       source: caDSR
       cde_id: 6142508
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142508&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142508%20and%20ver_nr=1.0"
 
 adapter_name:
   common:
@@ -90,7 +90,7 @@ adverse_event:
       source: caDSR
       cde_id: 3125302
       cde_version: 1.1
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3125302&version=1.1"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3125302%20and%20ver_nr=1.1"
 
 adverse_event_grade:
   common:
@@ -103,7 +103,7 @@ adverse_event_grade:
       source: caDSR
       cde_id: 2944515
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2944515&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2944515%20and%20ver_nr=1.0"
 
 age_at_diagnosis:
   common:
@@ -115,7 +115,7 @@ age_at_diagnosis:
       source: caDSR
       cde_id: 3225640
       cde_version: 2.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3225640&version=2.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3225640%20and%20ver_nr=2.0"
 
 age_at_index:
   common:
@@ -128,7 +128,7 @@ age_at_index:
       source: caDSR
       cde_id: 6028530
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6028530&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6028530%20and%20ver_nr=1.0"
 
 age_at_last_exposure:
   common:
@@ -194,7 +194,7 @@ ajcc_clinical_m:
       source: caDSR
       cde_id: 3440331
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440331&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3440331%20and%20ver_nr=1.0"
 
 ajcc_clinical_n:
   common:
@@ -208,7 +208,7 @@ ajcc_clinical_n:
       source: caDSR
       cde_id: 3440330
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440330&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3440330%20and%20ver_nr=1.0"
 
 ajcc_clinical_stage:
   common:
@@ -222,7 +222,7 @@ ajcc_clinical_stage:
       source: caDSR
       cde_id: 3440332
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440332&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3440332%20and%20ver_nr=1.0"
 
 ajcc_clinical_t:
   common:
@@ -235,7 +235,7 @@ ajcc_clinical_t:
       source: caDSR
       cde_id: 3440328
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440328&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3440328%20and%20ver_nr=1.0"
 
 ajcc_pathologic_m:
   common:
@@ -250,7 +250,7 @@ ajcc_pathologic_m:
       source: caDSR
       cde_id: 3045439
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3045439&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3045439%20and%20ver_nr=1.0"
 
 ajcc_pathologic_n:
   common:
@@ -264,7 +264,7 @@ ajcc_pathologic_n:
       source: caDSR
       cde_id: 3203106
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3203106&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3203106%20and%20ver_nr=1.0"
 
 ajcc_pathologic_stage:
   common:
@@ -277,7 +277,7 @@ ajcc_pathologic_stage:
       source: caDSR
       cde_id: 3203222
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3203222&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3203222%20and%20ver_nr=1.0"
 
 ajcc_pathologic_t:
   common:
@@ -291,7 +291,7 @@ ajcc_pathologic_t:
       source: caDSR
       cde_id: 3045435
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3045435&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3045435%20and%20ver_nr=1.0"
 
 ajcc_staging_system_edition:
   common:
@@ -306,7 +306,7 @@ ajcc_staging_system_edition:
       source: caDSR
       cde_id: 2722309
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2722309&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2722309%20and%20ver_nr=1.0"
 
 alcohol_days_per_week:
   common:
@@ -319,7 +319,7 @@ alcohol_days_per_week:
       source: caDSR
       cde_id: 3114013
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3114013&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3114013%20and%20ver_nr=1.0"
 
 alcohol_drinks_per_day:
   common:
@@ -332,7 +332,7 @@ alcohol_drinks_per_day:
       source: caDSR
       cde_id: 3124961
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3124961&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3124961%20and%20ver_nr=1.0"
 
 alcohol_frequency:
   common:
@@ -357,7 +357,7 @@ alcohol_history:
       source: caDSR
       cde_id: 2201918
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2201918&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2201918%20and%20ver_nr=1.0"
 
 alcohol_intensity:
   common:
@@ -370,7 +370,7 @@ alcohol_intensity:
       source: caDSR
       cde_id: 3457767
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3457767&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3457767%20and%20ver_nr=1.0"
 
 alcohol_type:
   common:
@@ -443,7 +443,7 @@ analyte_type:
       source: caDSR
       cde_id: 2513915
       cde_version: 2.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2513915&version=2.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2513915%20and%20ver_nr=2.0"
 
 analyte_type_id:
   common:
@@ -455,7 +455,7 @@ analyte_type_id:
       source: caDSR
       cde_id: 5432508
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432508&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432508%20and%20ver_nr=1.0"
 
 analyte_volume:
   common:
@@ -481,7 +481,7 @@ anaplasia_present:
       source: caDSR
       cde_id: 6059599
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6059599&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6059599%20and%20ver_nr=1.0"
 
 anaplasia_present_type:
   common:
@@ -495,7 +495,7 @@ anaplasia_present_type:
       source: caDSR
       cde_id: 4925534
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4925534&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=4925534%20and%20ver_nr=1.0"
 
 aneuploidy:
   common:
@@ -521,7 +521,7 @@ ann_arbor_b_symptoms:
       source: caDSR
       cde_id: 2902402
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2902402&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2902402%20and%20ver_nr=1.0"
 
 ann_arbor_b_symptoms_described:
   common:
@@ -545,7 +545,7 @@ ann_arbor_clinical_stage:
       source: caDSR
       cde_id: 5615604
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5615604&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5615604%20and%20ver_nr=1.0"
 
 ann_arbor_extranodal_involvement:
   common:
@@ -558,7 +558,7 @@ ann_arbor_extranodal_involvement:
       source: caDSR
       cde_id: 3364582
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3364582&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3364582%20and%20ver_nr=1.0"
 
 ann_arbor_pathologic_stage:
   common:
@@ -571,7 +571,7 @@ ann_arbor_pathologic_stage:
       source: caDSR
       cde_id: 5615605
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5615605&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5615605%20and%20ver_nr=1.0"
 
 antigen:
   common:
@@ -583,7 +583,7 @@ antigen:
       source: caDSR
       cde_id: 6142523
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142523&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142523%20and%20ver_nr=1.0"
 
 asbestos_exposure:
   common:
@@ -596,7 +596,7 @@ asbestos_exposure:
       source: caDSR
       cde_id: 1253
       cde_version: 3.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=1253&version=3.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=1253%20and%20ver_nr=3.0"
 
 asbestos_exposure_type:
   common:
@@ -653,7 +653,7 @@ barretts_esophagus_goblet_cells_present:
       source: caDSR
       cde_id: 3440216
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440216&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3440216%20and%20ver_nr=1.0"
 
 base_caller_name:
   common:
@@ -687,7 +687,7 @@ best_overall_response:
       source: caDSR
       cde_id: 2003324
       cde_version: 4.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2003324&version=4.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2003324%20and%20ver_nr=4.0"
 
 biospecimen_anatomic_site:
   common:
@@ -700,7 +700,7 @@ biospecimen_anatomic_site:
       source: caDSR
       cde_id: 4742851
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4742851&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=4742851%20and%20ver_nr=1.0"
 
 biospecimen_laterality:
   common:
@@ -712,7 +712,7 @@ biospecimen_laterality:
       source: caDSR
       cde_id: 2007875
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2007875&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2007875%20and%20ver_nr=1.0"
 
 biospecimen_type:
   common:
@@ -749,7 +749,7 @@ blood_test_normal_range_lower:
       source: caDSR
       cde_id: 6142571
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142571&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142571%20and%20ver_nr=1.0"
 
 blood_test_normal_range_upper:
   common:
@@ -762,7 +762,7 @@ blood_test_normal_range_upper:
       source: caDSR
       cde_id: 6142535
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142535&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142535%20and%20ver_nr=1.0"
 
 bmi:
   common:
@@ -775,7 +775,7 @@ bmi:
       source: caDSR
       cde_id: 2006410
       cde_version: 3.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2006410&version=3.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2006410%20and%20ver_nr=3.0"
 
 body_surface_area:
   common:
@@ -788,7 +788,7 @@ body_surface_area:
       source: caDSR
       cde_id: 653
       cde_version: 6.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=653&version=6.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=653%20and%20ver_nr=6.0"
 
 bone_marrow_malignant_cells:
   common:
@@ -814,7 +814,7 @@ breslow_thickness:
       source: caDSR
       cde_id: 64809
       cde_version: 3.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64809&version=3.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=64809%20and%20ver_nr=3.0"
 
 burkitt_lymphoma_clinical_variant:
   common:
@@ -827,7 +827,7 @@ burkitt_lymphoma_clinical_variant:
       source: caDSR
       cde_id: 3770421
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3770421&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3770421%20and%20ver_nr=1.0"
 
 cancer_detection_method:
   common:
@@ -862,7 +862,7 @@ cause_of_death:
       source: caDSR
       cde_id: 2554674
       cde_version: 3.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2554674&version=3.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2554674%20and%20ver_nr=3.0"
 
 cause_of_death_source:
   common:
@@ -887,7 +887,7 @@ cause_of_response:
       source: caDSR
       cde_id: 6161025
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161025&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6161025%20and%20ver_nr=1.0"
 
 cd4_count:
   common:
@@ -900,7 +900,7 @@ cd4_count:
       source: caDSR
       cde_id: 4182751
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4182751&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=4182751%20and%20ver_nr=1.0"
 
 cdc_hiv_risk_factors:
   common:
@@ -925,7 +925,7 @@ cell_count:
       source: caDSR
       cde_id: 6142528
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142528&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142528%20and%20ver_nr=1.0"
 
 channel:
   common:
@@ -975,7 +975,7 @@ child_pugh_classification:
       source: caDSR
       cde_id: 2931791
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2931791&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2931791%20and%20ver_nr=1.0"
 
 chip_id:
   common:
@@ -1047,7 +1047,7 @@ chromosome:
       source: caDSR
       cde_id: 6142404
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142404&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142404%20and%20ver_nr=1.0"
 
 chromosome_arm:
   common:
@@ -1073,7 +1073,7 @@ cigarettes_per_day:
       source: caDSR
       cde_id: 2001716
       cde_version: 4.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2001716&version=4.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2001716%20and%20ver_nr=4.0"
 
 circumferential_resection_margin:
   common:
@@ -1087,7 +1087,7 @@ circumferential_resection_margin:
       source: caDSR
       cde_id: 6161030
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161030&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6161030%20and%20ver_nr=1.0"
 
 classification_of_tumor:
   common:
@@ -1100,7 +1100,7 @@ classification_of_tumor:
       source: caDSR
       cde_id: 3288124
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3288124&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3288124%20and%20ver_nr=1.0"
 
 clinical_trial_indicator:
   common:
@@ -1153,7 +1153,7 @@ cog_liver_stage:
       source: caDSR
       cde_id: 6013618
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6013618&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6013618%20and%20ver_nr=1.0"
 
 cog_neuroblastoma_risk_group:
   common:
@@ -1167,7 +1167,7 @@ cog_neuroblastoma_risk_group:
       source: caDSR
       cde_id: 4616452
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4616452&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=4616452%20and%20ver_nr=1.0"
 
 cog_renal_stage:
   common:
@@ -1180,7 +1180,7 @@ cog_renal_stage:
       source: caDSR
       cde_id: 6013641
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6013641&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6013641%20and%20ver_nr=1.0"
 
 cog_rhabdomyosarcoma_risk_group:
   common:
@@ -1193,7 +1193,7 @@ cog_rhabdomyosarcoma_risk_group:
       source: caDSR
       cde_id: 6133604
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6133604&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6133604%20and%20ver_nr=1.0"
 
 columnar_mucosa_present:
   common:
@@ -1217,7 +1217,7 @@ comorbidities:
       source: caDSR
       cde_id: 2970715
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2970715&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2970715%20and%20ver_nr=1.0"
 
 comorbidity:
   common:
@@ -1230,7 +1230,7 @@ comorbidity:
       source: caDSR
       cde_id: 2970715
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2970715&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2970715%20and%20ver_nr=1.0"
 
 comorbidity_method_of_diagnosis:
   common:
@@ -1243,7 +1243,7 @@ comorbidity_method_of_diagnosis:
       source: caDSR
       cde_id: 6142386
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142386&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142386%20and%20ver_nr=1.0"
 
 composition:
   common:
@@ -1255,7 +1255,7 @@ composition:
       source: caDSR
       cde_id: 5432591
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432591&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432591%20and%20ver_nr=1.0"
 
 concentration:
   common:
@@ -1269,7 +1269,7 @@ concentration:
       source: caDSR
       cde_id: 5432594
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432594&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432594%20and%20ver_nr=1.0"
 
 consent_type:
   common:
@@ -1330,7 +1330,7 @@ copy_number:
       source: caDSR
       cde_id: 6142519
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142519&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142519%20and%20ver_nr=1.0"
 
 country_of_residence_at_enrollment:
   common:
@@ -1343,7 +1343,7 @@ country_of_residence_at_enrollment:
       source: caDSR
       cde_id: 7050286
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=7050286&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=7050286%20and%20ver_nr=1.0"
 
 course_number:
   common:
@@ -1367,7 +1367,7 @@ creation_datetime:
       source: caDSR
       cde_id: 5432592
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432592&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432592%20and%20ver_nr=1.0"
 
 current_weight:
   common:
@@ -1380,7 +1380,7 @@ current_weight:
       source: caDSR
       cde_id: 5432606
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432606&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432606%20and%20ver_nr=1.0"
 
 cytoband:
   common:
@@ -1395,7 +1395,7 @@ cytoband:
       source: caDSR
       cde_id: 6142405
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142405&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142405%20and%20ver_nr=1.0"
 
 data_category:
   common:
@@ -1463,7 +1463,7 @@ days_to_adverse_event:
       source: caDSR
       cde_id: 6154728
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154728&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6154728%20and%20ver_nr=1.0"
 
 days_to_best_overall_response:
   common:
@@ -1476,7 +1476,7 @@ days_to_best_overall_response:
       source: caDSR
       cde_id: 6154732
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154732&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6154732%20and%20ver_nr=1.0"
 
 days_to_birth:
   common:
@@ -1489,7 +1489,7 @@ days_to_birth:
       source: caDSR
       cde_id: 6154723
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154723&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6154723%20and%20ver_nr=1.0"
 
 days_to_collection:
   common:
@@ -1503,7 +1503,7 @@ days_to_collection:
       source: caDSR
       cde_id: 3008340
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3008340&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3008340%20and%20ver_nr=1.0"
 
 days_to_comorbidity:
   common:
@@ -1516,7 +1516,7 @@ days_to_comorbidity:
       source: caDSR
       cde_id: 6154729
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154729&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6154729%20and%20ver_nr=1.0"
 
 days_to_consent:
   common:
@@ -1542,7 +1542,7 @@ days_to_death:
       source: caDSR
       cde_id: 6154724
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154724&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6154724%20and%20ver_nr=1.0"
 
 days_to_diagnosis:
   common:
@@ -1555,7 +1555,7 @@ days_to_diagnosis:
       source: caDSR
       cde_id: 6154733
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154733&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6154733%20and%20ver_nr=1.0"
 
 days_to_first_event:
   common:
@@ -1579,7 +1579,7 @@ days_to_follow_up:
       source: caDSR
       cde_id: 6154727
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154727&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6154727%20and%20ver_nr=1.0"
 
 days_to_imaging:
   common:
@@ -1606,7 +1606,7 @@ days_to_last_follow_up:
       source: caDSR
       cde_id: 3008273
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3008273&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3008273%20and%20ver_nr=1.0"
 
 days_to_last_known_disease_status:
   common:
@@ -1620,7 +1620,7 @@ days_to_last_known_disease_status:
       source: caDSR
       cde_id: 3008273
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3008273&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3008273%20and%20ver_nr=1.0"
 
 days_to_lost_to_followup:
   common:
@@ -1633,7 +1633,7 @@ days_to_lost_to_followup:
       source: caDSR
       cde_id: 6154721
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154721&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6154721%20and%20ver_nr=1.0"
 
 days_to_progression:
   common:
@@ -1646,7 +1646,7 @@ days_to_progression:
       source: caDSR
       cde_id: 6154730
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154730&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6154730%20and%20ver_nr=1.0"
 
 days_to_progression_free:
   common:
@@ -1672,7 +1672,7 @@ days_to_recurrence:
       source: caDSR
       cde_id: 6154731
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154731&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6154731%20and%20ver_nr=1.0"
 
 days_to_risk_factor:
   common:
@@ -1734,7 +1734,7 @@ days_to_treatment_end:
       source: caDSR
       cde_id: 6154725
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154725&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6154725%20and%20ver_nr=1.0"
 
 days_to_treatment_start:
   common:
@@ -1746,7 +1746,7 @@ days_to_treatment_start:
       source: caDSR
       cde_id: 6154726
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154726&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6154726%20and%20ver_nr=1.0"
 
 diabetes_treatment_type:
   common:
@@ -1758,7 +1758,7 @@ diabetes_treatment_type:
       source: caDSR
       cde_id: 3587247
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3587247&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3587247%20and%20ver_nr=1.0"
 
 diagnosis_is_primary_disease:
   common:
@@ -1798,7 +1798,7 @@ disease_response:
       source: caDSR
       cde_id: 5750671
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5750671&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5750671%20and%20ver_nr=1.0"
 
 disease_type:
   common:
@@ -1812,7 +1812,7 @@ disease_type:
       source: caDSR
       cde_id: 6161017
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161017&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6161017%20and%20ver_nr=1.0"
 
 distance_normal_to_tumor:
   common:
@@ -1825,7 +1825,7 @@ distance_normal_to_tumor:
       source: caDSR
       cde_id: 3088708
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3088708&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3088708%20and%20ver_nr=1.0"
 
 distributor_reference:
   common:
@@ -1850,7 +1850,7 @@ dlco_ref_predictive_percent:
       source: caDSR
       cde_id: 2180255
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2180255&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2180255%20and%20ver_nr=1.0"
 
 double_expressor_lymphoma:
   common:
@@ -1920,7 +1920,7 @@ ecog_performance_status:
       source: caDSR
       cde_id: 88
       cde_version: 5.1
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=88&version=5.1"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=88%20and%20ver_nr=5.1"
 
 eln_risk_classification:
   common:
@@ -1972,7 +1972,7 @@ enneking_msts_grade:
       source: caDSR
       cde_id: 6003955
       cde_version: 2.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6003955&version=2.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6003955%20and%20ver_nr=2.0"
 
 enneking_msts_metastasis:
   common:
@@ -1986,7 +1986,7 @@ enneking_msts_metastasis:
       source: caDSR
       cde_id: 6003958
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6003958&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6003958%20and%20ver_nr=1.0"
 
 enneking_msts_stage:
   common:
@@ -1999,7 +1999,7 @@ enneking_msts_stage:
       source: caDSR
       cde_id: 6060045
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6060045&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6060045%20and%20ver_nr=1.0"
 
 enneking_msts_tumor_site:
   common:
@@ -2013,7 +2013,7 @@ enneking_msts_tumor_site:
       source: caDSR
       cde_id: 6003957
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6003957&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6003957%20and%20ver_nr=1.0"
 
 environmental_tobacco_smoke_exposure:
   common:
@@ -2040,7 +2040,7 @@ esophageal_columnar_dysplasia_degree:
       source: caDSR
       cde_id: 3440917
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440917&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3440917%20and%20ver_nr=1.0"
 
 esophageal_columnar_metaplasia_present:
   common:
@@ -2053,7 +2053,7 @@ esophageal_columnar_metaplasia_present:
       source: caDSR
       cde_id: 3440218
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440218&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3440218%20and%20ver_nr=1.0"
 
 ethnicity:
   common:
@@ -2068,7 +2068,7 @@ ethnicity:
       source: caDSR
       cde_id: 2192217
       cde_version: 2.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2192217&version=2.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2192217%20and%20ver_nr=2.0"
 
 evidence_of_progression_type:
   common:
@@ -2108,7 +2108,7 @@ exon:
       source: caDSR
       cde_id: 6142411
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142411&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142411%20and%20ver_nr=1.0"
 
 experiment_name:
   common:
@@ -2275,7 +2275,7 @@ fev1_fvc_post_bronch_percent:
       source: caDSR
       cde_id: 3302956
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3302956&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3302956%20and%20ver_nr=1.0"
 
 fev1_fvc_pre_bronch_percent:
   common:
@@ -2288,7 +2288,7 @@ fev1_fvc_pre_bronch_percent:
       source: caDSR
       cde_id: 3302955
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3302955&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3302955%20and%20ver_nr=1.0"
 
 fev1_ref_post_bronch_percent:
   common:
@@ -2301,7 +2301,7 @@ fev1_ref_post_bronch_percent:
       source: caDSR
       cde_id: 3302948
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3302948&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3302948%20and%20ver_nr=1.0"
 
 fev1_ref_pre_bronch_percent:
   common:
@@ -2314,7 +2314,7 @@ fev1_ref_pre_bronch_percent:
       source: caDSR
       cde_id: 3302947
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3302947&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3302947%20and%20ver_nr=1.0"
 
 figo_stage:
   common:
@@ -2329,7 +2329,7 @@ figo_stage:
       source: caDSR
       cde_id: 3225684
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3225684&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3225684%20and%20ver_nr=1.0"
 
 figo_staging_edition_year:
   common:
@@ -2399,7 +2399,7 @@ first_symptom_prior_to_diagnosis:
       source: caDSR
       cde_id: 6133605
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6133605&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6133605%20and%20ver_nr=1.0"
 
 flow_cell_barcode:
   common:
@@ -2478,7 +2478,7 @@ freezing_method:
       source: caDSR
       cde_id: 5432607
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432607&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432607%20and%20ver_nr=1.0"
 
 gastric_esophageal_junction_involvement:
   common:
@@ -2491,7 +2491,7 @@ gastric_esophageal_junction_involvement:
       source: caDSR
       cde_id: 6059632
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6059632&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6059632%20and%20ver_nr=1.0"
 
 gender:
   common:
@@ -2506,7 +2506,7 @@ gender:
       source: caDSR
       cde_id: 2200604
       cde_version: 3.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2200604&version=3.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2200604%20and%20ver_nr=3.0"
 
 gene_symbol:
   common:
@@ -2519,7 +2519,7 @@ gene_symbol:
       source: caDSR
       cde_id: 6142392
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142392&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142392%20and%20ver_nr=1.0"
 
 gleason_grade_group:
   common:
@@ -2534,7 +2534,7 @@ gleason_grade_group:
       source: caDSR
       cde_id: 5918370
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5918370&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5918370%20and%20ver_nr=1.0"
 
 gleason_grade_tertiary:
   common:
@@ -2591,7 +2591,7 @@ goblet_cells_columnar_mucosa_present:
       source: caDSR
       cde_id: 3440219
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440219&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3440219%20and%20ver_nr=1.0"
 
 greatest_tumor_dimension:
   common:
@@ -2619,7 +2619,7 @@ gross_tumor_weight:
       source: caDSR
       cde_id: 6133606
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6133606&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6133606%20and%20ver_nr=1.0"
 
 growth_rate:
   common:
@@ -2655,20 +2655,20 @@ height:
       source: caDSR
       cde_id: 649
       cde_version: 4.1
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=649&version=4.1"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=649%20and%20ver_nr=4.1"
 
 hepatitis_sustained_virological_response:
   common:
     description: >-
-      The yes/no/unknown indicator used to describe whether the patient received treatment
-      for a risk factor the patient had at the time of or prior to their diagnosis.
+      An indication as to whether sustained virological response was obtained in responses
+      to viral hepatitis treatment.
     termDef:
       term: >-
         Viral Hepatitis Sustained Virologic Response Post Treatment Indicator
       source: caDSR
       cde_id: 6423783
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6423783&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6423783%20and%20ver_nr=1.0"
 
 histone_family:
   common:
@@ -2681,7 +2681,7 @@ histone_family:
       source: caDSR
       cde_id: 6142511
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142511&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142511%20and%20ver_nr=1.0"
 
 histone_variant:
   common:
@@ -2694,7 +2694,7 @@ histone_variant:
       source: caDSR
       cde_id: 6142515
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142515&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142515%20and%20ver_nr=1.0"
 
 history_of_tumor:
   common:
@@ -2731,7 +2731,7 @@ hiv_viral_load:
       source: caDSR
       cde_id: 2649682
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2649682&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2649682%20and%20ver_nr=1.0"
 
 hormonal_contraceptive_type:
   common:
@@ -2778,7 +2778,7 @@ hpv_positive_type:
       source: caDSR
       cde_id: 2922649
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2922649&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2922649%20and%20ver_nr=1.0"
 
 hpv_strain:
   common:
@@ -2827,7 +2827,7 @@ icd_10_code:
       source: caDSR
       cde_id: 3226287
       cde_version: 2.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3226287&version=2.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3226287%20and%20ver_nr=2.0"
 
 igcccg_stage:
   common:
@@ -2958,7 +2958,7 @@ index_date:
       source: caDSR
       cde_id: 6154722
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6154722&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6154722%20and%20ver_nr=1.0"
 
 initial_disease_status:
   common:
@@ -2984,7 +2984,7 @@ initial_weight:
       source: caDSR
       cde_id: 5432605
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432605&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432605%20and%20ver_nr=1.0"
 
 inpc_grade:
   common:
@@ -2998,7 +2998,7 @@ inpc_grade:
       source: caDSR
       cde_id: 6133602
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6133602&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6133602%20and%20ver_nr=1.0"
 
 inpc_histologic_group:
   common:
@@ -3014,7 +3014,7 @@ inpc_histologic_group:
       source: caDSR
       cde_id: 4616372
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4616372&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=4616372%20and%20ver_nr=1.0"
 
 inrg_stage:
   common:
@@ -3027,7 +3027,7 @@ inrg_stage:
       source: caDSR
       cde_id: 5777238
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5777238&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5777238%20and%20ver_nr=1.0"
 
 inss_stage:
   common:
@@ -3040,7 +3040,7 @@ inss_stage:
       source: caDSR
       cde_id: 6133603
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6133603&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6133603%20and%20ver_nr=1.0"
 
 instrument_model:
   common:
@@ -3052,7 +3052,7 @@ instrument_model:
       source: caDSR
       cde_id: 5432604
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432604&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432604%20and%20ver_nr=1.0"
 
 intermediate_dimension:
   common:
@@ -3076,7 +3076,7 @@ international_prognostic_index:
       source: caDSR
       cde_id: 2500234
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2500234&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2500234%20and%20ver_nr=1.0"
 
 intron:
   common:
@@ -3090,7 +3090,7 @@ intron:
       source: caDSR
       cde_id: 6514355
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6514355&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6514355%20and%20ver_nr=1.0"
 
 irs_group:
   common:
@@ -3103,7 +3103,7 @@ irs_group:
       source: caDSR
       cde_id: 6141658
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6141658&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6141658%20and%20ver_nr=1.0"
 
 irs_stage:
   common:
@@ -3116,7 +3116,7 @@ irs_stage:
       source: caDSR
       cde_id: 5162089
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5162089&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5162089%20and%20ver_nr=1.0"
 
 is_ffpe:
   common:
@@ -3129,7 +3129,7 @@ is_ffpe:
       source: caDSR
       cde_id: 4170557
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4170557&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=4170557%20and%20ver_nr=1.0"
 
 is_paired_end:
   common:
@@ -3153,7 +3153,7 @@ ishak_fibrosis_score:
       source: caDSR
       cde_id: 3182621
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3182621&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3182621%20and%20ver_nr=1.0"
 
 iss_stage:
   common:
@@ -3165,7 +3165,7 @@ iss_stage:
       source: caDSR
       cde_id: 2465385
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2465385&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2465385%20and%20ver_nr=1.0"
 
 karnofsky_performance_status:
   common:
@@ -3178,7 +3178,7 @@ karnofsky_performance_status:
       source: caDSR
       cde_id: 2003853
       cde_version: 4.2
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2003853&version=4.2"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2003853%20and%20ver_nr=4.2"
 
 laboratory_test:
   common:
@@ -3216,7 +3216,7 @@ largest_extrapelvic_peritoneal_focus:
       source: caDSR
       cde_id: 6690680
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6690680&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6690680%20and%20ver_nr=1.0"
 
 last_known_disease_status:
   common:
@@ -3229,7 +3229,7 @@ last_known_disease_status:
       source: caDSR
       cde_id: 5424231
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2759550&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5424231%20and%20ver_nr=1.0"
 
 laterality:
   common:
@@ -3241,7 +3241,7 @@ laterality:
       source: caDSR
       cde_id: 827
       cde_version: 3.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=827&version=3.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=827%20and%20ver_nr=3.0"
 
 lesions_treated_number:
   common:
@@ -3352,7 +3352,7 @@ loci_abnormal_count:
       source: caDSR
       cde_id: 6074182
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6074182&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6074182%20and%20ver_nr=1.0"
 
 loci_count:
   common:
@@ -3364,7 +3364,7 @@ loci_count:
       source: caDSR
       cde_id: 6074183
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6074183&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6074183%20and%20ver_nr=1.0"
 
 locus:
   common:
@@ -3391,7 +3391,7 @@ longest_dimension:
       source: caDSR
       cde_id: 5432602
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432602&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432602%20and%20ver_nr=1.0"
 
 lost_to_followup:
   common:
@@ -3404,7 +3404,7 @@ lost_to_followup:
       source: caDSR
       cde_id: 6161018
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161018&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6161018%20and%20ver_nr=1.0"
 
 lymph_node_dissection_method:
   common:
@@ -3464,7 +3464,7 @@ lymph_nodes_positive:
       source: caDSR
       cde_id: 89
       cde_version: 3.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=89&version=3.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=89%20and%20ver_nr=3.0"
 
 lymph_nodes_removed:
   common:
@@ -3488,7 +3488,7 @@ lymph_nodes_tested:
       source: caDSR
       cde_id: 3
       cde_version: 3.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3&version=3.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3%20and%20ver_nr=3.0"
 
 lymphatic_invasion_present:
   common:
@@ -3501,7 +3501,7 @@ lymphatic_invasion_present:
       source: caDSR
       cde_id: 64171
       cde_version: 3.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64171&version=3.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=64171%20and%20ver_nr=3.0"
 
 margin_distance:
   common:
@@ -3568,7 +3568,7 @@ masaoka_stage:
       source: caDSR
       cde_id: 3952848
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3952848&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3952848%20and%20ver_nr=1.0"
 
 max_tumor_bulk_site:
   common:
@@ -3617,7 +3617,7 @@ medulloblastoma_molecular_classification:
       source: caDSR
       cde_id: 6002209
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6002209&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6002209%20and%20ver_nr=1.0"
 
 menopause_status:
   common:
@@ -3629,7 +3629,7 @@ menopause_status:
       source: caDSR
       cde_id: 2434914
       cde_version: 1.1
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2434914&version=1.1"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2434914%20and%20ver_nr=1.1"
 
 metaplasia_present:
   common:
@@ -3652,7 +3652,7 @@ metastasis_at_diagnosis:
       source: caDSR
       cde_id: 6133614
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6133614&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6133614%20and%20ver_nr=1.0"
 
 metastasis_at_diagnosis_site:
   common:
@@ -3665,7 +3665,7 @@ metastasis_at_diagnosis_site:
       source: caDSR
       cde_id: 3029815
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3029815&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3029815%20and%20ver_nr=1.0"
 
 method_of_diagnosis:
   common:
@@ -3678,7 +3678,7 @@ method_of_diagnosis:
       source: caDSR
       cde_id: 6161031
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161031&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6161031%20and%20ver_nr=1.0"
 
 method_of_sample_procurement:
   common:
@@ -3703,7 +3703,7 @@ micropapillary_features:
       source: caDSR
       cde_id: 6068784
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6068784&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6068784%20and%20ver_nr=1.0"
 
 mismatch_repair_mutation:
   common:
@@ -3716,7 +3716,7 @@ mismatch_repair_mutation:
       source: caDSR
       cde_id: 6142534
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142534&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142534%20and%20ver_nr=1.0"
 
 mitosis_karyorrhexis_index:
   common:
@@ -3730,7 +3730,7 @@ mitosis_karyorrhexis_index:
       source: caDSR
       cde_id: 4616412
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4616412&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=4616412%20and%20ver_nr=1.0"
 
 mitotic_count:
   common:
@@ -3768,7 +3768,7 @@ molecular_analysis_method:
       source: caDSR
       cde_id: 6142401
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142401&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142401%20and%20ver_nr=1.0"
 
 molecular_consequence:
   common:
@@ -3780,7 +3780,7 @@ molecular_consequence:
       source: caDSR
       cde_id: 6142403
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142403&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142403%20and%20ver_nr=1.0"
 
 morphologic_architectural_pattern:
   common:
@@ -3812,7 +3812,7 @@ morphology:
       source: caDSR
       cde_id: 3226275
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3226275&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3226275%20and%20ver_nr=1.0"
 
 multiplex_barcode:
   common:
@@ -3952,7 +3952,7 @@ non_nodal_tumor_deposits:
       source: caDSR
       cde_id: 3107051
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3107051&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3107051%20and%20ver_nr=1.0"
 
 normal_tumor_genotype_snp_match:
   common:
@@ -3965,7 +3965,7 @@ normal_tumor_genotype_snp_match:
       source: caDSR
       cde_id: 4588156
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4588156&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=4588156%20and%20ver_nr=1.0"
 
 number_expect_cells:
   common:
@@ -4014,7 +4014,7 @@ number_proliferating_cells:
       source: caDSR
       cde_id: 5432636
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432636&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432636%20and%20ver_nr=1.0"
 
 occupation_duration_years:
   common:
@@ -4026,7 +4026,7 @@ occupation_duration_years:
       source: caDSR
       cde_id: 2435424
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2435424&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2435424%20and%20ver_nr=1.0"
 
 occupation_type:
   common:
@@ -4052,7 +4052,7 @@ oct_embedded:
       source: caDSR
       cde_id: 5432538
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432538&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432538%20and%20ver_nr=1.0"
 
 ovarian_specimen_status:
   common:
@@ -4064,7 +4064,7 @@ ovarian_specimen_status:
       source: caDSR
       cde_id: 6690671
       cde_version:
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6690671&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6690671%20and%20ver_nr="
 
 ovarian_surface_involvement:
   common:
@@ -4077,7 +4077,7 @@ ovarian_surface_involvement:
       source: caDSR
       cde_id: 6690674
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6690674&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6690674%20and%20ver_nr=1.0"
 
 pack_years_smoked:
   common:
@@ -4090,7 +4090,7 @@ pack_years_smoked:
       source: caDSR
       cde_id: 2955385
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2955385&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2955385%20and%20ver_nr=1.0"
 
 pairs_on_diff_chr:
   common:
@@ -4114,7 +4114,7 @@ pancreatitis_onset_year:
       source: caDSR
       cde_id: 3457763
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3457763&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3457763%20and%20ver_nr=1.0"
 
 papillary_renal_cell_type:
   common:
@@ -4167,7 +4167,8 @@ pathogenicity:
 pediatric_kidney_staging:
   common:
     description: >-
-      A modified version of the Children's Oncology Group (COG) National Wilms Tumor Study Group (NWTS) staging system.
+      A modified version of the Children's Oncology Group (COG) National Wilms Tumor
+      Study Group (NWTS) staging system.
     termDef:
       term:
       source:
@@ -4186,7 +4187,7 @@ percent_eosinophil_infiltration:
       source: caDSR
       cde_id: 2897700
       cde_version: 2.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2897700&version=2.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2897700%20and%20ver_nr=2.0"
 
 percent_follicular_component:
   common:
@@ -4224,7 +4225,7 @@ percent_granulocyte_infiltration:
       source: caDSR
       cde_id: 2897705
       cde_version: 2.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2897705&version=2.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2897705%20and%20ver_nr=2.0"
 
 percent_inflam_infiltration:
   common:
@@ -4239,7 +4240,7 @@ percent_inflam_infiltration:
       source: caDSR
       cde_id: 2897695
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2897695&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2897695%20and%20ver_nr=1.0"
 
 percent_lymphocyte_infiltration:
   common:
@@ -4252,7 +4253,7 @@ percent_lymphocyte_infiltration:
       source: caDSR
       cde_id: 2897710
       cde_version: 2.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2897710&version=2.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2897710%20and%20ver_nr=2.0"
 
 percent_monocyte_infiltration:
   common:
@@ -4265,7 +4266,7 @@ percent_monocyte_infiltration:
       source: caDSR
       cde_id: 5455535
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5455535&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5455535%20and%20ver_nr=1.0"
 
 percent_necrosis:
   common:
@@ -4278,7 +4279,7 @@ percent_necrosis:
       source: caDSR
       cde_id: 2841237
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2841237&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2841237%20and%20ver_nr=1.0"
 
 percent_neutrophil_infiltration:
   common:
@@ -4291,7 +4292,7 @@ percent_neutrophil_infiltration:
       source: caDSR
       cde_id: 2841267
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2841267&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2841267%20and%20ver_nr=1.0"
 
 percent_normal_cells:
   common:
@@ -4304,7 +4305,7 @@ percent_normal_cells:
       source: caDSR
       cde_id: 2841233
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2841233&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2841233%20and%20ver_nr=1.0"
 
 percent_rhabdoid_features:
   common:
@@ -4317,7 +4318,7 @@ percent_rhabdoid_features:
       source: caDSR
       cde_id: 6790120
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6790120&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6790120%20and%20ver_nr=1.0"
 
 percent_sarcomatoid_features:
   common:
@@ -4330,7 +4331,7 @@ percent_sarcomatoid_features:
       source: caDSR
       cde_id: 2429786
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2429786&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2429786%20and%20ver_nr=1.0"
 
 percent_stromal_cells:
   common:
@@ -4344,7 +4345,7 @@ percent_stromal_cells:
       source: caDSR
       cde_id: 2841241
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2841241&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2841241%20and%20ver_nr=1.0"
 
 percent_tumor_cells:
   common:
@@ -4357,7 +4358,7 @@ percent_tumor_cells:
       source: caDSR
       cde_id: 5432686
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432686&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432686%20and%20ver_nr=1.0"
 
 percent_tumor_invasion:
   common:
@@ -4382,7 +4383,7 @@ percent_tumor_nuclei:
       source: caDSR
       cde_id: 2841225
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2841225&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2841225%20and%20ver_nr=1.0"
 
 perineural_invasion_present:
   common:
@@ -4395,7 +4396,7 @@ perineural_invasion_present:
       source: caDSR
       cde_id: 64181
       cde_version: 3.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64181&version=3.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=64181%20and%20ver_nr=3.0"
 
 peripancreatic_lymph_nodes_positive:
   common:
@@ -4408,7 +4409,7 @@ peripancreatic_lymph_nodes_positive:
       source: caDSR
       cde_id: 5983082
       cde_version: 2.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5983082&version=2.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5983082%20and%20ver_nr=2.0"
 
 peripancreatic_lymph_nodes_tested:
   common:
@@ -4421,7 +4422,7 @@ peripancreatic_lymph_nodes_tested:
       source: caDSR
       cde_id: 6050944
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6050944&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6050944%20and%20ver_nr=1.0"
 
 peritoneal_fluid_cytological_status:
   common:
@@ -4434,7 +4435,7 @@ peritoneal_fluid_cytological_status:
       source: caDSR
       cde_id: 6690681
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6690681&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6690681%20and%20ver_nr=1.0"
 
 peritoneal_washing_results:
   common:
@@ -4493,7 +4494,7 @@ ploidy:
       source: caDSR
       cde_id: 6142527
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142527&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142527%20and%20ver_nr=1.0"
 
 portion_number:
   common:
@@ -4506,7 +4507,7 @@ portion_number:
       source: caDSR
       cde_id: 5432711
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432711&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432711%20and%20ver_nr=1.0"
 
 portion_weight:
   common:
@@ -4518,7 +4519,7 @@ portion_weight:
       source: caDSR
       cde_id: 5432593
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432593&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432593%20and%20ver_nr=1.0"
 
 pregnancy_count:
   common:
@@ -4567,7 +4568,7 @@ premature_at_birth:
       source: caDSR
       cde_id: 6010765
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6010765&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6010765%20and%20ver_nr=1.0"
 
 prescribed_dose:
   common:
@@ -4590,7 +4591,7 @@ preservation_method:
       source: caDSR
       cde_id: 5432521
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432521&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432521%20and%20ver_nr=1.0"
 
 primary_diagnosis:
   common:
@@ -4604,7 +4605,7 @@ primary_diagnosis:
       source: caDSR
       cde_id: 6161032
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161032&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6161032%20and%20ver_nr=1.0"
 
 primary_disease:
   common:
@@ -4634,7 +4635,7 @@ primary_gleason_grade:
       source: caDSR
       cde_id: 5936800
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5936800&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5936800%20and%20ver_nr=1.0"
 
 primary_site:
   common:
@@ -4650,7 +4651,7 @@ primary_site:
       source: caDSR
       cde_id: 6161019
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161019&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6161019%20and%20ver_nr=1.0"
 
 prior_malignancy:
   common:
@@ -4663,7 +4664,7 @@ prior_malignancy:
       source: caDSR
       cde_id: 3382736
       cde_version: 2.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3382736&version=2.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3382736%20and%20ver_nr=2.0"
 
 prior_treatment:
   common:
@@ -4677,7 +4678,7 @@ prior_treatment:
       source: caDSR
       cde_id: 4231463
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4231463&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=4231463%20and%20ver_nr=1.0"
 
 proc_internal:
   common:
@@ -4712,7 +4713,7 @@ progression_or_recurrence:
       source: caDSR
       cde_id: 3121376
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3121376&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3121376%20and%20ver_nr=1.0"
 
 progression_or_recurrence_anatomic_site:
   common:
@@ -4725,7 +4726,7 @@ progression_or_recurrence_anatomic_site:
       source: caDSR
       cde_id: 6161026
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161026&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6161026%20and%20ver_nr=1.0"
 
 progression_or_recurrence_type:
   common:
@@ -4738,7 +4739,7 @@ progression_or_recurrence_type:
       source: caDSR
       cde_id: 6142385
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142385&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142385%20and%20ver_nr=1.0"
 
 project_id:
   common:
@@ -4906,7 +4907,7 @@ race:
       source: caDSR
       cde_id: 2192199
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2192199&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2192199%20and%20ver_nr=1.0"
 
 radon_exposure:
   common:
@@ -4919,7 +4920,7 @@ radon_exposure:
       source: caDSR
       cde_id: 2816352
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2816352&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2816352%20and%20ver_nr=1.0"
 
 read_group_name:
   common:
@@ -5004,7 +5005,7 @@ reflux_treatment_type:
       source: caDSR
       cde_id: 3440206
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3440206&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3440206%20and%20ver_nr=1.0"
 
 regimen_or_line_of_therapy:
   common:
@@ -5016,7 +5017,7 @@ regimen_or_line_of_therapy:
       source: caDSR
       cde_id: 6161024
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161024&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6161024%20and%20ver_nr=1.0"
 
 relationship_age_at_diagnosis:
   common:
@@ -5028,7 +5029,7 @@ relationship_age_at_diagnosis:
       source: caDSR
       cde_id: 5300571
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5300571&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5300571%20and%20ver_nr=1.0"
 
 relationship_gender:
   common:
@@ -5041,7 +5042,7 @@ relationship_gender:
       source: caDSR
       cde_id: 6161021
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161021&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6161021%20and%20ver_nr=1.0"
 
 relationship_primary_diagnosis:
   common:
@@ -5054,7 +5055,7 @@ relationship_primary_diagnosis:
       source: caDSR
       cde_id: 6161022
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161022&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6161022%20and%20ver_nr=1.0"
 
 relationship_type:
   common:
@@ -5067,7 +5068,7 @@ relationship_type:
       source: caDSR
       cde_id: 2690165
       cde_version: 2.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2690165&version=2.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2690165%20and%20ver_nr=2.0"
 
 relative_with_cancer_history:
   common:
@@ -5080,7 +5081,7 @@ relative_with_cancer_history:
       source: caDSR
       cde_id: 6161023
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161023&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6161023%20and%20ver_nr=1.0"
 
 relatives_with_cancer_history_count:
   common:
@@ -5120,14 +5121,13 @@ residual_tumor:
 residual_tumor_measurement:
   common:
     description: >-
-        A measurement of the tumor cells that remain in the body following cancer
-        treatment.
+      A measurement of the tumor cells that remain in the body following cancer treatment.
     termDef:
-        term:
-        source:
-        cde_id:
-        cde_version:
-        term_url:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
 
 respirable_crystalline_silica_exposure:
   common:
@@ -5155,7 +5155,7 @@ rhabdoid_percent:
       source: caDSR
       cde_id: 6790120
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6790120&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6790120%20and%20ver_nr=1.0"
 
 rhabdoid_present:
   common:
@@ -5191,7 +5191,7 @@ rin:
       source: caDSR
       cde_id: 5278775
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5278775&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5278775%20and%20ver_nr=1.0"
 
 risk_factor:
   common:
@@ -5204,8 +5204,7 @@ risk_factor:
       source: caDSR
       cde_id: 6142389
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142389&version=1.0"
-
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142389%20and%20ver_nr=1.0"
 
 risk_factors:
   common:
@@ -5218,7 +5217,7 @@ risk_factors:
       source: caDSR
       cde_id: 6142389
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142389&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142389%20and%20ver_nr=1.0"
 
 risk_factor_method_of_diagnosis:
   common:
@@ -5244,7 +5243,7 @@ risk_factor_treatment:
       source: caDSR
       cde_id: 6514356
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6514356&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6514356%20and%20ver_nr=1.0"
 
 rna_integrity_number:
   common:
@@ -5295,7 +5294,7 @@ sample_type:
       source: caDSR
       cde_id: 3111302
       cde_version: 2.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3111302&version=2.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3111302%20and%20ver_nr=2.0"
 
 sample_type_id:
   common:
@@ -5319,7 +5318,7 @@ sarcomatoid_percent:
       source: caDSR
       cde_id: 2429786
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2429786&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2429786%20and%20ver_nr=1.0"
 
 sarcomatoid_present:
   common:
@@ -5383,7 +5382,7 @@ second_gene_symbol:
       source: caDSR
       cde_id: 6142393
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142393&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142393%20and%20ver_nr=1.0"
 
 secondary_gleason_grade:
   common:
@@ -5400,7 +5399,7 @@ secondary_gleason_grade:
       source: caDSR
       cde_id: 5936802
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5936802&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5936802%20and%20ver_nr=1.0"
 
 secondhand_smoke_as_child:
   common:
@@ -5413,7 +5412,7 @@ secondhand_smoke_as_child:
       source: caDSR
       cde_id: 6841888
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6841888&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6841888%20and%20ver_nr=1.0"
 
 section_location:
   common:
@@ -5497,7 +5496,7 @@ shortest_dimension:
       source: caDSR
       cde_id: 5432603
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432603&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432603%20and%20ver_nr=1.0"
 
 single_cell_library:
   common:
@@ -5522,7 +5521,7 @@ site_of_resection_or_biopsy:
       source: caDSR
       cde_id: 6161034
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161034&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6161034%20and%20ver_nr=1.0"
 
 sites_of_involvement:
   common:
@@ -5615,7 +5614,7 @@ specialized_molecular_test:
       source: caDSR
       cde_id: 6142526
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142526&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142526%20and%20ver_nr=1.0"
 
 specimen_type:
   common:
@@ -5643,7 +5642,7 @@ spectrophotometer_method:
       source: caDSR
       cde_id: 3008378
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3008378&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3008378%20and%20ver_nr=1.0"
 
 spike_ins_concentration:
   common:
@@ -5700,7 +5699,7 @@ supratentorial_localization:
       source: caDSR
       cde_id: 3133891
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3133891&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3133891%20and%20ver_nr=1.0"
 
 synchronous_malignancy:
   common:
@@ -5714,7 +5713,7 @@ synchronous_malignancy:
       source: caDSR
       cde_id: 6142390
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142390&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142390%20and%20ver_nr=1.0"
 
 target_capture_kit:
   common:
@@ -5793,7 +5792,7 @@ test_analyte_type:
       source: caDSR
       cde_id: 6142394
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142394&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142394%20and%20ver_nr=1.0"
 
 test_result:
   common:
@@ -5806,7 +5805,7 @@ test_result:
       source: caDSR
       cde_id: 6142397
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142397&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142397%20and%20ver_nr=1.0"
 
 test_units:
   common:
@@ -5819,7 +5818,7 @@ test_units:
       source: caDSR
       cde_id: 6142525
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142525&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142525%20and%20ver_nr=1.0"
 
 test_value:
   common:
@@ -5832,7 +5831,7 @@ test_value:
       source: caDSR
       cde_id: 6142524
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142524&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142524%20and%20ver_nr=1.0"
 
 test_value_range:
   common:
@@ -5855,7 +5854,7 @@ therapeutic_agents:
       source: caDSR
       cde_id: 2975232
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2975232&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2975232%20and%20ver_nr=1.0"
 
 therapeutic_level_achieved:
   common:
@@ -5891,7 +5890,7 @@ time_between_clamping_and_freezing:
       source: caDSR
       cde_id: 5432611
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432611&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432611%20and%20ver_nr=1.0"
 
 time_between_excision_and_freezing:
   common:
@@ -5904,7 +5903,7 @@ time_between_excision_and_freezing:
       source: caDSR
       cde_id: 5432612
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432612&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432612%20and%20ver_nr=1.0"
 
 time_between_waking_and_first_smoke:
   common:
@@ -5918,7 +5917,7 @@ time_between_waking_and_first_smoke:
       source: caDSR
       cde_id: 3279220
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3279220&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3279220%20and%20ver_nr=1.0"
 
 timepoint_category:
   common:
@@ -5970,7 +5969,7 @@ tissue_or_organ_of_origin:
       source: caDSR
       cde_id: 6161035
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6161035&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6161035%20and%20ver_nr=1.0"
 
 tissue_type:
   common:
@@ -5983,7 +5982,7 @@ tissue_type:
       source: caDSR
       cde_id: 5432687
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432687&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432687%20and%20ver_nr=1.0"
 
 to_trim_adapter_sequence:
   common:
@@ -6006,7 +6005,7 @@ tobacco_smoking_onset_year:
       source: caDSR
       cde_id: 2228604
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2228604&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2228604%20and%20ver_nr=1.0"
 
 tobacco_smoking_quit_year:
   common:
@@ -6018,7 +6017,7 @@ tobacco_smoking_quit_year:
       source: caDSR
       cde_id: 2228610
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2228610&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2228610%20and%20ver_nr=1.0"
 
 tobacco_smoking_status:
   common:
@@ -6031,7 +6030,7 @@ tobacco_smoking_status:
       source: caDSR
       cde_id: 2181650
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2181650&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2181650%20and%20ver_nr=1.0"
 
 tobacco_use_per_day:
   common:
@@ -6079,7 +6078,7 @@ transcript:
       source: caDSR
       cde_id: 6142465
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142465&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142465%20and%20ver_nr=1.0"
 
 transglottic_extension:
   common:
@@ -6106,7 +6105,7 @@ treatment_anatomic_site:
       source: caDSR
       cde_id: 5615611
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5615611&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5615611%20and%20ver_nr=1.0"
 
 treatment_arm:
   common:
@@ -6119,7 +6118,7 @@ treatment_arm:
       source: caDSR
       cde_id: 7068995
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=7068995&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=7068995%20and%20ver_nr=1.0"
 
 treatment_dose:
   common:
@@ -6131,7 +6130,7 @@ treatment_dose:
       source: caDSR
       cde_id: 2182728
       cde_version: 3.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2182728&version=3.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2182728%20and%20ver_nr=3.0"
 
 treatment_dose_max:
   common:
@@ -6178,7 +6177,7 @@ treatment_effect:
       source: caDSR
       cde_id: 6514354
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6514354&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6514354%20and%20ver_nr=1.0"
 
 treatment_effect_indicator:
   common:
@@ -6216,7 +6215,7 @@ treatment_intent_type:
       source: caDSR
       cde_id: 2793511
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2793511&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2793511%20and%20ver_nr=1.0"
 
 treatment_or_therapy:
   common:
@@ -6230,7 +6229,7 @@ treatment_or_therapy:
       source: caDSR
       cde_id: 4231463
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4231463&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=4231463%20and%20ver_nr=1.0"
 
 treatment_outcome:
   common:
@@ -6243,7 +6242,7 @@ treatment_outcome:
       source: caDSR
       cde_id: 5102383
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5102383&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5102383%20and%20ver_nr=1.0"
 
 treatment_outcome_duration:
   common:
@@ -6266,7 +6265,7 @@ treatment_type:
       source: caDSR
       cde_id: 5102381
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5102381&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5102381%20and%20ver_nr=1.0"
 
 tumor_code:
   common:
@@ -6302,7 +6301,7 @@ tumor_confined_to_organ_of_origin:
       source: caDSR
       cde_id: 4925494
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4925494&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=4925494%20and%20ver_nr=1.0"
 
 tumor_depth:
   common:
@@ -6328,7 +6327,7 @@ tumor_descriptor:
       source: caDSR
       cde_id: 3288124
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3288124&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3288124%20and%20ver_nr=1.0"
 
 tumor_focality:
   common:
@@ -6341,7 +6340,7 @@ tumor_focality:
       source: caDSR
       cde_id: 3174022
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3174022&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3174022%20and%20ver_nr=1.0"
 
 tumor_grade:
   common:
@@ -6354,7 +6353,7 @@ tumor_grade:
       source: caDSR
       cde_id: 2785839
       cde_version: 2.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2785839&version=2.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2785839%20and%20ver_nr=2.0"
 
 tumor_grade_category:
   common:
@@ -6379,7 +6378,7 @@ tumor_largest_dimension_diameter:
       source: caDSR
       cde_id: 64215
       cde_version: 3.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64215&version=3.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=64215%20and%20ver_nr=3.0"
 
 tumor_level_prostate:
   common:
@@ -6429,7 +6428,7 @@ tumor_regression_grade:
       source: caDSR
       cde_id: 6471217
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6471217&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6471217%20and%20ver_nr=1.0"
 
 tumor_thickness:
   common:
@@ -6715,7 +6714,7 @@ variant_type:
       source: caDSR
       cde_id: 6142402
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142402&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142402%20and%20ver_nr=1.0"
 
 vascular_invasion_present:
   common:
@@ -6728,7 +6727,7 @@ vascular_invasion_present:
       source: caDSR
       cde_id: 64358
       cde_version: 3.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=64358&version=3.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=64358%20and%20ver_nr=3.0"
 
 vascular_invasion_type:
   common:
@@ -6740,20 +6739,20 @@ vascular_invasion_type:
       source: caDSR
       cde_id: 3168001
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3168001&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3168001%20and%20ver_nr=1.0"
 
 viral_hepatitis_serologies:
   common:
     description: >-
       Text term that describes the kind of serological laboratory test used to determine
-      the patient's hepatitus status.
+      the patient's hepatitis status.
     termDef:
       term: >-
         Viral Hepatitis Laboratory Procedure Serology Test Method Type
       source: caDSR
       cde_id: 4395982
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4395982&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=4395982%20and%20ver_nr=1.0"
 
 vital_status:
   common:
@@ -6765,7 +6764,7 @@ vital_status:
       source: caDSR
       cde_id: 5
       cde_version: 5.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5&version=5.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5%20and%20ver_nr=5.0"
 
 weeks_gestation_at_birth:
   common:
@@ -6779,7 +6778,7 @@ weeks_gestation_at_birth:
       source: caDSR
       cde_id: 2737369
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2737369&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2737369%20and%20ver_nr=1.0"
 
 weight:
   common:
@@ -6791,7 +6790,7 @@ weight:
       source: caDSR
       cde_id: 651
       cde_version: 4.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=651&version=4.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=651%20and%20ver_nr=4.0"
 
 weiss_assessment_findings:
   common:
@@ -6821,12 +6820,12 @@ weiss_assessment_score:
       source: caDSR
       cde_id: 3648744
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3648744&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3648744%20and%20ver_nr=1.0"
 
 well_number:
   common:
     description: >-
-      Numeric value that represents the the well location within a plate for the analyte
+      Numeric value that represents the well location within a plate for the analyte
       or aliquot from the sample.
     termDef:
       term: >-
@@ -6834,7 +6833,7 @@ well_number:
       source: caDSR
       cde_id: 5432613
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=5432613&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432613%20and%20ver_nr=1.0"
 
 who_cns_grade:
   common:
@@ -6872,7 +6871,7 @@ wilms_tumor_histologic_subtype:
       source: caDSR
       cde_id: 4358735
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=4358735&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=4358735%20and%20ver_nr=1.0"
 
 workflow_type:
   common:
@@ -6895,7 +6894,7 @@ year_of_birth:
       source: caDSR
       cde_id: 2896954
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2896954&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2896954%20and%20ver_nr=1.0"
 
 year_of_death:
   common:
@@ -6907,7 +6906,7 @@ year_of_death:
       source: caDSR
       cde_id: 2897030
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2897030&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2897030%20and%20ver_nr=1.0"
 
 year_of_diagnosis:
   common:
@@ -6920,7 +6919,7 @@ year_of_diagnosis:
       source: caDSR
       cde_id: 2896960
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2896960&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2896960%20and%20ver_nr=1.0"
 
 year_of_follow_up:
   common:
@@ -6944,7 +6943,7 @@ years_smoked:
       source: caDSR
       cde_id: 3137957
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=3137957&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3137957%20and%20ver_nr=1.0"
 
 zone_of_origin_prostate:
   common:
@@ -6967,4 +6966,406 @@ zygosity:
       source: caDSR
       cde_id: 6142510
       cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142510&version=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142510%20and%20ver_nr=1.0"
+
+ensat_pathologic_stage:
+  common:
+    description: >-
+      An adrenal cancer stage defined according to the European Network for the Study
+      of Adrenal Tumors (ENSAT) criteria.
+    termDef:
+      term: >-
+        ENSAT Stage
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C141099"
+      term_id: C141099
+      term_version: 23.03d
+
+ensat_pathologic_t:
+  common:
+    description: >-
+      A pathologic finding about one or more characteristics of adrenal cancer, following
+      the rules of the ENSAT staging v7 classification system as they pertain to staging
+      of the primary tumor.
+    termDef:
+      term: >-
+        Pathologic Primary Tumor ENSAT Staging Finding v7
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104018"
+      term_id: C104018
+      term_version: 23.03d
+
+ensat_pathologic_n:
+  common:
+    description: >-
+      A pathologic finding about one or more characteristics of adrenal cancer, following
+      the rules of the ENSAT staging v7 classification system as they pertain to staging
+      of the lymph nodes.
+    termDef:
+      term: >-
+        Pathologic Lymph Nodes ENSAT Staging Finding v7
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104023"
+      term_id: C104023
+      term_version: 23.03d
+
+ensat_clinical_m:
+  common:
+    description: >-
+      A clinical finding about one or more characteristics of adrenal cancer, following
+      the rules of the ENSAT staging v7 classification system as they pertain to distant
+      metastases.
+    termDef:
+      term: >-
+        Clinical Distant Metastasis ENSAT Staging Finding v7
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104027"
+      term_id: C104027
+      term_version: 23.03d
+
+discontiguous_lesion_count:
+  common:
+    description: >-
+      The number of the discontiguous lesions in a new tumor event.
+    termDef:
+      term: >-
+        Number of Discontiguous Lesions (New Tumor Event)
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C158639"
+      term_id: C158639
+      term_version: 23.03d
+
+tumor_burden:
+  common:
+    description: >-
+      Refers to the number of cancer cells, the size of a tumor, or the amount of
+      cancer in the body.
+    termDef:
+      term: >-
+        Tumor Burden
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C28384"
+      term_id: C28384
+      term_version: 23.03d
+
+measurement_unit:
+  common:
+    description: >-
+      The type of unit of measure being used to express a length or distance.
+    termDef:
+      term: >-
+        Unit of Length
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C42578"
+      term_id: C42578
+      term_version: 23.03d
+
+clark_level:
+  common:
+    description: >-
+      A morphologic finding indicating the cutaneous melanoma depth of invasion into
+      the dermis and subcutaneous tissue.
+    termDef:
+      term: >-
+        Clark Level Finding
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94811"
+      term_id: C94811
+      term_version: 23.03d
+
+ulceration_indicator:
+  common:
+    description: >-
+      The formation or development of an ulcer.
+    termDef:
+      term: >-
+        Ulceration
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25757"
+      term_id: C25757
+      term_version: 23.03d
+
+tumor_infiltrating_lymphocytes:
+  common:
+    description: >-
+      Lymphocytes that show specificity for autologous tumor cells and can infiltrate
+      a tumor.
+    termDef:
+      term: >-
+        Tumor Infiltrating Lymphocyte
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C12546"
+      term_id: C12546
+      term_version: 23.03d
+
+tumor_infiltrating_macrophages:
+  common:
+    description: >-
+      Non-neoplastic macrophages that infiltrate a tumor.
+    termDef:
+      term: >-
+        Tumor Infiltrating Macrophages
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111027"
+      term_id: C111027
+      term_version: 23.03d
+
+education_level:
+  common:
+    description: >-
+      The years of schooling completed in graded public, private, or parochial schools,
+      and in colleges, universities, or professional schools.
+    termDef:
+      term: >-
+        Education Level
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17953"
+      term_id: C17953
+      term_version: 23.03d
+
+marital_status:
+  common:
+    description: >-
+      A demographic parameter indicating a person's current conjugal status.
+    termDef:
+      term: >-
+        Marital Status
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25188"
+      term_id: C25188
+      term_version: 23.03d
+
+relative_deceased:
+  common:
+    description: >-
+      The historical fact that a legal or consanguineous family member has died.
+    termDef:
+      term: >-
+        Deceased Family Member
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C81180"
+      term_id: C81180
+      term_version: 23.03d
+
+staining_intensity_scale:
+  common:
+    description: >-
+      The scale used by the immunohistochemistry staining rating.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+first_symptom_longest_duration:
+  common:
+    description: >-
+      The length of time the first presenting symptom occurred that related to the
+      diagnosis of the patient with cancer.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+measurement_type:
+  common:
+    description: >-
+      The method used to measure tumor size.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+contiguous_organ_invaded:
+  common:
+    description: >-
+      The organ or contiguous site the disease migrated to from the primary site.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+tumor_depth_measurement:
+  common:
+    description: >-
+      The numerical measurement of tumor depth.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+tumor_length_measurement:
+  common:
+    description: >-
+      The numerical measurement of tumor length.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+tumor_width_measurement:
+  common:
+    description: >-
+      The numerical measurement of tumor width.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+tumor_depth_descriptor:
+  common:
+    description: >-
+      Text term for the degree to which a tumor has penetrated into organ or tissue.
+    termDef:
+      term: >-
+        Tumor Depth Extent Name
+      source: caDSR
+      cde_id: 3808610
+      cde_version: 2.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3808610%20and%20ver_nr=2.0"
+
+melanoma_known_primary:
+  common:
+    description: >-
+      A melanoma which has metastasized from a known primary anatomic site.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+spindle_cell_percent:
+  common:
+    description: >-
+      The percent of uveal melanoma arising from the choroid, ciliary body, or the
+      iris and characterized by the presence of spindle-shaped melanocytes.
+    termDef:
+      term: >-
+        Cell Morphology Percent Uveal Spindle Cell Melanoma Integer
+      source: caDSR
+      cde_id: 7292254
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=7292254%20and%20ver_nr=1.0"
+
+epithelioid_cell_percent:
+  common:
+    description: >-
+      The percent of uveal melanoma characterized by the presence of malignant large
+      epithelioid melanocytes.
+    termDef:
+      term: >-
+        Cell Morphology Percent Uveal Epithelioid Cell Melanoma Integer
+      source: caDSR
+      cde_id: 7292253
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=7292253%20and%20ver_nr=1.0"
+
+tumor_shape:
+  common:
+    description: >-
+      Text term to represent the description of the shape of a tumor determined by
+      clinical or pathological techniques.
+    termDef:
+      term: >-
+        Tumor Shape Type
+      source: caDSR
+      cde_id: 3870445
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3870445%20and%20ver_nr=1.0"
+
+tumor_measurement_method:
+  common:
+    description: >-
+      The method used to measure tumor size.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+relative_smoker:
+  common:
+    description: >-
+      Indication that a legal or consanguineous family member was a smoker.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+exposure_duration_hrs_per_day:
+  common:
+    description: >-
+      The duration (in hours per day) that a person was exposed.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+country_of_birth:
+  common:
+    description: >-
+      The name of the country in which the patient is born.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+wgs_coverage:
+  common:
+    description: >-
+      Range of coverage values for WGS aligned reads. Each range is non-inclusive to the lower bound.
+    termDef:
+      term:
+      source:
+      cde_id:
+      cde_version:
+      term_url:

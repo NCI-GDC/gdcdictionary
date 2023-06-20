@@ -193,8 +193,8 @@ properties:
       - Gum
       - Hand
       - Hard Palate
-      - Head - Face Or Neck, Nos
       - Head & Neck
+      - Head - Face Or Neck, Nos
       - Heart
       - Hepatic
       - Hepatic Duct
@@ -267,14 +267,12 @@ properties:
       - Neck
       - Nerve
       - Nerve(s) Cranial
-      - Not Allowed To Collect
       - Occipital Cortex
       - Ocular Orbits
       - Omentum
       - Oral Cavity
       - Oral Cavity - Mucosa Only
       - Oropharynx
-      - Other
       - Ovary
       - Palate
       - Pancreas
@@ -368,8 +366,10 @@ properties:
       - Vulva
       - White Blood Cells
       - Wrist
+      - Other
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     enumDef:
       Bone Marrow:
         $ref:
@@ -389,21 +389,21 @@ properties:
       Neck:
         $ref:
           - "_terms_enum.yaml#/neck/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
       Soft Tissue:
         $ref:
           - "_terms_enum.yaml#/soft_tissue/common"
+      Other:
+        $ref:
+          - "_terms_enum.yaml#/other/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   biospecimen_laterality:
     $ref:
@@ -452,7 +452,6 @@ properties:
       - Lymphocytes
       - Mixed Adherent Suspension
       - Mononuclear Cells from Bone Marrow Normal
-      - Not Allowed To Collect
       - Peripheral Blood Components NOS
       - Peripheral Whole Blood
       - Plasma
@@ -465,6 +464,7 @@ properties:
       - Whole Bone Marrow
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
@@ -474,9 +474,6 @@ properties:
       Lymphocytes:
         $ref:
           - "_terms_enum.yaml#/lymphocytes/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Plasma:
         $ref:
           - "_terms_enum.yaml#/plasma/common"
@@ -492,6 +489,9 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   current_weight:
     $ref:
@@ -517,17 +517,14 @@ properties:
     $ref:
       - "_terms.yaml#/diagnosis_pathologically_confirmed/common"
     enum:
-      - Not Allowed To Collect
       - "Yes"
       - "No"
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       "Yes":
         $ref:
           - "_terms_enum.yaml#/yes/common"
@@ -540,6 +537,9 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   distance_normal_to_tumor:
     $ref:
@@ -644,7 +644,6 @@ properties:
       - Metastasectomy
       - Modified Radical Mastectomy
       - Needle Biopsy
-      - Not Allowed To Collect
       - Omentectomy
       - Oophorectomy
       - Open Craniotomy
@@ -652,7 +651,6 @@ properties:
       - Open Radical Nephrectomy
       - Open Radical Prostatectomy
       - Orchiectomy
-      - Other
       - Other Surgical Resection
       - Palatectomy
       - Pan-Procto Colectomy
@@ -701,8 +699,10 @@ properties:
       - Vertical Hemilaryngectomy
       - Wedge Resection
       - Whipple Procedure
+      - Other
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     enumDef:
       Autopsy:
         $ref:
@@ -710,9 +710,6 @@ properties:
       Indeterminant:
         $ref:
           - "_terms_enum.yaml#/indeterminant/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Other:
         $ref:
           - "_terms_enum.yaml#/other/common"
@@ -722,6 +719,9 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   oct_embedded:
     $ref:
@@ -744,26 +744,27 @@ properties:
       - "_terms.yaml#/preservation_method/common"
     enum:
       - Cryopreserved
+      - EDTA
       - FFPE
       - Fresh
       - Frozen
-      - Not Allowed To Collect
       - OCT
       - Snap Frozen
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   sample_ordinal:
     $ref:
@@ -806,7 +807,6 @@ properties:
       - Neoplasms of Uncertain and Unknown Behavior
       - Next Generation Cancer Model
       - Next Generation Cancer Model Expanded Under Non-conforming Conditions
-      - Not Allowed To Collect
       - Pleural Effusion
       - Post neo-adjuvant therapy
       - Primary Blood Derived Cancer - Bone Marrow
@@ -828,13 +828,11 @@ properties:
       - Xenograft Tissue
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     enumDef:
       DNA:
         $ref:
           - "_terms_enum.yaml#/dna/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Saliva:
         $ref:
           - "_terms_enum.yaml#/saliva/common"
@@ -847,6 +845,9 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   sample_type_id:
     $ref:
@@ -908,6 +909,7 @@ properties:
       - Cell
       - Control Analyte
       - Derived Cell Line
+      - Derived Cell Lines and Sorted Cells
       - EBV Immortalized
       - Fibroblasts from Bone Marrow
       - Granulocytes
@@ -954,28 +956,28 @@ properties:
     $ref:
       - "_terms.yaml#/tissue_type/common"
     enum:
-      - Tumor
-      - Normal
       - Abnormal
+      - Normal
       - Peritumoral
-      - Not Allowed To Collect
+      - Tumor
       - Unknown
       - Not Reported
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
       Normal:
         $ref:
           - "_terms_enum.yaml#/normal/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   tumor_code:
     $ref:
@@ -1051,30 +1053,29 @@ properties:
       - Metastatic
       - New Primary
       - NOS
-      - Not Allowed To Collect
-      - Not Applicable
       - Premalignant
       - Primary
       - Recurrence
       - Xenograft
       - Unknown
       - Not Reported
-
+      - Not Applicable
+      - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
     enumDef:
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
-      Not Applicable:
-        $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Applicable:
+        $ref:
+          - "_terms_enum.yaml#/not_applicable/common"
+      Not Allowed To Collect:
+        $ref:
+          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   cases:
     $ref: "_definitions.yaml#/to_one"

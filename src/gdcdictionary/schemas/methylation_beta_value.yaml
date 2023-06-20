@@ -67,17 +67,17 @@ properties:
     enum:
       - DNA Methylation
 
-  data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
-    enum:
-      - Methylation Beta Value
-
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
       - TXT
+
+  data_type:
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - Methylation Beta Value
 
   experimental_strategy:
     $ref:
@@ -92,6 +92,7 @@ properties:
       - Illumina Human Methylation 27
       - Illumina Human Methylation 450
       - Illumina Methylation Epic
+      - Illumina Methylation Epic v2
 
   methylation_array_harmonization_workflows:
     $ref: "_definitions.yaml#/to_one"

@@ -44177,20 +44177,6 @@ exocervix:
       term_id: C12310
       term_version: 20.05a
 
-exon:
-  common:
-    description: >-
-      Exon number targeted or included in a molecular analysis. If a specific genetic
-      variant is being reported, this property can be used to capture the exon where
-      that variant is located.
-    termDef:
-      term: >-
-        Molecular Laboratory Procedure Exon Identification Number
-      source: caDSR
-      cde_id: 6142411
-      cde_version: 1.0
-      term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=6142411&version=1.0"
-
 ext1:
   common:
     description: >-
@@ -53880,6 +53866,20 @@ i:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70658"
       term_id: C70658
       term_version: 20.05a
+  diagnosis:
+    clark_level:
+      description: >-
+        A morphologic finding indicating that the cutaneous melanoma is confined to
+        the epidermis and does not invade the dermis.
+      termDef:
+        term: >-
+          Clark Level I
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94812"
+        term_id: C94812
+        term_version: 23.03d
 
 iadademstat:
   common:
@@ -54307,6 +54307,21 @@ ii:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70659"
       term_id: C70659
       term_version: 20.05a
+  diagnosis:
+    clark_level:
+      description: >-
+        A morphologic finding indicating that the cutaneous melanoma has invaded part
+        of the papillary dermis but the malignant cellular infiltrate has not reached
+        the papillary-reticular dermis interface.
+      termDef:
+        term: >-
+          Clark Level II
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94813"
+        term_id: C94813
+        term_version: 23.03d
 
 iii:
   common:
@@ -54323,6 +54338,21 @@ iii:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70660"
       term_id: C70660
       term_version: 20.05a
+  diagnosis:
+    clark_level:
+      description: >-
+        A morphologic finding indicating that the cutaneous melanoma has invaded the
+        entire thickness of the papillary dermis but the malignant cellular infiltrate
+        does not extend into the reticular dermis.
+      termDef:
+        term: >-
+          Clark Level III
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94814"
+        term_id: C94814
+        term_version: 23.03d
 
 ikbkb:
   common:
@@ -61889,6 +61919,20 @@ m0:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C48699"
       term_id: C48699
       term_version: 20.05a
+  diagnosis:
+    ensat_clinical_m:
+      description: >-
+        Adrenal cancer with no involvement of distant organs or tissues. (7th Ed,
+        2009)
+      termDef:
+        term: >-
+          cM0 ENSAT Staging Finding v7
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104028"
+        term_id: C104028
+        term_version: 23.03d
 
 m1:
   common:
@@ -61904,6 +61948,20 @@ m1:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C48700"
       term_id: C48700
       term_version: 20.05a
+  diagnosis:
+    ensat_clinical_m:
+      description: >-
+        Adrenal cancer with involvement of distant organs or tissues such as liver,
+        bone or brain. (7th Ed, 2009)
+      termDef:
+        term: >-
+          cM1 ENSAT Staging Finding v7
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104029"
+        term_id: C104029
+        term_version: 23.03d
 
 m1a:
   common:
@@ -70255,6 +70313,19 @@ n0:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C48705"
       term_id: C48705
       term_version: 20.05a
+  diagnosis:
+    ensat_pathologic_n:
+      description: >-
+        Adrenal cancer with no involvement of regional lymph nodes. (7th Ed, 2009)
+      termDef:
+        term: >-
+          pN0 ENSAT Staging Finding v7
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104024"
+        term_id: C104024
+        term_version: 23.03d
 
 n0_i:
   common:
@@ -70307,6 +70378,19 @@ n1:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C48706"
       term_id: C48706
       term_version: 20.05a
+  diagnosis:
+    ensat_pathologic_n:
+      description: >-
+        Adrenal cancer with involvement of regional lymph nodes. (7th Ed, 2009)
+      termDef:
+        term: >-
+          pN1 ENSAT Staging Finding v7
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104025"
+        term_id: C104025
+        term_version: 23.03d
 
 n1a:
   common:
@@ -80276,7 +80360,7 @@ poorly_cohesive_carcinoma:
       term_id: C4127
       term_version: 20.05a
 
-poorly_differentiated:
+poorly_differentiated_neuroblastoma:
   common:
     description: >-
       A neuroblastoma in which the differentiating neuroblasts constitute less than
@@ -90218,6 +90302,20 @@ stage_i:
         term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C112007"
         term_id: C112007
         term_version: 20.05a
+    ensat_pathologic_stage:
+      description: >-
+        Stage I includes: T1, N0, M0. Tumor 5 cm or less in greatest dimension. The
+        tumor has not invaded the surrounding tissues or organs and has not spread
+        to lymph nodes or distant organs or tissues.
+      termDef:
+        term: >-
+          ENSAT Stage I Adrenal Cortical Carcinoma
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104031"
+        term_id: C104031
+        term_version: 23.03d
   common:
     description: >-
       Invasive cancer confined to the original anatomic site of growth without lymph
@@ -90648,6 +90746,20 @@ stage_ii:
         term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C140303"
         term_id: C140303
         term_version: 20.05a
+    ensat_pathologic_stage:
+      description: >-
+        Stage II includes: T2, N0, M0. Tumor greater than 5 cm. The tumor has not
+        invaded surrounding tissues or organs and has not spread to lymph nodes or
+        distant organs or tissues.
+      termDef:
+        term: >-
+          ENSAT Stage II Adrenal Cortical Carcinoma
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104032"
+        term_id: C104032
+        term_version: 23.03d
   common:
     description: >-
       Invasive cancer more extensive than stage I, usually involving local lymph nodes
@@ -91025,6 +91137,20 @@ stage_iii:
         term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C140305"
         term_id: C140305
         term_version: 20.05a
+    ensat_pathologic_stage:
+      description: >-
+        Stage III includes: T3/T4, N0/N1, M0. Tumor of any size that has spread to
+        the fat outside the adrenal gland or into nearby organs or tissues and/or
+        has spread to the regional lymph nodes.
+      termDef:
+        term: >-
+          ENSAT Stage III Adrenal Cortical Carcinoma
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104033"
+        term_id: C104033
+        term_version: 23.03d
 
 stage_iiia:
   diagnosis:
@@ -91385,6 +91511,20 @@ stage_iv:
         term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C140307"
         term_id: C140307
         term_version: 20.05a
+    ensat_pathologic_stage:
+      description: >-
+        Stage IV includes: Any T, Any N, M1. Tumor of any size that involves distant
+        organs such as liver, bone or brain. The tumor may or may not involve nearby
+        organs, tissues or lymph nodes.
+      termDef:
+        term: >-
+          ENSAT Stage IV Adrenal Cortical Carcinoma
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104034"
+        term_id: C104034
+        term_version: 23.03d
   common:
     description: >-
       Cancer that has spread to distant anatomic sites beyond its original site of
@@ -93266,6 +93406,20 @@ t1:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C48720"
       term_id: C48720
       term_version: 20.05a
+  diagnosis:
+    ensat_pathologic_t:
+      description: >-
+        Adrenal cancer with tumor size equal or less than 5.0 cm. There is no invasion
+        of tissues outside the adrenal gland. (7th Ed, 2009)
+      termDef:
+        term: >-
+          pT1 ENSAT Staging Finding v7
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104019"
+        term_id: C104019
+        term_version: 23.03d
 
 t1a:
   common:
@@ -93452,6 +93606,20 @@ t2:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C48724"
       term_id: C48724
       term_version: 20.05a
+  diagnosis:
+    ensat_pathologic_t:
+      description: >-
+        Adrenal cancer with tumor size more than 5.0 cm. There is no invasion of tissues
+        outside the adrenal gland. (7th Ed, 2009)
+      termDef:
+        term: >-
+          pT2 ENSAT Staging Finding v7
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104020"
+        term_id: C104020
+        term_version: 23.03d
 
 t2a:
   common:
@@ -93616,6 +93784,20 @@ t3:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C48728"
       term_id: C48728
       term_version: 20.05a
+  diagnosis:
+    ensat_pathologic_t:
+      description: >-
+        Adrenal cancer with tumor of any size. There is invasion of the fat that surrounds
+        the adrenal gland. (7th Ed, 2009)
+      termDef:
+        term: >-
+          pT3 ENSAT Staging Finding v7
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104021"
+        term_id: C104021
+        term_version: 23.03d
 
 t3a:
   common:
@@ -93717,6 +93899,20 @@ t4:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C48732"
       term_id: C48732
       term_version: 20.05a
+  diagnosis:
+    ensat_pathologic_t:
+      description: >-
+        Adrenal cancer with tumor of any size. There is invasion of nearby organs
+        such as the kidney, pancreas, spleen or liver. (7th Ed, 2009)
+      termDef:
+        term: >-
+          pT4 ENSAT Staging Finding v7
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104022"
+        term_id: C104022
+        term_version: 23.03d
 
 t4a:
   common:
@@ -101402,3 +101598,753 @@ zrsr2:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C101120"
       term_id: C101120
       term_version: 20.10d
+
+induction:
+  treatment:
+    treatment_intent_type:
+      description: >-
+        The first choice of treatment for a particular type of cancer.
+      termDef:
+        term: >-
+          Induction Therapy
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C158876"
+        term_id: C158876
+        term_version: 23.03d
+
+well_differentiated:
+  common:
+    description: >-
+      Describes tumor cells that generally retain the appearance of normal cells and
+      tend to grow and spread at a slower rate than undifferentiated or poorly differentiated
+      tumor cells.
+    termDef:
+      term: >-
+        Well Differentiated
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C14171"
+      term_id: C14171
+      term_version: 23.03d
+
+poorly_differentiated:
+  common:
+    description: >-
+      Describes tumor cells that generally have lost most of the appearance of normal
+      cells. They tend to grow and spread.
+    termDef:
+      term: >-
+        Poorly Differentiated
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C14167"
+      term_id: C14167
+      term_version: 23.03d
+
+extravascular_matrix_loops:
+  common:
+    description: >-
+      A microscopic finding indicating the presence or absence of extravascular matrix
+      loops in uveal melanoma.
+    termDef:
+      term: >-
+        Extravascular Matrix Loops
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111025"
+      term_id: C111025
+      term_version: 23.03d
+
+other_complex_extravascular_matrix_patterns:
+  common:
+    description: >-
+      A microscopic finding indicating the presence of patterns formed by malignant
+      cells outside the blood vessel circulation in uveal melanoma. The patterns are
+      detectable using PAS stain without counterstaining with hematoxylin.
+    termDef:
+      term: >-
+        Presence of Extravascular Matrix Patterns
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111024"
+      term_id: C111024
+      term_version: 23.03d
+
+common_superficial_femoral_vein:
+  common:
+    description: >-
+      A vein that accompanies the common femoral artery and is formed by the confluence
+      of the femoral vein and the deep femoral vein.
+    termDef:
+      term: >-
+        Common Femoral Vein
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C154771"
+      term_id: C154771
+      term_version: 23.03d
+
+inferior_vena_cava:
+  common:
+    description: >-
+      A large vein that returns blood from the lower half of the body to the heart.
+    termDef:
+      term: >-
+        Inferior Vena Cava
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C12815"
+      term_id: C12815
+      term_version: 23.03d
+
+iliac_vein:
+  common:
+    description: >-
+      Any of the three veins including the common, external and internal iliac veins.
+    termDef:
+      term: >-
+        Iliac Vein
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C12734"
+      term_id: C12734
+      term_version: 23.03d
+
+renal_vein:
+  common:
+    description: >-
+      The veins which return blood from the kidneys to the vena cava.
+    termDef:
+      term: >-
+        Renal Vein
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C33462"
+      term_id: C33462
+      term_version: 23.03d
+
+great_blood_vessel:
+  common:
+    description: >-
+      Any of the major arteries or veins attached to the cardiac atria or ventricles.
+      This includes the aorta, superior and inferior vena cava and the pulmonary arteries
+      and veins.
+    termDef:
+      term: >-
+        Great Blood Vessel
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C102955"
+      term_id: C102955
+      term_version: 23.03d
+
+centimeters:
+  common:
+    description: >-
+      A basic unit of length in the former CGS version of metric system, equal to
+      one hundredth of a meter or approximately 0.393 700 787 inch.
+    termDef:
+      term: >-
+        Centimeter
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49668"
+      term_id: C49668
+      term_version: 23.03d
+
+millimeters:
+  common:
+    description: >-
+      A metric unit of length equal to one thousandth of a meter (10E-3 meter) or
+      approximately 0.03937 inch.
+    termDef:
+      term: >-
+        Millimeter
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C28251"
+      term_id: C28251
+      term_version: 23.03d
+
+iv:
+  diagnosis:
+    clark_level:
+      description: >-
+        A morphologic finding indicating that the cutaneous melanoma has invaded the
+        reticular dermis.
+      termDef:
+        term: >-
+          Clark Level IV
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94815"
+        term_id: C94815
+        term_version: 23.03d
+
+v:
+  diagnosis:
+    clark_level:
+      description: >-
+        A morphologic finding indicating that the cutaneous melanoma has invaded the
+        subcutaneous tissue.
+      termDef:
+        term: >-
+          Clark Level V
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94816"
+        term_id: C94816
+        term_version: 23.03d
+
+few:
+  common:
+    description: >-
+      An indefinite but relatively small number.
+    termDef:
+      term: >-
+        Few
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64942\n"
+      term_id: C64942
+      term_version: 23.03d
+
+many:
+  common:
+    description: >-
+      An indefinite large quantity that is considered to be greater than several.
+    termDef:
+      term: >-
+        Many
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78728"
+      term_id: C78728
+      term_version: 23.03d
+
+glis2:
+  common:
+    description: >-
+      This gene is involved in transcriptional regulation and signaling pathway modulation.
+    termDef:
+      term: >-
+        GLIS2 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C105900"
+      term_id: C105900
+      term_version: 23.03d
+
+ptp4a1:
+  common:
+    description: >-
+      This gene is involved in liver cell growth and the cellular response to mitogens.
+    termDef:
+      term: >-
+        PTP4A1 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C24704"
+      term_id: C24704
+      term_version: 23.03d
+
+pim3:
+  common:
+    description: >-
+      This gene is involved in serine/threonine kinase activity that inhibits apoptosis,
+      promotes cell survival and regulates protein translation.
+    termDef:
+      term: >-
+        PIM3 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C178143"
+      term_id: C178143
+      term_version: 23.03d
+
+brd1:
+  common:
+    description: >-
+      This gene is involved in the localization of histone acetyltransferase complexes.
+    termDef:
+      term: >-
+        BRD1 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C185736"
+      term_id: C185736
+      term_version: 23.03d
+
+dot1l:
+  common:
+    description: >-
+      This gene is involved in epigenetic control of gene expression.
+    termDef:
+      term: >-
+        DOT1L Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C73677"
+      term_id: C73677
+      term_version: 23.03d
+
+ino80d:
+  common:
+    description: >-
+      This gene plays a role in ATP-dependent chromatin remodeling.
+    termDef:
+      term: >-
+        INO80D Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C125258"
+      term_id: C125258
+      term_version: 23.03d
+
+acaca:
+  common:
+    description: >-
+      This gene plays a role in the synthesis of long-chain fatty acids.
+    termDef:
+      term: >-
+        ACACA Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C103885"
+      term_id: C103885
+      term_version: 23.03d
+
+btbd18:
+  common:
+    description: >-
+      This gene may be involved in protein ubiquitination.
+    termDef:
+      term: >-
+        BTBD18 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C126629"
+      term_id: C126629
+      term_version: 23.03d
+
+cep170b:
+  common:
+    description: >-
+      This gene may be involved in microtubule organization.
+    termDef:
+      term: >-
+        CEP170B Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C126611"
+      term_id: C126611
+      term_version: 23.03d
+
+fryl:
+  common:
+    description: >-
+      This gene is involved in the regulation of cell shape and polarity.
+    termDef:
+      term: >-
+        FRYL Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C126623"
+      term_id: C126623
+      term_version: 23.03d
+
+hmgb3:
+  common:
+    description: >-
+      This gene plays a role in development and the regulation of gene transcription.
+    termDef:
+      term: >-
+        HMGB3 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C20580"
+      term_id: C20580
+      term_version: 23.03d
+
+top2b:
+  common:
+    description: >-
+      This gene is involved in chromosome recombination, DNA replication and the regulation
+      of DNA topology during transcription.
+    termDef:
+      term: >-
+        TOP2B Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C26593"
+      term_id: C26593
+      term_version: 23.03d
+
+phf23:
+  common:
+    description: >-
+      This gene may be involved in chromatin remodeling.
+    termDef:
+      term: >-
+        PHF23 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C98035"
+      term_id: C98035
+      term_version: 23.03d
+
+cbfa2t2:
+  common:
+    description: >-
+      This gene may be involved in tumor suppression.
+    termDef:
+      term: >-
+        CBFA2T2 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104928"
+      term_id: C104928
+      term_version: 23.03d
+
+ubb:
+  common:
+    description: >-
+      This gene is involved in ubiquitin-dependent proteolysis.
+    termDef:
+      term: >-
+        UBB Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C38431"
+      term_id: C38431
+      term_version: 23.03d
+
+zeb2:
+  common:
+    description: >-
+      This gene is involved in regulation of transcription.
+    termDef:
+      term: >-
+        ZEB2 Gene
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C75441"
+      term_id: C75441
+      term_version: 23.03d
+
+pneumonia_nos:
+  common:
+    description: >-
+      An acute, acute and chronic, or chronic inflammation focally or diffusely affecting
+      the lung parenchyma, due to infections (viruses, fungi, mycoplasma, or bacteria),
+      treatment (e.g. radiation), or exposure (inhalation) to chemicals. Symptoms
+      include cough, shortness of breath, fevers, chills, chest pain, headache, sweating,
+      and weakness.
+    termDef:
+      term: >-
+        Pneumonia
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C3333"
+      term_id: C3333
+      term_version: 23.03d
+
+preoperative:
+  common:
+    description: >-
+      Relating to or occurring during the period immediately before a surgical operation.
+    termDef:
+      term: >-
+        Preoperative
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C54732"
+      term_id: C54732
+      term_version: 23.03d
+
+some_highschool_or_less:
+  common:
+    description: >-
+      Indicates a person has attended high school but did not complete high school
+      and did not receive a high school diploma.
+    termDef:
+      term: >-
+        Not High School Graduate
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C76123"
+      term_id: C76123
+      term_version: 23.03d
+
+some_college_or_vocational_school:
+  common:
+    description: >-
+      Indicates that a person has attended college but that they did not receive any
+      degree.
+    termDef:
+      term: >-
+        Some College Completion
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67137"
+      term_id: C67137
+      term_version: 23.03d
+
+college_degree:
+  common:
+    description: >-
+      Completion of education at an institution of higher education created to educate
+      and grant degrees; often a part of a university.
+    termDef:
+      term: >-
+        College Completion
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C159746"
+      term_id: C159746
+      term_version: 23.03d
+
+widowed:
+  common:
+    description: >-
+      Indicates a person who is no longer married because of the death of his/her
+      spouse and has not remarried.
+    termDef:
+      term: >-
+        Widowed
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51775"
+      term_id: C51775
+      term_version: 23.03d
+
+married:
+  common:
+    description: >-
+      Indicates a person currently joined in a legally binding matrimonial union.
+      Classify common law marriage as married. Includes married couples living together
+      and not living together.
+    termDef:
+      term: >-
+        Married
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51773"
+      term_id: C51773
+      term_version: 23.03d
+
+divorced:
+  common:
+    description: >-
+      Indicates a person whose marriage has been legally dissolved and has not remarried.
+    termDef:
+      term: >-
+        Divorced
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51776"
+      term_id: C51776
+      term_version: 23.03d
+
+never_married:
+  common:
+    description: >-
+      Indicates a person who has never been married or whose marriages have been annulled.
+    termDef:
+      term: >-
+        Never Married
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51774"
+      term_id: C51774
+      term_version: 23.03d
+
+domestic_partnership:
+  common:
+    description: >-
+      Indicates a person who is a member of an unmarried couple, including same sex
+      couples, living together in longstanding relationships, that are registered
+      or unregistered.
+    termDef:
+      term: >-
+        Domestic Partnership
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C53262"
+      term_id: C53262
+      term_version: 23.03d
+
+separated:
+  common:
+    description: >-
+      A person who is separated from their spouse, whether or not there is a legal
+      arrangement.
+    termDef:
+      term: >-
+        Separated
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C156541"
+      term_id: C156541
+      term_version: 23.03d
+
+dust:
+  common:
+    description: >-
+      A fine powdery material such as dry earth or pollen that can be blown about
+      in the air.
+    termDef:
+      term: >-
+        Dust
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C84281"
+      term_id: C84281
+      term_version: 23.03d
+
+radiologic:
+  common:
+    description: >-
+      Imaging results obtained through a radiology procedure.
+    termDef:
+      term: >-
+        Radiologic Finding
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C35869"
+      term_id: C35869
+      term_version: 23.03d
+
+small_bowel:
+  common:
+    description: >-
+      The section of the intestines between the pylorus and cecum. The small intestine
+      is approximately 20 feet long and consists of the duodenum, the jejunum, and
+      the ileum. Its main function is to absorb nutrients from food as the food is
+      transported to the large intestine.
+    termDef:
+      term: >-
+        Small Intestine
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C12386"
+      term_id: C12386
+      term_version: 23.03d
+
+superficial:
+  common:
+    description: >-
+      Of little substance or significance; involving only a surface.
+    termDef:
+      term: >-
+        Superficial
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25239"
+      term_id: C25239
+      term_version: 23.03d
+
+deep:
+  common:
+    description: >-
+      Extending relatively far inward.
+    termDef:
+      term: >-
+        Deep
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25240"
+      term_id: C25240
+      term_version: 23.03d
+
+mushroom:
+  common:
+    description: >-
+      A lesion having the shape of a mushroom.
+    termDef:
+      term: >-
+        Mushroom-Shaped Lesion
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111029"
+      term_id: C111029
+      term_version: 23.03d
+
+dome:
+  common:
+    description: >-
+      A lesion having the shape of a dome.
+    termDef:
+      term: >-
+        Dome-Shaped Lesion
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C54253"
+      term_id: C54253
+      term_version: 23.03d
+
+exon:
+  tag:
+    name:
+      description: >-
+        Exon number targeted or included in a molecular analysis. If a specific genetic
+        variant is being reported, this property can be used to capture the exon where
+        that variant is located.
+      termDef:
+        term: >-
+          Molecular Laboratory Procedure Exon Identification Number
+        source: caDSR
+        cde_id: 6142411
+        cde_version: 1.0
+        term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142411%20and%20ver_nr=1.0"

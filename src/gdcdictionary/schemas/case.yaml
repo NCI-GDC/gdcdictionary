@@ -39,6 +39,8 @@ links:
 
 required:
   - submitter_id
+  - disease_type
+  - primary_site
 
 uniqueKeys:
   - [id]
@@ -113,8 +115,8 @@ properties:
       - Myeloid Leukemias
       - Myomatous Neoplasms
       - Myxomatous Neoplasms
-      - Neoplasms, NOS
       - Neoplasms of Histiocytes and Accessory Lymphoid Cells
+      - Neoplasms, NOS
       - Nerve Sheath Tumors
       - Neuroepitheliomatous Neoplasms
       - Nevi and Melanomas
@@ -251,6 +253,7 @@ properties:
       - Vulva
       - Unknown
       - Not Reported
+      - Not Applicable
     enumDef:
       Unknown:
         $ref:
@@ -258,6 +261,9 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+      Not Applicable:
+        $ref:
+          - "_terms_enum.yaml#/not_applicable/common"
 
   projects:
     $ref: "_definitions.yaml#/to_one_project"

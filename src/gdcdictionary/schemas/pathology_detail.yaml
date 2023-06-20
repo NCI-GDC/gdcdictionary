@@ -48,10 +48,10 @@ properties:
       - "_terms.yaml#/additional_pathology_findings/common"
     enum:
       - Adenomyosis
+      - Asbestos bodies
       - Atrophic endometrium
       - Atypical hyperplasia/Endometrial intraepithelial neoplasia (EIN)
       - Autoimmune atrophic chronic gastritis
-      - Asbestos bodies
       - Benign endocervical polyp
       - Bilateral ovaries with endometriotic cyst and surface adhesions
       - Bone marrow concordant histology
@@ -71,6 +71,7 @@ properties:
       - Endosalpingiosis
       - Epithelial dysplasia
       - Epithelial hyperplasia
+      - Extravascular Matrix Loops
       - Gallbladder adenomyomatosis
       - Glomerular disease
       - Hyperkeratosis
@@ -84,12 +85,13 @@ properties:
       - Nonkeratinizing dysplasia; mild
       - Nonkeratinizing dysplasia; moderate
       - Nonkeratinizing dysplasia; severe (carcinoma in situ)
-      - Other
+      - Other Complex Extravascular Matrix Patterns
+      - PD-L1 CPS (223C LDT) - 20%
       - Percent follicular component <= 10%
       - Percent follicular component > 10%
-      - PD-L1 CPS (223C LDT) - 20%
       - Platinum-resistant
       - Pleural plaque
+      - Poorly Differentiated
       - Pulmonary interstitial fibrosis
       - Sialadenitis
       - Sinonasal papilloma
@@ -97,8 +99,23 @@ properties:
       - Squamous papilloma; solitary
       - Squamous papillomatosis
       - Tubular (papillary) adenoma(s)
-      - Tumor-associated lymphoid proliferation
       - Tumor has rough spikey edges
+      - Tumor-associated lymphoid proliferation
+      - Well Differentiated
+      - Other
+    enumDef:
+      Extravascular Matrix Loops:
+        $ref:
+          - "_terms_enum.yaml#/extravascular_matrix_loops/common"
+      Other Complex Extravascular Matrix Patterns:
+        $ref:
+          - "_terms_enum.yaml#/other_complex_extravascular_matrix_patterns/common"
+      Poorly Differentiated:
+        $ref:
+          - "_terms_enum.yaml#/poorly_differentiated/common"
+      Well Differentiated:
+        $ref:
+          - "_terms_enum.yaml#/well_differentiated/common"
 
   anaplasia_present:
     $ref:
@@ -293,6 +310,13 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  epithelioid_cell_percent:
+    $ref:
+      - "_terms.yaml#/epithelioid_cell_percent/common"
+    type: number
+    maximum: 100
+    minimum: 0
+
   extracapsular_extension:
     $ref:
       - "_terms.yaml#/extracapsular_extension/common"
@@ -362,8 +386,8 @@ properties:
       - "_terms.yaml#/lymph_node_dissection_site/common"
     enum:
       - Neck, Left
-      - Neck, Right
       - Neck, NOS
+      - Neck, Right
 
   lymph_node_involved_site:
     $ref:
@@ -375,9 +399,9 @@ properties:
       - Epitrochlear
       - Femoral
       - Hilar
+      - Iliac, NOS
       - Iliac-common
       - Iliac-external
-      - Iliac, NOS
       - Inguinal
       - Mediastinal
       - Mesenteric
@@ -409,15 +433,15 @@ properties:
       Hilar:
         $ref:
           - "_terms_enum.yaml#/hilar/common"
+      Iliac, NOS:
+        $ref:
+          - "_terms_enum.yaml#/iliac_nos/common"
       Iliac-common:
         $ref:
           - "_terms_enum.yaml#/iliaccommon/common"
       Iliac-external:
         $ref:
           - "_terms_enum.yaml#/iliacexternal/common"
-      Iliac, NOS:
-        $ref:
-          - "_terms_enum.yaml#/iliac_nos/common"
       Inguinal:
         $ref:
           - "_terms_enum.yaml#/inguinal/common"
@@ -497,8 +521,8 @@ properties:
     $ref:
       - "_terms.yaml#/lymph_nodes_removed/common"
     enum:
-      - "No"
       - "Yes"
+      - "No"
       - Not Reported
 
   lymph_nodes_tested:
@@ -533,27 +557,52 @@ properties:
     $ref:
       - "_terms.yaml#/margin_status/common"
     enum:
+      - Indeterminant
       - Involved
       - Uninvolved
-      - Indeterminant
       - Unknown
       - Not Reported
     enumDef:
+      Indeterminant:
+        $ref:
+          - "_terms_enum.yaml#/indeterminant/common"
       Involved:
         $ref:
           - "_terms_enum.yaml#/involved/common"
       Uninvolved:
         $ref:
           - "_terms_enum.yaml#/uninvolved/common"
-      Indeterminant:
-        $ref:
-          - "_terms_enum.yaml#/indeterminant/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  measurement_type:
+    $ref:
+      - "_terms.yaml#/measurement_type/common"
+    enum:
+      - Pathologic
+      - Radiologic
+    enumDef:
+      Radiologic:
+        $ref:
+          - "_terms_enum.yaml#/radiologic/common"
+
+  measurement_unit:
+    $ref:
+      - "_terms.yaml#/measurement_unit/common"
+    enum:
+      - Centimeters
+      - Millimeters
+    enumDef:
+      Centimeters:
+        $ref:
+          - "_terms_enum.yaml#/centimeters/common"
+      Millimeters:
+        $ref:
+          - "_terms_enum.yaml#/millimeters/common"
 
   metaplasia_present:
     $ref:
@@ -767,10 +816,10 @@ properties:
     $ref:
       - "_terms.yaml#/residual_tumor/common"
     enum:
-      - RX
       - R0
       - R1
       - R2
+      - RX
 
   residual_tumor_measurement:
     $ref:
@@ -825,6 +874,13 @@ properties:
     type: number
     minimum: 0
 
+  spindle_cell_percent:
+    $ref:
+      - "_terms.yaml#/spindle_cell_percent/common"
+    type: number
+    maximum: 100
+    minimum: 0
+
   transglottic_extension:
     $ref:
       - "_terms.yaml#/transglottic_extension/common"
@@ -844,9 +900,75 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  tumor_depth_descriptor:
+    $ref:
+      - "_terms.yaml#/tumor_depth_descriptor/common"
+    enum:
+      - Deep
+      - Superficial
+      - Not Reported
+    enumDef:
+      Deep:
+        $ref:
+          - "_terms_enum.yaml#/deep/common"
+      Superficial:
+        $ref:
+          - "_terms_enum.yaml#/superficial/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
+
+  tumor_depth_measurement:
+    $ref:
+      - "_terms.yaml#/tumor_depth_measurement/common"
+    type: number
+    minimum: 0
+
+  tumor_infiltrating_lymphocytes:
+    $ref:
+      - "_terms.yaml#/tumor_infiltrating_lymphocytes/common"
+    enum:
+      - Few
+      - Many
+      - Moderate
+    enumDef:
+      Few:
+        $ref:
+          - "_terms_enum.yaml#/few/common"
+      Many:
+        $ref:
+          - "_terms_enum.yaml#/many/common"
+      Moderate:
+        $ref:
+          - "_terms_enum.yaml#/moderate/common"
+
+  tumor_infiltrating_macrophages:
+    $ref:
+      - "_terms.yaml#/tumor_infiltrating_macrophages/common"
+    enum:
+      - Few
+      - Many
+      - Moderate
+    enumDef:
+      Few:
+        $ref:
+          - "_terms_enum.yaml#/few/common"
+      Many:
+        $ref:
+          - "_terms_enum.yaml#/many/common"
+      Moderate:
+        $ref:
+          - "_terms_enum.yaml#/moderate/common"
+
   tumor_largest_dimension_diameter:
     $ref:
       - "_terms.yaml#/tumor_largest_dimension_diameter/common"
+    type: number
+    minimum: 0
+
+  tumor_length_measurement:
+    $ref:
+      - "_terms.yaml#/tumor_length_measurement/common"
     type: number
     minimum: 0
 
@@ -857,12 +979,47 @@ properties:
     items:
       enum:
         - Apex
-        - Middle
         - Base
+        - Middle
+
+  tumor_measurement_method:
+    $ref:
+      - "_terms.yaml#/tumor_measurement_method/common"
+    enum:
+      - Echographic
+      - Pathologic
+
+  tumor_shape:
+    $ref:
+      - "_terms.yaml#/tumor_shape/common"
+    enum:
+      - Diffuse
+      - Dome
+      - Mushroom
+      - Unknown
+    enumDef:
+      Diffuse:
+        $ref:
+          - "_terms_enum.yaml#/diffuse/common"
+      Dome:
+        $ref:
+          - "_terms_enum.yaml#/dome/common"
+      Mushroom:
+        $ref:
+          - "_terms_enum.yaml#/mushroom/common"
+      Unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
 
   tumor_thickness:
     $ref:
       - "_terms.yaml#/tumor_thickness/common"
+    type: number
+    minimum: 0
+
+  tumor_width_measurement:
+    $ref:
+      - "_terms.yaml#/tumor_width_measurement/common"
     type: number
     minimum: 0
 
@@ -914,10 +1071,10 @@ properties:
     $ref:
       - "_terms.yaml#/zone_of_origin_prostate/common"
     enum:
-      - Peripheral zone
-      - Transition zone
       - Central zone
       - Overlapping/multiple zones
+      - Peripheral zone
+      - Transition zone
       - Unknown zone
 
   diagnoses:

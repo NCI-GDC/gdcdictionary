@@ -42,6 +42,253 @@ properties:
   $ref:
     - "_definitions.yaml#/ubiquitous_properties"
 
+  relationship_age_at_diagnosis:
+    $ref:
+      - "_terms.yaml#/relationship_age_at_diagnosis/common"
+    type: number
+    maximum: 89
+    minimum: 0
+
+  relationship_gender:
+    $ref:
+      - "_terms.yaml#/relationship_gender/common"
+    enum:
+      - female
+      - male
+      - unspecified
+      - unknown
+      - not reported
+    enumDef:
+      female:
+        $ref:
+          - "_terms_enum.yaml#/female/common"
+      male:
+        $ref:
+          - "_terms_enum.yaml#/male/common"
+      unspecified:
+        $ref:
+          - "_terms_enum.yaml#/unspecified/common"
+      unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
+      not reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
+
+  relationship_primary_diagnosis:
+    $ref:
+      - "_terms.yaml#/relationship_primary_diagnosis/common"
+    enum:
+      - Adrenal Gland Cancer
+      - Basal Cell Cancer
+      - Bile Duct Cancer
+      - Bladder Cancer
+      - Blood Cancer
+      - Bone Cancer
+      - Brain Cancer
+      - Breast Cancer
+      - Cancer
+      - Cervical Cancer
+      - Chondrosarcoma
+      - CNS Cancer
+      - Colorectal Cancer
+      - Esophageal Cancer
+      - Ewing Sarcoma
+      - Gallbladder Cancer
+      - Gastric Cancer
+      - Glioblastoma
+      - Gynecologic Cancer
+      - Head and Neck Cancer
+      - Hematologic Cancer
+      - Kaposi Sarcoma
+      - Kidney Cancer
+      - Laryngeal Cancer
+      - Leukemia
+      - Liver Cancer
+      - Lung Cancer
+      - Lymph Node Cancer
+      - Lymphoma
+      - Melanoma
+      - Mesothelioma
+      - Multiple Myeloma
+      - Neuroblastoma
+      - Osteosarcoma
+      - Ovarian Cancer
+      - Pancreas Cancer
+      - Pediatric Liver Cancer
+      - Prostate Cancer
+      - Rectal Cancer
+      - Rhabdomyosarcoma
+      - Sarcoma
+      - Skin Cancer
+      - Spleen Cancer
+      - Testicular Cancer
+      - Throat Cancer
+      - Thyroid Cancer
+      - Tongue Cancer
+      - Tonsillar Cancer
+      - Uterine Cancer
+      - Wilms Tumor
+      - Unknown
+      - Not Reported
+    enumDef:
+      Adrenal Gland Cancer:
+        $ref:
+          - "_terms_enum.yaml#/adrenal_gland_cancer/common"
+      Basal Cell Cancer:
+        $ref:
+          - "_terms_enum.yaml#/basal_cell_cancer/common"
+      Bile Duct Cancer:
+        $ref:
+          - "_terms_enum.yaml#/bile_duct_cancer/common"
+      Bladder Cancer:
+        $ref:
+          - "_terms_enum.yaml#/bladder_cancer/common"
+      Blood Cancer:
+        $ref:
+          - "_terms_enum.yaml#/blood_cancer/common"
+      Bone Cancer:
+        $ref:
+          - "_terms_enum.yaml#/bone_cancer/common"
+      Brain Cancer:
+        $ref:
+          - "_terms_enum.yaml#/brain_cancer/common"
+      Breast Cancer:
+        $ref:
+          - "_terms_enum.yaml#/breast_cancer/common"
+      Cancer:
+        $ref:
+          - "_terms_enum.yaml#/cancer/common"
+      Cervical Cancer:
+        $ref:
+          - "_terms_enum.yaml#/cervical_cancer/common"
+      Chondrosarcoma:
+        $ref:
+          - "_terms_enum.yaml#/chondrosarcoma/common"
+      CNS Cancer:
+        $ref:
+          - "_terms_enum.yaml#/cns_cancer/common"
+      Colorectal Cancer:
+        $ref:
+          - "_terms_enum.yaml#/colorectal_cancer/common"
+      Esophageal Cancer:
+        $ref:
+          - "_terms_enum.yaml#/esophageal_cancer/common"
+      Ewing Sarcoma:
+        $ref:
+          - "_terms_enum.yaml#/ewing_sarcoma/common"
+      Gallbladder Cancer:
+        $ref:
+          - "_terms_enum.yaml#/gallbladder_cancer/common"
+      Gastric Cancer:
+        $ref:
+          - "_terms_enum.yaml#/gastric_cancer/common"
+      Glioblastoma:
+        $ref:
+          - "_terms_enum.yaml#/glioblastoma/common"
+      Gynecologic Cancer:
+        $ref:
+          - "_terms_enum.yaml#/gynecologic_cancer/common"
+      Head and Neck Cancer:
+        $ref:
+          - "_terms_enum.yaml#/head_and_neck_cancer/common"
+      Hematologic Cancer:
+        $ref:
+          - "_terms_enum.yaml#/hematologic_cancer/common"
+      Kaposi Sarcoma:
+        $ref:
+          - "_terms_enum.yaml#/kaposi_sarcoma/common"
+      Kidney Cancer:
+        $ref:
+          - "_terms_enum.yaml#/kidney_cancer/common"
+      Laryngeal Cancer:
+        $ref:
+          - "_terms_enum.yaml#/laryngeal_cancer/common"
+      Leukemia:
+        $ref:
+          - "_terms_enum.yaml#/leukemia/common"
+      Liver Cancer:
+        $ref:
+          - "_terms_enum.yaml#/liver_cancer/common"
+      Lung Cancer:
+        $ref:
+          - "_terms_enum.yaml#/lung_cancer/common"
+      Lymph Node Cancer:
+        $ref:
+          - "_terms_enum.yaml#/lymph_node_cancer/common"
+      Lymphoma:
+        $ref:
+          - "_terms_enum.yaml#/lymphoma/common"
+      Melanoma:
+        $ref:
+          - "_terms_enum.yaml#/melanoma/common"
+      Mesothelioma:
+        $ref:
+          - "_terms_enum.yaml#/mesothelioma/common"
+      Multiple Myeloma:
+        $ref:
+          - "_terms_enum.yaml#/multiple_myeloma/common"
+      Neuroblastoma:
+        $ref:
+          - "_terms_enum.yaml#/neuroblastoma/common"
+      Osteosarcoma:
+        $ref:
+          - "_terms_enum.yaml#/osteosarcoma/common"
+      Ovarian Cancer:
+        $ref:
+          - "_terms_enum.yaml#/ovarian_cancer/common"
+      Pancreas Cancer:
+        $ref:
+          - "_terms_enum.yaml#/pancreas_cancer/common"
+      Pediatric Liver Cancer:
+        $ref:
+          - "_terms_enum.yaml#/pediatric_liver_cancer/common"
+      Prostate Cancer:
+        $ref:
+          - "_terms_enum.yaml#/prostate_cancer/common"
+      Rectal Cancer:
+        $ref:
+          - "_terms_enum.yaml#/rectal_cancer/common"
+      Rhabdomyosarcoma:
+        $ref:
+          - "_terms_enum.yaml#/rhabdomyosarcoma/common"
+      Sarcoma:
+        $ref:
+          - "_terms_enum.yaml#/sarcoma/common"
+      Skin Cancer:
+        $ref:
+          - "_terms_enum.yaml#/skin_cancer/common"
+      Spleen Cancer:
+        $ref:
+          - "_terms_enum.yaml#/spleen_cancer/common"
+      Testicular Cancer:
+        $ref:
+          - "_terms_enum.yaml#/testicular_cancer/common"
+      Throat Cancer:
+        $ref:
+          - "_terms_enum.yaml#/throat_cancer/common"
+      Thyroid Cancer:
+        $ref:
+          - "_terms_enum.yaml#/thyroid_cancer/common"
+      Tongue Cancer:
+        $ref:
+          - "_terms_enum.yaml#/tongue_cancer/common"
+      Tonsillar Cancer:
+        $ref:
+          - "_terms_enum.yaml#/tonsillar_cancer/common"
+      Uterine Cancer:
+        $ref:
+          - "_terms_enum.yaml#/uterine_cancer/common"
+      Wilms Tumor:
+        $ref:
+          - "_terms_enum.yaml#/wilms_tumor/common"
+      Unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
+
   relationship_type:
     $ref:
       - "_terms.yaml#/relationship_type/common"
@@ -128,7 +375,6 @@ properties:
       - Nephew
       - Niece
       - Niece Second Degree Relative
-      - Other
       - Parent
       - Paternal Aunt
       - Paternal First Cousin
@@ -162,6 +408,7 @@ properties:
       - Unrelated
       - Ward
       - Wife
+      - Other
       - Unknown
       - Not Reported
     enumDef:
@@ -408,9 +655,6 @@ properties:
       Niece Second Degree Relative:
         $ref:
           - "_terms_enum.yaml#/niece_second_degree_relative/common"
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
       Parent:
         $ref:
           - "_terms_enum.yaml#/parent/common"
@@ -510,6 +754,9 @@ properties:
       Wife:
         $ref:
           - "_terms_enum.yaml#/wife/common"
+      Other:
+        $ref:
+          - "_terms_enum.yaml#/other/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -517,249 +764,38 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  relationship_gender:
+  relative_deceased:
     $ref:
-      - "_terms.yaml#/relationship_gender/common"
+      - "_terms.yaml#/relative_deceased/common"
     enum:
-      - female
-      - male
-      - unknown
-      - unspecified
-      - not reported
+      - "Yes"
+      - "No"
+      - Not Reported
     enumDef:
-      female:
+      "Yes":
         $ref:
-          - "_terms_enum.yaml#/female/common"
-      male:
+          - "_terms_enum.yaml#/yes/common"
+      "No":
         $ref:
-          - "_terms_enum.yaml#/male/common"
-      unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      unspecified:
-        $ref:
-          - "_terms_enum.yaml#/unspecified/common"
-      not reported:
+          - "_terms_enum.yaml#/no/common"
+      Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  relationship_age_at_diagnosis:
+  relative_smoker:
     $ref:
-      - "_terms.yaml#/relationship_age_at_diagnosis/common"
-    type: number
-    maximum: 89
-    minimum: 0
-
-  relationship_primary_diagnosis:
-    $ref:
-      - "_terms.yaml#/relationship_primary_diagnosis/common"
+      - "_terms.yaml#/relative_smoker/common"
     enum:
-      - Adrenal Gland Cancer
-      - Basal Cell Cancer
-      - Bile Duct Cancer
-      - Bladder Cancer
-      - Blood Cancer
-      - Bone Cancer
-      - Brain Cancer
-      - Breast Cancer
-      - Cancer
-      - Cervical Cancer
-      - Chondrosarcoma
-      - CNS Cancer
-      - Colorectal Cancer
-      - Esophageal Cancer
-      - Ewing Sarcoma
-      - Gallbladder Cancer
-      - Gastric Cancer
-      - Glioblastoma
-      - Gynecologic Cancer
-      - Head and Neck Cancer
-      - Hematologic Cancer
-      - Kaposi Sarcoma
-      - Kidney Cancer
-      - Laryngeal Cancer
-      - Leukemia
-      - Liver Cancer
-      - Lung Cancer
-      - Lymph Node Cancer
-      - Lymphoma
-      - Melanoma
-      - Mesothelioma
-      - Multiple Myeloma
-      - Neuroblastoma
-      - Osteosarcoma
-      - Ovarian Cancer
-      - Pancreas Cancer
-      - Pediatric Liver Cancer
-      - Prostate Cancer
-      - Rectal Cancer
-      - Rhabdomyosarcoma
-      - Sarcoma
-      - Skin Cancer
-      - Spleen Cancer
-      - Testicular Cancer
-      - Throat Cancer
-      - Thyroid Cancer
-      - Tongue Cancer
-      - Tonsillar Cancer
-      - Uterine Cancer
-      - Wilms Tumor
-      - Unknown
+      - "Yes"
+      - "No"
       - Not Reported
     enumDef:
-      Adrenal Gland Cancer:
+      "Yes":
         $ref:
-          - "_terms_enum.yaml#/adrenal_gland_cancer/common"
-      Basal Cell Cancer:
+          - "_terms_enum.yaml#/yes/common"
+      "No":
         $ref:
-          - "_terms_enum.yaml#/basal_cell_cancer/common"
-      Bile Duct Cancer:
-        $ref:
-          - "_terms_enum.yaml#/bile_duct_cancer/common"
-      Bladder Cancer:
-        $ref:
-          - "_terms_enum.yaml#/bladder_cancer/common"
-      Blood Cancer:
-        $ref:
-          - "_terms_enum.yaml#/blood_cancer/common"
-      Bone Cancer:
-        $ref:
-          - "_terms_enum.yaml#/bone_cancer/common"
-      Brain Cancer:
-        $ref:
-          - "_terms_enum.yaml#/brain_cancer/common"
-      Breast Cancer:
-        $ref:
-          - "_terms_enum.yaml#/breast_cancer/common"
-      Cancer:
-        $ref:
-          - "_terms_enum.yaml#/cancer/common"
-      Cervical Cancer:
-        $ref:
-          - "_terms_enum.yaml#/cervical_cancer/common"
-      Chondrosarcoma:
-        $ref:
-          - "_terms_enum.yaml#/chondrosarcoma/common"
-      CNS Cancer:
-        $ref:
-          - "_terms_enum.yaml#/cns_cancer/common"
-      Colorectal Cancer:
-        $ref:
-          - "_terms_enum.yaml#/colorectal_cancer/common"
-      Esophageal Cancer:
-        $ref:
-          - "_terms_enum.yaml#/esophageal_cancer/common"
-      Ewing Sarcoma:
-        $ref:
-          - "_terms_enum.yaml#/ewing_sarcoma/common"
-      Gallbladder Cancer:
-        $ref:
-          - "_terms_enum.yaml#/gallbladder_cancer/common"
-      Gastric Cancer:
-        $ref:
-          - "_terms_enum.yaml#/gastric_cancer/common"
-      Glioblastoma:
-        $ref:
-          - "_terms_enum.yaml#/glioblastoma/common"
-      Gynecologic Cancer:
-        $ref:
-          - "_terms_enum.yaml#/gynecologic_cancer/common"
-      Head and Neck Cancer:
-        $ref:
-          - "_terms_enum.yaml#/head_and_neck_cancer/common"
-      Hematologic Cancer:
-        $ref:
-          - "_terms_enum.yaml#/hematologic_cancer/common"
-      Kaposi Sarcoma:
-        $ref:
-          - "_terms_enum.yaml#/kaposi_sarcoma/common"
-      Kidney Cancer:
-        $ref:
-          - "_terms_enum.yaml#/kidney_cancer/common"
-      Laryngeal Cancer:
-        $ref:
-          - "_terms_enum.yaml#/laryngeal_cancer/common"
-      Leukemia:
-        $ref:
-          - "_terms_enum.yaml#/leukemia/common"
-      Liver Cancer:
-        $ref:
-          - "_terms_enum.yaml#/liver_cancer/common"
-      Lung Cancer:
-        $ref:
-          - "_terms_enum.yaml#/lung_cancer/common"
-      Lymph Node Cancer:
-        $ref:
-          - "_terms_enum.yaml#/lymph_node_cancer/common"
-      Lymphoma:
-        $ref:
-          - "_terms_enum.yaml#/lymphoma/common"
-      Melanoma:
-        $ref:
-          - "_terms_enum.yaml#/melanoma/common"
-      Mesothelioma:
-        $ref:
-          - "_terms_enum.yaml#/mesothelioma/common"
-      Multiple Myeloma:
-        $ref:
-          - "_terms_enum.yaml#/multiple_myeloma/common"
-      Neuroblastoma:
-        $ref:
-          - "_terms_enum.yaml#/neuroblastoma/common"
-      Osteosarcoma:
-        $ref:
-          - "_terms_enum.yaml#/osteosarcoma/common"
-      Ovarian Cancer:
-        $ref:
-          - "_terms_enum.yaml#/ovarian_cancer/common"
-      Pancreas Cancer:
-        $ref:
-          - "_terms_enum.yaml#/pancreas_cancer/common"
-      Pediatric Liver Cancer:
-        $ref:
-          - "_terms_enum.yaml#/pediatric_liver_cancer/common"
-      Prostate Cancer:
-        $ref:
-          - "_terms_enum.yaml#/prostate_cancer/common"
-      Rectal Cancer:
-        $ref:
-          - "_terms_enum.yaml#/rectal_cancer/common"
-      Rhabdomyosarcoma:
-        $ref:
-          - "_terms_enum.yaml#/rhabdomyosarcoma/common"
-      Sarcoma:
-        $ref:
-          - "_terms_enum.yaml#/sarcoma/common"
-      Skin Cancer:
-        $ref:
-          - "_terms_enum.yaml#/skin_cancer/common"
-      Spleen Cancer:
-        $ref:
-          - "_terms_enum.yaml#/spleen_cancer/common"
-      Testicular Cancer:
-        $ref:
-          - "_terms_enum.yaml#/testicular_cancer/common"
-      Throat Cancer:
-        $ref:
-          - "_terms_enum.yaml#/throat_cancer/common"
-      Thyroid Cancer:
-        $ref:
-          - "_terms_enum.yaml#/thyroid_cancer/common"
-      Tongue Cancer:
-        $ref:
-          - "_terms_enum.yaml#/tongue_cancer/common"
-      Tonsillar Cancer:
-        $ref:
-          - "_terms_enum.yaml#/tonsillar_cancer/common"
-      Uterine Cancer:
-        $ref:
-          - "_terms_enum.yaml#/uterine_cancer/common"
-      Wilms Tumor:
-        $ref:
-          - "_terms_enum.yaml#/wilms_tumor/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
+          - "_terms_enum.yaml#/no/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"

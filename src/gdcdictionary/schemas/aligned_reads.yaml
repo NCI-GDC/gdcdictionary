@@ -111,17 +111,17 @@ properties:
     enum:
       - Sequencing Reads
 
-  data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
-    enum:
-      - Aligned Reads
-
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
       - BAM
+
+  data_type:
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - Aligned Reads
 
   experimental_strategy:
     $ref:
@@ -156,17 +156,17 @@ properties:
       - "_terms.yaml#/mean_coverage/common"
     type: number
 
+  msi_score:
+    description: >-
+      Numeric score denoting the aligned reads file's MSI score from MSIsensor.
+    type: number
+
   msi_status:
     description: >-
       MSIsensor determination of either microsatellite stability or instability.
     enum:
       - MSI
       - MSS
-
-  msi_score:
-    description: >-
-      Numeric score denoting the aligned reads file's MSI score from MSIsensor.
-    type: number
 
   pairs_on_diff_chr:
     $ref:
@@ -207,6 +207,11 @@ properties:
       - "_terms.yaml#/proportion_targets_no_coverage/common"
     type: number
 
+  total_reads:
+    $ref:
+      - "_terms.yaml#/total_reads/common"
+    type: integer
+
   tumor_ploidy:
     $ref:
       - "_terms.yaml#/tumor_ploidy/common"
@@ -217,10 +222,23 @@ properties:
       - "_terms.yaml#/tumor_purity/common"
     type: number
 
-  total_reads:
+  wgs_coverage:
     $ref:
-      - "_terms.yaml#/total_reads/common"
-    type: integer
+      - "_terms.yaml#/wgs_coverage/common"
+    enum:
+      - 0x-10x
+      - 10x-25x
+      - 25x-150x
+      - 150x+
+      - Unknown
+      - Not Applicable
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
+      Not Applicable:
+        $ref:
+          - "_terms_enum.yaml#/not_applicable/common"
 
   alignment_cocleaning_workflows:
     $ref: "_definitions.yaml#/to_one"
