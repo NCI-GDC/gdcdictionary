@@ -9,7 +9,7 @@ stages:
 
 include:
   - project: nci-gdc/gitlab-templates
-    ref: master
+    ref: 0.2.0
     file:
       - templates/global/full.yaml
       - templates/python/full.yaml
@@ -22,28 +22,6 @@ variables:
   DOCKER_BUILD_OPTS: "--build-arg PIP_EXTRA_INDEX_URL=https://nexus.osdc.io/repository/pypi-all/simple"
   DOCKER_PUSH_OPTS: "--all-tags"
   TWINE_REPOSITORY_URL: "https://nexus.osdc.io/repository/pypi-snapshots/"
-
-
-tox:
-  image: ${BASE_CONTAINER_REGISTRY}/${REPO_PY_VERSION}-builder:${BASE_CONTAINER_VERSION}
-  before_script:
-    - mkdir -p /usr/share/man/man1
-
-.python_versions:
-  parallel:
-    matrix:
-      - REPO_PY_VERSION: ["python36"]
-
-docker_build:
-  allow_failure: true
-  rules:
-    - when: never
-
-release:
-  image: docker.osdc.io/ncigdc/python36-builder:1.4.0
-  allow_failure: true
-  rules:
-    - when: never
 
 .override_gdcdictionary_version:
   rules:
@@ -100,51 +78,6 @@ execute_plaster:
     expire_in: 1 week
   rules:
     - !reference [.override_gdcdictionary_version, rules]
-
-
-release_datamodels_to_nexus:
-  image: docker.osdc.io/ncigdc/python36-builder:1.4.0
-  stage: release_gdcdatamodel2
-  script:
-    - cd gdcdatamodel2
-    - ls -R .
-    - cat setup.cfg
-    - cat dev-requirements.txt
-    - whoami
-    - apt-get update
-    - apt-get install -y python3-venv
-    - pip3 install -U setuptools_scm build twine setuptools
-    - python3 -m setuptools_scm
-    - python3 -m build
-    - twine check dist/*
-    - twine upload dist/*
-  variables:
-    TWINE_USERNAME: ${TWINE_USER}
-    TWINE_PASSWORD: ${TWINE_PASSWORD}
-  artifacts:
-    paths:
-      - dist/*.whl
-    reports:
-      dotenv: vars.env
-  rules: # Override globally-defined RELEASE_REGISTRY
-    - if: $CI_COMMIT_TAG
-      when: always
-      variables:
-        TWINE_REPOSITORY_URL: "https://nexus.osdc.io/repository/pypi-releases/"
-    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
-      when: always
-      variables:
-        TWINE_REPOSITORY_URL: "https://nexus.osdc.io/repository/pypi-releases/"
-    - if: $CI_COMMIT_REF_NAME =~ /master/
-      when: always
-      variables:
-        TWINE_REPOSITORY_URL: "https://nexus.osdc.io/repository/pypi-releases/"
-    - if: $CI_COMMIT_REF_NAME =~ /main/
-      when: always
-      variables:
-        TWINE_REPOSITORY_URL: "https://nexus.osdc.io/repository/pypi-releases/"
-    - when: always
-  needs: ['update_reqs_for_gdcdatamodel2', 'execute_plaster']
 
 
 push_datamodels_to_github:
