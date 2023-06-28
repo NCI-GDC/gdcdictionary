@@ -1,0 +1,11 @@
+---
+# SEE https://yamllint.readthedocs.io/en/stable/configuration.html#default-configuration
+
+extends: default
+
+rules:
+  document-start: disable
+  line-length:
+    max: 130
+  indentation:
+    indent-sequences: consistent
