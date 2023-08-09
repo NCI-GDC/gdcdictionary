@@ -83,5 +83,5 @@ push_gdcdatamodels_tag_to_github:
     - echo "gdcdictionary $CI_COMMIT_SHORT_SHA gdcdatamodel2 $(git rev-parse --short HEAD)"
     - git tag -a $CI_COMMIT_TAG -m "gdcdictionary $CI_COMMIT_SHORT_SHA gdcdatamodel2 $(git rev-parse --short HEAD)"
     - git push origin $CI_COMMIT_TAG
-  only:     # TODO: change to only
+  only:
     - tags
