@@ -16,10 +16,7 @@ include:
 
 variables:
   PRE_COMMIT_DOCKER_IMAGE: docker.osdc.io/ncigdc/python3.7-builder:${BASE_CONTAINER_VERSION}
-  DOCKER_BUILDKIT: 1
   PIP_EXTRA_INDEX_URL: https://nexus.osdc.io/repository/pypi-all/simple
-  DOCKER_BUILD_OPTS: "--build-arg PIP_EXTRA_INDEX_URL=https://nexus.osdc.io/repository/pypi-all/simple"
-  DOCKER_PUSH_OPTS: "--all-tags"
   TWINE_REPOSITORY_URL: "https://nexus.osdc.io/repository/pypi-snapshots/"
 
 .override_gdcdictionary_version:
