@@ -20,6 +20,8 @@ pre-commit:
 
 .override_gdcdictionary_version:
   rules:
+    - if: $CI_COMMIT_TAG
+      when: never
     - if: $GDCDICTIONARY_TARGET_VERSION_OVERRIDE != null
       variables:
         GDCDICTIONARY_TARGET_VERSION: $GDCDICTIONARY_TARGET_VERSION_OVERRIDE
@@ -51,8 +53,7 @@ execute_plaster:
     expire_in: 1 week
   rules:
     - !reference [.override_gdcdictionary_version, rules]
-    - if: $CI_COMMIT_TAG
-      when: never
+
 
 push_datamodels_to_github:
   image: docker.osdc.io/ncigdc/python3.6-builder:${BASE_CONTAINER_VERSION}
@@ -68,8 +69,6 @@ push_datamodels_to_github:
   allow_failure: true   # failure when no changes of models
   rules:
     - !reference [.override_gdcdictionary_version, rules]
-    - if: $CI_COMMIT_TAG
-      when: never
   needs: ['execute_plaster']
 
 
