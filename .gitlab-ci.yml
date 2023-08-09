@@ -81,6 +81,8 @@ push_datamodels_to_github:
 push_gdcdatamodels_tag_to_github:
   image: docker.osdc.io/ncigdc/python3.8-builder:2.1.0
   stage: .pre   # TODO: change to last
+  variables:
+    CI_COMMIT_TAG: 2.6.7
   script:
     - !reference [ .load_github_key, script ]
     - export
