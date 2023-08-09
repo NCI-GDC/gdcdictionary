@@ -87,6 +87,7 @@ push_gdcdatamodels_tag_to_github:
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
     - cd gdcdatamodel2    # always tag develop
     - echo $CI_COMMIT_TAG
+    - echo $CI_COMMIT_SHA
     - git tag -a $CI_COMMIT_TAG -m "gdcdictionary $CI_COMMIT_SHORT_SHA gdcdatamodel2 $(git rev-parse --short HEAD)"
     - git push origin $CI_COMMIT_TAG
   except:     # TODO: change to only
