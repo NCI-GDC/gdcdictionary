@@ -16,7 +16,7 @@ include:
 
 pre-commit:
   before_script:
-    - export
+    - export    # https://docs.gitlab.com/ee/ci/variables/#list-all-variables
 
 .override_gdcdictionary_version:
   rules:
