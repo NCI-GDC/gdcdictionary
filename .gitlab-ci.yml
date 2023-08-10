@@ -69,7 +69,7 @@ push_datamodels_to_github:
   artifacts:
     paths:
       - gdcdatamodel2
-    expire_in: 1 wee
+    expire_in: 1 week
   rules:
     - !reference [.override_gdcdictionary_version, rules]
   needs: ['execute_plaster']
