@@ -72,7 +72,8 @@ push_datamodels_to_github:
     expire_in: 1 week
   rules:
     - !reference [.override_gdcdictionary_version, rules]
-  needs: ['execute_plaster']
+  dependencies:
+    - execute_plaster
 
 
 push_gdcdatamodels_tag_to_github:
@@ -90,4 +91,5 @@ push_gdcdatamodels_tag_to_github:
     - git push origin $CI_COMMIT_TAG
   except:   # TODO: change to only
     - tags
-  needs: ['push_datamodels_to_github']
+  dependencies:
+    - push_datamodels_to_github
