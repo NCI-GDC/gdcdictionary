@@ -62,21 +62,17 @@ push_datamodels_to_github:
 push_datamodels_tag_to_github:
   image: docker.osdc.io/ncigdc/python3.8-builder:${BASE_CONTAINER_VERSION}
   stage: tag_gdcdatamodel2
-  variables:      # TODO: clean
-    CI_COMMIT_TAG: 2.6.7
   script:
     - !reference [ .load_github_key, script ]
     # can not use artifact from previous stage because previous stage is allowed to fail
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
-    - pwd
-    - ls
     - cd gdcdatamodel2
     - git checkout "$CI_COMMIT_REF_NAME"
     - git log -1
     - echo "gdcdictionary $CI_COMMIT_SHORT_SHA gdcdatamodel2 $(git rev-parse --short HEAD)"
     - git tag -a $CI_COMMIT_TAG -m "gdcdictionary $CI_COMMIT_SHORT_SHA gdcdatamodel2 $(git rev-parse --short HEAD)"
     - git push origin $CI_COMMIT_TAG
-  except:     # TODO: change to only
+  only:
     - tags
   dependencies:
     - push_datamodels_to_github
