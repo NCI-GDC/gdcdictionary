@@ -15,10 +15,6 @@ include:
       - templates/global/full.yaml
       - templates/python/full.yaml
 
-pre-commit:
-  before_script:
-    - export    # https://docs.gitlab.com/ee/ci/variables/#list-all-variables
-
 
 execute_plaster:
   image: docker.osdc.io/ncigdc/python3.8-builder:${BASE_CONTAINER_VERSION}
