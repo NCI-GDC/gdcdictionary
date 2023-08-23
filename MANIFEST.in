@@ -1,0 +1,7 @@
+graft src/gdcdictionary
+prune tests
+prune sandbox
+prune examples
+global-exclude */__pycache__/*
+global-exclude *.pyc
+exclude .gitignore .gitlab-ci.yml .pre-commit-config.yaml .secrets.baseline .travis.yml
