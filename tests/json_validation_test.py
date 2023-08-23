@@ -18,20 +18,19 @@ import pytest
 
 
 def get_all_paths(subdir):
-    for path in sorted(glob.glob(os.path.join(DATA_DIR, subdir, '*.json'))):
-        yield path
+    yield from sorted(glob.glob(os.path.join(DATA_DIR, subdir, '*.json')))
 
 
 @pytest.mark.parametrize("path", get_all_paths("valid"))
 def test_valid_examples(path, schema):
-    with open(path, 'r') as f:
+    with open(path) as f:
         doc = json.load(f)
         validate(doc, schema[doc["type"]])
 
 
 @pytest.mark.parametrize("path", get_all_paths("invalid"))
 def test_invalid_examples(path, schema):
-    with open(path, 'r') as f:
+    with open(path) as f:
         doc = json.load(f)
         with pytest.raises(ValidationError):
             validate(doc, schema[doc["type"]])
