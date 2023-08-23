@@ -16,6 +16,12 @@ include:
       - templates/python/full.yaml
       - templates/common/python.yaml
 
+.python_versions:
+  parallel:
+    matrix:
+      - BUILD_PY_VERSION: [python3.7]
+        RELEASE_PY_VERSION: [python3.7]
+
 release:
   before_script:
     - git fetch --unshallow || true
