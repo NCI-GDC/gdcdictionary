@@ -14,7 +14,18 @@ include:
     file:
       - templates/global/full.yaml
       - templates/python/full.yaml
+      - templates/common/python.yaml
 
+# used by release
+.python_versions:
+  parallel:
+    matrix:
+      - BUILD_PY_VERSION: [python3.7]
+      - RELEASE_PY_VERSION: [python3.7]
+
+release:
+  before_script:
+    - git fetch --unshallow || true
 
 execute_plaster:
   image: docker.osdc.io/ncigdc/python3.8-builder:${BASE_CONTAINER_VERSION}
