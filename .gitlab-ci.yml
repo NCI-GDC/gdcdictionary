@@ -22,6 +22,11 @@ include:
       - BUILD_PY_VERSION: [python3.7]
         RELEASE_PY_VERSION: [python3.7]
 
+.tox_script:
+  script:
+    - python -m pip install tox
+    - tox -r -e py
+
 release:
   before_script:
     - git fetch --unshallow || true
