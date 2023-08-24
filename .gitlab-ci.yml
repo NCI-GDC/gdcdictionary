@@ -16,16 +16,15 @@ include:
       - templates/python/full.yaml
       - templates/common/python.yaml
 
-.python_versions:
-  parallel:
-    matrix:
-      - BUILD_PY_VERSION: [python3.7, python3.8, python3.9]
-        RELEASE_PY_VERSION: [python3.7]
-
 .tox_script:
   script:
     - python -m pip install tox
     - tox -r -e py
+
+tox:
+  parallel:
+    matrix:
+      - BUILD_PY_VERSION: [python3.7, python3.8, python3.9]
 
 release:
   before_script:
