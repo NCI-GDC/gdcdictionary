@@ -19,7 +19,7 @@ include:
 .python_versions:
   parallel:
     matrix:
-      - BUILD_PY_VERSION: [python3.7]
+      - BUILD_PY_VERSION: [python3.7, python3.8, python3.9]
         RELEASE_PY_VERSION: [python3.7]
 
 .tox_script:
