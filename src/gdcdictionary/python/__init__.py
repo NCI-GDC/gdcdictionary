@@ -28,7 +28,7 @@ def visit_directory(path):
         os.chdir(cdir)
 
 
-class GDCDictionary(object):
+class GDCDictionary:
 
     _metaschema_path = 'metaschema.yaml'
     _definitions_paths = [
@@ -65,13 +65,13 @@ class GDCDictionary(object):
         """Return contents of yaml file as dict"""
         # For DAT-1064 Bomb out hard if unicode is in a schema file
         # But allow unicode through the terms and definitions
-        with open(name, 'r') as f:
+        with open(name) as f:
             if name not in self.exclude:
                 try:
                     f.read().encode("ascii")
                     f.seek(0)
                 except Exception as e:
-                    self.logger.error("Error in file: {}".format(name))
+                    self.logger.error(f"Error in file: {name}")
                     raise e
             if yaml.__with_libyaml__:
                 return yaml.load(f, Loader=yaml.CSafeLoader)
@@ -87,7 +87,7 @@ class GDCDictionary(object):
             for path in glob.glob("*.yaml"):
                 schema = self.load_yaml(path)
                 schemas[path] = schema
-                resolver = RefResolver('{}#'.format(path), schema)
+                resolver = RefResolver(f'{path}#', schema)
                 resolvers[path] = ResolverPair(resolver, schema)
 
         return schemas, resolvers

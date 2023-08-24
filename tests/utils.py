@@ -15,7 +15,7 @@ from src.gdcdictionary import ROOT_DIR, GDCDictionary
 
 
 def load_yaml(path):
-    with open(path, 'r') as f:
+    with open(path) as f:
         return yaml.safe_load(f)
 
 
@@ -140,4 +140,4 @@ def check_for_cycles(schemata, ignored_types=None):
                 removable_types.append(target_type)
                 del backward[target_type]
 
-    assert not backward, 'cycle detected among {}'.format(backward.keys())
+    assert not backward, f'cycle detected among {backward.keys()}'

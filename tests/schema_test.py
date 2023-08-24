@@ -28,13 +28,13 @@ def _check_enum(enums):
 
         for item in enum_list:
             if not isinstance(item, str):
-                check_result["enum item is not a string"].append("{}: {}".format(path, item))
+                check_result["enum item is not a string"].append(f"{path}: {item}")
 
         if len(set(enum_list)) < len(enum_list):
             check_result["duplicates in enum"].append(path)
             duplicates = [item for item, count in collections.Counter(enum_list).items() if count > 1]
             for item in duplicates:
-                check_result["duplicates in enum"].append("\t{}".format(item))
+                check_result["duplicates in enum"].append(f"\t{item}")
     return check_result
 
 
@@ -52,7 +52,7 @@ def _generate_error_message_for_enum(res_dict):
     for error_name, lines in res_dict.items():
         message_lines.append(error_name)
         for line in lines:
-            message_lines.append("\t{}".format(line))
+            message_lines.append(f"\t{line}")
     return "\n".join(message_lines)
 
 
@@ -67,7 +67,7 @@ class SchemaTest(BaseTest):
         for node_name, node_schema in self.dictionary.schema.items():
             for prop_name, prop_schema in node_schema["properties"].items():
                 if "enum" in prop_schema:
-                    path_str = '{}->{}'.format(node_name, prop_name)
+                    path_str = f'{node_name}->{prop_name}'
                     enum_dict[path_str] = prop_schema["enum"]
 
         res = _check_enum(enum_dict)
@@ -89,7 +89,7 @@ class SchemaTest(BaseTest):
         If the acyclicality check passes like this, either the algorithm is
         missing something or we're ignoring types that we shouldn't.
         """
-        with self.assertRaisesRegexp(AssertionError, 'cycle detected'):
+        with self.assertRaisesRegex(AssertionError, 'cycle detected'):
             check_for_cycles(self.dictionary.schema)
 
     def test_check_for_cycles_positive(self):
@@ -187,7 +187,7 @@ class SchemaTest(BaseTest):
             'tissue_source_site': {'links': []},
         }
 
-        with self.assertRaisesRegexp(AssertionError, 'cycle detected'):
+        with self.assertRaisesRegex(AssertionError, 'cycle detected'):
             check_for_cycles(schemata)
 
     def test_links_to_annotation(self):
