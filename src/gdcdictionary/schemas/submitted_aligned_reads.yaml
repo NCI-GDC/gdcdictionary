@@ -88,6 +88,8 @@ properties:
       - Targeted Sequencing
       - WGS
       - WXS
+    deprecated_enum:
+      - scRNA-Seq
     enumDef:
       Targeted Sequencing:
         $ref:
