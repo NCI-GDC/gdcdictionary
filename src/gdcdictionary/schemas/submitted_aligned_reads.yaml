@@ -84,10 +84,11 @@ properties:
       - miRNA-Seq
       - RNA-Seq
       - scATAC-Seq
-      - scRNA-Seq
       - Targeted Sequencing
       - WGS
       - WXS
+    deprecated_enum:
+      - scRNA-Seq
     enumDef:
       Targeted Sequencing:
         $ref:
