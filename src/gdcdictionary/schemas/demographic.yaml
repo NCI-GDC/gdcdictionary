@@ -42,6 +42,10 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
+deprecated:
+  - premature_at_birth
+  - weeks_gestation_at_birth
+
 properties:
 
   $ref:
