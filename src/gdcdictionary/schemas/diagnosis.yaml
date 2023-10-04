@@ -2698,17 +2698,6 @@ properties:
       - Thyroid
       - Other
 
-  measurement_type:
-    description: >-
-      The method used to measure tumor size.
-    enum:
-      - Pathologic
-      - Radiologic
-    enumDef:
-      Radiologic:
-        $ref:
-          - "_terms_enum.yaml#/radiologic/common"
-
   medulloblastoma_molecular_classification:
     $ref:
       - "_terms.yaml#/medulloblastoma_molecular_classification/common"
@@ -19642,9 +19631,6 @@ properties:
       - Low Grade
       - Unknown
       - Not Reported
-      - not reported
-    deprecated_enum:
-      - not reported
     enumDef:
       G1:
         $ref:
@@ -19677,9 +19663,6 @@ properties:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
       Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-      not reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
