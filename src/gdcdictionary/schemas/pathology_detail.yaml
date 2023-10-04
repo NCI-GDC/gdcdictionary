@@ -366,9 +366,9 @@ properties:
     $ref:
       - "_terms.yaml#/extrathyroid_extension/common"
     enum:
+      - None
       - Minimal (T3)
       - Moderate/Advanced (T4a)
-      - None
       - Very Advanced (T4b)
       - Unknown
     enumDef:
