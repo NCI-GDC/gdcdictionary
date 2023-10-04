@@ -53880,6 +53880,20 @@ i:
         term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94812"
         term_id: C94812
         term_version: 23.03d
+  other_clinical_attribute:
+    myasthenia_gravis_classification:
+      description: >-
+        Myasthenia gravis presenting with any ocular weakness; may have weakness of
+        eye closure. All other muscles strength is normal.
+      termDef:
+        term: >-
+          Class I
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&code=C112014&ns=ncit"
+        term_id: C112014
+        term_version: 23.08d
 
 iadademstat:
   common:
@@ -54322,6 +54336,20 @@ ii:
         term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94813"
         term_id: C94813
         term_version: 23.03d
+  other_clinical_attribute:
+    myasthenia_gravis_classification:
+      description: >-
+        Myasthenia gravis presenting with mild weakness affecting non-ocular muscles.
+        May also have ocular muscle weakness of any severity.
+      termDef:
+        term: >-
+          Class II
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&code=C112015&ns=ncit"
+        term_id: C112015
+        term_version: 23.08d
 
 iii:
   common:
@@ -54353,6 +54381,20 @@ iii:
         term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94814"
         term_id: C94814
         term_version: 23.03d
+  other_clinical_attribute:
+    myasthenia_gravis_classification:
+      description: >-
+        Myasthenia gravis presenting with moderate weakness affecting non-ocular muscles.
+        May also have ocular muscle weakness of any severity.
+      termDef:
+        term: >-
+          Class III
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&code=C112016&ns=ncit"
+        term_id: C112016
+        term_version: 23.08d
 
 ikbkb:
   common:
@@ -93798,6 +93840,22 @@ t3:
         term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104021"
         term_id: C104021
         term_version: 23.03d
+  pathology_detail:
+    extrathyroid_extension:
+      description: >-
+        Thyroid cancer with a tumor size greater than 4 cm in greatest dimension and
+        limited to the thyroid gland, or a tumor of any size with minimal extrathyroid
+        extension (e.g., extension to sternothyroid muscle or perithyroid soft tissues).
+        (from AJCC 6th and 7th Eds.)
+      termDef:
+        term: >-
+          Thyroid Cancer pT3 TNM Finding v6 and v7
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C60864"
+        term_id: C60864
+        term_version: 23.08d
 
 t3a:
   common:
@@ -93933,6 +93991,21 @@ t4a:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C48733"
       term_id: C48733
       term_version: 20.05a
+  pathology_detail:
+    extrathyroid_extension:
+      description: >-
+        Thyroid cancer with moderately advanced local disease. Tumor of any size extending
+        beyond the thyroid gland capsule to invade subcutaneous soft tissues, larynx,
+        trachea, esophagus, or recurrent laryngeal nerve. (from AJCC 7th Ed.)
+      termDef:
+        term: >-
+          Thyroid Cancer pT4a TNM Finding v7
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C89150"
+        term_id: C89150
+        term_version: 23.08d
 
 t4b:
   common:
@@ -93953,6 +94026,20 @@ t4b:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C48734"
       term_id: C48734
       term_version: 20.05a
+  pathology_detail:
+    extrathyroid_extension:
+      description: >-
+        Thyroid cancer with very advanced disease. Tumor invades prevertebral fascia
+        or encases carotid artery or mediastinal vessels. (from AJCC 7th Ed.)
+      termDef:
+        term: >-
+          Thyroid Cancer pT4b TNM Finding v7
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C89152"
+        term_id: C89152
+        term_version: 23.08d
 
 t4c:
   common:
@@ -101794,6 +101881,20 @@ iv:
         term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94815"
         term_id: C94815
         term_version: 23.03d
+  other_clinical_attribute:
+    myasthenia_gravis_classification:
+      description: >-
+        Myasthenia gravis presenting with severe weakness affecting non-ocular muscles.
+        May also have ocular muscle weakness of any severity.
+      termDef:
+        term: >-
+          Class IV
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&code=C112017&ns=ncit"
+        term_id: C112017
+        term_version: 23.08d
 
 v:
   diagnosis:
@@ -101810,6 +101911,21 @@ v:
         term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94816"
         term_id: C94816
         term_version: 23.03d
+  other_clinical_attribute:
+    myasthenia_gravis_classification:
+      description: >-
+        Myasthenia gravis presenting with severe muscle weakness that requires intubation,
+        with or without mechanical ventilation, except when employed during routine
+        postoperative management.
+      termDef:
+        term: >-
+          Class V
+        source: NCIt
+        cde_id:
+        cde_version:
+        term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&code=C112018&ns=ncit"
+        term_id: C112018
+        term_version: 23.08d
 
 few:
   common:
@@ -102348,3 +102464,264 @@ exon:
         cde_id: 6142411
         cde_version: 1.0
         term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142411%20and%20ver_nr=1.0"
+
+continuous:
+  common:
+    description: >-
+      Remain in force or carry on without letup; keep or maintain in unaltered condition;
+      exist in time or space without stop or interruption.
+    termDef:
+      term: >-
+        Continue
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://thesaurus.cancer.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C53279"
+      term_id: C53279
+      term_version: 23.08d
+
+intermittent:
+  common:
+    description: >-
+      Periodically stopping and starting.
+    termDef:
+      term: >-
+        Intermittent
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://thesaurus.cancer.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71325"
+      term_id: C71325
+      term_version: 23.08d
+
+thyroid_gland_isthmus:
+  common:
+    description: >-
+      The narrow, central portion of the thyroid gland that crosses the trachea anteriorly
+      and connects the lateral lobes of the gland. When present, the normal variant
+      pyramidal lobe may extend from the isthmus.
+    termDef:
+      term: >-
+        Thyroid Gland Isthmus
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://thesaurus.cancer.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C32887"
+      term_id: C32887
+      term_version: 23.08d
+
+home:
+  common:
+    description: >-
+      A person's place of residence.
+    termDef:
+      term: >-
+        Home
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://thesaurus.cancer.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C18002"
+      term_id: C18002
+      term_version: 23.08d
+
+social:
+  common:
+    description: >-
+      The surroundings or environment in which social activities occur.
+    termDef:
+      term: >-
+        Social Setting
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://thesaurus.cancer.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C102712"
+      term_id: C102712
+      term_version: 23.08d
+
+work:
+  common:
+    description: >-
+      The physical location where work or employment takes place.
+    termDef:
+      term: >-
+        Worksite
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://thesaurus.cancer.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17556"
+      term_id: C17556
+      term_version: 23.08d
+
+ultrasound:
+  common:
+    description: >-
+      The use of high-frequency sound waves to generate images of the body.
+    termDef:
+      term: >-
+        Ultrasound Imaging
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://thesaurus.cancer.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17230"
+      term_id: C17230
+      term_version: 23.08d
+
+microscopy_nos:
+  common:
+    description: >-
+      The use of various technologies to resolve the structure or features of objects
+      too small or fine to naturally be seen by eye.
+    termDef:
+      term: >-
+        Microscopy
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://thesaurus.cancer.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16853"
+      term_id: C16853
+      term_version: 23.08d
+
+staining_intensity_0:
+  common:
+    description: >-
+      A measurement of the amount or proportion of tissue or cells that have a staining
+      intensity of 0.
+    termDef:
+      term: >-
+        Staining Intensity 0
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C186199"
+      term_id: C186199
+      term_version: 23.08d
+
+staining_intensity_1:
+  common:
+    description: >-
+      A measurement of the amount or proportion of tissue or cells that have a staining
+      intensity of 1+
+    termDef:
+      term: >-
+        Staining Intensity 1+
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C186200"
+      term_id: C186200
+      term_version: 23.08d
+
+staining_intensity_2:
+  common:
+    description: >-
+      A measurement of the amount or proportion of tissue or cells that have a staining
+      intensity of 2+
+    termDef:
+      term: >-
+        Staining Intensity 2+
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C186201"
+      term_id: C186201
+      term_version: 23.08d
+
+staining_intensity_3:
+  common:
+    description: >-
+      A measurement of the amount or proportion of tissue or cells that have a staining
+      intensity of 3+
+    termDef:
+      term: >-
+        Staining Intensity 3+
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C186202"
+      term_id: C186202
+      term_version: 23.08d
+
+staining_intensity_4:
+  ?
+  : ?
+    : description: >-
+        A measurement of the amount or proportion of tissue or cells that have a staining
+        intensity of 4+
+      termDef:
+        term: >-
+          Staining Intensity 4+
+        source:
+        cde_id:
+        cde_version:
+        term_url:
+
+aspirin:
+  common:
+    description: >-
+      An orally administered non-steroidal antiinflammatory agent. Acetylsalicylic
+      acid binds to and acetylates serine residues in cyclooxygenases, resulting in
+      decreased synthesis of prostaglandin, platelet aggregation, and inflammation.
+      This agent exhibits analgesic, antipyretic, and anticoagulant properties.
+    termDef:
+      term: >-
+        Aspirin
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://thesaurus.cancer.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C287"
+      term_id: C287
+      term_version: 23.08d
+
+metformin:
+  common:
+    description: >-
+      An agent belonging to the biguanide class of antidiabetics with antihyperglycemic
+      activity. Metformin is associated with a very low incidence of lactic acidosis.
+      This agent helps reduce LDL cholesterol and triglyceride levels, and is not
+      associated with weight gain, and prevents the cardiovascular complications of
+      diabetes. Metformin is not metabolized and is excreted unchanged by the kidneys.
+    termDef:
+      term: >-
+        Metformin
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C61612"
+      term_id: C61612
+      term_version: 23.08d
+
+acetaminophen:
+  common:
+    description: >-
+      A p-aminophenol derivative with analgesic and antipyretic activities. Although
+      the exact mechanism through which acetaminophen exert its effects has yet to
+      be fully determined, acetaminophen may inhibit the nitric oxide (NO) pathway
+      mediated by a variety of neurotransmitter receptors including N-methyl-D-aspartate
+      (NMDA) and substance P, resulting in elevation of the pain threshold. The antipyretic
+      activity may result from inhibition of prostaglandin synthesis and release in
+      the central nervous system (CNS) and prostaglandin-mediated effects on the heat-regulating
+      center in the anterior hypothalamus.
+    termDef:
+      term: >-
+        Acetaminophen
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://thesaurus.cancer.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C198"
+      term_id: C198
+      term_version: 23.08d
+
+cd43:
+  common:
+    description: >-
+      Leukosialin (400 aa, ~40 kDa) is encoded by the human SPN gene. This protein
+      is involved in immune cell function.
+    termDef:
+      term: >-
+        Leukosialin
+      source: NCIt
+      cde_id:
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C101153"
+      term_id: C101153
+      term_version: 23.08d
