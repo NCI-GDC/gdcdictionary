@@ -312,9 +312,22 @@ properties:
     $ref:
       - "_terms.yaml#/exposure_source/common"
     enum:
+      - Home
       - Occupational
       - Secondary
+      - Social
+      - Work
       - Unknown
+    enumDef:
+      Home:
+        $ref:
+          - "_terms_enum.yaml#/home/common"
+      Social:
+        $ref:
+          - "_terms_enum.yaml#/social/common"
+      Work:
+        $ref:
+          - "_terms_enum.yaml#/work/common"
 
   exposure_type:
     $ref:
