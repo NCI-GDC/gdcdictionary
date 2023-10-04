@@ -71,10 +71,6 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
-deprecated:
-  - proportion_coverage_10X
-  - proportion_coverage_30X
-
 properties:
 
   $ref:
