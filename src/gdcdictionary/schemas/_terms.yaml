@@ -57,8 +57,8 @@ additional_pathology_findings:
       term: >-
         Additional Pathologic Findings
       source: NCIt
-      cde_id:
-      cde_version:
+      cde_id: C158809
+      cde_version: 20.10d
       term_url:
       term_id: C158809
       term_version: 20.10d
@@ -1126,7 +1126,7 @@ clonality:
         Clonality
       source: NCIt
       cde_id: C18304
-      cde_version:
+      cde_version: 19.12e
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C18304"
       term_id: C18304
       term_version: 19.12e
@@ -2549,7 +2549,7 @@ gleason_grade_tertiary:
         Gleason Tertiary Score For Prostate Cancer Category
       source: NCIt
       cde_id: C48605
-      cde_version:
+      cde_version: 19.12e
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C48605"
       term_id: C48605
       term_version: 19.12e
@@ -2606,7 +2606,7 @@ greatest_tumor_dimension:
         Tumor Longest Dimension Centimeters Measurement
       source: NCIt
       cde_id: C157135
-      cde_version:
+      cde_version: 19.12e
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C157135"
       term_id: C157135
       term_version: 19.12e
@@ -3440,7 +3440,7 @@ lymph_node_involved_site:
         Lymph Node Involved Site
       source: NCIt
       cde_id: C33027
-      cde_version:
+      cde_version: 19.12e
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C33027"
       term_id: C33027
       term_version: 19.12e
@@ -3516,7 +3516,7 @@ margin_distance:
         Distance to Margin Measurement
       source: NCIt
       cde_id: C137815
-      cde_version:
+      cde_version: 19.12e
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C137815"
       term_id: C137815
       term_version: 19.12e
@@ -3863,8 +3863,8 @@ necrosis_percent:
       term: >-
         Percent of Necrosis
       source: NCIt
-      cde_id:
-      cde_version:
+      cde_id: C159481
+      cde_version: 20.10d
       term_url:
       term_id: C159481
       term_version: 20.10d
@@ -5258,7 +5258,7 @@ rna_integrity_number:
         RNA Integrity Number
       source: NCIt
       cde_id: C63637
-      cde_version:
+      cde_version: 20.10d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C63637"
       term_id: C63637
       term_version: 20.10d
@@ -6093,7 +6093,7 @@ transglottic_extension:
         Transglottic Extension
       source: NCIt
       cde_id: C160996
-      cde_version:
+      cde_version: 19.12e
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C160996"
       term_id: C160996
       term_version: 19.12e
@@ -6981,7 +6981,7 @@ ensat_pathologic_stage:
         ENSAT Stage
       source: NCIt
       cde_id: C141099
-      cde_version:
+      cde_version: 23.03d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C141099"
       term_id: C141099
       term_version: 23.03d
@@ -6997,7 +6997,7 @@ ensat_pathologic_t:
         Pathologic Primary Tumor ENSAT Staging Finding v7
       source: NCIt
       cde_id: C104018
-      cde_version:
+      cde_version: 23.03d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104018"
       term_id: C104018
       term_version: 23.03d
@@ -7013,7 +7013,7 @@ ensat_pathologic_n:
         Pathologic Lymph Nodes ENSAT Staging Finding v7
       source: NCIt
       cde_id: C104023
-      cde_version:
+      cde_version: 23.03d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104023"
       term_id: C104023
       term_version: 23.03d
@@ -7029,7 +7029,7 @@ ensat_clinical_m:
         Clinical Distant Metastasis ENSAT Staging Finding v7
       source: NCIt
       cde_id: C104027
-      cde_version:
+      cde_version: 23.03d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C104027"
       term_id: C104027
       term_version: 23.03d
@@ -7043,7 +7043,7 @@ discontiguous_lesion_count:
         Number of Discontiguous Lesions (New Tumor Event)
       source: NCIt
       cde_id: C158639
-      cde_version:
+      cde_version: 23.03d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C158639"
       term_id: C158639
       term_version: 23.03d
@@ -7058,7 +7058,7 @@ tumor_burden:
         Tumor Burden
       source: NCIt
       cde_id: C28384
-      cde_version:
+      cde_version: 23.03d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C28384"
       term_id: C28384
       term_version: 23.03d
@@ -7072,7 +7072,7 @@ measurement_unit:
         Unit of Length
       source: NCIt
       cde_id: C42578
-      cde_version:
+      cde_version: 23.03d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C42578"
       term_id: C42578
       term_version: 23.03d
@@ -7087,7 +7087,7 @@ clark_level:
         Clark Level Finding
       source: NCIt
       cde_id: C94811
-      cde_version:
+      cde_version: 23.03d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94811"
       term_id: C94811
       term_version: 23.03d
@@ -7101,7 +7101,7 @@ ulceration_indicator:
         Ulceration
       source: NCIt
       cde_id: C25757
-      cde_version:
+      cde_version: 23.03d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25757"
       term_id: C25757
       term_version: 23.03d
@@ -7116,7 +7116,7 @@ tumor_infiltrating_lymphocytes:
         Tumor Infiltrating Lymphocyte
       source: NCIt
       cde_id: C12546
-      cde_version:
+      cde_version: 23.03d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C12546"
       term_id: C12546
       term_version: 23.03d
@@ -7130,7 +7130,7 @@ tumor_infiltrating_macrophages:
         Tumor Infiltrating Macrophages
       source: NCIt
       cde_id: C111027
-      cde_version:
+      cde_version: 23.03d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111027"
       term_id: C111027
       term_version: 23.03d
@@ -7145,7 +7145,7 @@ education_level:
         Education Level
       source: NCIt
       cde_id: C17953
-      cde_version:
+      cde_version: 23.03d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17953"
       term_id: C17953
       term_version: 23.03d
@@ -7159,7 +7159,7 @@ marital_status:
         Marital Status
       source: NCIt
       cde_id: C25188
-      cde_version:
+      cde_version: 23.03d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25188"
       term_id: C25188
       term_version: 23.03d
@@ -7173,7 +7173,7 @@ relative_deceased:
         Deceased Family Member
       source: NCIt
       cde_id: C81180
-      cde_version:
+      cde_version: 23.03d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C81180"
       term_id: C81180
       term_version: 23.03d
@@ -7383,8 +7383,8 @@ staining_intensity_value:
       term: >-
         Staining Intensity
       source: NCIt
-      cde_id:
-      cde_version:
+      cde_id: C127762
+      cde_version: 23.08d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C127762"
       term_id: C127762
       term_version: 23.08d
@@ -7397,8 +7397,8 @@ reason_treatment_not_given:
       term: >-
         Reason Treatment Not Administered
       source: NCIt
-      cde_id:
-      cde_version:
+      cde_id: C102704
+      cde_version: 23.08d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C102704"
       term_id: C102704
       term_version: 23.08d
@@ -7414,8 +7414,8 @@ myasthenia_gravis_classification:
       term: >-
         Myasthenia Gravis Foundation of America Class
       source: NCIt
-      cde_id:
-      cde_version:
+      cde_id: C187352
+      cde_version: 23.08d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C187352"
       term_id: C187352
       term_version: 23.08d
@@ -7442,8 +7442,8 @@ radiosensitizing_agent:
       term: >-
         Radiosensitizing Agent
       source: NCIt
-      cde_id:
-      cde_version:
+      cde_id: C798
+      cde_version: 23.08d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C798"
       term_id: C798
       term_version: 23.08d
@@ -7457,8 +7457,8 @@ therapeutic_levels_achieved:
       term: >-
         Therapeutic Agent Level Achieved Indicator
       source: NCIt
-      cde_id:
-      cde_version:
+      cde_id: C198198
+      cde_version: 23.08d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C198198"
       term_id: C198198
       term_version: 23.08d
@@ -7466,7 +7466,7 @@ therapeutic_levels_achieved:
 oxygen_use_type:
   common:
     description: >-
-      Text term to decribe the type of oxygen the patient uses at home.
+      Text term to describe the type of oxygen the patient uses at home.
     termDef:
       term: >-
         Patient Oxygen Use Type
