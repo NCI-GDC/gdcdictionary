@@ -51,6 +51,7 @@ deprecated:
   - papillary_renal_cell_type
   - primary_disease
   - metastasis_at_diagnosis_site
+  - pregnant_at_diagnosis
 
 properties:
 
@@ -3805,6 +3806,7 @@ properties:
       - 8974/1
       - 8975/1
       - 8980/3
+      - 8980/6
       - 8981/3
       - 8982/0
       - 8982/3
@@ -8100,6 +8102,7 @@ properties:
       - Diffuse melanocytosis
       - Diffuse meningiomatosis
       - Diffuse midline glioma, H3 K27M-mutant
+      - Diffuse Pediatric-type High Grade Glioma
       - Digital papillary adenocarcinoma
       - Diktyoma, benign
       - Diktyoma, malignant
@@ -18306,6 +18309,7 @@ properties:
         - Testes
         - Thorax, NOS
         - Thyroid
+        - Thyroid Gland Isthmus
         - Tongue
         - Tonsil
         - Trachea
@@ -18373,6 +18377,9 @@ properties:
       Spinal Cord:
         $ref:
           - "_terms_enum.yaml#/spinal_cord/common"
+      Thyroid Gland Isthmus:
+        $ref:
+          - "_terms_enum.yaml#/thyroid_gland_isthmus/common"
       Urethra:
         $ref:
           - "_terms_enum.yaml#/urethra/common"
