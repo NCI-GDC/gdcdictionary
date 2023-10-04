@@ -24,18 +24,21 @@ systemProperties:
   - state
 
 links:
-  - name: cases
-    backref: other_clinical_attributes
-    label: describes
-    target_type: cases
-    multiplicity: many_to_one
-    required: false
-  - name: follow_ups
-    backref: other_clinical_attributes
-    label: describes
-    target_type: follow_ups
-    multiplicity: many_to_one
-    required: false
+  - exclusive: false
+  - required: true
+  - subgroup:
+      - name: cases
+        backref: other_clinical_attributes
+        label: describes
+        target_type: case
+        multiplicity: many_to_one
+        required: false
+      - name: follow_ups
+        backref: other_clinical_attributes
+        label: describes
+        target_type: follow_up
+        multiplicity: many_to_one
+        required: false
 
 required:
   - submitter_id
