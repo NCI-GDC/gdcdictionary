@@ -46,12 +46,13 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 deprecated:
+  - metastasis_at_diagnosis_site
   - micropapillary_features
   - mitotic_count
   - papillary_renal_cell_type
-  - primary_disease
-  - metastasis_at_diagnosis_site
   - pregnant_at_diagnosis
+  - primary_disease
+
 
 properties:
 
