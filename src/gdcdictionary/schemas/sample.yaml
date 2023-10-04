@@ -195,6 +195,7 @@ properties:
       - Hard Palate
       - Head & Neck
       - Head - Face Or Neck, Nos
+      - Head, Face or Neck, NOS
       - Heart
       - Hepatic
       - Hepatic Duct
@@ -370,6 +371,8 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Head - Face Or Neck, Nos
     enumDef:
       Bone Marrow:
         $ref:
