@@ -239,7 +239,6 @@ properties:
         - Hyperthyroidism
         - Hypospadias
         - Hypothyroidism
-        - Hypothyroidism
         - Inflammatory Bowel Disease
         - Insulin Controlled Diabetes
         - Interstitial Pneumonitis or ARDS
@@ -330,7 +329,7 @@ properties:
       Pneumocystis Pneumonia:
         $ref:
           - "_terms_enum.yaml#/pneumonia_nos/common"
-      Wagr Syndrome:
+      Other:
         $ref:
           - "_terms_enum.yaml#/other/common"
       Unknown:
@@ -1005,7 +1004,6 @@ properties:
         - Low Grade Dysplasia
         - Lymphamatoid Papulosis
         - Lymphocytic Meningitis
-        - Lymphocytic Thyroiditis
         - Lymphocytic Thyroiditis
         - Lymphoid Hyperplasia
         - Lynch Syndrome
