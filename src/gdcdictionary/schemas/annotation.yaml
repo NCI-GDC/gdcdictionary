@@ -202,6 +202,12 @@ links:
         target_type: molecular_test
         multiplicity: many_to_many
         required: false
+      - name: other_clinical_attributes
+        backref: annotations
+        label: annotates
+        target_type: other_clinical_attribute
+        multiplicity: many_to_many
+        required: false
       - name: pathology_details
         backref: annotations
         label: annotates
@@ -529,6 +535,9 @@ properties:
     $ref: "_definitions.yaml#/to_many"
 
   molecular_tests:
+    $ref: "_definitions.yaml#/to_many"
+
+  other_clinical_attributes:
     $ref: "_definitions.yaml#/to_many"
 
   pathology_details:
