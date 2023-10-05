@@ -102641,18 +102641,17 @@ staining_intensity_3:
       term_version: 23.08d
 
 staining_intensity_4:
-  ?
-  : ?
-    : description: >-
-        A measurement of the amount or proportion of tissue or cells that have a staining
-        intensity of 4+
-      termDef:
-        term: >-
-          Staining Intensity 4+
-        source:
-        cde_id:
-        cde_version:
-        term_url:
+  common:
+    description: >-
+      A measurement of the amount or proportion of tissue or cells that have a staining
+      intensity of 4+
+    termDef:
+      term: >-
+        Staining Intensity 4+
+      source:
+      cde_id:
+      cde_version:
+      term_url:
 
 aspirin:
   common:
