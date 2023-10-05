@@ -75,6 +75,7 @@ deprecated:
   - hormonal_contraceptive_type
   - hormonal_contraceptive_use
   - hormone_replacement_therapy_type
+  - hpv_positive_type
   - hysterectomy_margins_involved
   - hysterectomy_type
   - immunosuppressive_treatment_type
@@ -1781,6 +1782,44 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
+      Unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
+
+  hpv_positive_type:
+    $ref:
+      - "_terms.yaml#/hpv_positive_type/common"
+    enum:
+      - "16"
+      - "18"
+      - "26"
+      - "31"
+      - "33"
+      - "35"
+      - "39"
+      - "45"
+      - "51"
+      - "52"
+      - "53"
+      - "56"
+      - "58"
+      - "59"
+      - "63"
+      - "66"
+      - "68"
+      - "70"
+      - "73"
+      - "82"
+      - Other
+      - Unknown
+      - Not Reported
+    enumDef:
+      Other:
+        $ref:
+          - "_terms_enum.yaml#/other/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
