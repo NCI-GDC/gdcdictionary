@@ -9,7 +9,7 @@ project: '*'
 program: '*'
 description: >-
   Record of the administration and intention of therapeutic agents provided to a patient
-  to alter the course of a pathologic process.
+  to alter the course of a cancer-related pathologic process.
 additionalProperties: false
 submittable: true
 downloadable: false
@@ -302,6 +302,28 @@ properties:
       - S921
       - STB
 
+  radiosensitizing_agent:
+    $ref:
+      - "_terms.yaml#/radiosensitizing_agent/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms_enum.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms_enum.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
+
   reason_treatment_ended:
     $ref:
       - "_terms.yaml#/reason_treatment_ended/common"
@@ -316,6 +338,24 @@ properties:
       Other:
         $ref:
           - "_terms_enum.yaml#/other/common"
+
+  reason_treatment_not_given:
+    $ref:
+      - "_terms.yaml#/reason_treatment_not_given/common"
+    enum:
+      - Adverse Event/Complications
+      - Not Done per Treating Physician's Discretion
+      - Participant Refusal
+      - Scheduling Problems
+      - Unknown
+      - Not Reported
+    enumDef:
+      Unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
 
   regimen_or_line_of_therapy:
     $ref:
@@ -6741,6 +6781,28 @@ properties:
       - "_terms.yaml#/therapeutic_level_achieved/common"
     type: boolean
 
+  therapeutic_levels_achieved:
+    $ref:
+      - "_terms.yaml#/therapeutic_levels_achieved/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms_enum.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms_enum.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
+
   therapeutic_target_level:
     $ref:
       - "_terms.yaml#/therapeutic_target_level/common"
@@ -6754,11 +6816,13 @@ properties:
       - End of Consolidation Therapy
       - End of Treatment Course
       - First Complete Response
+      - First Treatment
       - Postoperative
       - Preoperative
       - Prior to Diagnosis
       - Prior to Procurement
       - Prior to Study Registration
+      - Prior to Treatment
       - Progression
       - Recurrence
       - Not Reported
@@ -7231,6 +7295,7 @@ properties:
         - Hard Palate
         - Head - Face Or Neck, Nos
         - Head and Neck
+        - Head, Face or Neck, NOS
         - Heart
         - Hepatic
         - Hepatic Duct
@@ -7416,6 +7481,8 @@ properties:
         - Other
         - Unknown
         - Not Reported
+    deprecated_enum:
+      - Head - Face Or Neck, Nos
     enumDef:
       Bone Marrow:
         $ref:
