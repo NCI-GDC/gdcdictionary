@@ -46,11 +46,12 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 deprecated:
+  - metastasis_at_diagnosis_site
   - micropapillary_features
   - mitotic_count
   - papillary_renal_cell_type
+  - pregnant_at_diagnosis
   - primary_disease
-  - metastasis_at_diagnosis_site
 
 properties:
 
@@ -2697,17 +2698,6 @@ properties:
       - Thyroid
       - Other
 
-  measurement_type:
-    description: >-
-      The method used to measure tumor size.
-    enum:
-      - Pathologic
-      - Radiologic
-    enumDef:
-      Radiologic:
-        $ref:
-          - "_terms_enum.yaml#/radiologic/common"
-
   medulloblastoma_molecular_classification:
     $ref:
       - "_terms.yaml#/medulloblastoma_molecular_classification/common"
@@ -3805,6 +3795,7 @@ properties:
       - 8974/1
       - 8975/1
       - 8980/3
+      - 8980/6
       - 8981/3
       - 8982/0
       - 8982/3
@@ -8100,6 +8091,7 @@ properties:
       - Diffuse melanocytosis
       - Diffuse meningiomatosis
       - Diffuse midline glioma, H3 K27M-mutant
+      - Diffuse Pediatric-type High Grade Glioma
       - Digital papillary adenocarcinoma
       - Diktyoma, benign
       - Diktyoma, malignant
@@ -18306,6 +18298,7 @@ properties:
         - Testes
         - Thorax, NOS
         - Thyroid
+        - Thyroid Gland Isthmus
         - Tongue
         - Tonsil
         - Trachea
@@ -18373,6 +18366,9 @@ properties:
       Spinal Cord:
         $ref:
           - "_terms_enum.yaml#/spinal_cord/common"
+      Thyroid Gland Isthmus:
+        $ref:
+          - "_terms_enum.yaml#/thyroid_gland_isthmus/common"
       Urethra:
         $ref:
           - "_terms_enum.yaml#/urethra/common"
@@ -19635,9 +19631,6 @@ properties:
       - Low Grade
       - Unknown
       - Not Reported
-      - not reported
-    deprecated_enum:
-      - not reported
     enumDef:
       G1:
         $ref:
@@ -19670,9 +19663,6 @@ properties:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
       Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-      not reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
