@@ -236,6 +236,14 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  days_to_pathology_detail:
+    description: >-
+      Number of days between the date used for index and the date a pathologic review
+      of a specific sample or slide was performed.
+    type: integer
+    maximum: 32872
+    minimum: -32872
+
   dysplasia_degree:
     $ref:
       - "_terms.yaml#/dysplasia_degree/common"
@@ -325,6 +333,22 @@ properties:
       - Focal
       - Not Reported
 
+  extracapsular_extension_present:
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms_enum.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms_enum.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
+
   extranodal_extension:
     $ref:
       - "_terms.yaml#/extranodal_extension/common"
@@ -338,6 +362,32 @@ properties:
       - "_terms.yaml#/extrascleral_extension/common"
     type: boolean
 
+  extrathyroid_extension:
+    $ref:
+      - "_terms.yaml#/extrathyroid_extension/common"
+    enum:
+      - None
+      - Minimal (T3)
+      - Moderate/Advanced (T4a)
+      - Very Advanced (T4b)
+      - Unknown
+    enumDef:
+      Minimal (T3):
+        $ref:
+          - "_terms_enum.yaml#/t3/pathology_detail/extrathyroid_extension"
+      Moderate/Advanced (T4a):
+        $ref:
+          - "_terms_enum.yaml#/t4a/pathology_detail/extrathyroid_extension"
+      None:
+        $ref:
+          - "_terms_enum.yaml#/none/common"
+      Very Advanced (T4b):
+        $ref:
+          - "_terms_enum.yaml#/t4b/pathology_detail/extrathyroid_extension"
+      Unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
+
   greatest_tumor_dimension:
     $ref:
       - "_terms.yaml#/greatest_tumor_dimension/common"
@@ -349,6 +399,25 @@ properties:
       - "_terms.yaml#/gross_tumor_weight/common"
     type: number
     minimum: 0
+
+  histologic_progression_type:
+    $ref:
+      - "_terms.yaml#/histologic_progression_type/common"
+    enum:
+      - Anaplastic
+      - Poorly differentiated
+      - Unknown
+      - Not Reported
+    enumDef:
+      Poorly differentiated:
+        $ref:
+          - "_terms_enum.yaml#/poorly_differentiated/common"
+      Unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
 
   largest_extrapelvic_peritoneal_focus:
     $ref:
@@ -396,6 +465,9 @@ properties:
       - Aortic
       - Axillary
       - Cervical
+      - Cervical, Central
+      - Cervical, Lateral
+      - Cervical, NOS
       - Epitrochlear
       - Femoral
       - Hilar
@@ -417,6 +489,8 @@ properties:
       - Supraclavicular
       - Unknown
       - Not Reported
+    deprecated_enum:
+      - Cervical
     enumDef:
       Axillary:
         $ref:
@@ -583,6 +657,7 @@ properties:
     $ref:
       - "_terms.yaml#/measurement_type/common"
     enum:
+      - Echographic
       - Pathologic
       - Radiologic
     enumDef:
@@ -607,6 +682,29 @@ properties:
   metaplasia_present:
     $ref:
       - "_terms.yaml#/metaplasia_present/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+    enumDef:
+      "Yes":
+        $ref:
+          - "_terms_enum.yaml#/yes/common"
+      "No":
+        $ref:
+          - "_terms_enum.yaml#/no/common"
+      Unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
+      Not Reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
+
+  micrometastasis_present:
+    description: >-
+      Indication of metastasis in the form of small clusters of malignant cells identifiable
+      only under the microscope.
     enum:
       - "Yes"
       - "No"
@@ -981,13 +1079,6 @@ properties:
         - Apex
         - Base
         - Middle
-
-  tumor_measurement_method:
-    $ref:
-      - "_terms.yaml#/tumor_measurement_method/common"
-    enum:
-      - Echographic
-      - Pathologic
 
   tumor_shape:
     $ref:
