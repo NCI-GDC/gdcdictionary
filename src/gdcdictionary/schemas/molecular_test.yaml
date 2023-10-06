@@ -95,6 +95,7 @@ properties:
       - CD30
       - CD33
       - CD34
+      - CD43
       - CD45
       - CD56
       - CD79A
@@ -170,6 +171,9 @@ properties:
       CD34:
         $ref:
           - "_terms_enum.yaml#/cd34/common"
+      CD43:
+        $ref:
+          - "_terms_enum.yaml#/cd43/common"
       CD45:
         $ref:
           - "_terms_enum.yaml#/cd45/common"
@@ -3883,6 +3887,7 @@ properties:
       - Karyotype
       - Microarray
       - Microsatellite Analysis
+      - Microscopy, NOS
       - Nuclear Staining
       - PCR
       - RNA Sequencing
@@ -3926,6 +3931,9 @@ properties:
       Microsatellite Analysis:
         $ref:
           - "_terms_enum.yaml#/microsatellite_analysis/common"
+      Microscopy, NOS:
+        $ref:
+          - "_terms_enum.yaml#/microscopy_nos/common"
       Nuclear Staining:
         $ref:
           - "_terms_enum.yaml#/nuclear_staining/common"
@@ -7119,6 +7127,32 @@ properties:
       - 3 Point Scale
       - 4 Point Scale
 
+  staining_intensity_value:
+    $ref:
+      - "_terms.yaml#/staining_intensity_value/common"
+    enum:
+      - "0"
+      - 1+
+      - 2+
+      - 3+
+      - 4+
+    enumDef:
+      "0":
+        $ref:
+          - "_terms_enum.yaml#/staining_intensity_0/common"
+      1+:
+        $ref:
+          - "_terms_enum.yaml#/staining_intensity_1/common"
+      2+:
+        $ref:
+          - "_terms_enum.yaml#/staining_intensity_2/common"
+      3+:
+        $ref:
+          - "_terms_enum.yaml#/staining_intensity_3/common"
+      4+:
+        $ref:
+          - "_terms_enum.yaml#/staining_intensity_4/common"
+
   test_analyte_type:
     $ref:
       - "_terms.yaml#/test_analyte_type/common"
@@ -7166,12 +7200,14 @@ properties:
       - Intermediate
       - Loss of Expression
       - Low
+      - Mitotic Count Reported
       - Negative
       - Normal
       - Not Amplified
       - Overexpressed
       - Positive
       - Stable
+      - Staining Intensity Value Reported
       - Test Value Reported
       - Unknown
       - Not Reported
@@ -7212,7 +7248,6 @@ properties:
       - "_terms.yaml#/test_units/common"
     enum:
       - cells/mL
-      - count x10^9/L
       - g/dL
       - g/L
       - mcg/L
@@ -7234,8 +7269,6 @@ properties:
       - x10^9 cells/L
       - Unknown
       - Not Reported
-    deprecated_enum:
-      - count x10^9/L
 
   test_value:
     $ref:
@@ -7273,6 +7306,7 @@ properties:
       - End of Treatment Course 1
       - End of Treatment Course 2
       - Preoperative
+      - Prior to Treatment
       - Not Reported
     enumDef:
       Preoperative:
