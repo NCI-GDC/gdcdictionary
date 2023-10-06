@@ -1,0 +1,44 @@
+{
+  "type": "other_clinical_attribute",
+  "submitter_id": "other_clin1",
+  "aids_risk_factors": "Toxoplasmosis",
+  "bmi": 10,
+  "body_surface_area": 15,
+  "cd4_count": 10,
+  "cdc_hiv_risk_factors": "None",
+  "comorbidities": [
+    "COPD"
+  ],
+  "comorbidity_method_of_diagnosis": "Histology",
+  "days_to_comorbidity": -340,
+  "diabetes_treatment_type": "Insulin",
+  "dlco_ref_predictive_percent": 1.21,
+  "eye_color": "Amber",
+  "fev1_ref_post_bronch_percent": 0.1,
+  "fev1_ref_pre_bronch_percent": 1.23,
+  "fev1_fvc_post_bronch_percent": 34.54,
+  "fev1_fvc_pre_bronch_percent": 33.3,
+  "haart_treatment_indicator": "Yes",
+  "height": 162,
+  "hepatitis_sustained_virological_response": "No",
+  "hormonal_contraceptive_type": "Unknown",
+  "hormonal_contraceptive_use": "Unknown",
+  "hysterectomy_margins_involved": "Bladder",
+  "hysterectomy_type": "Simple Hysterectomy",
+  "immunosuppressive_treatment_type": "None",
+  "menopause_status": "Not Reported",
+  "nadir_cd4_count": 0,
+  "pancreatitis_onset_year": 1974,
+  "pregnancy_count": 0,
+  "pregnancy_outcome": "Not Reported",
+  "reflux_treatment_type": "Medically Treated",
+  "risk_factors": [
+    "Obesity"
+  ],
+  "risk_factor_treatment": "Yes",
+  "viral_hepatitis_serologies": "HBV Surface Antibody",
+  "weight": 123,
+  "cases": {
+    "submitter_id": "case1"
+  }
+}
