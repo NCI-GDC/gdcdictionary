@@ -52,9 +52,51 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 deprecated:
-  - hpv_positive_type
+  - aids_risk_factors
+  - bmi
+  - body_surface_area
+  - cd4_count
+  - cdc_hiv_risk_factors
   - comorbidity
+  - comorbidity_method_of_diagnosis
+  - comorbidities
+  - days_to_comorbidity
+  - diabetes_treatment_type
+  - dlco_ref_predictive_percent
+  - eye_color
+  - fev1_fvc_post_bronch_percent
+  - fev1_fvc_pre_bronch_percent
+  - fev1_ref_post_bronch_percent
+  - fev1_ref_pre_bronch_percent
+  - haart_treatment_indicator
+  - height
+  - hepatitis_sustained_virological_response
+  - hiv_viral_load
+  - hormonal_contraceptive_type
+  - hormonal_contraceptive_use
+  - hormone_replacement_therapy_type
+  - hpv_positive_type
+  - hysterectomy_margins_involved
+  - hysterectomy_type
+  - immunosuppressive_treatment_type
+  - menopause_status
+  - nadir_cd4_count
+  - pancreatitis_onset_year
+  - pregnancy_count
+  - pregnancy_outcome
+  - reflux_treatment_type
   - risk_factor
+  - risk_factor_method_of_diagnosis
+  - risk_factor_treatment
+  - risk_factors
+  - undescended_testis_corrected
+  - undescended_testis_corrected_age
+  - undescended_testis_corrected_laterality
+  - undescended_testis_corrected_method
+  - undescended_testis_history
+  - undescended_testis_history_laterality
+  - viral_hepatitis_serologies
+  - weight
 
 properties:
 
@@ -1832,7 +1874,12 @@ properties:
     items:
       enum:
         - Abdomen
+        - Lymph Node
         - Pelvis
+    enumDef:
+      Lymph Node:
+        $ref:
+          - "_terms_enum.yaml#/lymph_node_nos/common"
 
   imaging_findings:
     $ref:
@@ -1889,6 +1936,11 @@ properties:
       - CT Scan
       - MRI
       - PET
+      - Ultrasound
+    enumDef:
+      Ultrasound:
+        $ref:
+          - "_terms_enum.yaml#/ultrasound/common"
 
   immunosuppressive_treatment_type:
     $ref:
