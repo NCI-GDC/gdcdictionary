@@ -402,9 +402,9 @@ properties:
       Text term that indicates the number of days that exercise occurred in the past
       seven days.
     enum:
-      - 5 or more days
-      - 3 to 4 days
-      - 1 to 2 days
+      - 5 or More Days
+      - 3 to 4 Days
+      - 1 to 2 Days
       - None
     enumDef:
       None:

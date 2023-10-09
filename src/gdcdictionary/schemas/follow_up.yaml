@@ -75,6 +75,7 @@ deprecated:
   - hormonal_contraceptive_type
   - hormonal_contraceptive_use
   - hormone_replacement_therapy_type
+  - hpv_positive_type
   - hysterectomy_margins_involved
   - hysterectomy_type
   - immunosuppressive_treatment_type
