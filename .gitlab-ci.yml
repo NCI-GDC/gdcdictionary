@@ -65,6 +65,8 @@ push_datamodels_to_github:
   allow_failure: true   # failure when no changes of models
   dependencies:
     - execute_plaster
+  except:
+    - tags
 
 
 push_datamodels_tag_to_github:
