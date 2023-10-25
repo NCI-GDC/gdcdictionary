@@ -76,8 +76,6 @@ push_datamodels_tag_to_github:
   stage: tag_gdcdatamodel2
   script:
     - !reference [ .load_github_key, script ]
-    # can not use artifact from previous stage because previous stage is allowed to fail
-#    - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
     - cd gdcdatamodel2
     - git push origin --delete "$CI_COMMIT_REF_NAME" || true # delete branch with tag name
     - git log -1
