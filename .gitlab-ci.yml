@@ -60,11 +60,15 @@ push_datamodels_to_github:
     - cat setup.cfg
     - git status
     - git add .
-    - git commit -m "Use gdcdictionary $CI_COMMIT_REF_NAME $CI_COMMIT_SHA"
+    - git commit -m "Use gdcdictionary $CI_COMMIT_REF_NAME $CI_COMMIT_SHA" || true
+    - git rev-parse --short HEAD
     - git push origin "$CI_COMMIT_REF_NAME"
-  allow_failure: true   # failure when no changes of models
   dependencies:
     - execute_plaster
+  artifacts:
+    paths:
+      - gdcdatamodel2
+    expire_in: 1 week
 
 
 push_datamodels_tag_to_github:
@@ -72,14 +76,13 @@ push_datamodels_tag_to_github:
   stage: tag_gdcdatamodel2
   script:
     - !reference [ .load_github_key, script ]
-    # can not use artifact from previous stage because previous stage is allowed to fail
-    - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
     - cd gdcdatamodel2
+    - git push origin --delete "$CI_COMMIT_REF_NAME" || true # delete branch with tag name
     - git log -1
     - echo "gdcdictionary $CI_COMMIT_SHORT_SHA gdcdatamodel2 $(git rev-parse --short HEAD)"
     - git tag -a $CI_COMMIT_TAG -m "gdcdictionary $CI_COMMIT_SHORT_SHA gdcdatamodel2 $(git rev-parse --short HEAD)"
-    - git push origin $CI_COMMIT_TAG
-  only:
-    - tags
+    - git push --tags
   dependencies:
     - push_datamodels_to_github
+  only:
+    - tags
