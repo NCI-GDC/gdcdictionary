@@ -2,12 +2,6 @@
 # To contribute improvements to CI/CD templates, please follow the Development guide at:
 # https://docs.gitlab.com/ee/development/cicd/templates.html
 
-stages:
-  - test
-  - build
-  - release_gdcdatamodel2
-  - tag_gdcdatamodel2
-
 include:
   - project: nci-gdc/gitlab-templates
     ref: 0.6.2
@@ -41,7 +35,12 @@ execute_plaster:
     - cd gdcdatamodel2
     - git checkout "$CI_COMMIT_REF_NAME" || git checkout -b "$CI_COMMIT_REF_NAME"
     - git log -1
-    - pip install "gdc-plaster==1.0.10.dev1+faet.dev.2444.use.without.profile" "psqlgml>=0.2.4"
+    - |
+      if [ ${CI_TRIGGER_VERSION+x} ]; then
+        pip install "gdc-plaster==$CI_TRIGGER_VERSION" "psqlgml>=0.2.4"
+      else
+        pip install gdc-plaster "psqlgml>=0.2.4"
+      fi
     - plaster --version
     - psqlgml --version
     - |
@@ -60,7 +59,7 @@ execute_plaster:
 
 push_datamodels_to_github:
   image: docker.osdc.io/ncigdc/python3.6-builder:${BASE_CONTAINER_VERSION}
-  stage: release_gdcdatamodel2
+  stage: .post
   script:
     - !reference [.load_github_key, script]
     - cd gdcdatamodel2
@@ -80,7 +79,7 @@ push_datamodels_to_github:
 
 push_datamodels_tag_to_github:
   image: docker.osdc.io/ncigdc/python3.8-builder:${BASE_CONTAINER_VERSION}
-  stage: tag_gdcdatamodel2
+  stage: .post
   script:
     - !reference [ .load_github_key, script ]
     - cd gdcdatamodel2
