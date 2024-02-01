@@ -32,18 +32,26 @@ execute_plaster:
   stage: build
   script:
     - !reference [.load_github_key, script]
-    - pwd
+    - export root_dir=$(pwd)
+    - echo $root_dir
+    - echo $CI_BUILDS_DIR
+    - mkdir -p gdcdictionary/$CI_COMMIT_REF_NAME
+    - cp -r src/gdcdictionary/schemas/* gdcdictionary/$CI_COMMIT_REF_NAME
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
     - cd gdcdatamodel2
     - git checkout "$CI_COMMIT_REF_NAME" || git checkout -b "$CI_COMMIT_REF_NAME"
     - git log -1
-    - sed -i 's|version = .*|version ="'"$CI_COMMIT_REF_NAME"'"|' plaster.toml
-    - sed -i 's/is_git_tag = .*/is_git_tag = false/' plaster.toml
-    - cat plaster.toml
-    - bash plaster
+    - pip install "gdc-plaster==1.0.10.dev1+faet.dev.2444.use.without.profile" "psqlgml>=0.2.4"
+    - plaster --version
+    - psqlgml --version
+    - |
+      plaster generate-no-profile \
+        -i $root_dir \
+        --dict-name gdcdictionary \
+        --dict-version $CI_COMMIT_REF_NAME \
+        -o src/gdcdatamodel2/models \
+        -s src/gdcdatamodel2/partial_dictionary
     - git status
-    - sed -i 's|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@.*#egg=gdcdictionary|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@'"$CI_COMMIT_REF_NAME"'#egg=gdcdictionary|' setup.cfg
-    - cat setup.cfg
   artifacts:
     paths:
       - gdcdatamodel2
@@ -61,7 +69,7 @@ push_datamodels_to_github:
     - git add .
     - git commit -m "Use gdcdictionary $CI_COMMIT_REF_NAME $CI_COMMIT_SHA" || true
     - git rev-parse --short HEAD
-    - git push origin "$CI_COMMIT_REF_NAME"
+    - git push origin "$CI_COMMIT_REF_NAME" || true
   dependencies:
     - execute_plaster
   artifacts:
