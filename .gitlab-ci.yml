@@ -28,16 +28,16 @@ execute_plaster:
     - !reference [.load_github_key, script]
     - export root_dir=$(pwd)
     - echo $root_dir
-    - echo $CI_BUILDS_DIR
     - mkdir -p gdcdictionary/$CI_COMMIT_REF_NAME
     - cp -r src/gdcdictionary/schemas/* gdcdictionary/$CI_COMMIT_REF_NAME
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
     - cd gdcdatamodel2
     - git checkout "$CI_COMMIT_REF_NAME" || git checkout -b "$CI_COMMIT_REF_NAME"
     - git log -1
+    - echo $CI_TRIGGER_BRANCH
     - |
-      if [ ${CI_TRIGGER_VERSION+x} ]; then
-        pip install "gdc-plaster==$CI_TRIGGER_VERSION" "psqlgml>=0.2.4"
+      if [ ${CI_TRIGGER_BRANCH+x} ]; then
+        pip install "gdc-plaster==CI_TRIGGER_BRANCH" "psqlgml>=0.2.4"
       else
         pip install gdc-plaster "psqlgml>=0.2.4"
       fi
