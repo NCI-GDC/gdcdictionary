@@ -10,7 +10,7 @@ stages:
 
 include:
   - project: nci-gdc/gitlab-templates
-    ref: 0.2.1
+    ref: 0.6.2
     file:
       - templates/global/full.yaml
       - templates/python/full.yaml
@@ -21,7 +21,6 @@ tox:
     matrix:
       - BUILD_PY_VERSION: [python3.7, python3.8, python3.9]
   script:
-    - python -m pip install tox
     - tox -r -e py
 
 release:
