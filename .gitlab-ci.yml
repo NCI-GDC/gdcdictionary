@@ -24,17 +24,10 @@ release:
       if [ ${CI_COMMIT_TAG+x} ]; then
         export TWINE_REPOSITORY_URL=https://nexus.osdc.io/repository/pypi-releases/
       fi
-  after_script:
-    - pip install "setuptools_scm>=6.2"
-    - python -m setuptools_scm | tee VERSION.txt
-  artifacts:
-    paths:
-      - VERSION.txt
-    expire_in: 1 week
 
 execute_plaster:
   image: docker.osdc.io/ncigdc/python3.9-builder:${BASE_CONTAINER_VERSION}
-  stage: release
+  stage: build
   script:
     - !reference [.load_github_key, script]
     - export root_dir=$(pwd)
@@ -54,7 +47,8 @@ execute_plaster:
       fi
     - plaster --version
     - psqlgml --version
-    - export DICT_VERSION=$(cat VERSION.txt)
+    - pip install "setuptools_scm>=6.2"
+    - export DICT_VERSION=$(python -m setuptools_scm)
     - |
       plaster generate-no-profile \
         -i $root_dir \
@@ -71,7 +65,7 @@ execute_plaster:
 
 push_datamodels_to_github:
   image: docker.osdc.io/ncigdc/python3.6-builder:${BASE_CONTAINER_VERSION}
-  stage: .post
+  stage: release
   script:
     - !reference [.load_github_key, script]
     - cd gdcdatamodel2
