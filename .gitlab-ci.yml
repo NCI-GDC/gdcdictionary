@@ -20,6 +20,17 @@ tox:
 release:
   before_script:
     - git fetch --unshallow || true
+    - |
+      if [ ${CI_COMMIT_TAG+x} ]; then
+        export TWINE_REPOSITORY_URL=https://nexus.osdc.io/repository/pypi-releases/
+      fi
+  after_script:
+    - pip install "setuptools_scm==8.0.4" "setuptools-git-versioning<2"
+    - python -m setuptools_git_versioning | tee VERSION.txt
+  artifacts:
+    paths:
+      - VERSION.txt
+    expire_in: 1 week
 
 execute_plaster:
   image: docker.osdc.io/ncigdc/python3.9-builder:${BASE_CONTAINER_VERSION}
@@ -43,11 +54,12 @@ execute_plaster:
       fi
     - plaster --version
     - psqlgml --version
+    - export DICT_VERSION=$(cat VERSION.txt)
     - |
       plaster generate-no-profile \
         -i $root_dir \
         --dict-name gdcdictionary \
-        --dict-version $CI_COMMIT_REF_NAME \
+        --dict-version $DICT_VERSION \
         -o src/gdcdatamodel2/models \
         -s src/gdcdatamodel2/partial_dictionary
     - git status
