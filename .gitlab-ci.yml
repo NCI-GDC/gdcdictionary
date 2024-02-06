@@ -2,6 +2,12 @@
 # To contribute improvements to CI/CD templates, please follow the Development guide at:
 # https://docs.gitlab.com/ee/development/cicd/templates.html
 
+stages:
+  - test
+  - build
+  - release_gdcdatamodel2
+  - tag_gdcdatamodel2
+
 include:
   - project: nci-gdc/gitlab-templates
     ref: 0.6.2
@@ -65,7 +71,7 @@ execute_plaster:
 
 push_datamodels_to_github:
   image: docker.osdc.io/ncigdc/python3.6-builder:${BASE_CONTAINER_VERSION}
-  stage: release
+  stage: release_gdcdatamodel2
   script:
     - !reference [.load_github_key, script]
     - cd gdcdatamodel2
@@ -85,7 +91,7 @@ push_datamodels_to_github:
 
 push_datamodels_tag_to_github:
   image: docker.osdc.io/ncigdc/python3.8-builder:${BASE_CONTAINER_VERSION}
-  stage: .post
+  stage: tag_gdcdatamodel2
   script:
     - !reference [ .load_github_key, script ]
     - cd gdcdatamodel2
