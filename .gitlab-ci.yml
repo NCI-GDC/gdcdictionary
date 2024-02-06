@@ -34,7 +34,7 @@ release:
 
 execute_plaster:
   image: docker.osdc.io/ncigdc/python3.9-builder:${BASE_CONTAINER_VERSION}
-  stage: build
+  stage: release
   script:
     - !reference [.load_github_key, script]
     - export root_dir=$(pwd)
