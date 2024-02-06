@@ -38,6 +38,7 @@ execute_plaster:
     - !reference [.load_github_key, script]
     - export root_dir=$(pwd)
     - echo $root_dir
+    - pip install "setuptools_scm>=6.2"
     - export DICT_VERSION=$(python -m setuptools_scm)
     - echo $DICT_VERSION
     - mkdir -p gdcdictionary/$CI_COMMIT_REF_NAME
@@ -55,7 +56,6 @@ execute_plaster:
       fi
     - plaster --version
     - psqlgml --version
-    - pip install "setuptools_scm>=6.2"
     - |
       plaster generate-no-profile \
         -i $root_dir \
