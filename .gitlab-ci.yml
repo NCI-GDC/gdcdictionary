@@ -41,7 +41,7 @@ execute_plaster:
     - pip install "setuptools_scm>=6.2"
     - export DICT_VERSION=$(python -m setuptools_scm)
     - echo $DICT_VERSION
-    - mkdir -p gdcdictionary/$CI_COMMIT_REF_NAME
+    - mkdir -p gdcdictionary/$DICT_VERSION
     - cp -r src/gdcdictionary/schemas/* gdcdictionary/$DICT_VERSION
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
     - cd gdcdatamodel2
