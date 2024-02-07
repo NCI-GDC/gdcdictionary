@@ -10,7 +10,7 @@ stages:
 
 include:
   - project: nci-gdc/gitlab-templates
-    ref: 0.2.1
+    ref: 0.6.2
     file:
       - templates/global/full.yaml
       - templates/python/full.yaml
@@ -21,30 +21,49 @@ tox:
     matrix:
       - BUILD_PY_VERSION: [python3.7, python3.8, python3.9]
   script:
-    - python -m pip install tox
     - tox -r -e py
 
 release:
   before_script:
     - git fetch --unshallow || true
+    - |
+      if [ ${CI_COMMIT_TAG+x} ]; then
+        export TWINE_REPOSITORY_URL=https://nexus.osdc.io/repository/pypi-releases/
+      fi
 
 execute_plaster:
-  image: docker.osdc.io/ncigdc/python3.8-builder:${BASE_CONTAINER_VERSION}
+  image: docker.osdc.io/ncigdc/python3.9-builder:${BASE_CONTAINER_VERSION}
   stage: build
   script:
     - !reference [.load_github_key, script]
-    - pwd
+    - export root_dir=$(pwd)
+    - echo $root_dir
+    - pip install "setuptools_scm>=6.2"
+    - export DICT_VERSION=$(python -m setuptools_scm)
+    - echo $DICT_VERSION
+    - mkdir -p gdcdictionary/$DICT_VERSION
+    - cp -r src/gdcdictionary/schemas/* gdcdictionary/$DICT_VERSION
     - git clone git@github.com:NCI-GDC/gdcdatamodel2.git
     - cd gdcdatamodel2
     - git checkout "$CI_COMMIT_REF_NAME" || git checkout -b "$CI_COMMIT_REF_NAME"
     - git log -1
-    - sed -i 's|version = .*|version ="'"$CI_COMMIT_REF_NAME"'"|' plaster.toml
-    - sed -i 's/is_git_tag = .*/is_git_tag = false/' plaster.toml
-    - cat plaster.toml
-    - bash plaster
+    - echo $CI_TRIGGER_BRANCH
+    - |
+      if [ ${CI_TRIGGER_BRANCH+x} ]; then
+        pip install "gdc-plaster==$CI_TRIGGER_BRANCH" "psqlgml>=0.2.4"
+      else
+        pip install "gdc-plaster>=1.1.0" "psqlgml>=0.2.4"
+      fi
+    - plaster --version
+    - psqlgml --version
+    - |
+      plaster generate-no-profile \
+        -i $root_dir \
+        --dict-name gdcdictionary \
+        --dict-version $DICT_VERSION \
+        -o src/gdcdatamodel2/models \
+        -s src/gdcdatamodel2/partial_dictionary
     - git status
-    - sed -i 's|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@.*#egg=gdcdictionary|gdcdictionary @ git+https://github.com/NCI-GDC/gdcdictionary.git@'"$CI_COMMIT_REF_NAME"'#egg=gdcdictionary|' setup.cfg
-    - cat setup.cfg
   artifacts:
     paths:
       - gdcdatamodel2
@@ -62,7 +81,7 @@ push_datamodels_to_github:
     - git add .
     - git commit -m "Use gdcdictionary $CI_COMMIT_REF_NAME $CI_COMMIT_SHA" || true
     - git rev-parse --short HEAD
-    - git push origin "$CI_COMMIT_REF_NAME"
+    - git push origin "$CI_COMMIT_REF_NAME" || true
   dependencies:
     - execute_plaster
   artifacts:
