@@ -63,6 +63,8 @@ execute_plaster:
         --dict-version $DICT_VERSION \
         -o src/gdcdatamodel2/models \
         -s src/gdcdatamodel2/partial_dictionary
+    - pip install pre-commit==${PRE_COMMIT_VERSION}
+    - pre-commit run -a
     - git status
   artifacts:
     paths:
