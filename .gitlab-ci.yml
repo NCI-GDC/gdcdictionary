@@ -10,7 +10,7 @@ stages:
 
 include:
   - project: nci-gdc/gitlab-templates
-    ref: 0.6.2
+    ref: feat/dev-2407-fix-release-location-for-python-wheels
     file:
       - templates/global/full.yaml
       - templates/python/full.yaml
@@ -26,10 +26,6 @@ tox:
 release:
   before_script:
     - git fetch --unshallow || true
-    - |
-      if [ ${CI_COMMIT_TAG+x} ]; then
-        export TWINE_REPOSITORY_URL=https://nexus.osdc.io/repository/pypi-releases/
-      fi
 
 execute_plaster:
   image: docker.osdc.io/ncigdc/python3.9-builder:${BASE_CONTAINER_VERSION}
