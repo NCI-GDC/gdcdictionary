@@ -116,5 +116,5 @@ trigger_gitlab_mirror_pull_github_for_gdcdatamodel2:
     - >
       curl --fail --request POST
       --form token=$CI_JOB_TOKEN
-      "https://gitlab.example.com/api/v4/projects/56/mirror/pull"
+      "https://gitlab.datacommons.io/api/v4/projects/56/mirror/pull"
   when: manual
