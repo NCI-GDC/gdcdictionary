@@ -31,6 +31,7 @@ release:
         export TWINE_REPOSITORY_URL=https://nexus.osdc.io/repository/pypi-releases/
       fi
 
+
 execute_plaster:
   image: docker.osdc.io/ncigdc/python3.9-builder:${BASE_CONTAINER_VERSION}
   stage: build
@@ -63,6 +64,8 @@ execute_plaster:
         --dict-version $DICT_VERSION \
         -o src/gdcdatamodel2/models \
         -s src/gdcdatamodel2/partial_dictionary
+    - pip install pre-commit==${PRE_COMMIT_VERSION}
+    - pre-commit run -a || true
     - git status
   artifacts:
     paths:
