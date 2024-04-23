@@ -7506,7 +7506,7 @@ extrathyroid_extension:
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3179452%20and%20ver_nr=1"
 
-genome_doublings:
+genome_doubling:
   common:
     description: >-
       Number of genome doubling events.
