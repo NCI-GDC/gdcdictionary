@@ -1954,15 +1954,16 @@ embolic_agent:
 encoding:
   common:
     description: >-
-      Version of ASCII encoding of quality values found in the file.
+      The version of ASCII used to encode the read group quality control data.
     termDef:
       term: >-
-        Encoding
-      source: FastQC
-      cde_id: Encoding
-      cde_version:
+        ASCII Encoding Version for Read Group QC
+      source: NCIt
+      cde_id: C181705
+      cde_version: 23.11d
       term_url: "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/1%20Basic%20Statistics.html"
-      term_id: Encoding
+      term_id: C181705
+      term_version: 23.11d
 
 enneking_msts_grade:
   common:
@@ -6063,15 +6064,16 @@ total_reads:
 total_sequences:
   common:
     description: >-
-      A count of the total number of sequences processed.
+      The total number of nucleotide sequences processed.
     termDef:
       term: >-
-        Total Sequences
-      source: FastQC
-      cde_id: Total Sequences
-      cde_version:
+        Total Number of Nucleotide Sequences Processed
+      source: NCIt
+      cde_id: C181855
+      cde_version: 23.11d
       term_url: "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/1%20Basic%20Statistics.html"
-      term_id: Total Sequences
+      term_id: C181855
+      term_version: 23.11d
 
 transcript:
   common:
@@ -7561,7 +7563,7 @@ workflow_link:
         Data Analysis Workflow URL
       source: NCIt
       cde_id: C182116
-      cde_version:
+      cde_version: 23.11d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C182116"
       term_id: C182116
       term_version: 23.11d
@@ -7575,7 +7577,7 @@ workflow_version:
         Data Analysis Workflow Version
       source: NCIt
       cde_id: C182117
-      cde_version:
+      cde_version: 23.11d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C182117"
       term_id: C182117
       term_version: 23.11d
