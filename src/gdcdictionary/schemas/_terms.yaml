@@ -1961,7 +1961,7 @@ encoding:
       source: NCIt
       cde_id: C181705
       cde_version: 23.11d
-      term_url: "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/1%20Basic%20Statistics.html"
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C181705"
       term_id: C181705
       term_version: 23.11d
 
@@ -6071,7 +6071,7 @@ total_sequences:
       source: NCIt
       cde_id: C181855
       cde_version: 23.11d
-      term_url: "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/1%20Basic%20Statistics.html"
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C181855"
       term_id: C181855
       term_version: 23.11d
 
