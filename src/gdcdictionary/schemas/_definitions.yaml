@@ -81,11 +81,11 @@ datetime:
     - type: 'null'
 
 file_name:
-  $ref: "_terms.yaml#/file_name"
+  $ref: "_terms.yaml#/file_name/common"
   type: string
 
 file_size:
-  $ref: "_terms.yaml#/file_size"
+  $ref: "_terms.yaml#/file_size/common"
   type: integer
 
 file_format:
@@ -93,7 +93,7 @@ file_format:
   type: string
 
 md5sum:
-  $ref: "_terms.yaml#/md5sum"
+  $ref: "_terms.yaml#/md5sum/common"
   type: string
   pattern: "^[a-f0-9]{32}$"
 
@@ -211,13 +211,11 @@ workflow_properties:
   $ref: "#/ubiquitous_properties"
 
   workflow_link:
-    description: >-
-      Link to Github hash for the CWL workflow used.
+    $ref: "_terms.yaml#/workflow_link/common"
     type: string
 
   workflow_version:
-    description: >-
-      Major version for a GDC workflow.
+    $ref: "_terms.yaml#/workflow_version/common"
     type: string
 
   workflow_start_datetime:
