@@ -529,7 +529,7 @@ ann_arbor_b_symptoms:
 ann_arbor_b_symptoms_described:
   common:
     description: >-
-      Text descibing the specific lymphoma B-symptoms present.
+      Text describing the specific lymphoma B-symptoms present.
     termDef:
       term:
       source:
@@ -1959,9 +1959,10 @@ encoding:
       term: >-
         Encoding
       source: FastQC
-      cde_id:
+      cde_id: Encoding
       cde_version:
       term_url: "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/1%20Basic%20Statistics.html"
+      term_id: Encoding
 
 enneking_msts_grade:
   common:
@@ -6067,9 +6068,10 @@ total_sequences:
       term: >-
         Total Sequences
       source: FastQC
-      cde_id:
+      cde_id: Total Sequences
       cde_version:
       term_url: "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/1%20Basic%20Statistics.html"
+      term_id: Total Sequences
 
 transcript:
   common:
@@ -6879,13 +6881,15 @@ wilms_tumor_histologic_subtype:
 workflow_type:
   common:
     description: >-
-      Generic name for the workflow used to analyze a data set.
+      The name of the workflow used to process and/or analyze a data set.
     termDef:
       term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      source: NCIt
+      cde_id: C181725
+      cde_version: 1.0
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C181725"
+      term_id: C181725
+      term_version: 23.11d
 
 year_of_birth:
   common:
@@ -7499,3 +7503,79 @@ extrathyroid_extension:
       cde_id: 3179452
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3179452%20and%20ver_nr=1"
+
+genome_doublings:
+  common:
+    description: >-
+      Number of genome doubling events.
+    termDef:
+      term: >-
+        Genome Doubling Events
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+cancer_dna_fraction:
+  common:
+    description: >-
+      Fraction of cancer DNA in the tumor tissue.
+    termDef:
+      term: >-
+        Cancer DNA Fraction
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+subclonal_genome_fraction:
+  common:
+    description: >-
+      Fraction of subclonal genome in the tumor tissue.
+    termDef:
+      term: >-
+        Subclonal DNA Fraction
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+curated_model_index:
+  common:
+    description: >-
+      Index number of the curated model.
+    termDef:
+      term: >-
+        Curated Model Index
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+workflow_link:
+  common:
+    description: >-
+      A URL-formatted web address for a data analysis workflow.
+    termDef:
+      term: >-
+        Data Analysis Workflow URL
+      source: NCIt
+      cde_id: C182116
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C182116"
+      term_id: C182116
+      term_version: 23.11d
+
+workflow_version:
+  common:
+    description: >-
+      The version of the workflow used in data analysis.
+    termDef:
+      term: >-
+        Data Analysis Workflow Version
+      source: NCIt
+      cde_id: C182117
+      cde_version:
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C182117"
+      term_id: C182117
+      term_version: 23.11d
