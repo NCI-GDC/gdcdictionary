@@ -80,26 +80,32 @@ properties:
     $ref:
       - "_terms.yaml#/average_base_quality/common"
     type: number
+    minimum: 0
 
   average_insert_size:
     $ref:
       - "_terms.yaml#/average_insert_size/common"
     type: integer
+    minimum: 0
 
   average_read_length:
     $ref:
       - "_terms.yaml#/average_read_length/common"
     type: integer
+    minimum: 0
 
   contamination:
     $ref:
       - "_terms.yaml#/contamination/common"
     type: number
+    maximum: 1
+    minimum: 0
 
   contamination_error:
     $ref:
       - "_terms.yaml#/contamination_error/common"
     type: number
+    minimum: 0
 
   data_category:
     $ref:
@@ -151,11 +157,13 @@ properties:
     $ref:
       - "_terms.yaml#/mean_coverage/common"
     type: number
+    minimum: 0
 
   msi_score:
     description: >-
       Numeric score denoting the aligned reads file's MSI score from MSIsensor.
     type: number
+    minimum: 0
 
   msi_status:
     description: >-
@@ -168,6 +176,7 @@ properties:
     $ref:
       - "_terms.yaml#/pairs_on_diff_chr/common"
     type: integer
+    minimum: 0
 
   platform:
     $ref:
@@ -177,46 +186,61 @@ properties:
     $ref:
       - "_terms.yaml#/proportion_base_mismatch/common"
     type: number
+    maximum: 1
+    minimum: 0
 
   proportion_coverage_10x:
     $ref:
       - "_terms.yaml#/proportion_coverage_10x/common"
     type: number
+    maximum: 1
+    minimum: 0
 
   proportion_coverage_30x:
     $ref:
       - "_terms.yaml#/proportion_coverage_30x/common"
     type: number
+    maximum: 1
+    minimum: 0
 
   proportion_reads_duplicated:
     $ref:
       - "_terms.yaml#/proportion_reads_duplicated/common"
     type: number
+    minimum: 0
 
   proportion_reads_mapped:
     $ref:
       - "_terms.yaml#/proportion_reads_mapped/common"
     type: number
+    maximum: 1
+    minimum: 0
 
   proportion_targets_no_coverage:
     $ref:
       - "_terms.yaml#/proportion_targets_no_coverage/common"
     type: number
+    maximum: 1
+    minimum: 0
 
   total_reads:
     $ref:
       - "_terms.yaml#/total_reads/common"
     type: integer
+    minimum: 0
 
   tumor_ploidy:
     $ref:
       - "_terms.yaml#/tumor_ploidy/common"
     type: number
+    minimum: 0
 
   tumor_purity:
     $ref:
       - "_terms.yaml#/tumor_purity/common"
     type: number
+    maximum: 1
+    minimum: 0
 
   wgs_coverage:
     $ref:
