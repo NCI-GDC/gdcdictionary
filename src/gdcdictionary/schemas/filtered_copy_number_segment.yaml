@@ -57,6 +57,12 @@ properties:
     enum:
       - Copy Number Variation
 
+  data_format:
+    $ref:
+      - "_terms.yaml#/data_format/common"
+    enum:
+      - TXT
+
   data_type:
     $ref:
       - "_terms.yaml#/data_type/common"
@@ -64,17 +70,19 @@ properties:
       - Copy Number Segment
       - Masked Copy Number Segment
 
-  data_format:
-    $ref:
-      - "_terms.yaml#/data_format/common"
-    enum:
-      - TXT
-
   experimental_strategy:
     $ref:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
       - Genotyping Array
+
+  platform:
+    $ref:
+      - "_terms.yaml#/platform/common"
+    enum:
+      - Affymetrix SNP 6.0
+      - Illumina
+      - Other
 
   copy_number_liftover_workflows:
     $ref: "_definitions.yaml#/to_one"
