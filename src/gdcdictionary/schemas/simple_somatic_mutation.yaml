@@ -68,18 +68,18 @@ properties:
       - Combined Nucleotide Variation
       - Simple Nucleotide Variation
 
+  data_format:
+    $ref:
+      - "_terms.yaml#/data_format/common"
+    enum:
+      - VCF
+
   data_type:
     $ref:
       - "_terms.yaml#/data_type/common"
     enum:
       - Raw CGI Variant
       - Raw Simple Somatic Mutation
-
-  data_format:
-    $ref:
-      - "_terms.yaml#/data_format/common"
-    enum:
-      - VCF
 
   experimental_strategy:
     $ref:
@@ -93,6 +93,10 @@ properties:
       - Targeted Sequencing
       - WGS
       - WXS
+
+  platform:
+    $ref:
+      - "read_group.yaml#/properties/platform"
 
   somatic_mutation_calling_workflows:
     $ref: "_definitions.yaml#/to_one"
