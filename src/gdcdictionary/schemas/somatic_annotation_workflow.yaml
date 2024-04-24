@@ -53,10 +53,13 @@ properties:
       - FoundationOne Annotation
       - GATK4 MuTect2 Annotation
       - GATK4 MuTect2 Tumor-Only Annotation
+      - Manta Indel Annotation
       - MuSE Annotation
       - MuTect2 Annotation
       - Pindel Annotation
       - SomaticSniper Annotation
+      - Strelka2 Annotation
+      - SvABA Indel Annotation
       - VarScan2 Annotation
 
   simple_somatic_mutations:
