@@ -66,19 +66,19 @@ properties:
     enum:
       - Simple Nucleotide Variation
 
-  data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
-    enum:
-      - Annotated Somatic Mutation
-      - Masked Annotated Somatic Mutation
-
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
       - MAF
       - VCF
+
+  data_type:
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - Annotated Somatic Mutation
+      - Masked Annotated Somatic Mutation
 
   experimental_strategy:
     $ref:
@@ -92,6 +92,10 @@ properties:
       - Targeted Sequencing
       - WGS
       - WXS
+
+  platform:
+    $ref:
+      - "read_group.yaml#/properties/platform"
 
   somatic_annotation_workflows:
     $ref: "_definitions.yaml#/to_one"
