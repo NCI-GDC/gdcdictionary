@@ -52,11 +52,14 @@ properties:
       - CaVEMan
       - GATK4 MuTect2
       - GATK4 MuTect2 Tumor-Only
+      - Manta Indel
       - MuSE
       - MuTect2
       - Pindel
       - SomaticSniper
+      - Strelka2
       - Strelka2 RNA
+      - SvABA Indel
       - VarScan2
 
   aligned_reads_files:
