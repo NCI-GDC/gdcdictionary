@@ -57,14 +57,6 @@ properties:
     enum:
       - Transcriptome Profiling
 
-  data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
-    enum:
-      - Isoform Expression Quantification
-      - miRNA Expression Quantification
-      - Supplementary Files
-
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
@@ -73,11 +65,23 @@ properties:
       - TSV
       - TXT
 
+  data_type:
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - Isoform Expression Quantification
+      - miRNA Expression Quantification
+      - Supplementary Files
+
   experimental_strategy:
     $ref:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
       - miRNA-Seq
+
+  platform:
+    $ref:
+      - "read_group.yaml#/properties/platform"
 
   mirna_expression_workflows:
     $ref: "_definitions.yaml#/to_one"
