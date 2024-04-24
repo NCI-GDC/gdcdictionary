@@ -66,6 +66,7 @@ properties:
       - MuTect2 Variant Aggregation and Masking
       - Pindel Variant Aggregation and Masking
       - SomaticSniper Variant Aggregation and Masking
+      - Tumor-Only Somatic Variant Merging and Masking
       - VarScan2 Variant Aggregation and Masking
 
   annotated_somatic_mutations:
