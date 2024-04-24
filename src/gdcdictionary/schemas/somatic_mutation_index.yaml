@@ -8,7 +8,7 @@ category: index_file
 project: '*'
 program: '*'
 description: >-
-  Data file containing the index for a set of aligned reads.
+  Data file containing the index for somatic mutation calls.
 additionalProperties: false
 submittable: false
 downloadable: true
@@ -72,17 +72,17 @@ properties:
       - Simple Nucleotide Variation
       - Somatic Structural Variation
 
-  data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
-    enum:
-      - Somatic Mutation Index
-
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
       - TBI
+
+  data_type:
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - Somatic Mutation Index
 
   simple_somatic_mutations:
     $ref: "_definitions.yaml#/to_one"
