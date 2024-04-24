@@ -172,6 +172,12 @@ links:
         target_type: gene_expression
         multiplicity: many_to_many
         required: false
+      - name: germline_mutation_indexes
+        backref: annotations
+        label: annotates
+        target_type: germline_mutation_index
+        multiplicity: many_to_many
+        required: false
       - name: masked_methylation_arrays
         backref: annotations
         label: annotates
@@ -520,6 +526,9 @@ properties:
     $ref: "_definitions.yaml#/to_many"
 
   gene_expressions:
+    $ref: "_definitions.yaml#/to_many"
+
+  germline_mutation_indexes:
     $ref: "_definitions.yaml#/to_many"
 
   masked_methylation_arrays:
