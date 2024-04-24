@@ -60,6 +60,7 @@ properties:
     enum:
       - Birdseed
       - HaplotypeCaller
+      - Strelka2 Germline
 
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
