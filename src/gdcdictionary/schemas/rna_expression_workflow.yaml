@@ -45,6 +45,12 @@ links:
         target_type: submitted_unaligned_reads
         multiplicity: many_to_one
         required: false
+      - name: submitted_expression_arrays
+        backref: rna_expression_workflows
+        label: performed_on
+        target_type: submitted_expression_array
+        multiplicity: many_to_many
+        required: false
 
 required:
   - submitter_id
@@ -68,6 +74,7 @@ properties:
       - CellRanger - 10x Raw Counts
       - Cufflinks
       - DEXSeq
+      - Expression Array Quantification
       - HTSeq - Counts
       - HTSeq - FPKM
       - HTSeq - FPKM-UQ
@@ -78,8 +85,8 @@ properties:
       - RSEM - Quantification
       - STAR - Counts
       - STAR - FPKM
-      - STAR - Smart-Seq2 Raw Counts
       - STAR - Smart-Seq2 Filtered Counts
+      - STAR - Smart-Seq2 Raw Counts
       - zUMIs - Smart-Seq2 Counts
 
   aligned_reads_files:
@@ -90,3 +97,6 @@ properties:
 
   submitted_unaligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
+
+  submitted_expression_arrays:
+    $ref: "_definitions.yaml#/to_many"
