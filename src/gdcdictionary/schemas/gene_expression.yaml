@@ -57,15 +57,6 @@ properties:
     enum:
       - Transcriptome Profiling
 
-  data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
-    enum:
-      - Exon Expression Quantification
-      - Gene Expression Quantification
-      - Isoform Expression Quantification
-      - Splice Junction Quantification
-
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
@@ -76,16 +67,34 @@ properties:
       - TSV
       - TXT
 
+  data_type:
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - Exon Expression Quantification
+      - Gene Expression Quantification
+      - Isoform Expression Quantification
+      - Splice Junction Quantification
+
   experimental_strategy:
     $ref:
       - "_terms.yaml#/experimental_strategy/common"
     enum:
+      - Expression Array
       - m6A MeRIP-Seq
       - RNA-Seq
       - scRNA-Seq
       - Total RNA-Seq
 
-
+  platform:
+    $ref:
+      - "_terms.yaml#/platform/common"
+    enum:
+      - Complete Genomics
+      - GeneChip U133 Plus 2.0
+      - GeneChip U133A
+      - Illumina
+      - Other
 
   rna_expression_workflows:
     $ref: "_definitions.yaml#/to_one"
