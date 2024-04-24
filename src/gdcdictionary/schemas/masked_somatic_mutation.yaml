@@ -73,18 +73,18 @@ properties:
     enum:
       - Simple Nucleotide Variation
 
-  data_type:
-    $ref:
-      - "_terms.yaml#/data_type/common"
-    enum:
-      - Masked Somatic Mutation
-
   data_format:
     $ref:
       - "_terms.yaml#/data_format/common"
     enum:
       - MAF
       - TSV
+
+  data_type:
+    $ref:
+      - "_terms.yaml#/data_type/common"
+    enum:
+      - Masked Somatic Mutation
 
   experimental_strategy:
     $ref:
@@ -98,6 +98,10 @@ properties:
       - Targeted Sequencing
       - WGS
       - WXS
+
+  platform:
+    $ref:
+      - "read_group.yaml#/properties/platform"
 
   projects:
     $ref: "_definitions.yaml#/to_one_project"
