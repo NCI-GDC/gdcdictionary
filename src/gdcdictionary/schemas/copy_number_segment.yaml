@@ -68,11 +68,24 @@ properties:
   $ref:
     - "_definitions.yaml#/data_file_properties"
 
+  cancer_dna_fraction:
+    $ref:
+      - "_terms.yaml#/cancer_dna_fraction/common"
+    type: number
+    maximum: 1
+    minimum: 0
+
   data_category:
     $ref:
       - "_terms.yaml#/data_category/common"
     enum:
       - Copy Number Variation
+
+  data_format:
+    $ref:
+      - "_terms.yaml#/data_format/common"
+    enum:
+      - TXT
 
   data_type:
     $ref:
@@ -81,12 +94,6 @@ properties:
       - Allele-specific Copy Number Segment
       - Copy Number Segment
       - Masked Copy Number Segment
-
-  data_format:
-    $ref:
-      - "_terms.yaml#/data_format/common"
-    enum:
-      - TXT
 
   experimental_strategy:
     $ref:
@@ -97,12 +104,38 @@ properties:
       - WGS
       - WXS
 
+  genome_doubling:
+    $ref:
+      - "_terms.yaml#/genome_doubling/common"
+    type: integer
+    minimum: 0
+
   platform:
     $ref:
       - "_terms.yaml#/platform/common"
     enum:
       - Affymetrix SNP 6.0
       - Illumina
+
+  subclonal_genome_fraction:
+    $ref:
+      - "_terms.yaml#/subclonal_genome_fraction/common"
+    type: number
+    maximum: 1
+    minimum: 0
+
+  tumor_ploidy:
+    $ref:
+      - "_terms.yaml#/tumor_ploidy/common"
+    type: number
+    minimum: 0
+
+  tumor_purity:
+    $ref:
+      - "_terms.yaml#/tumor_purity/common"
+    type: number
+    maximum: 1
+    minimum: 0
 
   copy_number_liftover_workflows:
     $ref: "_definitions.yaml#/to_one"
