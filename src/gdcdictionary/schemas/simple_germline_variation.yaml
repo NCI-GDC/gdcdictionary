@@ -57,18 +57,19 @@ properties:
     enum:
       - Simple Nucleotide Variation
 
+  data_format:
+    $ref:
+      - "_terms.yaml#/data_format/common"
+    enum:
+      - gVCF
+      - TSV
+      - VCF
+
   data_type:
     $ref:
       - "_terms.yaml#/data_type/common"
     enum:
       - Simple Germline Variation
-
-  data_format:
-    $ref:
-      - "_terms.yaml#/data_format/common"
-    enum:
-      - VCF
-      - TSV
 
   experimental_strategy:
     $ref:
@@ -89,6 +90,7 @@ properties:
       - "_terms.yaml#/platform/common"
     enum:
       - Affymetrix SNP 6.0
+      - Illumina
 
   germline_mutation_calling_workflows:
     $ref: "_definitions.yaml#/to_one"
