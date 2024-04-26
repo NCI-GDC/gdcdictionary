@@ -114,6 +114,8 @@ properties:
       - Glucocorticoid
       - Growth factor
       - PARP inhibitor
+      - Unknown
+      - Not Reported
 
   embolic_agent:
     $ref:
@@ -127,6 +129,8 @@ properties:
       - Y-90 Sirsphere
       - Y-90 Therasphere
       - Other
+      - Unknown
+      - Not Reported
 
   initial_disease_status:
     $ref:
@@ -171,6 +175,37 @@ properties:
       - "_terms.yaml#/prescribed_dose/common"
     type: number
     minimum: 0
+
+  prescribed_dose_units:
+    $ref:
+      - "_terms.yaml#/prescribed_dose_units/common"
+    enum:
+      - AUC
+      - cGy
+      - g/day
+      - g/m2
+      - Gy
+      - IU/kg
+      - IU/mg
+      - mCi
+      - mEq
+      - mg
+      - mg/day
+      - mg/dL
+      - mg/kg
+      - mg/kg/day
+      - mg/m2
+      - mg/m2/day
+      - mg/m2/wk
+      - mg/mL
+      - mg/wk
+      - mIU
+      - mL
+      - ug
+      - ug/m2
+      - Wafer
+      - Unknown
+      - Not Reported
 
   protocol_identifier:
     $ref:
@@ -288,7 +323,6 @@ properties:
       - N891
       - NWTS-4
       - NWTS-5
-      - Not Reported
       - OSTEO 2006
       - P9407
       - P9462
@@ -301,6 +335,8 @@ properties:
       - S31
       - S921
       - STB
+      - Unknown
+      - Not Reported
 
   radiosensitizing_agent:
     $ref:
@@ -334,6 +370,8 @@ properties:
       - Disease Progression
       - Withdrawal by Subject
       - Other
+      - Unknown
+      - Not Reported
     enumDef:
       Other:
         $ref:
@@ -346,6 +384,7 @@ properties:
       - Adverse Event/Complications
       - Not Done per Treating Physician's Discretion
       - Participant Refusal
+      - Patient Ineligible
       - Scheduling Problems
       - Unknown
       - Not Reported
@@ -370,6 +409,7 @@ properties:
       - R1
       - R2
       - RX
+      - Unknown
       - Not Reported
 
   route_of_administration:
@@ -6808,6 +6848,8 @@ properties:
       - "_terms.yaml#/therapeutic_target_level/common"
     enum:
       - '>14 mg/L'
+      - Unknown
+      - Not Reported
 
   timepoint_category:
     $ref:
@@ -6825,6 +6867,7 @@ properties:
       - Prior to Treatment
       - Progression
       - Recurrence
+      - Unknown
       - Not Reported
 
   treatment_anatomic_site:
@@ -7573,6 +7616,8 @@ properties:
       - ug
       - ug/m2
       - Wafer
+      - Unknown
+      - Not Reported
     enumDef:
       mg:
         $ref:
@@ -7736,6 +7781,7 @@ properties:
     $ref:
       - "_terms.yaml#/treatment_type/common"
     enum:
+      - Ablation or Embolization, NOS
       - Ablation, Cryo
       - Ablation, Ethanol Injection
       - Ablation, Microwave
