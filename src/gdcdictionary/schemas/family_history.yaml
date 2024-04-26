@@ -770,6 +770,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Unknown
       - Not Reported
     enumDef:
       "Yes":
@@ -788,6 +789,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Unknown
       - Not Reported
     enumDef:
       "Yes":
