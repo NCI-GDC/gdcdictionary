@@ -18266,7 +18266,10 @@ properties:
         - Ear
         - Epididymis
         - Esophagus
+        - Esophagus, Lower Third
+        - Esophagus, Middle Third
         - Esophagus, NOS
+        - Esophagus, Upper Third
         - Eye
         - Fallopian Tube, Left
         - Fallopian Tube, NOS
@@ -18287,7 +18290,6 @@ properties:
         - Leptomeninges
         - Liver
         - Lower lobe, lung
-        - Lower Third Esophagus
         - Lung, NOS
         - Lymph Node, Axillary
         - Lymph Node, Cervical
@@ -18313,7 +18315,6 @@ properties:
         - Mesentery
         - Mesothelium
         - Middle lobe, lung
-        - Middle Third Esophagus
         - Mouth
         - Nasal soft tissue
         - Nasopharynx
@@ -18372,7 +18373,6 @@ properties:
         - Transplanted kidney
         - Transverse colon
         - Upper lobe, lung
-        - Upper Third Esophagus
         - Urethra
         - Uterus
         - Vagina
