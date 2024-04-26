@@ -69,6 +69,7 @@ deprecated:
   - oct_embedded
   - sample_type
   - sample_type_id
+  - tumor_code
 
 properties:
 
