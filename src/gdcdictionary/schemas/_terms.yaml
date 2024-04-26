@@ -695,8 +695,8 @@ best_overall_response:
 biospecimen_anatomic_site:
   common:
     description: >-
-      Text term that represents the name of the primary disease site of the submitted
-      tumor sample.
+      Text term that represents the name of the organ or tissue site of the submitted
+      sample.
     termDef:
       term: >-
         Submitted Tumor Sample Primary Anatomic Site
@@ -1497,8 +1497,8 @@ days_to_birth:
 days_to_collection:
   common:
     description: >-
-      The number of days from the index date to the date a sample was collected for
-      a specific study or project.
+      The number of days from the index date to the date a sample was received by
+      the Biospecimen Core Resource (BCR) or other center for processing.
     termDef:
       term: >-
         Biospecimen Collection Date Less Initial Pathologic Diagnosis Date Calculated
@@ -1693,7 +1693,8 @@ days_to_sample_procurement:
   common:
     description: >-
       The number of days from the index date to the date a patient underwent a procedure
-      (e.g. surgical resection) yielding a sample that was eventually used for research.
+      (e.g. surgical resection) to yield or remove from the patient a sample that
+      was eventually used for research.
     termDef:
       term:
       source:
@@ -2354,22 +2355,28 @@ file_name:
     description: >-
       The name (or part of a name) of a file (of any type).
     termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      term: >-
+        Electronic File Name
+      source: NCIt
+      cde_id: C171191
+      cde_version: 23.11d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C171191"
+      term_id: C171191
+      term_version: 23.11d
 
 file_size:
   common:
     description: >-
       The size of the data file (object) in bytes.
     termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      term: >-
+        Electronic File Size
+      source: NCIt
+      cde_id: C171192
+      cde_version: 23.11d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C171192"
+      term_id: C171192
+      term_version: 23.11d
 
 file_state:
   common:
@@ -2517,7 +2524,7 @@ gene_symbol:
   common:
     description: >-
       The text term used to describe a gene targeted or included in molecular analysis.
-      For rearrangements, this is shold be used to represent the reference gene.
+      For rearrangements, this should be used to represent the reference gene.
     termDef:
       term: >-
         Molecular Analysis Gene Symbol Code
@@ -3593,11 +3600,14 @@ md5sum:
       The 128-bit hash value expressed as a 32 digit hexadecimal number (in lower
       case) used as a file's digital fingerprint.
     termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      term: >-
+        MD5 Checksum
+      source: NCIt
+      cde_id: C171276
+      cde_version: 23.11d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C171276"
+      term_id: C171276
+      term_version: 23.11d
 
 mean_coverage:
   common:
@@ -5380,7 +5390,7 @@ second_gene_symbol:
   common:
     description: >-
       The text term used to describe a secondary gene targeted or included in molecular
-      analysis. For rearrangements, this is should represent the location of the variant.
+      analysis. For rearrangements, this should represent the location of the variant.
     termDef:
       term: >-
         Molecular Analysis Secondary Gene Symbol Code
@@ -7545,7 +7555,7 @@ subclonal_genome_fraction:
 curated_model_index:
   common:
     description: >-
-      Index number of the curated model.
+      x
     termDef:
       term: >-
         Curated Model Index
@@ -7580,4 +7590,106 @@ workflow_version:
       cde_version: 23.11d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C182117"
       term_id: C182117
+      term_version: 23.11d
+
+tumor_of_origin:
+  common:
+    description: >-
+      The submitter_id string of the primary diagnosis node.
+    termDef:
+      term: >-
+        Tumor of Origin Diagnosis Node
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+prescribed_dose_units:
+  common:
+    description: >-
+      The units of the the amount of agent or medication formally prescribed to an
+      individual.
+    termDef:
+      term: >-
+        Prescribed Dose Units
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+number_of_pregnancies:
+  common:
+    description: >-
+      A measurement of the total number of pregnancy events experienced by the female
+      subject.
+    termDef:
+      term: >-
+        Number of Pregnancies
+      source: NCIt
+      cde_id: C106551
+      cde_version: 23.11d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C106551"
+      term_id: C106551
+      term_version: 23.11d
+
+prcc_type:
+  common:
+    description: >-
+      The type of papillary renal cell carcinoma. It is classified as type 1 or 2,
+      based on the cytoplasmic volume and the thickness of the lining neoplastic cells.
+    termDef:
+      term: >-
+        Papillary Renal Cell Carcinoma
+      source: NCIt
+      cde_id: C6975
+      cde_version: 23.11d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C6975"
+      term_id: C6975
+      term_version: 23.11d
+
+calgb_risk_group:
+  common:
+    description: >-
+      A classification strategy for Acute Myeloid Leukemia (AML) developed by the
+      cancer research cooperative group Cancer And Leukemia Group B that assigns a
+      rating based on the cytogenetic and molecular features of a particular disease.
+    termDef:
+      term: >-
+        Cytogenetic Risk Group-CALGB Criteria for AML
+      source: NCIt
+      cde_id: C159229
+      cde_version: 23.11d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C159229"
+      term_id: C159229
+      term_version: 23.11d
+
+treatment_emergent_adverse_event:
+  common:
+    description: >-
+      A situation that emerges during treatment, having been absent pretreatment,
+      or worsens relative to the pretreatment state.
+    termDef:
+      term: >-
+        Treatment-Emergent Adverse Event
+      source: NCIt
+      cde_id: C142733
+      cde_version: 23.11d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C142733"
+      term_id: C142733
+      term_version: 23.11d
+
+viral_hepatitis_serology_tests:
+  common:
+    description: >-
+      A set of tests that is used to determine if a subject has been or is currently
+      infected with a Hepatitis virus, is shedding Hepatitis virus or has immunity
+      to Hepatitis viruses.
+    termDef:
+      term: >-
+        Hepatitis Serology
+      source: NCIt
+      cde_id: C177609
+      cde_version: 23.11d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C177609"
+      term_id: C177609
       term_version: 23.11d
