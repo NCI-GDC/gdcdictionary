@@ -381,6 +381,8 @@ properties:
       - Yemen
       - Zambia
       - Zimbabwe
+      - Unknown
+      - Not Reported
     enumDef:
       Afghanistan:
         $ref:
@@ -1315,6 +1317,8 @@ properties:
       - Yemen
       - Zambia
       - Zimbabwe
+      - Unknown
+      - Not Reported
     enumDef:
       Afghanistan:
         $ref:
@@ -2036,6 +2040,7 @@ properties:
       - Professional or Graduate Degree
       - Some High School or Less
       - Vocational College or Some College
+      - Unknown
       - Not Reported
     enumDef:
       College Degree:
@@ -2119,6 +2124,8 @@ properties:
       - Never Married
       - Separated
       - Widowed
+      - Unknown
+      - Not Reported
     enumDef:
       Divorced:
         $ref:
