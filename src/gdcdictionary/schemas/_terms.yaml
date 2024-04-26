@@ -7555,7 +7555,7 @@ subclonal_genome_fraction:
 curated_model_index:
   common:
     description: >-
-      x
+      Index number of the curated model.
     termDef:
       term: >-
         Curated Model Index
