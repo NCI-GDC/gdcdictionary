@@ -7692,3 +7692,15 @@ viral_hepatitis_serology_tests:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C177609"
       term_id: C177609
       term_version: 23.11d
+
+hormonal_replacement_therapy_status:
+  common:
+    description: >-
+      Indicates whether the patient has ever received hormone replacement therapy.
+    termDef:
+      term: >-
+        Hormone Replacement Therapy Status
+      source:
+      cde_id:
+      cde_version:
+      term_url:
