@@ -224,6 +224,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Unknown
       - Not Reported
     enumDef:
       "Yes":
@@ -331,6 +332,7 @@ properties:
     enum:
       - Extensive
       - Focal
+      - Unknown
       - Not Reported
 
   extracapsular_extension_present:
@@ -338,6 +340,7 @@ properties:
       - "Yes"
       - "No"
       - Unknown
+      - Not Reported
     enumDef:
       "Yes":
         $ref:
@@ -356,6 +359,8 @@ properties:
       - Gross Extension
       - Microscopic Extension
       - No Extranodal Extension
+      - Unknown
+      - Not Reported
 
   extrascleral_extension:
     $ref:
@@ -371,6 +376,7 @@ properties:
       - Moderate/Advanced (T4a)
       - Very Advanced (T4b)
       - Unknown
+      - Not Reported
     enumDef:
       Minimal (T3):
         $ref:
@@ -457,6 +463,8 @@ properties:
       - Neck, Left
       - Neck, NOS
       - Neck, Right
+      - Unknown
+      - Not Reported
 
   lymph_node_involved_site:
     $ref:
@@ -597,6 +605,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Unknown
       - Not Reported
 
   lymph_nodes_tested:
@@ -660,6 +669,8 @@ properties:
       - Echographic
       - Pathologic
       - Radiologic
+      - Unknown
+      - Not Reported
     enumDef:
       Radiologic:
         $ref:
@@ -671,6 +682,8 @@ properties:
     enum:
       - Centimeters
       - Millimeters
+      - Unknown
+      - Not Reported
     enumDef:
       Centimeters:
         $ref:
@@ -736,6 +749,8 @@ properties:
       - Papillary, NOS
       - Solid
       - Tubular
+      - Unknown
+      - Not Reported
     enumDef:
       Cribiform:
         $ref:
@@ -769,6 +784,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Unknown
       - Not Reported
     enumDef:
       Not Reported:
@@ -891,6 +907,15 @@ properties:
     type: integer
     minimum: 0
 
+  prcc_type:
+    $ref:
+      - "_terms.yaml#/prcc_type/common"
+    enum:
+      - Type 1
+      - Type 2
+      - Unknown
+      - Not Reported
+
   prostatic_chips_positive_count:
     $ref:
       - "_terms.yaml#/prostatic_chips_positive_count/common"
@@ -918,6 +943,8 @@ properties:
       - R1
       - R2
       - RX
+      - Unknown
+      - Not Reported
 
   residual_tumor_measurement:
     $ref:
@@ -927,6 +954,8 @@ properties:
       - 11-20 mm
       - '>20 mm'
       - No macroscopic disease
+      - Unknown
+      - Not Reported
 
   rhabdoid_percent:
     $ref:
@@ -941,6 +970,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Unknown
       - Not Reported
     enumDef:
       Not Reported:
@@ -960,6 +990,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Unknown
       - Not Reported
     enumDef:
       Not Reported:
@@ -998,12 +1029,19 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  tumor_burden:
+    $ref:
+      - "_terms.yaml#/tumor_burden/common"
+    type: number
+    minimum: 0
+
   tumor_depth_descriptor:
     $ref:
       - "_terms.yaml#/tumor_depth_descriptor/common"
     enum:
       - Deep
       - Superficial
+      - Unknown
       - Not Reported
     enumDef:
       Deep:
@@ -1029,6 +1067,8 @@ properties:
       - Few
       - Many
       - Moderate
+      - Unknown
+      - Not Reported
     enumDef:
       Few:
         $ref:
@@ -1047,6 +1087,8 @@ properties:
       - Few
       - Many
       - Moderate
+      - Unknown
+      - Not Reported
     enumDef:
       Few:
         $ref:
@@ -1088,6 +1130,7 @@ properties:
       - Dome
       - Mushroom
       - Unknown
+      - Not Reported
     enumDef:
       Diffuse:
         $ref:
@@ -1167,6 +1210,7 @@ properties:
       - Peripheral zone
       - Transition zone
       - Unknown zone
+      - Not Reported
 
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
