@@ -64,6 +64,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Unknown
       - Not Reported
     enumDef:
       "Yes":
@@ -1091,6 +1092,8 @@ properties:
       - Night Sweats
       - Weight Loss
       - Other
+      - Unknown
+      - Not Reported
 
   ann_arbor_clinical_stage:
     $ref:
@@ -1210,6 +1213,8 @@ properties:
       - SPD-Surgical Progression
       - TE-Too Early
       - VGPR-Very Good Partial Response
+      - Unknown
+      - Not Reported
     enumDef:
       AJ-Adjuvant Therapy:
         $ref:
@@ -1324,6 +1329,17 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
+  calgb_risk_group:
+    $ref:
+      - "_terms.yaml#/calgb_risk_group/common"
+    enum:
+      - Favorable
+      - Intermediate/Normal
+      - Poor
+      - N/A
+      - Unknown
+      - Not Reported
+
   cancer_detection_method:
     $ref:
       - "_terms.yaml#/cancer_detection_method/common"
@@ -1331,6 +1347,7 @@ properties:
       - Screening
       - Surveillance
       - Symptomatic
+      - Unknown
       - Not Reported
 
   child_pugh_classification:
@@ -1400,6 +1417,7 @@ properties:
       - III
       - IV
       - V
+      - Unknown
       - Not Reported
     enumDef:
       I:
@@ -1431,6 +1449,7 @@ properties:
       - Prior primary
       - Progression
       - recurrence
+      - Subsequent Primary
       - Synchronous primary
       - other
       - Unknown
@@ -1586,6 +1605,7 @@ properties:
       - Liver
       - Small Bowel
       - Spleen
+      - Unknown
       - Not Reported
     enumDef:
       Adrenal:
@@ -1668,6 +1688,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Unknown
       - Not Reported
 
   double_hit_lymphoma:
@@ -1676,6 +1697,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Unknown
       - Not Reported
 
   eln_risk_classification:
@@ -1804,6 +1826,8 @@ properties:
     enum:
       - M0
       - M1
+      - Unknown
+      - Not Reported
     enumDef:
       M0:
         $ref:
@@ -1818,6 +1842,8 @@ properties:
     enum:
       - N0
       - N1
+      - Unknown
+      - Not Reported
     enumDef:
       N0:
         $ref:
@@ -1834,6 +1860,8 @@ properties:
       - Stage II
       - Stage III
       - Stage IV
+      - Unknown
+      - Not Reported
     enumDef:
       Stage I:
         $ref:
@@ -1856,6 +1884,8 @@ properties:
       - T2
       - T3
       - T4
+      - Unknown
+      - Not Reported
     enumDef:
       T1:
         $ref:
@@ -2167,6 +2197,7 @@ properties:
       - Group 3
       - Group 4
       - Group 5
+      - Unknown
       - Not Reported
     enumDef:
       Group 1:
@@ -2194,6 +2225,8 @@ properties:
     enum:
       - Pattern 4
       - Pattern 5
+      - Unknown
+      - Not Reported
     enumDef:
       Pattern 4:
         $ref:
@@ -2386,6 +2419,8 @@ properties:
       - High-Intermediate Risk
       - Low Risk
       - Low-Intermediate Risk
+      - Unknown
+      - Not Reported
     enumDef:
       High Risk:
         $ref:
@@ -2620,6 +2655,8 @@ properties:
       - Renal Sinus
       - Renal Vein
       - Ureter
+      - Unknown
+      - Not Reported
     enumDef:
       Ureter:
         $ref:
@@ -2635,6 +2672,8 @@ properties:
       - Stage III
       - Stage IVa
       - Stage IVb
+      - Unknown
+      - Not Reported
     enumDef:
       Stage I:
         $ref:
@@ -2734,6 +2773,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Unknown
       - Not Reported
     enumDef:
       "Yes":
@@ -7371,6 +7411,7 @@ properties:
         metastasis
       - Tumor biopsied only at diagnosis; distant metastasis identified at diagnosis
       - Tumor biopsied only at diagnosis; no distant metastasis
+      - Unknown
       - Not Reported
 
   peritoneal_fluid_cytological_status:
@@ -8085,6 +8126,7 @@ properties:
       - Diffuse astrocytoma, low grade
       - Diffuse cutaneous mastocytosis
       - Diffuse intraductal papillomatosis
+      - Diffuse Intrinsic Pontine Glioma, H3 K27M-Mutant
       - Diffuse large B-cell lymphoma associated with chronic inflammation
       - Diffuse large B-cell lymphoma, NOS
       - Diffuse leptomeningeal glioneuronal tumor
@@ -8444,7 +8486,6 @@ properties:
       - Gynandroblastoma
       - Haemangioblastoma
       - Haemangiosarcoma
-      - Hairy cell leukaemia variant
       - Hairy cell leukemia
       - Hairy cell leukemia variant
       - Hairy nevus
@@ -16904,6 +16945,8 @@ properties:
       - Pattern 3
       - Pattern 4
       - Pattern 5
+      - Unknown
+      - Not Reported
     enumDef:
       Pattern 1:
         $ref:
@@ -17061,6 +17104,8 @@ properties:
       - Pattern 3
       - Pattern 4
       - Pattern 5
+      - Unknown
+      - Not Reported
     enumDef:
       Pattern 1:
         $ref:
@@ -18217,9 +18262,11 @@ properties:
         - Diaphragm
         - Distant Nodes
         - Distant Organ
+        - Dura Mater
         - Ear
         - Epididymis
         - Esophagus
+        - Esophagus, NOS
         - Eye
         - Fallopian Tube, Left
         - Fallopian Tube, NOS
@@ -18240,12 +18287,25 @@ properties:
         - Leptomeninges
         - Liver
         - Lower lobe, lung
+        - Lower Third Esophagus
         - Lung, NOS
         - Lymph Node, Axillary
+        - Lymph Node, Cervical
+        - Lymph Node, Femoral
+        - Lymph Node, Hilar
+        - Lymph Node, Iliac-Common
+        - Lymph Node, Iliac-External
         - Lymph Node, Inguinal
+        - Lymph Node, Mediastinal
+        - Lymph Node, Mesenteric
         - Lymph node, NOS
+        - Lymph Node, Para-Aortic
         - Lymph Node, Regional
+        - Lymph Node, Retroperitoneal
+        - Lymph Node, Splenic
         - Lymph Node, Subcarinal
+        - Lymph Node, Submandibular
+        - Lymph Node, Supraclavicular
         - Mandible
         - Maxilla
         - Mediastinal soft tissue
@@ -18253,6 +18313,7 @@ properties:
         - Mesentery
         - Mesothelium
         - Middle lobe, lung
+        - Middle Third Esophagus
         - Mouth
         - Nasal soft tissue
         - Nasopharynx
@@ -18264,7 +18325,13 @@ properties:
         - Ovary, NOS
         - Ovary, Right
         - Pancreas
+        - Pancreas Body
+        - Pancreas Duct
+        - Pancreas Head
+        - Pancreas Tail
+        - Pancreas, NOS
         - Parametrium, Left
+        - Parametrium, NOS
         - Parametrium, Right
         - Parotid gland
         - Pelvic Lymph Node(s)
@@ -18305,6 +18372,7 @@ properties:
         - Transplanted kidney
         - Transverse colon
         - Upper lobe, lung
+        - Upper Third Esophagus
         - Urethra
         - Uterus
         - Vagina
@@ -18314,6 +18382,9 @@ properties:
         - Other
         - Unknown
         - Not Reported
+    deprecated_enum:
+      - Esophagus
+      - Pancreas
     enumDef:
       Ascites:
         $ref:
@@ -19672,7 +19743,13 @@ properties:
     enum:
       - Four Tier
       - Three Tier
+      - Unknown
       - Not Reported
+
+  tumor_of_origin:
+    $ref:
+      - "_terms.yaml#/tumor_of_origin/common"
+    type: string
 
   tumor_regression_grade:
     $ref:
@@ -19981,6 +20058,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Unknown
       - Not Reported
     enumDef:
       "Yes":
@@ -20008,6 +20086,7 @@ properties:
         - Nuclear Grade III or IV
         - Sinusoid Invasion
         - Venous Invasion
+        - Unknown
         - Not Reported
 
   weiss_assessment_score:
@@ -20024,6 +20103,8 @@ properties:
       - "7"
       - "8"
       - "9"
+      - Unknown
+      - Not Reported
 
   who_cns_grade:
     $ref:
