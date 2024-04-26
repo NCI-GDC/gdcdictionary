@@ -7607,8 +7607,7 @@ tumor_of_origin:
 prescribed_dose_units:
   common:
     description: >-
-      The units of the the amount of agent or medication formally prescribed to an
-      individual.
+      The units of the amount of agent or medication formally prescribed to an individual.
     termDef:
       term: >-
         Prescribed Dose Units
