@@ -405,7 +405,6 @@ properties:
     $ref:
       - "_terms.yaml#/dlco_ref_predictive_percent/common"
     type: number
-    maximum: 100
     minimum: 0
 
   exercise_frequency_weekly:
@@ -448,28 +447,24 @@ properties:
     $ref:
       - "_terms.yaml#/fev1_fvc_post_bronch_percent/common"
     type: number
-    maximum: 100
     minimum: 0
 
   fev1_fvc_pre_bronch_percent:
     $ref:
       - "_terms.yaml#/fev1_fvc_pre_bronch_percent/common"
     type: number
-    maximum: 100
     minimum: 0
 
   fev1_ref_post_bronch_percent:
     $ref:
       - "_terms.yaml#/fev1_ref_post_bronch_percent/common"
     type: number
-    maximum: 100
     minimum: 0
 
   fev1_ref_pre_bronch_percent:
     $ref:
       - "_terms.yaml#/fev1_ref_pre_bronch_percent/common"
     type: number
-    maximum: 100
     minimum: 0
 
   haart_treatment_indicator:
