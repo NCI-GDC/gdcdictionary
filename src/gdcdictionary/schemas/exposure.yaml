@@ -252,7 +252,6 @@ properties:
       - "Yes"
       - "No"
       - Unknown
-      - Not Reported
     enumDef:
       "Yes":
         $ref:
