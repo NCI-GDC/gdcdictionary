@@ -83,6 +83,8 @@ properties:
     enum:
       - Daily Drinker
       - Weekly Drinker
+      - Not Reported
+      - Unknown
 
   alcohol_history:
     $ref:
@@ -201,6 +203,8 @@ properties:
     enum:
       - Amosite
       - Crocidolite
+      - Unknown
+      - Not Reported
 
   chemical_exposure_type:
     $ref:
@@ -232,6 +236,7 @@ properties:
         - Solvent
         - Tetrachloroethylene
         - Toluene
+        - Unknown
         - Not Reported
 
   cigarettes_per_day:
@@ -265,6 +270,7 @@ properties:
       - "Yes"
       - "No"
       - Unknown
+      - Not Reported
     enumDef:
       "Yes":
         $ref:
@@ -318,6 +324,7 @@ properties:
       - Social
       - Work
       - Unknown
+      - Not Reported
     enumDef:
       Home:
         $ref:
@@ -345,6 +352,8 @@ properties:
       - Smokeless Tobacco
       - Tobacco
       - Wood Dust
+      - Unknown
+      - Not Reported
     enumDef:
       Dust, NOS:
         $ref:
@@ -499,6 +508,9 @@ properties:
         - Waiters and Bartenders
         - Wood Processing and Papermaking Plant Operators
         - Wood Treaters, Cabinet-makers and Related Trades Workers
+        - Other
+        - Unknown
+        - Not Reported
 
   pack_years_smoked:
     $ref:
@@ -512,6 +524,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Unknown
       - Not Reported
     enumDef:
       "Yes":
@@ -593,6 +606,7 @@ properties:
       - Every day
       - Some days
       - Unknown
+      - Not Reported
     enumDef:
       Every day:
         $ref:
@@ -613,6 +627,7 @@ properties:
       - 31-60 Minutes
       - After 60 Minutes
       - Unknown
+      - Not Reported
     enumDef:
       Within 5 Minutes:
         $ref:
@@ -760,6 +775,7 @@ properties:
       - Work-related smoke, plumbing
       - Work-related smoke, soldering/welding
       - Unknown
+      - Not Reported
     enumDef:
       Accidental building fire smoke:
         $ref:
