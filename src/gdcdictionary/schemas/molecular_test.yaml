@@ -72,6 +72,8 @@ properties:
     enum:
       - Monosomy
       - Trisomy
+      - Unknown
+      - Not Reported
 
   antigen:
     $ref:
@@ -335,12 +337,16 @@ properties:
       - "_terms.yaml#/chromosomal_translocation/common"
     enum:
       - t(3;5)(q25;q34)
+      - t(4;11)
       - t(6;9)
       - t(6;11)(q27;q23)
       - t(8;21)
+      - t(9;11)
       - t(9;11)(p22;q23)
+      - t(9;22)
       - t(10;11)(p11.2;q23)
       - t(11;19)(q23;p13.1)
+      - t(15;17)
       - Unknown
       - Not Reported
 
@@ -468,6 +474,7 @@ properties:
     enum:
       - p
       - q
+      - Unknown
       - Not Reported
 
   clonality:
@@ -476,6 +483,8 @@ properties:
     enum:
       - Clonal
       - Non-clonal
+      - Unknown
+      - Not Reported
     enumDef:
       Clonal:
         $ref:
@@ -940,6 +949,7 @@ properties:
       - MN1
       - MNX1
       - MPL
+      - MPO
       - MSH2
       - MSH6
       - MSI2
@@ -1083,6 +1093,7 @@ properties:
       - RANBP2
       - RAP1GDS1
       - RARA
+      - RAS, NOS
       - RB1
       - RBM10
       - RBM15
@@ -3588,6 +3599,8 @@ properties:
       - HPV66
       - HPV68
       - HPV73
+      - Unknown
+      - Not Reported
 
   intron:
     $ref:
@@ -3600,6 +3613,7 @@ properties:
       - "_terms.yaml#/laboratory_test/common"
     enum:
       - 5-Hydroxyindoleacetic Acid
+      - Abnormal Cells
       - Absolute Neutrophil
       - Albumin
       - Alpha Fetoprotein
@@ -3883,6 +3897,7 @@ properties:
       - Flow Cytometry
       - IHC
       - Immunofluorescence
+      - Immunophenotyping, NOS
       - ISH
       - Karyotype
       - Microarray
@@ -4012,6 +4027,8 @@ properties:
       - Transcript Ablation
       - Transcript Amplification
       - Upstream Gene Variant
+      - Unknown
+      - Not Reported
     enumDef:
       3 Prime UTR Variant:
         $ref:
@@ -4126,6 +4143,8 @@ properties:
       - "12"
       - "13"
       - "61"
+      - Unknown
+      - Not Reported
 
   pathogenicity:
     $ref:
@@ -4136,6 +4155,8 @@ properties:
       - Likely Pathogenic
       - Pathogenic
       - Uncertain Significance
+      - Unknown
+      - Not Reported
     enumDef:
       Benign:
         $ref:
@@ -4620,6 +4641,7 @@ properties:
       - MN1
       - MNX1
       - MPL
+      - MPO
       - MSH2
       - MSH6
       - MSI2
@@ -4761,6 +4783,7 @@ properties:
       - RANBP2
       - RAP1GDS1
       - RARA
+      - RAS, NOS
       - RB1
       - RBM10
       - RBM15
@@ -7126,6 +7149,8 @@ properties:
     enum:
       - 3 Point Scale
       - 4 Point Scale
+      - Unknown
+      - Not Reported
 
   staining_intensity_value:
     $ref:
@@ -7136,6 +7161,8 @@ properties:
       - 2+
       - 3+
       - 4+
+      - Unknown
+      - Not Reported
     enumDef:
       "0":
         $ref:
@@ -7250,6 +7277,7 @@ properties:
       - cells/mL
       - g/dL
       - g/L
+      - IU
       - mcg/L
       - mcg/mL
       - mg/24 hr
@@ -7259,13 +7287,16 @@ properties:
       - mmol/L
       - mU/mol Hb
       - ng/mL
+      - nmol/L
       - percent
+      - Seconds
       - U/g Hb
       - U/L
       - U/mL
       - ukat/L
       - umol/L
       - x10^3 cells/mcL
+      - x10^6 cells/mcL
       - x10^9 cells/L
       - Unknown
       - Not Reported
@@ -7296,7 +7327,17 @@ properties:
       - <1%
       - 1-49%
       - '>=50%'
+      - 0-25%
+      - 26-50%
+      - 51-75%
+      - 76-100%
+      - Unknown
       - Not Reported
+    deprecated_enum:
+      - 0-25
+      - 26-50
+      - 51-75
+      - 76-100
 
   timepoint_category:
     $ref:
@@ -7305,8 +7346,11 @@ properties:
       - End of Consolidation Therapy
       - End of Treatment Course 1
       - End of Treatment Course 2
+      - Initial Diagnosis
       - Preoperative
       - Prior to Treatment
+      - Sample Procurement
+      - Unknown
       - Not Reported
     enumDef:
       Preoperative:
@@ -7326,6 +7370,7 @@ properties:
       - Germline
       - Somatic
       - Unknown
+      - Not Reported
     enumDef:
       Germline:
         $ref:
