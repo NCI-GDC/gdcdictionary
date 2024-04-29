@@ -61,6 +61,7 @@ deprecated:
   - comorbidity_method_of_diagnosis
   - comorbidities
   - days_to_comorbidity
+  - days_to_risk_factor
   - diabetes_treatment_type
   - dlco_ref_predictive_percent
   - eye_color
@@ -208,6 +209,7 @@ properties:
       - Carbon Monoxide Diffusing Capacity Decreased
       - Cardiac Arrest
       - Cardiac Disorders - Other
+      - Cardiac Ischemia
       - Cardiac Troponin I Increased
       - Cardiac Troponin T Increased
       - Cataract
@@ -384,6 +386,7 @@ properties:
       - GGT Increased
       - Gingival Pain
       - Glaucoma
+      - Glomerular Filtration Rate Decreased
       - Glossopharyngeal Nerve Disorder
       - Glucose Intolerance
       - Growth Accelerated
@@ -504,6 +507,7 @@ properties:
       - Jejunal Ulcer
       - Joint Effusion
       - Joint Infection
+      - Joint Pain
       - Joint Range of Motion Decreased
       - Joint Range of Motion Decreased Cervical Spine
       - Joint Range of Motion Decreased Lumbar Spine
@@ -705,6 +709,7 @@ properties:
       - Rash Acneiform
       - Rash Maculo-Papular
       - Rash Pustular
+      - Rash/Desquamation
       - Rectal Anastomotic Leak
       - Rectal Fistula
       - Rectal Hemorrhage
@@ -719,6 +724,7 @@ properties:
       - Renal and Urinary Disorders - Other
       - Renal Calculi
       - Renal Colic
+      - Renal Failure
       - Renal Hemorrhage
       - Reproductive System and Breast Disorders - Other
       - Respiratory Failure
@@ -830,6 +836,7 @@ properties:
       - Unintended Pregnancy
       - Upper Gastrointestinal Hemorrhage
       - Upper Respiratory Infection
+      - Ureteral Obstruction
       - Ureteric Anastomotic Leak
       - Urethral Anastomotic Leak
       - Urethral Infection
@@ -897,6 +904,8 @@ properties:
       - Wound Dehiscence
       - Wound Infection
       - Wrist Fracture
+      - Unknown
+      - Not Reported
 
   adverse_event_grade:
     $ref:
@@ -907,6 +916,8 @@ properties:
       - Grade 3
       - Grade 4
       - Grade 5
+      - Unknown
+      - Not Reported
 
   aids_risk_factors:
     $ref:
@@ -1586,6 +1597,8 @@ properties:
     enum:
       - Convincing Image Source
       - Histologic Confirmation
+      - Unknown
+      - Not Reported
 
   evidence_of_recurrence_type:
     $ref:
@@ -1596,6 +1609,8 @@ properties:
       - Histologic Confirmation
       - Physical Examination
       - Positive Biomarker(s)
+      - Unknown
+      - Not Reported
 
   eye_color:
     $ref:
@@ -1652,9 +1667,11 @@ properties:
       - None
       - Presented with Metastases
       - Progression
+      - Recurrence
       - Relapse
       - Second Malignant Neoplasm
       - Other
+      - Unknown
       - Not Reported
 
   haart_treatment_indicator:
@@ -1713,6 +1730,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Unknown
       - Not Reported
     enumDef:
       "Yes":
@@ -1732,6 +1750,8 @@ properties:
       - Colorectal Cancer
       - Lower Grade Glioma
       - Phenochromocytoma or Paraganglioma
+      - Unknown
+      - Not Reported
 
   hiv_viral_load:
     $ref:
@@ -1876,6 +1896,9 @@ properties:
         - Abdomen
         - Lymph Node
         - Pelvis
+        - Pleura
+        - Unknown
+        - Not Reported
     enumDef:
       Lymph Node:
         $ref:
@@ -1886,12 +1909,18 @@ properties:
       - "_terms.yaml#/imaging_findings/common"
     enum:
       - Carcinomatosis
+      - Distant Metastasis
+      - Equivocal
+      - Extraprostatic Extension, Localized
+      - Extraprostatic Extension, Regional Lymphadenopathy
       - Kidney Involvement
       - Liver Involvement
       - Lung Involvement
+      - No Evidence of Extraprostatic Extension
       - Normal
       - Retroperitoneal Lymph Node Involvement
       - Vena Cava Involvement/Thrombus
+      - Unknown
       - Not Reported
 
   imaging_result:
@@ -1933,10 +1962,13 @@ properties:
       - "_terms.yaml#/imaging_type/common"
     enum:
       - 99mTc Bone Scintigraphy
+      - Bone Scan, NOS
       - CT Scan
       - MRI
       - PET
       - Ultrasound
+      - Unknown
+      - Not Reported
     enumDef:
       Ultrasound:
         $ref:
@@ -2028,6 +2060,7 @@ properties:
     enum:
       - Negative
       - Positive
+      - Unknown
       - Not Reported
 
   pregnancy_count:
@@ -2936,6 +2969,8 @@ properties:
       - Choline
       - PSMA
       - Sodium Fluoride
+      - Unknown
+      - Not Reported
 
   timepoint_category:
     $ref:
@@ -2953,11 +2988,26 @@ properties:
       - Post Secondary Therapy
       - Postoperative
       - Preoperative
+      - Prior to Adjuvant Therapy
       - Prior to Diagnosis
       - Prior to Treatment
       - Recurrence/Progression
+      - Within 2 Months After Completion of First-Course Treatment
       - Within 3 Months of Surgery
       - Other
+      - Unknown
+      - Not Reported
+
+  treatment_emergent_adverse_event:
+    $ref:
+      - "_terms.yaml#/treatment_emergent_adverse_event/common"
+    enum:
+      - Definitely
+      - Possibly
+      - Probably
+      - Unlikely
+      - Unrelated
+      - Unknown
       - Not Reported
 
   undescended_testis_corrected:
