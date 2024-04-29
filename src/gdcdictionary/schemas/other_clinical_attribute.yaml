@@ -556,6 +556,15 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  hormonal_replacement_therapy_status:
+    $ref:
+      - "_terms.yaml#/hormonal_replacement_therapy_status/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
   hormone_replacement_therapy_type:
     $ref:
       - "_terms.yaml#/hormone_replacement_therapy_type/common"
