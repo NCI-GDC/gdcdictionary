@@ -47,6 +47,10 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
+deprecated:
+  - pregnancy_count
+  - viral_hepatitis_serologies
+
 properties:
 
   $ref:
@@ -363,6 +367,13 @@ properties:
     maximum: 32872
     minimum: -32872
 
+  days_to_risk_factor:
+    $ref:
+      - "_terms.yaml#/days_to_risk_factor/common"
+    type: integer
+    maximum: 32872
+    minimum: -32872
+
   diabetes_treatment_type:
     $ref:
       - "_terms.yaml#/diabetes_treatment_type/common"
@@ -394,7 +405,6 @@ properties:
     $ref:
       - "_terms.yaml#/dlco_ref_predictive_percent/common"
     type: number
-    maximum: 100
     minimum: 0
 
   exercise_frequency_weekly:
@@ -423,6 +433,7 @@ properties:
       - Hazel
       - Red & Violet
       - Other
+      - Unknown
       - Not Reported
     enumDef:
       Other:
@@ -436,28 +447,24 @@ properties:
     $ref:
       - "_terms.yaml#/fev1_fvc_post_bronch_percent/common"
     type: number
-    maximum: 100
     minimum: 0
 
   fev1_fvc_pre_bronch_percent:
     $ref:
       - "_terms.yaml#/fev1_fvc_pre_bronch_percent/common"
     type: number
-    maximum: 100
     minimum: 0
 
   fev1_ref_post_bronch_percent:
     $ref:
       - "_terms.yaml#/fev1_ref_post_bronch_percent/common"
     type: number
-    maximum: 100
     minimum: 0
 
   fev1_ref_pre_bronch_percent:
     $ref:
       - "_terms.yaml#/fev1_ref_pre_bronch_percent/common"
     type: number
-    maximum: 100
     minimum: 0
 
   haart_treatment_indicator:
@@ -549,6 +556,15 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  hormonal_replacement_therapy_status:
+    $ref:
+      - "_terms.yaml#/hormonal_replacement_therapy_status/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+
   hormone_replacement_therapy_type:
     $ref:
       - "_terms.yaml#/hormone_replacement_therapy_type/common"
@@ -613,8 +629,10 @@ properties:
       - Anti-TNF Therapy
       - Azathioprine
       - Cyclophosphamide
+      - Immunoglobulin
       - Methotrexate
       - None
+      - Prednisone
       - Other
       - Unknown
       - Not Reported
@@ -690,6 +708,8 @@ properties:
       - Aspirin
       - Metformin
       - Statin, NOS
+      - Unknown
+      - Not Reported
     enumDef:
       Acetaminophen:
         $ref:
@@ -700,6 +720,17 @@ properties:
       Metformin:
         $ref:
           - "_terms_enum.yaml#/metformin/common"
+
+  number_of_pregnancies:
+    $ref:
+      - "_terms.yaml#/number_of_pregnancies/common"
+    enum:
+      - "1"
+      - "2"
+      - "3"
+      - 4+
+      - Unknown
+      - Not Reported
 
   oxygen_use_indicator:
     $ref:
@@ -729,6 +760,8 @@ properties:
     enum:
       - Continuous
       - Intermittent
+      - Unknown
+      - Not Reported
     enumDef:
       Continuous:
         $ref:
@@ -754,6 +787,7 @@ properties:
       - "_terms.yaml#/pregnancy_outcome/common"
     enum:
       - Ectopic Pregnancy
+      - Full Term Birth, NOS
       - Induced Abortion
       - Live Birth
       - Miscarriage
@@ -844,6 +878,7 @@ properties:
       - Biochemical Assessment
       - Both Clinical and Biochemical Assessments
       - Clinical Assessment
+      - Unknown
       - Not Reported
     enumDef:
       Not Reported:
@@ -914,6 +949,7 @@ properties:
         - Benign Prostatic Hyperplasia
         - Benign Thyroid Nodule
         - Birt-Hogg-Dube Syndrome
+        - BK Virus
         - BRCA Family History
         - Cancer
         - Chlamydia
@@ -941,6 +977,7 @@ properties:
         - Diabetes, Type II
         - Diet
         - Diverticulitis
+        - Diverticulosis
         - Down Syndrome
         - EBV Lymphoproliferation
         - Eczema
@@ -991,7 +1028,9 @@ properties:
         - Human Herpesvirus-6 (HHV-6)
         - Human Herpesvirus-8 (HHV-8)
         - Human Papillomavirus Infection
+        - Hypercholesterolemia
         - Hyperparathyroidism
+        - Hypertension
         - Hyperthyroidism
         - Hypospadias
         - Hypothyroidism
@@ -1034,6 +1073,7 @@ properties:
         - Rubella
         - Rubinstein-Taybi Syndrome
         - Sarcoidosis
+        - Scarlet Fever
         - Seizure
         - Sensory Changes
         - Serous Tubal Intraepithelial Carcinoma (STIC)
@@ -1057,6 +1097,7 @@ properties:
         - Tubulointerstitial Disease
         - Tumor-associated Lymphoid Proliferation
         - Turcot Syndrome
+        - Ulcerative Colitis
         - Undescended Testis
         - Varicella Zoster Virus
         - Vascular Disease
@@ -1098,8 +1139,10 @@ properties:
       - Prior to Diagnosis
       - Prior to Treatment
       - Recurrence/Progression
+      - Sample Procurement
       - Within 3 Months of Surgery
       - Other
+      - Unknown
       - Not Reported
     enumDef:
       Other:
@@ -1141,6 +1184,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Unknown
       - Not Reported
     enumDef:
       "Yes":
@@ -1167,6 +1211,7 @@ properties:
       - Bilateral
       - Left
       - Right
+      - Unknown
       - Not Reported
     enumDef:
       Not Reported:
@@ -1181,6 +1226,7 @@ properties:
       - Orchiopexy
       - Spontaneous Descent
       - Testis Removed
+      - Unknown
       - Not Reported
     enumDef:
       Not Reported:
@@ -1193,6 +1239,7 @@ properties:
     enum:
       - "Yes"
       - "No"
+      - Unknown
       - Not Reported
     enumDef:
       "Yes":
@@ -1212,6 +1259,7 @@ properties:
       - Bilateral
       - Left
       - Right
+      - Unknown
       - Not Reported
     enumDef:
       Not Reported:
@@ -1239,6 +1287,23 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  viral_hepatitis_serology_tests:
+    $ref:
+      - "_terms.yaml#/viral_hepatitis_serology_tests/common"
+    type: array
+    items:
+      enum:
+        - HBV Core Antibody
+        - HBV DNA
+        - HBV Genotype
+        - HBV Surface Antibody
+        - HCV Genotype
+        - Hepatitis B Surface Antigen
+        - Hepatitis C Antibody
+        - Hepatitis C Virus RNA
+        - Unknown
+        - Not Reported
 
   weeks_gestation_at_birth:
     $ref:
