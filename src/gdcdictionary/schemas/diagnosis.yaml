@@ -1335,8 +1335,8 @@ properties:
     enum:
       - Favorable
       - Intermediate/Normal
-      - N/A
       - Poor
+      - N/A
       - Unknown
       - Not Reported
 
