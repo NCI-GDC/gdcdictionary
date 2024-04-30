@@ -1335,8 +1335,8 @@ properties:
     enum:
       - Favorable
       - Intermediate/Normal
-      - Poor
       - N/A
+      - Poor
       - Unknown
       - Not Reported
 
@@ -8126,7 +8126,7 @@ properties:
       - Diffuse astrocytoma, low grade
       - Diffuse cutaneous mastocytosis
       - Diffuse intraductal papillomatosis
-      - Diffuse Intrinsic Pontine Glioma, H3 K27M-Mutant
+      - Diffuse intrinsic pontine glioma, H3 K27M-mutant
       - Diffuse large B-cell lymphoma associated with chronic inflammation
       - Diffuse large B-cell lymphoma, NOS
       - Diffuse leptomeningeal glioneuronal tumor
