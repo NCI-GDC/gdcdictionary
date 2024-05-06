@@ -47,6 +47,9 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
+deprecated:
+  - curated_model_index
+
 properties:
 
   $ref:
