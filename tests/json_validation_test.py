@@ -7,30 +7,70 @@ Note this is NOT testing that the schema is sane. Just that we adhere
 to it
 
 """
-
-from tests.utils import DATA_DIR
-from jsonschema import validate, ValidationError
+from importlib import resources
 
 import json
-import glob
-import os
 import pytest
 
+import gdcdictionary
 
-def get_all_paths(subdir):
-    yield from sorted(glob.glob(os.path.join(DATA_DIR, subdir, '*.json')))
+
+def get_all_paths(subdir: str) -> str:
+    with resources.path("tests", ".") as path:
+        examples_path = path.parent / f"examples/{subdir}"
+        yield from sorted(examples_path.glob("*.json"))
 
 
 @pytest.mark.parametrize("path", get_all_paths("valid"))
 def test_valid_examples(path, schema):
     with open(path) as f:
         doc = json.load(f)
-        validate(doc, schema[doc["type"]])
+        assert len(gdcdictionary.validate(doc)) == 0
 
 
 @pytest.mark.parametrize("path", get_all_paths("invalid"))
 def test_invalid_examples(path, schema):
     with open(path) as f:
         doc = json.load(f)
-        with pytest.raises(ValidationError):
-            validate(doc, schema[doc["type"]])
+        violations = gdcdictionary.validate(doc)
+        assert len(violations) > 0
+        print(violations)
+
+
+def test_validate_instances():
+    paths = get_all_paths("valid")
+    instances = []
+    for path in paths:
+        with open(path) as f:
+            doc = json.load(f)
+            instances.append(doc)
+    violations = gdcdictionary.validate_instances(instances)
+    assert len(violations) == 0
+
+
+def test_validate_instances__invalid_types():
+    instances = [
+        {"type": "species"},
+        {"type": "case", "python_version": "38"},
+        {"name": "species"},
+    ]
+    violations = gdcdictionary.validate_instances(instances)
+    assert len(violations) > 2
+
+    unknown_types = [v for v in violations if v.schema == ""]
+    assert len(unknown_types) == 2
+
+    case_required_field_violation = next(
+        v for v in violations if v.schema == "case" and v.keys == ["submitter_id"]
+    )
+    assert (
+        case_required_field_violation.message == "'submitter_id' is a required property"
+    )
+
+    case_extra_field_violation = next(
+        v for v in violations if v.schema == "case" and v.keys == ["python_version"]
+    )
+    assert (
+        case_extra_field_violation.message
+        == "Additional properties are not allowed ('python_version' was unexpected)"
+    )

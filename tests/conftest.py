@@ -1,10 +1,9 @@
 """
     Conftest.py a configuration file for pytest
 """
-import os
 
 import pytest
-from src.gdcdictionary import ROOT_DIR, GDCDictionary
+from gdcdictionary import GDCDictionary
 from tests.utils import load_yaml
 
 
@@ -15,8 +14,7 @@ def dictionary():
 
 @pytest.fixture(scope="session")
 def definitions(dictionary):
-    # TODO why not pkg_resources
-    return load_yaml(os.path.join(ROOT_DIR, 'schemas', '_definitions.yaml'))
+    return load_yaml('_definitions.yaml')
 
 
 @pytest.fixture(scope="session")

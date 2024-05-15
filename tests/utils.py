@@ -6,21 +6,24 @@ specific overrrides are not being used in the GDC currently.
 from collections import defaultdict
 import copy
 import os
+from typing import Optional
+
 import yaml
 import unittest
 
 from jsonschema import validate
 
-from src.gdcdictionary import ROOT_DIR, GDCDictionary
+import gdcdictionary
+from gdcdictionary import GDCDictionary
 
 
-def load_yaml(path):
-    with open(path) as f:
+def load_yaml(path, root: Optional[str] = None):
+    schema_path = gdcdictionary.get_schema_directory(root) / path
+    with schema_path.open() as f:
         return yaml.safe_load(f)
 
 
-DATA_DIR = os.path.join(ROOT_DIR, 'examples')
-project1 = load_yaml(os.path.join(ROOT_DIR, 'schemas/projects/project1.yaml'))
+project1 = load_yaml('projects/project1.yaml')
 projects = {'project1': project1}
 
 
@@ -28,7 +31,7 @@ class BaseTest(unittest.TestCase):
 
     def setUp(self):
         self.dictionary = GDCDictionary()
-        self.definitions = load_yaml(os.path.join(ROOT_DIR, 'schemas', '_definitions.yaml'))
+        self.definitions = load_yaml('_definitions.yaml')
 
 
 def merge_schemas(a, b, path=None):

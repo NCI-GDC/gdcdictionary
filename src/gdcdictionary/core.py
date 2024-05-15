@@ -1,31 +1,39 @@
+import logging
+import pathlib
 from copy import deepcopy
 from collections import namedtuple
-from contextlib import contextmanager
+
+from importlib import resources
+from typing import Optional, List
+
 from jsonschema import RefResolver
 
-import glob
-import logging
-import os
 import yaml
 
-MOD_DIR = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 
+logger = logging.getLogger(__name__)
 ResolverPair = namedtuple('ResolverPair', ['resolver', 'source'])
 
 
-@contextmanager
-def visit_directory(path):
-    """Perform contained actions with current working directory at
-    :param:``path``.  Always return to previous directory when done.
+def get_schema_directory(local_path: Optional[str] = None) -> pathlib.Path:
+    """Resolve the directory containing the schema definitions files.
 
+    Args:
+        local_path: custom location for the schema
+    Returns:
+        the schema directory as path object.
     """
+    if local_path:
+        path = pathlib.Path(local_path)
 
-    cdir = os.getcwd()
-    try:
-        os.chdir(path)
-        yield os.getcwd()
-    finally:
-        os.chdir(cdir)
+        if not path.exists():
+            raise IOError("Specified template directory '%s' does not exist", path)
+        return path
+
+        # use default embedded location
+    with resources.path("gdcdictionary", "schemas") as path:
+        logger.info(path)
+        return path
 
 
 class GDCDictionary:
@@ -37,10 +45,8 @@ class GDCDictionary:
         '_terms_enum.yaml',
     ]
 
-    logger = logging.getLogger("GDCDictionary")
-
-    def __init__(self, lazy=False, root_dir=None, definitions_paths=None,
-                 metaschema_path=None):
+    def __init__(self, lazy: bool = False, root_dir: Optional[str] = None, definitions_paths: Optional[List[str]] = None,
+                 metaschema_path: Optional[str] = None):
         """Creates a new dictionary instance.
 
         :param root_dir: The directory to find schemas
@@ -50,13 +56,14 @@ class GDCDictionary:
 
         """
 
+        self.loaded = False
         self.metaschema = None
 
-        self.root_dir = (root_dir or os.path.join(MOD_DIR, 'schemas'))
+        self.root_dir = get_schema_directory(root_dir)
         self.metaschema_path = metaschema_path or self._metaschema_path
         self.definitions_paths = definitions_paths or self._definitions_paths
         self.exclude = [self.metaschema_path] + self.definitions_paths
-        self.schema = dict()
+        self._schema = dict()
         self.resolvers = dict()
         if not lazy:
             self.load_directory(self.root_dir)
@@ -71,29 +78,28 @@ class GDCDictionary:
                     f.read().encode("ascii")
                     f.seek(0)
                 except Exception as e:
-                    self.logger.error(f"Error in file: {name}")
+                    logger.error(f"Error in file: {name}")
                     raise e
             if yaml.__with_libyaml__:
                 return yaml.load(f, Loader=yaml.CSafeLoader)
-            self.logger.debug("To enable CSafeLoader install libyaml. Falling back to yaml.safe_load()")
+            logger.debug("To enable CSafeLoader install libyaml. Falling back to yaml.safe_load()")
             return yaml.safe_load(f)
 
-    def load_schemas_from_dir(self, directory):
+    def load_schemas_from_dir(self, directory: pathlib.Path):
         """Returns all yamls and resolvers of those yamls from dir"""
 
         schemas, resolvers = {}, {}
 
-        with visit_directory(directory):
-            for path in glob.glob("*.yaml"):
-                schema = self.load_yaml(path)
-                schemas[path] = schema
-                resolver = RefResolver(f'{path}#', schema)
-                resolvers[path] = ResolverPair(resolver, schema)
+        for path in directory.glob("*.yaml"):
+            schema = self.load_yaml(path)
+            schemas[path.name] = schema
+            resolver = RefResolver(f'{path.name}#', schema)
+            resolvers[path.name] = ResolverPair(resolver, schema)
 
         return schemas, resolvers
 
-    def load_directory(self, directory):
-        """Load and reslove all schemas from directory"""
+    def load_directory(self, directory: pathlib.Path):
+        """Load and resolve all schemas from directory"""
 
         yamls, resolvers = self.load_schemas_from_dir(directory)
 
@@ -105,7 +111,8 @@ class GDCDictionary:
             for path, schema in yamls.items()
             if path not in self.exclude
         }
-        self.schema.update(schemas)
+        self._schema.update(schemas)
+        self.loaded = True
 
     def resolve_reference(self, value, root):
         """Resolves a reference.
@@ -163,5 +170,11 @@ class GDCDictionary:
         for ref in refs:
             obj.update(self.resolve_reference(ref, root))
 
+    @property
+    def schema(self) -> dict:
+        if not self.loaded:
+            self.load_directory(self.root_dir)
+        return self._schema
 
-gdcdictionary = GDCDictionary()
+
+gdcdictionary = GDCDictionary(lazy=True)
