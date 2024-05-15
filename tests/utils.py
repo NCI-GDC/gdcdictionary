@@ -5,7 +5,6 @@ specific overrrides are not being used in the GDC currently.
 
 from collections import defaultdict
 import copy
-import os
 from typing import Optional
 
 import yaml
