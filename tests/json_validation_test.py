@@ -7,7 +7,10 @@ Note this is NOT testing that the schema is sane. Just that we adhere
 to it
 
 """
-from importlib import resources
+try:
+    from importlib.resources import files
+except ImportError:
+    from importlib_resources import files
 
 import json
 import pytest
@@ -16,7 +19,7 @@ import gdcdictionary
 
 
 def get_all_paths(subdir: str) -> str:
-    with resources.path("tests", ".") as path:
+    with files("tests") as path:
         examples_path = path.parent / f"examples/{subdir}"
         yield from sorted(examples_path.glob("*.json"))
 

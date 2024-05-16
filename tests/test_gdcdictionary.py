@@ -1,4 +1,7 @@
-from importlib import resources
+try:
+    from importlib.resources import files
+except ImportError:
+    from importlib_resources import files
 
 import pytest
 
@@ -11,6 +14,6 @@ def test_load_dictionary__invalid_location() -> None:
 
 
 def test_load_dictionary() -> None:
-    with resources.path("tests", ".") as path:
+    with files("tests") as path:
         dictionary = gdcdictionary.GDCDictionary(root_dir=str(path.parent / "src/gdcdictionary/schemas"), lazy=False)
         assert dictionary.loaded is True

@@ -3,7 +3,10 @@ import pathlib
 from copy import deepcopy
 from collections import namedtuple
 
-from importlib import resources
+try:
+    from importlib.resources import files
+except ImportError:
+    from importlib_resources import files
 from typing import Optional, List
 
 from jsonschema import RefResolver
@@ -30,8 +33,8 @@ def get_schema_directory(local_path: Optional[str] = None) -> pathlib.Path:
             raise IOError("Specified template directory '%s' does not exist", path)
         return path
 
-        # use default embedded location
-    with resources.path("gdcdictionary", "schemas") as path:
+    # use default embedded location
+    with files("gdcdictionary").joinpath("schemas") as path:
         logger.info(path)
         return path
 
