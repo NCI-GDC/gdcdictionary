@@ -113,6 +113,16 @@ class SchemaValidator:
                         "message": violation.message,
                     },
                 )
+            violation = SchemaValidationError.from_values(self.name, message, keys)
+            if partial and violation.is_ignored_for_partials:
+                logger.debug(
+                    "Constraint violation ignored for partial validation",
+                    extra={
+                        "partial": partial,
+                        "keys": violation.keys,
+                        "message": violation.message,
+                    },
+                )
                 continue
             violations.append(violation)
         return violations
