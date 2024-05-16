@@ -91,19 +91,10 @@ class SchemaValidator:
         self.name = name
         self.validator = Draft4Validator(gdcdictionary.schema[name])
 
-    def post_validate(self, violations: List[SchemaValidationError]) -> None:
-        """Implements further validations and/or filtering here."""
-        ...
-
-    def pre_validate(self, json_instance: Any) -> None:
-        """Implements any prior work to be done on the json before validation."""
-        ...
-
     def iter_errors(
         self, json_instance: Any, partial: bool = False
     ) -> List[SchemaValidationError]:
         violations: List[SchemaValidationError] = []
-        self.pre_validate(json_instance)
         for error in self.validator.iter_errors(instance=json_instance):
             # the key will be  property.sub property for nested properties
             errors = [str(e) for e in error.path if error.path]
@@ -127,7 +118,6 @@ class SchemaValidator:
                 )
                 continue
             violations.append(violation)
-        self.post_validate(violations)
         return violations
 
 
@@ -139,7 +129,7 @@ def _get_validator(schema_name: str) -> Optional[SchemaValidator]:
     return _validators[schema_name]
 
 
-def validate(instance: dict, partial: bool = False) -> List[SchemaValidationError]:
+def validate(instance: Dict[str, Any], partial: bool = False) -> List[SchemaValidationError]:
     """Validate a single json instance.
 
     `type` is handled specially as it is not defined as a required field in
