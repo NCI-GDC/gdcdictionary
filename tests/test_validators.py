@@ -77,3 +77,9 @@ def test_validate_instances__invalid_types():
         case_extra_field_violation.message
         == "Additional properties are not allowed ('python_version' was unexpected)"
     )
+
+
+def test_partials_validation():
+    instance = {"type": "case", "days_to_consent": 123, "submitter_id": "UNSC"}
+    violations = gdcdictionary.validate_instances(instances=[instance], partial=True)
+    assert len(violations) == 0
