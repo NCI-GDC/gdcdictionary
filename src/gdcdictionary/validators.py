@@ -1,33 +1,51 @@
-"""JSON validator module for validating user supplied json documents."""
+"""JSON validator module for validating user supplied json documents.
+
+Example:
+    .. code-block:: python
+        import gdcdictionary
+
+        # single
+        instance = {'type': 'case', 'disease_type': 'bad disease'}
+        for violation in gdcdictionary.validate(instance):
+           print(violation.message, violation.keys)
+
+        # multiple
+        for violation in gdcdictionary.validate_instances([instance]):
+            ...
+
+"""
 from __future__ import annotations
 
 import logging
 import re
-from typing import Any, List, NamedTuple, Dict, Optional, Iterable, Set
+from typing import Any, List, NamedTuple, Dict, Optional, Iterable
 
 from gdcdictionary import gdcdictionary
 from jsonschema import Draft4Validator
 
 
 logger = logging.getLogger(__name__)
-missing_prop_re = re.compile(r"('[a-zA-Z_-]+')+")
+invalid_property_regex = re.compile(r"('[a-zA-Z_-]+')+")
 _validators: Dict[str, SchemaValidator] = {}
 
 
 def _parse_keys_from_error_message(error_msg: str) -> List[str]:
-    missing_prop = missing_prop_re.findall(error_msg)
+    missing_prop = invalid_property_regex.findall(error_msg)
     return [m.replace("'", "") for m in missing_prop]
 
 
-class SchemaValidationError:
+class SchemaValidationError(NamedTuple):
+    """A single schema violation representation.
 
-    def __init__(self, schema: str, message: str, keys: List[str]) -> None:
-        if "Additional properties are not allowed" in message:
-            message = f"Key(s) {keys} not a valid property for type '{schema}'"
+    Properties:
+        schema: the name of the json schema e.g. aliquot
+        message: the error message describing the violation
+        keys: the list of keys whose constraints were violated.
+    """
 
-        self.schema = schema
-        self.message = message
-        self.keys = keys
+    schema: str
+    message: str
+    keys: List[str]
 
     @property
     def is_required_field_violation(self) -> bool:
@@ -36,6 +54,19 @@ class SchemaValidationError:
     @property
     def is_ignored_for_partials(self) -> bool:
         return self.is_required_field_violation and "submitter_id" not in self.keys
+
+    @classmethod
+    def from_values(
+        cls, schema: str, message: str, keys: List[str]
+    ) -> SchemaValidationError:
+        if "Additional properties are not allowed" in message:
+            message = f"Key(s) {keys} not a valid property for type '{schema}'"
+        logger.debug(
+            "json schema violation for '%s'",
+            schema,
+            extra={"keys": keys, "message": message},
+        )
+        return SchemaValidationError(schema, message, keys)
 
 
 class SchemaValidator:
@@ -49,15 +80,20 @@ class SchemaValidator:
     def __init__(self, name: str) -> None:
         self.name = name
         self.validator = Draft4Validator(gdcdictionary.schema[name])
-        self._required_fields = set(gdcdictionary.schema[name])
 
-    def post_validate(self, violations: List[SchemaValidationError]):
+    def post_validate(self, violations: List[SchemaValidationError]) -> None:
+        """Implements further validations and/or filtering here."""
+        ...
+
+    def pre_validate(self, json_instance: Any) -> None:
+        """Implements any prior work to be done on the json before validation."""
         ...
 
     def iter_errors(
         self, json_instance: Any, partial: bool = False
     ) -> List[SchemaValidationError]:
         violations: List[SchemaValidationError] = []
+        self.pre_validate(json_instance)
         for error in self.validator.iter_errors(instance=json_instance):
             # the key will be  property.sub property for nested properties
             errors = [str(e) for e in error.path if error.path]
@@ -69,7 +105,7 @@ class SchemaValidator:
                 message += ": {}".format(
                     " and ".join([c.message for c in error.context])
                 )
-            violation = SchemaValidationError(self.name, message, keys)
+            violation = SchemaValidationError.from_values(self.name, message, keys)
             if (
                 partial
                 and violation.is_ignored_for_partials
@@ -92,6 +128,17 @@ def _get_validator(schema_name: str) -> Optional[SchemaValidator]:
 def validate(
     instance: dict, partial: bool = False
 ) -> List[SchemaValidationError]:
+    """Validate a single json instance.
+
+    `type` is handled specially as it is not defined as a required field in
+    the dictionary, but is required to correctly figure out the target schema.
+
+    Args:
+        instance: json instance
+
+    Returns:
+        a list of errors
+    """
     if "type" not in instance:
         return [
             SchemaValidationError(
@@ -113,6 +160,14 @@ def validate(
 def validate_instances(
     instances: Iterable[dict], partial: bool = False
 ) -> List[SchemaValidationError]:
+    """Validate multiple json instances.
+
+    Args:
+        instances: list of json documents.
+
+    Returns:
+        list of errors
+    """
     violations: List[SchemaValidationError] = []
     for instance in instances:
         violations += validate(instance, partial)

@@ -75,7 +75,7 @@ def test_validate_instances__invalid_types():
     )
     assert (
         case_extra_field_violation.message
-        == "Additional properties are not allowed ('python_version' was unexpected)"
+        == "Key(s) ['python_version'] not a valid property for type 'case'"
     )
 
 
