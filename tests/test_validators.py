@@ -52,6 +52,15 @@ def test_validate_instances() -> None:
 
 
 def test_validate_instances__invalid_types() -> None:
+    """Test validating multiple documents at the same time.
+
+    Test data is chosen to cover three scenarios:
+        * missing `type` property
+        * unexpected property
+        * unknown type - type does not match a known schema
+
+    The test does not cover every possible scenario that causes a violation.
+    """
     instances = [
         {"type": "species"},
         {"type": "case", "python_version": "38"},
