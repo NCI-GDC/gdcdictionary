@@ -19,10 +19,15 @@ def _parse_keys_from_error_message(error_msg: str) -> List[str]:
     return [m.replace("'", "") for m in missing_prop]
 
 
-class SchemaValidationError(NamedTuple):
-    schema: str
-    message: str
-    keys: List[str]
+class SchemaValidationError:
+
+    def __init__(self, schema: str, message: str, keys: List[str]) -> None:
+        if "Additional properties are not allowed" in message:
+            message = f"Key(s) {keys} not a valid property for type '{schema}'"
+
+        self.schema = schema
+        self.message = message
+        self.keys = keys
 
     @property
     def is_required_field_violation(self) -> bool:
