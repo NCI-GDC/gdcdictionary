@@ -51,7 +51,8 @@ def test_validate_instances() -> None:
     assert len(violations) == 0
 
 
-def test_validate_instances__invalid_types() -> None:
+@pytest.mark.parametrize("partial", [False, True])
+def test_validate_instances__invalid_types(partial: bool) -> None:
     """Test validating multiple documents at the same time.
 
     Test data is chosen to cover three scenarios:
@@ -66,7 +67,7 @@ def test_validate_instances__invalid_types() -> None:
         {"type": "case", "python_version": "38"},
         {"name": "species"},
     ]
-    violations = gdcdictionary.validate_instances(instances)
+    violations = gdcdictionary.validate_instances(instances, partial)
     print(violations)
 
     assert len(violations) > 2
@@ -88,3 +89,10 @@ def test_validate_instances__invalid_types() -> None:
         case_extra_field_violation.message
         == "Key(s) ['python_version'] not a valid property for type 'case'"
     )
+
+
+def test_partials_validation():
+    # example missing required fields
+    instance = {"type": "case", "days_to_consent": 123, "submitter_id": "UNSC-2"}
+    violations = gdcdictionary.validate_instances(instances=[instance], partial=True)
+    assert len(violations) == 0

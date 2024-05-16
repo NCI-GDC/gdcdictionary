@@ -1,11 +1,12 @@
 """JSON validator module for validating user supplied json documents.
 
 Example:
+
     .. code-block:: python
         import gdcdictionary
 
         # single
-        instance = {'type': 'case', 'disease_type': 'bad disease'}
+        instance = {'type': 'case', 'submitter_id': 'UNSC-1', 'disease_type': 'bad disease'}
         for violation in gdcdictionary.validate(instance):
            print(violation.message, violation.keys)
 
@@ -13,6 +14,15 @@ Example:
         for violation in gdcdictionary.validate_instances([instance]):
             ...
 
+Partial documents are json documents for a specific type but potentially
+missing some required fields. All supplied values should be valid based on
+the constraints defined in the target schema. The example instance above
+is a partial case document and can be partially validated using
+
+>>> import gdcdictionary
+>>> instance = {'type': 'case', 'submitter_id': 'UNSC-1', 'disease_type': 'Not Applicable'}
+>>> gdcdictionary.validate(instance, partial=True)
+[]
 """
 from __future__ import annotations
 
@@ -47,6 +57,14 @@ class SchemaValidationError(NamedTuple):
     message: str
     keys: List[str]
 
+    @property
+    def is_required_field_violation(self) -> bool:
+        return "is a required property" in self.message
+
+    @property
+    def is_ignored_for_partials(self) -> bool:
+        return self.is_required_field_violation and "submitter_id" not in self.keys
+
     @classmethod
     def from_values(
         cls, schema: str, message: str, keys: List[str]
@@ -73,7 +91,9 @@ class SchemaValidator:
         self.name = name
         self.validator = Draft4Validator(gdcdictionary.schema[name])
 
-    def iter_errors(self, json_instance: Any) -> List[SchemaValidationError]:
+    def iter_errors(
+        self, json_instance: Any, partial: bool = False
+    ) -> List[SchemaValidationError]:
         violations: List[SchemaValidationError] = []
         for error in self.validator.iter_errors(instance=json_instance):
             # the key will be  property.sub property for nested properties
@@ -86,9 +106,18 @@ class SchemaValidator:
                 message += ": {}".format(
                     " and ".join([c.message for c in error.context])
                 )
-            violations.append(
-                SchemaValidationError.from_values(self.name, message, keys)
-            )
+            violation = SchemaValidationError.from_values(self.name, message, keys)
+            if partial and violation.is_ignored_for_partials:
+                logger.debug(
+                    "Constraint violation ignored for partial validation",
+                    extra={
+                        "partial": partial,
+                        "keys": violation.keys,
+                        "message": violation.message,
+                    },
+                )
+                continue
+            violations.append(violation)
         return violations
 
 
@@ -100,7 +129,7 @@ def _get_validator(schema_name: str) -> Optional[SchemaValidator]:
     return _validators[schema_name]
 
 
-def validate(instance: Dict[str, Any]) -> List[SchemaValidationError]:
+def validate(instance: Dict[str, Any], partial: bool = False) -> List[SchemaValidationError]:
     """Validate a single json instance.
 
     `type` is handled specially as it is not defined as a required field in
@@ -108,6 +137,8 @@ def validate(instance: Dict[str, Any]) -> List[SchemaValidationError]:
 
     Args:
         instance: json instance
+        partial: if True, the instance is treated as a potentially incomplete json and
+            validation for required fields (except submitter_id) are omitted.
 
     Returns:
         a list of errors
@@ -127,19 +158,23 @@ def validate(instance: Dict[str, Any]) -> List[SchemaValidationError]:
                 keys=["type"],
             )
         ]
-    return validator.iter_errors(instance)
+    return validator.iter_errors(instance, partial)
 
 
-def validate_instances(instances: Iterable[Dict[str, Any]]) -> List[SchemaValidationError]:
+def validate_instances(
+    instances: Iterable[dict], partial: bool = False
+) -> List[SchemaValidationError]:
     """Validate multiple json instances.
 
     Args:
         instances: list of json documents.
+        partial: if True, the instance is treated as a potentially incomplete json and
+            validation for required fields (except submitter_id) are omitted.
 
     Returns:
         list of errors
     """
     violations: List[SchemaValidationError] = []
     for instance in instances:
-        violations += validate(instance)
+        violations += validate(instance, partial)
     return violations
