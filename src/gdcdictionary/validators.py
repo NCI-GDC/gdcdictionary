@@ -1,11 +1,12 @@
 """JSON validator module for validating user supplied json documents.
 
 Example:
+
     .. code-block:: python
         import gdcdictionary
 
         # single
-        instance = {'type': 'case', 'disease_type': 'bad disease'}
+        instance = {'type': 'case', 'submitter_id': 'UNSC-1', 'disease_type': 'bad disease'}
         for violation in gdcdictionary.validate(instance):
            print(violation.message, violation.keys)
 
@@ -13,6 +14,15 @@ Example:
         for violation in gdcdictionary.validate_instances([instance]):
             ...
 
+Partial documents are json documents for a specific type but potentially
+missing some required fields. All supplied values should be valid based on
+the constraints defined in the target schema. The example instance above
+is a partial case document and can be partially validated using
+
+>>> import gdcdictionary
+>>> instance = {'type': 'case', 'submitter_id': 'UNSC-1', 'disease_type': 'Not Applicable'}
+>>> gdcdictionary.validate(instance, partial=True)
+[]
 """
 from __future__ import annotations
 
@@ -106,11 +116,15 @@ class SchemaValidator:
                     " and ".join([c.message for c in error.context])
                 )
             violation = SchemaValidationError.from_values(self.name, message, keys)
-            if (
-                partial
-                and violation.is_ignored_for_partials
-            ):
-                logger.debug("Constraint violation for '%s' ignored for partial validation", violation.keys)
+            if partial and violation.is_ignored_for_partials:
+                logger.debug(
+                    "Constraint violation ignored for partial validation",
+                    extra={
+                        "partial": partial,
+                        "keys": violation.keys,
+                        "message": violation.message,
+                    },
+                )
                 continue
             violations.append(violation)
         self.post_validate(violations)
@@ -125,9 +139,7 @@ def _get_validator(schema_name: str) -> Optional[SchemaValidator]:
     return _validators[schema_name]
 
 
-def validate(
-    instance: dict, partial: bool = False
-) -> List[SchemaValidationError]:
+def validate(instance: dict, partial: bool = False) -> List[SchemaValidationError]:
     """Validate a single json instance.
 
     `type` is handled specially as it is not defined as a required field in
@@ -135,6 +147,8 @@ def validate(
 
     Args:
         instance: json instance
+        partial: if True, the instance is treated as a potentially incomplete json and
+            validation for required fields (except submitter_id) are omitted.
 
     Returns:
         a list of errors
@@ -164,6 +178,8 @@ def validate_instances(
 
     Args:
         instances: list of json documents.
+        partial: if True, the instance is treated as a potentially incomplete json and
+            validation for required fields (except submitter_id) are omitted.
 
     Returns:
         list of errors

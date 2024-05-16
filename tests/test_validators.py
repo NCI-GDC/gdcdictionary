@@ -51,13 +51,14 @@ def test_validate_instances():
     assert len(violations) == 0
 
 
-def test_validate_instances__invalid_types():
+@pytest.mark.parametrize("partial", [False, True])
+def test_validate_instances__invalid_types(partial: bool) -> None:
     instances = [
         {"type": "species"},
         {"type": "case", "python_version": "38"},
         {"name": "species"},
     ]
-    violations = gdcdictionary.validate_instances(instances)
+    violations = gdcdictionary.validate_instances(instances, partial)
     assert len(violations) > 2
 
     unknown_types = [v for v in violations if v.schema == ""]
@@ -80,6 +81,7 @@ def test_validate_instances__invalid_types():
 
 
 def test_partials_validation():
-    instance = {"type": "case", "days_to_consent": 123, "submitter_id": "UNSC"}
+    # example missing required fields
+    instance = {"type": "case", "days_to_consent": 123, "submitter_id": "UNSC-2"}
     violations = gdcdictionary.validate_instances(instances=[instance], partial=True)
     assert len(violations) == 0
