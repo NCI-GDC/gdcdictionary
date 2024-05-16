@@ -7,7 +7,7 @@ try:
     from importlib.resources import files
 except ImportError:
     from importlib_resources import files
-from typing import Optional, List
+from typing import Optional, List, Tuple, Dict, Any
 
 from jsonschema import RefResolver
 
@@ -88,7 +88,7 @@ class GDCDictionary:
             logger.debug("To enable CSafeLoader install libyaml. Falling back to yaml.safe_load()")
             return yaml.safe_load(f)
 
-    def load_schemas_from_dir(self, directory: pathlib.Path):
+    def load_schemas_from_dir(self, directory: pathlib.Path) -> Tuple[Dict[str, Any], Dict[str, Any]]:
         """Returns all yamls and resolvers of those yamls from dir"""
 
         schemas, resolvers = {}, {}
@@ -101,7 +101,7 @@ class GDCDictionary:
 
         return schemas, resolvers
 
-    def load_directory(self, directory: pathlib.Path):
+    def load_directory(self, directory: pathlib.Path) -> None:
         """Load and resolve all schemas from directory"""
 
         yamls, resolvers = self.load_schemas_from_dir(directory)

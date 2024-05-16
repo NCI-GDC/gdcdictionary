@@ -40,7 +40,7 @@ def test_invalid_examples(path, schema):
         print(violations)
 
 
-def test_validate_instances():
+def test_validate_instances() -> None:
     paths = get_all_paths("valid")
     instances = []
     for path in paths:
@@ -51,13 +51,15 @@ def test_validate_instances():
     assert len(violations) == 0
 
 
-def test_validate_instances__invalid_types():
+def test_validate_instances__invalid_types() -> None:
     instances = [
         {"type": "species"},
         {"type": "case", "python_version": "38"},
         {"name": "species"},
     ]
     violations = gdcdictionary.validate_instances(instances)
+    print(violations)
+
     assert len(violations) > 2
 
     unknown_types = [v for v in violations if v.schema == ""]
