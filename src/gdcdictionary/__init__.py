@@ -1,7 +1,7 @@
 from gdcdictionary.core import GDCDictionary, gdcdictionary, get_schema_directory
 from gdcdictionary.validators import (
-    SchemaValidator,
     SchemaValidationError,
+    SchemaValidator,
     validate,
     validate_instances,
 )

@@ -1,23 +1,53 @@
+---
 repos:
--   repo: git@github.com:Yelp/detect-secrets
-    rev: v0.13.0
+  - repo: https://github.com/psf/black
+    rev: 24.4.2
     hooks:
-    -   id: detect-secrets
-        args: ['--baseline', '.secrets.baseline']
-
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
+      - id: black
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
     hooks:
-    -   id: check-json
-    -   id: check-toml
-    -   id: check-yaml
+      - id: check-json
+      - id: check-toml
+      - id: check-yaml
         exclude: .gitlab-ci.yml
-    -   id: end-of-file-fixer
-    -   id: fix-encoding-pragma
+      - id: end-of-file-fixer
+      - id: fix-encoding-pragma
         args: [--remove]
-    -   id: no-commit-to-branch
+      - id: no-commit-to-branch
         args: [--branch, develop, --branch, master, --pattern, release/.*]
-    -   id: pretty-format-json
+      - id: pretty-format-json
         args: [--autofix, --no-sort-keys]
-    -   id: trailing-whitespace
+      - id: trailing-whitespace
         args: [--markdown-linebreak-ext=md]
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        name: isort (python)
+        args: [--profile, black]
+      - id: isort
+        name: isort (cython)
+        types: [cython]
+        args: [--profile, black]
+      - id: isort
+        name: isort (pyi)
+        types: [pyi]
+        args: [--profile, black]
+  - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
+    rev: 0.2.3
+    hooks:
+      - id: yamlfmt
+        args: [--mapping, '2', --sequence, '4', --offset, '2', --width, '80']
+        # yamllint disable-line rule:line-length
+        exclude: ^helm/templates/|^\.gitlab-ci.yml|^src/gdcdictionary/schemas/|^sandbox/
+  - repo: https://github.com/pappasam/toml-sort
+    rev: v0.23.1
+    hooks:
+      - id: toml-sort
+        args: [--in-place]
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        args: [--baseline, .secrets.baseline]

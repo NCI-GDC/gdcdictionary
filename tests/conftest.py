@@ -3,6 +3,7 @@
 """
 
 import pytest
+
 from gdcdictionary import GDCDictionary
 from tests.utils import load_yaml
 
@@ -14,7 +15,7 @@ def dictionary():
 
 @pytest.fixture(scope="session")
 def definitions(dictionary):
-    return load_yaml('_definitions.yaml')
+    return load_yaml("_definitions.yaml")
 
 
 @pytest.fixture(scope="session")

@@ -7,12 +7,14 @@ Note this is NOT testing that the schema is sane. Just that we adhere
 to it
 
 """
+
 try:
     from importlib.resources import files
 except ImportError:
     from importlib_resources import files
 
 import json
+
 import pytest
 
 import gdcdictionary
@@ -78,9 +80,7 @@ def test_validate_instances__invalid_types(partial: bool) -> None:
     case_required_field_violation = next(
         v for v in violations if v.schema == "case" and v.keys == ["submitter_id"]
     )
-    assert (
-        case_required_field_violation.message == "'submitter_id' is a required property"
-    )
+    assert case_required_field_violation.message == "'submitter_id' is a required property"
 
     case_extra_field_violation = next(
         v for v in violations if v.schema == "case" and v.keys == ["python_version"]
