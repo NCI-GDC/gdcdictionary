@@ -1,7 +1,17 @@
-import os
+from gdcdictionary.core import GDCDictionary, gdcdictionary, get_schema_directory
+from gdcdictionary.validators import (
+    SchemaValidator,
+    SchemaValidationError,
+    validate,
+    validate_instances,
+)
 
-from gdcdictionary.python import GDCDictionary, gdcdictionary
-
-
-
-ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+__all__ = [
+    "gdcdictionary",
+    "get_schema_directory",
+    "validate",
+    "validate_instances",
+    "GDCDictionary",
+    "SchemaValidator",
+    "SchemaValidationError",
+]
