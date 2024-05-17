@@ -57,6 +57,8 @@ push_datamodels_to_github:
   extends: .job-with-ssh-keys
   image: docker.osdc.io/ncigdc/python3.6-builder:${BASE_CONTAINER_VERSION}
   stage: generate-data-model
+  needs:
+    - execute_plaster
   script:
     - cd gdcdatamodel2
     - cat setup.cfg
@@ -77,6 +79,8 @@ push_datamodels_tag_to_github:
   extends: .job-with-ssh-keys
   image: docker.osdc.io/ncigdc/python3.8-builder:${BASE_CONTAINER_VERSION}
   stage: generate-data-model
+  needs:
+    - push_datamodels_to_github
   script:
     - cd gdcdatamodel2
     - git push origin --delete "$CI_COMMIT_REF_NAME" || true # delete branch with tag name
