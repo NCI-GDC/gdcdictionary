@@ -33,7 +33,7 @@ execute_plaster:
       if [ ${CI_TRIGGER_BRANCH+x} ]; then
         pip install "gdc-plaster==$CI_TRIGGER_BRANCH" "psqlgml>=0.2.4"
       else
-        pip install "gdc-plaster>=1.1.2.dev6+fix-md5-hash-fix" "psqlgml>=0.2.4"
+        pip install "gdc-plaster>=1.1.2" "psqlgml>=0.2.4"
       fi
     - plaster --version
     - psqlgml --version
@@ -55,7 +55,7 @@ execute_plaster:
 
 push_datamodels_to_github:
   extends: .job-with-ssh-keys
-  image: docker.osdc.io/ncigdc/python3.6-builder:${BASE_CONTAINER_VERSION}
+  image: docker.osdc.io/ncigdc/python3.9-builder:${BASE_CONTAINER_VERSION}
   stage: generate-data-model
   needs:
     - execute_plaster
