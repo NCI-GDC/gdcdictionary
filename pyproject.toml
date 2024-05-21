@@ -1,6 +1,26 @@
 [build-system]
-requires = ["setuptools>=45", "wheel", "tomli>=1.0", "packaging>=20.0", "pyparsing>2,<3", "setuptools_scm>=6.2"]
+requires = ["setuptools>=66", "wheel", "setuptools_scm[toml]>=7.0"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "gdcdictionary"
+dynamic = [
+  "version",
+  "description",
+  "readme",
+  "requires-python",
+  "license",
+  "authors",
+  "maintainers",
+  "keywords",
+  "classifiers",
+  "urls",
+  "scripts",
+  "gui-scripts",
+  "entry-points",
+  "dependencies",
+  "optional-dependencies"
+]
 
 [tool.black]
 line-length = 98
@@ -20,11 +40,27 @@ source = ["gdcdictionary"]
 profile = "black"
 known_first_party = ["gdcdictionary"]
 
+[tool.pytest.ini_options]
+minversion = 6.0
+# Silence warning by opting in to use pytest 6's new default value
+junit_family = "xunit2"
+junit_logging = "system-out"
+console_output_style = "classic"
+log_cli_level = "INFO"
+log_cli = "true"
+filterwarnings = ["ignore::DeprecationWarning"]
+addopts = "-rfE --color=yes --cov=gdcdictionary --cov-report term"
+norecursedirs = [
+  ".git",
+  ".tox",
+  "dist",
+  "build",
+  "examples",
+  "sandbox"
+]
+testpaths = [
+  "tests"
+]
+
 [tool.setuptools_scm]
 local_scheme = "no-local-version"
-
-[tool.towncrier]
-package = "gdcdictionary"
-package_dir = "src"
-filename = "changelog.rst"
-directory = "changelog"

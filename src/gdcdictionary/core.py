@@ -1,21 +1,20 @@
 import logging
 import pathlib
-from copy import deepcopy
 from collections import namedtuple
+from copy import deepcopy
 
 try:
     from importlib.resources import files
 except ImportError:
     from importlib_resources import files
-from typing import Optional, List, Tuple, Dict, Any
 
-from jsonschema import RefResolver
+from typing import Any, Dict, List, Optional, Tuple
 
 import yaml
-
+from jsonschema import RefResolver
 
 logger = logging.getLogger(__name__)
-ResolverPair = namedtuple('ResolverPair', ['resolver', 'source'])
+ResolverPair = namedtuple("ResolverPair", ["resolver", "source"])
 
 
 def get_schema_directory(local_path: Optional[str] = None) -> pathlib.Path:
@@ -41,15 +40,20 @@ def get_schema_directory(local_path: Optional[str] = None) -> pathlib.Path:
 
 class GDCDictionary:
 
-    _metaschema_path = 'metaschema.yaml'
+    _metaschema_path = "metaschema.yaml"
     _definitions_paths = [
-        '_definitions.yaml',
-        '_terms.yaml',
-        '_terms_enum.yaml',
+        "_definitions.yaml",
+        "_terms.yaml",
+        "_terms_enum.yaml",
     ]
 
-    def __init__(self, lazy: bool = False, root_dir: Optional[str] = None, definitions_paths: Optional[List[str]] = None,
-                 metaschema_path: Optional[str] = None):
+    def __init__(
+        self,
+        lazy: bool = False,
+        root_dir: Optional[str] = None,
+        definitions_paths: Optional[List[str]] = None,
+        metaschema_path: Optional[str] = None,
+    ):
         """Creates a new dictionary instance.
 
         :param root_dir: The directory to find schemas
@@ -85,10 +89,14 @@ class GDCDictionary:
                     raise e
             if yaml.__with_libyaml__:
                 return yaml.load(f, Loader=yaml.CSafeLoader)
-            logger.debug("To enable CSafeLoader install libyaml. Falling back to yaml.safe_load()")
+            logger.debug(
+                "To enable CSafeLoader install libyaml. Falling back to yaml.safe_load()"
+            )
             return yaml.safe_load(f)
 
-    def load_schemas_from_dir(self, directory: pathlib.Path) -> Tuple[Dict[str, Any], Dict[str, Any]]:
+    def load_schemas_from_dir(
+        self, directory: pathlib.Path
+    ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
         """Returns all yamls and resolvers of those yamls from dir"""
 
         schemas, resolvers = {}, {}
@@ -96,7 +104,7 @@ class GDCDictionary:
         for path in directory.glob("*.yaml"):
             schema = self.load_yaml(path)
             schemas[path.name] = schema
-            resolver = RefResolver(f'{path.name}#', schema)
+            resolver = RefResolver(f"{path.name}#", schema)
             resolvers[path.name] = ResolverPair(resolver, schema)
 
         return schemas, resolvers
@@ -110,7 +118,7 @@ class GDCDictionary:
         self.resolvers.update(resolvers)
 
         schemas = {
-            schema['id']: self.resolve_schema(schema, deepcopy(schema))
+            schema["id"]: self.resolve_schema(schema, deepcopy(schema))
             for path, schema in yamls.items()
             if path not in self.exclude
         }
@@ -128,14 +136,14 @@ class GDCDictionary:
         :returns: JSON Schema pointed to by :param:`value`
 
         """
-        base, ref = value.split('#', 1)
+        base, ref = value.split("#", 1)
 
         if base:
             resolver, new_root = self.resolvers[base]
             referrer, resolution = resolver.resolve(value)
             self.resolve_schema(resolution, new_root)
         else:
-            resolver = RefResolver('#', root)
+            resolver = RefResolver("#", root)
             referrer, resolution = resolver.resolve(value)
 
         return resolution
@@ -155,7 +163,7 @@ class GDCDictionary:
 
         if isinstance(obj, dict):
             for key in obj.copy().keys():
-                if key == '$ref':
+                if key == "$ref":
                     refs = obj.pop(key)
                     self.resolve_local_refs(refs, obj, root)
             return {k: self.resolve_schema(v, root) for k, v in obj.items()}
@@ -165,9 +173,7 @@ class GDCDictionary:
             return obj
 
     def resolve_local_refs(self, refs, obj, root):
-        """Converts a string ref to list of refs & resolves the references
-
-        """
+        """Converts a string ref to list of refs & resolves the references"""
         if not isinstance(refs, list):
             refs = [refs]
         for ref in refs:

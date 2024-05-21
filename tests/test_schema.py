@@ -6,6 +6,7 @@ have more tests later that need to validate new errors found within the
 schema.
 
 """
+
 import collections
 
 from .utils import BaseTest, check_for_cycles, validate_schemata
@@ -32,7 +33,9 @@ def _check_enum(enums):
 
         if len(set(enum_list)) < len(enum_list):
             check_result["duplicates in enum"].append(path)
-            duplicates = [item for item, count in collections.Counter(enum_list).items() if count > 1]
+            duplicates = [
+                item for item, count in collections.Counter(enum_list).items() if count > 1
+            ]
             for item in duplicates:
                 check_result["duplicates in enum"].append(f"\t{item}")
     return check_result
@@ -58,7 +61,7 @@ def _generate_error_message_for_enum(res_dict):
 
 class SchemaTest(BaseTest):
 
-    #@unittest.expectedFailure
+    # @unittest.expectedFailure
     def test_properties_enum(self):
         """Check the enums of node properties"""
         # The enums in _definitions.yaml, _terms.yaml and metaschema.yaml are not checked
@@ -67,7 +70,7 @@ class SchemaTest(BaseTest):
         for node_name, node_schema in self.dictionary.schema.items():
             for prop_name, prop_schema in node_schema["properties"].items():
                 if "enum" in prop_schema:
-                    path_str = f'{node_name}->{prop_name}'
+                    path_str = f"{node_name}->{prop_name}"
                     enum_dict[path_str] = prop_schema["enum"]
 
         res = _check_enum(enum_dict)
@@ -80,7 +83,7 @@ class SchemaTest(BaseTest):
         """Confirm the dictionary has no (unexpected) cycles."""
         # File and archive both point to each other. Ignore archive since it's
         # less relevant than file. The other types should be acyclic.
-        check_for_cycles(self.dictionary.schema, ['archive'])
+        check_for_cycles(self.dictionary.schema, ["archive"])
 
     def test_acyclicalty_without_ignored_types(self):
         """
@@ -89,7 +92,7 @@ class SchemaTest(BaseTest):
         If the acyclicality check passes like this, either the algorithm is
         missing something or we're ignoring types that we shouldn't.
         """
-        with self.assertRaisesRegex(AssertionError, 'cycle detected'):
+        with self.assertRaisesRegex(AssertionError, "cycle detected"):
             check_for_cycles(self.dictionary.schema)
 
     def test_check_for_cycles_positive(self):
@@ -99,44 +102,44 @@ class SchemaTest(BaseTest):
         # schemata with no incoming links, schemata with no outgoing links,
         # and schemata that link back to themselves.
         schemata = {
-            'analyte': {
-                'links': [
+            "analyte": {
+                "links": [
                     {
-                        'subgroup': [
-                            {'target_type': 'portion'},
-                            {'target_type': 'sample'},
+                        "subgroup": [
+                            {"target_type": "portion"},
+                            {"target_type": "sample"},
                         ]
                     }
                 ]
             },
-            'case': {
-                'links': [
-                    {'target_type': 'tissue_source_site'},
+            "case": {
+                "links": [
+                    {"target_type": "tissue_source_site"},
                 ]
             },
-            'portion': {
-                'links': [
-                    {'target_type': 'sample'},
+            "portion": {
+                "links": [
+                    {"target_type": "sample"},
                 ]
             },
-            'sample': {
-                'links': [
-                    {'target_type': 'case'},
-                    {'target_type': 'sample'},
-                    {'target_type': 'tissue_source_site'},
+            "sample": {
+                "links": [
+                    {"target_type": "case"},
+                    {"target_type": "sample"},
+                    {"target_type": "tissue_source_site"},
                 ]
             },
-            'slide': {
-                'links': [
+            "slide": {
+                "links": [
                     {
-                        'subgroup': [
-                            {'target_type': 'portion'},
-                            {'target_type': 'sample'},
+                        "subgroup": [
+                            {"target_type": "portion"},
+                            {"target_type": "sample"},
                         ]
                     }
                 ]
             },
-            'tissue_source_site': {'links': []},
+            "tissue_source_site": {"links": []},
         }
 
         check_for_cycles(schemata)
@@ -147,57 +150,65 @@ class SchemaTest(BaseTest):
         # There is one cycle involving case, sample, and analyte, and a second
         # cycle that also includes portion.
         schemata = {
-            'analyte': {
-                'links': [
+            "analyte": {
+                "links": [
                     {
-                        'subgroup': [
-                            {'target_type': 'portion'},
-                            {'target_type': 'sample'},
+                        "subgroup": [
+                            {"target_type": "portion"},
+                            {"target_type": "sample"},
                         ]
                     }
                 ]
             },
-            'case': {
-                'links': [
-                    {'target_type': 'analyte'},
+            "case": {
+                "links": [
+                    {"target_type": "analyte"},
                 ]
             },
-            'portion': {
-                'links': [
-                    {'target_type': 'sample'},
+            "portion": {
+                "links": [
+                    {"target_type": "sample"},
                 ]
             },
-            'sample': {
-                'links': [
-                    {'target_type': 'case'},
-                    {'target_type': 'sample'},
-                    {'target_type': 'tissue_source_site'},
+            "sample": {
+                "links": [
+                    {"target_type": "case"},
+                    {"target_type": "sample"},
+                    {"target_type": "tissue_source_site"},
                 ]
             },
-            'slide': {
-                'links': [
+            "slide": {
+                "links": [
                     {
-                        'subgroup': [
-                            {'target_type': 'portion'},
-                            {'target_type': 'sample'},
+                        "subgroup": [
+                            {"target_type": "portion"},
+                            {"target_type": "sample"},
                         ]
                     }
                 ]
             },
-            'tissue_source_site': {'links': []},
+            "tissue_source_site": {"links": []},
         }
 
-        with self.assertRaisesRegex(AssertionError, 'cycle detected'):
+        with self.assertRaisesRegex(AssertionError, "cycle detected"):
             check_for_cycles(schemata)
 
     def test_links_to_annotation(self):
         special_node = {
-            'annotation', 'clinical', 'experimental_strategy', 'metaschema',
-            'platform', 'program', 'project', 'publication', 'root', 'tag'
+            "annotation",
+            "clinical",
+            "experimental_strategy",
+            "metaschema",
+            "platform",
+            "program",
+            "project",
+            "publication",
+            "root",
+            "tag",
         }
 
         def _is_excluded_node(node_name):
-            if node_name.endswith('_workflow') or node_name.startswith('data_'):
+            if node_name.endswith("_workflow") or node_name.startswith("data_"):
                 return True
             if node_name in special_node:
                 return True
@@ -205,7 +216,9 @@ class SchemaTest(BaseTest):
 
         schemas = self.dictionary.schema
         nodes_set = set(schemas.keys())
-        linked_to_annotation = [link['target_type'] for link in schemas["annotation"]["links"][0]["subgroup"]]
+        linked_to_annotation = [
+            link["target_type"] for link in schemas["annotation"]["links"][0]["subgroup"]
+        ]
         linked_node_set = set(linked_to_annotation)
         # sanity check
         assert len(linked_to_annotation) == len(linked_node_set)
@@ -213,15 +226,16 @@ class SchemaTest(BaseTest):
         # check excluded nodes
         excluded_nodes = nodes_set - linked_node_set
         extra_nodes = [node for node in excluded_nodes if not _is_excluded_node(node)]
-        assert len(extra_nodes) == 0, \
-            "nodes not linking with annotation: \n{}".format('\n'.join(extra_nodes))
+        assert len(extra_nodes) == 0, "nodes not linking with annotation: \n{}".format(
+            "\n".join(extra_nodes)
+        )
 
     def test_integer_min_less_than_max(self):
         """Test integer min is less than max
 
-            Given a node schema
-            When a node property is Integer
-            Then the minimum shoould be smaller than the maximum
+        Given a node schema
+        When a node property is Integer
+        Then the minimum shoould be smaller than the maximum
         """
         schema = self.dictionary.schema
         node_schemas = (v for k, v in schema.items() if not k.startswith("_"))
@@ -234,14 +248,18 @@ class SchemaTest(BaseTest):
                 maximum = values.get("maximum")
                 minimum = values.get("minimum")
                 if prop_type == "integer" and maximum is not None and minimum is not None:
-                    assert maximum >= minimum, "Integer maximum should be larger than minimum: {}.properties.{}".format(node_schema["id"], prop)
+                    assert (
+                        maximum >= minimum
+                    ), "Integer maximum should be larger than minimum: {}.properties.{}".format(
+                        node_schema["id"], prop
+                    )
 
     def test_no_missing_type_array(self):
         """Test no missing type array.
 
-            Given a node schema,
-            When a node property has items.
-            Then the property type should be `array`.
+        Given a node schema,
+        When a node property has items.
+        Then the property type should be `array`.
         """
         schema = self.dictionary.schema
         node_schemas = (v for k, v in schema.items() if not k.startswith("_"))
@@ -253,4 +271,8 @@ class SchemaTest(BaseTest):
                 prop_type = values.get("type")
                 has_items = values.get("items") is not None
                 if has_items:
-                    assert prop_type == "array", "{}.properties.{} should has type array rather than {}".format(node_schema["id"], prop, prop_type)
+                    assert (
+                        prop_type == "array"
+                    ), "{}.properties.{} should has type array rather than {}".format(
+                        node_schema["id"], prop, prop_type
+                    )

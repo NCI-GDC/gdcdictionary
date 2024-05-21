@@ -24,15 +24,16 @@ is a partial case document and can be partially validated using
 >>> gdcdictionary.validate(instance, partial=True)
 []
 """
+
 from __future__ import annotations
 
 import logging
 import re
-from typing import Any, List, NamedTuple, Dict, Optional, Iterable
+from typing import Any, Dict, Iterable, List, NamedTuple, Optional
 
-from gdcdictionary import gdcdictionary
 from jsonschema import Draft4Validator
 
+from gdcdictionary import gdcdictionary
 
 logger = logging.getLogger(__name__)
 invalid_property_regex = re.compile(r"('[a-zA-Z_-]+')+")
@@ -66,9 +67,7 @@ class SchemaValidationError(NamedTuple):
         return self.is_required_field_violation and "submitter_id" not in self.keys
 
     @classmethod
-    def from_values(
-        cls, schema: str, message: str, keys: List[str]
-    ) -> SchemaValidationError:
+    def from_values(cls, schema: str, message: str, keys: List[str]) -> SchemaValidationError:
         if "Additional properties are not allowed" in message:
             message = f"Key(s) {keys} not a valid property for type '{schema}'"
         logger.debug(
@@ -103,8 +102,16 @@ class SchemaValidator:
                 keys = _parse_keys_from_error_message(error.message)
             message = error.message
             if error.context:
-                message += ": {}".format(
-                    " and ".join([c.message for c in error.context])
+                message += ": {}".format(" and ".join([c.message for c in error.context]))
+            violation = SchemaValidationError.from_values(self.name, message, keys)
+            if partial and violation.is_ignored_for_partials:
+                logger.debug(
+                    "Constraint violation ignored for partial validation",
+                    extra={
+                        "partial": partial,
+                        "keys": violation.keys,
+                        "message": violation.message,
+                    },
                 )
             violation = SchemaValidationError.from_values(self.name, message, keys)
             if partial and violation.is_ignored_for_partials:

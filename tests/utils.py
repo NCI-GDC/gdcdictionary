@@ -3,13 +3,12 @@ specific overrrides are not being used in the GDC currently.
 
 """
 
-from collections import defaultdict
 import copy
+import unittest
+from collections import defaultdict
 from typing import Optional
 
 import yaml
-import unittest
-
 from jsonschema import validate
 
 import gdcdictionary
@@ -22,21 +21,19 @@ def load_yaml(path, root: Optional[str] = None):
         return yaml.safe_load(f)
 
 
-project1 = load_yaml('projects/project1.yaml')
-projects = {'project1': project1}
+project1 = load_yaml("projects/project1.yaml")
+projects = {"project1": project1}
 
 
 class BaseTest(unittest.TestCase):
 
     def setUp(self):
         self.dictionary = GDCDictionary()
-        self.definitions = load_yaml('_definitions.yaml')
+        self.definitions = load_yaml("_definitions.yaml")
 
 
 def merge_schemas(a, b, path=None):
-    """Recursively zip schemas together
-
-    """
+    """Recursively zip schemas together"""
     path = path if path is not None else []
     for key in b:
         if key in a:
@@ -45,12 +42,14 @@ def merge_schemas(a, b, path=None):
             elif a[key] == b[key]:
                 pass
             else:
-                print("Overriding '{}':\n\t- {}\n\t+ {}".format(
-                    '.'.join(path + [str(key)]), a[key], b[key]))
+                print(
+                    "Overriding '{}':\n\t- {}\n\t+ {}".format(
+                        ".".join(path + [str(key)]), a[key], b[key]
+                    )
+                )
                 a[key] = b[key]
         else:
-            print("Adding '{}':\n\t+ {}".format(
-                '.'.join(path + [str(key)]), b[key]))
+            print("Adding '{}':\n\t+ {}".format(".".join(path + [str(key)]), b[key]))
             a[key] = b[key]
     return a
 
@@ -69,32 +68,33 @@ def get_project_specific_schema(projects, project, schema, entity_type):
     return root
 
 
-def validate_entity(entity, schemata, project=None, name=''):
+def validate_entity(entity, schemata, project=None, name=""):
     """Validate an entity by looking up the core schema for its type and
     overriding it with any project level overrides
 
     """
     local_schema = get_project_specific_schema(
-        projects, project, schemata[entity['type']], entity['type'])
+        projects, project, schemata[entity["type"]], entity["type"]
+    )
     result = validate(entity, local_schema)
     return result
 
 
 def validate_schemata(schemata, metaschema):
     # validate schemata
-    print('Validating schemas against metaschema... '),
+    print("Validating schemas against metaschema... "),
     for s in schemata.values():
         validate(s, metaschema)
 
         def assert_link_is_also_prop(link):
-            assert link in s['properties'],\
-                "Entity '{}' has '{}' as a link but not property".format(
-                    s['id'], link)
+            assert (
+                link in s["properties"]
+            ), "Entity '{}' has '{}' as a link but not property".format(s["id"], link)
 
-        for link in [l['name'] for l in s['links'] if 'name' in l]:
+        for link in [l["name"] for l in s["links"] if "name" in l]:
             assert_link_is_also_prop(link)
-        for subgroup in [l['subgroup'] for l in s['links'] if 'name' not in l]:
-            for link in [l['name'] for l in subgroup if 'name' in l]:
+        for subgroup in [l["subgroup"] for l in s["links"] if "name" not in l]:
+            for link in [l["name"] for l in subgroup if "name" in l]:
                 assert_link_is_also_prop(link)
 
 
@@ -112,11 +112,11 @@ def check_for_cycles(schemata, ignored_types=None):
         if schema_type in ignored_types:
             continue
 
-        for link in schema.get('links', []):
-            if 'subgroup' in link:
-                target_types = [g['target_type'] for g in link['subgroup']]
+        for link in schema.get("links", []):
+            if "subgroup" in link:
+                target_types = [g["target_type"] for g in link["subgroup"]]
             else:
-                target_types = [link['target_type']]
+                target_types = [link["target_type"]]
 
             for target_type in target_types:
                 # It's fine for a type to link to itself. Ignore such links
@@ -129,10 +129,7 @@ def check_for_cycles(schemata, ignored_types=None):
     # If there are no cycles, this will continue to free up types without
     # any links until the entire map is cleared out. If a cycle exists,
     # this process will fail to remove all of the links.
-    removable_types = [
-        schema_type for schema_type in forward
-        if schema_type not in backward
-    ]
+    removable_types = [schema_type for schema_type in forward if schema_type not in backward]
 
     while removable_types:
         schema_type = removable_types.pop()
@@ -142,4 +139,4 @@ def check_for_cycles(schemata, ignored_types=None):
                 removable_types.append(target_type)
                 del backward[target_type]
 
-    assert not backward, f'cycle detected among {backward.keys()}'
+    assert not backward, f"cycle detected among {backward.keys()}"
