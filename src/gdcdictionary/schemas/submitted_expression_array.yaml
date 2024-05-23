@@ -26,7 +26,7 @@ systemProperties:
 
 links:
   - name: aliquots
-    backref: submitted_genotyping_arrays
+    backref: submitted_expression_arrays
     label: derived_from
     target_type: aliquot
     multiplicity: many_to_one
