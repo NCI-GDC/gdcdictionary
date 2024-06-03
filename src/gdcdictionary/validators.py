@@ -156,7 +156,12 @@ def validate(instance: Dict[str, Any], partial: bool = False) -> List[SchemaVali
                 schema="", message="'type' is a required property", keys=["type"]
             )
         ]
-    if "submitter_id" not in instance and "id" not in instance:
+    schema_type = instance["type"]
+    if (
+        schema_type not in ["program", "project"]
+        and "submitter_id" not in instance
+        and "id" not in instance
+    ):
         return [
             SchemaValidationError(
                 schema=instance["type"],

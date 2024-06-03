@@ -34,7 +34,6 @@ def get_schema_directory(local_path: Optional[str] = None) -> pathlib.Path:
 
     # use default embedded location
     with files("gdcdictionary").joinpath("schemas") as path:
-        logger.info(path)
         return path
 
 
