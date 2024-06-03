@@ -164,17 +164,17 @@ def validate(instance: Dict[str, Any], partial: bool = False) -> List[SchemaVali
     ):
         return [
             SchemaValidationError(
-                schema=instance["type"],
+                schema=schema_type,
                 message="one of ['submitter_id', 'id'] is required.",
                 keys=["submitter_id", "id"],
             )
         ]
-    validator = _get_validator(instance["type"])
+    validator = _get_validator(schema_type)
     if not validator:
         return [
             SchemaValidationError(
                 schema="",
-                message=f"specified type: {instance['type']} is not in the current data model",
+                message=f"specified type: {schema_type} is not in the current data model",
                 keys=["type"],
             )
         ]
