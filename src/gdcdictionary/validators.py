@@ -64,7 +64,7 @@ class SchemaValidationError(NamedTuple):
 
     @property
     def is_ignored_for_partials(self) -> bool:
-        return self.is_required_field_violation and "submitter_id" not in self.keys
+        return self.is_required_field_violation
 
     @classmethod
     def from_values(cls, schema: str, message: str, keys: List[str]) -> SchemaValidationError:
@@ -154,6 +154,14 @@ def validate(instance: Dict[str, Any], partial: bool = False) -> List[SchemaVali
         return [
             SchemaValidationError(
                 schema="", message="'type' is a required property", keys=["type"]
+            )
+        ]
+    if "submitter_id" not in instance and "id" not in instance:
+        return [
+            SchemaValidationError(
+                schema=instance["type"],
+                message="one of ['submitter_id', 'id'] is required.",
+                keys=["submitter_id", "id"],
             )
         ]
     validator = _get_validator(instance["type"])
