@@ -17,11 +17,21 @@ Example:
 Partial documents are json documents for a specific type but potentially
 missing some required fields. All supplied values should be valid based on
 the constraints defined in the target schema. The example instance above
-is a partial case document and can be partially validated using
+is a partial case document and can be partially validated using.
 
+The minimum required fields for partial documents are:
+    * type
+    * one of:
+        ** id
+        ** submitter_id
+
+>>> import uuid
 >>> import gdcdictionary
->>> instance = {'type': 'case', 'submitter_id': 'UNSC-1', 'disease_type': 'Not Applicable'}
->>> gdcdictionary.validate(instance, partial=True)
+>>> instances = [\
+    {'type': 'case', 'submitter_id': 'UNSC-1', 'disease_type': 'Not Applicable'},\
+    {'type': 'case', 'id': str(uuid.uuid4()), 'disease_type': 'Not Applicable'}\
+]
+>>> gdcdictionary.validate_instances(instances, partial=True)
 []
 """
 
