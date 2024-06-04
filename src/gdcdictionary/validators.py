@@ -17,11 +17,21 @@ Example:
 Partial documents are json documents for a specific type but potentially
 missing some required fields. All supplied values should be valid based on
 the constraints defined in the target schema. The example instance above
-is a partial case document and can be partially validated using
+is a partial case document and can be partially validated using.
 
+The minimum required fields for partial documents are:
+    * type
+    * one of:
+        ** id
+        ** submitter_id
+
+>>> import uuid
 >>> import gdcdictionary
->>> instance = {'type': 'case', 'submitter_id': 'UNSC-1', 'disease_type': 'Not Applicable'}
->>> gdcdictionary.validate(instance, partial=True)
+>>> instances = [\
+    {'type': 'case', 'submitter_id': 'UNSC-1', 'disease_type': 'Not Applicable'},\
+    {'type': 'case', 'id': str(uuid.uuid4()), 'disease_type': 'Not Applicable'}\
+]
+>>> gdcdictionary.validate_instances(instances, partial=True)
 []
 """
 
@@ -64,7 +74,7 @@ class SchemaValidationError(NamedTuple):
 
     @property
     def is_ignored_for_partials(self) -> bool:
-        return self.is_required_field_violation and "submitter_id" not in self.keys
+        return self.is_required_field_violation
 
     @classmethod
     def from_values(cls, schema: str, message: str, keys: List[str]) -> SchemaValidationError:
@@ -156,12 +166,25 @@ def validate(instance: Dict[str, Any], partial: bool = False) -> List[SchemaVali
                 schema="", message="'type' is a required property", keys=["type"]
             )
         ]
-    validator = _get_validator(instance["type"])
+    schema_type = instance["type"]
+    if (
+        schema_type not in ["program", "project"]
+        and "submitter_id" not in instance
+        and "id" not in instance
+    ):
+        return [
+            SchemaValidationError(
+                schema=schema_type,
+                message="one of ['submitter_id', 'id'] is required.",
+                keys=["submitter_id", "id"],
+            )
+        ]
+    validator = _get_validator(schema_type)
     if not validator:
         return [
             SchemaValidationError(
                 schema="",
-                message=f"specified type: {instance['type']} is not in the current data model",
+                message=f"specified type: {schema_type} is not in the current data model",
                 keys=["type"],
             )
         ]

@@ -8,6 +8,8 @@ to it
 
 """
 
+import uuid
+
 try:
     from importlib.resources import files
 except ImportError:
@@ -66,7 +68,8 @@ def test_validate_instances__invalid_types(partial: bool) -> None:
     """
     instances = [
         {"type": "species"},
-        {"type": "case", "python_version": "38"},
+        {"type": "case", "submitter_id": "unsc-0", "python_version": "38"},
+        {"type": "aliquot", "python_version": "38"},
         {"name": "species"},
     ]
     violations = gdcdictionary.validate_instances(instances, partial)
@@ -75,12 +78,12 @@ def test_validate_instances__invalid_types(partial: bool) -> None:
     assert len(violations) > 2
 
     unknown_types = [v for v in violations if v.schema == ""]
-    assert len(unknown_types) == 2
+    assert len(unknown_types) == 1
 
     case_required_field_violation = next(
-        v for v in violations if v.schema == "case" and v.keys == ["submitter_id"]
+        v for v in violations if v.schema == "aliquot" and v.keys == ["submitter_id", "id"]
     )
-    assert case_required_field_violation.message == "'submitter_id' is a required property"
+    assert case_required_field_violation.message == "one of ['submitter_id', 'id'] is required."
 
     case_extra_field_violation = next(
         v for v in violations if v.schema == "case" and v.keys == ["python_version"]
@@ -93,6 +96,9 @@ def test_validate_instances__invalid_types(partial: bool) -> None:
 
 def test_partials_validation():
     # example missing required fields
-    instance = {"type": "case", "days_to_consent": 123, "submitter_id": "UNSC-2"}
-    violations = gdcdictionary.validate_instances(instances=[instance], partial=True)
+    instances = [
+        {"type": "case", "days_to_consent": 123, "submitter_id": "UNSC-2"},
+        {"type": "case", "days_to_consent": 123, "id": str(uuid.uuid4())},
+    ]
+    violations = gdcdictionary.validate_instances(instances, partial=True)
     assert len(violations) == 0
