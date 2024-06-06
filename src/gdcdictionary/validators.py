@@ -81,9 +81,9 @@ class SchemaValidationError(NamedTuple):
         if "Additional properties are not allowed" in message:
             message = f"Key(s) {keys} not a valid property for type '{schema}'"
         logger.debug(
-            "json schema violation for '%s'",
+            "gdcdictionary schema violation for '%s'",
             schema,
-            extra={"keys": keys, "message": message},
+            extra={"keys": keys, "violation": message},
         )
         return SchemaValidationError(schema, message, keys)
 
@@ -120,7 +120,7 @@ class SchemaValidator:
                     extra={
                         "partial": partial,
                         "keys": violation.keys,
-                        "message": violation.message,
+                        "violation": violation.message,
                     },
                 )
             violation = SchemaValidationError.from_values(self.name, message, keys)
@@ -130,7 +130,7 @@ class SchemaValidator:
                     extra={
                         "partial": partial,
                         "keys": violation.keys,
-                        "message": violation.message,
+                        "violation": violation.message,
                     },
                 )
                 continue
