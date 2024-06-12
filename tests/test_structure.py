@@ -55,20 +55,17 @@ class Association:
 
 class Associations(set):
     """"""
+
     def insert(self, association: Association) -> None:
         """Raise duplicate error"""
         if association in self:
-            raise ValueError(
-                f"{association} already exists - Duplicate links not allowed."
-            )
+            raise ValueError(f"{association} already exists - Duplicate links not allowed.")
         super().add(association)
 
     def merge(self, associations: "Associations") -> None:
         for association in associations:
             if association in self:
-                raise ValueError(
-                    f"{association} already exists - Duplicate links not allowed."
-                )
+                raise ValueError(f"{association} already exists - Duplicate links not allowed.")
         super().update(associations)
 
 
@@ -79,9 +76,7 @@ def extract_links(source, links) -> Associations:
             associations.merge(extract_links(source, link["subgroup"]))
             continue
         left = Association(name=link["name"], source=source, target=link["target_type"])
-        right = Association(
-            name=link["backref"], target=source, source=link["target_type"]
-        )
+        right = Association(name=link["backref"], target=source, source=link["target_type"])
 
         associations.insert(left)
         associations.insert(right)
