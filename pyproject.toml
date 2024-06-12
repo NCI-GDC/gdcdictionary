@@ -49,7 +49,7 @@ console_output_style = "classic"
 log_cli_level = "INFO"
 log_cli = "true"
 filterwarnings = ["ignore::DeprecationWarning"]
-addopts = "-rfE --color=yes --cov=gdcdictionary --cov-report term"
+addopts = "-rfE --color=yes"
 norecursedirs = [
   ".git",
   ".tox",
