@@ -85,11 +85,11 @@ def extract_links(source: str, links: Sequence[Mapping[str, Any]]) -> Associatio
         if "subgroup" in link:
             associations.update(extract_links(source, link["subgroup"]))
             continue
-        left = Association(name=link["name"], source=source, target=link["target_type"])
-        right = Association(name=link["backref"], target=source, source=link["target_type"])
+        forward = Association(name=link["name"], source=source, target=link["target_type"])
+        reverse = Association(name=link["backref"], target=source, source=link["target_type"])
 
-        associations.add(left)
-        associations.add(right)
+        associations.add(forward)
+        associations.add(reverse)
     return associations
 
 
