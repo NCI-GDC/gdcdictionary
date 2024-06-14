@@ -94,7 +94,7 @@ def test_validate_instances__invalid_types(partial: bool) -> None:
     )
 
 
-def test_partials_validation():
+def test_partials_validation() -> None:
     # example missing required fields
     instances = [
         {"type": "case", "days_to_consent": 123, "submitter_id": "UNSC-2"},
