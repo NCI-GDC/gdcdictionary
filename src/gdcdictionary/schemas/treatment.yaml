@@ -114,6 +114,7 @@ properties:
       - Glucocorticoid
       - Growth factor
       - PARP inhibitor
+      - Platinum
       - Unknown
       - Not Reported
 
@@ -323,6 +324,7 @@ properties:
       - N891
       - NWTS-4
       - NWTS-5
+      - Not Reported
       - OSTEO 2006
       - P9407
       - P9462
@@ -336,7 +338,6 @@ properties:
       - S921
       - STB
       - Unknown
-      - Not Reported
 
   radiosensitizing_agent:
     $ref:
@@ -1938,6 +1939,7 @@ properties:
       - CXCR4 Inhibitor Q-122
       - CXCR4 Peptide Antagonist LY2510924
       - CXCR4/E-selectin Antagonist GMI-1359
+      - Cyanocobalamin
       - Cyclin-dependent Kinase 8/19 Inhibitor BCD 115
       - Cyclin-dependent Kinase Inhibitor PF-06873600
       - Cyclodextrin-Based Polymer-Camptothecin CRLX101
@@ -6855,18 +6857,41 @@ properties:
     $ref:
       - "_terms.yaml#/timepoint_category/common"
     enum:
+      - Adjuvant Therapy
+      - Adolescence
+      - Adulthood
+      - After Chemotherapy
+      - After Study Enrollment
+      - Childhood
       - End of Consolidation Therapy
       - End of Treatment Course
+      - End of Treatment Course 1
+      - End of Treatment Course 2
       - First Complete Response
       - First Treatment
+      - Follow-up
+      - Initial Diagnosis
+      - Last Contact
+      - Post Adjuvant Therapy
+      - Post Hormone Therapy
+      - Post Initial Treatment
+      - Post Secondary Therapy
       - Postoperative
       - Preoperative
+      - Prior to Adjuvant Therapy
+      - Prior to Chemotherapy
       - Prior to Diagnosis
       - Prior to Procurement
+      - Prior to Study Enrollment
       - Prior to Study Registration
       - Prior to Treatment
       - Progression
       - Recurrence
+      - Recurrence/Progression
+      - Sample Procurement
+      - Within 2 Months After Completion of First-Course Treatment
+      - Within 3 Months of Surgery
+      - Other
       - Unknown
       - Not Reported
 
@@ -6945,7 +6970,6 @@ properties:
       - Colon
       - Colon - Mucosa Only
       - Common Duct
-      - Conjunctiva
       - Connective Tissue
       - Dermal
       - Descending Colon
@@ -7176,6 +7200,9 @@ properties:
       - Other
       - Unknown
       - Not Reported
+    deprecated_enum:
+      - Brain Stem
+      - Common Duct
     enumDef:
       Bone Marrow:
         $ref:
@@ -7305,6 +7332,7 @@ properties:
         - Endocrine Gland
         - Epididymis
         - Epidural Space
+        - Epiglottis
         - Epitrochlear
         - Esophagogastric Junction
         - Esophagus
@@ -7709,6 +7737,7 @@ properties:
       - Palliative
       - Prevention
       - Radiation Boost
+      - Re-Excision
       - Unknown
       - Not Reported
     enumDef:
@@ -7807,6 +7836,7 @@ properties:
       - Ethanol Injection Ablation
       - External Beam Radiation
       - Hormone Therapy
+      - Hysterectomy, NOS
       - I-131 Radiation Therapy
       - Immunotherapy (Including Vaccines)
       - Internal Radiation
