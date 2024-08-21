@@ -371,9 +371,9 @@ properties:
     $ref:
       - "_terms.yaml#/extrathyroid_extension/common"
     enum:
+      - None
       - Minimal (T3)
       - Moderate/Advanced (T4a)
-      - None
       - Very Advanced (T4b)
       - Unknown
       - Not Reported
@@ -499,6 +499,8 @@ properties:
       - Supraclavicular
       - Unknown
       - Not Reported
+    deprecated_enum:
+      - Cervical
     enumDef:
       Axillary:
         $ref:
@@ -576,8 +578,6 @@ properties:
       - Positive
       - Unknown
       - Not Reported
-    deprecated_enum:
-      - Indeterminant
     enumDef:
       Indeterminant:
         $ref:
