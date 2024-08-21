@@ -42,6 +42,7 @@ deprecated:
   - days_to_treatment
   - treatment_anatomic_site
   - treatment_arm
+  - therapeutic_level_achieved
 
 properties:
 
@@ -324,7 +325,6 @@ properties:
       - N891
       - NWTS-4
       - NWTS-5
-      - Not Reported
       - OSTEO 2006
       - P9407
       - P9462
@@ -338,6 +338,7 @@ properties:
       - S921
       - STB
       - Unknown
+      - Not Reported
 
   radiosensitizing_agent:
     $ref:
@@ -6970,6 +6971,7 @@ properties:
       - Colon
       - Colon - Mucosa Only
       - Common Duct
+      - Conjunctiva
       - Connective Tissue
       - Dermal
       - Descending Colon
@@ -7200,9 +7202,6 @@ properties:
       - Other
       - Unknown
       - Not Reported
-    deprecated_enum:
-      - Brain Stem
-      - Common Duct
     enumDef:
       Bone Marrow:
         $ref:
