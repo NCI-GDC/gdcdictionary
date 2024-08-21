@@ -7312,6 +7312,10 @@ properties:
     $ref:
       - "_terms.yaml#/test_value_range/common"
     enum:
+      - 0-25
+      - 26-50
+      - 51-75
+      - 76-100
       - 1-4%
       - 5-9%
       - <10%
@@ -7333,10 +7337,6 @@ properties:
       - 76-100%
       - Unknown
       - Not Reported
-      - 0-25
-      - 26-50
-      - 51-75
-      - 76-100
     deprecated_enum:
       - 0-25
       - 26-50
