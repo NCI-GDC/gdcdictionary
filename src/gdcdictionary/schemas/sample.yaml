@@ -375,6 +375,8 @@ properties:
       - Not Reported
       - Not Allowed To Collect
     deprecated_enum:
+      - Brain Stem
+      - Common Duct
       - Head - Face Or Neck, Nos
     enumDef:
       Bone Marrow:
