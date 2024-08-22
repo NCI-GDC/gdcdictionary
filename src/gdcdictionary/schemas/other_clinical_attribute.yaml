@@ -50,6 +50,7 @@ uniqueKeys:
 deprecated:
   - pregnancy_count
   - viral_hepatitis_serologies
+  - undescended_testis_corrected_age
 
 properties:
 
