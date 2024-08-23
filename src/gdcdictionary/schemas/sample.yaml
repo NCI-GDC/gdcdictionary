@@ -116,6 +116,7 @@ properties:
       - Bowel
       - Brain
       - Brain Stem
+      - Brainstem
       - Breast
       - Broad Ligament
       - Bronchiole
@@ -147,6 +148,7 @@ properties:
       - Clitoris
       - Colon
       - Colon - Mucosa Only
+      - Common Bile Duct
       - Common Duct
       - Conjunctiva
       - Connective Tissue
@@ -373,6 +375,8 @@ properties:
       - Not Reported
       - Not Allowed To Collect
     deprecated_enum:
+      - Brain Stem
+      - Common Duct
       - Head - Face Or Neck, Nos
     enumDef:
       Bone Marrow:
@@ -630,6 +634,7 @@ properties:
       - Hysterectomy NOS
       - Incisional Biopsy
       - Indeterminant
+      - Indeterminate
       - Laparoscopic Biopsy
       - Laparoscopic Partial Nephrectomy
       - Laparoscopic Radical Nephrectomy
@@ -707,6 +712,8 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+    deprecated_enum:
+      - Indeterminant
     enumDef:
       Autopsy:
         $ref:
