@@ -50,6 +50,7 @@ uniqueKeys:
 deprecated:
   - pregnancy_count
   - viral_hepatitis_serologies
+  - undescended_testis_corrected_age
 
 properties:
 
@@ -135,9 +136,30 @@ properties:
         - Acute Renal Failure
         - Adenocarcinoma
         - Adenomatous Polyposis Coli
+        - Adenomyosis
+        - Adenosis (Atypical Adenomatous Hyperplasia)
         - Adrenocortical Insufficiency
+        - Alcoholic Liver Disease
         - Allergies
+        - Allergy, Animal, NOS
+        - Allergy, Ant
+        - Allergy, Bee
+        - Allergy, Cat
+        - Allergy, Dairy or Lactose
+        - Allergy, Dog
+        - Allergy, Eggs
+        - Allergy, Food, NOS
+        - Allergy, Fruit
+        - Allergy, Meat
+        - Allergy, Mold or Dust
+        - Allergy, Nuts
+        - Allergy, Processed Foods
+        - Allergy, Seafood
+        - Allergy, Wasp
         - Alpha-1 Antitrypsin
+        - Alpha-1 Antitrypsin Deficiency
+        - Altered Mental Status
+        - Androgen Excess
         - Anemia
         - Anxiety
         - Arrhythmia
@@ -145,15 +167,20 @@ properties:
         - Asthma
         - Ataxia-Telangiectasia
         - Atrial Fibrillation
+        - Autoimmune Atrophic Chronic Gastritis
         - Autoimmune Lymphoproliferative Syndrome (ALPS)
         - Avascular Necrosis
         - Bacteroides fragilis
+        - BAP1 Tumor Predisposition Syndrome
         - Barrett's Esophagus
         - Basal Cell Carcinoma
         - Beckwith-Wiedemann
         - Behcet's Disease
+        - Benign Prostatic Hyperplasia
         - Benign Thyroid Nodule
         - Biliary Disorder
+        - Birt-Hogg-Dube Syndrome
+        - BK Virus
         - Blood Clots
         - Bone Fracture(s)
         - Bronchitis
@@ -166,6 +193,7 @@ properties:
         - Chloroma
         - Cholelithiasis
         - Chronic Fatigue Syndrome
+        - Chronic Kidney Disease
         - Chronic Pancreatitis
         - Chronic Renal Failure
         - Chronic Systemic Steroid Use
@@ -174,41 +202,58 @@ properties:
         - Clonal Hematopoiesis
         - CNS Infection
         - Colon Polyps
+        - Colonization, Bacterial
+        - Colonization, Fungal
+        - Common Variable Immune Deficiency (CVID)
         - Common Variable Immunodeficiency
         - Congestive Heart Failure (CHF)
         - Connective Tissue Disorder
         - COPD
         - Coronary Artery Disease
+        - Cortisol Excess
+        - Cowden Syndrome
         - Crohn's Disease
         - Cryptococcal Meningitis
         - Cryptogenic Organizing Pneumonia
+        - Cyst(s)
         - Cytomegalovirus (CMV)
         - Deep Vein Thrombosis / Thromboembolism
         - Denys-Drash Syndrome
         - Depression
         - Dermatomyosis
         - Diabetes
+        - Diabetes, NOS
+        - Diabetes, Type I
         - Diabetes, Type II
         - Diabetic Neuropathy
         - Diet Controlled Diabetes
         - Diverticulitis
+        - Diverticulosis
         - Down Syndrome
         - DVT/PE
         - Dyslipidemia
         - EBV Lymphoproliferation
         - Eczema
+        - Endometriosis
+        - Endosalpingiosis
         - Epilepsy
+        - Epithelial Dysplasia
+        - Epithelial Hyperplasia
         - Epstein-Barr Virus
         - Escherichia coli
+        - Estrogen Excess
         - Familial Adenomatous Polyposis
         - Fanconi Anemia
         - Fibromyalgia
         - Fibrosis
         - Follicular Adenoma
+        - Gastric Polyp(s)
         - Gastritis
         - Gastroesophageal Reflux Disease
         - GERD
+        - Gilbert's Syndrome
         - Glaucoma
+        - Glomerular Disease
         - Glycogen Storage Disease
         - Goiter
         - Gonadal Dysfunction
@@ -216,22 +261,40 @@ properties:
         - Gout
         - Graves' Disease
         - Hashimoto's Thyroiditis
+        - Hay Fever
         - Headache
         - Heart Disease
         - Helicobacter pylori Infection
+        - Helicobacter pylori-Associated Gastritis
+        - Hematologic Disorder, NOS
         - Hemihypertrophy
+        - Hemochromatosis
         - Hemorrhagic Cystitis
+        - Hepatic Encephalopathy
         - Hepatitis
         - Hepatitis A Infection
         - Hepatitis B Infection
         - Hepatitis C Infection
         - Hepatitis, Chronic
+        - Hepatitis, NOS
+        - Hereditary Breast Cancer
+        - Hereditary Hemorrhagic Telangiectasia
+        - Hereditary Kidney Oncocytoma
+        - Hereditary Leiomyomatosis and Renal Cell Carcinoma
         - Hereditary Non-Polyposis Colon Cancer
+        - Hereditary Ovarian Cancer
+        - Hereditary Papillary Renal Cell Carcinoma
+        - Hereditary Prostate Cancer
+        - Hereditary Renal Cell Carcinoma
         - Herpes
         - Herpes Zoster
+        - High Grade Dysplasia
         - High Grade Liver Dysplastic Nodule
+        - High-grade Prostatic Intraepithelial Neoplasia (PIN)
         - HIV/AIDS
         - Hodgkin Lymphoma
+        - Human Herpesvirus-6 (HHV-6)
+        - Human Herpesvirus-8 (HHV-8)
         - Human Papillomavirus Infection
         - HUS/TTP
         - Hypercalcemia
@@ -243,9 +306,13 @@ properties:
         - Hyperthyroidism
         - Hypospadias
         - Hypothyroidism
+        - Inflammation
+        - Inflammation, Hyperkeratosis
         - Inflammatory Bowel Disease
+        - Inherited Genetic Syndrome, NOS
         - Insulin Controlled Diabetes
         - Interstitial Pneumonitis or ARDS
+        - Intestinal Metaplasia
         - Intraductal Papillary Mucinous Neoplasm
         - Iron Overload
         - Ischemic Heart Disease
@@ -255,6 +322,7 @@ properties:
         - Li-Fraumeni Syndrome
         - Liver Cirrhosis (Liver Disease)
         - Liver Toxicity (Non-Infectious)
+        - Low Grade Dysplasia
         - Low Grade Liver Dysplastic Nodule
         - Lupus
         - Lymphamatoid Papulosis
@@ -266,11 +334,17 @@ properties:
         - Malaria
         - Metabolic Syndrome
         - Methicillin-Resistant Staphylococcus aureus (MRSA)
+        - Mineralcorticoids Excess
+        - Motor / Movement Change
         - Myasthenia Gravis
         - Mycobacterium avium Complex
+        - Myelodysplastic Syndrome
         - Myocardial Infarction
+        - Neurocystericerosis
         - Neuroendocrine Tumor
         - Nodular Hyperplasia
+        - Nodular Prostatic Hyperplasia
+        - Nonalcoholic Fatty Liver Disease
         - Nonalcoholic Steatohepatitis
         - Obesity
         - Organ Transplant (Site)
@@ -281,6 +355,7 @@ properties:
         - Other Pulmonary Complications
         - Pain (Various)
         - Pancreatitis
+        - Parasitic Disease of Biliary Tract
         - Peptic Ulcer (Ulcer)
         - Peripheral Neuropathy
         - Peripheral Vascular Disease
@@ -293,36 +368,63 @@ properties:
         - Psoriasis
         - Pulmonary Fibrosis
         - Pulmonary Hemorrhage
+        - Recurrent Pyogenic Cholangitis
         - Renal Dialysis
         - Renal Failure (Requiring Dialysis)
         - Renal Insufficiency
         - Rheumatoid Arthritis
         - Rheumatologic Disease
+        - Rubella
         - Rubinstein-Taybi Syndrome
         - Sarcoidosis
+        - Scarlet Fever
         - Seizure
+        - Sensory Changes
+        - Serous Tubal Intraepithelial Carcinoma (STIC)
         - Shingles
+        - Sialadenitis
         - Sjogren's Syndrome
+        - Skin Rash
         - Sleep Apnea
         - Smoking
+        - Squamous Metaplasia
         - Staph Osteomyelitis
         - Staphylococcus aureus
         - Steatosis
         - Stroke
+        - Succinate Dehydrogenase-Deficient Renal Cell Carcinoma
         - Syphilis
         - Thyroid Disease, Non-Cancer
+        - Thyroid Nodular Hyperplasia
+        - Tobacco, NOS
+        - Tobacco, Smokeless
+        - Tobacco, Smoking
         - Transient Ischemic Attack
         - Treponema pallidum
         - Tuberculosis
+        - Tuberous Sclerosis
+        - Tubulointerstitial Disease
+        - Tumor-Associated Lymphoid Proliferation
         - Turcot Syndrome
         - Tyrosinemia
         - Ulcerative Colitis
+        - Undescended Testis
         - Urinary Tract Infection
         - Varicella Zoster Virus
+        - Vascular Disease
+        - Vision Changes
+        - Von Hippel-Lindau Syndrome
         - Wagr Syndrome
         - Other
         - Unknown
         - Not Reported
+    deprecated_enum:
+      - Alpha-1 Antitrypsin
+      - Diabetes
+      - Gastroesophageal Reflux Disease
+      - Hepatitis
+      - Kidney Disease
+      - Smoking
     enumDef:
       Cancer:
         $ref:
@@ -725,6 +827,7 @@ properties:
     $ref:
       - "_terms.yaml#/number_of_pregnancies/common"
     enum:
+      - "0"
       - "1"
       - "2"
       - "3"
@@ -914,10 +1017,13 @@ properties:
     items:
       enum:
         - Abnormal Glucose Level
+        - Adenocarcinoma
+        - Adenomatous Polyposis Coli
         - Adenomyosis
         - Adenosis (Atypical Adenomatous Hyperplasia)
         - Alcohol Consumption
         - Alcoholic Liver Disease
+        - Allergies
         - Allergy, Animal, NOS
         - Allergy, Ant
         - Allergy, Bee
@@ -937,37 +1043,56 @@ properties:
         - Altered Mental Status
         - Androgen Excess
         - Anemia
+        - Arthritis
         - Asthma
         - Ataxia-Telangiectasia
+        - Atrial Fibrillation
         - Autoimmune Atrophic Chronic Gastritis
         - Autoimmune Lymphoproliferative Syndrome (ALPS)
         - Bacteroides fragilis
         - BAP1 Tumor Predisposition Syndrome
         - Barrett's Esophagus
+        - Basal Cell Carcinoma
         - Beckwith-Wiedemann
         - Behcet's Disease
         - Benign Prostatic Hyperplasia
         - Benign Thyroid Nodule
+        - Biliary Disorder
         - Birt-Hogg-Dube Syndrome
         - BK Virus
         - BRCA Family History
+        - Bronchitis
+        - Calcium Channel Blockers
         - Cancer
+        - Cataracts
+        - Celiac Disease
+        - Cerebrovascular Disease
         - Chlamydia
         - Chloroma
         - Cholelithiasis
+        - Chronic Fatigue Syndrome
         - Chronic Hepatitis
         - Chronic Kidney Disease
         - Chronic Pancreatitis
         - Chronic Systemic Steroid Use
         - Chronic Thyroiditis
         - Cirrhosis
+        - Clonal Hematopoiesis
+        - CNS Infection
         - Colon Polyps
         - Colonization, Bacterial
         - Colonization, Fungal
         - Common Variable Immune Deficiency (CVID)
+        - Common Variable Immunodeficiency
+        - Congestive Heart Failure (CHF)
+        - Connective Tissue Disorder
+        - COPD
+        - Coronary Artery Disease
         - Cortisol Excess
         - Cowden Syndrome
+        - Crohn's Disease
         - Cryptococcal Meningitis
+        - Cryptogenic Organizing Pneumonia
         - Cyst(s)
         - Cytomegalovirus (CMV)
         - Denys-Drash Syndrome
@@ -979,6 +1104,7 @@ properties:
         - Diverticulitis
         - Diverticulosis
         - Down Syndrome
+        - Dyslipidemia
         - EBV Lymphoproliferation
         - Eczema
         - Endometriosis
@@ -994,14 +1120,19 @@ properties:
         - Follicular Adenoma
         - Gastric Polyp(s)
         - Gastritis
+        - GERD
         - Gilbert's Syndrome
+        - Glaucoma
         - Glomerular Disease
+        - Glycogen Storage Disease
         - Goiter
         - Gorlin Syndrome
+        - Gout
         - Graves' Disease
         - Hashimoto's Thyroiditis
         - Hay Fever
         - Headache
+        - Heart Disease
         - Helicobacter pylori Infection
         - Helicobacter pylori-Associated Gastritis
         - Hematologic Disorder, NOS
@@ -1011,24 +1142,32 @@ properties:
         - Hepatitis A Infection
         - Hepatitis B Infection
         - Hepatitis C Infection
+        - Hepatitis, Chronic
         - Hepatitis, NOS
         - Hereditary Breast Cancer
         - Hereditary Hemorrhagic Telangiectasia
         - Hereditary Kidney Oncocytoma
         - Hereditary Leiomyomatosis and Renal Cell Carcinoma
+        - Hereditary Non-Polyposis Colon Cancer
         - Hereditary Ovarian Cancer
         - Hereditary Papillary Renal Cell Carcinoma
         - Hereditary Prostate Cancer
         - Hereditary Renal Cell Carcinoma
+        - Herpes
+        - Herpes Simplex Virus
         - Herpes Zoster
         - High Grade Dysplasia
+        - High Grade Liver Dysplastic Nodule
         - High-grade Prostatic Intraepithelial Neoplasia (PIN)
         - HIV
+        - HIV/AIDS
         - Hodgkin Lymphoma
         - Human Herpesvirus-6 (HHV-6)
         - Human Herpesvirus-8 (HHV-8)
         - Human Papillomavirus Infection
         - Hypercholesterolemia
+        - Hyperglycemia
+        - Hyperlipidemia
         - Hyperparathyroidism
         - Hypertension
         - Hyperthyroidism
@@ -1036,11 +1175,19 @@ properties:
         - Hypothyroidism
         - Inflammation
         - Inflammation, Hyperkeratosis
+        - Inflammatory Bowel Disease
         - Inherited Genetic Syndrome, NOS
+        - Interstitial Pneumonitis or ARDS
         - Intestinal Metaplasia
+        - Intraductal Papillary Mucinous Neoplasm
         - Iron Overload
+        - Ischemic Heart Disease
+        - ITP
         - Li-Fraumeni Syndrome
+        - Liver Cirrhosis (Liver Disease)
         - Low Grade Dysplasia
+        - Low Grade Liver Dysplastic Nodule
+        - Lupus
         - Lymphamatoid Papulosis
         - Lymphocytic Meningitis
         - Lymphocytic Thyroiditis
@@ -1053,7 +1200,9 @@ properties:
         - Myasthenia Gravis
         - Mycobacterium avium Complex
         - Myelodysplastic Syndrome
+        - Myocardial Infarction
         - Neurocystericerosis
+        - Neuroendocrine Tumor
         - Nodular Hyperplasia
         - Nodular Prostatic Hyperplasia
         - Nonalcoholic Fatty Liver Disease
@@ -1061,15 +1210,26 @@ properties:
         - None
         - Obesity
         - Oral Contraceptives
+        - Organ Transplant (Site)
+        - Osteoarthritis
         - Pancreatitis
         - Parasitic Disease of Biliary Tract
+        - Peptic Ulcer (Ulcer)
+        - Peripheral Vascular Disease
+        - Peutz-Jeghers Disease
         - Pneumocystis Pneumonia
         - Pneumonia, NOS
         - Polycystic Ovarian Syndrome (PCOS)
+        - Pregnancy in Patient or Partner
         - Primary Sclerosing Cholangitis
+        - Psoriasis
+        - Pulmonary Fibrosis
         - Recurrent Pyogenic Cholangitis
         - Reflux Disease
+        - Renal Failure (Requiring Dialysis)
+        - Renal Insufficiency
         - Rheumatoid Arthritis
+        - Rheumatologic Disease
         - Rubella
         - Rubinstein-Taybi Syndrome
         - Sarcoidosis
@@ -1081,12 +1241,15 @@ properties:
         - Sialadenitis
         - Sjogren's Syndrome
         - Skin Rash
+        - Sleep Apnea
         - Squamous Metaplasia
+        - Staph Osteomyelitis
         - Staphylococcus aureus
         - Steatosis
         - Succinate Dehydrogenase-Deficient Renal Cell Carcinoma
         - Syphilis
         - Tattoo
+        - Thyroid Disease, Non-Cancer
         - Thyroid Nodular Hyperplasia
         - Tobacco, NOS
         - Tobacco, Smokeless
@@ -1097,8 +1260,10 @@ properties:
         - Tubulointerstitial Disease
         - Tumor-associated Lymphoid Proliferation
         - Turcot Syndrome
+        - Tyrosinemia
         - Ulcerative Colitis
         - Undescended Testis
+        - Urinary Tract Infection
         - Varicella Zoster Virus
         - Vascular Disease
         - Vision Changes
@@ -1106,6 +1271,11 @@ properties:
         - Wagr Syndrome
         - Unknown
         - Not Reported
+    deprecated_enum:
+      - Chronic Hepatitis
+      - Cirrhosis
+      - HIV
+      - Reflux Disease
     enumDef:
       Cancer:
         $ref:
@@ -1127,19 +1297,36 @@ properties:
       - Adjuvant Therapy
       - Adolescence
       - Adulthood
+      - After Chemotherapy
+      - After Study Enrollment
       - Childhood
+      - End of Consolidation Therapy
+      - End of Treatment Course
+      - End of Treatment Course 1
+      - End of Treatment Course 2
+      - First Complete Response
+      - First Treatment
       - Follow-up
       - Initial Diagnosis
       - Last Contact
       - Post Adjuvant Therapy
       - Post Hormone Therapy
+      - Post Initial Treatment
       - Post Secondary Therapy
       - Postoperative
       - Preoperative
+      - Prior to Adjuvant Therapy
+      - Prior to Chemotherapy
       - Prior to Diagnosis
+      - Prior to Procurement
+      - Prior to Study Enrollment
+      - Prior to Study Registration
       - Prior to Treatment
+      - Progression
+      - Recurrence
       - Recurrence/Progression
       - Sample Procurement
+      - Within 2 Months After Completion of First-Course Treatment
       - Within 3 Months of Surgery
       - Other
       - Unknown
