@@ -1335,8 +1335,8 @@ properties:
     enum:
       - Favorable
       - Intermediate/Normal
-      - Poor
       - N/A
+      - Poor
       - Unknown
       - Not Reported
 
@@ -2995,6 +2995,7 @@ properties:
       - Incisional Biopsy
       - Laparoscopy
       - Laparotomy
+      - Orchiectomy
       - Pap Smear
       - Pathologic Review
       - Physical Exam
@@ -7578,6 +7579,7 @@ properties:
       - Adenocarcinoma in situ, NOS
       - Adenocarcinoma in tubolovillous adenoma
       - Adenocarcinoma in tubular adenoma
+      - Adenocarcinoma in tubulovillous adenoma
       - Adenocarcinoma in villous adenoma
       - Adenocarcinoma of anal ducts
       - Adenocarcinoma of anal glands
@@ -9232,6 +9234,7 @@ properties:
       - Myoma
       - Myosarcoma
       - Myxofibroma, NOS
+      - Myxofibrosarcoma
       - Myxoid chondrosarcoma
       - Myxoid fibroma
       - Myxoid leiomyosarcoma
@@ -10109,6 +10112,8 @@ properties:
       - Yolk sac tumor
       - Unknown
       - Not Reported
+    deprecated_enum:
+      - Adenocarcinoma in tubolovillous adenoma
     enumDef:
       Abdominal desmoid:
         $ref:
@@ -12808,9 +12813,6 @@ properties:
       Haemangiosarcoma:
         $ref:
           - "_terms_enum.yaml#/haemangiosarcoma/common"
-      Hairy cell leukaemia variant:
-        $ref:
-          - "_terms_enum.yaml#/hairy_cell_leukaemia_variant/common"
       Hairy cell leukemia:
         $ref:
           - "_terms_enum.yaml#/hairy_cell_leukemia/common"
@@ -18249,7 +18251,15 @@ properties:
         - Brain, Parietal
         - Brain, Temporal lobe
         - Brain, Ventricle, NOS
+        - Breast, Left Lower Inner
+        - Breast, Left Lower Outer
+        - Breast, Left Upper Inner
+        - Breast, Left Upper Outer
         - Breast, NOS
+        - Breast, Right Lower Inner
+        - Breast, Right Lower Outer
+        - Breast, Right Upper Inner
+        - Breast, Right Upper Outer
         - Bronchus
         - Buccal mucosa
         - Central Lung
@@ -18271,6 +18281,9 @@ properties:
         - Esophagus, NOS
         - Esophagus, Upper Third
         - Eye
+        - Eye, Choroid
+        - Eye, Ciliary Body
+        - Eye, Iris
         - Fallopian Tube, Left
         - Fallopian Tube, NOS
         - Fallopian Tube, Right
@@ -18358,6 +18371,10 @@ properties:
         - Sigmoid colon
         - Sinus
         - Skin
+        - Skin, Extremities
+        - Skin, Groin
+        - Skin, Head and Neck
+        - Skin, Trunk
         - Small intestine
         - Soft tissue
         - Spinal Cord
