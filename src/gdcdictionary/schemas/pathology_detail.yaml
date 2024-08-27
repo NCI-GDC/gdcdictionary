@@ -463,6 +463,7 @@ properties:
       - Neck, Left
       - Neck, NOS
       - Neck, Right
+      - Retroperitoneal
       - Unknown
       - Not Reported
 
@@ -483,6 +484,7 @@ properties:
       - Iliac-common
       - Iliac-external
       - Inguinal
+      - Intra-Abdominal, NOS
       - Mediastinal
       - Mesenteric
       - None
