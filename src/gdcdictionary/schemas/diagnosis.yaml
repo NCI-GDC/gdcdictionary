@@ -982,6 +982,9 @@ properties:
       T4:
         $ref:
           - "_terms_enum.yaml#/t4/common"
+      T4a:
+        $ref:
+          - "_terms_enum.yaml#/t4/common"
       T4b:
         $ref:
           - "_terms_enum.yaml#/t4b/common"
