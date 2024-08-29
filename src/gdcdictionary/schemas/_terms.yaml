@@ -909,7 +909,7 @@ cdc_hiv_risk_factors:
   common:
     description: >-
       The text term used to describe a risk factor for human immunodeficiency virus,
-      as described by the Center for Disease Control.
+      as described by the Centers for Disease Control.
     termDef:
       term: >-
         CDC HIV Risk Factor Text Term
@@ -7729,7 +7729,7 @@ population_group:
   common:
     description: >-
       A group of individuals united by a common factor (e.g., geographic location,
-      ethnicity, disease, age, gender)
+      ethnicity, disease, age, gender).
     termDef:
       term: >-
         Population Group
