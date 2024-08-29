@@ -180,7 +180,7 @@ properties:
     $ref:
       - "_terms.yaml#/margins_involved_site/common"
     enum:
-      - Cervix uteri
+      - Cervix Uteri
       - Gerota Fascia
       - Parenchyma
       - Perinephric Fat
