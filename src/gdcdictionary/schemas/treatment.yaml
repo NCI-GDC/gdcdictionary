@@ -160,6 +160,39 @@ properties:
     type: number
     minimum: 0
 
+  margin_distance:
+    $ref:
+      - "_terms.yaml#/margin_distance/common"
+    type: number
+    minimum: 0
+
+  margin_status:
+    $ref:
+      - "_terms.yaml#/margin_status/common"
+    enum:
+      - Indeterminate
+      - Involved
+      - Uninvolved
+      - Unknown
+      - Not Reported
+
+  margins_involved_site:
+    $ref:
+      - "_terms.yaml#/margins_involved_site/common"
+    enum:
+      - Cervix uteri
+      - Gerota Fascia
+      - Parenchyma
+      - Perinephric Fat
+      - Renal
+      - Renal Capsule
+      - Renal Sinus
+      - Renal Vein
+      - Ureter
+      - Other
+      - Unknown
+      - Not Reported
+
   number_of_cycles:
     $ref:
       - "_terms.yaml#/number_of_cycles/common"
@@ -206,6 +239,15 @@ properties:
       - ug
       - ug/m2
       - Wafer
+      - Unknown
+      - Not Reported
+
+  pretreatment:
+    $ref:
+      - "_terms.yaml#/pretreatment/common"
+    enum:
+      - rhTSH
+      - Thyroxine Withdrawal
       - Unknown
       - Not Reported
 
@@ -1840,6 +1882,7 @@ properties:
       - Cibisatamab
       - Ciclopirox Prodrug CPX-POM
       - Cidan Herbal Capsule
+      - Cidofovir
       - Ciforadenant
       - Cilengitide
       - Ciltacabtagene Autoleucel
@@ -3899,6 +3942,7 @@ properties:
       - Polo-like Kinase 1 Inhibitor MK1496
       - Polo-like Kinase 1 Inhibitor NMS-1286937
       - Polo-like Kinase 4 Inhibitor CFI-400945 Fumarate
+      - Poly ICLC
       - Poly-alendronate Dextran-Guanidine Conjugate
       - Poly-gamma Glutamic Acid
       - Polyamine Analog SL11093
@@ -7737,6 +7781,7 @@ properties:
       - Prevention
       - Radiation Boost
       - Re-Excision
+      - Salvage
       - Unknown
       - Not Reported
     enumDef:
