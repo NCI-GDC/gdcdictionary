@@ -175,7 +175,7 @@ aids_risk_factors:
   common:
     description: >-
       The text term used to describe a risk factor of the acquired immunodeficiency
-      syndrome (AIDS) that the patient either had at time time of the study or experienced
+      syndrome (AIDS) that the patient either had at the time of the study or experienced
       in the past.
     termDef:
       term: >-
@@ -783,7 +783,7 @@ bmi:
 body_surface_area:
   common:
     description: >-
-      Numeric value used to represent the 2-dimensional extent of the body surface
+      Numeric value used to represent the two-dimensional extent of the body surface
       relating height to weight.
     termDef:
       term: >-
@@ -909,7 +909,7 @@ cdc_hiv_risk_factors:
   common:
     description: >-
       The text term used to describe a risk factor for human immunodeficiency virus,
-      as described by the Center for Disease Control.
+      as described by the Centers for Disease Control.
     termDef:
       term: >-
         CDC HIV Risk Factor Text Term
@@ -1212,8 +1212,8 @@ columnar_mucosa_present:
 comorbidities:
   common:
     description: >-
-      The text term used to describe a comorbidity disease, which coexists with the
-      patient's malignant disease.
+      The text term used to describe a patient with one or more diseases or conditions,
+      which coexist with the patient's malignant disease at the same time.
     termDef:
       term: >-
         Index Date To Comorbidity Day Count
@@ -1238,7 +1238,7 @@ comorbidity:
 comorbidity_method_of_diagnosis:
   common:
     description: >-
-      The text term used to describe the method used to diagnose the patient's comorbidity
+      The text term used to describe the method used to diagnose the patient's comorbid
       disease.
     termDef:
       term: >-
@@ -2937,7 +2937,7 @@ imaging_type:
 immunosuppressive_treatment_type:
   common:
     description: >-
-      The text term used to describe the type of immunosuppresive treatment the patient
+      The text term used to describe the type of immunosuppressive treatment the patient
       received.
     termDef:
       term: >-
@@ -5568,10 +5568,12 @@ size_extraocular_nodule:
     termDef:
       term: >-
         Extraocular Nodule Size
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      source: NCIt
+      cde_id: C185261
+      cde_version: 24.07e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C185261"
+      term_id: C185261
+      term_version: 24.07e
 
 size_selection_range:
   common:
@@ -5950,7 +5952,7 @@ timepoint_category:
 tissue_collection_type:
   common:
     description: >-
-      The text term used to describe the tyoe of collection used to obtain tissue.
+      The text term used to describe the type of collection used to obtain tissue.
     termDef:
       term: >-
         Tissue Collection Type
@@ -6629,10 +6631,12 @@ undescended_testis_corrected_age:
     termDef:
       term: >-
         Undescended Testis Corrected Age
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      source: NCIt
+      cde_id: C181721
+      cde_version: 24.07e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C181721"
+      term_id: C181721
+      term_version: 24.07e
 
 undescended_testis_corrected_laterality:
   common:
@@ -7298,28 +7302,32 @@ melanoma_known_primary:
 spindle_cell_percent:
   common:
     description: >-
-      The percent of uveal melanoma arising from the choroid, ciliary body, or the
-      iris and characterized by the presence of spindle-shaped melanocytes.
+      A quantitative measurement of the percent of spindle-shaped melanocytes compared
+      to the number of total cells present in a sample.
     termDef:
       term: >-
-        Cell Morphology Percent Uveal Spindle Cell Melanoma Integer
-      source: caDSR
-      cde_id: 7292254
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=7292254%20and%20ver_nr=1.0"
+        Percent of Spindle-Shaped Melanocytes
+      source: NCIt
+      cde_id: C200472
+      cde_version: 24.07e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C200472"
+      term_id: C200472
+      term_version: 24.07e
 
 epithelioid_cell_percent:
   common:
     description: >-
-      The percent of uveal melanoma characterized by the presence of malignant large
-      epithelioid melanocytes.
+      A quantitative measurement of the percent of epithelioid melanocytes compared
+      to the number of total cells present in a sample.
     termDef:
       term: >-
-        Cell Morphology Percent Uveal Epithelioid Cell Melanoma Integer
-      source: caDSR
-      cde_id: 7292253
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=7292253%20and%20ver_nr=1.0"
+        Percent of Epithelioid Melanocytes
+      source: NCIt
+      cde_id: C200471
+      cde_version: 24.07e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C200471"
+      term_id: C200471
+      term_version: 24.07e
 
 tumor_shape:
   common:
@@ -7424,8 +7432,8 @@ myasthenia_gravis_classification:
     description: >-
       A finding associated with a patient with myasthenia gravis that is based on
       the classification system developed by the Myasthenia Gravis Foundation of America
-      (MGFA) for grading myasthenia gravis that divides the disease into 5 main classes
-      and several subclasses.
+      (MGFA) for grading myasthenia gravis that divides the disease into five main
+      classes and several subclasses.
     termDef:
       term: >-
         Myasthenia Gravis Foundation of America Class
@@ -7523,10 +7531,12 @@ genome_doubling:
     termDef:
       term: >-
         Genome Doubling Events
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      source: NCIt
+      cde_id: C206453
+      cde_version: 24.07e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C206453"
+      term_id: C206453
+      term_version: 24.07e
 
 cancer_dna_fraction:
   common:
@@ -7535,10 +7545,12 @@ cancer_dna_fraction:
     termDef:
       term: >-
         Cancer DNA Fraction
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      source: NCIt
+      cde_id: C206454
+      cde_version: 24.07e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C206454"
+      term_id: C206454
+      term_version: 24.07e
 
 subclonal_genome_fraction:
   common:
@@ -7547,10 +7559,12 @@ subclonal_genome_fraction:
     termDef:
       term: >-
         Subclonal DNA Fraction
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      source: NCIt
+      cde_id: C206455
+      cde_version: 24.07e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C206455"
+      term_id: C206455
+      term_version: 24.07e
 
 curated_model_index:
   common:
@@ -7559,10 +7573,12 @@ curated_model_index:
     termDef:
       term: >-
         Curated Model Index
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      source: NCIt
+      cde_id: C206456
+      cde_version: 24.07e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C206456"
+      term_id: C206456
+      term_version: 24.07e
 
 workflow_link:
   common:
@@ -7611,10 +7627,12 @@ prescribed_dose_units:
     termDef:
       term: >-
         Prescribed Dose Units
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      source: NCIt
+      cde_id: C206478
+      cde_version: 24.07e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C206478"
+      term_id: C206478
+      term_version: 24.07e
 
 number_of_pregnancies:
   common:
@@ -7700,7 +7718,92 @@ hormonal_replacement_therapy_status:
     termDef:
       term: >-
         Hormone Replacement Therapy Status
+      source: NCIt
+      cde_id: C206479
+      cde_version: 24.07e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C206479"
+      term_id: C206479
+      term_version: 24.07e
+
+population_group:
+  common:
+    description: >-
+      A group of individuals united by a common factor (e.g., geographic location,
+      ethnicity, disease, age, gender).
+    termDef:
+      term: >-
+        Population Group
+      source: NCIt
+      cde_id: C17005
+      cde_version: 24.07e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17005"
+      term_id: C17005
+      term_version: 24.07e
+
+ajcc_serum_tumor_markers:
+  common:
+    description: >-
+      A laboratory test result in which markers for testicular cancer are tested in
+      a blood sample for staging purposes.
+    termDef:
+      term: >-
+        Testicular Cancer Serum Markers Test Result
+      source: NCIt
+      cde_id: C111067
+      cde_version: 24.07e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111067"
+      term_id: C111067
+      term_version: 24.07e
+
+histologic_progression:
+  common:
+    description: >-
+      The evolution of a low-grade neoplastic pathologic process to a high grade malignancy.
+    termDef:
+      term: >-
+        Histologic Progression
+      source: NCIt
+      cde_id: C99318
+      cde_version: 24.07e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C99318"
+      term_id: C99318
+      term_version: 24.07e
+
+tumor_basal_diameter:
+  common:
+    description: >-
+      Numeric value in millimeters for the lowest layer of a tumor.
+    termDef:
+      term: >-
+        Tumor Basal Diameter
       source:
       cde_id:
       cde_version:
       term_url:
+
+intratubular_germ_cell_neoplasia_present:
+  common:
+    description: >-
+      Text term to indicate whether the intratubular germ cell neoplasm is present
+      or absent.
+    termDef:
+      term: >-
+        Testicular Intratubular Germ Cell Neoplasia Indicator
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+pretreatment:
+  common:
+    description: >-
+      Any relevant actions that were performed or occurred prior to a specific treatment.
+    termDef:
+      term: >-
+        Pretreatment
+      source: NCIt
+      cde_id: C103339
+      cde_version: 24.07e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C103339"
+      term_id: C103339
+      term_version: 24.07e
