@@ -1213,7 +1213,7 @@ comorbidities:
   common:
     description: >-
       The text term used to describe a patient with one or more diseases or conditions,
-      which coexists with the patient's malignant disease at the same time.
+      which coexist with the patient's malignant disease at the same time.
     termDef:
       term: >-
         Index Date To Comorbidity Day Count
