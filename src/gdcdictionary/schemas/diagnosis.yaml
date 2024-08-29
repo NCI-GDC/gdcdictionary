@@ -982,9 +982,6 @@ properties:
       T4:
         $ref:
           - "_terms_enum.yaml#/t4/common"
-      T4a:
-        $ref:
-          - "_terms_enum.yaml#/t4a/common"
       T4b:
         $ref:
           - "_terms_enum.yaml#/t4b/common"
@@ -1024,6 +1021,18 @@ properties:
       Not Allowed To Collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
+
+  ajcc_serum_tumor_markers:
+    $ref:
+      - "_terms.yaml#/ajcc_serum_tumor_markers/common"
+    enum:
+      - S0
+      - S1
+      - S2
+      - S3
+      - SX
+      - Unknown
+      - Not Reported
 
   ajcc_staging_system_edition:
     $ref:
@@ -18294,6 +18303,7 @@ properties:
         - Groin
         - Head, Face or Neck, NOS
         - Heart
+        - Hilar Fat
         - Inferior Vena Cava
         - Kidney, Lower Pole
         - Kidney, Middle
@@ -18365,9 +18375,11 @@ properties:
         - Prostate
         - Rectum
         - Renal Vein
+        - Rete testis
         - Retroperitoneum
         - Salivary gland
         - Scalp
+        - Scrotum
         - Sigmoid colon
         - Sinus
         - Skin
@@ -18377,6 +18389,7 @@ properties:
         - Skin, Trunk
         - Small intestine
         - Soft tissue
+        - Spermatic Cord
         - Spinal Cord
         - Spleen
         - Stomach
@@ -18389,6 +18402,8 @@ properties:
         - Trachea
         - Transplanted kidney
         - Transverse colon
+        - Tunica albuginea
+        - Tunica vaginalis
         - Upper lobe, lung
         - Urethra
         - Uterus
