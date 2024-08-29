@@ -1238,7 +1238,7 @@ comorbidity:
 comorbidity_method_of_diagnosis:
   common:
     description: >-
-      The text term used to describe the method used to diagnose the patient's comorbid
+      The text term used to describe the method used to diagnose the patient's comorbid
       disease.
     termDef:
       term: >-
