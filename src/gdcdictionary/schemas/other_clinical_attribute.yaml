@@ -218,6 +218,7 @@ properties:
         - Cyst(s)
         - Cytomegalovirus (CMV)
         - Deep Vein Thrombosis / Thromboembolism
+        - Dementia
         - Denys-Drash Syndrome
         - Depression
         - Dermatomyosis
@@ -342,6 +343,7 @@ properties:
         - Myocardial Infarction
         - Neurocystericerosis
         - Neuroendocrine Tumor
+        - Nevus of Ota
         - Nodular Hyperplasia
         - Nodular Prostatic Hyperplasia
         - Nonalcoholic Fatty Liver Disease
@@ -356,6 +358,7 @@ properties:
         - Pain (Various)
         - Pancreatitis
         - Parasitic Disease of Biliary Tract
+        - Parkinson's Disease
         - Peptic Ulcer (Ulcer)
         - Peripheral Neuropathy
         - Peripheral Vascular Disease
@@ -1203,6 +1206,7 @@ properties:
         - Myocardial Infarction
         - Neurocystericerosis
         - Neuroendocrine Tumor
+        - Nevus of Ota
         - Nodular Hyperplasia
         - Nodular Prostatic Hyperplasia
         - Nonalcoholic Fatty Liver Disease
@@ -1390,6 +1394,17 @@ properties:
     type: integer
     maximum: 89
     minimum: 0
+
+  undescended_testis_corrected_age_range:
+    $ref:
+      - "_terms.yaml#/undescended_testis_corrected_age/common"
+    enum:
+      - 2-11 months
+      - 1-2 years
+      - 3-9 years
+      - 10-14 years
+      - Unknown
+      - Not Reported
 
   undescended_testis_corrected_laterality:
     $ref:
