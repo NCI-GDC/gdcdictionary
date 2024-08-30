@@ -1595,8 +1595,11 @@ properties:
     $ref:
       - "_terms.yaml#/evidence_of_progression_type/common"
     enum:
+      - Biopsy with Histologic Confirmation
       - Convincing Image Source
       - Histologic Confirmation
+      - Physical Examination
+      - Positive Biomarker(s)
       - Unknown
       - Not Reported
 
@@ -1723,6 +1726,15 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  histologic_progression:
+    $ref:
+      - "_terms.yaml#/histologic_progression/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
 
   history_of_tumor:
     $ref:
