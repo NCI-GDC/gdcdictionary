@@ -38,6 +38,12 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
+deprecated:
+  - epithelioid_cell_percent
+  - extrascleral_extension
+  - size_extraocular_nodule
+  - spindle_cell_percent
+
 properties:
 
   $ref:
@@ -326,6 +332,18 @@ properties:
     maximum: 100
     minimum: 0
 
+  epithelioid_cell_percent_range:
+    $ref:
+      - "_terms.yaml#/epithelioid_cell_percent/common"
+    enum:
+      - 0%
+      - 1-30%
+      - 31-60%
+      - 61-90%
+      - '>90%'
+      - Unknown
+      - Not Reported
+
   extracapsular_extension:
     $ref:
       - "_terms.yaml#/extracapsular_extension/common"
@@ -362,10 +380,28 @@ properties:
       - Unknown
       - Not Reported
 
+  extraocular_nodule_size:
+    $ref:
+      - "_terms.yaml#/size_extraocular_nodule/common"
+    enum:
+      - <=5mm
+      - '>5mm'
+      - Unknown
+      - Not Reported
+
   extrascleral_extension:
     $ref:
       - "_terms.yaml#/extrascleral_extension/common"
     type: boolean
+
+  extrascleral_extension_present:
+    $ref:
+      - "_terms.yaml#/extrascleral_extension/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
 
   extrathyroid_extension:
     $ref:
@@ -424,6 +460,15 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  intratubular_germ_cell_neoplasia_present:
+    $ref:
+      - "_terms.yaml#/intratubular_germ_cell_neoplasia_present/common"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
 
   largest_extrapelvic_peritoneal_focus:
     $ref:
@@ -1012,6 +1057,60 @@ properties:
     maximum: 100
     minimum: 0
 
+  spindle_cell_percent_range:
+    $ref:
+      - "_terms.yaml#/spindle_cell_percent/common"
+    enum:
+      - 0%
+      - 1-30%
+      - 31-60%
+      - 61-90%
+      - '>90%'
+      - Unknown
+      - Not Reported
+
+  timepoint_category:
+    $ref:
+      - "_terms.yaml#/timepoint_category/common"
+    enum:
+      - Adjuvant Therapy
+      - Adolescence
+      - Adulthood
+      - After Chemotherapy
+      - After Study Enrollment
+      - Childhood
+      - End of Consolidation Therapy
+      - End of Treatment Course
+      - End of Treatment Course 1
+      - End of Treatment Course 2
+      - First Complete Response
+      - First Treatment
+      - Follow-up
+      - Initial Diagnosis
+      - Last Contact
+      - Post Adjuvant Therapy
+      - Post Hormone Therapy
+      - Post Initial Treatment
+      - Post Secondary Therapy
+      - Postoperative
+      - Preoperative
+      - Prior to Adjuvant Therapy
+      - Prior to Chemotherapy
+      - Prior to Diagnosis
+      - Prior to Procurement
+      - Prior to Study Enrollment
+      - Prior to Study Registration
+      - Prior to Treatment
+      - Progression
+      - Recurrence
+      - Recurrence/Progression
+      - Sample Procurement
+      - Within 2 Months After Completion of First-Course Treatment
+      - Within 3 Months of Surgery
+      - Other
+      - Unknown
+      - Not Reported
+
   transglottic_extension:
     $ref:
       - "_terms.yaml#/transglottic_extension/common"
@@ -1030,6 +1129,12 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  tumor_basal_diameter:
+    $ref:
+      - "_terms.yaml#/tumor_basal_diameter/common"
+    type: number
+    minimum: 0
 
   tumor_burden:
     $ref:
