@@ -1025,6 +1025,18 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
+  ajcc_serum_tumor_markers:
+    $ref:
+      - "_terms.yaml#/ajcc_serum_tumor_markers/common"
+    enum:
+      - S0
+      - S1
+      - S2
+      - S3
+      - SX
+      - Unknown
+      - Not Reported
+
   ajcc_staging_system_edition:
     $ref:
       - "_terms.yaml#/ajcc_staging_system_edition/common"
@@ -18294,6 +18306,7 @@ properties:
         - Groin
         - Head, Face or Neck, NOS
         - Heart
+        - Hilar Fat
         - Inferior Vena Cava
         - Kidney, Lower Pole
         - Kidney, Middle
@@ -18365,9 +18378,11 @@ properties:
         - Prostate
         - Rectum
         - Renal Vein
+        - Rete Testis
         - Retroperitoneum
         - Salivary gland
         - Scalp
+        - Scrotum
         - Sigmoid colon
         - Sinus
         - Skin
@@ -18377,6 +18392,7 @@ properties:
         - Skin, Trunk
         - Small intestine
         - Soft tissue
+        - Spermatic Cord
         - Spinal Cord
         - Spleen
         - Stomach
@@ -18389,6 +18405,8 @@ properties:
         - Trachea
         - Transplanted kidney
         - Transverse colon
+        - Tunica Albuginea
+        - Tunica Vaginalis
         - Upper lobe, lung
         - Urethra
         - Uterus
