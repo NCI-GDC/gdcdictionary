@@ -2153,6 +2153,12 @@ properties:
     maximum: 89
     minimum: 0
 
+  population_group:
+    $ref:
+      - "_terms.yaml#/population_group/common"
+    enum:
+      - Ashkenazi Jew
+
   premature_at_birth:
     $ref:
       - "_terms.yaml#/premature_at_birth/common"
