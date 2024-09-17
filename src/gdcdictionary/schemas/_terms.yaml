@@ -4147,7 +4147,7 @@ papillary_renal_cell_type:
 parent_with_radiation_exposure:
   common:
     description: >-
-      Indicates whether the patient's parent(s) were exposed to radiation
+      Indicates whether the patient's parent(s) were exposed to radiation.
     termDef:
       term:
       source:
