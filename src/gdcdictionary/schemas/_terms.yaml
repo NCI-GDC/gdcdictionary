@@ -3724,7 +3724,7 @@ mismatch_repair_mutation:
   common:
     description: >-
       The yes/no/unknown indicator used to describe whether the mutation included
-      in molecular testing was known to have an affect on the mismatch repair process.
+      in molecular testing was known to have an effect on the mismatch repair process.
     termDef:
       term: >-
         Gene Mutation Mismatch Repair Indicator
