@@ -7729,7 +7729,7 @@ population_group:
   common:
     description: >-
       A group of individuals united by a common factor (e.g., geographic location,
-      ethnicity, disease, age, gender).
+      ethnicity, disease, age, sex).
     termDef:
       term: >-
         Population Group
