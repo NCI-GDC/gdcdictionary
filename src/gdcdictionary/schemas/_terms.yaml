@@ -7864,7 +7864,7 @@ tmb_exonic:
   common:
     description: >-
       Tumor Mutational Burden (TMB), reported in mutations per
-      megabase (mut/Mb), calculated within the intersect of targeted capture
+      megabase (mut/Mb), calculated within the intersect of the targeted capture
       region and exonic region.
     termDef:
       term: >-
@@ -7879,7 +7879,7 @@ tmb_nonsynonymous_exonic:
     description: >-
       Tumor Mutational Burden (TMB) of nonsynonymous mutations only, reported
       in mutations per megabase (mut/Mb), calculated within the intersect of
-      targeted capture region. and exonic region.
+      the targeted capture region and exonic region.
     termDef:
       term: >-
         TMB of Nonsynonymous Mutations within Exonic Region
