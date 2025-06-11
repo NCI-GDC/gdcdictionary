@@ -7352,6 +7352,7 @@ properties:
       - Adulthood
       - After Chemotherapy
       - After Study Enrollment
+      - After Study Registration
       - Childhood
       - End of Consolidation Therapy
       - End of Treatment Course
@@ -7384,6 +7385,9 @@ properties:
       - Other
       - Unknown
       - Not Reported
+    deprecated_enum:
+      - After Study Enrollment
+      - Prior to Study Enrollment
     enumDef:
       Preoperative:
         $ref:
