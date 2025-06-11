@@ -37,14 +37,6 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
-deprecated:
-  - smokeless_tobacco_quit_age
-  - asbestos_exposure
-  - radon_exposure
-  - respirable_crystalline_silica_exposure
-  - years_smoked
-  - coal_dust_exposure
-
 properties:
 
   $ref:
@@ -175,28 +167,6 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  asbestos_exposure:
-    $ref:
-      - "_terms.yaml#/asbestos_exposure/common"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-      - Not Reported
-    enumDef:
-      "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-
   asbestos_exposure_type:
     $ref:
       - "_terms.yaml#/asbestos_exposure_type/common"
@@ -244,24 +214,6 @@ properties:
       - "_terms.yaml#/cigarettes_per_day/common"
     type: number
     minimum: 0
-
-  coal_dust_exposure:
-    $ref:
-      - "_terms.yaml#/coal_dust_exposure/common"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-    enumDef:
-      "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
 
   environmental_tobacco_smoke_exposure:
     $ref:
@@ -536,46 +488,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-
-  radon_exposure:
-    $ref:
-      - "_terms.yaml#/radon_exposure/common"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-      - Not Reported
-    enumDef:
-      "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-
-  respirable_crystalline_silica_exposure:
-    $ref:
-      - "_terms.yaml#/respirable_crystalline_silica_exposure/common"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-    enumDef:
-      "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
 
   secondhand_smoke_as_child:
     $ref:
@@ -959,13 +871,6 @@ properties:
     $ref:
       - "_terms.yaml#/use_per_day/common"
     type: number
-    minimum: 0
-
-  years_smoked:
-    $ref:
-      - "_terms.yaml#/years_smoked/common"
-    type: number
-    maximum: 89
     minimum: 0
 
   cases:
