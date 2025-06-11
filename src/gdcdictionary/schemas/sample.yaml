@@ -64,7 +64,6 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 deprecated:
-  - composition
   - sample_type
   - tumor_code_id
 
