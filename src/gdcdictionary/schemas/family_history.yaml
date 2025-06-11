@@ -52,6 +52,32 @@ properties:
     maximum: 89
     minimum: 0
 
+  relationship_gender:
+    $ref:
+      - "_terms.yaml#/relationship_gender/common"
+    enum:
+      - female
+      - male
+      - unspecified
+      - unknown
+      - not reported
+    enumDef:
+      female:
+        $ref:
+          - "_terms_enum.yaml#/female/common"
+      male:
+        $ref:
+          - "_terms_enum.yaml#/male/common"
+      unspecified:
+        $ref:
+          - "_terms_enum.yaml#/unspecified/common"
+      unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
+      not reported:
+        $ref:
+          - "_terms_enum.yaml#/not_reported/common"
+
   relationship_primary_diagnosis:
     $ref:
       - "_terms.yaml#/relationship_primary_diagnosis/common"
