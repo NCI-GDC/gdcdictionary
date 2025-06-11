@@ -49,7 +49,6 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 deprecated:
-  - RIN
   - target_capture_kit_catalog_number
   - target_capture_kit_name
   - target_capture_kit_target_region
@@ -365,8 +364,11 @@ properties:
     $ref:
       - "_terms.yaml#/single_cell_library/common"
     enum:
+      - Chromium 3' Gene Expression v1 Library
       - Chromium 3' Gene Expression v2 Library
       - Chromium 3' Gene Expression v3 Library
+      - Chromium 3' Gene Expression v4 Library
+      - Chromium Next GEM Single Cell Multiome ATAC + Gene Expression Library
       - Chromium scATAC v1 Library
       - Smart-Seq2
 
@@ -433,6 +435,7 @@ properties:
       - TruSight Myeloid Sequencing Panel
       - Twist Human Comprehensive Exome
       - xGen Exome Research Panel v1.0
+      - xGen Exome Research Panel v2.0
       - Unknown
     enumDef:
       Not Applicable:
