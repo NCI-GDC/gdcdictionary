@@ -7916,3 +7916,15 @@ dna_integrity_number:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C183240"
       term_id: C183240
       term_version: 25.05d
+
+ribosomal_rna_28s_18s_ratio:
+  common:
+    description: >-
+      The 28S/18S ribosomal RNA band ratio used to assess the quality of total RNA.
+    termDef:
+      term: >-
+        28s/18s Ribosomal RNA Ratio
+      source:
+      cde_id:
+      cde_version:
+      term_url:
