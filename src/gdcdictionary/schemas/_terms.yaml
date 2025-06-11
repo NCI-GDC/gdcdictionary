@@ -3724,7 +3724,7 @@ mismatch_repair_mutation:
   common:
     description: >-
       The yes/no/unknown indicator used to describe whether the mutation included
-      in molecular testing was known to have an affect on the mismatch repair process.
+      in molecular testing was known to have an effect on the mismatch repair process.
     termDef:
       term: >-
         Gene Mutation Mismatch Repair Indicator
@@ -7729,7 +7729,7 @@ population_group:
   common:
     description: >-
       A group of individuals united by a common factor (e.g., geographic location,
-      ethnicity, disease, age, gender).
+      ethnicity, disease, age, sex).
     termDef:
       term: >-
         Population Group
@@ -7807,3 +7807,112 @@ pretreatment:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C103339"
       term_id: C103339
       term_version: 24.07e
+
+sex_at_birth:
+  common:
+    description: >-
+      A textual description of a person's sex at birth.
+    termDef:
+      term: >-
+        Person Sex at Birth Category
+      source: caDSR
+      cde_id: 7572817
+      cde_version: 3.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=7572817%20and%20ver_nr=3.0"
+
+relationship_sex_at_birth:
+  common:
+    description: >-
+      A textual description of a person's relative's sex at birth.
+    termDef:
+      term: >-
+        Person Family Member Sex at Birth Category
+      source: caDSR
+      cde_id: 16087717
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=16087717%20and%20ver_nr=1.0"
+
+tmb:
+  common:
+    description: >-
+      Tumor Mutational Burden (TMB), reported in mutations per
+      megabase (mut/Mb), calculated within the targeted capture region or
+      across the whole genome for WGS data.
+    termDef:
+      term: >-
+        Tumor Mutational Burden
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+tmb_nonsynonymous:
+  common:
+    description: >-
+      Tumor Mutational Burden (TMB) of nonsynonymous mutations only,
+      reported in mutations per megabase (mut/Mb), calculated within the
+      targeted capture region or across the whole genome for WGS data.
+    termDef:
+      term: >-
+        TMB of Nonsynonymous Mutations
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+tmb_exonic:
+  common:
+    description: >-
+      Tumor Mutational Burden (TMB), reported in mutations per
+      megabase (mut/Mb), calculated within the intersect of the targeted capture
+      region and exonic region.
+    termDef:
+      term: >-
+        TMB within Exonic Region
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+tmb_nonsynonymous_exonic:
+  common:
+    description: >-
+      Tumor Mutational Burden (TMB) of nonsynonymous mutations only, reported
+      in mutations per megabase (mut/Mb), calculated within the intersect of
+      the targeted capture region and exonic region.
+    termDef:
+      term: >-
+        TMB of Nonsynonymous Mutations within Exonic Region
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+breslow_thickness_category:
+  common:
+    description: >-
+      The number that describes the distance, in millimeters, between the upper layer
+      of the epidermis and the deepest point of tumor penetration.
+    termDef:
+      term: >-
+        Breslow Depth Measurement Category
+      source: caDSR
+      cde_id: 64809
+      cde_version: 3.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=64809%20and%20ver_nr=3.0"
+
+dna_integrity_number:
+  common:
+    description: >-
+      An assessment of the amount of fragmentation in a genomic DNA sample. It
+      is derived by an algorithm that assesses the distribution of signal across
+      the size range and generates a calculated integrity number.
+    termDef:
+      term: >-
+        DNA Integrity Number
+      source: NCIt
+      cde_id: C183240
+      cde_version: 25.05d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C183240"
+      term_id: C183240
+      term_version: 25.05d
