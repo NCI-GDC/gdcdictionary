@@ -3669,19 +3669,6 @@ metastasis_at_diagnosis:
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6133614%20and%20ver_nr=1.0"
 
-metastasis_at_diagnosis_site:
-  common:
-    description: >-
-      Text term to identify an anatomic site in which metastatic disease involvement
-      is found.
-    termDef:
-      term: >-
-        Metastatic Disease Anatomic Site Name
-      source: caDSR
-      cde_id: 3029815
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3029815%20and%20ver_nr=1.0"
-
 method_of_diagnosis:
   common:
     description: >-
@@ -3706,19 +3693,6 @@ method_of_sample_procurement:
       cde_id:
       cde_version:
       term_url:
-
-micropapillary_features:
-  common:
-    description: >-
-      The yes/no/unknown indicator used to describe whether micropapillary features
-      were determined to be present.
-    termDef:
-      term: >-
-        Tumor Micropapillary Features Present Status
-      source: caDSR
-      cde_id: 6068784
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6068784%20and%20ver_nr=1.0"
 
 mismatch_repair_mutation:
   common:
@@ -4130,19 +4104,6 @@ pancreatitis_onset_year:
       cde_id: 3457763
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3457763%20and%20ver_nr=1.0"
-
-papillary_renal_cell_type:
-  common:
-    description: >-
-      The text term used to describe the type of papillary renal cell carcinoma characterized
-      by the presence of papillae covered by small cells with scant amount of cytoplasm.
-    termDef:
-      term: >-
-        Papillary Renal Cell Type Category
-      source:
-      cde_id:
-      cde_version:
-      term_url:
 
 parent_with_radiation_exposure:
   common:
@@ -4621,19 +4582,6 @@ primary_diagnosis:
       cde_id: 6161032
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6161032%20and%20ver_nr=1.0"
-
-primary_disease:
-  common:
-    description: >-
-      Indicates whether the specific diagnosis represents the disease that was the
-      primary focus of the study.
-    termDef:
-      term: >-
-        Primary Disease
-      source:
-      cde_id:
-      cde_version:
-      term_url:
 
 primary_gleason_grade:
   common:
