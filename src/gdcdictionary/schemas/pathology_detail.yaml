@@ -196,6 +196,15 @@ properties:
     type: number
     minimum: 0
 
+  breslow_thickness_category:
+    $ref:
+      - "_terms.yaml#/breslow_thickness_category/common"
+    enum:
+        - <=1 mm
+        - '>1.0-2.0 mm'
+        - '>2.0-4.0 mm'
+        - '>4.0 mm'
+
   circumferential_resection_margin:
     $ref:
       - "_terms.yaml#/circumferential_resection_margin/common"
@@ -1078,6 +1087,7 @@ properties:
       - Adulthood
       - After Chemotherapy
       - After Study Enrollment
+      - After Study Registration
       - Childhood
       - End of Consolidation Therapy
       - End of Treatment Course
@@ -1110,6 +1120,9 @@ properties:
       - Other
       - Unknown
       - Not Reported
+    deprecated_enum:
+      - After Study Enrollment
+      - Prior to Study Enrollment
 
   transglottic_extension:
     $ref:
