@@ -369,8 +369,6 @@ properties:
       - Not Reported
       - Not Allowed To Collect
     deprecated_enum:
-      - Brain Stem
-      - Common Duct
       - Head - Face Or Neck, Nos
     enumDef:
       Bone Marrow:
@@ -634,15 +632,10 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
-    deprecated_enum:
-      - Indeterminant
     enumDef:
       Autopsy:
         $ref:
           - "_terms_enum.yaml#/autopsy/common"
-      Indeterminant:
-        $ref:
-          - "_terms_enum.yaml#/indeterminant/common"
       Other:
         $ref:
           - "_terms_enum.yaml#/other/common"
