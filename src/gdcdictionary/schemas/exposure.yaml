@@ -123,6 +123,7 @@ properties:
     $ref:
       - "_terms.yaml#/alcohol_intensity/common"
     enum:
+      - Alcohol consumption equal to or less than 2 drinks per day for men and 1 drink or less per day for women
       - Drinker
       - Heavy Drinker
       - Lifelong Non-Drinker
