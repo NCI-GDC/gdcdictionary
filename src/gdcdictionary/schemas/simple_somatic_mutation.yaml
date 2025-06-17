@@ -73,11 +73,13 @@ properties:
       - "_terms.yaml#/data_format/common"
     enum:
       - VCF
+      - TSV
 
   data_type:
     $ref:
       - "_terms.yaml#/data_type/common"
     enum:
+      - Mutational Signature
       - Raw CGI Variant
       - Raw Simple Somatic Mutation
 
