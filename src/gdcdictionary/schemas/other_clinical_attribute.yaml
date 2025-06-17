@@ -48,8 +48,6 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 deprecated:
-  - pregnancy_count
-  - viral_hepatitis_serologies
   - undescended_testis_corrected_age
 
 properties:
@@ -80,6 +78,8 @@ properties:
       - Salmonella Septicemia
       - Toxoplasmosis
       - Wasting Syndrome
+      - Unknown
+      - Not Reported
     enumDef:
       Pneumonia, NOS:
         $ref:
@@ -521,6 +521,8 @@ properties:
       - 3 to 4 Days
       - 1 to 2 Days
       - None
+      - Unknown
+      - Not Reported
     enumDef:
       None:
         $ref:
@@ -781,6 +783,8 @@ properties:
       - Class III
       - Class IV
       - Class V
+      - Unknown
+      - Not Reported
     enumDef:
       Class I:
         $ref:
@@ -881,12 +885,6 @@ properties:
       - "_terms.yaml#/pancreatitis_onset_year/common"
     type: integer
     minimum: 1900
-
-  pregnancy_count:
-    $ref:
-      - "_terms.yaml#/pregnancy_count/common"
-    type: integer
-    minimum: 0
 
   pregnancy_outcome:
     $ref:
@@ -1303,6 +1301,7 @@ properties:
       - Adulthood
       - After Chemotherapy
       - After Study Enrollment
+      - After Study Registration
       - Childhood
       - End of Consolidation Therapy
       - End of Treatment Course
@@ -1335,6 +1334,9 @@ properties:
       - Other
       - Unknown
       - Not Reported
+    deprecated_enum:
+      - After Study Enrollment
+      - Prior to Study Enrollment
     enumDef:
       Other:
         $ref:
@@ -1464,28 +1466,6 @@ properties:
       - Unknown
       - Not Reported
     enumDef:
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-
-  viral_hepatitis_serologies:
-    $ref:
-      - "_terms.yaml#/viral_hepatitis_serologies/common"
-    enum:
-      - HBV Core Antibody
-      - HBV DNA
-      - HBV Genotype
-      - HBV Surface Antibody
-      - HCV Genotype
-      - Hepatitis B Surface Antigen
-      - Hepatitis C Antibody
-      - Hepatitis C Virus RNA
-      - Unknown
-      - Not Reported
-    enumDef:
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
