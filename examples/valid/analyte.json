@@ -8,6 +8,7 @@
   "analyte_type": "DNA",
   "analyte_volume": 0.4,
   "concentration": 0.14,
+  "id": "77c79587-0b2f-4e2f-afd8-2afc0bf307dd",
   "normal_tumor_genotype_snp_match": "Yes",
   "spectrophotometer_method": "PicoGreen",
   "well_number": "4",
