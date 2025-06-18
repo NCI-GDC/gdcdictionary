@@ -137,16 +137,6 @@ properties:
       - Unknown
       - Not Reported
       - Not Applicable
-    enumDef:
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-      Not Applicable:
-        $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
 
   index_date:
     $ref:
@@ -167,16 +157,6 @@ properties:
       - "Yes"
       - "No"
       - Unknown
-    enumDef:
-      "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
 
   primary_site:
     $ref:
@@ -254,16 +234,6 @@ properties:
       - Unknown
       - Not Reported
       - Not Applicable
-    enumDef:
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-      Not Applicable:
-        $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
 
   projects:
     $ref: "_definitions.yaml#/to_one_project"
