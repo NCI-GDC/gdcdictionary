@@ -37,6 +37,9 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
+deprecated:
+  - relationship_gender
+
 properties:
 
   $ref:
@@ -288,6 +291,24 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
+
+  relationship_sex_at_birth:
+    $ref:
+      - "_terms.yaml#/relationship_sex_at_birth/common"
+    enum:
+      - female
+      - male
+      - unknown
+    enumDef:
+      female:
+        $ref:
+          - "_terms_enum.yaml#/female/common"
+      male:
+        $ref:
+          - "_terms_enum.yaml#/male/common"
+      unknown:
+        $ref:
+          - "_terms_enum.yaml#/unknown/common"
 
   relationship_type:
     $ref:
