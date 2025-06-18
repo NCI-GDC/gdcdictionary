@@ -88,10 +88,6 @@ properties:
       - abcam ab4729 anti-H3K27ac
       - Unknown
       - Not Applicable
-    enumDef:
-      Not Applicable:
-        $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
 
   chipseq_target:
     $ref:
@@ -153,10 +149,6 @@ properties:
       - MboI
       - Unknown
       - Not Applicable
-    enumDef:
-      Not Applicable:
-        $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
 
   includes_spike_ins:
     $ref:
@@ -190,16 +182,6 @@ properties:
       - PacBio RS
       - Unknown
       - Not Reported
-    enumDef:
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   is_paired_end:
     $ref:
@@ -251,13 +233,6 @@ properties:
       - Poly-T Enrichment
       - Random
       - rRNA Depletion
-    enumDef:
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
-      PCR:
-        $ref:
-          - "_terms_enum.yaml#/pcr/common"
 
   library_strand:
     $ref:
@@ -267,10 +242,6 @@ properties:
       - First_Stranded
       - Second_Stranded
       - Not Applicable
-    enumDef:
-      Not Applicable:
-        $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
 
   library_strategy:
     $ref:
@@ -288,16 +259,6 @@ properties:
       - Targeted Sequencing
       - WGS
       - WXS
-    enumDef:
-      Targeted Sequencing:
-        $ref:
-          - "_terms_enum.yaml#/targeted_sequencing/common"
-      WGS:
-        $ref:
-          - "_terms_enum.yaml#/wgs/common"
-      WXS:
-        $ref:
-          - "_terms_enum.yaml#/wxs/common"
 
   multiplex_barcode:
     $ref:
@@ -322,10 +283,6 @@ properties:
       - Other
       - PacBio
       - SOLiD
-    enumDef:
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
 
   read_group_name:
     description: >-
@@ -434,13 +391,6 @@ properties:
       - Twist Human Comprehensive Exome
       - xGen Exome Research Panel v1.0
       - Unknown
-    enumDef:
-      Not Applicable:
-        $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
 
   target_capture_kit_catalog_number:
     $ref:
