@@ -80,10 +80,6 @@ properties:
       - Salmonella Septicemia
       - Toxoplasmosis
       - Wasting Syndrome
-    enumDef:
-      Pneumonia, NOS:
-        $ref:
-          - "_terms_enum.yaml#/pneumonia_nos/common"
 
   bmi:
     $ref:
@@ -115,16 +111,6 @@ properties:
       - Transfusion Recipient
       - Unknown
       - Not Reported
-    enumDef:
-      None:
-        $ref:
-          - "_terms_enum.yaml#/none/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   comorbidities:
     $ref:
@@ -428,25 +414,6 @@ properties:
       - Hepatitis
       - Kidney Disease
       - Smoking
-    enumDef:
-      Cancer:
-        $ref:
-          - "_terms_enum.yaml#/cancer/common"
-      Epstein-Barr Virus:
-        $ref:
-          - "_terms_enum.yaml#/epsteinbarr_virus/common"
-      Pneumocystis Pneumonia:
-        $ref:
-          - "_terms_enum.yaml#/pneumonia_nos/common"
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   comorbidity_method_of_diagnosis:
     $ref:
@@ -457,13 +424,6 @@ properties:
       - Radiology
       - Unknown
       - Not Reported
-    enumDef:
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   days_to_comorbidity:
     $ref:
@@ -495,16 +455,6 @@ properties:
       - Other
       - Unknown
       - Not Reported
-    enumDef:
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   dlco_ref_predictive_percent:
     $ref:
@@ -521,10 +471,6 @@ properties:
       - 3 to 4 Days
       - 1 to 2 Days
       - None
-    enumDef:
-      None:
-        $ref:
-          - "_terms_enum.yaml#/none/common"
 
   eye_color:
     $ref:
@@ -540,13 +486,6 @@ properties:
       - Other
       - Unknown
       - Not Reported
-    enumDef:
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   fev1_fvc_post_bronch_percent:
     $ref:
@@ -580,19 +519,6 @@ properties:
       - "No"
       - Unknown
       - Not Reported
-    enumDef:
-      "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   height:
     $ref:
@@ -608,19 +534,6 @@ properties:
       - "No"
       - Unknown
       - Not Reported
-    enumDef:
-      "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   hiv_viral_load:
     $ref:
@@ -636,13 +549,6 @@ properties:
       - Progestin and Estrogen
       - Unknown
       - Not Reported
-    enumDef:
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   hormonal_contraceptive_use:
     $ref:
@@ -653,13 +559,6 @@ properties:
       - Never Used
       - Unknown
       - Not Reported
-    enumDef:
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   hormonal_replacement_therapy_status:
     $ref:
@@ -679,13 +578,6 @@ properties:
       - Progesterone only
       - Unknown
       - Not Reported
-    enumDef:
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   hysterectomy_margins_involved:
     $ref:
@@ -698,16 +590,6 @@ properties:
       - Vagina
       - Unknown
       - Not Reported
-    enumDef:
-      None:
-        $ref:
-          - "_terms_enum.yaml#/none/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   hysterectomy_type:
     $ref:
@@ -719,13 +601,6 @@ properties:
       - Simple Hysterectomy
       - Unknown
       - Not Reported
-    enumDef:
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   immunosuppressive_treatment_type:
     $ref:
@@ -741,19 +616,6 @@ properties:
       - Other
       - Unknown
       - Not Reported
-    enumDef:
-      None:
-        $ref:
-          - "_terms_enum.yaml#/none/common"
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   menopause_status:
     $ref:
@@ -764,13 +626,6 @@ properties:
       - Premenopausal
       - Unknown
       - Not Reported
-    enumDef:
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   myasthenia_gravis_classification:
     $ref:
@@ -781,22 +636,6 @@ properties:
       - Class III
       - Class IV
       - Class V
-    enumDef:
-      Class I:
-        $ref:
-          - "_terms_enum.yaml#/i/other_clinical_attribute/myasthenia_gravis_classification"
-      Class II:
-        $ref:
-          - "_terms_enum.yaml#/ii/other_clinical_attribute/myasthenia_gravis_classification"
-      Class III:
-        $ref:
-          - "_terms_enum.yaml#/iii/other_clinical_attribute/myasthenia_gravis_classification"
-      Class IV:
-        $ref:
-          - "_terms_enum.yaml#/iv/other_clinical_attribute/myasthenia_gravis_classification"
-      Class V:
-        $ref:
-          - "_terms_enum.yaml#/v/other_clinical_attribute/myasthenia_gravis_classification"
 
   nadir_cd4_count:
     $ref:
@@ -815,16 +654,6 @@ properties:
       - Statin, NOS
       - Unknown
       - Not Reported
-    enumDef:
-      Acetaminophen:
-        $ref:
-          - "_terms_enum.yaml#/acetaminophen/common"
-      Aspirin:
-        $ref:
-          - "_terms_enum.yaml#/aspirin/common"
-      Metformin:
-        $ref:
-          - "_terms_enum.yaml#/metformin/common"
 
   number_of_pregnancies:
     $ref:
@@ -846,19 +675,6 @@ properties:
       - "No"
       - Unknown
       - Not Reported
-    enumDef:
-      "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   oxygen_use_type:
     $ref:
@@ -868,13 +684,6 @@ properties:
       - Intermittent
       - Unknown
       - Not Reported
-    enumDef:
-      Continuous:
-        $ref:
-          - "_terms_enum.yaml#/continuous/common"
-      Intermittent:
-        $ref:
-          - "_terms_enum.yaml#/intermittent/common"
 
   pancreatitis_onset_year:
     $ref:
@@ -901,13 +710,6 @@ properties:
       - Stillbirth
       - Unknown
       - Not Reported
-    enumDef:
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   pregnant_at_diagnosis:
     $ref:
@@ -917,19 +719,6 @@ properties:
       - "No"
       - Unknown
       - Not Reported
-    enumDef:
-      "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   premature_at_birth:
     $ref:
@@ -939,19 +728,6 @@ properties:
       - "No"
       - Unknown
       - Not Reported
-    enumDef:
-      "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   reflux_treatment_type:
     $ref:
@@ -966,16 +742,6 @@ properties:
       - Unknown
       - Not Reported
       - Not Applicable
-    enumDef:
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-      Not Applicable:
-        $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
 
   risk_factor_method_of_diagnosis:
     $ref:
@@ -986,10 +752,6 @@ properties:
       - Clinical Assessment
       - Unknown
       - Not Reported
-    enumDef:
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   risk_factor_treatment:
     $ref:
@@ -999,19 +761,6 @@ properties:
       - "No"
       - Unknown
       - Not Reported
-    enumDef:
-      "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   risk_factors:
     $ref:
@@ -1280,19 +1029,6 @@ properties:
       - Cirrhosis
       - HIV
       - Reflux Disease
-    enumDef:
-      Cancer:
-        $ref:
-          - "_terms_enum.yaml#/cancer/common"
-      Epstein-Barr Virus:
-        $ref:
-          - "_terms_enum.yaml#/epsteinbarr_virus/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   timepoint_category:
     $ref:
@@ -1335,13 +1071,6 @@ properties:
       - Other
       - Unknown
       - Not Reported
-    enumDef:
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   treatment_frequency:
     $ref:
@@ -1361,13 +1090,6 @@ properties:
       - Never
       - Unknown
       - Not Reported
-    enumDef:
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   undescended_testis_corrected:
     $ref:
@@ -1377,16 +1099,6 @@ properties:
       - "No"
       - Unknown
       - Not Reported
-    enumDef:
-      "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   undescended_testis_corrected_age:
     $ref:
@@ -1415,10 +1127,6 @@ properties:
       - Right
       - Unknown
       - Not Reported
-    enumDef:
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   undescended_testis_corrected_method:
     $ref:
@@ -1430,10 +1138,6 @@ properties:
       - Testis Removed
       - Unknown
       - Not Reported
-    enumDef:
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   undescended_testis_history:
     $ref:
@@ -1443,16 +1147,6 @@ properties:
       - "No"
       - Unknown
       - Not Reported
-    enumDef:
-      "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   undescended_testis_history_laterality:
     $ref:
@@ -1463,10 +1157,6 @@ properties:
       - Right
       - Unknown
       - Not Reported
-    enumDef:
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   viral_hepatitis_serologies:
     $ref:
@@ -1482,13 +1172,6 @@ properties:
       - Hepatitis C Virus RNA
       - Unknown
       - Not Reported
-    enumDef:
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   viral_hepatitis_serology_tests:
     $ref:
