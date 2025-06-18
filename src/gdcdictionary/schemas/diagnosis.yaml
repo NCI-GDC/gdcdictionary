@@ -45,14 +45,6 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
-deprecated:
-  - metastasis_at_diagnosis_site
-  - micropapillary_features
-  - mitotic_count
-  - papillary_renal_cell_type
-  - pregnant_at_diagnosis
-  - primary_disease
-
 properties:
 
   $ref:
@@ -2825,166 +2817,6 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  metastasis_at_diagnosis_site:
-    $ref:
-      - "_terms.yaml#/metastasis_at_diagnosis_site/common"
-    enum:
-      - Abdomen
-      - Adrenal Gland
-      - Ascites
-      - Bladder
-      - Bone
-      - Bone Marrow
-      - Brain
-      - Bronchus
-      - Central Nervous System
-      - Cerebrospinal Fluid
-      - Colon
-      - Distant Nodes
-      - Distant Organ
-      - Esophagus
-      - Gastrointestinal Tract
-      - Groin
-      - Head, Face or Neck, NOS
-      - Heart
-      - Kidney
-      - Liver
-      - Lung
-      - Lymph Node, Axillary
-      - Lymph Node, Inguinal
-      - Lymph Node, NOS
-      - Lymph Node, Regional
-      - Lymph Node, Subcarinal
-      - Mediastinum
-      - Neck
-      - Omentum
-      - Ovary
-      - Pancreas
-      - Pelvis
-      - Peritoneal Cavity
-      - Peritoneum
-      - Pleura
-      - Retroperitoneum
-      - Scalp
-      - Skin
-      - Small Intestine
-      - Soft Tissue
-      - Spinal Cord
-      - Spleen
-      - Stomach
-      - Urethra
-      - Uterine Adnexa
-      - Vertebral Canal
-      - Vulva, NOS
-      - Unknown
-      - Not Reported
-    enumDef:
-      Abdomen:
-        $ref:
-          - "_terms_enum.yaml#/abdomen/common"
-      Adrenal Gland:
-        $ref:
-          - "_terms_enum.yaml#/adrenal_gland/common"
-      Ascites:
-        $ref:
-          - "_terms_enum.yaml#/ascites/common"
-      Bone:
-        $ref:
-          - "_terms_enum.yaml#/bone/common"
-      Bone Marrow:
-        $ref:
-          - "_terms_enum.yaml#/bone_marrow/common"
-      Brain:
-        $ref:
-          - "_terms_enum.yaml#/brain/common"
-      Central Nervous System:
-        $ref:
-          - "_terms_enum.yaml#/central_nervous_system/common"
-      Cerebrospinal Fluid:
-        $ref:
-          - "_terms_enum.yaml#/cerebrospinal_fluid/common"
-      Colon:
-        $ref:
-          - "_terms_enum.yaml#/colon/common"
-      Groin:
-        $ref:
-          - "_terms_enum.yaml#/groin/common"
-      Kidney:
-        $ref:
-          - "_terms_enum.yaml#/kidney/common"
-      Liver:
-        $ref:
-          - "_terms_enum.yaml#/liver/common"
-      Lung:
-        $ref:
-          - "_terms_enum.yaml#/lung/common"
-      Lymph Node, Axillary:
-        $ref:
-          - "_terms_enum.yaml#/lymph_node_axillary/common"
-      Lymph Node, Inguinal:
-        $ref:
-          - "_terms_enum.yaml#/lymph_node_inguinal/common"
-      Lymph Node, NOS:
-        $ref:
-          - "_terms_enum.yaml#/lymph_node_nos/common"
-      Mediastinum:
-        $ref:
-          - "_terms_enum.yaml#/mediastinum/common"
-      Neck:
-        $ref:
-          - "_terms_enum.yaml#/neck/common"
-      Omentum:
-        $ref:
-          - "_terms_enum.yaml#/omentum/common"
-      Ovary:
-        $ref:
-          - "_terms_enum.yaml#/ovary/common"
-      Pancreas:
-        $ref:
-          - "_terms_enum.yaml#/pancreas/common"
-      Pelvis:
-        $ref:
-          - "_terms_enum.yaml#/pelvis/common"
-      Peritoneal Cavity:
-        $ref:
-          - "_terms_enum.yaml#/peritoneal_cavity/common"
-      Peritoneum:
-        $ref:
-          - "_terms_enum.yaml#/peritoneum/common"
-      Pleura:
-        $ref:
-          - "_terms_enum.yaml#/pleura/common"
-      Scalp:
-        $ref:
-          - "_terms_enum.yaml#/scalp/common"
-      Skin:
-        $ref:
-          - "_terms_enum.yaml#/skin/common"
-      Small Intestine:
-        $ref:
-          - "_terms_enum.yaml#/small_intestine/common"
-      Soft Tissue:
-        $ref:
-          - "_terms_enum.yaml#/soft_tissue/common"
-      Spinal Cord:
-        $ref:
-          - "_terms_enum.yaml#/spinal_cord/common"
-      Uterine Adnexa:
-        $ref:
-          - "_terms_enum.yaml#/uterine_adnexa/common"
-      Vertebral Canal:
-        $ref:
-          - "_terms_enum.yaml#/vertebral_canal/common"
-      Vulva, NOS:
-        $ref:
-          - "_terms_enum.yaml#/vulva_nos/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-
   method_of_diagnosis:
     $ref:
       - "_terms.yaml#/method_of_diagnosis/common"
@@ -3103,28 +2935,6 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
-  micropapillary_features:
-    $ref:
-      - "_terms.yaml#/micropapillary_features/common"
-    enum:
-      - Absent
-      - Present
-      - Unknown
-      - Not Reported
-    enumDef:
-      Absent:
-        $ref:
-          - "_terms_enum.yaml#/absent/common"
-      Present:
-        $ref:
-          - "_terms_enum.yaml#/present/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-
   mitosis_karyorrhexis_index:
     $ref:
       - "_terms.yaml#/mitosis_karyorrhexis_index/common"
@@ -3150,12 +2960,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-
-  mitotic_count:
-    $ref:
-      - "_terms.yaml#/mitotic_count/common"
-    type: integer
-    minimum: 0
 
   morphology:
     $ref:
@@ -7390,20 +7194,6 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  papillary_renal_cell_type:
-    $ref:
-      - "_terms.yaml#/papillary_renal_cell_type/common"
-    enum:
-      - Type 1
-      - Type 2
-    enumDef:
-      Type 1:
-        $ref:
-          - "_terms_enum.yaml#/type_1/common"
-      Type 2:
-        $ref:
-          - "_terms_enum.yaml#/type_2/common"
-
   pediatric_kidney_staging:
     $ref:
       - "_terms.yaml#/pediatric_kidney_staging/common"
@@ -7450,28 +7240,6 @@ properties:
       Unsatisfactory:
         $ref:
           - "_terms_enum.yaml#/unsatisfactory/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-
-  pregnant_at_diagnosis:
-    $ref:
-      - "_terms.yaml#/pregnant_at_diagnosis/common"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-      - Not Reported
-    enumDef:
-      "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
       Unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
@@ -16944,11 +16712,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-
-  primary_disease:
-    $ref:
-      - "_terms.yaml#/primary_disease/common"
-    type: boolean
 
   primary_gleason_grade:
     $ref:
