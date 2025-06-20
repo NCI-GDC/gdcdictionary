@@ -100,3 +100,27 @@ properties:
 
   somatic_aggregation_workflows:
     $ref: "_definitions.yaml#/to_one"
+
+  tmb:
+    $ref:
+      - "_terms.yaml#/tmb/common"
+    type: number
+    minimum: 0
+
+  tmb_nonsynonymous:
+    $ref:
+      - "_terms.yaml#/tmb_nonsynonymous/common"
+    type: number
+    minimum: 0
+
+  tmb_exonic:
+    $ref:
+      - "_terms.yaml#/tmb_exonic/common"
+    type: number
+    minimum: 0
+
+  tmb_nonsynonymous_exonic:
+    $ref:
+      - "_terms.yaml#/tmb_nonsynonymous_exonic/common"
+    type: number
+    minimum: 0
