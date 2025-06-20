@@ -61,6 +61,7 @@ properties:
       - Strelka2 RNA
       - SvABA Indel
       - VarScan2
+      - MuSiCal GATK4 MuTect2
 
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
