@@ -54,6 +54,7 @@ properties:
       - GATK4 MuTect2 Tumor-Only
       - Manta Indel
       - MuSE
+      - MuSiCal GATK4 MuTect2
       - MuTect2
       - Pindel
       - SomaticSniper
@@ -61,7 +62,6 @@ properties:
       - Strelka2 RNA
       - SvABA Indel
       - VarScan2
-      - MuSiCal GATK4 MuTect2
 
   aligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
