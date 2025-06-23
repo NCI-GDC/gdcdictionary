@@ -378,40 +378,6 @@ properties:
       - Brain Stem
       - Common Duct
       - Head - Face Or Neck, Nos
-    enumDef:
-      Bone Marrow:
-        $ref:
-          - "_terms_enum.yaml#/bone_marrow/common"
-      Buccal Mucosa:
-        $ref:
-          - "_terms_enum.yaml#/buccal_mucosa/common"
-      Cerebrospinal Fluid:
-        $ref:
-          - "_terms_enum.yaml#/cerebrospinal_fluid/common"
-      Connective Tissue:
-        $ref:
-          - "_terms_enum.yaml#/connective_tissue/common"
-      Frontal Lobe:
-        $ref:
-          - "_terms_enum.yaml#/frontal_lobe/common"
-      Neck:
-        $ref:
-          - "_terms_enum.yaml#/neck/common"
-      Soft Tissue:
-        $ref:
-          - "_terms_enum.yaml#/soft_tissue/common"
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   biospecimen_laterality:
     $ref:
@@ -422,13 +388,6 @@ properties:
       - Right
       - Unknown
       - Not Reported
-    enumDef:
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   catalog_reference:
     $ref:
@@ -475,31 +434,6 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
-    enumDef:
-      Buffy Coat:
-        $ref:
-          - "_terms_enum.yaml#/buffy_coat/common"
-      Lymphocytes:
-        $ref:
-          - "_terms_enum.yaml#/lymphocytes/common"
-      Plasma:
-        $ref:
-          - "_terms_enum.yaml#/plasma/common"
-      Saliva:
-        $ref:
-          - "_terms_enum.yaml#/saliva/common"
-      Serum:
-        $ref:
-          - "_terms_enum.yaml#/serum/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   current_weight:
     $ref:
@@ -532,22 +466,6 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
-    enumDef:
-      "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   distance_normal_to_tumor:
     $ref:
@@ -557,13 +475,6 @@ properties:
       - Distal (>2cm)
       - Unknown
       - Not Reported
-    enumDef:
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   distributor_reference:
     $ref:
@@ -714,25 +625,6 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Indeterminant
-    enumDef:
-      Autopsy:
-        $ref:
-          - "_terms_enum.yaml#/autopsy/common"
-      Indeterminant:
-        $ref:
-          - "_terms_enum.yaml#/indeterminant/common"
-      Other:
-        $ref:
-          - "_terms_enum.yaml#/other/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   oct_embedded:
     $ref:
@@ -766,16 +658,6 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
-    enumDef:
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   sample_ordinal:
     $ref:
@@ -840,25 +722,6 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
-    enumDef:
-      DNA:
-        $ref:
-          - "_terms_enum.yaml#/dna/common"
-      Saliva:
-        $ref:
-          - "_terms_enum.yaml#/saliva/common"
-      Total RNA:
-        $ref:
-          - "_terms_enum.yaml#/total_rna/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   sample_type_id:
     $ref:
@@ -976,19 +839,6 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
-    enumDef:
-      Normal:
-        $ref:
-          - "_terms_enum.yaml#/normal/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   tumor_code:
     $ref:
@@ -1019,13 +869,6 @@ properties:
       - Rhabdomyosarcoma
       - Soft tissue sarcoma, non-rhabdomyosarcoma
       - Wilms tumor (WT)
-    enumDef:
-      Ewing sarcoma:
-        $ref:
-          - "_terms_enum.yaml#/ewing_sarcoma/common"
-      Rhabdomyosarcoma:
-        $ref:
-          - "_terms_enum.yaml#/rhabdomyosarcoma/common"
 
   tumor_code_id:
     $ref:
@@ -1074,19 +917,6 @@ properties:
       - Not Allowed To Collect
     deprecated_enum:
       - Not Allowed To Collect
-    enumDef:
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-      Not Applicable:
-        $ref:
-          - "_terms_enum.yaml#/not_applicable/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   cases:
     $ref: "_definitions.yaml#/to_one"
