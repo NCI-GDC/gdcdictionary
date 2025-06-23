@@ -49,7 +49,7 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 deprecated:
-  - analyte_type_id
+  - ribosomal_rna_28s_16s_ratio
 
 properties:
 
@@ -99,21 +99,6 @@ properties:
         $ref:
           - "_terms_enum.yaml#/total_rna/common"
 
-  analyte_type_id:
-    $ref:
-      - "_terms.yaml#/analyte_type_id/common"
-    enum:
-      - D
-      - E
-      - G
-      - H
-      - R
-      - S
-      - T
-      - W
-      - X
-      - Y
-
   analyte_volume:
     $ref:
       - "_terms.yaml#/analyte_volume/common"
@@ -123,6 +108,12 @@ properties:
   concentration:
     $ref:
       - "_terms.yaml#/concentration/common"
+    type: number
+    minimum: 0
+
+  dna_integrity_number:
+    $ref:
+      - "_terms.yaml#/dna_integrity_number/common"
     type: number
     minimum: 0
 
@@ -176,6 +167,12 @@ properties:
   ribosomal_rna_28s_16s_ratio:
     $ref:
       - "_terms.yaml#/ribosomal_rna_28s_16s_ratio/common"
+    type: number
+    minimum: 0
+
+  ribosomal_rna_28s_18s_ratio:
+    $ref:
+      - "_terms.yaml#/ribosomal_rna_28s_18s_ratio/common"
     type: number
     minimum: 0
 
