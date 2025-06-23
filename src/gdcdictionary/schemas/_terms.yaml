@@ -714,7 +714,7 @@ biospecimen_laterality:
         Specimen Laterality
       source: caDSR
       cde_id: 8028966
-      cde_version: 1.0
+      cde_version: 2.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=8028966%20and%20ver_nr=2.0"
 
 biospecimen_type:
