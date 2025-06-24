@@ -34,8 +34,8 @@ links:
 required:
   - submitter_id
   - ethnicity
-  - gender
   - race
+  - sex_at_birth
   - vital_status
 
 uniqueKeys:
@@ -43,8 +43,7 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 deprecated:
-  - premature_at_birth
-  - weeks_gestation_at_birth
+  - gender
 
 properties:
 
@@ -2158,28 +2157,8 @@ properties:
       - "_terms.yaml#/population_group/common"
     enum:
       - Ashkenazi Jew
-
-  premature_at_birth:
-    $ref:
-      - "_terms.yaml#/premature_at_birth/common"
-    enum:
-      - "Yes"
-      - "No"
       - Unknown
       - Not Reported
-    enumDef:
-      "Yes":
-        $ref:
-          - "_terms_enum.yaml#/yes/common"
-      "No":
-        $ref:
-          - "_terms_enum.yaml#/no/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
 
   race:
     $ref:
@@ -2229,6 +2208,14 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
+  sex_at_birth:
+    $ref:
+      - "_terms.yaml#/sex_at_birth/common"
+    enum:
+      - female
+      - male
+      - unknown
+
   vital_status:
     $ref:
       - "_terms.yaml#/vital_status/common"
@@ -2250,12 +2237,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-
-  weeks_gestation_at_birth:
-    $ref:
-      - "_terms.yaml#/weeks_gestation_at_birth/common"
-    type: number
-    minimum: 0
 
   year_of_birth:
     $ref:
