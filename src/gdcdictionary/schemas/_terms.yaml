@@ -10,9 +10,9 @@ a260_a280_ratio:
       term: >-
         Nucleic Acid Absorbance at 260 And Absorbance at 280 DNA Purity Ratio Value
       source: caDSR
-      cde_id: 5432595
+      cde_id: 15113234
       cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432595%20and%20ver_nr=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=15113234%20and%20ver_nr=1.0"
 
 aa_change:
   common:
@@ -116,9 +116,9 @@ age_at_diagnosis:
       term: >-
         Patient Diagnosis Age Day Value
       source: caDSR
-      cde_id: 3225640
-      cde_version: 2.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3225640%20and%20ver_nr=2.0"
+      cde_id: 10609539
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=10609539%20and%20ver_nr=1.0"
 
 age_at_index:
   common:
@@ -139,10 +139,10 @@ age_at_last_exposure:
       The study participant's age at the time they were last exposed.
     termDef:
       term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      source: caDSR
+      cde_id: 14589582
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=14589582%20and%20ver_nr=1.0"
 
 age_at_onset:
   common:
@@ -166,10 +166,10 @@ age_is_obfuscated:
       (HIPAA).
     termDef:
       term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      source: caDSR
+      cde_id: 15157256
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=15157256%20and%20ver_nr=1.0"
 
 aids_risk_factors:
   common:
@@ -307,9 +307,9 @@ ajcc_staging_system_edition:
       term: >-
         American Joint Committee on Cancer Publication Version Type
       source: caDSR
-      cde_id: 2722309
+      cde_id: 6689577
       cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2722309%20and%20ver_nr=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6689577%20and%20ver_nr=1.0"
 
 alcohol_days_per_week:
   common:
@@ -371,9 +371,9 @@ alcohol_intensity:
       term: >-
         Person Self-Report Alcoholic Beverage Exposure Category
       source: caDSR
-      cde_id: 3457767
+      cde_id: 16181649
       cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3457767%20and%20ver_nr=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=16181649%20and%20ver_nr=1.0"
 
 alcohol_type:
   common:
@@ -394,10 +394,10 @@ aliquot_quantity:
     termDef:
       term: >-
         Biospecimen Aliquot Quantity
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      source: caDSR
+      cde_id: 15745091
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=15745091%20and%20ver_nr=1.0"
 
 aliquot_volume:
   common:
@@ -407,10 +407,10 @@ aliquot_volume:
     termDef:
       term: >-
         Biospecimen Aliquot Volume
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      source: caDSR
+      cde_id: 15745088
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=15745088%20and%20ver_nr=1.0"
 
 amount:
   common:
@@ -444,9 +444,9 @@ analyte_type:
       term: >-
         Molecular Specimen Type Text Name
       source: caDSR
-      cde_id: 2513915
-      cde_version: 2.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2513915%20and%20ver_nr=2.0"
+      cde_id: 15063661
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=15063661%20and%20ver_nr=1.0"
 
 analyte_type_id:
   common:
@@ -456,22 +456,22 @@ analyte_type_id:
       term: >-
         Molecular Analyte Identification Code
       source: caDSR
-      cde_id: 5432508
+      cde_id: 15248244
       cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432508%20and%20ver_nr=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=15248244%20and%20ver_nr=1.0"
 
 analyte_volume:
   common:
     description: >-
-      The volume in microliters (ul) of the aliquot(s) derived from the analyte(s)
-      shipped for sequencing and characterization.
+      The volume in microliters (ul) of the analyte(s) shipped for sequencing and
+       characterization.
     termDef:
       term: >-
         Biospecimen Analyte Volume
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      source: caDSR
+      cde_id: 15248383
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=15248383%20and%20ver_nr=1.0"
 
 anaplasia_present:
   common:
@@ -640,10 +640,10 @@ average_read_length:
       Average read length collected from samtools.
     termDef:
       term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      source: caDSR
+      cde_id: 12426615
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=12426615%20and%20ver_nr=1.0"
 
 barretts_esophagus_goblet_cells_present:
   common:
@@ -688,9 +688,9 @@ best_overall_response:
       term: >-
         Best Response Assessment Type
       source: caDSR
-      cde_id: 2003324
-      cde_version: 4.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2003324%20and%20ver_nr=4.0"
+      cde_id: 15179918
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=15179918%20and%20ver_nr=1.0"
 
 biospecimen_anatomic_site:
   common:
@@ -713,9 +713,9 @@ biospecimen_laterality:
       term: >-
         Specimen Laterality
       source: caDSR
-      cde_id: 2007875
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2007875%20and%20ver_nr=1.0"
+      cde_id: 8028966
+      cde_version: 2.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=8028966%20and%20ver_nr=2.0"
 
 biospecimen_type:
   common:
@@ -789,9 +789,9 @@ body_surface_area:
       term: >-
         Person Body Surface Area Value
       source: caDSR
-      cde_id: 653
-      cde_version: 6.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=653%20and%20ver_nr=6.0"
+      cde_id: 15118839
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=15118839%20and%20ver_nr=1.0"
 
 bone_marrow_malignant_cells:
   common:
@@ -863,9 +863,9 @@ cause_of_death:
       term: >-
         Patient Death Reason
       source: caDSR
-      cde_id: 2554674
-      cde_version: 3.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2554674%20and%20ver_nr=3.0"
+      cde_id: 4783274
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=4783274%20and%20ver_nr=1.0"
 
 cause_of_death_source:
   common:
@@ -1101,9 +1101,9 @@ classification_of_tumor:
       term: >-
         Tumor Tissue Disease Description Type
       source: caDSR
-      cde_id: 3288124
+      cde_id: 12922545
       cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3288124%20and%20ver_nr=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=12922545%20and%20ver_nr=1.0"
 
 clinical_trial_indicator:
   common:
@@ -1231,9 +1231,9 @@ comorbidity:
       term: >-
         Index Date To Comorbidity Day Count
       source: caDSR
-      cde_id: 2970715
+      cde_id: 14483678
       cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2970715%20and%20ver_nr=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=14483678%20and%20ver_nr=1.0"
 
 comorbidity_method_of_diagnosis:
   common:
@@ -1344,9 +1344,9 @@ country_of_residence_at_enrollment:
       term: >-
         Country of Residence
       source: caDSR
-      cde_id: 7050286
+      cde_id: 15115432
       cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=7050286%20and%20ver_nr=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=15115432%20and%20ver_nr=1.0"
 
 course_number:
   common:
@@ -1406,10 +1406,10 @@ data_category:
       Broad categorization of the contents of the data file.
     termDef:
       term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      source: caDSR
+      cde_id: 14824731
+      cde_version: 2.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=14824731%20and%20ver_nr=2.0"
 
 data_file_error_type:
   common:
@@ -1428,10 +1428,10 @@ data_format:
       Format of the data files.
     termDef:
       term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      source: caDSR
+      cde_id: 11416926
+      cde_version: 2.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=11416926%20and%20ver_nr=2.0"
 
 data_type:
   common:
@@ -1787,10 +1787,10 @@ diagnosis_pathologically_confirmed:
     termDef:
       term: >-
         Post-Diagnostic Pathology Review Confirmation
-      source:
-      cde_id:
-      cde_version:
-      term_url:
+      source: caDSR
+      cde_id: 15115494
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=15115494%20and%20ver_nr=1.0"
 
 disease_response:
   common:
@@ -1800,9 +1800,9 @@ disease_response:
       term: >-
         Disease Response Code
       source: caDSR
-      cde_id: 5750671
+      cde_id: 13383448
       cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5750671%20and%20ver_nr=1.0"
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=13383448%20and%20ver_nr=1.0"
 
 disease_type:
   common:
