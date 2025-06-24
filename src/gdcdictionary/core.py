@@ -36,11 +36,11 @@ def get_schema_directory(local_path: str | None = None) -> pathlib.Path:
 
 class GDCDictionary:
     _metaschema_path = "metaschema.yaml"
-    _definitions_paths = [
+    _definitions_paths = (
         "_definitions.yaml",
         "_terms.yaml",
         "_terms_enum.yaml",
-    ]
+    )
 
     def __init__(
         self,
@@ -64,7 +64,7 @@ class GDCDictionary:
         self.root_dir = get_schema_directory(root_dir)
         self.metaschema_path = metaschema_path or self._metaschema_path
         self.definitions_paths = definitions_paths or self._definitions_paths
-        self.exclude = [self.metaschema_path] + self.definitions_paths
+        self.exclude = frozenset((self.metaschema_path, *self.definitions_paths))
         self._schema = dict()
         self.resolvers = dict()
         if not lazy:

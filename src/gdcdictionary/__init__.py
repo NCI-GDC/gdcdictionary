@@ -6,12 +6,12 @@ from gdcdictionary.validators import (
     validate_instances,
 )
 
-__all__ = [
+__all__ = (
+    "GDCDictionary",
+    "SchemaValidationError",
+    "SchemaValidator",
     "gdcdictionary",
     "get_schema_directory",
     "validate",
     "validate_instances",
-    "GDCDictionary",
-    "SchemaValidator",
-    "SchemaValidationError",
-]
+)
