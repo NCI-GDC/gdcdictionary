@@ -4,7 +4,7 @@ import copy
 import logging
 import pathlib
 from importlib import abc, resources
-from typing import Any, NamedTuple
+from typing import NamedTuple
 
 import jsonschema
 import yaml
@@ -23,7 +23,7 @@ def get_schema_directory(local_path: str | abc.Traversable | None = None) -> abc
     Args:
         local_path: custom location for the schema
     Returns:
-        the schema directory as path object.
+        the schema directory as a generic traversable.
     """
     if local_path is None:
         return resources.files("gdcdictionary") / "schemas"
@@ -69,7 +69,7 @@ class GDCDictionary:
         self.definitions_paths = definitions_paths or self._definitions_paths
         self.exclude = [self.metaschema_path] + self.definitions_paths
         self._schema = dict()
-        self.resolvers = dict()
+        self.resolvers: dict[str, ResolverPair] = dict()
         self._yaml_loader = yaml.CSafeLoader if yaml.__with_libyaml__ else yaml.SafeLoader
 
         if not lazy:
@@ -91,7 +91,7 @@ class GDCDictionary:
 
     def load_schemas_from_dir(
         self, directory: abc.Traversable
-    ) -> tuple[dict[str, Any], dict[str, Any]]:
+    ) -> tuple[dict[str, dict], dict[str, ResolverPair]]:
         """Returns all yamls and resolvers of those yamls from dir"""
 
         schemas, resolvers = {}, {}
