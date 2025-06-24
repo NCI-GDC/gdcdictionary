@@ -64,12 +64,8 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 deprecated:
-  - composition
-  - is_ffpe
-  - oct_embedded
   - sample_type
-  - sample_type_id
-  - tumor_code
+  - tumor_code_id
 
 properties:
 
@@ -115,7 +111,6 @@ properties:
       - Bone Marrow
       - Bowel
       - Brain
-      - Brain Stem
       - Brainstem
       - Breast
       - Broad Ligament
@@ -149,7 +144,6 @@ properties:
       - Colon
       - Colon - Mucosa Only
       - Common Bile Duct
-      - Common Duct
       - Conjunctiva
       - Connective Tissue
       - Dermal
@@ -375,8 +369,6 @@ properties:
       - Not Reported
       - Not Allowed To Collect
     deprecated_enum:
-      - Brain Stem
-      - Common Duct
       - Head - Face Or Neck, Nos
     enumDef:
       Bone Marrow:
@@ -434,72 +426,6 @@ properties:
     $ref:
       - "_terms.yaml#/catalog_reference/common"
     type: string
-
-  composition:
-    $ref:
-      - "_terms.yaml#/composition/common"
-    enum:
-      - 2D Classical Conditionally Reprogrammed Cells
-      - 2D Modified Conditionally Reprogrammed Cells
-      - 3D Air-Liquid Interface Organoid
-      - 3D Neurosphere
-      - 3D Organoid
-      - Adherent Cell Line
-      - Bone Marrow Components
-      - Bone Marrow Components NOS
-      - Buccal Cells
-      - Buffy Coat
-      - Cell
-      - Control Analyte
-      - Derived Cell Line
-      - EBV Immortalized
-      - Fibroblasts from Bone Marrow Normal
-      - Granulocytes
-      - Human Original Cells
-      - Liquid Suspension Cell Line
-      - Lymphocytes
-      - Mixed Adherent Suspension
-      - Mononuclear Cells from Bone Marrow Normal
-      - Peripheral Blood Components NOS
-      - Peripheral Whole Blood
-      - Plasma
-      - Pleural Effusion
-      - Saliva
-      - Serum
-      - Solid Tissue
-      - Sorted Cells
-      - Sputum
-      - Whole Bone Marrow
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Not Allowed To Collect
-    enumDef:
-      Buffy Coat:
-        $ref:
-          - "_terms_enum.yaml#/buffy_coat/common"
-      Lymphocytes:
-        $ref:
-          - "_terms_enum.yaml#/lymphocytes/common"
-      Plasma:
-        $ref:
-          - "_terms_enum.yaml#/plasma/common"
-      Saliva:
-        $ref:
-          - "_terms_enum.yaml#/saliva/common"
-      Serum:
-        $ref:
-          - "_terms_enum.yaml#/serum/common"
-      Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      Not Reported:
-        $ref:
-          - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   current_weight:
     $ref:
@@ -593,11 +519,6 @@ properties:
     type: number
     minimum: 0
 
-  is_ffpe:
-    $ref:
-      - "_terms.yaml#/is_ffpe/common"
-    type: boolean
-
   longest_dimension:
     $ref:
       - "_terms.yaml#/longest_dimension/common"
@@ -633,7 +554,6 @@ properties:
       - Hand Assisted Laparoscopic Radical Nephrectomy
       - Hysterectomy NOS
       - Incisional Biopsy
-      - Indeterminant
       - Indeterminate
       - Laparoscopic Biopsy
       - Laparoscopic Partial Nephrectomy
@@ -712,15 +632,10 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
-    deprecated_enum:
-      - Indeterminant
     enumDef:
       Autopsy:
         $ref:
           - "_terms_enum.yaml#/autopsy/common"
-      Indeterminant:
-        $ref:
-          - "_terms_enum.yaml#/indeterminant/common"
       Other:
         $ref:
           - "_terms_enum.yaml#/other/common"
@@ -733,11 +648,6 @@ properties:
       Not Allowed To Collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
-
-  oct_embedded:
-    $ref:
-      - "_terms.yaml#/oct_embedded/common"
-    type: string
 
   passage_count:
     $ref:
@@ -860,43 +770,6 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
-  sample_type_id:
-    $ref:
-      - "_terms.yaml#/sample_type_id/common"
-    enum:
-      - "01"
-      - "02"
-      - "03"
-      - "04"
-      - "05"
-      - "06"
-      - "07"
-      - "08"
-      - "09"
-      - "10"
-      - "11"
-      - "12"
-      - "13"
-      - "14"
-      - "15"
-      - "16"
-      - "17"
-      - "18"
-      - "20"
-      - "30"
-      - "31"
-      - "32"
-      - "40"
-      - "41"
-      - "42"
-      - "50"
-      - "60"
-      - "61"
-      - "85"
-      - "86"
-      - "87"
-      - "99"
-
   shortest_dimension:
     $ref:
       - "_terms.yaml#/shortest_dimension/common"
@@ -989,43 +862,6 @@ properties:
       Not Allowed To Collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
-
-  tumor_code:
-    $ref:
-      - "_terms.yaml#/tumor_code/common"
-    enum:
-      - Acute Leukemia of Ambiguous Lineage (ALAL)
-      - Acute lymphoblastic leukemia (ALL)
-      - Acute myeloid leukemia (AML)
-      - Anal Cancer (all types)
-      - Cervical Cancer (all types)
-      - Clear cell sarcoma of the kidney (CCSK)
-      - CNS, ependymoma
-      - CNS, glioblastoma (GBM)
-      - CNS, low grade glioma (LGG)
-      - CNS, medulloblastoma
-      - CNS, other
-      - CNS, rhabdoid tumor
-      - Diffuse Large B-Cell Lymphoma (DLBCL)
-      - Ewing sarcoma
-      - Induction Failure AML (AML-IF)
-      - Lung Cancer (all types)
-      - Neuroblastoma (NBL)
-      - NHL, anaplastic large cell lymphoma
-      - NHL, Burkitt lymphoma (BL)
-      - Non cancerous tissue
-      - Osteosarcoma (OS)
-      - Rhabdoid tumor (kidney) (RT)
-      - Rhabdomyosarcoma
-      - Soft tissue sarcoma, non-rhabdomyosarcoma
-      - Wilms tumor (WT)
-    enumDef:
-      Ewing sarcoma:
-        $ref:
-          - "_terms_enum.yaml#/ewing_sarcoma/common"
-      Rhabdomyosarcoma:
-        $ref:
-          - "_terms_enum.yaml#/rhabdomyosarcoma/common"
 
   tumor_code_id:
     $ref:
