@@ -95,6 +95,38 @@ properties:
     $ref:
       - "read_group.yaml#/properties/platform"
 
+  tmb:
+    $ref:
+      - "_terms.yaml#/tmb/common"
+    oneOf:
+      - type: number
+        minimum: 0
+      - type: "null"
+
+  tmb_exonic:
+    $ref:
+      - "_terms.yaml#/tmb_exonic/common"
+    oneOf:
+      - type: number
+        minimum: 0
+      - type: "null"
+
+  tmb_nonsynonymous:
+    $ref:
+      - "_terms.yaml#/tmb_nonsynonymous/common"
+    oneOf:
+      - type: number
+        minimum: 0
+      - type: "null"
+
+  tmb_nonsynonymous_exonic:
+    $ref:
+      - "_terms.yaml#/tmb_nonsynonymous_exonic/common"
+    oneOf:
+      - type: number
+        minimum: 0
+      - type: "null"
+
   projects:
     $ref: "_definitions.yaml#/to_one_project"
 
