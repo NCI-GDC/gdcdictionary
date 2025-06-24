@@ -19,7 +19,8 @@ variables:
 tox:
   parallel:
     matrix:
-      - LANGUAGE_VERSION: [python3.9, python3.10, python3.11, python3.12]
+      - LANGUAGE_VERSION:
+          [python3.9, python3.10, python3.11, python3.12, python3.13]
 
 execute_plaster:
   extends: .job-with-ssh-keys
