@@ -1,6 +1,6 @@
 [build-system]
 build-backend = "setuptools.build_meta"
-requires = ["setuptools>=66", "wheel", "setuptools_scm[toml]>=7.0"]
+requires = ["setuptools>=78", "wheel", "setuptools_scm[toml]>=7.0"]
 
 [project]
 authors = [
@@ -55,14 +55,14 @@ context = "unit tests"
 source = ["gdcdictionary"]
 
 [tool.pytest.ini_options]
-minversion = 6.0
+minversion = "6.0"
 # Silence warning by opting in to use pytest 6's new default value
 addopts = "-rfE --color=yes --cov=gdcdictionary --cov-report term"
 console_output_style = "classic"
 filterwarnings = ["ignore::DeprecationWarning"]
 junit_family = "xunit2"
 junit_logging = "system-out"
-log_cli = "true"
+log_cli = true
 log_cli_level = "INFO"
 norecursedirs = [".git", ".tox", "dist", "build", "examples", "sandbox"]
 testpaths = ["tests"]
@@ -71,6 +71,18 @@ testpaths = ["tests"]
 line-length = 95
 src = ["src", "tests"]
 target-version = "py39"
+
+[tool.ruff.lint]
+# see https://docs.astral.sh/ruff/rules/
+select = [
+  "E", # pydocstyle errors
+  "F", # pyflakes
+  "I", # isort
+  "N", # pep8 naming
+  "RUF", # ruff specific rules
+  "UP", # pyupgrade
+  "W" # pydocstyle warnings
+]
 
 [tool.setuptools_scm]
 local_scheme = "no-local-version"
