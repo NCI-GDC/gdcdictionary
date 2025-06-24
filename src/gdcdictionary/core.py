@@ -1,14 +1,11 @@
+from __future__ import annotations
+
 import logging
 import pathlib
 from collections import namedtuple
 from copy import deepcopy
-
-try:
-    from importlib.resources import files
-except ImportError:
-    from importlib_resources import files
-
-from typing import Any, Dict, List, Optional, Tuple
+from importlib import resources
+from typing import Any
 
 import yaml
 from jsonschema import RefResolver
@@ -17,7 +14,7 @@ logger = logging.getLogger(__name__)
 ResolverPair = namedtuple("ResolverPair", ["resolver", "source"])
 
 
-def get_schema_directory(local_path: Optional[str] = None) -> pathlib.Path:
+def get_schema_directory(local_path: str | None = None) -> pathlib.Path:
     """Resolve the directory containing the schema definitions files.
 
     Args:
@@ -29,16 +26,15 @@ def get_schema_directory(local_path: Optional[str] = None) -> pathlib.Path:
         path = pathlib.Path(local_path)
 
         if not path.exists():
-            raise IOError("Specified template directory '%s' does not exist", path)
+            raise OSError("Specified template directory '%s' does not exist", path)
         return path
 
     # use default embedded location
-    with files("gdcdictionary").joinpath("schemas") as path:
+    with resources.files("gdcdictionary").joinpath("schemas") as path:
         return path
 
 
 class GDCDictionary:
-
     _metaschema_path = "metaschema.yaml"
     _definitions_paths = [
         "_definitions.yaml",
@@ -49,9 +45,9 @@ class GDCDictionary:
     def __init__(
         self,
         lazy: bool = False,
-        root_dir: Optional[str] = None,
-        definitions_paths: Optional[List[str]] = None,
-        metaschema_path: Optional[str] = None,
+        root_dir: str | None = None,
+        definitions_paths: list[str] | None = None,
+        metaschema_path: str | None = None,
     ):
         """Creates a new dictionary instance.
 
@@ -95,7 +91,7 @@ class GDCDictionary:
 
     def load_schemas_from_dir(
         self, directory: pathlib.Path
-    ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
+    ) -> tuple[dict[str, Any], dict[str, Any]]:
         """Returns all yamls and resolvers of those yamls from dir"""
 
         schemas, resolvers = {}, {}

@@ -39,7 +39,8 @@ from __future__ import annotations
 
 import logging
 import re
-from typing import Any, Dict, Iterable, List, NamedTuple, Optional
+from collections.abc import Iterable
+from typing import Any, NamedTuple
 
 from jsonschema import Draft4Validator
 
@@ -47,10 +48,10 @@ from gdcdictionary import gdcdictionary
 
 logger = logging.getLogger(__name__)
 invalid_property_regex = re.compile(r"('[a-zA-Z_-]+')+")
-_validators: Dict[str, SchemaValidator] = {}
+_validators: dict[str, SchemaValidator] = {}
 
 
-def _parse_keys_from_error_message(error_msg: str) -> List[str]:
+def _parse_keys_from_error_message(error_msg: str) -> list[str]:
     missing_prop = invalid_property_regex.findall(error_msg)
     return [m.replace("'", "") for m in missing_prop]
 
@@ -66,7 +67,7 @@ class SchemaValidationError(NamedTuple):
 
     schema: str
     message: str
-    keys: List[str]
+    keys: list[str]
 
     @property
     def is_required_field_violation(self) -> bool:
@@ -77,7 +78,7 @@ class SchemaValidationError(NamedTuple):
         return self.is_required_field_violation
 
     @classmethod
-    def from_values(cls, schema: str, message: str, keys: List[str]) -> SchemaValidationError:
+    def from_values(cls, schema: str, message: str, keys: list[str]) -> SchemaValidationError:
         if "Additional properties are not allowed" in message:
             message = f"Key(s) {keys} not a valid property for type '{schema}'"
         logger.debug(
@@ -102,8 +103,8 @@ class SchemaValidator:
 
     def iter_errors(
         self, json_instance: Any, partial: bool = False
-    ) -> List[SchemaValidationError]:
-        violations: List[SchemaValidationError] = []
+    ) -> list[SchemaValidationError]:
+        violations: list[SchemaValidationError] = []
         for error in self.validator.iter_errors(instance=json_instance):
             # the key will be  property.sub property for nested properties
             errors = [str(e) for e in error.path if error.path]
@@ -138,7 +139,7 @@ class SchemaValidator:
         return violations
 
 
-def _get_validator(schema_name: str) -> Optional[SchemaValidator]:
+def _get_validator(schema_name: str) -> SchemaValidator | None:
     if schema_name not in _validators and schema_name not in gdcdictionary.schema:
         logger.warning("Unknown schema name specified %s", schema_name)
         return None
@@ -146,7 +147,7 @@ def _get_validator(schema_name: str) -> Optional[SchemaValidator]:
     return _validators[schema_name]
 
 
-def validate(instance: Dict[str, Any], partial: bool = False) -> List[SchemaValidationError]:
+def validate(instance: dict[str, Any], partial: bool = False) -> list[SchemaValidationError]:
     """Validate a single json instance.
 
     `type` is handled specially as it is not defined as a required field in
@@ -193,7 +194,7 @@ def validate(instance: Dict[str, Any], partial: bool = False) -> List[SchemaVali
 
 def validate_instances(
     instances: Iterable[dict], partial: bool = False
-) -> List[SchemaValidationError]:
+) -> list[SchemaValidationError]:
     """Validate multiple json instances.
 
     Args:
@@ -204,7 +205,7 @@ def validate_instances(
     Returns:
         list of errors
     """
-    violations: List[SchemaValidationError] = []
+    violations: list[SchemaValidationError] = []
     for instance in instances:
         violations += validate(instance, partial)
     return violations

@@ -12,9 +12,18 @@ include:
     file:
       - templates/artifacts/python-library.yaml
 
+variables:
+  LANGUAGE_VERSION: python3.9
+  BASE_CONTAINER_VERSION: 3.1.0
+
+tox:
+  parallel:
+    matrix:
+      - LANGUAGE_VERSION: [python3.9, python3.10, python3.11, python3.12]
+
 execute_plaster:
   extends: .job-with-ssh-keys
-  image: docker.osdc.io/ncigdc/python3.9-builder:${BASE_CONTAINER_VERSION}
+  image: docker.osdc.io/ncigdc/${LANGUAGE_VERSION}-builder:${BASE_CONTAINER_VERSION}
   stage: generate-data-model
   script:
     - export root_dir=$(pwd)
@@ -52,10 +61,9 @@ execute_plaster:
       - gdcdatamodel2
     expire_in: 1 week
 
-
 push_datamodels_to_github:
   extends: .job-with-ssh-keys
-  image: docker.osdc.io/ncigdc/python3.9-builder:${BASE_CONTAINER_VERSION}
+  image: docker.osdc.io/ncigdc/${LANGUAGE_VERSION}-builder:${BASE_CONTAINER_VERSION}
   stage: generate-data-model
   needs:
     - execute_plaster
@@ -74,10 +82,9 @@ push_datamodels_to_github:
       - gdcdatamodel2
     expire_in: 1 week
 
-
 push_datamodels_tag_to_github:
   extends: .job-with-ssh-keys
-  image: docker.osdc.io/ncigdc/python3.8-builder:${BASE_CONTAINER_VERSION}
+  image: docker.osdc.io/ncigdc/${LANGUAGE_VERSION}-builder:${BASE_CONTAINER_VERSION}
   stage: generate-data-model
   needs:
     - push_datamodels_to_github

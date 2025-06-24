@@ -60,7 +60,6 @@ def _generate_error_message_for_enum(res_dict):
 
 
 class SchemaTest(BaseTest):
-
     # @unittest.expectedFailure
     def test_properties_enum(self):
         """Check the enums of node properties"""
@@ -248,10 +247,10 @@ class SchemaTest(BaseTest):
                 maximum = values.get("maximum")
                 minimum = values.get("minimum")
                 if prop_type == "integer" and maximum is not None and minimum is not None:
-                    assert (
-                        maximum >= minimum
-                    ), "Integer maximum should be larger than minimum: {}.properties.{}".format(
-                        node_schema["id"], prop
+                    assert maximum >= minimum, (
+                        "Integer maximum should be larger than minimum: {}.properties.{}".format(
+                            node_schema["id"], prop
+                        )
                     )
 
     def test_no_missing_type_array(self):
@@ -271,8 +270,8 @@ class SchemaTest(BaseTest):
                 prop_type = values.get("type")
                 has_items = values.get("items") is not None
                 if has_items:
-                    assert (
-                        prop_type == "array"
-                    ), "{}.properties.{} should has type array rather than {}".format(
-                        node_schema["id"], prop, prop_type
+                    assert prop_type == "array", (
+                        "{}.properties.{} should has type array rather than {}".format(
+                            node_schema["id"], prop, prop_type
+                        )
                     )

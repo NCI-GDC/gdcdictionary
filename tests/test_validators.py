@@ -8,14 +8,9 @@ to it
 
 """
 
-import uuid
-
-try:
-    from importlib.resources import files
-except ImportError:
-    from importlib_resources import files
-
 import json
+import uuid
+from importlib import resources
 
 import pytest
 
@@ -23,7 +18,7 @@ import gdcdictionary
 
 
 def get_all_paths(subdir: str) -> str:
-    with files("tests") as path:
+    with resources.files("tests") as path:
         examples_path = path.parent / f"examples/{subdir}"
         yield from sorted(examples_path.glob("*.json"))
 
@@ -83,7 +78,9 @@ def test_validate_instances__invalid_types(partial: bool) -> None:
     case_required_field_violation = next(
         v for v in violations if v.schema == "aliquot" and v.keys == ["submitter_id", "id"]
     )
-    assert case_required_field_violation.message == "one of ['submitter_id', 'id'] is required."
+    assert (
+        case_required_field_violation.message == "one of ['submitter_id', 'id'] is required."
+    )
 
     case_extra_field_violation = next(
         v for v in violations if v.schema == "case" and v.keys == ["python_version"]

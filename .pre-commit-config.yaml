@@ -1,15 +1,12 @@
 ---
 repos:
-  - repo: https://github.com/psf/black
-    rev: 24.4.2
-    hooks:
-      - id: black
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
       - id: check-json
       - id: check-toml
       - id: check-yaml
+        exclude: ^\.gitlab-ci.yml|docker-compose\.yaml
       - id: end-of-file-fixer
       - id: fix-encoding-pragma
         args: [--remove]
@@ -19,29 +16,20 @@ repos:
         args: [--autofix, --no-sort-keys]
       - id: trailing-whitespace
         args: [--markdown-linebreak-ext=md]
-  - repo: https://github.com/pycqa/isort
-    rev: 5.13.2
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.11
     hooks:
-      - id: isort
-        name: isort (python)
-        args: [--profile, black]
-      - id: isort
-        name: isort (cython)
-        types: [cython]
-        args: [--profile, black]
-      - id: isort
-        name: isort (pyi)
-        types: [pyi]
-        args: [--profile, black]
+      - id: ruff-check
+        args: [--fix]
+      - id: ruff-format
   - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
     rev: 0.2.3
     hooks:
       - id: yamlfmt
-        args: [--mapping, '2', --sequence, '4', --offset, '2', --width, '80']
-        # yamllint disable-line rule:line-length
+        args: [--mapping, '2', --sequence, '4', --offset, '2', --width, '95']
         exclude: ^helm/templates/|^\.gitlab-ci.yml|^src/gdcdictionary/schemas/|^sandbox/
   - repo: https://github.com/pappasam/toml-sort
-    rev: v0.23.1
+    rev: v0.24.2
     hooks:
       - id: toml-sort
         args: [--in-place]
