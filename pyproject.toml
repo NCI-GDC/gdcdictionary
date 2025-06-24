@@ -1,65 +1,86 @@
 [build-system]
-requires = ["setuptools>=66", "wheel", "setuptools_scm[toml]>=7.0"]
 build-backend = "setuptools.build_meta"
+requires = ["setuptools>=78", "wheel", "setuptools_scm[toml]>=7.0"]
 
 [project]
-name = "gdcdictionary"
-dynamic = [
-  "version",
-  "description",
-  "readme",
-  "requires-python",
-  "license",
-  "authors",
-  "maintainers",
-  "keywords",
-  "classifiers",
-  "urls",
-  "scripts",
-  "gui-scripts",
-  "entry-points",
-  "dependencies",
-  "optional-dependencies"
+authors = [
+  {name = "GDC Feature Team", email = "gdc_dev_questions-aaaaae2lhsbell56tlvh3upgoq@cdis.slack.com"}
 ]
+classifiers = [
+  "Operating System :: Unix",
+  "Operating System :: POSIX :: Linux",
+  "License :: OSI Approved :: Apache Software License",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Internet",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12"
+]
+dependencies = ["jsonschema", "pyyaml"]
+description = "The Genomic Data Commons (GDC) data dictionary"
+dynamic = ["version"]
+keywords = [
+  "Genomic Data Commons",
+  "JSON schema",
+  "Data Dictionary",
+  "GDC",
+  "Cancer Research"
+]
+license-files = ["LICENSE"]
+maintainers = [
+  {name = "GDC Feature Team", email = "gdc_dev_questions-aaaaae2lhsbell56tlvh3upgoq@cdis.slack.com"}
+]
+name = "gdcdictionary"
+readme = "README.md"
+requires-python = ">=3.9,<3.13"
 
-[tool.black]
-line-length = 98
-include = '\.pyi?$'
+[project.optional-dependencies]
+dev = ["coverage[toml]", "pytest", "pytest-cov"]
+lint = ["pre-commit"]
+
+[project.urls]
+Repository = "https://github.com/NCI-GDC/gdcdictionary"
 
 [tool.coverage.html]
-title = "gdcdictionary coverage report"
 directory = "docs/htmlcov"
 show_contexts = true
+title = "gdcdictionary coverage report"
 
 [tool.coverage.run]
 branch = true
 context = "unit tests"
 source = ["gdcdictionary"]
 
-[tool.isort]
-profile = "black"
-known_first_party = ["gdcdictionary"]
-
 [tool.pytest.ini_options]
-minversion = 6.0
+minversion = "6.0"
 # Silence warning by opting in to use pytest 6's new default value
+addopts = "-rfE --color=yes --cov=gdcdictionary --cov-report term"
+console_output_style = "classic"
+filterwarnings = ["ignore::DeprecationWarning"]
 junit_family = "xunit2"
 junit_logging = "system-out"
-console_output_style = "classic"
+log_cli = true
 log_cli_level = "INFO"
-log_cli = "true"
-filterwarnings = ["ignore::DeprecationWarning"]
-addopts = "-rfE --color=yes --cov=gdcdictionary --cov-report term"
-norecursedirs = [
-  ".git",
-  ".tox",
-  "dist",
-  "build",
-  "examples",
-  "sandbox"
-]
-testpaths = [
-  "tests"
+norecursedirs = [".git", ".tox", "dist", "build", "examples", "sandbox"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 95
+src = ["src", "tests"]
+target-version = "py39"
+
+[tool.ruff.lint]
+# see https://docs.astral.sh/ruff/rules/
+select = [
+  "E", # pydocstyle errors
+  "F", # pyflakes
+  "I", # isort
+  "N", # pep8 naming
+  "RUF", # ruff specific rules
+  "UP", # pyupgrade
+  "W" # pydocstyle warnings
 ]
 
 [tool.setuptools_scm]

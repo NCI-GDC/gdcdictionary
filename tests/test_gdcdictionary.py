@@ -1,10 +1,7 @@
 import dataclasses
-from typing import Any, Mapping, Sequence
-
-try:
-    from importlib.resources import files
-except ImportError:
-    from importlib_resources import files
+from collections.abc import Mapping, Sequence
+from importlib import resources
+from typing import Any
 
 import pytest
 
@@ -74,7 +71,9 @@ class Associations(set):
         """Raise key error if entry already exists."""
         for association in associations:
             if association in self:
-                raise ValueError(f"{association} already exists - Duplicate links not allowed.")
+                raise ValueError(
+                    f"{association} already exists - Duplicate links not allowed."
+                )
         super().update(associations)
 
 
@@ -108,7 +107,7 @@ def test_load_dictionary__invalid_location() -> None:
 
 
 def test_load_dictionary() -> None:
-    with files("tests") as path:
+    with resources.files("tests") as path:
         dictionary = gdcdictionary.GDCDictionary(
             root_dir=str(path.parent / "src/gdcdictionary/schemas"), lazy=False
         )

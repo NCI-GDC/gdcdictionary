@@ -1,5 +1,5 @@
 """
-    Conftest.py a configuration file for pytest
+Conftest.py a configuration file for pytest
 """
 
 import pytest
