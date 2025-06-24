@@ -8,6 +8,7 @@ from __future__ import annotations
 import unittest
 from collections import defaultdict
 from collections.abc import Iterator
+from importlib import resources
 
 import jsonschema
 import yaml
@@ -16,10 +17,11 @@ import gdcdictionary
 from gdcdictionary import GDCDictionary
 
 
-def load_yaml(path, root: str | None = None):
-    schema_path = gdcdictionary.get_schema_directory(root) / path
-    with schema_path.open() as f:
-        return yaml.safe_load(f)
+def load_yaml(path: str):
+    resource = resources.files(gdcdictionary) / "schemas" / path
+
+    with resource.open("rb") as fp:
+        return yaml.safe_load(fp)
 
 
 project1 = load_yaml("projects/project1.yaml")

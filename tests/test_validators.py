@@ -10,40 +10,44 @@ to it
 
 import json
 import uuid
-from importlib import resources
+from collections.abc import Iterable
+from importlib import abc, resources
 
 import pytest
 
 import gdcdictionary
 
 
-def get_all_paths(subdir: str) -> str:
-    with resources.files("tests") as path:
-        examples_path = path.parent / f"examples/{subdir}"
-        yield from sorted(examples_path.glob("*.json"))
+def get_all_paths(subdir: str) -> Iterable[abc.Traversable]:
+    resource = resources.files("tests") / "data/examples" / subdir
+    schemas = (r for r in resource.iterdir() if r.name.endswith(".json"))
+
+    return sorted(schemas, key=lambda s: s.name)
 
 
 @pytest.mark.parametrize("path", get_all_paths("valid"))
-def test_valid_examples(path, schema):
-    with open(path) as f:
+def test_valid_examples(path: abc.Traversable, schema):
+    with path.open("rb") as f:
         doc = json.load(f)
-        assert len(gdcdictionary.validate(doc)) == 0
+
+    assert len(gdcdictionary.validate(doc)) == 0
 
 
 @pytest.mark.parametrize("path", get_all_paths("invalid"))
-def test_invalid_examples(path, schema):
-    with open(path) as f:
+def test_invalid_examples(path: abc.Traversable, schema):
+    with path.open("rb") as f:
         doc = json.load(f)
-        violations = gdcdictionary.validate(doc)
-        assert len(violations) > 0
-        print(violations)
+
+    violations = gdcdictionary.validate(doc)
+    assert len(violations) > 0
+    print(violations)
 
 
 def test_validate_instances() -> None:
     paths = get_all_paths("valid")
     instances = []
     for path in paths:
-        with open(path) as f:
+        with path.open("rb") as f:
             doc = json.load(f)
             instances.append(doc)
     violations = gdcdictionary.validate_instances(instances)

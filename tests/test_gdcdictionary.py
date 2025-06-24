@@ -107,11 +107,10 @@ def test_load_dictionary__invalid_location() -> None:
 
 
 def test_load_dictionary() -> None:
-    with resources.files("tests") as path:
-        dictionary = gdcdictionary.GDCDictionary(
-            root_dir=str(path.parent / "src/gdcdictionary/schemas"), lazy=False
-        )
-        assert dictionary.loaded is True
+    schemas_resource = resources.files("gdcdictionary") / "schemas"
+    dictionary = gdcdictionary.GDCDictionary(root_dir=schemas_resource, lazy=False)
+
+    assert dictionary.loaded is True
 
 
 def test_unique_associations():
