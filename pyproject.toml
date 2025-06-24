@@ -1,6 +1,6 @@
 [build-system]
 build-backend = "setuptools.build_meta"
-requires = ["setuptools>=66", "wheel", "setuptools_scm[toml]>=7.0"]
+requires = ["setuptools>=78", "wheel", "setuptools_scm[toml]>=7.0"]
 
 [project]
 authors = [
