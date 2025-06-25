@@ -7879,3 +7879,15 @@ fertility_history:
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3896771%20and%20ver_nr=1.0"
       term_id: 3896771
       term_version: 1.0
+
+ribosomal_rna_28s_18s_ratio:
+  common:
+    description: >-
+      The 28S/18S ribosomal RNA band ratio used to assess the quality of total RNA.
+    termDef:
+      term: >-
+        28s/18s Ribosomal RNA Ratio
+      source:
+      cde_id:
+      cde_version:
+      term_url:
