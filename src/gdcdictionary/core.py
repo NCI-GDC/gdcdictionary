@@ -77,13 +77,15 @@ class GDCDictionary:
         if not lazy:
             self.load_directory(self.root_dir)
 
-    def load_yaml(self, file: abc.Traversable) -> dict:
+    def load_yaml(self, file: pathlib.Path) -> dict:
         """Return contents of yaml file as dict"""
         # For DAT-1064 Bomb out hard if unicode is in a schema file
         # But allow unicode through the terms and definitions
         if file.name not in self.exclude:
             try:
-                file.read_text(encoding="ascii")
+                data = file.read_text(encoding="ascii")
+
+                return yaml.load(data, Loader=self._yaml_loader)
             except Exception as e:
                 logger.error(f"Error in file: {file}")
                 raise e
@@ -97,13 +99,13 @@ class GDCDictionary:
         """Returns all yamls and resolvers of those yamls from dir"""
 
         schemas, resolvers = {}, {}
-        paths = (p for p in directory.iterdir() if p.name.endswith(".yaml"))
 
-        for path in paths:
-            schema = self.load_yaml(path)
-            schemas[path.name] = schema
-            resolver = jsonschema.RefResolver(f"{path.name}#", schema)
-            resolvers[path.name] = ResolverPair(resolver, schema)
+        with resources.as_file(directory) as dir_path:
+            for path in dir_path.glob("*.yaml"):
+                schema = self.load_yaml(path)
+                schemas[path.name] = schema
+                resolver = jsonschema.RefResolver(f"{path.name}#", schema)
+                resolvers[path.name] = ResolverPair(resolver, schema)
 
         return schemas, resolvers
 
