@@ -554,11 +554,11 @@ properties:
     $ref:
       - "_terms.yaml#/fertility_history/common"
     enum:
+      - Conceived > or = 1 child by assisted reproduction
+      - Conceived > or = 1 child by natural conception
+      - Conceived > or = 1 child by unspecified method
       - Did not achieve pregnancy following > or = 12 months of unprotected intercourse
       - Did not attempt to reproduce
-      - Fathered > or = 1 child by assisted reproduction
-      - Fathered > or = 1 child by natural conception
-      - Fathered > or = 1 child by unspecified method
       - Unknown
       - Not Reported
 
