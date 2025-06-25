@@ -7864,3 +7864,18 @@ dna_integrity_number:
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C183240"
       term_id: C183240
       term_version: 25.05d
+
+fertility_history:
+  common:
+    description: >-
+      Text term to describe an individual's capacity to conceive or to
+      induce conception
+    termDef:
+      term: >-
+        Fertility History
+      source: caDSR
+      cde_id: 3896771
+      cde_version: 1.0
+      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3896771%20and%20ver_nr=1.0"
+      term_id: 3896771
+      term_version: 1.0
