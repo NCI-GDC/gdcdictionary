@@ -550,6 +550,18 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
+  fertility_history:
+    $ref:
+      - "_terms.yaml#/fertility_history/common"
+    enum:
+      - Conceived 1 or more children by assisted reproduction
+      - Conceived 1 or more children by natural conception
+      - Conceived 1 or more children by unspecified method
+      - Did not achieve pregnancy following 12 or more months of unprotected intercourse
+      - Did not attempt to reproduce
+      - Unknown
+      - Not Reported
+
   fev1_fvc_post_bronch_percent:
     $ref:
       - "_terms.yaml#/fev1_fvc_post_bronch_percent/common"
