@@ -70,9 +70,9 @@ push_datamodels_to_github:
     - execute_plaster
   script:
     - cd gdcdatamodel2
-    - cat setup.cfg
     - git status
     - git add .
+    - git status
     - git commit -m "Use gdcdictionary $CI_COMMIT_REF_NAME $CI_COMMIT_SHA" || true
     - git rev-parse --short HEAD
     - git push origin "$CI_COMMIT_REF_NAME" || true
