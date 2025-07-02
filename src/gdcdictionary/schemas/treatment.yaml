@@ -135,6 +135,7 @@ properties:
     $ref:
       - "_terms.yaml#/initial_disease_status/common"
     enum:
+      - Biochemical Recurrence
       - Initial Diagnosis
       - Persistent Disease
       - Progressive Disease
@@ -177,15 +178,21 @@ properties:
     $ref:
       - "_terms.yaml#/margins_involved_site/common"
     enum:
+      - Bladder
       - Cervix Uteri
       - Gerota Fascia
+      - Macroscopic Parametrium
+      - Microscopic Parametrium
       - Parenchyma
       - Perinephric Fat
       - Renal
       - Renal Capsule
       - Renal Sinus
       - Renal Vein
+      - Soft Tissue
       - Ureter
+      - Uterus
+      - Vagina
       - Other
       - Unknown
       - Not Reported
