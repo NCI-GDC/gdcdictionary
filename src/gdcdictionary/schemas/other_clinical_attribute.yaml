@@ -132,6 +132,7 @@ properties:
     type: array
     items:
       enum:
+        - Abdominal Hernia
         - Abnormal Glucose Level
         - Acute Renal Failure
         - Adenocarcinoma
@@ -162,6 +163,7 @@ properties:
         - Androgen Excess
         - Anemia
         - Anxiety
+        - Aortic Valve Insufficiency
         - Arrhythmia
         - Arthritis
         - Asthma
@@ -178,7 +180,9 @@ properties:
         - Behcet's Disease
         - Benign Prostatic Hyperplasia
         - Benign Thyroid Nodule
+        - Beta Thalassemia
         - Biliary Disorder
+        - Bipolar Disorder
         - Birt-Hogg-Dube Syndrome
         - BK Virus
         - Blood Clots
@@ -186,6 +190,7 @@ properties:
         - Bronchitis
         - Calcium Channel Blockers
         - Cancer
+        - Cardiomyopathy
         - Cataracts
         - Celiac Disease
         - Cerebrovascular Disease
@@ -235,14 +240,18 @@ properties:
         - Dyslipidemia
         - EBV Lymphoproliferation
         - Eczema
+        - Encephalitis
         - Endometriosis
         - Endosalpingiosis
         - Epilepsy
         - Epithelial Dysplasia
         - Epithelial Hyperplasia
         - Epstein-Barr Virus
+        - Erectile Dysfunction
+        - Erythroderma
         - Escherichia coli
         - Estrogen Excess
+        - Evan's Syndrome
         - Familial Adenomatous Polyposis
         - Fanconi Anemia
         - Fibromyalgia
@@ -260,16 +269,19 @@ properties:
         - Gonadal Dysfunction
         - Gorlin Syndrome
         - Gout
+        - Graft vs Host Disease
         - Graves' Disease
         - Hashimoto's Thyroiditis
         - Hay Fever
         - Headache
+        - Hearing Loss
         - Heart Disease
         - Helicobacter pylori Infection
         - Helicobacter pylori-Associated Gastritis
         - Hematologic Disorder, NOS
         - Hemihypertrophy
         - Hemochromatosis
+        - Hemophagocytic Lymphohistiocytosis (HLH)
         - Hemorrhagic Cystitis
         - Hepatic Encephalopathy
         - Hepatitis
@@ -306,6 +318,7 @@ properties:
         - Hypertension
         - Hyperthyroidism
         - Hypospadias
+        - Hypotension
         - Hypothyroidism
         - Inflammation
         - Inflammation, Hyperkeratosis
@@ -326,6 +339,7 @@ properties:
         - Low Grade Dysplasia
         - Low Grade Liver Dysplastic Nodule
         - Lupus
+        - Lyme Disease
         - Lymphamatoid Papulosis
         - Lymphocytic Meningitis
         - Lymphocytic Thyroiditis
@@ -335,6 +349,7 @@ properties:
         - Malaria
         - Metabolic Syndrome
         - Methicillin-Resistant Staphylococcus aureus (MRSA)
+        - Migraine
         - Mineralcorticoids Excess
         - Motor / Movement Change
         - Myasthenia Gravis
@@ -343,12 +358,15 @@ properties:
         - Myocardial Infarction
         - Neurocystericerosis
         - Neuroendocrine Tumor
+        - Neuroma
+        - Neuropathy
         - Nevus of Ota
         - Nodular Hyperplasia
         - Nodular Prostatic Hyperplasia
         - Nonalcoholic Fatty Liver Disease
         - Nonalcoholic Steatohepatitis
         - Obesity
+        - Opioid Addiction
         - Organ Transplant (Site)
         - Osteoarthritis
         - Osteoporosis or Osteopenia
@@ -363,14 +381,20 @@ properties:
         - Peripheral Neuropathy
         - Peripheral Vascular Disease
         - Peutz-Jeghers Disease
+        - Pleural Effusion
         - Pneumocystis Pneumonia
         - Pneumonia, NOS
         - Polycystic Ovarian Syndrome (PCOS)
+        - Polycythemia
         - Pregnancy in Patient or Partner
+        - Primary Ciliary Dyskinesia
         - Primary Sclerosing Cholangitis
+        - Primordial Dwarfism
         - Psoriasis
+        - Pulmonary Embolism
         - Pulmonary Fibrosis
         - Pulmonary Hemorrhage
+        - Reactive Airway Disease
         - Recurrent Pyogenic Cholangitis
         - Renal Dialysis
         - Renal Failure (Requiring Dialysis)
@@ -383,6 +407,7 @@ properties:
         - Scarlet Fever
         - Seizure
         - Sensory Changes
+        - Sepsis
         - Serous Tubal Intraepithelial Carcinoma (STIC)
         - Shingles
         - Sialadenitis
@@ -409,12 +434,14 @@ properties:
         - Tubulointerstitial Disease
         - Tumor-Associated Lymphoid Proliferation
         - Turcot Syndrome
+        - Turner's Syndrome
         - Tyrosinemia
         - Ulcerative Colitis
         - Undescended Testis
         - Urinary Tract Infection
         - Varicella Zoster Virus
         - Vascular Disease
+        - Ventricular Tachycardia
         - Vision Changes
         - Von Hippel-Lindau Syndrome
         - Wagr Syndrome
@@ -1017,6 +1044,7 @@ properties:
     type: array
     items:
       enum:
+        - Abdominal Hernia
         - Abnormal Glucose Level
         - Adenocarcinoma
         - Adenomatous Polyposis Coli
@@ -1044,6 +1072,7 @@ properties:
         - Altered Mental Status
         - Androgen Excess
         - Anemia
+        - Aortic Valve Insufficiency
         - Arthritis
         - Asthma
         - Ataxia-Telangiectasia
@@ -1058,13 +1087,16 @@ properties:
         - Behcet's Disease
         - Benign Prostatic Hyperplasia
         - Benign Thyroid Nodule
+        - Beta Thalassemia
         - Biliary Disorder
+        - Bipolar Disorder
         - Birt-Hogg-Dube Syndrome
         - BK Virus
         - BRCA Family History
         - Bronchitis
         - Calcium Channel Blockers
         - Cancer
+        - Cardiomyopathy
         - Cataracts
         - Celiac Disease
         - Cerebrovascular Disease
@@ -1108,13 +1140,17 @@ properties:
         - Dyslipidemia
         - EBV Lymphoproliferation
         - Eczema
+        - Encephalitis
         - Endometriosis
         - Endosalpingiosis
         - Epithelial Dysplasia
         - Epithelial Hyperplasia
         - Epstein-Barr Virus
+        - Erectile Dysfunction
+        - Erythroderma
         - Escherichia coli
         - Estrogen Excess
+        - Evan's Syndrome
         - Familial Adenomatous Polyposis
         - Fanconi Anemia
         - Fibrosis
@@ -1129,16 +1165,19 @@ properties:
         - Goiter
         - Gorlin Syndrome
         - Gout
+        - Graft vs Host Disease
         - Graves' Disease
         - Hashimoto's Thyroiditis
         - Hay Fever
         - Headache
+        - Hearing Loss
         - Heart Disease
         - Helicobacter pylori Infection
         - Helicobacter pylori-Associated Gastritis
         - Hematologic Disorder, NOS
         - Hemihypertrophy
         - Hemochromatosis
+        - Hemophagocytic Lymphohistiocytosis (HLH)
         - Hepatic Encephalopathy
         - Hepatitis A Infection
         - Hepatitis B Infection
@@ -1173,6 +1212,7 @@ properties:
         - Hypertension
         - Hyperthyroidism
         - Hypospadias
+        - Hypotension
         - Hypothyroidism
         - Inflammation
         - Inflammation, Hyperkeratosis
@@ -1189,6 +1229,7 @@ properties:
         - Low Grade Dysplasia
         - Low Grade Liver Dysplastic Nodule
         - Lupus
+        - Lyme Disease
         - Lymphamatoid Papulosis
         - Lymphocytic Meningitis
         - Lymphocytic Thyroiditis
@@ -1196,6 +1237,7 @@ properties:
         - Lynch Syndrome
         - Malaria
         - Metabolic Syndrome
+        - Migraine
         - Mineralcorticoids Excess
         - Motor / Movement Change
         - Myasthenia Gravis
@@ -1204,6 +1246,8 @@ properties:
         - Myocardial Infarction
         - Neurocystericerosis
         - Neuroendocrine Tumor
+        - Neuroma
+        - Neuropathy
         - Nevus of Ota
         - Nodular Hyperplasia
         - Nodular Prostatic Hyperplasia
@@ -1211,6 +1255,7 @@ properties:
         - Nonalcoholic Steatohepatitis
         - None
         - Obesity
+        - Opioid Addiction
         - Oral Contraceptives
         - Organ Transplant (Site)
         - Osteoarthritis
@@ -1219,13 +1264,19 @@ properties:
         - Peptic Ulcer (Ulcer)
         - Peripheral Vascular Disease
         - Peutz-Jeghers Disease
+        - Pleural Effusion
         - Pneumocystis Pneumonia
         - Pneumonia, NOS
         - Polycystic Ovarian Syndrome (PCOS)
+        - Polycythemia
         - Pregnancy in Patient or Partner
+        - Primary Ciliary Dyskinesia
         - Primary Sclerosing Cholangitis
+        - Primordial Dwarfism
         - Psoriasis
+        - Pulmonary Embolism
         - Pulmonary Fibrosis
+        - Reactive Airway Disease
         - Recurrent Pyogenic Cholangitis
         - Reflux Disease
         - Renal Failure (Requiring Dialysis)
@@ -1238,6 +1289,7 @@ properties:
         - Scarlet Fever
         - Seizure
         - Sensory Changes
+        - Sepsis
         - Serous Tubal Intraepithelial Carcinoma (STIC)
         - Shingles
         - Sialadenitis
@@ -1262,12 +1314,14 @@ properties:
         - Tubulointerstitial Disease
         - Tumor-associated Lymphoid Proliferation
         - Turcot Syndrome
+        - Turner's Syndrome
         - Tyrosinemia
         - Ulcerative Colitis
         - Undescended Testis
         - Urinary Tract Infection
         - Varicella Zoster Virus
         - Vascular Disease
+        - Ventricular Tachycardia
         - Vision Changes
         - Von Hippel-Lindau Syndrome
         - Wagr Syndrome
