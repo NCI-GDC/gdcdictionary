@@ -701,6 +701,8 @@ properties:
       - Uninvolved
       - Unknown
       - Not Reported
+    deprecated_enum:
+      - Indeterminant
     enumDef:
       Indeterminate:
         $ref:
