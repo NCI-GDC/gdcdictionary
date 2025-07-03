@@ -696,6 +696,7 @@ properties:
     $ref:
       - "_terms.yaml#/margin_status/common"
     enum:
+      - Indeterminant
       - Indeterminate
       - Involved
       - Uninvolved
@@ -704,6 +705,9 @@ properties:
     deprecated_enum:
       - Indeterminant
     enumDef:
+      Indeterminant:
+        $ref:
+          - "_terms_enum.yaml#/indeterminant/common"
       Indeterminate:
         $ref:
           - "_terms_enum.yaml#/indeterminate/common"
