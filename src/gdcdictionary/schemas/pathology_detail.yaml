@@ -696,15 +696,15 @@ properties:
     $ref:
       - "_terms.yaml#/margin_status/common"
     enum:
-      - Indeterminant
+      - Indeterminate
       - Involved
       - Uninvolved
       - Unknown
       - Not Reported
     enumDef:
-      Indeterminant:
+      Indeterminate:
         $ref:
-          - "_terms_enum.yaml#/indeterminant/common"
+          - "_terms_enum.yaml#/indeterminate/common"
       Involved:
         $ref:
           - "_terms_enum.yaml#/involved/common"
