@@ -64,6 +64,26 @@ such as `submitter_id`, will allow any string value as a valid entry. Other nume
 can have maximum and minimum values to limit valid entries.  For examples of what a valid entry
 would look like, each node has a mock submission located in the `examples/valid/` directory.
 
+### Deprecated Properties and Enums
+
+The GDC Dictionary uses deprecated flags for properties and enums as part of the phased removal process. When a property or enum value is marked as deprecated:
+
+- It remains present in the dictionary, data models, API, and databases.
+- It is still a valid value for submission.
+- The deprecation flag only hides the property or enum value from the dictionary viewer.
+
+**For properties**:
+
+- `properties`: Lists all available properties for submission.
+- `deprecated`: Hides the property from the dictionary viewer, but it remains available for submission.
+
+**For enums**:
+
+- `enum`: Indicates a permissible value for submission.
+- `deprecated_enum`: Hides the value from the dictionary viewer, but it remains available for submission.
+
+This approach allows for a transition period before full removal, ensuring deprecated properties and enums are still accessible in system integrations while not displayed to dictionary users.
+
 ## Dictionary Changes
 
 The following is an attempt to layout guidelines for the level of
