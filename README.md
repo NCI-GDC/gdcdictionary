@@ -84,6 +84,8 @@ The GDC Dictionary uses deprecated flags for properties and enums as part of the
 
 This approach allows for a transition period before full removal, ensuring deprecated properties and enums are still accessible in system integrations while not displayed to dictionary users.
 
+Note: deprecated properties or enums will only still be valid if they are also present in the permissible properties/enums section.
+
 ## Dictionary Changes
 
 The following is an attempt to layout guidelines for the level of
