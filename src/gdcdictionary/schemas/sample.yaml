@@ -65,7 +65,6 @@ uniqueKeys:
 
 deprecated:
   - sample_type
-  - tumor_code_id
 
 properties:
 
@@ -191,7 +190,6 @@ properties:
       - Hand
       - Hard Palate
       - Head & Neck
-      - Head - Face Or Neck, Nos
       - Head, Face or Neck, NOS
       - Heart
       - Hepatic
@@ -216,6 +214,7 @@ properties:
       - Large Bowel
       - Laryngopharynx
       - Larynx
+      - Left Hemisphere
       - Leg
       - Leptomeninges
       - Ligament
@@ -266,6 +265,7 @@ properties:
       - Nerve
       - Nerve(s) Cranial
       - Occipital Cortex
+      - Occipital Lobe
       - Ocular Orbits
       - Omentum
       - Oral Cavity
@@ -277,6 +277,7 @@ properties:
       - Paranasal Sinuses
       - Paraspinal Ganglion
       - Parathyroid
+      - Parietal Lobe
       - Parotid Gland
       - Patella
       - Pelvis
@@ -300,6 +301,7 @@ properties:
       - Retro-Orbital Region
       - Retroperitoneum
       - Rib
+      - Right Hemisphere
       - Ring Finger
       - Round Ligament
       - Sacrum
@@ -334,6 +336,7 @@ properties:
       - Supraglottis
       - Synovium
       - Temporal Cortex
+      - Temporal Lobe
       - Tendon
       - Testis
       - Thigh
@@ -368,8 +371,6 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
-    deprecated_enum:
-      - Head - Face Or Neck, Nos
     enumDef:
       Bone Marrow:
         $ref:
@@ -455,9 +456,6 @@ properties:
       - "No"
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Not Allowed To Collect
     enumDef:
       "Yes":
         $ref:
@@ -471,9 +469,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   distance_normal_to_tumor:
     $ref:
@@ -673,9 +668,6 @@ properties:
       - Snap Frozen
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Not Allowed To Collect
     enumDef:
       Unknown:
         $ref:
@@ -683,9 +675,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   sample_ordinal:
     $ref:
@@ -846,9 +835,6 @@ properties:
       - Tumor
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Not Allowed To Collect
     enumDef:
       Normal:
         $ref:
@@ -859,39 +845,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
-
-  tumor_code_id:
-    $ref:
-      - "_terms.yaml#/tumor_code_id/common"
-    enum:
-      - "00"
-      - "01"
-      - "02"
-      - "03"
-      - "04"
-      - "10"
-      - "15"
-      - "20"
-      - "21"
-      - "30"
-      - "40"
-      - "41"
-      - "50"
-      - "51"
-      - "52"
-      - "60"
-      - "61"
-      - "62"
-      - "63"
-      - "64"
-      - "65"
-      - "70"
-      - "71"
-      - "80"
-      - "81"
 
   tumor_descriptor:
     $ref:
@@ -907,9 +860,6 @@ properties:
       - Unknown
       - Not Reported
       - Not Applicable
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Not Allowed To Collect
     enumDef:
       Unknown:
         $ref:
@@ -920,9 +870,6 @@ properties:
       Not Applicable:
         $ref:
           - "_terms_enum.yaml#/not_applicable/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   cases:
     $ref: "_definitions.yaml#/to_one"
