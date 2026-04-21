@@ -7891,3 +7891,75 @@ ribosomal_rna_28s_18s_ratio:
       cde_id:
       cde_version:
       term_url:
+
+birth_cohort:
+  common:
+    description: >-
+      TBD.
+    termDef:
+      term: >-
+        Birth Cohort
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+myometrial_invasion_categories:
+  common:
+    description: >-
+      TBD.
+    termDef:
+      term: >-
+        Myometrial Invasion Categories
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+myometrial_invasion_measurement:
+  common:
+    description: >-
+      TBD.
+    termDef:
+      term: >-
+        Myometrial Invasion Measurement
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+myometrial_invasion_percent:
+  common:
+    description: >-
+      TBD.
+    termDef:
+      term: >-
+        Myometrial Invasion Percent
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+myometrial_thickness:
+  common:
+    description: >-
+      TBD.
+    termDef:
+      term: >-
+        Myometrial Thickness
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
+smoking_exposure:
+  common:
+    description: >-
+      TBD.
+    termDef:
+      term: >-
+        Smoking Exposure
+      source:
+      cde_id:
+      cde_version:
+      term_url:
