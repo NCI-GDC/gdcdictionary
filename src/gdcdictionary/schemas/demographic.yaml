@@ -2164,7 +2164,6 @@ properties:
       - white
       - other
       - Unknown
-      - unknown
       - not reported
       - not allowed to collect
     deprecated_enum:
@@ -2189,9 +2188,6 @@ properties:
         $ref:
           - "_terms_enum.yaml#/other/common"
       Unknown:
-        $ref:
-          - "_terms_enum.yaml#/unknown/common"
-      unknown:
         $ref:
           - "_terms_enum.yaml#/unknown/common"
       not reported:
