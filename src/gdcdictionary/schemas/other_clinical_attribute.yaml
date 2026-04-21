@@ -47,9 +47,6 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
-deprecated:
-  - undescended_testis_corrected_age
-
 properties:
 
   $ref:
@@ -157,7 +154,6 @@ properties:
         - Allergy, Processed Foods
         - Allergy, Seafood
         - Allergy, Wasp
-        - Alpha-1 Antitrypsin
         - Alpha-1 Antitrypsin Deficiency
         - Altered Mental Status
         - Androgen Excess
@@ -227,7 +223,6 @@ properties:
         - Denys-Drash Syndrome
         - Depression
         - Dermatomyosis
-        - Diabetes
         - Diabetes, NOS
         - Diabetes, Type I
         - Diabetes, Type II
@@ -259,7 +254,6 @@ properties:
         - Follicular Adenoma
         - Gastric Polyp(s)
         - Gastritis
-        - Gastroesophageal Reflux Disease
         - GERD
         - Gilbert's Syndrome
         - Glaucoma
@@ -284,7 +278,6 @@ properties:
         - Hemophagocytic Lymphohistiocytosis (HLH)
         - Hemorrhagic Cystitis
         - Hepatic Encephalopathy
-        - Hepatitis
         - Hepatitis A Infection
         - Hepatitis B Infection
         - Hepatitis C Infection
@@ -332,7 +325,6 @@ properties:
         - Ischemic Heart Disease
         - ITP
         - Joint Replacement
-        - Kidney Disease
         - Li-Fraumeni Syndrome
         - Liver Cirrhosis (Liver Disease)
         - Liver Toxicity (Non-Infectious)
@@ -414,7 +406,6 @@ properties:
         - Sjogren's Syndrome
         - Skin Rash
         - Sleep Apnea
-        - Smoking
         - Squamous Metaplasia
         - Staph Osteomyelitis
         - Staphylococcus aureus
@@ -448,13 +439,6 @@ properties:
         - Other
         - Unknown
         - Not Reported
-    deprecated_enum:
-      - Alpha-1 Antitrypsin
-      - Diabetes
-      - Gastroesophageal Reflux Disease
-      - Hepatitis
-      - Kidney Disease
-      - Smoking
     enumDef:
       Cancer:
         $ref:
@@ -1116,12 +1100,10 @@ properties:
         - Chloroma
         - Cholelithiasis
         - Chronic Fatigue Syndrome
-        - Chronic Hepatitis
         - Chronic Kidney Disease
         - Chronic Pancreatitis
         - Chronic Systemic Steroid Use
         - Chronic Thyroiditis
-        - Cirrhosis
         - Clonal Hematopoiesis
         - CNS Infection
         - Colon Polyps
@@ -1211,7 +1193,6 @@ properties:
         - High Grade Dysplasia
         - High Grade Liver Dysplastic Nodule
         - High-grade Prostatic Intraepithelial Neoplasia (PIN)
-        - HIV
         - HIV/AIDS
         - Hodgkin Lymphoma
         - Human Herpesvirus-6 (HHV-6)
@@ -1290,7 +1271,6 @@ properties:
         - Pulmonary Fibrosis
         - Reactive Airway Disease
         - Recurrent Pyogenic Cholangitis
-        - Reflux Disease
         - Renal Failure (Requiring Dialysis)
         - Renal Insufficiency
         - Rheumatoid Arthritis
@@ -1339,11 +1319,6 @@ properties:
         - Wagr Syndrome
         - Unknown
         - Not Reported
-    deprecated_enum:
-      - Chronic Hepatitis
-      - Cirrhosis
-      - HIV
-      - Reflux Disease
     enumDef:
       Cancer:
         $ref:
@@ -1366,7 +1341,6 @@ properties:
       - Adolescence
       - Adulthood
       - After Chemotherapy
-      - After Study Enrollment
       - After Study Registration
       - Childhood
       - End of Consolidation Therapy
@@ -1388,7 +1362,6 @@ properties:
       - Prior to Chemotherapy
       - Prior to Diagnosis
       - Prior to Procurement
-      - Prior to Study Enrollment
       - Prior to Study Registration
       - Prior to Treatment
       - Progression
@@ -1400,9 +1373,6 @@ properties:
       - Other
       - Unknown
       - Not Reported
-    deprecated_enum:
-      - After Study Enrollment
-      - Prior to Study Enrollment
     enumDef:
       Other:
         $ref:
@@ -1455,13 +1425,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-
-  undescended_testis_corrected_age:
-    $ref:
-      - "_terms.yaml#/undescended_testis_corrected_age/common"
-    type: integer
-    maximum: 89
-    minimum: 0
 
   undescended_testis_corrected_age_range:
     $ref:
