@@ -10,6 +10,7 @@
   "treatment_intent_type": "Cure",
   "treatment_or_therapy": "unknown",
   "treatment_type": "Other",
+  "treatment_type_administered": "Other",
   "diagnoses": {
     "submitter_id": "E9EDB78B-6897-4205-B9AA-0CEF8AAB5A1F_diagnosis"
   }

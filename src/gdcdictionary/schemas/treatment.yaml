@@ -33,6 +33,7 @@ links:
 
 required:
   - submitter_id
+  - treatment_type_administered
 
 uniqueKeys:
   - [id]
