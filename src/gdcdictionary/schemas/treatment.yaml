@@ -38,9 +38,6 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
-deprecated:
-  - therapeutic_level_achieved
-
 properties:
 
   $ref:
@@ -2191,6 +2188,7 @@ properties:
       - Dynemicin A
       - E2F1 Pathway Activator ARQ 171
       - EBNA-1 inhibitor VK-2019
+      - EBV CTLs
       - Echinomycin
       - Ecromeximab
       - Edatrexate
@@ -3758,6 +3756,7 @@ properties:
       - PEG-PEI-cholesterol Lipopolymer-encased IL-12 DNA Plasmid Vector GEN-1
       - PEG-Proline-Interferon Alfa-2b
       - Pegargiminase
+      - Pegasparagase
       - Pegaspargase
       - Pegdinetanib
       - Pegfilgrastim
@@ -4669,6 +4668,7 @@ properties:
       - Tocladesine
       - Tocotrienol
       - Tocotrienol-rich Fraction
+      - Tofacitinib
       - Tolebrutinib
       - Toll-like Receptor 7 Agonist DSP-0509
       - Tolnidamine
@@ -4975,6 +4975,7 @@ properties:
       - Zebularine
       - Zelavespib
       - Zibotentan
+      - Zidovudine
       - Zinc Finger Nuclease ZFN-603
       - Zinc Finger Nuclease ZFN-758
       - Zinostatin
@@ -4993,6 +4994,8 @@ properties:
       - Other
       - Unknown
       - Not Reported
+    deprecated_enum:
+      - Pegaspargase
     enumDef:
       3'-dA Phosphoramidate NUC-7738:
         $ref:
@@ -6867,11 +6870,6 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  therapeutic_level_achieved:
-    $ref:
-      - "_terms.yaml#/therapeutic_level_achieved/common"
-    type: boolean
-
   therapeutic_levels_achieved:
     $ref:
       - "_terms.yaml#/therapeutic_levels_achieved/common"
@@ -6910,7 +6908,6 @@ properties:
       - Adolescence
       - Adulthood
       - After Chemotherapy
-      - After Study Enrollment
       - After Study Registration
       - Childhood
       - End of Consolidation Therapy
@@ -6932,7 +6929,6 @@ properties:
       - Prior to Chemotherapy
       - Prior to Diagnosis
       - Prior to Procurement
-      - Prior to Study Enrollment
       - Prior to Study Registration
       - Prior to Treatment
       - Progression
@@ -6944,9 +6940,6 @@ properties:
       - Other
       - Unknown
       - Not Reported
-    deprecated_enum:
-      - After Study Enrollment
-      - Prior to Study Enrollment
 
   treatment_anatomic_sites:
     $ref:
@@ -7071,7 +7064,6 @@ properties:
         - Gum
         - Hand
         - Hard Palate
-        - Head - Face Or Neck, Nos
         - Head and Neck
         - Head, Face or Neck, NOS
         - Heart
@@ -7259,8 +7251,6 @@ properties:
         - Other
         - Unknown
         - Not Reported
-    deprecated_enum:
-      - Head - Face Or Neck, Nos
     enumDef:
       Bone Marrow:
         $ref:
@@ -7529,7 +7519,6 @@ properties:
       - Chemoprotectant
       - Chemotherapy
       - Concurrent Chemoradiation
-      - Cryoablation
       - Distal Pancreatectomy
       - Embolization
       - Ethanol Injection Ablation
@@ -7575,7 +7564,6 @@ properties:
       - Stem Cell Treatment
       - Stereotactic Radiosurgery
       - Steroid Therapy
-      - Surgery
       - Surgery, Minimally Invasive
       - Surgery, NOS
       - Surgery, Open
@@ -7585,11 +7573,6 @@ properties:
       - Other
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Cryoablation
-      - Not Allowed To Collect
-      - Surgery
     enumDef:
       Radiation, Hypofractionated:
         $ref:
@@ -7606,9 +7589,87 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
+
+  treatment_type_administered:
+    $ref:
+      - "_terms.yaml#/treatment_type_administered/common"
+    oneOf:
+      - type: "null"
+      - enum:
+        - Ablation or Embolization, NOS
+        - Ablation, Cryo
+        - Ablation, Ethanol Injection
+        - Ablation, Microwave
+        - Ablation, NOS
+        - Ablation, Radiofrequency
+        - Ablation, Radiosurgical
+        - Ancillary Treatment
+        - Antiseizure Treatment
+        - Biopsy, Excisional
+        - Biopsy, Incisional
+        - Bisphosphonate Therapy
+        - Blinded Study, Treatment Unknown
+        - Brachytherapy, High Dose
+        - Brachytherapy, Low Dose
+        - Brachytherapy, NOS
+        - Chemoembolization
+        - Chemoprotectant
+        - Chemotherapy
+        - Concurrent Chemoradiation
+        - Distal Pancreatectomy
+        - Embolization
+        - Ethanol Injection Ablation
+        - External Beam Radiation
+        - Hormone Therapy
+        - Hysterectomy, NOS
+        - I-131 Radiation Therapy
+        - Immunotherapy (Including Vaccines)
+        - Internal Radiation
+        - Isolated Limb Perfusion (ILP)
+        - Organ Transplantation
+        - Peptide Receptor Radionuclide Therapy (PRRT)
+        - Pharmaceutical Therapy, NOS
+        - Pleurodesis
+        - Pleurodesis, NOS
+        - Pleurodesis, Talc
+        - Radiation Therapy, NOS
+        - Radiation, 2D Conventional
+        - Radiation, 3D Conformal
+        - Radiation, Combination
+        - Radiation, Cyberknife
+        - Radiation, External Beam
+        - Radiation, Hypofractionated
+        - Radiation, Implants
+        - Radiation, Intensity-Modulated Radiotherapy
+        - Radiation, Internal
+        - Radiation, Mixed Photon Beam
+        - Radiation, Photon Beam
+        - Radiation, Proton Beam
+        - Radiation, Radioisotope
+        - Radiation, Stereotactic/Gamma Knife/SRS
+        - Radiation, Systemic
+        - Radioactive Iodine Therapy
+        - Radioembolization
+        - Radiosensitizing Agent
+        - Stem Cell Transplantation, Allogeneic
+        - Stem Cell Transplantation, Autologous
+        - Stem Cell Transplantation, Double Autologous
+        - Stem Cell Transplantation, Haploidentical
+        - Stem Cell Transplantation, Non-Myeloablative
+        - Stem Cell Transplantation, NOS
+        - Stem Cell Transplantation, Syngenic
+        - Stem Cell Treatment
+        - Stereotactic Radiosurgery
+        - Steroid Therapy
+        - Surgery, Minimally Invasive
+        - Surgery, NOS
+        - Surgery, Open
+        - Targeted Molecular Therapy
+        - Total Pancreatectomy
+        - Whipple
+        - Other
+        - Unknown
+        - Not Reported
 
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
