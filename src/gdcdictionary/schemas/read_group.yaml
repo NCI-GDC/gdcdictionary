@@ -387,6 +387,7 @@ properties:
       - "_terms.yaml#/target_capture_kit/common"
     enum:
       - Custom AmpliSeq Cancer Hotspot GENIE-MDA Augmented Panel v1 - 46 Genes
+      - Custom Ashion GEM ExTra v2 – 125.9 Mb
       - Custom GENIE-DFCI OncoPanel - 275 Genes
       - Custom GENIE-DFCI Oncopanel - 300 Genes
       - Custom GENIE-DFCI Oncopanel - 447 Genes
