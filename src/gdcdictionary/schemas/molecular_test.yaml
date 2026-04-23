@@ -7312,10 +7312,6 @@ properties:
     $ref:
       - "_terms.yaml#/test_value_range/common"
     enum:
-      - 0-25
-      - 26-50
-      - 51-75
-      - 76-100
       - 1-4%
       - 5-9%
       - <10%
@@ -7337,11 +7333,6 @@ properties:
       - 76-100%
       - Unknown
       - Not Reported
-    deprecated_enum:
-      - 0-25
-      - 26-50
-      - 51-75
-      - 76-100
 
   timepoint_category:
     $ref:
@@ -7352,7 +7343,6 @@ properties:
       - Adulthood
       - After Chemotherapy
       - After Study Enrollment
-      - After Study Registration
       - Childhood
       - End of Consolidation Therapy
       - End of Treatment Course
@@ -7373,7 +7363,6 @@ properties:
       - Prior to Chemotherapy
       - Prior to Diagnosis
       - Prior to Procurement
-      - Prior to Study Enrollment
       - Prior to Study Registration
       - Prior to Treatment
       - Progression
@@ -7385,9 +7374,6 @@ properties:
       - Other
       - Unknown
       - Not Reported
-    deprecated_enum:
-      - After Study Enrollment
-      - Prior to Study Enrollment
     enumDef:
       Preoperative:
         $ref:
