@@ -853,9 +853,6 @@ properties:
       - TX
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Not Allowed To Collect
     enumDef:
       T0:
         $ref:
@@ -965,9 +962,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   ajcc_serum_tumor_markers:
     $ref:
@@ -18127,9 +18121,6 @@ properties:
         - Other
         - Unknown
         - Not Reported
-    deprecated_enum:
-      - Esophagus
-      - Pancreas
     enumDef:
       Ascites:
         $ref:
