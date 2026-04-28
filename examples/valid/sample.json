@@ -27,7 +27,6 @@
   "time_between_excision_and_freezing": 15.0,
   "tissue_collection_type": "Retrospective",
   "tissue_type": "Normal",
-  "tumor_code_id": "00",
   "tumor_descriptor": "NOS",
   "cases": {
     "submitter_id": "BLGSP-71-06-00019"
