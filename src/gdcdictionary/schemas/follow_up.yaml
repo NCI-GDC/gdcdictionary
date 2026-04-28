@@ -1701,7 +1701,6 @@ properties:
       - Adolescence
       - Adulthood
       - After Chemotherapy
-      - After Study Enrollment
       - After Study Registration
       - Childhood
       - End of Consolidation Therapy
@@ -1723,7 +1722,6 @@ properties:
       - Prior to Chemotherapy
       - Prior to Diagnosis
       - Prior to Procurement
-      - Prior to Study Enrollment
       - Prior to Study Registration
       - Prior to Treatment
       - Progression
@@ -1735,9 +1733,6 @@ properties:
       - Other
       - Unknown
       - Not Reported
-    deprecated_enum:
-      - After Study Enrollment
-      - Prior to Study Enrollment
 
   treatment_emergent_adverse_event:
     $ref:
