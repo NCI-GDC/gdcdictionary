@@ -5475,9 +5475,9 @@ single_cell_library:
 site_of_resection_or_biopsy:
   common:
     description: >-
-      The text term used to describe the anatomic site of origin, of the patient's
-      malignant disease, as described by the World Health Organization's (WHO) International
-      Classification of Diseases for Oncology (ICD-O).
+      The text term used to describe the anatomic site of the resection or biopsy of the
+      patient's malignant disease, as described by the World Health Organization's (WHO)
+      International Classification of Diseases for Oncology (ICD-O).
     termDef:
       term: >-
         ICD-O Origin of Disease Anatomic Site
