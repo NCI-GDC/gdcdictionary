@@ -48,9 +48,6 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
-deprecated:
-  - ribosomal_rna_28s_16s_ratio
-
 properties:
 
   $ref:
@@ -163,12 +160,6 @@ properties:
       Not Allowed To Collect:
         $ref:
           - "_terms_enum.yaml#/not_allowed_to_collect/common"
-
-  ribosomal_rna_28s_16s_ratio:
-    $ref:
-      - "_terms.yaml#/ribosomal_rna_28s_16s_ratio/common"
-    type: number
-    minimum: 0
 
   ribosomal_rna_28s_18s_ratio:
     $ref:
