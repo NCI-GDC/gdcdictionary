@@ -2048,9 +2048,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   figo_staging_edition_year:
     $ref:
@@ -10139,9 +10136,6 @@ properties:
       Adenocarcinoma in situ, NOS:
         $ref:
           - "_terms_enum.yaml#/adenocarcinoma_in_situ_nos/common"
-      Adenocarcinoma in tubolovillous adenoma:
-        $ref:
-          - "_terms_enum.yaml#/adenocarcinoma_in_tubolovillous_adenoma/common"
       Adenocarcinoma in tubular adenoma:
         $ref:
           - "_terms_enum.yaml#/adenocarcinoma_in_tubular_adenoma/common"
