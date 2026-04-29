@@ -45,6 +45,9 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
+deprecated:
+  - ann_arbor_b_symptoms_described
+
 properties:
 
   $ref:
@@ -91,9 +94,6 @@ properties:
       - MX
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Not Allowed To Collect
     enumDef:
       cM0 (i+):
         $ref:
@@ -122,9 +122,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   ajcc_clinical_n:
     $ref:
@@ -156,9 +153,6 @@ properties:
       - NX
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Not Allowed To Collect
     enumDef:
       N0:
         $ref:
@@ -238,9 +232,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   ajcc_clinical_stage:
     $ref:
@@ -257,14 +248,11 @@ properties:
       - Stage IB
       - Stage IB1
       - Stage IB2
-      - Stage IB Cervix
       - Stage IC
       - Stage II
-      - Stage II Cervix
       - Stage IIA
       - Stage IIA1
       - Stage IIA2
-      - Stage IIA Cervix
       - Stage IIB
       - Stage IIC
       - Stage IIC1
@@ -283,12 +271,6 @@ properties:
       - Stage X
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Not Allowed To Collect
-      - Stage IB Cervix
-      - Stage II Cervix
-      - Stage IIA Cervix
     enumDef:
       Stage 0:
         $ref:
@@ -320,18 +302,12 @@ properties:
       Stage IB2:
         $ref:
           - "_terms_enum.yaml#/stage_ib2/common"
-      Stage IB Cervix:
-        $ref:
-          - "_terms_enum.yaml#/stage_ib_cervix/common"
       Stage IC:
         $ref:
           - "_terms_enum.yaml#/stage_ic/common"
       Stage II:
         $ref:
           - "_terms_enum.yaml#/stage_ii/common"
-      Stage II Cervix:
-        $ref:
-          - "_terms_enum.yaml#/stage_ii_cervix/common"
       Stage IIA:
         $ref:
           - "_terms_enum.yaml#/stage_iia/common"
@@ -341,9 +317,6 @@ properties:
       Stage IIA2:
         $ref:
           - "_terms_enum.yaml#/stage_iia2/common"
-      Stage IIA Cervix:
-        $ref:
-          - "_terms_enum.yaml#/stage_iia_cervix/common"
       Stage IIB:
         $ref:
           - "_terms_enum.yaml#/stage_iib/common"
@@ -395,9 +368,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   ajcc_clinical_t:
     $ref:
@@ -439,9 +409,6 @@ properties:
       - TX
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Not Allowed To Collect
     enumDef:
       T0:
         $ref:
@@ -551,9 +518,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   ajcc_pathologic_m:
     $ref:
@@ -570,9 +534,6 @@ properties:
       - MX
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Not Allowed To Collect
     enumDef:
       cM0 (i+):
         $ref:
@@ -601,9 +562,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   ajcc_pathologic_n:
     $ref:
@@ -636,9 +594,6 @@ properties:
       - NX
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Not Allowed To Collect
     enumDef:
       N0:
         $ref:
@@ -718,9 +673,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   ajcc_pathologic_stage:
     $ref:
@@ -901,9 +853,6 @@ properties:
       - TX
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Not Allowed To Collect
     enumDef:
       T0:
         $ref:
@@ -1013,9 +962,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   ajcc_serum_tumor_markers:
     $ref:
@@ -1068,9 +1014,6 @@ properties:
       - "No"
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Not Allowed To Collect
     enumDef:
       "Yes":
         $ref:
@@ -1084,9 +1027,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   ann_arbor_b_symptoms_described:
     $ref:
@@ -1098,6 +1038,19 @@ properties:
       - Other
       - Unknown
       - Not Reported
+
+  ann_arbor_b_symptoms_described_array:
+    $ref:
+      - "_terms.yaml#/ann_arbor_b_symptoms_described/common"
+    type: array
+    items:
+      enum:
+        - Fever
+        - Night Sweats
+        - Weight Loss
+        - Other
+        - Unknown
+        - Not Reported
 
   ann_arbor_clinical_stage:
     $ref:
@@ -1137,9 +1090,6 @@ properties:
       - "No"
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Not Allowed To Collect
     enumDef:
       "Yes":
         $ref:
@@ -1153,9 +1103,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   ann_arbor_pathologic_stage:
     $ref:
@@ -1304,9 +1251,6 @@ properties:
       - Sporadic, pediatric
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Not Allowed To Collect
     enumDef:
       Endemic:
         $ref:
@@ -1329,9 +1273,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   calgb_risk_group:
     $ref:
@@ -2007,9 +1948,6 @@ properties:
       - Stage IVB
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Not Allowed To Collect
     enumDef:
       Stage 0:
         $ref:
@@ -2110,9 +2048,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   figo_staging_edition_year:
     $ref:
@@ -2849,9 +2784,6 @@ properties:
       - Other
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
-    deprecated_enum:
-      - Not Allowed To Collect
     enumDef:
       Autopsy:
         $ref:
@@ -2931,9 +2863,6 @@ properties:
       Not Reported:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
-      Not Allowed To Collect:
-        $ref:
-          - "_terms_enum.yaml#/not_allowed_to_collect/common"
 
   mitosis_karyorrhexis_index:
     $ref:
@@ -3872,6 +3801,7 @@ properties:
       - 9411/3
       - 9412/1
       - 9413/0
+      - 9413/1
       - 9420/3
       - 9421/1
       - 9421/3
@@ -3897,6 +3827,7 @@ properties:
       - 9473/3
       - 9474/3
       - 9475/3
+      - 9475/6
       - 9476/3
       - 9477/3
       - 9478/3
@@ -7361,7 +7292,6 @@ properties:
       - Adenocarcinoma in situ, mucinous
       - Adenocarcinoma in situ, non-mucinous
       - Adenocarcinoma in situ, NOS
-      - Adenocarcinoma in tubolovillous adenoma
       - Adenocarcinoma in tubular adenoma
       - Adenocarcinoma in tubulovillous adenoma
       - Adenocarcinoma in villous adenoma
@@ -7876,6 +7806,7 @@ properties:
       - DCIS, comedo type
       - DCIS, NOS
       - DCIS, papillary
+      - Dedifferentiated carcinoma
       - Dedifferentiated chondrosarcoma
       - Dedifferentiated chordoma
       - Dedifferentiated liposarcoma
@@ -7918,6 +7849,7 @@ properties:
       - Diffuse leptomeningeal glioneuronal tumor
       - Diffuse melanocytosis
       - Diffuse meningiomatosis
+      - Diffuse midline glioma, H3 K27-mutant
       - Diffuse midline glioma, H3 K27M-mutant
       - Diffuse Pediatric-type High Grade Glioma
       - Digital papillary adenocarcinoma
@@ -8786,6 +8718,7 @@ properties:
       - Medulloblastoma, SHH-activated and TP53-mutant
       - Medulloblastoma, SHH-activated and TP53-wildtype
       - Medulloblastoma, WNT-activated
+      - Medulloblastoma, WNT-activated, NOS
       - Medullocytoma
       - Medulloepithelioma, benign
       - Medulloepithelioma, NOS
@@ -9896,8 +9829,6 @@ properties:
       - Yolk sac tumor
       - Unknown
       - Not Reported
-    deprecated_enum:
-      - Adenocarcinoma in tubolovillous adenoma
     enumDef:
       Abdominal desmoid:
         $ref:
@@ -10205,9 +10136,6 @@ properties:
       Adenocarcinoma in situ, NOS:
         $ref:
           - "_terms_enum.yaml#/adenocarcinoma_in_situ_nos/common"
-      Adenocarcinoma in tubolovillous adenoma:
-        $ref:
-          - "_terms_enum.yaml#/adenocarcinoma_in_tubolovillous_adenoma/common"
       Adenocarcinoma in tubular adenoma:
         $ref:
           - "_terms_enum.yaml#/adenocarcinoma_in_tubular_adenoma/common"
@@ -17036,6 +16964,7 @@ properties:
       - Lateral wall of bladder
       - Lateral wall of nasopharynx
       - Lateral wall of oropharynx
+      - Left hemisphere
       - Lesser curvature of stomach, NOS
       - Lingual tonsil
       - Lip, NOS
@@ -17173,6 +17102,7 @@ properties:
       - Retromolar area
       - Retroperitoneum
       - Rib, sternum, clavicle and associated joints
+      - Right hemisphere
       - Round ligament
       - Scrotum, NOS
       - Short bones of lower limb and associated joints
@@ -18044,6 +17974,7 @@ properties:
         - Central Lung
         - Central nervous system
         - Cerebrospinal fluid
+        - Cervical stroma
         - Cervix
         - Chest wall
         - Colon, NOS
@@ -18054,7 +17985,6 @@ properties:
         - Dura Mater
         - Ear
         - Epididymis
-        - Esophagus
         - Esophagus, Lower Third
         - Esophagus, Middle Third
         - Esophagus, NOS
@@ -18118,7 +18048,6 @@ properties:
         - Ovary, Left
         - Ovary, NOS
         - Ovary, Right
-        - Pancreas
         - Pancreas Body
         - Pancreas Duct
         - Pancreas Head
@@ -18150,6 +18079,7 @@ properties:
         - Salivary gland
         - Scalp
         - Scrotum
+        - Serosa
         - Sigmoid colon
         - Sinus
         - Skin
@@ -18176,6 +18106,7 @@ properties:
         - Tunica Vaginalis
         - Upper lobe, lung
         - Urethra
+        - Ureter
         - Uterus
         - Vagina
         - Vertebrae
@@ -18184,9 +18115,6 @@ properties:
         - Other
         - Unknown
         - Not Reported
-    deprecated_enum:
-      - Esophagus
-      - Pancreas
     enumDef:
       Ascites:
         $ref:
