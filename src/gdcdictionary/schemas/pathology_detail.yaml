@@ -383,7 +383,7 @@ properties:
       - <=5mm
       - '>5mm'
       - Unknown
-      - Not Reporte
+      - Not Reported
 
   extrascleral_extension_present:
     $ref:
