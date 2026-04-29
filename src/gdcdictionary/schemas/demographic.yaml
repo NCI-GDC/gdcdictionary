@@ -2168,8 +2168,6 @@ properties:
       - Unknown
       - not reported
       - not allowed to collect
-    deprecated_enum:
-      - unknown
     enumDef:
       american indian or alaska native:
         $ref:
