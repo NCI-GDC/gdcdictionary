@@ -7963,3 +7963,15 @@ smoking_exposure:
       cde_id:
       cde_version:
       term_url:
+
+treatment_type_administered:
+  common:
+    description: >-
+      TBD.
+    termDef:
+      term: >-
+        Treatment Type Administered
+      source:
+      cde_id:
+      cde_version:
+      term_url:
