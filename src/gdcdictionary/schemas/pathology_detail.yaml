@@ -38,12 +38,6 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
-deprecated:
-  - epithelioid_cell_percent
-  - extrascleral_extension
-  - size_extraocular_nodule
-  - spindle_cell_percent
-
 properties:
 
   $ref:
@@ -334,13 +328,6 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  epithelioid_cell_percent:
-    $ref:
-      - "_terms.yaml#/epithelioid_cell_percent/common"
-    type: number
-    maximum: 100
-    minimum: 0
-
   epithelioid_cell_percent_range:
     $ref:
       - "_terms.yaml#/epithelioid_cell_percent/common"
@@ -396,12 +383,7 @@ properties:
       - <=5mm
       - '>5mm'
       - Unknown
-      - Not Reported
-
-  extrascleral_extension:
-    $ref:
-      - "_terms.yaml#/extrascleral_extension/common"
-    type: boolean
+      - Not Reporte
 
   extrascleral_extension_present:
     $ref:
@@ -527,7 +509,6 @@ properties:
     enum:
       - Aortic
       - Axillary
-      - Cervical
       - Cervical, Central
       - Cervical, Lateral
       - Cervical, NOS
@@ -553,15 +534,10 @@ properties:
       - Supraclavicular
       - Unknown
       - Not Reported
-    deprecated_enum:
-      - Cervical
     enumDef:
       Axillary:
         $ref:
           - "_terms_enum.yaml#/axillary/common"
-      Cervical:
-        $ref:
-          - "_terms_enum.yaml#/cervical/common"
       Epitrochlear:
         $ref:
           - "_terms_enum.yaml#/epitrochlear/common"
@@ -628,10 +604,13 @@ properties:
       - "_terms.yaml#/lymph_node_involvement/common"
     enum:
       - Indeterminant
+      - Indeterminate
       - Negative
       - Positive
       - Unknown
       - Not Reported
+    deprecated_enum::
+      - Indeterminant
     enumDef:
       Indeterminant:
         $ref:
@@ -696,18 +675,12 @@ properties:
     $ref:
       - "_terms.yaml#/margin_status/common"
     enum:
-      - Indeterminant
       - Indeterminate
       - Involved
       - Uninvolved
       - Unknown
       - Not Reported
-    deprecated_enum:
-      - Indeterminant
     enumDef:
-      Indeterminant:
-        $ref:
-          - "_terms_enum.yaml#/indeterminant/common"
       Indeterminate:
         $ref:
           - "_terms_enum.yaml#/indeterminate/common"
@@ -1059,19 +1032,6 @@ properties:
         $ref:
           - "_terms_enum.yaml#/not_reported/common"
 
-  size_extraocular_nodule:
-    $ref:
-      - "_terms.yaml#/size_extraocular_nodule/common"
-    type: number
-    minimum: 0
-
-  spindle_cell_percent:
-    $ref:
-      - "_terms.yaml#/spindle_cell_percent/common"
-    type: number
-    maximum: 100
-    minimum: 0
-
   spindle_cell_percent_range:
     $ref:
       - "_terms.yaml#/spindle_cell_percent/common"
@@ -1092,7 +1052,6 @@ properties:
       - Adolescence
       - Adulthood
       - After Chemotherapy
-      - After Study Enrollment
       - After Study Registration
       - Childhood
       - End of Consolidation Therapy
@@ -1114,7 +1073,6 @@ properties:
       - Prior to Chemotherapy
       - Prior to Diagnosis
       - Prior to Procurement
-      - Prior to Study Enrollment
       - Prior to Study Registration
       - Prior to Treatment
       - Progression
@@ -1126,9 +1084,6 @@ properties:
       - Other
       - Unknown
       - Not Reported
-    deprecated_enum:
-      - After Study Enrollment
-      - Prior to Study Enrollment
 
   transglottic_extension:
     $ref:
