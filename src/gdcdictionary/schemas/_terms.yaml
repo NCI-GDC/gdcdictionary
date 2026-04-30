@@ -4962,18 +4962,6 @@ rhabdoid_present:
       cde_version:
       term_url:
 
-ribosomal_rna_28s_16s_ratio:
-  common:
-    description: >-
-      The 28S/18S ribosomal RNA band ratio used to assess the quality of total RNA.
-    termDef:
-      term: >-
-        28s/18s Ribosomal RNA Ratio
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
 rin:
   common:
     description: >-
@@ -5602,18 +5590,6 @@ therapeutic_agents:
       cde_id: 2975232
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2975232%20and%20ver_nr=1.0"
-
-therapeutic_level_achieved:
-  common:
-    description: >-
-      Indicates a target level of treatment was reached, according to the patient's
-      treatment plan.
-    termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
 
 therapeutic_target_level:
   common:
@@ -7090,6 +7066,21 @@ radiosensitizing_agent:
       term_id: C798
       term_version: 23.08d
 
+therapeutic_levels_achieved:
+  common:
+    description: >-
+      An indication that the intended level of therapeutic agent was achieved in an
+      individual.
+    termDef:
+      term: >-
+        Therapeutic Agent Level Achieved Indicator
+      source: NCIt
+      cde_id: C198198
+      cde_version: 23.08d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C198198"
+      term_id: C198198
+      term_version: 23.08d
+
 oxygen_use_type:
   common:
     description: >-
@@ -7534,6 +7525,18 @@ fertility_history:
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3896771%20and%20ver_nr=1.0"
       term_id: 3896771
       term_version: 1.0
+
+ribosomal_rna_28s_18s_ratio:
+  common:
+    description: >-
+      The 28S/18S ribosomal RNA band ratio used to assess the quality of total RNA.
+    termDef:
+      term: >-
+        28s/18s Ribosomal RNA Ratio
+      source:
+      cde_id:
+      cde_version:
+      term_url:
 
 year_of_birth_range:
   common:
