@@ -2148,7 +2148,7 @@ extracapsular_extension:
 extracapsular_extension_present:
   common:
     description: >-
-      An indiction of the presence of the extension of malignant tissue situated outside of a specific capsule.
+      An indication of the presence of the extension of malignant tissue situated outside of a specific capsule.
     termDef:
       term: >-
         Extracapsular Extension Present
