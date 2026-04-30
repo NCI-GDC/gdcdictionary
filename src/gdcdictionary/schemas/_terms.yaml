@@ -6309,6 +6309,20 @@ undescended_testis_corrected:
       cde_version:
       term_url:
 
+undescended_testis_corrected_age:
+  common:
+    description: >-
+      The patient's age when their undescended testis was corrected.
+    termDef:
+      term: >-
+        Undescended Testis Corrected Age
+      source: NCIt
+      cde_id: C181721
+      cde_version: 24.07e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C181721"
+      term_id: C181721
+      term_version: 24.07e
+
 undescended_testis_corrected_laterality:
   common:
     description: >-
