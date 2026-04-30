@@ -350,6 +350,8 @@ properties:
       - Not Reported
 
   extracapsular_extension_present:
+    $ref:
+      - "_terms.yaml#/extracapsular_extension_present/common"
     enum:
       - "Yes"
       - "No"
