@@ -6934,6 +6934,36 @@ melanoma_known_primary:
       cde_version:
       term_url:
 
+spindle_cell_percent:
+  common:
+    description: >-
+      A quantitative measurement of the percent of spindle-shaped melanocytes compared
+      to the number of total cells present in a sample.
+    termDef:
+      term: >-
+        Percent of Spindle-Shaped Melanocytes
+      source: NCIt
+      cde_id: C200472
+      cde_version: 24.07e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C200472"
+      term_id: C200472
+      term_version: 24.07e
+
+epithelioid_cell_percent:
+  common:
+    description: >-
+      A quantitative measurement of the percent of epithelioid melanocytes compared
+      to the number of total cells present in a sample.
+    termDef:
+      term: >-
+        Percent of Epithelioid Melanocytes
+      source: NCIt
+      cde_id: C200471
+      cde_version: 24.07e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C200471"
+      term_id: C200471
+      term_version: 24.07e
+
 tumor_shape:
   common:
     description: >-
