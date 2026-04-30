@@ -2157,7 +2157,6 @@ extracapsular_extension_present:
       cde_version:
       term_url:
 
-
 extranodal_extension:
   common:
     description: >-
@@ -2169,6 +2168,18 @@ extranodal_extension:
       cde_id: C117309
       cde_version: 22.11d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117309"
+
+extrascleral_extension:
+  common:
+    description: >-
+      Spread of uveal melanoma beyond the sclera.
+    termDef:
+      term: >-
+        Extrascleral Extension of Uveal Melanoma
+      source: NCIt
+      cde_id: C111028
+      cde_version: 22.11d
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111028"
 
 eye_color:
   common:
@@ -5303,6 +5314,20 @@ sites_of_involvement_count:
       cde_id:
       cde_version:
       term_url:
+
+size_extraocular_nodule:
+  common:
+    description: >-
+      The size of the nodule that is outside the eye.
+    termDef:
+      term: >-
+        Extraocular Nodule Size
+      source: NCIt
+      cde_id: C185261
+      cde_version: 24.07e
+      term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C185261"
+      term_id: C185261
+      term_version: 24.07e
 
 size_selection_range:
   common:
