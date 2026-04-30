@@ -7892,13 +7892,13 @@ ribosomal_rna_28s_18s_ratio:
       cde_version:
       term_url:
 
-birth_cohort:
+year_of_birth_range:
   common:
     description: >-
       TBD.
     termDef:
       term: >-
-        Birth Cohort
+        Year of Birth Range
       source:
       cde_id:
       cde_version:
