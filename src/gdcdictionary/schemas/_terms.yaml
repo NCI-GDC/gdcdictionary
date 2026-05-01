@@ -136,7 +136,7 @@ age_at_index:
 age_at_last_exposure:
   common:
     description: >-
-      The study participant's age at the time they were last exposed.
+      The study participant's age (in years) at the time they were last exposed.
     termDef:
       term:
       source: caDSR
@@ -147,8 +147,7 @@ age_at_last_exposure:
 age_at_onset:
   common:
     description: >-
-      Numeric value used to represent the age of the patient when exposure to a specific
-      environmental factor began.
+      Numeric value used to represent the age (in years) of the patient when exposure to a specific environmental factor began.
     termDef:
       term: >-
         Patient Environmental Exposure Onset Age Day Value
@@ -448,18 +447,6 @@ analyte_type:
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=15063661%20and%20ver_nr=1.0"
 
-analyte_type_id:
-  common:
-    description: >-
-      A single letter code used to identify a type of molecular analyte.
-    termDef:
-      term: >-
-        Molecular Analyte Identification Code
-      source: caDSR
-      cde_id: 15248244
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=15248244%20and%20ver_nr=1.0"
-
 analyte_volume:
   common:
     description: >-
@@ -587,19 +574,6 @@ antigen:
       cde_id: 6142523
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142523%20and%20ver_nr=1.0"
-
-asbestos_exposure:
-  common:
-    description: >-
-      The yes/no/unknown indicator used to describe whether the patient was exposed
-      to asbestos.
-    termDef:
-      term: >-
-        Asbestos Exposure Ind-3
-      source: caDSR
-      cde_id: 1253
-      cde_version: 3.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=1253%20and%20ver_nr=3.0"
 
 asbestos_exposure_type:
   common:
@@ -1131,19 +1105,6 @@ clonality:
       term_id: C18304
       term_version: 19.12e
 
-coal_dust_exposure:
-  common:
-    description: >-
-      The yes/no/unknown indicator used to describe whether a patient was exposed
-      to fine powder derived by the crushing of coal.
-    termDef:
-      term: >-
-        Person Coal Dust Exposure Indicator
-      source: caDSR
-      cde_id:
-      cde_version:
-      term_url:
-
 cog_liver_stage:
   common:
     description: >-
@@ -1222,19 +1183,6 @@ comorbidities:
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2970715%20and%20ver_nr=1.0"
 
-comorbidity:
-  common:
-    description: >-
-      The text term used to describe a comorbidity disease, which coexists with the
-      patient's malignant disease.
-    termDef:
-      term: >-
-        Index Date To Comorbidity Day Count
-      source: caDSR
-      cde_id: 14483678
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=14483678%20and%20ver_nr=1.0"
-
 comorbidity_method_of_diagnosis:
   common:
     description: >-
@@ -1247,18 +1195,6 @@ comorbidity_method_of_diagnosis:
       cde_id: 6142386
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142386%20and%20ver_nr=1.0"
-
-composition:
-  common:
-    description: >-
-      Text term that represents the cellular composition of the sample.
-    termDef:
-      term: >-
-        Biospecimen Cellular Composition Type
-      source: caDSR
-      cde_id: 5432591
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432591%20and%20ver_nr=1.0"
 
 concentration:
   common:
@@ -2209,6 +2145,18 @@ extracapsular_extension:
       cde_version: 22.11d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25502"
 
+extracapsular_extension_present:
+  common:
+    description: >-
+      An indication of the presence of the extension of malignant tissue situated outside of a specific capsule.
+    termDef:
+      term: >-
+        Extracapsular Extension Present
+      source:
+      cde_id:
+      cde_version:
+      term_url:
+
 extranodal_extension:
   common:
     description: >-
@@ -2505,21 +2453,6 @@ gastric_esophageal_junction_involvement:
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6059632%20and%20ver_nr=1.0"
 
-gender:
-  common:
-    description: >-
-      Text designations that identify gender. Gender is described as the assemblage
-      of properties that distinguish people on the basis of their societal roles.
-      [Explanatory Comment 1: Identification of gender is based upon self-report and
-      may come from a form, questionnaire, interview, etc.]
-    termDef:
-      term: >-
-        Person Gender Text Type
-      source: caDSR
-      cde_id: 2200604
-      cde_version: 3.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2200604%20and%20ver_nr=3.0"
-
 gene_symbol:
   common:
     description: >-
@@ -2778,19 +2711,6 @@ hormone_replacement_therapy_type:
       cde_id:
       cde_version:
       term_url:
-
-hpv_positive_type:
-  common:
-    description: >-
-      Text classification to represent the strain or type of human papillomavirus
-      identified in an individual.
-    termDef:
-      term: >-
-        Human Papillomavirus Type
-      source: caDSR
-      cde_id: 2922649
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2922649%20and%20ver_nr=1.0"
 
 hpv_strain:
   common:
@@ -3555,19 +3475,6 @@ margins_involved_site:
       cde_version:
       term_url:
 
-marijuana_use_per_week:
-  common:
-    description: >-
-      Numeric value that represents the number of times the patient uses marijuana
-      each day.
-    termDef:
-      term: >-
-        Daily Marijuana Use Count
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
 masaoka_stage:
   common:
     description: >-
@@ -4030,19 +3937,6 @@ occupation_type:
       cde_version: 22.11d
       term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25193"
 
-oct_embedded:
-  common:
-    description: >-
-      Indicator of whether or not the sample was embedded in Optimal Cutting Temperature
-      (OCT) compound.
-    termDef:
-      term: >-
-        Tissue Sample Optimal Cutting Temperature Compound Embedding Indicator
-      source: caDSR
-      cde_id: 5432538
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432538%20and%20ver_nr=1.0"
-
 ovarian_specimen_status:
   common:
     description: >-
@@ -4497,17 +4391,6 @@ portion_weight:
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5432593%20and%20ver_nr=1.0"
 
-pregnancy_count:
-  common:
-    description: >-
-      The number of times an individual has become pregnant.
-    termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
 pregnancy_outcome:
   common:
     description: >-
@@ -4872,19 +4755,6 @@ race:
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2192199%20and%20ver_nr=1.0"
 
-radon_exposure:
-  common:
-    description: >-
-      The yes/no/unknown indicator used to describe whether the patient was exposed
-      to radon.
-    termDef:
-      term: >-
-        Person Lifetime Risk Radon Exposure Indicator
-      source: caDSR
-      cde_id: 2816352
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2816352%20and%20ver_nr=1.0"
-
 read_group_name:
   common:
     description: >-
@@ -4994,19 +4864,6 @@ relationship_age_at_diagnosis:
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5300571%20and%20ver_nr=1.0"
 
-relationship_gender:
-  common:
-    description: >-
-      The text term used to describe the gender of the patient's relative with a history
-      of cancer.
-    termDef:
-      term: >-
-        Relative Gender Type
-      source: caDSR
-      cde_id: 6161021
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6161021%20and%20ver_nr=1.0"
-
 relationship_primary_diagnosis:
   common:
     description: >-
@@ -5092,21 +4949,6 @@ residual_tumor_measurement:
       cde_version:
       term_url:
 
-respirable_crystalline_silica_exposure:
-  common:
-    description: >-
-      The yes/no/unknown indicator used to describe whether a patient was exposed
-      to respirable crystalline silica, a widespread, naturally occurring, crystalline
-      metal oxide that consists of different forms including quartz, cristobalite,
-      tridymite, tripoli, ganister, chert, and novaculite.
-    termDef:
-      term: >-
-        Person Respirable Cystalline Silica Exposure Indicator
-      source: caDSR
-      cde_id:
-      cde_version:
-      term_url:
-
 rhabdoid_percent:
   common:
     description: >-
@@ -5131,18 +4973,6 @@ rhabdoid_present:
       cde_version:
       term_url:
 
-ribosomal_rna_28s_16s_ratio:
-  common:
-    description: >-
-      The 28S/18S ribosomal RNA band ratio used to assess the quality of total RNA.
-    termDef:
-      term: >-
-        28s/18s Ribosomal RNA Ratio
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
 rin:
   common:
     description: >-
@@ -5155,19 +4985,6 @@ rin:
       cde_id: 5278775
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5278775%20and%20ver_nr=1.0"
-
-risk_factor:
-  common:
-    description: >-
-      The text term used to describe a risk factor the patient had at the time of
-      or prior to their diagnosis.
-    termDef:
-      term: >-
-        Risk Factor Description Type
-      source: caDSR
-      cde_id: 6142389
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=6142389%20and%20ver_nr=1.0"
 
 risk_factors:
   common:
@@ -5258,17 +5075,6 @@ sample_type:
       cde_id: 3111302
       cde_version: 2.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3111302%20and%20ver_nr=2.0"
-
-sample_type_id:
-  common:
-    description: >-
-      The accompanying sample type id for the sample type.
-    termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
 
 sarcomatoid_percent:
   common:
@@ -5527,17 +5333,6 @@ size_selection_range:
   common:
     description: >-
       Range of size selection.
-    termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
-smokeless_tobacco_quit_age:
-  common:
-    description: >-
-      The age the subject quit smoking tobacco.
     termDef:
       term:
       source:
@@ -5821,18 +5616,6 @@ therapeutic_agents:
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2975232%20and%20ver_nr=1.0"
 
-therapeutic_level_achieved:
-  common:
-    description: >-
-      Indicates a target level of treatment was reached, according to the patient's
-      treatment plan.
-    termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
 therapeutic_target_level:
   common:
     description: >-
@@ -5997,19 +5780,6 @@ tobacco_smoking_status:
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=2181650%20and%20ver_nr=1.0"
 
-tobacco_use_per_day:
-  common:
-    description: >-
-      Numeric value that represents the number of times the patient uses tobacco each
-      day.
-    termDef:
-      term: >-
-        Daily Tobacco Use Count
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
 total_reads:
   common:
     description: >-
@@ -6073,19 +5843,6 @@ treatment_anatomic_site:
       cde_id: 5615611
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5615611%20and%20ver_nr=1.0"
-
-treatment_arm:
-  common:
-    description: >-
-      Text term used to describe the treatment arm assigned to a patient at the time
-      eligibility is determined.
-    termDef:
-      term: >-
-        Protocol Treatment Arm Text
-      source: caDSR
-      cde_id: 7068995
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=7068995%20and%20ver_nr=1.0"
 
 treatment_dose:
   common:
@@ -6187,8 +5944,7 @@ treatment_intent_type:
 treatment_or_therapy:
   common:
     description: >-
-      A yes/no/unknown/not applicable indicator related to the administration of therapeutic
-      agents received.
+      An indicator related to the administration of the treatment specified in the treatment_type field.
     termDef:
       term: >-
         Therapeutic Procedure Prior Specimen Collection Administered Yes No Unknown
@@ -6225,7 +5981,11 @@ treatment_outcome_duration:
 treatment_type:
   common:
     description: >-
-      Text term that describes the kind of treatment administered.
+      Text term that describes the type of treatment information available within
+      this dataset. Note the value of this field may not be an indication that
+      the treatment type was administered to this patient. Please reference the
+      treatment_or_therapy property where it is indicated whether the patient
+      received this treatment type.
     termDef:
       term: >-
         Treatment Method Type
@@ -6233,28 +5993,6 @@ treatment_type:
       cde_id: 5102381
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=5102381%20and%20ver_nr=1.0"
-
-tumor_code:
-  common:
-    description: >-
-      Diagnostic tumor code of the tissue sample source.
-    termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
-tumor_code_id:
-  common:
-    description: >-
-      BCR-defined id code for the tumor sample.
-    termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
 
 tumor_confined_to_organ_of_origin:
   common:
@@ -6710,19 +6448,6 @@ vascular_invasion_type:
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3168001%20and%20ver_nr=1.0"
 
-viral_hepatitis_serologies:
-  common:
-    description: >-
-      Text term that describes the kind of serological laboratory test used to determine
-      the patient's hepatitis status.
-    termDef:
-      term: >-
-        Viral Hepatitis Laboratory Procedure Serology Test Method Type
-      source: caDSR
-      cde_id: 4395982
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=4395982%20and%20ver_nr=1.0"
-
 vital_status:
   common:
     description: >-
@@ -6902,19 +6627,6 @@ year_of_follow_up:
       cde_id:
       cde_version:
       term_url:
-
-years_smoked:
-  common:
-    description: >-
-      Numeric value (or unknown) to represent the number of years a person has been
-      smoking.
-    termDef:
-      term: >-
-        Person Smoking Duration Year Count
-      source: caDSR
-      cde_id: 3137957
-      cde_version: 1.0
-      term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3137957%20and%20ver_nr=1.0"
 
 zone_of_origin_prostate:
   common:
@@ -7289,17 +7001,6 @@ tumor_shape:
       cde_id: 3870445
       cde_version: 1.0
       term_url: "https://cadsr.cancer.gov/onedata/dmdirect/NIH/NCI/CO/CDEDD?filter=CDEDD.ITEM_ID=3870445%20and%20ver_nr=1.0"
-
-tumor_measurement_method:
-  common:
-    description: >-
-      The method used to measure tumor size.
-    termDef:
-      term:
-      source:
-      cde_id:
-      cde_version:
-      term_url:
 
 relative_smoker:
   common:
@@ -7869,7 +7570,7 @@ fertility_history:
   common:
     description: >-
       Text term to describe an individual's capacity to conceive or to
-      induce conception
+      induce conception.
     termDef:
       term: >-
         Fertility History
@@ -7895,7 +7596,7 @@ ribosomal_rna_28s_18s_ratio:
 year_of_birth_range:
   common:
     description: >-
-      TBD.
+      A categorical value to represent ranges of calendar years, during which an individual was born.
     termDef:
       term: >-
         Year of Birth Range
@@ -7904,70 +7605,10 @@ year_of_birth_range:
       cde_version:
       term_url:
 
-myometrial_invasion_categories:
-  common:
-    description: >-
-      TBD.
-    termDef:
-      term: >-
-        Myometrial Invasion Categories
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
-myometrial_invasion_measurement:
-  common:
-    description: >-
-      TBD.
-    termDef:
-      term: >-
-        Myometrial Invasion Measurement
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
-myometrial_invasion_percent:
-  common:
-    description: >-
-      TBD.
-    termDef:
-      term: >-
-        Myometrial Invasion Percent
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
-myometrial_thickness:
-  common:
-    description: >-
-      TBD.
-    termDef:
-      term: >-
-        Myometrial Thickness
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
-smoking_exposure:
-  common:
-    description: >-
-      TBD.
-    termDef:
-      term: >-
-        Smoking Exposure
-      source:
-      cde_id:
-      cde_version:
-      term_url:
-
 treatment_type_administered:
   common:
     description: >-
-      TBD.
+      Text term that describes the kind of treatment administered to a patient.
     termDef:
       term: >-
         Treatment Type Administered
