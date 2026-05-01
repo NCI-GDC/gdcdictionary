@@ -7570,7 +7570,7 @@ fertility_history:
   common:
     description: >-
       Text term to describe an individual's capacity to conceive or to
-      induce conception
+      induce conception.
     termDef:
       term: >-
         Fertility History
@@ -7596,7 +7596,7 @@ ribosomal_rna_28s_18s_ratio:
 year_of_birth_range:
   common:
     description: >-
-      A categorical value to represent ranges of calendar years, during which an individual was born
+      A categorical value to represent ranges of calendar years, during which an individual was born.
     termDef:
       term: >-
         Year of Birth Range
@@ -7608,7 +7608,7 @@ year_of_birth_range:
 treatment_type_administered:
   common:
     description: >-
-      Text term that describes the kind of treatment administered to a patient
+      Text term that describes the kind of treatment administered to a patient.
     termDef:
       term: >-
         Treatment Type Administered
