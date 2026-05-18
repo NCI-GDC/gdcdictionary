@@ -611,7 +611,7 @@ properties:
       - Positive
       - Unknown
       - Not Reported
-    deprecated_enum::
+    deprecated_enum:
       - Indeterminant
     enumDef:
       Indeterminant:
