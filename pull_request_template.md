@@ -1,6 +1,6 @@
 ## Description
 
-## Checklist
+## For the FE/Product reviewer
 
-- [ ] New properties (if any) follow the front-end [property type rules](https://gdc-ctds.atlassian.net/wiki/spaces/GDC/pages/1131610113) for Cohort Builder and Repository
-  <!-- e.g. an age property in years must include "year" in its definition. Unsure? Ask the front-end team. -->
+- [ ] New properties (if any) checked against the [front-end property type logic](https://gdc-ctds.atlassian.net/wiki/spaces/GDC/pages/1131610113). 
+    Adjust the FE logic if needed, or request a change to the property definition if a convention was missed (e.g. "year" not included in an age property in years definition).
