@@ -41,9 +41,11 @@ execute_plaster:
     - echo $CI_TRIGGER_BRANCH
     - |
       if [ ${CI_TRIGGER_BRANCH+x} ]; then
-        pip install "gdc-plaster==test-changes" "psqlgml>=0.2.4"
+        pip install "git+https://github.com/NCI-GDC/plaster.git@test-changes"
+        pip install "psqlgml>=0.2.4"
       else
-        pip install "gdc-plaster==test-changes" "psqlgml>=0.2.4"
+        pip install "git+https://github.com/NCI-GDC/plaster.git@test-changes"
+        pip install "psqlgml>=0.2.4"
       fi
     - plaster --version
     - psqlgml --version
