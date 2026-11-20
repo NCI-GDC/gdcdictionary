@@ -13,7 +13,6 @@ classifiers = [
   "Topic :: Software Development :: Libraries :: Python Modules",
   "Topic :: Internet",
   "Programming Language :: Python",
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
@@ -35,7 +34,7 @@ maintainers = [
 ]
 name = "gdcdictionary"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 
 [project.optional-dependencies]
 dev = ["coverage[toml]", "pytest", "pytest-cov"]
@@ -70,7 +69,7 @@ testpaths = ["tests"]
 [tool.ruff]
 line-length = 95
 src = ["src", "tests"]
-target-version = "py39"
+target-version = "py310"
 
 [tool.ruff.lint]
 # see https://docs.astral.sh/ruff/rules/
